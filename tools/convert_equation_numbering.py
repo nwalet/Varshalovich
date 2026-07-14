@@ -138,6 +138,13 @@ def convert(path, chapter):
             env = m_begin.group(1)
             j = i + 1
             while not END_RE.match(lines[j]):
+                assert not BEGIN_RE.match(lines[j]), (
+                    f"line {j+1}: found another \\begin{{...}} before the \\end{{{env}}} "
+                    f"opened at line {i+1} — its real \\end is probably not alone on its own "
+                    f"line (trailing content after it, e.g. '\\end{{{env}}} \\quad(...)'); fix "
+                    f"the source so \\begin/\\end markers are always alone on their line, then "
+                    f"rerun"
+                )
                 j += 1
             body = '\n'.join(lines[i + 1:j]) + '\n'
             new_body, global_n = process_block(env, body, chapter, global_n, scope_state, mapping)

@@ -402,13 +402,56 @@ provides. Replace with two new commands (`VMK.tex`):
 -\det X=\vect{r}^{2}
 ```
 
+## 11. No blank lines around display math
+
+The OCR source surrounds nearly every display-math block (`equation`,
+`align`, `gather`, `\[...\]`) with a blank line both before and after
+(often two). A blank line in LaTeX source starts a new paragraph
+(`\par`), which isn't wanted here — in most cases the equation is part of
+the sentence's flow, not a paragraph boundary, and the extra `\par` risks
+an unwanted first-line indent or spacing artifact on the text that
+follows. Delete the blank line(s) immediately before the block's
+`\begin{...}`/`\[` and immediately after its `\end{...}`/`\]`, so the
+equation sits flush against the surrounding prose in the source. Leave
+blank lines that separate actual paragraphs (i.e., that aren't adjacent to
+an equation) untouched.
+
+```latex
+% before
+of a point $\vect{r}$ may be written as
+
+
+\begin{equation}
+\vect{r}=x \vect{e}_{x}+y \vect{e}_{y}+z \vect{e}_{z} \label{chap1:eq:1}
+\end{equation}
+
+
+\begin{figure}[tbh]
+
+% after
+of a point $\vect{r}$ may be written as
+\begin{equation}
+\vect{r}=x \vect{e}_{x}+y \vect{e}_{y}+z \vect{e}_{z} \label{chap1:eq:1}
+\end{equation}
+\begin{figure}[tbh]
+```
+
 ## Notes
 
+- **Compilation now requires `xelatex`** (or another Unicode engine), not
+  `pdflatex` — `VMK.tex`'s preamble uses `fontspec`/`polyglossia` for font
+  handling. Compile with `xelatex VMK.tex` (run 2-3 times to resolve all
+  cross-references), not `pdflatex`.
 - Rules 3-5 all use `\middle` instead of the OCR source's mismatched
   `\left`/plain-delimiter pairing, so bracket sizing scales symmetrically
   around all arguments.
 - Applied so far: [Chap0.tex](Chap0.tex) (rules 1-5), [Chap1.tex](Chap1.tex)
-  (all rules).
+  and [Chap2.tex](Chap2.tex) (all rules — Chap2.tex has no figures/tables,
+  so rules 8-9 didn't apply there).
+- VMK.tex's own preamble/numbering choices (e.g. `\numberwithin{equation}`
+  scoped to `section` rather than `chapter`) have since been adjusted
+  directly by the project owner; treat the live file as authoritative over
+  this document's rule 7 example numbers if they ever disagree.
 - Three known gaps left as plain text in Chap1.tex, per rule 7's / rule 9's
   "genuine gaps"/orphaned-fragment cases: "A detailed form of (25) is..."
   and "...analogous to (25)-(28)." (section 1.1 and 1.2 respectively — the
@@ -418,4 +461,20 @@ provides. Replace with two new commands (`VMK.tex`):
 - `\boldsymbol{\varepsilon}_{ikl}` (Levi-Civita tensor) and
   `\boldsymbol{\Phi}` (a scalar field, oddly bolded once in a table row
   label) in Chap1.tex were deliberately left as plain `\boldsymbol` per
-  rule 10 — neither fits `\vect` (rank 1) or `\mat` (2D matrix).
+  rule 10 — neither fits `\vect` (rank 1) or `\mat` (2D matrix). Same in
+  Chap2.tex for `\boldsymbol{\Theta}` (a bolded scalar angle).
+- Rule 10 also applies to bolded numerals, not just letters — Chap2.tex had
+  `\widehat{\mathbf{L}}^{\mathbf{2}}` (a bold "2" exponent, OCR noise like
+  rule 10's `\boldsymbol{\prime}` case): drop the bold entirely rather than
+  wrapping a digit in `\vect` or `\mat`.
+- Environment-boundary detection (`tools/convert_equation_numbering.py`)
+  requires `\begin{...}`/`\end{...}` to be alone on their line. Chap2.tex
+  had one `\end{align*} \quad(i, k, l=x, y, z)` with trailing content stuck
+  on the same line (OCR noise) — the script silently merged it with the
+  next matching `\end{align*}` much later in the file, corrupting both
+  blocks' numbering, with no error at conversion time (it only surfaced as
+  a `\begin{align} on input line N ended by \end{align*}` compile error).
+  Grep for `\\end\{(equation\*|align\*|gather\*)\}\s*\S` (and the
+  `\begin` equivalent with leading content) on every new chapter *before*
+  running the script, and move any trailing content onto the equation's
+  last content line first.

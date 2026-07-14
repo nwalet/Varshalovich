@@ -1,768 +1,467 @@
-\section*{Chapter 2}
-\section*{ANGULAR MOMENTUM OPERATORS}
-\subsection*{2.1. TOTAL ANGULAR MOMENTUM OPERATOR}
-\subsection*{2.1.1. Definition}
-In quantum mechanics the total angular momentum operator $\widehat{\mathbf{J}}$ is defined as an operator which generates transformations of wave functions (state vectors) and quantum operators under infinitesimal rotations of the coordinate system (see Eqs. (1) and (2)).
+\chapter{ANGULAR MOMENTUM OPERATORS}
+\section{TOTAL ANGULAR MOMENTUM OPERATOR}
+\subsection{Definition}
+In quantum mechanics the total angular momentum operator $\widehat{\vect{J}}$ is defined as an operator which generates transformations of wave functions (state vectors) and quantum operators under infinitesimal rotations of the coordinate system (see Eqs. \eqref{chap2:eq:1} and \eqref{chap2:eq:2}).
 
 A transformation of an arbitrary wave function $\Psi$ under rotation of the coordinate system through an infinitesimal angle $\delta \omega$ about an axis $n$ may be written as
-
-
-\begin{equation*}
-\Psi \rightarrow \Psi^{\prime}=(1-i \delta \omega n \cdot \hat{J}) \Psi . \tag{1}
-\end{equation*}
-
-
-where $\widehat{\mathbf{J}}$ is the total angular momentum operator.\\
+\begin{equation}
+\Psi \rightarrow \Psi^{\prime}=(1-i \delta \omega n \cdot \hat{J}) \Psi . \label{chap2:eq:1}
+\end{equation}
+where $\widehat{\vect{J}}$ is the total angular momentum operator.\\
 A transformation of an arbitrary quantum operator $\widehat{O}$ under an infinitesimal rotation has the form
-
-
-\begin{equation*}
-\widehat{O} \rightarrow \widehat{O}^{\prime}=\widehat{O}-i \delta \omega n \cdot[\widehat{\mathbf{J}}, \widehat{O}] . \tag{2}
-\end{equation*}
-
-
+\begin{equation}
+\widehat{O} \rightarrow \widehat{O}^{\prime}=\widehat{O}-i \delta \omega n \cdot[\widehat{\vect{J}}, \widehat{O}] . \label{chap2:eq:2}
+\end{equation}
 The finite rotation operator can also be written in terms of the total angular momentum operator (see Eqs. 1.4(29), 1.4(30), 1.4(32)). The total angular momentum operator is Hermitian,
-
-
-\begin{equation*}
-\widehat{\mathbf{J}}^{+}=\widehat{\mathbf{J}} . \tag{3}
-\end{equation*}
-
-
+\begin{equation}
+\widehat{\vect{J}}^{+}=\widehat{\vect{J}} . \label{chap2:eq:3}
+\end{equation}
 This property for cartesian and spherical components of the operator $\widehat{J}$ can be expressed as
+\begin{equation}
+\left(\widehat{J}_{i}\right)^{+}=\widehat{J}_{i}, \quad(i=x, y, z) ; \quad\left(\widehat{J}_{\mu}\right)^{+}=\widehat{J}^{\mu}=(-1)^{\mu} \widehat{J}_{-\mu}, \quad(\mu= \pm 1,0) \label{chap2:eq:4}
+\end{equation}
+The eigenfunctions of the operators $\widehat{\vect{J}}^{2}$ and $\widehat{J}_{z}$ represent well-known tensor spherical harmonics (see Chap. 7).
 
-
-\begin{equation*}
-\left(\widehat{J}_{i}\right)^{+}=\widehat{J}_{i}, \quad(i=x, y, z) ; \quad\left(\widehat{J}_{\mu}\right)^{+}=\widehat{J}^{\mu}=(-1)^{\mu} \widehat{J}_{-\mu}, \quad(\mu= \pm 1,0) \tag{4}
-\end{equation*}
-
-
-The eigenfunctions of the operators $\widehat{\mathbf{J}}^{2}$ and $\widehat{J}_{z}$ represent well-known tensor spherical harmonics (see Chap. 7).
-
-\subsection*{2.1.2 Commutation Relations}
-Using the definition of the total angular momentum operator (1) and equations for the rotation addition (see Sec. 1.4.7), one may obtain the commutation rules for the operator $\hat{\mathbf{J}}$. These rules may be written as
-
-
-\begin{equation*}
-[(\mathbf{a} \cdot \widehat{\mathbf{J}}),(\mathbf{b} \cdot \widehat{\mathbf{J}})]=i \cdot[\mathbf{a} \times \mathbf{b}] \cdot \widehat{\mathbf{J}}, \tag{5}
-\end{equation*}
-
-
+\subsection{Commutation Relations}
+Using the definition of the total angular momentum operator \eqref{chap2:eq:1} and equations for the rotation addition (see Sec. 1.4.7), one may obtain the commutation rules for the operator $\hat{\vect{J}}$. These rules may be written as
+\begin{equation}
+[(\vect{a} \cdot \widehat{\vect{J}}),(\vect{b} \cdot \widehat{\vect{J}})]=i \cdot[\vect{a} \times \vect{b}] \cdot \widehat{\vect{J}}, \label{chap2:eq:5}
+\end{equation}
 $a$ and $b$ being arbitrary constant vectors. The commutation relations for the total angular momentum operator may also be written symbolically as
-
-
-\begin{equation*}
-[\widehat{\mathbf{J}} \times \widehat{\mathbf{J}}]=i \widehat{\mathbf{J}} \tag{6}
-\end{equation*}
-
-
-Cartesian components of $\widehat{\mathbf{J}}$ satisfy the commutation relations
-
-
-\begin{equation*}
-\left[\widehat{J}_{i}, \widehat{J}_{k}\right]=i \varepsilon_{i k l} \widehat{J}_{l}, \quad\left[\widehat{\mathbf{J}}^{2}, \widehat{J}_{i}\right]=0 \quad(i, k, l=x, y, z) \tag{7}
-\end{equation*}
-
-
-Equations (7) can be derived from (5) by substituting $\mathbf{a}=\mathbf{e}_{i}, \mathbf{b}=\mathbf{e}_{k}(i, k=x, y, z)$ where $\mathbf{e}_{i}$ and $\mathbf{e}_{k}$ are the cartesian basis vectors. In more detailed form Eq. (7) reads
-
-
-\begin{gather*}
-{\left[\hat{J}_{x}, \hat{J}_{x}\right]=\left[\hat{J}_{y}, \hat{J}_{y}\right]=\left[\hat{J}_{z}, \hat{J}_{z}\right]=0} \\
-{\left[\hat{J}_{x}, \hat{J}_{y}\right]=-\left[\hat{J}_{y}, \hat{J}_{x}\right]=i \hat{J}_{z}, \quad\left[\hat{J}_{x}, \hat{J}_{z}\right]=-\left[\hat{J}_{z}, \hat{J}_{x}\right]=-i \hat{J}_{y}} \\
-{\left[\hat{J}_{y}, \hat{J}_{z}\right]=-\left[\hat{J}_{z}, \hat{J}_{y}\right]=i \hat{J}_{x}}  \tag{8}\\
-{\left[\hat{\mathbf{J}}^{2}, \hat{J}_{x}\right]=\left[\hat{\mathbf{J}}^{2}, \hat{J}_{y}\right]=\left[\hat{\mathbf{J}}^{2}, \hat{J}_{z}\right]=0}
-\end{gather*}
-
-
-The square of the total angular momentum operator $\widehat{\mathbf{J}}^{2}$ may be expressed in terms of cartesian components $\widehat{J}_{i}(i=x, y, z)$ as
-
-
-\begin{equation*}
-\widehat{\mathbf{J}}^{2}=\sum_{i} \widehat{J}_{i}^{2}=\widehat{J}_{x}^{2}+\widehat{J}_{y}^{2}+\widehat{J}_{z}^{2} \tag{9}
-\end{equation*}
-
-
-Covariant spherical components of $\widehat{\mathbf{J}}$ satisfy the following commutation relations
-
-
-\begin{equation*}
-\left[\hat{J}_{\mu}, \hat{J}_{\nu}\right]=-\sqrt{2} C_{1 \mu 1 \nu}^{1 \lambda} \hat{J}_{\lambda}, \quad\left[\hat{J}^{2}, \hat{J}_{\mu}\right]=0, \quad(\mu, \nu, \lambda= \pm 1,0) \tag{10}
-\end{equation*}
-
-
-These relations may be obtained from (5) by putting $\mathbf{a}=\mathbf{e}_{\mu}, \mathbf{b}=\mathbf{e}_{\nu}(\mu, \nu= \pm 1,0), \mathbf{e}_{\mu}$ and $\mathbf{e}_{\nu}$ being covariant spherical basis vectors. A more detailed form of (10) is
-
-
-\begin{gather*}
-{\left[\widehat{J}_{+1}, \widehat{J}_{+1}\right]=\left[\widehat{J}_{0}, \widehat{J}_{0}\right]=\left[\widehat{J}_{-1}, \widehat{J}_{-1}\right]=0} \\
-{\left[\widehat{J}_{+1}, \widehat{J}_{0}\right]=-\left[\widehat{J}_{0}, \widehat{J}_{+1}\right]=-\widehat{J}_{+1},\left[\widehat{J}_{+1}, \widehat{J}_{-1}\right]=-\left[\widehat{J}_{-1}, \widehat{J}_{+1}\right]=-\widehat{J}_{0}} \\
-{\left[\widehat{J}_{0}, \widehat{J}_{-1}\right]=-\left[\widehat{J}_{-1}, \widehat{J}_{0}\right]=-\widehat{J}_{-1}}  \tag{11}\\
-{\left[\widehat{J}^{2}, \widehat{J}_{+1}\right]=\left[\widehat{J}^{2}, \widehat{J}_{0}\right]=\left[\widehat{J}^{2}, \widehat{J}_{-1}\right]=0}
-\end{gather*}
-
-
+\begin{equation}
+[\widehat{\vect{J}} \times \widehat{\vect{J}}]=i \widehat{\vect{J}} \label{chap2:eq:6}
+\end{equation}
+Cartesian components of $\widehat{\vect{J}}$ satisfy the commutation relations
+\begin{equation}
+\left[\widehat{J}_{i}, \widehat{J}_{k}\right]=i \varepsilon_{i k l} \widehat{J}_{l}, \quad\left[\widehat{\vect{J}}^{2}, \widehat{J}_{i}\right]=0 \quad(i, k, l=x, y, z) \label{chap2:eq:7}
+\end{equation}
+Equations \eqref{chap2:eq:7} can be derived from \eqref{chap2:eq:5} by substituting $\vect{a}=\vect{e}_{i}, \vect{b}=\vect{e}_{k}(i, k=x, y, z)$ where $\vect{e}_{i}$ and $\vect{e}_{k}$ are the cartesian basis vectors. In more detailed form Eq. \eqref{chap2:eq:7} reads
+\begin{gather}
+{\left[\hat{J}_{x}, \hat{J}_{x}\right]=\left[\hat{J}_{y}, \hat{J}_{y}\right]=\left[\hat{J}_{z}, \hat{J}_{z}\right]=0}  \notag\\
+{\left[\hat{J}_{x}, \hat{J}_{y}\right]=-\left[\hat{J}_{y}, \hat{J}_{x}\right]=i \hat{J}_{z}, \quad\left[\hat{J}_{x}, \hat{J}_{z}\right]=-\left[\hat{J}_{z}, \hat{J}_{x}\right]=-i \hat{J}_{y}}  \notag\\
+{\left[\hat{J}_{y}, \hat{J}_{z}\right]=-\left[\hat{J}_{z}, \hat{J}_{y}\right]=i \hat{J}_{x}}  \label{chap2:eq:8}\\
+{\left[\hat{\vect{J}}^{2}, \hat{J}_{x}\right]=\left[\hat{\vect{J}}^{2}, \hat{J}_{y}\right]=\left[\hat{\vect{J}}^{2}, \hat{J}_{z}\right]=0} \notag
+\end{gather}
+The square of the total angular momentum operator $\widehat{\vect{J}}^{2}$ may be expressed in terms of cartesian components $\widehat{J}_{i}(i=x, y, z)$ as
+\begin{equation}
+\widehat{\vect{J}}^{2}=\sum_{i} \widehat{J}_{i}^{2}=\widehat{J}_{x}^{2}+\widehat{J}_{y}^{2}+\widehat{J}_{z}^{2} \label{chap2:eq:9}
+\end{equation}
+Covariant spherical components of $\widehat{\vect{J}}$ satisfy the following commutation relations
+\begin{equation}
+\left[\hat{J}_{\mu}, \hat{J}_{\nu}\right]=-\sqrt{2} \clebsch{1}{\mu}{1}{\nu}{1}{\lambda} \hat{J}_{\lambda}, \quad\left[\hat{J}^{2}, \hat{J}_{\mu}\right]=0, \quad(\mu, \nu, \lambda= \pm 1,0) \label{chap2:eq:10}
+\end{equation}
+These relations may be obtained from \eqref{chap2:eq:5} by putting $\vect{a}=\vect{e}_{\mu}, \vect{b}=\vect{e}_{\nu}(\mu, \nu= \pm 1,0), \vect{e}_{\mu}$ and $\vect{e}_{\nu}$ being covariant spherical basis vectors. A more detailed form of \eqref{chap2:eq:10} is
+\begin{gather}
+{\left[\widehat{J}_{+1}, \widehat{J}_{+1}\right]=\left[\widehat{J}_{0}, \widehat{J}_{0}\right]=\left[\widehat{J}_{-1}, \widehat{J}_{-1}\right]=0}  \notag\\
+{\left[\widehat{J}_{+1}, \widehat{J}_{0}\right]=-\left[\widehat{J}_{0}, \widehat{J}_{+1}\right]=-\widehat{J}_{+1},\left[\widehat{J}_{+1}, \widehat{J}_{-1}\right]=-\left[\widehat{J}_{-1}, \widehat{J}_{+1}\right]=-\widehat{J}_{0}}  \notag\\
+{\left[\widehat{J}_{0}, \widehat{J}_{-1}\right]=-\left[\widehat{J}_{-1}, \widehat{J}_{0}\right]=-\widehat{J}_{-1}}  \label{chap2:eq:11}\\
+{\left[\widehat{J}^{2}, \widehat{J}_{+1}\right]=\left[\widehat{J}^{2}, \widehat{J}_{0}\right]=\left[\widehat{J}^{2}, \widehat{J}_{-1}\right]=0} \notag
+\end{gather}
 For contravariant spherical components of $\widehat{J}$ the commutation relations may be written as
-
-
-\begin{equation*}
-\left[\widehat{J}^{\mu}, \widehat{J}^{\nu}\right]=\sqrt{2} C_{1 \mu 1 \nu}^{1 \lambda} \widehat{J}^{\lambda}, \quad\left[\widehat{\mathbf{J}}^{2}, \widehat{J}^{\mu}\right]=0, \quad(\mu, \nu, \lambda= \pm 1,0) \tag{12}
-\end{equation*}
-
-
+\begin{equation}
+\left[\widehat{J}^{\mu}, \widehat{J}^{\nu}\right]=\sqrt{2} \clebsch{1}{\mu}{1}{\nu}{1}{\lambda} \widehat{J}^{\lambda}, \quad\left[\widehat{\vect{J}}^{2}, \widehat{J}^{\mu}\right]=0, \quad(\mu, \nu, \lambda= \pm 1,0) \label{chap2:eq:12}
+\end{equation}
 or, in a more detailed form
-
-
-\begin{gather*}
-{\left[\widehat{J}^{+1}, \widehat{J}^{+1}\right]=\left[\widehat{J}^{0}, \widehat{J}^{0}\right]=\left[\widehat{J}^{-1}, \widehat{J}^{-1}\right]=0} \\
-{\left[\widehat{J}^{+1}, \widehat{J}^{0}\right]=-\left[\widehat{J}^{0}, \widehat{J}^{+1}\right]=\widehat{J}^{+1},\left[\widehat{J}^{+1}, \widehat{J}^{-1}\right]=-\left[\widehat{J}^{-1}, \widehat{J}^{+1}\right]=\widehat{J}^{0}}  \tag{13}\\
-{\left[\widehat{J}^{0}, \widehat{J}^{-1}\right]=-\left[\widehat{J}^{-1}, \widehat{J}^{0}\right]=\widehat{J}^{-1}} \\
-{\left[\widehat{J}^{2}, \widehat{J}^{+1}\right]=\left[\widehat{J}^{2}, \widehat{J}^{0}\right]=\left[\widehat{J}^{2}, \widehat{J}^{-1}\right]=0}
-\end{gather*}
-
-
-The operator $\widehat{\mathbf{J}}^{2}$ is expressed in terms of spherical components $\widehat{J}_{\mu}(\mu= \pm 1,0)$ as
-
-
-\begin{equation*}
-\widehat{\mathbf{J}}^{2}=\sum_{\mu}(-1)^{\mu} \widehat{J}_{-\mu} \widehat{J}_{\mu}=-\widehat{J}_{+1} \widehat{J}_{-1}+\widehat{J}_{0} \widehat{J}_{0}-\widehat{J}_{-1} \widehat{J}_{+1}=\widehat{J}_{0}^{2}-\widehat{J}_{0}-2 \widehat{J}_{+1} \widehat{J}_{-1}=\widehat{J}_{0}^{2}+\widehat{J}_{0}-2 \widehat{J}_{-1} \widehat{J}_{+1} \tag{14}
-\end{equation*}
-
-
-\subsection*{2.1.3. Coordinate Inversion. Time Reversal}
-The total angular momentum operator $\widehat{\mathbf{J}}$ is an axial vector, i.e., it is invariant with respect to coordinate inversion ( $\mathbf{r} \rightarrow-\mathbf{r}$ )
-
-\[
+\begin{gather}
+{\left[\widehat{J}^{+1}, \widehat{J}^{+1}\right]=\left[\widehat{J}^{0}, \widehat{J}^{0}\right]=\left[\widehat{J}^{-1}, \widehat{J}^{-1}\right]=0}  \notag\\
+{\left[\widehat{J}^{+1}, \widehat{J}^{0}\right]=-\left[\widehat{J}^{0}, \widehat{J}^{+1}\right]=\widehat{J}^{+1},\left[\widehat{J}^{+1}, \widehat{J}^{-1}\right]=-\left[\widehat{J}^{-1}, \widehat{J}^{+1}\right]=\widehat{J}^{0}}  \label{chap2:eq:13}\\
+{\left[\widehat{J}^{0}, \widehat{J}^{-1}\right]=-\left[\widehat{J}^{-1}, \widehat{J}^{0}\right]=\widehat{J}^{-1}}  \notag\\
+{\left[\widehat{J}^{2}, \widehat{J}^{+1}\right]=\left[\widehat{J}^{2}, \widehat{J}^{0}\right]=\left[\widehat{J}^{2}, \widehat{J}^{-1}\right]=0} \notag
+\end{gather}
+The operator $\widehat{\vect{J}}^{2}$ is expressed in terms of spherical components $\widehat{J}_{\mu}(\mu= \pm 1,0)$ as
+\begin{equation}
+\widehat{\vect{J}}^{2}=\sum_{\mu}(-1)^{\mu} \widehat{J}_{-\mu} \widehat{J}_{\mu}=-\widehat{J}_{+1} \widehat{J}_{-1}+\widehat{J}_{0} \widehat{J}_{0}-\widehat{J}_{-1} \widehat{J}_{+1}=\widehat{J}_{0}^{2}-\widehat{J}_{0}-2 \widehat{J}_{+1} \widehat{J}_{-1}=\widehat{J}_{0}^{2}+\widehat{J}_{0}-2 \widehat{J}_{-1} \widehat{J}_{+1} \label{chap2:eq:14}
+\end{equation}
+\subsection{Coordinate Inversion. Time Reversal}
+The total angular momentum operator $\widehat{\vect{J}}$ is an axial vector, i.e., it is invariant with respect to coordinate inversion ( $\vect{r} \rightarrow-\vect{r}$ )
+\begin{equation}
 \begin{array}{ll}
-\hat{P}_{r} \hat{J}_{i} \hat{P}_{r}^{-1}=\hat{J}_{i}, & (i=x, y, z),  \tag{15}\\
+\hat{P}_{r} \hat{J}_{i} \hat{P}_{r}^{-1}=\hat{J}_{i}, & (i=x, y, z),  \label{chap2:eq:15}\\
 \hat{P}_{r} \hat{J}_{\mu} \hat{P}_{r}^{-1}=\hat{J}_{\mu}, & (\mu= \pm 1,0)
 \end{array}
-\]
-
-Under time reversal $(t \rightarrow-t) \widehat{\mathbf{J}}$ changes its sign
-
-\[
+\end{equation}
+Under time reversal $(t \rightarrow-t) \widehat{\vect{J}}$ changes its sign
+\begin{equation}
 \begin{array}{ll}
-\hat{P}_{t} \hat{J}_{i} \hat{P}_{t}^{-1}=-\hat{J}_{i}, & (i=x, y, z)  \tag{16}\\
+\hat{P}_{t} \hat{J}_{i} \hat{P}_{t}^{-1}=-\hat{J}_{i}, & (i=x, y, z)  \label{chap2:eq:16}\\
 \hat{P}_{t} \hat{J}_{\mu} \hat{P}_{t}^{-1}=-\hat{J}_{\mu}, & (\mu= \pm 1,0)
 \end{array}
-\]
+\end{equation}
+In Eqs. \eqref{chap2:eq:15} and \eqref{chap2:eq:16} $\widehat{P}_{r}$ and $\widehat{P}_{t}$ represent the operators of coordinate inversion and time reversal, respectively.
 
-In Eqs. (15) and (16) $\widehat{P}_{r}$ and $\widehat{P}_{t}$ represent the operators of coordinate inversion and time reversal, respectively.
-
-\subsection*{2.1.4. Total Angular Momentum of a System. Orbital and Spin Angular Momenta}
+\subsection{Total Angular Momentum of a System. Orbital and Spin Angular Momenta}
 The total angular momentum of some system consisting of $N$ subsystems with angular momenta $\widehat{\mathrm{j}}(1), \widehat{\mathrm{j}}(2)$, $\ldots, \widehat{\mathrm{j}}(N)$ is the vector sum
-
-
-\begin{equation*}
-\widehat{\mathbf{J}}=\sum_{n=1}^{N} \widehat{\mathbf{j}}(n) \tag{17}
-\end{equation*}
-
-
+\begin{equation}
+\widehat{\vect{J}}=\sum_{n=1}^{N} \widehat{\vect{j}}(n) \label{chap2:eq:17}
+\end{equation}
 For such a system the following commutation relations hold
-
-
-\begin{gather*}
-{\left[\hat{j}_{i}(n), \hat{j}_{k}\left(n^{\prime}\right)\right]=i \delta_{n n^{\prime}} \varepsilon_{i k l} \hat{j}_{l}(n), \quad(i, k, l=x, y, z),}  \tag{18}\\
-{\left[\hat{J}_{i}, \hat{j}_{k}(n)\right]=i \varepsilon_{i k l} \hat{j}_{l}(n),}  \tag{19}\\
-{\left[\hat{j}_{\mu}(n), \hat{j}_{\nu}\left(n^{\prime}\right)\right]=-\sqrt{2} \delta_{n n^{\prime}} C_{1 \mu 1 \nu}^{1 \lambda} \hat{j}_{\lambda}(n), \quad(\mu, \nu, \lambda= \pm 1,0) .} \\
-{\left[\hat{J}_{\mu}, \hat{j}_{\nu}(n)\right]=-\sqrt{2} C_{1 \mu 1 \nu}^{1 \lambda} \hat{j}_{\lambda}(n), \quad}
-\end{gather*}
-
-
-In particular, Eq. (17) determines the total angular momentum operator as the sum of the orbital angular momentum operator $\hat{\mathbf{L}}$ and the spin angular momentum operator $\widehat{\mathbf{S}}$.
-
-
-\begin{equation*}
-\widehat{\mathbf{J}}=\widehat{\mathbf{L}}+\widehat{\mathbf{S}} \tag{20}
-\end{equation*}
-
-
-The properties of the operators $\hat{\mathbf{L}}$ and $\hat{\mathbf{S}}$ are considered below (Secs. 2.2 and 2.3). The commutation relations for $\hat{\mathbf{L}}$ and $\hat{\mathbf{J}}$ are
-
-\[
+\begin{gather}
+{\left[\hat{j}_{i}(n), \hat{j}_{k}\left(n^{\prime}\right)\right]=i \delta_{n n^{\prime}} \varepsilon_{i k l} \hat{j}_{l}(n), \quad(i, k, l=x, y, z),}  \label{chap2:eq:18}\\
+{\left[\hat{J}_{i}, \hat{j}_{k}(n)\right]=i \varepsilon_{i k l} \hat{j}_{l}(n),}  \label{chap2:eq:19}\\
+{\left[\hat{j}_{\mu}(n), \hat{j}_{\nu}\left(n^{\prime}\right)\right]=-\sqrt{2} \delta_{n n^{\prime}} \clebsch{1}{\mu}{1}{\nu}{1}{\lambda} \hat{j}_{\lambda}(n), \quad(\mu, \nu, \lambda= \pm 1,0) .}  \notag\\
+{\left[\hat{J}_{\mu}, \hat{j}_{\nu}(n)\right]=-\sqrt{2} \clebsch{1}{\mu}{1}{\nu}{1}{\lambda} \hat{j}_{\lambda}(n), \quad} \notag
+\end{gather}
+In particular, Eq. \eqref{chap2:eq:17} determines the total angular momentum operator as the sum of the orbital angular momentum operator $\hat{\vect{L}}$ and the spin angular momentum operator $\widehat{\vect{S}}$.
+\begin{equation}
+\widehat{\vect{J}}=\widehat{\vect{L}}+\widehat{\vect{S}} \label{chap2:eq:20}
+\end{equation}
+The properties of the operators $\hat{\vect{L}}$ and $\hat{\vect{S}}$ are considered below (Secs. 2.2 and 2.3). The commutation relations for $\hat{\vect{L}}$ and $\hat{\vect{J}}$ are
+\begin{equation}
 \begin{array}{cr}
 {\left[\hat{J}_{i}, \hat{L}_{k}\right]=i \varepsilon_{i k l} \hat{L}_{l},} & (i, k, l=x, y, z) \\
-{\left[\hat{J}_{\mu}, \hat{L}_{\nu}\right]=-\sqrt{2} C_{1 \mu 1 \nu}^{1 \lambda} \hat{L}_{\lambda},} & (\mu, \nu, \lambda= \pm 1,0) \tag{21}
+{\left[\hat{J}_{\mu}, \hat{L}_{\nu}\right]=-\sqrt{2} \clebsch{1}{\mu}{1}{\nu}{1}{\lambda} \hat{L}_{\lambda},} & (\mu, \nu, \lambda= \pm 1,0) \label{chap2:eq:21}
 \end{array}
-\]
-
+\end{equation}
 or, in more detail
-
-
-\begin{gather*}
-{\left[\widehat{J}_{x}, \widehat{L}_{x}\right]=\left[\widehat{J}_{y}, \widehat{L}_{y}\right]=\left[\widehat{J}_{z}, \widehat{L}_{z}\right]=0} \\
-{\left[\widehat{J}_{x}, \widehat{L}_{y}\right]=-\left[\widehat{J}_{y}, \widehat{L}_{x}\right]=i \widehat{L}_{z},\left[\widehat{J}_{x}, \widehat{L}_{z}\right]=-\left[\widehat{J}_{z}, \widehat{L}_{x}\right]=-i \widehat{L}_{y}}  \tag{22}\\
-{\left[\widehat{J}_{y}, \widehat{L}_{z}\right]=-\left[\widehat{J}_{z}, \widehat{L}_{y}\right]=i \widehat{L}_{x}} \\
-{\left[\widehat{J}_{+1}, \widehat{L}_{+1}\right]=\left[\widehat{J}_{0}, \widehat{L}_{0}\right]=\left[\widehat{J}_{-1}, \widehat{L}_{-1}\right]=0} \\
-{\left[\widehat{J}_{+1}, \widehat{L}_{0}\right]=-\left[\widehat{J}_{0}, \widehat{L}_{+1}\right]=-\widehat{L}_{+1},\left[\widehat{J}_{+1}, \widehat{L}_{-1}\right]=-\left[\widehat{J}_{-1}, \widehat{L}_{+1}\right]=-\widehat{L}_{0}}  \tag{23}\\
-{\left[\widehat{J}_{0}, \widehat{L}_{-1}\right]=-\left[\widehat{J}_{-1}, \widehat{L}_{0}\right]=-\widehat{L}_{-1}}
-\end{gather*}
-
-
-Appropriate relations for the spin operator $\widehat{\mathbf{S}}$ and the total angular momentum operator $\widehat{\mathbf{J}}$ may be obtained from Eqs. (21)-(23) by replacing $\widehat{\mathbf{L}} \rightarrow \widehat{\mathbf{S}}$. The orbital angular momentum operator $\widehat{\mathbf{L}}$ commutes with the spin operator $\widehat{\mathbf{S}}$
-
-\[
+\begin{gather}
+{\left[\widehat{J}_{x}, \widehat{L}_{x}\right]=\left[\widehat{J}_{y}, \widehat{L}_{y}\right]=\left[\widehat{J}_{z}, \widehat{L}_{z}\right]=0}  \notag\\
+{\left[\widehat{J}_{x}, \widehat{L}_{y}\right]=-\left[\widehat{J}_{y}, \widehat{L}_{x}\right]=i \widehat{L}_{z},\left[\widehat{J}_{x}, \widehat{L}_{z}\right]=-\left[\widehat{J}_{z}, \widehat{L}_{x}\right]=-i \widehat{L}_{y}}  \label{chap2:eq:22}\\
+{\left[\widehat{J}_{y}, \widehat{L}_{z}\right]=-\left[\widehat{J}_{z}, \widehat{L}_{y}\right]=i \widehat{L}_{x}}  \notag\\
+{\left[\widehat{J}_{+1}, \widehat{L}_{+1}\right]=\left[\widehat{J}_{0}, \widehat{L}_{0}\right]=\left[\widehat{J}_{-1}, \widehat{L}_{-1}\right]=0}  \notag\\
+{\left[\widehat{J}_{+1}, \widehat{L}_{0}\right]=-\left[\widehat{J}_{0}, \widehat{L}_{+1}\right]=-\widehat{L}_{+1},\left[\widehat{J}_{+1}, \widehat{L}_{-1}\right]=-\left[\widehat{J}_{-1}, \widehat{L}_{+1}\right]=-\widehat{L}_{0}}  \label{chap2:eq:23}\\
+{\left[\widehat{J}_{0}, \widehat{L}_{-1}\right]=-\left[\widehat{J}_{-1}, \widehat{L}_{0}\right]=-\widehat{L}_{-1}} \notag
+\end{gather}
+Appropriate relations for the spin operator $\widehat{\vect{S}}$ and the total angular momentum operator $\widehat{\vect{J}}$ may be obtained from Eqs. \eqref{chap2:eq:21}-\eqref{chap2:eq:23} by replacing $\widehat{\vect{L}} \rightarrow \widehat{\vect{S}}$. The orbital angular momentum operator $\widehat{\vect{L}}$ commutes with the spin operator $\widehat{\vect{S}}$
+\begin{equation}
 \begin{array}{ll}
 {\left[\widehat{L}_{i}, \widehat{S}_{k}\right]=0,} & (i, k=x, y, z) \\
-{\left[\widehat{L}_{\mu}, \widehat{S}_{\nu}\right]=0,} & (\mu, \nu= \pm 1,0) \tag{24}
+{\left[\widehat{L}_{\mu}, \widehat{S}_{\nu}\right]=0,} & (\mu, \nu= \pm 1,0) \label{chap2:eq:24}
 \end{array}
-\]
+\end{equation}
+\section{ORBITAL ANGULAR MOMENTUM OPERATOR}
+\subsection{Definition}
+In classical mechanics the angular momentum $\vect{L}$ of a particle is defined as
+\begin{equation}
+\vect{L}=[\vect{r} \times \vect{p}] \label{chap2:eq:25}
+\end{equation}
+where $\vect{r}$ is the position vector of the particle and $\vect{p}$ is its linear momentum.\\
+In the quantum mechanics the orbital angular momentum operator $\hat{\vect{L}}$ of a particle is obtained from Eq. \eqref{chap2:eq:25} by replacing $\vect{r} \rightarrow \widehat{\vect{r}}$ and $\vect{p} \rightarrow \widehat{\vect{p}}$, where $\widehat{\vect{r}}$ and $\widehat{\vect{p}}$ are the position and momentum operators, respectively.
 
-\subsection*{2.2. ORBITAL ANGULAR MOMENTUM OPERATOR}
-\subsection*{2.2.1 Definition}
-In classical mechanics the angular momentum $\mathbf{L}$ of a particle is defined as
+In the coordinate representation we have $\hat{\vect{r}}=\vect{r}, \hat{\vect{p}}=-i \nabla$,
+\begin{equation}
+\widehat{\vect{L}}=-i[\vect{r} \times \nabla] . \label{chap2:eq:26}
+\end{equation}
+In the momentum representation we have $\hat{\vect{r}}=i \vect{\nabla}_{\vect{p}}, \hat{\vect{p}}=\vect{p}$,
+\begin{equation}
+\widehat{\vect{L}}=-i\left[\vect{p} \times \vect{\nabla}_{\vect{p}}\right] . \label{chap2:eq:27}
+\end{equation}
+The formulas below are valid for both representations. The explicit form of $\hat{\vect{L}}$ (see Sec. 2.2.3) in the momentum representation is obtained by substituting $\vect{r} \rightarrow \vect{p}, \vect{\nabla} \equiv \partial / \partial \vect{r} \rightarrow \vect{\nabla}_{\vect{p}} \equiv \partial / \partial \vect{p}$.
 
-
-\begin{equation*}
-\mathbf{L}=[\mathbf{r} \times \mathbf{p}] \tag{1}
-\end{equation*}
-
-
-where $\mathbf{r}$ is the position vector of the particle and $\mathbf{p}$ is its linear momentum.\\
-In the quantum mechanics the orbital angular momentum operator $\hat{\mathbf{L}}$ of a particle is obtained from Eq. (1) by replacing $\mathbf{r} \rightarrow \widehat{\mathbf{r}}$ and $\mathbf{p} \rightarrow \widehat{\mathbf{p}}$, where $\widehat{\mathbf{r}}$ and $\widehat{\mathbf{p}}$ are the position and momentum operators, respectively.
-
-In the coordinate representation we have $\hat{\mathbf{r}}=\mathbf{r}, \hat{\mathbf{p}}=-i \nabla$,
-
-
-\begin{equation*}
-\widehat{\mathbf{L}}=-i[\mathbf{r} \times \nabla] . \tag{2}
-\end{equation*}
-
-
-In the momentum representation we have $\hat{\mathbf{r}}=i \boldsymbol{\nabla}_{\mathbf{p}}, \hat{\mathbf{p}}=\mathbf{p}$,
-
-
-\begin{equation*}
-\widehat{\mathbf{L}}=-i\left[\mathbf{p} \times \boldsymbol{\nabla}_{\mathbf{p}}\right] . \tag{3}
-\end{equation*}
-
-
-The formulas below are valid for both representations. The explicit form of $\hat{\mathbf{L}}$ (see Sec. 2.2.3) in the momentum representation is obtained by substituting $\mathbf{r} \rightarrow \mathbf{p}, \boldsymbol{\nabla} \equiv \partial / \partial \mathbf{r} \rightarrow \boldsymbol{\nabla}_{\mathbf{p}} \equiv \partial / \partial \mathbf{p}$.
-
-The operator $\hat{\mathbf{L}}$ is Hermitian and purely imaginary.
-
-
-\begin{equation*}
-\widehat{\mathbf{L}}^{+}=\widehat{\mathbf{L}}, \quad \widehat{\mathbf{L}}^{*}=-\widehat{\mathbf{L}} . \tag{4}
-\end{equation*}
-
-
-For cartesian components of $\widehat{\mathbf{L}}$, Eqs. (4) become
-
-
-\begin{equation*}
-\widehat{L}_{i}^{+}=\widehat{L}_{i}, \quad \widehat{L}_{i}^{*}=-\widehat{L}_{i}, \quad(i=x, y, z) . \tag{5}
-\end{equation*}
-
-
-and for spherical components Eqs. (4) yield
-
-
+The operator $\hat{\vect{L}}$ is Hermitian and purely imaginary.
+\begin{equation}
+\widehat{\vect{L}}^{+}=\widehat{\vect{L}}, \quad \widehat{\vect{L}}^{*}=-\widehat{\vect{L}} . \label{chap2:eq:28}
+\end{equation}
+For cartesian components of $\widehat{\vect{L}}$, Eqs. \eqref{chap2:eq:28} become
+\begin{equation}
+\widehat{L}_{i}^{+}=\widehat{L}_{i}, \quad \widehat{L}_{i}^{*}=-\widehat{L}_{i}, \quad(i=x, y, z) . \label{chap2:eq:29}
+\end{equation}
+and for spherical components Eqs. \eqref{chap2:eq:28} yield
 \begin{align*}
 & \left(\widehat{L}_{\mu}\right)^{+}=(-1)^{\mu}\left(\widehat{L}^{+}\right)_{-\mu}=(-1)^{\mu} \widehat{L}_{-\mu}, \\
 & \left(\widehat{L}_{\mu}\right)^{*}=(-1)^{\mu}\left(\widehat{L}^{*}\right)_{-\mu}=(-1)^{\mu+1} \widehat{L}_{-\mu}, \quad(\mu= \pm 1,0) .
 \end{align*}
+The orbital angular momentum operator $\hat{\vect{L}}$ generates transformations of scalar (spinless) wave functions under rotations of the coordinate system. A rotation through an infinitesimal angle $\delta \omega$ about the n -axis transforms the position vector $\vect{r}$ into $\vect{r}+\delta \vect{r}$, with $\delta \vect{r}=-\delta \omega[\vect{n} \times \vect{r}]$. The corresponding transformation of the scalar wave functions reads
+\begin{equation}
+\Psi(\vect{r}) \rightarrow \Psi(\vect{r}+\delta \vect{r})=(1+\delta \vect{r} \cdot \nabla) \Psi(\vect{r})=(1-i \delta \omega \vect{n} \cdot \hat{\vect{L}}) \Psi(\vect{r}) . \label{chap2:eq:30}
+\end{equation}
+In the case of a finite rotation through an angle $\omega$ about the axis $n$, scalar functions are transformed by the operator $e^{-i \omega n \cdot \widehat{\vect{L}}}$ which is the particular form of the rotation operator $1.5(32)$. The eigenfunctions of the ɔperators $\widehat{\vect{L}}^{2}$ and $\widehat{L}_{z}$ represent spherical harmonics $Y_{l m}(\vartheta, \varphi)$ (Chap. 5) which depend on the polar angles $\vartheta, \varphi$.
 
+\subsection{Commutation Relations}
+The orbital angular momentum operator $\hat{\vect{L}}$ satisfies the same commutation relations as the total angular momentum operator $\widehat{\vect{J}}$. Appropriate expressions for the commutators are readily obtained from Eqs. \eqref{chap2:eq:5}-\eqref{chap2:eq:14} by substituting $\widehat{\vect{J}} \rightarrow \hat{\vect{L}}$.
 
-The orbital angular momentum operator $\hat{\mathbf{L}}$ generates transformations of scalar (spinless) wave functions under rotations of the coordinate system. A rotation through an infinitesimal angle $\delta \omega$ about the n -axis transforms the position vector $\mathbf{r}$ into $\mathbf{r}+\delta \mathbf{r}$, with $\delta \mathbf{r}=-\delta \omega[\mathbf{n} \times \mathbf{r}]$. The corresponding transformation of the scalar wave functions reads
-
-
-\begin{equation*}
-\Psi(\mathbf{r}) \rightarrow \Psi(\mathbf{r}+\delta \mathbf{r})=(1+\delta \mathbf{r} \cdot \nabla) \Psi(\mathbf{r})=(1-i \delta \omega \mathbf{n} \cdot \hat{\mathbf{L}}) \Psi(\mathbf{r}) . \tag{7}
-\end{equation*}
-
-
-In the case of a finite rotation through an angle $\omega$ about the axis $n$, scalar functions are transformed by the operator $e^{-i \omega n \cdot \widehat{\mathbf{L}}}$ which is the particular form of the rotation operator $1.5(32)$. The eigenfunctions of the ɔperators $\widehat{\mathbf{L}}^{2}$ and $\widehat{L}_{z}$ represent spherical harmonics $Y_{l m}(\vartheta, \varphi)$ (Chap. 5) which depend on the polar angles $\vartheta, \varphi$.
-
-\subsection*{2.2.2 Commutation Relations}
-The orbital angular momentum operator $\hat{\mathbf{L}}$ satisfies the same commutation relations as the total angular momentum operator $\widehat{\mathbf{J}}$. Appropriate expressions for the commutators are readily obtained from Eqs. 2.1(5)$2.1(14)$ by substituting $\widehat{\mathbf{J}} \rightarrow \hat{\mathbf{L}}$.
-
-The commutation rules for the operator $\hat{\mathbf{L}}$ with the position operator $\hat{\mathbf{r}}$ and the momentum operator $\hat{\mathbf{p}}$ are the following.
+The commutation rules for the operator $\hat{\vect{L}}$ with the position operator $\hat{\vect{r}}$ and the momentum operator $\hat{\vect{p}}$ are the following.
 
 For cartesian components
-
-
-\begin{align*}
-& {\left[\hat{L}_{i}, \hat{x}_{k}\right]=i \varepsilon_{i k l} x_{l},}  \tag{8}\\
-& {\left[\widehat{L}_{i}, \hat{p}_{k}\right]=i \varepsilon_{i k l} p_{l},}
-\end{align*} \quad(i, k, l=x, y, z)
-
-
-Note also that $\widehat{\mathbf{r}}$ and $\widehat{\mathbf{p}}$ obey the commutation relations
-
-
-\begin{equation*}
-\left[\widehat{x}_{i}, \widehat{x}_{k}\right]=0, \quad\left[\widehat{p}_{i}, \widehat{p}_{k}\right]=0, \quad\left[\widehat{x}_{i}, \widehat{p}_{k}\right]=i \delta_{i k}, \quad(i, k=x, y, z) \tag{9}
-\end{equation*}
-
-
+\begin{align}
+& {\left[\hat{L}_{i}, \hat{x}_{k}\right]=i \varepsilon_{i k l} x_{l},}  \label{chap2:eq:31}\\
+& {\left[\widehat{L}_{i}, \hat{p}_{k}\right]=i \varepsilon_{i k l} p_{l}, \quad(i, k, l=x, y, z)} \notag
+\end{align}
+Note also that $\widehat{\vect{r}}$ and $\widehat{\vect{p}}$ obey the commutation relations
+\begin{equation}
+\left[\widehat{x}_{i}, \widehat{x}_{k}\right]=0, \quad\left[\widehat{p}_{i}, \widehat{p}_{k}\right]=0, \quad\left[\widehat{x}_{i}, \widehat{p}_{k}\right]=i \delta_{i k}, \quad(i, k=x, y, z) \label{chap2:eq:32}
+\end{equation}
 For spherical components
-
-
 \begin{align*}
-& {\left[\widehat{L}_{\mu}, \widehat{x}_{\nu}\right]=-\sqrt{2} C_{1 \mu 1 \nu}^{1 \lambda} \widehat{x}_{\lambda}, \quad(\mu, \nu, \lambda= \pm 1,0) .} \\
-& {\left[\widehat{L}_{\mu}, \widehat{p}_{\nu}\right]=-\sqrt{2} C_{1 \mu 1 \nu}^{1 \lambda} \widehat{p}_{\lambda}, \quad(0)}
+& {\left[\widehat{L}_{\mu}, \widehat{x}_{\nu}\right]=-\sqrt{2} \clebsch{1}{\mu}{1}{\nu}{1}{\lambda} \widehat{x}_{\lambda}, \quad(\mu, \nu, \lambda= \pm 1,0) .} \\
+& {\left[\widehat{L}_{\mu}, \widehat{p}_{\nu}\right]=-\sqrt{2} \clebsch{1}{\mu}{1}{\nu}{1}{\lambda} \widehat{p}_{\lambda}, \quad(0)}
 \end{align*}
-
-
-The commutation relations for the spherical components of $\hat{\mathbf{r}}$ and $\hat{\mathbf{p}}$ are given by
-
-
-\begin{equation*}
-\left[\widehat{x}_{\mu}, \widehat{x}_{\nu}\right]=0, \quad\left[\widehat{p}_{\mu}, \widehat{p}_{\nu}\right]=0, \quad\left[\widehat{x}_{\mu}, \widehat{p}_{\nu}\right]=i \delta_{\mu-\nu}(-1)^{\mu}, \quad(\mu, \nu= \pm 1,0) \tag{11}
-\end{equation*}
-
-
-Equations (8) and (10) show that the operators $\hat{\mathbf{r}}$ and $\hat{\mathbf{p}}$ are vectors.\\
-The commutation relations for square of angular momentum operator $\widehat{\mathbf{L}}^{2}$ are
-
-
-\begin{align*}
-{\left[\widehat{\mathbf{L}}^{2}, \widehat{\mathbf{r}}\right] } & =i[\widehat{\mathbf{r}} \times \widehat{\mathbf{L}}]-i[\widehat{\mathbf{L}} \times \widehat{\mathbf{r}}] \\
-{\left[\widehat{\mathbf{L}}^{2}, \widehat{\mathbf{p}}\right] } & =i[\widehat{\mathbf{p}} \times \widehat{\mathbf{L}}]-i[\widehat{\mathbf{L}} \times \widehat{\mathbf{p}}] \tag{12}
-\end{align*}
-
-
-The operators $\widehat{\mathbf{r}}^{2}$ and $\widehat{\mathbf{p}}^{2}$ commute with $\widehat{\mathbf{L}}$ :
-
-$$
-\left[\widehat{\mathbf{L}}, \widehat{\mathbf{r}}^{2}\right]=0, \quad\left[\widehat{\mathbf{L}}, \widehat{\mathbf{p}}^{2}\right]=0
-$$
-
-The commutation rules of $\hat{\mathbf{L}}$ with the total angular momentum operator $\hat{\mathbf{J}}$ and the spin operator $\hat{\mathbf{S}}$ have been considered above (Eqs. 2.1(21)-2.1(24)).
-
-\subsection*{2.2.3. Explicit Form}
-The cartesian components of the operator $\hat{\mathbf{L}}$ are given by
-
-
-\begin{equation*}
-\hat{L}_{x}=-i\left(y \frac{\partial}{\partial z}-z \frac{\partial}{\partial y}\right), \quad \hat{L}_{y}=-i\left(z \frac{\partial}{\partial x}-x \frac{\partial}{\partial z}\right), \quad \hat{L}_{x}=-i\left(x \frac{\partial}{\partial y}-y \frac{\partial}{\partial x}\right) . \tag{13}
-\end{equation*}
-
-
-or in a more compact form
-
-
-\begin{equation*}
-\hat{L}_{i}=-i \sum_{k, l} \varepsilon_{i k l} x_{k} \frac{\partial}{\partial x_{l}}, \quad(i, k, l=x, y, z) \tag{14}
-\end{equation*}
-
-
-The cartesian components of $\widehat{\mathbf{L}}$ are expressed in terms of polar angles $\vartheta, \varphi$ as
-
-
-\begin{align*}
-& \hat{L}_{x}=i\left(\sin \varphi \frac{\partial}{\partial \vartheta}+\cot \vartheta \cos \varphi \frac{\partial}{\partial \varphi}\right) \\
-& \hat{L}_{y}=i\left(-\cos \varphi \frac{\partial}{\partial \vartheta}+\cot \vartheta \sin \varphi \frac{\partial}{\partial \varphi}\right)  \tag{15}\\
-& \hat{L}_{z}=-i \frac{\partial}{\partial \varphi}
-\end{align*}
-
-
-The spherical components of $\hat{\mathbf{L}}$ are written as
-
-
-\begin{align*}
-\widehat{L}_{+1} & =x_{0} \nabla_{+1}-x_{+1} \nabla_{0} \\
-\widehat{L}_{0} & =x_{-1} \nabla_{+1}-x_{+1} \nabla_{-1}  \tag{16}\\
-\widehat{L}_{-1} & =x_{-1} \nabla_{0}-x_{0} \nabla_{-1}
-\end{align*}
-
-
-or, in a more compact form
-
-
-\begin{equation*}
-\widehat{L}_{\mu}=-\sqrt{2} \sum_{\nu, \lambda} C_{1 \nu 1 \lambda}^{1 \mu} x_{\nu} \nabla_{\lambda}, \quad(\mu, \nu, \lambda= \pm 1,0) \tag{17}
-\end{equation*}
-
-
-The spherical components of $\hat{\mathbf{L}}$ may also be expressed in terms of polar angles $\vartheta, \varphi$ as
-
-
-\begin{align*}
-\widehat{L}_{+1} & =-\frac{1}{\sqrt{2}} e^{i \varphi}\left\{\frac{\partial}{\partial \vartheta}+i \cot \vartheta \frac{\partial}{\partial \varphi}\right\} \\
-\widehat{L}_{0} & =-i \frac{\partial}{\partial \varphi}  \tag{18}\\
-\widehat{L}_{-1} & =-\frac{1}{\sqrt{2}} e^{-i \varphi}\left\{\frac{\partial}{\partial \vartheta}-i \cot \vartheta \frac{\partial}{\partial \varphi}\right\} .
-\end{align*}
-
-
-For polar components of $\widehat{\mathbf{L}}$ we have
-
-
-\begin{equation*}
-\hat{L}_{r}=0, \quad \hat{L}_{\vartheta}=\frac{i}{\sin \vartheta} \frac{\partial}{\partial \varphi}, \quad \hat{L}_{\varphi}=-i \frac{\partial}{\partial \vartheta} . \tag{19}
-\end{equation*}
-
-
-The square of the orbital angular momentum operator $\widehat{\mathbf{L}}^{\mathbf{2}}$ is expressed in terms of its components as
-
-
-\begin{gather*}
-\hat{\mathbf{L}}^{2}=\sum_{i} \hat{L}_{i}^{2}=\hat{L}_{x}^{2}+\widehat{L}_{y}^{2}+\hat{L}_{z}^{2} \\
-\hat{\mathbf{L}}^{2}=\sum_{\mu}(-1)^{\mu} \hat{L}_{\mu} \hat{L}_{-\mu}=-\hat{L}_{+1} \hat{L}_{-1}+\hat{L}_{0} \hat{L}_{0}-\hat{L}_{-1} \hat{L}_{+1} \tag{20}
-\end{gather*}
-
-
-We may also write $\widehat{\mathbf{L}}^{\mathbf{2}}$ in the form
-
-
-\begin{equation*}
-\widehat{\mathbf{L}}^{2}=-\left[\frac{1}{\sin \vartheta} \cdot \frac{\partial}{\partial \vartheta}\left(\sin \vartheta \frac{\partial}{\partial \vartheta}\right)+\frac{1}{\sin ^{2} \vartheta} \cdot \frac{\partial^{2}}{\partial \varphi^{2}}\right] . \tag{21}
-\end{equation*}
-
-
-This operator differs only in sign from the angular part of the Laplacian operator (Eq. 1.3(15))
-
-
-\begin{equation*}
-\widehat{\mathbf{L}}^{2}=-\Delta_{\Omega} . \tag{22}
-\end{equation*}
-
-
-The operator $\widehat{\mathbf{L}}^{2}$ is Hermitian and real
-
-
-\begin{equation*}
-\left(\widehat{\mathbf{L}}^{2}\right)^{+}=\left(\widehat{\mathbf{L}}^{2}\right)^{*}=\widehat{\mathbf{L}}^{2} \tag{23}
-\end{equation*}
-
-
-The representation of the orbital angular momentum $\hat{\mathbf{L}}$ in the form of a differential operator is only one of possible representations. Alternatively, $\hat{\mathbf{L}}$ may be represented by a set of three matrices (because it has three components). These matrix elements of $\hat{\mathbf{L}}$ will be given in Chap. 13.
-
-\subsection*{2.3. SPIN ANGULAR MOMENTUM OPERATOR}
-\subsection*{2.3.1. Definition}
-The spin angular momentum operator or briefly the spin operator $\widehat{\mathbf{S}}$ is usually represented by a set of three (since the vector $\widehat{\mathrm{S}}$ has three components) square $(2 S+1) \times(2 S+1)$ matrices, $S$ being the particle spin. These matrices act on the spin functions (see Chap. 6) and satisfy the same commutation relations as the components of the total angular momentum operator given in Sec.2.1. The spin operator $\widehat{\mathbf{S}}$ is Hermitian:
-
-
-\begin{equation*}
-\widehat{\mathbf{S}}^{+}=\widehat{\mathbf{S}} \tag{1}
-\end{equation*}
-
-
-For the cartesian components of $\widehat{\mathbf{S}}$ the Hermitian property (1) has the form
-
-
-\begin{equation*}
-\left(\widehat{S}_{i}\right)^{+}=\widehat{S}_{i}, \quad(i=x, y, z) \tag{2}
-\end{equation*}
-
-
-and for spherical components
-
-
-\begin{equation*}
-\left(\widehat{S}_{\mu}\right)^{+}=(-1)^{\mu} \widehat{S}_{-\mu}, \quad(\mu= \pm 1,0) \tag{3}
-\end{equation*}
-
-
-The behaviour of $\widehat{\mathbf{S}}$ under complex conjugation depends on the representation of $\widehat{\mathbf{S}}$ (see, e.g., Sec. 2.6.2). The eigenfunctions of the operators $\widehat{\mathbf{S}}^{2}$ and $\widehat{S}_{z}$ are spin functions $\chi_{S m}$ (see Chap. 6) which depend on the spin variable $\sigma$. These functions have $(2 S+1)$ components and describe polarization states of a particle.
-
-\subsection*{2.3.2 Commutation Relations}
-The commutation relations for the spin operator $\widehat{\mathrm{S}}$ are given by Eqs. $2.1(5)-2.1(14)$ in which one must replace $\widehat{\mathbf{J}}$ by $\widehat{\mathbf{S}}$. The commutation rules for $\widehat{\mathbf{S}}$ and the orbital angular momentum operator $\widehat{\mathbf{L}}$ have already been considered in Sec. 2.1.4. The spin operator $\widehat{\mathbf{S}}$ commutes with the position operator $\widehat{\mathbf{r}}$ and the momentum operator $\widehat{\mathbf{p}}$,
-
-
-\begin{align*}
-& {\left[\widehat{S}_{i}, \widehat{x}_{k}\right]=0, \quad\left[\widehat{S}_{i}, \widehat{p}_{k}\right]=0, \quad(i, k=x, y, z),}  \tag{4}\\
-& {\left[\widehat{S}_{\mu}, \widehat{x}_{\nu}\right]=0, \quad\left[\widehat{S}_{\mu}, \widehat{p}_{\nu}\right]=0, \quad(\mu, \nu= \pm 1,0) .} \tag{5}
-\end{align*}
-
-
-\subsection*{2.3.3. Explicit Form}
-The spherical components of the spin operator $\widehat{S}$ may be expressed in terms of the basis spin functions $\chi_{S_{m}}$ (Chap. 6) as
-
-
-\begin{equation*}
-\widehat{S}_{\mu}=\sqrt{S(S+1)} \sum_{m, m^{\prime}} C_{S m 1 \mu}^{S m^{\prime}} \chi_{S_{m^{\prime}}} \chi_{S m}^{+}, \quad(\mu= \pm 1,0) \tag{6}
-\end{equation*}
-
-
-Cartesian components of $\widehat{\mathbf{S}}$ may be obtained from (6), using the relations
-
-
-\begin{equation*}
-\widehat{S}_{x}=\frac{1}{\sqrt{2}}\left(\widehat{S}_{-1}-\widehat{S}_{+1}\right), \quad \widehat{S}_{y}=\frac{i}{\sqrt{2}}\left(\widehat{S}_{-1}+\widehat{S}_{+1}\right), \quad \widehat{S}_{z}=\widehat{S}_{0} \tag{7}
-\end{equation*}
-
-
-Equations (6) and (7) are independent of representation used for spin functions, while an explicit form of the spin matrices depends on this representation. For an arbitrary spin $S$ the simplest form of the spin matrices is that in the spherical basis representation. The basis spin functions $\chi_{S m}$ in this representation are given by
-
-
-\begin{equation*}
-\chi_{S m}(\sigma)=\delta_{m \sigma}, \quad(m, \sigma=-S,-S+1, \ldots, S-1, S) \tag{8}
-\end{equation*}
-
-
-and the matrix elements of the spin matrices are
-
-
-\begin{equation*}
-\left(\widehat{S}_{\mu}\right)_{\sigma^{\prime} \sigma}=\sqrt{S(S+1)} C_{S \sigma 1 \mu}^{S \sigma^{\prime}}, \quad\left(\sigma, \sigma^{\prime}=-S,-S+1, \ldots, S-1, S\right) \tag{9}
-\end{equation*}
-
-
-The elements are arranged in the matrices as follows
-
+The commutation relations for the spherical components of $\hat{\vect{r}}$ and $\hat{\vect{p}}$ are given by
+\begin{equation}
+\left[\widehat{x}_{\mu}, \widehat{x}_{\nu}\right]=0, \quad\left[\widehat{p}_{\mu}, \widehat{p}_{\nu}\right]=0, \quad\left[\widehat{x}_{\mu}, \widehat{p}_{\nu}\right]=i \delta_{\mu-\nu}(-1)^{\mu}, \quad(\mu, \nu= \pm 1,0) \label{chap2:eq:33}
+\end{equation}
+Equation \eqref{chap2:eq:31} and (10) show that the operators $\hat{\vect{r}}$ and $\hat{\vect{p}}$ are vectors.\\
+The commutation relations for square of angular momentum operator $\widehat{\vect{L}}^{2}$ are
+\begin{align}
+{\left[\widehat{\vect{L}}^{2}, \widehat{\vect{r}}\right] } & =i[\widehat{\vect{r}} \times \widehat{\vect{L}}]-i[\widehat{\vect{L}} \times \widehat{\vect{r}}]  \notag\\
+{\left[\widehat{\vect{L}}^{2}, \widehat{\vect{p}}\right] } & =i[\widehat{\vect{p}} \times \widehat{\vect{L}}]-i[\widehat{\vect{L}} \times \widehat{\vect{p}}] \label{chap2:eq:34}
+\end{align}
+The operators $\widehat{\vect{r}}^{2}$ and $\widehat{\vect{p}}^{2}$ commute with $\widehat{\vect{L}}$ :
 \[
+\left[\widehat{\vect{L}}, \widehat{\vect{r}}^{2}\right]=0, \quad\left[\widehat{\vect{L}}, \widehat{\vect{p}}^{2}\right]=0
+\]
+The commutation rules of $\hat{\vect{L}}$ with the total angular momentum operator $\hat{\vect{J}}$ and the spin operator $\hat{\vect{S}}$ have been considered above (Eqs. \eqref{chap2:eq:21}-\eqref{chap2:eq:24}).
+
+\subsection{Explicit Form}
+The cartesian components of the operator $\hat{\vect{L}}$ are given by
+\begin{equation}
+\hat{L}_{x}=-i\left(y \frac{\partial}{\partial z}-z \frac{\partial}{\partial y}\right), \quad \hat{L}_{y}=-i\left(z \frac{\partial}{\partial x}-x \frac{\partial}{\partial z}\right), \quad \hat{L}_{x}=-i\left(x \frac{\partial}{\partial y}-y \frac{\partial}{\partial x}\right) . \label{chap2:eq:35}
+\end{equation}
+or in a more compact form
+\begin{equation}
+\hat{L}_{i}=-i \sum_{k, l} \varepsilon_{i k l} x_{k} \frac{\partial}{\partial x_{l}}, \quad(i, k, l=x, y, z) \label{chap2:eq:36}
+\end{equation}
+The cartesian components of $\widehat{\vect{L}}$ are expressed in terms of polar angles $\vartheta, \varphi$ as
+\begin{align}
+& \hat{L}_{x}=i\left(\sin \varphi \frac{\partial}{\partial \vartheta}+\cot \vartheta \cos \varphi \frac{\partial}{\partial \varphi}\right)  \notag\\
+& \hat{L}_{y}=i\left(-\cos \varphi \frac{\partial}{\partial \vartheta}+\cot \vartheta \sin \varphi \frac{\partial}{\partial \varphi}\right)  \label{chap2:eq:37}\\
+& \hat{L}_{z}=-i \frac{\partial}{\partial \varphi} \notag
+\end{align}
+The spherical components of $\hat{\vect{L}}$ are written as
+\begin{align}
+\widehat{L}_{+1} & =x_{0} \nabla_{+1}-x_{+1} \nabla_{0}  \notag\\
+\widehat{L}_{0} & =x_{-1} \nabla_{+1}-x_{+1} \nabla_{-1}  \label{chap2:eq:38}\\
+\widehat{L}_{-1} & =x_{-1} \nabla_{0}-x_{0} \nabla_{-1} \notag
+\end{align}
+or, in a more compact form
+\begin{equation}
+\widehat{L}_{\mu}=-\sqrt{2} \sum_{\nu, \lambda} \clebsch{1}{\nu}{1}{\lambda}{1}{\mu} x_{\nu} \nabla_{\lambda}, \quad(\mu, \nu, \lambda= \pm 1,0) \label{chap2:eq:39}
+\end{equation}
+The spherical components of $\hat{\vect{L}}$ may also be expressed in terms of polar angles $\vartheta, \varphi$ as
+\begin{align}
+\widehat{L}_{+1} & =-\frac{1}{\sqrt{2}} e^{i \varphi}\left\{\frac{\partial}{\partial \vartheta}+i \cot \vartheta \frac{\partial}{\partial \varphi}\right\}  \notag\\
+\widehat{L}_{0} & =-i \frac{\partial}{\partial \varphi}  \label{chap2:eq:40}\\
+\widehat{L}_{-1} & =-\frac{1}{\sqrt{2}} e^{-i \varphi}\left\{\frac{\partial}{\partial \vartheta}-i \cot \vartheta \frac{\partial}{\partial \varphi}\right\} . \notag
+\end{align}
+For polar components of $\widehat{\vect{L}}$ we have
+\begin{equation}
+\hat{L}_{r}=0, \quad \hat{L}_{\vartheta}=\frac{i}{\sin \vartheta} \frac{\partial}{\partial \varphi}, \quad \hat{L}_{\varphi}=-i \frac{\partial}{\partial \vartheta} . \label{chap2:eq:41}
+\end{equation}
+The square of the orbital angular momentum operator $\widehat{\vect{L}}^{2}$ is expressed in terms of its components as
+\begin{gather}
+\hat{\vect{L}}^{2}=\sum_{i} \hat{L}_{i}^{2}=\hat{L}_{x}^{2}+\widehat{L}_{y}^{2}+\hat{L}_{z}^{2}  \notag\\
+\hat{\vect{L}}^{2}=\sum_{\mu}(-1)^{\mu} \hat{L}_{\mu} \hat{L}_{-\mu}=-\hat{L}_{+1} \hat{L}_{-1}+\hat{L}_{0} \hat{L}_{0}-\hat{L}_{-1} \hat{L}_{+1} \label{chap2:eq:42}
+\end{gather}
+We may also write $\widehat{\vect{L}}^{2}$ in the form
+\begin{equation}
+\widehat{\vect{L}}^{2}=-\left[\frac{1}{\sin \vartheta} \cdot \frac{\partial}{\partial \vartheta}\left(\sin \vartheta \frac{\partial}{\partial \vartheta}\right)+\frac{1}{\sin ^{2} \vartheta} \cdot \frac{\partial^{2}}{\partial \varphi^{2}}\right] . \label{chap2:eq:43}
+\end{equation}
+This operator differs only in sign from the angular part of the Laplacian operator (Eq. 1.3(15))
+\begin{equation}
+\widehat{\vect{L}}^{2}=-\Delta_{\Omega} . \label{chap2:eq:44}
+\end{equation}
+The operator $\widehat{\vect{L}}^{2}$ is Hermitian and real
+\begin{equation}
+\left(\widehat{\vect{L}}^{2}\right)^{+}=\left(\widehat{\vect{L}}^{2}\right)^{*}=\widehat{\vect{L}}^{2} \label{chap2:eq:45}
+\end{equation}
+The representation of the orbital angular momentum $\hat{\vect{L}}$ in the form of a differential operator is only one of possible representations. Alternatively, $\hat{\vect{L}}$ may be represented by a set of three matrices (because it has three components). These matrix elements of $\hat{\vect{L}}$ will be given in Chap. 13.
+
+\section{SPIN ANGULAR MOMENTUM OPERATOR}
+\subsection{Definition}
+The spin angular momentum operator or briefly the spin operator $\widehat{\vect{S}}$ is usually represented by a set of three (since the vector $\widehat{\mathrm{S}}$ has three components) square $(2 S+1) \times(2 S+1)$ matrices, $S$ being the particle spin. These matrices act on the spin functions (see Chap. 6) and satisfy the same commutation relations as the components of the total angular momentum operator given in Sec.2.1. The spin operator $\widehat{\vect{S}}$ is Hermitian:
+\begin{equation}
+\widehat{\vect{S}}^{+}=\widehat{\vect{S}} \label{chap2:eq:46}
+\end{equation}
+For the cartesian components of $\widehat{\vect{S}}$ the Hermitian property \eqref{chap2:eq:46} has the form
+\begin{equation}
+\left(\widehat{S}_{i}\right)^{+}=\widehat{S}_{i}, \quad(i=x, y, z) \label{chap2:eq:47}
+\end{equation}
+and for spherical components
+\begin{equation}
+\left(\widehat{S}_{\mu}\right)^{+}=(-1)^{\mu} \widehat{S}_{-\mu}, \quad(\mu= \pm 1,0) \label{chap2:eq:48}
+\end{equation}
+The behaviour of $\widehat{\vect{S}}$ under complex conjugation depends on the representation of $\widehat{\vect{S}}$ (see, e.g., Sec. 2.6.2). The eigenfunctions of the operators $\widehat{\vect{S}}^{2}$ and $\widehat{S}_{z}$ are spin functions $\chi_{S m}$ (see Chap. 6) which depend on the spin variable $\sigma$. These functions have $(2 S+1)$ components and describe polarization states of a particle.
+
+\subsection{Commutation Relations}
+The commutation relations for the spin operator $\widehat{\mathrm{S}}$ are given by Eqs. \eqref{chap2:eq:5}-\eqref{chap2:eq:14} in which one must replace $\widehat{\vect{J}}$ by $\widehat{\vect{S}}$. The commutation rules for $\widehat{\vect{S}}$ and the orbital angular momentum operator $\widehat{\vect{L}}$ have already been considered in Sec. 2.1.4. The spin operator $\widehat{\vect{S}}$ commutes with the position operator $\widehat{\vect{r}}$ and the momentum operator $\widehat{\vect{p}}$,
+\begin{align}
+& {\left[\widehat{S}_{i}, \widehat{x}_{k}\right]=0, \quad\left[\widehat{S}_{i}, \widehat{p}_{k}\right]=0, \quad(i, k=x, y, z),}  \label{chap2:eq:49}\\
+& {\left[\widehat{S}_{\mu}, \widehat{x}_{\nu}\right]=0, \quad\left[\widehat{S}_{\mu}, \widehat{p}_{\nu}\right]=0, \quad(\mu, \nu= \pm 1,0) .} \label{chap2:eq:50}
+\end{align}
+\subsection{Explicit Form}
+The spherical components of the spin operator $\widehat{S}$ may be expressed in terms of the basis spin functions $\chi_{S_{m}}$ (Chap. 6) as
+\begin{equation}
+\widehat{S}_{\mu}=\sqrt{S(S+1)} \sum_{m, m^{\prime}} \clebsch{S}{m}{1}{\mu}{S}{m^{\prime}} \chi_{S_{m^{\prime}}} \chi_{S m}^{+}, \quad(\mu= \pm 1,0) \label{chap2:eq:51}
+\end{equation}
+Cartesian components of $\widehat{\vect{S}}$ may be obtained from \eqref{chap2:eq:51}, using the relations
+\begin{equation}
+\widehat{S}_{x}=\frac{1}{\sqrt{2}}\left(\widehat{S}_{-1}-\widehat{S}_{+1}\right), \quad \widehat{S}_{y}=\frac{i}{\sqrt{2}}\left(\widehat{S}_{-1}+\widehat{S}_{+1}\right), \quad \widehat{S}_{z}=\widehat{S}_{0} \label{chap2:eq:52}
+\end{equation}
+Equations \eqref{chap2:eq:51} and \eqref{chap2:eq:52} are independent of representation used for spin functions, while an explicit form of the spin matrices depends on this representation. For an arbitrary spin $S$ the simplest form of the spin matrices is that in the spherical basis representation. The basis spin functions $\chi_{S m}$ in this representation are given by
+\begin{equation}
+\chi_{S m}(\sigma)=\delta_{m \sigma}, \quad(m, \sigma=-S,-S+1, \ldots, S-1, S) \label{chap2:eq:53}
+\end{equation}
+and the matrix elements of the spin matrices are
+\begin{equation}
+\left(\widehat{S}_{\mu}\right)_{\sigma^{\prime} \sigma}=\sqrt{S(S+1)} \clebsch{S}{\sigma}{1}{\mu}{S}{\sigma^{\prime}}, \quad\left(\sigma, \sigma^{\prime}=-S,-S+1, \ldots, S-1, S\right) \label{chap2:eq:54}
+\end{equation}
+The elements are arranged in the matrices as follows
+\begin{equation}
 A=\left(\begin{array}{c}
-A_{s s} \ldots \ldots A_{S-S}  \tag{10}\\
+A_{s s} \ldots \ldots A_{S-S}  \label{chap2:eq:55}\\
 \ldots \ldots \ldots \ldots \ldots \\
 \ldots \ldots \ldots \ldots \ldots \\
 A_{-s s} \ldots A_{-S-S}
 \end{array}\right)
-\]
-
+\end{equation}
 Explicit forms of the spin matrices for spin values $\frac{1}{2}$ and 1 are given below in Secs. 2.5 and 2.6.
 
-\subsection*{2.3.4 Traces of Products of Spin Matrices}
+\subsection{Traces of Products of Spin Matrices}
 The traces of products of cartesian components of the spin matrices can be evaluated for an arbitrary spin $S$ by use of the following formulas (where $i, k, l$, etc. take the values $x, y, z$ )
-
-
-\begin{align*}
-\operatorname{Tr}\left\{\widehat{S}_{i}\right\} & =0 \\
-\operatorname{Tr}\left\{\widehat{S}_{i} \widehat{S}_{k}\right\} & =\frac{S(S+1)(2 S+1)}{3} \delta_{i k} \\
-\operatorname{Tr}\left\{\widehat{S}_{i} \widehat{S}_{k} \widehat{S}_{l}\right\} & =i \frac{S(S+1)(2 S+1)}{6} \varepsilon_{i k l}  \tag{11}\\
-\operatorname{Tr}\left\{\widehat{S}_{i} \widehat{S}_{k} \widehat{S}_{l} \widehat{S}_{j}\right\} & =\frac{S(S+1)(2 S+1)}{15}\left\{\left[S(S+1)+\frac{1}{2}\right]\left(\delta_{i k} \delta_{l j}+\delta_{i j} \delta_{k l}\right)+[S(S+1)-2] \delta_{i l} \delta_{k j}\right\}
-\end{align*}
-
-
+\begin{align}
+\operatorname{Tr}\left\{\widehat{S}_{i}\right\} & =0  \notag\\
+\operatorname{Tr}\left\{\widehat{S}_{i} \widehat{S}_{k}\right\} & =\frac{S(S+1)(2 S+1)}{3} \delta_{i k}  \notag\\
+\operatorname{Tr}\left\{\widehat{S}_{i} \widehat{S}_{k} \widehat{S}_{l}\right\} & =i \frac{S(S+1)(2 S+1)}{6} \varepsilon_{i k l}  \label{chap2:eq:56}\\
+\operatorname{Tr}\left\{\widehat{S}_{i} \widehat{S}_{k} \widehat{S}_{l} \widehat{S}_{j}\right\} & =\frac{S(S+1)(2 S+1)}{15}\left\{\left[S(S+1)+\frac{1}{2}\right]\left(\delta_{i k} \delta_{l j}+\delta_{i j} \delta_{k l}\right)+[S(S+1)-2] \delta_{i l} \delta_{k j}\right\} \notag
+\end{align}
 For spherical components of the spin operator $\widehat{S}$ the following relations hold $(\mu, \nu, \lambda$, etc. take the values $\pm 1,0$ )
-
-
-\begin{align*}
-\operatorname{Tr}\left\{\widehat{S}_{\mu}\right\} & =0, \\
-\operatorname{Tr}\left\{\widehat{S}_{\mu} \widehat{S}_{\nu}\right\} & =\frac{S(S+1)(2 S+1)}{3}(-1)^{\mu} \delta_{\mu-\nu}, \\
+\begin{align}
+\operatorname{Tr}\left\{\widehat{S}_{\mu}\right\} & =0,  \notag\\
+\operatorname{Tr}\left\{\widehat{S}_{\mu} \widehat{S}_{\nu}\right\} & =\frac{S(S+1)(2 S+1)}{3}(-1)^{\mu} \delta_{\mu-\nu},  \notag\\
 \operatorname{Tr}\left\{\widehat{S}_{\mu} \widehat{S}_{\nu} \widehat{S}_{\lambda}\right\} & =-\frac{S(S+1)(2 S+1)}{\sqrt{6}}\left(\begin{array}{ccc}
 1 & 1 \\
 \mu & \nu
-\end{array}\right)=\frac{S(S+1)(2 S+1)}{3 \sqrt{2}}(-1)^{1+\lambda} C_{1 \mu 1 \nu}^{1-\lambda},  \tag{12}\\
-\operatorname{Tr}\left\{\widehat{S}_{\mu} \widehat{S}_{\nu} \widehat{S}_{\lambda} \hat{S}_{\rho}\right\}= & \frac{S(S+1)(2 S+1)}{15}\left\{\left[S(S+1)+\frac{1}{2}\right](-1)^{\mu+\lambda}\left(\delta_{\mu-\nu} \delta_{\lambda-\rho}+\delta_{\mu-\rho} \delta_{\nu-\lambda}\right)\right. \\
-& \left.\quad+[S(S+1)-2](-1)^{\mu+\nu} \delta_{\mu-\lambda} \delta_{\nu-\rho}\right\} .
-\end{align*}
-
-
+\end{array}\right)=\frac{S(S+1)(2 S+1)}{3 \sqrt{2}}(-1)^{1+\lambda} \clebsch{1}{\mu}{1}{\nu}{1}{-\lambda},  \label{chap2:eq:57}\\
+\operatorname{Tr}\left\{\widehat{S}_{\mu} \widehat{S}_{\nu} \widehat{S}_{\lambda} \hat{S}_{\rho}\right\}= & \frac{S(S+1)(2 S+1)}{15}\left\{\left[S(S+1)+\frac{1}{2}\right](-1)^{\mu+\lambda}\left(\delta_{\mu-\nu} \delta_{\lambda-\rho}+\delta_{\mu-\rho} \delta_{\nu-\lambda}\right)\right.  \notag\\
+& \left.\quad+[S(S+1)-2](-1)^{\mu+\nu} \delta_{\mu-\lambda} \delta_{\nu-\rho}\right\} . \notag
+\end{align}
 Some analytic expressions for traces of products of many spin matrices in the spherical basis are given in Refs. [133, 144, 145].
 
-\subsection*{2.4. POLARIZATION OPERATORS}
-\subsection*{2.4.1. Definition}
+\section{POLARIZATION OPERATORS}
+\subsection{Definition}
 To describe a polarization (i.e., spin) state of a particle the so-called polarization operators are widely used. The polarization operators $\widehat{T}_{L M}(S)(M=-L,-L+1, \ldots L-1, L$ and $L=0,1, \ldots, 2 S ; L$ and $M$ being integers $)$ are $(2 S+1) \times(2 S+1)$ matrices which act on spin functions (see Chap. 6) and transform under rotations of the coordinate system according to the representation $D^{L}$. In other words, $\widehat{T}_{L M}(S)$ are irreducible tensors of rank $L$. Such transformation properties of $\widehat{T}_{L M}(S)$ with respect to rotations of the coordinate system imply the following commutation relations with spherical components of the spin operator $\widehat{S}_{\mu}(\mu= \pm 1,0)$
-
-
-\begin{equation*}
-\left[\widehat{S}_{\mu}, \widehat{T}_{L M}(S)\right]=\sqrt{L(L+1)} C_{L M 1 \mu}^{L M+\mu} \widehat{T}_{L M+\mu}(S) . \tag{1}
-\end{equation*}
-
-
+\begin{equation}
+\left[\widehat{S}_{\mu}, \widehat{T}_{L M}(S)\right]=\sqrt{L(L+1)} \clebsch{L}{M}{1}{\mu}{L}{M+\mu} \widehat{T}_{L M+\mu}(S) . \label{chap2:eq:58}
+\end{equation}
 Let us normalize the polarization operators by the condition
-
-
-\begin{equation*}
-\operatorname{Tr}\left\{\widehat{T}_{L M}^{+}(S) \widehat{T}_{L^{\prime} M^{\prime}}(S)\right\}=\delta_{L L^{\prime}} \delta_{M M^{\prime}} \tag{2}
-\end{equation*}
-
-
+\begin{equation}
+\operatorname{Tr}\left\{\widehat{T}_{L M}^{+}(S) \widehat{T}_{L^{\prime} M^{\prime}}(S)\right\}=\delta_{L L^{\prime}} \delta_{M M^{\prime}} \label{chap2:eq:59}
+\end{equation}
 and choose the phase factors to satisfy the relations
+\begin{equation}
+\widehat{T}_{L M}^{+}(S)=(-1)^{M} \widehat{T}_{L-M}(S) . \label{chap2:eq:60}
+\end{equation}
+The conditions \eqref{chap2:eq:58}-\eqref{chap2:eq:60} completely determine the polarization operators. The full complement of polarization operators $\hat{T}_{L M}(S)$ with $-L \leq M \leq L, 0 \leq L \leq 2 S$ constitutes a complete set of $\sum_{L=0}^{2 S}(2 L+1)=(2 S+1)^{2}$ linearly independent square $(2 S+1) \times(2 S+1)$ matrices.
 
-
-\begin{equation*}
-\widehat{T}_{L M}^{+}(S)=(-1)^{M} \widehat{T}_{L-M}(S) . \tag{3}
-\end{equation*}
-
-
-The conditions (1)-(3) completely determine the polarization operators. The full complement of polarization operators $\hat{T}_{L M}(S)$ with $-L \leq M \leq L, 0 \leq L \leq 2 S$ constitutes a complete set of $\sum_{L=0}^{2 S}(2 L+1)=(2 S+1)^{2}$ linearly independent square $(2 S+1) \times(2 S+1)$ matrices.
-
-\subsection*{2.4.2 Explicit Form}
+\subsection{Explicit Form}
 The polarization operators $\widehat{T}_{L M}(S)$ may be constructed from products of the spin matrices as
-
-
-\begin{equation*}
-\hat{T}_{L M}(S)=N_{L}(S)(\widehat{\mathbf{S}} \cdot \nabla)^{L}\left\{r^{L} Y_{L M}(\vartheta, \varphi)\right\} \tag{4}
-\end{equation*}
-
-
+\begin{equation}
+\hat{T}_{L M}(S)=N_{L}(S)(\widehat{\vect{S}} \cdot \nabla)^{L}\left\{r^{L} Y_{L M}(\vartheta, \varphi)\right\} \label{chap2:eq:61}
+\end{equation}
 where $\widehat{\mathrm{S}}$ is the spin operator, and $N_{L}(S)$ is the normalization factor given by
-
-
-\begin{equation*}
-N_{L}(S)=\frac{2^{L}}{L!}\left[\frac{4 \pi(2 S-L)!}{(2 S+L+1)!}\right]^{\frac{1}{2}} \tag{5}
-\end{equation*}
-
-
-Note that $\widehat{T}_{L M}(S)$ are actually independent of $r$, although the vector $r$ enters the right-hand side of Eq. (4). The operators $\widehat{T}_{L M}(S)$ may be expressed in terms of the basis spin functions $\chi_{S m}$ (Chap. 6) by
-
-
-\begin{equation*}
-\hat{T}_{L M}(S)=\sqrt{\frac{2 L+1}{2 S+1}} \sum_{m, m^{\prime}} C_{S m L M}^{S m^{\prime}} \chi_{S_{m^{\prime}}} \chi_{S m}^{+} \tag{6}
-\end{equation*}
-
-
+\begin{equation}
+N_{L}(S)=\frac{2^{L}}{L!}\left[\frac{4 \pi(2 S-L)!}{(2 S+L+1)!}\right]^{\frac{1}{2}} \label{chap2:eq:62}
+\end{equation}
+Note that $\widehat{T}_{L M}(S)$ are actually independent of $r$, although the vector $r$ enters the right-hand side of Eq. \eqref{chap2:eq:61}. The operators $\widehat{T}_{L M}(S)$ may be expressed in terms of the basis spin functions $\chi_{S m}$ (Chap. 6) by
+\begin{equation}
+\hat{T}_{L M}(S)=\sqrt{\frac{2 L+1}{2 S+1}} \sum_{m, m^{\prime}} \clebsch{S}{m}{L}{M}{S}{m^{\prime}} \chi_{S_{m^{\prime}}} \chi_{S m}^{+} \label{chap2:eq:63}
+\end{equation}
 The inverse relation is
-
-
-\begin{equation*}
-\chi_{S_{m^{\prime}}} \chi_{S m}^{+}=\sum_{L} \sqrt{\frac{2 L+1}{2 S+1}} C_{S m L M}^{S m^{\prime}} \hat{T}_{L M}(S) \tag{7}
-\end{equation*}
-
-
+\begin{equation}
+\chi_{S_{m^{\prime}}} \chi_{S m}^{+}=\sum_{L} \sqrt{\frac{2 L+1}{2 S+1}} \clebsch{S}{m}{L}{M}{S}{m^{\prime}} \hat{T}_{L M}(S) \label{chap2:eq:64}
+\end{equation}
 An explicit form of $\widehat{T}_{L M}(S)$ depends on the representation used for the spin functions. In particular, matrix elements of $\widehat{T}_{L M}(S)$ in the spherical basis representation are given by
-
-
-\begin{equation*}
-\left[\hat{T}_{L M}(S)\right]_{\sigma^{\prime} \sigma}=\sqrt{\frac{2 L+1}{2 S+1}} C_{S \sigma L M}^{S \sigma^{\prime}}, \quad\left(\sigma, \sigma^{\prime}=-S,-S+1, \ldots, S\right) \tag{8}
-\end{equation*}
-
-
+\begin{equation}
+\left[\hat{T}_{L M}(S)\right]_{\sigma^{\prime} \sigma}=\sqrt{\frac{2 L+1}{2 S+1}} \clebsch{S}{\sigma}{L}{M}{S}{\sigma^{\prime}}, \quad\left(\sigma, \sigma^{\prime}=-S,-S+1, \ldots, S\right) \label{chap2:eq:65}
+\end{equation}
 For $L=0$ the operators $\widehat{T}_{L M}(S)$ are proportional to the unit $(2 S+1) \times(2 S+1)$ matrix
-
-
-\begin{equation*}
-\widehat{T}_{00}(S)=\frac{1}{\sqrt{2 S+1}} \hat{I} \tag{9}
-\end{equation*}
-
-
+\begin{equation}
+\widehat{T}_{00}(S)=\frac{1}{\sqrt{2 S+1}} \hat{I} \label{chap2:eq:66}
+\end{equation}
 When $L=1$ the operators $\widehat{T}_{L M}(S)$ are proportional to the spherical components of the spin operator
-
-
-\begin{equation*}
-\widehat{T}_{1 M}(S)=\frac{\sqrt{3}}{\sqrt{S(S+1)(2 S+1)}} \widehat{S}_{M}, \quad(M= \pm 1,0) \tag{10}
-\end{equation*}
-
-
+\begin{equation}
+\widehat{T}_{1 M}(S)=\frac{\sqrt{3}}{\sqrt{S(S+1)(2 S+1)}} \widehat{S}_{M}, \quad(M= \pm 1,0) \label{chap2:eq:67}
+\end{equation}
 The polarization operators for a spin value $S=1$ are considered in Sec. 2.6.\\
 2.4.3. Properties of $\widehat{T}_{L M}(S)$ under Transformations of the Coordinate System\\
-(a) Coordinate inversion ( $\mathbf{r} \rightarrow-\mathbf{r}$ )
+(a) Coordinate inversion ( $\vect{r} \rightarrow-\vect{r}$ )
 
 The polarization operators $\widehat{T}_{L M}(S)$ are invariant under coordinate inversion
-
-
-\begin{equation*}
-\widehat{P}_{r} \widehat{T}_{L M}(S) \widehat{P}_{r}^{-1}=\widehat{T}_{L M}(S) . \tag{11}
-\end{equation*}
-
-
+\begin{equation}
+\widehat{P}_{r} \widehat{T}_{L M}(S) \widehat{P}_{r}^{-1}=\widehat{T}_{L M}(S) . \label{chap2:eq:68}
+\end{equation}
 (b) Rotation of coordinate system
 
 Under rotations specified by the Euler angles $\alpha, \beta, \gamma$ the polarization operators transform as
-
-
-\begin{equation*}
-\widehat{T}_{L M^{\prime}}^{\prime}(S)=\widehat{D}(\alpha, \beta, \gamma) \widehat{T}_{L M^{\prime}}(S)[\widehat{D}(\alpha, \beta, \gamma)]^{-1}=\sum_{M} D_{M M^{\prime}}^{L}(\alpha, \beta, \gamma) \widehat{T}_{L M}(S) \tag{12}
-\end{equation*}
-
-
+\begin{equation}
+\widehat{T}_{L M^{\prime}}^{\prime}(S)=\widehat{D}(\alpha, \beta, \gamma) \widehat{T}_{L M^{\prime}}(S)[\widehat{D}(\alpha, \beta, \gamma)]^{-1}=\sum_{M} D_{M M^{\prime}}^{L}(\alpha, \beta, \gamma) \widehat{T}_{L M}(S) \label{chap2:eq:69}
+\end{equation}
 where $\widehat{D}(\alpha, \beta, \gamma)$ is the rotation operator (see Sec. 1.4.5), and $D_{M M^{\prime}}^{L}$ are the Wigner $D$-functions (Chap. 4).
 
-\subsection*{2.4.4. Expansion Series of Polarization Operators}
+\subsection{Expansion Series of Polarization Operators}
 As has been mentioned above (Sec.2.4.1) the polarization operators $\hat{T}_{L M}(S)$ form a complete set of linearly independent matrices. An arbitrary square $(2 S+1) \times(2 S+1)$ matrix $\hat{A}$ (with $S$ integer or half-integer) may be expanded in a series of the polarization operators $\widehat{T}_{L M}(S)$, i.e., it may be written in the form
-
-
-\begin{equation*}
-\widehat{A}=\sum_{L=0}^{2 S} \sum_{M=-L}^{L} A_{L M} \widehat{T}_{L M}(S) \tag{13}
-\end{equation*}
-
-
+\begin{equation}
+\widehat{A}=\sum_{L=0}^{2 S} \sum_{M=-L}^{L} A_{L M} \widehat{T}_{L M}(S) \label{chap2:eq:70}
+\end{equation}
 where the expansion coefficients $A_{L M}$ are given by
-
-
-\begin{equation*}
-A_{L M}=\operatorname{Tr}\left\{\widehat{T}_{L M}^{+}(S) \hat{A}\right\} . \tag{14}
-\end{equation*}
-
-
+\begin{equation}
+A_{L M}=\operatorname{Tr}\left\{\widehat{T}_{L M}^{+}(S) \hat{A}\right\} . \label{chap2:eq:71}
+\end{equation}
 If the matrix $\widehat{A}$ is Hermitian, i.e., $\widehat{A}^{+}=\widehat{A}$, then
-
-
-\begin{equation*}
-A_{L M}^{*}=(-1)^{M} A_{L-M} \tag{15}
-\end{equation*}
-
-
+\begin{equation}
+A_{L M}^{*}=(-1)^{M} A_{L-M} \label{chap2:eq:72}
+\end{equation}
 Some examples of such expansions are given below.\\
 (a) Clebsch-Gordan series for polarization operators
 
 Products of two polarization operators $\widehat{T}_{L_{1} M_{1}}(S)$ and $\widehat{T}_{L_{2} M_{2}}(S)$ may be written in the form of a ClebschGordan series
-
-\[
+\begin{equation}
 \widehat{T}_{L_{1} M_{1}}(S) \widehat{T}_{L_{2} M_{2}}(S)=\sum_{L}(-1)^{2 S+L} \sqrt{\left(2 L_{1}+1\right)\left(2 L_{2}+1\right)}\left\{\begin{array}{ccc}
-L_{1} & L_{2} & L  \tag{16}\\
+L_{1} & L_{2} & L  \label{chap2:eq:73}\\
 S & S & S
-\end{array}\right\} C_{L_{1} M_{1} L_{2} M_{2}}^{L M} \widehat{T}_{L M}(S)
-\]
-
-\section*{(b) Expansion of rotation operator}
-If one is interested only in transformation properties of spin functions and spin operators under rotations of the coordinate system, one may replace the total angular momentum operator $\widehat{\mathbf{J}}$ by the spin operator $\widehat{\mathbf{S}}$ in the general expressions for the rotation operator 1.4(31) and 1.4(33). Such a modified operator will be labelled by a superscript $S$. If a rotation is defined by the Euler angles $\alpha, \beta, \gamma$, the rotation operator $\hat{D}^{S}(\alpha, \beta, \gamma)$ may be expressed as follows
-
-
-\begin{equation*}
-\hat{D}^{S}(\alpha, \beta, \gamma) \equiv e^{-i \alpha \widehat{S}_{z}} e^{-i \beta \widehat{S}_{y}} e^{-i \gamma \widehat{S}_{z}}=\sum_{L, M, m, m^{\prime}} \frac{2 L+1}{2 S+1} C_{S m^{\prime} L M}^{S m} D_{m m^{\prime}}^{S}(\alpha, \beta, \gamma) \hat{T}_{L M}(S) \tag{17}
-\end{equation*}
-
-
+\end{array}\right\} \clebsch{L_{1}}{M_{1}}{L_{2}}{M_{2}}{L}{M} \widehat{T}_{L M}(S)
+\end{equation}
+\subsubsection{(b) Expansion of rotation operator}
+If one is interested only in transformation properties of spin functions and spin operators under rotations of the coordinate system, one may replace the total angular momentum operator $\widehat{\vect{J}}$ by the spin operator $\widehat{\vect{S}}$ in the general expressions for the rotation operator 1.4(31) and 1.4(33). Such a modified operator will be labelled by a superscript $S$. If a rotation is defined by the Euler angles $\alpha, \beta, \gamma$, the rotation operator $\hat{D}^{S}(\alpha, \beta, \gamma)$ may be expressed as follows
+\begin{equation}
+\hat{D}^{S}(\alpha, \beta, \gamma) \equiv e^{-i \alpha \widehat{S}_{z}} e^{-i \beta \widehat{S}_{y}} e^{-i \gamma \widehat{S}_{z}}=\sum_{L, M, m, m^{\prime}} \frac{2 L+1}{2 S+1} \clebsch{S}{m^{\prime}}{L}{M}{S}{m} D_{m m^{\prime}}^{S}(\alpha, \beta, \gamma) \hat{T}_{L M}(S) \label{chap2:eq:74}
+\end{equation}
 If a rotation is defined by the rotation axis $n(\Theta, \Phi)$ and the rotation angle $\omega$, the expansion of the rotation operator $\hat{U}^{S}(\omega ; \Theta, \Phi)$ is given by
-
-
-\begin{equation*}
-\widehat{U}^{S}(\omega ; \Theta, \Phi) \equiv e^{-i \omega n \cdot \widehat{\mathbf{s}}}=2 \sqrt{\pi} \sum_{L=0}^{2 S} \frac{(-i)^{L}}{\sqrt{2 S+1}} \chi_{L}^{S}(\omega) \sum_{M=-L}^{L} Y_{L M}^{*}(\Theta, \Phi) \widehat{T}_{L M}(S) \tag{18}
-\end{equation*}
-
-
+\begin{equation}
+\widehat{U}^{S}(\omega ; \Theta, \Phi) \equiv e^{-i \omega n \cdot \widehat{\vect{s}}}=2 \sqrt{\pi} \sum_{L=0}^{2 S} \frac{(-i)^{L}}{\sqrt{2 S+1}} \chi_{L}^{S}(\omega) \sum_{M=-L}^{L} Y_{L M}^{*}(\Theta, \Phi) \widehat{T}_{L M}(S) \label{chap2:eq:75}
+\end{equation}
 where the functions $\chi_{L}^{S}(\omega)$ are the generalized characters (see Sec. 4.15).
 
-\subsection*{2.4.5. Commutators and Anticommutators}
+\subsection{Commutators and Anticommutators}
 The polarization operators satisfy the following commutation relations
-
-
-\begin{align*}
-& {\left[\widehat{T}_{L_{1} M_{1}}(S), \widehat{T}_{L_{2} M_{2}}(S)\right]=} \\
+\begin{align}
+& {\left[\widehat{T}_{L_{1} M_{1}}(S), \widehat{T}_{L_{2} M_{2}}(S)\right]=}  \notag\\
 & \quad \sqrt{\left(2 L_{1}+1\right)\left(2 L_{2}+1\right)} \sum_{L_{3}}(-1)^{2 S+L_{3}}\left[1-(-1)^{L_{1}+L_{2}+L_{3}}\right]\left\{\begin{array}{ccc}
 L_{1} & L_{2} & L_{3} \\
 S & S & S
-\end{array}\right\} C_{L_{1} M_{1} L_{2} M_{2}}^{L_{3} M_{3}} \widehat{T}_{L_{3} M_{3}}(S)  \tag{19}\\
-& \left\{\widehat{T}_{L_{1} M_{1}}(S), \widehat{T}_{L_{2} M_{2}}(S)\right\}= \\
+\end{array}\right\} \clebsch{L_{1}}{M_{1}}{L_{2}}{M_{2}}{L_{3}}{M_{3}} \widehat{T}_{L_{3} M_{3}}(S)  \label{chap2:eq:76}\\
+& \left\{\widehat{T}_{L_{1} M_{1}}(S), \widehat{T}_{L_{2} M_{2}}(S)\right\}=  \notag\\
 & \quad \sqrt{\left(2 L_{1}+1\right)\left(2 L_{2}+1\right)} \sum_{L_{3}}(-1)^{2 S+L_{3}}\left[1+(-1)^{L_{1}+L_{2}+L_{3}}\right]\left\{\begin{array}{ccc}
 L_{1} & L_{2} & L_{3} \\
 S & S & S
-\end{array}\right\} C_{L_{1} M_{1} L_{2} M_{3}}^{L_{3} M_{3}} \widehat{T}_{L_{3} M_{3}}(S) \tag{20}
-\end{align*}
+\end{array}\right\} \clebsch{L_{1}}{M_{1}}{L_{2}}{M_{3}}{L_{3}}{M_{3}} \widehat{T}_{L_{3} M_{3}}(S) \label{chap2:eq:77}
+\end{align}
+Equation \eqref{chap2:eq:58} is a special case of \eqref{chap2:eq:76} for $L_{1}=1$.
 
-
-Equation (1) is a special case of (19) for $L_{1}=1$.
-
-\subsection*{2.4.6. Traces of Products of Polarization Operators}
-
-\begin{gather*}
-\operatorname{Tr}\left\{\widehat{T}_{L M}(S)\right\}=\sqrt{2 S+1} \delta_{L O} \delta_{M O},  \tag{21}\\
-\operatorname{Tr}\left\{\widehat{T}_{L_{1} M_{1}}(S) \widehat{T}_{L_{2} M_{2}}(S)\right\}=(-1)^{M_{1}} \delta_{L_{1} L_{2}} \delta_{M_{1}-M_{2}},  \tag{22}\\
-\operatorname{Tr}\left\{\widehat{T}_{L_{1} M_{1}}(S) \widehat{T}_{L_{2} M_{2}}(S) \widehat{T}_{L_{3} M_{3}}(S)\right\}=(-1)^{2 S+L_{3}+M_{3}} \sqrt{\left(2 L_{1}+1\right)\left(2 L_{2}+1\right)} C_{L_{1} M_{1} L_{2} M_{2}}^{L_{3}-M_{3}}\left\{\begin{array}{cc}
+\subsection{Traces of Products of Polarization Operators}
+\begin{gather}
+\operatorname{Tr}\left\{\widehat{T}_{L M}(S)\right\}=\sqrt{2 S+1} \delta_{L O} \delta_{M O},  \label{chap2:eq:78}\\
+\operatorname{Tr}\left\{\widehat{T}_{L_{1} M_{1}}(S) \widehat{T}_{L_{2} M_{2}}(S)\right\}=(-1)^{M_{1}} \delta_{L_{1} L_{2}} \delta_{M_{1}-M_{2}},  \label{chap2:eq:79}\\
+\operatorname{Tr}\left\{\widehat{T}_{L_{1} M_{1}}(S) \widehat{T}_{L_{2} M_{2}}(S) \widehat{T}_{L_{3} M_{3}}(S)\right\}=(-1)^{2 S+L_{3}+M_{3}} \sqrt{\left(2 L_{1}+1\right)\left(2 L_{2}+1\right)} \clebsch{L_{1}}{M_{1}}{L_{2}}{M_{2}}{L_{3}}{-M_{3}}\left\{\begin{array}{cc}
 L_{1} & L_{2} L_{3} \\
 S & S \\
 S
-\end{array}\right\} . \tag{23}
-\end{gather*}
-
-
+\end{array}\right\} . \label{chap2:eq:80}
+\end{gather}
 In general
-
-
-\begin{align*}
-\operatorname{Tr}\left\{\hat{T}_{L_{1} M_{1}}(S)\right. & \left.\hat{T}_{L_{2} M_{2}}(S) \ldots \hat{T}_{L_{n} M_{n}}(S)\right\}=\frac{\left[\left(2 L_{1}+1\right)\left(2 L_{2}+1\right) \ldots\left(2 L_{n}+1\right)\right]}{(2 S+1)^{n / 2}} \\
-& \times \delta_{M_{1}+M_{3}+M_{3}+\ldots+M_{n, 0}} \sum_{m} C_{L_{1} M_{1} S m}^{S m+\mu_{1}} C_{L_{2} M_{2} S m+\mu_{1}}^{S m+\mu_{2}} \ldots C_{L_{n} M_{n} S m+\mu_{n-1}}^{S m} \tag{24}
-\end{align*}
-
-
+\begin{align}
+\operatorname{Tr}\left\{\hat{T}_{L_{1} M_{1}}(S)\right. & \left.\hat{T}_{L_{2} M_{2}}(S) \ldots \hat{T}_{L_{n} M_{n}}(S)\right\}=\frac{\left[\left(2 L_{1}+1\right)\left(2 L_{2}+1\right) \ldots\left(2 L_{n}+1\right)\right]}{(2 S+1)^{n / 2}}  \notag\\
+& \times \delta_{M_{1}+M_{3}+M_{3}+\ldots+M_{n, 0}} \sum_{m} \clebsch{L_{1}}{M_{1}}{S}{m}{S}{m+\mu_{1}} \clebsch{L_{2}}{M_{2}}{S}{m+\mu_{1}}{S}{m+\mu_{2}} \ldots \clebsch{L_{n}}{M_{n}}{S}{m+\mu_{n-1}}{S}{m} \label{chap2:eq:81}
+\end{align}
 where
-
-$$
-\mu_{k}=\sum_{i=1}^{k} M_{i}
-$$
-
-\subsection*{2.5. SPIN MATRICES FOR $S=1 / 2$}
-\subsection*{2.5.1. Explicit Form}
-For the particular case $S=\frac{1}{2}$, the spin operator $\widehat{\mathrm{S}}$ is represented by a set of three square $2 \times 2$ matrices. Cartesian components of $\widehat{\mathbf{S}}$ in the spherical basis representation are given by
-
 \[
+\mu_{k}=\sum_{i=1}^{k} M_{i}
+\]
+\section{SPIN MATRICES FOR $S=1 / 2$}
+\subsection{Explicit Form}
+For the particular case $S=\frac{1}{2}$, the spin operator $\widehat{\mathrm{S}}$ is represented by a set of three square $2 \times 2$ matrices. Cartesian components of $\widehat{\vect{S}}$ in the spherical basis representation are given by
+\begin{equation}
 \hat{S}_{x}=\frac{1}{2}\left(\begin{array}{ll}
-0 & 1  \tag{1}\\
+0 & 1  \label{chap2:eq:82}\\
 1 & 0
 \end{array}\right), \quad \hat{S}_{y}=\frac{1}{2}\left(\begin{array}{rr}
 0 & -i \\
@@ -771,13 +470,11 @@ i & 0
 1 & 0 \\
 0 & -1
 \end{array}\right) .
-\]
-
+\end{equation}
 whereas spherical components are written as
-
-\[
+\begin{equation}
 \widehat{S}_{+1}=-\frac{1}{\sqrt{2}}\left(\begin{array}{ll}
-0 & 1  \tag{2}\\
+0 & 1  \label{chap2:eq:83}\\
 0 & 0
 \end{array}\right), \quad \widehat{S}_{0}=\frac{1}{2}\left(\begin{array}{rr}
 1 & 0 \\
@@ -786,376 +483,238 @@ whereas spherical components are written as
 0 & 0 \\
 1 & 0
 \end{array}\right) .
-\]
-
+\end{equation}
 In addition to the spin matrices, the unit $2 \times 2$ matrix $\hat{I}$ is usually introduced:
-
-\[
+\begin{equation}
 \widehat{I}=\left(\begin{array}{ll}
-1 & 0  \tag{3}\\
+1 & 0  \label{chap2:eq:84}\\
 0 & 1
 \end{array}\right)
-\]
-
-Note that the Pauli matrices $\hat{\sigma}$ are widely used instead of the spin operator $\widehat{\mathbf{S}}$. The Pauli matrices are proportional to the spin operator
-
-
-\begin{equation*}
-\widehat{\mathrm{S}}=\frac{1}{2} \widehat{\sigma} \tag{4}
-\end{equation*}
-
-
-Equations (1) and (2) yield the following properties of the spin matrices
-
-
-\begin{gather*}
-\widehat{S}_{i}^{+}=\widehat{S}_{i}, \quad(i=x, y, z),  \tag{5}\\
-\widehat{S}_{\mu}^{+}=(-1)^{\mu} \widehat{S}_{-\mu}, \quad(\mu= \pm 1,0),  \tag{6}\\
-\widehat{S}_{x}^{*}=\widehat{S}_{x}, \quad \widehat{S}_{y}^{*}=-\widehat{S}_{y}, \quad \widehat{S}_{z}^{*}=\widehat{S}_{z},  \tag{7}\\
-\widehat{S}_{\mu}^{*}=\widehat{S}_{\mu}, \quad(\mu= \pm 1,0) . \tag{8}
-\end{gather*}
-
-
-\subsection*{2.5.2 Commutators and Anticommutators}
+\end{equation}
+Note that the Pauli matrices $\hat{\sigma}$ are widely used instead of the spin operator $\widehat{\vect{S}}$. The Pauli matrices are proportional to the spin operator
+\begin{equation}
+\widehat{\mathrm{S}}=\frac{1}{2} \widehat{\sigma} \label{chap2:eq:85}
+\end{equation}
+Equations \eqref{chap2:eq:82} and \eqref{chap2:eq:83} yield the following properties of the spin matrices
+\begin{gather}
+\widehat{S}_{i}^{+}=\widehat{S}_{i}, \quad(i=x, y, z),  \label{chap2:eq:86}\\
+\widehat{S}_{\mu}^{+}=(-1)^{\mu} \widehat{S}_{-\mu}, \quad(\mu= \pm 1,0),  \label{chap2:eq:87}\\
+\widehat{S}_{x}^{*}=\widehat{S}_{x}, \quad \widehat{S}_{y}^{*}=-\widehat{S}_{y}, \quad \widehat{S}_{z}^{*}=\widehat{S}_{z},  \label{chap2:eq:88}\\
+\widehat{S}_{\mu}^{*}=\widehat{S}_{\mu}, \quad(\mu= \pm 1,0) . \label{chap2:eq:89}
+\end{gather}
+\subsection{Commutators and Anticommutators}
 The cartesian components of the spin operator satisfy the following relations
-
-
-\begin{equation*}
-\left[\widehat{S}_{i}, \widehat{S}_{k}\right]=i \varepsilon_{i k l} \widehat{S}_{l}, \quad\left\{\widehat{S}_{i}, \widehat{S}_{k}\right\}=\frac{1}{2} \delta_{i k} \widehat{I}, \quad(i, k, l=x, y, z) \tag{9}
-\end{equation*}
-
-
+\begin{equation}
+\left[\widehat{S}_{i}, \widehat{S}_{k}\right]=i \varepsilon_{i k l} \widehat{S}_{l}, \quad\left\{\widehat{S}_{i}, \widehat{S}_{k}\right\}=\frac{1}{2} \delta_{i k} \widehat{I}, \quad(i, k, l=x, y, z) \label{chap2:eq:90}
+\end{equation}
 For spherical components these relations take the form
-
-
-\begin{equation*}
-\left[\widehat{S}_{\mu}, \widehat{S}_{\nu}\right]=-\sqrt{2} C_{1 \mu 1 \nu}^{1 \lambda} S_{\lambda}, \quad\left\{\widehat{S}_{\mu}, \widehat{S}_{\nu}\right\}=\frac{1}{2}(-1)^{\mu} \delta_{\mu-\nu} \widehat{I}, \quad(\mu, \nu, \lambda= \pm 1,0) \tag{10}
-\end{equation*}
-
-
-\subsection*{2.5.3. Products of Spin Matrices}
+\begin{equation}
+\left[\widehat{S}_{\mu}, \widehat{S}_{\nu}\right]=-\sqrt{2} \clebsch{1}{\mu}{1}{\nu}{1}{\lambda} S_{\lambda}, \quad\left\{\widehat{S}_{\mu}, \widehat{S}_{\nu}\right\}=\frac{1}{2}(-1)^{\mu} \delta_{\mu-\nu} \widehat{I}, \quad(\mu, \nu, \lambda= \pm 1,0) \label{chap2:eq:91}
+\end{equation}
+\subsection{Products of Spin Matrices}
 The four matrices $\widehat{S}_{x}, \widehat{S}_{y}, \widehat{S}_{z}$ and $\widehat{I}$ (or $\widehat{S}_{+1}, \widehat{S}_{0}, \widehat{S}_{-1}$ and $\widehat{I}$ ) constitute a complete set of square $2 \times 2$ matrices. Any function of the spin operator ( $S=\frac{1}{2}$ ) may be expanded in a series in terms of these matrices. In particular, products of the spin matrices may also be written in such a form. Products of cartesian components (where the indices $i, k, l$, etc. take the values $x, y, z)$ are given by
-
-
-\begin{align*}
-\widehat{S}_{i} \widehat{S}_{k}= & \frac{1}{4} \delta_{i k} \widehat{I}+\frac{i}{2} \varepsilon_{i k l} \widehat{S}_{l}  \tag{11}\\
-\widehat{S}_{i} \widehat{S}_{k} \widehat{S}_{l}= & \frac{i}{8} \varepsilon_{i k l} \widehat{I}+\frac{1}{4}\left(\widehat{S}_{i} \delta_{k l}-\widehat{S}_{k} \delta_{i l}+\widehat{S}_{l} \delta_{i k}\right)  \tag{12}\\
-\widehat{S}_{i} \widehat{S}_{k} \widehat{S}_{l} \widehat{S}_{j}= & \frac{1}{6}\left(\delta_{i k} \delta_{l j}-\delta_{i l} \delta_{k j}+\delta_{i j} \delta_{k l}\right) \widehat{I} \\
-& +\frac{i}{8}\left(\delta_{i k} \varepsilon_{l j m}-\delta_{i l} \varepsilon_{k j m}+\delta_{i j} \varepsilon_{k l m}+\delta_{k l} \varepsilon_{i j m}-\delta_{k j} \varepsilon_{i l m}+\delta_{l j} \varepsilon_{i k m}\right) \widehat{S}_{m} \tag{13}
-\end{align*}
-
-
-In more detailed form, Eq. (11) is written as
-
-
-\begin{gather*}
-\widehat{S}_{x}^{2}=\widehat{S}_{y}^{2}=\widehat{S}_{z}^{2}=\frac{1}{4} \widehat{I} \\
-\widehat{S}_{x} \widehat{S}_{y}=-\widehat{S}_{y} \widehat{S}_{x}=\frac{i}{2} \widehat{S}_{z}, \quad \widehat{S}_{y} \widehat{S}_{z}=-\widehat{S}_{z} \widehat{S}_{y}=\frac{i}{2} \widehat{S}_{x}  \tag{14}\\
-\widehat{S}_{z} \hat{S}_{x}=-\widehat{S}_{x} \widehat{S}_{z}=\frac{i}{2} \hat{S}_{y}
-\end{gather*}
-
-
+\begin{align}
+\widehat{S}_{i} \widehat{S}_{k}= & \frac{1}{4} \delta_{i k} \widehat{I}+\frac{i}{2} \varepsilon_{i k l} \widehat{S}_{l}  \label{chap2:eq:92}\\
+\widehat{S}_{i} \widehat{S}_{k} \widehat{S}_{l}= & \frac{i}{8} \varepsilon_{i k l} \widehat{I}+\frac{1}{4}\left(\widehat{S}_{i} \delta_{k l}-\widehat{S}_{k} \delta_{i l}+\widehat{S}_{l} \delta_{i k}\right)  \label{chap2:eq:93}\\
+\widehat{S}_{i} \widehat{S}_{k} \widehat{S}_{l} \widehat{S}_{j}= & \frac{1}{6}\left(\delta_{i k} \delta_{l j}-\delta_{i l} \delta_{k j}+\delta_{i j} \delta_{k l}\right) \widehat{I}  \notag\\
+& +\frac{i}{8}\left(\delta_{i k} \varepsilon_{l j m}-\delta_{i l} \varepsilon_{k j m}+\delta_{i j} \varepsilon_{k l m}+\delta_{k l} \varepsilon_{i j m}-\delta_{k j} \varepsilon_{i l m}+\delta_{l j} \varepsilon_{i k m}\right) \widehat{S}_{m} \label{chap2:eq:94}
+\end{align}
+In more detailed form, Eq. \eqref{chap2:eq:92} is written as
+\begin{gather}
+\widehat{S}_{x}^{2}=\widehat{S}_{y}^{2}=\widehat{S}_{z}^{2}=\frac{1}{4} \widehat{I}  \notag\\
+\widehat{S}_{x} \widehat{S}_{y}=-\widehat{S}_{y} \widehat{S}_{x}=\frac{i}{2} \widehat{S}_{z}, \quad \widehat{S}_{y} \widehat{S}_{z}=-\widehat{S}_{z} \widehat{S}_{y}=\frac{i}{2} \widehat{S}_{x}  \label{chap2:eq:95}\\
+\widehat{S}_{z} \hat{S}_{x}=-\widehat{S}_{x} \widehat{S}_{z}=\frac{i}{2} \hat{S}_{y} \notag
+\end{gather}
 Products of spherical components are as follows:
-
-
-\begin{gather*}
-\widehat{S}_{+1} \widehat{S}_{+1}=0, \quad \widehat{S}_{0} \widehat{S}_{0}=\frac{1}{4} \widehat{I}, \quad \widehat{S}_{-1} \widehat{S}_{-1}=0 \\
+\begin{gather}
+\widehat{S}_{+1} \widehat{S}_{+1}=0, \quad \widehat{S}_{0} \widehat{S}_{0}=\frac{1}{4} \widehat{I}, \quad \widehat{S}_{-1} \widehat{S}_{-1}=0  \notag\\
 \widehat{S}_{+1} \widehat{S}_{-1}=-\frac{1}{2}\left(\begin{array}{cc}
 1 & 0 \\
 0 & 0
-\end{array}\right)=-\frac{1}{4} \widehat{I}-\frac{1}{2} \widehat{S}_{0} \\
+\end{array}\right)=-\frac{1}{4} \widehat{I}-\frac{1}{2} \widehat{S}_{0}  \notag\\
 \widehat{S}_{-1} \widehat{S}_{+1}=-\frac{1}{2}\left(\begin{array}{cc}
 0 & 0 \\
 0 & 1
-\end{array}\right)=-\frac{1}{4} \widehat{I}+\frac{1}{2} \widehat{S}_{0}  \tag{15}\\
-\widehat{S}_{+1} \widehat{S}_{0}=-\frac{1}{2} \widehat{S}_{+1}, \quad \widehat{S}_{-1} \widehat{S}_{0}=\frac{1}{2} \widehat{S}_{-1} \\
-\widehat{S}_{0} \widehat{S}_{+1}=\frac{1}{2} \widehat{S}_{+1}, \quad \widehat{S}_{0} \widehat{S}_{-1}=-\frac{1}{2} \widehat{S}_{-1} \\
-\widehat{S}_{\mu} \widehat{S}_{\nu}=\frac{1}{4}(-1)^{\mu} \delta_{\mu-\nu} \widehat{I}-\frac{1}{\sqrt{2}} C_{1 \mu 1 \nu}^{1 \lambda} \widehat{S}_{\lambda},(\mu, \nu, \lambda= \pm 1,0), \quad\left(\widehat{S}_{+1}\right)^{n}=0, \quad\left(\widehat{S}_{-1}\right)^{n}=0, \quad(n=2,3, \ldots),  \tag{16}\\
-\left(\widehat{S}_{0}\right)^{2 n}=\left(\frac{1}{4}\right)^{n} \widehat{I},\left(\widehat{S}_{0}\right)^{2 n+1}=\left(\frac{1}{4}\right)^{n} \widehat{S}_{0}, \quad(n=0,1,2, \ldots),  \tag{17}\\
-\widehat{\mathbf{S}} \cdot \widehat{\mathbf{S}}=\widehat{\mathbf{S}}^{2}=\widehat{S}_{x}^{2}+\widehat{S}_{y}^{2}+\widehat{S}_{z}^{2}=-\widehat{S}_{+1} \widehat{S}_{-1}+\widehat{S}_{0} \widehat{S}_{0}-\widehat{S}_{-1} \widehat{S}_{+1}=\frac{3}{4} \widehat{I} \tag{18}
-\end{gather*}
-
-
-Products of the operators $\widehat{\mathbf{S}}$ and any vectors $a$ and $b$ commuting with $\widehat{\mathbf{S}}$ may be written in the form
-
-
-\begin{align*}
-\widehat{\mathbf{S}} \cdot(\widehat{\mathbf{S}} \cdot \mathbf{a}) & =\frac{1}{4} \widehat{I} \mathbf{a}-\frac{i}{2}[\widehat{\mathbf{S}} \times \mathbf{a}],  \tag{19}\\
-(\widehat{\mathbf{S}} \cdot[\widehat{\mathbf{S}} \times \mathbf{a}]) & =([\widehat{\mathbf{S}} \times \widehat{\mathbf{S}}] \cdot \mathbf{a})=i(\widehat{\mathbf{S}} \cdot \mathbf{a}), \tag{20}
-\end{align*}
-
-
-
-\begin{gather*}
-{[\widehat{\mathbf{S}} \times[\widehat{\mathbf{S}} \times \mathbf{a}]]=-\frac{1}{2} \widehat{I} \mathbf{a}+\frac{i}{2}[\widehat{\mathbf{S}} \times \mathbf{a}],}  \tag{21}\\
-(\widehat{\mathbf{S}} \cdot \mathbf{a})(\widehat{\mathbf{S}} \cdot \mathbf{b})=\frac{1}{4}(\mathbf{a} \cdot \mathbf{b}) \widehat{I}+\frac{i}{2}(\widehat{\mathbf{S}} \cdot[\mathbf{a} \times \mathbf{b}]),  \tag{22}\\
-([\widehat{\mathbf{S}} \times \mathbf{a}] \cdot[\widehat{\mathbf{S}} \times \mathbf{b}])=\frac{1}{2}(\mathbf{a} \cdot \mathbf{b}) \widehat{I}+\frac{i}{2}(\widehat{\mathbf{S}} \cdot[\mathbf{a} \times \mathbf{b}]),  \tag{23}\\
-(\widehat{\mathbf{S}} \cdot \mathbf{a})[\widehat{\mathbf{S}} \times \mathbf{b}]=\frac{1}{4}[\mathbf{a} \times \mathbf{b}] \widehat{I}+\frac{i}{2}\{(\widehat{\mathbf{S}} \cdot \mathbf{b}) \mathbf{a}-(\mathbf{a} \cdot \mathbf{b}) \widehat{\mathbf{S}}\},  \tag{24}\\
-{[[\widehat{\mathbf{S}} \times \mathbf{a}] \times[\widehat{\mathbf{S}} \times \mathbf{b}]]=\frac{1}{4}[\mathbf{a} \times \mathbf{b}] \widehat{I}+\frac{i}{2}\{(\widehat{\mathbf{S}} \cdot \mathbf{b}) \mathbf{a}+(\widehat{\mathbf{S}} \cdot \mathbf{a}) \mathbf{b}\} .} \tag{25}
-\end{gather*}
-
-
+\end{array}\right)=-\frac{1}{4} \widehat{I}+\frac{1}{2} \widehat{S}_{0}  \label{chap2:eq:96}\\
+\widehat{S}_{+1} \widehat{S}_{0}=-\frac{1}{2} \widehat{S}_{+1}, \quad \widehat{S}_{-1} \widehat{S}_{0}=\frac{1}{2} \widehat{S}_{-1}  \notag\\
+\widehat{S}_{0} \widehat{S}_{+1}=\frac{1}{2} \widehat{S}_{+1}, \quad \widehat{S}_{0} \widehat{S}_{-1}=-\frac{1}{2} \widehat{S}_{-1}  \notag\\
+\widehat{S}_{\mu} \widehat{S}_{\nu}=\frac{1}{4}(-1)^{\mu} \delta_{\mu-\nu} \widehat{I}-\frac{1}{\sqrt{2}} \clebsch{1}{\mu}{1}{\nu}{1}{\lambda} \widehat{S}_{\lambda},(\mu, \nu, \lambda= \pm 1,0), \quad\left(\widehat{S}_{+1}\right)^{n}=0, \quad\left(\widehat{S}_{-1}\right)^{n}=0, \quad(n=2,3, \ldots),  \label{chap2:eq:97}\\
+\left(\widehat{S}_{0}\right)^{2 n}=\left(\frac{1}{4}\right)^{n} \widehat{I},\left(\widehat{S}_{0}\right)^{2 n+1}=\left(\frac{1}{4}\right)^{n} \widehat{S}_{0}, \quad(n=0,1,2, \ldots),  \label{chap2:eq:98}\\
+\widehat{\vect{S}} \cdot \widehat{\vect{S}}=\widehat{\vect{S}}^{2}=\widehat{S}_{x}^{2}+\widehat{S}_{y}^{2}+\widehat{S}_{z}^{2}=-\widehat{S}_{+1} \widehat{S}_{-1}+\widehat{S}_{0} \widehat{S}_{0}-\widehat{S}_{-1} \widehat{S}_{+1}=\frac{3}{4} \widehat{I} \label{chap2:eq:99}
+\end{gather}
+Products of the operators $\widehat{\vect{S}}$ and any vectors $a$ and $b$ commuting with $\widehat{\vect{S}}$ may be written in the form
+\begin{align}
+\widehat{\vect{S}} \cdot(\widehat{\vect{S}} \cdot \vect{a}) & =\frac{1}{4} \widehat{I} \vect{a}-\frac{i}{2}[\widehat{\vect{S}} \times \vect{a}],  \label{chap2:eq:100}\\
+(\widehat{\vect{S}} \cdot[\widehat{\vect{S}} \times \vect{a}]) & =([\widehat{\vect{S}} \times \widehat{\vect{S}}] \cdot \vect{a})=i(\widehat{\vect{S}} \cdot \vect{a}), \label{chap2:eq:101}
+\end{align}
+\begin{gather}
+{[\widehat{\vect{S}} \times[\widehat{\vect{S}} \times \vect{a}]]=-\frac{1}{2} \widehat{I} \vect{a}+\frac{i}{2}[\widehat{\vect{S}} \times \vect{a}],}  \label{chap2:eq:102}\\
+(\widehat{\vect{S}} \cdot \vect{a})(\widehat{\vect{S}} \cdot \vect{b})=\frac{1}{4}(\vect{a} \cdot \vect{b}) \widehat{I}+\frac{i}{2}(\widehat{\vect{S}} \cdot[\vect{a} \times \vect{b}]),  \label{chap2:eq:103}\\
+([\widehat{\vect{S}} \times \vect{a}] \cdot[\widehat{\vect{S}} \times \vect{b}])=\frac{1}{2}(\vect{a} \cdot \vect{b}) \widehat{I}+\frac{i}{2}(\widehat{\vect{S}} \cdot[\vect{a} \times \vect{b}]),  \label{chap2:eq:104}\\
+(\widehat{\vect{S}} \cdot \vect{a})[\widehat{\vect{S}} \times \vect{b}]=\frac{1}{4}[\vect{a} \times \vect{b}] \widehat{I}+\frac{i}{2}\{(\widehat{\vect{S}} \cdot \vect{b}) \vect{a}-(\vect{a} \cdot \vect{b}) \widehat{\vect{S}}\},  \label{chap2:eq:105}\\
+{[[\widehat{\vect{S}} \times \vect{a}] \times[\widehat{\vect{S}} \times \vect{b}]]=\frac{1}{4}[\vect{a} \times \vect{b}] \widehat{I}+\frac{i}{2}\{(\widehat{\vect{S}} \cdot \vect{b}) \vect{a}+(\widehat{\vect{S}} \cdot \vect{a}) \vect{b}\} .} \label{chap2:eq:106}
+\end{gather}
 If $n$ is a unit vector ( $n^{2}=1$ ), then
-
-
-\begin{equation*}
-(\widehat{\mathbf{S}} \cdot \mathbf{n})^{2 k}=\left(\frac{1}{4}\right)^{k} \widehat{I}, \quad(\widehat{\mathbf{S}} \cdot \mathbf{n})^{2 k+1}=\left(\frac{1}{4}\right)^{k}(\widehat{\mathbf{S}} \cdot \mathbf{n}), \quad k=0,1,2, \ldots \tag{26}
-\end{equation*}
-
-
-\subsection*{2.5.4 Functions of Spin Matrices}
-
-\begin{gather*}
-e^{\alpha \widehat{S}_{i}}=\widehat{I} \cosh \frac{\alpha}{2}+2 \widehat{S}_{i} \sinh \frac{\alpha}{2}  \tag{27}\\
-\cosh \left(\alpha \widehat{S}_{i}\right)=\widehat{I} \cosh \frac{\alpha}{2}, \quad \sinh \left(\alpha \hat{S}_{i}\right)=2 \widehat{S}_{i} \sinh \frac{\alpha}{2} \tag{28}
-\end{gather*}
-
-
+\begin{equation}
+(\widehat{\vect{S}} \cdot \vect{n})^{2 k}=\left(\frac{1}{4}\right)^{k} \widehat{I}, \quad(\widehat{\vect{S}} \cdot \vect{n})^{2 k+1}=\left(\frac{1}{4}\right)^{k}(\widehat{\vect{S}} \cdot \vect{n}), \quad k=0,1,2, \ldots \label{chap2:eq:107}
+\end{equation}
+\subsection{Functions of Spin Matrices}
+\begin{gather}
+e^{\alpha \widehat{S}_{i}}=\widehat{I} \cosh \frac{\alpha}{2}+2 \widehat{S}_{i} \sinh \frac{\alpha}{2}  \label{chap2:eq:108}\\
+\cosh \left(\alpha \widehat{S}_{i}\right)=\widehat{I} \cosh \frac{\alpha}{2}, \quad \sinh \left(\alpha \hat{S}_{i}\right)=2 \widehat{S}_{i} \sinh \frac{\alpha}{2} \label{chap2:eq:109}
+\end{gather}
 where $i=x, y, z$.
-
-
-\begin{gather*}
-e^{\alpha \widehat{S}_{+1}}=\widehat{I}+\alpha \widehat{S}_{+1}, \quad e^{\alpha \widehat{S}_{0}}=\hat{I} \cosh \frac{\alpha}{2}+2 \widehat{S}_{0} \sinh \frac{\alpha}{2}, \quad e^{\alpha \widehat{S}_{-1}}=\widehat{I}+\alpha \widehat{S}_{-1}  \tag{29}\\
-\cosh \left(\alpha \widehat{S}_{+1}\right)=\widehat{I}, \quad \cosh \left(\alpha \widehat{S}_{0}\right)=\widehat{I} \cosh \frac{\alpha}{2}, \quad \cosh \left(\alpha \widehat{S}_{-1}\right)=\widehat{I}  \tag{30}\\
-\sinh \left(\alpha \widehat{S}_{+1}\right)=\alpha \widehat{S}_{+1}, \quad \sinh \left(\alpha \widehat{S}_{0}\right)=2 \widehat{S}_{0} \sinh \frac{\alpha}{2}, \quad \sinh \left(\alpha \widehat{S}_{-1}\right)=\alpha \widehat{S}_{-1} \tag{31}
-\end{gather*}
-
-
-\subsection*{2.5.5. Rotation Operators}
+\begin{gather}
+e^{\alpha \widehat{S}_{+1}}=\widehat{I}+\alpha \widehat{S}_{+1}, \quad e^{\alpha \widehat{S}_{0}}=\hat{I} \cosh \frac{\alpha}{2}+2 \widehat{S}_{0} \sinh \frac{\alpha}{2}, \quad e^{\alpha \widehat{S}_{-1}}=\widehat{I}+\alpha \widehat{S}_{-1}  \label{chap2:eq:110}\\
+\cosh \left(\alpha \widehat{S}_{+1}\right)=\widehat{I}, \quad \cosh \left(\alpha \widehat{S}_{0}\right)=\widehat{I} \cosh \frac{\alpha}{2}, \quad \cosh \left(\alpha \widehat{S}_{-1}\right)=\widehat{I}  \label{chap2:eq:111}\\
+\sinh \left(\alpha \widehat{S}_{+1}\right)=\alpha \widehat{S}_{+1}, \quad \sinh \left(\alpha \widehat{S}_{0}\right)=2 \widehat{S}_{0} \sinh \frac{\alpha}{2}, \quad \sinh \left(\alpha \widehat{S}_{-1}\right)=\alpha \widehat{S}_{-1} \label{chap2:eq:112}
+\end{gather}
+\subsection{Rotation Operators}
 (a) Under rotations described by the Euler angles $\alpha, \beta, \gamma$ spin functions and spin matrices for $S=\frac{1}{2}$ are transformed by a rotation operator $\widehat{D}^{\frac{1}{2}}(\alpha, \beta, \gamma)$ which is a special case of the operator given by Eq. 1.4(31)
-
-\[
+\begin{equation}
 \hat{D}^{\frac{1}{2}}(\alpha, \beta, \gamma)=e^{-i \alpha \hat{S}_{z}} \cdot e^{-i \beta \hat{S}_{y}} \cdot e^{-i \gamma \hat{S}_{z}}=\left(\begin{array}{cc}
-\cos \frac{\beta}{2} e^{-i \frac{\alpha+\gamma}{2}} & -\sin \frac{\beta}{2} e^{-i \frac{\alpha-\gamma}{2}}  \tag{32}\\
+\cos \frac{\beta}{2} e^{-i \frac{\alpha+\gamma}{2}} & -\sin \frac{\beta}{2} e^{-i \frac{\alpha-\gamma}{2}}  \label{chap2:eq:113}\\
 \sin \frac{\beta}{2} e^{i \frac{\alpha-\alpha}{2}} & \cos \frac{\beta}{2} e^{i \frac{\alpha+\alpha}{2}}
 \end{array}\right)
-\]
-
+\end{equation}
 The inverse matrix is
-
-
-\begin{gather*}
-{\left[\hat{D}^{\frac{1}{2}}(\alpha, \beta, \gamma)\right]^{-1}=\left[\hat{D}^{\frac{1}{2}}(\alpha, \beta, \gamma)\right]^{+}=\hat{D}^{\frac{1}{2}}(\pi-\gamma, \beta,-\pi-\alpha)=\hat{D}^{\frac{1}{2}}(-\gamma,-\beta,-\alpha)} \\
+\begin{gather}
+{\left[\hat{D}^{\frac{1}{2}}(\alpha, \beta, \gamma)\right]^{-1}=\left[\hat{D}^{\frac{1}{2}}(\alpha, \beta, \gamma)\right]^{+}=\hat{D}^{\frac{1}{2}}(\pi-\gamma, \beta,-\pi-\alpha)=\hat{D}^{\frac{1}{2}}(-\gamma,-\beta,-\alpha)}  \notag\\
 =\left(\begin{array}{cc}
 \cos \frac{\beta}{2} e^{i \frac{\alpha+\alpha}{2}} & \sin \frac{\beta}{2} e^{-i \frac{\alpha-\alpha}{2}} \\
 -\sin \frac{\beta}{2} e^{i \frac{\alpha-\alpha}{2}} & \cos \frac{\beta}{2} e^{-i \frac{\alpha+\alpha}{2}}
-\end{array}\right) \tag{33}
-\end{gather*}
-
-
+\end{array}\right) \label{chap2:eq:114}
+\end{gather}
 Matrix elements of the operator $\hat{D}^{\frac{1}{2}}(\alpha, \beta, \gamma)$ are the Wigner $D$-functions $D_{M M^{\prime}}^{\frac{1}{2}}(\alpha, \beta, \gamma)$ (Chap. 4). The expansion of $\widehat{D}^{\frac{1}{2}}(\alpha, \beta, \gamma)$ in terms of the spin matrices has the form
-
-
-\begin{align*}
-\widehat{D}^{\frac{1}{2}}(\alpha, \beta, \gamma) & =\cos \frac{\beta}{2} \cos \frac{\alpha+\gamma}{2} \widehat{I}+2 i \sin \frac{\beta}{2} \sin \frac{\alpha-\gamma}{2} \widehat{S}_{x}-2 i \sin \frac{\beta}{2} \cos \frac{\alpha-\gamma}{2} \widehat{S}_{y}-2 i \cos \frac{\beta}{2} \sin \frac{\alpha+\gamma}{2} \widehat{S}_{z},  \tag{34}\\
-\widehat{D}^{\frac{1}{2}}(\alpha, \beta, \gamma) & =\cos \frac{\beta}{2} \cos \frac{\alpha+\gamma}{2} \widehat{I}+\sqrt{2} \sin \frac{\beta}{2} e^{-i \frac{\alpha-\alpha}{2}} \widehat{S}_{+1}-2 i \cos \frac{\beta}{2} \sin \frac{\alpha+\gamma}{2} \widehat{S}_{0}+\sqrt{2} \sin \frac{\beta}{2} e^{i \frac{\alpha-\alpha}{2}} \widehat{S}_{-1} . \tag{35}
-\end{align*}
-
-
-(b) Under rotations of the coordinate system through an angle $\omega$ about an axis $\mathbf{n}(\boldsymbol{\Theta}, \Phi)$ spin functions and spin matrices for $S=\frac{1}{2}$ are transformed by the rotation operator $\hat{U}^{\frac{1}{2}}(\omega ; \Theta, \Phi)$ which is special case of the operator given by Eq. 1.4(33).
-
-\[
-\hat{U}^{\frac{1}{2}}(\omega ; \Theta, \Phi)=e^{-i \omega \mathbf{n} \cdot \hat{\mathbf{s}}}=\left(\begin{array}{cc}
-\cos \frac{\omega}{2}-i \sin \frac{\omega}{2} \cos \Theta & -i \sin \frac{\omega}{2} \sin \Theta e^{-i \Phi}  \tag{36}\\
+\begin{align}
+\widehat{D}^{\frac{1}{2}}(\alpha, \beta, \gamma) & =\cos \frac{\beta}{2} \cos \frac{\alpha+\gamma}{2} \widehat{I}+2 i \sin \frac{\beta}{2} \sin \frac{\alpha-\gamma}{2} \widehat{S}_{x}-2 i \sin \frac{\beta}{2} \cos \frac{\alpha-\gamma}{2} \widehat{S}_{y}-2 i \cos \frac{\beta}{2} \sin \frac{\alpha+\gamma}{2} \widehat{S}_{z},  \label{chap2:eq:115}\\
+\widehat{D}^{\frac{1}{2}}(\alpha, \beta, \gamma) & =\cos \frac{\beta}{2} \cos \frac{\alpha+\gamma}{2} \widehat{I}+\sqrt{2} \sin \frac{\beta}{2} e^{-i \frac{\alpha-\alpha}{2}} \widehat{S}_{+1}-2 i \cos \frac{\beta}{2} \sin \frac{\alpha+\gamma}{2} \widehat{S}_{0}+\sqrt{2} \sin \frac{\beta}{2} e^{i \frac{\alpha-\alpha}{2}} \widehat{S}_{-1} . \label{chap2:eq:116}
+\end{align}
+(b) Under rotations of the coordinate system through an angle $\omega$ about an axis $\vect{n}(\boldsymbol{\Theta}, \Phi)$ spin functions and spin matrices for $S=\frac{1}{2}$ are transformed by the rotation operator $\hat{U}^{\frac{1}{2}}(\omega ; \Theta, \Phi)$ which is special case of the operator given by Eq. 1.4(33).
+\begin{equation}
+\hat{U}^{\frac{1}{2}}(\omega ; \Theta, \Phi)=e^{-i \omega \vect{n} \cdot \hat{\vect{s}}}=\left(\begin{array}{cc}
+\cos \frac{\omega}{2}-i \sin \frac{\omega}{2} \cos \Theta & -i \sin \frac{\omega}{2} \sin \Theta e^{-i \Phi}  \label{chap2:eq:117}\\
 -i \sin \frac{\omega}{2} \sin \Theta e^{i \Phi} & \cos \frac{\omega}{2}+i \sin \frac{\omega}{2} \cos \Theta
 \end{array}\right) .
-\]
-
+\end{equation}
 The inverse matrix is
-
-
-\begin{align*}
-{\left[\hat{U}^{\frac{1}{2}}(\omega ; \Theta, \Phi)\right]^{-1} } & =\left[\hat{U}^{\frac{1}{2}}(\omega ; \Theta, \Phi)\right]^{+}=\hat{U}^{\frac{1}{2}}(\omega ; \pi-\Theta, \pi+\Phi)=\hat{U}^{\frac{1}{2}}(-\omega ; \Theta, \Phi) \\
+\begin{align}
+{\left[\hat{U}^{\frac{1}{2}}(\omega ; \Theta, \Phi)\right]^{-1} } & =\left[\hat{U}^{\frac{1}{2}}(\omega ; \Theta, \Phi)\right]^{+}=\hat{U}^{\frac{1}{2}}(\omega ; \pi-\Theta, \pi+\Phi)=\hat{U}^{\frac{1}{2}}(-\omega ; \Theta, \Phi)  \notag\\
 & =\left(\begin{array}{cc}
 \cos \frac{\omega}{2}+i \sin \frac{\omega}{2} \cos \Theta & i \sin \frac{\omega}{2} \sin \Theta e^{-i \Phi_{1}} \\
 i \sin \frac{\omega}{2} \sin \Theta e^{i \Phi} & \cos \frac{\omega}{2}-i \sin \frac{\omega}{2} \cos \Theta
-\end{array}\right) \tag{37}
-\end{align*}
-
-
+\end{array}\right) \label{chap2:eq:118}
+\end{align}
 The expansion of the operator $\hat{U}^{\frac{1}{2}}(\omega ; \theta, \Phi)$ in terms of the spin matrices has the form
-
-
-\begin{equation*}
-\widehat{U}^{\frac{1}{2}}(\omega ; \theta, \Phi)=e^{-i \omega n \cdot \widehat{\mathbf{S}}}=\widehat{I} \cos \frac{\omega}{2}-2 i(\mathrm{n} \cdot \widehat{\mathbf{S}}) \sin \frac{\omega}{2} \tag{38}
-\end{equation*}
-
-
+\begin{equation}
+\widehat{U}^{\frac{1}{2}}(\omega ; \theta, \Phi)=e^{-i \omega n \cdot \widehat{\vect{S}}}=\widehat{I} \cos \frac{\omega}{2}-2 i(\mathrm{n} \cdot \widehat{\vect{S}}) \sin \frac{\omega}{2} \label{chap2:eq:119}
+\end{equation}
 The relations between the angles $\omega, \Theta, \Phi$ and the Euler angles $\alpha, \beta, \gamma$ are given by Eqs. 1.4(16), 1.4(17). Note that
-
-
-\begin{equation*}
-\hat{D}^{\frac{1}{2}}(\alpha, \beta, \gamma)=\hat{U}^{\frac{1}{2}}(\omega ; \Theta, \Phi) . \tag{39}
-\end{equation*}
-
-
+\begin{equation}
+\hat{D}^{\frac{1}{2}}(\alpha, \beta, \gamma)=\hat{U}^{\frac{1}{2}}(\omega ; \Theta, \Phi) . \label{chap2:eq:120}
+\end{equation}
 (c) The result of applying the rotation operator $\hat{D}^{\frac{1}{2}}(\alpha, \beta, \gamma)$ to the spin matrices may be presented as
-
-
-\begin{equation*}
-\left.\left.\widehat{S}_{i}^{\prime} \equiv \widehat{D}^{\frac{1}{2}}(\alpha, \beta, \gamma) \widehat{S}_{i} \right\rvert\, \widehat{D}^{\frac{1}{2}}(\alpha, \beta, \gamma)\right]^{-1}=\sum_{k} a_{i k} \widehat{S}_{k}, \quad(i, k=x, y, z) \tag{40}
-\end{equation*}
-
-
+\begin{equation}
+\left.\left.\widehat{S}_{i}^{\prime} \equiv \widehat{D}^{\frac{1}{2}}(\alpha, \beta, \gamma) \widehat{S}_{i} \right\rvert\, \widehat{D}^{\frac{1}{2}}(\alpha, \beta, \gamma)\right]^{-1}=\sum_{k} a_{i k} \widehat{S}_{k}, \quad(i, k=x, y, z) \label{chap2:eq:121}
+\end{equation}
 where $a_{i k}$ are elements of the rotation matrix (Sec. 1.4.6). For spherical components of the spin matrices we have
-
-
-\begin{equation*}
-\widehat{S}_{\mu}^{\prime} \equiv \widehat{D}^{\frac{1}{2}}(\alpha, \beta, \gamma) \widehat{S}_{\mu}\left[\widehat{D}^{\frac{1}{2}}(\alpha, \beta, \gamma)\right]^{-1}=\sum_{\nu} D_{\nu \mu}^{1}(\alpha, \beta, \gamma) \widehat{S}_{\nu} ; \tag{41}
-\end{equation*}
-
-
+\begin{equation}
+\widehat{S}_{\mu}^{\prime} \equiv \widehat{D}^{\frac{1}{2}}(\alpha, \beta, \gamma) \widehat{S}_{\mu}\left[\widehat{D}^{\frac{1}{2}}(\alpha, \beta, \gamma)\right]^{-1}=\sum_{\nu} D_{\nu \mu}^{1}(\alpha, \beta, \gamma) \widehat{S}_{\nu} ; \label{chap2:eq:122}
+\end{equation}
 where $D_{\nu \mu}^{1}$ are the Wigner D-functions (Chap. 4).
 
-\subsection*{2.5.6. Traces of Products of Spin Matrices ( $S=\frac{1}{2}$ )}
+\subsection{Traces of Products of Spin Matrices ( $S=\frac{1}{2}$ )}
 For cartesian components of the spin operator the following relations hold (where $i, k, l$ etc. take the values $x, y, z)$
-
-
-\begin{gather*}
-\operatorname{Tr}\left\{\widehat{S}_{i}\right\}=0 \\
-\operatorname{Tr}\left\{\widehat{S}_{i} \widehat{S}_{k}\right\}=\frac{1}{2} \delta_{i k} \\
-\operatorname{Tr}\left\{\widehat{S}_{i} \widehat{S}_{k} \widehat{S}_{l}\right\}=\frac{i}{4} \varepsilon_{i k l}  \tag{42}\\
-\operatorname{Tr}\left\{\widehat{S}_{i} \widehat{S}_{k} \widehat{S}_{l} \widehat{S}_{j}\right\}=\frac{1}{8}\left(\delta_{i k} \delta_{l j}-\delta_{i l} \delta_{k j}+\delta_{i j} \delta_{k l}\right), \\
-\operatorname{Tr}\left\{\widehat{S}_{i} \widehat{S}_{k} \widehat{S}_{l} \widehat{S}_{j} \widehat{S}_{m}\right\}=\frac{i}{16}\left(\delta_{i k} \varepsilon_{l j m}+\delta_{j l} \varepsilon_{i k m}+\delta_{m l} \varepsilon_{i j k}+\delta_{j m} \varepsilon_{i k l}\right) .
-\end{gather*}
-
-
+\begin{gather}
+\operatorname{Tr}\left\{\widehat{S}_{i}\right\}=0  \notag\\
+\operatorname{Tr}\left\{\widehat{S}_{i} \widehat{S}_{k}\right\}=\frac{1}{2} \delta_{i k}  \notag\\
+\operatorname{Tr}\left\{\widehat{S}_{i} \widehat{S}_{k} \widehat{S}_{l}\right\}=\frac{i}{4} \varepsilon_{i k l}  \label{chap2:eq:123}\\
+\operatorname{Tr}\left\{\widehat{S}_{i} \widehat{S}_{k} \widehat{S}_{l} \widehat{S}_{j}\right\}=\frac{1}{8}\left(\delta_{i k} \delta_{l j}-\delta_{i l} \delta_{k j}+\delta_{i j} \delta_{k l}\right),  \notag\\
+\operatorname{Tr}\left\{\widehat{S}_{i} \widehat{S}_{k} \widehat{S}_{l} \widehat{S}_{j} \widehat{S}_{m}\right\}=\frac{i}{16}\left(\delta_{i k} \varepsilon_{l j m}+\delta_{j l} \varepsilon_{i k m}+\delta_{m l} \varepsilon_{i j k}+\delta_{j m} \varepsilon_{i k l}\right) . \notag
+\end{gather}
 The evaluation of traces of products which contain many spin matrices can be facilitated by using the following recurrence relation: if we introduce the definition
-
-
-\begin{equation*}
-T_{i_{1} i_{2} \ldots i_{n}} \equiv \operatorname{Tr}\left\{\widehat{S}_{i_{1}} \widehat{S}_{i_{2} \ldots} \widehat{S}_{i_{n}}\right\}, \quad(n \geq 3), \tag{43}
-\end{equation*}
-
-
+\begin{equation}
+T_{i_{1} i_{2} \ldots i_{n}} \equiv \operatorname{Tr}\left\{\widehat{S}_{i_{1}} \widehat{S}_{i_{2} \ldots} \widehat{S}_{i_{n}}\right\}, \quad(n \geq 3), \label{chap2:eq:124}
+\end{equation}
 then
-
-
-\begin{equation*}
-T_{i_{1} i_{2} \ldots i_{n}}=\frac{1}{4} \delta_{i_{1} i_{2}} T_{i_{3} i_{4} \ldots i_{n}}+\frac{i}{2} \varepsilon_{i_{1} i_{2} i^{\prime}} T_{i^{\prime} i_{3} \ldots i_{n}} \tag{44}
-\end{equation*}
-
-
+\begin{equation}
+T_{i_{1} i_{2} \ldots i_{n}}=\frac{1}{4} \delta_{i_{1} i_{2}} T_{i_{3} i_{4} \ldots i_{n}}+\frac{i}{2} \varepsilon_{i_{1} i_{2} i^{\prime}} T_{i^{\prime} i_{3} \ldots i_{n}} \label{chap2:eq:125}
+\end{equation}
 If $n$ is even, one may also use the relation
-
-
-\begin{equation*}
-T_{i_{1} i_{2} \ldots i_{n}}=\frac{1}{4}\left\{\delta_{i_{1} i_{2}} T_{i_{3} i_{4} \ldots i_{n}}-\delta_{i_{1} i_{3}} T_{i_{2} i_{4} \ldots i_{n}}+\ldots+\delta_{i_{1} i_{n}} T_{i_{2} i_{3} \ldots i_{n-1}}\right\} \tag{45}
-\end{equation*}
-
-
+\begin{equation}
+T_{i_{1} i_{2} \ldots i_{n}}=\frac{1}{4}\left\{\delta_{i_{1} i_{2}} T_{i_{3} i_{4} \ldots i_{n}}-\delta_{i_{1} i_{3}} T_{i_{2} i_{4} \ldots i_{n}}+\ldots+\delta_{i_{1} i_{n}} T_{i_{2} i_{3} \ldots i_{n-1}}\right\} \label{chap2:eq:126}
+\end{equation}
 For spherical components of the spin operator the following relations hold (where $\mu, \nu, \lambda$ etc. take the values $\pm 1,0$ )
-
-
-\begin{gather*}
-\operatorname{Tr}\left\{\widehat{S}_{\mu}\right\}=0, \\
-\operatorname{Tr}\left\{\widehat{S}_{\mu} \widehat{S}_{\nu}\right\}=\frac{1}{2}(-1)^{\mu} \delta_{\mu-\nu}, \\
+\begin{gather}
+\operatorname{Tr}\left\{\widehat{S}_{\mu}\right\}=0,  \notag\\
+\operatorname{Tr}\left\{\widehat{S}_{\mu} \widehat{S}_{\nu}\right\}=\frac{1}{2}(-1)^{\mu} \delta_{\mu-\nu},  \notag\\
 \operatorname{Tr}\left\{\widehat{S}_{\mu} \widehat{S}_{\nu} \widehat{S}_{\lambda}\right\}=-\frac{1}{2} \sqrt{\frac{3}{2}}\left(\begin{array}{ccc}
 1 & 1 & 1 \\
 \mu & \nu & \lambda
-\end{array}\right)=(-1)^{1+\lambda} \frac{1}{2 \sqrt{2}} C_{1 \mu 1 \nu}^{1-\lambda},  \tag{46}\\
-\operatorname{Tr}\left\{\widehat{S}_{\mu} \widehat{S}_{\nu} \widehat{S}_{\lambda} \widehat{S}_{\rho}\right\}=\frac{(-1)^{\mu}}{8}\left\{(-1)^{\lambda} \delta_{\mu-\nu} \delta_{\lambda-\rho}-(-1)^{\nu} \delta_{\mu-\lambda} \delta_{\nu-\rho}+(-1)^{\nu} \delta_{\mu-\rho} \delta_{\nu-\lambda}\right\} .
-\end{gather*}
-
-
+\end{array}\right)=(-1)^{1+\lambda} \frac{1}{2 \sqrt{2}} \clebsch{1}{\mu}{1}{\nu}{1}{-\lambda},  \label{chap2:eq:127}\\
+\operatorname{Tr}\left\{\widehat{S}_{\mu} \widehat{S}_{\nu} \widehat{S}_{\lambda} \widehat{S}_{\rho}\right\}=\frac{(-1)^{\mu}}{8}\left\{(-1)^{\lambda} \delta_{\mu-\nu} \delta_{\lambda-\rho}-(-1)^{\nu} \delta_{\mu-\lambda} \delta_{\nu-\rho}+(-1)^{\nu} \delta_{\mu-\rho} \delta_{\nu-\lambda}\right\} . \notag
+\end{gather}
 The recurrence relation for spherical components of the spin operator is written as
-
-
-\begin{equation*}
-T_{\mu_{1} \mu_{2} \ldots \mu_{n}}=\frac{(-1)^{\mu_{1}}}{4} \delta_{\mu_{1}-\mu_{2}} T_{\mu_{3} \ldots \mu_{n}}-\frac{1}{\sqrt{2}} C_{1 \mu_{1} 1 \mu_{2}}^{1 \mu} T_{\mu \mu_{3} \ldots \mu_{n}} \tag{47}
-\end{equation*}
-
-
+\begin{equation}
+T_{\mu_{1} \mu_{2} \ldots \mu_{n}}=\frac{(-1)^{\mu_{1}}}{4} \delta_{\mu_{1}-\mu_{2}} T_{\mu_{3} \ldots \mu_{n}}-\frac{1}{\sqrt{2}} \clebsch{1}{\mu_{1}}{1}{\mu_{2}}{1}{\mu} T_{\mu \mu_{3} \ldots \mu_{n}} \label{chap2:eq:128}
+\end{equation}
 where
-
-
-\begin{equation*}
-T_{\mu_{1} \mu_{2} \ldots \mu_{n}} \equiv \operatorname{Tr}\left\{\widehat{S}_{\mu_{1}} \widehat{S}_{\mu_{2} \ldots} \widehat{S}_{\mu_{n}}\right\} \tag{48}
-\end{equation*}
-
-
+\begin{equation}
+T_{\mu_{1} \mu_{2} \ldots \mu_{n}} \equiv \operatorname{Tr}\left\{\widehat{S}_{\mu_{1}} \widehat{S}_{\mu_{2} \ldots} \widehat{S}_{\mu_{n}}\right\} \label{chap2:eq:129}
+\end{equation}
 If $n$ is even, one may use the formula
-
-
-\begin{equation*}
-T_{\mu_{1} \mu_{2} \ldots \mu_{n}}=\frac{(-1)^{\mu_{1}}}{4}\left\{\delta_{\mu_{1}-\mu_{2}} T_{\mu_{3} \mu_{4} \ldots \mu_{n}}-\delta_{\mu_{1}-\mu_{3}} T_{\mu_{2} \mu_{4} \ldots \mu_{n}}+\ldots+\delta_{\mu_{1}-\mu_{n}} T_{\mu_{2} \mu_{3} \ldots \mu_{n-1}}\right\} \tag{49}
-\end{equation*}
-
-
-\subsection*{2.6. SPIN MATRICES AND POLARIZATION OPERATORS FOR $S=1$}
-\subsection*{2.6.1. Spin $S=1$}
+\begin{equation}
+T_{\mu_{1} \mu_{2} \ldots \mu_{n}}=\frac{(-1)^{\mu_{1}}}{4}\left\{\delta_{\mu_{1}-\mu_{2}} T_{\mu_{3} \mu_{4} \ldots \mu_{n}}-\delta_{\mu_{1}-\mu_{3}} T_{\mu_{2} \mu_{4} \ldots \mu_{n}}+\ldots+\delta_{\mu_{1}-\mu_{n}} T_{\mu_{2} \mu_{3} \ldots \mu_{n-1}}\right\} \label{chap2:eq:130}
+\end{equation}
+\section{SPIN MATRICES AND POLARIZATION OPERATORS FOR $S=1$}
+\subsection{Spin $S=1$}
 If $S=1$, the spin operator $\widehat{S}$ and the polarization operators $\widehat{T}_{L M}(L=0,1,2 ;-L \leq M \leq L)$ are square $3 \times 3$ matrices. The polarization operator $\widehat{T}_{00}$ is proportional to the unit matrix
-
-
-\begin{equation*}
-\widehat{T}_{00}=\frac{1}{\sqrt{3}} \widehat{I} \tag{1}
-\end{equation*}
-
-
+\begin{equation}
+\widehat{T}_{00}=\frac{1}{\sqrt{3}} \widehat{I} \label{chap2:eq:131}
+\end{equation}
 where
-
-\[
+\begin{equation}
 \widehat{I}=\left(\begin{array}{lll}
-1 & 0 & 0  \tag{2}\\
+1 & 0 & 0  \label{chap2:eq:132}\\
 0 & 1 & 0 \\
 0 & 0 & 1
 \end{array}\right)
-\]
-
+\end{equation}
 The polarization operators $\widehat{T}_{1 M}$ are proportional to spherical components of the spin matrices $\widehat{S}_{M}$ :
-
-
-\begin{equation*}
-\widehat{T}_{1 M}=\frac{1}{\sqrt{2}} \widehat{S}_{M}, \quad(M=0, \pm 1) \tag{3}
-\end{equation*}
-
-
+\begin{equation}
+\widehat{T}_{1 M}=\frac{1}{\sqrt{2}} \widehat{S}_{M}, \quad(M=0, \pm 1) \label{chap2:eq:133}
+\end{equation}
 The operators $\widehat{T}_{2 M}(M=0, \pm 1, \pm 2)$ can be expressed in terms of spherical components of the spin matrices as
-
-
-\begin{equation*}
-\widehat{T}_{2 M}=\sum_{\mu, \nu} C_{1 \mu 1 \nu}^{2 M} \widehat{S}_{\mu} \widehat{S}_{\nu} \tag{4}
-\end{equation*}
-
-
+\begin{equation}
+\widehat{T}_{2 M}=\sum_{\mu, \nu} \clebsch{1}{\mu}{1}{\nu}{2}{M} \widehat{S}_{\mu} \widehat{S}_{\nu} \label{chap2:eq:134}
+\end{equation}
 The polarization operators $\widehat{T}_{2 M}$ are equivalent to some symmetric traceless cartesian tensor of second rank $\widehat{Q}_{i k}:$
-
-
-\begin{gather*}
-\hat{Q}_{i k}=\frac{1}{2}\left(\widehat{S}_{i} \widehat{S}_{k}+\widehat{S}_{k} \widehat{S}_{i}-\frac{4}{3} \delta_{i k} \widehat{I}\right), \quad(i, k=x, y, z)  \tag{5}\\
-\widehat{Q}_{i k}=\widehat{Q}_{k i}, \sum_{i} \hat{Q}_{i i}=0 \tag{6}
-\end{gather*}
-
-
+\begin{gather}
+\hat{Q}_{i k}=\frac{1}{2}\left(\widehat{S}_{i} \widehat{S}_{k}+\widehat{S}_{k} \widehat{S}_{i}-\frac{4}{3} \delta_{i k} \widehat{I}\right), \quad(i, k=x, y, z)  \label{chap2:eq:135}\\
+\widehat{Q}_{i k}=\widehat{Q}_{k i}, \sum_{i} \hat{Q}_{i i}=0 \label{chap2:eq:136}
+\end{gather}
 $\widehat{Q}_{i k}$ is called the quadrupole tensor. It has 5 linearly independent components. The relations between $\widehat{T}_{2 M}$ and $\widehat{Q}_{i k}$ are given by
-
-
-\begin{gather*}
-\widehat{T}_{2 \pm 2}=\frac{1}{2}\left(\widehat{Q}_{x x}-\widehat{Q}_{y y} \pm 2 i \widehat{Q}_{x y}\right) \\
-\widehat{T}_{2 \pm 1}=\mp\left(\widehat{Q}_{x z} \pm i \widehat{Q}_{y z}\right)  \tag{7}\\
-\widehat{T}_{20}=\sqrt{\frac{3}{2}} \widehat{Q}_{x z}
-\end{gather*}
-
-
+\begin{gather}
+\widehat{T}_{2 \pm 2}=\frac{1}{2}\left(\widehat{Q}_{x x}-\widehat{Q}_{y y} \pm 2 i \widehat{Q}_{x y}\right)  \notag\\
+\widehat{T}_{2 \pm 1}=\mp\left(\widehat{Q}_{x z} \pm i \widehat{Q}_{y z}\right)  \label{chap2:eq:137}\\
+\widehat{T}_{20}=\sqrt{\frac{3}{2}} \widehat{Q}_{x z} \notag
+\end{gather}
 The inverse relations are
-
-\[
+\begin{equation}
 \begin{array}{ll}
 \hat{Q}_{x x}=\frac{1}{2}\left(\hat{T}_{22}+\hat{T}_{2-2}\right)-\frac{1}{\sqrt{6}} \hat{T}_{20}, & \hat{Q}_{x y}=\hat{Q}_{y x}=\frac{i}{2}\left(\hat{T}_{2-2}-\hat{T}_{22}\right) \\
-\hat{Q}_{y y}=-\frac{1}{2}\left(\hat{T}_{22}+\hat{T}_{2-2}\right)-\frac{1}{\sqrt{6}} \hat{T}_{20}, & \hat{Q}_{x x}=\hat{Q}_{x x}=\frac{1}{2}\left(\hat{T}_{2-1}-\hat{T}_{21}\right)  \tag{8}\\
+\hat{Q}_{y y}=-\frac{1}{2}\left(\hat{T}_{22}+\hat{T}_{2-2}\right)-\frac{1}{\sqrt{6}} \hat{T}_{20}, & \hat{Q}_{x x}=\hat{Q}_{x x}=\frac{1}{2}\left(\hat{T}_{2-1}-\hat{T}_{21}\right)  \label{chap2:eq:138}\\
 \hat{Q}_{x x}=\sqrt{\frac{2}{3}} \hat{T}_{20}, & \hat{Q}_{y x}=\hat{Q}_{x y}=\frac{i}{2}\left(\hat{T}_{2-1}+\hat{T}_{21}\right)
 \end{array}
-\]
-
-\subsection*{2.6.2 Explicit Form}
+\end{equation}
+\subsection{Explicit Form}
 Explicit forms of the spin matrices and the polarization operators depend on the representation used for basis spin functions (Chap. 6). We shall consider the spherical basis representation and the cartesian one. These representations are used very frequently.
 
-\section*{(a) Spherical basis representation}
-Cartesian components of the spin operator $\widehat{\mathbf{S}}$ are given by
-
-\[
+\subsubsection{(a) Spherical basis representation}
+Cartesian components of the spin operator $\widehat{\vect{S}}$ are given by
+\begin{equation}
 \widehat{S}_{x}=\frac{1}{\sqrt{2}}\left(\begin{array}{lll}
-0 & 1 & 0  \tag{9}\\
+0 & 1 & 0  \label{chap2:eq:139}\\
 1 & 0 & 1 \\
 0 & 1 & 0
 \end{array}\right), \quad \widehat{S}_{y}=\frac{i}{\sqrt{2}}\left(\begin{array}{rrr}
@@ -1167,13 +726,11 @@ Cartesian components of the spin operator $\widehat{\mathbf{S}}$ are given by
 0 & 0 & 0 \\
 0 & 0 & -1
 \end{array}\right)
-\]
-
-and the spherical components of $\hat{\mathbf{S}}$ are
-
-\[
+\end{equation}
+and the spherical components of $\hat{\vect{S}}$ are
+\begin{equation}
 \widehat{S}_{+1}=-\left(\begin{array}{ccc}
-0 & 1 & 0  \tag{10}\\
+0 & 1 & 0  \label{chap2:eq:140}\\
 0 & 0 & 1 \\
 0 & 0 & 0
 \end{array}\right), \quad \widehat{S}_{0}=\left(\begin{array}{ccc}
@@ -1185,31 +742,20 @@ and the spherical components of $\hat{\mathbf{S}}$ are
 1 & 0 & 0 \\
 0 & 1 & 0
 \end{array}\right)
-\]
-
-The order of rows and columns in these matrices is shown in Eq. 2.3(10).\\
+\end{equation}
+The order of rows and columns in these matrices is shown in Eq. \eqref{chap2:eq:55}.\\
 Matrix elements of the spin operators $\widehat{S}_{\mu}$ in the spherical basis representation are given by
-
-
-\begin{equation*}
-\left(\widehat{S}_{\mu}\right)_{\sigma^{\prime} \sigma}=\sqrt{2} C_{1 \sigma 1 \mu}^{1 \sigma^{\prime}} \quad\left(\mu, \sigma, \sigma^{\prime}= \pm 1,0\right) \tag{11}
-\end{equation*}
-
-
+\begin{equation}
+\left(\widehat{S}_{\mu}\right)_{\sigma^{\prime} \sigma}=\sqrt{2} \clebsch{1}{\sigma}{1}{\mu}{1}{\sigma^{\prime}} \quad\left(\mu, \sigma, \sigma^{\prime}= \pm 1,0\right) \label{chap2:eq:141}
+\end{equation}
 The spin matrices in the spherical basis representation satisfy the relations
-
-
-\begin{gather*}
-\widehat{S}_{i}^{+}=\widehat{S}_{i}, \quad(i=x, y, z)  \tag{12}\\
-\widehat{S}_{x}^{*}=\widehat{S}_{x}, \quad \widehat{S}_{y}^{*}=-\widehat{S}_{y}, \quad \widehat{S}_{z}^{*}=\widehat{S}_{z}  \tag{13}\\
-\widehat{S}_{\mu}^{*}=\widehat{S}_{\mu}, \quad \widehat{S}_{\mu}^{+}=(-1)^{\mu} \widehat{S}_{-\mu} \quad(\mu= \pm 1,0) \tag{14}
-\end{gather*}
-
-
+\begin{gather}
+\widehat{S}_{i}^{+}=\widehat{S}_{i}, \quad(i=x, y, z)  \label{chap2:eq:142}\\
+\widehat{S}_{x}^{*}=\widehat{S}_{x}, \quad \widehat{S}_{y}^{*}=-\widehat{S}_{y}, \quad \widehat{S}_{z}^{*}=\widehat{S}_{z}  \label{chap2:eq:143}\\
+\widehat{S}_{\mu}^{*}=\widehat{S}_{\mu}, \quad \widehat{S}_{\mu}^{+}=(-1)^{\mu} \widehat{S}_{-\mu} \quad(\mu= \pm 1,0) \label{chap2:eq:144}
+\end{gather}
 The quadrupole tensor $\widehat{Q}_{i k}(i, k=x, y, z)$ in the spherical basis representation has the form
-
-
-\begin{gather*}
+\begin{gather}
 \hat{Q}_{x x}=\frac{1}{6}\left(\begin{array}{rrr}
 -1 & 0 & 3 \\
 0 & 2 & 0 \\
@@ -1222,7 +768,7 @@ The quadrupole tensor $\widehat{Q}_{i k}(i, k=x, y, z)$ in the spherical basis r
 1 & 0 & 0 \\
 0 & -2 & 0 \\
 0 & 0 & 1
-\end{array}\right),  \tag{15}\\
+\end{array}\right),  \label{chap2:eq:145}\\
 \hat{Q}_{x y}=\hat{Q}_{y x}=\frac{i}{2}\left(\begin{array}{rrr}
 0 & 0 & -1 \\
 0 & 0 & 0 \\
@@ -1235,27 +781,19 @@ The quadrupole tensor $\widehat{Q}_{i k}(i, k=x, y, z)$ in the spherical basis r
 0 & -1 & 0 \\
 1 & 0 & 1 \\
 0 & -1 & 0
-\end{array}\right) .
-\end{gather*}
-
-
+\end{array}\right) . \notag
+\end{gather}
 The components of the quadrupole tensor $\widehat{Q}_{i k}$ in the spherical basis representation have the following properties
-
-
-\begin{equation*}
-\widehat{Q}_{i k}^{+}=\widehat{Q}_{i k}, \quad(i, k=x, y, z), \tag{16}
-\end{equation*}
-
-
+\begin{equation}
+\widehat{Q}_{i k}^{+}=\widehat{Q}_{i k}, \quad(i, k=x, y, z), \label{chap2:eq:146}
+\end{equation}
 The matrices $\hat{Q}_{x x}, \hat{Q}_{y y}, \hat{Q}_{x z}, \hat{Q}_{x x}, \hat{Q}_{x x}$ are real, whereas $\hat{Q}_{x y}, \hat{Q}_{y x}, \hat{Q}_{y z}, \hat{Q}_{x y}$ are purely imaginary. The polarization operators $\widehat{T}_{L M}$ in the spherical basis representation are given by
-
-
-\begin{gather*}
+\begin{gather}
 \hat{T}_{00}=\frac{1}{\sqrt{3}}\left(\begin{array}{lll}
 1 & 0 & 0 \\
 0 & 1 & 0 \\
 0 & 0 & 1
-\end{array}\right),  \tag{17}\\
+\end{array}\right),  \label{chap2:eq:147}\\
 \hat{T}_{1+1}=-\frac{1}{\sqrt{2}}\left(\begin{array}{lll}
 0 & 1 & 0 \\
 0 & 0 & 1 \\
@@ -1268,7 +806,7 @@ The matrices $\hat{Q}_{x x}, \hat{Q}_{y y}, \hat{Q}_{x z}, \hat{Q}_{x x}, \hat{Q
 0 & 0 & 0 \\
 1 & 0 & 0 \\
 0 & 1 & 0
-\end{array}\right),  \tag{18}\\
+\end{array}\right),  \label{chap2:eq:148}\\
 \hat{T}_{2+2}=\left(\begin{array}{lll}
 0 & 0 & 1 \\
 0 & 0 & 0 \\
@@ -1281,7 +819,7 @@ The matrices $\hat{Q}_{x x}, \hat{Q}_{y y}, \hat{Q}_{x z}, \hat{Q}_{x x}, \hat{Q
 1 & 0 & 0 \\
 0 & -2 & 0 \\
 0 & 0 & 1
-\end{array}\right), \\
+\end{array}\right),  \notag\\
 \hat{T}_{2-1}=\frac{1}{\sqrt{2}}\left(\begin{array}{rrr}
 0 & 0 & 0 \\
 1 & 0 & 0 \\
@@ -1290,41 +828,26 @@ The matrices $\hat{Q}_{x x}, \hat{Q}_{y y}, \hat{Q}_{x z}, \hat{Q}_{x x}, \hat{Q
 0 & 0 & 0 \\
 0 & 0 & 0 \\
 1 & 0 & 0
-\end{array}\right) . \tag{19}
-\end{gather*}
-
-
+\end{array}\right) . \label{chap2:eq:149}
+\end{gather}
 Matrix elements of the polarization operators in the spherical basis representation may be written as
-
-
-\begin{equation*}
-\left(\widehat{T}_{L M}\right)_{\sigma^{\prime} \sigma}=\sqrt{\frac{2 L+1}{3}} C_{1 \sigma L M}^{1 \sigma^{\prime}}, \quad\left(\sigma, \sigma^{\prime}= \pm 1,0 ;-L \leq M \leq L\right) \tag{20}
-\end{equation*}
-
-
+\begin{equation}
+\left(\widehat{T}_{L M}\right)_{\sigma^{\prime} \sigma}=\sqrt{\frac{2 L+1}{3}} \clebsch{1}{\sigma}{L}{M}{1}{\sigma^{\prime}}, \quad\left(\sigma, \sigma^{\prime}= \pm 1,0 ;-L \leq M \leq L\right) \label{chap2:eq:150}
+\end{equation}
 The polarization operators $\widehat{T}_{L M}$ in the spherical basis representation are real, i.e.,
-
-
-\begin{equation*}
-\widehat{T}_{L M}^{*}=\widehat{T}_{L M} \tag{21}
-\end{equation*}
-
-
+\begin{equation}
+\widehat{T}_{L M}^{*}=\widehat{T}_{L M} \label{chap2:eq:151}
+\end{equation}
 and satisfy the relations
-
-
-\begin{equation*}
-\hat{T}_{L M}^{+}=(-1)^{M} \hat{T}_{L-M} \tag{22}
-\end{equation*}
-
-
+\begin{equation}
+\hat{T}_{L M}^{+}=(-1)^{M} \hat{T}_{L-M} \label{chap2:eq:152}
+\end{equation}
 (b) Cartesian basis representation
 
 Cartesian components of the spin operator $\widehat{S}$ in the cartesian basis representation are given by
-
-\[
+\begin{equation}
 \widehat{S}_{x}=\left(\begin{array}{rrr}
-0 & 0 & 0  \tag{23}\\
+0 & 0 & 0  \label{chap2:eq:153}\\
 0 & 0 & -i \\
 0 & i & 0
 \end{array}\right), \quad \widehat{S}_{y}=\left(\begin{array}{rrr}
@@ -1336,21 +859,15 @@ Cartesian components of the spin operator $\widehat{S}$ in the cartesian basis r
 i & 0 & 0 \\
 0 & 0 & 0
 \end{array}\right) .
-\]
-
+\end{equation}
 The matrix elements of $\widehat{S}_{i}$ in this representation may be written as
-
-
-\begin{equation*}
-\left(\widehat{S}_{i}\right)_{k l}=-i \varepsilon_{i k l}, \quad(i, k, l=x, y, z) . \tag{24}
-\end{equation*}
-
-
-The spherical components of $\widehat{\mathbf{S}}$ are as follows
-
-\[
+\begin{equation}
+\left(\widehat{S}_{i}\right)_{k l}=-i \varepsilon_{i k l}, \quad(i, k, l=x, y, z) . \label{chap2:eq:154}
+\end{equation}
+The spherical components of $\widehat{\vect{S}}$ are as follows
+\begin{equation}
 \widehat{S}_{+1}=\frac{1}{\sqrt{2}}\left(\begin{array}{rrr}
-0 & 0 & 1  \tag{25}\\
+0 & 0 & 1  \label{chap2:eq:155}\\
 0 & 0 & i \\
 -1 & -i & 0
 \end{array}\right), \quad \widehat{S}_{0}=\left(\begin{array}{rrr}
@@ -1362,21 +879,14 @@ i & 0 & 0 \\
 0 & 0 & -i \\
 -1 & i & 0
 \end{array}\right) .
-\]
-
+\end{equation}
 The spin matrices in the cartesian basis representation satisfy the following relations
-
-
-\begin{align*}
-\left(\widehat{S}_{\mu}\right)^{+}=(-1)^{\mu} \widehat{S}_{-\mu}, \quad \widehat{S}_{\mu}^{*}=(-1)^{1+\mu} \widehat{S}_{-\mu}, \quad(\mu= \pm 1,0)  \tag{26}\\
-\left(\widehat{S}_{i}\right)^{+}=\widehat{S}_{i}, \quad \widehat{S}_{i}^{*}=-\widehat{S}_{i}, \quad(i=x, y, z) . \tag{27}
-\end{align*}
-
-
+\begin{align}
+\left(\widehat{S}_{\mu}\right)^{+}=(-1)^{\mu} \widehat{S}_{-\mu}, \quad \widehat{S}_{\mu}^{*}=(-1)^{1+\mu} \widehat{S}_{-\mu}, \quad(\mu= \pm 1,0)  \label{chap2:eq:156}\\
+\left(\widehat{S}_{i}\right)^{+}=\widehat{S}_{i}, \quad \widehat{S}_{i}^{*}=-\widehat{S}_{i}, \quad(i=x, y, z) . \label{chap2:eq:157}
+\end{align}
 The quadrupole tensor $\widehat{Q}_{i k}(i, k=x, y, z)$ in the cartesian basis representation is given by
-
-
-\begin{gather*}
+\begin{gather}
 \hat{Q}_{x x}=\frac{1}{3}\left(\begin{array}{rrr}
 -2 & 0 & 0 \\
 0 & 1 & 0 \\
@@ -1389,7 +899,7 @@ The quadrupole tensor $\widehat{Q}_{i k}(i, k=x, y, z)$ in the cartesian basis r
 1 & 0 & 0 \\
 0 & 1 & 0 \\
 0 & 0 & -2
-\end{array}\right), \\
+\end{array}\right),  \notag\\
 \hat{Q}_{x y}=\hat{Q}_{y x}=\frac{1}{2}\left(\begin{array}{rrr}
 0 & -1 & 0 \\
 -1 & 0 & 0 \\
@@ -1402,35 +912,23 @@ The quadrupole tensor $\widehat{Q}_{i k}(i, k=x, y, z)$ in the cartesian basis r
 0 & 0 & 0 \\
 0 & 0 & -1 \\
 0 & -1 & 0
-\end{array}\right) . \tag{28}
-\end{gather*}
-
-
+\end{array}\right) . \label{chap2:eq:158}
+\end{gather}
 The matrix elements of $\widehat{Q}_{i k}$ in the cartesian basis representation may be written in the form
-
-
-\begin{equation*}
-\left(\widehat{Q}_{i k}\right)_{l m}=-\frac{1}{2}\left(\delta_{i l} \delta_{k m}+\delta_{i m} \delta_{k l}-\frac{2}{3} \delta_{i k} \delta_{l m}\right), \quad(i, k, l, m=x, y, z) \tag{29}
-\end{equation*}
-
-
+\begin{equation}
+\left(\widehat{Q}_{i k}\right)_{l m}=-\frac{1}{2}\left(\delta_{i l} \delta_{k m}+\delta_{i m} \delta_{k l}-\frac{2}{3} \delta_{i k} \delta_{l m}\right), \quad(i, k, l, m=x, y, z) \label{chap2:eq:159}
+\end{equation}
 In the cartesian basis representation the matrices $\widehat{Q}_{i k}$ are Hermitian and real, i.e.,
-
-
-\begin{equation*}
-\widehat{Q}_{i k}^{+}=\widehat{Q}_{i k}, \quad \widehat{Q}_{i k}^{*}=\widehat{Q}_{i k}, \quad(i, k=x, y, z) . \tag{30}
-\end{equation*}
-
-
+\begin{equation}
+\widehat{Q}_{i k}^{+}=\widehat{Q}_{i k}, \quad \widehat{Q}_{i k}^{*}=\widehat{Q}_{i k}, \quad(i, k=x, y, z) . \label{chap2:eq:160}
+\end{equation}
 The polarization operators $\widehat{T}_{L M}$ in the cartesian basis representation have the form
-
-
-\begin{gather*}
+\begin{gather}
 \widehat{T}_{00}=\frac{1}{\sqrt{3}}\left(\begin{array}{lll}
 1 & 0 & 0 \\
 0 & 1 & 0 \\
 0 & 0 & 1
-\end{array}\right),  \tag{31}\\
+\end{array}\right),  \label{chap2:eq:161}\\
 \widehat{T}_{1+1}=\frac{1}{2}\left(\begin{array}{rrr}
 0 & 0 & 1 \\
 0 & 0 & i \\
@@ -1443,7 +941,7 @@ i & 0 & 0 \\
 0 & 0 & 1 \\
 0 & 0 & -i \\
 -1 & i & 0
-\end{array}\right), \\
+\end{array}\right),  \notag\\
 \widehat{T}_{2+2}=\frac{1}{2}\left(\begin{array}{rrr}
 -1 & -i & 0 \\
 -i & 1 & 0 \\
@@ -1456,7 +954,7 @@ i & 0 & 0 \\
 1 & 0 & 0 \\
 0 & 1 & 0 \\
 0 & 0 & -2
-\end{array}\right),  \tag{32}\\
+\end{array}\right),  \label{chap2:eq:162}\\
 \widehat{T}_{2-1}=\frac{1}{2}\left(\begin{array}{rrr}
 0 & 0 & -1 \\
 0 & 0 & i \\
@@ -1465,33 +963,22 @@ i & 0 & 0 \\
 -1 & i & 0 \\
 i & 1 & 0 \\
 0 & 0 & 0
-\end{array}\right) . \tag{33}
-\end{gather*}
-
-
+\end{array}\right) . \label{chap2:eq:163}
+\end{gather}
 The polarization operators $\widehat{T}_{L M}$ in the cartesian basis representation satisfy the relations
-
-
-\begin{gather*}
-\widehat{T}_{L M}^{+}=(-1)^{M} \widehat{T}_{L M}  \tag{34}\\
-\widehat{T}_{L M}^{*}=(-1)^{L+M} \widehat{T}_{L-M} \tag{35}
-\end{gather*}
-
-
+\begin{gather}
+\widehat{T}_{L M}^{+}=(-1)^{M} \widehat{T}_{L M}  \label{chap2:eq:164}\\
+\widehat{T}_{L M}^{*}=(-1)^{L+M} \widehat{T}_{L-M} \label{chap2:eq:165}
+\end{gather}
 One can easily transform any matrix in the cartesian basis representation into a matrix in the spherical basis representation and vice versa with the aid of the unitary matrix $U$,
-
-
-\begin{align*}
-& \widehat{A}(\text { spherical basis })=U \widehat{A}(\text { cartesian basis }) U^{-1} \\
-& \widehat{A}(\text { cartesian basis })=U^{-1} \widehat{A}(\text { spherical basis }) U \tag{36}
-\end{align*}
-
-
+\begin{align}
+& \widehat{A}(\text { spherical basis })=U \widehat{A}(\text { cartesian basis }) U^{-1}  \notag\\
+& \widehat{A}(\text { cartesian basis })=U^{-1} \widehat{A}(\text { spherical basis }) U \label{chap2:eq:166}
+\end{align}
 In this case $\widehat{A}$ is any spin or polarization operator (i.e., $\widehat{S}_{i}, \widehat{S}_{\mu}, \widehat{Q}_{i k}, \widehat{T}_{L M}$ ),
-
-\[
+\begin{equation}
 U=\left(\begin{array}{rrr}
--\frac{1}{\sqrt{2}} & \frac{i}{\sqrt{2}} & 0  \tag{37}\\
+-\frac{1}{\sqrt{2}} & \frac{i}{\sqrt{2}} & 0  \label{chap2:eq:167}\\
 0 & 0 & 1 \\
 \frac{1}{\sqrt{2}} & \frac{i}{\sqrt{2}} & 0
 \end{array}\right), \quad U^{-1}=U^{+}=\left(\begin{array}{rrr}
@@ -1499,334 +986,218 @@ U=\left(\begin{array}{rrr}
 -\frac{i}{\sqrt{2}} & 0 & -\frac{i}{\sqrt{2}} \\
 0 & 1 & 0
 \end{array}\right) .
-\]
-
+\end{equation}
 The matrix $U$ coincides with $M(+1,0,-1 \leftarrow x, y, z)$ and $U^{-1}$ coincides with $M(x, y, z \leftarrow+1,0,-1)$ (Table 1.2).
 
 The formulas given in Sec. 2.6 (except those of Sec. 2.6.2) are independent of the representation unless the contrary is indicated.
 
-\subsection*{2.6.3. Products of Spin and Polarization Matrices}
+\subsection{Products of Spin and Polarization Matrices}
 For $S=1$, the nine matrices $\widehat{T}_{L M}(L=0,1,2 ;-L \leq M \leq L)$ or, equivalently, the matrices $\widehat{I}, \widehat{S}, \widehat{Q}_{i k}$ constitute a complete set of square $3 \times 3$ matrices for expanding any function of the spin and polarization operators. In particular, products of the spin and polarization operators may be expanded in a series in terms of these matrices.
 
 Products of cartesian components of the matrices $\widehat{S}$ and $\widehat{Q}_{i k}$ may be expressed as follows $(i, k, l$, etc. take the values $x, y, z$ )\\
 (a)
-
-
-\begin{equation*}
-\widehat{S}_{i} \widehat{S}_{k}=\frac{2}{3} \delta_{i k} \widehat{I}+\frac{i}{2} \varepsilon_{i k l} \widehat{S}_{l}+\widehat{Q}_{i k} \tag{38}
-\end{equation*}
-
-
+\begin{equation}
+\widehat{S}_{i} \widehat{S}_{k}=\frac{2}{3} \delta_{i k} \widehat{I}+\frac{i}{2} \varepsilon_{i k l} \widehat{S}_{l}+\widehat{Q}_{i k} \label{chap2:eq:168}
+\end{equation}
 In particular,
-
-
-\begin{gather*}
-\widehat{\mathbf{S}}^{2}=\widehat{S}_{x}^{2}+\widehat{S}_{y}^{2}+\widehat{S}_{z}^{2}=2 \widehat{I}  \tag{39}\\
-{\left[\widehat{S}_{i}, \widehat{S}_{k}\right] \equiv \widehat{S}_{i} \widehat{S}_{k}-\widehat{S}_{k} \widehat{S}_{i}=i \varepsilon_{i k l} \widehat{S}_{l}}  \tag{40}\\
-\left\{\widehat{S}_{i}, \widehat{S}_{k}\right\} \equiv \widehat{S}_{i} \widehat{S}_{k}+\widehat{S}_{k} \widehat{S}_{i}=\frac{4}{3} \delta_{i k} \widehat{I}+2 \widehat{Q}_{i k} \tag{41}
-\end{gather*}
-
-
+\begin{gather}
+\widehat{\vect{S}}^{2}=\widehat{S}_{x}^{2}+\widehat{S}_{y}^{2}+\widehat{S}_{z}^{2}=2 \widehat{I}  \label{chap2:eq:169}\\
+{\left[\widehat{S}_{i}, \widehat{S}_{k}\right] \equiv \widehat{S}_{i} \widehat{S}_{k}-\widehat{S}_{k} \widehat{S}_{i}=i \varepsilon_{i k l} \widehat{S}_{l}}  \label{chap2:eq:170}\\
+\left\{\widehat{S}_{i}, \widehat{S}_{k}\right\} \equiv \widehat{S}_{i} \widehat{S}_{k}+\widehat{S}_{k} \widehat{S}_{i}=\frac{4}{3} \delta_{i k} \widehat{I}+2 \widehat{Q}_{i k} \label{chap2:eq:171}
+\end{gather}
 (b)
-
-
-\begin{align*}
-\hat{S}_{i} \hat{S}_{k} \hat{S}_{l} & =\frac{i}{3} \varepsilon_{i k l} \hat{I}+\frac{1}{2}\left(\delta_{i k} \hat{S}_{l}+\delta_{k l} \hat{S}_{i}\right)+i \varepsilon_{i l m} \hat{Q}_{k m} \\
-& =\frac{i}{3} \varepsilon_{i k l} \hat{I}+\frac{1}{2}\left(\delta_{i k} \hat{S}_{l}+\delta_{k l} \hat{S}_{i}\right)+\frac{i}{2}\left(\varepsilon_{i k m} \hat{Q}_{l m}+\varepsilon_{i l m} \hat{Q}_{k m}+\varepsilon_{k l m} \hat{Q}_{i m}\right) \tag{42}
-\end{align*}
-
-
-From Eq. (42) one may obtain the Duffin-Kemmer relation
-
-
-\begin{equation*}
-\widehat{S}_{i} \widehat{S}_{k} \widehat{S}_{l}+\widehat{S}_{l} \widehat{S}_{k} \widehat{S}_{i}=\delta_{i k} \widehat{S}_{l}+\delta_{k l} \widehat{S}_{i} \tag{43}
-\end{equation*}
-
-
-Other particular cases of (42) are
-
-
-\begin{gather*}
-\hat{S}_{i} \hat{S}_{k} \hat{S}_{i}=\delta_{i k} \hat{S}_{i} \quad \text { (no sum over } i \text { ); } \quad \sum_{i} \hat{S}_{i} \hat{S}_{k} \hat{S}_{i}=\hat{S}_{k}  \tag{44}\\
-\hat{S}_{i} \hat{S}_{k} \hat{S}_{k}+\hat{S}_{k} \hat{S}_{k} \hat{S}_{i}=\hat{S}_{i}+\delta_{i k} \hat{S}_{k} \quad \text { (no sum over } k \text { ) }  \tag{45}\\
-\hat{S}_{x} \hat{S}_{y} \hat{S}_{z}+\hat{S}_{y} \hat{S}_{z} \hat{S}_{x}+\hat{S}_{z} \hat{S}_{x} \hat{S}_{y}=i \hat{I} \\
-\hat{S}_{x} \hat{S}_{z} \hat{S}_{y}+\hat{S}_{z} \hat{S}_{y} \hat{S}_{x}+\hat{S}_{y} \hat{S}_{x} \hat{S}_{z}=-i \hat{I}  \tag{46}\\
-\hat{S}_{x} \hat{S}_{z} \hat{S}_{z}=\hat{S}_{y} \hat{S}_{y} \hat{S}_{x}=\frac{1}{2} \hat{S}_{x}-i \hat{Q}_{y x}  \tag{47}\\
-\hat{S}_{x} \hat{S}_{y} \hat{S}_{y}=\hat{S}_{z} \hat{S}_{z} \hat{S}_{x}=\frac{1}{2} \hat{S}_{x}+i \hat{Q}_{y x} \\
-\hat{S}_{y} \hat{S}_{x} \hat{S}_{x}=\hat{S}_{z} \hat{S}_{z} \hat{S}_{y}=\frac{1}{2} \hat{S}_{y}-i \hat{Q}_{x z} \\
-\hat{S}_{y} \hat{S}_{z} \hat{S}_{z}=\hat{S}_{x} \hat{S}_{x} \hat{S}_{y}=\frac{1}{2} \hat{S}_{y}+i \hat{Q}_{x z}  \tag{48}\\
-\hat{S}_{z} \hat{S}_{y} \hat{S}_{y}=\hat{S}_{x} \hat{S}_{x} \hat{S}_{z}=\frac{1}{2} \hat{S}_{z}-i \hat{Q}_{x y}  \tag{49}\\
-\hat{S}_{z} \hat{S}_{x} \hat{S}_{x}=\hat{S}_{y} \hat{S}_{y} \hat{S}_{z}=\frac{1}{2} \hat{S}_{z}+i \hat{Q}_{x y}
-\end{gather*}
-
-
+\begin{align}
+\hat{S}_{i} \hat{S}_{k} \hat{S}_{l} & =\frac{i}{3} \varepsilon_{i k l} \hat{I}+\frac{1}{2}\left(\delta_{i k} \hat{S}_{l}+\delta_{k l} \hat{S}_{i}\right)+i \varepsilon_{i l m} \hat{Q}_{k m}  \notag\\
+& =\frac{i}{3} \varepsilon_{i k l} \hat{I}+\frac{1}{2}\left(\delta_{i k} \hat{S}_{l}+\delta_{k l} \hat{S}_{i}\right)+\frac{i}{2}\left(\varepsilon_{i k m} \hat{Q}_{l m}+\varepsilon_{i l m} \hat{Q}_{k m}+\varepsilon_{k l m} \hat{Q}_{i m}\right) \label{chap2:eq:172}
+\end{align}
+From Eq. \eqref{chap2:eq:172} one may obtain the Duffin-Kemmer relation
+\begin{equation}
+\widehat{S}_{i} \widehat{S}_{k} \widehat{S}_{l}+\widehat{S}_{l} \widehat{S}_{k} \widehat{S}_{i}=\delta_{i k} \widehat{S}_{l}+\delta_{k l} \widehat{S}_{i} \label{chap2:eq:173}
+\end{equation}
+Other particular cases of \eqref{chap2:eq:172} are
+\begin{gather}
+\hat{S}_{i} \hat{S}_{k} \hat{S}_{i}=\delta_{i k} \hat{S}_{i} \quad \text { (no sum over } i \text { ); } \quad \sum_{i} \hat{S}_{i} \hat{S}_{k} \hat{S}_{i}=\hat{S}_{k}  \label{chap2:eq:174}\\
+\hat{S}_{i} \hat{S}_{k} \hat{S}_{k}+\hat{S}_{k} \hat{S}_{k} \hat{S}_{i}=\hat{S}_{i}+\delta_{i k} \hat{S}_{k} \quad \text { (no sum over } k \text { ) }  \label{chap2:eq:175}\\
+\hat{S}_{x} \hat{S}_{y} \hat{S}_{z}+\hat{S}_{y} \hat{S}_{z} \hat{S}_{x}+\hat{S}_{z} \hat{S}_{x} \hat{S}_{y}=i \hat{I}  \notag\\
+\hat{S}_{x} \hat{S}_{z} \hat{S}_{y}+\hat{S}_{z} \hat{S}_{y} \hat{S}_{x}+\hat{S}_{y} \hat{S}_{x} \hat{S}_{z}=-i \hat{I}  \label{chap2:eq:176}\\
+\hat{S}_{x} \hat{S}_{z} \hat{S}_{z}=\hat{S}_{y} \hat{S}_{y} \hat{S}_{x}=\frac{1}{2} \hat{S}_{x}-i \hat{Q}_{y x}  \label{chap2:eq:177}\\
+\hat{S}_{x} \hat{S}_{y} \hat{S}_{y}=\hat{S}_{z} \hat{S}_{z} \hat{S}_{x}=\frac{1}{2} \hat{S}_{x}+i \hat{Q}_{y x}  \notag\\
+\hat{S}_{y} \hat{S}_{x} \hat{S}_{x}=\hat{S}_{z} \hat{S}_{z} \hat{S}_{y}=\frac{1}{2} \hat{S}_{y}-i \hat{Q}_{x z}  \notag\\
+\hat{S}_{y} \hat{S}_{z} \hat{S}_{z}=\hat{S}_{x} \hat{S}_{x} \hat{S}_{y}=\frac{1}{2} \hat{S}_{y}+i \hat{Q}_{x z}  \label{chap2:eq:178}\\
+\hat{S}_{z} \hat{S}_{y} \hat{S}_{y}=\hat{S}_{x} \hat{S}_{x} \hat{S}_{z}=\frac{1}{2} \hat{S}_{z}-i \hat{Q}_{x y}  \label{chap2:eq:179}\\
+\hat{S}_{z} \hat{S}_{x} \hat{S}_{x}=\hat{S}_{y} \hat{S}_{y} \hat{S}_{z}=\frac{1}{2} \hat{S}_{z}+i \hat{Q}_{x y} \notag
+\end{gather}
 (c)
-
-
-\begin{equation*}
-\widehat{S}_{i}^{2 n}=\frac{2}{3} \widehat{I}+\widehat{Q}_{i i},(n=1,2, \ldots), \quad \widehat{S}_{i}^{2 n+1}=\widehat{S}_{i},(n=0,1,2, \ldots) \tag{50}
-\end{equation*}
-
-
+\begin{equation}
+\widehat{S}_{i}^{2 n}=\frac{2}{3} \widehat{I}+\widehat{Q}_{i i},(n=1,2, \ldots), \quad \widehat{S}_{i}^{2 n+1}=\widehat{S}_{i},(n=0,1,2, \ldots) \label{chap2:eq:180}
+\end{equation}
 In particular, if $n$ is the unit vector, then
-
-
-\begin{gather*}
-(\widehat{\mathbf{S}} \cdot \mathbf{n})^{2 k}=\frac{2}{3} \widehat{I}+\sum_{i, l} n_{i} n_{l} \widehat{Q}_{i l}, \quad(k=1,2,3, \ldots)  \tag{51}\\
-(\widehat{\mathbf{S}} \cdot \mathbf{n})^{2 k+1}=(\widehat{\mathbf{S}} \cdot \mathbf{n}), \quad(k=0,1,2, \ldots)
-\end{gather*}
-
-
+\begin{gather}
+(\widehat{\vect{S}} \cdot \vect{n})^{2 k}=\frac{2}{3} \widehat{I}+\sum_{i, l} n_{i} n_{l} \widehat{Q}_{i l}, \quad(k=1,2,3, \ldots)  \label{chap2:eq:181}\\
+(\widehat{\vect{S}} \cdot \vect{n})^{2 k+1}=(\widehat{\vect{S}} \cdot \vect{n}), \quad(k=0,1,2, \ldots) \notag
+\end{gather}
 (d)
-
-
-\begin{align*}
-& \widehat{Q}_{i k} \widehat{S}_{l}=\frac{1}{4}\left(\delta_{i l} \widehat{S}_{k}+\delta_{k l} \widehat{S}_{i}-\frac{2}{3} \delta_{i k} \widehat{S}_{l}\right)+\frac{i}{2}\left(\varepsilon_{i l m} \widehat{Q}_{k m}+\varepsilon_{k l m} \widehat{Q}_{i m}\right)  \tag{52}\\
-& \widehat{S}_{i} \widehat{Q}_{k l}=\frac{1}{4}\left(\delta_{i k} \widehat{S}_{l}+\delta_{i l} \widehat{S}_{k}-\frac{2}{3} \delta_{k l} \widehat{S}_{i}\right)+\frac{i}{2}\left(\varepsilon_{i k m} \widehat{Q}_{l m}+\varepsilon_{i l m} \widehat{Q}_{k m}\right) \tag{53}
-\end{align*}
-
-
+\begin{align}
+& \widehat{Q}_{i k} \widehat{S}_{l}=\frac{1}{4}\left(\delta_{i l} \widehat{S}_{k}+\delta_{k l} \widehat{S}_{i}-\frac{2}{3} \delta_{i k} \widehat{S}_{l}\right)+\frac{i}{2}\left(\varepsilon_{i l m} \widehat{Q}_{k m}+\varepsilon_{k l m} \widehat{Q}_{i m}\right)  \label{chap2:eq:182}\\
+& \widehat{S}_{i} \widehat{Q}_{k l}=\frac{1}{4}\left(\delta_{i k} \widehat{S}_{l}+\delta_{i l} \widehat{S}_{k}-\frac{2}{3} \delta_{k l} \widehat{S}_{i}\right)+\frac{i}{2}\left(\varepsilon_{i k m} \widehat{Q}_{l m}+\varepsilon_{i l m} \widehat{Q}_{k m}\right) \label{chap2:eq:183}
+\end{align}
 (e)
-
-
-\begin{align*}
-& \hat{Q}_{i k} \hat{Q}_{l m}=\frac{1}{6}\left(\delta_{i l} \delta_{k m}+\delta_{i m} \delta_{k l}-\frac{2}{3} \delta_{i k} \delta_{l m}\right) \hat{I}-\frac{1}{4}\left(\delta_{i l} \hat{Q}_{k m}+\delta_{i m} \hat{Q}_{k l}+\delta_{k m} \hat{Q}_{i l}+\delta_{k l} \hat{Q}_{i m}-\right. \\
-& \left.-\frac{4}{3} \delta_{i k} \hat{Q}_{l m}-\frac{4}{3} \delta_{l m} \hat{Q}_{i k}\right)+\frac{i}{8}\left(\delta_{i l} \varepsilon_{k m p} \hat{S}_{p}+\delta_{i m} \varepsilon_{k l p} \hat{S}_{p}+\delta_{k l} \varepsilon_{i m p} \hat{S}_{p}+\delta_{k m} \varepsilon_{i l p} \hat{S}_{p}\right) \tag{54}
-\end{align*}
-
-
-Products involving spherical components of the spin operator $\widehat{\mathbf{S}}$ and the polarization operators $\widehat{T}_{\mathrm{LM}}$ may be expanded in a series as given below ( $\mu, \nu= \pm 1,0$ )\\
+\begin{align}
+& \hat{Q}_{i k} \hat{Q}_{l m}=\frac{1}{6}\left(\delta_{i l} \delta_{k m}+\delta_{i m} \delta_{k l}-\frac{2}{3} \delta_{i k} \delta_{l m}\right) \hat{I}-\frac{1}{4}\left(\delta_{i l} \hat{Q}_{k m}+\delta_{i m} \hat{Q}_{k l}+\delta_{k m} \hat{Q}_{i l}+\delta_{k l} \hat{Q}_{i m}-\right.  \notag\\
+& \left.-\frac{4}{3} \delta_{i k} \hat{Q}_{l m}-\frac{4}{3} \delta_{l m} \hat{Q}_{i k}\right)+\frac{i}{8}\left(\delta_{i l} \varepsilon_{k m p} \hat{S}_{p}+\delta_{i m} \varepsilon_{k l p} \hat{S}_{p}+\delta_{k l} \varepsilon_{i m p} \hat{S}_{p}+\delta_{k m} \varepsilon_{i l p} \hat{S}_{p}\right) \label{chap2:eq:184}
+\end{align}
+Products involving spherical components of the spin operator $\widehat{\vect{S}}$ and the polarization operators $\widehat{T}_{\mathrm{LM}}$ may be expanded in a series as given below ( $\mu, \nu= \pm 1,0$ )\\
 (i)
-
-
-\begin{equation*}
-\widehat{S}_{\mu} \widehat{S}_{\nu}=\frac{2}{3}(-1)^{\mu} \delta_{\mu-\nu} \widehat{I}-\frac{1}{\sqrt{2}} C_{1 \mu 1 \nu}^{1 \lambda} \widehat{S}_{\lambda}+C_{1 \mu 1 \nu}^{2 M} \widehat{T}_{2 M} \tag{55}
-\end{equation*}
-
-
+\begin{equation}
+\widehat{S}_{\mu} \widehat{S}_{\nu}=\frac{2}{3}(-1)^{\mu} \delta_{\mu-\nu} \widehat{I}-\frac{1}{\sqrt{2}} \clebsch{1}{\mu}{1}{\nu}{1}{\lambda} \widehat{S}_{\lambda}+\clebsch{1}{\mu}{1}{\nu}{2}{M} \widehat{T}_{2 M} \label{chap2:eq:185}
+\end{equation}
 In particular
-
-
-\begin{gather*}
-\widehat{S}^{2}=-\widehat{S}_{+1} \widehat{S}_{-1}+\widehat{S}_{0} \widehat{S}_{0}-\widehat{S}_{-1} \widehat{S}_{+1}=2 \widehat{I}  \tag{56}\\
-{\left[\widehat{S}_{\mu}, \widehat{S}_{\nu}\right] \equiv \widehat{S}_{\mu} \widehat{S}_{\nu}-\widehat{S}_{\nu} \widehat{S}_{\mu}=-\sqrt{2} C_{1 \mu 1 \nu}^{1 \lambda} \widehat{S}_{\lambda}}  \tag{57}\\
-\left\{\widehat{S}_{\mu}, \widehat{S}_{\nu}\right\} \equiv \widehat{S}_{\mu} \widehat{S}_{\nu}+\widehat{S}_{\nu} \widehat{S}_{\mu}=\frac{4}{3}(-1)^{\mu} \delta_{\mu-\nu}+2 C_{1 \mu 1 \nu}^{2 M} \widehat{T}_{2 M} \tag{58}
-\end{gather*}
-
-
+\begin{gather}
+\widehat{S}^{2}=-\widehat{S}_{+1} \widehat{S}_{-1}+\widehat{S}_{0} \widehat{S}_{0}-\widehat{S}_{-1} \widehat{S}_{+1}=2 \widehat{I}  \label{chap2:eq:186}\\
+{\left[\widehat{S}_{\mu}, \widehat{S}_{\nu}\right] \equiv \widehat{S}_{\mu} \widehat{S}_{\nu}-\widehat{S}_{\nu} \widehat{S}_{\mu}=-\sqrt{2} \clebsch{1}{\mu}{1}{\nu}{1}{\lambda} \widehat{S}_{\lambda}}  \label{chap2:eq:187}\\
+\left\{\widehat{S}_{\mu}, \widehat{S}_{\nu}\right\} \equiv \widehat{S}_{\mu} \widehat{S}_{\nu}+\widehat{S}_{\nu} \widehat{S}_{\mu}=\frac{4}{3}(-1)^{\mu} \delta_{\mu-\nu}+2 \clebsch{1}{\mu}{1}{\nu}{2}{M} \widehat{T}_{2 M} \label{chap2:eq:188}
+\end{gather}
 (ii)
-
-
-\begin{gather*}
-\widehat{S}_{ \pm 1}^{2}=\widehat{T}_{2 \pm 2}, \widehat{S}_{ \pm 1}^{3}=\widehat{S}_{ \pm 1}^{4}=\widehat{S}_{ \pm 1}^{5}=\ldots=0  \tag{59}\\
-\widehat{S}_{0}^{2}=\frac{2}{3} \widehat{I}+\sqrt{\frac{2}{3}} \widehat{T}_{20}  \tag{60}\\
-\widehat{S}_{0}^{2 n}=\widehat{S}_{0}^{2},(n=1,2, \ldots), \quad \widehat{S}_{0}^{2 n+1}=\widehat{S}_{0}, \quad(n=0,1,2, \ldots) \tag{61}
-\end{gather*}
-
-
+\begin{gather}
+\widehat{S}_{ \pm 1}^{2}=\widehat{T}_{2 \pm 2}, \widehat{S}_{ \pm 1}^{3}=\widehat{S}_{ \pm 1}^{4}=\widehat{S}_{ \pm 1}^{5}=\ldots=0  \label{chap2:eq:189}\\
+\widehat{S}_{0}^{2}=\frac{2}{3} \widehat{I}+\sqrt{\frac{2}{3}} \widehat{T}_{20}  \label{chap2:eq:190}\\
+\widehat{S}_{0}^{2 n}=\widehat{S}_{0}^{2},(n=1,2, \ldots), \quad \widehat{S}_{0}^{2 n+1}=\widehat{S}_{0}, \quad(n=0,1,2, \ldots) \label{chap2:eq:191}
+\end{gather}
 (iii)
-
-\[
+\begin{equation}
 \hat{T}_{L_{1} M_{1}} \hat{T}_{L_{2} M_{2}}=\sqrt{\left(2 L_{1}+1\right)\left(2 L_{2}+1\right)} \sum_{L}(-1)^{L}\left\{\begin{array}{ccc}
-L_{1} & L_{2} & L  \tag{62}\\
+L_{1} & L_{2} & L  \label{chap2:eq:192}\\
 1 & 1 & 1
-\end{array}\right\} C_{L_{1} M_{1} L_{2} M_{2}}^{L M} \hat{T}_{L M}
-\]
-
+\end{array}\right\} \clebsch{L_{1}}{M_{1}}{L_{2}}{M_{2}}{L}{M} \hat{T}_{L M}
+\end{equation}
 Particularly,
-
-
-\begin{gather*}
-\widehat{T}_{L M} \widehat{T}_{00}=\widehat{T}_{00} \widehat{T}_{L M}=\frac{1}{\sqrt{3}} \widehat{T}_{L M}, \quad(L=0,1,2 ;-L \leq M \leq L),  \tag{63}\\
-\widehat{S}_{\mu} \widehat{T}_{2 M}=-\frac{1}{2} \sqrt{\frac{5}{3}} C_{1 \mu 2 M}^{1 \nu} \widehat{S}_{\nu}-\sqrt{\frac{3}{2}} C_{1 \mu 2 M}^{2 N} \widehat{T}_{2 N},  \tag{64}\\
-\widehat{T}_{2 M} \widehat{S}_{\mu}=-\frac{1}{2} \sqrt{\frac{5}{3}} C_{1 \mu 2 M}^{1 \nu} \widehat{S}_{\nu}+\sqrt{\frac{3}{2}} C_{1 \mu 2 M}^{2 N} \widehat{T}_{2 N},  \tag{65}\\
-\widehat{T}_{2 M} \widehat{T}_{2 N}=(-1)^{M} \cdot \frac{1}{3} \delta_{M-N} \widehat{I}+\frac{1}{2} \sqrt{\frac{5}{2}} C_{2 M 2 N}^{1 \mu} \widehat{S}_{\mu}+\frac{1}{2} \sqrt{\frac{7}{3}} C_{2 M 2 N}^{2 A} \widehat{T}_{2 A} . \tag{66}
-\end{gather*}
-
-
-\subsection*{2.6.4 Functions of Spin Matrices}
-
-\begin{align*}
-e^{\alpha \widehat{S}_{i}}=\frac{1}{3}(1+2 \cosh \alpha) \widehat{I}+ & \left.\sinh \alpha \widehat{S}_{i}+(\cosh \alpha-1) \widehat{Q}_{i i} \quad \text { (no sum over } i\right)  \tag{67}\\
-\cosh \left(\alpha \widehat{S}_{i}\right)= & \frac{1}{3}(1+2 \cosh \alpha) \widehat{I}+(\cosh \alpha-1) \widehat{Q}_{i i}  \tag{68}\\
-& \sinh \left(\alpha \widehat{S}_{i}\right)=\sinh \alpha \widehat{S}_{i} \tag{69}
-\end{align*}
-
-
+\begin{gather}
+\widehat{T}_{L M} \widehat{T}_{00}=\widehat{T}_{00} \widehat{T}_{L M}=\frac{1}{\sqrt{3}} \widehat{T}_{L M}, \quad(L=0,1,2 ;-L \leq M \leq L),  \label{chap2:eq:193}\\
+\widehat{S}_{\mu} \widehat{T}_{2 M}=-\frac{1}{2} \sqrt{\frac{5}{3}} \clebsch{1}{\mu}{2}{M}{1}{\nu} \widehat{S}_{\nu}-\sqrt{\frac{3}{2}} \clebsch{1}{\mu}{2}{M}{2}{N} \widehat{T}_{2 N},  \label{chap2:eq:194}\\
+\widehat{T}_{2 M} \widehat{S}_{\mu}=-\frac{1}{2} \sqrt{\frac{5}{3}} \clebsch{1}{\mu}{2}{M}{1}{\nu} \widehat{S}_{\nu}+\sqrt{\frac{3}{2}} \clebsch{1}{\mu}{2}{M}{2}{N} \widehat{T}_{2 N},  \label{chap2:eq:195}\\
+\widehat{T}_{2 M} \widehat{T}_{2 N}=(-1)^{M} \cdot \frac{1}{3} \delta_{M-N} \widehat{I}+\frac{1}{2} \sqrt{\frac{5}{2}} \clebsch{2}{M}{2}{N}{1}{\mu} \widehat{S}_{\mu}+\frac{1}{2} \sqrt{\frac{7}{3}} \clebsch{2}{M}{2}{N}{2}{A} \widehat{T}_{2 A} . \label{chap2:eq:196}
+\end{gather}
+\subsection{Functions of Spin Matrices}
+\begin{align}
+e^{\alpha \widehat{S}_{i}}=\frac{1}{3}(1+2 \cosh \alpha) \widehat{I}+ & \left.\sinh \alpha \widehat{S}_{i}+(\cosh \alpha-1) \widehat{Q}_{i i} \quad \text { (no sum over } i\right)  \label{chap2:eq:197}\\
+\cosh \left(\alpha \widehat{S}_{i}\right)= & \frac{1}{3}(1+2 \cosh \alpha) \widehat{I}+(\cosh \alpha-1) \widehat{Q}_{i i}  \label{chap2:eq:198}\\
+& \sinh \left(\alpha \widehat{S}_{i}\right)=\sinh \alpha \widehat{S}_{i} \label{chap2:eq:199}
+\end{align}
 where $i=x, y, z$.
-
-
-\begin{gather*}
-e^{\alpha \widehat{S}_{+1}}=\widehat{I}+\alpha \widehat{S}_{+1}+\frac{\alpha^{2}}{2} \widehat{T}_{22}  \tag{70}\\
-e^{\alpha \widehat{S}_{0}}=\frac{1}{3}(1+2 \cosh \alpha) \widehat{I}+\sinh \alpha \widehat{S}_{0}+\sqrt{\frac{2}{3}}(\cosh \alpha-1) \widehat{T}_{20}  \tag{71}\\
-e^{\alpha \widehat{S}_{-1}}=\widehat{I}+\alpha \widehat{S}_{-1}+\frac{\alpha^{2}}{2} \widehat{T}_{2-2}  \tag{72}\\
-\sinh \left(\alpha \widehat{S}_{+1}\right)=\alpha \widehat{S}_{+1}, \quad \sinh \left(\alpha \widehat{S}_{0}\right)=\sinh \alpha \widehat{S}_{0}, \quad \sinh \left(\alpha \widehat{S}_{-1}\right)=\alpha \widehat{S}_{-1} \tag{73}
-\end{gather*}
-
-
-
-\begin{gather*}
-\cosh \left(\alpha \widehat{S}_{+1}\right)=\widehat{I}+\frac{\alpha^{2}}{2} \widehat{T}_{22} \\
-\cosh \left(\alpha \widehat{S}_{0}\right)=\frac{1}{3}(1+2 \cosh \alpha) \widehat{I}+\sqrt{\frac{2}{3}}(\cosh \alpha-1) \widehat{T}_{20}  \tag{74}\\
-\cosh \left(\alpha \widehat{S}_{-1}\right)=\widehat{I}+\frac{\alpha^{2}}{2} \widehat{T}_{2-2}
-\end{gather*}
-
-
-\subsection*{2.6.5. Operators of Coordinate Rotations}
+\begin{gather}
+e^{\alpha \widehat{S}_{+1}}=\widehat{I}+\alpha \widehat{S}_{+1}+\frac{\alpha^{2}}{2} \widehat{T}_{22}  \label{chap2:eq:200}\\
+e^{\alpha \widehat{S}_{0}}=\frac{1}{3}(1+2 \cosh \alpha) \widehat{I}+\sinh \alpha \widehat{S}_{0}+\sqrt{\frac{2}{3}}(\cosh \alpha-1) \widehat{T}_{20}  \label{chap2:eq:201}\\
+e^{\alpha \widehat{S}_{-1}}=\widehat{I}+\alpha \widehat{S}_{-1}+\frac{\alpha^{2}}{2} \widehat{T}_{2-2}  \label{chap2:eq:202}\\
+\sinh \left(\alpha \widehat{S}_{+1}\right)=\alpha \widehat{S}_{+1}, \quad \sinh \left(\alpha \widehat{S}_{0}\right)=\sinh \alpha \widehat{S}_{0}, \quad \sinh \left(\alpha \widehat{S}_{-1}\right)=\alpha \widehat{S}_{-1} \label{chap2:eq:203}
+\end{gather}
+\begin{gather}
+\cosh \left(\alpha \widehat{S}_{+1}\right)=\widehat{I}+\frac{\alpha^{2}}{2} \widehat{T}_{22}  \notag\\
+\cosh \left(\alpha \widehat{S}_{0}\right)=\frac{1}{3}(1+2 \cosh \alpha) \widehat{I}+\sqrt{\frac{2}{3}}(\cosh \alpha-1) \widehat{T}_{20}  \label{chap2:eq:204}\\
+\cosh \left(\alpha \widehat{S}_{-1}\right)=\widehat{I}+\frac{\alpha^{2}}{2} \widehat{T}_{2-2} \notag
+\end{gather}
+\subsection{Operators of Coordinate Rotations}
 (a) Under rotations of coordinate systems defined by the Euler angles $\alpha, \beta, \gamma$ spin functions and spin matrices for $S=1$ are transformed by the rotation operator $\hat{D}^{1}(\alpha, \beta, \gamma)$ which is a special case of the operator given by Eq. 1.4(31)
-
-
-\begin{equation*}
-\widehat{D}^{1}(\alpha, \beta, \gamma)=e^{-i \alpha \widehat{S}_{x}} e^{-i \beta \widehat{S}_{y}} e^{-i \gamma \widehat{S}_{z}} \tag{75}
-\end{equation*}
-
-
+\begin{equation}
+\widehat{D}^{1}(\alpha, \beta, \gamma)=e^{-i \alpha \widehat{S}_{x}} e^{-i \beta \widehat{S}_{y}} e^{-i \gamma \widehat{S}_{z}} \label{chap2:eq:205}
+\end{equation}
 In the spherical basis representation $\hat{D}^{1}(\alpha, \beta, \gamma)$ has the form
-
-\[
+\begin{equation}
 \widehat{D}^{1}(\alpha, \beta, \gamma)=\left(\begin{array}{ccc}
-\frac{1+\cos \beta}{2} e^{-i(\alpha+\gamma)} & -\frac{\sin \beta}{\sqrt{2}} e^{-i \alpha} & \frac{1-\cos \beta}{2} e^{i(\gamma-\alpha)}  \tag{76}\\
+\frac{1+\cos \beta}{2} e^{-i(\alpha+\gamma)} & -\frac{\sin \beta}{\sqrt{2}} e^{-i \alpha} & \frac{1-\cos \beta}{2} e^{i(\gamma-\alpha)}  \label{chap2:eq:206}\\
 \frac{\sin \beta}{\sqrt{2}} e^{-i \gamma} & \cos \beta & -\frac{\sin \beta}{\sqrt{2}} e^{i \gamma} \\
 \frac{1-\cos \beta}{2} e^{i(\alpha-\gamma)} & \frac{\sin \beta}{\sqrt{2}} e^{i \alpha} & \frac{1+\cos \beta}{2} e^{i(\gamma+\alpha)}
 \end{array}\right) .
-\]
-
+\end{equation}
 The matrix elements of $\widehat{D}^{1}(\alpha, \beta, \gamma)$ in this representation are the Wigner $D$-functions $D_{M M^{\prime}}^{1}(\alpha, \beta, \gamma)$ (see Chap. 4).
 
 In the cartesian basis representation we have
-
-\[
+\begin{equation}
 \hat{D}^{1}(\alpha, \beta, \gamma)=\left(\begin{array}{ccc}
-\cos \beta \cos \alpha \cos \gamma-\sin \alpha \sin \gamma & -\cos \beta \cos \alpha \sin \gamma-\sin \alpha \cos \gamma & \sin \beta \cos \alpha  \tag{77}\\
+\cos \beta \cos \alpha \cos \gamma-\sin \alpha \sin \gamma & -\cos \beta \cos \alpha \sin \gamma-\sin \alpha \cos \gamma & \sin \beta \cos \alpha  \label{chap2:eq:207}\\
 \cos \beta \sin \alpha \cos \gamma+\cos \alpha \sin \gamma & -\cos \beta \sin \alpha \sin \gamma+\cos \alpha \cos \gamma & \sin \beta \sin \alpha \\
 -\sin \beta \cos \gamma & \sin \beta \sin \gamma & \cos \beta
 \end{array}\right) .
-\]
-
+\end{equation}
 The matrix elements of $\widehat{D}^{1}(\alpha, \beta, \gamma)$ in the cartesian basis representation coincide with the elements of the rotation matrix $a_{i k}$ (see Sec. 1.4.6).
 
 The inverse rotation of the coordinate system is performed by the matrix
-
-
-\begin{equation*}
-\left[\widehat{D}^{1}(\alpha, \beta, \gamma)\right]^{-1}=\left[\widehat{D}^{1}(\alpha, \beta, \gamma)\right]^{+}=\widehat{D}^{1}(-\gamma,-\beta,-\alpha)=\widehat{D}^{1}(\pi-\gamma ; \beta,-\pi-\alpha) . \tag{78}
-\end{equation*}
-
-
-(b) Under rotation of the coordinate system through an angle $\omega$ about an axis $\mathbf{n}(\Theta, \Phi)$ the spin functions and spin matrices for $S=1$ are transformed by the rotation operator $\hat{U}^{1}(\omega ; \Theta, \Phi)$ which is a special case of the operator given by Eq. 1.4(33)
-
-
-\begin{equation*}
-\widehat{U}^{1}(\omega ; \Theta, \Phi)=e^{-i \omega \mathbf{n} \cdot \widehat{\mathbf{s}}} . \tag{79}
-\end{equation*}
-
-
+\begin{equation}
+\left[\widehat{D}^{1}(\alpha, \beta, \gamma)\right]^{-1}=\left[\widehat{D}^{1}(\alpha, \beta, \gamma)\right]^{+}=\widehat{D}^{1}(-\gamma,-\beta,-\alpha)=\widehat{D}^{1}(\pi-\gamma ; \beta,-\pi-\alpha) . \label{chap2:eq:208}
+\end{equation}
+(b) Under rotation of the coordinate system through an angle $\omega$ about an axis $\vect{n}(\Theta, \Phi)$ the spin functions and spin matrices for $S=1$ are transformed by the rotation operator $\hat{U}^{1}(\omega ; \Theta, \Phi)$ which is a special case of the operator given by Eq. 1.4(33)
+\begin{equation}
+\widehat{U}^{1}(\omega ; \Theta, \Phi)=e^{-i \omega \vect{n} \cdot \widehat{\vect{s}}} . \label{chap2:eq:209}
+\end{equation}
 In the spherical basis representation this operator may be written as
-
-\[
-\left.\begin{array}{c}
-\hat{U}^{1}(\omega ; \Theta, \Phi)=\left(\begin{array}{cc}
+\begin{align}
+& \hat{U}^{1}(\omega ; \Theta, \Phi)=\left(\begin{array}{c}
 \frac{1}{2} \cos \omega\left(1+\cos ^{2} \Theta\right)-i \sin \omega \cos \Theta+\frac{1}{2} \sin ^{2} \Theta \\
 \frac{1}{\sqrt{2}} \sin \Theta e^{i \Phi}[(\cos \omega-1) \cos \Theta-i \sin \omega] \\
 \frac{1}{2}(\cos \omega-1) \sin ^{2} \Theta e^{i 2 \Phi}
-\end{array}\right.  \tag{80}\\
-\frac{1}{\sqrt{2}} \sin \Theta e^{-i \Phi}[(\cos \omega-1) \cos \Theta-i \sin \omega] \\
-\cos \omega \sin ^{2} \Theta+\cos ^{2} \Theta \\
+\end{array}\right. \notag\\
+& \left.\begin{array}{cc}
+\frac{1}{\sqrt{2}} \sin \Theta e^{-i \Phi}[(\cos \omega-1) \cos \Theta-i \sin \omega] &
 \frac{1}{2}(\cos \omega-1) \sin ^{2} \Theta e^{-i 2 \Phi} \\
+\cos \omega \sin ^{2} \Theta+\cos ^{2} \Theta &
 -\frac{1}{\sqrt{2}} \sin \Theta e^{i \Phi}[(\cos \omega-1) \cos \Theta+i \sin \omega] \\
-\frac{1}{2} \cos \omega\left(1+\cos ^{2} \Theta\right)+i \sin \omega \cos \Theta+\frac{1}{2} \sin ^{2} \Theta
-\end{array}\right) .
-\]
-
+-\frac{1}{\sqrt{2}} \sin \Theta e^{i \Phi}[(\cos \omega-1) \cos \Theta+i \sin \omega] & \frac{1}{2} \cos \omega\left(1+\cos ^{2} \Theta\right)+i \sin \omega \cos \Theta+\frac{1}{2} \sin ^{2} \Theta
+\end{array}\right) . \label{chap2:eq:210}
+\end{align}
 In the cartesian basis representation $\hat{U}^{1}(\omega ; \Theta, \Phi)$ has the form
-
-$$
-\hat{U}^{1}(\omega ; \Theta, \Phi)=\left(\begin{array}{l}
+\begin{align}
+& \hat{U}^{1}(\omega ; \Theta, \Phi)=\left(\begin{array}{l}
 (1-\cos \omega) \sin ^{2} \Theta \cos ^{2} \Phi+\cos \omega \\
 (1-\cos \omega) \sin ^{2} \Theta \cos \Phi \sin \Phi+\sin \omega \cos \Theta \\
 (1-\cos \omega) \sin \Theta \cos \Theta \cos \Phi-\sin \omega \sin \Theta \sin \Phi
-\end{array}\right.
-$$
-
-\[
-\left.\begin{array}{ll}
-(1-\cos \omega) \sin ^{2} \Theta \cos \Phi \sin \Phi-\sin \omega \cos \Theta & (1-\cos \omega) \sin \Theta \cos \Theta \cos \Phi+\sin \omega \sin \Theta \sin \Phi  \tag{81}\\
+\end{array}\right.  \notag\\
+& \left.\begin{array}{ll}
+(1-\cos \omega) \sin ^{2} \Theta \cos \Phi \sin \Phi-\sin \omega \cos \Theta & (1-\cos \omega) \sin \Theta \cos \Theta \cos \Phi+\sin \omega \sin \Theta \sin \Phi \\
 (1-\cos \omega) \sin ^{2} \Theta \sin ^{2} \Phi+\cos \omega & (1-\cos \omega) \sin \Theta \cos \Theta \sin \Phi-\sin \omega \sin \Theta \cos \Phi \\
 (1-\cos \omega) \sin \Theta \cos \Theta \sin \Phi+\sin \omega \sin \Theta \cos \Phi & (1-\cos \omega) \cos ^{2} \Theta+\cos \omega
-\end{array}\right) .
-\]
-
+\end{array}\right) . \label{chap2:eq:211}
+\end{align}
 The inverse rotation of the coordinate system is performed by the matrix
-
-
-\begin{equation*}
-\left[\hat{U}^{1}(\omega ; \Theta, \Phi)\right]^{-1}=\left[\hat{U}^{1}(\omega ; \Theta, \Phi)\right]^{+}=\hat{U}^{1}(-\omega ; \Theta, \Phi)=\hat{U}^{1}(\omega ; \pi-\Theta, \pi+\Phi) \tag{82}
-\end{equation*}
-
-
+\begin{equation}
+\left[\hat{U}^{1}(\omega ; \Theta, \Phi)\right]^{-1}=\left[\hat{U}^{1}(\omega ; \Theta, \Phi)\right]^{+}=\hat{U}^{1}(-\omega ; \Theta, \Phi)=\hat{U}^{1}(\omega ; \pi-\Theta, \pi+\Phi) \label{chap2:eq:212}
+\end{equation}
 The expansion of the rotation operator $\hat{U}^{1}(\omega ; \Theta, \Phi)$ in terms of the spin matrices and the polarization operators has the form
-
-
-\begin{equation*}
-\hat{U}^{1}(\omega ; \Theta, \Phi)=\frac{1}{3}(2 \cos \omega+1) \hat{I}-i \sin \omega(\mathrm{n} \cdot \widehat{\mathrm{~S}})+(\cos \omega-1) \sum_{i, k} n_{i} n_{k} \hat{Q}_{i k} \tag{83}
-\end{equation*}
-
-
-(See also Eqs. 2.4(17) and 2.4(18).)\\
+\begin{equation}
+\hat{U}^{1}(\omega ; \Theta, \Phi)=\frac{1}{3}(2 \cos \omega+1) \hat{I}-i \sin \omega(\mathrm{n} \cdot \widehat{\mathrm{~S}})+(\cos \omega-1) \sum_{i, k} n_{i} n_{k} \hat{Q}_{i k} \label{chap2:eq:213}
+\end{equation}
+(See also Eqs. \eqref{chap2:eq:74} and \eqref{chap2:eq:75}.)\\
 The relations between the angles $\omega, \Theta, \Phi$ and the Euler angles $\alpha, \beta, \gamma$ are given by Eqs. 1.4(16), 1.4(17). Note that
-
-
-\begin{equation*}
-\widehat{D}^{1}(\alpha, \beta, \gamma)=\widehat{U}^{1}(\omega ; \Theta, \Phi) \tag{84}
-\end{equation*}
-
-
+\begin{equation}
+\widehat{D}^{1}(\alpha, \beta, \gamma)=\widehat{U}^{1}(\omega ; \Theta, \Phi) \label{chap2:eq:214}
+\end{equation}
 (c) Applying the rotation operator $\widehat{D}^{1}(\alpha, \beta, \gamma)$ to the spin matrices yields $(i, k, j, l=x, y, z)$
-
-
-\begin{gather*}
-\widehat{S}_{i}^{\prime} \equiv \widehat{D}^{1}(\alpha, \beta, \gamma) \widehat{S}_{i}\left[\widehat{D}^{1}(\alpha, \beta, \gamma)\right]^{-1}=\sum_{k} a_{i k} \widehat{S}_{k}  \tag{85}\\
-\widehat{Q}_{i k}^{\prime} \equiv \widehat{D}^{1}(\alpha, \beta, \gamma) \widehat{Q}_{i k}\left[\widehat{D}^{1}(\alpha, \beta, \gamma)\right]^{-1}=\sum_{j, l} a_{i j} a_{k l} \widehat{Q}_{j l} \tag{86}
-\end{gather*}
-
-
+\begin{gather}
+\widehat{S}_{i}^{\prime} \equiv \widehat{D}^{1}(\alpha, \beta, \gamma) \widehat{S}_{i}\left[\widehat{D}^{1}(\alpha, \beta, \gamma)\right]^{-1}=\sum_{k} a_{i k} \widehat{S}_{k}  \label{chap2:eq:215}\\
+\widehat{Q}_{i k}^{\prime} \equiv \widehat{D}^{1}(\alpha, \beta, \gamma) \widehat{Q}_{i k}\left[\widehat{D}^{1}(\alpha, \beta, \gamma)\right]^{-1}=\sum_{j, l} a_{i j} a_{k l} \widehat{Q}_{j l} \label{chap2:eq:216}
+\end{gather}
 where $a_{i k}$ is the rotation matrix (Sec. 1.4.6)
-
-
-\begin{gather*}
-\widehat{S}_{\mu}^{\prime} \equiv \widehat{D}^{1}(\alpha, \beta, \gamma) \widehat{S}_{\mu}\left[\widehat{D}^{1}(\alpha, \beta, \gamma)\right]^{-1}=\sum_{\nu} D_{\nu \mu}^{1}(\alpha, \beta, \gamma) \widehat{S}_{\nu}, \quad(\mu, \nu= \pm 1,0)  \tag{87}\\
-\widehat{T}_{L M}^{\prime} \equiv \widehat{D}^{1}(\alpha, \beta, \gamma) \widehat{T}_{L M}\left[\widehat{D}^{1}(\alpha, \beta, \gamma)\right]^{-1}=\sum_{M^{\prime}} D_{M^{\prime} M}^{L}(\alpha, \beta, \gamma) \widehat{T}_{L M^{\prime}} \quad\left(-L \leq M, M^{\prime} \leq L\right) \tag{88}
-\end{gather*}
-
-
+\begin{gather}
+\widehat{S}_{\mu}^{\prime} \equiv \widehat{D}^{1}(\alpha, \beta, \gamma) \widehat{S}_{\mu}\left[\widehat{D}^{1}(\alpha, \beta, \gamma)\right]^{-1}=\sum_{\nu} D_{\nu \mu}^{1}(\alpha, \beta, \gamma) \widehat{S}_{\nu}, \quad(\mu, \nu= \pm 1,0)  \label{chap2:eq:217}\\
+\widehat{T}_{L M}^{\prime} \equiv \widehat{D}^{1}(\alpha, \beta, \gamma) \widehat{T}_{L M}\left[\widehat{D}^{1}(\alpha, \beta, \gamma)\right]^{-1}=\sum_{M^{\prime}} D_{M^{\prime} M}^{L}(\alpha, \beta, \gamma) \widehat{T}_{L M^{\prime}} \quad\left(-L \leq M, M^{\prime} \leq L\right) \label{chap2:eq:218}
+\end{gather}
 $D_{M M^{\prime}}^{L}(\alpha, \beta, \gamma)$ being the Wigner $D$-functions (see Chap. 4).
 
-\subsection*{2.6.6. Traces of Products of Spin Matrices}
+\subsection{Traces of Products of Spin Matrices}
 For cartesian components of the spin matrices $\widehat{S}_{i}$ and $\widehat{Q}_{i k}$ the following relations hold $(i, k, l$, etc. take the values $x, y, z)$.
-
-
-\begin{gather*}
-\operatorname{Tr}\left\{\widehat{S}_{i}\right\}=0, \quad \operatorname{Tr}\left\{\widehat{Q}_{i k}\right\}=0, \\
-\operatorname{Tr}\left\{\widehat{S}_{i} \widehat{S}_{k}\right\}=2 \delta_{i k}, \quad \operatorname{Tr}\left\{\widehat{S}_{i} \widehat{Q}_{k l}\right\}=0, \quad \operatorname{Tr}\left\{\widehat{Q}_{i k} \widehat{S}_{l}\right\}=0, \\
-\operatorname{Tr}\left\{\widehat{S}_{i} \widehat{S}_{k} \widehat{S}_{l}\right\}=i \varepsilon_{i k l},  \tag{89}\\
-\operatorname{Tr}\left\{\widehat{Q}_{i k} \widehat{Q}_{l m}\right\}=\frac{1}{2}\left(\delta_{i l} \delta_{k m}+\delta_{i m} \delta_{k l}-\frac{2}{3} \delta_{i k} \delta_{l m}\right), \operatorname{Tr}\left\{\widehat{S}_{i} \widehat{S}_{k} \widehat{S}_{l} \widehat{S}_{m}\right\}=\delta_{i k} \delta_{l m}+\delta_{i m} \delta_{k l}
-\end{gather*}
-
-
+\begin{gather}
+\operatorname{Tr}\left\{\widehat{S}_{i}\right\}=0, \quad \operatorname{Tr}\left\{\widehat{Q}_{i k}\right\}=0,  \notag\\
+\operatorname{Tr}\left\{\widehat{S}_{i} \widehat{S}_{k}\right\}=2 \delta_{i k}, \quad \operatorname{Tr}\left\{\widehat{S}_{i} \widehat{Q}_{k l}\right\}=0, \quad \operatorname{Tr}\left\{\widehat{Q}_{i k} \widehat{S}_{l}\right\}=0,  \notag\\
+\operatorname{Tr}\left\{\widehat{S}_{i} \widehat{S}_{k} \widehat{S}_{l}\right\}=i \varepsilon_{i k l},  \label{chap2:eq:219}\\
+\operatorname{Tr}\left\{\widehat{Q}_{i k} \widehat{Q}_{l m}\right\}=\frac{1}{2}\left(\delta_{i l} \delta_{k m}+\delta_{i m} \delta_{k l}-\frac{2}{3} \delta_{i k} \delta_{l m}\right), \operatorname{Tr}\left\{\widehat{S}_{i} \widehat{S}_{k} \widehat{S}_{l} \widehat{S}_{m}\right\}=\delta_{i k} \delta_{l m}+\delta_{i m} \delta_{k l} \notag
+\end{gather}
 For spherical components of the spin operator $\widehat{S}_{\mu}$ we have ( $\mu, \nu, \lambda$, etc. take the values $\pm 1,0$ )
-
-
-\begin{gather*}
-\operatorname{Tr}\left\{\widehat{S}_{\mu}\right\}=0 \\
-\operatorname{Tr}\left\{\widehat{S}_{\mu} \widehat{S}_{\nu}\right\}=(-1)^{\mu} 2 \delta_{\mu-\nu} \\
+\begin{gather}
+\operatorname{Tr}\left\{\widehat{S}_{\mu}\right\}=0  \notag\\
+\operatorname{Tr}\left\{\widehat{S}_{\mu} \widehat{S}_{\nu}\right\}=(-1)^{\mu} 2 \delta_{\mu-\nu}  \notag\\
 \operatorname{Tr}\left\{\widehat{S}_{\mu} \widehat{S}_{\nu} \widehat{S}_{\lambda}\right\}=-\sqrt{6}\left(\begin{array}{ccc}
 1 & 1 & 1 \\
 \mu & \nu & \lambda
-\end{array}\right)=(-1)^{1+\lambda} \sqrt{2} C_{1 \mu 1 \nu}^{1-\lambda},  \tag{90}\\
-\operatorname{Tr}\left\{\widehat{S}_{\mu} \widehat{S}_{\nu} \widehat{S}_{\lambda} \widehat{S}_{\rho}\right\}=(-1)^{\mu+\lambda}\left(\delta_{\mu-\nu} \delta_{\lambda-\rho}+\delta_{\mu-\rho} \delta_{\nu-\lambda}\right), \\
-\operatorname{Tr}\left\{\widehat{S}_{\mu_{1}} \widehat{S}_{\mu_{2}} \ldots \widehat{S}_{\mu_{n}}\right\}=0 \quad \text { if } \mu_{1}+\mu_{2}+\ldots+\mu_{n} \neq 0, \tag{91}
-\end{gather*}
-
-
-Traces of products of the polarization operators $\widehat{T}_{L M}(L=0,1,2 ;-L \leq M \leq L)$ can be evaluated by using Eqs. 2.4(21)-2.4(24) at $S=1$.
+\end{array}\right)=(-1)^{1+\lambda} \sqrt{2} \clebsch{1}{\mu}{1}{\nu}{1}{-\lambda},  \label{chap2:eq:220}\\
+\operatorname{Tr}\left\{\widehat{S}_{\mu} \widehat{S}_{\nu} \widehat{S}_{\lambda} \widehat{S}_{\rho}\right\}=(-1)^{\mu+\lambda}\left(\delta_{\mu-\nu} \delta_{\lambda-\rho}+\delta_{\mu-\rho} \delta_{\nu-\lambda}\right),  \notag\\
+\operatorname{Tr}\left\{\widehat{S}_{\mu_{1}} \widehat{S}_{\mu_{2}} \ldots \widehat{S}_{\mu_{n}}\right\}=0 \quad \text { if } \mu_{1}+\mu_{2}+\ldots+\mu_{n} \neq 0, \label{chap2:eq:221}
+\end{gather}
+Traces of products of the polarization operators $\widehat{T}_{L M}(L=0,1,2 ;-L \leq M \leq L)$ can be evaluated by using Eqs. \eqref{chap2:eq:78}-\eqref{chap2:eq:81} at $S=1$.
