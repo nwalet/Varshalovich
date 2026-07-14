@@ -446,10 +446,36 @@ of a point $\vect{r}$ may be written as
   `\left`/plain-delimiter pairing, so bracket sizing scales symmetrically
   around all arguments.
 - Applied so far: [Chap0.tex](Chap0.tex) (rules 1-5), [Chap1.tex](Chap1.tex),
-  [Chap2.tex](Chap2.tex), [Chap3.tex](Chap3.tex), [Chap4.tex](Chap4.tex) and
-  [Chap5.tex](Chap5.tex) (all rules — Chap2.tex and Chap3.tex have no
-  figures/tables, so rules 8-9
+  [Chap2.tex](Chap2.tex), [Chap3.tex](Chap3.tex), [Chap4.tex](Chap4.tex),
+  [Chap5.tex](Chap5.tex) and [Chap6.tex](Chap6.tex) (all rules — Chap2.tex,
+  Chap3.tex and Chap6.tex have no figures/tables, so rules 8-9
   didn't apply there).
+- Chap6.tex reused rule 7's "checks before running the script" habit to
+  good effect: `grep`ing for trailing content after `\end{...}` (the
+  Chap2.tex boundary-detection bug) caught 2 instances before the script
+  ran, both fixed the same way (move the trailing text onto the last
+  content line) with no post-hoc cleanup needed.
+- Rule 4's `\braOket` conversion needed a targeted regex this time instead
+  of hand-picked replacements — Chap6.tex has ~26 instances of `\langle+|
+  OP|+\rangle`-style matrix elements (bra/ket are always literally `+` or
+  `-`, a spin-up/spin-down label) in dense tabular/aligned blocks. Watch
+  for a *different*, unrelated use of `\langle...\rangle` in the same
+  chapter: `\langle X \rangle` (one pair, no `|`) is expectation-value/
+  ensemble-average notation, not an inner product — it doesn't match
+  `\braket` (needs a bra *and* ket) or `\braOket` (needs a middle
+  operator) and should be left alone.
+- One `C_{...}^{...}` was left unconverted because the fix needed to
+  reconstruct actual missing content (a dropped `t_{LM}` factor and a
+  superscript/subscript merged into the same wrong text), not just
+  whitespace — beyond what rule 2's "insert a missing space" precedent
+  covers. Flagged rather than guessed; see Chap6.tex around `\tag{50}`'s
+  replacement.
+- Found `\operatorname{n}` where every other occurrence of that exact unit
+  vector in the same chapter is `\mathbf{n}(\vartheta,\varphi)` — an OCR
+  command mix-up, not a real operator. Fixed to `\mathbf{n}` (then
+  `\vect{n}` under rule 10) by cross-checking against the chapter's own
+  consistent usage elsewhere, the same kind of evidence that's justified
+  fixes in earlier chapters.
 - Chap5.tex had two more variants of the "heading collapsed to plain text"
   bug (see Chap4.tex's notes above): a numbered `N.N.N Title` heading with
   no `\subsection*` wrapper at all (same fix — wrap it), and one case where
