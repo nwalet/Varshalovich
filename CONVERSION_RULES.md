@@ -446,9 +446,36 @@ of a point $\vect{r}$ may be written as
   `\left`/plain-delimiter pairing, so bracket sizing scales symmetrically
   around all arguments.
 - Applied so far: [Chap0.tex](Chap0.tex) (rules 1-5), [Chap1.tex](Chap1.tex),
-  [Chap2.tex](Chap2.tex), [Chap3.tex](Chap3.tex) and [Chap4.tex](Chap4.tex)
-  (all rules — Chap2.tex and Chap3.tex have no figures/tables, so rules 8-9
+  [Chap2.tex](Chap2.tex), [Chap3.tex](Chap3.tex), [Chap4.tex](Chap4.tex) and
+  [Chap5.tex](Chap5.tex) (all rules — Chap2.tex and Chap3.tex have no
+  figures/tables, so rules 8-9
   didn't apply there).
+- Chap5.tex had two more variants of the "heading collapsed to plain text"
+  bug (see Chap4.tex's notes above): a numbered `N.N.N Title` heading with
+  no `\subsection*` wrapper at all (same fix — wrap it), and one case where
+  the wrapper was missing *and* the title text ran straight into the
+  next paragraph's prose with no separator (`5.8.1 Action of ... on
+  $Y_{lm}$ Spherical components of the operator...` — split into a heading
+  line and a new paragraph by eye, there's no mechanical marker for where
+  the title ends and the prose begins).
+- Also found `\[...\]` wrapped around a `\begin{align*}`/`\begin{gather*}`
+  (nesting a numbered amsmath environment inside plain display math) —
+  amsmath rejects this outright (`Erroneous nesting of equation
+  structures`). Source of the bug: `$$`/`\[...\]` was OCR'd as a wrapper
+  around what should have been the *only* delimiter; strip the outer
+  `\[`/`\]` and keep just the inner environment. `grep -n '\\\[\s*$'`
+  followed by checking the next non-blank line for `\begin{align*|gather*|equation*}`
+  catches this before it surfaces as a compile error.
+- Another `\tag{$\{n\}$}` (same garbled-tag bug as Chap4) — this time
+  inside a `\[...\]` (single-equation) block, not an `align`/`gather` row,
+  so the whole block silently stayed unconverted rather than corrupting a
+  row. Checking for this pattern (`grep -n '\\tag{\$'`) *before* running
+  `convert_equation_numbering.py`, not after, meant no post-hoc renumbering
+  shift was needed this time.
+- Rule 3's plain `\braket` appeared for the first time (previous chapters
+  only had rule 4's `\braOket`) — same source pattern, `\langle a \mid
+  b\rangle`, just using `\mid` instead of a bare `|` before the source's
+  `\rangle`; both mean the same thing here.
 - **Chap4.tex was the most structurally damaged chapter so far** — beyond
   the routine rule application, it needed:
   - **~35 more missed `(a)/(b)/(c)` subsubsection headings**, flattened to
