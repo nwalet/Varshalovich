@@ -447,9 +447,268 @@ of a point $\vect{r}$ may be written as
   around all arguments.
 - Applied so far: [Chap0.tex](Chap0.tex) (rules 1-5), [Chap1.tex](Chap1.tex),
   [Chap2.tex](Chap2.tex), [Chap3.tex](Chap3.tex), [Chap4.tex](Chap4.tex),
-  [Chap5.tex](Chap5.tex) and [Chap6.tex](Chap6.tex) (all rules — Chap2.tex,
-  Chap3.tex and Chap6.tex have no figures/tables, so rules 8-9
-  didn't apply there).
+  [Chap5.tex](Chap5.tex), [Chap6.tex](Chap6.tex), [Chap7.tex](Chap7.tex) and
+  [Chap8.tex](Chap8.tex) (all rules — Chap2.tex, Chap3.tex and Chap6.tex have
+  no figures/tables, so rules 8-9 didn't apply there; Chap7.tex has no
+  figures, so only rule 9 applied there).
+- **Chap8.tex's back half (numerical-value tables, roughly the last third of
+  the chapter) is wrapped in `\begin{comment}...\end{comment}`** by the
+  project owner (predates this pass, `comment` package already loaded in
+  `VMK.tex`) to keep compile times down — per explicit instruction, none of
+  rules 1-11 were applied inside that block; it was left byte-for-byte
+  untouched. Everything below refers only to the unwrapped front matter
+  (defintions, symmetry/recursion relations, and the algebraic — not
+  numerical — coefficient tables, Sec. 8.1-8.13's prose plus Tables
+  8.1-8.10).
+- **Chap8.tex was by far the most heavily corrupted chapter converted so
+  far**, an order of magnitude more than Chap4.tex's previous high-water
+  mark, because its content is almost entirely dense algebraic formulas
+  (few complete sentences to anchor OCR against) using terse single-letter
+  momenta (`a, b, c` / `α, β, γ`) instead of the `j_1, m_1, j_2, m_2` style
+  seen elsewhere, so a lot of inter-symbol whitespace load-bears for
+  tokenization in a way OCR handles poorly:
+  - Rule 2's Clebsch-Gordan converter needed a genuinely iterative
+    repair strategy, not just the single-space-insertion precedent: of
+    ~473 `C_{...}^{...}` instances found, 313 were already well-formed, and
+    a further ~90 were recovered in three escalating passes — inserting a
+    space before a glued trailing `-\gamma`/`-\beta`/`-b`/etc. projection
+    (the same bug as prior chapters, just far more common here); an
+    unambiguous multi-split search (trying every way to split a deficient
+    token list down to the required 4 subscript + 2 superscript count, only
+    accepting the fix when exactly one such split existed); and, once the
+    user confirmed mid-session that a bare `00` inside a Clebsch coefficient
+    always means two separate zero arguments glued together (not a single
+    "00"), a pass that also generalized to `060` as `0 b 0` (`b`, the second
+    momentum letter, OCR'd as the digit `6`) and `+10`/`+20`-style trailing
+    zeros as a glued `+1 0`/`+2 0` — each confirmed against the specific
+    formula's own surrounding context (e.g. a $P_a P_b P_c$ product on the
+    same line proving a `b` term must be present) rather than applied
+    blindly. That left 68 genuinely unconvertible instances — mostly
+    Sec. 8.5.1(i)-(k) and 8.6.3's `±`/`∓`
+    template formulas (which encode two or four sibling equations at once
+    through a single argument list, so no single 4+2 split is
+    "the" correct one), Sec. 8.7.3-8.7.6's sums-of-three/four-CG-coefficient
+    identities (corrupted well beyond spacing — stray/wrong Greek letters,
+    swapped sub/superscripts), and Sec. 8.11's explicit table of *other
+    authors'* differently-shaped notations (`C^{j_1j_2j_3}_{m_1m_2m}`-style,
+    never meant to fit `\clebsch`'s 4+2 template at all) — left as literal
+    `C_{...}^{...}$ text and not force-converted, per the existing
+    "flag rather than guess" precedent (see Chap6.tex's note above).
+  - Rule 9 hit its worst case yet: **two entire tables (8.5 and 8.8) had
+    lost their whole `\begin{table}`/`\caption` wrapper**, not just the
+    `\captionsetup` line — bare `\begin{center}\begin{tabular}` preceded by
+    only a stray `Table 8.N.` text fragment (8.5) or a `\section*{Table
+    8.8.}` heading plus a loose `$$formula$$` (8.8), each with its own
+    correctly-wrapped `(Cont.)` half sitting right after. A **third table
+    (8.10) had no textual trace at all** — not even an orphaned `Table
+    8.10.` fragment — its number and formula were recoverable only because
+    the formula itself survived, misplaced as a `\multicolumn` header row
+    *inside* the table body. All three were reconstructed as proper
+    `\begin{table}[h]\begin{center}\caption{...}\label{...}` blocks. Once
+    every one of Tables 8.1-8.10 had a real `\caption`, this chapter also
+    needed the *other* half of Chap4.tex's continuation precedent applied
+    at scale for the first time: seven more `(Cont.)` tables (8.3, 8.4, 8.6,
+    8.7, and two each for 8.9 and 8.10) each already had their own
+    `\captionsetup{labelformat=empty}`+`\caption{Table 8.N. (Cont.)}` pair,
+    which would have silently stepped `\numberwithin{table}`'s counter an
+    extra time per continuation — all ten were rewritten to
+    `\textbf{Table~\ref{chap8:tab:N} (continued)}` with no `\caption` of
+    their own, so the auto-numbered sequence lands on exactly Table 8.1
+    through Table 8.10 with no gaps, matching the source's own numbers.
+  - Also found, and fixed the same way as rule 2's digit-glue precedent:
+    **~104 instances of `]^{1/2}` (the square-root exponent that appears on
+    almost every formula in this chapter) missing their leading `1`** —
+    OCR'd as `]^{/2}` or `]^{/3}` — plus 11 more misread as `]^{7/2}`, 3 as
+    `]^{1/3}`, 1 as `]^{1/8}`, and 1 as `]^{//2}`. All were confirmed as the
+    same "square root of a factorial ratio" notation (never actually a
+    7th/cube/8th root anywhere in this book) by their identical structural
+    position closing a `\left[\frac{...!...!}{...!}\right]` group, and
+    fixed with a global substitution rather than case-by-case, since the
+    pattern and fix were unambiguous throughout.
+  - Rule 6 was simpler than Chap7.tex's: **every** `8.N` and `8.N.M` heading
+    was uniformly `\subsection*` regardless of its true depth (no
+    inconsistent mix), so reclassifying purely by the number of
+    dot-separated components in the printed title (not by which wrapper
+    command the OCR happened to use) was a clean, single pass. The deepest
+    unnumbered level had one genuine "sibling inconsistency" case, handled
+    the same way as Chap7.tex's `(a) Coordinate inversion` /
+    `(b) Rotations...` pair: **`(a) Permutations of columns` /
+    `(b) Permutations of rows` / `(c) Transposition`** (Sec. 8.4.1) and
+    **`(a) Rotation of the coordinate system.` / `(b) Inversion...` /
+    `(c) Time reversal.`** (Sec. 8.4.5) each had only their `(b)`/`(c)`
+    member surviving OCR with a `\section*{...}` wrapper; the other
+    siblings, structurally identical short noun-phrase titles, were
+    unwrapped plain text and were wrapped to match. Elsewhere in the
+    chapter, bare `(a)/(b)/(c)/(d)` markers introducing a list of
+    conditions or a group of unnumbered formula variants (dozens of them)
+    were left as plain text, per Chap2.tex's precedent — this book's
+    `(a)/(b)/(c)` markers are usually paragraph/equation-group labels, not
+    their own headings, and none of those had a wrapped sibling as evidence
+    otherwise.
+  - Six more headings (`8.2.1`, `8.7.3`, `8.7.4`, `8.7.5`, `8.7.6`, `8.9.1`)
+    had the familiar "collapsed to plain text" bug (no sectioning command
+    at all); one heading (`8.11`) had its title text itself split across
+    two source lines with the second half left as an unwrapped continuation
+    line — merged onto one line before running rule 6, same fix as
+    Chap3.tex's embedded-`\\`-in-a-heading case.
+  - Two equations (`\tag{18a}`, `\tag{18b}` in Sec. 8.9.3, a physically
+    genuine split into an $S^2\ge 0$ case and an $S^2\le 0$ case sharing one
+    conceptual equation number) used a letter-suffixed tag that
+    `tools/convert_equation_numbering.py`'s pure-digit regex doesn't match
+    by design, so both blocks were silently left starred by the mechanical
+    pass. Converted by hand into two separate `\begin{gather}...\end{gather}`
+    blocks with sequential labels, which meant manually renumbering the
+    two labels the automated pass had already assigned immediately after
+    them (a `+2` shift, done before the prose `\eqref` pass so there was
+    nothing stale to chase afterward) — same principle as Chap4.tex's
+    hand-fixed `\tag{$\{53\}$}` gaps.
+  - Rule 10 found the chapter's only vector-valued `\mathbf` usage
+    (`\mathbf{j}`/`\mathbf{j}_1`/`\mathbf{j}_2}`, the angular-momentum
+    vectors in Sec. 8.1.1) alongside a handful of **bold *scalars* used
+    purely for emphasis**, not vectors or matrices: `\mathbf{J}` (and once
+    the glued `\mathbf{1 3}`) labelling the perimeter value `J=a+b+c` in
+    Sec. 8.10's list of vanishing `3jm` symbols (inconsistently mixed with
+    plain, unbolded `J=11` a few lines later — left the unbolded instances
+    alone, matching Chap7.tex's ε/ϵ precedent of only touching what's
+    already marked bold); a bolded division slash,
+    `Arguments Change by $\mathbf{1} \boldsymbol{/} \mathbf{2}$` as a
+    heading title (dropped all three bold wrappers, rendering plain
+    `$1/2$`); and `\boldsymbol{c}` bolding a table column header letter in
+    four different tables (dropped, same as Chap7.tex's bold table-header
+    `J` precedent). `\operatorname{Re}` (used correctly, Fraktur exception
+    from rule 10 doesn't apply since this is the upright-text Re) was left
+    untouched.
+  - One stray pair of running header/page-number lines
+    (`Clebsch-Gordan Coefficients and 3jm Symbols NNN`, OCR'd from the
+    original PDF's header, three occurrences) had leaked into the body text
+    between tables in the algebraic-tables section — deleted as pure OCR
+    noise, not part of the actual content.
+  - Two `\langle...\}`/`\{...\rangle` delimiter-mismatch bugs (an angle
+    bracket OCR'd where the matching close was already a curly brace, or
+    vice versa) inside otherwise-fine table-cell formulas were fixed the
+    same way as Chap7.tex's `\left.\left\lvert` bug — by comparing against
+    the sibling cell's matching, correctly-delimited `\{...\}` pair in the
+    same table row/column.
+- **Chap7.tex's heading wrapper was inconsistent with its title's own printed
+  depth in two genuine source spots**: three of its four top-level `N.N`
+  sections (`7.2`, `7.3`, `7.4`) were OCR'd as `\subsection*` instead of
+  `\section*`, and `7.1.1. Definition` (a three-part number) was OCR'd as
+  `\section*` instead of `\subsection*`. Rather than trust the source
+  command, the conversion script classified every heading purely by how many
+  dot-separated components its own printed number had (2 → `\section`, 3 →
+  `\subsection`, none → `\subsubsection`), which handled both mismatches
+  automatically. That approach then introduced its *own* bug: matching
+  `\d+(?:\.\d+)*\.\s*` against a heading whose number had *no* trailing
+  period before the title (e.g. `7.1.2 Components...`, vs. the more common
+  `7.1.1. Definition`) let the greedy match backtrack to a shorter 2-part
+  number, misclassifying 9 ordinary `\subsection*{7.N.M ...}` headings
+  (`7.1.2`, `7.1.4`, `7.1.9`, `7.2.2`, `7.2.4`, `7.2.6`, `7.2.8`, `7.3.2`,
+  `7.3.4` — all correctly wrapped in the source) as `\section` with a stray
+  leading digit stuck in the title (`\section{2 Components of Tensor
+  Spherical Harmonics}`). Caught by grepping `^\\section\{[0-9]` after the
+  pass and reclassifying those 9 back to `\subsection` by hand; a correct
+  regex would require the optional trailing period to be followed by
+  whitespace, not swallow a period that's actually a separator before the
+  next digit group.
+- Chap7.tex is built from three top-level sections (`7.1`, `7.2`, `7.3`) plus
+  a short unnumbered appendix-style section (`7.4`, cross-referencing other
+  authors' notations) whose own three subsections (`Tensor spherical
+  harmonics`, `Spinor spherical harmonics`, `Vector spherical harmonics`)
+  are bare `\section*{Title}` with no numeric prefix at all — the deepest-level
+  bare-title case from rule 6, converted to `\subsubsection`.
+- **A whole heading (`7.3.10. Clebsch-Gordan Series`) had lost its
+  `\subsection*{...}` wrapper entirely**, appearing as bare text — same
+  "collapsed to plain text" bug documented for Chap4.tex/Chap5.tex. Only
+  one instance this time, caught by eyeballing the full heading list rather
+  than a mechanical grep (it has no lettered or numeric-but-unwrapped marker
+  distinguishing it from ordinary prose at a glance).
+- **The `(a) Coordinate inversion` / `(b) Rotations of coordinate system(s)`
+  pair of `\subsubsection`-level headings appears three times** (once each
+  in `7.1.4`, `7.2.4`, `7.3.4`, all three sections titled "Transformations of
+  Coordinate Systems"). Only one of the six occurrences (`7.1.4`'s "(b)")
+  survived OCR with its `\section*{...}` wrapper intact; the other five were
+  flattened to plain text. Used the one surviving wrapped instance as
+  evidence that this specific `(a)`/`(b)` pair is a genuine heading pair
+  (short noun-phrase titles, matching Chap1.tex's precedent), then wrapped
+  the other five to match. By contrast, **the many *other* `(a)`/`(b)`/`(c)`
+  markers in this chapter — both bare (introducing a group of equations with
+  no title text at all) and the ones followed by a full lead-in sentence
+  ("(a) Spherical contravariant components ... may be written ... as")** were
+  all left as plain text, per Chap2.tex's established precedent that this
+  book's `(a)/(b)/(c)` markers usually label paragraphs/equation groups
+  within a subsection rather than naming their own headings. No surviving
+  wrapped example existed anywhere in the chapter for these, unlike the
+  Coordinate-inversion pair.
+- Rule 1 (`$$...$$` → `\[...\]`) needs to run independently of rule 7's
+  equation-numbering script — `tools/convert_equation_numbering.py` only
+  touches blocks containing a `\tag`, so Chap7.tex's seven `$$...$$` blocks
+  (all untagged continuations of a numbered `align`/`gather`, alternating
+  with proper environments to work around an amsmath multi-page-alignment
+  limitation) were silently skipped by every earlier check and only
+  surfaced by a final `grep -n '\$\$'` sweep *after* the numbering pass and
+  the "no blank lines" pass had already run. Converted and had rule 11
+  (blank-line stripping) re-applied to just those seven blocks by hand,
+  since the earlier blanket rule-11 pass predated their conversion to
+  `\[...\]` and couldn't have matched them.
+- Rule 2's Clebsch-Gordan converter hit its "insert a missing space, reject
+  on unexpected token count" precedent (Chap3.tex) far more than any prior
+  chapter — 13 of Chap7.tex's 56 `C_{...}^{...}` instances had glued
+  subscript tokens needing a space inserted (e.g. `C_{L 010}^{L'0}` →
+  `C_{L 0 1 0}^{L'0}` for $L,m{=}0,S{=}1,\sigma{=}0$; `C_{10 L 0}^{J0}` →
+  `C_{1 0 L 0}^{J0}$ for $j_1{=}1,m_1{=}0$; `C_{L M+\mu S-\mu}^{JM}` →
+  `C_{L M+\mu S -\mu}^{JM}$ with the sign glued onto $S$). One pair
+  (`C_{J M 2 n 0}^{JM}`, `C_{J 02 n 0}^{J0}`) needed the opposite fix —
+  *joining* an OCR-split `2 n` into the single symbolic token `2n` (an even
+  integer, not two separate quantum numbers) — which a token-count check
+  alone can't catch, since `J 02 n 0` already had 4 raw whitespace-separated
+  groups, just wrongly divided (`02`/`n` instead of `0`/`2n`). Verified by
+  hand against the surrounding formula's physical meaning (a $J$-with-$2n$
+  coupling in a Legendre-polynomial expansion) before fixing.
+- Two more OCR content bugs, beyond rule 2/6's routine cases, needed
+  hand reconstruction (both flagged and fixed, not guessed blind, since the
+  correct form was directly evidenced by sibling equations in the same
+  block): `\left.\left\lvert\, \Omega...\right.\right]^{\mp\frac12}` (a
+  mismatched-delimiter bug — displays a stray `|` where the two neighboring
+  rows in the same `align*` clearly show `\left[\Omega...\right]^{\mp\frac12}`
+  should be there) in Sec. 7.2.2, and `\mathbf{n}\cdot[\mathbf{a} * \mathbf{a}]`
+  (missing `\times` and a dropped superscript star) in two of six sibling
+  equations in Sec. 7.3.9 whose other four correctly show
+  `\mathbf{n}\cdot[\mathbf{a}^{*} \times \mathbf{a}]`.
+- One equation's argument was garbled into an entire run-on sentence stuffed
+  inside a single spurious `\mathbf{...}`:
+  `$\mathbf{F ( \mathbf { r } _ { 2 } ) \Phi ( \mathbf { r } _ { 1 } , \mathbf
+  { r } _ { 2 } ) \text { in a series of } \mathbf { Y } _ { J M } ^ { L }
+  ( \vartheta _ { 1 } , \varphi _ { 1 } ) \text { has the form }}$` in Sec.
+  7.3.14 — reconstructed as ordinary prose with two separate inline-math
+  spans, `$\mathbf{F}(\mathbf{r}_2)\Phi(\mathbf{r}_1,\mathbf{r}_2)$ in a
+  series of $\mathbf{Y}_{JM}^L(\vartheta_1,\varphi_1)$ has the form`, since
+  every word and symbol needed was already present, just wrapped wrong.
+- One prose cross-reference, `Eqs. 7.1(27)7.1(29)` in Sec. 7.3.7 (missing
+  its range dash — presumably `7.1(27)-7.1(29)`), names old-numbering
+  eq. 7.1(29) — but section 7.1's own `\tag` sequence genuinely skips 29
+  (jumps `\tag{28}` straight to `\tag{30}` inside one `gather*`, an
+  original-numbering gap, not an OCR artifact, confirmed by the surrounding
+  block's own structure). Left as plain, unconverted text and flagged per
+  rule 7's "genuine gaps" case, rather than guessing whether the intended
+  target was `7.1(28)` (an OCR digit swap) or something else.
+- Rule 10: `\boldsymbol{\nabla}` (appears ~14 times, mostly in
+  `\operatorname{grad}/\operatorname{div}/\operatorname{curl}` identities of
+  Sec. 7.3.6) all became `\vect{\nabla}` per the rule's own worked example.
+  `\boldsymbol{\epsilon}`/`\boldsymbol{\varepsilon}` (a photon polarization
+  vector in Sec. 7.3.14) became `\vect{\epsilon}`/`\vect{\varepsilon}` since
+  it's unambiguously a vector — even though the *same* quantity appears
+  bold in some equations and plain (unbolded) `\varepsilon(\mathbf{k})` in
+  others nearby; per this chapter's convention of only touching what's
+  already marked bold, the plain instances were left alone rather than
+  bolding them to match. A one-off `\boldsymbol{J}` (bolding the scalar
+  quantum number $J$ in a table's column header) was dropped to plain `J`,
+  same as Chap2.tex's bold-numeral-exponent precedent — it fits neither
+  `\vect` (not rank 1) nor `\mat` (not a matrix).
+- `\operatorname{grad}`, `\operatorname{div}`, `\operatorname{curl}` (Sec.
+  7.3.6) and `\operatorname{rank}` (Sec. 7.1.1) were all left as
+  `\operatorname{...}` per rule 10 — amsmath has no built-in equivalent for
+  any of them, matching the rule's existing `curl`/`div`/`grad` exception.
+  No `\operatorname{det}` occurred in this chapter.
 - Chap6.tex reused rule 7's "checks before running the script" habit to
   good effect: `grep`ing for trailing content after `\end{...}` (the
   Chap2.tex boundary-detection bug) caught 2 instances before the script
