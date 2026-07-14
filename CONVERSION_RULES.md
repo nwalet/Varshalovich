@@ -445,9 +445,24 @@ of a point $\vect{r}$ may be written as
 - Rules 3-5 all use `\middle` instead of the OCR source's mismatched
   `\left`/plain-delimiter pairing, so bracket sizing scales symmetrically
   around all arguments.
-- Applied so far: [Chap0.tex](Chap0.tex) (rules 1-5), [Chap1.tex](Chap1.tex)
-  and [Chap2.tex](Chap2.tex) (all rules — Chap2.tex has no figures/tables,
-  so rules 8-9 didn't apply there).
+- Applied so far: [Chap0.tex](Chap0.tex) (rules 1-5), [Chap1.tex](Chap1.tex),
+  [Chap2.tex](Chap2.tex) and [Chap3.tex](Chap3.tex) (all rules — Chap2.tex
+  and Chap3.tex have no figures/tables, so rules 8-9 didn't apply there).
+- Chap3.tex needed two more one-off source fixes before the general rules
+  applied cleanly: a `\subsection*{...}` heading whose title text itself
+  contained a literal `\\` line break (merge onto one line before running
+  rule 6's regex — it's anchored on end-of-line); and rule 4's bra-ket
+  conversion caught a genuinely mismatched-delimiter OCR bug (`\left(` ...
+  `\right\rangle` — parenthesis mixed with angle bracket), which was fixed
+  in the same pass since applying `\braOket` there required first figuring
+  out which side of the equation the mismatch was on.
+- Rule 2's Clebsch-Gordan conversion needs whitespace between adjacent
+  index digits — Chap3.tex had `C_{J M_{1} J M_{2}}^{00}` (superscript
+  `j=0,m=0` written as one glued token `00`) and `C_{10 l_{i-1} 0}^{...}`
+  (same issue, `10` meaning `j=1,m=0`). The brace-aware converter splits on
+  whitespace and expects exactly 4 subscript / 2 superscript tokens, so it
+  loudly flags these (`UNEXPECTED TOKEN COUNT`) rather than mis-converting
+  — insert the missing space and rerun.
 - VMK.tex's own preamble/numbering choices (e.g. `\numberwithin{equation}`
   scoped to `section` rather than `chapter`) have since been adjusted
   directly by the project owner; treat the live file as authoritative over
