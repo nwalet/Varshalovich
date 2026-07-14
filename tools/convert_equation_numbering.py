@@ -43,29 +43,51 @@ ENV_RENAME = {
 
 def split_top_level_rows(body):
     """Split a block body into rows at top-level (depth-0) '\\\\', tracking
-    \\begin{...}/\\end{...} nesting so nested array/matrix row breaks aren't
-    mistaken for top-level align/gather row breaks. Returns list of row
-    strings (without the trailing '\\\\')."""
+    two independent kinds of nesting so their internal row breaks aren't
+    mistaken for top-level align/gather row breaks:
+    (1) \\begin{...}/\\end{...} environments (array/matrix/cases/...), and
+    (2) raw brace groups like \\substack{a \\\\ b} or {gathered ...}, whose
+    opening/closing braces stay unclosed for the group's whole extent
+    (unlike a \\begin{X}...\\end{X} pair, which is self-contained and nets
+    to zero depth as soon as it's matched).
+    Escaped brace characters (\\{, \\}) are literal symbols, not grouping,
+    and are skipped without affecting either depth counter.
+    Returns list of row strings (without the trailing '\\\\')."""
     rows = []
-    depth = 0
+    env_depth = 0
+    brace_depth = 0
     i = 0
     row_start = 0
     n = len(body)
     while i < n:
         m = BEGIN_ENV_RE.match(body, i)
         if m:
-            depth += 1
+            env_depth += 1
             i = m.end()
             continue
         m = END_ENV_RE.match(body, i)
         if m:
-            depth -= 1
+            env_depth -= 1
             i = m.end()
             continue
-        if depth == 0 and body[i:i + 2] == '\\\\':
-            rows.append(body[row_start:i])
+        if body[i:i + 2] == '\\\\':
+            if env_depth == 0 and brace_depth == 0:
+                rows.append(body[row_start:i])
+                i += 2
+                row_start = i
+                continue
             i += 2
-            row_start = i
+            continue
+        if body[i:i + 2] in ('\\{', '\\}'):
+            i += 2
+            continue
+        if body[i] == '{':
+            brace_depth += 1
+            i += 1
+            continue
+        if body[i] == '}':
+            brace_depth -= 1
+            i += 1
             continue
         i += 1
     rows.append(body[row_start:])

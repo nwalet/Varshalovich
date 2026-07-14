@@ -446,8 +446,73 @@ of a point $\vect{r}$ may be written as
   `\left`/plain-delimiter pairing, so bracket sizing scales symmetrically
   around all arguments.
 - Applied so far: [Chap0.tex](Chap0.tex) (rules 1-5), [Chap1.tex](Chap1.tex),
-  [Chap2.tex](Chap2.tex) and [Chap3.tex](Chap3.tex) (all rules — Chap2.tex
-  and Chap3.tex have no figures/tables, so rules 8-9 didn't apply there).
+  [Chap2.tex](Chap2.tex), [Chap3.tex](Chap3.tex) and [Chap4.tex](Chap4.tex)
+  (all rules — Chap2.tex and Chap3.tex have no figures/tables, so rules 8-9
+  didn't apply there).
+- **Chap4.tex was the most structurally damaged chapter so far** — beyond
+  the routine rule application, it needed:
+  - **~35 more missed `(a)/(b)/(c)` subsubsection headings**, flattened to
+    plain text like the rest, but *not* caught by the mechanical rule 6
+    regex because they never had a numeric `N.M` prefix to match on in the
+    first place (they're the deepest level, same as rule 6's `\section*`
+    case, just never wrapped in *any* sectioning command). Distinguishing
+    these from genuine prose that happens to start "(a) ...", "(b) ..." is
+    a judgment call: a real heading is short (no full descriptive
+    sentence), stands in its own paragraph, and is followed immediately by
+    dedicated equation content; a prose enumeration is a multi-sentence
+    paragraph that continues discursively. When in doubt, check how the
+    *other* letters in the same `(a)(b)(c)...` sequence read — treat
+    siblings consistently rather than one becoming a heading and another
+    staying prose.
+  - **Two headings trapped *inside* a `gather`/`align` body** as a
+    `\text{...}` or bare line marked `\notag` (e.g. `\text { (d) Periodicity
+    } \\` sitting between two tagged rows) — the OCR lost the environment
+    boundary entirely, not just the sectioning command. Fix by splitting
+    the math environment in two at that point and lifting the heading out.
+  - **Three tables missing their entire `\begin{table}`/`\caption` wrapper**
+    (just a bare `\begin{center}...\end{center}` with a plain-text title
+    line like `Table 4.20.\\` in front of it) and **one table with a
+    caption that belonged to a different table entirely** (copy-paste/OCR
+    mixup — the caption text didn't match the tabulated data at all;
+    resolved by using the orphaned title text sitting in front of the
+    table, which *did* match). Six orphaned "what this table shows"
+    formula lines (sitting as bare text before a table with no title of
+    its own) needed merging into that table's caption.
+  - **`(Cont.)` continuation tables** (a table's data split across two
+    `\begin{table}` blocks because it didn't fit on one page) need to
+    *not* get their own `\label`/number — `\caption` always steps the
+    counter even under `labelformat=empty`, so giving each continuation a
+    normal rule-9 treatment silently shifts every later table's number.
+    Instead, drop `\caption` entirely for the continuation and write
+    `\textbf{Table~\ref{<base's label>} (continued)}` by hand.
+  - **Two equations whose `\tag{n}` was itself garbled** —
+    `\tag{$\{53\}$}` instead of `\tag{53}` (stray OCR-inserted math-mode
+    and escaped braces around the number). `tools/convert_equation_numbering.py`'s
+    tag regex only matches pure digits, so these were silently invisible
+    to it: one sat inside an already-tagged `gather` (which the script
+    still processed, just skipping this one row as if untagged — no
+    error, wrong-looking output) and the other was the *only* tag in its
+    `equation*` block, so the script found zero tags and left the whole
+    block starred and unconverted (also no error). Both only surfaced by
+    grepping `\\tag\{` for leftovers *after* the script ran and expecting
+    zero matches. Fixing them after the main numbering pass already ran
+    means hand-computing the shift: every label at or after the insertion
+    point moves up by one (by two, after the second fix) — safe to do
+    because the prose `\eqref` pass hadn't run yet, so there were no
+    stale cross-references to chase down too. Do the `\tag\{` leftover
+    check *before* the prose pass for this reason.
+  - `tools/convert_equation_numbering.py` itself had a real bug, now
+    fixed: its row-splitter tracked `\begin{...}/\end{...}` nesting but
+    not generic brace groups, so `\sum_{\substack{a \\ b}}` inside a
+    `gather`/`align` row had its internal `\\` (meant to line-wrap the
+    subscript) mistaken for a top-level row break, corrupting the
+    surrounding row and — in one case — causing amsmath's own "Multiple
+    \label's" error downstream. The splitter now tracks two independent
+    depths: named environments, and raw (non-escaped) `{`/`}` brace
+    nesting. Escaped `\{`/`\}` (the literal brace glyphs used in e.g. 6j-
+    symbol notation, `\left\{j_1 j_2 j_3\right\}`) are explicitly excluded
+    from the brace count. Run `grep -n '\\substack{' ChapN.tex` before
+    trusting a chapter's equation numbering if it wasn't already checked.
 - Chap3.tex needed two more one-off source fixes before the general rules
   applied cleanly: a `\subsection*{...}` heading whose title text itself
   contained a literal `\\` line break (merge onto one line before running
