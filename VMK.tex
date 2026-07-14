@@ -33,6 +33,17 @@
 
 \DeclareUnicodeCharacter{2207}{\ifmmode\nabla\else{$\nabla$}\fi}
 
+%Reset equation numbering at each chapter; see CONVERSION_RULES.md rule 7
+\numberwithin{equation}{chapter}
+
+%Reset figure/table numbering at each chapter and match the source's
+%"Fig. 1.1. Title" / "Table 1.1. Title" caption style; see
+%CONVERSION_RULES.md rules 8-9
+\numberwithin{figure}{chapter}
+\numberwithin{table}{chapter}
+\renewcommand{\figurename}{Fig.}
+\captionsetup{labelsep=period}
+
 %Clebsch-Gordan coefficient C^{#5 #6}_{#1 #2 #3 #4}
 \newcommand{\clebsch}[6]{C_{#1 #2 #3 #4}^{#5 #6}}
 
@@ -40,6 +51,10 @@
 \newcommand{\braket}[2]{\left\langle #1 \middle| #2 \right\rangle}
 \newcommand{\braOket}[3]{\left\langle #1 \middle| #2 \middle| #3 \right\rangle}
 \newcommand{\braOketred}[3]{\left\langle #1 \middle\| #2 \middle\| #3 \right\rangle}
+
+%Vectors (upright bold) and matrices (italic bold); see CONVERSION_RULES.md rule 10
+\newcommand{\vect}[1]{\mathbf{#1}}
+\newcommand{\mat}[1]{\boldsymbol{#1}}
 
 \begin{document}
 \captionsetup{singlelinecheck=false}

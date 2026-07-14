@@ -35,6 +35,7 @@ C_{j_{1} m_{1} j_{2} m_{2}}^{j m}
 ```
 
 Definition:
+
 ```latex
 \newcommand{\clebsch}[6]{C_{#1 #2 #3 #4}^{#5 #6}}
 ```
@@ -53,6 +54,7 @@ bar and no operator in between) with `\braket{bra}{ket}`.
 ```
 
 Definition:
+
 ```latex
 \newcommand{\braket}[2]{\left\langle #1 \middle| #2 \right\rangle}
 ```
@@ -71,6 +73,7 @@ sandwiched between single bars, ket) with `\braOket{bra}{operator}{ket}`.
 ```
 
 Definition:
+
 ```latex
 \newcommand{\braOket}[3]{\left\langle #1 \middle| #2 \middle| #3 \right\rangle}
 ```
@@ -90,8 +93,313 @@ with `\braOketred{bra}{operator}{ket}`.
 ```
 
 Definition:
+
 ```latex
 \newcommand{\braOketred}[3]{\left\langle #1 \middle\| #2 \middle\| #3 \right\rangle}
+```
+
+## 6. Heading numbering
+
+The OCR source encodes the chapter's heading hierarchy as `\subsection*`/
+`\section*` with the number baked into the title text (e.g.
+`\subsection*{1.1. COORDINATE SYSTEMS. BASIS VECTORS}`). Replace these with
+proper, automatically-numbered LaTeX sectioning commands, inferring depth
+from how many number components the original title had:
+
+- `\subsection*{N.M. Title}` (two-part number, one level below the chapter)
+  → `\section{Title}`
+- `\subsection*{N.M.K. Title}` (three-part number) → `\subsection{Title}`
+- `\section*{Title}` (deepest level in the source — no numeric prefix at
+  all, e.g. lettered sub-parts like `(a) ...`, or a bare title) →
+  `\subsubsection{Title}`
+
+Strip the numeric prefix (e.g. `1.1.`, `1.1.1.`, plus the space after it)
+from the title text — `\section`/`\subsection` generate it automatically.
+Leave lettered prefixes
+like `(a)` in `\subsubsection` titles as-is, since `book` class doesn't
+number `\subsubsection` by default (matching the source, which left these
+deepest headings unnumbered too).
+
+```latex
+% before
+\subsection*{1.1. COORDINATE SYSTEMS. BASIS VECTORS}
+\subsection*{1.1.1. Cartesian Coordinate System}
+\section*{(a) Description of rotations in terms of Euler angles}
+
+% after
+\section{COORDINATE SYSTEMS. BASIS VECTORS}
+\subsection{Cartesian Coordinate System}
+\subsubsection{(a) Description of rotations in terms of Euler angles}
+```
+
+## 7. Equation numbering
+
+The source manually numbers equations with `\tag{n}` inside starred
+environments (`equation*`, `align*`, `gather*`) or plain `\[...\]`, and
+**resets `n` back to 1 at every top-level section** (i.e. at each `1.1`,
+`1.2`, ... boundary — now a `\section` per rule 6). Replace this with
+LaTeX's automatic numbering, reset once per *chapter* instead (so numbering
+runs continuously across all of a chapter's sections), with a stable label
+on every numbered equation for cross-referencing via `\eqref`.
+
+Preamble (`VMK.tex`): `\numberwithin{equation}{chapter}` resets the
+`equation` counter at each `\chapter` and renders numbers as
+`chapter.equation` (e.g. `(1.5)`).
+
+### Mechanical pass: `tools/convert_equation_numbering.py`
+
+Run `python3 tools/convert_equation_numbering.py ChapN.tex` — it rewrites the
+file in place and does the bulk of the work automatically:
+
+- Finds every display-math block (`\[...\]`, `equation*`, `align*`,
+  `gather*`) containing at least one `\tag{n}`, drops the `*` (a tagged
+  `\[...\]` becomes `\begin{equation}...\end{equation}`), and replaces each
+  `\tag{n}` with `\label{chap<C>:eq:<N>}`, where `<C>` is the chapter number
+  (parsed from the filename) and `<N>` is a fresh sequential integer in
+  document order through the whole chapter — **not** the old, per-section
+  `n`, since the source resets `n` back to 1 at every top-level section and
+  reusing it verbatim would produce colliding labels.
+- In multi-line `align`/`gather` blocks, adds `\notag` to any row that had
+  no `\tag` in the source (non-starred `align`/`gather` number every row by
+  default, unlike the starred originals). Row-splitting is nesting-aware —
+  it tracks `\begin{...}/\end{...}` depth so a nested `array`/`matrix`'s own
+  `\\` row breaks are never mistaken for a top-level `align`/`gather` row
+  break.
+- Blocks with **no** `\tag` at all are left untouched (starred/unnumbered)
+  — they were intentionally unnumbered in the source.
+- Also writes `ChapN.eqmap.json` (gitignored, safe to delete once the manual
+  pass below is done): `"<scope>,<old local n>": <new global N>` for every
+  relabeled equation, where `<scope>` counts resets (0 for the first
+  top-level section, 1 for the second, ...). Needed for the manual pass
+  because the old numbers repeat across scopes.
+
+### Manual pass: prose cross-references
+
+Rewrite every prose cross-reference to a renumbered equation (`Eq. (9)`,
+`Eqs. (26)-(27)`, `Equations (43) and (44)`, etc.) to use
+`\eqref{chap<C>:eq:<N>}` for each number, resolving `<N>` by looking up
+`"<scope>,<old n>"` in the `.eqmap.json` — determine `<scope>` from which
+top-level section the reference's surrounding prose falls in (usually, but
+not always, the same section the referenced equation itself was numbered
+in). Watch for:
+
+- **Explicit cross-section overrides**: e.g. `Eqs. 1.1(29)-1.1(54)` names
+  section 1.1 outright — resolve against *that* section's scope, not the
+  scope the sentence physically sits in.
+- **Cross-chapter references**: e.g. `Eq. 2.5(4)` (chapter 2, section 5,
+  equation 4) — leave as plain text; there's nothing to `\eqref` until that
+  chapter exists.
+- **False positives**: text that merely looks like an equation reference,
+  e.g. `$a(1)$` and `$a(2)$` denoting *two different rotations*, not
+  equations (1) and (2).
+- **Genuine gaps in the source**: occasionally a prose reference names an
+  old number that was never actually `\tag`ged anywhere in its scope (the
+  source's own OCR/transcription dropped it — e.g. an unnumbered
+  restatement block that should have carried its own number). Don't
+  fabricate a label for these; leave the reference as plain text and flag
+  it instead of guessing.
+
+```latex
+% before
+\begin{equation*}
+\mathbf{r}=x \mathbf{e}_{x}+y \mathbf{e}_{y}+z \mathbf{e}_{z} \tag{1}
+\end{equation*}
+...
+as shown in Eq. (1)
+
+% after (chapter 1, this is the chapter's first numbered equation)
+\begin{equation}
+\mathbf{r}=x \mathbf{e}_{x}+y \mathbf{e}_{y}+z \mathbf{e}_{z} \label{chap1:eq:1}
+\end{equation}
+...
+as shown in \eqref{chap1:eq:1}
+```
+
+## 8. Figure numbering
+
+The source manually numbers figures too: each `\caption{Fig. 1.N. Title}`
+is preceded by `\captionsetup{labelformat=empty}` (to suppress LaTeX's own
+"Figure N:" label, since the number is baked into the caption text by
+hand). Unlike equations, the source's figure numbers run straight through
+the chapter with no per-section resets, so this rule is simpler — no
+scope-mapping needed.
+
+Preamble (`VMK.tex`):
+
+```latex
+\numberwithin{figure}{chapter}
+\renewcommand{\figurename}{Fig.}
+\captionsetup{labelsep=period}
+```
+
+`\numberwithin` resets the counter per chapter (matching equations, rule
+7); `\figurename` + `labelsep=period` make LaTeX's automatic label render
+as `Fig. 1.1.` instead of the default `Figure 1.1:`, matching the source.
+
+For every figure:
+
+- Delete the `\captionsetup{labelformat=empty}` line.
+- Strip the `Fig. 1.N.` (or `Fig. 1.N` — the source is inconsistent about
+  the trailing period) prefix from the caption text.
+- Add `\label{chap<C>:fig:<N>}` right after the `\caption{...}` (same
+  `chap<C>:` namespace as equations, `:fig:` instead of `:eq:`).
+
+Then rewrite every prose reference (`(Fig. 1.3)`, `shown in Fig. 1.5.`,
+etc.) to `Fig.~\ref{chap<C>:fig:<N>}`, keeping surrounding punctuation.
+This chapter's figure numbers had no gaps or cross-chapter references to
+worry about (unlike rule 7's equations) — check for both anyway before
+assuming it's this simple on a future chapter.
+
+```latex
+% before
+\begin{figure}[h]
+\begin{center}
+  \includegraphics[...]{...}
+\captionsetup{labelformat=empty}
+\caption{Fig. 1.1. Cartesian coordinate system.}
+\end{center}
+\end{figure}
+...
+the distances between the point and coordinate planes (Fig. 1.1).
+
+% after
+\begin{figure}[h]
+\begin{center}
+  \includegraphics[...]{...}
+\caption{Cartesian coordinate system.}
+\label{chap1:fig:1}
+\end{center}
+\end{figure}
+...
+the distances between the point and coordinate planes (Fig.~\ref{chap1:fig:1}).
+```
+
+## 9. Table numbering
+
+Same idea as rule 8, applied to `table` environments: each
+`\caption{Table 1.N\\ Title}` (note the source puts the number and title on
+separate lines via `\\`, unlike figures) is preceded by
+`\captionsetup{labelformat=empty}`.
+
+Preamble (`VMK.tex`): `\numberwithin{table}{chapter}` — `\tablename`
+already defaults to "Table" and `\captionsetup{labelsep=period}` is shared
+with rule 8 (`\captionsetup` isn't per-environment unless you scope it), so
+no extra setup is needed beyond the one line.
+
+For every table:
+
+- Delete the `\captionsetup{labelformat=empty}` line.
+- Strip the `Table 1.N\\` prefix line from the caption (the title text
+  becomes the whole caption body, same as figures).
+- Add `\label{chap<C>:tab:<N>}` right after the `\caption{...}`.
+- Rewrite prose references (`summarized in Table 1.3.`) to
+  `Table~\ref{chap<C>:tab:<N>}`.
+
+**Number `<N>` by auto-numbering order, not the source's printed number.**
+If the source has a gap — e.g. a "Table 1.2" that was never actually a
+`table` environment (garbled OCR that dropped the real table and left only
+a orphaned `Table 1.2\\ Title` text fragment with no `\begin{table}` around
+it) — LaTeX's `\numberwithin` counter has no way to skip it, so the next
+real table renders as `1.2`, not `1.3`. Name that table's label
+`chap<C>:tab:2` (matching what it actually renders as), not `chap<C>:tab:3`
+(matching the source's now-stale printed number) — same principle as rule
+7's equations, where labels track the new auto-numbered sequence, never the
+old manual one. Leave the orphaned fragment itself as plain, unconverted
+text (nothing to number) and flag it same as rule 7's "genuine gaps" case.
+
+```latex
+% before
+\begin{table}[h]
+\begin{center}
+\captionsetup{labelformat=empty}
+\caption{Table 1.1\\
+Matrix form of the transformations for vector components in different bases.}
+...
+\end{table}
+...
+Table 1.2\\
+Matrices of transformations between cartesian, spherical contravariant and polar components of vectors.
+...
+\begin{table}[h]
+\begin{center}
+\captionsetup{labelformat=empty}
+\caption{Table 1.3\\
+Differential operations.}
+...
+\end{table}
+...
+The above equations are summarized in Table 1.3.\\
+
+% after
+\begin{table}[h]
+\begin{center}
+\caption{Matrix form of the transformations for vector components in different bases.}
+\label{chap1:tab:1}
+...
+\end{table}
+...
+Table 1.2\\
+Matrices of transformations between cartesian, spherical contravariant and polar components of vectors.
+...
+\begin{table}[h]
+\begin{center}
+\caption{Differential operations.}
+\label{chap1:tab:2}
+...
+\end{table}
+...
+The above equations are summarized in Table~\ref{chap1:tab:2}.\\
+```
+
+## 10. Vectors, matrices, and named operators
+
+The source is inconsistent about the semantic weight of `\mathbf` and
+`\boldsymbol`, and uses `\operatorname` for some names amsmath already
+provides. Replace with two new commands (`VMK.tex`):
+
+```latex
+\newcommand{\vect}[1]{\mathbf{#1}}
+\newcommand{\mat}[1]{\boldsymbol{#1}}
+```
+
+- `\mathbf{X}` → `\vect{X}` — this covers essentially every occurrence
+  (single-letter vectors: `e`, `A`, `B`, `r`, `n`, ...). If a single
+  `\mathbf{...}` ever wraps *two* symbols at once (an OCR artifact, e.g.
+  `\mathbf{n r}` meaning the dot product `\mathbf{n}\mathbf{r}`), split it
+  into two separate `\vect{...}` calls first — `\vect` should always take
+  exactly one vector's name, not a whole sub-expression.
+- `\boldsymbol{X}` → `\mat{X}`, but **only when `X` is actually a matrix**.
+  Don't convert blindly: check each occurrence's meaning first, because the
+  source also uses `\boldsymbol` for other bold quantities that aren't
+  matrices — e.g. `\boldsymbol{\nabla}` (the nabla vector-operator, typeset
+  bold because the source bolds vector-valued quantities throughout — this
+  should become `\vect{\nabla}`, not `\mat{\nabla}`) or
+  `\boldsymbol{\varepsilon}_{ikl}` (the rank-3 Levi-Civita tensor, which
+  fits neither `\vect` nor `\mat` — leave it as plain `\boldsymbol`). Also
+  watch for OCR noise like `\boldsymbol{\prime}` (a bold prime mark, which
+  should just become a plain `\prime}`/`'` — bolding a prime is never
+  meaningful).
+- `\operatorname{name}` → the built-in command, **only if amsmath already
+  defines `name` as a named operator with identical rendering**. In this
+  chapter that's just `\operatorname{det}` → `\det`. Don't convert names
+  amsmath doesn't define (`curl`, `div`, `grad` have no amsmath equivalent)
+  or names where amsmath's version renders differently (`\Re`/`\Im` are
+  Fraktur symbols ℜ/ℑ, not the upright-text "Re"/"Im" that
+  `\operatorname{Re}`/`\operatorname{Im}` produce — swapping would be a
+  visual regression, not a preserving rewrite).
+
+```latex
+% before
+\mathbf{r}=x \mathbf{e}_{x}+y \mathbf{e}_{y}+z \mathbf{e}_{z}
+\boldsymbol{X}^{\boldsymbol{\prime}}
+\boldsymbol{\nabla} \times \mathbf{A}
+-\operatorname{det} X=\mathbf{r}^{2}
+
+% after
+\vect{r}=x \vect{e}_{x}+y \vect{e}_{y}+z \vect{e}_{z}
+\mat{X}^{\prime}
+\vect{\nabla} \times \vect{A}
+-\det X=\vect{r}^{2}
 ```
 
 ## Notes
@@ -99,4 +407,15 @@ Definition:
 - Rules 3-5 all use `\middle` instead of the OCR source's mismatched
   `\left`/plain-delimiter pairing, so bracket sizing scales symmetrically
   around all arguments.
-- Applied so far: [Chap0.tex](Chap0.tex).
+- Applied so far: [Chap0.tex](Chap0.tex) (rules 1-5), [Chap1.tex](Chap1.tex)
+  (all rules).
+- Three known gaps left as plain text in Chap1.tex, per rule 7's / rule 9's
+  "genuine gaps"/orphaned-fragment cases: "A detailed form of (25) is..."
+  and "...analogous to (25)-(28)." (section 1.1 and 1.2 respectively — the
+  source never tagged the equations these numbers would refer to), and the
+  orphaned "Table 1.2" text fragment (never a real `table` environment, so
+  nothing to number — see rule 9).
+- `\boldsymbol{\varepsilon}_{ikl}` (Levi-Civita tensor) and
+  `\boldsymbol{\Phi}` (a scalar field, oddly bolded once in a table row
+  label) in Chap1.tex were deliberately left as plain `\boldsymbol` per
+  rule 10 — neither fits `\vect` (rank 1) or `\mat` (2D matrix).
