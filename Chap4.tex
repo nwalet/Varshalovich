@@ -1,0 +1,3271 @@
+\section*{Chapter 4}
+\section*{WIGNER D-FUNCTIONS}
+\subsection*{4.1. DEFINITION OF $D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)$}
+(a) The Wigner $D$-functions $D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)$ may be defined as the matrix elements of the rotation operator $\widehat{D}(\alpha, \beta, \gamma)$ in the JM-representation. The arguments $\alpha, \beta, \gamma$ are the Euler angles which specify the rotation
+
+
+\begin{equation*}
+\langle J M| \hat{D}(\alpha, \beta, \gamma)\left|J^{\prime} M^{\prime}\right\rangle=\delta_{J J^{\prime}} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma) \tag{1}
+\end{equation*}
+
+
+The $D$-functions realize transformations of covariant components of any irreducible tensor of rank $J$ (e.g., the wave function $\Psi_{J M}$ of a quantum mechanical system with angular momentum $J$ and its projection $M$ ) under coordinate rotations.
+
+
+\begin{align*}
+& \Psi_{J M^{\prime}}\left(\vartheta^{\prime}, \varphi^{\prime}, \sigma^{\prime}\right)=\sum_{M=-J}^{J} \Psi_{J M}(\vartheta, \varphi, \sigma) D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma), \\
+& \Psi_{J M^{\prime}}^{*}\left(\vartheta^{\prime}, \varphi^{\prime}, \sigma^{\prime}\right)=\sum_{M=-J}^{J} \Psi_{J M}^{*}(\vartheta, \varphi, \sigma) D_{M M^{\prime}}^{J *}(\alpha, \beta, \gamma) . \tag{2}
+\end{align*}
+
+
+Here $\vartheta, \varphi$ and $\vartheta^{\prime}, \varphi^{\prime}$ are polar angles in the initial and rotated coordinate systems, $S$ and $S^{\prime}$, respectively. The angles $\vartheta, \varphi$ and $\vartheta^{\prime}, \varphi^{\prime}$ are related by Eqs. 1.4(2) and 1.4(3). Similarly, $\sigma$ and $\sigma^{\prime}$ are spin variables in the initial and new systems.
+
+The inverse transformation $S^{\prime} \rightarrow S$ is performed by the inverse matrix $\left[\widehat{D}^{-1}(\alpha, \beta, \gamma)\right]_{M M^{\prime}}^{J}$. Owing to the unitarity of the rotation operator,
+
+
+\begin{equation*}
+\widehat{D}^{-1}(\alpha, \beta, \gamma)=\widehat{D}^{+}(\alpha, \beta, \gamma) \tag{3}
+\end{equation*}
+
+
+the elements of inverse matrix are given by
+
+
+\begin{equation*}
+\left|\hat{D}^{-1}(\alpha, \beta, \gamma)\right|_{M M^{\prime}}^{J}=D_{M^{\prime} M}^{J *}(\alpha, \beta, \gamma) . \tag{4}
+\end{equation*}
+
+
+Hence, under the inverse rotation, $S^{\prime} \rightarrow S$, wave functions transform as
+
+
+\begin{align*}
+& \Psi_{J M}(\vartheta, \varphi, \sigma)=\sum_{M^{\prime}=-J}^{J} D_{M M^{\prime}}^{J *}(\alpha, \beta, \gamma) \Psi_{J M^{\prime}}\left(\vartheta^{\prime}, \varphi^{\prime}, \sigma^{\prime}\right), \\
+& \Psi_{J M}^{*}(\vartheta, \varphi, \sigma)=\sum_{M^{\prime}=-J}^{J} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma) \Psi_{J M^{\prime}}^{*}\left(\vartheta^{\prime}, \varphi^{\prime}, \sigma^{\prime}\right) . \tag{5}
+\end{align*}
+
+
+\begin{table}[h]
+\begin{center}
+\captionsetup{labelformat=empty}
+\caption{Table 4.1. Effect of the Operator $\hat{D}(\alpha, \beta, \gamma)$}
+\begin{tabular}{|l|l|l|l|}
+\hline
+\multirow{2}{*}{Transformation} & \multicolumn{3}{|c|}{Angles, Axes and Sequence of Rotations} \\
+\hline
+ & I & II & III \\
+\hline
+Passive &  &  &  \\
+\hline
+Rotation of coordinate system & $\alpha(z)$ & $\beta\left(y_{1}\right)$ & $\gamma\left(z^{\prime}\right)$ \\
+\hline
+without rotation of physical body & $\gamma(z)$ & $\beta(y)$ & $\alpha(z)$ \\
+\hline
+Active &  &  &  \\
+\hline
+Rotation of physical body & $-\alpha(z)$ & $-\beta(y)$ & $-\gamma(z)$ \\
+\hline
+without rotation of coordinate system & $-\gamma(z)$ & $-\beta\left(y_{1}\right)$ & $-\alpha\left(z^{\prime}\right)$ \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+The unitarity condition for the Wigner $D$-functions may be written as
+
+
+\begin{align*}
+& \sum_{M=-J}^{J} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma) D_{M \tilde{M}^{\prime}}^{J^{*}}(\alpha, \beta, \gamma)=\delta_{M^{\prime} \tilde{M}^{\prime}}, \\
+& \sum_{M^{\prime}=-J}^{J} D_{M M^{\prime}}^{J^{*}}(\alpha, \beta, \gamma) D_{\tilde{M}^{\prime}}^{J}(\alpha, \beta, \gamma)=\delta_{M \tilde{M}} . \tag{6}
+\end{align*}
+
+
+The matrix $D_{M M^{\prime}}^{j}(\alpha, \beta, \gamma)$ is unimodular, i.e.,
+
+
+\begin{equation*}
+\operatorname{det}\left\|D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)\right\|=+1 . \tag{7}
+\end{equation*}
+
+
+(b) A set of $(2 J+1)$ functions $\Psi_{J M}$ with different $M$ 's constitute a basis for expansion of an arbitrary function $\Psi_{J}$ with the same $J$ :
+
+
+\begin{equation*}
+\Psi_{J}(\vartheta, \varphi)=\sum_{M=-J}^{J} C_{J}^{M} \Psi_{J M}(\vartheta, \varphi)=\left(\mathbf{C}_{J} \cdot \Psi_{J}\right) . \tag{8}
+\end{equation*}
+
+
+The expansion coefficients $C_{J}^{M}$ are contravariant components of some irreducible tensor of rank $J$. Under rotations the quantities $C_{J}^{M}$ transform by means of functions $D_{M M^{\prime}}^{J^{*}}(\alpha, \beta, \gamma)$.
+
+The effect of the operator $\hat{D}(\alpha, \beta, \gamma)$ on $\Psi_{J}$ may be interpreted in two different ways:\\
+(i) as a rotation of the coordinate system without rotation of the physical body (this is the passive interpretation; $\widehat{D}$ acts on the basis functions $\Psi_{J M}$ while $C_{J}^{M}$ remain unchanged);\\
+(ii) as a rotation of the physical body without rotation of coordinate system (active interpretation; $\hat{D}$ acts on $C_{J}^{M}$ but does not affect $\Psi_{J M}$ ).
+
+Any rotation of a physical body in combination with the same rotation of coordinate system leaves the wave function $\Psi_{J}$ unchanged:
+
+
+\begin{equation*}
+\{\widehat{D}(\alpha, \beta, \gamma)\}_{\text {phys. body }} \cdot\{\widehat{D}(\alpha, \beta, \gamma)\}_{\text {coord. system }}=1 \tag{10}
+\end{equation*}
+
+
+i.e.,
+
+
+\begin{equation*}
+\left\{\widehat{D}_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)\right\}_{\text {phys. body }}=\left\{\left[\widehat{D}^{-1}(\alpha, \beta, \gamma)\right]_{M M^{\prime}}^{J}\right\}_{\text {coord. system }} \tag{11}
+\end{equation*}
+
+
+Moreover, a rotation of the coordinate system (or physical body) described by the Euler angles $\alpha, \beta, \gamma$ may also be realized in two ways:\\
+(i) by rotating about the initial axes (case B in Sec. 1.4.1), or\\
+(ii) by rotating about the new (turned) axes (case A in Sec. 1.4.1).
+
+Thus, any transformation of wave functions described by Eq. (2) can be treated in four different ways (Table 4.1).
+
+The Wigner $D$-functions are complex. They depend on three real arguments $\alpha, \beta, \gamma$ and are defined in the domain
+
+
+\begin{equation*}
+0 \leq a<2 \pi, \quad 0 \leq \beta \leq \pi, \quad 0 \leq \gamma<2 \pi \tag{12}
+\end{equation*}
+
+
+These functions, as well as their derivatives, are single-valued, finite and continuous. Sometimes it is convenient to change the domain (12). This can be done using the symmetries of $D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)$ (Sec. 4.4). For example, the matrix of the inverse rotation satisfies the equation
+
+
+\begin{equation*}
+\left[\left.D^{-1}(\alpha, \beta, \gamma)\right|_{M M^{\prime}} ^{J}=D_{M M^{\prime}}^{J}(\pi-\gamma, \beta,-\pi-\alpha)=D_{M M^{\prime}}^{J}(-\gamma,-\beta,-\alpha) .\right. \tag{13}
+\end{equation*}
+
+
+This means that the inverse transformation $S^{\prime} \rightarrow S$ may be realized by the Euler angles
+
+
+\begin{equation*}
+\alpha^{\prime}=\pi-\gamma, \quad \beta^{\prime}=\beta, \quad \gamma^{\prime}=-\pi-\alpha \tag{14}
+\end{equation*}
+
+
+as well as by
+
+
+\begin{equation*}
+\alpha^{\prime}=-\gamma, \quad \beta^{\prime}=-\beta, \quad \gamma^{\prime}=-\alpha \tag{15}
+\end{equation*}
+
+
+\subsection*{4.2 DIFFERENTIAL EQUATIONS FOR $D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)$}
+(a) The Wigner $D$-functions represent wave functions of a rigid symmetric top. They are eigenfunctions of three operators
+
+
+\begin{equation*}
+\hat{J}_{z}=-i \frac{\partial}{\partial \alpha}, \quad \hat{J}_{z^{\prime}}=-i \frac{\partial}{\partial \gamma}, \quad \hat{J}^{2}=-\left[\frac{\partial^{2}}{\partial \beta^{2}}+\cot \beta \frac{\dot{\partial}}{\partial \beta}+\frac{1}{\sin ^{2} \beta}\left(\frac{\partial^{2}}{\partial \alpha^{2}}-2 \cos \beta \frac{\partial^{2}}{\partial \alpha \partial \gamma}+\frac{\partial^{2}}{\partial \gamma^{2}}\right)\right] \tag{1}
+\end{equation*}
+
+
+where $\widehat{J}$ is the operator of angular momentum of the top; $\widehat{J}_{z^{\prime}}$ and $\widehat{J}_{z}$ are projections of $\widehat{J}$ onto the $z$-axis of the rotating (body-fixed) and non-rotating (lab-fixed) coordinate systems, respectively. The eigenvalues of the operators (1) are defined by the equations
+
+
+\begin{align*}
+\widehat{J}_{x} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma) & =-M D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma) \\
+\widehat{J}_{z^{\prime}} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma) & =-M^{\prime} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma) \\
+\widehat{J}^{2} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma) & =\left\{-\frac{1}{\sin \beta} \cdot \frac{\partial}{\partial \beta}\left(\sin \beta \frac{\partial}{\partial \beta}\right)+\frac{M^{2}-2 M M^{\prime} \cos \beta+M^{\prime 2}}{\sin ^{2} \beta}\right\} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)  \tag{2}\\
+& =J(J+1) D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)
+\end{align*}
+
+
+Periodicity conditions for $D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)$ are as follows
+
+
+\begin{align*}
+& D_{M M^{\prime}}^{J}(\alpha \pm 2 k \pi, \beta, \gamma)=D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma) \\
+& D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma \pm 2 k \pi)=D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)  \tag{3}\\
+& D_{M M^{\prime}}^{J}(\alpha, \beta \pm 2 k \pi, \gamma)=D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)
+\end{align*}
+
+
+where
+
+$$
+\begin{aligned}
+& k=0,1,2, \ldots \quad \text { if } J \text { is integer }, \\
+& k=0,2,4, \ldots \quad \text { if } J \text { is half-integer. }
+\end{aligned}
+$$
+
+(b) The functions $D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)$ can also be defined as solutions of the differential equations
+
+
+\begin{gather*}
+{\left[\widehat{J}_{\nu}, D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)\right]=\widehat{J}_{\nu} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)=(-1)^{1+\nu} \sqrt{J(J+1)} C_{J M-\nu}^{J M-\nu} D_{M-\nu M^{\prime}}^{J}(\alpha, \beta, \gamma)} \\
+= \begin{cases}-M D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma), & \nu=0 \\
+\pm \sqrt{\frac{J(J+1)-M(M \mp 1)}{2}} D_{M \mp 1 M^{\prime}}^{J(\alpha, \beta, \gamma),} & \nu= \pm 1\end{cases}  \tag{4}\\
+{\left[\widehat{J}^{\nu}, D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)\right]=\widehat{J}^{\nu} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)=-\sqrt{J(J+1)} C_{J M^{\prime}+\nu}^{J M^{\prime}+\nu} D_{M M^{\prime}+\nu}^{J}(\alpha, \beta, \gamma)} \\
+= \begin{cases}-M^{\prime} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma), & \nu=0 \\
+\pm \sqrt{\frac{J(J+1)-M^{\prime}\left(M^{\prime} \pm 1\right)}{2}} D_{M M^{\prime} \pm 1}^{J}(\alpha, \beta, \gamma), & \nu= \pm 1\end{cases} \tag{5}
+\end{gather*}
+
+
+Here $\widehat{J_{\nu}}$ is a covariant spherical component of $\widehat{\mathbf{J}}$ in the non-rotating (lab-fixed) system
+
+
+\begin{gather*}
+\hat{J}_{ \pm 1}=\frac{i}{\sqrt{2}} e^{ \pm i \alpha}\left[\mp \cot \beta \frac{\partial}{\partial \alpha}+i \frac{\partial}{\partial \beta} \pm \frac{1}{\sin \beta} \cdot \frac{\partial}{\partial \gamma}\right]  \tag{6}\\
+\hat{J}_{0}=-i \frac{\partial}{\partial \alpha}
+\end{gather*}
+
+
+and $\widehat{J}^{\nu}$ is a contravariant component of $\widehat{\mathbf{J}}$ in the rotating (body-fixed) system
+
+
+\begin{gather*}
+\widehat{J}^{ \pm 1}=\frac{i}{\sqrt{2}} e^{\mp i \gamma}\left[ \pm \cot \beta \frac{\partial}{\partial \gamma}+i \frac{\partial}{\partial \beta} \mp \frac{1}{\sin \beta} \cdot \frac{\partial}{\partial \alpha}\right]  \tag{7}\\
+\hat{J}^{0}=-i \frac{\partial}{\partial \gamma}
+\end{gather*}
+
+
+The operator $\widehat{\mathbf{J}}^{2}$ can be expressed in terms of $\widehat{J}_{\nu}$ or $\widehat{J}^{\nu}$ as
+
+
+\begin{align*}
+\hat{\mathbf{J}}^{2} & =-\hat{J}_{-1} \hat{J}_{+1}+\hat{J}_{0} \hat{J}_{0}-\hat{J}_{+1} \hat{J}_{-1}=-\hat{J}^{-1} \hat{J}^{+1}+\hat{J}^{0} \hat{J}^{0}-\hat{J}^{+1} \hat{J}^{-1}=\hat{J}_{0}\left(\hat{J}_{0}+1\right)-2 \hat{J}_{-1} \hat{J}_{+1} \\
+& =\hat{J}^{0}\left(\hat{J}^{0}-1\right)-2 \hat{J}^{-1} \hat{J}^{+1}=\hat{J}_{0}\left(\hat{J}_{0}-1\right)-2 \hat{J}_{+1} \hat{J}_{-1}=\hat{J}^{0}\left(\hat{J}^{0}+1\right)-2 \hat{J}^{+1} \hat{J}^{-1} \tag{8}
+\end{align*}
+
+
+The relationships between $\widehat{J}_{\nu}$ and $\widehat{J}^{\mu}$ read
+
+
+\begin{align*}
+\hat{J}^{\mu}(\alpha, \beta, \gamma) & =\sum_{\nu} D_{\nu \mu}^{1}(\alpha, \beta, \gamma) \hat{J}_{\nu}(\alpha, \beta, \gamma) \\
+\hat{J}_{\nu}(\alpha, \beta, \gamma) & =\sum_{\mu} D_{\nu \mu}^{1 *}(\alpha, \beta, \gamma) \hat{J}^{\mu}(\alpha, \beta, \gamma) \tag{9}
+\end{align*}
+
+
+Hence
+
+
+\begin{equation*}
+\hat{J}^{\nu}(\alpha, \beta, \gamma)=-\hat{J}_{\nu}(-\gamma,-\beta,-\alpha), \hat{J}^{\nu}(\alpha, \beta, \gamma)=\hat{J}_{-\nu}(\gamma, \beta, \alpha) . \tag{10}
+\end{equation*}
+
+
+Commutators of spherical components $\widehat{J}_{\mu}$ and $\widehat{J}^{\nu}(\mu, \nu=-1,0,1)$ are given by
+
+
+\begin{align*}
+{\left[\hat{J}_{\mu}, \hat{J}_{\nu}\right] } & =-\sqrt{2} C_{1 \mu 1 \nu}^{1 \mu+\nu} \hat{J}_{\mu+\nu} \\
+{\left[\hat{J}^{\prime \mu}, \hat{J}^{\nu}\right] } & =\sqrt{2} C_{1 \mu 1 \nu}^{1 \mu+\nu} \hat{J}^{\mu+\nu}  \tag{11}\\
+{\left[\hat{J}_{\mu}, \hat{J}^{\nu}\right] } & =0
+\end{align*}
+
+
+The commutators of cartesian components $\widehat{J}_{k}$ and $\widehat{J}_{l}(i, k, l=x, y, z)$ are
+
+
+\begin{align*}
+& {\left[\hat{J}_{i}, \hat{J}_{k}\right]=i \varepsilon_{i k l} \hat{J}_{l},} \\
+& {\left[\hat{J}_{i}, \hat{J}_{k}\right]=i \varepsilon_{i k l}, \hat{J}_{l},}  \tag{12}\\
+& {\left[\hat{J}_{i}, \hat{J}_{k}\right]=0,}
+\end{align*}
+
+
+The operator of orbital angular momentum $\hat{\mathbf{L}}(\vartheta, \varphi)$ (Sec. 2.2) may be regarded as a special case of $\hat{\mathbf{J}}(\alpha, \beta, \gamma)$, viz. at $\alpha=\varphi, \beta=\vartheta, \gamma=0$
+
+
+\begin{align*}
+\hat{J}_{\nu}(\varphi, \vartheta, 0) & =\hat{L}_{\nu}(\vartheta, \varphi), & \nu & =-1,0,1 \\
+\hat{J}_{i}(\varphi, \vartheta, 0) & =\hat{L}_{i}(\vartheta, \varphi), & i & =x, y, z \tag{13}
+\end{align*}
+
+
+at $\alpha=0, \beta=\vartheta, \gamma=\varphi$
+
+
+\begin{align*}
+\hat{J}^{\nu}(0, \vartheta, \varphi) & =\hat{L}^{\prime \nu}(\vartheta, \varphi), & & \nu=-1,0,1 \\
+\hat{J}_{i}(0, \vartheta, \varphi) & =\hat{L}_{i}^{\prime}(\vartheta, \varphi), & & i=x, y, z \tag{14}
+\end{align*}
+
+
+(c) Equations (2) define $D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)$ only within normalization and phase factors. To fix these factors some additional conditions are required. In the case of diagonal elements of the rotation matrix these factors are completely determined by the boundary condition
+
+
+\begin{equation*}
+D_{M M^{\prime}}^{J}(0,0,0)=\delta_{M M^{\prime}} \tag{15}
+\end{equation*}
+
+
+As for non-diagonal elements, they are determined by Eqs. (4) and (5) which relate the $D_{M M}^{J}$, of different $M$ and $M^{\prime}$. This phase convention corresponds to the condition
+
+
+\begin{equation*}
+D_{M M^{\prime}}^{J}(0, \pi, 0)=(-1)^{J+M} \delta_{M,-M^{\prime}}=(-1)^{J-M^{\prime}} \delta_{-M, M^{\prime}} \tag{16}
+\end{equation*}
+
+
+\subsection*{4.3. EXPLICIT FORMS OF THE WIGNER D-FUNCTIONS}
+$D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)$ may be represented as a product of three functions, each of which depends only on one argument $\alpha, \beta$ or $\gamma$,
+
+
+\begin{equation*}
+D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)=e^{-i M \alpha} d_{M M^{\prime}}^{J}(\beta) e^{-i M^{\prime} \gamma} \tag{1}
+\end{equation*}
+
+
+where $d_{M M^{\prime}}^{J}(\beta)$ is a real function whose explicit forms are given below.
+
+\subsection*{4.3.1. Expressions for $d_{M M^{\prime}}^{J}(\beta)$ Involving Trigonometric Functions}
+
+\begin{gather*}
+d_{M M^{\prime}}^{J}(\beta)=(-1)^{J-M^{\prime}}\left[(J+M)!(J-M)!\left(J+M^{\prime}\right)!\left(J-M^{\prime}\right)!\right]^{\frac{1}{2}} \\
+\times \sum_{k}(-1)^{k} \frac{\left(\cos \frac{\beta}{2}\right)^{M+M^{\prime}+2 k}\left(\sin \frac{\beta}{2}\right)^{2 J-M-M^{\prime}-2 k}}{k!(J-M-k)!\left(J-M^{\prime}-k\right)!\left(M+M^{\prime}+k\right)!}  \tag{2}\\
+d_{M M^{\prime}}^{J}(\beta)=(-1)^{J+M^{\prime}}\left[(J+M)!(J-M)!\left(J+M^{\prime}\right)!\left(J-M^{\prime}\right)!\right]^{\frac{1}{2}} \\
+\times \sum_{k}(-1)^{k} \frac{\left(\cos \frac{\beta}{2}\right)^{2 k-M-M^{\prime}}\left(\sin \frac{\beta}{2}\right)^{2 J+M+M^{\prime}-2 k}}{k!(J+M-k)!\left(J+M^{\prime}-k\right)!\left(k-M-M^{\prime}\right)!}  \tag{3}\\
+d_{M M^{\prime}}^{J}(\beta)=\left[(J+M)!(J-M)!\left(J+M^{\prime}\right)!\left(J-M^{\prime}\right)!\right]^{\frac{1}{2}} \\
+\times \sum_{k}(-1)^{k} \frac{\left(\cos \frac{\beta}{2}\right)^{2 J-2 k+M-M^{\prime}}\left(\sin \frac{\beta}{2}\right)^{2 k-M+M^{\prime}}}{k!(J+M-k)!\left(J-M^{\prime}-k\right)!\left(M^{\prime}-M+k\right)!} \tag{4}
+\end{gather*}
+
+
+
+\begin{align*}
+& d_{M M^{\prime}}^{J}(\beta)=(-1)^{M-M^{\prime}}\left[(J+M)!(J-M)!\left(J+M^{\prime}\right)!\left(J-M^{\prime}\right)!\right]^{\frac{1}{2}} \\
+& \quad \times \sum_{k}(-1)^{k} \frac{\left(\cos \frac{\beta}{2}\right)^{2 J-2 k-M+M^{\prime}}\left(\sin \frac{\beta}{2}\right)^{2 k+M-M^{\prime}}}{k!(J-M-k)!\left(J+M^{\prime}-k\right)!\left(M-M^{\prime}+k\right)!} \tag{5}
+\end{align*}
+
+
+In Eqs. (2)-(5) $k$ runs over all integer values for which the factorial arguments are non-negative. Each of these sums contains $(N+1)$ terms, where $N$ is the minimum of $J+M, J-M, J+M^{\prime}$ and $J-M^{\prime}$. Equations (2)-(5) are not independent, but may be transformed into one another by changing summation variables.
+
+Equations (2)-(5) may be regarded as special cases of the more general expression
+
+
+\begin{gather*}
+d_{M M^{\prime}}^{J}(\beta)=\left[\frac{\left(J_{1}+J_{2}+J+1\right)!\left(J_{1}+J_{2}-J\right)!}{2 J+1}\right]^{\frac{1}{2}} \\
+\times \sum_{\substack{m_{1} m_{2} \\
+\left(m_{1}+m_{2}=M\right)}}(-1)^{J_{2}+m_{2}} C_{J_{1} m_{1} J_{2} m_{2}}^{J M} \frac{\left(\cos \frac{\beta}{2}\right)^{J_{1}+J_{2}+m_{1}-m_{2}}\left(\sin \frac{\beta}{2}\right)^{J_{1}+J_{2}-m_{1}+m_{2}}}{\left[\left(J_{1}+m_{1}\right)!\left(J_{1}-m_{1}\right)!\left(J_{2}+m_{2}\right)!\left(J_{2}-m_{2}\right)!\right]^{\frac{1}{2}}} \tag{6}
+\end{gather*}
+
+
+where $J_{1}$ and $J_{2}$ are arbitrary integer or half-integer numbers which satisfy the conditions $J_{1}-J_{2}=M^{\prime}$ and $\left|J_{1}-J_{2}\right| \leq J \leq J_{1}+J_{2}$. The sum in Eq. (6) is over all possible (positive and negative) values of $m_{1}$ and $m_{2}$ which correspond to nonzero Clebsch-Gordan coefficients. In particular, Eq. (6) reduces to Eq. (2), when $J_{1}=\left(J+M^{\prime}\right) / 2, J_{2}=\left(J-M^{\prime}\right) / 2, m_{1}=M+k-\left(J-M^{\prime}\right) / 2$ and $m_{2}=-k+\left(J-M^{\prime}\right) / 2$.
+
+\subsection*{4.3.2. Differential Representations of $d_{M M^{\prime}}^{J}(\beta)$}
+
+\begin{align*}
+& d_{M M^{\prime}}^{J}(\beta)=(-1)^{J-M^{\prime}} \frac{1}{2^{J}}\left[\frac{(J+M)!}{(J-M)!\left(J+M^{\prime}\right)!\left(J-M^{\prime}\right)!}\right]^{\frac{1}{2}}(1-\cos \beta)^{\frac{M^{\prime}-M}{2}}(1+\cos \beta)^{-\frac{M+M^{\prime}}{2}} \\
+& \times \frac{d^{J-M}}{(d \cos \beta)^{J-M}}\left[(1-\cos \beta)^{J-M^{\prime}}(1+\cos \beta)^{J+M^{\prime}}\right]  \tag{7}\\
+& d_{M M^{\prime}}^{J}(\beta)=(-1)^{J+M} \frac{1}{2^{J}}\left[\frac{(J-M)!}{(J+M)!\left(J+M^{\prime}\right)!\left(J-M^{\prime}\right)!}\right]^{\frac{1}{2}}(1-\cos \beta)^{\frac{M-M^{\prime}}{2}}(1+\cos \beta)^{\frac{M+M^{\prime}}{2}} \\
+& \times \frac{d^{J+M}}{(d \cos \beta)^{J+M}}\left[(1-\cos \beta)^{J+M^{\prime}}(1+\cos \beta)^{J-M^{\prime}}\right]  \tag{8}\\
+& d_{M M^{\prime}}^{J}(\beta)=(-1)^{J-M^{\prime}} \frac{1}{2^{J}}\left[\frac{\left(J+M^{\prime}\right)!}{(J+M)!(J-M)!\left(J-M^{\prime}\right)!}\right]^{\frac{1}{2}}(1-\cos \beta)^{\frac{M-M^{\prime}}{2}}(1+\cos \beta)^{-\frac{M+M^{\prime}}{2}} \\
+& \times \frac{d^{J-M^{\prime}}}{(d \cos \beta)^{J-M^{\prime}}}\left[(1-\cos \beta)^{J-M^{\prime}}(1+\cos \beta)^{J+M^{\prime}}\right]  \tag{9}\\
+& d_{M M^{\prime}}^{J}(\beta)=(-1)^{J+M} \frac{1}{2^{J}}\left[\frac{\left(J-M^{\prime}\right)!}{\left(J+M^{\prime}\right)!(J-M)!\left(J+M^{\prime}\right)!}\right]^{\frac{1}{2}}(1-\cos \beta)^{\frac{M^{\prime}-M}{2}}(1+\cos \beta)^{\frac{M+M^{\prime}}{2}} \\
+& \times \frac{d^{J+M^{\prime}}}{(d \cos \beta)^{J+M^{\prime}}}\left[(1-\cos \beta)^{J+M^{\prime}}(1+\cos \beta)^{J-M^{\prime}}\right] \tag{10}
+\end{align*}
+
+
+In practice it is convenient to use such equation from Eqs. (7)-(10) in which the order of derivative is the lowest.
+
+\subsection*{4.3.3. Integral Representations of $d_{M M^{\prime}}^{J}(\beta)$}
+
+\begin{gather*}
+d_{M M^{\prime}}^{J}(\beta)=i^{M-M^{\prime}} \frac{1}{2 \pi}\left[\frac{(J+M)!(J-M)!}{\left(J+M^{\prime}\right)!\left(J-M^{\prime}\right)!}\right]^{\frac{\alpha}{2}} \\
+\times \int_{0}^{2 \pi}\left(e^{i \frac{\phi}{2}} \cos \frac{\beta}{2}+i e^{-i \frac{\phi}{2}} \sin \frac{\beta}{2}\right)^{J-M^{\prime}}\left(e^{-i \frac{\phi}{2}} \cos \frac{\beta}{2}+i e^{i \frac{\phi}{2}} \sin \frac{\beta}{2}\right)^{J+M^{\prime}} e^{i M \phi} d \phi \tag{11}
+\end{gather*}
+
+
+Equation (11) can be rewritten as a contour integral
+
+
+\begin{align*}
+d_{M M^{\prime}}^{J}(\beta)=\frac{i^{M-M^{\prime}-1}}{2 \pi} & {\left[\frac{(J+M)!(J-M)!}{\left(J+M^{\prime}\right)!\left(J-M^{\prime}\right)!}\right]_{|z|=1}^{\frac{1}{2}} \oint\left(z \cos \frac{\beta}{2}+i \sin \frac{\beta}{2}\right)^{J-M^{\prime}} } \\
+& \times\left(i z \sin \frac{\beta}{2}+\cos \frac{\beta}{2}\right)^{J+M^{\prime}} z^{M-J-1} d z \tag{12}
+\end{align*}
+
+
+The integration contour in Eq. (12) is a circle of unit radius about the origin of the $z$-plane.
+
+\subsection*{4.3.4. Relation Between $d_{M M^{\prime}}^{J}(\beta)$ and the Jacobi Polynomials}
+The functions $d_{M M^{\prime}}^{J}(\beta)$ can be expressed in terms of the Jacobi polynomials
+
+
+\begin{equation*}
+d_{M M^{\prime}}^{J}(\beta)=\xi_{M M^{\prime}}\left[\frac{s!(s+\mu+\nu)!}{(s+\mu)!(s+\nu)!}\right]^{\frac{1}{2}}\left(\sin \frac{\beta}{2}\right)^{\mu}\left(\cos \frac{\beta}{2}\right)^{\nu} P_{s}^{(\mu, \nu)}(\cos \beta) \tag{13}
+\end{equation*}
+
+
+where $\mu, \nu$ and $s$ are related to $M, M^{\prime}$ and $J$ by
+
+
+\begin{equation*}
+\mu=\left|M-M^{\prime}\right|, \quad \nu=\left|M+M^{\prime}\right|, \quad s=J-\frac{1}{2}(\mu+\nu) . \tag{14}
+\end{equation*}
+
+
+and
+
+\[
+\xi_{M M^{\prime}}= \begin{cases}1 & \text { if } M^{\prime} \geq M  \tag{15}\\ (-1)^{M^{\prime}-M} & \text { if } M^{\prime}<M\end{cases}
+\]
+
+4.3.5. Relations Between $d_{M M^{\prime}}^{J}(\beta)$ and Hypergeometric Functions
+
+
+\begin{gather*}
+d_{M M^{\prime}}^{J}(\beta)=\frac{\xi_{M M^{\prime}}}{\mu!}\left[\frac{(s+\mu+\nu)!(s+\mu)!}{s!(s+\nu)!}\right]^{\frac{1}{2}}\left(\sin \frac{\beta}{2}\right)^{\mu}\left(\cos \frac{\beta}{2}\right)^{\nu} F\left(-s, s+\mu+\nu+1 ; \mu+1 ; \sin ^{2} \frac{\beta}{2}\right),  \tag{16}\\
+d_{M M^{\prime}}^{J}(\beta)=\frac{\xi_{M M^{\prime}}}{\mu!}\left[\frac{(s+\mu+\nu)!(s+\mu)!}{s!(s+\nu)!}\right]^{\frac{1}{2}}\left(\sin \frac{\beta}{2}\right)^{\mu}\left(\cos \frac{\beta}{2}\right)^{-\nu} F\left(s+\mu+1,-s-\nu ; \mu+1 ; \sin ^{2} \frac{\beta}{2}\right),  \tag{17}\\
+d_{M M^{\prime}}^{J}(\beta)=\frac{(-1)^{s} \xi_{M M^{\prime}}}{\nu!}\left[\frac{(s+\mu+\nu)!(s+\nu)!}{s!(s+\mu)!}\right]^{\frac{1}{2}}\left(\sin \frac{\beta}{2}\right)^{\mu}\left(\cos \frac{\beta}{2}\right)^{\nu} F\left(-s, s+\mu+\nu+1 ; \nu+1 ; \cos ^{2} \frac{\beta}{2}\right), \tag{18}
+\end{gather*}
+
+
+
+\begin{gather*}
+d_{M M^{\prime}}^{J}(\beta)=\frac{(-1)^{s} \xi_{M M^{\prime}}}{\nu!}\left[\frac{(s+\mu+\nu)!(s+\nu)!}{s!(s+\mu)!}\right]^{\frac{1}{2}}\left(\sin \frac{\beta}{2}\right)^{-\mu}\left(\cos \frac{\beta}{2}\right)^{\nu} F\left(s+\nu+1 ;-s-\mu ; \nu+1 ; \cos ^{2} \frac{\beta}{2}\right),  \tag{19}\\
+d_{M M^{\prime}}^{J}(\beta)=\frac{\xi_{M M^{\prime}}}{\mu!}\left[\frac{(s+\mu+\nu)!(s+\mu)!}{s!(s+\nu)!}\right]^{\frac{1}{2}}\left(\sin \frac{\beta}{2}\right)^{\mu}\left(\cos \frac{\beta}{2}\right)^{2 s+\nu} F\left(-s,-s-\nu ; \mu+1 ;-\tan ^{2} \frac{\beta}{2}\right), \tag{20}
+\end{gather*}
+
+
+
+\begin{equation*}
+d_{M M^{\prime}}^{J}(\beta)=\frac{(-1)^{s} \xi_{M M^{\prime}}}{\nu!}\left[\frac{(s+\mu+\nu)!(s+\nu)!}{s!(s+\mu)!}\right]^{\frac{1}{2}}\left(\sin \frac{\beta}{2}\right)^{2 s+\mu}\left(\cos \frac{\beta}{2}\right)^{\nu} F\left(-s,-s-\mu ; \nu+1 ;-\cot ^{2} \frac{\beta}{2}\right) \tag{21}
+\end{equation*}
+
+
+
+\begin{equation*}
+d_{M M^{\prime}}^{J}(\beta)=\frac{(-1)^{s} \xi_{M M^{\prime}}(2 s+\mu+\nu)!}{[s!(s+\mu+\nu)!(s+\mu)!(s+\nu)!]^{\frac{1}{2}}}\left(\sin \frac{\beta}{2}\right)^{2 s+\mu}\left(\cos \frac{\beta}{2}\right)^{\nu} F\left(-s,-s-\mu ;-2 s-\mu-\nu ; \frac{1}{\sin ^{2} \frac{\beta}{2}}\right) \tag{22}
+\end{equation*}
+
+
+
+\begin{equation*}
+d_{M M^{\prime}}^{J}(\beta)=\frac{\xi_{M M^{\prime}}(2 s+\mu+\nu)!}{[s!(s+\mu+\nu)!(s+\mu)!(s+\nu)!]^{\frac{1}{2}}}\left(\sin \frac{\beta}{2}\right)^{\mu}\left(\cos \frac{\beta}{2}\right)^{2 s+\nu} F\left(-s,-s-\nu ;-2 s-\mu-\nu ;-\frac{1}{\cos ^{2} \frac{\beta}{2}}\right) \tag{23}
+\end{equation*}
+
+
+Parameters $\mu, \nu, s$ and a phase factor $\xi_{M M^{\prime}}$ in Eqs. (16)-(23) are defined by Eqs. (14) and (15).
+
+\subsection*{1.4. SYMMETRIES OF $d_{M M^{\prime}}^{J}(\beta)$ AND $D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)$}
+(a) In accordance with Eqs. $4.3(2)-(5)$ the functions $d_{M M^{\prime}}^{J}(\beta)$ are real and satisfy the relations
+
+\[
+\left.\begin{array}{rl}
+d_{M M^{\prime}}^{J}(\beta) & =(-1)^{M-M^{\prime}} d_{-M-M^{\prime}}^{J}(\beta)=(-1)^{M-M^{\prime}} d_{M^{\prime} M^{\prime}}^{J}(\beta)=d_{-M^{\prime}-M^{\prime}}^{J}(\beta), \\
+d_{M M^{\prime}}^{J}(-\beta) & =(-1)^{M-M^{\prime}} d_{M M^{\prime}}^{J}(\beta)=d_{M^{\prime} M}^{J}(\beta), \\
+d_{M M^{\prime}}^{J}(\pi-\beta) & =(-1)^{J-M^{\prime}} d_{-M M^{\prime}}^{J}(\beta)=(-1)^{J+M} d_{M-M^{\prime}}^{J}(\beta), \\
+d_{M M^{\prime}}^{J}(\beta \pm 2 \pi n) & =(-1)^{2 J n} d_{M M^{\prime}}^{J}(\beta),  \tag{1}\\
+d_{M M^{\prime}}^{J}(\beta \pm(2 n+1) \pi) & =(-1)^{ \pm(2 n+1) J-M^{\prime}} d_{M-M^{\prime}}^{J}(\beta),
+\end{array}\right\} n \text { is integer }
+\]
+
+(b) Equations (1) imply the following symmetry properties of $D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)$
+
+$$
+\begin{array}{llll} 
+& D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma) & =\varepsilon \eta D_{-M-M^{\prime}}^{J}(\alpha, \beta, \gamma) & =\eta D_{M M^{\prime}}^{J *}(\alpha, \beta, \gamma) \\
+=\varepsilon D_{M^{\prime} M^{\prime}}^{J}(\gamma, \beta, \alpha) & =\eta D_{-M^{\prime}-M^{\prime}}^{J}(\gamma, \beta, \alpha) & =\varepsilon \eta D_{M^{\prime} M^{\prime}}^{J *}(\gamma, \beta, \alpha) & =\varepsilon D_{-M-M^{\prime}}^{J *}(\alpha, \beta, \gamma) \\
+=\varepsilon D_{M M^{\prime}}^{J}(\alpha,-\beta, \gamma) & =\eta D_{-M^{\prime}-M^{\prime}}^{J}(\alpha,-\beta, \gamma)=\varepsilon \eta D_{M M^{\prime}}^{J *}(\alpha,-\beta, \gamma) & =D_{-M^{\prime}-M}^{J *}(\gamma, \beta, \alpha) \\
+=D_{M^{\prime} M^{\prime}}^{J}(\gamma,-\beta, \alpha) & =\varepsilon \eta D_{-M^{\prime}-M}^{J}(\gamma,-\beta, \alpha)=\eta D_{M^{\prime} M}^{J *}(\gamma,-\beta, \alpha) & =\varepsilon D_{-M-M^{\prime}}^{J *}(\alpha,-\beta, \gamma) \\
+=\varepsilon D_{-M-M^{\prime}}^{J}(-\alpha, \beta,-\gamma) & =\eta D_{M M^{\prime}}^{J}(\gamma, \beta,-\beta,-\gamma)=\varepsilon \eta D_{-M-M^{\prime}}^{J *}(-\alpha, \beta,-\gamma)=D_{M M^{\prime}}^{J *}(-\alpha, \beta,-\gamma) \\
+=D_{-M^{\prime}-M^{\prime}}^{J}(-\gamma, \beta,-\alpha) & =\varepsilon \eta D_{M^{\prime} M^{\prime}}^{J}(-\gamma, \beta,-\alpha)=\eta D_{-M^{\prime}-M^{\prime}}^{J *}(-\gamma, \beta,-\alpha)=\varepsilon D_{M^{\prime} M}^{J *}(-\gamma, \beta,-\alpha) \\
+=D_{-M-M^{\prime}}^{J}(-\alpha,-\beta,-\gamma)=\varepsilon \eta D_{M M^{\prime}}^{J}(-\alpha,-\beta,-\gamma)=\eta D_{-M-M^{\prime}}^{J}(-\alpha,-\beta,-\gamma)=\varepsilon D_{M M^{\prime}}^{J *}(-\alpha,-\beta,-\gamma) \\
+=\varepsilon D_{-M^{\prime}-M^{\prime}}^{J}(-\gamma,-\beta,-\alpha)=\eta D_{M^{\prime} M^{\prime}}^{J}(-\gamma,-\beta,-\alpha)=\varepsilon \eta D_{-M^{\prime}-M^{\prime}}^{J *}(-\gamma,-\beta,-\alpha)=D_{M^{\prime} M^{\prime}}^{J J^{\prime}}(-\gamma,-\beta,-\alpha),
+\end{array}
+$$
+
+vhere
+
+
+\begin{equation*}
+\varepsilon=(-1)^{M^{\prime}-M}, \quad \eta=e^{-i 2 M \alpha-i 2 M^{\prime} \gamma} \tag{3}
+\end{equation*}
+
+
+The periodicity conditions for $D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)$ are
+
+
+\begin{gather*}
+D_{M M^{\prime}}^{J}(\alpha, \beta \pm 2 n \pi, \gamma)=(-1)^{2 n J} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma) \\
+D_{M M^{\prime}}^{J}(\alpha, \beta \pm(2 n+1) \pi, \gamma)=(-1)^{ \pm(2 n+1) J-M^{\prime}} D_{M-M^{\prime}}^{J}(\alpha, \beta,-\gamma)  \tag{4}\\
+D_{M M^{\prime}}^{J}(\alpha \pm n \pi, \beta, \gamma)=(-i)^{ \pm 2 n M} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma) \\
+D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma \pm n \pi)=(-i)^{ \pm 2 n M^{\prime}} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)
+\end{gather*}
+
+
+where $n$ is integer. Note also that
+
+
+\begin{equation*}
+D_{M M^{\prime}}^{J}(\tilde{\alpha}, \beta, \tilde{\gamma})=e^{i M(\alpha-\tilde{\alpha})} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma) e^{i M^{\prime}(\gamma-\tilde{\gamma})} \tag{5}
+\end{equation*}
+
+
+Some properties of $D_{M M}^{J},(\alpha, \beta, \gamma)$ follow from the addition theorem (Sec. 1.4.7). Let us consider some special cases.\\
+(i) The matrix of the transformation $S\{x, y, z\} \rightarrow S^{\prime \prime}\left\{x^{\prime},-y^{\prime},-z^{\prime}\right\}$ may be obtained from the matrix of the transformation $S\{x, y, z\} \rightarrow S^{\prime}\left\{x^{\prime}, y^{\prime}, z^{\prime}\right\}$ by substituting $(\alpha+\pi, \pi-\beta,-\gamma)$ for $(\alpha, \beta, \gamma)$. On the other hand, this substitution corresponds to an additional rotation $R_{x^{\prime}}$ about the $x^{\prime}$-axis through an angle $-\pi$. Hence,
+
+
+\begin{align*}
+D_{M M^{\prime}}^{J}(\alpha+\pi, \pi-\beta,-\gamma) & =\widehat{R}_{x^{\prime}} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)=\sum_{M^{\prime \prime}} D_{M M^{\prime \prime}}^{J}(\alpha, \beta, \gamma) D_{M^{\prime \prime} M^{\prime}}^{J}\left(-\frac{\pi}{2},-\pi, \frac{\pi}{2}\right) \\
+& =(-1)^{J} D_{M-M^{\prime}}^{J}(\alpha, \beta, \gamma) \tag{6}
+\end{align*}
+
+
+(ii) The matrix of the transformation $S\{x, y, z\} \rightarrow S^{\prime \prime \prime}\left\{-x^{\prime}, y^{\prime},-z^{\prime}\right\}$ may be obtained from the matrix of the transformation $S\{x, y, z\} \rightarrow S^{\prime}\left\{x^{\prime}, y^{\prime}, z^{\prime}\right\}$ by substituting $(\alpha-\pi, \pi-\beta, \pi-\gamma)$ for $(\alpha, \beta, \gamma)$. This substitution corresponds to an additional rotation $R_{y^{\prime}}$ about $y^{\prime}$-axis through an angle $-\pi$. Hence,
+
+
+\begin{align*}
+D_{M M^{\prime}}^{J}(\alpha-\pi, \pi-\beta, \pi-\gamma) & =\hat{R}_{y^{\prime}} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)=\sum_{M^{\prime \prime}} D_{M M^{\prime \prime}}^{J}(\alpha, \beta, \gamma) D_{M^{\prime \prime} M^{\prime}}^{J}(0,-\pi, 0) \\
+& =(-1)^{J+M^{\prime}} D_{M-M^{\prime}}^{J}(\alpha, \beta, \gamma) \tag{7}
+\end{align*}
+
+
+(iii) The matrix of the transformation $S\{x, y, z\} \rightarrow S^{\prime \prime \prime \prime}\left\{-x^{\prime},-y^{\prime}, z^{\prime}\right\}$ may be derived from the matrix of the transformation $S\{x, y, z\} \rightarrow S^{\prime}\left\{x^{\prime}, y^{\prime}, z^{\prime}\right\}$ by replacing $(\alpha, \beta, \gamma) \rightarrow(\alpha, \beta, \gamma-\pi)$. This corresponds to an additional rotation $R_{z^{\prime}}$ about the $z^{\prime}$-axis through an angle $-\pi$. Thus,
+
+
+\begin{equation*}
+D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma-\pi)=\hat{R}_{z^{\prime}} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)=\sum_{M^{\prime \prime}} D_{M M^{\prime \prime}}^{J}(\alpha, \beta, \gamma) D_{M^{\prime \prime} M^{\prime}}^{J}(0,0,-\pi)=(-1)^{M^{\prime}} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma) \tag{8}
+\end{equation*}
+
+
+Note that three successive rotations through angles $-\pi$ about the axes $x^{\prime}, y^{\prime}$ and $z^{\prime}$ return the coordinate system to its initial position.
+
+\subsection*{4.5. ROTATION MATRIX $U_{M M}^{J}$, IN TERMS OF ANGLES $\omega, \Theta, \Phi$}
+\subsection*{4.5.1. Deflnition}
+In some cases the description of rotations in terms of $\omega, \Theta, \Phi$ (where $\omega$ is the angle of rotation and $\Theta, \Phi$ are the angles which determine the rotation axis, see Sec. 1.4) is more convenient than that in terms of the Euler angles $\alpha, \beta, \gamma$. Matrix elements of the rotation operator in terms of variables $\omega, \Theta, \Phi$ will be denoted by $U_{M M^{\prime}}^{J}(\omega ; \Theta, \Phi):$
+
+
+\begin{equation*}
+U_{M M^{\prime}}^{J}(\omega ; \Theta, \Phi) \equiv\langle J M| e^{-i \omega n \cdot \hat{J}}\left|J M^{\prime}\right\rangle \tag{1}
+\end{equation*}
+
+
+Therefore, under a rotation specified by $\omega, \Theta, \Phi$ the components of an irreducible tensor of rank $J$ transform as
+
+
+\begin{equation*}
+\mathfrak{M}_{J M^{\prime}}\left(\vartheta^{\prime}, \varphi^{\prime}\right)=\sum_{M} \mathfrak{M}_{J M}(\vartheta, \varphi) U_{M M^{\prime}}^{J}(\omega ; \Theta, \Phi) \tag{2}
+\end{equation*}
+
+
+The polar angles $\vartheta, \varphi$ and $\vartheta^{\prime}, \varphi^{\prime}$ which specify a direction of an arbitrary vector in the initial and rotated coordinate systems in terms $\omega, \Theta, \Phi$ are related by Eqs. 1.4(5) and 1.4(6).
+
+\subsection*{4.5.2 Explicit form}
+(a) An arbitrary rotation specified by angles $\omega, \Theta, \Phi$ may be considered as a result of three successive rotations of coordinate system:\\
+(i) $R_{1}\left(\alpha_{1}=\Phi, \beta_{1}=\Theta, \gamma_{1}=-\Phi\right)$, i.e., the rotation which turns the $z$-axis to the direction of $\mathbf{n}(\Theta, \Phi)$;\\
+(ii) $R_{2}\left(\alpha_{2}=\omega, \beta_{2}=0, \gamma_{2}=0\right)$, i.e., the rotation about $\mathbf{n}(\Theta, \Phi)$ through an angle $\omega$;\\
+(iii) $R_{3}\left(\alpha_{3}=\Phi, \beta_{3}=-\Theta, \gamma_{3}=-\Phi\right)$, i.e., the rotation which is inverse to $R_{1}$. The result of these three rotations yields the relation between $U_{M M^{\prime}}^{J}(\omega ; \Theta, \Phi)$ and the Wigner $D$-functions
+
+
+\begin{equation*}
+U_{M M^{\prime}}^{J}(\omega ; \Theta, \Phi)=\sum_{M^{\prime \prime}} D_{M M^{\prime \prime}}^{J}(\Phi, \Theta,-\Phi) e^{-i M^{\prime \prime} \omega} D_{M^{\prime \prime} M^{\prime}}^{J}(\Phi,-\Theta,-\Phi) \tag{3}
+\end{equation*}
+
+
+Equation (3) enables one to find an explicit form for $U_{M M^{\prime}}^{J}(\omega ; \Theta, \Phi)$ for particular $J, M$ and $M^{\prime}$.\\
+(b) According to Eq. 4.6(10) the functions $U_{M M^{\prime}}^{J}(\omega ; \Theta, \Phi)$ may be directly constructed from the matrix elements $U_{m m^{\prime}}^{\frac{1}{2}}$ which represent the Cayley-Klein parameters (see Eqs. 4.6(12)). This gives the expression
+
+\[
+U_{M M^{\prime}}^{J}(\omega ; \Theta, \Phi)=\left\{\begin{array}{cc}
+(-i v)^{2 J}\left(\frac{u}{-i v}\right)^{\left(M+M^{\prime}\right)} e^{-i\left(M-M^{\prime}\right) \Phi} \sum_{v} \frac{\sqrt{(J+M)!(J-M)!\left(J+M^{\prime}\right)!\left(J-M^{\prime}\right)!}}{s!\left(s+M+M^{\prime}\right)!(J-M-s)!\left(J-M^{\prime}-s\right)!}\left(1-v^{-2}\right)^{s}  \tag{4}\\
+& M+M^{\prime} \geq 0 \\
+(-i v)^{2 J}\left(\frac{u^{*}}{-i v}\right)^{-\left(M+M^{\prime}\right)} & e^{-i\left(M-M^{\prime}\right) \Phi} \sum_{s} \frac{\sqrt{(J+M)!(J-M)!\left(J+M^{\prime}\right)!\left(J-M^{\prime}\right)!}}{s!\left(s-M-M^{\prime}\right)!(J+M-s)!\left(J+M^{\prime}-s\right)!}\left(1-v^{-2}\right)^{*} \\
+& M+M^{\prime} \leq 0
+\end{array}\right.
+\]
+
+In this case Eqs. 1.4(26) have been used, and the following notations are introduced
+
+
+\begin{equation*}
+v=\sin \frac{\omega}{2} \sin \Theta, \quad u=\cos \frac{\omega}{2}-i \sin \frac{\omega}{2} \cos \Theta \tag{5}
+\end{equation*}
+
+
+In Eqs. (4) the summation index $s$ runs over all integer values which do not lead to negative factorial arguments.\\
+(c) Another explicit form of $U_{M M^{\prime}}^{J}(\omega ; \Theta, \Phi)$ can be obtained directly from $D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)$ by changing variables $(\omega, \Theta, \Phi) \rightarrow(\alpha, \beta, \gamma)$ with the aid of Eqs. 1.4(16) and 1.4(17)
+
+
+\begin{equation*}
+U_{M M^{\prime}}^{J}(\omega ; \Theta, \Phi)=i^{M-M^{\prime}} e^{-i\left(M-M^{\prime}\right) \Phi}\left(\frac{1-i \tan \frac{\omega}{2} \cos \Theta}{\sqrt{1+\tan ^{2} \frac{\omega}{2} \cos ^{2} \Theta}}\right)^{M+M^{\prime}} d_{M M^{\prime}}^{J}(\xi) \tag{6}
+\end{equation*}
+
+
+The functions $d_{M M^{\prime}}^{J}(\xi)$ are defined in Sec. 4.3, and the angle $\xi$ is determined by
+
+
+\begin{equation*}
+\sin \frac{\xi}{2}=\sin \frac{\omega}{2} \sin \Theta . \tag{7}
+\end{equation*}
+
+
+(d) The function $U_{M M^{\prime}}^{J}(\omega ; \Theta, \Phi)$ may be expanded in a series of the spherical harmonics which depend on polar angles $\Theta$ and $\Phi$,
+
+
+\begin{equation*}
+U_{M M^{\prime}}^{J}(\omega ; \Theta, \Phi)=\sum_{\lambda \mu}(-i)^{\lambda} \frac{2 \lambda+1}{2 J+1} \chi_{\lambda}^{J}(\omega) C_{J M \lambda \mu}^{J M^{\prime}} \sqrt{\frac{4 \pi}{2 \lambda+1}} Y_{\lambda \mu}(\Theta, \Phi) \tag{8}
+\end{equation*}
+
+
+where $\chi_{\lambda}^{J}(\omega)$ is a generalized character (of order $\lambda$ ) of the irreducible representation of rank $J$. Explicit forms and properties of $\chi_{\lambda}^{J}(\omega)$ will be given below in Sec. 4.15.
+
+Equation (8) shows that $U_{M M^{\prime}}^{J}(\omega ; \Theta, \Phi)$ depends on $M$ and $M^{\prime}$ only through the Clebsch-Gordan coefficients $C_{J M \lambda \mu}^{J M^{\prime}}$.
+
+\subsection*{4.5.3. Differential Equations}
+$U_{M M^{\prime}}^{J}(\omega ; \Theta, \Phi)$ are eigenfunctions of three operators $\widehat{J}_{z}, \widehat{J}_{z}^{\prime}$ and $\widehat{J}^{2}$ whose eigenvalues equal $-M,-M^{\prime}$ and $J(J+1)$, respectively. In terms of $\omega, \Theta, \Phi$ these operators have the forms
+
+
+\begin{align*}
+& \hat{J}_{z}=-i\left[\cos \Theta \frac{\partial}{\partial \omega}-\frac{1}{2} \cot \frac{\omega}{2} \sin \Theta \frac{\partial}{\partial \Theta}+\frac{1}{2} \cdot \frac{\partial}{\partial \Phi}\right]  \tag{9}\\
+& \hat{J}_{z}=-i\left[\cos \Theta \frac{\partial}{\partial \omega}-\frac{1}{2} \cot \frac{\omega}{2} \sin \Theta \frac{\partial}{\partial \Theta}-\frac{1}{2} \cdot \frac{\partial}{\partial \Phi}\right]  \tag{10}\\
+& \hat{J}^{2}=-\left[\frac{\partial^{2}}{\partial \omega^{2}}+\cot \frac{\omega}{2} \frac{\partial}{\partial \omega}+\frac{1}{4 \sin ^{2} \frac{\omega}{2}}\left(\frac{\partial^{2}}{\partial \Theta^{2}}+\cot \Theta \frac{\partial}{\partial \Theta}+\frac{1}{\sin ^{2} \Theta} \frac{\partial^{2}}{\partial \Phi^{2}}\right)\right] \tag{11}
+\end{align*}
+
+
+Thus, $U_{M M^{\prime}}^{J}(\omega ; \Theta, \Phi)$ is a solution of the differential equations
+
+
+\begin{align*}
+{\left[\widehat{\mathbf{J}}^{2}-J(J+1)\right] U_{M M^{\prime}}^{J}(\omega ; \Theta, \Phi) } & =0 \\
+{\left[\widehat{J}_{z}+M\right] U_{M M^{\prime}}^{J}(\omega ; \Theta, \Phi) } & =0  \tag{12}\\
+{\left[\widehat{J}_{z}+M^{\prime}\right] U_{M M^{\prime}}^{J}(\omega ; \Theta, \Phi) } & =0
+\end{align*}
+
+
+with the boundary conditions
+
+
+\begin{gather*}
+U_{M M^{\prime}}^{J}(0 ; \Theta, \Phi)=\delta_{M M^{\prime}} \\
+\left.\frac{\partial}{\partial \Phi} U_{M M^{\prime}}^{J}(\omega ; \Theta, \Phi)\right|_{\Theta=0}=\left.\frac{\partial}{\partial \Phi} U_{M M^{\prime}}^{J}(\omega ; \Theta, \Phi)\right|_{\Theta=\pi}=0 . \tag{13}
+\end{gather*}
+
+
+\subsection*{4.5.4. Orthogonality and Completeness}
+A collection of the functions $U_{M M^{\prime}}^{J}(\omega ; \Theta, \Phi)$ with all possible integer and half-integer $J \geq 0$ constitutes a complete set of orthogonal functions of three variables $\omega, \Theta, \Phi$ defined in the domain
+
+
+\begin{equation*}
+0 \leq \theta \leq \pi, \quad 0 \leq \Phi<2 \pi, \quad 0 \leq \omega<2 \pi \tag{14}
+\end{equation*}
+
+
+whose total volume is equal to $16 \pi^{2}$.\\
+(a) Orthogonality and Normalization
+
+
+\begin{equation*}
+4 \int_{0}^{2 \pi} d \omega \sin ^{2} \frac{\omega}{2} \int_{0}^{\pi} d \Theta \sin \Theta \int_{0}^{2 \pi} d \Phi U_{M_{1} M_{1}^{\prime}}^{J_{1} *}(\omega ; \Theta, \Phi) U_{M_{2} M_{2}^{\prime}}^{J_{2}}(\omega ; \Theta, \Phi)=\frac{16 \pi^{2}}{2 J_{1}+1} \delta_{J_{1} J_{2}} \delta_{M_{1} M_{2}} \delta_{M_{1}^{\prime} M_{2}^{\prime}} \tag{15}
+\end{equation*}
+
+
+(b) Completeness
+
+
+\begin{equation*}
+\sum_{J=0,1 / 2,1 \ldots}^{\infty} \frac{2 J+1}{16 \pi^{2}} \sum_{M M^{\prime}} U_{M M^{\prime}}^{J}(\omega ; \Theta, \Phi) U_{M M^{\prime}}^{J *}(\tilde{\omega} ; \tilde{\Theta}, \tilde{\Phi})=\frac{\delta(\Phi-\tilde{\Phi}) \delta(\Theta-\tilde{\Theta}) \delta(\omega-\tilde{\omega})}{4 \sin \Theta \sin ^{2} \frac{\omega}{2}} \tag{16}
+\end{equation*}
+
+
+\subsection*{4.5.5. Principal Properties}
+(a) Inverse transformation
+
+
+\begin{equation*}
+\left[U^{-1}(\omega ; \Theta, \Phi)\right]_{M M^{\prime}}^{J}=U_{M M^{\prime}}^{J}(-\omega ; \Theta, \Phi)=U_{M M^{\prime}}^{J}(\omega ; \pi-\Theta, \pi+\Phi) \tag{17}
+\end{equation*}
+
+
+(b) Complex conjugation
+
+
+\begin{equation*}
+U_{M M^{\prime}}^{J *}(\omega ; \Theta, \Phi)=U_{M^{\prime} M}^{J}(\omega ; \pi-\Theta, \pi+\Phi)=U_{M^{\prime} M}^{J}(-\omega ; \Theta, \Phi) \tag{18}
+\end{equation*}
+
+
+(c) Reversal of argument signs
+
+
+\begin{gather*}
+U_{M M^{\prime}}^{J}(-\omega ; \Theta, \Phi)=(-1)^{M-M^{\prime}} U_{-M^{\prime}-M}^{J}(\omega ; \Theta \\
+U_{M M^{\prime}}^{J}(\omega ;-\Theta, \Phi)=(-1)^{M-M^{\prime}} U_{M M^{\prime}}^{J}(\omega ; \Theta, \Phi)  \tag{19}\\
+U_{M M^{\prime}}^{J}(\omega ; \Theta,-\Phi)=U_{M^{\prime} M}^{J}(\omega ; \Theta, \Phi) \\
+\text { (d) Periodicity } \\
+U_{M M^{\prime}}^{J}(\omega+4 \pi ; \Theta, \Phi)=U_{M M^{\prime}}^{J}(\omega ; \Theta, \Phi) \\
+U_{M M^{\prime}}^{J}(\omega ; \Theta+2 \pi, \Phi)=U_{M M^{\prime}}^{J}(\omega ; \Theta, \Phi)  \tag{20}\\
+U_{M M^{\prime}}^{J}(\omega ; \Theta, \Phi+2 \pi)=U_{M M^{\prime}}^{J}(\omega ; \Theta, \Phi)
+\end{gather*}
+
+
+Half-period Shift of Arguments
+
+
+\begin{align*}
+U_{M M^{\prime}}^{J}(\omega+2 \pi ; \Theta, \Phi) & =(-1)^{2 J} U_{M M^{\prime}}^{J}(\omega ; \Theta, \Phi), & U_{M M^{\prime}}^{J}(2 \pi-\omega ; \Theta, \Phi) & =(-1)^{M+M^{\prime}} U_{-M^{\prime}-M^{\prime}}^{J}(\omega ; \Theta, \Phi) \\
+U_{M M^{\prime}}^{J}(\omega ; \Theta+\pi, \Phi) & =(-1)^{M-M^{\prime}} U_{-M^{\prime}-M}^{J}(\omega ; \Theta, \Phi), & U_{M M^{\prime}}^{J}(\omega ; \pi-\Theta, \Phi) & =U_{-M^{\prime}-M}^{J}(\omega ; \Theta, \Phi) \\
+U_{M M^{\prime}}^{J}(\omega ; \Theta, \Phi+\pi) & =(-1)^{M-M^{\prime}} U_{M M^{\prime}}^{J}(\omega ; \Theta, \Phi), & U_{M M^{\prime}}^{J}(\omega ; \Theta, \pi-\Phi) & =(-1)^{M-M^{\prime}} U_{M^{\prime} M}^{J}(\omega ; \Theta, \Phi) \tag{21}
+\end{align*}
+
+
+(e) Permutation $M \not \rightleftarrows M^{\prime}$ and reversal of signs of $M$ and $M^{\prime}$
+
+
+\begin{align*}
+U_{M^{\prime} M}^{J}(\omega ; \Theta, \Phi) & =U_{M M^{\prime}}^{J}(\omega ; \Theta,-\Phi)=U_{M M^{\prime}}^{J *}(\omega ; \pi-\Theta, \pi+\Phi) \\
+U_{-M-M^{\prime}}^{J}(\omega ; \Theta, \Phi) & =(-1)^{M-M^{\prime}} U_{M M^{\prime}}^{J}(\omega ; \pi-\Theta, \pi+\Phi)  \tag{22}\\
+U_{M M^{\prime}}^{J}(\omega ; \Theta, \Phi) & =(-1)^{J-M^{\prime}} U_{-M M^{\prime}}^{J}\left(\omega_{1} ; \Theta_{1}, \Phi_{1}\right)=(-1)^{J+M} U_{M-M^{\prime}}^{J}\left(\omega_{1} ; \Theta_{1}, \Phi_{1}\right)
+\end{align*}
+
+
+where angles $\omega_{1}, \Theta_{1}, \Phi_{1}$ and $\omega, \Theta, \Phi$ are related by the equations
+
+
+\begin{gather*}
+\cos \frac{\omega_{1}}{2}=\sin \frac{\omega}{2} \sin \Theta \sin \Phi \\
+\sin \frac{\omega_{1}}{2} \cos \Theta_{1}=-\sin \frac{\omega}{2} \sin \Theta \cos \Phi  \tag{23}\\
+\cot \Phi_{1}=-\tan \frac{\omega}{2} \cos \Theta \\
+\cos \frac{\omega}{2}=\sin \frac{\omega_{1}}{2} \sin \Theta_{1} \sin \Phi_{1} \\
+\sin \frac{\omega}{2} \cos \Theta=-\sin \frac{\omega_{1}}{2} \sin \Theta_{1} \cos \Phi_{1}  \tag{24}\\
+\cot \Phi=-\tan \frac{\omega_{1}}{2} \cos \Theta_{1}
+\end{gather*}
+
+
+
+\begin{equation*}
+\sin ^{2} \frac{\omega_{1}}{2} \sin ^{2} \Theta_{1}+\sin ^{2} \frac{\omega}{2} \sin ^{2} \Theta=1 \tag{25}
+\end{equation*}
+
+
+Some relations which are valid for $D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)$ remain valid for $U_{M M^{\prime}}^{J}(\omega ; \Theta, \Phi)$. In particular, the Clebsch-Gordan expansion
+
+
+\begin{equation*}
+U_{M_{1} M_{1}^{\prime}}^{J_{1}}(\omega ; \Theta, \Phi) U_{M_{2} M_{2}^{\prime}}^{J_{2}}(\omega ; \Theta, \Phi)=\sum_{J M} C_{J_{1} M_{1} J_{2} M_{2}}^{J M} U_{M M^{\prime}}^{J}(\omega ; \Theta, \Phi) C_{J_{1} M_{1}^{\prime} J_{2} M_{2}^{\prime}}^{J M^{\prime}} \tag{26}
+\end{equation*}
+
+
+is equivalent to Eq. 4.6(1), and the addition theorem
+
+
+\begin{equation*}
+\sum_{M^{\prime \prime}} U_{M M^{\prime \prime}}^{J}\left(\omega_{2} ; \Theta_{2}, \Phi_{2}\right) U_{M^{\prime \prime} M^{\prime}}^{J}\left(\omega_{1} ; \Theta_{1}, \Phi_{1}\right)=U_{M M^{\prime}}^{J}(\omega ; \Theta, \Phi) \tag{27}
+\end{equation*}
+
+
+is equivalent to Eq. 4.7(1). The angles $\omega_{1}, \Theta_{1}, \Phi_{1}, \omega_{2}, \Theta_{2}, \Phi_{2}$ and $\omega, \Theta, \Phi$ are related by Eqs. 1.4(76).
+
+\subsection*{4.5.6. Special Cases}
+(a) The rotation axis $\mathrm{n}(\theta, \Phi)$ coincides with one of the coordinate axes:\\
+(i) The $x$-axis $\left(\Theta=\frac{\pi}{2}, \Phi=0\right)$
+
+
+\begin{equation*}
+U_{M M^{\prime}}^{J}\left(\omega ; \frac{\pi}{2}, 0\right)=D_{M M^{\prime}}^{J}\left(\frac{\pi}{2}, \omega,-\frac{\pi}{2}\right)=(-i)^{M-M^{\prime}} d_{M M^{\prime}}^{J}(\omega) \tag{28}
+\end{equation*}
+
+
+(ii) The $y$-axis ( $\Theta=\frac{\pi}{2}, \Phi=\frac{\pi}{2}$ )
+
+
+\begin{equation*}
+U_{M M^{\prime}}^{J}\left(\omega ; \frac{\pi}{2}, \frac{\pi}{2}\right)=D_{M M^{\prime}}^{J}(0, \omega, 0)=d_{M M^{\prime}}^{J}(\omega) \tag{29}
+\end{equation*}
+
+
+(iii) The $z$-axis $(\Theta=0)$
+
+
+\begin{equation*}
+U_{M M^{\prime}}^{J}(\omega ; 0, \Phi)=\delta_{M M^{\prime}} e^{-i M \omega} \tag{30}
+\end{equation*}
+
+
+(b) Rotation about $\mathrm{n}(\Theta, \Phi)$ through a small angle $\omega \ll \pi / 2$.
+
+
+\begin{gather*}
+U_{M M^{\prime}}^{J}(\omega ; \Theta, \Phi)=\delta_{M M^{\prime}}(1-i \omega M \cos \Theta)-\frac{i \omega}{2} e^{-i \Phi} \sin \Theta \sqrt{\left(J-M^{\prime}\right)(J+M)} \delta_{M, M^{\prime}+1} \\
+-\frac{i \omega}{2} e^{i \Phi} \sqrt{(J-M)\left(J+M^{\prime}\right)} \delta_{M M^{\prime}-1} \tag{31}
+\end{gather*}
+
+
+(c) Explicit forms of $U_{M M^{\prime}}^{J}(\omega ; \Theta, \Phi)$ at $M= \pm J$ and/or $M^{\prime}= \pm J$
+
+
+\begin{gather*}
+U_{J J}^{J}(\omega ; \theta, \Phi)=\left(\cos \frac{\omega}{2}-i \sin \frac{\omega}{2} \cos \Theta\right)^{2 J}, U_{-J-J}^{J}(\omega ; \theta, \Phi)=\left(\cos \frac{\omega}{2}+i \sin \frac{\omega}{2} \cos \Theta\right)^{2 J} \\
+U_{J-J}^{J}(\omega ; \Theta, \Phi)=\left(-i \sin \frac{\omega}{2} \sin \Theta e^{-i \Phi}\right)^{2 J}, U_{-J J}^{J}(\omega ; \Theta, \Phi)=\left(-i \sin \frac{\omega}{2} \sin \Theta e^{i \Phi}\right)^{2 J} \tag{32}
+\end{gather*}
+
+
+(d) Explicit forms of $U_{M M^{\prime}}^{J}(\omega ; \theta, \Phi)$ for $J=\frac{1}{2}, 1, \frac{3}{2}, 2$ are given below in Tables 4.23-4.26.
+
+\subsection*{4.6. SUMS INVOLVING $D$-FUNCTIONS}
+\subsection*{4.6.1. The Clebsch-Gordan Series}
+The product of two $D$-functions with the same arguments may be expanded in the following series
+
+
+\begin{equation*}
+D_{M_{1} N_{1}}^{J_{1}}(\alpha, \beta, \gamma) D_{M_{2} N_{2}}^{J_{2}}(\alpha, \beta, \gamma)=\sum_{J=\left|J_{1}-J_{2}\right|}^{J_{1}+J_{2}} \sum_{M N} C_{J_{1} M_{1} J_{2} M_{2}}^{J M} D_{M N}^{J}(\alpha, \beta, \gamma) C_{J_{1} N_{1} J_{2} N_{2}}^{J N}, \tag{1}
+\end{equation*}
+
+
+Here $C_{J_{1} M_{1} J_{2} M_{2}}^{J M}$ is a Clebsch-Gordan coefficient (Chap. 8). The sum in Eq. (1) has $2 j+1$ terms, where $j=\min \left(J_{1}, J_{2}\right)$. Equation (1) may be regarded as a particular case of the expansion of an arbitrary function in a series of the $D$-functions (Sec. 4.10).
+
+\subsection*{4.6.2. Some Applications of the Clebsch-Gordan Expansion}
+The Clebsch-Gordan expansion, Eq. (1), together with the orthogonality condition of the Clebsch-Gordan coefficients, Eq. 8.1(8), enable one to calculate sums of products of the $D$-functions with identical arguments. Hereafter we introduce the $3 j$-symbol $\left\{j_{1} j_{2} j_{3}\right\}$ defined by
+
+\[
+\left\{j_{1} j_{2} j_{3}\right\}= \begin{cases}1 & \text { if } j_{1}+j_{2}+j_{3} \text { is integer and }\left|j_{1}-j_{2}\right| \leq j_{3} \leq j_{1}+j_{2},  \tag{2}\\ 0 & \text { otherwise },\end{cases}
+\]
+
+$\left\{j_{1} j_{2} j_{3}\right\}$ is invariant with respect to permutations of $j_{1}, j_{2}, j_{3}$. Using Eqs. 4.6(1) and 8.1(8), one obtains
+
+
+\begin{align*}
+& \quad \sum_{\substack{M_{1} M_{2} \\
+N_{1} N_{2}}} C_{J_{1} M_{1} J_{2} M_{2}}^{J M} D_{M_{1} N_{1}}^{J_{1}}(\alpha, \beta, \gamma) D_{M_{2} N_{2}}^{J_{2}}(\alpha, \beta, \gamma) C_{J_{1} N_{1} J_{2} N_{2}}^{J^{\prime} N}=\delta_{J J^{\prime}}\left\{J_{1} J_{2} J\right\} D_{M N}^{J}(\alpha, \beta, \gamma)  \tag{3}\\
+& \quad \sum_{J=\left|J_{1}-J_{2}\right|}^{J_{1}+J_{2}} \sum_{M_{1} M} C_{J_{1} M_{1} J_{2} M_{2}}^{J M} D_{M_{1} N_{1}}^{J_{1} *}(\alpha, \beta, \gamma) D_{M N}^{J}(\alpha, \beta, \gamma) C_{J_{1} N_{1}^{\prime} J_{2} N_{2}}^{J N}=\delta_{N_{1} N_{1}^{\prime}} D_{M_{2} N_{2}}^{J_{2}}(\alpha, \beta, \gamma)  \tag{4}\\
+& \quad \sum_{N_{1} N_{2}} D_{M_{1} N_{1}}^{J_{1}}(\alpha, \beta, \gamma) D_{M_{2} N_{2}}^{J_{2}}(\alpha, \beta, \gamma) C_{J_{1} N_{1} J_{2} N_{2}}^{J N}=C_{J_{1} M_{1} J_{2} M_{3}}^{J M} D_{M N}^{J}(\alpha, \beta, \gamma)  \tag{5}\\
+& \quad \sum_{\substack{N_{1} N_{2} N \\
+M_{1} M_{2} M}} D_{M_{N} N}^{J *}(\alpha, \beta, \gamma) D_{M_{1} N_{1}}^{J_{1}}(\alpha, \beta, \gamma) D_{M_{2} N_{2}}^{J_{2}}(\alpha, \beta, \gamma) C_{J_{1} N_{1} J_{2} N_{2}}^{J N}=C_{J_{1} M_{1} J_{2} M_{2}}^{J M} N_{J_{1} M_{1} J_{2} M_{2}}^{J *} D_{M N}^{J *}(\alpha, \beta, \gamma) D_{M_{1} N_{1}}^{J_{1}}(\alpha, \beta, \gamma) D_{M_{2} N_{2}}^{J_{2}}(\alpha, \beta, \gamma) C_{J_{1} N_{1} J_{2} N_{2}}^{J^{\prime} N^{\prime}}=\delta_{J J^{\prime}} \delta_{N N^{\prime}}\left\{J_{1} J_{2} J\right\} \tag{6}
+\end{align*}
+
+
+\subsection*{4.6.3. Generalization of the Clebsch-Gordan Expansion}
+The Clebsch-Gordan expansion can be generalized to the case of an arbitrary number of $D$-functions of identical arguments by successive use of Eq. (3). For instance, the summation of products of three $D$-functions yields
+
+
+\begin{gather*}
+\sum_{\substack{M_{1} M_{2} M_{3} \\
+N_{1} N_{2} N_{3}}} C_{J_{12} M_{12} J_{3} M_{3}}^{J M} C_{J_{1} M_{1} J_{2} M_{2}}^{J_{12} M_{12}} D_{M_{1} N_{1}}^{J_{1}}(\alpha, \beta, \gamma) D_{M_{2} N_{2}}^{J_{2}}(\alpha, \beta, \gamma) D_{M_{3} N_{3}}^{J_{3}}(\alpha, \beta, \gamma) C_{J_{1} N_{1} J_{2} N_{2}}^{J_{12}^{\prime} N_{12}} C_{J_{12}^{\prime} N_{12} J_{3} N_{3}}^{J^{\prime} N} \\
+=\delta_{J J^{\prime}} \delta_{J_{12} J_{12}^{\prime}}\left\{J_{1} J_{2} J_{12}\right\}\left\{J_{12} J_{3} J\right\} D_{M N}^{J}(\alpha, \beta, \gamma) . \tag{8}
+\end{gather*}
+
+
+In particular, for the case when $J_{3}=0$, Eq. (8) is reduced to Eq. (3).\\
+In general, the sum of products of $k D$-functions is given by
+
+
+\begin{equation*}
+\sum_{\substack{m_{1}, \ldots, m_{k} \\ n_{1}, \ldots, n_{k}}} \prod_{i=1}^{k} C_{J_{i-1} M_{i-1} j_{i} m_{i}}^{J_{i} M_{i}} D_{m_{i} n_{i}}^{j_{i}}(\alpha, \beta, \gamma) C_{J_{i-1}^{\prime} N_{i-1} j_{i} n_{i}}^{J_{i}^{\prime} N_{i}}=D_{M_{k} N_{k}}^{J_{k}}(\alpha, \beta, \gamma) \prod_{i=1}^{k} \delta_{J_{i} J_{i}^{\prime}}\left\{j_{i} J_{i-1} J_{i}\right\} \tag{9}
+\end{equation*}
+
+
+where $J_{i}(i=1,2, \ldots, k)$ is any angular momentum consistent with the vector addition rule,
+
+$$
+\mathbf{J}_{i}=\mathbf{j}_{1}+\mathbf{j}_{2}+\cdots+\mathbf{j}_{i}, \quad M_{i}=m_{1}+m_{2}+\cdots+m_{i}, \quad N_{i}=n_{1}+n_{2}+\cdots+n_{i}
+$$
+
+It is assumed in Eq. (9) that $J_{0}=J_{0}^{\prime}=M_{0}=N_{0}=0$.\\
+In particular, for $j_{1}=j_{2}=\ldots=j_{k}=\frac{1}{2}$ and $J_{i+1}=J_{i}+\frac{1}{2}$ one has
+
+
+\begin{align*}
+\sum_{\substack{m_{1}+\ldots+m_{k}=M \\
+n_{1}+\ldots+n_{k}=N}} & D_{m_{1} n_{1}}^{\frac{1}{2}}(\alpha, \beta, \gamma) D_{m_{2} n_{2}}^{\frac{1}{2}}(\alpha, \beta, \gamma) \ldots D_{m_{k} n_{k}}^{\frac{1}{2}}(\alpha, \beta, \gamma) \\
+& =\frac{(2 J)!}{\sqrt{(J+M)!(J-M)!(J+N)!(J-N)!}} D_{M N}^{J}(\alpha, \beta, \gamma) \tag{10}
+\end{align*}
+
+
+where $J \equiv J_{k}=k / 2$ is either integer or half-integer. Similarly, for $j_{1}=j_{2}=\ldots=j_{k}=1$ and $J_{i+1}=J_{i}+1$,
+
+
+\begin{gather*}
+\sum_{\substack{m_{1}+\ldots+m_{k}=M \\
+n_{1}+\ldots+n_{k}=N}} \sqrt{\prod_{i, j=1}^{k}\left(1+\delta_{m_{i} 0}\right)\left(1+\delta_{n_{i} 0}\right)} D_{m_{1} n_{1}}^{1}(\alpha, \beta, \gamma) D_{m_{2} n_{2}}^{1}(\alpha, \beta, \gamma) \ldots D_{m_{k} n_{k}}^{1}(\alpha, \beta, \gamma) \\
+=\frac{(2 J)!}{\sqrt{(J+M)!(J-M)!(J+N)!(J-N)!}} D_{M N}^{J}(\alpha, \beta, \gamma) \tag{11}
+\end{gather*}
+
+
+where $J \equiv J_{k}=k$ is integer.\\
+Equations (10) and (11) are useful for evaluating the Wigner $D$-functions. For example, Eq. (10) gives an explicit form of the $D$-functions in terms of the Cayley-Klein parameters (Sec. 1.4.3.) defined by
+
+\[
+\left.\begin{array}{lc}
+D_{\frac{1}{2} \frac{1}{2}}^{\frac{1}{2}}(\alpha, \beta, \gamma) \equiv a, & D_{\frac{1}{2}-\frac{1}{2}}^{\frac{1}{2}}(\alpha, \beta, \gamma) \equiv-b^{*}  \tag{12}\\
+D_{-\frac{1}{2} \frac{1}{2}}^{\frac{1}{2}}(\alpha, \beta, \gamma) \equiv b, & D_{-\frac{1}{2}-\frac{1}{2}}^{\frac{1}{2}}(\alpha, \beta, \gamma) \equiv a^{*}
+\end{array}\right\}
+\]
+
+The appropriate expression for the $D$-functions has the form
+
+
+\begin{equation*}
+D_{M N}^{J}(\alpha, \beta, \gamma)=\sqrt{(J+M)!(J-M)!(J+N)!(J-N)!} \sum_{p, q, r, s} \frac{(a)^{p}(b)^{q}\left(a^{*}\right)^{r}\left(-b^{*}\right)^{s}}{p!q!r!s!} \tag{13}
+\end{equation*}
+
+
+Here the summation indices $p, q, r$ and $s$ run over all integer values consistent with the condition
+
+
+\begin{align*}
+& p+q+r+s=2 J \\
+& p-q-r+s=2 M  \tag{14}\\
+& p+q-r-s=2 N
+\end{align*}
+
+
+According to Eqs. (14), only one parameter from $p, q, r$ and $s$ is independent, i.e., in fact, Eq. (13) represents a single sum. The independent summation index may be chosen in different ways. This yields different explicit forms for the $D$-functions, Eqs. 4.3(2)-4.3(5). For example, if $r$ is taken to be independent, Eq. (13) reduces to Eq. 4.3(2).
+
+\subsection*{4.6.4. Determinant of Matrix $D_{M M^{\prime}}^{J}$}
+The determinant $\left\|D_{M M^{\prime}}^{J}\right\|$ of the rotation matrix is an invariant sum of products of $2 J+1 D$-functions. According to Eq. 4.1(7), this matrix is unimodular, i.e.,
+
+
+\begin{equation*}
+\sum_{P}(-1)^{P} D_{-J M_{1}}^{J}(\alpha, \beta, \gamma) D_{-J+1 M_{2}}^{J}(\alpha, \beta, \gamma) \ldots D_{J M_{2 J+1}}^{J}(\alpha, \beta, \gamma)=1 \tag{15}
+\end{equation*}
+
+
+where $M_{1}, M_{2}, \ldots, M_{2 J+1}$ represent all possible permutations $P$ of $J, J-1, J-2, \ldots,-J$. The phase factor $(-1)^{P}$ equals +1 for even permutations, and -1 for odd ones.
+
+\subsection*{4.7. ADDITION OF ROTATIONS}
+\subsection*{4.7.1. The Addition Theorem for $D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)$}
+Let two successive rotations of the coordinate system, $S\{x, y, z\} \rightarrow S^{\prime}\left\{x^{\prime}, y^{\prime}, z^{\prime}\right\}$ and $S^{\prime}\left\{x^{\prime}, y^{\prime}, z^{\prime}\right\} \rightarrow S^{\prime \prime}\left\{x^{\prime \prime}, y^{\prime \prime}, z^{\prime \prime}\right\}$, be described by the Euler angles $\alpha_{1}, \beta_{1}, \gamma_{1}$ and $\alpha_{2}, \beta_{2}, \gamma_{2}$, respectively, and the resultant rotation $S\{x, y, z\} \rightarrow S^{\prime \prime}\left\{x^{\prime \prime}, y^{\prime \prime}, z^{\prime \prime}\right\}$ be described by the angles $\alpha, \beta, \gamma$. In accordance with Sec. 1.4.7, there are two alternative forms of the rotation addition.\\
+(a) The operator of the resultant rotation, $\widehat{D}(\alpha, \beta, \gamma)$, is given by Eq. 1.4(64), if all rotations are performed according to scheme B (Sec. 1.4.1) and the Euler angles $\alpha_{2}, \beta_{2}, \gamma_{2} ; \alpha_{1}, \beta_{1}, \gamma_{1}$ and $\alpha, \beta, \gamma$ are defined with respect to the initial system $S\{x, y, z\}$. Then the addition theorem reads
+
+
+\begin{equation*}
+\sum_{M^{\prime \prime}=-J}^{J} D_{M M^{\prime \prime}}^{J}\left(\alpha_{2}, \beta_{2}, \gamma_{2}\right) D_{M^{\prime \prime} M^{\prime}}^{J}\left(\alpha_{1}, \beta_{1}, \gamma_{1}\right)=D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma) \tag{1}
+\end{equation*}
+
+
+where $\alpha, \beta, \gamma$ are related to $\alpha_{1}, \beta_{1}, \gamma_{1}$ and $\alpha_{2}, \beta_{2}, \gamma_{2}$ by Eqs. 1.4(66)-1.4(70).\\
+(b) The operator of the resultant rotation $\hat{D}(\alpha, \beta, \gamma)$ is given by Eq. 1.4(73), if $\alpha_{1}, \beta_{1}, \gamma_{1}$ and $\alpha, \beta, \gamma$ are defined with respect to the initial system $S\{x, y, z\}$, but $\alpha_{2}, \beta_{2}, \gamma_{2}$ are defined with respect to the intermediate system $S^{\prime}\left\{x^{\prime}, y^{\prime}, z^{\prime}\right\}$ (scheme B), or if successive rotations are performed according to scheme A. In these cases the addition theorem reads
+
+
+\begin{equation*}
+\sum_{M^{\prime \prime}=-J}^{J} D_{M M^{\prime \prime}}^{J}\left(\alpha_{1}, \beta_{1}, \gamma_{1}\right) D_{M^{\prime \prime} M^{\prime}}^{J}\left(\alpha_{2}, \beta_{2}, \gamma_{2}\right)=D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma) \tag{2}
+\end{equation*}
+
+
+and $\alpha, \beta, \gamma$ are related to $\alpha_{1}, \beta_{1}, \gamma_{1}$ and $\alpha_{2}, \beta_{2}, \gamma_{2}$ by the equations which may be obtained from Eqs. 1.4(66)$1.4(70)$ by replacing $\left(\alpha_{1}, \beta_{1}, \gamma_{1}\right) \rightleftarrows\left(\alpha_{2}, \beta_{2}, \gamma_{2}\right)$.
+
+In particular,
+
+
+\begin{equation*}
+\sum_{M^{\prime \prime}=-J}^{J} D_{M M^{\prime \prime}}^{J}\left(\alpha, \beta_{1}, \varphi\right) D_{M^{\prime \prime} M^{\prime}}^{J}\left(-\varphi, \beta_{2}, \gamma\right)=D_{M M^{\prime}}^{J}\left(\alpha, \beta_{1}+\beta_{2}, \gamma\right), \tag{3}
+\end{equation*}
+
+
+where $\varphi$ is arbitrary, and
+
+
+\begin{align*}
+\sum_{M^{\prime \prime}=-J}^{J} D_{M M^{\prime \prime}}^{J}(\alpha, \beta, \gamma) D_{M^{\prime} M^{\prime \prime}}^{J *}(\alpha, \beta, \gamma) & =\sum_{M^{\prime \prime}=-J}^{J} D_{M M^{\prime \prime}}^{J}(\alpha, \beta, \gamma) D_{M^{\prime \prime} M^{\prime}}^{J}(-\gamma,-\beta,-\alpha) \\
+& =D_{M M^{\prime}}^{J}(0,0,0)=\delta_{M M^{\prime}} \tag{4}
+\end{align*}
+
+
+\subsection*{4.7.2 The Addition Theorem for $d_{M M^{\prime}}^{J}(\beta)$}
+Equation (2) may be rewritten as
+
+
+\begin{equation*}
+\sum_{M^{\prime \prime}=-J}^{J} d_{M M^{\prime \prime}}^{J}\left(\beta_{1}\right) d_{M^{\prime \prime} M^{\prime}}^{J}\left(\beta_{2}\right) e^{-i M^{\prime \prime} \varphi}=e^{-i M \alpha} d_{M M^{\prime}}^{J}(\beta) e^{-i M^{\prime} \gamma} \tag{5}
+\end{equation*}
+
+
+Here
+
+
+\begin{align*}
+& \cot \alpha=\cos \beta_{1} \cot \varphi+\cot \beta_{2} \frac{\sin \beta_{1}}{\sin \varphi} \\
+& \cos \beta=\cos \beta_{1} \cos \beta_{2}-\sin \beta_{1} \sin \beta_{2} \cos \varphi  \tag{6}\\
+& \cot \gamma=\cos \beta_{2} \cot \varphi+\cot \beta_{1} \frac{\sin \beta_{2}}{\sin \varphi}
+\end{align*}
+
+
+Equation (5) is simplified in the following particular cases. If $\varphi=0$ and $\beta_{1}+\beta_{2} \leq \pi$, then $\alpha=0, \beta=\beta_{1}+\beta_{2}$ and $\gamma=0$,
+
+
+\begin{equation*}
+\sum_{M^{\prime \prime}=-J}^{J} d_{M M^{\prime \prime}}^{J}\left(\beta_{1}\right) d_{M^{\prime \prime} M^{\prime}}^{J}\left(\beta_{2}\right)=d_{M M^{\prime}}^{J}\left(\beta_{1}+\beta_{2}\right) \tag{7}
+\end{equation*}
+
+
+If $\varphi=0$ and $\beta_{1}+\beta_{2}>\pi$, then $\alpha=\pi, \beta=2 \pi-\beta_{1}-\beta_{2}$ and $\gamma=\pi$,
+
+
+\begin{equation*}
+\sum_{M^{\prime \prime}=-J}^{J} d_{M M^{\prime \prime}}^{J}\left(\beta_{1}\right) d_{M^{\prime \prime} M^{\prime}}^{J}\left(\beta_{2}\right)=(-1)^{M+M^{\prime}} d_{M M^{\prime}}^{J}\left(2 \pi-\beta_{1}-\beta_{2}\right) \tag{8}
+\end{equation*}
+
+
+If $\varphi=\pi$ and $\beta_{1} \geq \beta_{2}$, then $\alpha=0, \beta=\beta_{1}-\beta_{2}$ and $\gamma=\pi$,
+
+
+\begin{equation*}
+\sum_{M^{\prime \prime}=-J}^{J}(-1)^{M^{\prime \prime}-M^{\prime}} d_{M M^{\prime \prime}}^{J}\left(\beta_{1}\right) d_{M^{\prime \prime} M^{\prime}}^{J}\left(\beta_{2}\right)=d_{M M^{\prime}}^{J}\left(\beta_{1}-\beta_{2}\right) \tag{9}
+\end{equation*}
+
+
+In particular, for $\beta_{1}=\beta_{2}$,
+
+
+\begin{equation*}
+\sum_{M^{\prime \prime}=-J}^{J}(-1)^{M^{\prime \prime}-M^{\prime}} d_{M M^{\prime \prime}}^{J}(\beta) d_{M^{\prime \prime} M^{\prime}}^{J}(\beta)=\delta_{M M^{\prime}} \tag{10}
+\end{equation*}
+
+
+If $\varphi=\pi / 2$, then
+
+
+\begin{equation*}
+\sum_{M^{\prime \prime}=-J}^{J}(-i)^{M^{\prime \prime}} d_{M M^{\prime \prime}}^{J}\left(\beta_{1}\right) d_{M^{\prime \prime} M^{\prime}}^{J}\left(\beta_{2}\right)=e^{-i M \alpha} d_{M M^{\prime}}^{J}(\beta) e^{-i M^{\prime} \gamma} \tag{11}
+\end{equation*}
+
+
+where
+
+
+\begin{align*}
+& \cot \alpha=\cot \beta_{2} \sin \beta_{1} \\
+& \cos \beta=\cos \beta_{1} \cos \beta_{2}  \tag{12}\\
+& \cot \gamma=\cot \beta_{1} \sin \beta_{2}
+\end{align*}
+
+
+\subsection*{4.7.3. Addition of Two Identical Rotations}
+When $\alpha_{1}=\alpha_{2}, \beta_{1}=\beta_{2}$ and $\gamma_{1}=\gamma_{2}$ the addition theorem, Eq. (1), together with the Clebsch-Gordan expansion, Eq. 4.6(1), yield
+
+
+\begin{equation*}
+\sum_{J=0,1, \ldots}^{2 j} \sum_{m^{\prime \prime}} C_{j m j m^{\prime \prime}}^{J m+m^{\prime \prime}} D_{m+m^{\prime \prime} m^{\prime \prime}+m^{\prime}}^{J}(\alpha, \beta, \gamma) C_{j m^{\prime \prime} j m^{\prime}}^{J m^{\prime \prime}+m^{\prime}}=D_{m m^{\prime}}^{j}(\bar{\alpha}, \bar{\beta}, \bar{\gamma}) \tag{13}
+\end{equation*}
+
+
+where
+
+
+\begin{gather*}
+\cos \bar{\beta}=\cos ^{2} \beta-\sin ^{2} \beta \cos (\alpha+\gamma) \\
+\tan (\bar{\alpha}-\alpha)=\tan (\bar{\gamma}-\gamma)=\frac{\tan \frac{\alpha+\gamma}{2}}{\cos \beta} \tag{14}
+\end{gather*}
+
+
+In particular, if $\alpha=\gamma=0$,
+
+
+\begin{equation*}
+\sum_{J=0,1, \ldots}^{2 j} \sum_{m^{\prime \prime}} C_{j m j m^{\prime \prime}}^{J m+m^{\prime \prime}} d_{m+m^{\prime \prime} m^{\prime \prime}+m^{\prime}}^{J}(\beta) C_{j m^{\prime \prime} j m^{\prime}}^{J m^{\prime \prime}+m^{\prime}}=d_{m m^{\prime}}^{j}(2 \beta) \tag{15}
+\end{equation*}
+
+
+\subsection*{4.7.4. The Multiplication Theorem for $d_{M M^{\prime}}^{J}(\beta)$}
+Equation (5) leads to a representation of products of two $d_{M M^{\prime}}^{J}(\beta)$ functions
+
+
+\begin{equation*}
+d_{M M^{\prime \prime}}^{J}\left(\beta_{1}\right) d_{M^{\prime \prime} M^{\prime}}^{J}\left(\beta_{2}\right)=\frac{1}{4 \pi} \int_{-2 \pi}^{2 \pi} e^{i\left(M^{\prime \prime} \varphi-M \alpha-M^{\prime} \gamma\right)} d_{M M^{\prime}}^{J}(\beta) d \varphi \tag{16}
+\end{equation*}
+
+
+Here $\alpha, \beta, \gamma$ are related to $\beta_{1}, \beta_{2}$ and $\varphi$ by means of Eq. (6).
+
+\subsection*{4.7.5. Sums Involving the D-Functions of Different Arguments}
+In addition to Eqs. (1) or (2) one can derive the following invariant sums which are equivalent to the characters of irreducible representations of rotation group for two rotations (Sec. 4.14):\\
+(a)
+
+
+\begin{equation*}
+\sum_{M M^{\prime}} D_{M M^{\prime}}^{J}\left(\alpha_{1}, \beta_{1}, \gamma_{1}\right) D_{M^{\prime} M}^{J}\left(\alpha_{2}, \beta_{2}, \gamma_{2}\right) \equiv \chi^{J}\left(R_{1} R_{2}\right)=\chi^{J}\left(R_{2} R_{1}\right)=\frac{\sin \left[(2 J+1) \frac{\omega}{2}\right]}{\sin \frac{\omega}{2}} \tag{17}
+\end{equation*}
+
+
+where
+
+
+\begin{align*}
+\cos \frac{\omega}{2} & =\cos \frac{\beta_{1}}{2} \cos \frac{\beta_{2}}{2} \cos \frac{\alpha_{1}+\gamma_{1}+\alpha_{2}+\gamma_{2}}{2}-\sin \frac{\beta_{1}}{2} \sin \frac{\beta_{2}}{2} \cos \frac{\alpha_{1}-\gamma_{1}-\alpha_{2}+\gamma_{2}}{2} \\
+& =\cos \frac{\beta_{1}+\beta_{2}}{2} \cos \frac{\alpha_{1}+\gamma_{2}}{2} \cos \frac{\gamma_{1}+\alpha_{2}}{2}-\cos \frac{\beta_{1}-\beta_{2}}{2} \sin \frac{\alpha_{1}+\gamma_{2}}{2} \sin \frac{\gamma_{1}+\alpha_{2}}{2} \tag{18}
+\end{align*}
+
+
+(b)
+
+
+\begin{equation*}
+\sum_{M M^{\prime}} D_{M M^{\prime}}^{J}\left(\alpha_{1}, \beta_{1}, \gamma_{1}\right) D_{M M^{\prime}}^{J *}\left(\alpha_{2}, \beta_{2}, \gamma_{2}\right) \equiv \chi^{J}\left(R_{1} R_{2}^{-\mathbf{r}}\right)=\chi^{J}\left(R_{1}^{-1} R_{2}\right)=\frac{\sin \left[(2 J+1) \frac{\omega^{\prime}}{2}\right]}{\sin \frac{\omega^{\prime}}{2}} \tag{19}
+\end{equation*}
+
+
+where
+
+
+\begin{align*}
+\cos \frac{\omega^{\prime}}{2} & =\cos \frac{\beta_{1}}{2} \cos \frac{\beta_{2}}{2} \cos \frac{\alpha_{1}+\gamma_{1}-\alpha_{2}-\gamma_{2}}{2}+\sin \frac{\beta_{1}}{2} \sin \frac{\beta_{2}}{2} \cos \frac{\alpha_{1}-\gamma_{1}-\alpha_{2}+\gamma_{2}}{2} \\
+& =\cos \frac{\beta_{1}-\beta_{2}}{2} \cos \frac{\alpha_{1}-\alpha_{2}}{2} \cos \frac{\gamma_{1}-\gamma_{2}}{2}-\cos \frac{\beta_{1}+\beta_{2}}{2} \sin \frac{\alpha_{1}-\alpha_{2}}{2} \sin \frac{\gamma_{1}-\gamma_{2}}{2} \tag{20}
+\end{align*}
+
+
+Equation (20) may be obtained from Eq. (18) by replacing $\left(\alpha_{2}, \beta_{2}, \gamma_{2}\right) \rightarrow\left(-\gamma_{2},-\beta_{2},-\alpha_{2}\right)$.\\
+Similarly, one can arrive at invariant sums which may be reduced to the characters involving three and more rotations, i.e., $\chi^{J}\left(R_{1} R_{2} R_{3}\right)$ etc.
+
+\subsection*{4.7.6. The Ponzano-Regge sum}
+Note the following sum involving products of three $d_{M M^{\prime}}^{J}(\beta)$ functions with the same $J$ but different arguments (Ref. [89])
+
+
+\begin{equation*}
+\sum_{J=J_{\mathrm{min}}}^{\infty}(2 J+1) d_{M_{1} M_{2}}^{J}\left(\beta_{3}\right) d_{M_{2} M_{3}}^{J}\left(\beta_{1}\right) d_{M_{3} M_{1}}^{J}\left(\beta_{2}\right)=\frac{2 \Theta(B)}{\pi \sqrt{B}} \cos \left(\sum_{i=1}^{3} M_{i} \delta_{i}\right) \tag{21}
+\end{equation*}
+
+
+Here the summation index $J$ runs from $J_{\text {min }}=\max \left\{\left|M_{1}\right|,\left|M_{2}\right|,\left|M_{3}\right|\right\}$ to infinity, $M_{1}, M_{2}, M_{3}$ being fixed, and
+
+
+\begin{gather*}
+B=\left|\begin{array}{ccc}
+1 & \cos \beta_{3} & \cos \beta_{2} \\
+\cos \beta_{3} & 1 & \cos \beta_{1} \\
+\cos \beta_{2} & \cos \beta_{1} & 1
+\end{array}\right|,  \tag{22}\\
+\Theta(x)=\left\{\begin{array}{cc}
+1 & x>0 \\
+0 & x<0
+\end{array}\right. \tag{23}
+\end{gather*}
+
+
+\begin{figure}[h]
+\begin{center}
+  \includegraphics[alt={},max width=\textwidth]{402d9a1b-ee97-49cb-ae14-75458391be12-103_558_708_271_683}
+\captionsetup{labelformat=empty}
+\caption{Fig. 4.1. Geometrical interpretation of the angles in Eq. 4.7(21)}
+\end{center}
+\end{figure}
+
+The relations between the angles $\delta_{1}, \delta_{2}, \delta_{3}$ and $\beta_{1}, \beta_{2}, \beta_{3}$ are
+
+
+\begin{gather*}
+\cos \delta_{i}=\frac{\cos \beta_{j} \cos \beta_{k}-\cos \beta_{i}}{\sin \beta_{j} \sin \beta_{k}}, \quad(i \neq j \neq k),  \tag{24}\\
+\frac{\sin \beta_{i}}{\sin \delta_{i}}=\frac{\sin \beta_{j}}{\sin \delta_{j}}, \quad(i, j=1,2,3) . \tag{25}
+\end{gather*}
+
+
+These relations may be easily obtained by using spherical trigonometry (see Fig. 4.1).
+
+\subsection*{4.8. RECURSION RELATIONS FOR $D_{M M^{\prime}}^{J}$}
+\subsection*{4.8.1. Relations between $D^{J}$ and $D^{J \pm 1}$}
+
+\begin{align*}
+\cos \beta D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)= & \frac{\sqrt{\left(J^{2}-M^{2}\right)\left(J^{2}-M^{\prime 2}\right)}}{J(2 J+1)} D_{M M^{\prime}}^{J-1}(\alpha, \beta, \gamma)+\frac{M M^{\prime}}{J(J+1)} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma) \\
++ & \frac{\sqrt{\left((J+1)^{2}-M^{2}\right]\left[(J+1)^{2}-M^{\prime 2}\right]}}{(J+1)(2 J+1)} D_{M M^{\prime}}^{J+1}(\alpha, \beta, \gamma)  \tag{1}\\
+\sin \beta e^{i \alpha} D_{M+1 M^{\prime}}^{J}(\alpha, \beta, \gamma)= & -\frac{\sqrt{(J+M)(J+M+1)\left(J^{2}-M^{\prime 2}\right)}}{J(2 J+1)} D_{M M^{\prime}}^{J-1}(\alpha, \beta, \gamma) \\
++ & \frac{M^{\prime} \sqrt{(J-M)(J+M+1)}}{J(J+1)} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma) \\
++ & \frac{\sqrt{\left.(J-M)(J-M+1)[J+1)^{2}-M^{\prime 2}\right]}}{(J+1)(2 J+1)} D_{M M^{\prime}}^{J+1}(\alpha, \beta, \gamma)  \tag{2}\\
+\sin \beta e^{-i \alpha} D_{M-1 M^{\prime}}^{J}(\alpha, \beta, \gamma)= & \frac{\sqrt{(J-M)(J-M+1)\left(J^{2}-M^{\prime 2}\right)}}{J(2 J+1)} D_{M M^{\prime}}^{J-1}(\alpha, \beta, \gamma)  \tag{3}\\
+& +\frac{M^{\prime} \sqrt{(J+M)(J-M+1)}}{J(J+1)} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma) \\
+& -\frac{\sqrt{(J+M)(J+M+1)\left[(J+1)^{2}-M^{\prime 2}\right]}}{(J+1)(2 J+1)} D_{M M^{\prime}}^{J+1}(\alpha, \beta, \gamma)
+\end{align*}
+
+
+
+\begin{align*}
+& \sin \beta e^{i \gamma} D_{M M^{\prime}+1}^{J}(\alpha, \beta, \gamma)= \frac{\sqrt{\left(J^{2}-M^{2}\right)\left(J+M^{\prime}\right)\left(J+M^{\prime}+1\right)}}{J(2 J+1)} D_{M^{\prime}}^{J-1}(\alpha, \beta, \gamma) \\
+&- \frac{M \sqrt{\left(J-M^{\prime}\right)\left(J+M^{\prime}+1\right)}}{J(J+1)} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma) \\
+&- \frac{\sqrt{\left((J+1)^{2}-M^{2}\right)\left(J-M^{\prime}\right)\left(J-M^{\prime}+1\right)}}{(J+1)(2 J+1)} D_{M^{\prime}+1}^{J(\alpha, \beta, \gamma)},  \tag{4}\\
+& \sin \beta e^{-i \gamma} D_{M M^{\prime}-1}^{J}(\alpha, \beta, \gamma)=-\frac{\sqrt{\left(J^{2}-M^{2}\right)\left(J-M^{\prime}\right)\left(J-M^{\prime}+1\right)} D_{M M^{\prime}}^{J-1}(\alpha, \beta, \gamma)}{J(2 J+1)} \\
+&- \frac{M \sqrt{\left(J+M^{\prime}\right)\left(J-M^{\prime}+1\right)} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)}{J(J+1)} \\
+&+ \frac{\sqrt{\left.(J+1)^{2}-M^{2}\right)\left(J+M^{\prime}\right)\left(J+M^{\prime}+1\right)} D_{M^{\prime}}^{J+1}(\alpha, \beta, \gamma)}{(J+1)(2 J+1)}  \tag{5}\\
+&(1+\cos \beta) e^{i(\alpha+\gamma)} D_{M+1 M^{\prime}+1}^{J}(\alpha, \beta, \gamma)= \frac{\sqrt{(J+M+1)(J+M)\left(J+M^{\prime}+1\right)\left(J+M^{\prime}\right)}}{J(2 J+1)} D_{M M^{\prime}}^{J-1}(\alpha, \beta, \gamma) \\
+&+\frac{\sqrt{(J-M)(J+M+1)\left(J-M^{\prime}\right)\left(J+M^{\prime}+1\right)}}{J(J+1)} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma) \\
+&+\frac{\sqrt{(J-M)(J-M+1)\left(J-M^{\prime}\right)\left(J-M^{\prime}+1\right)}}{(J+1)(2 J+1)} D_{M M^{\prime}}^{J+1}(\alpha, \beta, \gamma),(6)  \tag{6}\\
+&(1+\cos \beta) e^{-i(\alpha+\gamma)} D_{M-1 M^{\prime}-1}^{J(\alpha, \beta, \gamma)=} \frac{\sqrt{(J-M)(J-M+1)\left(J-M^{\prime}\right)\left(J-M^{\prime}+1\right)}}{J(2 J+1)} D_{M M^{\prime}}^{J-1}(\alpha, \beta, \gamma) \\
+&+\frac{\sqrt{(J+M)(J-M+1)\left(J+M^{\prime}\right)\left(J-M^{\prime}+1\right)}}{J(J+1)} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma) \\
+&+\frac{\sqrt{\left(J+M^{\prime}\right)\left(J+M^{\prime}+1\right)\left(J+M^{\prime}\right)(J+M+1)}}{(J+1)(2 J+1)} D_{M M^{\prime}}^{J+1}(\alpha, \beta, \gamma),(7)  \tag{7}\\
+&(1-\cos \beta) e^{i(\alpha-\gamma)} D_{M+1 M^{\prime}-1}^{J(\alpha, \beta, \gamma)=} \frac{\sqrt{(J+M)(J+M+1)\left(J-M^{\prime}\right)\left(J-M^{\prime}+1\right)}}{J(2 J+1)} D_{M M^{\prime}}^{J-1}(\alpha, \beta, \gamma) \\
+&-\frac{\sqrt{(J-M)(J+M+1)\left(J+M^{\prime}\right)\left(J-M^{\prime}+1\right)}}{J(J+1)} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma) \\
+&+\frac{\sqrt{(J-M)(J-M+1)\left(J+M^{\prime}\right)\left(J+M^{\prime}+1\right)}}{(J+1)(2 J+1)} D_{M M^{\prime}}^{J+1}(\alpha, \beta, \gamma),(8)  \tag{8}\\
+&(1-\cos \beta) e^{-i(\alpha-\gamma)} D_{M-1 M^{\prime}+1}^{J}(\alpha, \beta, \gamma)= \frac{\sqrt{(J-M)(J-M+1)\left(J+M^{\prime}\right)\left(J+M^{\prime}+1\right)}}{J(2 J+1)} D_{M M^{\prime}}^{J-1}(\alpha, \beta, \gamma) \\
+&-\frac{\sqrt{(J+M)(J-M+1)\left(J-M^{\prime}\right)\left(J+M^{\prime}+1\right)}}{J(J+1)} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma) \\
+&+\frac{\sqrt{(J+M)(J+M+1)\left(J-M^{\prime}\right)\left(J-M^{\prime}+1\right)}}{(J+1)(2 J+1)} D_{M M^{\prime}}^{J+1}(\alpha, \beta, \gamma)  \tag{9}\\
+&(9)
+\end{align*}
+
+
+Equations (1)-(9) may be obtained from the Clebsch-Gordan series, Eq. 4.6(1) with $J_{1}=1$.
+
+\subsection*{4.8.2. Relations Between $D^{J}$ and $D^{J \pm 1 / 2}$}
+
+\begin{align*}
+\cos \frac{\beta}{2} e^{i \frac{\alpha+\alpha}{2}} D_{M+\frac{1}{2} M^{\prime}+\frac{1}{2}}^{J}(\alpha, \beta, \gamma)= & \frac{\sqrt{\left(J+M+\frac{1}{2}\right)\left(J+M^{\prime}+\frac{1}{2}\right)}}{2 J+1} D_{M M^{\prime}}^{J-\frac{1}{2}}(\alpha, \beta, \gamma) \\
+& +\frac{\sqrt{\left(J-M+\frac{1}{2}\right)\left(J-M^{\prime}+\frac{1}{2}\right)}}{2 J+1} D_{M M^{\prime}}^{J+\frac{1}{2}}(\alpha, \beta, \gamma),  \tag{10}\\
+\sin \frac{\beta}{2} e^{i \frac{\alpha-\alpha}{2}} D_{M+\frac{1}{2} M^{\prime}-\frac{1}{2}}^{J}(\alpha, \beta, \gamma)= & -\frac{\sqrt{\left(J+M+\frac{1}{2}\right)\left(J-M^{\prime}+\frac{1}{2}\right)}}{2 J+1} D_{M M^{\prime}}^{J-\frac{1}{2}}(\alpha, \beta, \gamma) \\
+& +\frac{\sqrt{\left(J-M+\frac{1}{2}\right)\left(J+M^{\prime}+\frac{1}{2}\right)}}{2 J+1} D_{M M^{\prime}}^{J+\frac{1}{2}}(\alpha, \beta, \gamma),  \tag{11}\\
+\cos \frac{\beta}{2} e^{-i \frac{\alpha+\alpha}{2}} D_{M-\frac{1}{2} M^{\prime}-\frac{1}{2}}^{J}(\alpha, \beta, \gamma)= & \frac{\sqrt{\left(J-M+\frac{1}{2}\right)\left(J-M^{\prime}+\frac{1}{2}\right)}}{2 J+1} D_{M M^{\prime}}^{J-\frac{1}{2}}(\alpha, \beta, \gamma) \\
+& +\frac{\sqrt{\left(J+M+\frac{1}{2}\right)\left(J+M^{\prime}+\frac{1}{2}\right)}}{2 J+1} D_{M M^{\prime}}^{J+\frac{1}{2}}(\alpha, \beta, \gamma),  \tag{12}\\
+\sin \frac{\beta}{2} e^{-i \frac{\alpha-\alpha}{2}} D_{M-\frac{1}{2} M^{\prime}+\frac{1}{2}}^{J}(\alpha, \beta, \gamma)= & \frac{\sqrt{\left(J-M+\frac{1}{2}\right)\left(J+M^{\prime}+\frac{1}{2}\right)}}{2 J+1} D_{M M^{\prime}}^{J-\frac{1}{2}}(\alpha, \beta, \gamma) \\
+& -\frac{\sqrt{\left(J+M+\frac{1}{2}\right)\left(J-M^{\prime}+\frac{1}{2}\right)}}{2 J+1} D_{M M^{\prime}}^{J+\frac{1}{2}}(\alpha, \beta, \gamma) . \tag{13}
+\end{align*}
+
+
+Equations (10)-(13) may be obtained from Eq. 4.6(1) with $J_{1}=\frac{1}{2}$. They yield
+
+
+\begin{align*}
+D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)= & \sqrt{\frac{J-M}{J-M^{\prime}}} \cos \frac{\beta}{2} e^{i \frac{\alpha+x}{2}} D_{M+\frac{1}{2} M^{\prime}+\frac{1}{2}}^{J-\frac{1}{2}}(\alpha, \beta, \gamma) \\
+& -\sqrt{\frac{J+M}{J-M^{\prime}}} \sin \frac{\beta}{2} e^{-i \frac{\alpha-x}{2}} D_{M-\frac{1}{2} M^{\prime}+\frac{1}{2}}^{J-\frac{1}{2}}(\alpha, \beta, \gamma), \quad\left(M^{\prime} \neq J\right),  \tag{14}\\
+D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)= & \sqrt{\frac{J-M}{J+M^{\prime}}} \sin \frac{\beta}{2} e^{i \frac{\alpha-x}{2}} D_{M+\frac{1}{2} M^{\prime}-\frac{1}{2}}^{J-\frac{1}{2}}(\alpha, \beta, \gamma) \\
+& +\sqrt{\frac{J+M}{J+M^{\prime}}} \cos \frac{\beta}{2} e^{-i \frac{\alpha+x}{2}} D_{M-\frac{1}{2} M^{\prime}-\frac{1}{2}}^{J-\frac{1}{2}}(\alpha, \beta, \gamma), \quad\left(M^{\prime} \neq-J\right) . \tag{15}
+\end{align*}
+
+
+4.8.3. Relations Between $D_{M M^{\prime}}^{J}$ and $D_{M \pm 1 M^{\prime} \neq 1}^{J}$
+
+
+\begin{align*}
+& \begin{aligned}
+& \frac{-M+M^{\prime} \cos \beta}{\sin \beta} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)= \frac{1}{2} \sqrt{\left(J+M^{\prime}\right)\left(J-M^{\prime}+1\right)} D_{M M^{\prime}-1}^{J}(\alpha, \beta, \gamma) e^{-i \gamma} \\
+&+\frac{1}{2} \sqrt{\left(J-M^{\prime}\right)\left(J+M^{\prime}+1\right)} D_{M M^{\prime}+1}^{J}(\alpha, \beta, \gamma) e^{i \gamma}
+\end{aligned} \\
+& \begin{aligned}
+& \frac{M^{\prime}-M \cos \beta}{\sin \beta} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)= \frac{1}{2} \sqrt{(J+M)(J-M+1)} D_{M-1 M^{\prime}}^{J}(\alpha, \beta, \gamma) e^{-i \alpha} \\
+&+\frac{1}{2} \sqrt{(J-M)(J+M+1)} D_{M+1 M^{\prime}}^{J}(\alpha, \beta, \gamma) e^{i \alpha}
+\end{aligned}  \tag{16}\\
+& \begin{aligned}
+D_{M+1 M^{\prime}}^{J}(\alpha, \beta, \gamma) e^{i \alpha}= & \sqrt{\frac{\left(J+M^{\prime}\right)\left(J-M^{\prime}+1\right)}{(J-M)(J+M+1)}} \frac{1+\cos \beta}{2} e^{-i \gamma} D_{M M^{\prime}-1}^{J}(\alpha, \beta, \gamma) \\
++ & \frac{M^{\prime} \sin \beta}{\sqrt{\left(J-M^{\prime}\right)\left(J+M^{\prime}+1\right)}} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma) \\
+- & \sqrt{\frac{\left(J-M^{\prime}\right)\left(J+M^{\prime}+1\right)}{(J-M)\left(J+M^{\prime}+1\right)}} \frac{1-\cos \beta}{2} e^{i \gamma} D_{M M^{\prime}+1}^{J}(\alpha, \beta, \gamma)
+\end{aligned} \\
+& \begin{aligned}
+D_{M-1 M^{\prime}}^{J}(\alpha, \beta, \gamma) e^{-i \alpha}= & -\sqrt{\frac{\left(J+M^{\prime}\right)\left(J-M^{\prime}+1\right)}{\left(J+M^{\prime}\right)\left(J-M^{\prime}+1\right)}} \frac{1-\cos \beta}{2} e^{-i \gamma} D_{M M^{\prime}-1}^{J}(\alpha, \beta, \gamma) \\
++ & \frac{M^{\prime} \sin \beta}{\sqrt{\left(J+M^{\prime}\right)(J-M+1)}} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma) \\
++ & \sqrt{\frac{\left(J-M^{\prime}\right)\left(J+M^{\prime}+1\right)}{\left(J+M^{\prime}\right)(J-M+1)}} \frac{1+\cos \beta}{2} e^{i \gamma} D_{M M^{\prime}+1}^{J}(\alpha, \beta, \gamma) \\
+D_{M M^{\prime}+1}^{J}(\alpha, \beta, \gamma) e^{i \gamma}= & \sqrt{\frac{(J+M)(J-M+1)}{\left(J-M^{\prime}\right)\left(J+M^{\prime}+1\right)}} \frac{1+\cos \beta}{2} e^{-i \alpha} D_{M-1 M^{\prime}}^{J}(\alpha, \beta, \gamma) \\
+- & \frac{M^{\prime} \sin \beta}{\sqrt{\left(J-M^{\prime}\right)\left(J+M^{\prime}+1\right)}} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma) \\
+- & \sqrt{\frac{\left(J-M^{\prime}\right)\left(J+M^{\prime}+1\right)}{\left(J-M^{\prime}\right)\left(J+M^{\prime}+1\right)}} \frac{1-\cos \beta}{2} e^{i \alpha} D_{M+1 M^{\prime}}^{J}(\alpha, \beta, \gamma) \\
+D_{M M^{\prime}-1}^{J}(\alpha, \beta, \gamma) e^{-i \gamma}=- & \sqrt{\frac{(J+M)(J-M+1)}{\left(J+M^{\prime}\right)\left(J-M^{\prime}+1\right)}} \frac{1-\cos \beta}{2} e^{-i \alpha} D_{M-1 M^{\prime}}^{J}(\alpha, \beta, \gamma) \\
+- & \frac{M^{\prime} \sin \beta}{\sqrt{\left(J+M^{\prime}\right)\left(J-M^{\prime}+1\right)}} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma) \\
++ & \sqrt{\frac{(J-M)\left(J+M^{\prime}+1\right)}{\left(J+M^{\prime}\right)\left(J-M^{\prime}+1\right)}} \frac{1+\cos \beta}{2} e^{i \alpha} D_{M+1 M^{\prime}}^{J}(\alpha, \beta, \gamma)
+\end{aligned} \tag{17}
+\end{align*}
+
+
+\subsection*{4.9. DIFFERENTIAL RELATIONS FOR $D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)$}
+Derivatives of $D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)$ may be expressed in terms of the $D$-functions with different $M, M^{\prime}$ and $J$
+
+
+\begin{gather*}
+\sin \beta \frac{\partial}{\partial \beta} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)=-\frac{(J+1) \sqrt{\left(J^{2}-M^{2}\right)\left(J^{2}-M^{\prime 2}\right)}}{J(2 J+1)} D_{M M^{\prime}}^{J-1}(\alpha, \beta, \gamma)-\frac{M M^{\prime}}{J(J+1)} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma) \\
++\frac{\left.J \sqrt{\left.(J+1)^{2}-M^{2}\right](J+1)^{2}-M^{\prime 2}}\right]}{(J+1)(2 J+1)} D_{M M^{\prime}}^{J+1}(\alpha, \beta, \gamma)  \tag{1}\\
+\begin{aligned}
+\frac{\partial}{\partial \beta} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)= & -\frac{1}{2} \sqrt{(J+M)(J-M+1)} e^{-i \alpha} D_{M-1 M^{\prime}}^{J}(\alpha, \beta, \gamma) \\
+& +\frac{1}{2} \sqrt{(J-M)(J+M+1)} e^{i \alpha} D_{M+1 M^{\prime}}^{J}(\alpha, \beta, \gamma)
+\end{aligned} \\
+\frac{\partial}{\partial \beta} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)=\frac{1}{2} \sqrt{\left(J+M^{\prime}\right)\left(J-M^{\prime}+1\right)} e^{-i \gamma} D_{M M^{\prime}-1}^{J}(\alpha, \beta, \gamma)  \tag{2}\\
+\\
+-\frac{1}{2} \sqrt{\left(J-M^{\prime}\right)\left(J+M^{\prime}+1\right)} e^{i \gamma} D_{M M^{\prime}+1}^{J}(\alpha, \beta, \gamma)  \tag{3}\\
+\frac{\partial}{\partial \beta} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)=\frac{M^{\prime}-M \cos \beta}{\sin \beta} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)-\sqrt{(J+M)(J-M+1)} e^{-i \alpha} D_{M-1 M^{\prime}}^{J}(\alpha, \beta, \gamma)  \tag{4}\\
+\frac{\partial}{\partial \beta} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)=-\frac{M^{\prime}-M \cos \beta}{\sin \beta} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)+\sqrt{(J-M)(J+M+1)} e^{i \alpha} D_{M+1 M^{\prime}}^{J}(\alpha, \beta, \gamma)  \tag{5}\\
+\frac{\partial}{\partial \beta} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)=\frac{M-M^{\prime} \cos \beta}{\sin \beta} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)+\sqrt{\left(J+M^{\prime}\right)\left(J-M^{\prime}+1\right)} e^{-i \gamma} D_{M M^{\prime}-1}^{J}(\alpha, \beta, \gamma)  \tag{6}\\
+\frac{\partial}{\partial \beta} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)=-\frac{M-M^{\prime} \cos \beta}{\sin \beta} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)-\sqrt{\left(J-M^{\prime}\right)\left(J+M^{\prime}+1\right)} e^{i \gamma} D_{M M^{\prime}+1}^{J}(\alpha, \beta, \gamma)  \tag{7}\\
+\frac{\partial}{\partial \alpha} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)=-i M D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)  \tag{8}\\
+\frac{\partial}{\partial \gamma} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)=-i M^{\prime} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma) \tag{9}
+\end{gather*}
+
+
+See also Eqs. 4.2(1) and 4.2(2).
+
+\subsection*{4.10. ORTHOGONALITY AND COMPLETENESS OF THE $D$-FUNCTIONS}
+The functions $D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)$ with different $J$ (integer and half-integer) are mutually orthogonal with respect to integration over a double volume of the 3 -dimensional rotation group (i.e., over the volume of $\mathrm{SU}_{2}$ group)\\
+because the period of $D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)$ with half-integer $J$ is $4 \pi$ rather than $2 \pi$. The double domain may be chosen in two ways:
+
+\[
+\begin{array}{lll}
+V_{1}: & 0 \leq \alpha<4 \pi, & 0 \leq \beta \leq \pi, \\
+V_{2}: & 0 \leq \alpha<\gamma<2 \pi  \tag{2}\\
+& 0 \leq \beta \leq \pi, & 0 \leq \gamma<4 \pi
+\end{array}
+\]
+
+The total volume of the double domain $V_{1}$ or $V_{2}$ is equal to $16 \pi^{2}$.\\
+Orthogonality and normalization condition is
+
+
+\begin{gather*}
+\int_{0}^{4 \pi} d \alpha \int_{0}^{\pi} d \beta \sin \beta \int_{0}^{2 \pi} d \gamma D_{M_{2} M_{2}^{\prime}}^{J_{2} *}(\alpha, \beta, \gamma) D_{M_{1} M_{1}^{\prime}}^{J_{1}}(\alpha, \beta, \gamma) \\
+=\int_{0}^{2 \pi} d \alpha \int_{0}^{\pi} d \beta \sin \beta \int_{0}^{4 \pi} d \gamma D_{M_{2} M_{2}^{\prime}}^{J_{2} *}(\alpha, \beta, \gamma) D_{M_{1} M_{1}^{\prime}}^{J_{1}}(\alpha, \beta, \gamma)=\frac{16 \pi^{2}}{2 J_{1}+1} \delta_{J_{1} J_{2}} \delta_{M_{1} M_{2}} \delta_{M_{1}^{\prime} M_{2}^{\prime}} \tag{3}
+\end{gather*}
+
+
+If $J_{1}$ and $J_{2}$ are both either integer or half-integer, orthogonality of the $D$-functions takes place at integration over the single volume of rotation group which corresponds to the domain
+
+
+\begin{equation*}
+V: \quad 0 \leq \alpha<2 \pi, \quad 0 \leq \beta \leq \pi, \quad 0 \leq \gamma<2 \pi . \tag{4}
+\end{equation*}
+
+
+The total volume of the domain $V$ is equal to $8 \pi^{2}$. Hence, the orthogonality condition (3) is reduced to
+
+
+\begin{equation*}
+\int_{0}^{2 \pi} d \alpha \int_{0}^{\pi} d \beta \sin \beta \int_{0}^{2 \pi} d \gamma D_{M_{2} M_{2}^{\prime}}^{J_{2} *}(\alpha, \beta, \gamma) D_{M_{1} M_{1}^{\prime}}^{J_{1}}(\alpha, \beta, \gamma)=\frac{8 \pi^{2}}{2 J_{1}+1} \delta_{J_{1} J_{2}} \delta_{M_{1} M_{2}} \delta_{M_{1}^{\prime} M_{2}^{\prime}} \tag{5}
+\end{equation*}
+
+
+In physical applications Eq. (5) is used more often than Eq. (3).\\
+The orthonormality of $D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)$ may be rewritten in terms of $d_{M M^{\prime}}^{J}(\beta)$
+
+
+\begin{equation*}
+\int_{0}^{\pi} d \beta \sin \beta d_{M M^{\prime}}^{J}(\beta) d_{M M^{\prime}}^{J^{\prime}}(\beta)=\frac{2}{2 J+1} \delta_{J J^{\prime}} \tag{6}
+\end{equation*}
+
+
+Thus, the collection of functions $D_{M M}^{J}(\alpha, \beta, \gamma)$ with integer and half-integer $J$ constitutes a complete set of orthonormalized functions. The completeness condition is
+
+
+\begin{align*}
+& \sum_{J=0, \frac{1}{2}, 1, \ldots}^{\infty} \sum_{M=-J}^{J} \sum_{M^{\prime}=-J}^{J} \frac{2 J+1}{16 \pi^{2}} D_{M M^{\prime}}^{J *}\left(\alpha_{1}, \beta_{1}, \gamma_{1}\right) D_{M M^{\prime}}^{J}\left(\alpha_{2}, \beta_{2}, \gamma_{2}\right) \\
+& \quad=\delta\left(\alpha_{1}-\alpha_{2}\right) \delta\left(\cos \beta_{1}-\cos \beta_{2}\right) \delta\left(\gamma_{1}-\gamma_{2}\right) \tag{7}
+\end{align*}
+
+
+Any function $f(\alpha, \beta, \gamma)$ which is defined in the domain $V_{1}$ (or $V_{2}$ ) and satisfies the condition
+
+
+\begin{equation*}
+\iiint_{V_{1}\left(V_{2}\right)} d \alpha d \beta \sin \beta d \gamma|f(\alpha, \beta, \gamma)|^{2}<\infty \tag{8}
+\end{equation*}
+
+
+may be expanded in a series of the $D$-functions
+
+
+\begin{equation*}
+f(\alpha, \beta, \gamma)=\sum_{J=0, \frac{1}{2}, 1, \ldots}^{\infty} \sum_{M=-J}^{J} \sum_{M^{\prime}=-J}^{J} a_{M M^{\prime}}^{J} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma) \tag{9}
+\end{equation*}
+
+
+The expansion coefficients $a_{M M^{\prime}}^{J}$ are determined by
+
+
+\begin{equation*}
+a_{M M^{\prime}}^{J}=\frac{2 J+1}{16 \pi^{2}} \iint_{V_{1}\left(V_{2}\right)} d \alpha d \beta \sin \beta d \gamma f(\alpha, \beta, \gamma) D_{M M^{\prime}}^{J *}(\alpha, \beta, \gamma) \tag{10}
+\end{equation*}
+
+
+and obey the relation
+
+
+\begin{equation*}
+\sum_{J=0, \frac{1}{2}, 1, \ldots}^{\infty} \frac{16 \pi^{2}}{2 J+1} \sum_{M=-J}^{J} \sum_{M^{\prime}=-J}^{J}\left|a_{M M^{\prime}}^{J}\right|^{2}=\iint_{V_{1}\left(V_{2}\right)} d \alpha d \beta \sin \beta d \gamma|f(\alpha, \beta, \gamma)|^{2} \tag{11}
+\end{equation*}
+
+
+If a function $f(\alpha, \beta, \gamma)$ is defined in the domain $V$, it may be expanded in a series of the $D$-functions with only integer or only half-integer $J$
+
+
+\begin{equation*}
+f(\alpha, \beta, \gamma)=\sum_{\substack{J \text { integer } \\ \text { or halk-integer }}} \sum_{M=-J}^{J} \sum_{M^{\prime}=-J}^{J} b_{M M^{\prime}}^{J} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma) \tag{12}
+\end{equation*}
+
+
+The expansion coefficients $b_{M M^{\prime}}^{J}$ are determined by
+
+
+\begin{equation*}
+b_{M M^{\prime}}^{J}=\frac{2 J+1}{8 \pi^{2}} \int_{0}^{2 \pi} d \alpha \int_{0}^{\pi} d \beta \sin \beta \int_{0}^{2 \pi} d \gamma f(\alpha, \beta, \gamma) D_{M M^{\prime}}^{J *}(\alpha, \beta, \gamma) \tag{13}
+\end{equation*}
+
+
+for both cases of integer and half-integer $J$. A difference between the expansions of $f(\alpha, \beta, \gamma)$ in these two cases occurs if one uses the expansions outside of the domain V. The expansion coefficients in Eq. (12) satisfy the relation
+
+
+\begin{equation*}
+\sum_{\substack{J \text { integer } \\ \text { or half-integer }}} \frac{8 \pi^{2}}{2 J+1} \sum_{M=-J}^{J} \sum_{M^{\prime}=-J}^{J}\left|b_{M M^{\prime}}^{J}\right|^{2}=\int_{0}^{2 \pi} d \alpha \int_{0}^{\pi} d \beta \sin \beta \int_{0}^{2 \pi} d \gamma|f(\alpha, \beta, \gamma)|^{2} \tag{14}
+\end{equation*}
+
+
+\subsection*{4.11. INTEGRALS INVOLVING THE $D$-FUNCTIONS}
+\subsection*{4.11.1. Integration of Products of $D_{M M^{\prime}}^{J}$}
+
+\begin{gather*}
+\int_{0}^{2 \pi} d \alpha \int_{0}^{\pi} d \beta \sin \beta \int_{0}^{2 \pi} d \gamma D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)=\delta_{J 0} \delta_{M 0} \delta_{M^{\prime} 0} 8 \pi^{2},(J \text { is integer })  \tag{1}\\
+\int_{0}^{2 \pi} d \alpha \int_{0}^{\pi} d \beta \sin \beta \int_{0}^{2 \pi} d \gamma D_{M_{1} M_{1}^{\prime}}^{J_{1}}(\alpha, \beta, \gamma) D_{M_{2} M_{2}^{\prime}}^{J_{2}}(\alpha, \beta, \gamma)=(-1)^{M_{2}-M_{2}^{\prime}} \frac{8 \pi^{2}}{2 J_{2}+1} \delta_{J_{1} J_{2}} \delta_{-M_{1} M_{2}} \delta_{-M_{1}^{\prime} M_{2}^{\prime}} \\
+\quad\left(J_{1}+J_{2} \text { is integer }\right) \\
+\int_{0}^{2 \pi} d \alpha \int_{0}^{\pi} d \beta \sin \beta \int_{0}^{2 \pi} d \gamma D_{M_{2} M_{2}^{\prime}}^{J_{2} *}(\alpha, \beta, \gamma) D_{M_{1} M_{1}^{\prime}}^{J_{1}}(\alpha, \beta, \gamma)=\frac{8 \pi^{2}}{2 J_{2}+1} \delta_{J_{1} J_{2}} \delta_{M_{1} M_{2}} \delta_{M_{1}^{\prime} M_{2}^{\prime}}  \tag{2}\\
+\quad\left(J_{1}+J_{2} \text { is integer }\right)  \tag{3}\\
+\int_{0}^{2 \pi} d \alpha \int_{0}^{\pi} d \beta \sin \beta \int_{0}^{2 \pi} d \gamma D_{M_{2} M_{3}^{\prime}}^{J_{3}}(\alpha, \beta, \gamma) D_{M_{2} M_{2}^{\prime}}^{J_{2}}(\alpha, \beta, \gamma) D_{M_{1} M_{1}^{\prime}}^{J_{1}}(\alpha, \beta, \gamma) \\
+=(-1)^{M_{3}-M_{3}^{\prime}} \frac{8 \pi^{2}}{2 J_{3}+1} C_{J_{1} M_{1} J_{2} M_{2}}^{J_{3}-M_{3}} C_{J_{1} M_{1}^{\prime} J_{2} M_{2}^{\prime}}^{J_{3}-M_{1}^{\prime}}\left(J_{1}+J_{2}+J_{3} \text { is integer }\right) \tag{4}
+\end{gather*}
+
+
+
+\begin{gather*}
+\int_{0}^{2 \pi} d \alpha \int_{0}^{\pi} d \beta \sin \beta \int_{0}^{2 \pi} d \gamma D_{M_{3} M_{5}^{\prime}}^{J_{3}^{*}}(\alpha, \beta, \gamma) D_{M_{2} M_{2}^{\prime}}^{J_{2}}(\alpha, \beta, \gamma) D_{M_{1} M_{1}^{\prime}}^{J_{1}}(\alpha, \beta, \gamma) \\
+=\frac{8 \pi^{2}}{2 J_{3}+1} C_{J_{1} M_{1} J_{2} M_{2}}^{J_{3} M_{3}} C_{J_{1} M_{1}^{\prime} J_{2} M_{2}^{\prime}}^{J_{3} M_{3}^{\prime}}, \quad\left(J_{1}+J_{2}+J_{3} \text { is integer }\right) \tag{5}
+\end{gather*}
+
+
+Equations (1)-(5) are valid, if the conditions in parentheses are satisfied. These conditions may be omitted, if the integration domain is $V_{1}$ or $V_{2}$ instead of $V$; in the latter case the factor $8 \pi^{2}$ on the right-hand side of Eqs. (1)-(5) must be replaced by $16 \pi^{2}$ (see Sec. 4.10).
+
+Integrals involving products of four or more $D$-functions may be reduced to Eqs. (4)-(5) by using the Clebsch-Gordan expansion (Sec. 4.6.1).
+
+\subsection*{4.11.2. Integrals Involving $d_{M M^{\prime}}^{J}(\beta)$}
+From Eqs. (1)-(5) one may obtain
+
+
+\begin{gather*}
+\int_{0}^{\pi} d \beta \sin \beta d_{00}^{J}(\beta)=2 \delta_{J 0}  \tag{6}\\
+\int_{0}^{\pi} d \beta \sin \beta d_{M M^{\prime}}^{J}(\beta) d_{M M^{\prime}}^{J^{\prime}}(\beta)=\frac{2}{2 J+1} \delta_{J J^{\prime}}  \tag{7}\\
+\int_{0}^{\pi} d \beta \sin \beta d_{M_{1} M_{1}^{\prime}}^{J_{1}}(\beta) d_{M_{2} M_{2}^{\prime}}^{J_{2}}(\beta) d_{M_{3} M_{3}^{\prime}}^{J_{3}}(\beta) \delta_{M_{1}+M_{2} M_{3}} \delta_{M_{1}^{\prime}+M_{2}^{\prime} M_{3}^{\prime}}=\frac{2}{2 J_{3}+1} C_{J_{1} M_{1} J_{2} M_{2}}^{J_{3} M_{3}} C_{J_{1} M_{1}^{\prime} J_{2} M_{2}^{\prime}}^{J_{3} M_{3}^{\prime}} \tag{8}
+\end{gather*}
+
+
+Note also the following relation
+
+
+\begin{align*}
+& \int_{0}^{\beta} d \beta\left(\sin \frac{\beta}{2}\right)^{M-M^{\prime}+1}\left(\cos \frac{\beta}{2}\right)^{M+M^{\prime}+1} d_{M M^{\prime}}^{J}(\beta) \\
+& \quad=\frac{-1}{\sqrt{J(J+1)-M(M+1)}}\left(\sin \frac{\beta}{2}\right)^{M-M^{\prime}+1}\left(\cos \frac{\beta}{2}\right)^{M+M^{\prime}+1} d_{M+1 M^{\prime}}^{J}(\beta) \tag{9}
+\end{align*}
+
+
+Equation (9) is valid, if $M \geq M^{\prime} \geq 0$. Other cases may be deduced from Eq. (9) using the symmetries of $d_{M M^{\prime}}^{J}(\beta)$ (Eq. 4.4(1)).
+
+\subsection*{4.12. INVARIANT SUMMATION OF INTEGRALS INVOLVING $D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)$}
+Hereafter $R$ will denote the Euler angles $\alpha, \beta, \gamma$ and we also will set $d R=\sin \beta d \beta d \alpha d \gamma$ :
+
+
+\begin{equation*}
+\int d R f(R) \equiv \int_{0}^{2 \pi} d \alpha \int_{0}^{\pi} d \beta \sin \beta \int_{0}^{2 \pi} d \gamma f(\alpha, \beta, \gamma) \tag{1}
+\end{equation*}
+
+
+Making use of this notation, one gets
+
+
+\begin{gather*}
+\sum_{M M^{\prime}} \int d R D_{M M}^{J *}(R) D_{M^{\prime} M^{\prime}}^{J^{\prime}}(R)=8 \pi^{2} \delta_{J J^{\prime}}  \tag{2}\\
+\sum_{M M^{\prime}} \int d R D_{M M^{\prime}}^{J}(R) D_{M^{\prime} M}^{J^{\prime}}(R)=(-1)^{2 J} 8 \pi^{2} \delta_{J J^{\prime}}  \tag{3}\\
+\sum_{M_{1} M_{2} M_{3}} \int d R D_{M_{3} M_{3}}^{J_{3}}(R) D_{M_{2} M_{2}}^{J_{2}}(R) D_{M_{1} M_{1}}^{J_{1}}(R)=8 \pi^{2}\left\{J_{1} J_{2} J_{3}\right\}  \tag{4}\\
+\sum_{A l M, N} \int d R_{1} D_{M_{1} N_{1}}^{J_{1}}\left(R_{1}\right) D_{M_{3} N_{2}}^{J_{2}}\left(R_{1}\right) D_{M_{3} M_{3}}^{J_{3}}\left(R_{1}\right) \int d R_{2} D_{N_{1} M_{1}}^{J_{1}}\left(R_{2}\right) D_{M_{2} N_{2}}^{J_{2} *}\left(R_{2}\right) D_{M_{3}^{\prime} M_{3}^{\prime}}^{J_{3}^{\prime}}\left(R_{2}\right) \\
+=(-1)^{2 J_{*}^{\prime}}\left(8 \pi^{2}\right)^{2}\left\{\begin{array}{lll}
+J_{1} & J_{2} & J_{3} \\
+J_{1} & J_{2} & J_{3}^{\prime}
+\end{array}\right\}, \tag{5}
+\end{gather*}
+
+
+
+\begin{align*}
+& \sum_{\text {All } M, N} \int d R_{1} D_{M_{1}^{\prime} N_{1}^{\prime}}^{J_{1}^{\prime}}\left(R_{1}\right) D_{M_{2}^{\prime} N_{2}^{\prime}}^{J_{2}^{\prime}}\left(R_{1}\right) D_{M_{3} M_{3}}^{J_{3}}\left(R_{1}\right) \int d R_{2} D_{M_{2}^{\prime} N_{2}^{\prime}}^{J_{2}^{\prime}}\left(R_{2}\right) D_{M_{3}^{\prime} N_{3}^{\prime}}^{J_{3}^{\prime}}\left(R_{2}\right) D_{M_{1} M_{1}}^{J_{1}}\left(R_{2}\right) \\
+& \times \int d R_{3} D_{M_{3}^{\prime} N_{3}^{\prime}}^{J_{3}^{\prime *}}\left(R_{3}\right) D_{M_{1}^{\prime} N_{1}^{\prime}}^{J_{1}^{\prime}}\left(R_{3}\right) D_{1}^{J_{2}} M_{2} M_{2}\left(R_{3}\right)=\left(8 \pi^{2}\right)^{3}\left\{\begin{array}{lll}
+J_{1} & J_{2} & J_{3} \\
+J_{1}^{\prime} & J_{2}^{\prime} & J_{3}^{\prime}
+\end{array}\right\}^{2},  \tag{6}\\
+& \sum_{\text {All } M, N} \int d R_{1} D_{M M}^{J}\left(R_{1}\right) D_{N_{2} N_{3}^{\prime}}^{J_{2}}\left(R_{1}\right) D_{N_{3} N_{3}^{\prime}}^{J_{3}}\left(R_{1}\right) \int d R_{2} D_{M^{\prime} M^{\prime}}^{J^{\prime}}\left(R_{2}\right) D_{N_{1} M_{1}}^{J_{1}}\left(R_{2}\right) D_{N_{2}^{\prime} M_{2}^{\prime}}^{J_{2}}\left(R_{2}\right) \\
+& \times \int d R_{3} D_{M^{\prime \prime} M^{\prime \prime}}^{J^{\prime \prime}}\left(R_{3}\right) D_{M_{2}^{\prime} M_{2}^{\prime \prime}}^{J_{2}}\left(R_{3}\right) D_{N_{2}^{\prime} M_{3}}^{J_{3}}\left(R_{3}\right) \int d R_{4} D_{M_{1} N_{1}}^{J_{1}}\left(R_{4}\right) D_{M_{2} N_{2}}^{J_{2}}\left(R_{4}\right) D_{M_{2}^{\prime \prime} M_{2}}^{J_{2}}\left(R_{4}\right) D_{M_{3} N_{3}}^{J_{3}}\left(R_{4}\right) \\
+& =(-1)^{2 J_{1}}\left(8 \pi^{2}\right)^{4}\left\{\begin{array}{lll}
+J_{1} & J_{2} & J^{\prime} \\
+J_{3} & J_{2} & J
+\end{array}\right\}\left\{\begin{array}{lll}
+J_{1} & J_{2} & J^{\prime \prime} \\
+J_{3} & J_{2} & J^{\prime}
+\end{array}\right\}\left\{\begin{array}{lll}
+J_{1} & J_{2} & J \\
+J_{3} & J_{2} & J^{\prime \prime}
+\end{array}\right\},  \tag{7}\\
+& \sum_{\text {All } M, N} \int d R_{1} D_{M M}^{J}\left(R_{1}\right) D_{M^{\prime} N^{\prime}}^{J}\left(R_{1}\right) D_{M_{1} N_{1}}^{J_{1} *}\left(R_{1}\right) \int d R_{2} D_{N^{\prime} M^{\prime}}^{J}\left(R_{2}\right) D_{N N}^{J}\left(R_{2}\right) D_{M_{2} N_{2}}^{J_{2} *}\left(R_{2}\right) \\
+& \times \int d R_{3} D_{M_{1} N_{1}}^{J_{1}}\left(R_{3}\right) D_{M_{2} N_{2}}^{J_{2}}\left(R_{3}\right) D_{M_{3} M_{3}}^{J_{3} *}\left(R_{3}\right)=\left(8 \pi^{2}\right)^{3}\left\{\begin{array}{lll}
+J & J & J_{1} \\
+J & J & J_{2} \\
+J_{1} & J_{2} & J_{3}
+\end{array}\right\},  \tag{8}\\
+& \sum_{\text {All } M, N} \int d R_{1} D_{M_{1} N_{1}}^{J_{1}}\left(R_{1}\right) D_{M_{2} N_{2}}^{J_{2}}\left(R_{1}\right) D_{M_{12} M_{12}}^{J_{12}}\left(R_{1}\right) \int d R_{2} D_{M_{3} N_{3}}^{J_{3}}\left(R_{2}\right) D_{M_{4} N_{4}}^{J_{6}}\left(R_{2}\right) D_{M_{34} M_{34}}^{J_{34}}\left(R_{2}\right) \\
+& \times \int d R_{3} D_{M_{13} N_{13}}^{J_{13}}\left(R_{3}\right) D_{M_{24} N_{24}}^{J_{24}}\left(R_{3}\right) D_{M M}^{J}\left(R_{3}\right) \int d R_{4} D_{N_{1} M_{1}}^{J_{1}}\left(R_{4}\right) D_{N_{2} M_{2}}^{J_{3}}\left(R_{4}\right) D_{N_{13} M_{13}}^{J_{13}}\left(R_{4}\right) \\
+& \times \int d R_{5} D_{N_{2} M_{2}}^{J_{2}}\left(R_{5}\right) D_{N_{4} M_{4}}^{J_{4}}\left(R_{5}\right) D_{N_{24} M_{24}}^{J_{24}}\left(R_{5}\right)=\left(8 \pi^{2}\right)^{5}\left\{\begin{array}{lll}
+J_{1} & J_{2} & J_{12} \\
+J_{3} & J_{4} & J_{34} \\
+J_{13} & J_{24} & J
+\end{array}\right\}^{2} . \tag{9}
+\end{align*}
+
+
+The left-hand sides of Eqs. (5)-(9) include integrations as well as summations. If the integrations are carried out before the summations (with the aid of Eqs. 4.11(4)-4.11(5)), then Eqs. (5)-(9) are reduced to sums of the Clebsch-Gordan coefficients (Sec. 8.7). On the other hand, if the summations are preformed before the integrations, one obtains the integral representations of $6 j$ - and $9 j$-symbols (see Secs. 9.3 and 10.3).
+
+\subsection*{4.13. GENERATING FUNCTIONS FOR $d_{M M}^{J}(\beta)$}
+The functions $d_{M M^{\prime}}^{J}(\beta)$ may be defined as coefficients of expansions of various generating functions.\\
+(a) If $J$ and $M^{\prime}$ are fixed, then
+
+
+\begin{gather*}
+\left(\cos \frac{\beta}{2} e^{i \varphi / 2}+i \sin \frac{\beta}{2} e^{-i \varphi / 2}\right)^{J+M^{\prime}}\left(i \sin \frac{\beta}{2} e^{i \varphi / 2}+\cos \frac{\beta}{2} e^{-i \varphi / 2}\right)^{J-M^{\prime}} \\
+=\sum_{M=-J}^{J} \sqrt{\frac{\left(J-M^{\prime}\right)!\left(J+M^{\prime}\right)!}{(J-M)!(J+M)!}}(-i)^{M-M^{\prime}} e^{i M \varphi} d_{M M^{\prime}}^{J}(\beta) \tag{1}
+\end{gather*}
+
+
+In particular, for $\varphi=0$
+
+
+\begin{equation*}
+e^{i J \beta}=\sum_{M=-J}^{J} \sqrt{\frac{\left(J-M^{\prime}\right)!\left(J+M^{\prime}\right)!}{(J-M)!(J+M)!}}(-i)^{M-M^{\prime}} d_{M M^{\prime}}^{J}(\beta) \tag{2}
+\end{equation*}
+
+
+and for $\varphi=\pi$
+
+
+\begin{equation*}
+e^{-i J \beta}=\sum_{M=-J}^{J} \sqrt{\frac{\left(J-M^{\prime}\right)!\left(J+M^{\prime}\right)!}{(J-M)!(J+M)!}} i^{M-M^{\prime}} d_{M M^{\prime}}^{J}(\beta) \tag{3}
+\end{equation*}
+
+
+(b) If $M$ and $M^{\prime}$ are fixed, one can obtain several expressions in which $s, \mu, \nu$ are related to $J, M, M^{\prime}$ by Eqs. 4.3(14), $\xi_{M M^{\prime}}$ is defined by Eq. 4.3(15); and $R$ denotes
+
+
+\begin{gather*}
+R=\sqrt{1-2 t \cos \beta+t^{2}}, \quad|t|<1 .  \tag{4}\\
+\frac{\xi_{M M^{\prime}}}{R}\left(\frac{2 \sin \frac{\beta}{2}}{1+R-t}\right)^{\mu}\left(\frac{2 \cos \frac{\beta}{2}}{1+R+t}\right)^{\nu}=\sum_{s=0}^{\infty} \sqrt{\frac{(s+\mu)!(s+\nu)!}{s!(s+\mu+\nu)!}} t^{s} d_{M M^{\prime}}^{s+\frac{\mu+\nu}{2}}(\beta) .  \tag{5}\\
+\xi_{M M^{\prime}}\left(\sin \frac{\beta}{2}\right)^{\mu}\left(\cos \frac{\beta}{2}\right)_{0}^{\nu} F_{1}\left(; 1+\mu ;-t^{\sin ^{2}} \frac{\beta}{2}\right)_{0} F_{1}\left(; 1+\nu ; t \cos ^{2} \frac{\beta}{2}\right) \\
+=\sum_{s=0}^{\infty} \frac{\mu!\nu!}{\sqrt{s!(s+\mu)!(s+\nu)!(s+\mu+\nu)!}} t^{s} d_{M M^{\prime}}^{s+\frac{\mu \pm \nu}{2}}(\beta),  \tag{6}\\
+\xi_{M M^{\prime}}(1-t)^{1-\mu-\nu}\left(\sin \frac{\beta}{2}\right)^{\mu}\left(\cos \frac{\beta}{2}\right)^{\nu}{ }_{2} F_{1}\left(\frac{\mu+\nu+1}{2}, \frac{\mu+\nu+2}{2} ; 1+\mu ;-\frac{4 t \sin ^{2} \frac{\beta}{2}}{(1-t)^{2}}\right) \\
+=\sum_{s=0}^{\infty} \sqrt{\frac{(s+\nu)!(s+\mu+\nu)!}{s!(s+\mu)!}} \frac{\mu!}{(\mu+\nu)!} t^{s} d_{M M^{\prime}}^{\frac{\mu+\nu}{2}}(\beta),  \tag{7}\\
+\xi_{M M^{\prime}}\left(\sin \frac{\beta}{2}\right)^{\mu}\left(\cos \frac{\beta}{2}\right)^{\nu}{ }_{2} F_{1}\left(\lambda, \mu+\nu+1-\lambda ; 1+\mu ; \frac{1-t-R}{2}\right)_{2} F_{1}\left(\lambda, \mu+\nu+1-\lambda ; 1+\nu ; \frac{1+t-R}{2}\right) \\
+=\sum_{s=0}^{\infty} \frac{(\mu+\nu+1-\lambda),(\lambda)_{s} \mu!\nu!}{\sqrt{s!(s+\mu+\nu)!(s+\mu)!(s+\nu)!}} t^{s} d_{M M^{\prime}}^{+\frac{\mu+\nu}{2}}(\beta) . \tag{8}
+\end{gather*}
+
+
+In Eq. (8) $\lambda$ is an arbitrary integer.
+
+\subsection*{4.14. CHARACTERS $\chi^{j}(R)$ OF IRREDUCIBLE REPRESENTATIONS OF ROTATION GROUP}
+\subsection*{4.14.1. Definition}
+The trace of the finite rotation matrix in the JM-representation
+
+
+\begin{equation*}
+\chi^{J}(R)=\sum_{M=-J}^{J} D_{M M}^{J}(R), \tag{1}
+\end{equation*}
+
+
+is called the characteristic function, or simply, the character of the irreducible representation of rank $J$.
+
+In contrast to $D_{M M^{\prime}}^{J}(R)$, the function $\chi^{J}(R)$ is invariant under rotations of the coordinate systems. Explicit forms of $\chi^{J}(R)$ are simpler when $R$ is specified by $\omega, \Theta, \Phi$ rather than by $\alpha, \beta, \gamma$ (Sec. 1.4.2). With variables $\omega, \Theta, \Phi$ in use, $\chi^{\mathrm{J}}(R)$ is entirely determined by the rotation angles $\omega$ and is independent of the rotation axis $\mathbf{n}(\boldsymbol{\theta}, \boldsymbol{\Phi}):$
+
+
+\begin{equation*}
+\chi^{J}(R)=\chi^{J}(\omega) \tag{2}
+\end{equation*}
+
+
+\subsection*{4.14.2. Explicit Forms}
+(a) Trigonometric formulas
+
+
+\begin{align*}
+& \chi^{J}(\omega)=\frac{\sin \left[(2 J+1) \frac{\omega}{2}\right]}{\sin \frac{\omega}{2}}  \tag{3}\\
+& \chi^{J}(\omega)=\sum_{M=-J}^{J} e^{-i M \omega}=\sum_{M=-J}^{J} \cos M \omega  \tag{4}\\
+& \chi^{J}(\omega)=\sum_{n=0}^{[J]}(-1)^{n} \frac{(2 J-n)!}{(2 J-2 n)!n!}\left(2 \cos \frac{\omega}{2}\right)^{2 J-2 n}  \tag{5}\\
+& \chi^{J}(\omega)=\sum_{n=0}^{[J]}(-1)^{n} \frac{(2 J+1)!}{(2 n+1)!(2 J-2 n)!}\left(\cos \frac{\omega}{2}\right)^{2 J-2 n}\left(\sin \frac{\omega}{2}\right)^{2 n}  \tag{6}\\
+& \chi^{J}(\omega)=\frac{1}{2 J+1} \frac{d}{d\left(\cos \frac{\omega}{2}\right)} \cos \left[(2 J+1) \frac{\omega}{2}\right]  \tag{7}\\
+& \chi^{J}(\omega)=\frac{(2 J+1)!2^{2 J}}{(4 J+1)!\sin \frac{\omega}{2}}\left[-\frac{d}{d\left(\cos \frac{\omega}{2}\right)}\right]^{2 J}\left(\sin \frac{\omega}{2}\right)^{4 J+1} \tag{8}
+\end{align*}
+
+
+(b) Relations to hypergeometric functions
+
+
+\begin{gather*}
+\chi^{J}(\omega)=(2 J+1) F\left(-J, J+1 ; 3 / 2 ; \sin ^{2} \frac{\omega}{2}\right)  \tag{9}\\
+\chi^{J}(\omega)=(2 J+1) F\left(-2 J, 2(J+1) ; 3 / 2 ; \sin ^{2} \frac{\omega}{4}\right) \tag{10}
+\end{gather*}
+
+
+(c) Relation to the Chebyshev polynomials of the second kind
+
+
+\begin{equation*}
+\chi^{J}(\omega)=U_{2 J}\left(\cos \frac{\omega}{2}\right) \tag{11}
+\end{equation*}
+
+
+(d) Relation to the Gegenbauer polynomials
+
+
+\begin{equation*}
+\chi^{J}(\omega)=C_{2 J}^{1}\left(\cos \frac{\omega}{2}\right) \tag{12}
+\end{equation*}
+
+
+(e) Relation to the Jacobi polynomials
+
+
+\begin{equation*}
+\chi^{J}(\omega)=\frac{(4 J+2)!!}{2(4 J+1)!!} P_{2 J}^{\left(\frac{1}{2}, \frac{1}{2}\right)}\left(\cos \frac{\omega}{2}\right) \tag{13}
+\end{equation*}
+
+
+(f) Integral representation
+
+
+\begin{equation*}
+\chi^{J}(\omega)=\frac{2 J+1}{2} \int_{-1}^{1}\left(\cos \frac{\omega}{2}+i x \sin \frac{\omega}{2}\right)^{2 J} d x \tag{14}
+\end{equation*}
+
+
+To express $\chi^{J}(R)$ in terms of the Euler angles $\alpha, \beta, \gamma$ one can use the relation
+
+
+\begin{equation*}
+\cos \frac{\omega}{2}=\cos \frac{\beta}{2} \cos \frac{\alpha+\gamma}{2} . \tag{15}
+\end{equation*}
+
+
+\subsection*{4.14.3. Principal Properties}
+In contrast to $D_{M M^{\prime}}^{J}(R)$, the characters $\chi^{J}(R)$ are real.
+
+
+\begin{equation*}
+\left(\chi^{J}(R)\right)^{*}=\chi^{J}(R) \tag{16}
+\end{equation*}
+
+
+The characters which correspond to direct and inverse rotations, $R$ and $R^{-1}$, are equal
+
+
+\begin{equation*}
+\chi^{J}\left(R^{-1}\right)=\chi^{J}(R) \tag{17}
+\end{equation*}
+
+
+$\chi^{J}(R)$ is invariant with respect to coordinate rotation and inversion
+
+
+\begin{equation*}
+\chi^{J}\left(U R U^{-1}\right)=\chi^{J}(R) \tag{18}
+\end{equation*}
+
+
+where $U$ is any orthogonal transformation of the coordinate system.\\
+The characters which depend on the combined rotations $R_{1} R_{2} \ldots R_{n}$ do not change under cyclic permutations of the rotations
+
+
+\begin{equation*}
+\chi^{J}\left(R_{1} R_{2} \ldots R_{n}\right)=\chi^{J}\left(R_{2} \ldots R_{n} R_{1}\right) \tag{19}
+\end{equation*}
+
+
+In particular,
+
+
+\begin{equation*}
+\chi^{J}\left(R_{1} R_{2}\right)=\chi^{J}\left(R_{2} R_{1}\right) \tag{20}
+\end{equation*}
+
+
+inspite of the non-commutativity of $R_{1}$ and $R_{2}$.\\
+Products of the characters may be expanded in a Clebsch-Gordan series
+
+
+\begin{equation*}
+\chi^{J_{1}}(R) \chi^{J_{2}}(R)=\sum_{J}\left\{J_{1} J_{2} J\right\} \chi^{J}(R) \tag{21}
+\end{equation*}
+
+
+where $\left\{J_{1} J_{2} J_{3}\right\}=1$, if the triangle inequality (Sec. 4.6.2) is satisfied, and $\left\{J_{1} J_{2} J_{3}\right\}=0$ otherwise.\\
+The transformation $J=J=-J-1$ reverses the character sign
+
+
+\begin{equation*}
+\chi^{J}(R)=-\chi^{J}(R) \tag{22}
+\end{equation*}
+
+
+The function $\chi^{J}(\omega)$ is even and periodic
+
+
+\begin{align*}
+\chi^{J}(-\omega) & =\chi^{J}(\omega), \\
+\chi^{J}(\omega+4 \pi) & =\chi^{J}(\omega),  \tag{23}\\
+\chi^{J}(\omega+2 \pi) & =(-1)^{2 J} \chi^{J}(\omega) .
+\end{align*}
+
+
+\section*{The addition theorem}
+The character which depends on the combined rotation $R_{1} R_{2}$ may be represented as a superposition of products of the generalized characters which depend on $R_{1}$ and $R_{2}$ (Sec. 4.15):
+
+
+\begin{equation*}
+\chi^{J}(\omega)=\sum_{\lambda=0}^{2 J}(-1)^{\lambda} \frac{2 \lambda+1}{2 J+1} \chi_{\lambda}^{J}\left(\omega_{1}\right) \chi_{\lambda}^{J}\left(\omega_{2}\right) P_{\lambda}\left(\cos \Theta_{12}\right), \tag{24}
+\end{equation*}
+
+
+where $\omega_{1}, \omega_{2}$ and $\omega$ are the rotation angles corresponding to $R_{1}, R_{2}$ and $R=R_{1} R_{2}$, respectively. These angles are mutually related by means of Eqs. $1.4(75) ; \Theta_{12}$ is the angle between the rotation axes of $R_{1}$ and $R_{2}$
+
+
+\begin{equation*}
+\cos \Theta_{12}=\left(n_{1} \cdot n_{2}\right)=\cos \Theta_{1} \cos \Theta_{2}+\sin \Theta_{1} \sin \Theta_{2} \cos \left(\Phi_{1}-\Phi_{2}\right) \tag{25}
+\end{equation*}
+
+
+\subsection*{4.14.4. Differential Equation}
+The character $\chi^{J}(\omega)$ satisfies the equation
+
+
+\begin{equation*}
+\frac{d^{2}}{d \omega^{2}} \chi^{J}(\omega)+\cot \frac{\omega}{2} \cdot \frac{d}{d \omega} \chi^{J}(\omega)+J(J+1) \chi^{J}(\omega)=0 \tag{26}
+\end{equation*}
+
+
+and the boundary conditions
+
+
+\begin{align*}
+\chi^{J}(0) & =2 J+1 \\
+\chi^{J}(\omega \pm 4 \pi n) & =\chi^{J}(\omega), \quad \text { where } n \text { is integer. } \tag{27}
+\end{align*}
+
+
+\subsection*{4.14.5. Differential Relations}
+
+\begin{gather*}
+\frac{d}{d \omega} \chi^{J}(\omega)=-\sqrt{J(J+1)} \chi_{1}^{J}(\omega)  \tag{28}\\
+\left(\frac{d}{d \cos \frac{\omega}{2}}\right)^{k} \chi^{J}(\omega)=\frac{1}{\sqrt{2 J+1}} \sqrt{\frac{(2 J+k+1)!}{(2 J-k)!}} \frac{\chi_{k}^{J}(\omega)}{\left(\sin \frac{\omega}{2}\right)^{k}} \tag{29}
+\end{gather*}
+
+
+where $\chi_{k}^{J}(\omega)$ is the generalized character (Sec. 4.15):
+
+
+\begin{equation*}
+\sin \frac{\omega}{2} \frac{d}{d \omega} \chi^{J}(\omega)=J \cos \frac{\omega}{2} \chi^{J}(\omega)-\left(J+\frac{1}{2}\right) \chi^{J-\frac{1}{2}}(\omega)=\left(J+\frac{1}{2}\right) \chi^{J+\frac{1}{2}}(\omega)-(J+1) \cos \frac{\omega}{2} \chi^{J}(\omega) \tag{30}
+\end{equation*}
+
+
+\subsection*{4.14.6. Algebraic Relations}
+
+\begin{align*}
+\chi^{J+\frac{1}{2}}(\omega) & =2 \cos \frac{\omega}{2} \cdot \chi^{J}(\omega)-\chi^{J-\frac{1}{2}}(\omega)  \tag{31}\\
+\chi^{J_{1}}(\omega)-\chi^{J_{2}}(\omega) & =2 \chi^{\frac{J_{1}-J_{2}-1}{2}}(\omega) \cos \left[\left(J_{1}+J_{2}+1\right) \frac{\omega}{2}\right]  \tag{32}\\
+\chi^{J_{1}}(\omega)+\chi^{J_{2}}(\omega) & =2 \chi^{\frac{J_{1}+J_{2}}{2}}(\omega) \cos \left[\left(J_{1}-J_{2}\right) \frac{\omega}{2}\right] \tag{33}
+\end{align*}
+
+
+Equations (32) and (33) are valid, if $J_{1}+J_{2}$ is integer.
+
+
+\begin{equation*}
+\chi^{J-\frac{1}{2}}(\omega)=2 \cos \frac{J \omega}{2} \chi^{\frac{J-1}{2}}(\omega) \tag{34}
+\end{equation*}
+
+
+where $J$ is integer and positive.
+
+
+\begin{equation*}
+-2 \sin ^{2} \frac{\omega}{2} \chi^{J_{1}}(\omega) \chi^{J_{2}}(\omega)=\cos \left[\left(J_{1}+J_{2}+1\right) \omega\right]-\cos \left[\left(J_{1}-J_{2}\right) \omega\right] \tag{35}
+\end{equation*}
+
+
+In particular,
+
+
+\begin{gather*}
+2 \sin ^{2} \frac{\omega}{2}\left[\chi^{J}(\omega)\right]^{2}=1-\cos [(2 J+1) \omega]  \tag{36}\\
+\chi^{J}(\omega)=2^{2 J} \prod_{k=1}^{2 J} \sin \left(\frac{\omega}{2}+\frac{k \pi}{2 J+1}\right) \tag{37}
+\end{gather*}
+
+
+\subsection*{4.14.7. Orthogonality and Completeness}
+The collection of characters $\chi^{J}(\omega)$ with different $J$ constitute a complete set of orthogonal functions of argument $\omega$ in the domain $0 \leq \omega<2 \pi$.
+
+The orthogonality and normalization condition for these functions reads
+
+
+\begin{equation*}
+\int_{0}^{2 \pi} \chi^{J_{1}}(\omega) \chi^{J_{2}}(\omega) \sin ^{2} \frac{\omega}{2} d \omega=\pi \delta_{J_{1} J_{2}} \tag{38}
+\end{equation*}
+
+
+The completeness condition has the form
+
+
+\begin{equation*}
+\sum_{J=0, \frac{1}{2}, 1, \ldots}^{\infty} \chi^{J}\left(\omega_{1}\right) \chi^{J}\left(\omega_{2}\right)=\frac{\pi \delta\left(\omega_{1}-\omega_{2}\right)}{\sin ^{2} \frac{\omega_{1}}{2}} \tag{39}
+\end{equation*}
+
+
+\subsection*{4.14.8. Integrals Involving $\chi^{J}(\omega)$}
+
+\begin{gather*}
+\int_{0}^{2 \pi} d \omega \sin ^{2} \frac{\omega}{2} \chi^{J}(\omega)=\pi \delta_{J 0}  \tag{40}\\
+\int_{0}^{2 \pi} d \omega \sin ^{2} \frac{\omega}{2} \chi^{J}(2 \omega)=\pi(-1)^{2 J}  \tag{41}\\
+\int_{0}^{2 \pi} d \omega \frac{\sin ^{2} \frac{\omega}{2}}{\cos \frac{\omega}{2}-\cos \frac{\Omega}{2}} \chi^{J}(\omega)=-2 \pi \cos \left[(2 J+1) \frac{\Omega}{2}\right] \tag{42}
+\end{gather*}
+
+
+In Eq. (42) the Cauchy principal value of the integral is assumed.
+
+
+\begin{gather*}
+\int_{0}^{2 \pi} d \omega \sin ^{2} \frac{\omega}{2} \chi^{J_{1}}(\omega) \chi^{J_{2}}(\omega)=\pi \delta_{J_{1} J_{2}}  \tag{43}\\
+\int_{0}^{2 \pi} d \omega \sin ^{2} \frac{\omega}{2} \chi^{J_{1}}(\omega) \chi^{J_{2}}(\omega) \chi^{J_{3}}(\omega)=\pi\left\{J_{1} J_{2} J_{3}\right\} \tag{44}
+\end{gather*}
+
+
+\subsection*{4.14.9. Sums Involving $\chi^{J}(\omega)$}
+(a) Finite sums
+
+
+\begin{gather*}
+\sum_{J=J_{1}, J_{1}+1, \ldots}^{J_{2}} \chi^{J}(\omega)=\frac{\sin \left[\left(J_{2}+J_{1}+1\right) \frac{\omega}{2}\right] \sin \left[\left(J_{2}-J_{1}+1\right) \frac{\omega}{2}\right]}{\sin ^{2} \frac{\omega}{2}}=\chi^{\frac{J_{2}+J_{1}}{2}}(\omega) \chi^{\frac{J_{2}-J_{1}}{2}}(\omega)  \tag{45}\\
+\sum_{J=0,1,2, \ldots}^{J_{0}}(2 J+1) \chi^{J}(\omega)=\frac{\left(2 J_{0}+3\right) \sin \left[\left(2 J_{0}+1\right) \frac{\omega}{2}\right]-\left(2 J_{0}+1\right) \sin \left[\left(2 J_{0}+3\right) \frac{\omega}{2}\right]}{4 \sin ^{3} \frac{\omega}{2}} \tag{46}
+\end{gather*}
+
+
+The summation index in Eq. (45) runs over integer values, if $J_{1}$ and $J_{2}$ are integers, or half-integer values, if $J_{1}$ and $J_{2}$ are half-integers.
+
+In the equations given below the summation indices run over both integer and half-integer values:
+
+
+\begin{gather*}
+\sum_{J=J_{1}, J_{1}+\frac{1}{2}, J_{1}+1, \ldots}^{J_{2}} \chi^{J}(\omega)=\frac{\sin \left[\left(J_{2}+J_{1}+1\right) \frac{\omega}{2}\right] \sin \left[\left(J_{2}-J_{1}+\frac{1}{2}\right) \frac{\omega}{2}\right]}{\sin \frac{\omega}{2} \sin \frac{\omega}{4}},  \tag{47}\\
+\sum_{J=0, \frac{1}{2}, 1, \ldots}^{J_{0}}(2 J+1) \chi^{J}(\omega)=\frac{\left(2 J_{0}+2\right) \sin \left[\left(2 J_{0}+1\right) \frac{\omega}{2}\right]-\left(2 J_{0}+1\right) \sin \left[\left(2 J_{0}+2\right) \frac{\omega}{2}\right]}{4 \sin \frac{\omega}{2} \sin ^{2} \frac{\omega}{4}},  \tag{48}\\
+\sum_{J=0, \frac{1}{2}, 1, \ldots}^{J_{0}}\left[\chi^{J}(\omega)\right]^{2}=\frac{\left(4 J_{0}+3\right) \sin \frac{\omega}{2}-\sin \left[\left(4 J_{0}+3\right) \frac{\omega}{2}\right]}{4 \sin ^{3} \frac{\omega}{2}},  \tag{49}\\
+\sum_{J=0, \frac{1}{2}, 1, \ldots}^{J_{0}} \chi^{J}(\omega) \chi^{J}\left(\omega^{\prime}\right)=\frac{\chi^{J_{0}+\frac{1}{2}}(\omega) \chi^{J_{0}}\left(\omega^{\prime}\right)-\chi^{J_{0}}(\omega) \chi^{J_{0}+\frac{1}{2}}\left(\omega^{\prime}\right)}{2\left(\cos \frac{\omega}{2}-\cos \frac{\omega^{\prime}}{2}\right)},  \tag{50}\\
+\sum_{J=0, \frac{1}{2}, 1, \ldots}^{J_{0}} \chi^{J}(\omega) \cos \left[(2 J+1) \frac{\omega^{\prime}}{2}\right] \\
+=\frac{\sin \frac{\omega}{2}-\cos \left[\left(2 J_{0}+1\right) \frac{\omega^{\prime}}{2}\right] \sin \left[\left(J_{0}+1\right) \omega\right]+\sin \left[\left(2 J_{0}+1\right) \frac{\omega}{2}\right] \cos \left[\left(J_{0}+1\right) \omega^{\prime}\right]}{2 \sin \frac{\omega}{2}\left(\cos \frac{\omega^{\prime}}{2}-\cos \frac{\omega}{2}\right)} . \tag{51}
+\end{gather*}
+
+
+(b) Infinite series
+
+
+\begin{gather*}
+\sum_{J=0, \frac{1}{2}, 1, \ldots}^{\infty} \chi^{J}(\omega)=\frac{1}{4 \sin ^{2} \frac{\omega}{4}}, \quad(\omega \neq 0)  \tag{52}\\
+\sum_{J=0, \frac{1}{2}, 1, \ldots}^{\infty}(2 J+1) \chi^{J}(\omega)=\frac{\pi}{\sin ^{2} \frac{\omega}{2}} \delta(\omega) \tag{$\{53\}$}
+\end{gather*}
+
+
+Let us introduce the notation
+
+
+\begin{gather*}
+R^{2} \equiv 1-2 t \cos \frac{\omega}{2}+t^{2}, \quad \text { where }|t|<1:  \tag{54}\\
+\sum_{J=0, \frac{1}{2}, 1, \ldots}^{\infty} t^{2 J} \chi^{J}(\omega)=\frac{1}{R^{2}},  \tag{55}\\
+\sum_{J=0, \frac{1}{2}, 1, \ldots}^{\infty}(2 J+1) t^{2 J} \chi^{J}(\omega)=\frac{1-t^{2}}{R^{4}},  \tag{56}\\
+\sum_{J=0, \frac{1}{2}, 1, \ldots}^{\infty} \frac{(4 J+1)!!}{(4 J+2)!!} t^{2 J} \chi^{J}(\omega)=\frac{1}{R \sqrt{2\left(1-t \cos \frac{\omega}{2}+R\right)}},  \tag{57}\\
+\sum_{J=0, \frac{1}{2}, 1 \ldots}^{\infty} \frac{1}{(2 J+1)!} t^{2 J+1} \chi^{J}(\omega)=\frac{\sin \left(t \sin \frac{\omega}{2}\right)}{\sin \frac{\omega}{2}} e^{t \cos \frac{\omega}{2}},  \tag{58}\\
+\sum_{J=0, \frac{1}{2}, 1, \ldots}^{\infty} \frac{1}{2 J+1} t^{2 J} \chi^{J}(\omega)=\frac{1}{2 i t \sin \frac{\omega}{2}} \ln \left(\frac{1-t e^{-\frac{i \omega}{2}}}{1-t e^{\frac{i \omega}{2}}}\right),  \tag{59}\\
+\sum_{J=0, \frac{1}{2}, 1, \ldots}^{\infty} \sum_{\Gamma(\nu)}^{\Gamma(2 J+\nu)} \frac{t^{2 J} \chi^{J}(\omega)}{(2 J+1)!}=\left(1-t \cos \frac{\omega}{2}\right)^{-\nu}{ }_{2} F_{1}\left(\frac{\nu}{2}, \frac{\nu+1}{2} ; \frac{3}{2} ;-\left(\frac{t \sin \frac{\omega}{2}}{1-t \cos \frac{\omega}{2}}\right)^{2}\right),  \tag{60}\\
+\sum_{J=0, \frac{1}{2}, 1, \ldots}^{\infty} \frac{1}{(4 J+2)!}(4 t)^{2 J} \chi^{J}(\omega)=\frac{1}{2}{ }^{0} F_{1}\left(; \frac{3}{2} ;-t \sin ^{2} \frac{\omega}{4}\right)_{0} F_{1}\left(; \frac{3}{2} ; t \cos { }^{2} \frac{\omega}{4}\right),  \tag{61}\\
+\sum_{J=0, \frac{1}{2}, 1, \ldots}^{\infty} t^{2 J} \chi^{J}(\omega) \chi^{J}\left(\omega^{\prime}\right)=\frac{1-t^{2}}{1+t^{2}-4 t \cos \frac{\omega}{2} \cos \frac{\omega^{\prime}}{2}+2 t^{2}\left(\cos \omega+\cos \omega^{\prime}\right)} . \tag{62}
+\end{gather*}
+
+
+4.14.10. $\quad \chi^{J}(\omega)$ for Particular Values of $\omega$
+
+
+\begin{align*}
+\chi^{J}(0) & =2 J+1  \tag{63}\\
+\chi^{J}(2 \pi) & =(-1)^{2 J}(2 J+1)  \tag{64}\\
+\chi^{J}(\pi) & = \begin{cases}0 & \text { if } J \text { is half-integer } \\
+(-1)^{J} & \text { if } J \text { is integer }\end{cases}  \tag{65}\\
+\chi^{J}\left(\frac{\pi}{2}\right) & = \begin{cases}\sqrt{2} & J=1 / 2,9 / 2,17 / 2, \ldots \\
+1 & J=0,1,4,5,8,9, \ldots \\
+0 & J=3 / 2,7 / 2,11 / 2,15 / 2, \ldots \\
+-1 & J=2,3,6,7,10,11, \ldots \\
+-\sqrt{2} & J=5 / 2,13 / 2,21 / 2, \ldots\end{cases} \tag{66}
+\end{align*}
+
+
+\subsection*{4.14.11. Special Cases of $\chi^{J}(\omega)$}
+
+\begin{align*}
+& \chi^{0}(\omega)=1  \tag{67}\\
+& \chi^{\frac{1}{2}}(\omega)=2 \cos \frac{\omega}{2}  \tag{68}\\
+& \chi^{1}(\omega)=4 \cos ^{2} \frac{\omega}{2}-1  \tag{69}\\
+& \chi^{\frac{3}{2}}(\omega)=8 \cos ^{3} \frac{\omega}{2}-4 \cos \frac{\omega}{2}  \tag{70}\\
+& \chi^{2}(\omega)=16 \cos ^{4} \frac{\omega}{2}-12 \cos ^{2} \frac{\omega}{2}+1  \tag{71}\\
+& \chi^{\frac{5}{2}}(\omega)=32 \cos ^{5} \frac{\omega}{2}-32 \cos ^{3} \frac{\omega}{2}+6 \cos \frac{\omega}{2} \tag{72}
+\end{align*}
+
+
+\subsection*{4.15. GENERALIZED CHARACTERS, $\chi_{\hat{\lambda}}^{J}(R)$, OF IRREDUCIBLE REPRESENTATIONS OF THE ROTATION GROUP}
+\subsection*{4.15.1. Definition}
+Let us introduce the function $\chi_{\lambda}^{J}(\omega)$ associated with $\chi^{J}(\omega)$ by the differential relation
+
+
+\begin{equation*}
+\chi_{\lambda}^{J}(\omega)=\sqrt{2 J+1} \sqrt{\frac{(2 J-\lambda)!}{(2 J+\lambda+1)!}}\left(\sin \frac{\omega}{2}\right)^{\lambda}\left(\frac{d}{d \cos \frac{\omega}{2}}\right)^{\lambda} \chi^{J}(\omega) \tag{1}
+\end{equation*}
+
+
+where $\lambda$ is integer, $0 \leq \lambda \leq 2 J$, and $\chi^{J}(\omega)$ is the character of the irreducible representation of rank $J$ (Eq. 4.14(1)).
+
+The function $\chi_{\lambda}^{J}(\omega)$ will be called the generalized character (of order $\lambda$ ) of the irreducible representation of rank $J$. Note that the relations between $\chi_{\lambda}^{J}(\omega)$ and $\chi^{J}(\omega)$ are similar to those between the associated Legendre functions $P_{l}^{\lambda}(x)$ and the Legendre polynomials $P_{l}(x)$.
+
+At $\lambda=0$ one has $\chi_{\lambda}^{J}(\omega)=\chi^{J}(\omega)$.
+
+\subsection*{4.15.2 Explicit Forms}
+(a) Trigonometric series
+
+
+\begin{align*}
+& \chi_{\lambda}^{J}(\omega)=i^{\lambda} \sum_{M} e^{-i M \omega} C_{J M \lambda 0}^{J M}  \tag{2}\\
+& \chi_{\lambda}^{J}(\omega)=\left(\sin \frac{\omega}{2}\right)^{\lambda} \sqrt{2 J+1} \sqrt{\frac{(2 J-\lambda)!}{(2 J+\lambda+1)!}} 2^{\lambda} \sum_{s=0}^{|J-\lambda / 2|} \frac{(-1)^{s}(2 J-s)!}{s!(2 J-\lambda-2 s)!}\left(2 \cos \frac{\omega}{2}\right)^{2 J-\lambda-2 s}  \tag{3}\\
+& \chi_{\lambda}^{J}(\omega)=\frac{\left(2 \sin \frac{\omega}{2}\right)^{\lambda}}{\lambda!} \sqrt{2 J+1} \sqrt{\frac{(2 J-\lambda)!}{(2 J+\lambda+1)!}} \sum_{s=0}^{2 J-\lambda} \frac{(\lambda+s)!(2 J-s)!}{s!(2 J-\lambda-s)!} \cos \left[(2 J-\lambda-2 s) \frac{\omega}{2}\right] \tag{4}
+\end{align*}
+
+
+(b) Differential form
+
+
+\begin{equation*}
+\chi_{\lambda}^{J}(\omega)=\frac{1}{\sqrt{2 J+1}} \sqrt{\frac{(2 J-\lambda)!}{(2 J+\lambda+1)!}}\left(\sin \frac{\omega}{2}\right)^{\lambda}\left(\frac{d}{d \cos \frac{\omega}{2}}\right)^{\lambda+1} \cos \left[(2 J+1) \frac{\omega}{2}\right] \tag{5}
+\end{equation*}
+
+
+See also Eq. (1).\\
+(c) Relation between $\chi_{\lambda}^{J}(\omega)$ and the Gegenbauer polynomials
+
+
+\begin{equation*}
+\chi_{\lambda}^{J}(\omega)=(2 \lambda)!!\sqrt{2 J+1} \sqrt{\frac{(2 J-\lambda)!}{(2 J+\lambda+1)!}}\left(\sin \frac{\omega}{2}\right)^{\lambda} C_{2 J-\lambda}^{\lambda+1}\left(\cos \frac{\omega}{2}\right) \tag{6}
+\end{equation*}
+
+
+(d) Relations of $\chi_{\lambda}^{J}(\omega)$ to the Jacobi polynomials
+
+
+\begin{align*}
+& \chi_{\lambda}^{J}(\omega)=\frac{\sqrt{2 J+1} \sqrt{(2 J-\lambda)!(2 J+\lambda+1)!}}{(4 J+1)!!} 2^{2 J-\lambda}\left(\sin \frac{\omega}{2}\right)^{\lambda} P_{2 J-\lambda}^{\left(\lambda+\frac{1}{2}, \lambda+\frac{1}{2}\right)}\left(\cos \frac{\omega}{2}\right)  \tag{7}\\
+& \chi_{\lambda}^{J}(\omega)=\left\{\begin{array}{l}
+\sqrt{2 J+1} \sqrt{\frac{(2 J+\lambda)!!(2 J-\lambda)!!}{(2 J+\lambda+1)!!(2 J-\lambda-1)!!}}\left(\sin \frac{\omega}{2}\right)^{\lambda} P_{J-\lambda / 2}^{\left(\lambda+\frac{1}{2},-\frac{1}{2}\right)}(\cos \omega) \\
+\frac{2 J-\lambda \text { is even }}{\sqrt{2 J+1} \sqrt{\frac{(2 J-\lambda-1)!!(2 J+\lambda+1)!!}{(2 J-\lambda)!!(2 J+\lambda)!!}}\left(\cos \frac{\omega}{2}\right)\left(\sin \frac{\omega}{2}\right)^{\lambda} P_{J-\frac{\lambda+1}{2}}^{\left(\lambda+\frac{1}{2}, \frac{1}{2}\right)}(\cos \omega)} 2 J-\lambda \text { is odd }
+\end{array}\right. \tag{8}
+\end{align*}
+
+
+(e) Relations of $\chi_{\lambda}^{J}(\omega)$ to the Hypergeometric functions
+
+
+\begin{gather*}
+\chi_{\lambda}^{J}(\omega)=\frac{\sqrt{2 J+1}}{(2 \lambda+1)!!} \sqrt{\frac{(2 J+\lambda+1)!}{(2 J-\lambda)!}}\left(\sin \frac{\omega}{2}\right)^{\lambda} F\left(-2 J+\lambda, 2 J+\lambda+2 ; \lambda+\frac{3}{2} ; \sin ^{2} \frac{\omega}{4}\right)  \tag{9}\\
+\chi_{\lambda}^{J}(\omega)=\frac{(-1)^{2 J-\lambda}(2 \lambda)!!\sqrt{2 J+1}}{(2 \lambda+1)!} \sqrt{\frac{(2 J+\lambda+1)!}{(2 J-\lambda)!}}\left(\sin \frac{\omega}{2}\right)^{\lambda} F\left(-2 J+\lambda, 2 J+\lambda+2 ; \lambda+\frac{3}{2} ; \cos ^{2} \frac{\omega}{4}\right)  \tag{10}\\
+\chi_{\lambda}^{J}(\omega)=\frac{(-1)^{2 J-\lambda} \sqrt{2 J+1} 2^{4 J-\lambda}(2 J)!}{\sqrt{(2 J-\lambda)!(2 J+\lambda+1)!}}\left(\sin \frac{\omega}{2}\right)^{\lambda}\left(\sin \frac{\omega}{4}\right)^{4 J-2 \lambda} \\
+\times F\left(-2 J+\lambda,-2 J-\frac{1}{2} ;-4 J-1 ; \frac{1}{\sin ^{2} \frac{\omega}{2}}\right)  \tag{11}\\
+\chi_{\lambda}^{J}(\omega)=\frac{\sqrt{2 J+1}(4 J)!!}{\sqrt{(2 J-\lambda)!(2 J+\lambda+1)!}}\left(\cos \frac{\omega}{2}\right)^{2 J-\lambda}\left(\sin ^{\frac{\omega}{2}}\right)^{\lambda} \\
+\times F\left(-J+\frac{1}{2}, \frac{-2 J+\lambda+1}{2} ;-2 J ; \frac{1}{\cos ^{2} \frac{\omega}{2}}\right)  \tag{12}\\
+\chi_{\lambda}^{J}(\omega)=\frac{\sqrt{2 J+1}}{(2 \lambda+1)!!} \sqrt{\frac{(2 J+\lambda+1)!}{(2 J-\lambda)!}}\left(\sin \frac{\omega}{2}\right)^{\lambda}\left(\cos ^{\left.\frac{\omega}{4}\right)^{4 J-2 \lambda}}\right. \\
+\times F\left(-2 J+\lambda,-2 J-\frac{1}{2} ; \lambda+\frac{3}{2} ;-\tan ^{2} \frac{\omega}{4}\right) \tag{13}
+\end{gather*}
+
+
+
+\begin{align*}
+\chi_{\lambda}^{J}(\omega)= & \frac{\sqrt{2 J+1}(2 J)!i^{\lambda}}{\sqrt{(2 J-\lambda)!(2 J+\lambda+1)!}}\left(e^{-\frac{i \omega}{2}}-e^{\frac{i \omega}{2}}\right)^{\lambda} e^{ \pm i \frac{\omega}{2}(2 J-\lambda)} F\left(-2 J+\lambda, \lambda+1 ;-2 J ; e^{\mp i \omega}\right)  \tag{14}\\
+\chi_{\lambda}^{J}(\omega)= & \left\{\begin{array}{c}
+(-1)^{J+\frac{3 \lambda}{2}} \sqrt{2 J+1} \sqrt{\frac{(2 J-\lambda-1)!(2 J+\lambda)!11}{(2 J-\lambda)!(2 J+\lambda+1)!}}\left(\sin \frac{\omega}{2}\right)^{\lambda} F\left(-J+\frac{\lambda}{2}, J+1+\frac{\lambda}{2} ; \frac{1}{2} ; \cos ^{2} \frac{\omega}{2}\right) \\
+\text { if } 2 J-\lambda \text { is even } \\
+(-1)^{J+\frac{3 \lambda-1}{2}} \sqrt{2 J+1} \sqrt{\frac{(2 J-\lambda)!1(2 J+\lambda+1)!1}{(2 J-\lambda-1)!1(2 J+\lambda)!1}} \cos \frac{\omega}{2}\left(\sin \frac{\omega}{2}\right)^{\lambda} \\
+\times F\left(-J+\frac{\lambda+1}{2}, J+1+\frac{\lambda+1}{2} ; \frac{3}{2} ; \cos ^{2} \frac{\omega}{2}\right) \\
+\text { if } 2 J-\lambda \text { is odd }
+\end{array}\right.  \tag{15}\\
+\chi_{\lambda}^{J}(\omega)= & \left\{\begin{array}{c}
+\frac{\sqrt{2 J+1}}{(2 \lambda+1)!1} \sqrt{\frac{(2 J+\lambda+1)!}{(2 J-\lambda)!}}\left(\sin \frac{\omega}{2}\right)^{\lambda} F\left(-J+\frac{\lambda}{2}, J+1+\frac{\lambda}{2} ; \lambda+\frac{3}{2} ; \sin ^{2} \frac{\omega}{2}\right) \\
+\text { if } 2 J-\lambda \text { is even } \\
+\frac{\sqrt{2 J+1}}{(2 \lambda+1)!1} \sqrt{\frac{(2 J+\lambda+1)!}{(2 J-\lambda)!}} \cos \frac{\omega}{2}\left(\sin \frac{\omega}{2}\right)^{\lambda} F\left(-J+\frac{\lambda+1}{2}, J+1+\frac{\lambda+1}{2} ; \lambda+\frac{3}{2} ; \sin ^{2} \frac{\omega}{2}\right) \\
+\text { if } 2 J-\lambda \text { is odd }
+\end{array}\right. \tag{16}
+\end{align*}
+
+
+(f) Integral representations
+
+
+\begin{align*}
+& \chi_{\lambda}^{J}(\omega)=\frac{1}{2} \frac{1}{\lambda!} \sqrt{\frac{(2 J+1)(2 J+\lambda+1)!}{(2 J-\lambda)!}} \frac{1}{\left(\sin \frac{\omega}{2}\right)^{\lambda+1}} \int_{0}^{\omega} \cos \left[(2 J+1) \frac{\psi}{2}\right]\left(\cos \frac{\psi}{2}-\cos \frac{\omega}{2}\right)^{\lambda} d \psi  \tag{17}\\
+& \chi_{\lambda}^{J}(\omega)=(-i)^{\lambda} \frac{\sqrt{(2 J+1)(2 J+\lambda+1)!(2 J-\lambda)!}}{2(2 J)!} \int_{-1}^{+1} P_{\lambda}(x)\left[\cos \frac{\omega}{2}+i x \sin \frac{\omega}{2}\right]^{2 J} d x \tag{18}
+\end{align*}
+
+
+\subsection*{4.15.3. Principal Properties}
+(a) Symmetries
+
+
+\begin{align*}
+\chi_{\lambda}^{J *}(\omega) & =\chi_{\lambda}^{J}(\omega)=(-1)^{\lambda} \chi_{\lambda}^{J}(-\omega)  \tag{19}\\
+\chi_{\lambda}^{J}(\omega+2 \pi n) & =(-1)^{2 J n} \chi_{\lambda}^{J}(\omega), \quad \chi_{\lambda}^{J}(2 \pi-\omega)=(-1)^{2 J-\lambda} \chi_{\lambda}^{J}(\omega) \tag{20}
+\end{align*}
+
+
+(b) Particular values of $\omega$
+
+
+\begin{align*}
+& \chi_{\lambda}^{J}(0)=(2 J+1) \delta_{\lambda 0}, \quad \chi_{\lambda}^{J}(2 \pi)=(-1)^{2 J}(2 J+1) \delta_{\lambda 0}, \\
+& \chi_{\lambda}^{J}(\pi)= \begin{cases}(-1)^{J-\frac{\lambda}{2}} \sqrt{\frac{(2 J+\lambda)!!(2 J-\lambda-1)!!(2 J+1)}{(2 J-\lambda)!(2 J+\lambda+1)!!}} & \text { if } 2 J-\lambda \text { is even }, \\
+0 & \text { if } 2 J-\lambda \text { is odd } .\end{cases} \tag{21}
+\end{align*}
+
+
+(c) Recursion relations
+
+
+\begin{gather*}
+2 \frac{d}{d \omega} \chi_{\lambda}^{J}(\omega)=\frac{\lambda}{2 \lambda+1} \sqrt{(2 J+1)^{2}-\lambda^{2}} \chi_{\lambda-1}^{J}(\omega)-\frac{\lambda+1}{2 \lambda+1} \sqrt{(2 J+1)^{2}-(\lambda+1)^{2}} \chi_{\lambda+1}^{J}(\omega),  \tag{22}\\
+(2 \lambda+1) \cot \frac{\omega}{2} \chi_{\lambda}^{J}(\omega)=\sqrt{(2 J+1)^{2}-\lambda^{2}} \chi_{\lambda-1}^{J}(\omega)+\sqrt{(2 J+1)^{2}-(\lambda+1)^{2}} \chi_{\lambda+1}^{J}(\omega) . \tag{23}
+\end{gather*}
+
+
+(d) Asymptotics
+
+If $\omega \rightarrow 0$ and $J \rightarrow \infty$, while $J \omega \equiv x<\infty$, then
+
+
+\begin{equation*}
+\lim _{\substack{J \rightarrow \infty \\ \omega \rightarrow 0}} \frac{1}{2 J+1} \chi_{\lambda}^{J}(\omega)=j_{\lambda}(x) \tag{24}
+\end{equation*}
+
+
+where $j_{\lambda}(x)$ is a spherical Bessel function. If $\omega \rightarrow 0$ and $J$ is fixed, then
+
+
+\begin{equation*}
+\chi_{\lambda}^{J}(\omega) \approx\left(\frac{\omega}{2}\right)^{\lambda} \frac{1}{(2 \lambda+1)!!} \sqrt{(2 J+1) \frac{(2 J+\lambda+1)!}{(2 J-\lambda)!}} \tag{25}
+\end{equation*}
+
+
+\subsection*{4.15.4. Differential Equation}
+The functions $\chi_{\lambda}^{J}(\omega)$ are solutions of the linear differential equation
+
+
+\begin{equation*}
+\frac{d^{2}}{d \omega^{2}} \chi_{\lambda}^{J}(\omega)+\cot \frac{\omega}{2} \frac{d}{d \omega} \chi_{\lambda}^{J}(\omega)+\left[J(J+1)-\frac{\lambda(\lambda+1)}{4 \sin ^{2} \frac{\omega}{2}}\right] \chi_{\lambda}^{J}(\omega)=0 \tag{26}
+\end{equation*}
+
+
+with the boundary conditions
+
+
+\begin{equation*}
+\chi_{\lambda}^{J}(0)=(2 J+1) \delta_{\lambda 0}, \quad \chi_{\lambda}^{J}(2 \pi)=(-1)^{2 J}(2 J+1) \delta_{\lambda 0} . \tag{27}
+\end{equation*}
+
+
+\subsection*{4.15.5. Orthogonality and Completeness}
+The collection of functions $\chi_{\lambda}^{J}(\omega)$ with different $J \geq \lambda / 2$ and fixed $\lambda$ constitutes a complete set of orthogonal functions of argument $\omega$ defined in the domain $0 \leq \omega<2 \pi$.
+
+These functions are orthogonal,
+
+
+\begin{equation*}
+\int_{0}^{2 \pi} d \omega \sin ^{2} \frac{\omega}{2} \chi_{\lambda}^{J_{1}}(\omega) \chi_{\lambda}^{J_{2}}(\omega)=\pi \delta_{J_{1} J_{2}} \tag{28}
+\end{equation*}
+
+
+and the completeness condition reads
+
+
+\begin{equation*}
+\sum_{J=0, \frac{1}{2}, 1, \ldots}^{\infty} \chi_{\lambda}^{J}\left(\omega_{1}\right) \chi_{\lambda}^{J}\left(\omega_{2}\right)=\frac{\pi \delta\left(\omega_{1}-\omega_{2}\right)}{\sin ^{2} \frac{\omega_{1}}{2}} \tag{29}
+\end{equation*}
+
+
+\subsection*{4.15.6. The Addition Theorem for $\chi_{\lambda}^{J}(\omega)$}
+The generalized character $\chi_{\lambda}^{J}(\omega)$ for the rotation $R(\omega ; \Theta, \Phi)$, which resulted from two successive rotations $R_{1}\left(\omega_{1} ; \Theta_{1}, \Phi_{1}\right)$ and $R_{2}\left(\omega_{2} ; \Theta_{2}, \Phi_{2}\right)$ may be expanded in terms of $\chi_{\lambda}^{J}\left(R_{1}\right)$ and $\chi_{\lambda}^{J}\left(R_{2}\right)$ as
+
+
+\begin{equation*}
+\chi_{\lambda}^{J}(\omega)=\sqrt{\frac{(2 J-\lambda)!}{(2 J+\lambda+1)!(2 J+1)}}\left(\frac{\sin \frac{\omega}{2}}{\sin \frac{\omega_{1}}{2} \sin \frac{\omega_{2}}{2} \sin \chi}\right)^{\lambda} \sum_{l=\lambda}^{2 J}(-1)^{l}(2 l+1) P_{l}^{\lambda}(\cos \chi) \chi_{l}^{J}\left(\omega_{1}\right) \chi_{l}^{J}\left(\omega_{2}\right), \tag{30}
+\end{equation*}
+
+
+where $P_{i}^{\lambda}(\cos \chi)$ is an associated Legendre function, $\chi$ is an angle between the rotation axes $\mathbf{n}_{1}\left(\Theta_{1}, \Phi_{1}\right)$ and $\mathbf{n}_{2}\left(\Theta_{2}, \Phi_{2}\right)$
+
+\[
+\cos \chi=\left(\begin{array}{ll}
+\mathbf{n}_{1} & \mathbf{n}_{2} \tag{31}
+\end{array}\right)=\cos \Theta_{1} \cos \Theta_{2}+\sin \Theta_{1} \sin \Theta_{2} \cos \left(\Phi_{1}-\Phi_{2}\right) .
+\]
+
+The angle of the resulting rotation, $\omega$, is determined in terms of $\omega_{1}, \omega_{2}$ and $\chi$ by
+
+
+\begin{equation*}
+\cos \frac{\omega}{2}=\cos \frac{\omega_{1}}{2} \cos \frac{\omega_{2}}{2}-\sin \frac{\omega_{1}}{2} \sin \frac{\omega_{2}}{2} \cos \chi \tag{32}
+\end{equation*}
+
+
+\subsection*{4.15.7. Sums and Infinite Series Involving $\chi_{\lambda}^{J}(\omega)$}
+(a) Summation over $\lambda$
+
+
+\begin{align*}
+& \sum_{\lambda=0}^{2 J}( \pm 1)^{\lambda} i^{\lambda} \frac{2 \lambda+1}{2 J+1} \chi_{\lambda}^{J}(\omega) C_{J M \lambda 0}^{J M}=e^{ \pm i M \omega}, \quad(|M| \leq J)  \tag{33}\\
+& \sum_{\lambda=0,2, \ldots}^{\leq 2 J}(-i)^{\lambda} \frac{2 \lambda+1}{2 J+1} \chi_{\lambda}^{J}(\omega) C_{J M \lambda 0}^{J M}=\cos M \omega, \quad(|M| \leq J)  \tag{34}\\
+& \sum_{\lambda=1,3, \ldots}^{\leq 2 J}(-i)^{\lambda-1} \frac{2 \lambda+1}{2 J+1} \chi_{\lambda}^{J}(\omega) C_{J M \lambda 0}^{J M}=\sin M \omega, \quad(|M| \leq J) \tag{35}
+\end{align*}
+
+
+In Eqs. (33)-(35) $J \geq|M|$ is an arbitrary integer or half-integer.
+
+
+\begin{gather*}
+\sum_{\lambda=0,2, \ldots}^{\leq 2 l} \frac{2 \lambda+1}{2 l+1} \frac{(\lambda-1)!!}{\lambda!!} \chi_{\lambda}^{l}(\vartheta) C_{l 0 \lambda 0}^{l 0}=P_{l}(\cos \vartheta),  \tag{36}\\
+\sum_{\lambda=|m|}^{2 l} \frac{2 \lambda+1}{2 l+1} \sqrt{\frac{(\lambda+m-1)!!(\lambda-m-1)!!}{(\lambda+m)!!(\lambda-m)!!}} \chi_{\lambda}^{l}(\vartheta) C_{l 0 \lambda m}^{l m}=\sqrt{\frac{4 \pi}{2 l+1}} Y_{l m}(\vartheta, 0),  \tag{37}\\
+(\lambda+m \text { is even }), \\
+\sum_{\lambda=\left|M^{\prime}-M\right|}^{\leq 2 l}(-1)^{\lambda} \frac{2 \lambda+1}{2 J+1} \sqrt{\frac{\left(\lambda+M^{\prime}-M-1\right)!!\left(\lambda-M^{\prime}+M-1\right)!!}{\left(\lambda+M^{\prime}-M\right)!!\left(\lambda-M^{\prime}+M\right)!!}} \chi_{\lambda}^{J}(\beta) C_{J M \lambda M^{\prime}-M}^{J M^{\prime}}=d_{M M^{\prime}}^{J}(\beta),  \tag{38}\\
+\left(\lambda+M^{\prime}-M \text { is even }\right) . \\
+(\mathrm{b}) S u m m a t i o n^{\prime} \text { over } J \\
+\sum_{J=\nu / 2}^{\infty} \frac{(4 J+1)!!\chi_{\nu}^{J}(\omega)\left(\frac{t}{2}\right)^{2 J}}{\sqrt{(2 J+1)(2 J-\nu)!(2 J+\nu+1)!}}=\sqrt{2} \frac{\left(-t \sin \frac{\omega}{2}\right)^{\nu}}{R\left(1-t \cos \frac{\omega}{2}+R\right)^{\nu+\frac{1}{2}}}, \tag{39}
+\end{gather*}
+
+
+where $R^{2}=1-2 t \cos (\omega / 2)+t^{2}$.
+
+
+\begin{equation*}
+\sum_{J=\nu / 2}^{\infty} i^{2 J-\nu} \sqrt{(2 J+1) \frac{(2 J+\nu+1)!}{(2 J-\nu)!}} \chi_{\nu}^{J}(\omega) J_{2 J+1}(y)=\frac{y}{2}\left(y \sin \frac{\omega}{2}\right)^{\nu} e^{i y \cos \frac{\omega}{2}} \tag{$\{41\}$}
+\end{equation*}
+
+
+
+\begin{equation*}
+\sum_{J=\nu / 2}^{\infty} \frac{\chi_{\nu}^{J}(\omega) t^{2 J}}{\sqrt{(2 J+1)(2 J-\nu)!(2 J+\nu+1)!}}=j_{\nu}\left(t \sin \frac{\omega}{2}\right) e^{t \cos \frac{\omega}{2}} \tag{42}
+\end{equation*}
+
+
+
+\begin{gather*}
+\sum_{J=\nu / 2}^{\infty} \frac{\Gamma(k+2 J-\nu)}{\Gamma(k)} \frac{\chi_{\nu}^{J}(\omega) t^{2 J}}{\sqrt{(2 J+1)(2 J-\nu)!(2 J+\nu+1)!}} \\
+=\frac{1}{(2 \nu+1)!!} \frac{\left(t \sin \frac{\omega}{2}\right)^{\nu}}{\left(1-t \cos \frac{\omega}{2}\right)^{k}} F\left(\frac{k}{2}, \frac{k+1}{2} ; \nu+\frac{3}{2} ;-\left(\frac{t \sin \frac{\omega}{2}}{1-t \cos \frac{\omega}{2}}\right)^{2}\right) . \tag{43}
+\end{gather*}
+
+
+Here $k$ is an arbitrary integer.
+
+
+\begin{gather*}
+\sum_{J=\nu / 2}^{\infty} \frac{\chi_{\nu}^{J}(\omega)(2 t)^{2 J}}{(4 J+1)!!\sqrt{(2 J+1)(2 J-\nu)!(2 J+\nu+1)!}} \\
+=\frac{\left(2 t \sin \frac{\omega}{2}\right)^{\nu}}{[(2 \nu+1)!!]^{2} \circ F_{1}\left(; \nu+\frac{3}{2} ;-t \sin ^{2} \frac{\omega}{4}\right)_{0} F_{1}\left(; \nu+\frac{3}{2} ; t \cos ^{2} \frac{\omega}{4}\right) .} \tag{44}
+\end{gather*}
+
+
+The right-hand sides of Eqs. (39)-(44) may be treated as generating functions of $\chi_{\lambda}^{J}(\omega)$.
+
+\subsection*{4.15.8. Special Cases of $\chi_{\lambda}^{J}(\omega)$ for Particular $\lambda$}
+(a) For $\lambda=2 J, 2 J-1,2 J-2,2 J-3$ the function $\chi_{\lambda}^{J}(\omega)$ is given by
+
+
+\begin{align*}
+\chi_{2 J}^{J}(\omega) & =\sqrt{2 J+1} \sqrt{\frac{(4 J)!!}{(4 J+1)!!}}\left(\sin \frac{\omega}{2}\right)^{2 J}  \tag{45}\\
+\chi_{2 J-1}^{J}(\omega) & =\sqrt{2 J+1} \sqrt{\frac{(4 J)!!}{(4 J-1)!!}}\left(\sin \frac{\omega}{2}\right)^{2 J-1} \cos \frac{\omega}{2}  \tag{46}\\
+\chi_{2 J-2}^{J}(\omega) & =\sqrt{2 J+1} \sqrt{\frac{(4 J-2)!!}{2(4 J-1)!!}}\left(\sin \frac{\omega}{2}\right)^{2 J-2}\left[4 J \cos ^{2} \frac{\omega}{2}-1\right]  \tag{47}\\
+\chi_{2 J-3}^{J}(\omega) & =\sqrt{2 J+1} \sqrt{\frac{(4 J-2)!!}{6(4 J-3)!!}}\left(\sin \frac{\omega}{2}\right)^{2 J-3}\left[4 J \cos ^{3} \frac{\omega}{2}-3 \cos \frac{\omega}{2}\right] \tag{48}
+\end{align*}
+
+
+(b) When $\lambda=0,1,2$ one has
+
+
+\begin{align*}
+& \chi_{0}^{J}(\omega)=\frac{\sin (2 J+1) \frac{\omega}{2}}{\sin \frac{\omega}{2}}=\frac{\cos J \omega-\cos (J+1) \omega}{1-\cos \omega}  \tag{49}\\
+& \chi_{1}^{J}(\omega)=\frac{-1}{\sqrt{J(J+1)}} \frac{2 J \cos (2 J+1) \frac{\omega}{2} \sin \frac{\omega}{2}-\sin J \omega}{2 \sin ^{2} \frac{\omega}{2}}=\frac{-1}{\sqrt{J(J+1)}} \frac{J \sin (J+1) \omega-(J+1) \sin J \omega}{1-\cos \omega}  \tag{50}\\
+& \chi_{2}^{J}(\omega)=\frac{1}{\sqrt{J(J+1)(2 J-1)(2 J+3)}}\left\{\frac{\left[3-2 J(2 J-1) \sin ^{2} \frac{\omega}{2}\right] \sin (2 J+1) \frac{\omega}{2}}{2 \sin ^{3} \frac{\omega}{2}}-\frac{3}{2}(2 J+1) \frac{\cos J \omega}{\sin ^{2} \frac{\omega}{2}}\right\} \tag{51}
+\end{align*}
+
+
+(c) $\chi_{\lambda}^{J}(\omega)$ may be expressed in terms of derivatives of $\chi^{J}(\omega)$
+
+
+\begin{align*}
+\chi_{0}^{J}(\omega)= & \chi^{J}(\omega) \\
+\chi_{1}^{J}(\omega)= & \frac{-1}{\sqrt{J(J+1)}} \frac{d \chi^{J}(\omega)}{d \omega} \\
+\chi_{2}^{J}(\omega)= & \frac{1}{\sqrt{J(J+1)(2 J-1)(2 J+3)}}\left[J(J+1) \chi^{J}(\omega)+3 \frac{d^{2} \chi^{J}(\omega)}{d \omega^{2}}\right] \\
+\chi_{3}^{J}(\omega)= & -4 \sqrt{2 J+1} \sqrt{\frac{(2 J-3)!}{(2 J+4)!}}\left\{[3 J(J+1)-1] \frac{d \chi^{J}(\omega)}{d \omega}+5 \frac{d^{3} \chi^{J}(\omega)}{d \omega^{3}}\right\}  \tag{52}\\
+\chi_{4}^{J}(\omega)= & 2 \sqrt{2 J+1} \sqrt{\frac{(2 J-4)!}{(2 J+5)!}}\left\{3(J-1) J(J+1)(J+2) \chi^{J}(\omega)\right. \\
+& \left.+5[6 J(J+1)-5] \frac{d^{2} \chi^{J}(\omega)}{d \omega^{2}}+35 \frac{d^{4} \chi^{J}(\omega)}{d \omega^{4}}\right\}
+\end{align*}
+
+
+\subsection*{4.15.9. Special Cases of $\chi_{\lambda}^{J}(\omega)$ for Particular $J$}
+\[
+\begin{array}{ll}
+J=0 & \chi_{0}^{0}(\omega)=1 ; \\
+J=1 / 2 & \chi_{0}^{\frac{1}{2}}(\omega)=2 \cos \frac{\omega}{2} \\
+& \chi_{1}^{\frac{1}{2}}(\omega)=\frac{2}{\sqrt{3}} \sin \frac{\omega}{2} \\
+J=1 & \chi_{0}^{1}(\omega)=1+2 \cos \omega \\
+& \chi_{1}^{1}(\omega)=\sqrt{2} \sin \omega \\
+& \chi_{2}^{1}(\omega)=\sqrt{\frac{2}{5}}(1-\cos \omega) ; \\
+J=3 / 2 & \chi_{0}^{\frac{3}{2}}(\omega)=4 \cos \omega \cos \frac{\omega}{2}=4 \cos \frac{\omega}{2}\left(2 \cos ^{2} \frac{\omega}{2}-1\right), \\
+& \chi_{1}^{\frac{3}{2}}(\omega)=\frac{4}{\sqrt{3 \cdot 5}}(2+3 \cos \omega) \sin \frac{\omega}{2}=\frac{4}{\sqrt{3 \cdot 5}} \sin \frac{\omega}{2}\left(6 \cos ^{2} \frac{\omega}{2}-1\right), \\
+& \chi_{2}^{\frac{3}{2}}(\omega)=\frac{8}{\sqrt{5}}\left(\sin \frac{\omega}{2}\right)^{2} \cos \frac{\omega}{2}=\frac{4}{\sqrt{5}} \sin \frac{\omega}{2} \sin \omega,  \tag{53}\\
+& \chi_{3}^{\frac{3}{2}}(\omega)=\frac{4}{\sqrt{5 \cdot 7}} \sin \frac{\omega}{2}(1-\cos \omega)=\frac{8}{\sqrt{5 \cdot 7}}\left(\sin \frac{\omega}{2}\right)^{3} ; \\
+J=2 & \chi_{0}^{2}(\omega)=4 \cos ^{2} \omega+2 \cos \omega-1, \\
+& \chi_{1}^{2}(\omega)=\sqrt{\frac{2}{3}} \sin \omega(1+4 \cos \omega), \\
+& \chi_{2}^{2}(\omega)=\sqrt{\frac{2}{7}}(3+\cos \omega-4 \cos 2 \omega), \\
+& \chi_{3}^{2}(\omega)=2 \sqrt{\frac{2}{7}} \sin \omega(1-\cos \omega), \\
+& \chi_{4}^{2}(\omega)=\frac{2}{3} \sqrt{\frac{2}{7}}(1-\cos \omega)^{2}
+\end{array}
+\]
+
+\subsection*{4.16. $D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)$ FOR PARTICULAR VALUES OF THE ARGUMENTS}
+Here $k, l$ and $n$ are integers.
+
+
+\begin{gather*}
+D_{M M^{\prime}}^{J}(0,0,0)=\delta_{M M^{\prime}}  \tag{1}\\
+D_{M M^{\prime}}^{J}(\alpha, 0, \gamma)=\delta_{M M^{\prime}} e^{-i M(\alpha+\gamma)}  \tag{2}\\
+D_{M M^{\prime}}^{J}(\alpha, \pm 2 n \pi, \gamma)=\delta_{M M^{\prime}}(-1)^{2 n J} e^{-i M(\alpha+\gamma)} \tag{3}
+\end{gather*}
+
+
+
+\begin{gather*}
+D_{M M^{\prime}}^{J}(\alpha, \pm(2 n+1) \pi, \gamma)=\delta_{-M M^{\prime}}(-1)^{ \pm(2 n+1) J+M} e^{-i M(\alpha-\gamma)},  \tag{4}\\
+D_{M M^{\prime}}^{J}\left(\alpha, \frac{\pi}{2}, \gamma\right)=(-1)^{M-M^{\prime}} e^{-i \alpha M-i \gamma M^{\prime}} \frac{1}{2^{J}} \sqrt{\frac{(J+M)!(J-M)!}{\left(J+M^{\prime}\right)!\left(J-M^{\prime}\right)!}} \sum_{k}(-1)^{k}\binom{J+M^{\prime}}{k}\binom{J-M^{\prime}}{k+M-M^{\prime}} \tag{5}
+\end{gather*}
+
+
+Some particular cases of Eq. (5) are given by
+
+
+\begin{gather*}
+D_{m 0}^{l}\left(\alpha, \frac{\pi}{2}, \gamma\right)=(-1)^{\frac{l+m}{2}} \delta_{l-m, 2 n} \frac{\sqrt{(l-m)!(l+m)!}}{2^{l}\left(\frac{l+m}{2}\right)!\left(\frac{l-m}{2}\right)!} e^{-i m \alpha}, \\
+D_{0 m}^{l}\left(\alpha, \frac{\pi}{2}, \gamma\right)=(-1)^{\frac{l-m}{2}} \delta_{l-m, 2 n} \frac{\sqrt{(l-m)!(l+m)!}}{2^{l}\left(\frac{l+m}{2}\right)!\left(\frac{l-m}{2}\right)!} e^{-i m \gamma},  \tag{6}\\
+D_{00}^{l}\left(\alpha, \frac{\pi}{2}, \gamma\right)=P_{l}(0)=\delta_{l, 2 n}(-1)^{l / 2} \frac{(l-1)!!}{l!!},  \tag{7}\\
+D_{ \pm 1 m}^{l}\left(\alpha, \frac{\pi}{2}, \gamma\right)=\sqrt{\frac{(l-m)!(l+m)!}{l(l+1)}}\left\{\delta_{l+m, 2 k} \frac{m(-1)^{\frac{l-m}{2}}}{2^{l}\left(\frac{l-m}{2}\right)!\left(\frac{l+m}{2}\right)!}\right. \\
+\left.\mp \delta_{l+m, 2 k+1} \frac{(-1)^{\frac{l-m-1}{2}}}{2^{l-1}\left(\frac{l-m-1}{2}\right)!\left(\frac{l+m-1}{2}\right)!}\right\} e^{\mp i \alpha-i m \gamma} . \tag{8}
+\end{gather*}
+
+
+Squares of the $D$-functions for $\beta=\frac{\pi}{2}$ may be written as
+
+
+\begin{equation*}
+\left[D_{M M^{\prime}}^{J}\left(\alpha, \frac{\pi}{2}, \gamma\right)\right]^{2}=e^{-i 2 M \alpha-i 2 M^{\prime} \gamma}(-1)^{M-M^{\prime}} \sum_{l=0,2,4, \ldots}(-1)^{l / 2} \frac{(l-1)!!}{l!!} C_{J M J-M}^{l 0} C_{J M^{\prime} J-M^{\prime}}^{l 0} \tag{9}
+\end{equation*}
+
+
+Using $d_{M M^{\prime}}^{J}(\pi / 2)$, one can evaluate $D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)$ for arbitrary arguments from the relation
+
+
+\begin{align*}
+& D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma) \\
+& =\sum_{m_{i}} D_{M m_{1}}^{J}(\alpha, 0,0) D_{m_{1} m_{2}}^{J}\left(0, \frac{\pi}{2}, 0\right) D_{m_{2} m_{3}}^{J}(\beta, 0,0) D_{m_{3} m_{4}}^{J}\left(0, \frac{\pi}{2}, 0\right) D_{m_{4} M^{\prime}}^{J}(0,0, \gamma)  \tag{10}\\
+& =\sum_{m} e^{-i M \alpha} \cdot d_{M m}^{J}\left(\frac{\pi}{2}\right) \cdot e^{-i m \beta} \cdot d_{m M^{\prime}}^{J}\left(\frac{\pi}{2}\right) \cdot e^{-i M^{\prime} \gamma}
+\end{align*}
+
+
+Numerical Tables of $D_{M M^{\prime}}^{J}(0, \pi / 2,0)=d_{M M^{\prime}}^{J}(\pi / 2)$ for $J=1 / 2,1,3 / 2,2,5 / 2,3,7 / 2,4,9 / 2,5$ are given in Sec. 4.21.\\
+4.17. SPECIAL CASES OF $D_{M M^{\prime}}^{J}$ FOR PARTICULAR $M$ OR $M^{\prime}$\\
+(a) $M=0$ and/or $M^{\prime}=0$
+
+
+\begin{align*}
+& D_{m 0}^{l}(\alpha, \beta, \gamma)=(-1)^{m} \sqrt{\frac{4 \pi}{2 l+1}} Y_{l-m}(\beta, \alpha)=\sqrt{\frac{4 \pi}{2 l+1}} Y_{l m}^{*}(\beta, \alpha), \\
+& D_{0 m}^{l}(\alpha, \beta, \gamma)=\sqrt{\frac{4 \pi}{2 l+1}} Y_{l-m}(\beta, \gamma)=(-1)^{m} \sqrt{\frac{4 \pi}{2 l+1}} Y_{l m}^{*}(\beta, \gamma) \tag{1}
+\end{align*}
+
+
+In particular,
+
+
+\begin{align*}
+D_{00}^{l}(\alpha, \beta, \gamma) & =P_{l}(\cos \beta) \\
+D_{ \pm 10}^{l}(\alpha, \beta, \gamma) & =\mp e^{\mp i \alpha} \frac{\sin \beta}{\sqrt{l(l+1)}} P_{l}^{\prime}(\cos \beta) \\
+D_{0 \pm 1}^{l}(\alpha, \beta, \gamma) & = \pm e^{\mp i \gamma} \frac{\sin \beta}{\sqrt{l(l+1)}} P_{l}^{\prime}(\cos \beta)  \tag{2}\\
+D_{ \pm 20}^{l}(\alpha, \beta, \gamma) & =e^{\mp i 2 \alpha}\left\{-\sqrt{\frac{l(l+1)}{(l-1)(l+2)}} P_{l}(\cos \beta)+\frac{2 \cos \beta}{\sqrt{(l-1) l(l+1)(l+2)}} P_{l}^{\prime}(\cos \beta)\right\} \\
+D_{0 \pm 2}^{l}(\alpha, \beta, \gamma) & =e^{\mp i 2 \gamma}\left\{-\sqrt{\frac{l(l+1)}{(l-1)(l+2)}} P_{l}(\cos \beta)+\frac{2 \cos \beta}{\sqrt{(l-1) l(l+1)(l+2)}} P_{l}^{\prime}(\cos \beta)\right\}
+\end{align*}
+
+
+(b) $M= \pm 1 / 2$ and/or $M^{\prime}= \pm 1 / 2$
+
+
+\begin{gather*}
+D_{ \pm \frac{1}{2} M^{\prime}}^{J}(\alpha, \beta, \gamma)=e^{ \pm i \frac{\alpha-\alpha}{2}} \frac{\sqrt{\pi}}{\sqrt{2 J+1} \sin \frac{\beta}{2}}\left\{ \pm \sqrt{\frac{J \pm M^{\prime}+1}{J+1}} Y_{J+\frac{1}{2} \mp \frac{1}{2}-M^{\prime}}(\beta, \gamma)\right. \\
+\left.\mp \sqrt{\frac{J \mp M^{\prime}}{J}} Y_{J-\frac{1}{2} \mp \frac{1}{2}-M^{\prime}}(\beta, \gamma)\right\} \\
+D_{M \pm \frac{1}{2}}^{J}(\alpha, \beta, \gamma)=(-1)^{ \pm \frac{1}{2}-M} e^{\mp i \frac{\alpha-\alpha}{2}} \frac{\sqrt{\pi}}{\sqrt{2 J+1} \sin \frac{\beta}{2}}\left\{ \pm \sqrt{\frac{J \pm M+1}{J+1}} Y_{J+\frac{1}{2} \mp \frac{1}{2}-M}(\beta, \alpha)\right.  \tag{3}\\
+\left.\mp \sqrt{\frac{J \mp M}{J}} Y_{J-\frac{1}{2} \mp \frac{1}{2}-M}(\beta, \alpha)\right\}
+\end{gather*}
+
+
+In particular
+
+
+\begin{align*}
+D_{\frac{1}{2} \frac{1}{2}}^{J}(\alpha, \beta, \gamma) & =e^{-i \frac{\alpha+\alpha}{2} \frac{\cos \frac{\beta}{2}}{J+\frac{1}{2}}}\left\{P_{J+\frac{1}{2}}^{\prime}(\cos \beta)-P_{J-\frac{1}{2}}^{\prime}(\cos \beta)\right\} \\
+D_{\frac{1}{2}-\frac{1}{2}}^{J}(\alpha, \beta, \gamma) & =-e^{-i \frac{\alpha-\alpha}{2}} \frac{\sin \frac{\beta}{2}}{J+\frac{1}{2}}\left\{P_{J+\frac{1}{2}}^{\prime}(\cos \beta)+P_{J-\frac{1}{2}}^{\prime}(\cos \beta)\right\} \\
+D_{-\frac{1}{2} \frac{1}{2}}^{J}(\alpha, \beta, \gamma) & =e^{i \frac{\alpha-\alpha}{2}} \frac{\sin \frac{\beta}{2}}{J+\frac{1}{2}}\left\{P_{J+\frac{1}{2}}^{\prime}(\cos \beta)+P_{J-\frac{1}{2}}^{\prime}(\cos \beta)\right\}  \tag{4}\\
+D_{-\frac{1}{2}-\frac{1}{2}}^{J}(\alpha, \beta, \gamma) & =e^{i \frac{\alpha+\alpha}{2}} \frac{\cos \frac{\beta}{2}}{J+\frac{1}{2}}\left\{P_{J+\frac{1}{2}}^{\prime}(\cos \beta)-P_{J-\frac{1}{2}}^{\prime}(\cos \beta)\right\}
+\end{align*}
+
+
+(c) $M= \pm 1$ and/or $M^{\prime}= \pm 1$
+
+
+\begin{gather*}
+D_{ \pm 1 m}^{l}(\alpha, \beta, \gamma)=e^{\mp i \alpha} \sqrt{\frac{4 \pi}{l(l+1)(2 l+1)}}\left\{\mp \sqrt{(l-m)(l+m+1)} \frac{1 \mp \cos \beta}{2} Y_{l-m-1}(\beta, \gamma) e^{i \gamma}\right. \\
+\left.+m \sin \beta Y_{l-m}(\beta, \gamma) \pm \sqrt{(l+m)(l-m+1)} \frac{1 \pm \cos \beta}{2} Y_{l-m+1}(\beta, \gamma) e^{-i \gamma}\right\} \\
+D_{m \pm 1}^{l}(\alpha, \beta, \gamma)=e^{\mp i \gamma}(-1)^{m+1} \sqrt{\frac{4 \pi}{l(l+1)(2 l+1)}}\left\{\mp \sqrt{(l-m)(l+m+1)} \frac{1 \mp \cos \beta}{2} Y_{l-m-1}(\beta, \alpha) e^{i \alpha}\right.  \tag{5}\\
+\left.+m \sin \beta Y_{l-m}(\beta, \alpha) \pm \sqrt{(l+m)(l-m+1)} \frac{1 \pm \cos \beta}{2} Y_{l-m+1}(\beta, \alpha) e^{-i \alpha}\right\}
+\end{gather*}
+
+
+In particular,
+
+
+\begin{align*}
+D_{ \pm 11}^{l}(\alpha, \beta, \gamma) & =e^{\mp i \alpha-i \gamma} \frac{1 \pm \cos \beta}{l(l+1)}\left\{P_{l}^{\prime}(\cos \beta) \mp(1 \mp \cos \beta) P_{l}^{\prime \prime}(\cos \beta)\right\} \\
+D_{ \pm 1-1}^{l}(\alpha, \beta, \gamma) & =e^{\mp i \alpha+i \gamma} \frac{1 \mp \cos \beta}{l(l+1)}\left\{P_{l}^{\prime}(\cos \beta) \pm(1 \pm \cos \beta) P_{l}^{\prime \prime}(\cos \beta)\right\} \tag{6}
+\end{align*}
+
+
+(d) $M= \pm(J-1)$ and/or $M^{\prime}= \pm(J-1)$
+
+
+\begin{gather*}
+D_{J-1 m}^{J}(\alpha, \beta, \gamma)=(-1)^{J-m-1} e^{-i(J-1) \alpha-i m \gamma} \sqrt{\frac{(2 J-1)!}{(J+m)!(J-m)!}}\left(\cos \frac{\beta}{2}\right)^{J+m-1}\left(\sin \frac{\beta}{2}\right)^{J-m-1} \\
+\times[J \cos \beta-m], \\
+D_{-J+1 m}^{J}(\alpha, \beta, \gamma)=e^{i(J-1) \alpha-i m \gamma} \sqrt{\frac{(2 J-1)!}{(J+m)!(J-m)!}}\left(\cos \frac{\beta}{2}\right)^{J-m-1}\left(\sin \frac{\beta}{2}\right)^{J+m-1} \\
+\times[J \cos \beta+m], \\
+D_{m J-1}^{J}(\alpha, \beta, \gamma)=e^{-i(J-1) \gamma-i m \alpha} \sqrt{\frac{(2 J-1)!}{(J+m)!(J-m)!}}\left(\cos \frac{\beta}{2}\right)^{J+m-1}\left(\sin \frac{\beta}{2}\right)^{J-m-1}  \tag{7}\\
+\times[J \cos \beta-m], \\
+D_{m-J+1}^{J}(\alpha, \beta, \gamma)=(-1)^{J+m-1} e^{+i(J-1) \gamma-i m \alpha} \sqrt{\frac{(2 J-1)!}{(J+m)!(J-m)!}}\left(\cos \frac{\beta}{2}\right)^{J-m-1}\left(\sin \frac{\beta}{2}\right)^{J+m-1} \\
+\times[J \cos \beta+m] .
+\end{gather*}
+
+
+(e) $M= \pm J$ and/or $M^{\prime}= \pm J$
+
+
+\begin{align*}
+D_{J M}^{J}(\alpha, \beta, \gamma) & =\sqrt{\frac{(2 J)!}{(J+M)!(J-M)!}}\left(\cos \frac{\beta}{2}\right)^{J+M}\left(-\sin \frac{\beta}{2}\right)^{J-M} e^{-i J \alpha-i M \gamma} \\
+D_{-J M}^{J}(\alpha, \beta, \gamma) & =\sqrt{\frac{(2 J)!}{(J+M)!(J-M)!}}\left(\cos \frac{\beta}{2}\right)^{J-M}\left(\sin \frac{\beta}{2}\right)^{J+M} e^{i J \alpha-i M \gamma} \\
+D_{M J}^{J}(\alpha, \beta, \gamma) & =\sqrt{\frac{(2 J)!}{(J+M)!(J-M)!}}\left(\cos \frac{\beta}{2}\right)^{J+M}\left(\sin \frac{\beta}{2}\right)^{J-M} e^{-i M \alpha-i J \gamma}  \tag{8}\\
+D_{M-J}^{J}(\alpha, \beta, \gamma) & =\sqrt{\frac{(2 J)!}{(J+M)!(J-M)!}}\left(\cos \frac{\beta}{2}\right)^{J-M}\left(-\sin \frac{\beta}{2}\right)^{J+M} e^{-i M \alpha+i J \gamma}
+\end{align*}
+
+
+Explicit forms of $d_{M M^{\prime}}^{J}(\beta)$ for particular values of $J(J=1 / 2,1,3 / 2,2,5 / 2,3,7 / 2,4,9 / 2,5)$ are presented in Sec. 4.20.
+
+\subsection*{4.18. ASYMPTOTICS OF $D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)$}
+\subsection*{4.18.1. Large Angular Momentum}
+If $J \gg 1$, one has
+
+
+\begin{align*}
+D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma) \approx & e^{-i M \alpha-i M^{\prime} \gamma} \xi_{M M^{\prime}} \sqrt{\frac{s!(s+\mu+\nu)!}{(s+\mu)!(s+\nu)!}} \\
+& \times \sqrt{\frac{2}{\pi s}} \frac{\cos \left[\left(s+\frac{\mu+\nu+1}{2}\right) \beta-\frac{\pi}{4}(2 \mu+1)\right]}{\sqrt{\sin \beta}}+O\left(\frac{1}{J^{\frac{3}{2}}}\right) \tag{1}
+\end{align*}
+
+
+where $s, \mu, \nu$ are related to $J, M, M^{\prime}$ through Eqs. 4.3(14), and $\xi_{M M^{\prime}}$ is defined by Eq. 4.3(15).\\
+If $J \rightarrow \infty$ and $\beta \rightarrow 0$, while $J \beta<\infty$, then
+
+
+\begin{equation*}
+D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma) \approx e^{-i M \alpha-i M^{\prime} \gamma} J_{M-M^{\prime}}(J \beta) . \tag{2}
+\end{equation*}
+
+
+Here $J_{n}(x)$ is the Bessel function.
+
+\subsection*{4.18.2. Small Variation of Rotation Axis}
+If $\beta \rightarrow 0$, we have
+
+
+\begin{align*}
+& D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma) \approx e^{-i M \alpha-i M^{\prime} \gamma} \frac{\xi_{M M^{\prime}}}{\mu!} \sqrt{\frac{(s+\mu+\nu)!(s+\mu)!}{s!(s+\nu)!}}  \tag{3}\\
+& \times\left(\frac{\beta}{2}\right)^{\mu}\left\{1-\frac{2 s(s+\mu+\nu+1)+\nu(\mu+1)}{2(\mu+1)}\left(\frac{\beta}{2}\right)^{2}+\ldots\right\}
+\end{align*}
+
+
+If $\pi-\beta \rightarrow 0$, we have
+
+
+\begin{align*}
+& D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma) \approx e^{-i M \alpha-i M^{\prime} \gamma} \frac{\xi_{M M^{\prime}}}{\nu!}(-1)^{s} \sqrt{\frac{(s+\mu+\nu)!(s+\nu)!}{s!(s+\mu)!}}  \tag{4}\\
+& \times\left(\frac{\pi-\beta}{2}\right)^{\nu}\left\{1-\frac{2 s(s+\mu+\nu+1)+\mu(\nu+1)}{2(\nu+1)}\left(\frac{\pi-\beta}{2}\right)^{2}+\ldots\right\}
+\end{align*}
+
+
+\subsection*{4.18.3. Infinitesimal Rotations}
+(a) Rotation $\varepsilon$ about the $x$-Axis
+
+
+\begin{gather*}
+\lim _{\varepsilon \rightarrow 0} \frac{1}{\varepsilon}\left[D_{M M^{\prime}}^{J}\left(-\frac{\pi}{2}, \varepsilon, \frac{\pi}{2}\right)-\delta_{M M^{\prime}}\right]=-i\langle J M| \widehat{J}_{x}\left|J M^{\prime}\right\rangle \\
+=-\frac{i}{2} \delta_{M M^{\prime}+1} \sqrt{\left(J-M^{\prime}\right)\left(J+M^{\prime}+1\right)}-\frac{i}{2} \delta_{M M^{\prime}-1} \sqrt{\left(J+M^{\prime}\right)\left(J-M^{\prime}+1\right)} \tag{5}
+\end{gather*}
+
+
+(b) Rotation $\varepsilon$ about the $y$-Axis
+
+
+\begin{gather*}
+\lim _{\varepsilon \rightarrow 0} \frac{1}{\varepsilon}\left[D_{M M^{\prime}}^{J}(0, \varepsilon, 0)-\delta_{M M^{\prime}}\right]=-i\langle J M| \widehat{J}_{y}\left|J M^{\prime}\right\rangle \\
+=-\frac{1}{2} \delta_{M M^{\prime}+1} \sqrt{\left(J-M^{\prime}\right)\left(J+M^{\prime}+1\right)}+\frac{1}{2} \delta_{M M^{\prime}-1} \sqrt{\left(J+M^{\prime}\right)\left(J-M^{\prime}+1\right)} \tag{6}
+\end{gather*}
+
+
+(c) Rotation $\varepsilon$ about the $z$-Axis
+
+
+\begin{equation*}
+\lim _{\varepsilon \rightarrow 0} \frac{1}{\varepsilon}\left[D_{M M^{\prime}}(\varepsilon, 0,0)-\delta_{M M^{\prime}}\right]=-i\langle J M| \widehat{J}_{z}\left|J M^{\prime}\right\rangle=-i M \delta_{M M^{\prime}} \tag{7}
+\end{equation*}
+
+
+(d) Rotation $\varepsilon$ about an Arbitrary Axis $\mathbf{n}(\Theta, \Phi)$
+
+
+\begin{gather*}
+\lim _{\ell \rightarrow 0} \frac{1}{\varepsilon}\left[D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)-\delta_{M M^{\prime}}\right]=-i\langle J M| \widehat{\mathbf{J}} \cdot \mathbf{n}\left|J M^{\prime}\right\rangle=-i M \cos \Theta \delta_{M M^{\prime}} \\
+-\frac{i}{2} \sin \Theta e^{-i \Phi} \sqrt{\left(J-M^{\prime}\right)\left(J+M^{\prime}+1\right)} \delta_{M M^{\prime}+1}-\frac{i}{2} \sin \Theta e^{i \Phi} \sqrt{\left(J+M^{\prime}\right)\left(J-M^{\prime}+1\right)} \delta_{M M^{\prime}-1} \tag{8}
+\end{gather*}
+
+
+In Eqs. (5)-(8) $\widehat{\mathrm{J}}$ is the operator of angular momentum defined in Sec.2.1.
+
+\subsection*{4.19. DEFINITIONS OF $D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)$ BY OTHER AUTHORS}
+Different authors use somewhat different definitions of the rotation matrix. The main differences are in the following:\\
+(a) in using right- or left-handed coordinate system;\\
+(b) in rotating either coordinate system or physical body;\\
+(c) in using various definitions of the Euler angles $\alpha, \beta, \gamma$, namely,\\
+(i) choosing different rotation axes,\\
+(ii) choosing a different order of rotations, and\\
+(iii) defining rotation either in a right-handed or left-handed sense;\\
+(d) in considering transformations either of covariant or of contravariant components;\\
+(e) in choosing various transformation rules for irreducible tensors;\\
+(f) in accepting different phases of non-diagonal elements in Eqs. 4.2(4) and 4.2(5).
+
+The Wigner $D$-functions used in this book coincide with those defined by Edmonds (Ref. [64]), Rose (Ref. [30]), Newton (Ref. [28]) and some other authors. The relations between these $D$-functions and corresponding functions of other authors are listed in Table 4.2.
+
+\subsection*{4.20. SPECIAL CASES OF $d_{M M^{\prime}}^{J}(\beta)$ FOR PARTICULAR $J, M$ AND $M^{\prime}$}
+General expressions for the $D$-functions, Eqs. 4.3(2)-(5), may be reduced to simple closed forms for particular values of $J$. Explicit forms of $d_{M M^{\prime}}^{J}(\beta)$ for $J \leq 5$ are presented in Tables 4.3-4.12. $d_{M M^{\prime}}^{J}(\beta)$ are given in terms of either $\cos \beta$ and $\sin \beta$ (if $J$ is integer), or $\cos (\beta / 2)$ and $\sin (\beta / 2)$ (if $J$ is half-integer). Expressions for $d_{M M^{\prime}}^{J}(\beta)$ for $J \geq 5 / 2$ are presented for $M \geq 0$ and $\left|M^{\prime}\right| \leq M$ only. For $M<0$ and $\left|M^{\prime}\right|>M$ one can obtain $d_{M M^{\prime}}^{J}(\beta)$ using the symmetry properties (Sec. 4.4).
+
+Explicit forms of $d_{M M^{\prime}}^{J}(\beta)$ with $J \leq 6$ are also given by Buckmaster (Ref. [116]), and Wolters (Ref. [129]).\\
+Extensive numerical tables of $d_{M M^{\prime}}^{J}(\beta)$ for $J \leq 13$ (integer and half-integer) may be found in Behkami (Ref. [114]).
+
+\subsection*{4.21. TABLES OF $d_{M M^{\prime}}^{J}(\beta)$ FOR $\beta=\pi / 2$}
+Values of the $d_{M M^{\prime}}^{J}(\beta)$-functions for $\beta=\pi / 2$ and $J=1 / 2,1,3 / 2,2,5 / 2,3,7 / 2,4,9 / 2,5$ are given in Tables 4.13-4.22.
+
+\subsection*{4.22. SPECIAL CASES OF $U_{M M^{\prime}}^{J}(\omega ; \Theta, \Phi)$}
+Explicit forms of $U_{M M^{\prime}}^{J}(\omega ; \Theta, \Phi)$ for $J=1 / 2,1,3 / 2,2$ are given in Tables 4.23-4.26.
+
+\begin{table}[h]
+\begin{center}
+\captionsetup{labelformat=empty}
+\caption{Table 4.2.\\
+Definitions of the Rotation Matrix by Other Authors.}
+\begin{tabular}{|l|l|l|l|}
+\hline
+Reference & Rotation Operator & Transformation Form & Relation between Referred Function (left) and Function of this Book (right) \\
+\hline
+Edmonds $\left[{ }^{16}\right]$ & $e^{-i \alpha f_{z}^{f}} e^{-i \beta f_{y}} e^{-i \dagger f_{z}}$ & $\Psi_{J M^{\prime}}\left(\vartheta^{\prime}, \varphi^{\prime}\right)=\sum_{M} \Psi_{J M}(\vartheta, \varphi) D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)$ & $D_{M M^{\prime}}^{(J)}(\alpha, \beta, \gamma)=D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)$ \\
+\hline
+Rose [ ${ }^{31}$ ] & The same & The same & The same \\
+\hline
+Brink and Satcher [ ${ }^{9}$ ] & » » & » » & » » \\
+\hline
+Messiah [25] & » » & ৯ » & » » \\
+\hline
+Tinkham [ ${ }^{39}$ ] & » " & " " & » " \\
+\hline
+Newton [ ${ }^{28}$ ] & " " & " " & » " \\
+\hline
+Baldin et al [ ${ }^{3}$ ] & " » & » » & " " \\
+\hline
+De-Shalit and Talmi [ ${ }^{32}$ ] & " " & » " & " " \\
+\hline
+Dolginov $\left[{ }^{14}\right]$ & $e^{i \alpha f_{g}} e^{i \beta f_{y}} e^{i \gamma f_{g}}$ & $\Psi_{J M}(\vartheta, \varphi)=\sum_{M^{\prime}} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma) \Psi_{J M^{\prime}}\left(\vartheta^{\prime}, \varphi^{\prime}\right)$ & $D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)=D_{M M^{\prime}}^{J}(-\alpha,-\beta,-\gamma)$ \\
+\hline
+Davydov [ ${ }^{12}$ ] & The same & The same & The same \\
+\hline
+Bohr and Mottelson [ ${ }^{8}$ ] & " " & $\Psi_{J M}\left(\vartheta^{\prime}, \varphi^{\prime}\right)=\sum_{M} \Psi_{J M}(\vartheta, \varphi) D_{M M^{\prime}}^{J^{*}}(\alpha, \beta, \gamma)$ & $D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)=D_{M M^{\prime}}^{J *}(\alpha, \beta, \gamma)$ \\
+\hline
+Wigner [ ${ }^{43}$ ] & » » &  & $D^{J}((\alpha, \beta, \gamma))_{M M^{\prime}}=D_{M M^{\prime}}^{J}(-\alpha,-\beta,-\gamma)$ \\
+\hline
+Rose [ ${ }^{30}$ ] & $e^{i \alpha f_{z}} e^{i \beta f_{y}} e^{i \gamma_{z}^{\beta}}$ & $\Psi_{J M^{\prime}}\left(\vartheta^{\prime}, \varphi^{\prime}\right)=\sum_{M} \Psi_{J M}(\vartheta, \varphi) D_{M M^{\prime}}^{(J)}(\alpha, \beta, \gamma)$ & $D_{M M^{\prime}}^{(J)}(\alpha, \beta, \gamma)=D_{M M^{\prime}}^{J}(-\alpha,-\beta,-\gamma)$ \\
+\hline
+Edmonds [ ${ }^{64}$ ] & The same & The same & The same \\
+\hline
+Fano and Racah [ ${ }^{18}$ ] & » " & » » & » » \\
+\hline
+Berestetskii et al. [ ${ }^{6}$ ] & " " & $\Psi_{J M}(\vartheta, \varphi)=\sum_{M^{\prime}} \Psi_{J M^{\prime}}\left(\vartheta^{\prime}, \varphi^{\prime}\right) D_{M^{\prime} M}^{(J)}(\alpha, \beta, \gamma)$ & $D_{M M^{\prime}}^{(J)}(\alpha, \beta, \gamma)=D_{M M^{\prime}}^{J}(-\gamma,-\beta,-\alpha)$ \\
+\hline
+Gel'fand et al. $\left[{ }^{20}\right]$ & $e^{-i \alpha \hat{f}_{x}} e^{-i \beta \hat{f}_{x}} e^{-i \gamma \hat{f}_{z}}$ &  & $T_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)=(-i)^{M-M^{\prime}} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)$ \\
+\hline
+Lubarskii $\left[{ }^{26}\right]$ & The same &  & $D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)=(-i)^{M-M^{\prime}} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)$ \\
+\hline
+Vilenkin [ ${ }^{41}$ ] & » » &  & $t_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)=(-i)^{M-M^{\prime}} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)$ \\
+\hline
+Yutsis and Bandzaitis ${ }^{45}$ ] & » » & $\Psi_{J M^{\prime}}\left(\vartheta^{\prime}, \varphi^{\prime}\right)=\sum_{M} D_{M^{\prime} M}^{(J)}(\alpha, \beta, \gamma) \Psi_{J M}(\vartheta, \varphi)$ & $D_{M M^{\prime}}^{(J)}(\alpha, \beta, \gamma)=i^{M-M^{\prime}} D_{M M^{\prime}}^{J^{*}}(\alpha, \beta, \gamma)$ \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+Tables 4.3. - 4.12. Explicit forms of $d_{M M^{\prime}}^{J}(\beta)$.
+
+\begin{table}[h]
+\begin{center}
+\captionsetup{labelformat=empty}
+\caption{Table 4.3.}
+\begin{tabular}{|l|l|l|}
+\hline
+\multicolumn{3}{|c|}{$d_{M M^{\prime}}^{1 / 2}(\beta)$} \\
+\hline
+\backslashbox{M}{$M^{\prime}$} & 1/2 & -1/2 \\
+\hline
+1/2 & $\cos \frac{\beta}{2}$ & $-\sin \frac{\beta}{2}$ \\
+\hline
+$-1 / 2$ & $\sin \frac{\beta}{2}$ & $\cos \frac{\beta}{2}$ \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[h]
+\begin{center}
+\captionsetup{labelformat=empty}
+\caption{Table 4.4.}
+\begin{tabular}{|l|l|l|l|}
+\hline
+\multicolumn{4}{|c|}{$d_{M M^{\prime}}^{1}(\beta)$} \\
+\hline
+\backslashbox{$M$}{$M^{\prime}$} & 1 & 0 & -1 \\
+\hline
+1 & $\frac{1+\cos \beta}{2}$ & $-\frac{\sin \beta}{\sqrt{2}}$ & $\frac{1-\cos \beta}{2}$ \\
+\hline
+0 & $\frac{\sin \beta}{\sqrt{2}}$ & $\cos \beta$ & $-\frac{\sin \beta}{\sqrt{2}}$ \\
+\hline
+-1 & $\frac{1-\cos \beta}{2}$ & $\frac{\sin \beta}{\sqrt{2}}$ & $\frac{1+\cos \beta}{2}$ \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[h]
+\begin{center}
+\captionsetup{labelformat=empty}
+\caption{Table 4.5.\\
+$d_{M M^{\prime}}^{3 / 2}(\beta)$}
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+\backslashbox{M}{$M^{\prime}$} & 3/2 & 1/2 & -1/2 & -3/2 \\
+\hline
+3/2 & $\cos ^{3} \frac{\beta}{2}$ & $-\sqrt{3} \sin \frac{\beta}{2} \cos ^{2} \frac{\beta}{2}$ & $\sqrt{3} \sin ^{2} \frac{\beta}{2} \cos \frac{\beta}{2}$ & $-\sin ^{3} \frac{\beta}{2}$ \\
+\hline
+1/2 & $\sqrt{3} \sin \frac{\beta}{2} \cos ^{2} \frac{\beta}{2}$ & $\cos \frac{\beta}{2}\left(3 \cos ^{2} \frac{9}{2}-2\right)$ & $\sin \frac{\beta}{2}\left(3 \sin ^{2} \frac{\beta}{2}-2\right)$ & $\sqrt{3} \sin ^{2} \frac{\beta}{2} \cos \frac{\beta}{2}$ \\
+\hline
+$-\frac{1}{2}$ & $\sqrt{3} \sin ^{2} \frac{\beta}{2} \cos \frac{\beta}{2}$ & $-\sin \frac{\beta}{2}\left(3 \sin ^{2} \frac{\beta}{2}-2\right)$ & $\cos \frac{\beta}{2}\left(3 \cos ^{2} \frac{\beta}{2}-2\right)$ & $-\sqrt{3} \sin \frac{\beta}{2} \cos ^{2} \frac{\beta}{2}$ \\
+\hline
+$-3 / 2$ & $\sin ^{3} \frac{\beta}{2}$ & $\sqrt{3} \sin ^{2} \frac{\beta}{2} \cos \frac{\beta}{2}$ & $\sqrt{3} \sin \frac{\beta}{2} \cos ^{2} \frac{\beta}{2}$ & $\cos ^{3} \frac{3}{2}$ \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[h]
+\begin{center}
+\captionsetup{labelformat=empty}
+\caption{Table 4.6.\\
+$d_{M M^{\prime}}^{2}(\beta)$}
+\begin{tabular}{|l|l|l|l|l|l|}
+\hline
+\backslashbox{M}{$\boldsymbol{M}^{\boldsymbol{\prime}}$} & 2 & 1 & 0 & -1 & -2 \\
+\hline
+2 & $\frac{(1+\cos \beta)^{2}}{4}$ & $-\frac{\sin \beta(1+\cos \beta)}{2}$ & $\frac{1}{2} \sqrt{\frac{3}{2}} \sin ^{8} \beta$ & $-\frac{\sin \beta(1-\cos \beta)}{2}$ & $\frac{(1-\cos \beta)^{2}}{4}$ \\
+\hline
+1 & $\frac{\sin \beta(1+\cos \beta)}{2}$ & $\frac{2 \cos ^{2} \beta+\cos \beta-1}{2}$ & $-\sqrt{\frac{3}{2}} \sin \beta \cos \beta$ & $-\frac{2 \cos ^{2} \beta-\cos \beta-1}{2}$ & $-\frac{\sin \beta(1-\cos \beta)}{2}$ \\
+\hline
+0 & $\frac{1}{2} \sqrt{\frac{3}{2}} \sin ^{2} \beta$ & $\sqrt{\frac{3}{2}} \sin \beta \cos \beta$ & $\frac{3 \cos ^{2} \beta-1}{2}$ & $-\sqrt{\frac{3}{2}} \sin \beta \cos \beta$ & $\frac{1}{2} \sqrt{\frac{3}{2}} \sin ^{2} \beta$ \\
+\hline
+-1 & $\frac{\sin \beta(1-\cos \beta)}{2}$ & $-\frac{2 \cos ^{2} \beta-\cos \beta-1}{2}$ & $\sqrt{\frac{3}{2}} \sin \beta \cos \beta$ & $\frac{2 \cos ^{2} \beta+\cos \beta-1}{2}$ & $-\frac{\sin \beta(1+\cos \beta)}{2}$ \\
+\hline
+-2 & $\frac{(1-\cos \beta)^{2}}{4}$ & $\frac{\sin \beta(1-\cos \beta)}{2}$ & $\frac{1}{2} \sqrt{\frac{3}{2}} \sin ^{2} \beta$ & $\frac{\sin \beta(1+\cos \beta)}{2}$ & $\frac{(1+\cos \beta)^{2}}{4}$ \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[h]
+\begin{center}
+\captionsetup{labelformat=empty}
+\caption{Table 4.7. $d_{M M^{\prime}}^{5 / 2}(\beta)$}
+\begin{tabular}{|l|l|l|l|}
+\hline
+$M^{\prime}$ & $M=5 / 2$ & $M^{\prime}$ & $M=3 / 2$ \\
+\hline
+5/2 & $\cos ^{5} \frac{\beta}{2}$ & 3/2 & $\cos ^{3} \frac{\beta}{2}\left(1-5 \sin ^{2} \frac{\beta}{2}\right)$ \\
+\hline
+3/2 & $-\sqrt{5} \sin \frac{\beta}{2} \cos ^{4} \frac{\beta}{2}$ & $1 / 2$ & $-\sqrt{2} \sin \frac{\beta}{2} \cos ^{2} \frac{\beta}{2}\left(2-5 \sin ^{2} \frac{\beta}{2}\right)$ \\
+\hline
+1/2 & $\sqrt{10} \sin ^{2} \frac{\beta}{2} \cos ^{3} \frac{\beta}{2}$ & $-1 / 2$ & $-\sqrt{2} \sin ^{2} \frac{\beta}{2} \cos \frac{\beta}{2}\left(2-5 \cos ^{2} \frac{\beta}{2}\right)$ \\
+\hline
+$-1 / 2$ & $-\sqrt{10} \sin ^{3} \frac{\beta}{2} \cos ^{2} \frac{3}{2}$ & $-3 / 2$ & $\sin ^{3} \frac{\beta}{2}\left(1-5 \cos ^{2} \frac{\beta}{2}\right)$ \\
+\hline
+$-3 / 2$ & $\sqrt{5} \sin ^{4} \frac{\beta}{2} \cos \frac{3}{2}$ & $M^{\prime}$ & $M=1 / 2$ \\
+\hline
+-5/2 & $-\sin ^{6} \frac{\beta}{2}$ &  & \( \begin{aligned} & \cos \frac{\beta}{2}\left(3-12 \cos ^{2} \frac{\beta}{2}+10 \cos ^{4} \frac{\beta}{2}\right) \\ & -\sin \frac{\beta}{2}\left(3-12 \sin ^{2} \frac{\beta}{2}+10 \sin ^{4} \frac{\beta}{2}\right) \end{aligned} \) \\
+\hline
+ &  & \begin{tabular}{l}
+1/2 \\
+$-1 / 2$ \\
+\end{tabular} &  \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[h]
+\begin{center}
+\captionsetup{labelformat=empty}
+\caption{Table 4.8.\\
+$d_{M M^{\prime}}^{3}{ }^{(\beta)}$}
+\begin{tabular}{|l|l|l|l|}
+\hline
+$M^{\prime}$ & $M=3$ & $\boldsymbol{M}^{\boldsymbol{\prime}}$ & $M=2$ \\
+\hline
+3 & $\frac{1}{8}(1+\cos \beta)^{3}$ & 0 & $\frac{\sqrt{30}}{4} \sin ^{2} \beta \cos \beta$ \\
+\hline
+2 & $-\frac{\sqrt{6}}{8} \sin \beta(1+\cos \beta)^{2}$ & -1 & $-\frac{\sqrt{10}}{8} \sin 3\left(1+2 \cos \beta-3 \cos ^{2} \beta\right)$ \\
+\hline
+1 & $\frac{\sqrt{15}}{8} \sin ^{2} \beta(1+\cos \beta)$ & -2 & $\frac{1}{4}(1-\cos \beta)^{2}(2+3 \cos \beta)$ \\
+\hline
+0 & $-\frac{\sqrt{5}}{4} \sin ^{3} 8$ & $M^{\prime}$ & $M=1$ \\
+\hline
+-1 & $\frac{\sqrt{15}}{8} \sin ^{2} \beta(1-\cos \beta)$ &  &  \\
+\hline
+-2 & $-\frac{\sqrt{6}}{8} \sin \beta(1-\cos \beta)^{2}$ & 1 & $-\frac{1}{8}(1+\cos \beta)\left(1+10 \cos \beta-15 \cos ^{2} \beta\right)$ \\
+\hline
+-3 & $\frac{1}{\gamma}(1-\cos \beta)^{3}$ & 0 & $\frac{\sqrt{3}}{4} \sin \beta\left(1-5 \cos ^{2} \beta\right)$ \\
+\hline
+ &  & -1 & $-\frac{1}{8}(1-\cos \beta)\left(1-10 \cos \beta-15 \cos ^{2} \beta\right)$ \\
+\hline
+$M^{\prime}$ & $M=2$ &  &  \\
+\hline
+\multirow{2}{*}{\begin{tabular}{l}
+2 \\
+1 \\
+\end{tabular}} & $-\frac{1}{4}(1+\cos \beta)^{2}(2-3 \cos \beta)$ & $M^{\prime}$ & $M=0$ \\
+\hline
+ & $\frac{\sqrt{10}}{8} \sin \beta\left(1-2 \cos \beta-3 \cos ^{2} \beta\right)$ & 0 & $-\frac{1}{2} \cos \beta\left(3-5 \cos ^{2} \beta\right)$ \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[h]
+\begin{center}
+\captionsetup{labelformat=empty}
+\caption{Table 4.9.\\
+$d_{M M^{\prime}}^{7 / 2}(\beta)$}
+\begin{tabular}{|l|l|l|l|}
+\hline
+$M^{\prime}$ & $M=7 / 2$ & $M^{\prime}$ & $M=5 / 2$ \\
+\hline
+$7 / 2$ & $\cos ^{7} \frac{\beta}{2}$ & $-1 / 2$ & $\sqrt{5} \cos ^{2} \frac{\beta}{2} \sin ^{3} \frac{\beta}{2}\left(3-7 \cos ^{2} \frac{\beta}{2}\right)$ \\
+\hline
+5/2 & $-\sqrt{7} \cos ^{6} \frac{\beta}{2} \sin \frac{\beta}{2}$ & -3/2 & $-\sqrt{3} \cos \frac{\beta}{2} \sin ^{4} \frac{\beta}{2}\left(2-7 \cos ^{2} \frac{\beta}{2}\right)$ \\
+\hline
+3/2 & $\sqrt{21} \cos ^{5} \frac{\beta}{2} \sin ^{2} \frac{\beta}{2}$ & -5/2 & $\sin ^{5} \frac{\beta}{2}\left(1-7 \cos ^{2} \frac{\beta}{2}\right)$ \\
+\hline
+1/2 & $-\sqrt{35} \cos ^{4} \frac{\beta}{2} \sin ^{3} \frac{\beta}{2}$ & $M^{\prime}$ & $M=3 / 2$ \\
+\hline
+-1/2 & $\sqrt{35} \cos ^{3} \frac{\beta}{2} \sin ^{4} \frac{\beta}{2}$ &  &  \\
+\hline
+-3/2 & $-\sqrt{21} \cos ^{2} \frac{\beta}{2} \sin ^{5} \frac{\beta}{2}$ & 3/2 & $\cos ^{3} \frac{\beta}{2}\left(10-30 \cos ^{2} \frac{\beta}{2}+21 \cos ^{4} \frac{\beta}{2}\right)$ \\
+\hline
+-5/2 & $\sqrt{7} \cos \frac{\beta}{2} \sin ^{6} \frac{\beta}{2}$ & 1/2 & $-\sqrt{15} \cos ^{2} \frac{\beta}{2} \sin \frac{\beta}{2}\left(2-8 \cos ^{2} \frac{\beta}{2}+7 \cos ^{4} \frac{\beta}{2}\right)$ \\
+\hline
+$-7 / 2$ & $-\sin 7 \frac{\beta}{2}$ & $-1 / 2$ & $\sqrt{15} \cos \frac{\beta}{2} \sin ^{2} \frac{\beta}{2}\left(2-8 \sin ^{2} \frac{\beta}{2}+7 \sin ^{2} \frac{\beta}{2}\right)$ \\
+\hline
+$\boldsymbol{M}^{\boldsymbol{\prime}}$ & $M=5 / 2$ & -3/2 & $-\sin ^{3} \frac{\beta}{2}\left(10-30 \sin ^{3} \frac{\beta}{2}+21 \sin ^{4} \frac{\beta}{2}\right)$ \\
+\hline
+5/2 & $\cos ^{5} \frac{\beta}{2}\left(1-7 \sin ^{2} \frac{\beta}{2}\right)$ & $M^{\prime}$ & $M=1 / 2$ \\
+\hline
+3/2 & $-\sqrt{3} \cos ^{4} \frac{\beta}{2} \sin \frac{\beta}{2}\left(2-7 \sin ^{2} \frac{\beta}{2}\right)$ & 1/2 & $-\cos \frac{\beta}{2}\left(4-30 \cos ^{2} \frac{\beta}{2}+60 \cos ^{4} \frac{\beta}{2}-35 \cos ^{6} \frac{\beta}{2}\right)$ \\
+\hline
+1/2 & $\sqrt{5} \cos ^{3} \frac{\beta}{2} \sin ^{2} \frac{\beta}{2}\left(3-7 \sin ^{2} \frac{\beta}{2}\right)$ & $-\frac{1}{2}$ & $-\sin \frac{\beta}{2}\left(4-30 \sin ^{2} \frac{\beta}{2}+60 \sin ^{4} \frac{\beta}{2}-35 \sin ^{6} \frac{\beta}{2}\right)$ \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+$d_{M M^{\prime}}^{4}(\beta)$
+
+\begin{table}[h]
+\begin{center}
+\captionsetup{labelformat=empty}
+\caption{Table 4.10.}
+\begin{tabular}{|l|l|l|l|}
+\hline
+$M^{\prime}$ & $M=4$ & $M^{\prime}$ & $M=4$ \\
+\hline
+4 & $\frac{1}{16}(1+\cos \beta)^{4}$ & -1 & $-\frac{\sqrt{14}}{8} \sin ^{3} \beta(1-\cos \beta)$ \\
+\hline
+3 & $-\frac{\sqrt{2}}{8} \sin \beta(1+\cos \beta)^{3}$ & -2 & $\frac{\sqrt{7}}{8} \sin ^{2} \beta(1-\cos \beta)^{2}$ \\
+\hline
+2 & $\frac{\sqrt{7}}{8} \sin ^{2} \beta(1+\cos \beta)^{2}$ & -3 & $-\frac{\sqrt{2}}{8} \sin \beta(1-\cos \beta)^{3}$ \\
+\hline
+1 & $-\frac{\sqrt{14}}{8} \sin ^{3} \beta(1+\cos \beta)$ & -4 & $\frac{1}{16}(1-\cos \beta)^{4}$ \\
+\hline
+0 & $\frac{\sqrt{70}}{16} \sin ^{4} \beta$ &  &  \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[h]
+\begin{center}
+\captionsetup{labelformat=empty}
+\caption{Table 4.10. (Cont.)}
+\begin{tabular}{|l|l|l|l|}
+\hline
+$M^{\prime}$ & $M=3$ & $M^{\prime}$ & $M=2$ \\
+\hline
+\multirow[t]{7}{*}{\begin{tabular}{l}
+3 \\
+2 \\
+1 \\
+\end{tabular}} & $-\frac{1}{8}(1+\cos \beta)^{3}(3-4 \cos \beta)$ & \multirow{4}{*}{\begin{tabular}{l}
+0 \\
+-1 \\
+-2 \\
+\end{tabular}} & \multirow{4}{*}{\(
+\begin{gathered}
+-\frac{\sqrt{10}}{8} \sin ^{2} \beta\left(1-7 \cos ^{2} \beta\right) \\
+\frac{\sqrt{2}}{8} \sin \beta(1-\cos \beta)\left(1-7 \cos \beta-14 \cos ^{2} \beta\right) \\
+\frac{1}{4}(1-\cos \beta)^{2}\left(1+7 \cos \beta+7 \cos ^{2} \beta\right)
+\end{gathered}
+\)} \\
+\hline
+ & $\frac{\sqrt{14}}{8} \sin \beta(1+\cos \beta)^{2}(1-2 \cos \beta)$ &  &  \\
+\hline
+ & \( \begin{gathered} -\frac{\sqrt{7}}{8} \sin ^{2} 3(1+\cos \beta)(1-4 \cos \beta) \\ -\frac{\sqrt{35}}{4} \sin ^{3} \beta \cos \beta \end{gathered} \) &  &  \\
+\hline
+ &  &  &  \\
+\hline
+ & \multirow[b]{2}{*}{\begin{tabular}{l}
+$\frac{\sqrt{7}}{8} \sin ^{2} \beta(1-\cos \beta)(1+4 \cos \beta)$ \\
+$-\frac{\sqrt{14}}{8} \sin \beta(1-\cos \beta)^{2}(1+2 \cos \beta)$ \\
+\end{tabular}} & $M^{\prime}$ & $M=1$ \\
+\hline
+\multirow{2}{*}{} &  & 1 & $\frac{1}{8}(1+\cos \beta)\left(3-6 \cos \beta-21 \cos ^{2} \beta+28 \cos ^{3} \beta\right)$ \\
+\hline
+ & $\frac{1}{8}(1-\cos \beta)^{3}(3+4 \cos \beta)$ & 0 & $\frac{\sqrt{5}}{4} \sin \beta \cos \beta\left(3-7 \cos ^{2} \beta\right)$ \\
+\hline
+$M^{\prime}$ & $M=2$ & -1 & $-\frac{1}{8}(1-\cos \beta)\left(3+6 \cos \beta-21 \cos ^{2} \beta-28 \cos ^{3} \beta\right)$ \\
+\hline
+\multirow{2}{*}{\begin{tabular}{l}
+2 \\
+1 \\
+\end{tabular}} & \multirow[b]{2}{*}{\(
+\begin{gathered}
+\frac{1}{4}(1+\cos \beta)^{2}\left(1-7 \cos \beta+7 \cos ^{2} \beta\right) \\
+\frac{\sqrt{2}}{8} \sin \beta(1+\cos 3)\left(1+7 \cos 3-14 \cos ^{2} \beta\right)
+\end{gathered}
+\)} & $M^{\prime}$ & $M=0$ \\
+\hline
+ &  & 0 & $\frac{1}{8}\left(3-30 \cos ^{2} \beta+35 \cos ^{4} \beta\right)$ \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{center}
+\begin{tabular}{|l|l|l|l|}
+\hline
+\multicolumn{4}{|c|}{$d_{M M^{\prime}}^{9 / 2}(\beta)$} \\
+\hline
+$M^{\prime}$ & $M=9 / 2$ & $M^{\prime}$ & $M=7 / 2$ \\
+\hline
+9/2 & $\cos ^{9} \frac{\beta}{2}$ & 7/2 & $\cos ^{7} \frac{\beta}{2}\left(1-9 \sin ^{2} \frac{\beta}{2}\right)$ \\
+\hline
+7/2 & $-3 \cos ^{8} \frac{\beta}{2} \sin \frac{\beta}{2}$ & 5/2 & $-2 \cos ^{6} \frac{\beta}{2} \sin \frac{\beta}{2}\left(2-9 \sin ^{2} \frac{\beta}{2}\right)$ \\
+\hline
+5/2 & $6 \cos ^{2} \frac{\beta}{2} \sin ^{2} \frac{\beta}{2}$ & 3/2 & $2 \sqrt{21} \cos ^{5} \frac{\beta}{2} \sin ^{2} \frac{\beta}{2}\left(1-3 \sin ^{2} \frac{\beta}{2}\right)$ \\
+\hline
+3/2 & $-2 \sqrt{21} \cos ^{6} \frac{\beta}{2} \sin ^{3} \frac{\beta}{2}$ & 1/2 & $-\sqrt{14} \cos ^{4} \frac{\beta}{2} \sin ^{3} \frac{\beta}{2}\left(4-9 \sin ^{2} \frac{\beta}{2}\right)$ \\
+\hline
+1/2 & $3 \sqrt{14} \cos ^{5} \frac{\beta}{2} \sin ^{4} \frac{\beta}{2}$ & -1/2 & $-\sqrt{14} \cos ^{3} \frac{\beta}{2} \sin 4 \frac{\beta}{2}\left(4-9 \cos ^{2} \frac{\beta}{2}\right)$ \\
+\hline
+$-1 / 2$ & $-3 \sqrt{14} \cos ^{4} \frac{\beta}{2} \sin ^{5} \frac{\beta}{2}$ & -3/2 & $2 \sqrt{21} \cos ^{2} \frac{\beta}{2} \sin ^{5} \frac{\beta}{2}\left(1-3 \cos ^{2} \frac{\beta}{2}\right)$ \\
+\hline
+$-3 / 2$ & $2 \sqrt{21} \cos ^{3} \frac{\beta}{2} \sin ^{6} \frac{\beta}{2}$ & -5/2 & $-2 \cos \frac{\beta}{2} \sin ^{6} \frac{\beta}{2}\left(2-9 \cos ^{2} \frac{\beta}{2}\right)$ \\
+\hline
+-5/2 & $-6 \cos ^{2} \frac{\beta}{2} \sin ^{2} \frac{\beta}{2}$ & -7/2 & $\sin ^{7} \frac{\beta}{2}\left(1-9 \cos ^{2} \frac{\beta}{2}\right)$ \\
+\hline
+$-7 / 2$ & $3 \cos \frac{\beta}{2} \sin ^{8} \frac{\beta}{2}$ & $M^{\prime}$ & $M=5 / 2$ \\
+\hline
+-9/2 & $-\sin ^{9} \frac{\beta}{2}$ & 5/2 & $\cos ^{5} \frac{\beta}{2}\left(21-56 \cos ^{2} \frac{\beta}{2}+36 \cos ^{4} \frac{\beta}{2}\right)$ \\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{table}[h]
+\begin{center}
+\captionsetup{labelformat=empty}
+\caption{Table 4.11. (Cont.)}
+\begin{tabular}{|l|l|l|l|}
+\hline
+$M^{\prime}$ & $M=5 / 2$ & $M^{\prime}$ & $M=3 / 2$ \\
+\hline
+3/2 & $-\sqrt{21} \cos ^{4} \frac{\beta}{2} \sin \frac{\beta}{2}\left(5-16 \cos ^{2} \frac{\beta}{2}+12 \cos ^{4} \frac{\beta}{2}\right)$ & 1/2 & $\sqrt{6} \cos ^{2} \frac{\beta}{2} \sin \frac{\beta}{2}\left(5-35 \cos ^{2} \frac{3}{2}+70 \cos ^{4} \frac{3}{2}-42 \cos ^{6} \frac{3}{2}\right)$ \\
+\hline
+1/2 & $\sqrt{14} \cos ^{3} \frac{\beta}{2} \sin ^{2} \frac{\beta}{2}\left(5-20 \cos ^{2} \frac{\beta}{2}+18 \cos ^{4} \frac{\beta}{2}\right)$ & -1/2 & $\sqrt{6} \cos \frac{\beta}{2} \sin ^{2} \frac{\beta}{2}\left(5-35 \sin ^{2} \frac{3}{2}+70 \sin \frac{3}{2}-42 \sin ^{6} \frac{3}{2}\right)$ \\
+\hline
+$-1 / 2$ & $-\sqrt{14} \cos ^{2} \frac{\beta}{2} \sin ^{3} \frac{\beta}{2}\left(5-20 \sin ^{2} \frac{\beta}{2}+18 \sin ^{4} \frac{\beta}{2}\right)$ & -3/2 & $-\sin ^{8} \frac{\beta}{2}\left(20-105 \sin ^{2} \frac{\beta}{2}+168 \sin ^{4} \frac{\beta}{2}-84 \sin ^{6} \frac{\beta}{2}\right)$ \\
+\hline
+-3/2 & $\sqrt{21} \cos \frac{\beta}{2} \sin ^{4} \frac{\beta}{2}\left(5-16 \sin ^{2} \frac{\beta}{2}+12 \sin \mathrm{a} \frac{\beta}{2}\right)$ & $M^{\prime}$ & $M=1 / 2$ \\
+\hline
+-5/2 & $-\sin ^{5} \frac{\beta}{2}\left(21-56 \sin ^{2} \frac{\beta}{2}+36 \sin ^{4} \frac{\beta}{2}\right)$ & \multirow{2}{*}{\begin{tabular}{l}
+1/2 \\
+$-1 / 2$ \\
+\end{tabular}} & \( \begin{gathered} \cos \frac{\beta}{2}\left(5-60 \cos ^{2} \frac{\beta}{2}+210 \cos ^{4} \frac{3}{2}-280 \cos ^{6} \frac{3}{2}+\right. \\ \left.+126 \cos ^{8} \frac{3}{2}\right) \end{gathered} \) \\
+\hline
+3/2 & $-\cos ^{3} \frac{\beta}{2}\left(20-105 \cos ^{2} \frac{\beta}{2}+168 \cos ^{4} \frac{\beta}{2}-84 \cos ^{6} \frac{\beta}{2}\right)$ &  & \( \begin{gathered} -\sin \frac{\beta}{2}\left(5-60 \sin ^{2} \frac{\beta}{2}+210 \sin ^{4} \frac{\beta}{2}-280 \sin ^{6} \frac{\beta}{2}+\right. \\ \left.+126 \sin ^{8} \frac{\beta}{2}\right) \end{gathered} \) \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[h]
+\begin{center}
+\captionsetup{labelformat=empty}
+\caption{Table 4.12. $d_{M M^{\prime}}^{5}(\beta)$}
+\begin{tabular}{|l|l|l|l|}
+\hline
+$M^{\prime}$ & $M=5$ & $M^{\prime}$ & $M=4$ \\
+\hline
+5 & $-\frac{\sqrt{10}}{32} \sin \beta(1+\cos \beta)^{4}$ & 3 & \multirow{2}{*}{} \\
+\hline
+3 & $\frac{3 \sqrt{5}}{32} \sin ^{2} \beta(1+\cos \beta)^{3}$ & 2 &  \\
+\hline
+2 & \( -\frac{\sqrt{30}}{16} \sin ^{3} \beta(1+\cos \beta)^{2} \) & 1 & \( \frac{\sqrt{21}}{16} \sin ^{3} \beta(1+\cos \beta)(1-5 \cos \beta) \) \\
+\hline
+1 & \( \frac{\sqrt{210}}{32} \sin ^{4} \beta(1+\cos \beta) \) & 0 & \( \begin{gathered} \frac{3 \sqrt{70}}{16} \sin ^{4} \beta \cos \beta \\ -\frac{\sqrt{21}}{16} \sin ^{3} 3(1-\cos \beta)(1+5 \cos \beta) \end{gathered} \) \\
+\hline
+ &  & -1 & $-\frac{\sqrt{21}}{16} \sin ^{3} 3(1-\cos \beta)(1+5 \cos \beta)$ \\
+\hline
+-1 & $\frac{\sqrt{210}}{32} \sin ^{4} \beta(1-\cos \beta)$ & -2 & \( \frac{2 \sqrt{3}}{16} \sin ^{2} 3(1-\cos \beta)^{2}(2+5 \cos \beta) \) \\
+\hline
+-2 & \( -\frac{\sqrt{30}}{16} \sin ^{3} \beta(1-\cos \beta)^{2} \) & -3 & \( -\frac{3 \sqrt{2}}{32} \sin 3(1-\cos \beta)^{3}(3+5 \cos \beta) \) \\
+\hline
+-3 & \( \frac{3 \sqrt{5}}{32} \sin ^{2} \beta(1-\cos \beta)^{3} \) & -4 & \begin{tabular}{l}
+$\frac{1}{16}(1-\cos \beta)^{4}(4+5 \cos \beta)$ \\
+$\frac{1}{16}(1-\cos \beta)^{4}(4+5 \cos \beta)$ \\
+\end{tabular} \\
+\hline
+\multirow{2}{*}{\begin{tabular}{l}
+-4 \\
+$-5$ \\
+\end{tabular}} & \( -\frac{\sqrt{10}}{32} \sin \beta(1-\cos \beta)^{4} \) & $M^{\prime}$ & $M=3$ \\
+\hline
+ & $\frac{1}{32}(1-\cos 3)^{5}$ & 3 & $\frac{1}{32}(1+\cos 3)^{3}\left(13-54 \cos 3+45 \cos ^{2} 3\right)$ \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[h]
+\begin{center}
+\captionsetup{labelformat=empty}
+\caption{Table 4.12. (Cont.)}
+\begin{tabular}{|l|l|l|l|}
+\hline
+$M^{\prime}$ & $M=3$ & $M^{\prime}$ & $M=2$ \\
+\hline
+2 & $-\frac{\sqrt{6}}{16} \sin \beta(1+\cos \beta)^{2}\left(1-12 \cos \beta+15 \cos ^{2} \beta\right)$ & -1 & $-\frac{1}{4}(1-\cos \beta)^{2}\left(1-3 \cos \beta-18 \cos ^{2} 3-15 \cos ^{3} \beta\right)$ \\
+\hline
+0 & $\frac{\sqrt{35}}{16} \sin ^{3} 3\left(1-9 \cos ^{2} 3\right)$ & $M^{\prime}$ & $M=1$ \\
+\hline
+-1 & $-\frac{\sqrt{42}}{32} \sin ^{2} \beta(1-\cos \beta)\left(1-6 \cos \beta-15 \cos ^{2} \beta\right)$ & \multirow{3}{*}{\begin{tabular}{l}
+1 \\
+-1 \\
+\end{tabular}} & \( \begin{gathered} \frac{1}{16}(1+\cos \beta)\left(1+28 \cos \beta-42 \cos ^{2} \beta-\right. \\ \left.-84 \cos ^{3} \beta+105 \cos ^{4} \beta\right) \end{gathered} \) \( \begin{gathered} \frac{1}{16}(1+\cos \beta)\left(1+28 \cos \beta-42 \cos ^{2} \beta-\right. \\ \left.-84 \cos ^{3} \beta+105 \cos ^{4} \beta\right) \end{gathered} \) \\
+\hline
+-3 & $\frac{1}{32}(1-\cos \beta)^{3}\left(13+54 \cos \beta+45 \cos ^{2} \beta\right)$ &  & $-\frac{\sqrt{30}}{16} \sin \beta\left(1-14 \cos ^{2} \beta+21 \cos ^{4} \beta\right)$ \\
+\hline
+$M^{\prime}$ & $M=2$ &  & \( \begin{gathered} \frac{1}{16}(1-\cos \beta)\left(1-28 \cos \beta-42 \cos ^{2} \beta+\right. \\ \left.+84 \cos ^{3} \beta+105 \cos ^{4} \beta\right) \end{gathered} \) \\
+\hline
+2 & \multirow{2}{*}{\(
+\begin{gathered}
+\frac{1}{4}(1+\cos \beta)^{2}\left(1+3 \cos \beta-18 \cos ^{2} \beta+15 \cos ^{3} \beta\right) \\
+-\frac{\sqrt{7}}{8} \sin \beta(1+\cos \beta)\left(1-3 \cos \beta-9 \cos ^{2} \beta+15 \cos ^{3} \beta\right) \\
+-\frac{\sqrt{210}}{8} \sin ^{2} \beta \cos \beta\left(1-3 \cos ^{2} \beta\right)
+\end{gathered}
+\)} & $\boldsymbol{M}^{\boldsymbol{\prime}}$ & $M=0$ \\
+\hline
+0 &  & 0 & $\frac{1}{8} \cos \beta\left(15-70 \cos ^{2} \beta+63 \cos ^{4} \beta\right)$ \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+Tables 4.13. - 4.22. Numerical Values of $d_{M M^{\prime}}^{J}(\pi / 2)$.\\
+$d_{M M^{\prime}}^{1 / 2}\left(\frac{\pi}{2}\right)$
+
+\begin{table}[h]
+\begin{center}
+\captionsetup{labelformat=empty}
+\caption{Table 4.13.}
+\begin{tabular}{c|r|r}
+\hline
+$M$ & $1 / 2$ & $-1 / 2$ \\
+\hline
+$1 / 2$ & $1 / \sqrt{2}$ & $-1 / \sqrt{2}$ \\
+$-1 / 2$ & $1 / \sqrt{2}$ & $1 / \sqrt{2}$ \\
+\end{tabular}
+\end{center}
+\end{table}
+
+$d_{M M^{\prime}}^{1}\left(\frac{\pi}{2}\right)$
+
+\begin{table}[h]
+\begin{center}
+\captionsetup{labelformat=empty}
+\caption{Table 4.14.}
+\begin{tabular}{r|l|c|c}
+\hline
+$M$ & 1 & 0 & -1 \\
+\hline
+$M$ &  &  &  \\
+\hline
+1 & $1 / 2$ & $-1 / \sqrt{2}$ & $1 / 2$ \\
+0 & $1 / \sqrt{2}$ & 0 & $-1 / \sqrt{2}$ \\
+-1 & $1 / 2$ & $1 / \sqrt{2}$ & $1 / 2$ \\
+\end{tabular}
+\end{center}
+\end{table}
+
+$$
+d_{M M^{\prime}}^{3 / 2}\left(\frac{\pi}{2}\right)
+$$
+
+\begin{table}[h]
+\begin{center}
+\captionsetup{labelformat=empty}
+\caption{Table 4.15.}
+\begin{tabular}{r|r|r|r|r}
+\hline
+\multicolumn{1}{c|}{$M^{\prime}$} & $3 / 2$ & $1 / 2$ & $-1 / 2$ & \multicolumn{1}{|c}{$-3 / 2$} \\
+\hline
+$3 / 2$ & $1 / 2 \sqrt{2}$ & $-\sqrt{3} / 2 \sqrt{2}$ & $\sqrt{3} / 2 \sqrt{2}$ & $-1 / 2 \sqrt{2}$ \\
+$1 / 2$ & $\sqrt{3} / 2 \sqrt{2}$ & $-1 / 2 \sqrt{2}$ & $-1 / 2 \sqrt{2}$ & $\sqrt{3} / 2 \sqrt{2}$ \\
+$-1 / 2$ & $\sqrt{3} / 2 \sqrt{2}$ & $1 / 2 \sqrt{2}$ & $-1 / 2 \sqrt{2}$ & $-\sqrt{3} / 2 \sqrt{2}$ \\
+$-3 / 2$ & $1 / 2 \sqrt{2}$ & $\sqrt{3} / 2 \sqrt{2}$ & $\sqrt{3} / 2 \sqrt{2}$ & $1 / 2 \sqrt{2}$ \\
+\end{tabular}
+\end{center}
+\end{table}
+
+$d_{M M^{\prime}}^{2}\left(\frac{\pi}{2}\right)$
+
+\begin{table}[h]
+\begin{center}
+\captionsetup{labelformat=empty}
+\caption{Table 4.16.}
+\begin{tabular}{r|c|c|c|c|c}
+\hline
+$M$ & 2 & 1 & 0 & -1 & -2 \\
+\hline
+2 & $1 / 4$ & $-1 / 2$ & $\sqrt{3} / 2 \sqrt{2}$ & $-1 / 2$ & $1 / 4$ \\
+1 & $1 / 2$ & $-1 / 2$ & 0 & $1 / 2$ & $-1 / 2$ \\
+0 & $\sqrt{3} / 2 \sqrt{2}$ & 0 & $-1 / 2$ & 0 & $\sqrt{3} / 2 \sqrt{2}$ \\
+-1 & $1 / 2$ & $1 / 2$ & 0 & $-1 / 2$ & $-1 / 2$ \\
+-2 & $1 / 4$ & $1 / 2$ & $\sqrt{3} / 2 \sqrt{2}$ & $1 / 2$ & $1 / 4$ \\
+\end{tabular}
+\end{center}
+\end{table}
+
+$d_{M M^{\prime}}^{5 / 2}\left(\frac{\pi}{2}\right)$
+
+\begin{table}[h]
+\begin{center}
+\captionsetup{labelformat=empty}
+\caption{Table 4.17.}
+\begin{tabular}{|l|l|l|l|l|l|l|}
+\hline
+\backslashbox{M}{$M^{\prime}$} & 5/2 & 3/2 & 1/2 & -1/2 & -3/2 & $-5 / 2$ \\
+\hline
+5/2 & $1 / 4 \sqrt{2}$ & $-\sqrt{5} / 4 \sqrt{2}$ & $\sqrt{5} / 4$ & $-\sqrt{5} / 4$ & $\sqrt{5} / 4 \sqrt{2}$ & $-1 / 4 \sqrt{2}$ \\
+\hline
+3/2 & $\sqrt{5} / 4 \sqrt{2}$ & $-3 / 4 \sqrt{2}$ & 1/4 & 1/4 & $-3 / 4 \sqrt{2}$ & $\sqrt{5} / 4 \sqrt{2}$ \\
+\hline
+1/2 & $\sqrt{5} / 4$ & $-1 / 4$ & $-1 / 2 \sqrt{2}$ & $1 / 2 \sqrt{2}$ & 1/4 & $-\sqrt{5} / 4$ \\
+\hline
+$-1 / 2$ & $\sqrt{5} / 4$ & 1/4 & $-1 / 2 \sqrt{2}$ & $-1 / 2 \sqrt{2}$ & 1/4 & $\sqrt{5} / 4$ \\
+\hline
+$-3 / 2$ & $\sqrt{5} / 4 \sqrt{2}$ & $3 / 4 \sqrt{2}$ & 1/4 & $-1 / 4$ & $-3 / 4 \sqrt{2}$ & $-\sqrt{5} / 4 \sqrt{2}$ \\
+\hline
+-5/2 & $1 / 4 \sqrt{2}$ & $\sqrt{5} / 4 \sqrt{2}$ & $\sqrt{5} / 4$ & $\sqrt{5} / 4$ & $\sqrt{5} / 4 \sqrt{2}$ & $1 / 4 \sqrt{ } \overline{2}$ \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+$d_{M M^{\prime}}^{3}\left(\frac{\pi}{2}\right)$
+
+\begin{table}[h]
+\begin{center}
+\captionsetup{labelformat=empty}
+\caption{Table 4.18.}
+\begin{tabular}{|l|l|l|l|l|l|l|l|}
+\hline
+\backslashbox{M}{$\boldsymbol{M}^{\boldsymbol{\prime}}$} & 3 & 2 & 1 & 0 & -1 & -2 & -3 \\
+\hline
+3 & 1/8 & $-\sqrt{3} / 4 \sqrt{2}$ & $\sqrt{3 \cdot 5} / 8$ & $-\sqrt{5} / 4$ & $\sqrt{3 \cdot 5} / 8$ & $-\sqrt{3} / 4 \sqrt{2}$ & 1/8 \\
+\hline
+2 & $\sqrt{3} / 4 \sqrt{2}$ & -1/2 & $\sqrt{5} / 4 \sqrt{2}$ & 0 & $-\sqrt{5} / 4 \sqrt{2}$ & 1/2 & $-\sqrt{3} / 4 \sqrt{2}$ \\
+\hline
+1 & $\sqrt{3 \cdot 5} / 8$ & $-\sqrt{5} / 4 \sqrt{2}$ & $-1 / 8$ & $\sqrt{3} / 4$ & -1/8 & $-\sqrt{5} / 4 \sqrt{2}$ & $\sqrt{3 \cdot 5} / 8$ \\
+\hline
+0 & $\sqrt{5} / 4$ & 0 & $-\sqrt{3} / 4$ & 0 & $\sqrt{3} / 4$ & 0 & $-\sqrt{5} / 4$ \\
+\hline
+-1 & $\sqrt{3 \cdot 5} / 8$ & $\sqrt{5} / 4 \sqrt{2}$ & -1/8 & $-\sqrt{3} / 4$ & -1/8 & $\sqrt{5} / 4 \sqrt{2}$ & $\sqrt{3 \cdot 5} / 8$ \\
+\hline
+-2 & $\sqrt{3} / 4 \sqrt{2}$ & 1/2 & $\sqrt{5} / 4 \sqrt{2}$ & 0 & $-\sqrt{5} / 4 \sqrt{2}$ & $-1 / 2$ & $-\sqrt{3} / 4 \sqrt{2}$ \\
+\hline
+-3 & 1/8 & $\sqrt{3} / 4 \sqrt{2}$ & $\sqrt{3 \cdot 5} / 8$ & $\sqrt{5} / 4$ & $\sqrt{3 \cdot 5} / 8$ & - $\sqrt{3} / 4 \sqrt{2}$ & 1/8 \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+$$
+d_{M M^{\prime}}^{7 / 2}\left(\frac{\pi}{2}\right)
+$$
+
+\begin{table}[h]
+\begin{center}
+\captionsetup{labelformat=empty}
+\caption{Table 4.19.}
+\begin{tabular}{|l|l|l|l|l|l|l|l|l|}
+\hline
+\backslashbox{M}{$\boldsymbol{M}^{\boldsymbol{\prime}}$} & 7/2 & 5/2 & 3/2 & 1/2 & $-1 / 2$ & $-3 / 2$ & -5/2 & $-7 / 2$ \\
+\hline
+7/2 & $\frac{1}{8} \sqrt{2}$ & $-\sqrt{7} / 8 \sqrt{2}$ & $\sqrt{3 \cdot 7} / 8 \sqrt{2}$ & $-\sqrt{5 \cdot 7} / 8 \sqrt{2}$ & $\sqrt{5 \cdot 7} / 8 \sqrt{2}$ & $-\sqrt{3 \cdot 7} / 8 \sqrt{2}$ & $\sqrt{7} / 8 \sqrt{2}$ & $-1 / 8 \sqrt{2}$ \\
+\hline
+5/2 & $\sqrt{7} / 8 \sqrt{2}$ & $-5 / 8 \sqrt{2}$ & $3 \sqrt{3} / 8 \sqrt{2}$ & $-\sqrt{5} / 8 \sqrt{2}$ & $-\sqrt{5} / 8 \sqrt{2}$ & $3 \sqrt{3} / 8 \sqrt{2}$ & $-5 / 8 \sqrt{2}$ & $\sqrt{7} / 8 \sqrt{2}$ \\
+\hline
+3/2 & $\sqrt{3 \cdot 7} / 8 \sqrt{2}$ & $-3 \sqrt{3} / 8 \sqrt{2}$ & $1 / 8 \sqrt{2}$ & $\sqrt{3 \cdot 5} / 8 \sqrt{2}$ & $-\sqrt{3.5} / 8 \sqrt{2}$ & $-1 / 8 \sqrt{2}$ & $3 \sqrt{3} / 8 \sqrt{2}$ & $-\sqrt{3 \cdot 7} / 8 \sqrt{2}$ \\
+\hline
+1/2 & $\sqrt{5 \cdot 7} / 8 \sqrt{2}$ & $-\sqrt{5} / 8 \sqrt{2}$ & $-\sqrt{3 \cdot 5} / 8 \sqrt{2}$ & $3 / 8 \sqrt{2}$ & $3 / 8 \sqrt{2}$ & $-\sqrt{3 \cdot 5} / 8 \sqrt{2}$ & $-\sqrt{5} / 8 \sqrt{2}$ & $\sqrt{5 \cdot 7} / 8 \sqrt{2}$ \\
+\hline
+$-1 / 2$ & $\sqrt{5 \cdot 7} / 8 \sqrt{2}$ & $\sqrt{5} / 8 \sqrt{2}$ & $-\sqrt{3 \cdot 5} / 8 \sqrt{2}$ & $-3 / 8 \sqrt{2}$ & $3 / 8 \sqrt{2}$ & $\sqrt{3 \cdot 5} / 8 \sqrt{2}$ & $-\sqrt{5} / 8 \sqrt{2}$ & $-\sqrt{5 \cdot 7} / 8 \sqrt{2}$ \\
+\hline
+-3/2 & $\sqrt{3 \cdot 7} / 8 \sqrt{2}$ & $3 \sqrt{3} / 8 \sqrt{2}$ & $\frac{1}{8} \sqrt{2}$ & $-\sqrt{3 \cdot 5} / 8 \sqrt{2}$ & $-\sqrt{3 \cdot 5} / 8 \sqrt{2}$ & $\frac{1}{8} \sqrt{2}$ & $3 \sqrt{3} / 8 \sqrt{2}$ & $\sqrt{3.7} / 8 \sqrt{2}$ \\
+\hline
+$-5 / 2$ & $\sqrt{7} / 8 \sqrt{2}$ & $5 / 8 \sqrt{2}$ & $3 \sqrt{3} / 8 \sqrt{2}$ & $\sqrt{5} / 8 \sqrt{2}$ & $-\sqrt{5} / 8 \sqrt{2}$ & $-3 \sqrt{3} / 8 \sqrt{2}$ & $-5 / 8 \sqrt{2}$ & $-\sqrt{7} / 8 \sqrt{2}$ \\
+\hline
+$-7 / 2$ & $\frac{1}{8} \sqrt{2}$ & $\sqrt{7} / 8 \sqrt{2}$ & $\sqrt{3 \cdot 7} / 8 \sqrt{2}$ & $\sqrt{5 \cdot 7} / 8 \sqrt{2}$ & $\sqrt{5 \cdot 7} / 3 \sqrt{2}$ & $\sqrt{3 \cdot 7} / 8 \sqrt{2}$ & $\sqrt{7} / 8 \sqrt{2}$ & $1 / 8 \sqrt{2}$ \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+Table 4.20.\\
+$d_{M M^{\prime}}^{4}\left(\frac{\pi}{2}\right)$
+
+\begin{center}
+\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|}
+\hline
+\slashbox{$M^{\prime}$}{$M$} & 4 & 3 & 2 & 1 & 0 & -1 & -2 & -3 & -4 \\
+\hline
+4 & 1/16 & $-1 / 4 \sqrt{2}$ & $\sqrt{7} / 8$ & $-\sqrt{7} / 4 \sqrt{2}$ & $\sqrt{5 \cdot 7} / 8 \sqrt{2}$ & $-\sqrt{7} / 4 \sqrt{2}$ & $\sqrt{7} / 8$ & $-1 / 4 \sqrt{2}$ & 1/16 \\
+\hline
+3 & $\frac{1}{4} \sqrt{2}$ & $-3 / 8$ & $\sqrt{7} / 4 \sqrt{2}$ & $-\sqrt{7} / 8$ & 0 & $\sqrt{7} / 8$ & $-\sqrt{7} / 4 \sqrt{2}$ & 3/8 & $-1 / 4 \sqrt{2}$ \\
+\hline
+2 & $\sqrt{7} / 8$ & $-\sqrt{7} / 4 \sqrt{2}$ & 1/4 & $1 / 4 \sqrt{2}$ & $-\sqrt{5} / 4 \sqrt{2}$ & $1 / 4 \sqrt{2}$ & 1/4 & $-\sqrt{7} / 4 \sqrt{2}$ & $\sqrt{7} / 8$ \\
+\hline
+1 & $\sqrt{7} / 4 \sqrt{2}$ & $-\sqrt{7} / 8$ & $-1 / 4 \sqrt{2}$ & 3/8 & 0 & $-3 / 8$ & $1 / 4 \sqrt{2}$ & $\sqrt{7} / 8$ & $-\sqrt{7} / 4 \sqrt{2}$ \\
+\hline
+0 & $\sqrt{5 \cdot 7} / 8 \sqrt{2}$ & 0 & $-\sqrt{5} / 4 \sqrt{2}$ & 0 & 3/8 & 0 & $-\sqrt{5} / 4 \sqrt{2}$ & 0 & $\sqrt{5 \cdot 7} / 8 \sqrt{2}$ \\
+\hline
+-1 & $\sqrt{7} / 4 \sqrt{2}$ & $\sqrt{7} / 8$ & $-1 / 4 \sqrt{2}$ & $-3 / 8$ & 0 & 3/8 & $1 / 4 \sqrt{2}$ & $-\sqrt{7} / 8$ & $-\sqrt{7} / 4 \sqrt{2}$ \\
+\hline
+-2 & $\sqrt{7} / 8$ & $\sqrt{7} / 4 \sqrt{2}$ & 1/4 & $-1 / 4 \sqrt{2}$ & $-\sqrt{5} / 4 \sqrt{2}$ & $-1 / 4 \sqrt{2}$ & 1/4 & $\sqrt{7} / 4 \sqrt{2}$ & $\sqrt{7} / 8$ \\
+\hline
+-3 & $1 / 4 \sqrt{2}$ & 3/8 & $\sqrt{7} / 4 \sqrt{2}$ & $\sqrt{7} / 8$ & 0 & $-\sqrt{7} / 8$ & $-\sqrt{7} / 4 \sqrt{2}$ & $-3 / 8$ & $-1 / 4 \sqrt{2}$ \\
+\hline
+-4 & 1/16 & $1 / 4 \sqrt{2}$ & $\sqrt{7} / 8$ & $\sqrt{7} / 4 \sqrt{2}$ & $\sqrt{5 \cdot 7} / 8 \sqrt{2}$ & $\sqrt{7} / 4 \sqrt{2}$ & $\sqrt{7} / 8$ & $1 / 4 \sqrt{2}$ & 1/16 \\
+\hline
+\end{tabular}
+\end{center}
+
+Table 4.21.\\
+$d_{M M^{\prime}}^{9 / 2}\left(\frac{\pi}{2}\right)$
+
+\begin{center}
+\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|}
+\hline
+M & 9/2 & 7/2 & 5/2 & 3/2 & 1/2 & $-1 \frac{7}{2}$ & -3/2 & -5/2 & $-7 / 2$ & -9/2 \\
+\hline
+9/2 & $1 / 16 \sqrt{2}$ & $-3 / 16 \sqrt{2}$ & $3 / 8 \sqrt{2}$ & $-\sqrt{3 \cdot 7} / 8 \sqrt{2}$ & $3 \sqrt{7} / 16$ & $-3 \sqrt{7} / 16$ & $\sqrt{3 \cdot 7} / 8 \sqrt{2}$ & $-3 / 8 \sqrt{2}$ & $3 / 16 \sqrt{2}$ & $-1 / 16 \sqrt{2}$ \\
+\hline
+7/2 & $3 / 16 \sqrt{2}$ & $-7 / 16 \sqrt{2}$ & $5 / 8 \sqrt{2}$ & $-\sqrt{3 \cdot 7} / 8 \sqrt{2}$ & $\sqrt{7} / 16$ & $\sqrt{7} / 16$ & $-\sqrt{3 \cdot 7} / 8 \sqrt{2}$ & $5 / 8 \sqrt{2}$ & $-7 / 16 \sqrt{2}$ & $3 / 16 \sqrt{2}$ \\
+\hline
+5/2 & $3 / 8 \sqrt{2}$ & $-5 / 8 \sqrt{2}$ & $1 / 2 \sqrt{2}$ & 0 & $-\sqrt{7} / 8$ & $\sqrt{7} / 8$ & 0 & $-1 / 2 \sqrt{2}$ & $-5 / 8 \sqrt{2}$ & $-3 / 8 \sqrt{2}$ \\
+\hline
+3/2 & $\sqrt{3 \cdot 7} / 8 \sqrt{2}$ & $-\sqrt{3 \cdot 7} / 8 \sqrt{2}$ & 0 & $1 / 2 \sqrt{2}$ & $-\sqrt{3} / 8$ & $-\sqrt{3} / 8$ & 1/2 $\sqrt{2}$ & 0 & $-\sqrt{3 \cdot 7} / 8 \sqrt{2}$ & $\sqrt{3 \cdot 7} / 8 \sqrt{2}$ \\
+\hline
+1/2 & $3 \sqrt{7} / 16$ & $-\sqrt{7} / 16$ & $-\sqrt{7} / 8$ & $\sqrt{3} / 8$ & $+3 / 8 \sqrt{2}$ & $-3 / 8 \sqrt{2}$ & $-\sqrt{3} / 8$ & $\sqrt{7} / 8$ & $\sqrt{7} / 16$ & $-3 \sqrt{7} / 16$ \\
+\hline
+$-1 / 2$ & $3 \sqrt{7} / 16$ & $\sqrt{7} / 16$ & $-\sqrt{7} / 8$ & $-\sqrt{3} / 8$ & $\frac{3}{8} \sqrt{2}$ & $\frac{3}{8} \sqrt{2}$ & $-\sqrt{3} / 8$ & $-\sqrt{7} / 8$ & $\sqrt{7} / 16$ & $3 \sqrt{7} / 16$ \\
+\hline
+-3/2 & $\sqrt{3 \cdot 7} / 8 \sqrt{2}$ & $\sqrt{3 \cdot 7} / 8 \sqrt{2}$ & 0 & $-1 / 2 \sqrt{2}$ & $-\sqrt{3} / 8$ & $\sqrt{3} / 8$ & $1 / 2 \sqrt{2}$ & 0 & $-\sqrt{3 \cdot 7} / 8 \sqrt{2}$ & $-\sqrt{3 \cdot 7} / 8 \sqrt{2}$ \\
+\hline
+-5/2 & $\frac{3}{8} \sqrt{2}$ & $5 / 8 \sqrt{2}$ & $1 / 2 \sqrt{2}$ & 0 & $-\sqrt{7} / 8$ & $-\sqrt{7} / 8$ & 0 & $1 / 2 \sqrt{2}$ & $5 / 8 \sqrt{2}$ & $3 / 8 \sqrt{2}$ \\
+\hline
+$-7 / 2$ & $3 / 16 \sqrt{2}$ & $7 / 16 \sqrt{2}$ & $\frac{5}{8} \sqrt{2}$ & $\sqrt{3 \cdot 7} / 8 \sqrt{2}$ & $\sqrt{7} / 16$ & $-\sqrt{7} / 16$ & $-\sqrt{3 \cdot 7} / 8 \sqrt{2}$ & $-5 / 8 \sqrt{2}$ & $-7 / 16 \sqrt{2}$ & $-3 / 16 \sqrt{2}$ \\
+\hline
+-9/2 & $1 / 16 \sqrt{2}$ & $3 / 16 \sqrt{2}$ & $3 / 8 \sqrt{2}$ & $\sqrt{3 \cdot 7} / 8 \sqrt{2}$ & $3 \sqrt{7} / 16$ & $3 \sqrt{7} / 16$ & $\sqrt{3 \cdot 7} / 8 \sqrt{2}$ & $3 / 8 \sqrt{2}$ & $3 / 16 \sqrt{2}$ & $1 / 16 \sqrt{2}$ \\
+\hline
+\end{tabular}
+\end{center}
+
+Table 4.22.\\
+$d_{M M^{+}}^{5}\left(\frac{\pi}{2}\right)$
+
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|}
+\hline
+\slashbox{$\boldsymbol{M}^{\boldsymbol{\prime}}$}{M} & 5 & 4 & 3 & 2 & 1 & 0 & -1 & -2 & -3 & -4 & -5 \\
+\hline
+5 & 1/32 & $-\sqrt{5} / 16 \sqrt{2}$ & $3 \sqrt{5} / 32$ & $-\sqrt{3 \cdot 5} / 8 \sqrt{2}$ & $\sqrt{3 \cdot 5 \cdot 7} / 16 \sqrt{2}$ & $-3 \sqrt{7} / 16$ & $\sqrt{3 \cdot 5 \cdot 7} / 16 \sqrt{2}$ & $-\sqrt{3 \cdot 5} / 8 \sqrt{2}$ & $3 \sqrt{5} / 32$ & $-\sqrt{5} / 16 \sqrt{2}$ & 1/32 \\
+\hline
+4 & $\sqrt{5} / 16 \sqrt{2}$ & $-1 / 4$ & $9 / 16 \sqrt{2}$ & $-\sqrt{3} / 4$ & $\sqrt{3 \cdot 7} / 16$ & 0 & $-\sqrt{3 \cdot 7} / 16$ & $\sqrt{3} / 4$ & $-9 / 16 \sqrt{2}$ & $1 / 4$ & $-\sqrt{5} / 16 \sqrt{2}$ \\
+\hline
+3 & $3 \sqrt{5} / 32$ & $-9 / 16 \sqrt{2}$ & 13/32 & $-\sqrt{3} / 8 \sqrt{2}$ & $-\sqrt{3 \cdot 7} / 16 \sqrt{2}$ & $\sqrt{5 \cdot 7} / 16$ & $-\sqrt{3 \cdot 7} / 16 \sqrt{2}$ & $-\sqrt{3} / 8 \sqrt{2}$ & 13/32 & $-9 / 16 \sqrt{2}$ & $3 \sqrt{5} / 32$ \\
+\hline
+2 & $\sqrt{3 \cdot 5} / 8 \sqrt{2}$ & $-\sqrt{3} / 4$ & $\sqrt{3} / 8 \sqrt{2}$ & 1/4 & $-\sqrt{7} / 8$ & 0 & $\sqrt{7} / 8$ & $-1 / 4$ & $-\sqrt{3} / 8 \sqrt{2}$ & $\sqrt{3} / 4$ & $-\sqrt{3 \cdot 5} / 8 \sqrt{2}$ \\
+\hline
+1 & $\sqrt{3 \cdot 5 \cdot 7} / 16 \sqrt{2}$ & $-\sqrt{3 \cdot 7} / 16$ & $-\sqrt{3 \cdot 7} / 16 \sqrt{2}$ & $\sqrt{7} / 8$ & 1/16 & $-\sqrt{3 \cdot 5} / 8 \sqrt{2}$ & 1/16 & $\sqrt{7} / 8$ & $-\sqrt{3 \cdot 7} / 16 \sqrt{2}$ & $-\sqrt{3 \cdot 7} / 16$ & $\sqrt{3 \cdot 5 \cdot 7} / 16 \sqrt{2}$ \\
+\hline
+0 & $3 \sqrt{7} / 16$ & 0 & $-\sqrt{5 \cdot 7} / 16$ & 0 & $\sqrt{3 \cdot 5} / 8 \sqrt{2}$ & 0 & $-\sqrt{3 \cdot 5} / 8 \sqrt{2}$ & 0 & $\sqrt{5 \cdot 7} / 16$ & 0 & $-3 \sqrt{7} / 16$ \\
+\hline
+-1 & $\sqrt{3 \cdot 5 \cdot 7} / 16 \sqrt{2}$ & $\sqrt{3 \cdot 7} / 16$ & $-\sqrt{3 \cdot 7} / 16 \sqrt{2}$ & $-\sqrt{7} / 8$ & 1/16 & $\sqrt{3 \cdot 5} / 8 \sqrt{2}$ & 1/16 & $-\sqrt{7} / 8$ & $-\sqrt{3 \cdot 7} / 16 \sqrt{2}$ & $\sqrt{3 \cdot 7} / 16$ & $\sqrt{3 \cdot 5 \cdot 7} / 16 \sqrt{2}$ \\
+\hline
+-2 & $\sqrt{3 \cdot 5} / 8 \sqrt{2}$ & $\sqrt{3} / 4$ & $\sqrt{3} / 8 \sqrt{2}$ & $-1 / 4$ & $-\sqrt{7} / 8$ & 0 & $\sqrt{7} / 8$ & 1/4 & $-\sqrt{3} / 8 \sqrt{2}$ & $-\sqrt{3} / 4$ & $-\sqrt{3 \cdot 5} / 8 \sqrt{2}$ \\
+\hline
+-3 & $3 \sqrt{5} / 32$ & $9 / 16 \sqrt{2}$ & 13/32 & $\sqrt{3} / 8 \sqrt{2}$ & $-\sqrt{3 \cdot 7} / 16 \sqrt{2}$ & $-\sqrt{5 \cdot 7} / 16$ & $-\sqrt{3 \cdot 7} / 16 \sqrt{2}$ & $\sqrt{3} / 8 \sqrt{2}$ & 13/32 & $9 / 16 \sqrt{2}$ & $3 \sqrt{5} / 32$ \\
+\hline
+-4 & $\sqrt{5} / 16 \sqrt{2}$ & 1/4 & $9 \frac{1}{16} \sqrt{2}$ & $\sqrt{3} / 4$ & $\sqrt{3 \cdot 7} / 16$ & 0 & $-\sqrt{3 \cdot 7} / 16$ & $-\sqrt{3} / 4$ & $-9 / 16 \sqrt{2}$ & $-1 / 4$ & $\sqrt{5} / 16 \sqrt{2}$ \\
+\hline
+-5 & 1/32 & $\sqrt{5} / 16 \sqrt{2}$ & $3 \sqrt{5} / 32$ & $\sqrt{3 \cdot 5} / 8 \sqrt{2}$ & $\sqrt{3 \cdot 5 \cdot 7} / 16 \sqrt{2}$ & $3 \sqrt{7} / 16$ & $\sqrt{3 \cdot 5 \cdot 7} / 16 \sqrt{2}$ & $\sqrt{3 \cdot 5} / 8 \sqrt{2}$ & $3 \sqrt{5} / 32$ & $\sqrt{5} / 16 \sqrt{2}$ & 1/32 \\
+\hline
+\end{tabular}
+\captionsetup{labelformat=empty}
+\caption{Tables 4.23. -4.26. Explicit forms of $U_{M M^{\prime}}^{J}(\omega ; \Theta, \Phi)$.}
+\end{center}
+\end{table}
+
+\begin{table}[h]
+\begin{center}
+\captionsetup{labelformat=empty}
+\caption{Table 4.23.}
+\begin{tabular}{|l|l|l|}
+\hline
+\multicolumn{3}{|l|}{$U_{M M^{\prime}}^{1 / 2}(\omega ; \Theta, \Phi)$} \\
+\hline
+\slashbox{$\boldsymbol{M}^{\boldsymbol{\prime}}$}{M} & 1/2 & -1/2 \\
+\hline
+\begin{tabular}{l}
+1/2 \\
+$-1 / 2$ \\
+\end{tabular} & \begin{tabular}{l}
+$\cos \frac{\omega}{2}-i \sin \frac{\omega}{2} \cos \theta$ \\
+$-i \sin \frac{\omega}{2} \sin \theta e^{i \Phi}$ \\
+\end{tabular} & \begin{tabular}{l}
+$-i \sin \frac{\omega}{2} \sin \theta e^{-i \Phi}$ \\
+$\cos \frac{\omega}{2}+i \sin \frac{\omega}{2} \cos \theta$ \\
+\end{tabular} \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[h]
+\begin{center}
+\captionsetup{labelformat=empty}
+\caption{Table 4.24.}
+\begin{tabular}{|l|l|l|l|}
+\hline
+\multicolumn{4}{|l|}{$U_{M M^{\prime}}^{1}(\omega ; \Theta, \Phi)$} \\
+\hline
+\slashbox{$M^{\prime}$}{M} & 1 & 0 & -1 \\
+\hline
+1 & $\left(\cos \frac{\omega}{2}-i \sin \frac{\omega}{2} \cos \theta\right)^{2}$ & \( \begin{aligned} & -i \sqrt{2} \sin \frac{\omega}{2} \sin \theta e^{-i \Phi} \times \\ & \times\left(\cos \frac{\omega}{2}-i \sin \frac{\omega}{2} \cos \theta\right) \end{aligned} \) & $-\left(\sin \frac{\omega}{2} \sin \theta e^{-i \omega}\right)^{2}$ \\
+\hline
+0 & \( \begin{aligned} & -i \sqrt{2} \sin \frac{\omega}{2} \sin \theta e^{i \Phi} \times \\ & \times\left(\cos \frac{\omega}{2}-i \sin \frac{\omega}{2} \cos \theta\right) \end{aligned} \) & $1-2 \sin ^{2} \frac{\omega}{2} \sin ^{2} \Theta$ & \( \begin{aligned} & -i \sqrt{2} \sin \frac{\omega}{2} \sin \theta e^{-i \Phi} \times \\ & \times\left(\cos \frac{\omega}{2}+i \sin \frac{\omega}{2} \cos \theta\right) \end{aligned} \) \\
+\hline
+-1 & $-\left(\sin \frac{\omega}{2} \sin \theta e^{i \Phi}\right)^{2}$ & \( \begin{gathered} -i \sqrt{2} \sin \frac{\omega}{2} \sin \theta e^{i \Phi} \times \\ \times\left(\cos \frac{\omega}{2}+i \sin \frac{\omega}{2} \cos \theta\right) \end{gathered} \) & $\left(\cos \frac{\omega}{2}+i \sin \frac{\omega}{2} \cos \theta\right)^{2}$ \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+$$
+U_{M M^{\prime}}^{3 / 2}(\omega ; \Theta, \Phi)
+$$
+
+\begin{table}[h]
+\begin{center}
+\captionsetup{labelformat=empty}
+\caption{Table 4.25.}
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+\slashbox{$M^{\prime}$}{$м$} & 3/2 & 1/2 & -1/2 & $-3 / 2$ \\
+\hline
+3/2 & $\left(\cos \frac{\omega}{2}-i \sin \frac{\omega}{2} \cos \theta\right)^{3}$ & \( \begin{gathered} -i \sqrt{3} \sin \frac{\omega}{2} \sin \theta e^{-i \Phi} \times \\ \times\left(\cos \frac{\omega}{2}-i \sin \frac{\omega}{2} \cos \theta\right)^{2} \end{gathered} \) & \( \begin{aligned} & -\sqrt{3}\left(\sin \frac{\omega}{2} \sin \theta e^{-i \Phi}\right)^{2} \times \\ & \times\left(\cos \frac{\omega}{2}-i \sin \frac{\omega}{2} \cos \theta\right) \end{aligned} \) & $i\left(\sin \frac{\omega}{2} \sin \theta e^{-i \phi}\right)^{3}$ \\
+\hline
+ & $-i \sqrt{3} \sin \frac{\omega}{2} \sin \theta e^{i \Phi} \times$ & $\left(1-3 \sin ^{2} \frac{\omega}{2} \sin ^{2} \theta\right) \times$ & $-i \sin \frac{\omega}{2} \sin \theta e^{-i \Phi} \times$ & $-\sqrt{3}\left(\sin \frac{\omega}{2} \sin \theta e^{-i \Phi}\right)^{2} \times$ \\
+\hline
+1/2 & $\times\left(\cos \frac{\omega}{2}-i \sin \frac{\omega}{2} \cos \theta\right)^{2}$ & $\times\left(\cos \frac{\omega}{2}-i \sin \frac{\omega}{2} \cos \theta\right)$ & $\times\left(2-3 \sin ^{2} \frac{\omega}{2} \sin ^{2} \theta\right)$ & $\times\left(\cos \frac{\omega}{2}+i \sin \frac{\omega}{2} \cos \theta\right)$ \\
+\hline
+$-1 / 2$ & $-\sqrt{3}\left(\sin \frac{\omega}{2} \sin \theta e^{i \Phi}\right)^{2} \times$ & $\times\left(2-3 \sin ^{2} \frac{\omega}{2} \sin ^{2} \theta\right)$ & $\times\left(\cos \frac{\omega}{2}+i \sin \frac{\omega}{2} \cos \theta\right)^{2}$ & $\times\left(\cos \frac{\omega}{2}+i \sin \frac{\omega}{2} \cos \theta\right)^{2}$ \\
+\hline
+-3/2 & $i\left(\sin \frac{\omega}{2} \sin \theta e^{i \Phi}\right)^{3}$ & \( \begin{aligned} & -\sqrt{3}\left(\sin \frac{\omega}{2} \sin \theta e^{i \Phi}\right)^{2} \times \\ & \times\left(\cos \frac{\omega}{2}+i \sin \frac{\omega}{2} \cos \theta\right) \end{aligned} \) & \( \begin{gathered} -i \sqrt{3} \sin \frac{\omega}{2} \sin \theta e^{i \Phi} \times \\ \times\left(\cos \frac{\omega}{2}+i \sin \frac{\omega}{2} \cos \theta\right)^{2} \end{gathered} \) & $\left(\cos \frac{\omega}{2}+i \sin \frac{\omega}{2} \cos \theta\right)^{3}$ \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+Table 4.26.
+
+$$
+U_{M M^{\prime}}^{2}(\omega ; \Theta, \Phi)
+$$
+
+\begin{center}
+\begin{tabular}{|l|l|l|l|l|l|}
+\hline
+\slashbox{$M^{\prime}$}{M} & 2 & 1 & 0 & -1 & -2 \\
+\hline
+2 & $\left(\cos \frac{\omega}{2}-i \sin \frac{\omega}{2} \cos \theta\right)^{4}$ & \( \begin{gathered} -2 i \sin \frac{\omega}{2} \sin \theta e^{-i \Phi} \times \\ \times\left(\cos \frac{\omega}{2}-i \sin \frac{\omega}{2} \cos \theta\right)^{3} \end{gathered} \) & \( \begin{aligned} & -\sqrt{6}\left(\sin \frac{\omega}{2} \sin \theta e^{-i \omega}\right)^{2} \times \\ & \times\left(\cos \frac{\omega}{2}-i \sin \frac{\omega}{2} \cos \theta\right)^{2} \end{aligned} \) & \( \begin{array}{r} 2 i\left(\sin \frac{\omega}{2} \sin \theta e^{-i \phi}\right)^{3} \times \\ \times\left(\cos \frac{\omega}{2}-i \sin \frac{\omega}{2} \cos \theta\right) \end{array} \) & $\left(\sin \frac{\omega}{2} \sin \theta e^{-i \Phi}\right)^{4}$ \\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{table}[h]
+\begin{center}
+\captionsetup{labelformat=empty}
+\caption{Table 4.26. (Cont.)}
+\begin{tabular}{|l|l|l|l|l|l|}
+\hline
+\slashbox{$\boldsymbol{M}^{\boldsymbol{\prime}}$}{M} & 2 & 1 & 0 & -1 & -2 \\
+\hline
+1 & $-2 i \sin \frac{\omega}{2} \sin \theta e^{i \Phi} \times$ \( x\left(\cos \frac{\omega}{2}-i \sin \frac{\omega}{2} \cos \theta\right)^{3} \) & \( \begin{aligned} & \left(1-4 \sin ^{2} \frac{\omega}{2} \sin ^{2} \theta\right) \times \\ & \left(\cos \frac{\omega}{2}-i \sin \frac{\omega}{2} \cos \theta\right)^{2} \end{aligned} \) & \( \begin{aligned} & -i \sqrt{6} \sin \frac{\omega}{2} \sin \theta e^{-i \Phi} \times \\ & \times\left(1-2 \sin ^{2} \frac{\omega}{2} \sin ^{2} \theta\right) \times \\ & \times\left(\cos \frac{\omega}{2}-i \sin \frac{\omega}{2} \cos \theta\right) \end{aligned} \) & \( \begin{aligned} & -\left(\sin \frac{\omega}{2} \sin \theta e^{-i \Phi}\right)^{2} \times \\ & \times\left(3-4 \sin ^{2} \frac{\omega}{2} \sin ^{2} \theta\right) \end{aligned} \) & \( \begin{gathered} 2 i\left(\sin \frac{\omega}{2} \sin \theta e^{-i \Phi}\right)^{3} \times \\ \times\left(\cos \frac{\omega}{2}+i \sin \frac{\omega}{2} \cos \theta\right) \end{gathered} \) \\
+\hline
+0 & \( \begin{aligned} & -\sqrt{6}\left(\sin \frac{\omega}{2} \sin \theta e^{i \Phi}\right)^{\frac{1}{2}} \times \\ & \times\left(\cos \frac{\omega}{2}-i \sin \frac{\omega}{2} \cos \theta\right)^{2} \end{aligned} \) & \( \begin{aligned} & -i \sqrt{6} \sin \frac{\omega}{2} \sin \theta e^{i \Phi} \times \\ & \times\left(1-2 \sin ^{2} \frac{\omega}{2} \sin ^{2} \theta\right) \times \\ & \times\left(\cos \frac{\omega}{2}-i \sin \frac{\omega}{2} \cos \theta\right) \end{aligned} \) & \( \begin{gathered} 1-6 \sin ^{2} \frac{\omega}{2} \sin ^{2} \theta \times \\ \times\left(1-\sin ^{2} \frac{\omega}{2} \sin ^{2} \theta\right) \end{gathered} \) & \( \begin{aligned} & -i \sqrt{6} \sin \frac{\omega}{2} \sin \theta e^{-i \Phi} \times \\ & \times\left(1-2 \sin ^{2} \frac{\omega}{2} \sin ^{2} \theta\right) \times \\ & \times\left(\cos \frac{\omega}{2}+i \sin \frac{\omega}{2} \cos \theta\right) \end{aligned} \) & \( \begin{aligned} & -\sqrt{6}\left(\sin \frac{\omega}{2} \sin \theta e^{-i \Phi}\right)^{2} \times \\ & \times\left(\cos \frac{\omega}{2}+i \sin \frac{\omega}{2} \cos \theta\right)^{2} \end{aligned} \) \\
+\hline
+-1 & \( \begin{gathered} 2 i\left(\sin \frac{\omega}{2} \sin \theta e^{i \Phi}\right)^{3} \times \\ \times\left(\cos \frac{\omega}{2}-i \sin \frac{\omega}{2} \cos \theta\right) \end{gathered} \) & \( \begin{aligned} & -\left(\sin \frac{\omega}{2} \sin \theta e^{i \Phi}\right)^{2} \times \\ & \times\left(3-4 \sin ^{2} \frac{\omega}{2} \sin ^{2} \theta\right) \end{aligned} \) & \( \begin{aligned} & -i \sqrt{6} \sin \frac{\omega}{2} \sin \theta e^{i \Phi} \times \\ & \times\left(1-2 \sin ^{2} \frac{\omega}{2} \sin ^{2} \theta\right) \times \\ & \times\left(\cos \frac{\omega}{2}+i \sin \frac{\omega}{2} \cos \theta\right) \end{aligned} \) & \( \begin{gathered} \left(1-4 \sin ^{2} \frac{\omega}{2} \sin ^{2} \theta\right) \times \\ \times\left(\cos \frac{\omega}{2}+i \sin \frac{\omega}{2} \cos \theta\right)^{2} \end{gathered} \) & \( \begin{gathered} -2 i \sin \frac{\omega}{2} \sin \theta e^{-i \Phi} \times \\ \times\left(\cos \frac{\omega}{2}+i \sin \frac{\omega}{2} \cos \theta\right)^{3} \end{gathered} \) \\
+\hline
+-2 & $\left(\sin \frac{\omega}{2} \sin \theta e^{i \Phi}\right)^{4}$ & \( \begin{gathered} 2 i\left(\sin \frac{\omega}{2} \sin \theta e^{i \Phi}\right)^{3} \times \\ \times\left(\cos \frac{\omega}{2}+i \sin \frac{\omega}{2} \cos \theta\right) \end{gathered} \) & \( \begin{aligned} & -\sqrt{6}\left(\sin \frac{\omega}{2} \sin \theta e^{i \Phi}\right)^{2} \times \\ & \times\left(\cos \frac{\omega}{2}+i \sin \frac{\omega}{2} \cos \theta\right)^{2} \end{aligned} \) & \( \begin{gathered} -2 i \sin \frac{\omega}{2} \sin \theta e^{i \Phi} \times \\ \times\left(\cos \frac{\omega}{2}+i \sin \frac{\omega}{2} \cos \theta\right)^{3} \end{gathered} \) & $\left(\cos \frac{\omega}{2}+i \sin \frac{\omega}{2} \cos \theta\right)^{4}$ \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}

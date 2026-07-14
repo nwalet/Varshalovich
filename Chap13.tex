@@ -1,0 +1,2174 @@
+\section*{Chapter 13}
+\section*{MATRIX ELEMENTS OF IRREDUCIBLE TENSOR OPERATORS}
+\subsection*{13.1. THE WIGNER-ECKART THEOREM AND THE EVALUATION OF MATRIX ELEMENTS}
+In this section we consider the evaluation of matrix elements of irreducible tensor operators in a general form.\\
+Let a quantum mechanical system be characterized by a set of the quantum numbers ( $n j m$ ), where $j$ and $m$ are the angular momentum and its projection on the quantization axis, respectively. The symbol $n$ stands for all other quantum numbers required to define the state of the system. Let $\Psi_{n j m}$ be the wave function of this state. The matrix element of any irreducible tensor operator $\widehat{\mathfrak{M}}_{k}$ of rank $k$ between the states $\left(n^{\prime} j^{\prime} m^{\prime}\right)$ and ( $n j m$ ) is defined as
+
+
+\begin{equation*}
+\left\langle n^{\prime} j^{\prime} m^{\prime}\right| \hat{\mathfrak{M}}_{k c}|n j m\rangle=\int \Psi_{n^{\prime} j^{\prime} m^{\prime}}^{*} \hat{\mathfrak{M}}_{k c} \Psi_{n j m} d \tau \tag{1}
+\end{equation*}
+
+
+where $\widehat{\mathfrak{M}}_{k c}$ is a tensor component.
+
+\subsection*{13.1.1. Wigner-Eckart Theorem}
+The Wigner-Eckart theorem is widely used for evaluation of matrix elements. According to this theorem, the dependence of any matrix element on the orientation of the coordinate system, i.e., on the projections $m$, $m^{\prime}$ and $\kappa$, is entirely included in the $3 j m$ symbol or the Clebsch-Gordan coefficient,
+
+\[
+\left\langle n^{\prime} j^{\prime} m^{\prime}\right| \widehat{\mathfrak{M}}_{k \kappa}|n j m\rangle=(-1)^{j^{\prime}-m^{\prime}}\left(\begin{array}{ccc}
+j^{\prime} & k & j  \tag{2}\\
+-m^{\prime} & \kappa & m
+\end{array}\right)\left\langle n^{\prime} j^{\prime}\left\|\widehat{\mathfrak{M}}_{k}\right\| n j\right\rangle=(-1)^{2 k} C_{j m k \kappa}^{j^{\prime} m^{\prime}} \frac{\left\langle n^{\prime} j^{\prime}\left\|\hat{\mathfrak{M}}_{k}\right\| n j\right\rangle}{\sqrt{2 j^{\prime}+1}}
+\]
+
+The invariant factor $\left\langle n^{\prime} j^{\prime}\left\|\widehat{\mathfrak{M}}_{k}\right\| n j\right\rangle$ is called the reduced matrix element of the set of tensor operators $\widehat{\mathfrak{M}}_{k \kappa}$.\\
+As follows from the definition (2), the reduced matrix element of the unit operator is given by
+
+
+\begin{equation*}
+\left\langle n^{\prime} j^{\prime}\|\hat{\mathbf{I}}\| n j\right\rangle=\sqrt{2 j+1} \delta_{n^{\prime} n^{\prime}} \delta_{j^{\prime} j} \tag{3}
+\end{equation*}
+
+
+In this section, as well as in Chap. 12 we shall use the notation
+
+$$
+\prod_{a b \ldots c} \equiv[(2 a+1)(2 b+1) \ldots(2 c+1)]^{\frac{1}{2}}
+$$
+
+\subsection*{13.1.2. Sum Rules}
+Making use of the definition (2), one can obtain the following rules for sums of matrix elements of irreducible tensor operators:
+
+
+\begin{align*}
+\sum_{m \kappa}\left|\left(n^{\prime} j^{\prime} m^{\prime}\left|\widehat{\mathbb{M}}_{k \kappa}\right| n j m\right)\right|^{2} & =\frac{\left|\left(n^{\prime} j^{\prime}| | \widehat{\mathbb{M}}_{k} \| n j\right)\right|^{2}}{2 j^{\prime}+1},  \tag{4}\\
+\sum_{m^{\prime} \kappa}\left|\left(n^{\prime} j^{\prime} m^{\prime}\left|\widehat{\mathbb{M}}_{k \kappa}\right| n j m\right)\right|^{2} & =\frac{\left.\mid\left(n^{\prime} j^{\prime} \|\right) \hat{\mathbb{M}}_{k} \| n j\right)\left.\right|^{2}}{2 j+1},  \tag{5}\\
+\sum_{m m^{\prime}}\left|\left(n^{\prime} j^{\prime} m^{\prime}\left|\widehat{\mathbb{M}}_{k \kappa}\right| n j m\right)\right|^{2} & =\frac{\left.\mid\left(n^{\prime} j^{\prime} \|\right) \widehat{\mathbb{M}}_{k} \| n j\right)\left.\right|^{2}}{2 k+1},  \tag{6}\\
+\sum_{m m^{\prime} \kappa}\left|\left(n^{\prime} j^{\prime} m^{\prime}\left|\hat{\mathbb{M}}_{k \kappa}\right| n j m\right)\right|^{2} & =\left|\left\langle n^{\prime} j^{\prime}\left\|\widehat{\mathbb{M}}_{k}\right\| n j\right)\right|^{2} \tag{7}
+\end{align*}
+
+
+\subsection*{13.1.3. Matrix Elements of Products of Irreducible Tensor Operators}
+From two irreducible tensor operators $\widehat{P}_{a \alpha}$ and $\widehat{Q}_{b g}$ ode can compone the drect or reducible product $\widehat{P}_{a \alpha} \widehat{Q}_{b \rho}$ and the irreducible product $\left\{\hat{\mathbf{P}}_{a} \otimes \hat{\mathbf{Q}}_{b}\right\}_{c y}$ of rank $c$ (seé Chap. 3). A mattrx element of the direct tensor product may be written in the form
+
+
+\begin{equation*}
+\left\langle n^{\prime} j^{\prime} m^{\prime}\right| \hat{P}_{a \alpha} \cdot \hat{Q}_{b \rho}|n j m\rangle=\frac{(-1)^{2 a+2 b}}{\Pi_{j^{\prime}}} \sum_{n_{1} j_{1} m_{1}} C_{j_{1} m_{1} a \alpha}^{j^{\prime} m^{\prime}} C_{j_{1} m b \rho}^{j_{1} m_{1}} \frac{1_{1}}{\Pi_{j 1}}\left(n^{\prime} j^{\prime}\left\|\hat{P}_{a}\right\| n_{1} j_{1}\right)\left\langle n_{1} j_{1}\left\|\hat{Q}_{b}\right\| n j\right\rangle . \tag{8}
+\end{equation*}
+
+
+Another frequently used relationship for the same matrix element is as follows:
+
+\[
+\left.=\frac{(-1)^{j^{\prime}+j}}{\prod_{j^{\prime}}} \sum_{c \gamma}(-1)^{-c} \prod_{c} C_{j m c \gamma}^{j^{\prime} m^{\prime}} C_{a \alpha b \rho}^{c \gamma} \sum_{n_{1} j_{1}}\left\{\begin{array}{ll}
+a & b \\
+j & c  \tag{9}\\
+j & j^{\prime} \\
+\vdots
+\end{array}\right\}\left\langle\hat{j}_{1}\right\} \hat{Q}^{\prime} j^{\prime}\left\|\hat{P}_{a}\right\| n_{1} j_{1}\right\rangle\left\langle n_{1} j_{1}\left\|\hat{Q}_{b}\right\| n j\right\rangle .
+\]
+
+Matrix elements of irreducible tensor products may be evaluated from the equation
+
+
+\begin{gather*}
+\left\langle n^{\prime} j^{\prime} m^{\prime}\right|\left\{\hat{\mathbf{P}}_{a} \otimes \hat{Q}_{b}\right\}_{e \gamma}|n j m\rangle \\
+=(-1)^{j^{\prime}+j-c} \frac{\Pi_{c}}{\Pi_{j!}} C_{j m e q}^{j^{\prime} m^{\prime}} \sum_{n_{1} j_{1}}\left\{\begin{array}{cc}
+a & b \\
+j & j^{\prime} \\
+j & j_{1}
+\end{array}\right\}\left(n^{\prime} j^{\prime}\left\|\widehat{\mathbf{P}}_{a}\right\| n_{1} j_{1}\right)\left\langle n_{1} j_{1}\left\|\widehat{\mathbf{Q}}_{b}\right\| n j\right\rangle . \tag{10}
+\end{gather*}
+
+
+Putting $c=0$ and $b=a$ in Eq. (10) and multiplying the resulting expression by $(-1)^{-a} \Pi_{a}$ (in accordance with Eq. 3.1 (34)) we get a matrix element of scalar product of two tensors of rank a
+
+
+\begin{equation*}
+\left\langle n^{\prime} j^{\prime} m^{\prime}\right|\left(\widehat{\mathbf{P}}_{a} \cdot \widehat{\mathbf{Q}}_{a}\right)|n j m\rangle=\delta_{j j^{\prime}} \delta_{m m^{\prime}} \frac{1}{\prod_{j}^{2}} \sum_{n_{1} j_{1}}(-1)^{-j+j_{1}}\left\langle n^{\prime} j\left\|\widehat{\mathbf{P}}_{a}\right\| n_{1} j_{1}\right\rangle\left\langle n_{1} j_{1}\left\|\widehat{\mathbf{Q}}_{a}\right\| n j\right\rangle . \tag{11}
+\end{equation*}
+
+
+From the three irreducible tensor operators $\widehat{P}_{a \alpha}, \widehat{Q}_{b \beta}$ and $\widehat{R}_{d \delta}$, one can compose the products
+
+$$
+\begin{array}{ccc}
+\hat{P}_{a a} \cdot \hat{Q}_{b \beta} \cdot \hat{R}_{d b}, & \left\{\hat{\mathbf{P}}_{a} \otimes \hat{Q}_{b}\right\}_{c 7} \cdot \hat{R}_{d b}, & \hat{P}_{a \alpha} \cdot\left\{\hat{Q}_{b} \otimes \hat{\mathbf{R}}_{d}\right\}_{f \varphi}, \\
+\left\{\left\{\hat{\mathbf{P}}_{a} \otimes \hat{Q}_{b}\right\}_{c} \otimes \hat{\mathbf{R}}_{d}\right\}_{\}_{\varphi}}, & \left\{\hat{\mathbf{P}}_{a} \otimes\left\{\hat{Q}_{b} \otimes \hat{\mathbf{R}}_{d}\right\}_{c}\right\}_{f \varphi} .
+\end{array}
+$$
+
+Making permutations of operators one can construct other products which differ from the given above only by commutators of operators. The matrix element of the direct product of three tensor operators is given by
+
+
+\begin{gather*}
+\left\langle n^{\prime} j^{\prime} m^{\prime}\right| \hat{P}_{a \alpha} \cdot \hat{Q}_{b \beta} \cdot \hat{R}_{d \delta}|n j m\rangle=\frac{(-1)^{2 a+2 b+2 d}}{\prod_{j^{\prime}}} \sum_{n_{1} j_{1} n_{2} j_{2}} \frac{1}{\prod_{j_{1} j_{2}}}\left\langle n^{\prime} j^{\prime}\left\|\hat{\mathbf{P}}_{a}\right\| n_{1} j_{1}\right\rangle\left\langle n_{1} j_{1}\left\|\hat{\mathbf{Q}}_{b}\right\| n_{2} j_{2}\right\rangle \\
+\times\left\langle n_{2} j_{2}\left\|\hat{\mathbf{R}}_{d}\right\| n j\right\rangle \sum_{m_{1} m_{2}} C_{j_{1} m_{1} a \alpha}^{j^{\prime} m^{\prime}} C_{j_{2} m_{2} b \beta}^{j_{1} m_{1}} C_{j m d \delta}^{j_{2} m_{2}} \tag{12}
+\end{gather*}
+
+
+The evaluation of matrix elements of the products $\left\{\widehat{\mathbf{P}}_{a} \otimes \widehat{\mathbf{Q}}_{b}\right\}_{c \gamma} \cdot \widehat{R}_{d \delta}$ and $\widehat{P}_{a \alpha} \cdot\left\{\widehat{\mathbf{Q}}_{b} \otimes \widehat{\mathbf{R}}_{d}\right\}_{c \gamma}$ is reduced to the successive use of Eqs. (8)-(10).
+
+The matrix element of the irreducible tensor product of three tensors may be represented in the form
+
+
+\begin{gather*}
+\left\langle n^{\prime} j^{\prime} m^{\prime}\right|\left\{\left\{\widehat{\mathbf{P}}_{a} \otimes \widehat{\mathbf{Q}}_{b}\right\}_{c} \otimes \widehat{\mathbf{R}}_{d}\right\}_{f \varphi}|n j m\rangle=(-1)^{f+c-j} \frac{\prod_{f c}}{\prod_{j^{\prime}}} C_{j m f \varphi}^{j^{\prime} m^{\prime}} \\
+\times \sum_{n_{1} j_{1} n_{2} j_{2}}(-1)^{j_{2}}\left\{\begin{array}{ccc}
+a & b & c \\
+j_{2} & j^{\prime} & j_{1}
+\end{array}\right\}\left\{\begin{array}{ccc}
+d & c & f \\
+j^{\prime} & j & j_{2}
+\end{array}\right\}\left\langle n^{\prime} j^{\prime}\left\|\widehat{\mathbf{P}}_{a}\right\| n_{1} j_{1}\right\rangle\left\langle n_{1} j_{1}\left\|\widehat{\mathbf{Q}}_{b}\right\| n_{2} j_{2}\right\rangle\left\langle n_{2} j_{2}\left\|\widehat{\mathbf{R}}_{d}\right\| n j\right\rangle \tag{13}
+\end{gather*}
+
+
+By the use of Eq. 3.3(1) the evaluation of the matrix elements of $\left\{\widehat{\mathbf{P}}_{a} \otimes\left\{\widehat{\mathbf{Q}}_{b} \otimes \widehat{\mathbf{R}}_{d}\right\}_{c}\right\}_{f \varphi}$ is reduced to applying Eq. (13).
+
+The matrix element of a scalar product may be obtained from Eq. (13). Taking into account the factor $(-1)^{-c} \prod_{c}$, one gets
+
+
+\begin{gather*}
+\left\langle n^{\prime} j^{\prime} m^{\prime}\right|\left(\left\{\hat{\mathbf{P}}_{a} \otimes \widehat{\mathbf{Q}}_{b}\right\}_{c} \cdot \widehat{\mathbf{R}}_{c}\right)|n j m\rangle=\delta_{j j^{\prime}} \delta_{m m^{\prime}}(-1)^{2 j-c} \frac{\prod_{c}}{\prod_{j}^{2}} \\
+\times \sum_{n_{1} j_{1} n_{2} j_{2}}\left\{\begin{array}{lll}
+a & b & c \\
+j_{2} & j & j_{1}
+\end{array}\right\}\left\langle n^{\prime} j\left\|\widehat{\mathbf{P}}_{a}\right\| n_{1} j_{1}\right\rangle\left\langle n_{1} j_{1}\left\|\widehat{\mathbf{Q}}_{b}\right\| n_{2} j_{2}\right\rangle\left\langle n_{2} j_{2}\left\|\widehat{\mathbf{R}}_{c}\right\| n j\right\rangle . \tag{14}
+\end{gather*}
+
+
+Of the four irreducible tensors $\widehat{P}_{a \alpha}, \widehat{Q}_{b \beta}, \widehat{R}_{d \delta}$ and $\widehat{S}_{e s}$ one can compose the following types of tensor products:\\
+(a) $\widehat{P}_{a \alpha} \cdot \widehat{Q}_{b \beta} \cdot \widehat{R}_{d \delta} \cdot \widehat{S}_{c \varepsilon}$;\\
+(b) $\left\{\hat{\mathbf{P}}_{a} \otimes \hat{\mathbf{Q}}_{b}\right\}_{c \gamma} \cdot \widehat{R}_{d \delta} \cdot \widehat{S}_{e c}, \widehat{P}_{a \alpha} \cdot\left\{\widehat{\mathbf{Q}}_{b} \otimes \widehat{\mathbf{R}}_{d}\right\}_{k c} \cdot \widehat{S}_{e c}, \widehat{P}_{a \alpha} \cdot \widehat{Q}_{b \beta} \cdot\left\{\widehat{\mathbf{R}}_{d} \otimes \widehat{\mathbf{S}}_{e}\right\}_{h \sigma}$;\\
+(c) $\left\{\left\{\widehat{\mathbf{P}}_{a} \otimes \widehat{\mathbf{Q}}_{b}\right\}_{c} \otimes \widehat{\mathbf{R}}_{d}\right\}_{f \varphi} \cdot \widehat{S}_{e c}, \quad\left\{\widehat{\mathbf{P}}_{a} \otimes\left\{\widehat{\mathbf{Q}}_{b} \otimes \widehat{\mathbf{R}}_{d}\right\}_{h}\right\}_{f \varphi} \cdot \widehat{S}_{e c}, \quad \widehat{P}_{a \alpha} \cdot\left\{\left\{\widehat{\mathbf{Q}}_{b} \otimes \widehat{\mathbf{R}}_{d}\right\}_{h} \otimes \widehat{\mathbf{S}}_{e}\right\}_{f \varphi}$, $\widehat{P}_{a \alpha} \cdot\left\{\widehat{\mathbf{Q}}_{b} \otimes\left\{\widehat{\mathbf{R}}_{d} \otimes \widehat{\mathbf{S}}_{e}\right\}_{h}\right\}_{f \varphi}, \quad\left\{\widehat{\mathbf{P}}_{a} \otimes \widehat{\mathbf{Q}}_{b}\right\}_{c q} \cdot\left\{\widehat{\mathbf{R}}_{d} \otimes \widehat{\mathbf{S}}_{e}\right\}_{h \sigma} ;$\\
+(d) $\left\{\left\{\left\{\widehat{\mathbf{P}}_{a} \otimes \widehat{\mathbf{Q}}_{b}\right\}_{c} \otimes \widehat{\mathbf{R}}_{d}\right\}_{f} \otimes \widehat{\mathbf{S}}_{e}\right\}_{k c}, \quad\left\{\widehat{\mathbf{P}}_{a} \otimes\left\{\widehat{\mathbf{Q}}_{b} \otimes\left\{\widehat{\mathbf{R}}_{d} \otimes \widehat{\mathbf{S}}_{e}\right\}_{h}\right\}_{f}\right\}_{k}, \quad\left\{\left\{\widehat{\mathbf{P}}_{a} \otimes \widehat{\mathbf{Q}}_{b}\right\}_{c} \otimes\left\{\widehat{\mathbf{R}}_{d} \otimes \widehat{\mathbf{S}}_{e}\right\}_{f}\right\}_{k c}$.
+
+Products with other orders of the operators can be reduced to the products listed here using the commutation rules.
+
+A matrix element of a direct product may be evaluated as follows:
+
+
+\begin{gather*}
+\left\langle n^{\prime} j^{\prime} m^{\prime}\right| \widehat{P}_{a \alpha} \widehat{Q}_{b \beta} \widehat{R}_{d \delta} \widehat{S}_{e \varepsilon}|n j m\rangle=(-1)^{2 a+2 b+2 d+2 e} \frac{1}{\prod_{j^{\prime}}} \sum_{\substack{n_{1} n_{2} n_{3} \\
+j_{1} j_{2} j_{3}}}\left\langle n^{\prime} j^{\prime}\left\|\widehat{\mathbf{P}}_{a}\right\| n_{1} j_{1}\right\rangle\left\langle n_{1} j_{1}\left\|\widehat{\mathbf{Q}}_{b}\right\| n_{2} j_{2}\right\rangle\left\langle n_{2} j_{2}\left\|\widehat{\mathbf{R}}_{d}\right\| n_{3} j_{3}\right\rangle \\
+\times\left\langle n_{3} j_{3}\left\|\widehat{\mathbf{S}}_{e}\right\| n j\right\rangle \frac{1}{\prod_{j_{1} j_{2} j_{3}}} \sum_{m_{1} m_{2} m_{3}} C_{j_{1} m_{1} a \alpha}^{j^{\prime} m^{\prime}} C_{j_{2} m_{2} b \beta}^{j_{1} m_{1}} C_{j_{2} m_{3} d \delta}^{j_{2} m_{2}} C_{j_{3} m e c}^{j_{3} m_{3}} \tag{15}
+\end{gather*}
+
+
+Matrix elements of products of (b)- and (c)-type products can be evaluated by using Eqs. (8)-(14).
+
+The evaluation of matrix elements of irreducible tensor products yields
+
+
+\begin{gather*}
+\left\langle n^{\prime} j^{\prime} m^{\prime}\right|\left\{\left\{\left\{\widehat{\mathbf{P}}_{a} \otimes \widehat{\mathbf{Q}}_{b}\right\}_{c} \otimes \widehat{\mathbf{R}}_{d}\right\}_{f} \otimes \widehat{\mathbf{S}}_{e}\right\}_{k c}|n j m\rangle=(-1)^{j-j^{\prime}+f+c-k} \frac{\prod_{f c k}}{\prod_{j^{\prime}}} C_{j m k c}^{j^{\prime} m^{\prime}} \sum_{\substack{n_{1} n_{2} n_{3} \\
+j_{1} j_{2} j_{3}}}(-1)^{j_{2}+j_{3}}\left\{\begin{array}{ccc}
+a & b & c \\
+j_{2} & j^{\prime} & j_{1}
+\end{array}\right\} \\
+\left.\times\left\{\begin{array}{ccc}
+d & c & f \\
+j^{\prime} & j_{3} & j_{2}
+\end{array}\right\}\left\{\begin{array}{ccc}
+e & f \\
+j^{\prime} & j & j_{3}
+\end{array}\right\}\left\langle n^{\prime} j^{\prime}\left\|\widehat{\mathbf{P}}_{a}\right\| n_{1} j_{1}\right\rangle\left\langle n_{1} j_{1}\left\|\widehat{\mathbf{Q}}_{b}\right\| n_{2} j_{2}\right\rangle\left\langle n_{2} j_{2}\left\|\widehat{\mathbf{R}}_{d}\right\| n_{3} j_{3}\right\rangle\left\langle n_{3} j_{3}\left\|\widehat{\mathbf{S}}_{e}\right\| n j\right\rangle \right\rvert\,  \tag{16}\\
+\left\langle n^{\prime} j^{\prime} m^{\prime}\right|\left(\left\{\left\{\widehat{\mathbf{P}}_{a} \otimes \widehat{\mathbf{Q}}_{b}\right\}_{c} \otimes \widehat{\mathbf{R}}_{d}\right\}_{f} \cdot \widehat{\mathbf{S}}_{f}\right)|n j m\rangle=(-1)^{c-f-j} \frac{\prod_{f c}}{\prod_{j}^{2}} \delta_{j^{\prime} j} \delta_{m^{\prime} m} \sum_{\substack{n_{1} n_{2} n_{3} \\
+j_{1} j_{2} j_{3}}}(-1)^{j_{2}} \cdot\left\{\begin{array}{ccc}
+a & b & c \\
+j_{2} & j & j_{1}
+\end{array}\right\}\left\{\begin{array}{ccc}
+d & c & f \\
+j & j_{3} & j_{2}
+\end{array}\right\} \\
+\times\left\langle n^{\prime} j^{\prime}\left\|\widehat{\mathbf{P}}_{a}\right\| n_{1} j_{1}\right\rangle\left\langle n_{1} j_{1}\left\|\widehat{\mathbf{Q}}_{b}\right\| n_{2} j_{2}\right\rangle\left\langle n_{2} j_{2}\left\|\widehat{\mathbf{R}}_{d}\right\| n_{3} j_{3}\right\rangle\left\langle n_{3} j_{3}\left\|\widehat{\mathbf{S}}_{f}\right\| n j\right\rangle \tag{17}
+\end{gather*}
+
+
+Finally Eq. 3.3(5) allows one to simplify the calculation of matrix elements of the tensor product $\left\{\widehat{\mathbf{P}}_{a} \otimes\left\{\widehat{\mathbf{Q}}_{b} \otimes\right.\right. \left.\left.\left\{\widehat{\mathbf{R}}_{d} \otimes \widehat{\mathbf{S}}_{e}\right\}_{h}\right\}_{f}\right\}_{k \kappa}$ to Eq. (16). Thus
+
+
+\begin{gather*}
+\left\langle n^{\prime} j^{\prime} m^{\prime}\right|\left\{\left\{\widehat{\mathbf{P}}_{a} \otimes \widehat{\mathbf{Q}}_{b}\right\}_{c} \otimes\left\{\widehat{\mathbf{R}}_{d} \otimes \widehat{\mathbf{S}}_{e}\right\}_{j}\right\}_{k c}|n j m\rangle=(-1)^{2 j^{\prime}+c-k-f} \frac{\prod_{c f k}}{\prod_{j^{\prime}}} C_{j^{\prime} m k c}^{j^{\prime} m^{\prime}} \sum_{\substack{n_{1} n_{2} n_{3} \\
+j_{1} j_{2} j_{3}}}\left\{\begin{array}{ccc}
+a & b & c \\
+j_{2} & j^{\prime} & j_{1}
+\end{array}\right\}\left\{\begin{array}{ccc}
+d & e & f \\
+j & j_{2} & j_{3}
+\end{array}\right\} \\
+\times\left\{\begin{array}{ccc}
+f & c & k \\
+j^{\prime} & j & j_{2}
+\end{array}\right\}\left\langle n^{\prime} j^{\prime}\left\|\widehat{\mathbf{P}}_{a}\right\| n_{1} j_{1}\right\rangle\left\langle n_{1} j_{1}\left\|\widehat{\mathbf{Q}}_{b}\right\| n_{2} j_{2}\right\rangle\left\langle n_{2} j_{2}\left\|\widehat{\mathbf{R}}_{d}\right\| n_{3} j_{3}\right\rangle\left\langle n_{3} j_{3}\left\|\widehat{\mathbf{S}}_{e}\right\| n j\right\rangle,  \tag{18}\\
+\left.\left\langle n^{\prime} j^{\prime} m^{\prime}\right\}\left|\left(\left\{\widehat{\mathbf{P}}_{a} \otimes \widehat{\mathbf{Q}}_{b}\right\}_{c} \cdot\left\{\widehat{\mathbf{R}}_{d} \otimes \widehat{\mathbf{S}}_{e}\right\}_{c}\right)\right| n j m\right\rangle=\delta_{j^{\prime}} \delta_{m^{\prime} m} \frac{\prod_{c}^{2}}{\prod_{j}^{2}} \sum_{\substack{n_{1} n_{2} n_{3} \\
+j_{1} j_{2} j_{3}}}(-1)^{-j+j_{2}}\left\{\begin{array}{ccc}
+a & b & c \\
+j_{2} & j & j_{1}
+\end{array}\right\}\left\{\begin{array}{ccc}
+d & e & c \\
+j & j_{2} & j_{3}
+\end{array}\right\} \\
+\times\left\langle n^{\prime} j\left\|\widehat{\mathbf{P}}_{a}\right\| n_{1} j_{1}\right\rangle\left\langle n_{1} j_{1}\left\|\widehat{\mathbf{Q}}_{b}\right\| n_{2} j_{2}\right\rangle\left\langle n_{2} j_{2}\left\|\widehat{\mathbf{R}}_{d}\right\| n_{3} j_{3}\right\rangle\left\langle n_{3} j_{3}\left\|\widehat{\mathbf{S}}_{e}\right\| n j\right\rangle . \tag{19}
+\end{gather*}
+
+
+\subsection*{13.1.4. Matrix Elements of Operators Which Depend on Variables of Two Subsystems}
+If a quantum-mechanical system consists of two subsystems, 1 and 2 , and eigenstates of these subsystems are characterized by the sets of quantum numbers $\left(n_{1} j_{1} m_{1}\right)$ and $\left(n_{2} j_{2} m_{2}\right)$, it is often convenient to introduce the two following representations of matrix elements.\\
+(a) The angular momenta of both subsystems are not coupled. Then
+
+
+\begin{equation*}
+\left\langle n_{1}^{\prime} j_{1}^{\prime} m_{1}^{\prime} ; n_{2}^{\prime} j_{2}^{\prime} m_{2}^{\prime}\right| \widehat{\mathbf{P}}(1,2)\left|n_{1} j_{1} m_{1} ; n_{2} j_{2} m_{2}\right\rangle=\int \Psi_{n_{1}^{\prime} j_{1}^{\prime} m_{1}^{\prime}}^{*}(1) \Psi_{n_{2}^{\prime} j_{2}^{\prime} m_{2}^{\prime}}^{*}(2) \widehat{\mathbf{P}}(1,2) \Psi_{n_{1} j_{1} m_{1}}(1) \Psi_{n_{2} j_{2} m_{2}}(2) d r_{1} d \tau_{2} \tag{20}
+\end{equation*}
+
+
+where $\Psi_{n_{1} j_{1} m_{1}}$ and $\Psi_{n_{2} j_{2} m_{2}}$ are wave functions that describe the eigenstates of each subsystem. Such a representation of matrix elements is called the $\left(n_{1} j_{1} m_{1} ; n_{2} j_{2} m_{2}\right)$-representation.\\
+(b) If angular momenta $\mathrm{j}_{1}$ and $\mathrm{j}_{2}$ are coupled to the resultant angular momentum j with projection $m= m_{1}+m_{2}$, then
+
+
+\begin{equation*}
+\left\langle n_{1}^{\prime} j_{1}^{\prime} n_{2}^{\prime} j_{2}^{\prime} j^{\prime} m^{\prime}\right| \widehat{\mathbf{P}}(1,2)\left|n_{1} j_{1} n_{2} j_{2} j m\right\rangle=\int \Psi_{n_{1}^{\prime} j_{1}^{\prime} n_{2}^{\prime} j_{2}^{\prime} j^{\prime} m^{\prime}}^{*}(1,2) \widehat{\mathbf{P}}(1,2) \Psi_{n_{1} j_{1} n_{2} j_{2} j m}(1,2) d \tau_{1} d \tau_{2} \tag{21}
+\end{equation*}
+
+
+Here
+
+
+\begin{equation*}
+\Psi_{n_{1} j_{1} n_{2} j_{2} j m}(1,2)=\sum_{m_{1} m_{2}} C_{j_{1} m_{1} j_{2} m_{2}}^{j m} \Psi_{n_{1} j_{1} m_{1}}(1) \Psi_{n_{2} j_{2} m_{2}}(2) \tag{22}
+\end{equation*}
+
+
+This representation of matrix elements is called the $\left(n_{1} j_{1} n_{2} j_{2} j m\right)$-representation.
+
+In general case, we have
+
+
+\begin{gather*}
+\left\langle n_{1}^{\prime} j_{1}^{\prime} m_{1}^{\prime} ; n_{2}^{\prime} j_{2}^{\prime} m_{2}^{\prime}\right| \widehat{\mathbf{P}}_{a \alpha}(1,2)\left|n_{1} j_{1} m_{1} ; n_{2} j_{2} m_{2}\right\rangle \\
+=(-1)^{2 a} \frac{1}{\prod_{j^{\prime}}} \sum_{j m j^{\prime} m^{\prime}} C_{j_{1} m_{1} j_{2} m_{2}}^{j m} C_{j_{1}^{\prime} m_{1}^{\prime} j_{2}^{\prime} m_{2}^{\prime}}^{j^{\prime} m^{\prime}} C_{j m a \alpha}^{j^{\prime} m^{\prime}}\left\langle n_{1}^{\prime} j_{1}^{\prime} n_{2}^{\prime} j_{2}^{\prime} j^{\prime}\left\|\widehat{\mathbf{P}}_{a}(1,2)\right\| n_{1} j_{1} n_{2} j_{2} j\right\rangle \tag{23}
+\end{gather*}
+
+
+Any operator $\widehat{A}(1,2)$ which depends on variables of two subsystems can frequently be expressed as a direct or irreducible product of two operators $\widehat{P}_{a \alpha}(1)$ and $\widehat{Q}_{b \beta}(2)$ which depend only on variables of the first and second subsystem, respectively.
+
+$$
+\widehat{A}(1,2)=\widehat{P}_{a \alpha}(1) \widehat{Q}_{b \beta}(2) \quad \text { or } \quad \widehat{A}(1,2)=\left\{\widehat{\mathbf{P}}_{a}(1) \otimes \widehat{\mathbf{Q}}_{b}(2)\right\}_{c \gamma}
+$$
+
+The matrix element for the direct-product case is given by
+
+
+\begin{gather*}
+\left\langle n_{1}^{\prime} j_{1}^{\prime} m_{1}^{\prime} ; n_{2}^{\prime} j_{2}^{\prime} m_{2}^{\prime}\right| \widehat{P}_{a \alpha}(1) \cdot \widehat{Q}_{b \beta}(2)\left|n_{1} j_{1} m_{1} ; n_{2} j_{2} m_{2}\right\rangle \\
+=\frac{(-1)^{2 a+2 b}}{\prod_{j_{1}^{\prime} j_{2}^{\prime}}} C_{j_{1} m_{1} a \alpha}^{j_{1}^{\prime} m_{1}^{\prime}} C_{j_{2} m_{2} b \beta}^{j_{2}^{\prime} m_{2}^{\prime}}\left\langle n_{1}^{\prime} j_{1}^{\prime}\left\|\widehat{\mathbf{P}}_{a}(1)\right\| n_{1} j_{1}\right\rangle\left\langle n_{2}^{\prime} j_{2}^{\prime}\left\|\widehat{\mathbf{Q}}_{b}(2)\right\| n_{2} j_{2}\right\rangle \tag{24}
+\end{gather*},
+
+
+whereas for the irreducible tensor product case it may be expressed in the form
+
+
+\begin{gather*}
+\left\langle n_{1}^{\prime} j_{1}^{\prime} m_{1}^{\prime} ; n_{2}^{\prime} j_{2}^{\prime} m_{2}^{\prime}\right|\left\{\widehat{\mathbf{P}}_{a}(1) \otimes \widehat{\mathbf{Q}}_{b}(2)\right\}_{c \gamma}\left|n_{1} j_{1} m_{1} ; n_{2} j_{2} m_{2}\right\rangle \\
+=\frac{(-1)^{2 c}}{\prod_{j_{1}^{\prime} j_{2}^{\prime}}} \sum_{\alpha \beta} C_{j_{1} m_{1} a \alpha}^{j_{1}^{\prime} m_{1}^{\prime}} C_{a \alpha b \beta}^{c \gamma} C_{j_{2} m_{2} b \beta}^{j_{2}^{\prime} m_{2}^{\prime}}\left\langle n_{1}^{\prime} j_{1}^{\prime}\left\|\widehat{\mathbf{P}}_{a}(1)\right\| n_{1} j_{1}\right\rangle\left\langle n_{2}^{\prime} j_{2}^{\prime}\left\|\widehat{\mathbf{Q}}_{b}(2)\right\| n_{2} j_{2}\right\rangle \tag{25}
+\end{gather*}
+
+
+The matrix element of a scalar product is given as follows:
+
+
+\begin{gather*}
+\left\langle n_{1}^{\prime} j_{1}^{\prime} m_{1}^{\prime} ; n_{2}^{\prime} j_{2}^{\prime} m_{2}^{\prime}\right|\left(\widehat{\mathbf{P}}_{a}(1) \cdot \widehat{\mathbf{Q}}_{a}(2)\right)\left|n_{1} j_{1} m_{1} ; n_{2} j_{2} m_{2}\right\rangle \\
+=\frac{1}{\prod_{j_{1}^{\prime} j_{2}^{\prime}}} \sum_{\alpha}(-1)^{-\alpha} C_{j_{1} m_{1} \alpha \alpha}^{j_{1}^{\prime} m_{1}^{\prime}} C_{j_{2} m_{2} \alpha-\alpha}^{j_{2}^{\prime} m_{2}^{\prime}}\left\langle n_{1}^{\prime} j_{1}^{\prime}\left\|\widehat{\mathbf{P}}_{a}(1)\right\| n_{1} j_{1}\right\rangle\left\langle n_{2}^{\prime} j_{2}^{\prime}\left\|\widehat{\mathbf{Q}}_{b}(2)\right\| n_{2} j_{2}\right\rangle \tag{26}
+\end{gather*} .
+
+
+Matrix elements of the same operators can be evaluated in the $\left(n_{1} j_{1} n_{2} j_{2} j m\right)$-representation. This yields
+
+
+\begin{gather*}
+\left\langle n_{1}^{\prime} j_{1}^{\prime} n_{2}^{\prime} j_{2}^{\prime} j^{\prime} m^{\prime}\right| \widehat{P}_{a \alpha}(1) \cdot \widehat{Q}_{b \beta}(2)\left|n_{1} j_{1} n_{2} j_{2} j m\right\rangle \\
+=(-1)^{2 a+2 b} \prod_{j}\left\langle n_{1}^{\prime} j_{1}^{\prime}\left\|\widehat{\mathbf{P}}_{a}(1)\right\| n_{1} j_{1}\right\rangle\left\langle n_{2}^{\prime} j_{2}^{\prime}\left\|\widehat{\mathbf{Q}}_{b}(2)\right\| n_{2} j_{2}\right\rangle \sum_{c \gamma} \prod_{c} C_{j m c \gamma}^{j^{\prime} m^{\prime}} C_{a \alpha b \beta}^{c \gamma}\left\{\begin{array}{ccc}
+a & b & c \\
+j_{1}^{\prime} & j_{2}^{\prime} & j^{\prime} \\
+j_{1} & j_{2} & j
+\end{array}\right\}  \tag{27}\\
+\left\langle n_{1}^{\prime} j_{1}^{\prime} n_{2}^{\prime} j_{2}^{\prime} j^{\prime} m^{\prime}\right|\left\{\widehat{\mathbf{P}}_{a}(1) \otimes \widehat{\mathbf{Q}}_{b}(2)\right\}_{c \gamma}\left|n_{1} j_{1} n_{2} j_{2} j m\right\rangle \\
+=(-1)^{2 c} \prod_{c j} C_{j m c \gamma}^{j^{\prime} m^{\prime}}\left\{\begin{array}{ccc}
+a & b & c \\
+j_{1}^{\prime} & j_{2}^{\prime} & j^{\prime} \\
+j_{1} & j_{2} & j
+\end{array}\right\}\left\langle n_{1}^{\prime} j_{1}^{\prime}\left\|\widehat{\mathbf{P}}_{a}(1)\right\| n_{1} j_{1}\right\rangle\left\langle n_{2}^{\prime} j_{2}^{\prime}\left\|\widehat{\mathbf{Q}}_{b}(2)\right\| n_{2} j_{2}\right\rangle  \tag{28}\\
+\left\langle n_{1}^{\prime} j_{1}^{\prime} n_{2}^{\prime} j_{2}^{\prime} j^{\prime} m^{\prime}\right|\left(\widehat{\mathbf{P}}_{a}(1) \cdot \widehat{\mathbf{Q}}_{a}(2)\right)\left|n_{1} j_{1} n_{2} j_{2} j m\right\rangle \\
+=\delta_{j^{\prime} j^{\prime}} \delta_{m^{\prime} m}(-1)^{j+j_{1}+j_{2}^{\prime}}\left\{\begin{array}{ccc}
+j_{1}^{\prime} & j_{1} & a \\
+j_{2} & j_{2}^{\prime} & j
+\end{array}\right\}\left\langle n_{1}^{\prime} j_{1}^{\prime}\left\|\widehat{\mathbf{P}}_{a}(1)\right\| n_{1} j_{1}\right\rangle\left\langle n_{2}^{\prime} j_{2}^{\prime}\left\|\widehat{\mathbf{Q}}_{a}(2)\right\| n_{2} j_{2}\right\rangle \tag{29}
+\end{gather*}
+
+
+Let us consider the products of three operators which depend only on variables of one of the subsystems. In this case the matrix elements of direct products of these operators can be evaluated by the successive use of Eqs. (24), (27) and (8). If two of three operators form an irreducible tensor product, Eqs. (25), (28), (9) and (10) must additionally be applied.
+
+Matrix elements of irreducible tensor products of three tensor operators may be represented in the forms
+
+
+\begin{align*}
+& \left\langle n_{1}^{\prime} j_{1}^{\prime} m_{1}^{\prime} ; n_{2}^{\prime} j_{2}^{\prime} m_{2}^{\prime}\right|\left\{\left\{\hat{\mathbf{P}}_{a}(1) \otimes \widehat{\mathbf{Q}}_{b}(2)\right\}_{c} \otimes \widehat{\mathbf{R}}_{d}(1)\right\}_{e c}\left|n_{1} j_{1} m_{1} ; n_{2} j_{2} m_{2}\right\rangle \\
+& =(-1)^{b-c-d-j_{1}-j_{1}^{\prime}} \frac{\prod_{c}}{\prod_{j_{1}^{\prime} j_{2}^{\prime}}} \sum_{f N J} \prod_{\rho \beta}^{2} C_{f \varphi b \beta}^{e s} \dot{C}_{j_{1} m_{1} f \varphi}^{j_{1}^{\prime} m_{1}^{\prime}} C_{j_{2} m_{2} b \beta}^{j_{j}^{\prime} m_{2}^{\prime}}\left\{\begin{array}{lll}
+a & b & c \\
+e & d & f
+\end{array}\right\}\left\{\begin{array}{ccc}
+d & a & f \\
+j_{1}^{\prime} & j_{1} & J
+\end{array}\right\} \\
+& x\left\langle n_{1}^{\prime} j_{1}^{\prime}\left\|\hat{\mathbf{P}}_{\mathrm{a}}(1)\right\| N J\right\rangle\left\langle N J\left\|\hat{\mathrm{R}}_{d}(1)\right\| n_{1} j_{1}\right\rangle\left\langle n_{2}^{\prime} j_{2}^{\prime}\left\|\hat{\mathrm{Q}}_{b}(2)\right\| n_{2} j_{2}\right\rangle,  \tag{30}\\
+& \left\langle n_{1}^{\prime} j_{1}^{\prime} n_{2}^{\prime} j_{2}^{\prime} j^{\prime} m^{\prime}\right|\left\{\left\{\widehat{\mathbf{P}}_{a}(1) \otimes \widehat{\mathbf{Q}}_{b}(2)\right\}_{c} \otimes \widehat{\mathbf{R}}_{d}(1)\right\}_{e c}\left|n_{1} j_{1} n_{2} j_{2} j m\right\rangle=(-1)^{b-c-d-j_{1}-j_{1}^{\prime}} \prod_{c j e} C_{j m e c}^{j^{\prime} m^{\prime}} \sum_{j N J} \prod_{j}^{2} \\
+& \left\{\begin{array}{lll}
+a & b & c \\
+e & d & f
+\end{array}\right\}\left\{\begin{array}{lll}
+d & a & f \\
+j_{1}^{\prime} & j_{1} & J
+\end{array}\right\}\left\{\begin{array}{lll}
+j_{1} & f & j_{1}^{\prime} \\
+j_{2} & b & j_{2}^{\prime} \\
+j & e & j^{\prime}
+\end{array}\right\}\left\langle n_{1}^{\prime} j_{1}^{\prime}\left\|\widehat{P}_{a}(1)\right\| N J\right\rangle\left\langle N J\left\|\widehat{R}_{d}(1)\right\| n_{1} j_{1}\right\rangle\left(n_{2}^{\prime} j_{2}^{\prime}\left\|\widehat{Q}_{b}(2)\right\| n_{2} j_{2}\right\rangle,  \tag{31}\\
+& \left\langle n_{1}^{\prime} j_{1}^{\prime} n_{2}^{\prime} j_{2}^{\prime} j^{\prime} m^{\prime}\right|\left(\left\{\hat{\mathbf{P}}_{\mathrm{a}}(1) \otimes \widehat{\mathbf{Q}}_{\mathrm{b}}(2)\right\}_{\mathrm{c}} \cdot \hat{\mathbf{R}}_{\mathrm{c}}(1)\right)\left|n_{1} j_{1} n_{2} j_{2} j m\right\rangle=\delta_{j^{\prime} j} \delta_{m^{\prime} m}(-1)^{-a+b+j+j_{2}^{\prime}-j_{1}^{\prime}} \prod_{c} \\
+& \times\left\{\begin{array}{lll}
+j_{1}^{\prime} & j_{1} & b \\
+j_{2} & j_{2}^{\prime} & j
+\end{array}\right\} \sum_{N J}\left\{\begin{array}{ccc}
+a & b & c \\
+j_{1} & J & j_{1}^{\prime}
+\end{array}\right\}\left\langle n_{1}^{\prime} j_{1}^{\prime}\left\|\widehat{\mathbf{P}}_{a}(1)\right\| N J\right\rangle\left\langle N J\left\|\widehat{\mathbf{R}}_{c}(1)\right\| n_{1} j_{1}\right\rangle\left\langle n_{2}^{\prime} j_{2}^{\prime}\left\|\widehat{\mathbf{Q}}_{b}(2)\right\| n_{2} j_{2}\right\rangle . \tag{32}
+\end{align*}
+
+
+The evaluation of matrix elements of the product $\left\{\hat{\mathbf{P}}_{a}(1) \otimes\left\{\hat{\mathbf{Q}}_{b}(2) \otimes \hat{\mathbf{R}}_{d}(1)\right\}_{f}\right\}_{k}$ can be performed using Eq. 3.3(1), while, for the product $\left\{\left\{\widehat{\mathbf{P}}_{a}(1) \otimes \widehat{\mathbf{R}}_{d}(1)\right\}_{f} \otimes \widehat{\mathbf{Q}}_{b}(2)\right\}_{k}$, one can use Eqs. (25), (28), (10).
+
+Matrix elements of direct products of four tensor operators can be obtained by the successive use of the foregoing relations.
+
+We give below expressions for matrix elements of irreducible tensor products of four tensor operators:
+
+
+\begin{align*}
+& \left\langle n_{1}^{\prime} j_{1}^{\prime} m_{1}^{\prime} ; n_{2}^{\prime} j_{2}^{\prime} m_{2}^{\prime}\right|\left\{\left\{\hat{\mathbf{P}}_{\mathrm{a}}(1) \otimes \hat{\mathbf{Q}}_{\mathrm{b}}(2)\right\}_{c} \otimes\left\{\hat{\mathbf{R}}_{d}(1) \otimes \hat{\mathbf{S}}_{e}(2)\right\}_{f}\right\}_{k c}\left|n_{1} j_{1} m_{1} ; n_{2} j_{2} m_{2}\right\rangle=(-1)^{2 j_{1}^{\prime}+2 j_{2}^{\prime}+2 k} \frac{\Pi_{c j}}{\Pi_{j_{1}^{\prime} j_{2}^{\prime}}} \\
+& \times \sum_{g h \sigma \eta} \prod_{g h}^{2} C_{h \sigma g \eta}^{k \kappa} C_{h \sigma j_{1} m_{1}}^{j_{1}^{\prime} m_{1}^{\prime}} C_{g \eta j_{2} m_{2}}^{j_{1}^{\prime} m_{2}^{\prime}}\left\{\begin{array}{lll}
+a & b & c \\
+d & e & f \\
+h & g & k
+\end{array}\right\} \sum_{N_{1} J_{1} N_{2} J_{2}}\left\{\begin{array}{lll}
+a & d & h \\
+j_{1} & j_{1}^{\prime} & J_{1}
+\end{array}\right\}\left\{\begin{array}{ccc}
+b & e & g \\
+j_{2} & j_{2}^{\prime} & J_{2}
+\end{array}\right\} \\
+& \times\left\langle n_{1}^{\prime} j_{1}^{\prime}\left\|\widehat{\mathbf{P}}_{a}(1)\right\| N_{1} J_{1}\right\rangle\left\langle N_{1} J_{1}\left\|\widehat{\mathrm{R}}_{d}(1)\right\| n_{1} j_{1}\right\rangle\left\langle n_{2}^{\prime} j_{2}^{\prime}\left\|\widehat{\mathrm{Q}}_{b}(2)\right\| N_{2} J_{2}\right\rangle\left\langle N_{2} J_{2}\left\|\widehat{\mathbf{S}}_{e}(2)\right\| n_{2} j_{2}\right\rangle \text {, }  \tag{33}\\
+& \left.\left\langle n_{1}^{\prime} j_{1}^{\prime} n_{2}^{\prime} j_{2}^{\prime} j^{\prime} m^{\prime}\right|\left\{\left\{\widehat{\mathbf{P}}_{a}(1) \otimes \widehat{\mathbf{Q}}_{b}(2)\right\}_{c} \otimes\left\{\widehat{\mathbf{R}}_{d}(1) \otimes \widehat{\mathbf{S}}_{e}(2)\right\}_{f}\right\}_{k c} \mid n_{1} j_{1} n_{2} j_{2} j m\right) \\
+& =(-1)^{j+j^{\prime}-k} \prod_{c f j k} C_{j m k k}^{j^{\prime} m^{\prime}} \sum_{g h} \prod_{g h}^{2}\left\{\begin{array}{lll}
+a & b & c \\
+d & e & f \\
+h & g & k
+\end{array}\right\}\left\{\begin{array}{lll}
+j_{1} & j_{1}^{\prime} & h \\
+j_{2} & j_{2}^{\prime} & g \\
+j & j^{\prime} & k
+\end{array}\right\} \sum_{N_{1}} J_{1} N_{3} J_{2}, ~\left(\begin{array}{lll}
+d & a & h \\
+j_{1}^{\prime} & j_{1} & J_{1}
+\end{array}\right\}\left\{\begin{array}{ccc}
+e & b & g \\
+j_{2}^{\prime} & j_{2} & J_{2}
+\end{array}\right\} \\
+& \times\left\langle n_{1}^{\prime} j_{1}^{\prime}\left\|\hat{\mathbf{P}}_{a}(1)\right\| N_{1} J_{1}\right\rangle\left\langle N_{1} J_{1}\left\|\hat{\mathbf{R}}_{d}(1)\right\| n_{1} j_{1}\right\rangle\left\langle n_{2}^{\prime} j_{2}^{\prime}\left\|\widehat{\mathbf{Q}}_{b}(2)\right\| N_{2} J_{2}\right\rangle\left\langle N_{2} J_{2}\left\|\widehat{\mathbf{S}}_{e}(2)\right\| n_{2} j_{2}\right\rangle,  \tag{34}\\
+& \left\langle n_{1}^{\prime} j_{1}^{\prime} n_{2}^{\prime} j_{2}^{\prime} j^{\prime} m^{\prime}\right|\left(\left\{\hat{\mathbf{P}}_{a}(1) \otimes \widehat{\mathbf{Q}}_{b}(2)\right\}_{c} \cdot\left\{\widehat{\mathbf{R}}_{d}(1) \otimes \widehat{\mathbf{S}}_{e}(2)\right\}_{c}\left|n_{1} j_{1} n_{2} j_{2} j m\right\rangle=\delta_{j^{\prime} j} \delta_{m^{\prime} m}(-1)^{2 c+j_{1}^{\prime}+j_{2}-j-b-d} \prod_{c}^{2}\right. \\
+& \times \sum_{g} \prod_{g}^{2}\left\{\begin{array}{lll}
+a & b & c \\
+e & d & g
+\end{array}\right\}\left\{\begin{array}{lll}
+j_{1}^{\prime} & j_{1} & g \\
+j_{2} & j_{2}^{\prime} & j
+\end{array}\right\} \sum_{N_{1} J_{1} N_{2} J_{2}}\left\{\begin{array}{ccc}
+d & a & g \\
+j_{1}^{\prime} & j_{1} & J_{1}
+\end{array}\right\}\left\{\begin{array}{ccc}
+e & b & g \\
+j_{2}^{\prime} & j_{2} & J_{2}
+\end{array}\right\} \\
+& \times\left\langle n_{1}^{\prime} j_{1}^{\prime}\left\|\hat{\mathrm{P}}_{\mathrm{a}}(1)\right\| N_{1} J_{1}\right\rangle\left\langle N_{1} J_{1}\left\|\hat{\mathrm{R}}_{d}(1)\right\| n_{1} j_{1}\right\rangle\left\langle n_{2}^{\prime} j_{2}^{\prime}\left\|\hat{\mathrm{Q}}_{\mathrm{b}}(2)\right\| N_{2} J_{2}\right\rangle\left(N_{2} J_{2}\left\|\hat{\mathrm{~S}}_{e}(2)\right\| n_{2} j_{2}\right\rangle, \tag{35}
+\end{align*}
+
+
+
+\begin{align*}
+& \left\langle n_{1}^{\prime} j_{1}^{\prime} m_{1}^{\prime} ; n_{2}^{\prime} j_{2}^{\prime} m_{2}^{\prime}\right|\left\{\left\{\left\{\widehat{\mathbf{P}}_{a}(1) \otimes \widehat{\mathbf{Q}}_{b}(2)\right\}_{c} \otimes \widehat{\mathbf{R}}_{d}(1)\right\}_{f} \otimes \widehat{\mathbf{S}}_{e}(2)\right\}_{k c}\left|n_{1} j_{1} m_{1} ; n_{2} j_{2} m_{2}\right\rangle \\
+& =(-1)^{c+d+k-e+2 j_{1}^{\prime}+2 j_{2}^{\prime}} \frac{\prod_{c f}}{\prod_{j_{1}^{\prime} j_{2}^{\prime}}} \sum_{g h \sigma \eta} \prod_{g h}^{2} C_{h \sigma g \eta}^{k \kappa} C_{h \sigma j_{1} m_{1}}^{j_{1}^{\prime} m_{1}^{\prime}} C_{g \eta j_{2} m_{2}}^{j_{2}^{\prime} m_{2}^{\prime}}\left\{\begin{array}{lll}
+a & d & h \\
+f & b & c
+\end{array}\right\}\left\{\begin{array}{lll}
+b & e & g \\
+k & h & f
+\end{array}\right\} \\
+& \times \sum_{N_{1} J_{1} N_{2} J_{2}}\left\{\begin{array}{ccc}
+d & a & h \\
+j_{1}^{\prime} & j_{1} & J_{1}
+\end{array}\right\}\left\{\begin{array}{ccc}
+e & b & g \\
+j_{2}^{\prime} & j_{2} & J_{2}
+\end{array}\right\}\left\langle n_{1}^{\prime} j_{1}^{\prime}\left\|\widehat{\mathbf{P}}_{a}(1)\right\| N_{1} J_{1}\right\rangle\left\langle N_{1} J_{1}\left\|\widehat{\mathbf{R}}_{d}(1)\right\| n_{1} j_{1}\right\rangle \\
+& \times\left\langle n_{2}^{\prime} j_{2}^{\prime}\left\|\widehat{\mathbf{Q}}_{b}(2)\right\| N_{2} J_{2}\right\rangle\left\langle N_{2} J_{2}\left\|\widehat{\mathbf{S}}_{e}(2)\right\| n_{2} j_{2}\right\rangle,  \tag{36}\\
+& \left\langle n_{1}^{\prime} j_{1}^{\prime} n_{2}^{\prime} j_{2}^{\prime} j^{\prime} m^{\prime}\right|\left\{\left\{\left\{\widehat{\mathbf{P}}_{a}(1) \otimes \widehat{\mathbf{Q}}_{b}(2)\right\}_{c} \otimes \widehat{\mathbf{R}}_{d}(1)\right\}_{f} \otimes \widehat{\mathbf{S}}_{e}(2)\right\}_{k \kappa}\left|n_{1} j_{1} n_{2} j_{2} j m\right\rangle \\
+& =(-1)^{c+d-e-j-j^{\prime}} \prod_{c f j k} C_{j m k \kappa}^{j^{\prime} m^{\prime}} \sum_{g h} \prod_{g h}^{2}\left\{\begin{array}{lll}
+a & d & h \\
+f & b & c
+\end{array}\right\}\left\{\begin{array}{ccc}
+b & e & g \\
+k & h & f
+\end{array}\right\}\left\{\begin{array}{ccc}
+j_{1} & j_{1}^{\prime} & h \\
+j_{2} & j_{2}^{\prime} & g \\
+j & j^{\prime} & k
+\end{array}\right\} \sum_{N_{1}} \sum_{1} N_{2} J_{2} ~\left(\begin{array}{ccc}
+d & a & h \\
+j_{1}^{\prime} & j_{1} & J_{1}
+\end{array}\right\}\left\{\begin{array}{ccc}
+e & b & g \\
+j_{2}^{\prime} & j_{2} & J_{2}
+\end{array}\right\} \\
+& \left\langle n_{1}^{\prime} j_{1}^{\prime}\left\|\widehat{\mathbf{P}}_{a}(1)\right\| N_{1} J_{1}\right\rangle\left\langle N_{1} J_{1}\left\|\widehat{\mathbf{R}}_{d}(1)\right\| n_{1} j_{1}\right\rangle\left\langle n_{2}^{\prime} j_{2}^{\prime}\left\|\widehat{\mathbf{Q}}_{b}(2)\right\| N_{2} J_{2}\right\rangle\left\langle N_{2} J_{2}\left\|\widehat{\mathbf{S}}_{e}(2)\right\| n_{2} j_{2}\right\rangle,  \tag{37}\\
+& \left\langle n_{1}^{\prime} j_{1}^{\prime} n_{2}^{\prime} j_{2}^{\prime} j^{\prime} m^{\prime}\right|\left(\left\{\left\{\widehat{\mathbf{P}}_{a}(1) \otimes \widehat{\mathbf{Q}}_{b}(2)\right\}_{c} \otimes \widehat{\mathbf{R}}_{d}(1)\right\}_{f} \cdot \widehat{\mathbf{S}}_{j}(2)\right)\left|n_{1} j_{1} n_{2} j_{2} j m\right\rangle \\
+& =\delta_{j^{\prime} j} \delta_{m^{\prime} m}(-1)^{c+d-b+j-j+j_{1}^{\prime}+j_{2}} \prod_{c f} \sum_{g} \prod_{g}^{2}\left\{\begin{array}{lll}
+a & b & c \\
+f & d & g
+\end{array}\right\}\left\{\begin{array}{lll}
+j_{1}^{\prime} & j_{1} & g \\
+j_{2} & j_{2}^{\prime} & j
+\end{array}\right\} \sum_{N_{1} J_{1} N_{2} J_{2}}\left\{\begin{array}{ccc}
+a & d & g \\
+j_{1} & j_{1}^{\prime} & J_{1}
+\end{array}\right\}\left\{\begin{array}{ccc}
+b & f & g \\
+j_{2} & j_{2}^{\prime} & J_{2}
+\end{array}\right\} \\
+& \times\left\langle n_{1}^{\prime} j_{1}^{\prime}\left\|\widehat{\mathbf{P}}_{a}(1)\right\| N_{1} J_{1}\right\rangle\left\langle N_{1} J_{1}\left\|\widehat{\mathbf{R}}_{d}(1)\right\| n_{1} j_{1}\right\rangle\left\langle n_{2}^{\prime} j_{2}^{\prime}\left\|\widehat{\mathbf{Q}}_{b}(2)\right\| N_{2} J_{2}\right\rangle\left\langle N_{2} J_{2}\left\|\widehat{\mathbf{S}}_{f}(2)\right\| n_{2} j_{2}\right\rangle . \tag{38}
+\end{align*}
+
+
+Matrix elements of irreducible tensor products with other coupling schemes of operators may be evaluated using the formulas for the recoupling of four irreducible tensors (see Eq. 3.3(3)-3.3(5)).
+
+If the wave functions and operators depend on variables of three or more subsystems, the evaluation of matrix elements is reduced to the successive use of the above equations.
+
+\subsection*{13.1.5. Matrix Elements of Operators Which Depend on \\
+ Variables of One of the Subsystems}
+Let $\widehat{P}_{a \alpha}(1)$ be an operator which depends on variables of subsystem 1. Matrix elements of this operator are diagonal with respect to quantum numbers which characterize eigenstates of subsystem 2 .
+
+
+\begin{equation*}
+\left\langle n_{1}^{\prime} j_{1}^{\prime} m_{1}^{\prime} ; n_{2}^{\prime} j_{2}^{\prime} m_{2}^{\prime}\right| \widehat{P}_{a \alpha}(1)\left|n_{1} j_{1} m_{1} ; n_{2} j_{2} m_{2}\right\rangle=\delta_{n_{2}^{\prime} n_{2}} \delta_{j_{2}^{\prime} j_{2}} \delta_{m_{2}^{\prime} m_{2}}\left\langle n_{1}^{\prime} j_{1}^{\prime} m_{1}^{\prime}\right| \widehat{P}_{a \alpha}(1)\left|n_{1} j_{1} m_{1}\right\rangle \tag{39}
+\end{equation*}
+
+
+Further evaluation is reduced to the use of the foregoing relations.\\
+If an eigenstate corresponds to some fixed resultant angular momentum $\mathbf{j}=\mathbf{j}_{1}+\mathbf{j}_{2}$ and its projection $m=m_{1}+m_{2}$, one has
+
+\[
+\left\langle n_{1}^{\prime} j_{1}^{\prime} n_{2}^{\prime} j_{2}^{\prime} j^{\prime} m^{\prime}\right| \widehat{P}_{a \alpha}(1)\left|n_{1} j_{1} n_{2} j_{2} j m\right\rangle=\delta_{j_{2}^{\prime} j_{2}} \delta_{n_{2}^{\prime} n_{2}}(-1)^{j+j_{1}^{\prime}+j_{2}-a} \prod_{j} C_{j m a \alpha}^{j^{\prime} m^{\prime}}\left\{\begin{array}{ccc}
+j_{1} & j_{2} & j  \tag{40}\\
+j^{\prime} & a & j_{1}^{\prime}
+\end{array}\right\}\left\langle n_{1}^{\prime} j_{1}^{\prime}\left\|\widehat{\mathbf{P}}_{a}(1)\right\| n_{1} j_{1}\right\rangle
+\]
+
+A matrix element of the direct tensor product of two operators may be represented in the form
+
+
+\begin{gather*}
+\left\langle n_{1}^{\prime} j_{1}^{\prime} n_{2}^{\prime} j_{2}^{\prime} j^{\prime} m^{\prime}\right| \widehat{P}_{a \alpha}(1) \widehat{Q}_{b \beta}(1)\left|n_{1} j_{1} n_{2} j_{2} j m\right\rangle=\delta_{n_{2}^{\prime} n_{2}} \delta_{j_{2}^{\prime} j_{2}}(-1)^{j_{2}+j-j_{1}+2 a+2 b} \prod_{j} \sum_{c \gamma} \prod_{c} C_{j m c \gamma}^{j^{\prime} m^{\prime}} C_{a \alpha b \beta}^{c \gamma}\left\{\begin{array}{ccc}
+j_{1} & j_{2} & j \\
+j^{\prime} & c & j_{1}^{\prime}
+\end{array}\right\} \\
+\times \sum_{N J}\left\{\begin{array}{ccc}
+a & b & c \\
+j_{1} & j_{1}^{\prime} & J
+\end{array}\right\}\left\langle n_{1}^{\prime} j_{1}^{\prime}\left\|\widehat{\mathbf{P}}_{a}(1)\right\| N J\right\rangle\left\langle N J\left\|\widehat{Q}_{b}(1)\right\| n_{1} j_{1}\right\rangle \tag{41}
+\end{gather*}
+
+
+For an irreducible tensor product one gets the expressions
+
+
+\begin{gather*}
+\left\langle n_{1}^{\prime} j_{1}^{\prime} n_{2}^{\prime} j_{2}^{\prime} j^{\prime} m^{\prime}\right|\left\{\widehat{\mathbf{P}}_{a}(1) \otimes \widehat{\mathbf{Q}}_{b}(1)\right\}_{c \gamma}\left|n_{1} j_{1} n_{2} j_{2} j m\right\rangle=\delta_{n_{2}^{\prime} n_{2}} \delta_{j_{2}^{\prime} j_{2}}(-1)^{j_{2}+j-j_{1}+2 c} \prod_{j c} C_{j m c \gamma}^{j^{\prime} m^{\prime}}\left\{\begin{array}{ccc}
+j_{1} & j_{2} & j \\
+j^{\prime} & c & j_{1}^{\prime}
+\end{array}\right\} \\
+\times \sum_{N J}\left\{\begin{array}{ccc}
+a & b & c \\
+j_{1} & j_{1}^{\prime} & J
+\end{array}\right\}\left\langle n_{1}^{\prime} j_{1}^{\prime}\left\|\widehat{\mathbf{P}}_{a}(1)\right\| N J\right\rangle\left\langle N J\left\|\widehat{\mathbf{Q}}_{b}(1)\right\| n_{1} j_{1}\right\rangle  \tag{42}\\
+\left\langle n_{1}^{\prime} j_{1}^{\prime} n_{2}^{\prime} j_{2}^{\prime} j^{\prime} m^{\prime}\right|\left(\widehat{\mathbf{P}}_{a}(1) \cdot \widehat{\mathbf{Q}}_{a}(1)\right)\left|n_{1} j_{1} n_{2} j_{2} j m\right\rangle=\delta_{n_{2}^{\prime} n_{2}} \delta_{j_{2}^{\prime} j_{2}} \delta_{j_{1}^{\prime} j_{1}} \delta_{j^{\prime} j^{\prime}} \delta_{m^{\prime} m} \\
+\times \frac{1}{\prod_{j_{1}}^{2}}(-1)^{-j_{1}} \sum_{J N}(-1)^{J}\left(n_{1}^{\prime} j_{1}\left\|\widehat{\mathbf{P}}_{a}(1)\right\| N J\right\rangle\left\langle N J\left\|\widehat{\mathbf{Q}}_{a}(1)\right\| n_{1} j_{1}\right\rangle \tag{43}
+\end{gather*}
+
+
+In the case of the irreducible tensor product of three operators we obtain
+
+
+\begin{gather*}
+\left\langle n_{1}^{\prime} j_{1}^{\prime} n_{2}^{\prime} j_{2}^{\prime} j^{\prime} m^{\prime}\right|\left\{\left\{\widehat{\mathbf{P}}_{a}(1) \otimes \widehat{\mathbf{Q}}_{b}(1)\right\}_{c} \otimes \widehat{\mathbf{R}}_{d}(1)\right\}_{f \varphi}\left|n_{1} j_{1} n_{2} j_{2} j m\right\rangle \\
+=\delta_{n_{2}^{\prime} n_{2}} \delta_{j_{2}^{\prime} j_{2}}(-1)^{j+j_{1}-j_{1}^{\prime}+j_{2}+c} \prod_{j f c} C_{j m f \varphi}^{j^{\prime} m^{\prime}}\left\{\begin{array}{ccc}
+j_{1} & j_{2} & j \\
+j^{\prime} & f & j_{1}^{\prime}
+\end{array}\right\} \times \sum_{N_{1} J_{1} N_{2} J_{2}}(-1)^{J_{2}}\left\{\begin{array}{ccc}
+a & b & c \\
+J_{2} & j_{1}^{\prime} & J_{1}
+\end{array}\right\}\left\{\begin{array}{ccc}
+d & c & f \\
+j_{1}^{\prime} & j_{1} & J_{2}
+\end{array}\right\} \\
+\times\left\langle n_{1}^{\prime} j_{1}^{\prime}\left\|\widehat{\mathbf{P}}_{a}(1)\right\| N_{1} J_{1}\right\rangle\left\langle N_{1} J_{1}\left\|\widehat{\mathbf{Q}}_{b}(1)\right\| N_{2} J_{2}\right\rangle\left\langle N_{2} J_{2}\left\|\widehat{\mathbf{R}}_{d}(1)\right\| n_{1} j_{1}\right\rangle  \tag{44}\\
+\left\langle n_{1}^{\prime} j_{1}^{\prime} n_{2}^{\prime} j_{2}^{\prime} j^{\prime} m^{\prime}\right|\left(\left\{\widehat{\mathbf{P}}_{a}(1) \otimes \widehat{\mathbf{Q}}_{b}(1)\right\}_{c} \cdot \widehat{\mathbf{R}}_{c}(1)\right)\left|n_{1} j_{1} n_{2} j_{2} j m\right\rangle=\delta_{n_{2}^{\prime} n_{2}} \delta_{j_{1}^{\prime} j_{1}} \delta_{j_{2}^{\prime} j_{2}} \delta_{j^{\prime} j^{\prime}} \delta_{m^{\prime} m}(-1)^{-c+2 j_{1}} \\
+\times \frac{\prod_{c}}{\prod_{j_{1}}^{2}} \sum_{N_{1} N_{2} J}\left\{\begin{array}{ccc}
+a & b & c \\
+J_{2} & j_{1} & J_{1}
+\end{array}\right\}\left\langle n_{1}^{\prime} j_{1}\left\|\widehat{\mathbf{P}}_{a}(1)\right\| N_{1} J_{1}\right\rangle\left\langle N_{1} J_{1}\left\|\widehat{\mathbf{Q}}_{b}(1)\right\| N_{2} J_{2}\right\rangle\left\langle N_{2} J_{2}\left\|\widehat{\mathbf{R}}_{c}(1)\right\| n_{1} j_{1}\right\rangle \tag{45}
+\end{gather*}
+
+
+The matrix elements of irreducible tensor products of four operators may be evaluated using the expressions given below:
+
+
+\begin{gather*}
+\left\langle n_{1}^{\prime} j_{1}^{\prime} n_{2}^{\prime} j_{2}^{\prime} j^{\prime} m^{\prime}\right|\left\{\left\{\widehat{\mathbf{P}}_{a}(1) \otimes \widehat{\mathbf{Q}}_{b}(1)\right\}_{c} \otimes\left\{\widehat{\mathbf{R}}_{d}(1) \otimes \widehat{\mathbf{S}}_{e}(1)\right\}_{f}\right\}_{k c}\left|n_{1} j_{1} n_{2} j_{2} j m\right\rangle \\
+=\delta_{n_{2}^{\prime} n_{2}} \delta_{j_{2}^{\prime} j_{2}}(-1)^{j+j_{1}^{\prime}+j_{2}-c-f} \prod_{c f k j} C_{j m k \kappa}^{j^{\prime} m^{\prime}}\left\{\begin{array}{ccc}
+j_{1} & j_{2} & j \\
+j^{\prime} & k & j_{1}^{\prime}
+\end{array}\right\} \sum_{N_{1} N_{2} N_{3}}(-1)^{2 J_{2}}\left\{\begin{array}{ccc}
+a & b & c \\
+J_{2} & j_{1}^{\prime} & J_{1}
+\end{array}\right\}\left\{\begin{array}{ccc}
+e & d & f \\
+J_{2} & j_{1} & J_{3}
+\end{array}\right\}\left\{\begin{array}{ccc}
+f & c & k \\
+j_{1}^{\prime} & j_{1} & J_{2}
+\end{array}\right\} \\
+\times\left(n_{1}^{\prime} j_{1}^{\prime}\left\|\widehat{\mathbf{P}}_{a}(1)\right\| N_{1} J_{1}\right\rangle\left\langle N_{1} J_{1}\left\|\widehat{\mathbf{Q}}_{b}(1)\right\| N_{2} J_{2}\right\rangle\left\langle N_{2} J_{2}\left\|\widehat{\mathbf{R}}_{d}(1)\right\| N_{3} J_{3}\right\rangle\left\langle N_{3} J_{3}\left\|\widehat{\mathbf{S}}_{e}(1)\right\| n_{1} j_{1}\right\rangle,  \tag{46}\\
+\left\langle n_{1}^{\prime} j_{1}^{\prime} n_{2}^{\prime} j_{2}^{\prime} j^{\prime} m^{\prime}\right|\left(\left\{\widehat{\mathbf{P}}_{a}(1) \otimes \widehat{\mathbf{Q}}_{b}(1)\right\}_{c} \cdot\left\{\widehat{\mathbf{R}}_{d}(1) \otimes \widehat{\mathbf{S}}_{e}(1)\right\}_{c}\right)\left|n_{1} j_{1} n_{2} j_{2} j m\right\rangle \\
+=\delta_{n_{2}^{\prime} n_{2}} \delta_{j_{1}^{\prime} j_{1}} \delta_{j_{2}^{\prime} j_{2}} \delta_{j^{\prime}} \delta_{m^{\prime} m} \frac{(-1)^{-j_{1}}}{\prod_{j_{1}}^{2}} \sum_{N_{J_{1}} J_{2} N_{3}}(-1)^{J_{2}}\left\{\begin{array}{ccc}
+a & b & c \\
+J_{2} & j_{1} & J_{1}
+\end{array}\right\}\left\{\begin{array}{ccc}
+e & d & c \\
+J_{2} & j_{1} & J_{3}
+\end{array}\right\} \\
+\times \prod_{c}^{2} \cdot\left\langle n_{1}^{\prime} j_{1}\left\|\widehat{\mathbf{P}}_{a}(1)\right\| N_{1} J_{1}\right\rangle\left\langle N_{1} J_{1}\left\|\widehat{\mathbf{Q}}_{b}(1)\right\| N_{2} J_{2}\right\rangle\left\langle N_{2} J_{2}\left\|\widehat{\mathbf{R}}_{d}(1)\right\| N_{3} J_{3}\right\rangle\left\langle N_{3} J_{3}\left\|\widehat{\mathbf{S}}_{e}(1)\right\| n_{1} j_{1}\right\rangle,  \tag{47}\\
+\left\langle n_{1}^{\prime} j_{1}^{\prime} n_{2}^{\prime} j_{2}^{\prime} j^{\prime} m^{\prime}\right|\left\{\left\{\left\{\widehat{\mathbf{P}}_{a}(1) \otimes \widehat{\mathbf{Q}}_{b}(1)\right\}_{c} \otimes \widehat{\mathbf{R}}_{d}(1)\right\}_{f} \otimes \widehat{\mathbf{S}}_{e}(1)\right\}_{k c}\left|n_{1} j_{1} n_{2} j_{2} j m\right\rangle \\
+=\delta_{n_{2}^{\prime} n_{2}} \delta_{j_{2}^{\prime} j_{2}}(-1)^{j_{1}+j_{2}+j+j^{\prime}+c} \prod_{f c k j} C_{j^{\prime} m k \kappa}^{j^{\prime} m^{\prime}}\left\{\begin{array}{ccc}
+j_{1} & j_{2} & j \\
+j^{\prime} & k & j_{1}^{\prime}
+\end{array}\right\}_{N_{1} N_{2} N_{3}}(-1)^{J_{2}+J_{3}}\left\{\begin{array}{ccc}
+a & b & c \\
+J_{2} & j_{1}^{\prime} & J_{1}
+\end{array}\right\}\left\{\begin{array}{ccc}
+d & c & f \\
+j_{1}^{\prime} & J_{3} & J_{2}
+\end{array}\right\}\left\{\begin{array}{ccc}
+e & f \\
+j_{1}^{\prime} & j_{1} & J_{3}
+\end{array}\right\} \\
+\times\left\langle n_{1}^{\prime} j_{1}^{\prime}\left\|\widehat{\mathbf{P}}_{a}(1)\right\| N_{1} J_{1}\right\rangle\left\langle N_{1} J_{1}\left\|\widehat{\mathbf{Q}}_{b}(1)\right\| N_{2} J_{2}\right\rangle\left\langle N_{2} J_{2}\left\|\widehat{\mathbf{R}}_{d}(1)\right\| N_{3} J_{3}\right\rangle\left(N_{3} J_{3}\left\|\widehat{\mathbf{S}}_{e}(1)\right\| n_{1} j_{1}\right\rangle, \tag{48}
+\end{gather*}
+
+
+
+\begin{gather*}
+\left\langle n_{1}^{\prime} j_{1}^{\prime} n_{2}^{\prime} j_{2}^{\prime} j^{\prime} m^{\prime}\right|\left(\left\{\left\{\widehat{\mathbf{P}}_{a}(1) \otimes \widehat{\mathbf{Q}}_{b}(1)\right\}_{c} \otimes \widehat{\mathbf{R}}_{d}(1)\right\}_{f} \cdot \widehat{\mathbf{S}}_{f}(1)\right)\left|n_{1} j_{1} n_{2} j_{2} j m\right\rangle \\
+=\delta_{n_{2}^{\prime} n_{2}} \delta_{j_{1}^{\prime} j_{1}} \delta_{j_{2}^{\prime} j_{2}} \delta_{j^{\prime} j^{\prime}} \delta_{m^{\prime} m}(-1)^{c-f-j_{1}} \frac{\prod_{f c}}{\prod_{j_{1}}^{2}} \sum_{\substack{N_{1} N_{2} N_{3} \\
+J_{1} J_{2} J_{3}}}(-1)^{J_{2}}\left\{\begin{array}{ccc}
+a & b & c \\
+J_{2} & j_{1} & J_{1}
+\end{array}\right\}\left\{\begin{array}{ccc}
+d & c & f \\
+j_{1} & J_{3} & J_{2}
+\end{array}\right\} \\
+\times\left\langle n_{1}^{\prime} j_{1}\left\|\widehat{\mathbf{P}}_{a}(1)\right\| N_{1} J_{1}\right\rangle\left\langle N_{1} J_{1}\left\|\widehat{\mathbf{Q}}_{b}(1)\right\| N_{2} J_{2}\right\rangle\left\langle N_{2} J_{2}\left\|\widehat{\mathbf{R}}_{d}(1)\right\| N_{3} J_{3}\right\rangle\left\langle N_{3} J_{3}\left\|\widehat{\mathbf{S}}_{f}(1)\right\| n_{1} j_{1}\right\rangle \tag{49}
+\end{gather*}
+
+
+Matrix elements for tensor products with other coupling schemes of operators may be obtained from the foregoing equations by the use of the recoupling rules and the commutation relations for irreducible tensors (Chap. 3).
+
+\subsection*{13.2. MATRIX ELEMENTS OF BASIC TENSOR OPERATORS}
+\subsection*{13.2.1. Some Introductory Remarks}
+In this section we shall consider matrix elements of the following operators and their tensor products:\\
+(a) the unit operator $\widehat{I}$;\\
+(b) the unit vector operator $\widehat{\mathbf{n}} \equiv \widehat{\mathbf{n}}_{1}$;\\
+(c) the gradient operators $\hat{\nabla} \equiv \hat{\nabla}_{1}$ and $\hat{\nabla}_{\Omega} \equiv\left(\hat{\nabla}_{\Omega}\right)_{1}$;\\
+(d) the total angular momentum operator $\widehat{\mathbf{J}} \equiv \widehat{\mathbf{J}}_{1}$;\\
+(e) the orbital angular momentum operator $\hat{\mathbf{L}} \equiv \hat{\mathbf{L}}_{1}$;\\
+(f) the spin angular momentum operator $\widehat{\mathbf{S}} \equiv \widehat{\mathbf{S}}_{1}$;\\
+(g) the spherical harmonic operator $Y_{l m}(\vartheta, \varphi)$.
+
+All matrix elements may be evaluated from the equations of Sec. 13.1.\\
+A wave function which describes an eigenstate of some quantum system will generally depend on the position $(r, \vartheta, \varphi)$ as well as on the spin variables ( $\xi$ ). It may be defined by
+
+
+\begin{equation*}
+\Phi(r, \vartheta, \varphi ; \xi)=\Psi_{n}(r) Y_{l m}(\vartheta \varphi)_{s m .}(\xi)=\left\langle r, \vartheta, \varphi ; \xi \mid n, l, m ; s m_{s}\right\rangle \tag{1}
+\end{equation*}
+
+
+where $l$ and $m$ are the orbital momentum and its projection; $s$ and $m_{s}$ are the spin momentum and its projection. The symbol $n$ has been defined previously in Sec. 13.1.1.
+
+The wave functions (1) determine the (nlmsms)-representation of operators.\\
+If the angular momenta $\widehat{\mathbf{L}}$ and $\widehat{\mathbf{S}}$ are coupled into the total angular momentum $\widehat{\mathbf{J}}$ with its projection $M$, the wave function which describes an eigenstate of the quantum system is defined as
+
+
+\begin{equation*}
+\Phi(r, \vartheta, \varphi ; \xi)=\Psi_{n}(r) \sum_{m m,} C_{l m s m,}^{J M} Y_{l m}(\vartheta, \varphi) \chi_{s m,}(\xi)=\Psi_{n}(r) Y_{J M}^{l s}(\vartheta, \varphi)=\langle r, \vartheta, \varphi ; \xi \mid n, l, s, J, M\rangle \tag{2}
+\end{equation*}
+
+
+These wave functions determine the ( $n l s J M$ )-representation of operators.\\
+If an operator acts only on position variables, the evaluation of matrix elements in the ( $n$ lmsm. $_{s}$ )-representation is reduced to calculating matrix elements in the (nlm)-representation.
+
+
+\begin{equation*}
+\left\langle n^{\prime} l^{\prime} m^{\prime} ; s^{\prime} m_{s}^{\prime}\right| \widehat{\mathbb{M}}_{k \kappa}(r, \vartheta, \varphi)\left|n l m ; s m_{s}\right\rangle=\delta_{s \theta^{\prime}} \delta_{m_{s} m_{!}^{\prime}}\left\langle n^{\prime} l^{\prime} m^{\prime}\right| \widehat{\mathbb{M}}_{k \kappa}(r, \vartheta ; \varphi)|n l m\rangle . \tag{3}
+\end{equation*}
+
+
+If an operator depends only on spin variables, we get a similar relationship
+
+
+\begin{equation*}
+\left\langle n^{\prime} l^{\prime} m^{\prime} ; s^{\prime} m_{s}^{\prime}\right| \hat{\mathfrak{N}}_{k \kappa}(\xi)\left|n l m ; s m_{s}\right\rangle=\delta_{l l} \delta_{m m^{\prime}}\left\langle n^{\prime} s^{\prime} m_{s}^{\prime}\right| \hat{\mathfrak{N}}_{k \kappa}(\xi)\left|n s m_{s}\right\rangle \tag{4}
+\end{equation*}
+
+
+Hereafter matrix elements of operators which depend only on position variables or only on spin variables will be evaluated in the ( $n l m)$ - or the ( $n s m_{s}$ )-representation, respectively.
+
+To determine matrix elements of operators $\widehat{\mathfrak{M}}_{k c}(r, \vartheta, \varphi)$ and $\widehat{\mathfrak{N}}_{k c}(\xi)$ in the (nlsJM)-representation one should use the equations
+
+
+\begin{align*}
+& \left\langle n^{\prime} l^{\prime} s^{\prime} J^{\prime}\left\|\hat{\mathfrak{M}}_{k}\right\| n l s J\right\rangle=\delta_{0^{\prime}}(-1)^{J+l^{\prime}+\infty+k} \prod_{J J^{\prime}}\left\{\begin{array}{ccc}
+l & s & J \\
+J^{\prime} & k & l^{\prime}
+\end{array}\right\}\left\langle n^{\prime} l^{\prime}\left\|\mathfrak{M}_{k}\right\| n l\right)  \tag{5}\\
+& \left\langle n^{\prime} l^{\prime} s^{\prime} J^{\prime}\left\|\hat{\mathfrak{N}}_{k}\right\| n l s J\right\rangle=\delta_{l l^{\prime}}(-1)^{J^{\prime}+l+a+k} \prod_{J J^{\prime}}\left\{\begin{array}{ccc}
+s & l & J \\
+J^{\prime} & k & s^{\prime}
+\end{array}\right\}\left(n^{\prime} s^{\prime}\left\|\hat{\mathfrak{N}}_{k}\right\| n s\right) \tag{6}
+\end{align*}
+
+
+If some operator $\widehat{R}_{a \alpha}(r, \vartheta, \varphi ; \xi)$ acts on position as well as on spin variables, its matrix elements will be given in the (nlsJM)-representation. These matrix elements may be evaluated in the (nlmsm,)-representation with aid of
+
+
+\begin{equation*}
+\left.\left\langle n^{\prime} l^{\prime} m^{\prime} ; s^{\prime} m_{o}^{\prime}\right| \widehat{R}_{a \alpha}(r, \vartheta, \varphi ; \xi)\left|n l m ; s m_{s}\right\rangle=\sum_{\substack{J M \\ J^{\prime} M^{\prime}}} C_{l m s m_{e}}^{J M} C_{l^{\prime} m^{\prime} s^{\prime} m_{\prime}^{\prime}}^{J^{\prime} M^{\prime}}\left\langle n^{\prime} l^{\prime} s^{\prime} J^{\prime} M^{\prime}\right| \widehat{R}_{a \alpha}(r, \vartheta, \varphi ; \xi) \mid n l s J M\right) \tag{7}
+\end{equation*}
+
+
+or from the corresponding equations of the section above.\\
+From now on, we will omit the arguments of operators in the expressions for matrix elements to simplify the equations. In addition, the index $n$ will also be dropped in all the cases for which it is not essential.
+
+\subsection*{13.2.2 Matrix Elements of the Unit Operator $\hat{\mathrm{I}}$}
+The unit operator $\widehat{\mathbf{I}}$ is an irreducible tensor operator of rank sero. It does not act on variables $r, \vartheta, \varphi, \xi$. Hence, in any representation its diagonal matrix elements are determined by
+
+
+\begin{equation*}
+\left\langle\lambda^{\prime}\right| \hat{\mathbf{I}}|\lambda\rangle=\left\langle\lambda^{\prime} \mid \lambda\right\rangle=\delta_{\lambda \lambda^{\prime}} \tag{8}
+\end{equation*}
+
+
+All non-diagonal matrix elements vanish. A reduced matrix element of the operator $\hat{\mathbf{I}}$ may be represented in the form
+
+
+\begin{equation*}
+\langle l\|\hat{\mathbf{I}}\| l\rangle=\sqrt{2 l+1}, \quad(s\|\hat{\mathbf{I}}\| s)=\sqrt{2 s+1}, \quad\left\langle l^{\prime} s^{\prime} J\|\hat{\mathbf{I}}\| l s J\right\rangle=\sqrt{2 J+1} \delta_{l l^{\prime}} \delta_{s a^{\prime}} \tag{9}
+\end{equation*}
+
+
+\subsection*{13.2.3. Matrix Elements of the Unit Vector $\hat{\mathbf{n}}(\vartheta, \varphi) \equiv \widehat{\mathbf{n}}_{1}(\vartheta, \varphi)$}
+The unit vector operator $\widehat{\mathbf{n}}_{1}(\vartheta, \varphi)$ acts only on variables $\vartheta, \varphi$. In the (lm)-representation matrix elements of spherical components of this operator are given by
+
+
+\begin{equation*}
+\left\langle l^{\prime} m^{\prime}\right| \widehat{n}_{1 \mu}|l m\rangle=\frac{\left\langle l^{\prime}\left\|\widehat{n}_{1}\right\| l\right\rangle}{\sqrt{2 l^{\prime}+1}} C_{l m 1 \mu}^{l^{\prime} m^{\prime}} \tag{10}
+\end{equation*}
+
+
+where
+
+
+\begin{equation*}
+\left\langle l^{\prime}\left\|\hat{\mathbf{n}}_{1}\right\| l\right\rangle=\sqrt{2 l+1} C_{1010}^{l^{\prime} 0} \tag{11}
+\end{equation*}
+
+
+Taking into account Eq. (5), we obtain a reduced matrix element in the (lsJ)-representation
+
+\[
+\left\langle l^{\prime} s^{\prime} J^{\prime}\left\|\hat{\mathbf{n}}_{1}\right\| l s J\right\rangle=\delta_{s e^{\prime}}(-1)^{s+J+l^{\prime}+1} \sqrt{(2 J+1)\left(2 J^{\prime}+1\right)(2 l+1)} C_{1010}^{\prime 0}\left\{\begin{array}{ccc}
+l & s & J  \tag{12}\\
+J^{\prime} & 1 & l^{\prime}
+\end{array}\right\}
+\]
+
+The matrix element (10) vanishes unless $l^{\prime}=l \pm 1$. Using Eq. (11) one can rewrite Eq. (10) in component form as
+
+
+\begin{align*}
+\left\langle l+1 m^{\prime}\right| \hat{n}_{1 \pm 1}|l m\rangle & =\sqrt{\frac{(l \pm m+1)(l \pm m+2)}{2(2 l+1)(2 l+3)}} \delta_{m^{\prime} m \pm 1} \\
+\left\langle l+1 m^{\prime}\right| \hat{n}_{10}|l m\rangle & =\sqrt{\frac{(l-m+1)(l+m+1)}{(2 l+1)(2 l+3)}} \delta_{m^{\prime} m}  \tag{13}\\
+\left\langle l-1 m^{\prime}\right| \hat{n}_{1 \pm 1}|l m\rangle & =-\sqrt{\frac{(l \mp m-1)(l \mp m)}{2(2 l+1)(2 l-1)}} \delta_{m^{\prime} m \pm 1} \\
+\left\langle l-1 m^{\prime}\right| \hat{n}_{10}|l m\rangle & =\sqrt{\frac{(l-m)(l+m)}{(2 l+1)(2 l-1)}} \delta_{m^{\prime} m}
+\end{align*}
+
+
+All other matrix elements of the spherical components of the operator in question are equal to zero.\\
+The matrix elements of the cartesian components of the operator $\widehat{\mathbf{n}}_{1}(\vartheta, \varphi)$ are given by
+
+
+\begin{align*}
+\left\langle l^{\prime} m \pm 1\right| \widehat{n}_{x}|l m\rangle & =\mp \frac{1}{2} \sqrt{\frac{(l \pm m+1)(l \pm m+2)}{(2 l+1)(2 l+3)}} \delta_{l^{\prime} l+1} \pm \frac{1}{2} \sqrt{\frac{(l \mp m-1)(l \mp m)}{(2 l+1)(2 l-1)}} \delta_{l^{\prime} l-1}  \tag{14}\\
+\left\langle l^{\prime} m \pm 1\right| \widehat{n}_{y}|l m\rangle & =\frac{i}{2} \sqrt{\frac{(l \pm m+1)(l \pm m+2)}{(2 l+1)(2 l+3)}} \delta_{l^{\prime} l+1}-\frac{i}{2} \sqrt{\frac{(l \mp m-1)(l \mp m)}{(2 l+1)(2 l-1)}} \delta_{l^{\prime} l-1}  \tag{15}\\
+\left\langle l^{\prime} m\right| \widehat{n}_{z}|l m\rangle & =\sqrt{\frac{(l-m+1)(l+m+1)}{(2 l+1)(2 l+3)}} \delta_{l^{\prime} l+1}+\sqrt{\frac{(l-m)(l+m)}{(2 l+1)(2 l-1)}} \delta_{l^{\prime} l-1} \tag{16}
+\end{align*}
+
+
+All other matrix elements of the cartesian components of $\widehat{\mathbf{n}}_{1}(\vartheta, \varphi)$ vanish.\\
+It is easy to obtain the matrix elements of direct products of two operators involving $\widehat{\mathbf{n}}_{1}(\vartheta, \varphi)$ :
+
+
+\begin{equation*}
+\left\langle l^{\prime} m^{\prime}\right| \widehat{n}_{1 \mu} \widehat{n}_{1 \nu}|l m\rangle=\frac{(-1)^{\mu}}{3} \delta_{l l^{\prime}} \delta_{m m^{\prime}} \delta_{\mu-\nu}+\sqrt{\frac{2}{3} \frac{2 l+1}{2 l^{\prime}+1}} C_{l 020}^{l^{\prime} 0} C_{1 \mu 1 \nu}^{2 \kappa} C_{l m 2 \kappa}^{l^{\prime} m^{\prime}} \tag{17}
+\end{equation*}
+
+
+These matrix elements vanish unless $l^{\prime}=l, l \pm 2$. To derive the matrix elements of direct products of cartesian components of $\widehat{\mathbf{n}}_{1}(\vartheta, \varphi)$ one may express these products in terms of the products of spherical components. In this way we get
+
+
+\begin{align*}
+\left\langle l^{\prime} m \pm 2\right| \hat{n}_{x} \hat{n}_{x}|l m\rangle & =\frac{1}{2}\left\langle l^{\prime} m \pm 2\right| \hat{n}_{1 \pm 1} \hat{n}_{1 \pm 1}|l m\rangle \\
+\left\langle l^{\prime} m\right| \hat{n}_{x} \hat{n}_{x}|l m\rangle & =-\left\langle l^{\prime} m\right| \hat{n}_{1 \pm 1} \hat{n}_{1 \mp 1}|l m\rangle \\
+\left\langle l^{\prime} m \pm 2\right| \hat{n}_{y} \hat{n}_{y}|l m\rangle & =-\left\langle l^{\prime} m \pm 2\right| \hat{n}_{1 \pm 1} \hat{n}_{1 \pm 1}|l m\rangle \\
+\left\langle l^{\prime} m\right| \hat{n}_{y} \hat{n}_{y}|l m\rangle & =-\left\langle l^{\prime} m\right| \hat{n}_{1 \pm 1} \hat{n}_{1 \mp 1}|l m\rangle \\
+\left\langle l^{\prime} m\right| \hat{n}_{x} \hat{n}_{z}|l m\rangle & =\left\langle l^{\prime} m\right| \hat{n}_{10} \hat{n}_{10}|l m\rangle  \tag{18}\\
+\left\langle l^{\prime} m \pm 2\right| \hat{n}_{x} \hat{n}_{y}|l m\rangle & =\mp \frac{i}{2}\left\langle l^{\prime} m \pm 2\right| \hat{n}_{l \pm 1} \hat{n}_{1 \pm 1}|l m\rangle \\
+\left\langle l^{\prime} m \pm 1\right| \hat{n}_{x} \hat{n}_{z}|l m\rangle & =\mp \frac{1}{\sqrt{2}}\left\langle l^{\prime} m \pm 1\right| \hat{n}_{1 \pm 1} \hat{n}_{10}|l m\rangle \\
+\left\langle l^{\prime} m \pm 1\right| \hat{n}_{y} \hat{n}_{z}|l m\rangle & =\frac{i}{\sqrt{2}}\left\langle l^{\prime} m \pm 1\right| \hat{n}_{1 \pm 1} \hat{n}_{10}|l m\rangle
+\end{align*}
+
+
+The matrix elements of the irreducible tensor product of $k$ unit vector operators $\widehat{\mathbf{n}}_{1}(\vartheta, \varphi)$ may be represented in the form
+
+
+\begin{equation*}
+\left\langle l^{\prime} m^{\prime}\right|\left\{\ldots\left\{\left\{\widehat{\mathbf{n}}_{1} \otimes \widehat{\mathbf{n}}_{1}\right\}_{q_{2}} \otimes \widehat{\mathbf{n}}_{1}\right\}_{q_{3}} \otimes \ldots \otimes \widehat{\mathbf{n}}_{1}\right\}_{q_{k} \kappa_{k}}|l m\rangle=\sqrt{\frac{2 l+1}{2 l^{\prime}+1}} C_{l o q_{k} 0}^{l^{\prime} 0} \prod_{i=2}^{k} C_{q_{i-1} 010}^{q_{i} 0} C_{l m q_{k} \kappa_{k}}^{l^{\prime} m^{\prime}} \tag{19}
+\end{equation*}
+
+
+where $q_{1}=1$. In particular, if $q_{2}=2, q_{3}=3, q_{4}=4, \ldots$ one has
+
+
+\begin{equation*}
+\left\langle l^{\prime} m^{\prime}\right|\left\{\ldots\left\{\left\{\hat{\mathbf{n}}_{1} \otimes \widehat{\mathbf{n}}_{1}\right\}_{2} \otimes \widehat{\mathbf{n}}_{1}\right\}_{3} \otimes \ldots \otimes \widehat{\mathbf{n}}_{1}\right\}_{k \kappa}|l m\rangle=\sqrt{\frac{k!}{(2 k-1)!!} \frac{2 l+1}{2 l^{\prime}+1}} C_{l 0 k 0}^{l^{\prime} 0} C_{l m k \kappa}^{l^{\prime} m^{\prime}} \tag{20}
+\end{equation*}
+
+
+From Eq. (19) one obtains two obvious equalities,
+
+$$
+\begin{gathered}
+\left\langle l^{\prime} m^{\prime}\right|(\hat{\mathbf{n}} \cdot \hat{\mathbf{n}})|l m\rangle=\delta_{l^{\prime}} \delta_{m^{\prime} m^{\prime}} \\
+\left\langle l^{\prime} m^{\prime}\right|[\hat{\mathbf{n}} \times \hat{\mathbf{n}}]|l m\rangle=0
+\end{gathered}
+$$
+
+\subsection*{13.2.4. Matrix Elements of the Operator $\hat{\nabla}(r, \vartheta, \varphi) \equiv \hat{\nabla}_{1}(r, \vartheta, \varphi)$}
+The operator $\hat{\nabla}_{1}(r, \vartheta, \varphi)$ acts only on variables $r, \vartheta, \varphi$. The matrix elements of its spherical components are determined by
+
+
+\begin{equation*}
+\left\langle n^{\prime} l^{\prime} m^{\prime}\right| \hat{\nabla}_{1 \mu}|n l m\rangle=\frac{\left\langle n^{\prime} l^{\prime}\left\|\hat{\nabla}_{1}\right\| n l\right\rangle}{\sqrt{2 l^{\prime}+1}} C_{l m 1 \mu}^{l^{\prime} m^{\prime}} \tag{21}
+\end{equation*}
+
+
+where
+
+
+\begin{equation*}
+\left\langle n^{\prime} l^{\prime}\left\|\widehat{\nabla}_{1}\right\| n l\right\rangle=\sqrt{l+1} A_{n^{\prime} l^{\prime} n!} \delta_{l^{\prime} l+1}-\sqrt{l} B_{n^{\prime} l^{\prime} n!} \delta_{l^{\prime} l-1} \tag{22}
+\end{equation*}
+
+
+The quantities $A_{n^{\prime} l^{\prime} n!}$ and $B_{n^{\prime} l^{\prime} n!}$ in Eq. (22) may be represented as the integrals
+
+
+\begin{align*}
+& A_{n^{\prime} l^{\prime} n l}=\int_{0}^{\infty} \Psi_{n^{\prime} l^{\prime}}^{*}(r)\left(\frac{\partial}{\partial r}-\frac{l}{r}\right) \Psi_{n l}(r) r^{2} d r \\
+& B_{n^{\prime} l^{\prime} n l}=\int_{0}^{\infty} \Psi_{n^{\prime} l^{\prime}}^{*}(r)\left(\frac{\partial}{\partial r}+\frac{l+1}{r}\right) \Psi_{n l}(r) r^{2} d r \tag{23}
+\end{align*}
+
+
+Here $\Psi_{n l}(r)$ is the radial part of the corresponding wave function.\\
+Reduced matrix elements of the operator $\widehat{\nabla}_{1}(r, \vartheta, \varphi)$ in the (nlsJM)-representation may be obtained from Eq. (5) by replacing $\hat{\mathfrak{M}}_{k} \rightarrow \hat{\nabla}_{1}$.
+
+The matrix elements (21) vanish unless $l^{\prime}=l+1$. In detailed form Eq. (21) reads
+
+
+\begin{align*}
+\left\langle n^{\prime} l+1 m^{\prime}\right| \hat{\nabla}_{1 \pm 1}|n l m\rangle & =\sqrt{\frac{(l \pm m+1)(l \pm m+2)}{2(2 l+1)(2 l+3)}} A_{n^{\prime} l+1, n l} \delta_{m^{\prime} m \pm 1} \\
+\left\langle n^{\prime} l+1 m^{\prime}\right| \hat{\nabla}_{10}|n l m\rangle & =\sqrt{\frac{(l-m+1)(l+m+1)}{(2 l+1)(2 l+3)}} A_{n^{\prime} l+1, n l} \delta_{m^{\prime} m} \\
+\left\langle n^{\prime} l-1 m^{\prime}\right| \hat{\nabla}_{1 \pm 1}|n l m\rangle & =-\sqrt{\frac{(l \mp m-1)(l \mp m)}{2(2 l+1)(2 l-1)}} B_{n^{\prime} l-1, n l} \delta_{m^{\prime} m \pm 1}  \tag{24}\\
+\left\langle n^{\prime} l-1 m^{\prime}\right| \hat{\nabla}_{10}|n l m\rangle & =\sqrt{\frac{(l-m)(l+m)}{(2 l+1)(2 l-1)} B_{n^{\prime} l-1, n l} \delta_{m^{\prime} m}}
+\end{align*}
+
+
+All other matrix elements equal zero. The matrix elements of the cartesian components of $\widehat{\nabla}_{1}(r, \vartheta, \varphi)$ are as\\
+follows:
+
+
+\begin{align*}
+\left\langle n^{\prime} l^{\prime} m \pm 1\right| \hat{\nabla}_{x}|n l m\rangle= & \mp \frac{1}{2} \sqrt{\frac{(l \pm m+1)(l \pm m+2)}{(2 l+1)(2 l+3)}} A_{n^{\prime} l+1, n l} \delta_{l^{\prime} l+1} \\
+& \pm \frac{1}{2} \sqrt{\frac{(l \mp m-1)(l \mp m)}{(2 l+1)(2 l-1)}} B_{n^{\prime} l-1, n l} \delta_{l^{\prime} l-1} \\
+\left\langle n^{\prime} l^{\prime} m \pm 1\right| \hat{\nabla}_{y}|n l m\rangle= & \frac{i}{2} \sqrt{\frac{(l \pm m+1)(l \pm m+2)}{(2 l+1)(2 l+3)}} A_{n^{\prime} l+1, n l} \delta_{l^{\prime} l+1} \\
+& -\frac{i}{2} \sqrt{\frac{(l \mp m-1)(l \mp m)}{(2 l+1)(2 l-1)}} B_{n^{\prime} l-1, n l} \delta_{l^{\prime} l-1}  \tag{25}\\
+\left\langle n^{\prime} l^{\prime} m\right| \hat{\nabla}_{z}|n l m\rangle= & \sqrt{\frac{(l-m+1)(l+m+1)}{(2 l+1)(2 l+3)}} A_{n^{\prime} l+1, n l} \delta_{l^{\prime} l+1} \\
+& +\sqrt{\frac{(l-m)(l+m)}{(2 l+1)(2 l-1)} B_{n^{\prime} l-1, n l} \delta_{l^{\prime} l-1}}
+\end{align*}
+
+
+All other matrix elements are equal zero.\\
+The matrix elements of the angular part of $\widehat{\nabla}(r, \vartheta, \varphi)$ may be presented in a simpler form. According to Eq. 1.3(10),
+
+$$
+\hat{\nabla}_{\Omega}=-i[\widehat{\mathbf{n}} \times \hat{\mathbf{L}}]
+$$
+
+This operator is independent of $r$. The use of the Wigner-Eckart theorem yields the following expression for the matrix elements of the spherical components of $\left(\hat{\nabla}_{\Omega}\right)_{1}$,
+
+
+\begin{equation*}
+\left\langle l^{\prime} m^{\prime}\right|\left(\widehat{\nabla}_{\Omega}\right)_{1 \mu}|l m\rangle=\frac{\left\langle l^{\prime}\left\|\left(\widehat{\nabla}_{\Omega}\right)_{1}\right\| l\right\rangle}{\sqrt{2 l^{\prime}+1}} C_{l m 1 \mu}^{\prime^{\prime} m^{\prime}} \tag{26}
+\end{equation*}
+
+
+where
+
+
+\begin{equation*}
+\left\langle l^{\prime}\left\|\left(\hat{\nabla}_{\Omega}\right)_{1}\right\| l\right\rangle=-\left\{l \sqrt{l+1} \delta_{l^{\prime} l+1}+(l+1) \sqrt{l} \delta_{l^{\prime} l-1}\right\} \tag{27}
+\end{equation*}
+
+
+Equation (27) may be obtained from (22) by the formal substitution
+
+
+\begin{equation*}
+A_{n^{\prime} l^{\prime}, n l} \rightarrow-l, \quad B_{n^{\prime} l^{\prime}, n l} \rightarrow l+1 . \tag{28}
+\end{equation*}
+
+
+Similarly, Eqs. (24) and (25) become valid for $\left(\widehat{\nabla}_{\Omega}\right)_{1}$ after the same substitution (28).\\
+Let us consider the matrix elements of products of two operators $\left(\widehat{\nabla}_{\Omega}\right)_{1}$. In the case of the direct product we obtain
+
+
+\begin{align*}
+& \left\langle l^{\prime} m^{\prime}\right|\left(\hat{\nabla}_{\Omega}\right)_{1 \mu}\left(\hat{\nabla}_{\Omega}\right)_{1 \nu}|l m\rangle=\frac{(-1)^{1-\mu}}{3} l(l+1) \delta_{l l^{\prime}} \delta_{m m^{\prime}} \delta_{\mu-\nu}+C_{1 \mu 1 \nu}^{2 \kappa}\left\{\frac{l(l+1) \sqrt{(l+1)(l+2)}}{\sqrt{(2 l+3)(2 l+5)}} C_{l m 2 \kappa}^{l+2 m+\kappa} \delta_{l^{\prime} l+2}\right. \\
+& \left.\quad+\frac{1}{2 l+1} \sqrt{\frac{l(l+1)}{6(2 l-1)(2 l+3)}}\left[4 l^{3}+6 l^{2}-4 l-3\right] C_{l m 2 \kappa}^{l m+\kappa} \delta_{l l^{\prime}}+\frac{l(l+1) \sqrt{l(l-1)}}{\sqrt{(2 l-1)(2 l-3)}} C_{l m 2 \kappa}^{l-2 m+\kappa} \delta_{l^{\prime} l-2}\right\} \tag{29}
+\end{align*}
+
+
+The matrix elements of the product of cartesian components $\left(\widehat{\nabla}_{\Omega}\right)_{i}\left(\widehat{\nabla}_{\Omega}\right)_{k}(i, k=x, y, z)$ are related to the matrix elements (29) by means of Eqs. (18) where one should make the replacement $\hat{n}_{i} \hat{n}_{k} \rightarrow\left(\hat{\nabla}_{\Omega}\right)_{i}\left(\hat{\nabla}_{\Omega}\right)_{k}(i, k=x, y, z)$. In the case of the irreducible tensor product of two operators $\left(\widehat{\vec{\nabla}}_{\Omega}\right)_{1}$ one has
+
+
+\begin{gather*}
+\left\langle l^{\prime} m^{\prime}\right|\left\{\left(\hat{\nabla}_{\Omega}\right)_{1} \otimes\left(\widehat{\nabla}_{\Omega}\right)_{1}\right\}_{k \kappa}|l m\rangle \\
+=(-1)^{k+l+l^{\prime}} \sqrt{\frac{2 k+l}{2 l^{\prime}+1}} C_{l m k \kappa c}^{l^{\prime} m^{\prime}} \sum_{l^{\prime \prime}}\left\{\begin{array}{ccc}
+1 & 1 & k \\
+l^{\prime} & l & l^{\prime \prime}
+\end{array}\right\}\left\langle l^{\prime}\left\|\left(\widehat{\nabla}_{\Omega}\right)_{1}\right\| l^{\prime \prime}\right\rangle\left\langle l^{\prime \prime}\left\|\left(\widehat{\nabla}_{\Omega}\right)_{1}\right\| l\right\rangle . \tag{30}
+\end{gather*}
+
+
+In particular, Eq. (30) yields the well known expression for the matrix elements of scalar product of two operators $\left(\hat{\nabla}_{\Omega}\right)_{1}$
+
+$$
+\left\langle l^{\prime} m^{\prime}\right|\left(\left(\hat{\nabla}_{\Omega}\right)_{1} \cdot\left(\hat{\nabla}_{\Omega}\right)_{1}\right)|l m\rangle=-\delta_{l^{\prime} l} \delta_{m^{\prime} m} l(l+1)
+$$
+
+Matrix elements of products of the operators $\widehat{\mathbf{n}}_{1}$ and $\left(\widehat{\boldsymbol{\nabla}}_{\Omega}\right)_{1}$ are of interest for application. For the matrix elements of the direct product of these operators one obtains
+
+
+\begin{align*}
+& \left\langle l^{\prime} m^{\prime}\right| \hat{n}_{1 \mu}\left(\hat{\nabla}_{\Omega}\right)_{1 \nu}|l m\rangle=-\delta_{l^{\prime}} \sqrt{\frac{l(l+1)}{2}}\left\{C_{1 \mu 1 \nu}^{1 \kappa} C_{l m 1 \kappa}^{l m^{\prime}}+\sqrt{\frac{3}{(2 l-1)(2 l+3)}} C_{1 \mu 1 \nu}^{2 \kappa} C_{l m 2 \kappa}^{l m^{\prime}}\right\} \\
+& -\delta_{l^{\prime} l+2} l \sqrt{\frac{(l+1)(l+2)}{(2 l+3)(2 l+5)}} C_{1 \mu 1 \nu}^{2 \kappa} C_{l m 2 \kappa}^{l^{\prime} m^{\prime}}+\delta_{l^{\prime l}-2}(l+1) \sqrt{\frac{l(l-1)}{(2 l-1)(2 l-3)}} C_{1 \mu 1 \nu}^{2 \kappa} C_{l m 2 \kappa}^{l^{\prime} m^{\prime}} \tag{31}
+\end{align*}
+
+
+The matrix element of the direct product $\left(\widehat{\nabla}_{\Omega}\right)_{1 \mu} \widehat{n}_{1 \nu}$ differs from the foregoing one by the factor
+
+$$
+\left\langle l^{\prime} m^{\prime}\right| \Re_{1 \nu 1 \mu}\left(\hat{n}_{1 \nu,}\left(\nabla_{\Omega}\right)_{1 \mu}\right)|l m\rangle
+$$
+
+where $\Re_{1 \nu 1 \mu}$ is the commutator of the operator components in question (see Sec. 3.1.7)
+
+
+\begin{equation*}
+\Re_{1 \nu 1 \mu}\left(\hat{n}_{1 \nu},\left(\hat{\nabla}_{\Omega}\right)_{1 \mu}\right)=-\left(\hat{\nabla}_{\Omega}\right)_{1 \mu} \hat{n}_{1 \nu}=(-1)^{1+\nu} \frac{2}{3} \delta_{\nu-\mu}+2 \sqrt{\frac{2 \pi}{15}} C_{1 \mu 1 \nu}^{2 \mu+\nu} Y_{2 \mu+\nu}(\vartheta, \varphi) \tag{32}
+\end{equation*}
+
+
+and
+
+
+\begin{equation*}
+\left.\left\langle l^{\prime} m^{\prime}\right| \Re_{1 \mu 1 \nu}\left(\widehat{n}_{1 \nu},\left(\widehat{\nabla}_{\Omega}\right)_{1 \mu}\right) \mid l m\right)=(-1)^{1+\nu} \frac{2}{3} \delta_{\nu-\mu} \delta_{l l^{\prime}} \delta_{m m^{\prime}}+\sqrt{\frac{2}{3} \frac{2 l+1}{2 l^{\prime}+1}} C_{l 020}^{l^{\prime} 0} C_{1 \mu 1 \nu}^{2 \mu+\nu} C_{l m 2 \mu+\nu}^{\prime^{\prime} m^{\prime}} \tag{32a}
+\end{equation*}
+
+
+To determine the matrix elements of products of cartesian components of the operators $\hat{\mathbf{n}}_{1}$ and $\left(\hat{\nabla}_{\Omega}\right)_{1}$ one can transform these products to the products of spherical components (see Eq. 1.2(11)) and use Eq. (31).
+
+For the irreducible tensor product of $\hat{\mathbf{n}}_{1}(\vartheta, \varphi)$ and $\left(\hat{\nabla}_{\Omega}\right)_{1}$ one obtains
+
+\[
+\left\langle l^{\prime} m^{\prime}\right|\left\{\hat{\mathrm{n}}_{1} \otimes\left(\hat{\nabla}_{\Omega}\right)_{1}\right\}_{k \kappa}|l m\rangle=(-1)^{l^{\prime}+l+k} C_{l m k \kappa}^{l^{\prime} m^{\prime}} \sqrt{\frac{2 k+1}{2 l^{\prime}+1}} \sum_{l^{\prime \prime}} \sqrt{2 l^{\prime \prime}+1}\left\{\begin{array}{cc}
+1 & l l^{\prime \prime}  \tag{33}\\
+l^{\prime} & 1
+\end{array}\right\} \quad C_{l^{\prime \prime} 010}^{l^{\prime} 0}\left\langle l^{\prime \prime}\left\|\left(\hat{\nabla}_{0}\right)_{1}\right\| l\right\rangle .
+\]
+
+The reduced matrix element of $\left(\widehat{\nabla}_{\Omega}\right)_{1}$ in (33) is given by Eq. (27)
+
+
+\begin{equation*}
+\left\langle l^{\prime} m^{\prime}\right|\left\{\left(\widehat{\nabla}_{\Omega}\right)_{1} \otimes \widehat{\mathbf{n}}_{1}\right\}_{k c}|l m\rangle=(-1)^{k}\left\langle l^{\prime} m^{\prime}\right|\left\{\widehat{\mathbf{n}}_{1} \otimes\left(\nabla_{\Omega}\right)_{1}\right\}_{k c}|l m\rangle-(-1)^{k}\left\langle l^{\prime} m^{\prime}\right| \Re_{k c}^{11}\left(\widehat{\mathbf{n}}_{1},\left(\widehat{\nabla}_{\Omega}\right)_{1}\right)|l m\rangle \tag{34}
+\end{equation*}
+
+
+The second term in Eq. (34) is the matrix element of the commutator of the irreducible tensor product in question.
+
+
+\begin{equation*}
+\Re_{k \kappa}^{11}\left(\hat{\mathbf{n}}_{1},\left(\hat{\nabla}_{\Omega}\right)_{1}\right)=\frac{2}{\sqrt{3}} \delta_{k 0}+2 \sqrt{\frac{2 \pi}{15}} Y_{2 \kappa}(\vartheta, \varphi) \delta_{k 2} \tag{35}
+\end{equation*}
+
+
+Using Eqs. (104) and (105), we find
+
+
+\begin{equation*}
+\left\langle l^{\prime} m^{\prime}\right| \Re_{k \kappa}^{11}\left(\widehat{\mathbf{n}}_{1},\left(\widehat{\nabla}_{\Omega}\right)_{1}\right)|l m\rangle=\frac{2}{\sqrt{3}} \delta_{k 0} \delta_{l l} \delta_{m m^{\prime}}+\sqrt{\frac{2}{3} \frac{2 l+1}{2 l^{\prime}+1}} C_{l 020}^{\prime^{\prime 0}} C_{l m 2 \kappa}^{\prime^{\prime} m^{\prime}} \delta_{k 2} \tag{36}
+\end{equation*}
+
+
+\subsection*{13.2.5. Matrix Elements of the Total Angular Momentum Operator $\widehat{\mathbf{J}} \equiv \widehat{\mathbf{J}}_{1}$}
+The operator of the total angular momentum $\widehat{\mathbf{J}}=\widehat{\mathbf{L}}+\widehat{\mathbf{S}}$ acts on position as well as spin variables. Making use of the Wigner-Eckart theorem, we get
+
+
+\begin{equation*}
+\left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime}\right| \hat{J}_{1 \mu}|l s J M\rangle=\frac{\left\langle l^{\prime} s^{\prime} J^{\prime}\left\|\widehat{\mathbf{J}}_{1}\right\| l s J\right\rangle}{\sqrt{2 J^{\prime}+1}} C_{J M 1 \mu}^{J^{\prime} M^{\prime}} \tag{37}
+\end{equation*}
+
+
+where
+
+
+\begin{equation*}
+\left\langle l^{\prime} s^{\prime} J^{\prime}\left\|\widehat{\mathbf{J}}_{1}\right\| l s J\right\rangle=\delta_{l l^{\prime}} \delta_{s s^{\prime}} \delta_{J J^{\prime}} \sqrt{J(J+1)(2 J+1)} \tag{38}
+\end{equation*}
+
+
+For simplicity in equations (41)-(47) we shall omit the quantum numbers $l$ and $s$ in notation for matrix elements. Thus,
+
+
+\begin{equation*}
+\left\langle J^{\prime} M^{\prime}\right| \widehat{J}_{1 \mu}|J M\rangle=\frac{\left\langle J^{\prime}\left\|\widehat{\mathbf{J}}_{1}\right\| J\right\rangle}{\sqrt{2 J^{\prime}+1}} C_{J M 1 \mu}^{J^{\prime} M^{\prime}} \tag{39}
+\end{equation*}
+
+
+where
+
+
+\begin{equation*}
+\left\langle J^{\prime}\left\|\widehat{\mathbf{J}}_{1}\right\| J\right\rangle=\delta_{J J^{\prime}} \sqrt{J(J+1)(2 J+1)} \tag{40}
+\end{equation*}
+
+
+In expanded form
+
+
+\begin{align*}
+\langle J M \pm 1| \widehat{J}_{1 \pm 1}|J M\rangle & =\mp \sqrt{\frac{(J \pm M+1)(J \mp M)}{2}}  \tag{41}\\
+\langle J M| \widehat{J}_{10}|J M\rangle & =M
+\end{align*}
+
+
+All other matrix elements are equal to zero. Let us present the non-vanishing matrix elements of the cartesian components of $\hat{\mathbf{J}}$ :
+
+
+\begin{align*}
+\langle J M \pm 1| \widehat{J}_{x}|J M\rangle & =\frac{1}{2} \sqrt{(J \pm M+1)(J \mp M)} \\
+\langle J M \pm 1| \widehat{J}_{y}|J M\rangle & =\mp \frac{i}{2} \sqrt{(J \pm M+1)(J \mp M)}  \tag{42}\\
+\langle J M| \widehat{J}_{z}|J M\rangle & =M
+\end{align*}
+
+
+The matrix element of the operator $\widehat{J}^{2}$ is as follows:
+
+
+\begin{equation*}
+\left\langle J^{\prime} M^{\prime}\right| \hat{\mathbf{J}}^{2}|J M\rangle=\delta_{J J^{\prime}} \delta_{M M^{\prime}} J(J+1) \tag{43}
+\end{equation*}
+
+
+Let us consider matrix elements of products of the $\widehat{\mathbf{J}}_{1}$ components. Matrix elements of direct product of spherical components may be represented in the form
+
+
+\begin{equation*}
+\left\langle J^{\prime} M^{\prime}\right| \hat{J}_{1 \mu} \hat{J}_{1 \nu}|J M\rangle=J(J+1) C_{J M^{\prime}-\mu 1 \mu}^{J M^{\prime}} C_{J M 1 \nu}^{J M^{\prime}-\mu} \delta_{J J^{\prime}} \tag{44}
+\end{equation*}
+
+
+In component form
+
+
+\begin{align*}
+\langle J M \pm 2| \widehat{J}_{1 \pm 1} \widehat{J}_{1 \pm 1}|J M\rangle & =\frac{1}{2} \sqrt{(J \pm M+2)(J \pm M+1)(J \mp M-1)(J \mp M)} \\
+\langle J M \pm 1| \widehat{J}_{1 \pm 1} \widehat{J}_{10}|J M\rangle & =\mp M \sqrt{\frac{(J \pm M+1)(J \mp M)}{2}} \\
+\langle J M \pm 1| \widehat{J}_{10} \widehat{J}_{1 \pm 1}|J M\rangle & =\mp(M \pm 1) \sqrt{\frac{(J \pm M+1)(J \mp M)}{2}}  \tag{45}\\
+\langle J M| \widehat{J}_{1 \pm 1} \widehat{J}_{1 \mp 1}|J M\rangle & =-\frac{1}{2}(J \pm M)(J \mp M+1) \\
+\langle J M| \widehat{J}_{10} \widehat{J}_{10}|J M\rangle & =M^{2}
+\end{align*}
+
+
+The non-vanishing matrix elements of product of the cartesian components are as follows:
+
+
+\begin{align*}
+\langle J M \pm 2| \hat{J}_{x} \hat{J}_{x}|J M\rangle & =\frac{1}{4} \sqrt{(J \pm M+2)(J \pm M+1)(J \mp M-1)(J \mp M)} \\
+\langle J M| \hat{J}_{x} \hat{J}_{x}|J M\rangle & =\frac{1}{2}\left[J(J+1)-M^{2}\right] \\
+\langle J M \pm 2| \hat{J}_{y} \hat{J}_{y}|J M\rangle & =-\frac{1}{4} \sqrt{(J \pm M+2)(J \pm M+1)(J \mp M-1)(J \mp M)} \\
+\langle J M| \hat{J}_{y} \hat{J}_{y}|J M\rangle & =\frac{1}{2}\left[J(J+1)-M^{2}\right] \\
+\langle J M| \hat{J}_{z} \hat{J}_{z}|J M\rangle & =M^{2} \\
+\langle J M \pm 2| \hat{J}_{x} \hat{J}_{y}|J M\rangle & =\mp \frac{i}{4} \sqrt{(J \pm M+2)(J \pm M+1)(J \mp M-1)(J \mp M)} \\
+\langle J M| \hat{J}_{x} \hat{J}_{y}|J M\rangle & =\frac{i}{2} M  \tag{46}\\
+\langle J M \pm 2| \hat{J}_{y} \hat{J}_{x}|J M\rangle & =\mp \frac{i}{4} \sqrt{(J \pm M+2)(J \pm M+1)(J \mp M-1)(J \mp M)} \\
+\langle J M| \hat{J}_{y} \hat{J}_{x}|J M\rangle & =-\frac{i}{2} M, \\
+\langle J M \pm 1| \hat{J}_{x} \hat{J}_{z}|J M\rangle & =\frac{M}{2} \sqrt{(J \pm M+1)(J \mp M)} \\
+\langle J M \pm 1| \hat{J}_{z} \hat{J}_{x}|J M\rangle & =\frac{M \pm 1}{2} \sqrt{(J \pm M+1)(J \mp M)} \\
+\langle J M \pm 1| \hat{J}_{y} \hat{J}_{z}|J M\rangle & =\mp \frac{i}{2} M \sqrt{(J \pm M+1)(J \mp M)} \\
+\langle J M \pm 1| \hat{J}_{z} \hat{J}_{y}|J M\rangle & =\mp \frac{i}{2}(M \pm 1) \sqrt{(J \pm M+1)(J \mp M)}
+\end{align*}
+
+
+In the case of the irreducible tensor product of two operators $\widehat{\mathbf{J}}$ one obtains
+
+\[
+\left\langle J^{\prime} M^{\prime}\right|\left\{\widehat{\mathbf{J}}_{1} \otimes \widehat{\mathbf{J}}_{1}\right\}_{k c}|J M\rangle=\delta_{J J^{\prime}}(-1)^{2 J+k} J(J+1) \sqrt{(2 k+1)(2 J+1)}\left\{\begin{array}{lll}
+1 & 1 & k  \tag{47}\\
+J & J & J
+\end{array}\right\} C_{J M k c}^{J M^{\prime}}
+\]
+
+In particular, from this equation one has two obvious relations
+
+$$
+\begin{aligned}
+\left.\left\langle J^{\prime} M^{\prime}\right| \hat{\mathbf{J}} \cdot \hat{\mathbf{J}}\right)|J M\rangle & =\delta_{J J^{\prime}} \delta_{M M^{\prime}} J(J+1) \\
+\left\langle J^{\prime} M^{\prime}\right||\hat{\mathbf{J}} \times \hat{\mathbf{J}}|_{\kappa}|J M\rangle & =\delta_{J J^{\prime}} i \sqrt{J(J+1)} C_{J M M^{\prime}}^{J M^{\prime}}
+\end{aligned}
+$$
+
+In applications, the expressions for matrix elements of products of the operator $\widehat{\mathbf{J}}$ and the operators $\widehat{\mathbf{n}}_{1}$ or $\left(\widehat{\nabla}_{\Omega}\right)_{1}$ are of particular interest. Some relations for the matrix elements in questions will be considered below. The matrix elements of the direct tensor product of operators $\widehat{\mathbf{n}}_{1}$ and $\widehat{\mathbf{J}}_{1}$ are given by
+
+
+\begin{gather*}
+\left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime}\right| \widehat{n}_{1 \mu} \widehat{J}_{1 \nu}|l s J M\rangle=\delta_{e^{\prime}}(-1)^{\rho+J+l^{\prime}+1} \sqrt{J(J+1)(2 l+1)(2 J+1)} C_{1010}^{l^{\prime} 0}\left\{\begin{array}{ccc}
+l & s & J \\
+J^{\prime} & 1 & l^{\prime}
+\end{array}\right\} C_{J M+\nu 1 \mu}^{J^{\prime} M^{\prime}} C_{J M 1 \nu}^{J M+\nu}  \tag{48}\\
+\left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime}\right| \widehat{J}_{1 \nu} \widehat{n}_{1 \mu}|l s J M\rangle=\left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime}\right| \widehat{n}_{1 \mu} \widehat{J}_{1 \nu}|l s J M\rangle-\left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime}\right| \Re_{1 \mu 1 \nu}\left(n_{1 \mu}, J_{1 \nu}\right)|l s J M\rangle \tag{49}
+\end{gather*}
+
+
+The commutator of components of these operators is as follows:
+
+
+\begin{equation*}
+\Re_{1 \mu 1 \nu}\left(\widehat{n}_{1 \mu}, \widehat{J}_{1 \nu}\right)=-\sqrt{\frac{8 \pi}{3}} C_{1 \mu 1 \nu}^{1 \mu+\nu} Y_{1 \mu+\nu}(\vartheta, \varphi) \tag{50}
+\end{equation*}
+
+
+Using Eqs. (104) and (105), one finds
+
+\[
+\left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime}\right| \Re_{1 \mu 1 \nu}\left(\hat{n}_{1 \mu}, \widehat{J}_{1 \nu}\right)|l s J M\rangle=(-1)^{J+l^{\prime}+{ }^{*}} \delta_{s s^{\prime}} \sqrt{2(2 l+1)(2 J+1)} C_{l 010}^{l^{\prime} 0}\left\{\begin{array}{ccc}
+l & s & J  \tag{51}\\
+J^{\prime} & 1 & l^{\prime}
+\end{array}\right\} C_{1 \mu 1 \nu}^{1 \mu+\nu} C_{J M 1 \mu+\nu}^{J^{\prime} M^{\prime}}
+\]
+
+In the case of the irreducible tensor product of the operators $\widehat{\mathbf{n}}_{1}$ and $\widehat{\mathbf{J}}_{1}$ one obtains
+
+
+\begin{align*}
+\left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime}\right|\left\{\widehat{\mathbf{n}}_{1} \otimes \widehat{\mathbf{J}}_{1}\right\}_{k \kappa}|l s J M\rangle= & (-1)^{s+l^{\prime}-J^{\prime}+k+1} \delta_{s s^{\prime}} \sqrt{(2 l+1)(2 k+1) J(J+1)} \\
+& \times(2 J+1) C_{1010}^{l^{\prime} 0}\left\{\begin{array}{ccc}
+1 & 1 & k \\
+J^{\prime} & J & J
+\end{array}\right\}\left\{\begin{array}{ccc}
+l & s & J \\
+J^{\prime} & 1 & l^{\prime}
+\end{array}\right\} C_{J M k \kappa}^{J^{\prime} M^{\prime}} \tag{52}
+\end{align*}
+
+
+The commutator of the irreducible tensor product may be expressed as
+
+
+\begin{equation*}
+\Re_{k \kappa}^{11}\left(\hat{\mathrm{n}}_{1}, \hat{\mathrm{~J}}_{1}\right)=-\sqrt{\frac{8 \pi}{3}} Y_{1 \kappa}(\vartheta, \varphi) \delta_{k 1} \tag{53}
+\end{equation*}
+
+
+Taking Eqs. (104) and (105) into account, we get
+
+\[
+\left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime}\right| \Re_{k \kappa}^{11}\left(\widehat{\mathbf{n}}_{1}, \widehat{\mathbf{J}}_{1}\right)|l s J M\rangle=(-1)^{J+l^{\prime}+s} \delta_{s s^{\prime}} \sqrt{2(2 J+1)(2 l+1)}\left\{\begin{array}{ccc}
+l & s & J  \tag{54}\\
+J^{\prime} & 1 & l^{\prime}
+\end{array}\right\} C_{l 010}^{l^{\prime} 0} C_{J M 1 \kappa}^{J^{\prime} M^{\prime}} \delta_{k 1}
+\]
+
+Now the matrix elements of $\left\{\widehat{\mathbf{J}}_{1} \otimes \widehat{\mathbf{n}}_{1}\right\}_{k \kappa}$ are determined by
+
+
+\begin{gather*}
+\left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime}\right|\left\{\widehat{\mathbf{J}}_{1} \otimes \widehat{\mathbf{n}}_{1}\right\}_{k \kappa}\left|l_{s} J M\right\rangle \\
+=(-1)^{k}\left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime}\right|\left\{\widehat{\mathbf{n}}_{1} \otimes \widehat{\mathbf{J}}_{1}\right\}_{k \kappa}\left|l_{s} J M\right\rangle+(-1)^{k+1}\left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime}\right| \Re_{k \kappa}^{11}\left(\widehat{\mathbf{n}}_{1}, \widehat{\mathbf{J}}_{1}\right)|l s J M\rangle . \tag{55}
+\end{gather*}
+
+
+This expression may also be rewritten in the form
+
+
+\begin{align*}
+\left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime}\right|\left\{\widehat{\mathbf{J}}_{1} \otimes \widehat{\mathbf{n}}_{1}\right\}_{k \kappa}|l s J M\rangle= & (-1)^{s+l^{\prime}-J^{\prime}+k+1} \delta_{s s^{\prime}} \sqrt{(2 l+1)(2 k+1)\left(2 J^{\prime}+1\right)(2 J+1)} \\
+& \times \sqrt{J^{\prime}\left(J^{\prime}+1\right)} C_{l 010}^{l^{\prime} 0}\left\{\begin{array}{ccc}
+1 & 1 & k \\
+J^{\prime} & J & J^{\prime}
+\end{array}\right\}\left\{\begin{array}{ccc}
+l & s & J \\
+J^{\prime} & 1 & l^{\prime}
+\end{array}\right\} C_{J M k \kappa}^{J^{\prime} M^{\prime}} \tag{56}
+\end{align*}
+
+
+Let us consider the matrix elements of products of the operators $\left(\hat{\nabla}_{\Omega}\right)_{1}$ and $\hat{J}_{1}$. In the case of the direct product of these operators we have
+
+\[
+\left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime}\right|\left(\hat{\nabla}_{\Omega}\right)_{1 \mu} \widehat{J}_{1 \nu}|l s J M\rangle=(-1)^{J+l^{\prime}+s+1} \sqrt{J(J+1)(2 J+2)}\left\{\begin{array}{ccc}
+J & J^{\prime} & 1  \tag{57}\\
+l^{\prime} & l & s
+\end{array}\right\}\left\langle l^{\prime}\left\|\left(\hat{\nabla}_{\Omega}\right)_{1}\right\| l\right\rangle C_{J M+\nu 1 \mu}^{J^{\prime} M^{\prime}} C_{J M 1 \nu}^{J M+\nu}
+\]
+
+As in the foregoing case,
+
+
+\begin{equation*}
+\left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime}\right| \hat{J}_{1 \nu}\left(\hat{\nabla}_{\Omega}\right)_{1 \mu}|l s J M\rangle=\left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime}\right|\left(\hat{\nabla}_{\Omega}\right)_{1 \mu} \hat{J}_{1 \nu}|l s J M\rangle-\left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime}\right| \Re_{1 \mu 1 \nu}\left(\left(\hat{\nabla}_{\Omega}\right)_{1 \mu}, J_{1 \nu}\right)|l s J M\rangle \tag{58}
+\end{equation*}
+
+
+The commutator of components of the operators $\left(\widehat{\nabla}_{\Omega}\right)_{1}$ and $\widehat{J}_{1}$ is
+
+
+\begin{equation*}
+\Re_{1 \mu 1 \nu}\left(\left(\hat{\nabla}_{\Omega}\right)_{1 \mu}, \hat{J}_{1 \nu}\right)=-\sqrt{2} C_{1 \mu 1 \nu}^{1 \lambda}\left(\hat{\nabla}_{\Omega}\right)_{\lambda} \tag{59}
+\end{equation*}
+
+
+Using Eq. (26), we find
+
+\[
+\left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime}\right| \Re_{1 \mu 1 \nu}\left(\left(\widehat{\nabla}_{\Omega}\right)_{1 \mu}, J_{1 \nu}\right)|l s J M\rangle=(-1)^{J+l^{\prime}-s} \delta_{* s^{\prime}} \sqrt{2(2 J+1)}\left\{\begin{array}{ccc}
+l & s & J  \tag{60}\\
+J^{\prime} & 1 & l^{\prime}
+\end{array}\right\} C_{1 \mu 1 \nu}^{1 \mu+\nu} C_{J M 1 \mu+\nu}^{J^{\prime} M^{\prime}}\left\langle l^{\prime}\left\|\left(\nabla_{\Omega}\right)_{1}\right\| l\right\rangle
+\]
+
+In the case of the irreducible tensor product of these operators, $\left\{\left(\nabla_{\Omega}\right)_{1} \otimes \widehat{J}_{1}\right\}_{k \kappa}$ one has
+
+
+\begin{align*}
+&\left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime}\right|\left\{\left(\hat{\nabla}_{\Omega}\right)_{1} \otimes \hat{\mathbf{J}}_{1}\right\}_{k c}|l s J M\rangle=(-1)^{s+l^{\prime}-J^{\prime}+k+1} \delta_{e e^{\prime}} \sqrt{(2 k+1) J(J+1)} \\
+& \times(2 J+1)\left\{\begin{array}{ccc}
+J & J^{\prime} & 1 \\
+l^{\prime} & l & s
+\end{array}\right\}\left\{\begin{array}{ccc}
+1 & 1 & k \\
+J^{\prime} & J & J
+\end{array}\right\}\left\langle l^{\prime}\left\|\left(\nabla_{\Omega}\right)_{1}\right\| l\right\rangle C_{J M k c}^{J^{\prime} M^{\prime}} \tag{61}
+\end{align*}
+
+
+while for the irreducible tensor product $\left\{\widehat{\mathbf{J}}_{1} \otimes\left(\widehat{\nabla}_{\Omega}\right)_{1}\right\}_{k c}$ we have
+
+
+\begin{align*}
+\left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime}\right|\left\{\widehat{\mathbf{J}}_{1} \otimes\left(\widehat{\nabla}_{\Omega}\right)_{1}\right\}_{k \kappa}|l s J M\rangle= & (-1)^{k}\left(l^{\prime} s^{\prime} J^{\prime} M^{\prime}\left|\left\{\left(\widehat{\nabla}_{\Omega}\right)_{1} \otimes \widehat{\mathbf{J}}_{1}\right\}_{k \kappa}\right| l s J M\right\rangle \\
+& +(-1)^{k+1}\left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime}\right| \Re_{k \kappa}^{11}\left(\left(\widehat{\nabla}_{\Omega}\right)_{1}, \widehat{\mathbf{J}}_{1}\right)|l s J M\rangle \tag{62}
+\end{align*}
+
+
+The commutator of $\left\{\left(\hat{\nabla}_{\Omega}\right)_{1} \otimes \widehat{\mathrm{~J}}_{1}\right\}_{k \kappa}$ is determined by
+
+
+\begin{equation*}
+\Re_{k \times}^{11}\left(\left(\hat{\nabla}_{\Omega}\right)_{1}, \hat{\mathbf{J}}_{1}\right)=-\sqrt{2}\left(\hat{\nabla}_{\Omega}\right)_{1 \kappa} \delta_{k 1} \tag{63}
+\end{equation*}
+
+
+i.e.,
+
+\[
+\left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime}\right| \Re_{k \kappa}^{11}\left(\left(\widehat{\nabla}_{\Omega}\right)_{1}, \widehat{J}_{1}\right)|l s J M\rangle=(-1)^{J+l^{\prime}+\iota} \delta_{s}, \delta_{k 1} \sqrt{2(2 J+1)}\left\{\begin{array}{ccc}
+l & s & J  \tag{64}\\
+J^{\prime} & 1 & l^{\prime}
+\end{array}\right\}\left\langle l^{\prime}\left\|\left(\widehat{\nabla}_{\Omega}\right)_{1}\right\| l\right\rangle C_{J M 1 \kappa}^{J^{\prime} M^{\prime}}
+\]
+
+Equation (62) may also be represented by
+
+
+\begin{align*}
+&\left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime}\right|\left\{\widehat{\mathbf{J}}_{1} \otimes\left(\widehat{\nabla}_{\Omega}\right)_{1}\right\}_{k \kappa}\left|l_{s} J M\right\rangle=(-1)^{e+l^{\prime}-J^{\prime}+k+1} \delta_{e^{\prime}} \sqrt{(2 k+1)(2 J+1)\left(2 J^{\prime}+1\right)} \\
+& \times \sqrt{J^{\prime}\left(J^{\prime}+1\right)}\left\{\begin{array}{lll}
+J & J^{\prime} & 1 \\
+l^{\prime} & l & s
+\end{array}\right\}\left\{\begin{array}{ccc}
+1 & 1 & k \\
+J^{\prime} & J & J^{\prime}
+\end{array}\right\}\left\langle l^{\prime}\left\|\left(\nabla_{\Omega}\right)_{1}\right\| l\right\rangle C_{J M k c}^{J^{\prime} M^{\prime}} \tag{65}
+\end{align*}
+
+
+\subsection*{13.2.6. Matrix Elements of the Orbital Angular Momentum Operator $\hat{\mathbf{L}} \equiv \hat{\mathbf{L}}_{1}$}
+This operator acts only on the position variables $\theta, \varphi$. In accordance with the Wigner-Eckart theorem, we get
+
+
+\begin{equation*}
+\left\langle l^{\prime} m^{\prime}\right| \widehat{L}_{1 \mu}|l m\rangle=\frac{\left\langle l^{\prime}\left\|\widehat{\mathbf{L}}_{1}\right\| l\right\rangle}{\sqrt{2 l^{\prime}+1}} C_{l m 1 \mu}^{l^{\prime} m^{\prime}} \tag{66}
+\end{equation*}
+
+
+where
+
+
+\begin{equation*}
+\left\langle l^{\prime}\left\|\hat{\mathbf{L}}_{1}\right\| l\right\rangle=\delta_{l l} \sqrt{l(l+1)(2 l+1)} \tag{67}
+\end{equation*}
+
+
+Equations (39)-(47) are obtained for the matrix elements of the total angular momentum operator $\hat{\mathbf{J}}$ and remain valid for the operator $\hat{\mathbf{L}}$ after the replacement
+
+$$
+J \rightarrow l, \quad M \rightarrow m, \quad \hat{J}_{1 \mu} \rightarrow \hat{L}_{1 \mu}
+$$
+
+A reduced matrix element in the (lsJ)-representation is given by
+
+\[
+\left\langle l^{\prime} s^{\prime} J^{\prime}\left\|\hat{\mathbf{L}}_{1}\right\| l s J\right\rangle=(-1)^{\rho+J+l+1} \delta_{s^{\prime}}, \delta_{l l} \sqrt{(2 J+1)\left(2 J^{\prime}+1\right) l(l+1)(2 l+1)}\left\{\begin{array}{ccc}
+l & s & J  \tag{68}\\
+J^{\prime} & 1 & l
+\end{array}\right\}
+\]
+
+We present matrix elements of products of the operators $\widehat{\mathbf{L}}_{1}$ and $\mathbf{n}_{1}$. For the direct product of these operators we have
+
+
+\begin{equation*}
+\left\langle l^{\prime} m^{\prime}\right| \hat{n}_{1 \mu} \widehat{L}_{1 \nu}|l m\rangle=\sqrt{\frac{l(l+1)(2 l+1)}{2 l^{\prime}+1}} C_{l 010}^{l^{\prime} 0} C_{l m+\nu 1 \mu}^{l^{\prime} m^{\prime}} C_{l m 1 \nu}^{l m+\nu} \tag{69}
+\end{equation*}
+
+
+The commutator of the components $\hat{n}_{1 \mu}$ and $\hat{L}_{1 \nu}$ may be written in the form
+
+
+\begin{equation*}
+\Re_{1 \mu 1 \nu}\left(\widehat{n}_{1 \mu}, \hat{L}_{1 \nu}\right)=-\sqrt{\frac{8 \pi}{3}} C_{1 \mu 1 \nu}^{1 \mu+\nu} Y_{1 \mu+\nu}(\vartheta, \varphi) \tag{70}
+\end{equation*}
+
+
+Taking Eqs. (104) and (105) in account one finds
+
+
+\begin{equation*}
+\left\langle l^{\prime} m^{\prime}\right| \Re_{1 \mu 1 \nu}\left(\hat{n}_{1 \mu}, \hat{L}_{1 \nu}|l m\rangle=-\sqrt{2 \frac{2 l+1}{2 l^{\prime}+1}} C_{1010}^{l^{\prime} 0} C_{1 \mu 1 \nu}^{1 \mu+\nu} C_{l m 1 \mu+\nu}^{l^{\prime} m^{\prime}}\right. \tag{71}
+\end{equation*}
+
+
+The matrix element of the direct product $\widehat{L}_{1 \nu} \widehat{n}_{1 \mu}$ is
+
+
+\begin{equation*}
+\left\langle l^{\prime} m^{\prime}\right| \widehat{L}_{1 \nu} \widehat{n}_{1 \mu}|l m\rangle=\sqrt{\frac{(2 l+1) l^{\prime}\left(l^{\prime}+1\right)}{2 l^{\prime}+1}} C_{l 010}^{l^{\prime} 0} C_{l^{\prime} m+\mu 1 \nu}^{l^{\prime} m^{\prime}} C_{l m 1 \mu}^{l^{\prime} m+\mu} \tag{72}
+\end{equation*}
+
+
+In the case of irreducible tensor products of the operators in question one gets
+
+
+\begin{align*}
+& \left\langle l^{\prime} m^{\prime}\right|\left\{\widehat{\mathbf{n}}_{1} \otimes \widehat{\mathbf{L}}_{1}\right\}_{k \kappa}|l m\rangle=(-1)^{l^{\prime}+l+k} C_{l m k \kappa}^{l^{\prime} m^{\prime}} \sqrt{\frac{(2 k+1) l(l+1)}{2 l^{\prime}+1}}(2 l+1) C_{l 010}^{l^{\prime} 0}\left\{\begin{array}{ccc}
+1 & 1 & k \\
+l^{\prime} & l & l
+\end{array}\right\}  \tag{73}\\
+& \left\langle l^{\prime} m^{\prime}\right|\left\{\widehat{\mathbf{L}}_{1} \otimes \widehat{\mathbf{n}}_{1}\right\}_{k \kappa}|l m\rangle=(-1)^{l^{\prime}+l+k} C_{l m k \kappa}^{l^{\prime} m^{\prime}} \sqrt{(2 k+1) l^{\prime}\left(l^{\prime}+1\right)(2 l+1)} C_{l 010}^{l^{\prime} 0}\left\{\begin{array}{ccc}
+1 & 1 & k \\
+l^{\prime} & l & l^{\prime}
+\end{array}\right\} \tag{74}
+\end{align*}
+
+
+Both equations are related by the expression
+
+
+\begin{equation*}
+\left\langle l^{\prime} m^{\prime}\right|\left\{\widehat{\mathbf{n}}_{1} \otimes \widehat{\mathbf{L}}_{1}\right\}_{k \kappa}|l m\rangle=(-1)^{k}\left\langle l^{\prime} m^{\prime}\right|\left\{\widehat{\mathbf{L}}_{1} \otimes \widehat{\mathbf{n}}_{1}\right\}_{k \kappa}|l m\rangle+\left\langle l^{\prime} m^{\prime}\right| \Re_{k \kappa}^{11}\left(\widehat{\mathbf{n}}_{1}, \widehat{\mathbf{L}}_{1}\right)|l m\rangle \tag{75}
+\end{equation*}
+
+
+where
+
+
+\begin{align*}
+\Re_{k \kappa}^{11}\left(\hat{\mathbf{n}}_{1}, \hat{\mathbf{L}}_{1}\right) & =-\sqrt{\frac{8 \pi}{3}} Y_{1 \kappa} \delta_{k 1}  \tag{76}\\
+\left\langle l^{\prime} m^{\prime}\right| \Re_{k \kappa}^{11}\left(\hat{\mathbf{n}}_{1}, \hat{\mathbf{L}}_{1}\right)|l m\rangle & =-\sqrt{2 \frac{2 l+1}{2 l^{\prime}+1}} C_{l 010}^{l^{\prime 0}} C_{l m 1 \kappa}^{l^{\prime} m^{\prime}} \tag{77}
+\end{align*}
+
+
+Let us now consider matrix elements of products of the operators $\left(\hat{\nabla}_{\Omega}\right)_{1}$ and $\hat{\mathbf{L}}_{1}$. The matrix elements of the direct product of these operators are
+
+
+\begin{align*}
+& \left\langle l^{\prime} m^{\prime}\right|\left(\hat{\nabla}_{\Omega}\right)_{1 \mu} \hat{L}_{1 \nu}|l m\rangle=\sqrt{\frac{l(l+1)}{2 l^{\prime}+1}}\left\langle l^{\prime}\left\|\left(\hat{\nabla}_{\Omega}\right)_{1}\right\| l\right\rangle C_{l m+\nu 1 \mu}^{l^{\prime} m^{\prime}} C_{l m 1 \nu}^{l m+\nu}  \tag{78}\\
+& \left\langle l^{\prime} m^{\prime}\right| \hat{L}_{1 \nu}\left(\hat{\nabla}_{\Omega}\right)_{1 \mu}|l m\rangle=\sqrt{\frac{l^{\prime}\left(l^{\prime}+1\right)}{2 l^{\prime}+1}}\left\langle l^{\prime}\left\|\left(\hat{\nabla}_{\Omega}\right)_{1}\right\| l\right\rangle C_{l^{\prime} m+\mu 1 \nu}^{l^{\prime} m^{\prime}} C_{l m 1 \mu}^{l^{\prime} m+\mu} \tag{79}
+\end{align*}
+
+
+Equations (78) and (79) differ by a quantity which is the matrix element of the commutator of $\hat{L}_{1 \nu}$ and $\left(\hat{\nabla}_{\Omega}\right)_{1 \mu}$,
+
+
+\begin{gather*}
+\Re_{1 \mu 1 \nu}\left(\left(\hat{\nabla}_{\Omega}\right)_{1 \mu}, \hat{L}_{1 \nu}\right)=-\sqrt{2} C_{1 \mu 1 \nu}^{1 \mu+\nu}\left(\hat{\nabla}_{\Omega}\right)_{1 \mu+\nu}  \tag{80}\\
+\left\langle l^{\prime} m^{\prime}\right| \Re_{1 \mu 1 \nu}\left(\left(\hat{\nabla}_{\Omega}\right)_{1 \mu}, \hat{L}_{1 \nu}\right)|l m\rangle=-\sqrt{\frac{2}{2 l^{\prime}+1}}\left\langle l^{\prime}\left\|\left(\hat{\nabla}_{\Omega}\right)_{1}\right\| l\right\rangle C_{1 \mu 1 \nu}^{1 \mu+\nu} C_{l m 1 \mu+\nu}^{l^{\prime} m^{\prime}} \tag{81}
+\end{gather*}
+
+
+In the case of the irreducible tensor product of the operators $\left(\widehat{\nabla}_{\Omega}\right)_{1}$ and $\widehat{\mathbf{L}}_{1}$ we find
+
+
+\begin{align*}
+& \left\langle l^{\prime} m^{\prime}\right|\left\{\left(\hat{\nabla}_{\Omega}\right)_{1} \otimes \hat{\mathbf{L}}_{1}\right\}_{k \kappa}|l m\rangle=(-1)^{l^{\prime}+l+k} \sqrt{\frac{(2 k+1) l(l+1)(2 l+1)}{2 l^{\prime}+1}}\left\langle l^{\prime}\left\|\left(\hat{\nabla}_{\Omega}\right)_{1}\right\| l\right\rangle\left\{\begin{array}{ccc}
+1 & 1 & k \\
+l^{\prime} & l & l
+\end{array}\right\} C_{l m k \kappa}^{l^{\prime} m^{\prime}}  \tag{82}\\
+& \left\langle l^{\prime} m^{\prime}\right|\left\{\hat{\mathbf{L}}_{1} \otimes\left(\hat{\nabla}_{\Omega}\right)_{1}\right\}_{k \kappa}|l m\rangle=(-1)^{l^{\prime}+l+k} \sqrt{(2 k+1) l^{\prime}\left(l^{\prime}+1\right)}\left\langle l^{\prime}\left\|\left(\hat{\nabla}_{\Omega}\right)_{1}\right\| l\right\rangle\left\{\begin{array}{ccc}
+1 & 1 & k \\
+l^{\prime} & l & l^{\prime}
+\end{array}\right\} C_{l m k \kappa}^{l^{\prime} m^{\prime}} \tag{83}
+\end{align*}
+
+
+The commutator of the product $\left\{\left(\hat{\nabla}_{\Omega}\right)_{1} \otimes \hat{\mathbf{L}}_{1}\right\}_{k \kappa}$ may be represented in the form
+
+
+\begin{equation*}
+\Re_{k \kappa}^{11}\left(\left(\widehat{\nabla}_{\Omega}\right)_{1}, \hat{\mathbf{L}}_{1}\right)=-\sqrt{2}\left(\hat{\nabla}_{\Omega}\right)_{1 \kappa} \delta_{k 1}, \tag{84}
+\end{equation*}
+
+
+Using Eq. (26), one obtains
+
+
+\begin{equation*}
+\left\langle l^{\prime} m^{\prime}\right| \Re_{k \kappa}^{11}\left(\left(\hat{\boldsymbol{\nabla}}_{\Omega}\right)_{1}, \hat{\mathbf{L}}_{1}\right)|l m\rangle=-\sqrt{\frac{2}{2 l^{\prime}+1}}\left(l^{\prime}\left\|\left(\hat{\boldsymbol{\nabla}}_{\Omega}\right)_{1}\right\| l\right\rangle C_{l m 1 \kappa}^{l^{\prime} m^{\prime}} . \tag{85}
+\end{equation*}
+
+
+The matrix elements of the irreducible tensor product of the operators $\hat{\mathbf{L}}_{1}$ and $\hat{\mathbf{J}}_{1}$ are
+
+
+\begin{gather*}
+\left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime}\right|\left\{\hat{\mathbf{L}}_{1} \otimes \hat{\mathbf{J}}_{1}\right\}_{k \times}\left|l_{s} J M\right\rangle=(-1)^{s+l-J^{\prime}+k+1} \delta_{l l^{\prime}} \delta_{e s^{\prime}} C_{J M k \kappa}^{J^{\prime} M^{\prime}}(2 J+1) \\
+\times \sqrt{(2 k+1)(2 l+1) l(l+1) J(J+1)}\left\{\begin{array}{ccc}
+1 & 1 & k \\
+J^{\prime} & J & J
+\end{array}\right\}\left\{\begin{array}{ccc}
+l & s & J \\
+J^{\prime} & 1 & l
+\end{array}\right\},  \tag{86}\\
+\left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime}\right|\left\{\hat{\mathbf{J}}_{1} \otimes \hat{\mathbf{L}}_{1}\right\}_{k \kappa}|l s J M\rangle=(-1)^{\circ+l-J^{\prime}+k+1} \delta_{l^{\prime} l} \delta_{e^{\prime}}, C_{J M k \kappa}^{J^{\prime} M^{\prime}} \\
+\times \sqrt{(2 k+1) l(l+1)(2 l+1) J^{\prime}\left(J^{\prime}+1\right)\left(2 J^{\prime}+1\right)(2 J+1)}\left\{\begin{array}{ccc}
+1 & 1 & k \\
+J^{\prime} & J & J^{\prime}
+\end{array}\right\}\left\{\begin{array}{ccc}
+l & s & J \\
+J^{\prime} & 1 & l
+\end{array}\right\} . \tag{87}
+\end{gather*}
+
+
+The commutator of the irreducible tensor product $\left\{\hat{\mathbf{L}}_{1} \otimes \widehat{\mathbf{J}}_{1}\right\}_{k \kappa}$ is defined as
+
+
+\begin{equation*}
+\Re_{k \kappa}^{11}\left(\hat{\mathbf{L}}_{1}, \widehat{\mathbf{J}}_{1}\right)=-\sqrt{2} \widehat{L}_{1 \kappa} \delta_{k 1}, \tag{88}
+\end{equation*}
+
+
+To evaluate its matrix elements one can use Eqs. (66) and (67). Then
+
+\[
+\left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime}\right| \Re_{k \kappa}^{11}\left(\hat{\mathbf{L}}_{1}, \hat{\mathbf{J}}_{1}\right)|l s J M\rangle=(-1)^{s+J+l} \delta_{l l^{\prime}} \delta_{s a^{\prime}} \delta_{k 1} \sqrt{2(2 J+1)(2 l+1) l(l+1)}\left\{\begin{array}{ccc}
+l & s & J  \tag{89}\\
+J^{\prime} & 1 & l
+\end{array}\right\} C_{J M 1 \kappa}^{J^{\prime} M^{\prime}}
+\]
+
+To determine the matrix elements of the direct tensor product of the operators $\widehat{\mathbf{L}}_{1}$ and $\widehat{\mathbf{J}}_{1}$ one can decompose this direct product into irreducible products. In this way one obtains
+
+
+\begin{align*}
+& \left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime}\right| \hat{L}_{1 \nu} \hat{J}_{1 \mu}|l s J M\rangle=\sum_{k \kappa} C_{1 \mu 1 \nu}^{k \kappa}\left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime}\right|\left\{\hat{\mathbf{L}}_{1} \otimes \hat{\mathbf{J}}_{1}\right\}_{k \kappa}|l s J M\rangle .  \tag{90}\\
+& \left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime}\right| \hat{J}_{1 \mu} \hat{L}_{1 \nu}|l s J M\rangle=\sum_{k \kappa} C_{1 \mu 1 \nu}^{k \kappa}\left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime}\right|\left\{\hat{\mathbf{J}}_{1} \otimes \hat{\mathbf{L}}_{1}\right\}_{k \kappa}|l s J M\rangle . \tag{91}
+\end{align*}
+
+
+The commutator of the operator components $\hat{L}_{1 \mu}$ and $\hat{J}_{1 \nu}$ may be presented in the form
+
+
+\begin{equation*}
+\Re_{1 \mu 1 \nu}\left(\widehat{L}_{1 \mu}, \widehat{J}_{1 \nu}\right)=-\sqrt{2} C_{1 \mu 1 \nu}^{1 \mu+\nu} \widehat{L}_{1 \mu+\nu} \tag{92}
+\end{equation*}
+
+
+From Eqs. (92), (66) and (67) we find
+
+\[
+\left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime}\right| \Re_{1 \mu 1 \nu}\left(\widehat{L}_{1 \mu}, \widehat{J}_{1 \nu}\right)|l s J M\rangle=(-1)^{\diamond+J+l} \delta_{l l^{\prime}} \delta_{s s^{\prime}} \sqrt{2(2 J+1)(2 l+1) l(l+1)}\left\{\begin{array}{ccc}
+l & s & J  \tag{93}\\
+J^{\prime} & 1 & l
+\end{array}\right\} C_{1 \mu 1 \nu}^{1 \mu+\nu} C_{J M 1 \mu+\nu}^{J^{\prime} M^{\prime}}
+\]
+
+\subsection*{13.2.7. Matrix Elements of the Spin Angular Momentum Operator $\widehat{\mathbf{S}} \equiv \widehat{\mathbf{S}}_{1}$}
+This operator acts only on spin variables. Using the Wigner-Eckart theorem, we get
+
+
+\begin{gather*}
+\left\langle s^{\prime} m_{s}^{\prime}\right| \widehat{S}_{1 \mu}\left|s m_{s}\right\rangle=\frac{\left\langle s^{\prime}\left\|\widehat{\mathbf{S}}_{1}\right\| s\right\rangle}{\sqrt{2 s^{\prime}+1}} C_{s m, 1 \mu}^{s^{\prime} m^{\prime}}  \tag{94}\\
+\left\langle s^{\prime}\left\|\widehat{\mathbf{S}}_{1}\right\| s\right\rangle=\delta_{s s^{\prime}} \sqrt{s(s+1)(2 s+1)} \tag{95}
+\end{gather*}
+
+
+Equations (39)-(47) were obtained for the matrix elements of the operator $\widehat{\mathbf{J}}_{1}$ and they remain valid for the spin operator $\widehat{\mathbf{S}}_{1}$ after the replacement
+
+$$
+J \rightarrow s, \quad M \rightarrow m_{s}, \quad \widehat{\mathbf{J}}_{1} \rightarrow \widehat{\mathbf{S}}_{1}
+$$
+
+The use of Eqs. (6) and (95) yields an expression for the reduced matrix element of the spin operator in the ( $l s J$ )-representation
+
+\[
+\left\langle l^{\prime} s^{\prime} J^{\prime}\left\|\widehat{\mathrm{S}}_{1}\right\| l s J\right\rangle=(-1)^{l+s+J^{\prime}+1} \delta_{l l^{\prime}} \delta_{s s^{\prime}} \sqrt{s(s+1)(2 s+1)(2 J+1)\left(2 J^{\prime}+1\right)}\left\{\begin{array}{ccc}
+s & l & J  \tag{96}\\
+J^{\prime} & 1 & s
+\end{array}\right\}
+\]
+
+The operators $\widehat{\mathbf{n}}_{1},\left(\widehat{\nabla}_{\Omega}\right)_{1}, \widehat{\mathbf{L}}_{1}$ commute with the spin operator $\widehat{\mathbf{S}}_{1}$. Matrix elements of the irreducible tensor products of these operators and the spin operator are given by
+
+
+\begin{align*}
+& \left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime}\right|\left\{\widehat{\mathbf{n}}_{1} \otimes \widehat{\mathbf{S}}_{1}\right\}_{k \kappa}|l s J M\rangle=\delta_{s s^{\prime}} \sqrt{(2 k+1)(2 J+1)(2 l+1)(2 s+1) s(s+1)} C_{l 010}^{l^{\prime} 0} C_{J M k \kappa}^{J^{\prime} M^{\prime}}\left\{\begin{array}{ccc}
+l & 1 & l^{\prime} \\
+s & 1 & s \\
+J & k & J^{\prime}
+\end{array}\right\},(97)  \tag{97}\\
+& \left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime}\right|\left\{\left(\widehat{\nabla}_{\Omega}\right)_{1} \otimes \widehat{\mathbf{S}}_{1}\right\}_{k \kappa}|l s J M\rangle=\delta_{e e^{\prime}} \sqrt{(2 k+1)(2 J+1)(2 s+1) s(s+1)}\left(l^{\prime}\left\|\left(\widehat{\nabla}_{\Omega}\right)_{1}\right\| l\right\rangle C_{J M k \kappa}^{J^{\prime} M^{\prime}}\left\{\begin{array}{ccc}
+l & 1 & l^{\prime} \\
+s & 1 & s \\
+J & k & J^{\prime}
+\end{array}\right\},  \tag{98}\\
+& \left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime}\right|\left\{\widehat{\mathbf{L}}_{1} \otimes \widehat{\mathbf{S}}_{1}\right\}_{k \kappa}|l s J M\rangle=\delta_{l l} \delta_{s^{\prime}} \sqrt{(2 k+1)(2 J+1)(2 l+1)(2 s+1) l(l+1) s(s+1)} C_{J M k \kappa}^{J^{\prime} M^{\prime}}\left\{\begin{array}{lll}
+l & 1 & l \\
+s & 1 & s \\
+J & k & J^{\prime}
+\end{array}\right\}, \tag{99}
+\end{align*}
+
+
+The operators $\widehat{\mathbf{S}}_{1}$ and $\widehat{\mathbf{J}}_{1}$ do not commute. Matrix elements of irreducible tensor products of these operators depend on the order of the operators.
+
+
+\begin{align*}
+\left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime}\right|\left\{\widehat{\mathbf{S}}_{1} \otimes \widehat{\mathbf{J}}_{1}\right\}_{k \kappa}\left|l_{s} J M\right\rangle= & (-1)^{J+k-l-s+1} \delta_{s^{\prime} s} \delta_{l^{\prime} l}(2 J+1) \sqrt{(2 k+1) s(s+1)(2 s+1) J(J+1)} \\
+& \times\left\{\begin{array}{ccc}
+1 & 1 & k \\
+J^{\prime} & J & J
+\end{array}\right\}\left\{\begin{array}{ccc}
+s & l & J \\
+J^{\prime} & 1 & s
+\end{array}\right\} C_{J M k \kappa}^{J^{\prime} M^{\prime}}  \tag{100}\\
+\left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime}\right|\left\{\widehat{\mathbf{J}}_{1} \otimes \widehat{\mathbf{S}}_{1}\right\}_{k \kappa}\left|l_{s} J M\right\rangle= & (-1)^{J+k-l-s^{+} 1} \delta_{s^{\prime} \delta} \delta_{l^{\prime} l} \sqrt{(2 k+1)(2 J+1) J^{\prime}\left(J^{\prime}+1\right)\left(2 J^{\prime}+1\right)} \\
+& \times \sqrt{s(s+1)(2 s+1)}\left\{\begin{array}{ccc}
+1 & 1 & k \\
+J^{\prime} & J & J^{\prime}
+\end{array}\right\}\left\{\begin{array}{ccc}
+s & l & J \\
+J^{\prime} & 1 & s
+\end{array}\right\} C_{J M k \kappa}^{J^{\prime} M^{\prime}} \tag{101}
+\end{align*}
+
+
+The commutator of the product $\left\{\widehat{\mathbf{S}}_{1} \otimes \widehat{\mathbf{J}}_{1}\right\}_{k c}$ is as follows:
+
+
+\begin{equation*}
+\Re_{k \kappa}^{11}\left(\widehat{\mathbf{S}}_{1}, \widehat{\mathbf{J}}_{1}\right)=-\sqrt{2} \widehat{S}_{1 \kappa} \delta_{k 1} \tag{102}
+\end{equation*}
+
+
+Using Eqs. (94) and (95), we find
+
+\[
+\left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime}\right| \Re_{k \kappa}^{11}\left(\widehat{\mathbf{S}}_{1}, \widehat{\mathbf{J}}_{1}\right)|l s J M\rangle=(-1)^{l+s+J^{\prime}} \delta_{l l} \delta_{e e^{\prime}} \delta_{k 1} \sqrt{2 s(s+1)(2 s+1)(2 J+1)}\left\{\begin{array}{ccc}
+s & l & J  \tag{103}\\
+J^{\prime} & 1 & s
+\end{array}\right\} C_{J M k \kappa}^{J^{\prime} M^{\prime}}
+\]
+
+To obtain matrix elements of direct products of the operator $\widehat{\mathbf{S}}_{1}$ and the operators $\widehat{\mathbf{n}}_{1},\left(\widehat{\boldsymbol{V}}_{\Omega}\right)_{1}, \widehat{\mathbf{L}}_{1}$ or $\widehat{\mathbf{J}}_{1}$ one should decompose the direct products into irreducible products in accordance with Eq. 3.1(22) and use Eqs. (97)-(101).\\
+13.2.8. Matrix Elements of the Spherical Harmonic Operator $\hat{Y}_{L \nu} \equiv Y_{L \nu}(\vartheta, \varphi)$
+
+A spherical harmonic operator, $Y_{L \nu}$, depends only on position variables $\vartheta, \varphi$. From the Wigner-Eckart theorem it follows that
+
+
+\begin{gather*}
+\left\langle l^{\prime} m^{\prime}\right| \hat{Y}_{L \nu}|l m\rangle=\frac{\left\langle l^{\prime}\left\|\hat{Y}_{l}\right\| l\right\rangle}{\sqrt{2 l^{\prime}+1}} C_{l m L \nu}^{l^{\prime} m^{\prime}}  \tag{104}\\
+\left\langle l^{\prime}\left\|\hat{Y}_{L}\right\| l\right\rangle=\sqrt{\frac{(2 L+1)(2 l+1)}{4 \pi}} C_{l 0 L 0}^{l^{\prime} 0} \tag{105}
+\end{gather*}
+
+
+Similar relationships for an operator $\hat{C}_{L \nu}(\vartheta, \varphi)$ (see Eq. 5.1(7)) may be represented in the form
+
+
+\begin{align*}
+\left\langle l^{\prime} m^{\prime}\right| \widehat{C}_{L \nu}|l m\rangle & =\frac{\left\langle l^{\prime}\left\|\widehat{\mathrm{C}}_{L}\right\| l\right\rangle}{\sqrt{2 l^{\prime}+1}} C_{l m L \nu}^{\prime^{\prime} m^{\prime}}  \tag{106}\\
+\left\langle l^{\prime}\left\|\widehat{\mathrm{C}}_{L}\right\| l\right\rangle & =\sqrt{2 l+1} C_{l 0 L 0}^{l^{\prime} 0} \tag{107}
+\end{align*}
+
+
+Let us consider the matrix elements of some tensor products involving $\hat{Y}_{L \nu}(\vartheta, \varphi)$.\\
+For products of the commuting operators $\widehat{\mathbf{n}}_{1}$ and $\widehat{\mathbf{Y}}_{L}$, we get
+
+
+\begin{gather*}
+\left(l^{\prime} m^{\prime}\left|\widehat{n}_{1 \mu} \hat{Y}_{L \nu}\right| l m\right\rangle=-\sqrt{\frac{(2 L+1)(2 l+1)}{4 \pi\left(2 l^{\prime}+1\right)}}\left\{\sqrt{\frac{l^{\prime}+1}{2 l^{\prime}+3}} C_{10 L 0}^{l^{\prime}+10} C_{l m L \nu}^{l^{\prime}+1 m+\nu} C_{l^{\prime}+1 m+\nu 1}^{l^{\prime} m^{\prime}}\right. \\
+\left.-\sqrt{\frac{l^{\prime}}{2 l^{\prime}-1}} C_{l 0 L 0}^{l^{\prime}-10} C_{l m L \nu}^{l^{\prime}-1 m+\nu} C_{l^{\prime}-1 m+\nu 1 \mu}^{l^{\prime} m}\right\}  \tag{108}\\
+\left\langle l^{\prime} m^{\prime}\right|\left\{\hat{\mathrm{n}}_{1} \otimes \hat{\mathrm{Y}}_{L}\right\}_{L^{\prime} \nu^{\prime}}|l m\rangle=(-1)^{L^{\prime}+l^{\prime}+1} \sqrt{\frac{(2 L+1)\left(2 L^{\prime}+1\right)(2 l+1)}{4 \pi\left(2 l^{\prime}+1\right)}} C_{l m L^{\prime} \nu^{\prime}}^{l^{\prime} m^{\prime}} \\
+\times \sum_{k} \sqrt{2 k+1} C_{k 010}^{l^{\prime} 0} C_{l 0 L 0}^{k 0}\left\{\begin{array}{ccc}
+L & 1 & L^{\prime} \\
+l^{\prime} & l & k
+\end{array}\right\} \tag{109}
+\end{gather*}
+
+
+The matrix elements of products of the non-commuting operators $\left(\hat{\nabla}_{\Omega}\right)_{1}$ and $\hat{\Psi}_{L}$ are determined by
+
+
+\begin{gather*}
+\left\langle l^{\prime} m^{\prime}\right|\left(\hat{\nabla}_{\Omega}\right)_{1 \mu} \hat{Y}_{L \nu}|l m\rangle=-\sqrt{\frac{(2 L+1)(2 l+1)}{4 \pi\left(2 l^{\prime}+1\right)}}\left\{\left(l^{\prime}-1\right) \sqrt{\frac{l^{\prime}}{2 l^{\prime}-1}} C_{l 0 L 0}^{l^{\prime}-10}\right. \\
+\left.\times C_{l m L \nu}^{l^{\prime}-1 m+\nu} C_{l^{\prime}-1 m+\nu 1 \mu}^{l^{\prime} m^{\prime}}+\left(l^{\prime}+2\right) \sqrt{\frac{l^{\prime}+1}{2 l^{\prime}+3}} C_{l 0 L 0}^{l^{\prime}+10} C_{l m L \nu}^{l^{\prime}+1 m+\nu} C_{l^{\prime}+1 m+\nu 1 \mu}^{l^{\prime} m^{\prime}}\right\}  \tag{110}\\
+\left\langle l^{\prime} m^{\prime}\right|\left\{\left(\hat{\nabla}_{\Omega}\right)_{1} \otimes \hat{\mathrm{Y}}_{L}\right\}_{L^{\prime} \nu^{\prime}}|l m\rangle=(-1)^{L^{\prime}+l^{\prime}+1} \sqrt{\frac{(2 L+1)(2 l+1)\left(2 L^{\prime}+1\right)}{4 \pi\left(2 l^{\prime}+1\right)}} \\
+\times \sum_{k}\left\langle l^{\prime}\left\|\left(\hat{\nabla}_{\Omega}\right)_{1}\right\| k\right\rangle C_{l 0 L 0}^{k 0}\left\{\begin{array}{ccc}
+L & 1 & L^{\prime} \\
+l^{\prime} & l & k
+\end{array}\right\} C_{l m L^{\prime} \nu^{\prime}}^{l^{\prime} m^{\prime}} \tag{111}
+\end{gather*}
+
+
+The commutator of components of these operators is as follows
+
+\[
+\Re_{1 \mu L \nu}\left(\left(\widehat{\nabla}_{\Omega}\right)_{1 \mu} \hat{Y}_{L \nu}\right)=-\sqrt{6 L(L+1)}(2 L+1) \sum_{L^{\prime}} \frac{1}{\sqrt{2 L^{\prime}+1}} C_{L 010}^{L^{\prime} 0} C_{1 \mu L \nu}^{L^{\prime} \mu+\nu}\left\{\begin{array}{lll}
+1 & 1 & 1  \tag{112}\\
+L^{\prime} & L & L
+\end{array}\right\} \widehat{Y}_{L^{\prime} \mu+\nu}(\vartheta, \varphi)
+\]
+
+The commutator of the irreducible product of the same operators may be expressed as
+
+\[
+\Re_{L^{\prime} \nu^{\prime}}^{1 L}\left(\left(\widehat{\nabla}_{\Omega}\right)_{1}, \widehat{\mathbf{Y}}_{L}\right)=-\sqrt{\frac{6 L(L+1)}{2 L^{\prime}+1}}(2 L+1) C_{L 010}^{L^{\prime} 0}\left\{\begin{array}{lll}
+1 & 1 & 1  \tag{113}\\
+L^{\prime} & L & L
+\end{array}\right\} \hat{Y}_{L^{\prime} \nu^{\prime}}(\vartheta, \varphi)
+\]
+
+One can easily obtain the matrix elements of these commutators:
+
+
+\begin{align*}
+&\left\langle l^{\prime} m^{\prime}\right| \Re_{1 \mu L \nu}\left(\left(\hat{\nabla}_{\Omega}\right)_{1 \mu}, \hat{Y}_{L \nu}\right)|l m\rangle=-\sqrt{\frac{6 L(L+1)(2 l+1)}{4 \pi\left(2 l^{\prime}+1\right)}}(2 L+1) \\
+& \times \sum_{L^{\prime}} C_{L 010}^{L^{\prime} 0} C_{10 L^{\prime} 0}^{l^{\prime} 0} C_{1 \mu L \nu}^{L^{\prime} \mu+\nu} C_{l m L^{\prime} \mu+\nu}^{l^{\prime} m^{\prime}}\left\{\begin{array}{ccc}
+1 & 1 & 1 \\
+L^{\prime} & L & L
+\end{array}\right\}  \tag{114}\\
+&\left\langle l^{\prime} m^{\prime}\right| \Re_{L^{\prime} \nu^{\prime}}^{1 L}\left(\left(\hat{\nabla}_{\Omega}\right)_{1}, \hat{\mathbf{Y}}_{L^{\prime}}\right)|l m\rangle=-\sqrt{\frac{6 L(L+1)(2 l+1)}{4 \pi\left(2 l^{\prime}+1\right)}}(2 L+1) C_{l m L^{\prime} \nu^{\prime}}^{l^{\prime} m^{\prime}} C_{L 010}^{L^{\prime} 0} C_{l 0 L^{\prime} 0}^{l^{\prime} 0}\left\{\begin{array}{ccc}
+1 & 1 & 1 \\
+L^{\prime} & L & L
+\end{array}\right\} . \tag{115}
+\end{align*}
+
+
+Of particular interest are the matrix elements of direct and irreducible products of the angular momentum operators and the spherical harmonic operator.
+
+The matrix elements of products of the operators $\hat{\mathbf{L}}_{1}$ and $\hat{\mathbf{Y}}_{L}$ are given by
+
+
+\begin{gather*}
+\left(l^{\prime} m^{\prime}\left|\widehat{L}_{1 \mu} \widehat{Y}_{L \nu}\right| l m\right\rangle=\sqrt{\frac{(2 L+1)(2 l+1) l^{\prime}\left(l^{\prime}+1\right)}{4 \pi\left(2 l^{\prime}+1\right)}} C_{l 0 L 0}^{l^{\prime} 0} C_{l m L \nu}^{l^{\prime} m+\nu} C_{l^{\prime} m+\nu 1 \mu}^{l^{\prime} m^{\prime}}  \tag{116}\\
+\left\langle l^{\prime} m^{\prime}\right|\left\{\widehat{\mathbf{L}}_{1} \otimes \widehat{\mathbf{Y}}_{L}\right\}_{L^{\prime} \nu^{\prime}}|l m\rangle=(-1)^{L^{\prime}+l^{\prime}+l} \sqrt{\frac{\left(2 L^{\prime}+1\right)(2 L+1)(2 l+1)\left(l^{\prime}+1\right) l^{\prime}}{4 \pi}} C_{l m L^{\prime} \nu^{\prime}}^{l^{\prime} m^{\prime}} C_{l 0 L 0}^{l^{\prime} 0}\left\{\begin{array}{ccc}
+L & 1 & L^{\prime} \\
+l^{\prime} & l & l^{\prime}
+\end{array}\right\} \tag{117}
+\end{gather*}
+
+
+The commutators of these operators are
+
+
+\begin{gather*}
+\Re_{1 \mu L \nu}\left(\hat{L}_{1 \mu}, \hat{Y}_{L \nu}\right)=\sqrt{L(L+1)} C_{L \nu+\mu}^{L \nu+\mu} \hat{Y}_{L \mu+\nu}  \tag{118}\\
+\Re_{L^{\prime} \nu^{\prime}}^{1 L}\left(\hat{\mathbf{L}}_{1}, \hat{\mathbf{Y}}_{L}\right)=-\sqrt{L(L+1)} \hat{Y}_{L \mu+\nu} \delta_{L^{\prime} L} \delta_{\nu^{\prime} \mu+\nu} \tag{119}
+\end{gather*}
+
+
+Using Eqs. (104) and (105), we find the expressions for the matrix elements of the commutators,
+
+
+\begin{align*}
+& \left\langle l^{\prime} m^{\prime}\right| \Re_{1 \mu L \nu}\left(\widehat{L}_{1 \mu}, \hat{\mathrm{Y}}_{L \nu}\right)|l m\rangle=\sqrt{\frac{L(L+1)(2 L+1)(2 l+1)}{4 \pi\left(2 l^{\prime}+1\right)}} C_{l m L \mu+\nu}^{l^{\prime} m^{\prime}} C_{L \nu 1 \mu}^{L \nu+\mu} C_{l 0 L 0}^{l^{\prime} 0}  \tag{120}\\
+& \left\langle l^{\prime} m^{\prime}\right| \Re_{L^{\prime} \nu^{\prime}}^{L L}\left(\hat{\mathbf{L}}_{1}, \hat{\mathbf{Y}}_{L}\right)|l m\rangle=-\sqrt{\frac{L(L+1)(2 L+1)(2 l+1)}{4 \pi\left(2 l^{\prime}+1\right)}} C_{l 0 L 0}^{l^{\prime} 0} C_{l m L \mu+\nu}^{l^{\prime} m^{\prime}} \delta_{L^{\prime} L} \tag{121}
+\end{align*}
+
+
+In the case of products of the operators $\widehat{\mathbf{S}}_{1}$ and $\widehat{\mathbf{Y}}_{L}$ the matrix elements may be evaluated in the (lsJM). representation:
+
+
+\begin{align*}
+\left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime}\right| \widehat{S}_{1 \mu} \widehat{Y}_{L \nu}|l s J M\rangle= & \delta_{s s^{\prime}} \sqrt{\frac{(2 J+1)(2 l+1)(2 L+1) s(s+1)(2 s+1)}{4 \pi}} C_{10 L 0}^{l^{\prime} 0} \\
+& \times \sum_{k}(-1)^{L+k+1} \sqrt{2 k+1} C_{J M k \mu+\nu}^{J^{\prime} M^{\prime}} C_{1 \mu L \nu}^{k \mu+\nu}\left\{\begin{array}{ccc}
+l & L & l^{\prime} \\
+s & 1 & s \\
+J & k & J^{\prime}
+\end{array}\right\} \tag{122}
+\end{align*}
+
+
+
+\begin{align*}
+\left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime}\right|\left\{\hat{\mathbf{Y}}_{L} \otimes \hat{\mathrm{~S}}_{1}\right\}_{L^{\prime} \nu^{\prime}}|l s J M\rangle= & \delta_{s^{\prime}} \sqrt{\frac{(2 J+1)\left(2 L^{\prime}+1\right)(2 L+1)(2 l+1) s(s+1)(2 s+1)}{4 \pi}} \\
+& \times C_{l 0 L 0}^{\prime{ }_{0} 0} C_{J M L^{\prime} \nu^{\prime}}^{J^{\prime} M^{\prime}}\left\{\begin{array}{ccc}
+l & L & l^{\prime} \\
+s & 1 & s \\
+J & L^{\prime} & J^{\prime}
+\end{array}\right\} \tag{123}
+\end{align*}
+
+
+The matrix elements of products of the operators $\widehat{\mathbf{J}}_{1}$ and $\widehat{\mathbf{Y}}_{L}$ in the same representation may be obtained by using the relations
+
+
+\begin{gather*}
+\left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime}\right| \hat{J}_{1 \mu} \hat{Y}_{L \nu}|l s J M\rangle=(-1)^{l^{\prime}+s+J+L} \delta_{s,{ }^{\prime}} \sqrt{\frac{(2 L+1)(2 l+1)(2 J+1) J^{\prime}\left(J^{\prime}+1\right)}{4 \pi}} \\
+\times C_{J M L \nu}^{J^{\prime} M+\nu} C_{J^{\prime} M+\nu 1 \mu}^{J^{\prime} M^{\prime}} C_{L 010}^{l^{\prime} 0}\left\{\begin{array}{lll}
+l & s & J \\
+J^{\prime} & L & l^{\prime}
+\end{array}\right\}  \tag{124}\\
+\left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime}\right|\left\{\hat{J}_{1} \otimes \hat{\mathbf{Y}}_{L}\right\}_{L^{\prime} \nu^{\prime}}|l J M\rangle=(-1)^{l+\omega^{\prime}-J^{\prime}} \delta_{s o^{\prime}} \sqrt{\frac{(2 L+1)\left(2 L^{\prime}+1\right)(2 l+1)(2 J+1) J^{\prime}\left(J^{\prime}+1\right)\left(2 J^{\prime}+1\right)}{4 \pi}} \\
+\times C_{J M L^{\prime} \nu^{\prime}}^{J^{\prime} M^{\prime}}\left\{\begin{array}{lll}
+L & 1 & L^{\prime} \\
+J^{\prime} & J & J^{\prime}
+\end{array}\right\} C_{L 010}^{l^{\prime} 0}\left\{\begin{array}{lll}
+l & s & J \\
+J^{\prime} & L & l^{\prime}
+\end{array}\right\} \tag{125}
+\end{gather*}
+
+
+The commutators of these operators are reduced to the commutators of $\hat{\mathbf{L}}_{1}$ and $\hat{\mathbf{Y}}_{L}$. Namely,
+
+$$
+\begin{aligned}
+\Re_{1 \mu L \nu}\left(\hat{J}_{1 \mu}, \hat{Y}_{L \nu}\right) & =\Re_{1 \mu L \nu}\left(\hat{L}_{1 \mu}, \hat{Y}_{L \nu}\right) \\
+\Re_{L^{\prime} \nu^{\prime}}^{L}\left(\hat{J}_{1}, \hat{\mathbf{Y}}_{L}\right) & =\Re_{L^{\prime} \nu^{\prime}}^{L}\left(\hat{\mathbf{L}}_{1}, \hat{\mathbf{Y}}_{L}\right)
+\end{aligned}
+$$
+
+The matrix elements of these commutators in the (lsJM)-representation are given by
+
+
+\begin{align*}
+&\left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime}\right| \Re_{1 \mu L \nu}\left(\hat{J}_{1 \mu}, \hat{Y}_{L \nu}\right)\left|l_{s} J M\right\rangle=(-1)^{J+l^{\prime}+s+L} \delta_{\theta^{\prime}} \sqrt{\frac{L(L+1)(2 L+1)(2 l+1)(2 J+1)}{4 \pi}} \\
+&\left.\times C_{10 L 0}^{l^{\prime} 0}\left\{\begin{array}{cc}
+l & s \\
+J^{\prime} & L
+\end{array}\right\} l^{\prime}\right\} C_{L \nu 1 \mu}^{L \mu+\nu} C_{J M L \mu+\nu}^{J^{\prime} M^{\prime}}  \tag{126}\\
+&\left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime}\right| \Re_{L^{\prime} \nu^{\prime}}^{1 L}\left(\hat{J}_{1}, \hat{\mathbf{Y}}_{L}\right)|l s J M\rangle=(-1)^{J+l^{\prime}+s+L+1} \delta_{s, \prime^{\prime}} \delta_{L L^{\prime}} \sqrt{\frac{L(L+1)(2 L+1)(2 l+1)(2 J+1)}{4 \pi}} \\
+& \times C_{10 L 0}^{l^{\prime} 0}\left\{\begin{array}{ccc}
+l & s & J \\
+J^{\prime} & L & l^{\prime}
+\end{array}\right\} C_{J M L \nu^{\prime}}^{J^{\prime} M^{\prime}} \tag{127}
+\end{align*}
+
+
+Below we also present expressions for matrix elements of some more complex tensor products which include the spherical harmonic operator:
+
+
+\begin{gather*}
+\left\langle l^{\prime} m^{\prime}\right|\left\{\widehat{\mathrm{n}}_{1} \otimes\left(\widehat{\nabla}_{\Omega}\right)_{1}\right\}_{k \kappa} \hat{Y}_{L \nu}|l m\rangle=\sum_{L^{\prime} \nu^{\prime} l^{\prime \prime}}(-1)^{l^{\prime}+L^{\prime}+k} \sqrt{\frac{(2 L+1)(2 l+1)(2 k+1)\left(2 l^{\prime \prime}+1\right)}{4 \pi\left(2 l^{\prime}+1\right)\left(2 L^{\prime}+1\right)}} \\
+\times C_{l m L_{\nu}}^{L^{\prime} \nu^{\prime}} C_{L^{\prime} \nu^{\prime} k \kappa}^{l^{\prime} m^{\prime}} C_{l o L 0}^{L^{\prime} 0} C_{l^{\prime \prime} 010}^{l^{\prime} 0}\left\{\begin{array}{ccc}
+1 & L^{\prime} & l^{\prime \prime} \\
+l^{\prime} & 1 & k
+\end{array}\right\}\left(l^{\prime \prime}\left\|\left(\widehat{\nabla}_{\Omega}\right)_{1}\right\| L^{\prime}\right\rangle  \tag{128}\\
+\left\langle l^{\prime} m^{\prime}\right|\left\{\left\{\widehat{\mathrm{n}}_{1} \otimes\left(\widehat{\nabla}_{\Omega}\right)_{1}\right\}_{k} \otimes \widehat{\mathrm{Y}}_{L}\right\}_{F \varphi}|l m\rangle=(-1)^{F+l+k} \sqrt{\frac{(2 L+1)(2 l+1)(2 k+1)(2 F+1)}{4 \pi\left(2 l^{\prime}+1\right)}} \\
+\quad \times C_{l m F \varphi}^{l^{\prime} m^{\prime}} \sum_{L^{\prime} l^{\prime \prime}}(-1)^{L^{\prime}} \sqrt{2 l^{\prime \prime}+1} C_{l 0 L_{0}}^{L^{\prime} 0} C_{l^{\prime \prime} 010}^{l^{\prime} 0}\left\{\begin{array}{ccc}
+1 & L^{\prime} & l^{\prime \prime} \\
+l^{\prime} & 1 & k
+\end{array}\right\}\left\{\begin{array}{cc}
+L & k \\
+l^{\prime} & L^{\prime}
+\end{array}\right\}\left(l^{\prime \prime}\left\|\left(\widehat{\nabla}_{\Omega}\right)_{1}\right\| L^{\prime}\right\rangle \tag{129}
+\end{gather*}
+
+
+
+\begin{align*}
+& \left\langle l^{\prime} m^{\prime}\right|\left\{\hat{\mathbf{n}}_{1} \otimes \hat{\mathbf{L}}_{1}\right\}_{k \kappa} \hat{Y}_{L \nu}|l m\rangle=\sum_{L^{\prime} \nu^{\prime}}(-1)^{l^{\prime}+L^{\prime}+k} \sqrt{\frac{(2 L+1)(2 l+1)(2 k+1) L^{\prime}\left(L^{\prime}+1\right)\left(2 L^{\prime}+1\right)}{4 \pi\left(2 l^{\prime}+1\right)}} \\
+& \times C_{l m L \nu}^{L^{\prime} \nu^{\prime}} C_{L^{\prime} \nu^{\prime} k \kappa}^{l^{\prime} m^{\prime}} C_{l 0 L 0}^{L^{\prime} 0} C_{L^{\prime} 010}^{l^{\prime} 0}\left\{\begin{array}{ccc}
+1 & 1 & k \\
+l^{\prime} & L^{\prime} & L^{\prime}
+\end{array}\right\},  \tag{130}\\
+& \left\langle l^{\prime} m^{\prime}\right|\left\{\left\{\hat{\mathbf{n}}_{1} \otimes \hat{\mathbf{L}}_{1}\right\}_{k} \otimes \mathbf{Y}_{L}\right\}_{F \varphi}|l m\rangle=(-1)^{F+l+k} \sqrt{\frac{(2 L+1)(2 l+1)(2 k+1)(2 F+1)}{4 \pi\left(2 l^{\prime}+1\right)}} \\
+& \times C_{l m F \varphi}^{l^{\prime} m^{\prime}} \sum_{L^{\prime}}(-1)^{L^{\prime}} \sqrt{L^{\prime}\left(L^{\prime}+1\right.}\left(2 L^{\prime}+1\right) C_{l 0 L 0}^{L^{\prime} 0} C_{L^{\prime} 010}^{l^{\prime} 0}\left\{\begin{array}{ccc}
+1 & 1 & k \\
+l^{\prime} & L^{\prime} & L^{\prime}
+\end{array}\right\}\left\{\begin{array}{ccc}
+L & k & F \\
+l^{\prime} & l & L^{\prime}
+\end{array}\right\},  \tag{131}\\
+& \left\langle l^{\prime} m^{\prime}\right|\left\{\left(\widehat{\nabla}_{\Omega}\right)_{1} \otimes \widehat{\mathbf{L}}_{1}\right\}_{k \kappa} \widehat{Y}_{L \nu}|l m\rangle=\sum_{L^{\prime} \nu^{\prime}}(-1)^{l^{\prime}+L^{\prime}+k} \sqrt{\frac{(2 k+1)(2 L+1)(2 l+1) L^{\prime}\left(L^{\prime}+1\right)}{4 \pi\left(2 l^{\prime}+1\right)}} \\
+& \times C_{l m L \nu}^{L^{\prime} \nu^{\prime}} C_{L^{\prime} \nu^{\prime} k \kappa}^{l^{\prime} m^{\prime}} C_{l 0 L 0}^{l^{\prime} 0}\left\{\begin{array}{ccc}
+1 & 1 & k \\
+l^{\prime} & L^{\prime} & L^{\prime}
+\end{array}\right\}\left\langle l^{\prime}\left\|\left(\hat{\nabla}_{\Omega}\right)_{1}\right\| L^{\prime}\right\rangle,  \tag{132}\\
+& \left\langle l^{\prime} m^{\prime}\right|\left\{\left\{\left(\widehat{\nabla}_{\Omega}\right)_{1} \otimes \widehat{\mathbf{L}}_{1}\right\}_{k} \otimes \widehat{\mathbf{Y}}_{L}\right\}_{F_{\varphi}}|l m\rangle=(-1)^{F+l+k} \sqrt{\frac{(2 k+1)(2 L+1)(2 l+1)(2 F+1)}{4 \pi\left(2 l^{\prime}+1\right)}} \\
+& \times C_{l m F \varphi}^{\prime^{\prime} m^{\prime}} \sum_{L^{\prime}}(-1)^{L^{\prime}} \sqrt{L^{\prime}\left(L^{\prime}+1\right)\left(2 L^{\prime}+1\right)} C_{l 0 L 0}^{l^{\prime} 0}\left\{\begin{array}{ccc}
+1 & 1 & k \\
+l^{\prime} & L^{\prime} & L^{\prime}
+\end{array}\right\}\left\{\begin{array}{ccc}
+L & k & F \\
+l^{\prime} & l & L^{\prime}
+\end{array}\right\}\left\langle l^{\prime}\left\|\left(\widehat{\nabla}_{\Omega}\right)_{1}\right\| L^{\prime}\right\rangle,  \tag{133}\\
+& \left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime}\right|\left\{\widehat{\mathbf{n}}_{1} \otimes \widehat{\mathbf{S}}_{1}\right\}_{k \kappa} \widehat{Y}_{L \nu}|l s J M\rangle=(-1)^{l+s+J} \delta_{s s^{\prime}} \sqrt{\frac{(2 L+1)(2 l+1)(2 J+1)(2 k+1) s(s+1)(2 s+1)}{4 \pi}} \\
+& \times \sum_{J_{1} L_{1} M_{1}} \sqrt{\left(2 J_{1}+1\right)\left(2 L_{1}+1\right)} C_{J M L_{\nu}}^{J_{1} M_{1}} C_{J_{1} M_{1} k \kappa}^{J^{\prime} M^{\prime}} C_{L 0 l 0}^{L_{1} 0} C_{L_{1} 010}^{l^{\prime} 0}\left\{\begin{array}{ccc}
+l & s & J \\
+J_{1} & L & L_{1}
+\end{array}\right\}\left\{\begin{array}{ccc}
+L_{1} & 1 & l^{\prime} \\
+s & 1 & s \\
+J_{1} & k & J^{\prime}
+\end{array}\right\},  \tag{134}\\
+& \left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime}\right|\left\{\left\{\widehat{\mathrm{n}}_{1} \otimes \widehat{\mathrm{~S}}_{1}\right\}_{k} \otimes \mathbf{Y}_{L}\right\}_{F \varphi}|l s J M\rangle=(-1)^{l+s-J^{\prime}-F} \delta_{s s^{\prime}} C_{J M F \varphi}^{J^{\prime} M^{\prime}} \\
+& \times \sqrt{\frac{(2 L+1)(2 J+1)(2 l+1)(2 k+1)(2 F+1) s(s+1)(2 s+1)}{4 \pi}} \sum_{J_{1} L_{1}} \sqrt{2 L_{1}+1}\left(2 J_{1}+1\right) \\
+& \times C_{L 010}^{L_{1} 0} C_{L_{1} 010}^{l^{\prime} 0}\left\{\begin{array}{ccc}
+l & s & J \\
+J_{1} & L & L_{1}
+\end{array}\right\}\left\{\begin{array}{ccc}
+L & k & F \\
+J^{\prime} & J & J_{1}
+\end{array}\right\}\left\{\begin{array}{ccc}
+L_{1} & 1 & l^{\prime} \\
+s & 1 & s \\
+J_{1} & k & J^{\prime}
+\end{array}\right\},  \tag{135}\\
+& \times \sum_{J_{1} L_{1} M_{1}} \sqrt{2 J_{1}+1} C_{J M L \nu}^{J_{1} M_{1}} C_{J_{1} M_{1} k \kappa}^{J^{\prime} M^{\prime}} C_{L 0 l 0}^{L_{1} 0}\left\{\begin{array}{ccc}
+l & s & J \\
+J_{1} & L & L_{1}
+\end{array}\right\}\left\{\begin{array}{ccc}
+L_{1} & 1 & l^{\prime} \\
+s & 1 & s \\
+J_{1} & k & J^{\prime}
+\end{array}\right\}\left\langle l^{\prime}\left\|\left(\hat{\nabla}_{\Omega}\right)_{1}\right\| L_{1}\right\rangle, \tag{136}
+\end{align*}
+
+
+
+\begin{align*}
+& \left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime}\right|\left\{\left\{\left(\hat{\nabla}_{\Omega}\right)_{1} \otimes \hat{\mathrm{~S}}_{1}\right\}_{k} \otimes \hat{\mathrm{Y}}_{L}\right\}_{F_{\varphi}}\left|l_{s} J M\right\rangle=(-1)^{l+s-J^{\prime}-F} \delta_{s, s^{\prime}} C_{J M F \varphi}^{J^{\prime} M^{\prime}} \\
+& \times \sqrt{\frac{(2 L+1)(2 l+1)(2 J+1)(2 k+1)(2 F+1) s(s+1)(2 s+1)}{4 \pi}} \sum_{J_{1} L_{1}}\left(2 J_{1}+1\right) C_{L 010}^{L_{1} 0} \\
+& \times\left\{\begin{array}{ccc}
+l & s & J \\
+J_{1} & L & L_{1}
+\end{array}\right\}\left\{\begin{array}{ccc}
+L & k & F \\
+J^{\prime} & J & J_{1}
+\end{array}\right\}\left\{\begin{array}{ccc}
+L_{1} & 1 & l^{\prime} \\
+s & 1 & s \\
+J_{1} & k & J^{\prime}
+\end{array}\right\}\left\langle l^{\prime}\left\|\left(\widehat{\nabla}_{\Omega}\right)_{1}\right\| L_{1}\right\rangle,  \tag{137}\\
+& \left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime}\right|\left\{\hat{\mathbf{n}}_{1} \otimes \widehat{\mathbf{J}}_{1}\right\}_{k c} \widehat{Y}_{L \nu}|l s J M\rangle=(-1)^{2 s+J-J^{\prime}+k+L} \delta_{0 \theta^{\prime}} \\
+& \times \sqrt{\frac{(2 L+1)(2 l+1)(2 J+1)(2 k+1)}{4 \pi}} \sum_{L_{1} J_{1} M_{1}} \sqrt{J_{1}\left(J_{1}+1\right)\left(2 L_{1}+1\right)}\left(2 J_{1}+1\right) \\
+& \times C_{J M L \nu}^{J_{1} M_{1}} C_{J_{1} M_{1} k \kappa}^{J^{\prime} M^{\prime}} C_{L 010}^{L_{1} 0} C_{L_{1} 010}^{l^{\prime 0}}\left\{\begin{array}{ccc}
+l & s & J \\
+J_{1} & L & L_{1}
+\end{array}\right\}\left\{\begin{array}{ccc}
+1 & 1 & k \\
+J^{\prime} & J_{1} & J_{1}
+\end{array}\right\}\left\{\begin{array}{ccc}
+L_{1} & s & J_{1} \\
+J^{\prime} & 1 & l^{\prime}
+\end{array}\right\},  \tag{138}\\
+& \left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime}\right|\left\{\left\{\hat{\mathrm{n}}_{1} \otimes \widehat{\mathrm{~J}}_{1}\right\}_{k} \otimes \widehat{\mathrm{Y}}_{L}\right\}_{F \varphi}|l s J M\rangle=(-1)^{F+k+L} \delta_{\theta^{\prime}} C_{J M F \varphi}^{J^{\prime} M^{\prime}} \\
+& \times \sqrt{\frac{(2 F+1)(2 L+1)(2 l+1)(2 J+1)(2 k+1)}{4 \pi}} \sum_{L_{1} J_{1}} \sqrt{J_{1}\left(J_{1}+1\right)\left(2 L_{1}+1\right)} \\
+& \times\left(2 J_{1}+1\right)^{\frac{1}{3}} C_{L 010}^{L_{2} 0} C_{L_{1} 010}^{\prime^{\prime} 0}\left\{\begin{array}{ccc}
+l & s & J \\
+J_{1} & L & L_{1}
+\end{array}\right\}\left\{\begin{array}{ccc}
+1 & 1 & k \\
+J^{\prime} & J_{1} & J_{1}
+\end{array}\right\}\left\{\begin{array}{lll}
+L_{1} & s & J_{1} \\
+J^{\prime} & 1 & l^{\prime}
+\end{array}\right\}\left\{\begin{array}{lll}
+L & k & F \\
+J^{\prime} & J & J_{1}
+\end{array}\right\}, \tag{139}
+\end{align*}
+
+
+
+\begin{gather*}
+\left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime}\right|\left\{\left\{\left(\hat{\nabla}_{n}\right)_{1} \otimes \hat{\mathrm{~J}}_{1}\right\}_{k} \otimes \hat{\mathrm{Y}}_{L}\right\}_{F \varphi}|l s J M\rangle=(-1)^{l+l^{\prime}+F+k+1} C_{J M F \varphi}^{J^{\prime} M^{\prime}} \\
+\times \sqrt{\frac{(2 L+1)(2 l+1)(2 J+1)(2 k+1)(2 F+1)}{4 \pi}} \sum_{L_{1} J_{1}} \sqrt{J_{1}\left(J_{1}+1\right)}\left(2 J_{1}+1\right)^{\frac{3}{2}} C_{L 0 l 0}^{L_{1} 0} \\
+\times\left(l^{\prime}\left\|\left(\hat{\nabla}_{\Omega}\right)_{1}\right\| L_{1}\right\rangle\left\{\begin{array}{ccc}
+l & s & J \\
+J_{1} & L & L_{1}
+\end{array}\right\}\left\{\begin{array}{ccc}
+J_{1} & J^{\prime} & 1 \\
+l^{\prime} & L_{1} & s
+\end{array}\right\}\left\{\begin{array}{ccc}
+1 & 1 & k \\
+J^{\prime} & J_{1} & J_{1}
+\end{array}\right\}\left\{\begin{array}{ccc}
+L & k & F \\
+J^{\prime} & J & J_{1}
+\end{array}\right\}  \tag{141}\\
+\times \sqrt{\frac{\left(l^{\prime} s^{\prime} J^{\prime} M^{\prime}\left|\left\{\hat{\mathrm{L}}_{1} \otimes \hat{\mathrm{~S}}_{1}\right\}_{k c} \hat{Y}_{L \nu}\right| l s J M\right\rangle=(-1)^{l+}+J^{\prime} \delta_{s^{\prime}} C_{L 010}^{l^{\prime} 0}}{}} \\
+\times \sum_{J_{1} M_{1}} \sqrt{2 J_{1}+1} C_{J M L_{\nu}}^{J_{1} M_{1}} C_{J_{1} M_{1} k \kappa}^{J^{\prime} M^{\prime}}\left\{\begin{array}{ccc}
+l & s & J \\
+J_{1} & L & l^{\prime}
+\end{array}\right\}\left\{\begin{array}{ccc}
+l^{\prime} & 1 & l^{\prime} \\
+s & 1 & s \\
+J_{1} & k & J^{\prime}
+\end{array}\right\}, \tag{142}
+\end{gather*}
+
+
+
+\begin{align*}
+& \left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime}\right|\left\{\left\{\hat{\mathbf{L}}_{1} \otimes \widehat{\mathbf{S}}_{1}\right\}_{k} \otimes \widehat{\mathbf{Y}}_{L}\right\}_{F \varphi}|\operatorname{ls} J M\rangle=(-1)^{l+s-J^{\prime}-F} \delta_{s s^{\prime}} C_{J M F \varphi}^{J^{\prime} M^{\prime}} C_{L 0 l 0}^{l^{\prime} 0} \\
+& \times \sqrt{\frac{(2 L+1)(2 l+1)(2 k+1)(2 F+1) s(s+1)(2 s+1) l^{\prime}\left(l^{\prime}+1\right)\left(2 l^{\prime}+1\right)(2 J+1)}{4 \pi}} \\
+& \times \sum_{J_{1}}\left(2 J_{1}+1\right)\left\{\begin{array}{ccc}
+l & s & J \\
+J_{1} & L & l^{\prime}
+\end{array}\right\}\left\{\begin{array}{ccc}
+L & k & F \\
+J^{\prime} & J & J_{1}
+\end{array}\right\}\left\{\begin{array}{ccc}
+l^{\prime} & 1 & l^{\prime} \\
+s & 1 & s \\
+J_{1} & k & J^{\prime}
+\end{array}\right\},  \tag{143}\\
+& \left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime}\right|\left\{\hat{\mathrm{L}}_{1} \otimes \hat{\mathrm{~J}}_{1}\right\}_{k \kappa} \hat{Y}_{L \nu}\left|l_{s} J M\right\rangle=(-1)^{l+l^{\prime}+J+J^{\prime}+k+1} \delta_{s s^{\prime}} C_{L 0 l 0}^{l^{\prime} 0} \\
+& \times \sqrt{\frac{(2 L+1)(2 l+1)(2 J+1)(2 k+1) l^{\prime}\left(l^{\prime}+1\right)\left(2 l^{\prime}+1\right)}{4 \pi}} \sum_{J_{1} M_{1}}\left(2 J_{1}+1\right) \sqrt{J_{1}\left(J_{1}+1\right)} C_{J M L_{\nu}}^{J_{1} M_{1}} C_{J_{1} M_{1} k \kappa}^{J^{\prime} M^{\prime}} \\
+& \times\left\{\begin{array}{ccc}
+l & s & J \\
+J_{1} & L & l^{\prime}
+\end{array}\right\}\left\{\begin{array}{ccc}
+1 & 1 & k \\
+J^{\prime} & J_{1} & J_{1}
+\end{array}\right\}\left\{\begin{array}{ccc}
+l^{\prime} & s & J_{1} \\
+J^{\prime} & 1 & l^{\prime}
+\end{array}\right\},  \tag{144}\\
+& \left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime}\right|\left\{\left\{\hat{\mathbf{L}}_{1} \otimes \widehat{\mathbf{J}}_{1}\right\}_{k} \otimes \widehat{\mathbf{Y}}_{L}\right\}_{F \varphi}|l s J M\rangle=(-1)^{l+l^{\prime}-F+k+1} \delta_{s s^{\prime}} C_{L 0 l 0}^{l^{\prime} 0} C_{J M F \varphi}^{J^{\prime} M^{\prime}} \\
+& \times \sqrt{\frac{(2 L+1)(2 l+1)(2 J+1)(2 k+1)(2 F+1) l^{\prime}\left(l^{\prime}+1\right)\left(2 l^{\prime}+1\right)}{4 \pi}} \sum_{J_{1}} \sqrt{J_{1}\left(J_{1}+1\right)}\left(2 J_{1}+1\right)^{\frac{3}{2}} \\
+& \times\left\{\begin{array}{ccc}
+l & s & J \\
+J_{1} & L & l^{\prime}
+\end{array}\right\}\left\{\begin{array}{ccc}
+1 & 1 & k \\
+J^{\prime} & J_{1} & J_{1}
+\end{array}\right\}\left\{\begin{array}{lll}
+l^{\prime} & s & J_{1} \\
+J^{\prime} & 1 & l^{\prime}
+\end{array}\right\}\left\{\begin{array}{ccc}
+L & k & F \\
+J^{\prime} & J & J_{1}
+\end{array}\right\},  \tag{145}\\
+& \left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime}\right|\left\{\widehat{\mathbf{S}}_{1} \otimes \widehat{\mathbf{J}}_{1}\right\}_{k \kappa} \widehat{Y}_{L \nu}|l s J M\rangle=(-1)^{J+L+k+1} \delta_{s s^{\prime}} C_{L 0 l 0}^{l^{\prime} 0} \\
+& \times \sqrt{\frac{(2 L+1)(2 l+1)(2 J+1)(2 k+1) s(s+1)(2 s+1)}{4 \pi}} \sum_{J_{1} M_{1}} C_{J M L \nu}^{J_{1} M_{1}} C_{J_{1} M_{1} k \kappa}^{J^{\prime} M^{\prime}} \sqrt{J_{1}\left(J_{1}+1\right)}\left(2 J_{1}+1\right) \\
+& \times(-1)^{J_{1}}\left\{\begin{array}{ccc}
+l & s & J \\
+J_{1} & L & l^{\prime}
+\end{array}\right\}\left\{\begin{array}{ccc}
+1 & 1 & k \\
+J^{\prime} & J_{1} & J_{1}
+\end{array}\right\}\left\{\begin{array}{ccc}
+s & l^{\prime} & J_{1} \\
+J^{\prime} & 1 & s
+\end{array}\right\},  \tag{146}\\
+& \left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime}\right|\left\{\left\{\widehat{\mathbf{S}}_{1} \otimes \widehat{\mathbf{J}}_{1}\right\}_{k} \otimes \widehat{\mathbf{Y}}_{L}\right\}_{F \varphi}|l s J M\rangle=(-1)^{L+F-J^{\prime}+k+1} \delta_{s s^{\prime}} C_{L 0 l 0}^{l^{\prime} 0} C_{J M F \varphi}^{J^{\prime} M^{\prime}} \\
+& \times \sqrt{\frac{(2 L+1)(2 l+1)(2 J+1)(2 k+1)(2 F+1) s(s+1)(2 s+1)}{4 \pi}} \sum_{J_{1}} \sqrt{J_{1}\left(J_{1}+1\right)}\left(2 J_{1}+1\right)^{\frac{3}{2}} \\
+& \times(-1)^{J_{1}}\left\{\begin{array}{ccc}
+l & s & J \\
+J_{1} & L & l^{\prime}
+\end{array}\right\}\left\{\begin{array}{ccc}
+1 & 1 & k \\
+J^{\prime} & J_{1} & J_{1}
+\end{array}\right\}\left\{\begin{array}{ccc}
+s & l^{\prime} & J_{1} \\
+J^{\prime} & 1 & s
+\end{array}\right\}\left\{\begin{array}{ccc}
+L & k & F \\
+J^{\prime} & J & J_{1}
+\end{array}\right\} . \tag{147}
+\end{align*}
+
+
+The commutators of the operators in Eqs. (128)-(147) may be represented in a more general form as
+
+
+\begin{gather*}
+\Re_{k \kappa, L \nu}\left(\left\{\hat{\mathbf{P}}_{a} \otimes \widehat{\mathbf{Q}}_{b}\right\}_{k \kappa}, \widehat{Y}_{L \nu}\right)=\sum_{\alpha \beta} C_{a \alpha b \beta}^{k \kappa}\left\{\Re_{a \alpha, L \nu}\left(\widehat{P}_{a \alpha}, \widehat{Y}_{L \nu}\right) \widehat{Q}_{b \beta}+\widehat{P}_{a \alpha} \Re_{b \beta, L \nu}\left(\widehat{Q}_{b \beta}, \widehat{Y}_{L \nu}\right)\right\}  \tag{148}\\
+\Re_{F \varphi}^{k L}\left(\left\{\widehat{\mathbf{P}}_{a} \otimes \widehat{\mathbf{Q}}_{b}\right\}_{k}, \widehat{\mathbf{Y}}_{L}\right)=\sum_{\alpha \beta \kappa \nu} C_{a \alpha b \beta}^{k \kappa} C_{k \kappa L \nu}^{F \varphi}\left\{\Re_{a \alpha, L \nu}\left(\widehat{P}_{a \alpha}, \widehat{Y}_{L \nu}\right) \widehat{Q}_{b \beta}+\widehat{P}_{a \alpha} \Re_{b \beta L \nu}\left(\widehat{Q}_{b \beta}, \hat{Y}_{L \nu}\right)\right\} \tag{149}
+\end{gather*}
+
+
+The evaluation of matrix elements of these commutators may be performed using the foregoing equations.
+
+\subsection*{13.2.9 Matrix Elements of Some Scalar and Vector Products}
+Using Eq. (33), one can easily obtain matrix elements of scalar and vector products of the operators $\hat{\mathbf{n}}$ and $\hat{\nabla}_{\Omega}$
+
+
+\begin{gather*}
+\left\langle l^{\prime} m^{\prime}\right|\left(\widehat{\mathbf{n}} \cdot \widehat{\nabla}_{\Omega}\right)|l m\rangle=0  \tag{150}\\
+\left\langle l^{\prime} m^{\prime}\right|\left[\widehat{\mathbf{n}} \times\left.\widehat{\nabla}_{\Omega}\right|_{\mu}|l m\rangle=i \sqrt{l(l+1)} C_{l m 1 \mu}^{l^{\prime} m^{\prime}} \delta_{l l^{\prime}}\right. \tag{151}
+\end{gather*}
+
+
+Equation (150) follows from the orthogonality of the vectors in question. Equation (151) may also be obtained by taking into account the fact that
+
+$$
+\left[\widehat{\mathbf{n}} \times \hat{\boldsymbol{\nabla}}_{\Omega}\right]=i \hat{\mathbf{L}} .
+$$
+
+Matrix elements of scalar and vector products of the operator $\widehat{\mathbf{J}}$ and the operators $\widehat{\mathbf{n}}$ and $\widehat{\nabla}_{\Omega}$ may be derived from Eqs. (52)-(56) and (61)-(65)
+
+
+\begin{gather*}
+\left(l^{\prime} s^{\prime} J^{\prime} M^{\prime}|(\widehat{\mathbf{n}} \cdot \widehat{\mathbf{J}})| l s J M\right\rangle=\delta_{s^{\prime} s} \delta_{J^{\prime}} \delta_{M^{\prime} M}(-1)^{s+l^{\prime}+J+1} \sqrt{J(J+1)(2 J+1)(2 l+1)} C_{l 010}^{l^{\prime} 0}\left\{\begin{array}{lll}
+l & s & J \\
+J & 1 & l^{\prime}
+\end{array}\right\}  \tag{152}\\
+\left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime}\right|[\widehat{\mathbf{n}} \times \widehat{\mathbf{J}}]_{\kappa}|l s J M\rangle=\frac{i}{2}(-1)^{J+s+l^{\prime}}\left\{J^{\prime}\left(J^{\prime}+1\right)-J(J+1)-2\right\} \sqrt{(2 l+1)(2 J+1)} \\
+\times C_{l 010}^{l^{\prime} 0}\left\{\begin{array}{lll}
+l & s & J \\
+J^{\prime} & 1 & l^{\prime}
+\end{array}\right\} C_{J M 1 \kappa}^{J^{\prime} M^{\prime}} \tag{153}
+\end{gather*}
+
+
+The scalar product of the operators $\widehat{\mathbf{n}}$ and $\widehat{\mathbf{J}}$ is commutative. At the same time, the vector product of these operators is not commutative, i.e.,
+
+
+\begin{gather*}
+\left.\left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime}\right| \widehat{\mathbf{J}} \times \widehat{\mathbf{n}}\right]_{\kappa}|l s J M\rangle \\
+=\frac{i}{2}(-1)^{-+\bullet+l^{\prime}+1}\left\{J^{\prime}\left(J^{\prime}+1\right)-J(J+1)+2\right\} \sqrt{(2 l+1)(2 J+1)} C_{1010}^{l^{\prime} 0}\left\{\begin{array}{ccc}
+l & s & J \\
+J^{\prime} & 1 & l^{\prime}
+\end{array}\right\} C_{J M 1 \kappa}^{J^{\prime} M^{\prime}} . \tag{154}
+\end{gather*}
+
+
+In a similar manner we get
+
+
+\begin{gather*}
+\left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime}\right|\left(\hat{\nabla}_{\Omega} \cdot \widehat{J}\right)|l s J M\rangle=\delta_{J^{\prime} J} \delta_{s^{\prime} s} \delta_{M^{\prime} M}(-1)^{s+l^{\prime}+J} \sqrt{\left(2 l^{\prime}+1\right)(2 J+1) J(J+1)} \\
+\times\left[l \sqrt{\frac{l+1}{2 l+3}} \delta_{l l+1}+(l+1) \sqrt{\frac{l}{2 l-1}} \delta_{l l-1}\right]\left\{\begin{array}{ccc}
+l & s & J \\
+J & 1 & l^{\prime}
+\end{array}\right\},  \tag{155}\\
+\left.\left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime}\right| \mid \widehat{\nabla}_{\Omega} \times \widehat{\mathbf{J}}\right]_{\kappa}|l s J M\rangle=\frac{i}{2}(-1)^{J+s+l^{\prime}+1} \sqrt{\left(2 l^{\prime}+1\right)(2 J+1)}\left\{J^{\prime}\left(J^{\prime}+1\right)-J(J+1)-2\right\} \\
+\times\left[\sqrt{\frac{l+1}{2 l+3}} \delta_{l l+1}+(l+1) \sqrt{\frac{l}{2 l-1}} \delta_{l l-1}\right]\left\{\begin{array}{cc}
+l & J \\
+J^{\prime} & 1
+\end{array} l^{\prime}\right\} C_{J M 1 \kappa}^{J^{\prime} M^{\prime}} . \tag{156}
+\end{gather*}
+
+
+As in the foregoing case, the scalar product of the vector operators $\hat{\nabla}_{\Omega}$ and $\hat{\mathbf{J}}$ is commutative, while the vector product is not commutative. Therefore,
+
+
+\begin{gather*}
+\left.\left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime}\right| \mid \widehat{\mathbf{J}} \times \widehat{\nabla}_{\Omega}\right]_{\kappa}|l s J M\rangle=\frac{i}{2}(-1)^{J++l^{\prime}}\left\{J^{\prime}\left(J^{\prime}+1\right)-J(J+1)+2\right\} \sqrt{\left(2 l^{\prime}+1\right)(2 J+1)} \\
+\times\left[l \sqrt{\frac{l+1}{2 l+3}} \delta_{l^{\prime} l+1}+(l+1) \sqrt{\frac{l}{2 l-1}} \delta_{l^{\prime} l-1}\right]\left\{\begin{array}{ccc}
+l & s & J \\
+J^{\prime} & 1 & l^{\prime}
+\end{array}\right\} C_{J M 1 \kappa}^{J^{\prime} M^{\prime}} \tag{157}
+\end{gather*}
+
+
+The matrix elements of scalar and vector products of the operator $\hat{\mathbf{L}}$ and the operators $\hat{\mathbf{n}}$ and $\hat{\nabla}_{\Omega}$ may be obtained from Eqs. (73)-(77) and (82)-(85). In the case of scalar products we get
+
+
+\begin{align*}
+\left\langle l^{\prime} m^{\prime}\right|(\hat{\mathbf{n}} \cdot \hat{\mathbf{L}})|l m\rangle & =0, \\
+\left\langle l^{\prime} m^{\prime}\right|\left(\hat{\nabla}_{\Omega} \cdot \hat{\mathbf{L}}\right)|l m\rangle & =0 . \tag{158}
+\end{align*}
+
+
+These results follow from the orthogonality of the vectors $\widehat{\mathbf{n}}, \widehat{\nabla}_{\Omega}$ and $\widehat{\mathbf{L}}$. The vector products $[\widehat{\mathbf{n}} \times \widehat{\mathbf{L}}]$ and $\left[\widehat{\nabla}_{\Omega} \times \widehat{\mathbf{L}}\right]$ are not commutative. Hence,
+
+
+\begin{gather*}
+\left\langle l^{\prime} m^{\prime}\right||\widehat{\mathbf{n}} \times \widehat{\mathbf{L}}|_{\kappa}|l m\rangle=-\frac{i}{2}\left[l^{\prime}\left(l^{\prime}+1\right)-l(l+1)-2\right] \sqrt{\frac{2 l+1}{2 l^{\prime}+1}} C_{l 010}^{l^{\prime} 0} C_{l m 1 \kappa}^{l^{\prime} m^{\prime}}=i\left\langle l^{\prime} m^{\prime}\right|\left(\hat{\nabla}_{\Omega}\right)_{1 \kappa}|l m\rangle  \tag{159}\\
+\left\langle l^{\prime} m^{\prime}\right||\widehat{\mathbf{L}} \times \widehat{\mathbf{n}}|_{\kappa}|l m\rangle=\frac{i}{2}\left[l^{\prime}\left(l^{\prime}+1\right)-l(l+1)+2\right] \sqrt{\frac{2 l+1}{2 l^{\prime}+1}} C_{l 010}^{l^{\prime} 0} C_{l m 1 \kappa}^{l^{\prime} m^{\prime}} \tag{160}
+\end{gather*}
+
+
+and also
+
+
+\begin{gather*}
+\left\langle l^{\prime} m^{\prime}\right|\left|\widehat{\nabla}_{\Omega} \times \widehat{\mathbf{L}}\right|_{\kappa}|l m\rangle \\
+=\frac{i}{2}\left[l^{\prime}\left(l^{\prime}+1\right)-l(l+1)-2\right]\left[\sqrt{\frac{l+1}{2 l+3}} \delta_{l^{\prime} l+1}+(l+1) \sqrt{\frac{l}{2 l-1}} \delta_{l^{\prime} l-1}\right] C_{l m 1 \kappa}^{l^{\prime} m^{\prime}},  \tag{161}\\
+\left\langle l^{\prime} m^{\prime}\right|\left|\widehat{\mathbf{L}} \times \widehat{\nabla}_{\Omega}\right|_{\kappa}|l m\rangle \\
+=-\frac{i}{2}\left[l^{\prime}\left(l^{\prime}+1\right)-l(l+1)+2\right]\left[\sqrt{\frac{l+1}{2 l+3}} \delta_{l l+1}+(l+1) \sqrt{\frac{l}{2 l-1}} \delta_{l^{\prime} l-1}\right] C_{l m 1 \kappa}^{l^{\prime} m^{\prime}} . \tag{162}
+\end{gather*}
+
+
+The matrix elements of scalar and vector products of the operators $\hat{\mathbf{L}}$ and $\hat{\mathbf{J}}$ may be derived from Eqs. (86)(89). The scalar product is commutative:
+
+
+\begin{equation*}
+\left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime}\right|(\hat{\mathbf{L}} \cdot \hat{\mathbf{J}})\left|l_{s} J M\right\rangle=\delta_{l^{\prime} l^{\prime}} \delta_{s^{\prime},} \delta_{J^{\prime} j} \delta_{M^{\prime} M} \frac{J(J+1)+l(l+1)-s(s+1)}{2} \tag{163}
+\end{equation*}
+
+
+The vector product is not commutative:
+
+
+\begin{gather*}
+\left.\left.\left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime}\right||\hat{\mathbf{L}} \times \hat{\mathbf{J}}|_{\kappa}|l s J M\rangle=\frac{i}{2}(-1)^{s+l+J+1} \delta_{l^{\prime} l} \delta_{s^{\prime},} \right\rvert\, J(J+1)-J^{\prime}\left(J^{\prime}+1\right)+2\right] \\
+\times \sqrt{(2 J+1) l(l+1)(2 l+1)}\left\{\begin{array}{ccc}
+l & s & J \\
+J^{\prime} & 1 & l
+\end{array}\right\} C_{J M 1 \kappa}^{J^{\prime} M^{\prime}}  \tag{164}\\
+\left.\left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime}\right| \hat{\mathbf{J}} \times \hat{\mathbf{L}}_{\kappa}| | l s J M\right\rangle=\frac{i}{2}(-1)^{s+l+J+1} \delta_{l^{\prime} l} \delta_{s^{\prime},}\left[J^{\prime}\left(J^{\prime}+1\right)-J(J+1)+2\right] \\
+\times \sqrt{(2 J+1) l(l+1)(2 l+1)}\left\{\begin{array}{ccc}
+l & s & J \\
+J^{\prime} & 1 & l^{\prime}
+\end{array}\right\} C_{J M 1 \kappa}^{J^{\prime} M^{\prime}} \tag{165}
+\end{gather*}
+
+
+Matrix elements of scalar and vector products of the spin operator $\widehat{\mathbf{S}}$ and the operators $\widehat{\mathbf{n}}, \widehat{\nabla}_{\Omega}$ and $\widehat{\mathbf{L}}$ (which commutative with $\widehat{\mathbf{S}})$ may be found from Eqs. (95)-(99):
+
+\[
+\left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime}\right|(\widehat{\mathbf{n}} \cdot \widehat{\mathbf{S}})|l s J M\rangle=(-1)^{l+s+J} \delta_{J J^{\prime}} \delta_{M M^{\prime}} \delta_{e^{\prime}} \sqrt{s(s+1)(2 s+1)(2 l+1)} C_{l 010}^{l^{\prime} 0}\left\{\begin{array}{ccc}
+1 & s & s  \tag{166}\\
+J & l & l^{\prime}
+\end{array}\right\}
+\]
+
+
+\begin{align*}
+& \left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime}\right|\left(\hat{\nabla}_{\Omega} \cdot \widehat{\mathbf{S}}\right)|l s J M\rangle=(-1)^{l+\vartheta+J+1} \delta_{J J^{\prime}} \delta_{M M^{\prime}} \delta_{s o^{\prime}} \sqrt{s(s+1)(2 s+1)\left(2 l^{\prime}+1\right)} \\
+& \times\left[\sqrt{\frac{l+1}{2 l+3}} \delta_{l l+1}+(l+1) \sqrt{\frac{l}{2 l-1}} \delta_{l l-1}\right]\left\{\begin{array}{ccc}
+1 & s & s \\
+J & l & l^{\prime}
+\end{array}\right\},  \tag{167}\\
+& \left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime}\right|(\hat{\mathbf{L}} \cdot \hat{\mathbf{S}})|l s J M\rangle=\delta_{l l^{\prime}} \delta_{0, g^{\prime}} \delta_{J J^{\prime}} \delta_{M M^{\prime}} \frac{1}{2}[J(J+1)-l(l+1)-s(s+1)],  \tag{168}\\
+& \left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime}\right|\left[\widehat{\mathrm{n}} \times\left.\widehat{\mathrm{S}}\right|_{\kappa}|l s J M\rangle=i(-1)^{l^{\prime}+J+{ }^{\circ}} \delta_{0,}, \sqrt{(2 l+1)(2 J+1)} C_{l 010}^{l^{\prime} 0}\right. \\
+& \times \frac{1}{2}\left[\left(J^{\prime}-l^{\prime}\right)\left(J^{\prime}+l^{\prime}+1\right)-(J-l)(J+l+1)\right]\left\{\begin{array}{lll}
+J^{\prime} & l^{\prime} & 3 \\
+l & J & 1
+\end{array}\right\} C_{J M 1 \kappa}^{J^{\prime} M^{\prime}},  \tag{169}\\
+& \left.\left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime}\right| \mid \hat{\nabla} \widehat{\nabla}_{n} \times \widehat{\mathbf{S}}\right]_{\kappa}|l s J M\rangle=i(-1)^{l^{\prime}+J+\iota+1} \delta_{s s^{\prime}} \sqrt{\left(2 l^{\prime}+1\right)(2 J+1)}\left\{\begin{array}{lll}
+J^{\prime} & l^{\prime} & s \\
+l & J & 1
+\end{array}\right\} \\
+& \times \frac{1}{2}\left[\left(J^{\prime}-l^{\prime}\right)\left(J^{\prime}+l^{\prime}+1\right)-(J-l)(J+l+1)\right]\left[\sqrt{\frac{l+1}{2 l+3}} \delta_{l l+1}+(l+1) \sqrt{\frac{l}{2 l-1}} \delta_{l l-1}\right] C_{J M 1 \kappa}^{J^{\prime} M^{\prime}},  \tag{170}\\
+& \left.\left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime} \| \widehat{\mathbf{L}}_{1} \times \widehat{\mathbf{S}}_{1}\right]_{\kappa} \|_{l s} J M\right\rangle=i(-1)^{l+J+c} \sqrt{(2 J+1) l(l+1)(2 l+1)} \delta_{l l^{\prime}} \delta_{l^{\prime}} \\
+& \times \frac{1}{2}\left[\left(J^{\prime}-l\right)\left(J^{\prime}+l+1\right)-(J-l)(J+l+1)\right]\left\{\begin{array}{lll}
+J^{\prime} & l & s \\
+l & J & 1
+\end{array}\right\} C_{J M 1 \kappa}^{J^{\prime} M^{\prime}} . \tag{171}
+\end{align*}
+
+
+The scalar product of the operators $\widehat{\mathbf{S}}$ and $\widehat{\mathbf{J}}$ is commutative and its matrix elements are determined by
+
+
+\begin{equation*}
+\left(l^{\prime} s^{\prime} J^{\prime} M^{\prime}|(\widehat{\mathbf{S}} \cdot \widehat{\mathbf{J}})| l_{s} J M\right\rangle=\delta_{l l} \delta_{s,} \delta_{J J^{\prime}} \delta_{M M^{\prime}} \frac{1}{2}[J(J+1)+s(s+1)-l(l+1)] \tag{172}
+\end{equation*}
+
+
+The vector product of the same operators is not commutative. The matrix elements of this product are given by
+
+
+\begin{gather*}
+\left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime}\right||\widehat{\mathbf{S}} \times \widehat{\mathbf{J}}|_{\kappa}|l s J M\rangle=\frac{i}{2}(-1)^{l+s+J^{\prime}+1} \delta_{s^{\prime}} \delta_{l l}\left[J(J+1)-J^{\prime}\left(J^{\prime}+1\right)+2\right] \\
+\times \sqrt{(2 J+1) s(s+1)(2 s+1)}\left\{\begin{array}{ccc}
+s & l & J \\
+J^{\prime} & 1 & s
+\end{array}\right\} C_{J M 1 \kappa}^{J^{\prime} M^{\prime}}  \tag{173}\\
+\left\langle l^{\prime} s^{\prime} J^{\prime} M^{\prime} \| \hat{\mathbf{J}} \times \widehat{\mathbf{S}}\right]_{\kappa}|l s J M\rangle=\frac{i}{2}(-1)^{l+s+J^{\prime}+1} \delta_{l l^{\prime}} \delta_{s^{\prime}}\left[J^{\prime}\left(J^{\prime}+1\right)-J(J+1)+2\right] \\
+\times \sqrt{(2 J+1) s(s+1)(2 s+1)}\left\{\begin{array}{ll}
+s & l \\
+J^{\prime} & 1 \\
+& s
+\end{array}\right\} C_{J M 1 \kappa}^{J^{\prime} M^{\prime}} \tag{174}
+\end{gather*}

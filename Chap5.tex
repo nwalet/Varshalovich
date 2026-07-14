@@ -1,0 +1,2013 @@
+\section*{Chapter 5}
+\section*{SPHERICAL HARMONICS}
+A spherical harmonic $Y_{\text {Im }}(\vartheta, \varphi)$ is a single-valued, continuous, bounded complex function of two real arguments $\vartheta, \varphi$ with $0 \leq \vartheta \leq \pi$ and $0 \leq \varphi<2 \pi$. It is characterized by two parameters $l$ and $m$, which take values $l=0,1,2, \ldots$ and $m=l, l-1, l-2, \ldots-l+2,-l+1,-l$. Therefore, for a given $l$ there exist $(2 l+1)$ functions corresponding to different $m$ 's. All derivatives of $Y_{l m}(\vartheta, \varphi)$ are single-valued, continuous and finite functions.
+
+The spherical harmonics play an important role in quantum mechanics. They are eigenfunctions of the operator of orbital angular momentum and describe the angular distribution of particles which move in a spherically-symmetric field with the orbital angular momentum $l$ and projection $m$. Strictly speaking, $l$ specifies the absolute value of orbital angular momentum because $l(l+1)$ is the eigenvalue of the square of the orbital angular momentum operator, $\widehat{\mathbf{L}}^{2} ; m$ is the eigenvalue of $\widehat{L}_{z}$ which is the projection of the orbital angular momentum operator on the quantization axis.
+
+\subsection*{5.1. DEFINITION}
+\subsection*{5.1.1. Commutation Relations}
+The spherical harmonics $Y_{l m}(\vartheta, \varphi)$ are components of some irreducible tensor of rank $l$ (Chap. 3). Owing to this circumstance they may be defined by the commutation relations
+
+
+\begin{equation*}
+\left[\widehat{L}_{\mu}, Y_{l m}(\vartheta, \varphi)\right]=\sqrt{l(l+1)} C_{l m 1 \mu}^{l m+\mu} Y_{l m+\mu}(\vartheta, \varphi) \tag{1}
+\end{equation*}
+
+
+where $\widehat{L}_{\mu}(\vartheta, \varphi)$ is a spherical component of the operator $\widehat{\mathbf{L}}$ (see Eq. 2.2(18)).\\
+The three commutation relations (1) (for $\mu=1,0,-1$ ) generate the following three equations
+
+
+\begin{gather*}
+\hat{L}_{ \pm 1} Y_{l m}(\vartheta, \varphi)=\mp \sqrt{\frac{l(l+1)-m(m \pm 1)}{2}} Y_{l m \pm 1}(\vartheta, \varphi)  \tag{2}\\
+\hat{L}_{0} Y_{l m}(\vartheta, \varphi)=m Y_{l m}(\vartheta, \varphi)
+\end{gather*}
+
+
+\subsection*{5.1.2. Differential Equations}
+According to the commutation relations (1), $Y_{l m}(\vartheta, \varphi)$ is the eigenfunction of the operators $\widehat{\mathbf{L}}^{2}$ and $\widehat{L}_{z}$
+
+\[
+\left\{\begin{array}{l}
+\hat{L}^{2} Y_{l m}(\vartheta, \varphi)=l(l+1) Y_{l m}(\vartheta, \varphi)  \tag{$\{3\}$}\\
+\widehat{L}_{z} Y_{l m}(\vartheta, \varphi)=m Y_{l m}(\vartheta, \varphi)
+\end{array}\right.
+\]
+
+or in an expanded form
+
+
+\begin{gather*}
+{\left[\frac{1}{\sin \vartheta} \frac{\partial}{\partial \vartheta}\left(\sin \vartheta \frac{\partial}{\partial \vartheta}\right)+\frac{1}{\sin ^{2} \vartheta} \frac{\partial^{2}}{\partial \varphi^{2}}+l(l+1)\right] Y_{l m}(\vartheta, \varphi)=0}  \tag{4}\\
+{\left[i \frac{\partial}{\partial \varphi}+m\right] Y_{l m}(\vartheta, \varphi)=0}
+\end{gather*}
+
+
+Equations (4) are invariant under the following transformations\\
+(a) $l \rightarrow \bar{l}=-l-1$;\\
+(b) $\vartheta \rightarrow-\vartheta$ (or $\vartheta \rightarrow \pi-\vartheta$ );\\
+(c) $m \rightarrow-m, \varphi \rightarrow-\varphi$.
+
+\subsection*{5.1.3. Boundary Conditions}
+The first of Eqs. (4) is of the second order. For fixed $l$ and $m$ it has two linearly independent solutions. However, only one of them is regular, i.e., satisfies the condition $\left|Y_{l m}(\vartheta, \varphi)\right|^{2}<\infty$ while the other solution is singular at $\vartheta=0$ and $\vartheta=\pi$. For quantum mechanical applications the regular solution is of major interest. This solution will be considered in the present chapter. The regular solution is selected by the following boundary conditions
+
+
+\begin{align*}
+Y_{l m}(\vartheta, \varphi \pm 2 \pi n) & =Y_{l m}(\vartheta, \varphi), \\
+\left.\frac{\partial}{\partial \varphi} Y_{l m}(\vartheta, \varphi)\right|_{\vartheta=0} & =\left.\frac{\partial}{\partial \varphi} Y_{l m}(\vartheta, \varphi)\right|_{\vartheta=\pi}=0 . \tag{5}
+\end{align*}
+
+
+Below we shall consider the spherical harmonics $Y_{l m}(\vartheta, \varphi)$ with integer $l$ and $m$ (with $|m| \leq l$ ) because the boundary conditions (5) are fulfilled only for such values of the parameters.
+
+\subsection*{5.1.4. Normalization}
+(a) The differential equations (4) and the boundary conditions (5) are homogeneous. Hence, they determine the spherical harmonics only up to some arbitrary complex factor. The absolute value of this factor can be fixed by the normalization.
+
+The normalization and orthogonality relation of the spherical harmonics is given by
+
+
+\begin{equation*}
+\int_{0}^{2 \pi} d \varphi \int_{0}^{\pi} d \vartheta \sin \vartheta Y_{l m}^{*}(\vartheta, \varphi) Y_{l^{\prime} m^{\prime}}(\vartheta, \varphi)=\delta_{l l^{\prime}} \delta_{m m^{\prime}} \tag{6}
+\end{equation*}
+
+
+(b) Sometimes instead of $Y_{l m}(\vartheta, \varphi)$ it is more convenient to use the function $C_{l m}(\vartheta, \varphi)$ (see, e.g., Refs. [9,24]) which differs from $Y_{l m}(\vartheta, \varphi)$ by the normalization factor,
+
+
+\begin{equation*}
+C_{l m}(\vartheta, \varphi)=\sqrt{\frac{4 \pi}{2 l+1}} Y_{l m}(\vartheta, \varphi) \tag{7}
+\end{equation*}
+
+
+The function $C_{l m}(\vartheta, \varphi)$ satisfies the following relations
+
+
+\begin{gather*}
+\sum_{m} C_{l m}(\vartheta, \varphi) C_{l-m}(\vartheta, \varphi)(-1)^{m}=1, C_{l m}(0,0)=\delta_{m 0}  \tag{8}\\
+C_{l 0}(\vartheta, \varphi)=P_{l}(\cos \vartheta), C_{l m}(\vartheta, \varphi)=D_{0,-m}^{l}(0, \vartheta, \varphi)
+\end{gather*}
+
+
+The normalization and orthogonality relation for $C_{l m}(\vartheta, \varphi)$ can be represented in the form
+
+
+\begin{equation*}
+\int_{0}^{2 \pi} d \varphi \int_{0}^{\pi} d \vartheta \sin \vartheta C_{l m}^{*}(\vartheta, \varphi) C_{l^{\prime} m^{\prime}}(\vartheta, \varphi)=\frac{2 l+1}{4 \pi} \delta_{l} \delta_{m m^{\prime}} \tag{9}
+\end{equation*}
+
+
+\subsection*{5.1.5. Choice of Phase}
+(a) The phase differences of the harmonics $Y_{l m}(\vartheta, \varphi)$ and $Y_{l m^{\prime}}(\vartheta, \varphi)$ with $m=m^{\prime} \pm 1$ are determined by the commutation relations (1). Using these relations, we may find relative phases of all ( $2 l+1$ ) harmonics $Y_{l m}(\vartheta, \varphi)$ with different $m$ for each $l$. An overall phase factor may be fixed by specifying the phase of one of the harmonics $Y_{l m}(\vartheta, \varphi)$ for some given values of arguments, for example,
+
+
+\begin{equation*}
+Y_{l 0}(0,0)=\sqrt{\frac{2 l+1}{4 \pi}} \tag{10}
+\end{equation*}
+
+
+In this case the following relations are valid for the complex conjugate function $Y_{l m}^{*}(\vartheta, \varphi)$
+
+
+\begin{equation*}
+Y_{l m}^{*}(\vartheta, \varphi)=Y_{l m}(\vartheta,-\varphi)=(-1)^{m} Y_{l-m}(\vartheta, \varphi) . \tag{11}
+\end{equation*}
+
+
+In particular, Eqs. (10) and (11) show that $Y_{l 0}(\vartheta, \varphi)$ is real for $0 \leq \vartheta \leq \pi$, and $Y_{l m}(\vartheta, \varphi)$ with $m \neq 0$ is real only for $\varphi=0, \pi / m, 2 \pi / m, 3 \pi / m, \ldots$, etc.
+
+The above choice of the phase is widely used (e.g., see, Condon and Shortley [10]).\\[0pt]
+(b) In the literature (see, e.g., Refs. [6, 18]) one can also find the spherical harmonics defined according to another phase convention, namely,
+
+
+\begin{equation*}
+\tilde{Y}_{l m}(\vartheta, \varphi)=i^{l} Y_{l m}(\vartheta, \varphi) \tag{12}
+\end{equation*}
+
+
+We shall refer to these harmonics as the modified spherical harmonics. They satisfy the phase relation
+
+
+\begin{equation*}
+\tilde{Y}_{l m}^{*}(\vartheta, \varphi)=(-1)^{l+m} Y_{l-m}(\vartheta, \varphi) . \tag{13}
+\end{equation*}
+
+
+Equations (4) and the relations (5), (10) and (11) completely define the harmonics $Y_{l m}(\vartheta, \varphi)$. Since $l$ and $m$ are integers, the function $Y_{\text {Im }}(\vartheta, \varphi)$ is single-valued.
+
+\subsection*{5.1.6. Zonal, Sectorial and Tesseral Harmonics}
+These functions are linear combinations of the spherical harmonics for $|m| \leq l$
+
+
+\begin{align*}
+& u_{l m}(\vartheta, \varphi)=\frac{1}{2}\left[Y_{l m}(\vartheta, \varphi)+Y_{l m}^{*}(\vartheta, \varphi)\right]=\sqrt{\frac{2 l+1}{2 \pi} \cdot \frac{(l-m)!}{(l+m)!}} \cos m \varphi P_{l}^{m}(\cos \vartheta) \\
+& v_{l m}(\vartheta, \varphi)=\frac{1}{2 i}\left[Y_{l m}(\vartheta, \varphi)-Y_{l m}^{*}(\vartheta, \varphi)\right]=\sqrt{\frac{2 l+1}{4 \pi} \frac{(l-m)!}{(l+m)!}} \sin m \varphi P_{l}^{m}(\cos \vartheta) \tag{14}
+\end{align*}
+
+
+The functions $u_{l m}(\vartheta, \varphi)$ and $v_{l m}(\vartheta, \varphi)$ are real, in contrast to $Y_{l m}(\vartheta, \varphi)$. The functions $u_{l 0}(\vartheta, \varphi)$ are called the zonal harmonics because parallels where $u_{10}(\vartheta, \varphi)=0$ divide a sphere of unit radius into $l+1$ zones. The functions $u_{l l}(\vartheta, \varphi)$ and $v_{l l}(\vartheta, \varphi)$ are called the sectorial harmonics because meridians where $u_{l l}(\vartheta, \varphi)=0$ or $v_{l l}(\vartheta, \varphi)=0$ divide the unit sphere into $2 l$ sectors. The functions $u_{l m}(\vartheta, \varphi)$ and $v_{l m}(\vartheta, \varphi)$ for $m \neq 0$ and $m \neq l$ are called the tesseral harmonics because a set of parallels and meridians where $u_{l m}(\vartheta, \varphi)=0$ or $v_{l m}(\vartheta, \varphi)=0$ divides the whole spherical surface into $2 m(l-m+1)$ cells. The cells, which correspond to positive and negative signs of any function, are arranged in checkered order.
+
+\subsection*{5.1.7. Solutions of Some Differential Equations in Terms of $Y_{l m}(\vartheta, \varphi)$}
+(a) The solution of the Laplace equation
+
+
+\begin{equation*}
+\nabla^{2} f(r, \vartheta, \varphi)=0 \tag{15}
+\end{equation*}
+
+
+in polar coordinates is given by
+
+$$
+3_{l m}(r, \vartheta, \varphi)=r^{l} Y_{l m}(\vartheta, \varphi) \text { and } \Re_{l m}(r, \vartheta, \varphi)=r^{-l-1} Y_{l m}(\vartheta, \varphi)
+$$
+
+where $3_{l m}(r, \vartheta, \varphi)$ is regular and $\Re_{l m}(r, \vartheta, \varphi)$ is singular at $r=0$. These functions are called the solid harmonics. In the cartesian coordinate representation, a function $\mathbf{3}_{l m}$ is a homogeneous harmonic polynomial of degree $l$
+
+
+\begin{equation*}
+r^{l} Y_{l m}(\vartheta, \varphi)=\sqrt{\frac{2 l+1}{4 \pi}(l+m)!(l-m)!} \sum_{p, q, r} \frac{1}{p!q!r!}\left(-\frac{x+i y}{2}\right)^{p}\left(\frac{x-i y}{2}\right)^{q} z^{r} \tag{16}
+\end{equation*}
+
+
+Here $p, q, r$ are positive integers which satisfy the conditions $p+q+r=l, p-q=m$.\\
+(b) The solutions of the Helmholtz wave equation
+
+
+\begin{equation*}
+\left[\nabla^{2}+k^{2}\right] f(r, \vartheta, \varphi)=0 \tag{17}
+\end{equation*}
+
+
+in polar coordinates may be expressed in terms of the functions $z_{l}(k r) Y_{l m}(\vartheta, \varphi)$ where $z_{l}(k r)=\sqrt{\frac{\pi}{2 k r}} Z_{l+\frac{1}{2}}(k r)$, $Z_{l+\frac{1}{2}}(x)$ being any of the Bessel functions.
+
+The functions $\mathfrak{I}_{l m}(r, \vartheta, \varphi)=i^{l} j_{l}(k r) Y_{l m}(\vartheta, \varphi)$ and $\mathfrak{N}_{l m}(r, \vartheta, \varphi)=i^{l} n_{l}(k r) Y_{l m}(\vartheta, \varphi)$ are called the standing spherical waves; $\mathcal{L}_{l m}$ is regular at $r=0$, whereas $\mathcal{N}_{l m}$ is irregular. The functions $\mathfrak{B}_{l m}^{(1)}(r, \vartheta, \varphi)= i^{l} h_{l}^{(1)}(k r) Y_{l m}(\vartheta, \varphi)$ and $\mathfrak{B}_{l m}^{(2)}(r, \vartheta, \varphi)=i^{l} h_{l}^{(2)}(k r) Y_{l m}(\vartheta, \varphi)$ are called the running spherical waves. The first of these corresponds to a spherical wave which converges to the origin, $r=0$, while the second corresponds to an outgoing spherical wave. In the limit $k \rightarrow 0$ Eq. (17) transforms into (15). In this case
+
+$$
+\mathfrak{L}_{l m}(r, \vartheta, \varphi) \rightarrow 3_{l m}(r, \vartheta, \varphi), \mathfrak{N}_{l m}(r, \vartheta, \varphi) \rightarrow \Re_{l m}(r, \vartheta, \varphi)
+$$
+
+(c) Solutions of the equation
+
+
+\begin{equation*}
+\left[\nabla^{2}-\frac{(n-l)(n+l+1)}{r^{2}}\right] f(r, \vartheta, \varphi)=0 \tag{18}
+\end{equation*}
+
+
+in polar coordinates are expressed in terms of the functions
+
+$$
+f_{l m}^{n}(r, \vartheta, \varphi)=r^{n} Y_{l m}(\vartheta, \varphi)
+$$
+
+For $r=0$ a function $f_{l m}^{n}(r, \vartheta, \varphi)$ is regular, if $n \geq 0$, but irregular if $n<0$. When $n=l$ or $n=-l-1$, Eq. (18) transforms into (15), yielding
+
+
+\begin{equation*}
+f_{l m}^{l}(r, \vartheta, \varphi)=3_{l m}(r, \vartheta, \varphi), f_{l m}^{l-1}(r, \vartheta, \varphi)=\Re_{l m}(r, \vartheta, \varphi) \tag{19}
+\end{equation*}
+
+
+Note that along with the above solutions, which are regular at $\vartheta=0, \pi$, the equations under consideration have irregular solutions, which are not discussed here.
+
+\subsection*{5.2. EXPLICIT FORMS OF THE SPHERICAL HARMONICS AND THEIR RELATIONS TO OTHER FUNCTIONS}
+According to Sec. 5.1.2, $Y_{\text {Im }}(\vartheta, \varphi)$ may be represented by a product of two functions, one of which depends only on $\varphi$ while the other depends on $\vartheta$. The $\varphi$-dependence of the spherical harmonics is given by the factor $e^{i m \varphi}$. The $\vartheta$-dependence is determined by the associated Legendre polynomials $P_{l}^{m}(\cos \vartheta)[4,27]$. Taking into account the normalization, we get
+
+
+\begin{equation*}
+Y_{l m}(\vartheta, \varphi)=e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \frac{(l-m)!}{(l+m)!}} P_{l}^{m}(\cos \vartheta) \tag{1}
+\end{equation*}
+
+
+For the spherical harmonics with $|m| \leq l$ one gets the following expressions (see Refs. [4, 22, 27]).
+
+\subsection*{5.2.1. Differential Expressions for $Y_{l m}(\vartheta, \varphi)$}
+
+\begin{align*}
+& Y_{l m}(\vartheta, \varphi)=\frac{e^{i m \varphi}}{2^{l} l!} \sqrt{\frac{2 l+1}{4 \pi} \frac{(l+m)!}{(l-m)!}}(\sin \vartheta)^{-m} \frac{d^{l-m}}{(d \cos \vartheta)^{l-m}}\left(\cos ^{2} \vartheta-1\right)^{l}  \tag{2}\\
+& Y_{l m}(\vartheta, \varphi)=(-1)^{m} \frac{e^{i m \varphi}}{2^{l} l!} \sqrt{\frac{2 l+1}{4 \pi} \frac{(l-m)!}{(l+m)!}}(\sin \vartheta)^{m} \frac{d^{l+m}}{(d \cos \vartheta)^{l+m}}\left(\cos ^{2} \vartheta-1\right)^{l}  \tag{3}\\
+& Y_{l m}(\vartheta, \varphi)=\frac{e^{i m \varphi}}{2^{l}} \sqrt{\frac{2 l+1}{4 \pi(l+m)!(l-m)!}}\left(\cot \frac{\vartheta}{2}\right)^{m}\left(\frac{d}{d \cos \vartheta}\right)^{l}\left[(1+\cos \vartheta)^{l-m}(\cos \vartheta-1)^{l+m}\right]  \tag{4}\\
+& Y_{l m}(\vartheta, \varphi)=(-1)^{m} \frac{e^{i m \varphi}}{2^{l}} \sqrt{\frac{2 l+1}{4 \pi(l+m)!(l-m)!}}\left(\tan \frac{\vartheta}{2}\right)^{m}\left(\frac{d}{d \cos \vartheta}\right)^{l}\left[(\cos \vartheta+1)^{l+m}(\cos \vartheta-1)^{l-m}\right] \tag{5}
+\end{align*}
+
+
+The spherical harmonics may be expressed in terms of $m$ th order derivatives of the Legendre polynomials
+
+
+\begin{gather*}
+Y_{l m}(\vartheta, \varphi)=(-1)^{m} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \frac{(l-m)!}{(l+m)!}}(\sin \vartheta)^{m} \frac{d^{m}}{(d \cos \vartheta)^{m}} P_{l}(\cos \vartheta)  \tag{6}\\
+(m \geq 0)
+\end{gather*}
+
+
+Assuming that
+
+
+\begin{equation*}
+\left(\frac{d}{d \mu}\right)^{-|m|} f(\mu) \equiv \int_{1}^{\mu} \int_{1}^{\mu} \cdots \int_{1}^{\mu} f(\mu) \underbrace{d \mu \ldots d \mu}_{|m|} \tag{7}
+\end{equation*}
+
+
+one can use Eq. (6) not only at $m \geq 0$ but also at $m<0$.
+
+\subsection*{5.2.2. Representations of $Y_{l m}(\vartheta, \varphi)$ as a Power Series of Trigonometric Functions of $\vartheta / 2$}
+In the following equations sums are over all integer values of $s$ so that no factorial in the denominator has negative argument. The quantity $\xi_{m 0}$ is defined as
+
+\[
+\xi_{m 0}= \begin{cases}(-1)^{m} & \text { if } m>0  \tag{8}\\ 1 & \text { if } m \leq 0\end{cases}
+\]
+
+
+\begin{align*}
+& Y_{l m}(\vartheta, \varphi)=(-1)^{m} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \cdot \frac{(l+m)!}{(l-m)!}}\left(\tan \frac{\vartheta}{2}\right)^{m} \sum_{*}(-1)^{s} \frac{(l+s)!}{(l-s)!} \cdot \frac{\left(\sin \frac{\vartheta}{2}\right)^{2 s}}{s!(s+m)!}  \tag{9}\\
+& Y_{l m}(\vartheta, \varphi)=(-1)^{m} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \cdot \frac{(l-m)!}{(l+m)!}}\left(\sin \frac{\vartheta}{2} \cdot \cos \frac{\vartheta}{2}\right)^{m} \sum_{s}(-1)^{s} \frac{(l+m+s)!}{(l-m-s)!} \cdot \frac{\left(\sin \frac{\vartheta}{2}\right)^{2 s}}{s!(s+m)!}  \tag{10}\\
+& Y_{l m}(\vartheta, \varphi)=e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \cdot \frac{(l-m)!}{(l+m)!}}\left(\cot \frac{\vartheta}{2}\right)^{m} \sum_{s}(-1)^{l-s} \frac{(2 l-s)!}{s!(l-s)!} \cdot \frac{\left(\sin \frac{\vartheta}{2}\right)^{2(l-s)}}{(l-m-s)!} \tag{11}
+\end{align*}
+
+
+
+\begin{gather*}
+Y_{l m}(\vartheta, \varphi)=(-1)^{l} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \cdot \frac{(l+m)!}{(l-m)!}}\left(\cot \frac{\vartheta}{2}\right)^{m} \sum_{s}(-1)^{s} \frac{(l+s)!}{(l-s)!} \cdot \frac{\left(\cos \frac{\vartheta}{2}\right)^{2 s}}{s!(s+m)!},  \tag{12}\\
+Y_{l m}(\vartheta, \varphi)=(-1)^{l} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \cdot \frac{(l-m)!}{(l+m)!}}\left(\sin \frac{\vartheta}{2} \cdot \cos \frac{\vartheta}{2}\right)^{m} \sum_{s}(-1)^{s} \frac{(l+m+s)!}{(l-m-s)!} \cdot \frac{\left(\cos \frac{\vartheta}{2}\right)^{2 s}}{s!(s+m)!},  \tag{13}\\
+Y_{l m}(\vartheta, \varphi)=(-1)^{l-m} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \cdot \frac{(l-m)!}{(l+m)!}}\left(\tan \frac{\vartheta}{2}\right)^{m} \sum_{s}(-1)^{l-s} \frac{(2 l-s)!}{s!(l-s)!} \cdot \frac{\left(\cos \frac{\vartheta}{2}\right)^{2(l-s)}}{(l-m-s)!},  \tag{14}\\
+Y_{l m}(\vartheta, \varphi)=\xi_{m 0} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi}} \sqrt{(l+m)!(l-m)!l!|m|!\left(\cos \frac{\vartheta}{2}\right)^{2 l}} \\
+\times \sum_{s} \frac{(-1)^{s}\left(\tan \frac{\vartheta}{2}\right)^{2 s+|m|}}{s!(s+|m|)!(l-s)!(l-|m|-s)!},  \tag{15}\\
+Y_{l m}(\vartheta, \varphi)=\xi_{m 0}(-1)^{l-m} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi}} \sqrt{(l+m)!(l-m)!l!|m|!\left(\sin \frac{\vartheta}{2}\right)^{2 l}} \\
+\times \sum_{s} \frac{(-1)^{s}\left(\cot \frac{\vartheta}{2}\right)^{2 \cdot+|m|}}{s!(s+|m|)!(l-s)!(l-|m|-s)!} \tag{16}
+\end{gather*}
+
+
+\subsection*{5.2.3. Representations of $Y_{l m}(\vartheta, \varphi)$ as a Power Series of Trigonometric Functions of $\vartheta$}
+In the equations of this section an integer index $s$ assumes either only even or only odd values as indicated under the summation symbols. Sums are over such $s$ for which the factorial arguments are non-negative.
+
+
+\begin{gather*}
+Y_{l m}(\vartheta, \varphi)=e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi(l+m)!(l-m)!}} \\
+\times\left\{\begin{array}{c}
+\sum_{s=|m|,|m|+2, \ldots}^{l}(-1)^{\frac{4+m}{2}} \frac{(l+s)!}{(s+m)!!(s-m)!!} \cdot \frac{(l+m)!!(l-m)!!}{(l+\vartheta)!!(l-s)!!}(\sin \vartheta)^{s} \\
+\text { if } l-m \text { is even } \\
+\cos \vartheta \sum_{s=|m|,|m|+2, \ldots}^{l-1}(-1)^{\frac{l+m}{2}} \frac{(l+s)!}{(s+m)!!(s-m)!!} \cdot \frac{(l+m-1)!!(l-m-1)!!}{(l+s-1)!!(l-s-1)!!}(\sin \vartheta)^{s} \\
+\text { if } l-m \text { is odd },
+\end{array}\right.  \tag{17}\\
+Y_{l m}(\vartheta, \varphi)=e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi(l+m)!(l-m)!}}(\sin \vartheta)^{l} \\
+\times\left\{\begin{array}{c}
+\sum_{s=0,2, \ldots}^{l-|m|}(-1)^{\frac{l+m-s}{2}} \frac{(l+m)!!(l-m)!!}{(l+m-s)!!(l-m-s)!!} \cdot \frac{(2 l-s-1)!!}{s!(\sin \vartheta)} \\
+\text { if } l-m \text { is even } \\
+\cos \vartheta \sum_{s=1,3, \ldots}^{l-|m|}(-1)^{\frac{l+m-s}{2}} \frac{(l+m-1)!(l-m-1)!!}{(l+m-s)!!(l-m-s)!!} \cdot \frac{(2 l-s)!!}{(s-1)!!(\sin \vartheta)} \\
+\text { if } l-m \text { is odd },
+\end{array}\right.  \tag{18}\\
+Y_{l m}(\vartheta, \varphi)=e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \cdot \frac{(l-m)!}{(l+m)!}(\sin \vartheta)^{m} \sum_{s}(-1)^{\frac{l+m-s}{2}} \frac{(l+m+s-1)!!}{(l-m-s)!!} \cdot \frac{(\cos \vartheta)^{s}}{s!}}
+\end{gather*}
+
+
+
+\begin{gather*}
+Y_{l m}(\vartheta, \varphi)=e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi}(l+m)!(l-m)!(\cos \vartheta)^{l}} \sum_{\rho=|m|,|m|+2, \ldots}(-1)^{\frac{s+m}{2}} \frac{1}{(s+m)!!(s-m)!!} \cdot \frac{(\tan \vartheta)^{\prime}}{(l-s)!}  \tag{20}\\
+Y_{l m}(\vartheta, \varphi)=e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi}(l+m)!(l-m)!(\sin \vartheta)^{l}} \sum_{0}(-1)^{l+\frac{m}{2}-s} \frac{1}{(l+m-s)!!(l-m-s)!!} \cdot \frac{(\cot \vartheta)^{\prime}}{s!} \\
+l+m-s \text { is even } \tag{21}
+\end{gather*}
+
+
+The quantity $\left|Y_{\text {Im }}(\vartheta, \varphi)\right|^{2}$ may be written in the form
+
+
+\begin{equation*}
+\left|Y_{l m}(\vartheta, \varphi)\right|^{2}=\frac{2 l+1}{4 \pi} \sum_{s=|m|,|m|+1, \ldots}^{l}(-1)^{s+m} \frac{(l+s)!}{(l-s)!} \cdot \frac{(2 s-1)!!}{(2 s)!!} \cdot \frac{(\sin \vartheta)^{2}}{(s-m)!(s+m)!} . \tag{22}
+\end{equation*}
+
+
+5.2.4. $Y_{\text {im }}(\vartheta, \varphi)$ and the Hypergeometric Functions with Arguments Expressed in Terms of Trigonometric Functions of $\vartheta / 2$
+
+
+\begin{gather*}
+Y_{l m}(\vartheta, \varphi)=\xi_{m 0} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \cdot \frac{(l+|m|)!}{(l-|m|)!}} \cdot \frac{(\sin \vartheta)^{|m|}}{|m|!2^{|m|}} F\left(-l+|m|, l+|m|+1 ;|m|+1 ; \sin ^{2} \frac{\vartheta}{2}\right)  \tag{23}\\
+\begin{aligned}
+Y_{l m}(\vartheta, \varphi)= & (-1)^{l-m} \xi_{m 0} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi(l+m)!(l-m)!}}(2 l)! \\
+l! & \left.\sin \frac{\vartheta}{2}\right)^{2 l}\left(\cot \frac{\vartheta}{2}\right)^{|m|} \\
+& \times F\left(-l,-l+|m| ;-2 l ; \frac{1}{\sin ^{2} \frac{\vartheta}{2}}\right)
+\end{aligned} \\
+Y_{l m}(\vartheta, \varphi)=(-1)^{l-m} \xi_{m 0} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \cdot \frac{(l+|m|)!}{(l-|m|)!}} \frac{(\sin \vartheta)^{|m|}}{|m||2| m \mid}  \tag{24}\\
+\times F\left(-l+|m|, l+|m|+1 ;|m|+1 ; \cos ^{2} \frac{\vartheta}{2}\right) \\
+Y_{l m}(\vartheta, \varphi)=\xi_{m 0} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi(l+m)!(l-m)!}} \frac{(2 l)!}{l!}\left(\cos ^{\frac{\vartheta}{2}}\right)^{2 l}\left(\tan \frac{\vartheta}{2}\right)^{|m|}  \tag{25}\\
+\times F\left(-l,-l+|m| ;-2 l ; \frac{1}{\cos ^{2} \frac{\vartheta}{2}}\right), \\
+Y_{l m}(\vartheta, \varphi)=\xi_{m 0} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \cdot \frac{(l+|m|)!}{(l-|m|)!}}\left(\tan \frac{\vartheta}{2}\right)^{|m|}\left(\cos \frac{\vartheta}{2}\right)^{2 l} F\left(-l+|m|,-l ;|m|+1 ;-\tan ^{2} \frac{\vartheta}{2}\right)  \tag{26}\\
+Y_{l m}(\vartheta, \varphi)=(-1)^{l-m} \xi_{m 0} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \cdot \frac{(l+|m|)!}{(l-|m|)!}}\left(\cot ^{\frac{\vartheta}{2}}\right)^{|m|}\left(\sin ^{\frac{\vartheta}{2}}\right)^{2 l}  \tag{27}\\
+\times F\left(-l+|m|,-l ;|m|+1 ;-\cot ^{2} \frac{\vartheta}{2}\right)
+\end{gather*}
+
+
+5.2.5. $Y_{l m}(\vartheta, \varphi)$ and the Hypergeometric Functions with Arguments Expressed in Terms of Trigonometric Functions of $\vartheta$
+
+
+\begin{align*}
+& Y_{l m}(\vartheta, \varphi)=\xi_{m 0} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \cdot \frac{(l+|m|)!}{(l-|m|)!}} \frac{(\sin \vartheta)^{|m|}}{2^{|m|}|m|!} \\
+& \times\left\{\begin{array}{r}
+F\left(-\frac{l-|m|}{2}, \frac{l+|m|+1}{2} ;|m|+1 ; \sin ^{2} \vartheta\right) \\
+\text { if } l+m \text { is even , } \\
+\cos \vartheta F\left(-\frac{l-|m|-1}{2}, \frac{l+|m|+2}{2} ;|m|+1 ; \sin ^{2} \vartheta\right) \\
+\text { if } l+m \text { is odd , }
+\end{array}\right.  \tag{29}\\
+& Y_{l m}(\vartheta, \varphi)=e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi(l+m)!(l-m)!}}(2 l-1)!!(\sin \vartheta)^{l} \\
+& \times\left\{\begin{array}{c}
+(-1)^{\frac{l+m}{2}} F\left(-\frac{l+m}{2},-\frac{l-m}{2} ;-\frac{2 l-1}{2} ; \frac{1}{\sin ^{2} \theta}\right) \\
+\text { if } l+m \text { is even } \\
+(-1)^{\frac{l+m-1}{2}} \cot \vartheta F\left(-\frac{l+m-1}{2},-\frac{l-m-1}{2} ;-\frac{2 l-1}{2} ; \frac{1}{\sin ^{2} \vartheta}\right) \\
+\text { if } l+m \text { is odd },
+\end{array}\right.  \tag{30}\\
+& Y_{l m}(\vartheta, \varphi)=e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi(l+m)!(l-m)!}}(\sin \vartheta)^{m} \\
+& \times\left\{\begin{array}{c}
+(-1)^{\frac{l+m}{2}}(l+m-1)!!(l-m-1)!!F\left(-\frac{l-m}{2}, \frac{l+m+1}{2} ; \frac{1}{2} ; \cos ^{2} \vartheta\right) \\
+\text { if } l+m \text { is even } \\
+(-1)^{\frac{l+m-1}{2}}(l+m)!!(l-m)!!\cos \vartheta F\left(-\frac{l-m-1}{2}, \frac{l+m+2}{2} ; \frac{3}{2} ; \cos ^{2} \vartheta\right) \\
+\text { if } l+m \text { is odd },
+\end{array}\right.  \tag{31}\\
+& Y_{l m}(\vartheta, \varphi)=(-1)^{m} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi(l+m)!(l-m)!}}(2 l-1)!!(\cos \vartheta)^{l}(\tan \vartheta)^{m} \\
+& \times F\left(-\frac{l-m}{2},-\frac{l-m-1}{2} ;-\frac{2 l-1}{2} ; \frac{1}{\cos ^{2} \vartheta}\right),  \tag{32}\\
+& Y_{l m}(\vartheta, \varphi)=\xi_{m 0} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \frac{(l+|m|)!}{(l-|m|)!}}(\cos \vartheta)^{l} \frac{(\tan \vartheta)^{|m|}}{2^{|m||m|!}} \\
+& \times F\left(-\frac{l-|m|}{2},-\frac{l-|m|-1}{2} ;|m|+1 ;-\tan ^{2} \vartheta\right),  \tag{33}\\
+& Y_{l m}(\vartheta, \varphi)=e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi(l+m)!(l-m)!}}(\sin \vartheta)^{l} \\
+& \times\left\{\begin{array}{c}
+(-1)^{\frac{l+m}{2}}(l+m-1)!!(l-m-1)!!F\left(-\frac{l-m}{2},-\frac{l+m}{2} ; \frac{1}{2} ;-\cot ^{2} \vartheta\right) \\
+\text { if } l+m \text { is even } \\
+(-1)^{\frac{l+m-1}{2}}(l+m)!!(l-m)!!\cot \vartheta F\left(-\frac{l-m-1}{2},-\frac{l+m-1}{2} ; \frac{3}{2} ;-\cot ^{2} \vartheta\right) \\
+\text { if } l+m \text { is odd },
+\end{array}\right. \tag{34}
+\end{align*}
+
+
+5.2.6. $Y_{l m}(\vartheta, \varphi)$ and the Hypergeometric Functions with Arguments Expressed in Terms of Exponential Functions
+
+
+\begin{gather*}
+Y_{l m}(\vartheta, \varphi)=-\frac{i e^{i m \varphi}}{\pi} \sqrt{\frac{2 l+1}{4 \pi}(l+m)!(l-m)!} \frac{2^{l+m+1}(\sin \vartheta)^{m}}{(2 l+1)!!} \\
+\times\left\{e^{-i(l+m+1) \vartheta} F\left(m+\frac{1}{2}, l+m+1 ; l+\frac{3}{2} ; e^{-2 i \vartheta}\right)-e^{i(l+m+1) \vartheta} F\left(m+\frac{1}{2}, l+m+1 ; l+\frac{3}{2} ; e^{2 i \vartheta}\right)\right\},  \tag{35}\\
+Y_{l m}(\vartheta, \varphi)=-\frac{i}{\pi} e^{i m \varphi} \sqrt{\frac{2 l+1}{8 \pi}(l+m)!(l-m)!} \frac{2^{l+1}}{(2 l+1)!!\sqrt{\sin \vartheta}} \\
+\times\left\{e^{-i\left[(2 l+1) \frac{\rho}{2}+(2 m+1) \frac{\pi}{4}\right]} F\left(m+\frac{1}{2}, \frac{1}{2}-m ; l+\frac{3}{2} ;-\frac{e^{-i\left(\vartheta+\frac{\pi}{2}\right)}}{2 \sin \vartheta}\right)\right. \\
+\left.-e^{i\left[(2 l+1) \frac{s}{2}+(2 m+1) \frac{\pi}{4}\right]} F\left(m+\frac{1}{2}, \frac{1}{2}-m ; l+\frac{3}{2} ;-\frac{e^{i\left(\vartheta+\frac{\pi}{2}\right)}}{2 \sin \vartheta}\right)\right\} . \tag{36}
+\end{gather*}
+
+
+\subsection*{5.2.7. $Y_{l m}(\vartheta, \varphi)$ and Other Special Functions}
+(a) The relation between $Y_{l m}(\vartheta, \varphi)$ and the Wigner D-function (Chap. 4) is given by
+
+
+\begin{gather*}
+Y_{l m}(\vartheta, \varphi)=\sqrt{\frac{2 l+1}{4 \pi}} D_{0-m}^{l}(\chi, \vartheta, \varphi)=(-1)^{m} \sqrt{\frac{2 l+1}{4 \pi}} D_{0 m}^{l *}(\chi, \vartheta, \varphi) \\
+=(-1)^{m} \sqrt{\frac{2 l+1}{4 \pi}} D_{-m 0}^{l}(\varphi, \vartheta, \chi)=\sqrt{\frac{2 l+1}{4 \pi}} D_{m 0}^{l *}(\varphi, \vartheta, \chi) \tag{37}
+\end{gather*}
+
+
+where $\chi$ is an arbitrary angle.\\
+(b) $Y_{l m}(\vartheta, \varphi)$ can be related to the Jacobi polynomials $P_{n}^{(\alpha, \beta)}(x)$,
+
+
+\begin{equation*}
+Y_{l m}(\vartheta, \varphi)=\xi_{m 0} \frac{e^{i m \varphi}}{2|m| l!} \sqrt{\frac{2 l+1}{4 \pi}(l+m)!(l-m)!(\sin \vartheta)^{|m|} P_{l-|m|}^{(|m|,|m|)}(\cos \vartheta)} \tag{38}
+\end{equation*}
+
+
+(c) $Y_{l m}(\vartheta, \varphi)$ can be expressed in terms of Gegenbauer polynomials $C_{\nu}^{\lambda}(x)$,
+
+
+\begin{equation*}
+Y_{l m}(\vartheta, \varphi)=\xi_{m 0} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \cdot \frac{(l-|m|)!}{(l+|m|)!}}(2|m|-1)!!(\sin \vartheta)^{|m|} C_{l-|m|}^{\frac{1}{2}+|m|}(\cos \vartheta) \tag{39}
+\end{equation*}
+
+
+\subsection*{5.2.8. $Y_{l m}(\vartheta, \varphi)$ as an Irreducible Tensor Product}
+For any position vector $r$ specified by polar coordinates $r, \vartheta, \varphi$ one has
+
+
+\begin{equation*}
+Y_{l m}(\vartheta, \varphi)=\frac{1}{r} \sqrt{\frac{(2 l+1)!!}{4 \pi l!}}\left\{\ldots\left\{\{r \otimes r\}_{2} \otimes r\right\}_{3} \ldots \otimes r\right\}_{l m} \tag{40}
+\end{equation*}
+
+
+\subsection*{5.3. INTEGRAL REPRESENTATIONS OF THE SPHERICAL HARMONICS [4,22,27]}
+5.3.1. $Y_{l m}(\vartheta, \varphi)$ in the Form of Indefinite Integrals\\
+(a)
+
+
+\begin{equation*}
+Y_{l m}(\vartheta, \varphi)=e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \cdot \frac{(l+m)!}{(l-m)!}} \frac{1}{(\sin \vartheta)^{m}} \int_{1}^{\cos \vartheta} \int_{1}^{\cos \vartheta} \cdots \int_{1}^{\cos \vartheta} P_{l}(\cos \vartheta)(d \cos \vartheta)^{m}, \quad(m \geq 0) . \tag{1}
+\end{equation*}
+
+
+This formula represents the analytic continuation of the differential expression 5.2(6) to the case $m<0$.\\
+(b) The Mehler-Dirichlet formulas
+
+
+\begin{gather*}
+Y_{l m}(\vartheta, \varphi)=(-1)^{m} \frac{\sqrt{2}}{\pi} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \cdot \frac{(l-m)!}{(l+m)!}}(2 m-1)!!\left(\frac{\sin \vartheta}{2}\right)^{m} \int_{0}^{\vartheta} \frac{\cos \left[(2 l+1) \frac{\psi}{2}\right] d \psi}{(\cos \psi-\cos \vartheta)^{m+\frac{1}{2}}},(m \geq 0)  \tag{2}\\
+Y_{l m}(\vartheta, \varphi)=\frac{\sqrt{2}}{\pi} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \cdot \frac{(l-m)!}{(l+m)!}}(2 m-1)!!\left(\frac{\sin \vartheta}{2}\right)^{m} \int_{\vartheta}^{\pi} \frac{\sin \left[(2 l+1) \frac{\psi}{2}\right] d \psi}{(\cos \vartheta-\cos \psi)^{m+\frac{1}{2}}},(m \geq 0) \tag{3}
+\end{gather*}
+
+
+(c)
+
+
+\begin{align*}
+Y_{l m}(\vartheta, \varphi)= & (-1)^{m} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \cdot \frac{(l+m)!}{(l-m)!}} \frac{1}{(m-1)!(\sin \vartheta)^{m}} \\
+& \times \int_{\cos \vartheta}^{1} P_{l}(\cos \psi)[\cos \psi-\cos \vartheta]^{m-1} d \cos \psi,(m>0) \tag{4}
+\end{align*}
+
+
+\subsection*{5.3.2. $Y_{\text {lm }}(\vartheta, \varphi)$ in the Form of Definite Integrals}
+(a)
+
+
+\begin{align*}
+& Y_{l m}(\vartheta, \varphi)=\frac{( \pm i)^{m}}{\pi} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi}(l+m)!(l-m)!} \frac{1}{l!} \int_{0}^{\pi}[\cos \vartheta \pm i \sin \vartheta \cos \psi]^{l} \cos (m \psi) d \psi  \tag{5}\\
+& Y_{l m}(\vartheta, \varphi)=\frac{( \pm i)^{m}}{\pi} e^{i m \varphi} \sqrt{\frac{(2 l+1)}{4 \pi(l+m)!(l-m)!}} l!\int_{0}^{\pi} \frac{\cos (m \psi) d \psi}{(\cos \vartheta \mp i \sin \vartheta \cos \psi)^{l+1}} \tag{6}
+\end{align*}
+
+
+For $\varphi=0$, complex conjugation does not affect the right-hand side of Eq. (6), because $Y_{l m}(\vartheta, 0)$ is real.\\
+(b)
+
+
+\begin{align*}
+& Y_{l m}(\vartheta, \varphi)=\frac{( \pm i)^{m}}{2 \pi} \sqrt{\frac{(2 l+1)}{4 \pi}(l+m)!(l-m)!} \frac{1}{l!} \int_{0}^{2 \pi}[\cos \vartheta \pm i \sin \vartheta \cos (\psi-\varphi)]^{l} e^{i m \psi} d \psi  \tag{7}\\
+& Y_{l m}(\vartheta, \varphi)=\frac{( \pm i)^{m}}{2 \pi} \sqrt{\frac{2 l+1}{4 \pi(l+m)!(l-m)!}} l!\int_{0}^{2 \pi}[\cos \vartheta \mp i \sin \vartheta \cos (\psi-\varphi)]^{-l-1} e^{i m \psi} d \psi \tag{8}
+\end{align*}
+
+
+Equations (7) and (8) represent modifications of Eqs. (5) and (6).\\
+(c)
+
+
+\begin{align*}
+& Y_{l m}(\vartheta, \varphi)=\frac{(-1)^{m}}{\pi} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \cdot \frac{(1+m)!}{(l-m)!}} \frac{(\sin \vartheta)^{m}}{(2 m-1)!!} \int_{0}^{\pi}(\cos \vartheta \pm i \sin \vartheta \cos \psi)^{l-m}(\sin \psi)^{2 m} d \psi,(m \geq 0)  \tag{9}\\
+& Y_{l m}(\vartheta, \varphi)=\frac{(-1)^{m}}{\pi} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \cdot \frac{(1+m)!}{(l-m)!}} \frac{(\sin \vartheta)^{m}}{(2 m-1)!!} \int_{0}^{\pi} \frac{(\sin \chi)^{2 m} d \chi}{(\cos \vartheta \mp i \sin \vartheta \cos \chi)^{l+m+1}},(m \geq 0) \tag{10}
+\end{align*}
+
+
+Equations (9) and (10) transform to each other at replacing the integration variables according to
+
+
+\begin{equation*}
+\cos \psi=\frac{\cos \vartheta \cos \chi+i \sin \vartheta}{\cos \vartheta+i \sin \vartheta \cos \chi}, \quad \cos \chi=\frac{\cos \vartheta \cos \psi-i \sin \vartheta}{\cos \vartheta-i \sin \vartheta \cos \psi} . \tag{11}
+\end{equation*}
+
+
+This replacing is equivalent to the transformation of "mirror" symmetry, i.e., to the replacement $l$ by $l=-l-1$.
+
+\subsection*{5.3.3. $Y_{\text {Im }}(\vartheta, \varphi)$ in the Form of Improper Integrals}
+(a)
+
+
+\begin{align*}
+& Y_{l m}(\vartheta, \varphi)=\frac{i^{m+1}}{\pi} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi(l+m)!(l-m)!}} l! \\
+& \quad \times\left\{(-1)^{m} \int_{0}^{\infty} \frac{\cosh (m t) d t}{(\cos \vartheta+i \sin \vartheta \cosh t)^{l+1}}-\int_{0}^{\infty} \frac{\cosh (m t) d t}{(\cos \vartheta-i \sin \vartheta \cosh t)^{l+1}}\right\}  \tag{12}\\
+& \quad Y_{l m}(\vartheta, \varphi)=\frac{i}{\pi} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \cdot \frac{(l+m)!}{(l-m)!}} \frac{(\sin \vartheta)^{m}}{(2 m-1)!!} \\
+& \times\left\{\int_{0}^{\infty} \frac{(\sinh t)^{2 m} d t}{(\cos \vartheta+i \sin \vartheta \cosh t)^{l+m+1}}-\int_{0}^{\infty} \frac{(\sinh t)^{2 m} d t}{(\cos \vartheta-i \sin \vartheta \cosh t)^{l+m+1}}\right\},(m \geq 0) \tag{13}
+\end{align*}
+
+
+(b)
+
+
+\begin{equation*}
+Y_{l m}(\vartheta, \varphi)=(-1)^{m} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi(l+m)!(l-m)!}} \int_{0}^{\infty} e^{-k \cos \vartheta} J_{m}(k \sin \vartheta) k^{l} d k \tag{14}
+\end{equation*}
+
+
+where $J_{m}(x)$ is a Bessel function.\\
+(c) $\left|Y_{I m}(\vartheta, \varphi)\right|^{2}$ may be represented as
+
+
+\begin{equation*}
+\left|Y_{l m}(\vartheta, \varphi)\right|^{2}=\frac{2 l+1}{4 \pi} \int_{0}^{\infty}\left[J_{m}\left(\frac{t \sin \vartheta}{2}\right)\right]^{2} J_{2 l+1}(t) d t \tag{15}
+\end{equation*}
+
+
+\subsection*{5.4. SYMMETRY PROPERTIES}
+The symmetry relations given below couple the harmonics $Y_{l m}(\vartheta, \varphi)$ with different values of $\vartheta, \varphi$ and $l, m$. These relations permit us to extend the domain of allowed $\vartheta, \varphi$ and generalise $Y_{\text {lm }}(\vartheta, \varphi)$ to the case of negative $l$.\\
+(a) Complex conjugation:
+
+
+\begin{equation*}
+Y_{l m}^{*}(\vartheta, \varphi)=Y_{l m}(\vartheta,-\varphi)=(-1)^{m} Y_{l-m}(\vartheta, \varphi) . \tag{1}
+\end{equation*}
+
+
+(b) Sign reversal of $m$ :
+
+
+\begin{equation*}
+Y_{l-m}(\vartheta, \varphi)=(-1)^{m} Y_{l m}(\vartheta,-\varphi)=(-1)^{m} e^{-i 2 m \varphi} Y_{l m}(\vartheta, \varphi) . \tag{2}
+\end{equation*}
+
+
+(c) "Mirror" symmetry (replacement $l$ by $l=-l-1$ ):
+
+
+\begin{equation*}
+Y_{I m}(\vartheta, \varphi)=(-1)^{m} Y_{I m}(\vartheta, \varphi) \tag{3}
+\end{equation*}
+
+
+(d) Replacement $\vartheta \rightarrow \pi-\vartheta$ and $\varphi=\pi+\varphi$ :
+
+
+\begin{gather*}
+Y_{l m}(\pi-\vartheta, \varphi)=(-1)^{l+m} Y_{l m}(\vartheta, \varphi)  \tag{4}\\
+Y_{l m}(\vartheta, \pi+\varphi)=(-1)^{m} Y_{l m}(\vartheta, \varphi)  \tag{5}\\
+Y_{l m}(\pi-\vartheta, \pi+\varphi)=(-1)^{l} Y_{l m}(\vartheta, \varphi) \tag{6}
+\end{gather*}
+
+
+(e) Change of argument signs:
+
+
+\begin{gather*}
+Y_{l m}(-\vartheta, \varphi)=(-1)^{m} Y_{l m}(\vartheta, \varphi)  \tag{7}\\
+Y_{l m}(\vartheta,-\varphi)=(-1)^{m} Y_{l-m}(\vartheta, \varphi)  \tag{8}\\
+Y_{l m}(-\vartheta,-\varphi)=Y_{l-m}(\vartheta, \varphi) \tag{9}
+\end{gather*}
+
+
+(f) The periodicity in $\vartheta$ and $\varphi$
+
+
+\begin{align*}
+& Y_{l m}(\vartheta \pm \pi n, \varphi)= \begin{cases}(-1)^{l} Y_{l m}(\vartheta, \varphi), & \text { if } n \text { is odd } \\
+Y_{l m}(\vartheta, \varphi), & \text { if } n \text { is even }\end{cases}  \tag{10}\\
+& Y_{l m}(\vartheta, \varphi \pm n \pi)= \begin{cases}(-1)^{m} Y_{l m}(\vartheta, \varphi), & \text { if } n \text { is odd } \\
+Y_{l m}(\vartheta, \varphi) & \text { if } n \text { is even }\end{cases} \tag{11}
+\end{align*}
+
+
+Making use of the above symmetry properties, one gets
+
+\[
+\begin{array}{rlll} 
+& Y_{l m}(\vartheta, \varphi) & =(-1)^{m} e^{2 i m \varphi} Y_{l-m}(\vartheta, \varphi) & =e^{2 i m \varphi} Y_{l m}^{*}(\vartheta, \varphi) \\
+=(-1)^{m} Y_{l m}(-\vartheta, \varphi) & =e^{2 i m \varphi} Y_{l-m}(-\vartheta, \varphi) & =(-1)^{m} Y_{l-m}^{*}(\vartheta, \varphi)  \tag{12}\\
+=(-1)^{m} Y_{l-m}(\vartheta,-\varphi) & =e^{2 i m \varphi} Y_{l m}(\vartheta,-\varphi) & =(-1)^{m} e^{2 i m \varphi} Y_{l m}^{*}(-\vartheta, \varphi) & =Y_{l-m}^{*}(-\vartheta, \varphi) \\
+=Y_{l-m}(-\vartheta,-\varphi) & =(-1)^{m} e^{2 i m \varphi} Y_{l m}(-\vartheta,-\varphi) & =e^{2 i m \varphi} Y_{l-m}^{*}(-\vartheta,-\varphi) & =(-1)^{m} Y_{l m}^{*}(-\vartheta,-\varphi) .
+\end{array}
+\]
+
+\subsection*{5.5. BEHAVIOUR OF $Y_{\text {Im }}(\vartheta, \varphi)$ UNDER TRANSFORMATIONS OF COORDINATE SYSTEMS}
+Any transformation of coordinate system in 3-dimensional space, which does not affect the orthogonality of coordinate axes, may be represented as a result of three operations: (1) rotation, (2) inversion and (3) parallel translation.
+
+\subsection*{5.5.1. Rotation}
+The spherical harmonics $Y_{\text {lm }}(\vartheta, \varphi)$ are covariant components of some irreducible tensor of rank $l$. Hence, under arbitrary rotation $S\{x, y, z\} \rightarrow S^{\prime}\left\{x^{\prime}, y^{\prime}, z^{\prime}\right\}$ of the coordinate system described by the Euler angles $\alpha, \beta, \gamma$ (Sec. 1.4) the spherical harmonics transform in accordance with
+
+
+\begin{equation*}
+\hat{D}(\alpha, \beta, \gamma) Y_{l m^{\prime}}(\vartheta, \varphi)=Y_{l m^{\prime}}\left(\vartheta^{\prime}, \varphi^{\prime}\right)=\sum_{m} Y_{l m}(\vartheta, \psi) D_{m m^{\prime}}^{l}(\alpha, \beta, \gamma) \tag{1}
+\end{equation*}
+
+
+Here $D_{m m^{\prime}}^{\prime}(\alpha, \beta, \gamma)$ is a Wigner $D$-function (Chap. 4), $\vartheta, \varphi$ and $\vartheta^{\prime}, \varphi^{\prime}$ are polar angles of the position vector in the original and final coordinate systems, $S$ and $S^{\prime}$, respectively. The angles $\vartheta^{\prime}, \varphi^{\prime}$ may be expressed through $\vartheta, \varphi$ and the Euler angles according to Eqs. 1.4.(2).
+
+\subsection*{5.5.2. Inversion}
+Under inversion $S\{x, y, z\} \rightarrow S^{\prime}\{-x,-y,-z\}$ the spherical harmonics transform as
+
+
+\begin{equation*}
+\widehat{P}_{r} Y_{l m}(\vartheta, \varphi)=Y_{l m}(\pi-\vartheta, \varphi+\pi)=(-1)^{l} Y_{l m}(\vartheta, \varphi) . \tag{2}
+\end{equation*}
+
+
+\subsection*{5.5.3. Parallel Translation}
+At parallel displacement $S\{x, y, z\} \rightarrow S^{\prime}\left\{x^{\prime}, y^{\prime}, z^{\prime}\right\}$ by a vector $\mathbf{a}(a, \theta, \phi)$ one has $\mathbf{r}^{\prime}=\mathbf{r}-\mathbf{a}$. In this case the spherical harmonics transform as
+
+
+\begin{align*}
+\hat{T}(\mathbf{a}) Y_{l^{\prime} m^{\prime}}(\vartheta, \varphi)=Y_{l^{\prime} m^{\prime}}\left(\vartheta^{\prime}, \varphi^{\prime}\right)=\sum_{l=0}^{l^{\prime}} & (-1)^{l^{\prime}+l}\left[\frac{4 \pi(2 l+1)\left(2 l^{\prime}-2 l+1\right)}{2 l^{\prime}+1}\right]^{\frac{1}{2}} \\
+& \times\left(\frac{a}{r^{\prime}}\right)^{l^{\prime}}\left(\frac{r}{a}\right)^{l}\left\{\mathbf{Y}_{l}(\vartheta, \varphi) \otimes \mathbf{Y}_{l^{\prime}-l}(\Theta, \Phi)\right\}_{l^{\prime} m^{\prime}} \tag{3}
+\end{align*}
+
+
+where $\widehat{T}(a)=e^{-a \cdot \nabla}$ is the displacement operator, $\left\{\mathbf{Y}_{l_{1}} \otimes \mathbf{Y}_{l_{2}}\right\}_{t m}$ is the irreducible tensor product (Sec. 3.1). The polar coordinates of the vectors $r(r, \vartheta, \varphi)$ and $r^{\prime}\left(r^{\prime}, \vartheta^{\prime}, \varphi^{\prime}\right)$ are related by
+
+
+\begin{gather*}
+r^{\prime 2}=r^{2}+a^{2}-2 r a \cos \omega_{12} \\
+\cos \vartheta^{\prime}=\frac{r \cos \vartheta-a \cos \theta}{\sqrt{r^{2}+d^{2}-2 r a \cos \omega_{12}}}  \tag{4}\\
+\tan \varphi^{\prime}=\frac{r \sin \vartheta \sin \varphi-a \sin \theta \sin \Phi}{r \sin \vartheta \cos \varphi-a \sin \theta \cos \Phi}
+\end{gather*}
+
+
+where
+
+
+\begin{equation*}
+\cos \omega_{12}=\cos \vartheta \cos \theta+\sin \vartheta \sin \theta \cos (\varphi-\Phi) . \tag{5}
+\end{equation*}
+
+
+\subsection*{5.5.4. Special Cases of Coordinate-System Transformations}
+(a) Rotation about the coordinate axes through the angle $\pi$
+
+
+\begin{align*}
+\text { about the } x \text { axis } & \left.\begin{array}{l}
+r^{\prime}=r, \\
+\vartheta^{\prime}=\pi-\vartheta, \\
+\varphi^{\prime}=2 \pi-\varphi,
+\end{array}\right\} Y_{l m}(\pi-\vartheta, 2 \pi-\varphi)=(-1)^{l} Y_{l-m}(\vartheta, \varphi)  \tag{6}\\
+\text { about the } y \text { axis } & \left.\begin{array}{l}
+r^{\prime}=r, \\
+\vartheta^{\prime}=\pi-\vartheta, \\
+\varphi^{\prime}=\pi-\varphi,
+\end{array}\right\} Y_{l m}(\pi-\vartheta, \pi-\varphi)=(-1)^{l-m} Y_{l-m}(\vartheta, \varphi),  \tag{7}\\
+\text { about the } z \text { axis } & \left.\begin{array}{l}
+r^{\prime}=r, \\
+\vartheta^{\prime}=\vartheta, \\
+\varphi^{\prime}=\pi+\varphi
+\end{array}\right\} Y_{l m}(\vartheta, \pi+\varphi)=(-1)^{m} Y_{l m}(\vartheta, \varphi) . \tag{8}
+\end{align*}
+
+
+(b) Rotation about the $z$ axis through an arbitrary angle $\chi$
+
+\[
+\left.\begin{array}{l}
+r^{\prime}=r,  \tag{9}\\
+\vartheta^{\prime}=\vartheta, \\
+\varphi^{\prime}=\varphi-\chi,
+\end{array}\right\} Y_{l m}(\vartheta, \varphi-\chi)=e^{-i m x} Y_{l m}(\vartheta, \varphi) .
+\]
+
+(c) Rotation about an arbitrary direction $\mathbf{n}(\boldsymbol{\Theta}, \Phi)$ through a small angle $\omega(\omega \ll \pi / 2)$
+
+
+\begin{gather*}
+\hat{D} Y_{l m}(\vartheta, \varphi) \approx Y_{l m}(\vartheta, \varphi)-i \omega\left\{m \cos \Theta Y_{l m}(\vartheta, \varphi)\right. \\
+\left.+\frac{\sin \Theta}{2}\left[e^{-i \Phi} \sqrt{l(l+1)-m(m+1)} Y_{l m+1}(\vartheta, \varphi)+e^{i \Phi} \sqrt{l(l+1)-m(m-1)} Y_{l m-1}(\vartheta, \varphi)\right]\right\} . \tag{10}
+\end{gather*}
+
+
+(d) Reflection of the coordinate system with respect to the equatorial plane, $\vartheta=\pi / 2$
+
+\[
+\left.\begin{array}{rl}
+r^{\prime} & =r  \tag{11}\\
+\vartheta^{\prime} & =\pi-\vartheta, \\
+\varphi^{\prime} & =\varphi,
+\end{array}\right\} Y_{l m}(\pi-\vartheta, \varphi)=(-1)^{l+m} Y_{l m}(\vartheta, \varphi)
+\]
+
+(e) Reflection of the coordinate system with respect to a meridian plane, $\varphi=\varphi_{0}$ and $\varphi=\pi+\varphi_{0}$
+
+\[
+\left.\begin{array}{l}
+r^{\prime}=r  \tag{12}\\
+\vartheta^{\prime}=\vartheta, \\
+\varphi^{\prime}=2 \varphi_{0}-\varphi,
+\end{array}\right\} Y_{l m}\left(\vartheta, 2 \varphi_{0}-\varphi\right)=e^{i 2 m \varphi_{0}}(-1)^{m} Y_{l-m}(\vartheta, \varphi)
+\]
+
+\subsection*{5.6. EXPANSIONS IN SERIES OF THE SPHERICAL HARMONICS}
+\subsection*{5.6.1. General Relations}
+A collection of the spherical harmonics $Y_{l m}(\vartheta, \varphi)$ with all integer non-negative $l$ and integer $m(|m| \leq l)$ constitutes a complete orthonormal set of functions of two real variables $\vartheta$ and $\varphi$ defined within $0 \leq \vartheta \leq \pi$, $0 \leq \varphi<2 \pi$. The completeness relation for the spherical harmonics is given by
+
+
+\begin{equation*}
+\sum_{l=0}^{\infty} \sum_{m=-l}^{l} Y_{l m}^{*}(\vartheta, \varphi) Y_{l m}\left(\vartheta^{\prime}, \varphi^{\prime}\right)=\delta\left(\varphi-\varphi^{\prime}\right) \delta\left(\cos \vartheta-\cos \vartheta^{\prime}\right) \tag{1}
+\end{equation*}
+
+
+The orthogonality and normalization relation is as follows: (Sec. 5.1.4)
+
+
+\begin{equation*}
+\int_{0}^{2 \pi} d \varphi \int_{0}^{\pi} d \vartheta \sin \vartheta Y_{l m}^{*}(\vartheta, \varphi) Y_{l^{\prime} m^{\prime}}(\vartheta, \varphi)=\delta_{l l^{\prime}} \delta_{m m^{\prime}} \tag{2}
+\end{equation*}
+
+
+An arbitrary function $f(\vartheta, \varphi)$ which is defined in the interval $0 \leq \vartheta \leq \pi, 0 \leq \varphi<2 \pi$ and satisfies the condition
+
+
+\begin{equation*}
+\int_{0}^{2 \pi} d \varphi \int_{0}^{\pi} d \vartheta \sin \vartheta|f(\vartheta, \varphi)|^{2}<\infty \tag{3}
+\end{equation*}
+
+
+can be expanded into a series of the spherical harmonics as
+
+
+\begin{equation*}
+f(\vartheta, \varphi)=\sum_{l=0}^{\infty} \sum_{m=-l}^{l} a_{l m} Y_{l m}(\vartheta, \varphi) \tag{4}
+\end{equation*}
+
+
+The expansion coefficients $a_{l m}$ are given by the relation
+
+
+\begin{equation*}
+a_{l m}=\int_{0}^{2 \pi} d \varphi \int_{0}^{\pi} d \vartheta \sin \vartheta Y_{l m}^{*}(\vartheta, \varphi) f(\vartheta, \varphi) \tag{5}
+\end{equation*}
+
+
+This relation may be treated as an integral transformation of $f(\vartheta, \varphi)$ from the continuous variables $\vartheta, \varphi$ to the discrete variables $l, m$. In this case $Y_{l m}(\vartheta, \varphi) \equiv\langle\vartheta, \varphi \mid l m\rangle$ plays the role of the transformation matrix
+
+
+\begin{equation*}
+\langle l m \mid f\rangle=\langle l m \mid \vartheta \varphi\rangle\langle\vartheta \varphi \mid f\rangle \tag{6}
+\end{equation*}
+
+
+where
+
+$$
+\langle l m \mid f\rangle \equiv a_{l m}, \quad\langle l m \mid \vartheta, \varphi\rangle \equiv Y_{l m}^{*}(\vartheta, \varphi), \quad\langle\vartheta, \varphi \mid f\rangle \equiv f(\vartheta, \varphi)
+$$
+
+As usual, in relations of this type, summation or integration is assumed over all variables which are repeated twice.
+
+The transformation (5) is unitary, i.e.,
+
+
+\begin{equation*}
+\langle f \mid \operatorname{lm}\rangle\langle\operatorname{lm} \mid f\rangle=\langle f \mid \vartheta, \varphi\rangle\langle\vartheta, \varphi \mid f\rangle . \tag{7}
+\end{equation*}
+
+
+The expansion coefficients $a_{l m}$ satisfy the Parseval condition
+
+
+\begin{equation*}
+\sum_{l=0}^{\infty} \sum_{m=-l}^{l}\left|a_{l m}\right|^{2}=\int_{0}^{2 \pi} d \varphi \int_{0}^{\pi} d \vartheta \sin \vartheta|f(\vartheta, \varphi)|^{2} \tag{8}
+\end{equation*}
+
+
+The expansion (4) in terms of the spherical harmonics is widely used in different branches of physics. It is called the multipole expansion, and the $a_{l m}$ are called multipole moments.
+
+\subsection*{5.6.2. Expansion of Products of the Sphextcal Etarmonics}
+(a) A direct product of two spherical harmonics of the same arguments may be expanded in series as (the so-called Clebsch-Gordan series)
+
+
+\begin{equation*}
+Y_{l_{1} m_{1}}(\vartheta, \varphi) Y_{l_{2} m_{2}}(\vartheta, \varphi)=\sum_{L M} \sqrt{\frac{\left(2 l_{1}+1\right)\left(2 l_{2}+1\right)}{4 \pi(2 L+1)}} C_{l_{1} 0 l_{2} 0}^{L 0} C_{l_{2} m_{1} l_{2} m a}^{L M} Y_{L M}(\vartheta, \varphi) . \tag{9}
+\end{equation*}
+
+
+The inverse relation may be written as
+
+
+\begin{equation*}
+\sqrt{\frac{4 \pi(2 L+1)}{\left(2 l_{1}+1\right)\left(2 l_{2}+1\right)}} \sum_{m_{1} m_{2}} C_{l_{1} m_{1} l_{2} m_{3}}^{L M} Y_{l_{1} m_{1}}(\vartheta, \varphi) Y_{l_{2} m_{2}}(\vartheta, \varphi)=C_{l_{1} 0 l_{2} 0}^{L 0} Y_{L M}(\vartheta, \varphi) . \tag{10}
+\end{equation*}
+
+
+Products of three and more spherical harmonics are decomposed according to
+
+
+\begin{gather*}
+Y_{l_{1} m_{1}}(\vartheta, \varphi) Y_{l_{2} m_{2}}(\vartheta, \varphi) Y_{l_{3} m_{3}}(\vartheta, \varphi)=\sum_{L M L^{\prime} M^{\prime}} \sqrt{\frac{\left(2 l_{1}+1\right)\left(2 l_{2}+1\right)\left(2 l_{3}+1\right)}{(4 x)^{2}(2 L+1)}} \\
+\times C_{l_{1} 0 l_{2} 0}^{L^{\prime} 0} C_{L^{\prime} 0 l_{3} 0}^{L 0} C_{l_{1} m_{1} l_{2} m_{2}}^{L^{\prime} M^{\prime}} C_{L^{\prime} M^{\prime} l_{3} m_{3}}^{L M} Y_{L M}(\vartheta, \varphi)  \tag{11}\\
+Y_{l_{1} m_{1}}(\vartheta, \varphi) Y_{l_{2} m_{2}}(\vartheta, \varphi) \times \ldots \times Y_{l_{n} m_{n}}(\vartheta, \varphi)=\sum_{L_{n}} B_{L_{n}} Y_{L_{n} M_{n}}(\vartheta, \varphi) \tag{12}
+\end{gather*}
+
+
+where
+
+
+\begin{equation*}
+B_{L_{n}}=\sqrt{\frac{4 \pi}{2 L_{n}+1}} \sum_{\substack{L_{1} L_{2} \ldots L_{n-1} \\ M_{1} M_{2}, \ldots M_{n-1}}} \prod_{i=1}^{n}\left(\sqrt{\frac{2 l_{i}+1}{4 \pi}} C_{L_{i-1} 0 l_{i} 0}^{L_{i} 0} C_{L_{i-1} M_{i-1} l_{i} m_{i}}^{L_{i} M_{i}}\right) \tag{13}
+\end{equation*}
+
+
+with $L_{0} \equiv M_{0} \equiv 0$.\\
+(b) Irreducible tensor products (defined in Sec. 3.1) of the spherical harmonics may be expanded as
+
+
+\begin{gather*}
+\left\{\mathbf{Y}_{l_{1}}(\vartheta, \varphi) \otimes \mathbf{Y}_{l_{3}}(\vartheta, \varphi)\right\}_{L M}=\sqrt{\frac{\left(2 l_{1}+1\right)\left(2 l_{2}+1\right)}{4 \pi(2 L+1)}} C_{l_{1} 0 l_{2} 0}^{L 0} Y_{L M}(\vartheta, \varphi)  \tag{14}\\
+\left\{\left\{\mathbf{Y}_{l_{1}}(\vartheta, \varphi) \otimes \mathbf{Y}_{l_{2}}(\vartheta, \varphi)\right\}_{L^{\prime}} \otimes \mathbf{Y}_{l_{3}}(\vartheta, \varphi)\right\}_{L M}=\sqrt{\frac{\left(2 l_{1}+1\right)\left(2 l_{2}+1\right)\left(2 l_{3}+1\right)}{(4 \pi)^{2}(2 L+1)}} C_{l_{1} 0 l_{2} 0}^{L^{\prime} 0} C_{L^{\prime} 0 l_{3} 0}^{L 0} Y_{L M}(\vartheta, \varphi),(  \tag{15}\\
+\left\{\ldots\left\{\left\{\mathbf{Y}_{l_{1}}(\vartheta, \varphi) \otimes \mathbf{Y}_{l_{2}}(\vartheta, \varphi)\right\}_{L_{2}} \otimes \mathbf{Y}_{l_{3}}(\vartheta, \varphi)\right\}_{L_{2}} \ldots \otimes \mathbf{Y}_{l_{n}}(\vartheta, \varphi)\right\}_{L_{n} M_{n}} \\
+=\sqrt{\frac{4 \pi}{2 L_{n}+1}} \prod_{i=1}^{n}\left(\sqrt{\frac{2 l_{i}+1}{4 \pi}} C_{L_{i-1} 0 l_{i} 0}^{L_{i} 0}\right) Y_{L_{n} M_{n}}(\vartheta, \varphi) \tag{16}
+\end{gather*}
+
+
+In particular, when $l_{1}=l_{2}=\ldots=l_{n}=1$ and $L_{k}=k(k=1,2,3, \ldots, n)$ one has
+
+
+\begin{equation*}
+\left\{\ldots\left\{\left\{\mathbf{Y}_{1}(\vartheta, \varphi) \otimes \mathbf{Y}_{1}(\vartheta, \varphi)\right\}_{2} \otimes \mathbf{Y}_{1}(\vartheta, \varphi)\right\}_{3} \ldots \otimes \mathbf{Y}_{1}(\vartheta, \varphi)\right\}_{n m}=\sqrt{\frac{3^{n}}{(4 \pi)^{n-1}} \frac{n!}{(2 n+1)!!}} Y_{n m}(\vartheta, \varphi) \tag{17}
+\end{equation*}
+
+
+Note that when expanding the products of the spherical harmonics, the functions $C_{l m}(\vartheta, \varphi)$ which contain an additional factor $\sqrt{4 \pi /(2 l+1)}$ (Sec. 5.1.4), are more convenient.
+
+\subsection*{5.7. RECURSION RELATIONS}
+Recursion relations for the spherical harmonics may be obtained, for example, from the Clebsch-Gordan series (see Eq. 5.6.(9)).
+
+
+\begin{align*}
+-2 m \cot \vartheta Y_{l m}(\vartheta, \varphi) & =\sqrt{l(l+1)-m(m+1)} e^{-i \varphi} Y_{l m+1}(\vartheta, \varphi)+\sqrt{l(l+1)-m(m-1)} e^{i \varphi} Y_{l m-1}(\vartheta, \varphi)  \tag{1}\\
+\cos \vartheta Y_{l m}(\vartheta, \varphi) & =\sqrt{\frac{(l-m+1)(l+m+1)}{(2 l+1)(2 l+3)}} Y_{l+1 m}(\vartheta, \varphi)+\sqrt{\frac{(l-m)(l+m)}{(2 l-1)(2 l+1)}} Y_{l-1 m}(\vartheta, \varphi)  \tag{2}\\
+\sin \vartheta Y_{l m}(\vartheta, \varphi) e^{-i \varphi} & =\sqrt{\frac{(l-m+1)(l-m+2)}{(2 l+1)(2 l+3)}} Y_{l+1 m-1}(\vartheta, \varphi)-\sqrt{\frac{(l+m-1)(l+m)}{(2 l-1)(2 l+1)}} Y_{l-1 m-1}(\vartheta, \varphi) \\
+& =\cos \vartheta \sqrt{\frac{l-m+1}{l+m}} Y_{l m-1}(\vartheta, \varphi)-\sqrt{\frac{2 l+1}{2 l-1} \cdot \frac{l+m-1}{l+m}} Y_{l-1 m-1}(\vartheta, \varphi) \\
+& =-\cos \vartheta \sqrt{\frac{l+m}{l-m+1}} Y_{l m-1}(\vartheta, \varphi)+\sqrt{\frac{2 l+1}{2 l+3} \cdot \frac{l-m+2}{l-m+1}} Y_{l+1 m-1}(\vartheta, \varphi) \tag{3}
+\end{align*}
+
+
+
+\begin{align*}
+\sin \vartheta Y_{l m}(\vartheta, \varphi) e^{i \varphi} & =-\sqrt{\frac{(l+m+1)(l+m+2)}{(2 l+1)(2 l+3)}} Y_{l+1 m+1}(\vartheta, \varphi)+\sqrt{\frac{(l-m-1)(l-m)}{(2 l-1)(2 l+1)}} Y_{l-1 m+1}(\vartheta, \varphi) \\
+& =-\cos \vartheta \sqrt{\frac{l+m+1}{l-m}} Y_{l m+1}(\vartheta, \varphi)+\sqrt{\frac{2 l+1}{2 l-1} \cdot \frac{l-m-1}{l-m}} Y_{l-1 m+1}(\vartheta, \varphi) \\
+& =\cos \vartheta \sqrt{\frac{l-m}{l+m+1}} Y_{l m+1}(\vartheta, \varphi)-\sqrt{\frac{2 l+1}{2 l+3} \cdot \frac{l+m+2}{l+m+1}} Y_{l+1 m+1}(\vartheta, \varphi) \tag{4}
+\end{align*}
+
+
+
+\begin{align*}
+& (2 l-1)(2 l+3) \cos ^{2} \vartheta Y_{l m}(\vartheta, \varphi)=(2 l-1) \sqrt{\frac{(l+1)^{2}-m^{2}}{2 l+1} \cdot \frac{(l+2)^{2}-m^{2}}{2 l+5}} Y_{l+2 m}(\vartheta, \varphi) \\
+& \quad+\left[2 l(l+1)-2 m^{2}-1\right] Y_{l m}(\vartheta, \varphi)+(2 l+3) \sqrt{\frac{l^{2}-m^{2}}{2 l+1} \cdot \frac{(l-1)^{2}-m^{2}}{2 l-3}} Y_{l-2 m}(\vartheta, \varphi) \tag{5}
+\end{align*}
+
+
+
+\begin{align*}
+& (2 l-1)(2 l+3) \sin \vartheta \cos \vartheta e^{i \varphi} Y_{l m}(\vartheta, \varphi)=-(2 l-1) \sqrt{\frac{(l+1)^{2}-m^{2}}{2 l+1} \cdot \frac{(l+m+2)(l+m+3)}{2 l+5}} Y_{l+2 m+1}(\vartheta, \varphi) \\
+& -(2 m+1) \sqrt{l(l+1)-m(m+1)} Y_{l m+1}(\vartheta, \varphi)+(2 l+3) \sqrt{\frac{l^{2}-m^{2}}{2 l+1} \cdot \frac{(l-m-1)(l-m-2)}{2 l-3}} Y_{l-2 m+1}(\vartheta, \varphi) \tag{6}
+\end{align*}
+
+
+
+\begin{align*}
+& (2 l-1)(2 l+3) \sin \vartheta \cos \vartheta e^{-i \varphi} Y_{l m}(\vartheta, \varphi)=(2 l-1) \sqrt{\frac{(l+1)^{2}-m^{2}}{2 l+1} \cdot \frac{(l-m+2)(l-m+3)}{2 l+5}} Y_{l+2 m-1}(\vartheta, \varphi) \\
+& -(2 m-1) \sqrt{l(l+1)-m(m-1)} Y_{l m-1}(\vartheta, \varphi)-(2 l+3) \sqrt{\frac{l^{2}-m^{2}}{2 l+1} \cdot \frac{(l+m-1)(l+m-2)}{(2 l-3)}} Y_{l-2 m-1}(\vartheta, \varphi) \tag{7}
+\end{align*}
+
+
+
+\begin{align*}
+& (2 l-1)(2 l+3) \sin ^{2} \vartheta e^{i 2 \varphi} Y_{l m}(\vartheta, \varphi)=\frac{(2 l-1)}{\sqrt{(2 l+1)(2 l+5)}} \sqrt{\frac{(l+m+4)!}{(l+m)!}} Y_{l+2 m+2}(\vartheta, \varphi) \\
++ & \frac{(2 l+3)}{\sqrt{(2 l+1)(2 l-3)}} \sqrt{\frac{(l-m)!}{(l-m-4)!}} Y_{l-2 m+2}(\vartheta, \varphi)-2 \sqrt{\frac{(l+m+2)!(l-m)!}{(l-m-2)!(l+m)!}} Y_{l m+2}(\vartheta, \varphi) \tag{8}
+\end{align*}
+
+
+
+\begin{align*}
+& (2 l-1)(2 l+3) \sin ^{2} \forall e^{-i 2 \varphi} Y_{l m}(\vartheta, \varphi)=\frac{(2 l-1)}{\sqrt{(2 l+1)(2 l+5)}} \sqrt{\frac{(l-m+4)!}{(l-m)!}} Y_{l+2 m-2}(\vartheta, \varphi) \\
+& +\frac{(2 l+3)}{\sqrt{(2 l+1)(2 l+3)}} \sqrt{\frac{(l+m)!}{(l+m-4)!}} Y_{l-2 m-2}(\vartheta, \varphi)-2 \sqrt{\frac{(l-m+2)!(l+m)!}{(l+m-2)!(l-m)!}} Y_{l m-2}(\vartheta, \varphi) \tag{9}
+\end{align*}
+
+
+\subsection*{5.8. DIFFERENTIAL RELATIONS}
+5.8.1. Action of the Operator of Orbital Angular Momentum on $Y_{\text {Im }}(\vartheta, \varphi)$ Spherical components of the operator $\overline{\mathbf{L}}$ (Eq. $2.2(18)$ ) act on $\mathbf{Y}_{\text {Im }}(\mathcal{\vartheta}, \varphi)$ according to
+
+
+\begin{align*}
+\widehat{L}_{ \pm 1} Y_{l m}(\vartheta, \varphi) & =\mp \sqrt{\frac{l(l+1)-m(m \pm 1)}{2}} Y_{l m \pm 1}(\vartheta, \varphi)  \tag{1}\\
+\widehat{L}_{0} Y_{l m}(\vartheta, \varphi) & =m Y_{l m}(\vartheta, \varphi)
+\end{align*}
+
+
+or in a more compact form
+
+
+\begin{equation*}
+\widehat{L}_{\mu} Y_{l m}(\vartheta, \varphi)=\sqrt{l(l+1)} C_{l m+\mu}^{l m+\mu} Y_{l m+\mu}(\vartheta, \varphi) \tag{2}
+\end{equation*}
+
+
+The action of the operator $\hat{\mathbf{L}}^{2}$ on $Y_{l m}(\vartheta, \varphi)$ yields
+
+
+\begin{equation*}
+\hat{\mathbf{L}}^{2} Y_{l m}(\vartheta, \varphi)=l(l+1) Y_{l m}(\vartheta, \varphi) \tag{3}
+\end{equation*}
+
+
+\subsection*{5.8.2 First and Second Order Derivatives of $Y_{i m}(\vartheta, \varphi)$}
+
+\begin{equation*}
+\frac{\partial}{\partial \varphi} Y_{I m}(v, \varphi)=i m Y_{I m}(\theta, \varphi) \tag{4}
+\end{equation*}
+
+
+
+\begin{align*}
+\frac{\partial}{\partial \vartheta} Y_{l m}(\vartheta, \varphi) & =m \cot \vartheta Y_{l m}(\vartheta, \varphi)+\sqrt{l(l+1)-m(m+1)} Y_{l m+1}(\vartheta, \varphi) e^{-i \varphi} \\
+& =-m \cot \vartheta Y_{l m}(\vartheta, \varphi)-\sqrt{l(l+1)-m(m-1)} Y_{l m-1}(\vartheta, \varphi) e^{i \varphi} \\
+& =\frac{1}{2} \sqrt{l(l+1)-m(m+1)} Y_{l m+1}(\vartheta, \varphi) e^{-i \varphi}-\frac{1}{2} \sqrt{l(l+1)-m(m-1)} Y_{l m-1}(\vartheta, \varphi) e^{i \varphi} \tag{5}
+\end{align*}
+
+
+
+\begin{gather*}
+\sin \vartheta \frac{\partial}{\partial \vartheta} Y_{l m}(\vartheta, \varphi)=-\sin ^{2} \vartheta \frac{\partial}{\partial \cos \vartheta} Y_{l m}(\vartheta, \varphi) \\
+=l \cos \vartheta Y_{l m}(\vartheta, \varphi)-\sqrt{\frac{2 l+1}{2 l-1}\left(l^{2}-m^{2}\right)} Y_{l-1 m}(\vartheta, \varphi) \\
+=-(l+1) \cos \vartheta Y_{l m}(\vartheta, \varphi)+\sqrt{\frac{2 l+1}{2 l+3}\left[(l+1)^{2}-m^{2}\right]} Y_{l+1 m}(\vartheta, \varphi) \\
+=l \sqrt{\frac{(l+1)^{2}-m^{2}}{(2 l+1)(2 l+3)}} Y_{l+1 m}(\vartheta, \varphi)-(l+1) \sqrt{\frac{l^{2}-m^{2}}{(2 l+1)(2 l-1)}} Y_{l-1 m}(\vartheta, \varphi)  \tag{6}\\
+\frac{\partial}{\partial \vartheta^{2}} Y_{l m}(\vartheta, \varphi)=-\left[l(l+1)-\frac{m^{2}}{\sin ^{2} \vartheta}\right] Y_{l m}(\vartheta, \varphi)-\cot \vartheta \frac{\partial}{\partial \vartheta} Y_{l m}(\vartheta, \varphi) .  \tag{7}\\
+\sin ^{2} \vartheta \frac{\partial^{2}}{\partial(\cos \vartheta)^{2}} Y_{l m}(\vartheta, \varphi)=2 \cos \vartheta \frac{\partial}{\partial \cos \vartheta} Y_{l m}(\vartheta, \varphi)-\left[l(l+1)-\frac{m^{2}}{\sin ^{2} \vartheta}\right] Y_{l m}(\vartheta, \varphi) . \tag{8}
+\end{gather*}
+
+
+\subsection*{5.8.3. Vector Differentiation Operations}
+(a) The gradient of a function $f(r) Y_{l m}(\vartheta, \varphi)$, where $f(r)$ is an arbitrary function of $r \equiv|\mathbf{r}|$ can be expanded in terms of vector spherical harmonics (Sec. 7.3) as follows:
+
+
+\begin{equation*}
+\nabla\left[f(r) Y_{l m}(\vartheta, \varphi)\right]=-\sqrt{\frac{l+1}{2 l+1}}\left(\frac{d f}{d r}-\frac{l}{r} f\right) \mathbf{Y}_{l m}^{l+1}(\vartheta, \varphi)+\sqrt{\frac{l}{2 l+1}}\left(\frac{d f}{d r}+\frac{l+1}{r} f\right) \mathbf{Y}_{l m}^{l-1}(\vartheta, \varphi) \tag{9}
+\end{equation*}
+
+
+or in component form
+
+
+\begin{align*}
+\nabla_{0}\left[f(r) Y_{l m}(\vartheta, \varphi)\right]= & \sqrt{\frac{(l+1)^{2}-m^{2}}{(2 l+1)(2 l+3)}}\left(\frac{d f}{d r}-\frac{l}{r} f\right) Y_{l+1 m}(\vartheta, \varphi) \\
+& +\sqrt{\frac{l^{2}-m^{2}}{(2 l-1)(2 l+1)}}\left(\frac{d f}{d r}+\frac{l+1}{r} f\right) Y_{l-1 m}(\vartheta, \varphi)  \tag{10}\\
+\nabla_{ \pm 1}\left[f(r) Y_{l m}(\vartheta, \varphi)\right]= & \sqrt{\frac{(l \pm m+1)(l \pm m+2)}{2(2 l+1)(2 l+3)}}\left(\frac{d f}{d r}-\frac{l}{r} f\right) Y_{l+1 m \pm 1}(\vartheta, \varphi) \\
+& -\sqrt{\frac{(l \mp m-1)(l \mp m)}{2(2 l-1)(2 l+1)}}\left(\frac{d f}{d r}+\frac{l+1}{r} f\right) Y_{l-1 m \pm 1}(\vartheta, \varphi) \tag{11}
+\end{align*}
+
+
+Here $\nabla_{0, \pm 1}$ are spherical components of the operator $\nabla$ (Sec. 1.3).\\
+Let us consider some special cases of Eq. (9). If $f(r)=j(k r)$ is a spherical Bessel function, one has,
+
+
+\begin{equation*}
+\frac{1}{k} \nabla\left[j_{l}(k r) Y_{l m}(\vartheta, \varphi)\right]=\sqrt{\frac{l+1}{2 l+1}} j_{l+1}(k r) \mathbf{Y}_{l m}^{l+1}(\vartheta, \varphi)+\sqrt{\frac{l}{2 l+1}} j_{l-1}(k r) \mathbf{Y}_{l m}^{l-1}(\vartheta, \varphi) \tag{12}
+\end{equation*}
+
+
+Putting $f(r)=r^{l}$, one gets
+
+
+\begin{equation*}
+\nabla\left[r^{l} Y_{l m}(\vartheta, \varphi)\right]=\sqrt{l(2 l+1)} r^{l-1} \mathbf{Y}_{l m}^{l-1}(\vartheta, \varphi) \tag{13}
+\end{equation*}
+
+
+If $f(r)=r^{-l-1}$, Eq. (9) is reduced to
+
+
+\begin{equation*}
+\nabla\left[r^{-l-1} Y_{l m}(\vartheta, \varphi)\right]=\sqrt{(l+1)(2 l+1)} r^{-l-2} \mathbf{Y}_{l m}^{l+1}(\vartheta, \varphi) \tag{14}
+\end{equation*}
+
+
+(b) The divergence of a vector function $f(r) \hat{\mathbf{L}} Y_{\text {Im }}(\vartheta, \varphi)$ vanishes for any function $f(r)$
+
+
+\begin{equation*}
+\nabla\left[f(r) \hat{\mathrm{L}} Y_{l m}(\vartheta, \varphi)\right]=0 . \tag{15}
+\end{equation*}
+
+
+(c) The curl of a vector function $f(r) \hat{\mathbf{L}} Y_{\mathbf{I m}}(\vartheta, \varphi)$, where $f(r)$ is an arbitrary function of $r$, is expressible in terms of a gradient of the corresponding scalar function
+
+
+\begin{equation*}
+\nabla \times\left[f(\mathrm{r}) \hat{\mathrm{L}} Y_{l m}(\vartheta, \varphi)\right]=i \nabla\left[\left(r \frac{d f}{d r}+f\right) Y_{l m}(\vartheta, \varphi)\right]-i \mathrm{r}\left[\frac{1}{r^{2}} \frac{d}{d r}\left(r^{2} \frac{d f}{d r}\right)-\frac{l(l+1)}{r^{2}} f\right] Y_{l m}(\vartheta, \varphi) . \tag{16}
+\end{equation*}
+
+
+In particular, if $f(r)=j_{l}(k r)$, one gets
+
+
+\begin{equation*}
+\left.\operatorname{curl}\left[j_{i}(k r) \hat{L} Y_{l m}(\vartheta, \varphi)\right]=i \nabla \mid\left(k r j_{l-1}(k r)-l j_{i}(k r)\right) Y_{l m}(\vartheta, \varphi)\right]+i r k^{2} j_{i}(k r) Y_{l m}(\vartheta, \varphi) . \tag{17}
+\end{equation*}
+
+
+If $f(r)=r$,
+
+
+\begin{equation*}
+\operatorname{curl}\left[r^{\prime} \hat{\mathbf{L}} Y_{l m}(\vartheta, \varphi)\right]=i(l+1) \sqrt{l(2 l+1)} r^{l-1} \mathbf{Y}_{l m}^{l-1}(\vartheta, \varphi) . \tag{18}
+\end{equation*}
+
+
+and if $f(r)=r^{-l-1}$,
+
+
+\begin{equation*}
+\operatorname{curl}\left|r^{-l-1} \hat{\mathbf{L}} Y_{l m}(\vartheta, \varphi)\right|=-i l \sqrt{(l+1)(2 l+1)} r^{-l-2} \mathbf{Y}_{l m}^{l+1}(\vartheta, \varphi) . \tag{19}
+\end{equation*}
+
+
+Some additional formulas for the vector differentiation of functions which contain $Y_{l m}(\theta, \varphi)$ will be given in Sec. 7.3.6.
+
+\subsection*{5.9. SOME INTEGRALS INVOLVING SPHERICAL HARMONICS}
+\subsection*{5.9.1. Integrals over Total Solid Angle}
+
+\begin{gather*}
+\int_{0}^{2 \pi} d \varphi \int_{0}^{\pi} d \vartheta \sin \vartheta Y_{1 m}(\vartheta, \varphi)=\sqrt{4 \pi} \delta_{10} \delta_{m 0}  \tag{1}\\
+\int_{0}^{2 \pi} d \varphi \int_{0}^{\pi} d \vartheta \sin \vartheta Y_{l_{1} m_{1}}(\vartheta, \varphi) Y_{l_{2} m_{2}}^{*}(\vartheta, \varphi)=\delta_{l_{1} l_{2}} \delta_{m_{1} m_{2}}  \tag{2}\\
+\int_{0}^{2 \pi} d \varphi \int_{0}^{\pi} d \vartheta \sin \vartheta Y_{l_{1} m_{1}}(\vartheta, \varphi) Y_{l_{2} m_{2}}(\vartheta, \varphi)=(-1)^{m_{2}} \delta_{l_{1} l_{2}} \delta_{-m_{1} m_{2}}  \tag{3}\\
+\int_{0}^{2 \pi} d \varphi \int_{0}^{\pi} d \vartheta \sin \vartheta Y_{l_{2} m_{1}}(\vartheta, \varphi) Y_{l_{2} m_{2}}(\vartheta, \varphi) Y_{l_{3} m_{3}}^{*}(\vartheta, \varphi)=\sqrt{\frac{\left(2 l_{1}+1\right)\left(2 l_{2}+1\right)}{4 \pi\left(2 l_{3}+1\right)}} C_{l_{1} 0 l_{2} 0}^{l_{2} 0} C_{l_{1} m_{1} l_{2} m_{2}}^{l_{3} m_{3}}  \tag{4}\\
+\int_{0}^{2 \pi} d \varphi \int_{0}^{\pi} d \vartheta \sin \vartheta Y_{l_{1} m_{2}}(\vartheta, \varphi) Y_{l_{2} m_{2}}(\vartheta, \varphi) Y_{l_{3} m_{3}}(\vartheta, \varphi) \\
+=\sqrt{\frac{\left(2 l_{1}+1\right)\left(2 l_{2}+1\right)\left(2 l_{3}+1\right)}{4 \pi}}\left(\begin{array}{ccc}
+l_{1} & l_{2} & l_{3} \\
+0 & 0 & 0
+\end{array}\right)\left(\begin{array}{ccc}
+l_{1} & l_{2} & l_{3} \\
+m_{1} & m_{3} & m_{3}
+\end{array}\right) \tag{5}
+\end{gather*}
+
+
+Integrals involving products of three and more spherical harmonics can be evaluated by reducing them to integrals which involve products of a smaller number of harmonics. For this purpose it is convenient to use the Clebsch-Gordan expansion (Eq. 5.6(9)).\\
+5.9.2 Fourier Transformations for Some Functions Which Contain $Y_{\text {Im }}(\vartheta, \varphi)$
+
+
+\begin{gather*}
+\int_{0}^{\infty} d r r^{2} \int_{0}^{2 \pi} d \varphi \int_{0}^{\pi} d \vartheta \sin \vartheta e^{i \mathbf{k r}} j l(q r) Y_{l m}(\vartheta, \varphi)=2 \pi^{2} i^{l} \frac{\delta(q-k)}{q^{2}} Y_{l m}\left(\vartheta_{k}, \varphi_{k}\right)  \tag{6}\\
+\int_{0}^{\infty} d r r^{2} \int_{0}^{2 \pi} d \varphi \int_{0}^{\pi} d \vartheta \sin \vartheta e^{i \mathbf{k r}} \hat{\mathbf{L}}\left[j i(q r) Y_{l m}(\vartheta, \varphi)\right]=2 \pi^{2} i^{l} \frac{\delta(q-k)}{q^{2}} \hat{\mathbf{L}}_{\mathbf{k}} Y_{l m}\left(\vartheta_{k}, \varphi_{k}\right)  \tag{7}\\
+\int_{0}^{\infty} d r r^{2} \int_{0}^{2 \pi} d \varphi \int_{0}^{\pi} d \vartheta \sin \vartheta e^{i \mathbf{k r}}[\nabla \times \hat{\mathbf{L}}]\left(j l(q r) Y_{l m}(\vartheta, \varphi)\right)=2 \pi^{2} i^{l-1} \frac{\delta(q-k)}{q^{2}}\left[\mathbf{k} \times \hat{\mathbf{L}}_{\mathbf{k}}\right] Y_{l m}\left(\vartheta_{k}, \varphi_{k}\right) \tag{8}
+\end{gather*}
+
+
+Here $j_{l}(x)$ is a spherical Bessel function, $\vartheta_{k}$ and $\varphi_{k}$ are polar angles of the vector $\mathbf{k} ; \hat{\mathbf{L}}$ and $\hat{\mathbf{L}}_{\mathbf{k}}$ are the operators of orbital angular momentum in the coordinate and momentum representations, respectively,
+
+
+\begin{equation*}
+\hat{\mathbf{L}}=-i[\mathbf{r} \times \nabla], \hat{\mathbf{L}}_{\mathbf{k}}=-i\left[\mathbf{k} \times \nabla_{\mathbf{k}}\right] . \tag{9}
+\end{equation*}
+
+
+\subsection*{5.9.3. Integrals with Respect to $\vartheta$}
+
+\begin{gather*}
+\int_{0}^{\pi} Y_{l m}^{*}(\vartheta, \varphi) Y_{l^{\prime} m}(\vartheta, \varphi) \sin \vartheta d \vartheta=\frac{\delta l^{\prime}}{2 \pi} .  \tag{10}\\
+\int_{0}^{\pi} Y_{l m}^{*}(\vartheta, \varphi) Y_{l m^{\prime}}(\vartheta, \varphi) \frac{d \vartheta}{\sin \vartheta}=\frac{2 l+1}{4 \pi m} \delta_{m m^{\prime}}\left(m, m^{\prime}>0\right) .  \tag{11}\\
+\int_{0}^{\pi / 2}(\sin \vartheta)^{m+1}(\cos \vartheta)^{n} Y_{l m}(\vartheta, \varphi) d \vartheta \\
+=\sqrt{\frac{2 l+1}{4 \pi}} \cdot \frac{(l+m)!}{(l-m)!}(-1)^{m} \frac{n!e^{i m \varphi}}{(n+l+m+1)!!(n-l+m)!!},(m, n \geq 0)  \tag{12}\\
+\int_{a}^{b}\left[\left(l_{1}-l_{2}\right)\left(l_{1}+l_{2}+1\right)-\frac{m_{1}^{2}-m_{2}^{2}}{\sin ^{2} \vartheta}\right] Y_{l_{1} m_{1}}(\vartheta, \varphi) Y_{l_{2} m_{2}}(\vartheta, \varphi) d(\cos \vartheta) \\
+=\left.\sin ^{2} \vartheta\left[Y_{l_{1} m_{1}}(\vartheta, \varphi) \frac{d}{d \cos \vartheta} Y_{l_{2} m_{2}}(\vartheta, \varphi)-Y_{l_{2} m_{2}}(\vartheta, \varphi) \frac{d}{d \cos \vartheta} Y_{l_{1} m_{1}}(\vartheta, \varphi)\right]\right|_{a} ^{b} \\
+=\left[\cos \vartheta\left(l_{1}-l_{2}\right) Y_{l_{1} m_{1}}(\vartheta, \varphi) Y_{l_{2} m_{2}}(\vartheta, \varphi)+\left(l_{2}+m_{2}\right) Y_{l_{1} m_{1}}(\vartheta, \varphi) Y_{l_{2}-1 m_{2}}(\vartheta, \varphi)\right. \\
+\left.-\left(l_{1}+m_{1}\right) Y_{l_{1}-1 m_{1}}(\vartheta, \varphi) Y_{l_{2} m_{2}}(\vartheta, \varphi)\right]\left.\right|_{a} ^{b} . \tag{13}
+\end{gather*}
+
+
+\subsection*{5.10. SUMS INVOLVING SPHERICAL HARMONICS}
+5.10.1. Sums over $m$ (with fixed $l$ )
+
+
+\begin{gather*}
+\sum_{m=-l}^{l}\left|Y_{l m}(\vartheta, \varphi)\right|^{2}=\frac{2 l+1}{4 \pi},  \tag{1}\\
+\sum_{m=-l}^{l} m\left|Y_{l m}(\vartheta, \varphi)\right|^{2}=0,  \tag{2}\\
+\sum_{m=-1}^{l} m^{2}\left|Y_{l m}(\vartheta, \varphi)\right|^{2}=\frac{l(l+1)(2 l+1)}{8 \pi} \sin ^{2} \vartheta,  \tag{3}\\
+\sum_{m=-l}^{l} \sqrt{\frac{\left(l^{2}-m^{2}\right)\left[(l+1)^{2}-m^{2}\right]}{(2 l-1)(2 l+3)}} Y_{l-1 m}(\vartheta, \varphi) Y_{l+1 m}^{*}(\vartheta, \varphi)=\frac{l(l+1)}{8 \pi}\left(3 \cos ^{2} \vartheta-1\right),  \tag{4}\\
+\sum_{m=-l}^{l} \frac{(\mp i)^{m}}{\sqrt{(l-m)!(l+m)!}} Y_{l m}(\vartheta, \varphi)=\sqrt{\frac{2 l+1}{4 \pi}} \cdot \frac{(\cos \vartheta \pm i \sin \vartheta \cos \varphi)^{l}}{l!} . \tag{5}
+\end{gather*}
+
+
+\subsection*{5.10.2. Sums over $l$ (with fixed $m \geq 0$ )}
+In the equations given below [27] we will use the notation $R=\sqrt{1-2 t \cos \vartheta+t^{2}}$.
+
+
+\begin{gather*}
+\sum_{l=m}^{n+m}(-1)^{l} \frac{t^{n-l+m}}{(n-l+m)!\sqrt{(l-m)!(l+m)!}} \sqrt{\frac{4 \pi}{2 l+1}} Y_{l m}(\vartheta, \varphi) \\
+=(-1)^{n} \frac{(2 m-1)!!}{(2 m+n)!}\left(\sin \vartheta e^{i \varphi}\right)^{m}\left(1-2 t \cos \vartheta+t^{2}\right)^{\frac{n}{2}} C_{n}^{m+\frac{1}{2}}\left(\frac{\cos \vartheta-t}{\sqrt{1-2 t \cos \vartheta+t^{2}}}\right),(|t|<1),  \tag{6}\\
+\sum_{l=m}^{\infty} \sqrt{\frac{4 \pi}{(2 l+1)(l-m)!(l+m)!}} \cdot \frac{1}{l!} t^{l-m} Y_{l m}(\vartheta, \varphi) \\
+=\frac{\left(-\sin \vartheta e^{i \varphi}\right)^{m}}{2^{m}(m!)^{2}} o_{1}\left(; m+1 ; t \cos ^{2} \frac{\vartheta}{2}\right) 0 F_{1}\left(; m+1 ;-t \sin ^{2} \frac{\vartheta}{2}\right),(|t|<1),  \tag{7}\\
+\sum_{l=m}^{\infty} \frac{(n+l-m)!t^{l-m}}{\sqrt{(l+m)!(l-m)!}} \sqrt{\frac{4 \pi}{2 l+1}} Y_{l m}(\vartheta, \varphi) \\
+=\frac{n!}{2^{m} m!} \cdot \frac{\left(-\sin \vartheta e^{i \varphi}\right)^{m}}{(1-t \cos \vartheta)^{n+1}} F\left\{\frac{n+1}{2}, \frac{n}{2}+1 ; m+1 ;-\left(\frac{t \sin \vartheta}{1-t \cos \vartheta}\right)^{2}\right\},(|t|<1), \tag{8}
+\end{gather*}
+
+
+
+\begin{gather*}
+\sum_{l=m}^{\infty} \sqrt{\frac{4 \pi}{(2 l+1)(l-m)!(l+m)!}} \cdot \frac{(l+m-n)!(l-m+n-1)!}{l!} t^{l-m} Y_{l m}(\vartheta, \varphi)=\frac{(2 m-n)!(n-1)!}{2^{m}(m!)^{2}} \\
+\times\left(-\sin \vartheta e^{i \varphi}\right)^{m} F\left(n, 2 m+1-n ; m+1 ; \frac{1-t-R}{2}\right) F\left(n, 2 m+1-n ; m+1 ; \frac{1+t-R}{2}\right),(|t|<1),  \tag{9}\\
+\sum_{l=m}^{\infty} \sqrt{\frac{4 \pi(l-m)!}{(2 l+1)(l+m)!}} L_{l-m}^{2 m}(y) t^{l-m} Y_{l m}(\vartheta, \varphi) \\
+=\frac{1}{2^{m} m!} \cdot \frac{\left(-\sin \vartheta e^{i \varphi}\right)^{m}}{R^{2 m+1}} \exp \left[-\frac{y t(\cos \vartheta-t)}{R^{2}}\right] 0 F_{1}\left(; m+1 ;-\frac{y^{2} t^{2} \sin ^{2} \vartheta}{4 R^{4}}\right),(|t|<1),  \tag{10}\\
+\sum_{l=m}^{\infty} i^{l-m} \sqrt{\frac{4 \pi(2 l+1)(l+m)!}{(l-m)!}} j(t) Y_{l m}(\vartheta, \varphi)=\left(-t \sin \vartheta e^{i \varphi}\right)^{m} e^{i t \cos \vartheta},  \tag{11}\\
+\sum_{l=m, m+2, \ldots}^{\infty} i^{l-m} \sqrt{\frac{4 \pi(2 l+1)(l+m)!}{(l-m)!}} j(t) Y_{l m}(\vartheta, \varphi)=\left(-t \sin \vartheta e^{i \varphi}\right)^{m} \cos (t \cos \vartheta),  \tag{12}\\
+\sum_{l=m+1, m+3, \ldots}^{\infty} i^{l-m-1} \sqrt{\frac{4 \pi(2 l+1)(l+m)!}{(l-m)!}} j(t) Y_{l m}(\vartheta, \varphi)=\left(-t \sin \vartheta e^{i \varphi}\right)^{m} \sin (t \cos \vartheta),  \tag{13}\\
+\sum_{l=m}^{\infty} \sqrt{\frac{4 \pi(2 l+1)(l+m)!}{(l-m)!}} j(t) z_{l}(t) Y_{l m}(\vartheta, \varphi)=\left(-t \cos \frac{\vartheta}{2} e^{i \varphi}\right)^{m} z_{m}\left(2 t \sin \frac{\vartheta}{2}\right),  \tag{14}\\
+\sum_{l=m}^{\infty} \sqrt{\frac{4 \pi(2 l+1)(l+m)!}{(l-m)!}} j_{l}(x) z_{l}(y) Y_{l m}(\vartheta, \varphi)=\left(-\frac{x y \sin \vartheta e^{i \varphi}}{\sqrt{x^{2}+y^{2}-2 x y \cos \vartheta}}\right)^{m} z_{m}\left(\sqrt{x^{2}+y^{2}-2 x y \cos \vartheta}\right),  \tag{15}\\
+\sum_{l=m}^{\infty} i^{l-m} j i(t) Y_{l m}\left(\vartheta_{1}, \varphi_{1}\right) Y_{l m}^{*}\left(\vartheta_{2}, \varphi_{2}\right)=\frac{1}{4 \pi} J_{m}\left(t \sin \vartheta_{1} \sin \vartheta_{2}\right) e^{i t \cos \vartheta_{1} \cos \vartheta_{2} e^{i m\left(\varphi_{1}-\varphi_{2}\right)}} \tag{16}
+\end{gather*}
+
+
+\subsection*{5.11. GENERATING FUNCTIONS FOR $Y_{l m}(\vartheta, \varphi)$}
+For fixed $m$ one has (see Refs. [4, 22])
+
+\[
+\frac{1}{R^{2 m+1}}=\left\{\begin{array}{l}
+\frac{(-1)^{m}}{(2 m-1)!!(\sin \vartheta)^{m}} \sum_{l=m}^{\infty} t^{l-m} \sqrt{\frac{4 \pi}{2 l+1} \cdot \frac{(l+m)!}{(l-m)!}} Y_{l m}(\vartheta, 0),|t|<1  \tag{1}\\
+\frac{(-1)^{m}}{(2 m-1)!!(\sin \vartheta)^{m}} \sum_{l=m}^{\infty} \frac{1}{t^{+m+1}} \sqrt{\frac{4 \pi}{2 l+1} \cdot \frac{(l+m)!}{(l-m)!}} Y_{l m}(\vartheta, 0),|t|>1
+\end{array}\right.
+\]
+
+where
+
+$$
+R=\sqrt{1-2 t \cos \vartheta+t^{2}}
+$$
+
+In particular, for $m=0$ one gets
+
+
+\begin{gather*}
+\frac{1}{R}= \begin{cases}\sum_{l=0}^{\infty} t^{l} P_{l}(\cos \vartheta), & |t|<1, \\
+\sum_{l=0}^{\infty} \frac{1}{1^{l+1}} P_{l}(\cos \vartheta), & |t|>1 .\end{cases}  \tag{2}\\
+\frac{\left.\mid(1+R)^{2}-t^{2}\right]^{-m}}{R}=\frac{(-1)^{m}}{2^{m}(\sin \vartheta)^{m}} \sum_{l=m}^{\infty} t^{l-m} \|_{1} \sqrt{\frac{4 \pi}{(2 l+1)(l+m)!(l-m)!}} Y_{l m}(\vartheta, 0),|t|<1 . \tag{3}
+\end{gather*}
+
+
+In addition, we present the following expansions in terms of $Y_{\text {Im }}(\vartheta, \varphi)$ [4]
+
+
+\begin{align*}
+& \frac{(\sin \vartheta)^{m}}{(\cos \psi-\cos \vartheta)^{m+\frac{1}{2}}} \Theta(\cos \psi-\cos \vartheta)=\frac{(-1)^{m} 2^{m}}{(2 m-1)!!} \sum_{l=m}^{\infty} \sqrt{\frac{8 \pi}{2 l+1} \cdot \frac{(l+m)!}{(l-m)!}} \cos \left[(2 l+1) \frac{\psi}{2}\right] Y_{l m}(\vartheta, 0)  \tag{4}\\
+& \frac{(\sin \vartheta)^{m}}{(\cos \vartheta-\cos \psi)^{m+\frac{1}{2}}} \Theta(\cos \vartheta-\cos \psi)=\frac{(-1)^{m} 2^{m}}{(2 m-1)!!} \sum_{l=m}^{\infty} \sqrt{\frac{8 \pi}{2 l+1} \cdot \frac{(l+m)!}{(l-m)!}} \sin \left[(2 l+1) \frac{\psi}{2}\right] Y_{l m}(\vartheta, 0) \tag{5}
+\end{align*}
+
+
+where
+
+\[
+\Theta(x)= \begin{cases}1 & \text { if } x \geq 0,  \tag{6}\\ 0 & \text { if } x<0 .\end{cases}
+\]
+
+In particular, when $m=0$ one has
+
+
+\begin{equation*}
+\frac{\theta(\cos \psi-\cos \vartheta)}{\sqrt{\cos \psi-\cos \vartheta}} \pm i \frac{\theta(\cos \vartheta-\cos \psi)}{\sqrt{\cos \vartheta-\cos \psi}}=\sqrt{2} \sum_{l=0}^{\infty} e^{ \pm i(2 l+1) \frac{\psi}{2}} P_{l}(\cos \vartheta) . \tag{7}
+\end{equation*}
+
+
+\subsection*{5.12. ASYMPTOTIC EXPRESSIONS FOR $Y_{l m}(\vartheta, \varphi)$}
+\subsection*{5.12.1. $Y_{\text {Im }}(\vartheta, \varphi)$ for Large $l$}
+If $l \gg 1$ and $l \gg m \geq 0$, a spherical harmonic $Y_{l m}(\vartheta, \varphi)$ for $\varepsilon \leq \vartheta \leq \pi-\varepsilon(0<\varepsilon \ll 1 / l)$ and $0 \leq \varphi<2 \pi$ can be approximated by (see Ref. [4])
+
+
+\begin{equation*}
+Y_{l m}(\vartheta, \varphi) \approx \frac{e^{i m \varphi}}{\pi} \frac{\cos \left[(2 l+1) \frac{\vartheta}{2}+(2 m-1) \frac{\pi}{4}\right]}{\sqrt{\sin \vartheta}}+O\left(\frac{1}{l}\right) . \tag{1}
+\end{equation*}
+
+
+A more exact formula [22] is
+
+\[
+\begin{array}{r}
+Y_{l m}(\vartheta, \varphi) \approx \frac{e^{i m \varphi}}{\pi \sqrt{\sin \vartheta}}\left\{\left(1+\frac{4 m^{2}-3}{8 l}\right) \cos \left[(2 l+1) \frac{\vartheta}{2}+(2 m-1) \frac{\pi}{4}\right]\right. \\
+\left.+\frac{4 m^{2}-1}{8 l \sin \vartheta} \cos \left[(2 l+3) \frac{\vartheta}{2}+(2 m-3) \frac{\pi}{4}\right]\right\}+O\left(\frac{1}{l^{2}}\right) \tag{2}
+\end{array}
+\]
+
+The terms $O(1 / l)$ and $O\left(1 / l^{2}\right)$ depend on $m$ and $\vartheta$.\\
+If $l \gg 1$ and $l \gg m \geq 0$, one also obtains
+
+
+\begin{equation*}
+\left|Y_{l \pm m}(\vartheta, \varphi)\right|<\frac{2}{\pi}(\sin \vartheta)^{-\left(m+\frac{1}{2}\right)} . \tag{3}
+\end{equation*}
+
+
+\subsection*{5.12.2. Behaviour of $Y_{l m}(\vartheta, \varphi)$ in Neighbourhoods of $\vartheta=0, \pi$ and $\pi / 2$}
+For $0 \leq \vartheta \leq \varepsilon(\varepsilon \ll 1)$ one has
+
+
+\begin{equation*}
+Y_{l \pm m}(\vartheta, \varphi) \approx(\mp 1)^{m} \frac{e^{ \pm i m \varphi}}{m!} \sqrt{\frac{2 l+1}{4 \pi} \cdot \frac{(l+m)!}{(l-m)!}}\left(\frac{\vartheta}{2}\right)^{m}\left[1-\frac{3 l(l+1)-m(m+1)}{3(m+1)}\left(\frac{\vartheta}{2}\right)^{2}\right] . \tag{4}
+\end{equation*}
+
+
+For $\pi-\varepsilon \leq \vartheta \leq \pi$, one obtains
+
+
+\begin{equation*}
+Y_{l \pm m}(\vartheta, \varphi) \approx(-1)^{l}( \pm 1)^{m} \frac{e^{ \pm i m \varphi}}{m!} \sqrt{\frac{2 l+1}{4 \pi} \cdot \frac{(l+m)!}{(l-m)!}}\left(\frac{\pi-\vartheta}{2}\right)^{m}\left[1-\frac{3 l(l+1)-m(m+1)}{3(m+1)}\left(\frac{\pi-\vartheta}{2}\right)^{2}\right] . \tag{5}
+\end{equation*}
+
+
+In the case when $\pi / 2-\varepsilon \leq \vartheta \leq \pi / 2+\varepsilon$
+
+
+\begin{equation*}
+Y_{l \pm m}(\vartheta, \varphi) \approx(-1)^{\frac{l+m}{2}} e^{ \pm i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \cdot \frac{(l-m-1)!!}{(l-m)!!} \cdot \frac{(l+m-1)!!}{(l+m)!!}}\left[1-\frac{l(l+1)-m^{2}}{2}\left(\frac{\pi}{2}-\vartheta\right)^{2}\right] \tag{6}
+\end{equation*}
+
+
+if $l+m$ is even and
+
+
+\begin{gather*}
+Y_{l \pm m}(\vartheta, \varphi) \approx(-1)^{\frac{l \pm m-1}{2}} e^{ \pm i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \cdot \frac{(l-m)!!}{(l-m-1)!!} \cdot \frac{(l+m)!!}{(l+m-1)!!}}\left(\frac{\pi}{2}-\vartheta\right) \\
+\times\left[1-\frac{l(l+1)-\left(m^{2}+1\right)}{6}\left(\frac{\pi}{2}-\vartheta\right)^{2}\right] \tag{7}
+\end{gather*}
+
+
+if $l+m$ is odd.\\
+If $\vartheta$ is small, $Y_{l m}(\vartheta, \varphi)$ may be approximated by the Bessel function (McDonald formula [4])
+
+
+\begin{gather*}
+Y_{l-m}(\vartheta, \varphi)=\sqrt{\frac{2 l+1}{4 \pi} \frac{(l+m)!}{(l-m)!}} e^{-i m \varphi}\left[\left(l+\frac{1}{2}\right) \cos \frac{\vartheta}{2}\right]^{-m} \\
+\times\left\{J_{m}(\alpha)+\left(\sin \frac{\vartheta}{2}\right)^{2}\left[\frac{\alpha}{6} J_{m+3}(\alpha)-J_{m+2}(\alpha)+\frac{1}{2 \alpha} J_{m+1}(\alpha)\right]+O\left[\left(\sin \frac{\vartheta}{2}\right)^{4}\right]\right\} \tag{8}
+\end{gather*}
+
+
+Here $\alpha=(2 l+1) \sin (\vartheta / 2), J_{\lambda}(\alpha)$ is the Bessel function.
+
+\subsection*{5.12.3. Asymptotic Expression for Fixed $m, l \rightarrow \infty, \vartheta \rightarrow 0$ and Finite $l \vartheta$}
+In this case
+
+
+\begin{equation*}
+Y_{l-m}(\vartheta, \varphi) \approx \sqrt{\frac{l}{2 \pi}} e^{-i m \varphi} J_{m}(l \vartheta) \tag{9}
+\end{equation*}
+
+
+\begin{figure}[h]
+\begin{center}
+  \includegraphics[alt={},max width=\textwidth]{402d9a1b-ee97-49cb-ae14-75458391be12-167_1859_1185_358_420}
+\captionsetup{labelformat=empty}
+\caption{Fig. 5.1. Spherical harmonics $Y_{i m}(\vartheta, 0)$ are shown as functions of the polar angle $\vartheta$. Symbols + and - indicate the sign of the function.}
+\end{center}
+\end{figure}
+
+\subsection*{5.13. $Y_{l m}(\vartheta, \varphi)$ FOR SPECIAL VALUES OF $l$ AND $m$}
+\subsection*{5.13.1. $Y_{l m}(\vartheta, \varphi)$ for $l \leq 5$}
+Below the explicit forms of the spherical harmonics for $l=0,1,2,3,4,5$ are presented in terms of trigonometric functions. These harmonics are plotted in Fig. 5.1.
+
+
+\begin{align*}
+& Y_{00}(\vartheta, \varphi)=\frac{1}{2 \sqrt{\pi}} \cdot  \tag{1}\\
+& Y_{1+1}(\vartheta, \varphi)=-\frac{1}{2} \sqrt{\frac{3}{2 \pi}} \sin \vartheta e^{i \varphi}, \\
+& Y_{10}(\vartheta, \varphi)=\frac{1}{2} \sqrt{\frac{3}{\pi}} \cos \vartheta,  \tag{2}\\
+& Y_{1-1}(\vartheta, \varphi)=\frac{1}{2} \sqrt{\frac{3}{2 \pi}} \sin \vartheta e^{-i \varphi} . \\
+& Y_{2+2}(\vartheta, \varphi)=\frac{1}{4} \sqrt{\frac{3 \cdot 5}{2 \pi}} \sin ^{2} \vartheta e^{i 2 \varphi}=\frac{1}{8} \sqrt{\frac{3 \cdot 5}{2 \pi}}(1-\cos 2 \vartheta) e^{i 2 \varphi}, \\
+& Y_{2+1}(\vartheta, \varphi)=-\frac{1}{2} \sqrt{\frac{3 \cdot 5}{2 \pi}} \cos \vartheta \sin \vartheta e^{i \varphi}=-\frac{1}{4} \sqrt{\frac{3 \cdot 5}{2 \pi}} \sin 2 \vartheta e^{i \varphi}, \\
+& Y_{20}(\vartheta, \varphi)=\frac{1}{4} \sqrt{\frac{5}{\pi}}\left(3 \cos { }^{2} \vartheta-1\right)=\frac{1}{8} \sqrt{\frac{5}{\pi}}(1+3 \cos 2 \vartheta),  \tag{3}\\
+& Y_{2-1}(\vartheta, \varphi)=\frac{1}{2} \sqrt{\frac{3 \cdot 5}{2 \pi}} \cos \vartheta \sin \vartheta e^{-i \varphi}=\frac{1}{4} \sqrt{\frac{3 \cdot 5}{2 \pi}} \sin 2 \vartheta e^{-i \varphi}, \\
+& Y_{2-2}(\vartheta, \varphi)=\frac{1}{4} \sqrt{\frac{3 \cdot 5}{2 \pi}} \sin ^{2} \vartheta e^{-i 2 \varphi}=\frac{1}{8} \sqrt{\frac{3 \cdot 5}{2 \pi}}(1-\cos 2 \vartheta) e^{-i 2 \varphi} . \\
+& Y_{3+3}(\vartheta, \varphi)=-\frac{1}{8} \sqrt{\frac{5 \cdot 7}{\pi}} \sin ^{3} \vartheta e^{i 3 \varphi}=-\frac{1}{32} \sqrt{\frac{5 \cdot 7}{\pi}}(3 \sin \vartheta-\sin 3 \vartheta) e^{i 3 \varphi}, \\
+& Y_{3+2}(\vartheta, \varphi)=\frac{1}{4} \sqrt{\frac{3 \cdot 5 \cdot 7}{2 \pi}} \cos \vartheta \sin ^{2} \vartheta e^{i 2 \varphi}=\frac{1}{16} \sqrt{\frac{3 \cdot 5 \cdot 7}{2 \pi}}(\cos \vartheta-\cos 3 \vartheta) e^{i 2 \varphi}, \\
+& Y_{3+1}(\vartheta, \varphi)=-\frac{1}{8} \sqrt{\frac{3 \cdot 7}{\pi}}\left(5 \cos ^{2} \vartheta-1\right) \sin \vartheta e^{i \varphi}=-\frac{1}{32} \sqrt{\frac{3 \cdot 7}{\pi}}(\sin \vartheta+5 \sin 3 \vartheta) e^{i \varphi}, \\
+& Y_{30}(\vartheta, \varphi)=\frac{1}{4} \sqrt{\frac{7}{\pi}}\left(5 \cos ^{2} \vartheta-3\right) \cos \vartheta=\frac{1}{16} \sqrt{\frac{7}{\pi}}(3 \cos \vartheta+5 \cos 3 \vartheta),  \tag{4}\\
+& Y_{3-1}(\vartheta, \varphi)=\frac{1}{8} \sqrt{\frac{3 \cdot 7}{\pi}}\left(5 \cos ^{2} \vartheta-1\right) \sin \vartheta e^{-i \varphi}=\frac{1}{32} \sqrt{\frac{3 \cdot 7}{\pi}}(\sin \vartheta+5 \sin 3 \vartheta) e^{-i \varphi}, \\
+& Y_{3-2}(\vartheta, \varphi)=\frac{1}{4} \sqrt{\frac{3 \cdot 5 \cdot 7}{2 \pi}} \cos \vartheta \sin ^{2} \vartheta e^{-i 2 \varphi}=\frac{1}{16} \sqrt{\frac{3 \cdot 5 \cdot 7}{2 \pi}}(\cos \vartheta-\cos 3 \vartheta) e^{-i 2 \varphi}, \\
+& Y_{3-3}(\vartheta, \varphi)=\frac{1}{8} \sqrt{\frac{5 \cdot 7}{\pi}} \sin ^{3} \vartheta e^{-i 3 \varphi}=\frac{1}{32} \sqrt{\frac{5 \cdot 7}{\pi}}(3 \sin \vartheta-\sin 3 \vartheta) e^{-i 3 \varphi} . \\
+& Y_{4+4}(\vartheta, \varphi)=\frac{3}{16} \sqrt{\frac{5 \cdot 7}{2 \pi}} \sin ^{4} \vartheta e^{i 4 \varphi}=\frac{3}{128} \sqrt{\frac{5 \cdot 7}{2 \pi}}(3-4 \cos 2 \vartheta+\cos 4 \vartheta) e^{i 4 \varphi}, \\
+& Y_{4+3}(\vartheta, \varphi)=-\frac{3}{8} \sqrt{\frac{5 \cdot 7}{\pi}} \sin ^{3} \vartheta \cos \vartheta e^{i 3 \varphi}=-\frac{3}{64} \sqrt{\frac{5 \cdot 7}{\pi}}(2 \sin 2 \vartheta-\sin 4 \vartheta) e^{i 3 \varphi}, \\
+& Y_{4+2}(\vartheta, \varphi)=\frac{3}{8} \sqrt{\frac{5}{2 \pi}} \sin ^{2} \vartheta\left(7 \cos ^{2} \vartheta-1\right) e^{i 2 \varphi}=\frac{3}{64} \sqrt{\frac{5}{2 \pi}}(3+4 \cos 2 \vartheta-7 \cos 4 \vartheta) e^{i 2 \varphi},
+\end{align*}
+
+
+
+\begin{align*}
+& Y_{4+1}(\vartheta, \varphi)=-\frac{3}{8} \sqrt{\frac{5}{\pi}} \sin \vartheta\left(7 \cos ^{3} \vartheta-3 \cos \vartheta\right) e^{i \varphi}=-\frac{3}{64} \sqrt{\frac{5}{\pi}}(2 \sin 2 \vartheta+7 \sin 4 \vartheta) e^{i \varphi}, \\
+& Y_{40}(\vartheta, \varphi)=\frac{3}{16 \sqrt{\pi}}\left(35 \cos ^{4} \vartheta-30 \cos ^{2} \vartheta+3\right)=\frac{3}{128 \sqrt{\pi}}(9+20 \cos 2 \vartheta+35 \cos 4 \vartheta),  \tag{5}\\
+& Y_{4-1}(\vartheta, \varphi)=\frac{3}{8} \sqrt{\frac{5}{\pi}} \sin \vartheta\left(7 \cos ^{3} \vartheta-3 \cos \vartheta\right) e^{-i \varphi}=\frac{3}{64} \sqrt{\frac{5}{\pi}}(2 \sin 2 \vartheta+7 \sin 4 \vartheta) e^{-i \varphi}, \\
+& Y_{4-2}(\vartheta, \varphi)=\frac{3}{8} \sqrt{\frac{5}{2 \pi}} \sin ^{2} \vartheta\left(7 \cos ^{2} \vartheta-1\right) e^{-i 2 \varphi}=\frac{3}{64} \sqrt{\frac{5}{2 \pi}}(3+4 \cos 2 \vartheta-7 \cos 4 \vartheta) e^{-i 2 \varphi}, \\
+& Y_{4-3}(\vartheta, \varphi)=\frac{3}{8} \sqrt{\frac{5 \cdot 7}{\pi}} \sin ^{3} \vartheta \cos \vartheta e^{-i 3 \varphi}=\frac{3}{64} \sqrt{\frac{5 \cdot 7}{\pi}}(2 \sin 2 \vartheta-\sin 4 \theta) e^{-i S \varphi}, \\
+& Y_{4-4}(\vartheta, \varphi)=\frac{3}{16} \sqrt{\frac{5 \cdot 7}{2 \pi}} \sin ^{4} \vartheta e^{-i 4 \varphi}=\frac{3}{128} \sqrt{\frac{5 \cdot 7}{2 \pi}}(3-4 \cos 2 \vartheta+\cos 4 \vartheta) e^{-i 4 \varphi} . \\
+& Y_{5+5}(\vartheta, \varphi)=-\frac{3}{32} \sqrt{\frac{7 \cdot 11}{\pi}} \sin ^{5} \vartheta e^{i 5 \varphi}=-\frac{3}{512} \sqrt{\frac{77}{\pi}}(10 \sin \vartheta-5 \sin 3 \theta+\sin 5 \vartheta) e^{i 5 \varphi}, \\
+& Y_{5+4}(\vartheta, \varphi)=\frac{3}{16} \sqrt{\frac{5 \cdot 7 \cdot 11}{2 \pi}} \sin ^{4} \vartheta \cos \vartheta e^{i 4 \varphi}=\frac{3}{256} \sqrt{\frac{385}{2 \pi}}(2 \cos \vartheta-3 \cos 3 \vartheta+\cos 5 \vartheta) e^{i 4 \varphi}, \\
+& Y_{5+9}(\vartheta, \varphi)=-\frac{1}{32} \sqrt{\frac{5 \cdot 7 \cdot 11}{\pi}} \sin ^{3} \vartheta\left(9 \cos ^{2} \vartheta-1\right) e^{i 3 \varphi}=-\frac{1}{512} \sqrt{\frac{385}{\pi}}(6 \sin \vartheta+13 \sin 3 \vartheta-9 \sin 5 \vartheta) e^{i 3 \varphi}, \\
+& Y_{5+2}(\vartheta, \varphi)=\frac{1}{8} \sqrt{\frac{3 \cdot 5 \cdot 7 \cdot 11}{2 \pi}} \sin ^{2} \vartheta\left(3 \cos ^{3} \vartheta-\cos \vartheta\right) e^{i 2 \varphi}=\frac{1}{128} \sqrt{\frac{1155}{2 \pi}}(2 \cos \vartheta+\cos 3 \vartheta-3 \cos 5 \vartheta) e^{i 2 \varphi}, \\
+& Y_{\delta+1}(\vartheta, \varphi)=-\frac{1}{16} \sqrt{\frac{3 \cdot 5 \cdot 11}{2 \pi}} \sin \phi\left(21 \cos ^{4} \vartheta-14 \cos ^{2} \vartheta+1\right) e^{i \varphi} \\
+& =-\frac{1}{256} \sqrt{\frac{165}{2 \pi}}(2 \sin \vartheta+7 \sin 3 \vartheta+21 \sin 5 \vartheta) e^{i \varphi}, \\
+& Y_{50}(\vartheta, \varphi)=\frac{1}{16} \sqrt{\frac{11}{\pi}}\left(63 \cos ^{5} \vartheta-70 \cos ^{3} \vartheta+15 \cos \vartheta\right)=\frac{1}{256} \sqrt{\frac{11}{\pi}}(30 \cos \vartheta+35 \cos 3 \vartheta+63 \cos 5 \vartheta),  \tag{6}\\
+& Y_{5-1}(\vartheta, \varphi)=\frac{1}{16} \sqrt{\frac{3 \cdot 5 \cdot 11}{2 \pi}} \sin \vartheta\left(21 \cos ^{4} \vartheta-14 \cos ^{2} \vartheta+1\right) e^{-i \varphi} \\
+& =\frac{1}{256} \sqrt{\frac{165}{2 \pi}}(2 \sin \vartheta+7 \sin 3 \vartheta+21 \sin 5 \vartheta) e^{-i \varphi}, \\
+& Y_{5-3}(\vartheta, \varphi)=\frac{1}{32} \sqrt{\frac{5 \cdot 7 \cdot 11}{\pi}} \sin ^{3} \vartheta\left(9 \cos ^{2} \vartheta-1\right) e^{-i 3 \varphi}=\frac{1}{512} \sqrt{\frac{385}{\pi}}(6 \sin \vartheta+13 \sin 3 \vartheta-9 \sin 5 \vartheta) e^{-i 3 \varphi}, \\
+& Y_{5-4}(\vartheta, \varphi)=\frac{3}{16} \sqrt{\frac{5 \cdot 7 \cdot 11}{2 \pi}} \sin ^{4} \vartheta \cos \vartheta e^{-i 4 \varphi}=\frac{3}{256} \sqrt{\frac{385}{2 \pi}}(2 \cos \vartheta-3 \cos 3 \vartheta+\cos 5 \vartheta) e^{-i 4 \varphi}, \\
+& Y_{5-5}(\vartheta, \varphi)=\frac{3}{32} \sqrt{\frac{7 \cdot 11}{\pi}} \sin ^{5} \vartheta e^{-i 5 \varphi}=\frac{3}{512} \sqrt{\frac{77}{\pi}}(10 \sin \vartheta-5 \sin 3 \vartheta+\sin 5 \vartheta) e^{-i 5 \varphi} .
+\end{align*}
+
+
+\subsection*{5.13.2. $Y_{l m}(\vartheta, \varphi)$ for $|m|=0,1,2,3,4$ and Any Integer $l$}
+In this case $Y_{\text {im }}(\vartheta, \varphi)$ may be expressed in terms of the Legendre polynomials,
+
+
+\begin{gather*}
+Y_{l 0}(\vartheta, \varphi)=\sqrt{\frac{2 l+1}{4 \pi}} P_{l}(\cos \vartheta),  \tag{7}\\
+Y_{l \pm 1}(\vartheta, \varphi)=\mp \frac{e^{ \pm i \varphi}}{\sin \vartheta} \sqrt{\frac{l(l+1)}{4 \pi(2 l+1)}}\left[P_{l-1}(\cos \vartheta)-P_{l+1}(\cos \vartheta)\right],  \tag{8}\\
+Y_{l \pm 2}(\vartheta, \varphi)=\frac{e^{ \pm i 2 \varphi}}{(\sin \vartheta)^{2}} \sqrt{\frac{(l-1) l(l+1)(l+2)}{4 \pi(2 l+1)}}\left[\frac{P_{l-2}(\cos \vartheta)}{2 l-1}\right. \\
+\left.-\frac{2(2 l+1)}{(2 l-1)(2 l+3)} P_{l}(\cos \vartheta)+\frac{1}{2 l+3} P_{l+2}(\cos \vartheta)\right],  \tag{9}\\
+Y_{l \pm 3}(\vartheta, \varphi)=\mp \frac{e^{ \pm i 3 \varphi}}{(\sin \vartheta)^{3}} \sqrt{\frac{1}{4 \pi(2 l+1)} \cdot \frac{(l+3)!}{(l-3)!}}\left[\frac{1}{(2 l-3)(2 l-1)} P_{l-3}(\cos \vartheta)-\frac{3}{(2 l-3)(2 l+3)} P_{l-1}(\cos \vartheta)\right. \\
+\left.+\frac{3}{(2 l-1)(2 l+5)} P_{l+1}(\cos \vartheta)-\frac{1}{(2 l+3)(2 l+5)} P_{l+3}(\cos \vartheta)\right],  \tag{10}\\
+Y_{l \pm 4}(\vartheta, \varphi)=\frac{e^{ \pm i 4 \varphi}}{(\sin \vartheta)^{4}} \sqrt{\frac{1}{4 \pi(2 l+1)} \cdot \frac{(l+4)!}{(l-4)!}}\left[\frac{1}{(2 l-5)(2 l-3)(2 l-1)} P_{l-4}(\cos \vartheta)\right. \\
+-\frac{4}{(2 l-5)(2 l-1)(2 l+3)} P_{l-2}(\cos \vartheta)+\frac{6(2 l+1)}{(2 l-3)(2 l-1)(2 l+3)(2 l+5)} P_{l}(\cos \vartheta) \\
+\left.-\frac{4}{(2 l-1)(2 l+3)(2 l+7)} P_{l+2}(\cos \vartheta)+\frac{1}{(2 l+3)(2 l+5)(2 l+7)} P_{l+4}(\cos \vartheta)\right] . \tag{11}
+\end{gather*}
+
+
+\subsection*{5.13.3. $Y_{i m}(\vartheta, \varphi)$ for $|m|=l, l-1, l-2, l-3, l-4, l-5$ and Any Integer $l$}
+In this case the spherical harmonics are conveniently expressed in terms of trigonometric functions.
+
+
+\begin{align*}
+Y_{l \pm l}(\vartheta, \varphi) & =(\mp 1)^{l} e^{ \pm i l \varphi} \sqrt{\frac{(2 l+1)!!}{4 \pi(2 l)!!}}(\sin \vartheta)^{l}  \tag{12}\\
+Y_{l \pm(l-1)}(\vartheta, \varphi) & =(\mp 1)^{l-1} e^{ \pm i(l-1) \varphi} \sqrt{\frac{(2 l+1)!!}{4 \pi(2 l-2)!!}} \cos \vartheta(\sin \vartheta)^{l-1}  \tag{13}\\
+Y_{l \pm(l-2)}(\vartheta, \varphi) & =(\mp 1)^{l-2} e^{ \pm i(l-2) \varphi} \sqrt{\frac{2 l+1}{8 \pi} \cdot \frac{(2 l-3)!!}{(2 l-2)!!}}(\sin \vartheta)^{l-2}\left[(2 l-1) \cos ^{2} \vartheta-1\right]  \tag{14}\\
+Y_{l \pm(l-3)}(\vartheta, \varphi) & =(\mp 1)^{l-3} e^{ \pm i(l-3) \varphi} \sqrt{\frac{2 l+1}{24 \pi} \cdot \frac{(2 l-3)!!}{(2 l-4)!!}}(\sin \vartheta)^{l-3} \cos \vartheta\left[(2 l-1) \cos ^{2} \vartheta-3\right] \tag{15}
+\end{align*}
+
+
+
+\begin{align*}
+& Y_{l \pm(l-4)}(\vartheta, \varphi)=(\mp 1)^{l-4} e^{ \pm i(l-4) \varphi} \sqrt{\frac{2 l+1}{96 \pi} \cdot \frac{(2 l-5)!!}{(2 l-4)!!}}(\sin \vartheta)^{l-4} \\
+& \times\left[(2 l-1)(2 l-3) \cos ^{4} \vartheta-6(2 l-3) \cos ^{2} \vartheta+3\right] \tag{16}
+\end{align*}
+
+
+
+\begin{align*}
+& Y_{l \pm(l-5)}(\vartheta, \varphi)=(\mp 1)^{l-5} e^{ \pm i(l-5) \varphi} \sqrt{\frac{2 l+1}{480 \pi} \cdot \frac{(2 l-5)!!}{(2 l-6)!!}}(\sin \vartheta)^{l-5} \cos \vartheta \\
+& \times\left[(2 l-1)(2 l-3) \cos ^{4} \vartheta-10(2 l-3) \cos ^{2} \vartheta+15\right] \tag{17}
+\end{align*}
+
+
+5.14. $Y_{l m}(\vartheta, \varphi)$ AND $\frac{\partial}{\partial \vartheta} Y_{l m}(\vartheta, \varphi)$ FOR SPECIAL $\vartheta$\\
+(a)
+
+
+\begin{gather*}
+Y_{l m}(0, \varphi)=\delta_{m 0} \sqrt{\frac{2 l+1}{4 \pi}},  \tag{1}\\
+Y_{l m}\left(\frac{\pi}{2}, \varphi\right)= \begin{cases}(-1)^{\frac{l+m}{2}} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \cdot \frac{(l+m-1)!!}{(l+m)!!} \cdot \frac{(l-m-1)!!}{(l-m)!!}} & \text { if } l+m \text { is even }, \\
+0 & \text { if } l+m \text { is odd },\end{cases}  \tag{2}\\
+Y_{l m}(\pi, \varphi)=\delta_{m 0}(-1)^{l} \sqrt{\frac{2 l+1}{4 \pi}},  \tag{3}\\
+Y_{l m}( \pm \pi n, \varphi)=\delta_{m 0}(-1)^{n l} \sqrt{\frac{2 l+1}{4 \pi}} . \tag{4}
+\end{gather*}
+
+
+(b)
+
+
+\begin{gather*}
+\left.\frac{\partial}{\partial \vartheta} Y_{l m}(\vartheta, \varphi)\right|_{\vartheta=0}=\left(\delta_{m-1} e^{-i \varphi}-\delta_{m 1} e^{i \varphi}\right) \sqrt{\frac{l(l+1)(2 l+1)}{16 \pi}}  \tag{5}\\
+\left.\frac{\partial}{\partial \vartheta} Y_{l m}(\vartheta, \varphi)\right|_{\vartheta=\frac{\pi}{2}}= \begin{cases}(-1)^{l+\frac{m+1}{2}} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \cdot \frac{(l+m)!!(l-m)!!}{(l+m-1)!!(l-m-1)!!}} & \text { if } l+m \text { is odd } \\
+0 & \text { if } l+m \text { is even }\end{cases}  \tag{6}\\
+\left.\frac{\partial}{\partial \vartheta} Y_{l m}(\vartheta, \varphi)\right|_{\vartheta=\pi}=(-1)^{l}\left(\delta_{m-1} e^{-i \varphi}-\delta_{m 1} e^{i \varphi}\right) \sqrt{\frac{l(l+1)(2 l+1)}{16 \pi}}  \tag{7}\\
+\left.\frac{\partial}{\partial \vartheta} Y_{l m}(\vartheta, \varphi)\right|_{\vartheta= \pm n \pi}=(-1)^{n l}\left(\delta_{m-1} e^{-i \varphi}-\delta_{m 1} e^{i \varphi}\right) \sqrt{\frac{l(l+1)(2 l+1)}{16 \pi}} \tag{8}
+\end{gather*}
+
+
+\subsection*{5.15. ZEROS OF $Y_{l m}(\vartheta, \varphi)$ AND $\frac{\partial}{\partial \vartheta} Y_{l m}(\vartheta, \varphi)$}
+In the interval $0 \leq \vartheta \leq \pi$ the spherical harmonics $Y_{l m}(\vartheta, \varphi)$ and their derivatives $\frac{\partial}{\partial \vartheta} Y_{l m}(\vartheta, \varphi)$ possess some zeros.
+
+The number of zeros, i.e., the number of roots of the equations
+
+
+\begin{equation*}
+Y_{l m}(\vartheta, \varphi)=0 \quad \text { and } \quad \frac{\partial}{\partial \vartheta} Y_{l m}(\vartheta, \varphi)=0 \tag{1}
+\end{equation*}
+
+
+is finite in interval $0<\vartheta<\pi$. All these roots are non-degenerate. Below we denote the zeros of $Y_{l m}(\vartheta, \varphi)$ and $\frac{\partial}{\partial \vartheta} Y_{l m}(\vartheta, \varphi)$ by $\vartheta_{\alpha}$ and $\vartheta_{\beta}$, respectively. Note that the functions in question have no roots with respect to $\varphi$ in the domain $0 \leq \varphi<2 \pi$.
+
+\subsection*{5.15.1. Zeros of $Y_{l m}(\vartheta, \varphi)$}
+If $m=0, Y_{l m}(\vartheta, \varphi)$ has $l$ zeros in the interval $0<\vartheta<\pi$. If $m \neq 0, Y_{l m}(\vartheta, \varphi)$ has $(l-|m|)$ zeros inside the same interval of $\vartheta$ and also two zeros at $\vartheta_{\alpha}=0$ and $\vartheta_{\alpha}=\pi$. All these zeros lie symmetrically with respect to\\
+$\vartheta=\pi / 2$. Hence, $Y_{l m}(\pi / 2, \varphi)=0$ provided $(l-m)$ is odd. If $m \neq 0$, the zeros of $Y_{l m}(\vartheta, \varphi)$ are determined by the equations
+
+\[
+\text { if } \begin{align*}
+m & = \pm l, \quad \cos ^{2} \vartheta_{\alpha}=1 ; \\
+m & = \pm(l-1) \quad \cos ^{2} \vartheta_{\alpha}=1,0 ; \\
+m & = \pm(l-2) \quad \cos ^{2} \vartheta_{\alpha}=1, \frac{1}{2 l-1} ; \\
+m & = \pm(l-3) \quad \cos ^{2} \vartheta_{\alpha}=1, \frac{3}{(2 l-1)}, 0 ; \\
+m & = \pm(l-4) \quad \cos ^{2} \vartheta_{\alpha}=1, \frac{3 \pm 2 \sqrt{3(l-2) /(2 l-3)}}{2 l-1} ; \\
+m & = \pm(l-5) \quad \cos ^{2} \vartheta_{\alpha}=1, \frac{5 \pm 2 \sqrt{5(l-3) /(2 l-3)}}{(2 l-1)}, 0 . \tag{2}
+\end{align*}
+\]
+
+Numerical values of $\vartheta_{\alpha}$ for $0 \leq l \leq 5$ are given in Table 5.1. If $l \gg 1$, approximate values of $\vartheta_{\alpha}$ may be found from the relation
+
+
+\begin{equation*}
+\vartheta_{\alpha} \approx \frac{\pi}{2}\left(\frac{4 k+3-2 m}{2 l+1}\right), \tag{3}
+\end{equation*}
+
+
+where $k$ is integer and $\frac{2|m|-3}{4} \leq k \leq \frac{4 l+2|m|-1}{4}$.
+
+\begin{table}[h]
+\begin{center}
+\captionsetup{labelformat=empty}
+\caption{Table 5.1.\\
+Zeros of $Y_{l m}(\vartheta, \varphi)$ and $\frac{\partial}{\partial \vartheta} Y_{l m}(\vartheta, \varphi)$.}
+\begin{tabular}{|l|l|l|l|l|l|}
+\hline
+$l m$ & $\vartheta_{\alpha}$ (degree) & $\vartheta_{\beta}$ (degree) & $l m$ & $\vartheta_{\alpha}$ (degree) & $\vartheta_{\beta}$ (degree) \\
+\hline
+10 & 90 & 0; 180 & 40 & 30.6; 70.1; 109.9; 149.4; & 0; 49.1; 90; 130.9; 180 \\
+\hline
+$1 \pm 1$ & 0; 180 & 90 & $4 \pm 1$ & 0; 49.1; 90; 130.9; 180 & 23.9; 69; 111; 156.1 \\
+\hline
+20 & 54.7; 125.3 & 0; 90; 180 & $4 \pm 2$ & 0; 67.8; 112.2; 180 & 0; 50.9; 90; 129.1; 180 \\
+\hline
+$2 \pm 1$ & 0; 90; 180 & 45; 135 & $4 \pm 3$ & 0; 90; 180 & 0; 60; 120; 180 \\
+\hline
+$2 \pm 2$ & 0; 180 & 0; 90; 180 & $4 \pm 4$ & 0; 180 & 0; 90; 180 \\
+\hline
+30 & 39.2; 90; 140.8 & 0; 63.4; 116.6; 180 & 50 & 25; 57.4; 90; 112.6; 155 & 0; 49.9; 73.4; 106.6; \\
+\hline
+$3 \pm 1$ & 0; 63.4; 116.6; 180 & 31.1; 90; 148.9 & $5 \pm 1$ & 0; 49.9; 73.4; 106.6; 130.1; & 19.6; 56.1; 90; 123.9; \\
+\hline
+$3 \pm 2$ & 0; 90; 180 & 0; 54.7; 125.3; 180 &  & 180 & 160.4 \\
+\hline
+$3 \pm 3$ & 0; 180 & 0; 90; 180 & $5 \pm 2$ & 0; 54.7; 90; 125.3; 180 & 0; 32.9; 72.1; 107.9; \\
+\hline
+ &  &  & $5 \pm 3$ & 0; 70.5; 109.5; 180 & 0; 46.9; 90; 133.1; 180 \\
+\hline
+ &  &  & $5 \pm 4$ & 0; 90; 180 & 0; 63.4; 116.6; 180 \\
+\hline
+ &  &  & $5 \pm 5$ & 0; 180 & , 90; 180 \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\subsection*{5.15.2 Zeros of $\frac{\partial}{\partial \vartheta} Y_{l m}(\vartheta, \varphi)$}
+If $m=0, \frac{\partial}{\partial \vartheta} Y_{l m}(\vartheta, \varphi)$ has $l-1$ zeros in the interval $0<\vartheta<\pi$ and also two zeros at $\vartheta_{\beta}=0$ and $\vartheta_{\beta}=\pi$. If $m \neq 0, \frac{\partial}{\partial \theta} Y_{l m}(\vartheta, \varphi)$ has $(l-|m|+1)$ zeros in the same interval and two additional ones at $\vartheta_{\beta}=0$ and $\vartheta_{\beta}=\pi$ provided $m \geq 2$. All zeros of $\frac{\partial}{\partial \vartheta} Y_{l m}(\vartheta, \varphi)$ lie symmetrically with respect to $\vartheta=\pi / 2$. Hence $\frac{\partial}{\partial \vartheta} Y_{l m}(\vartheta, \varphi)=0$\\
+for $\vartheta=\pi / 2$ provided $(l-m+1)$ is odd. When $m \neq 0$ the values of $\vartheta_{\beta}$ are determined by the equations
+
+\[
+\text { if } \begin{align*}
+m & = \pm l \\
+m & = \pm(l-1) \quad \cos ^{2} \vartheta_{\beta}=0 ; 1(l \geq 2) ; \\
+m & = \pm(l-2) \quad \cos ^{2} \vartheta_{\beta}=\frac{1}{l} ; 1(l \geq 3) ; \\
+m & = \pm(l-3) \quad \cos ^{2} \vartheta_{\beta}=\frac{5 l-4}{l(2 l-1)} ; 0 ; 1(l \geq 4) ; \\
+m & = \pm(l-4) \quad \cos ^{2} \vartheta_{\beta}=\frac{7 l-8 \pm 2 \sqrt{\left(11 l^{3}-62 l^{2}+104 l-48\right) /(2 l-3)}}{2 l(2 l-1)} ; 0 ; 1(l \geq 6) \tag{4}
+\end{align*}
+\]
+
+Numerical values for $\vartheta_{\beta}$ are given in Table 5.1.\\
+It is evident that $Y_{\text {lm }}(\vartheta, \varphi)$ has an extremum at $\vartheta=\vartheta_{\beta}$. Zeros of $Y_{\text {lm }}(\vartheta, \varphi)$ and $\frac{\partial}{\partial \vartheta} Y_{\text {lm }}(\vartheta, \varphi)$ alternate in the domain $0 \leq \vartheta \leq \pi$.
+
+All harmonics $Y_{\text {Im }}(\vartheta, 0)$ and $Y_{l+s, m+s}(\vartheta, 0)$ with $m>0$, and $m+s>0$ have the same number of maxima, minima and zeros, i.e., can be represented by topologically equivalent plots (Fig. 5.1). With increasing $l+s$ the positions of all maxima, minima and zeros of $Y_{l+s, m+s}(\vartheta, 0)$ shift to $\vartheta=\pi / 2$.
+
+\subsection*{5.16. BIPOLAR AND TRIPOLAR SPHERICAL HARMONICS}
+In many applications one has to deal with functions which depend on two or three vector directions. Convenient bases for expansions of such functions are provided by the bipolar and tripolar harmonics.
+
+\subsection*{5.16.1. Bipolar Spherical Harmonics}
+Bipolar spherical harmonics are given by irreducible tensor product of the spherical harmonics with different arguments
+
+
+\begin{equation*}
+\left\{\mathbf{Y}_{l_{1}}\left(\vartheta_{1}, \varphi_{1}\right) \otimes \mathbf{Y}_{l_{2}}\left(\vartheta_{2}, \varphi_{2}\right)\right\}_{L M}=\sum_{m_{1} m_{2}} C_{l_{1} m_{1} l_{2} m_{2}}^{L M} Y_{l_{1} m_{1}}\left(\vartheta_{1}, \varphi_{1}\right) Y_{l_{2} m_{2}}\left(\vartheta_{2}, \varphi_{2}\right) \tag{1}
+\end{equation*}
+
+
+The variety of bipolar spherical harmonics with different $l_{1}, l_{2}, L$ and $M$ forms a complete orthonormal set of functions which depend on two unit vectors, $\mathbf{n}_{1}$ and $\mathbf{n}_{2}$. These functions possess simple transformation properties under rotations and inversion of coordinate system.
+
+The orthogonality and normalization relation for these harmonics is given by
+
+
+\begin{equation*}
+\iint d \Omega_{1} d \Omega_{2}\left\{\mathbf{Y}_{l_{1}}\left(\Omega_{1}\right) \otimes \mathbf{Y}_{l_{2}}\left(\Omega_{2}\right)\right\}_{L M}\left\{\mathbf{Y}_{l_{1}^{\prime}}\left(\Omega_{1}\right) \otimes \mathbf{Y}_{l_{2}^{\prime}}\left(\Omega_{2}\right)\right\}_{L^{\prime} M^{\prime}}=\delta_{l_{1} l_{1}^{\prime}} \delta_{l_{2} l_{2}^{\prime}} \delta_{L L^{\prime}} \delta_{M M^{\prime}} \tag{2}
+\end{equation*}
+
+
+where
+
+$$
+\Omega \equiv\{\vartheta, \varphi\}, \quad \int d \Omega \equiv \int_{0}^{2 \pi} d \varphi \int_{0}^{\pi} d \vartheta \sin \vartheta
+$$
+
+The completeness condition has the form
+
+
+\begin{equation*}
+\sum_{l_{1} l_{2} L M}\left\{\mathbf{Y}_{l_{1}}\left(\Omega_{1}\right) \otimes \mathbf{Y}_{l_{2}}\left(\Omega_{2}\right)\right\}_{L M}\left\{\mathbf{Y}_{l_{1}}\left(\Omega_{1}^{\prime}\right) \otimes \mathbf{Y}_{l_{2}}\left(\Omega_{2}^{\prime}\right)\right\}_{L M}^{*}=\delta\left(\Omega_{1}-\Omega_{1}^{\prime}\right) \delta\left(\Omega_{2}-\Omega_{2}^{\prime}\right) \tag{3}
+\end{equation*}
+
+
+where
+
+$$
+\delta\left(\Omega-\Omega^{\prime}\right) \equiv \delta\left(\cos \vartheta-\cos \vartheta^{\prime}\right) \delta\left(\varphi-\varphi^{\prime}\right) .
+$$
+
+In addition, let us note the following equation
+
+
+\begin{equation*}
+\sum_{L M}\left|\left\{\mathbf{Y}_{l_{1}}\left(\Omega_{1}\right) \otimes \mathbf{Y}_{l_{2}}\left(\Omega_{2}\right)\right\}_{L M}\right|^{2}=\frac{\left(2 l_{1}+1\right)\left(2 l_{2}+1\right)}{(4 \pi)^{2}} \tag{4}
+\end{equation*}
+
+
+Under a rotation of the coordinate system the bipolar harmonics transform according to
+
+
+\begin{equation*}
+\hat{D}(\alpha, \beta, \gamma)\left\{\mathbf{Y}_{l_{1}}\left(\Omega_{1}\right) \otimes \mathbf{Y}_{l_{2}}\left(\Omega_{2}\right)\right\}_{L M^{\prime}}=\left\{\mathbf{Y}_{l_{1}}\left(\Omega_{1}^{\prime}\right) \otimes \mathbf{Y}_{l_{2}}\left(\Omega_{2}^{\prime}\right)\right\}_{L M^{\prime}}=\sum_{M} D_{M M^{\prime}}^{L}(\alpha, \beta, \gamma)\left\{\mathbf{Y}_{l_{1}}\left(\Omega_{1}\right) \otimes \mathbf{Y}_{l_{2}}\left(\Omega_{2}\right)\right\}_{L M} \tag{5}
+\end{equation*}
+
+
+where the angles $\Omega_{i}^{\prime} \equiv\left\{\vartheta_{i}^{\prime}, \varphi_{i}^{\prime}\right\}$ and $\Omega_{i} \equiv\left\{\vartheta_{i}, \varphi_{i}\right\}$ are related by Eqs. 1.4.(2), 1.4.(3).\\
+Under inversion of coordinate system the phases of the bipolar harmonics change according to
+
+
+\begin{equation*}
+\widehat{P}_{r}\left\{\mathbf{Y}_{l_{1}}\left(\Omega_{1}\right) \otimes \mathbf{Y}_{l_{2}}\left(\Omega_{2}\right)\right\}_{L M}=(-1)^{l_{1}+l_{2}}\left\{\mathbf{Y}_{l_{1}}\left(\Omega_{1}\right) \otimes \mathbf{Y}_{l_{2}}\left(\Omega_{2}\right)\right\}_{L M} \tag{6}
+\end{equation*}
+
+
+The Clebsch-Gordan series for product of the bipolar harmonics may be presented in the form
+
+
+\begin{gather*}
+\left\{\mathbf{Y}_{l_{1}^{\prime}}\left(\Omega_{1}\right) \otimes \mathbf{Y}_{l_{2}^{\prime}}\left(\Omega_{2}\right)\right\}_{L^{\prime} M^{\prime}}\left\{\mathbf{Y}_{l_{1}^{\prime \prime}}\left(\Omega_{1}\right) \otimes \mathbf{Y}_{l_{2}^{\prime \prime}}\left(\Omega_{2}\right)\right\}_{L^{\prime \prime} M^{\prime \prime}} \\
+=\sum_{L M} C_{L^{\prime} M^{\prime} L^{\prime \prime} M^{\prime \prime}}^{L M} \sum_{l_{1} l_{2}} B_{l_{1}^{\prime} l_{2}^{\prime} L^{\prime} l_{1}^{\prime \prime} L^{\prime \prime}}^{l_{1} l_{2} L}\left\{\mathbf{Y}_{l_{1}}\left(\Omega_{1}\right) \otimes \mathbf{Y}_{l_{2}}\left(\Omega_{2}\right)\right\}_{L M}, \tag{7}
+\end{gather*}
+
+
+where
+
+\[
+B_{l_{1}^{\prime} l_{2}^{\prime} L_{1}^{\prime \prime} l_{2}^{\prime \prime} L^{\prime \prime}}^{l_{1} l_{2} L}=\sqrt{\frac{\left(2 l_{1}^{\prime}+1\right)\left(2 l_{2}^{\prime}+1\right)\left(2 l_{1}^{\prime \prime}+1\right)\left(2 l_{2}^{\prime \prime}+1\right)\left(2 L^{\prime}+1\right)\left(2 L^{\prime \prime}+1\right)}{(4 \pi)^{2}}} C_{l_{1}^{\prime} 0 l_{1}^{\prime \prime} 0}^{l_{1} 0} C_{l_{2}^{\prime} 0 l_{2}^{\prime \prime} 0}^{l_{2} 0}\left\{\begin{array}{lll}
+l_{1}^{\prime} & l_{1}^{\prime \prime} & l_{1}  \tag{8}\\
+l_{2}^{\prime} & l_{2}^{\prime \prime} & l_{2} \\
+L^{\prime} & L^{\prime \prime} & L
+\end{array}\right\} .
+\]
+
+For the important special case $L=0$ a bipolar harmonic is reduced to a scalar product of the spherical harmonics
+
+
+\begin{equation*}
+\left\{\mathbf{Y}_{l_{1}}\left(\Omega_{1}\right) \otimes \mathbf{Y}_{l_{2}}\left(\Omega_{2}\right)\right\}_{00}=\frac{(-1)^{l_{1}}}{\sqrt{2 l_{1}+1}}\left(\mathbf{Y}_{l_{1}}\left(\Omega_{1}\right) \cdot \mathbf{Y}_{l_{1}}\left(\Omega_{2}\right)\right) \delta_{l_{1} l_{2}} \tag{9}
+\end{equation*}
+
+
+In accordance with Eq. 3.1(30) this scalar product is given by
+
+
+\begin{equation*}
+\left(\mathbf{Y}_{l}\left(\Omega_{1}\right) \cdot \mathbf{Y}_{l}\left(\Omega_{2}\right)\right)=\sum_{m=-l}^{l} Y_{l m}^{*}\left(\Omega_{1}\right) Y_{l m}\left(\Omega_{2}\right) \tag{10}
+\end{equation*}
+
+
+\subsection*{5.16.2 Tripolar Spherical Harmonics}
+A tripolar spherical harmonic is defined as an irreducible tensor product of three spherical harmonics with different arguments,
+
+\[
+=\sum_{\substack{m_{1} m_{2} m_{3} \\
+m_{23}}} \begin{gather*}
+\left\{\mathbf{Y}_{l_{1}}\left(\vartheta_{1}, \varphi_{1}\right) \otimes\left\{\mathbf{Y}_{l_{2}}\left(\vartheta_{2}, \varphi_{2}\right) \otimes \mathbf{Y}_{l_{3}}\left(\vartheta_{3}, \varphi_{3}\right)\right\}_{l_{23}}\right\}_{L M}  \tag{11}\\
+=C_{l_{2} m_{2} m_{2} m_{3} m_{3}}^{l_{23}} Y_{l_{1} m_{1}}\left(\vartheta_{1}, \varphi_{1}\right) Y_{l_{2} m_{2}}\left(\vartheta_{2}, \varphi_{2}\right) Y_{l_{3} m_{3}}\left(\vartheta_{3}, \varphi_{3}\right)
+\end{gather*}
+\]
+
+In contrast to bipolar harmonics, the tripolar harmonics allow different coupling schemes of angular momenta, namely, $l_{1}+\left(l_{2}+l_{3}\right)_{l_{23}}=\mathbf{L},\left(l_{1}+l_{2}\right)_{l_{12}}+l_{3}=\mathbf{L}$ or $\left(l_{1}+l_{3}\right)_{l_{13}}+l_{2}=\mathbf{L}$. The relations between different coupling schemes are considered in Sec. 3.3.
+
+The tripolar spherical harmonics form a complete orthonormal set of functions which depend on three unit vectors $n_{1}, n_{2}$ and $n_{3}$.
+
+The orthogonality and normalization relations is as follows
+
+
+\begin{gather*}
+\iiint d \Omega_{1} d \Omega_{2} d \Omega_{3}\left\{\mathbf{Y}_{l_{1}}\left(\Omega_{1}\right) \otimes\left\{\mathbf{Y}_{l_{2}}\left(\Omega_{2}\right) \otimes \mathbf{Y}_{l_{3}}\left(\Omega_{3}\right)\right\}_{\lambda}\right\}_{L M}\left\{\mathbf{Y}_{l_{1}^{\prime}}\left(\Omega_{1}\right) \otimes\left\{\mathbf{Y}_{l_{2}^{\prime}}\left(\Omega_{2}\right) \otimes \mathbf{Y}_{l_{3}^{\prime}}\left(\Omega_{3}\right)\right\}_{\lambda^{\prime}}\right\}_{L^{\prime} M^{\prime}}^{*} \\
+=\delta_{l_{1} l_{1}^{\prime}} \delta_{l_{2} l_{2}^{\prime}} \delta_{l_{3} l_{3}^{\prime}} \delta_{\lambda \lambda^{\prime}} \delta_{L L^{\prime}} \delta_{M M^{\prime}} \tag{12}
+\end{gather*}
+
+
+The completeness relation may be presented in the form
+
+
+\begin{gather*}
+\sum_{\substack{l_{1} l_{2} l_{3} \\
+\lambda L M}}\left\{\mathbf{Y}_{l_{1}}\left(\Omega_{1}\right) \otimes\left\{\mathbf{Y}_{l_{2}}\left(\Omega_{2}\right) \otimes \mathbf{Y}_{l_{3}}\left(\Omega_{3}\right)\right\}_{\lambda}\right\}_{L M}\left\{\mathbf{Y}_{l_{1}}\left(\Omega_{1}^{\prime}\right) \otimes\left\{\mathbf{Y}_{l_{2}}\left(\Omega_{2}^{\prime}\right) \otimes \mathbf{Y}_{l_{3}}\left(\Omega_{3}^{\prime}\right)\right\}_{\lambda}\right\}_{L M}^{*} \\
+=\delta\left(\Omega_{1}-\Omega_{1}^{\prime}\right) \delta\left(\Omega_{2}-\Omega_{2}^{\prime}\right) \delta\left(\Omega_{3}-\Omega_{3}^{\prime}\right) \tag{13}
+\end{gather*}
+
+
+In addition we also have the following equation
+
+
+\begin{equation*}
+\sum_{\lambda L M}\left|\left\{\mathbf{Y}_{l_{1}}\left(\Omega_{1}\right) \otimes\left\{\mathbf{Y}_{l_{2}}\left(\Omega_{2}\right) \otimes \mathbf{Y}_{l_{3}}\left(\Omega_{3}\right)\right\}_{\lambda}\right\}_{L M}\right|^{2}=\frac{\left(2 l_{1}+1\right)\left(2 l_{2}+1\right)\left(2 l_{3}+1\right)}{(4 \pi)^{3}} \tag{14}
+\end{equation*}
+
+
+Under a rotation of the coordinate system the tripolar harmonics transform according to
+
+
+\begin{gather*}
+\hat{D}(\alpha, \beta, \gamma)\left\{\mathbf{Y}_{l_{1}}\left(\Omega_{1}\right) \otimes\left\{\mathbf{Y}_{l_{2}}\left(\Omega_{2}\right) \otimes \mathbf{Y}_{l_{3}}\left(\Omega_{3}\right)\right\}_{\lambda}\right\}_{L M^{\prime}}=\left\{\mathbf{Y}_{l_{1}}\left(\Omega_{1}^{\prime}\right) \otimes\left\{\mathbf{Y}_{l_{2}}\left(\Omega_{2}^{\prime}\right) \otimes \mathbf{Y}_{l_{3}}\left(\Omega_{3}^{\prime}\right)\right\}_{\lambda}\right\}_{L M^{\prime}} \\
+=\sum_{M} D_{M M^{\prime}}^{L}(\alpha, \beta, \gamma)\left\{\mathbf{Y}_{l_{1}}\left(\Omega_{1}\right) \otimes\left\{\mathbf{Y}_{l_{2}}\left(\Omega_{2}\right) \otimes \mathbf{Y}_{l_{3}}\left(\Omega_{3}\right)\right\}_{\lambda}\right\}_{L M} \tag{15}
+\end{gather*}
+
+
+where the angles $\Omega_{i}^{\prime} \equiv\left\{\vartheta_{i}^{\prime}, \varphi_{i}^{\prime}\right\}$ and $\Omega_{i} \equiv\left\{\vartheta_{i}, \varphi_{i}\right\}$ are related through Eqs. 1.4.(2), 1.4.(3).\\
+Under inversion of the coordinate system the tripolar harmonics acquire the phase factor
+
+
+\begin{equation*}
+\widehat{P}_{r}\left\{\mathbf{Y}_{l_{1}}\left(\Omega_{1}\right) \otimes\left\{\mathbf{Y}_{l_{2}}\left(\Omega_{2}\right) \otimes \mathbf{Y}_{l_{3}}\left(\Omega_{3}\right)\right\}_{\lambda}\right\}_{L M}=(-1)^{l_{1}+l_{2}+l_{3}}\left\{\mathbf{Y}_{l_{1}}\left(\Omega_{1}\right) \otimes\left\{\mathbf{Y}_{l_{2}}\left(\Omega_{2}\right) \otimes \mathbf{Y}_{l_{3}}\left(\Omega_{3}\right)\right\}_{\lambda}\right\}_{L M} \tag{16}
+\end{equation*}
+
+
+The Clebsch-Gordan series for the tripolar harmonics is given by
+
+
+\begin{align*}
+& \left\{\mathbf{Y}_{l_{1}^{\prime}}\left(\Omega_{1}\right) \otimes\left\{\mathbf{Y}_{l_{2}^{\prime}}\left(\Omega_{2}\right) \otimes \mathbf{Y}_{l_{3}^{\prime}}\left(\Omega_{3}\right)\right\}_{\lambda^{\prime}}\right\}_{L^{\prime} M^{\prime}}\left\{\mathbf{Y}_{l_{1}^{\prime \prime}}\left(\Omega_{1}\right) \otimes\left\{\mathbf{Y}_{l_{2}^{\prime \prime}}\left(\Omega_{2}\right) \otimes \mathbf{Y}_{l_{3}^{\prime \prime}}\left(\Omega_{3}\right)\right\}_{\lambda^{\prime \prime}}\right\}_{L^{\prime \prime} M^{\prime \prime}} \\
+& =\sum_{L M} C_{L^{\prime} M^{\prime} L^{\prime \prime} M^{\prime \prime}}^{L M} \sum_{l_{1} l_{2} l_{3} \lambda} B_{l_{1}^{\prime} l_{2}^{\prime} l_{3}^{\prime} \lambda^{\prime} L^{\prime} l_{1}^{\prime \prime} l_{2}^{\prime \prime} l_{3}^{\prime \prime} L^{\prime \prime}}^{l_{1} l_{3} \lambda L}\left\{\mathbf{Y}_{l_{1}}\left(\Omega_{1}\right) \otimes\left\{\mathbf{Y}_{l_{2}}\left(\Omega_{2}\right) \otimes \mathbf{Y}_{l_{3}}\left(\Omega_{3}\right)\right\}_{\lambda}\right\}_{L M} \tag{17}
+\end{align*}
+
+
+where
+
+
+\begin{gather*}
+B_{l_{1}^{\prime} l_{2}^{\prime} l^{\prime} \lambda^{\prime} L_{1}^{\prime \prime} l_{2}^{\prime \prime} l_{3}^{\prime \prime} \lambda^{\prime \prime} L^{\prime \prime}}^{l_{1} l_{2} l_{3} \lambda L}=\sqrt{\frac{\left(2 l_{1}^{\prime}+1\right)\left(2 l_{1}^{\prime \prime}+1\right)\left(2 l_{2}^{\prime}+1\right)\left(2 l_{2}^{\prime \prime}+1\right)\left(2 l_{3}^{\prime \prime}+1\right)\left(2 l_{3}^{\prime}+1\right)\left(2 L^{\prime}+1\right)\left(2 L^{\prime \prime}+1\right)}{(4 \pi)^{3}}} \\
+\times \sqrt{\left(2 \lambda^{\prime}+1\right)\left(2 \lambda^{\prime \prime}+1\right)(2 \lambda+1)} C_{l_{1}^{\prime} 0 l_{1}^{\prime \prime} 0}^{l_{1} 0} C_{l_{2}^{\prime} 0 l_{2}^{\prime \prime} 0}^{l_{2} 0} C_{l_{3}^{\prime} 0 l_{3}^{\prime \prime} 0}^{l_{3} 0}\left\{\begin{array}{ccc}
+l_{1}^{\prime} & l_{1}^{\prime \prime} & l_{1} \\
+\lambda^{\prime} & \lambda^{\prime \prime} & \lambda \\
+L^{\prime} & L^{\prime \prime} & L
+\end{array}\right\}\left\{\begin{array}{ccc}
+l_{2}^{\prime} & l_{2}^{\prime \prime} & l_{2} \\
+l_{3}^{\prime} & l_{3}^{\prime \prime} & l_{3} \\
+\lambda^{\prime} & \lambda^{\prime \prime} & \lambda
+\end{array}\right\} \tag{18}
+\end{gather*}
+
+
+Putting $L=0$ in Eq. (11), we get an important special case for the tripolar scalar harmonic:
+
+
+\begin{gather*}
+\left\{\mathrm{Y}_{l_{1}}\left(\Omega_{1}\right) \otimes\left\{\mathrm{Y}_{l_{2}}\left(\Omega_{2}\right) \otimes \mathrm{Y}_{l_{3}}\left(\Omega_{3}\right)\right\}_{\lambda}\right\}_{00} \\
+=(-1)^{l_{1}+l_{2}+l_{3}} \delta_{\lambda l_{1}} \sum_{m_{1} m_{2} m_{3}}\left(\begin{array}{ccc}
+l_{1} & l_{2} & l_{3} \\
+m_{1} & m_{2} & m_{3}
+\end{array}\right) Y_{l_{1} m_{1}}\left(\Omega_{1}\right) Y_{l_{2} m_{2}}\left(\Omega_{2}\right) Y_{l_{3} m_{3}}\left(\Omega_{3}\right) \tag{19}
+\end{gather*}
+
+
+\subsection*{5.17. EXPANSIONS OF FUNCTIONS WHICH DEPEND ON TWO VECTORS}
+\subsection*{5.17.1. Preliminary Remarks}
+Any function $f\left(\mathbf{r}_{1}, \mathbf{r}_{2}\right)$ which depends on two arbitrary vectors $\mathbf{r}_{1}\left(r_{1}, \vartheta_{1}, \varphi_{1}\right)$ and $\mathbf{r}_{2}\left(r_{2}, \vartheta_{2}, \varphi_{2}\right)$ may be expanded into a series of the bipolar harmonics (Sec. 5.16):
+
+
+\begin{equation*}
+f\left(\mathbf{r}_{1}, \mathbf{r}_{2}\right)=\sum_{l_{1} l_{2} L M} C_{l_{1} l_{2}}^{L M}\left(r_{1}, r_{2}\right)\left\{\mathbf{Y}_{l_{1}}\left(\Omega_{1}\right) \otimes \mathbf{Y}_{l_{2}}\left(\Omega_{2}\right)\right\}_{L M} \tag{1}
+\end{equation*}
+
+
+The function $f\left(\mathbf{r}_{1}, \mathbf{r}_{2}\right)$ may be presented in terms of $\mathbf{r}_{1}$ and $\mathbf{r}_{2}$ as well as in terms of $\mathbf{R}$ and $\mathbf{r}$, where
+
+
+\begin{equation*}
+\mathbf{R}=\mathbf{r}_{1}+\mathbf{r}_{2}, \mathbf{r}=\mathbf{r}_{1}-\mathbf{r}_{2}, \mathbf{r}_{1}=\frac{1}{2}(\mathbf{R}+\mathbf{r}), \mathbf{r}_{2}=\frac{1}{2}(\mathbf{R}-\mathbf{r}) \tag{2}
+\end{equation*}
+
+
+Polar coordinates of the vectors $\mathbf{R}(R, \Theta, \Phi)$ and $\mathbf{r}(r, \vartheta, \varphi)$ are related to polar coordinates of the vectors $\mathbf{r}_{1}\left(r_{1}, \vartheta_{1}, \varphi_{1}\right)$ and $\mathbf{r}_{2}\left(r_{2}, \vartheta_{2}, \varphi_{2}\right)$ by
+
+
+\begin{align*}
+R^{2} & =r_{1}^{2}+r_{2}^{2}+2 r_{1} r_{2} \cos \omega_{12}, \\
+\cos \Theta & =\frac{r_{1} \cos \vartheta_{1}+r_{2} \cos \vartheta_{2}}{\sqrt{r_{1}^{2}+r_{2}^{2}+2 r_{1} r_{2} \cos \omega_{12}}}, \\
+\tan \Phi & =\frac{r_{1} \sin \vartheta_{1} \sin \varphi_{1}+r_{2} \sin \vartheta_{2} \sin \varphi_{2}}{r_{1} \sin \vartheta_{1} \cos \varphi_{1}+r_{2} \sin \vartheta_{2} \cos \varphi_{2}}, \\
+r^{2} & =r_{1}^{2}+r_{2}^{2}-2 r_{1} r_{2} \cos \omega_{12},  \tag{3}\\
+\cos \vartheta & =\frac{r_{1} \cos \vartheta_{1}-r_{2} \cos \vartheta_{2}}{\sqrt{r_{1}^{2}+r_{2}^{2}-2 r_{1} r_{2} \cos \omega_{12}}}, \\
+\tan \varphi & =\frac{r_{1} \sin \vartheta_{1} \sin \varphi_{1}-r_{2} \sin \vartheta_{2} \sin \varphi_{2}}{r_{1} \sin \vartheta_{1} \cos \varphi_{1}-r_{2} \sin \vartheta_{2} \cos \varphi_{2}} .
+\end{align*}
+
+
+Here $\omega_{12}$ is the angle between $\mathbf{r}_{1}$ and $\mathbf{r}_{2}$ (Fig. 5.2),
+
+
+\begin{equation*}
+\cos \omega_{12}=\cos \vartheta_{1} \cos \vartheta_{2}+\sin \vartheta_{1} \sin \vartheta_{2} \cos \left(\varphi_{1}-\varphi_{2}\right) . \tag{4}
+\end{equation*}
+
+
+The inverse relations to (3) can be written in the form
+
+
+\begin{align*}
+4 r_{1}^{2} & =R^{2}+r^{2}+2 R r \cos \omega, & 4 r_{2}^{2} & =R^{2}+r^{2}-2 R r \cos \omega, \\
+\cos \vartheta_{1} & =\frac{R \cos \Theta+r \cos \vartheta}{\sqrt{R^{2}+r^{2}+2 R r \cos \omega}}, & \cos \vartheta_{2} & =\frac{R \cos \Theta-r \cos \vartheta}{\sqrt{R^{2}+r^{2}-2 R r \cos \omega}}, \\
+\tan \varphi_{1} & =\frac{R \sin \Theta \sin \Phi+r \sin \vartheta \sin \varphi}{R \sin \Theta \cos \Phi+r \sin \vartheta \cos \varphi}, & \tan \varphi_{2} & =\frac{R \sin \Theta \sin \Phi-r \sin \vartheta \sin \varphi}{R \sin \Theta \cos \Phi-r \sin \vartheta \cos \varphi} .
+\end{align*}
+
+
+$\omega$ being the angle between $\mathbf{R}$ and $\mathbf{r}$ (Fig. 5.2)
+
+
+\begin{equation*}
+\cos \omega=\cos \Theta \cos \vartheta+\sin \Theta \sin \vartheta \cos (\Phi-\varphi) \text {. } \tag{6}
+\end{equation*}
+
+
+Note that the expressions for the polar coordinates of $\mathbf{R}$ and $\mathbf{r}$ are interchanged by the replacement $\mathbf{r}_{2} \rightarrow-\mathbf{r}_{2}$, i.e., $\vartheta_{2} \rightarrow \pi-\vartheta_{2}, \varphi_{2} \rightarrow \pi+\varphi_{2}$. Hence, the expansions of functions $F(\mathbf{R}, \mathbf{r})$ and $F(\mathbf{r}, \mathbf{R})$, which may be reduced to each other by the replacement $\mathbf{R} \rightleftarrows \mathbf{r}$ are mutually related. If
+
+
+\begin{equation*}
+F(\mathbf{R}, \mathbf{r})=f\left(\mathbf{r}_{1}, \mathbf{r}_{2}\right)=\sum_{l_{1} l_{3} L M} C_{l_{1} l_{2}}^{L M}\left(r_{1}, r_{2}\right)\left\{\mathbf{Y}_{l_{1}}\left(\Omega_{1}\right) \otimes \mathbf{Y}_{l_{2}}\left(\Omega_{2}\right)\right\}_{L M} \tag{7}
+\end{equation*}
+
+
+\begin{figure}[h]
+\begin{center}
+  \includegraphics[alt={},max width=\textwidth]{402d9a1b-ee97-49cb-ae14-75458391be12-177_736_783_276_688}
+\captionsetup{labelformat=empty}
+\caption{Fig. 5.2. Relations between the vectors $\mathbf{R}, \mathbf{r}$ and $\mathbf{r}_{1}, \mathbf{r}_{2}$.}
+\end{center}
+\end{figure}
+
+then
+
+
+\begin{equation*}
+F(\mathbf{r}, \mathbf{R})=f\left(\mathbf{r}_{1},-\mathbf{r}_{2}\right)=\sum_{l_{1} l_{2} L M}(-1)^{l_{2}} C_{l_{1} l_{2}}^{L M}\left(r_{1}, r_{2}\right)\left\{\mathbf{Y}_{l_{1}}\left(\Omega_{1}\right) \otimes \mathbf{Y}_{l_{2}}\left(\Omega_{2}\right)\right\}_{L M} \tag{8}
+\end{equation*}
+
+
+\subsection*{5.17.2. Addition Theorem for the Spherical Harmonics}
+The functions $f\left(r_{1}, r_{2}\right)$ which are invariant under rotations of coordinate systems play an especially important role in applications. These functions depend only on three variables $r_{1}=\left|r_{1}\right|, r_{2}=\left|r_{2}\right|,\left(r_{1} \cdot r_{2}\right)= r_{1} r_{2} \cos \omega_{12}$ or, equivalently, on $R=\left|r_{1}+r_{2}\right|, r=\left|r_{1}-r_{2}\right|$ and $(\mathbf{R} \cdot \mathbf{r})=R r \cos \omega$. The expansions of these functions will evidently contain only the bipolar harmonics of zero rank ( $L=0$ ), i.e., only scalar products $\left(Y_{1}\left(\Omega_{1}\right) \cdot Y_{1}\left(\Omega_{2}\right)\right)$ (Eqs. $5.16(10)$ ). Such expansions are equivalent to the expansions in terms of the Legendre polynomials, which depend on $\cos \omega_{12}$ because
+
+
+\begin{equation*}
+\left(Y_{l}\left(\Omega_{1}\right) \cdot Y_{l}\left(\Omega_{2}\right)\right)=\frac{2 l+1}{4 \pi} P_{l}\left(\cos \omega_{12}\right) . \tag{9}
+\end{equation*}
+
+
+This relation is called the addition theorem for the spherical harmonics.
+
+\subsection*{5.17.3. Expansions of Some Functions Which Depend on $\left(\mathrm{r}_{1} \cdot \mathrm{r}_{2}\right)$}
+
+\begin{align*}
+\left(\mathbf{r}_{1} \cdot \mathbf{r}_{2}\right) & =\frac{4 \pi}{3} r_{1} r_{2}\left(\mathbf{Y}_{1}\left(\vartheta_{1}, \varphi_{1}\right) \cdot \mathbf{Y}_{1}\left(\vartheta_{2}, \varphi_{2}\right)\right)  \tag{10}\\
+\left(\mathbf{r}_{1} \cdot \mathbf{r}_{2}\right)^{2} & =\frac{4 \pi}{3} r_{1}^{2} r_{2}^{2}\left[\left(\mathbf{Y}_{0}\left(\vartheta_{1}, \varphi_{1}\right) \cdot \mathbf{Y}_{0}\left(\vartheta_{2}, \varphi_{2}\right)\right)+\frac{2}{5}\left(\mathbf{Y}_{2}\left(\vartheta_{1}, \varphi_{1}\right) \cdot \mathbf{Y}_{2}\left(\vartheta_{2}, \varphi_{2}\right)\right)\right]  \tag{11}\\
+\left(\mathbf{r}_{1} \cdot \mathbf{r}_{2}\right)^{3} & =\frac{4 \pi}{5} r_{1}^{3} r_{2}^{3}\left[\left(\mathbf{Y}_{1}\left(\vartheta_{1}, \varphi_{1}\right) \cdot \mathbf{Y}_{1}\left(\vartheta_{2}, \varphi_{2}\right)\right)+\frac{2}{7}\left(\mathbf{Y}_{3}\left(\vartheta_{1}, \varphi_{1}\right) \cdot \mathbf{Y}_{3}\left(\vartheta_{2}, \varphi_{2}\right)\right)\right] \tag{12}
+\end{align*}
+
+
+In the general case [69], for integer $n$, one has
+
+
+\begin{equation*}
+\left(\mathbf{r}_{1} \cdot \mathbf{r}_{2}\right)^{n}=4 \pi r_{1}^{n} r_{2}^{n} \sum_{l} \frac{n!}{(n-l)!!(n+l+1)!!}\left(\mathbf{Y}_{l}\left(\vartheta_{1}, \varphi_{1}\right) \cdot \mathbf{Y}_{l}\left(\vartheta_{2}, \varphi_{2}\right)\right) . \tag{13}
+\end{equation*}
+
+
+In this formula the summation index $l$ assumes the values $l=0,2, \ldots, n-2, n$ if $n$ is even, and $l=1,3, \ldots$, $n-2, n$ if $n$ is odd.
+
+The expansion of the exponential function is given by
+
+
+\begin{equation*}
+e^{i\left(r_{1} \cdot r_{2}\right)}=4 \pi \sum_{l=0}^{\infty} i^{l} j_{l}\left(r_{1} r_{2}\right)\left(\mathbf{Y}_{l}\left(\Omega_{1}\right) \cdot \mathbf{Y}_{l}\left(\Omega_{2}\right)\right) \tag{14}
+\end{equation*}
+
+
+where $j l(x)$ is a spherical Bessel function.\\
+An arbitrary function $f\left(\mathbf{r}_{1} \cdot \mathbf{r}_{2}\right)$ which can be written as a power series
+
+
+\begin{equation*}
+f\left(r_{1} \cdot r_{2}\right)=\sum_{n=0}^{\infty} c_{n}\left(r_{1} \cdot r_{2}\right)^{n} \tag{15}
+\end{equation*}
+
+
+may be expanded in terms of the spherical harmonics:
+
+
+\begin{equation*}
+f\left(\mathbf{r}_{1} \cdot \mathbf{r}_{2}\right)=\sum_{l=0}^{\infty} f_{l}\left(r_{1} r_{2}\right)\left(\mathbf{Y}_{l}\left(\Omega_{1}\right) \cdot \mathbf{Y}_{l}\left(\Omega_{2}\right)\right) \tag{16}
+\end{equation*}
+
+
+The expansion coefficients are determined by
+
+
+\begin{equation*}
+f_{l}\left(r_{1} r_{2}\right)=4 \pi \sum_{n=l, l+2}^{\infty} c_{n} \frac{n!\left(r_{1} r_{2}\right)^{n}}{(n-1)!!(n+l+1)!!} \tag{17}
+\end{equation*}
+
+
+\subsection*{5.17.4. Expansions of Some Functions Which Depend on $r=\left|\mathbf{r}_{1}-\mathbf{r}_{2}\right|$}
+An expansion of the delta function $\delta\left(\mathrm{r}_{1}-\mathrm{r}_{2}\right)$ is
+
+
+\begin{equation*}
+\delta\left(\mathbf{r}_{1}-\mathbf{r}_{2}\right)=\frac{\delta\left(r_{1}-r_{2}\right)}{r_{1}^{2}} \sum_{l=0}^{\infty}\left(\mathbf{Y}_{l}\left(\Omega_{1}\right) \cdot \mathbf{Y}_{l}\left(\Omega_{2}\right)\right) \tag{18}
+\end{equation*}
+
+
+This equation results from the completeness relation for the spherical harmonics (Eqs. $5.6(1)$ ).\\
+An expansion of the Green's function for the scalar Helmholtz equation may be written in the form
+
+
+\begin{equation*}
+\frac{e^{i k r}}{r}=4 \pi i k \sum_{l=0}^{\infty} j_{l}\left(k r_{1}\right) h_{l}^{(1)}\left(k r_{2}\right)\left(\mathbf{Y}_{l}\left(\Omega_{1}\right) \cdot \mathbf{Y}_{l}\left(\Omega_{2}\right)\right), \quad\left(r_{1}<r_{2}\right) \tag{19}
+\end{equation*}
+
+
+where $j(x)$ and $h_{l}^{(1)}(x)$ are the spherical Bessel function and the Hankel function of the first kind; respectively. Equation (19) is valid at $r_{1}<r_{2}$; for $r_{1}>r_{2}$ one should make the replacement $r_{1} \rightleftarrows r_{2}$. Equation (19) follows from a more general expansion which is given in Ref. [70].
+
+
+\begin{equation*}
+z_{0}(k r)=4 \pi \sum_{l=0}^{\infty} j_{l}\left(k r_{1}\right) z_{l}\left(k r_{2}\right)\left(\mathbf{Y}_{l}\left(\Omega_{1}\right) \cdot \mathbf{Y}_{l}\left(\Omega_{2}\right)\right), \quad\left(r_{1}<r_{2}\right) \tag{20}
+\end{equation*}
+
+
+Here $z_{l}(x)=\sqrt{\pi / 2 x} Z_{l+\frac{1}{2}}(x)$, and $Z_{l+\frac{1}{2}}(x)$ is any of the cylinder functions.\\
+When $k=0$ Eq. (19) yields the important expansion of the Green's function for the scalar Laplace equation
+
+
+\begin{equation*}
+\frac{1}{r}=\frac{4 \pi}{r_{2}} \sum_{l=0}^{\infty} \frac{1}{(2 l+1)}\left(\frac{r_{1}}{r_{2}}\right)^{l}\left(\mathbf{Y}_{l}\left(\Omega_{1}\right) \cdot \mathbf{Y}_{l}\left(\Omega_{2}\right)\right), \quad\left(r_{1}<r_{2}\right) \tag{21}
+\end{equation*}
+
+
+This result as well as Eq. (19) are valid when $r_{1}<r_{2}$, whereas if $r_{1}>r_{2}$ it becomes valid after the interchange $r_{1} \vec{\leftarrow} r_{2}$. We may also write Eq. (21) in a symmetric form valid both at $r_{1}<r_{2}$ and at $r_{1}>r_{2}$ :
+
+
+\begin{equation*}
+\frac{1}{r}=\frac{4 \pi}{\sqrt{r_{1}^{2}+r_{2}^{2}}} \sum_{l=0}^{\infty}\left\{\sum_{n=l, l+2}^{\infty} \frac{(2 n-1)!!}{(n-l)!!(l+n+1)!!}\left(\frac{r_{1} r_{2}}{r_{1}^{2}+r_{2}^{2}}\right)^{n}\right\}\left(\mathbf{Y}_{l}\left(\Omega_{1}\right) \cdot \mathbf{Y}_{l}\left(\Omega_{2}\right)\right) \tag{22}
+\end{equation*}
+
+
+Below we give some examples of expansions of $r^{n}(n=1,-3,-5)$
+
+
+\begin{align*}
+r & =4 \pi \sum_{l=0}^{\infty} \frac{1}{(2 l+1)}\left(\frac{r_{1}^{l}}{r_{2}^{l+1}}\right)\left(\frac{r_{1}^{2}}{2 l+3}-\frac{r_{2}^{2}}{2 l-1}\right)\left(\mathbf{Y}_{l}\left(\Omega_{1}\right) \cdot \mathbf{Y}_{l}\left(\Omega_{2}\right)\right)  \tag{23}\\
+\frac{1}{r^{3}} & =\frac{4 \pi}{r_{2}^{2}-r_{1}^{2}} \sum_{l=0}^{\infty}\left(\frac{r_{1}^{l}}{r_{2}^{l+1}}\right)\left(\mathbf{Y}_{l}\left(\Omega_{1}\right) \cdot \mathbf{Y}_{l}\left(\Omega_{2}\right)\right)  \tag{24}\\
+\frac{1}{r^{5}} & =\frac{4 \pi}{3\left(r_{2}^{2}-r_{1}^{2}\right)^{3}} \sum_{l=0}^{\infty}(2 l-1)(2 l+3)\left(\frac{r_{1}^{l}}{r_{2}^{l+1}}\right)\left(\frac{r_{2}^{2}}{2 l-1}-\frac{r_{1}^{2}}{2 l+3}\right)\left(\mathbf{Y}_{l}\left(\Omega_{1}\right) \cdot \mathbf{Y}_{l}\left(\Omega_{2}\right)\right) \tag{25}
+\end{align*}
+
+
+These equations are valid when $r_{1}<r_{2}$, whereas for $r_{1}>r_{2}$ they are valid after interchanging $r_{1}$ and $r_{2}$. Equations (23)-(25) follow from the expansions which will be considered below.
+
+\subsection*{5.17.5. Expansions of $r^{n} \equiv\left|r_{1}-r_{2}\right|^{n}$}
+Let $n$ be an integer. Then the expansion under discussion is as follows
+
+
+\begin{equation*}
+r^{n}=4 \pi \sum_{l=0}^{\infty} \frac{1}{2 l+1} a_{l}^{n}\left(r_{1}, r_{2}\right)\left(\mathbf{Y}_{l}\left(\Omega_{1}\right) \cdot \mathbf{Y}_{l}\left(\Omega_{2}\right)\right), \tag{26}
+\end{equation*}
+
+
+where the expansion coefficients $a_{1}^{n}\left(r_{1}, r_{2}\right)$ are determined by (see Ref. [97])
+
+
+\begin{align*}
+a_{l}^{n}\left(r_{1}, r_{2}\right)= & \frac{\left(-\frac{n}{2}\right)_{l}}{\left(\frac{1}{2}\right)_{l}} r_{2}^{n}\left(\frac{r_{1}}{r_{2}}\right)^{l} F\left(l-\frac{n}{2},-\frac{1}{2}-\frac{n}{2} ; l+\frac{3}{2} ; \frac{r_{1}^{2}}{r_{2}^{2}}\right),\left(r_{1}<r_{2}\right),  \tag{27}\\
+a_{l}^{n}\left(r_{1}, r_{2}\right)= & \frac{\left(-\frac{n}{2}\right)_{l}}{\left(\frac{1}{2}\right)_{l}} \frac{r_{1}^{l}\left(r_{2}^{2}-r_{1}^{2}\right)^{n+2}}{r_{2}^{l+n+4}} F\left(l+2+\frac{n}{2}, \frac{3}{2}+\frac{n}{2} ; l+\frac{3}{2} ; \frac{r_{1}^{2}}{r_{2}^{2}}\right),\left(r_{1}<r_{2}\right),  \tag{28}\\
+a_{l}^{n}\left(r_{1}, r_{2}\right)= & \frac{2^{n+1}\left(l+\frac{1}{2}\right)\left(-\frac{n}{2}\right)_{l}}{\left(1+\frac{n}{2}\right)_{l+1}^{l} r_{2}^{n-l} F\left(l-\frac{n}{2},-\frac{1}{2}-\frac{n}{2} ;-1-n ; \frac{r_{2}^{2}-r_{1}^{2}}{r_{2}^{2}}\right)} \\
+& -\frac{2 l+1}{2^{n+3}(n+2)} \cdot \frac{r_{1}^{l}\left(r_{2}^{2}-r_{1}^{2}\right)^{n+2}}{r_{2}^{l+n+4}} F\left(l+\frac{n}{2}+2, \frac{3}{2}+\frac{n}{2} ; n+3 ; \frac{r_{2}^{2}-r_{1}^{2}}{r_{2}^{2}}\right), \\
+a_{l}^{n}\left(r_{1}, r_{2}\right)= & \frac{\left(-\frac{n}{2}\right)_{l}(-1)^{\frac{n}{2}} \cos \frac{n \pi}{2} r_{1}^{n-l} r_{2}^{l} F\left(l-\frac{n}{2},-\frac{1}{2}-\frac{n}{2} ; l+\frac{3}{2} ; \frac{r_{2}^{2}}{r_{1}^{2}}\right)}{\left(\frac{1}{2}\right)_{l}}  \tag{29}\\
+& +\frac{\Gamma\left(l+\frac{3}{2}\right) \sqrt{\pi}(-1)^{\frac{n+1}{2}}}{\Gamma\left(-\frac{n}{2}\right) \Gamma\left(2+l+\frac{n}{2}\right)} \frac{r_{1}^{n+l+1}}{r_{2}^{l+1}} F\left(-1-l-\frac{n}{2},-\frac{1}{2}-\frac{n}{2} ; \frac{1}{2}-l ; \frac{r_{2}^{2}}{r_{1}^{2}}\right),
+\end{align*}
+
+
+If $r_{1}>r_{2}$, one should interchange $r_{1}$ and $r_{2}$ in Eqs. (27)-(30). Let us present also symmetric expressions for $a_{l}^{n}\left(r_{1}, r_{2}\right)$ which are valid when $r_{1}<r_{2}$ and $r_{1}>r_{2}$ :
+
+
+\begin{align*}
+& a_{l}^{n}\left(r_{1}, r_{2}\right)=\frac{\left(-\frac{n}{2}\right)_{l}}{\left(\frac{1}{2}\right)_{l}} \cdot \frac{\left(r_{1} r_{2}\right)^{l}}{\left(r_{1}^{2}+r_{2}^{2}\right)^{l-\frac{n}{2}}} F\left(\frac{l}{2}-\frac{n}{4}, \frac{l}{2}-\frac{n}{4}+\frac{1}{2} ; l+\frac{3}{2} ;\left(\frac{2 r_{1} r_{2}}{r_{1}^{2}+r_{2}^{2}}\right)^{2}\right)  \tag{31}\\
+& a_{l}^{n}\left(r_{1}, r_{2}\right)=\frac{\left(-\frac{n}{2}\right)_{l}}{\left(\frac{1}{2}\right)_{l}} \cdot \frac{\left(r_{1} r_{2}\right)^{l}}{\left(r_{1}+r_{2}\right)^{2 l-n}} F\left(l-\frac{n}{2}, 1+l ; 2 l+2 ; \frac{4 r_{1} r_{2}}{\left(r_{1}+r_{2}\right)^{2}}\right) \tag{32}
+\end{align*}
+
+
+A comparison of Eqs. (27) and (28) shows that the expansion coefficient for $r^{n}$ and $r^{-n-4}$ are related by
+
+
+\begin{equation*}
+a_{l}^{n}\left(r_{1}, r_{2}\right)=\frac{\left(-\frac{n}{2}\right)_{l}}{\left(\frac{n}{2}+2\right)_{l}}\left(r_{2}^{2}-r_{1}^{2}\right)^{n+2} a_{l}^{-n-4}\left(r_{1}, r_{2}\right) \tag{33}
+\end{equation*}
+
+
+Note that all the expansions given in Secs. 5.17 .4 and 5.17 .5 remain valid after substituting $R=\left|\mathbf{r}_{1}+\mathbf{r}_{2}\right|$ for $r=\left|r_{1}-r_{2}\right|$ and multiplying the expansion coefficients by $(-1)^{l}$.
+
+\subsection*{5.17.6. Expansions of Spherical Waves}
+The spherical waves have the form $z_{L}(k r) Y_{L M}(\vartheta, \varphi)$, where $\mathbf{r}(r, \vartheta, \varphi)=\mathbf{r}_{1}-\mathbf{r}_{2}, z_{L}(x)=\sqrt{\pi / 2 x} Z_{L+\frac{1}{2}}(x)$ and $Z_{L+\frac{1}{2}}(x)$ is any of the cylinder functions. The spherical waves are expressed in terms of the bipolar spherical harmonics of rank $L$ [70] (Sec. 5.16.1)
+
+
+\begin{align*}
+z_{L}(k r) Y_{L M}(\vartheta, \varphi)= & \sqrt{\frac{4 \pi}{2 L+1}} \sum_{l_{1}, l_{2}=0}^{\infty} i^{l_{1}-l_{2}-L} \sqrt{\left(2 l_{1}+1\right)\left(2 l_{2}+1\right)} \\
+& \times C_{l_{1} 0 l_{2} 0}^{L 0} \dot{l}_{1}\left(k r_{1}\right) z_{l_{2}}\left(k r_{2}\right)\left\{\mathbf{Y}_{l_{1}}\left(\Omega_{1}\right) \otimes \mathbf{Y}_{l_{2}}\left(\Omega_{2}\right)\right\}_{L M},\left(r_{1}<r_{2}\right) \tag{34}
+\end{align*}
+
+
+When $r_{1}>r_{2}$, one should interchange $r_{1}$ and $r_{2}$ in Eq. (34). If $z_{L}(k r)=j_{L}(k r), j_{L}(x)$ being a spherical Bessel function, one obtains as $k \rightarrow 0[22,96]$
+
+
+\begin{equation*}
+r^{L} Y_{L M}(\vartheta, \varphi)=\sqrt{4 \pi(2 L+1)!} \sum_{\substack{l_{1}, l_{2}=0 \\ l_{1}+l_{2}=L}}^{L}(-1)^{l_{2}} \frac{r_{1}^{l_{1}} r_{2}^{l_{2}}}{\sqrt{\left(2 l_{1}+1\right)!\left(2 l_{2}+1\right)!}}\left\{\mathbf{Y}_{l_{1}}\left(\Omega_{1}\right) \otimes \mathbf{Y}_{l_{2}}\left(\Omega_{2}\right)\right\}_{L M} \tag{35}
+\end{equation*}
+
+
+Similarly, if $z_{L}(k r)=n_{L}(k r), n_{L}(k r)$ being a spherical Neumann function, one obtains as $k \rightarrow 0[22,96]$
+
+
+\begin{equation*}
+\frac{1}{r^{L+1}} Y_{L M}(\vartheta, \varphi)=\sqrt{\frac{4 \pi}{(2 L)!}} \sum_{\substack{l_{1}, l_{2}=0 \\ l_{2}-l_{1}=L}}^{\infty}(-1)^{l_{2}} \sqrt{\frac{\left(2 l_{2}\right)!}{\left(2 l_{1}+1\right)!}} \cdot \frac{r_{1}^{l_{1}}}{r_{2}^{l_{2}+1}}\left\{\mathbf{Y}_{l_{1}}\left(\Omega_{1}\right) \otimes \mathbf{Y}_{l_{2}}\left(\Omega_{2}\right)\right\}_{L M},\left(r_{1}<r_{2}\right) \tag{36}
+\end{equation*}
+
+
+For example, spherical components of $r / r^{3}$ read
+
+
+\begin{equation*}
+\frac{r_{\mu}}{r^{3}}=4 \pi \sum_{l=1}^{\infty}(-1)^{l} \sqrt{\frac{l}{3}} \cdot \frac{r_{1}^{l-1}}{r_{2}^{l+1}}\left\{\mathbf{Y}_{l-1}\left(\Omega_{1}\right) \otimes \mathbf{Y}_{l}\left(\Omega_{2}\right)\right\}_{1 \mu}, \quad\left(r_{1}<r_{2}\right) \tag{37}
+\end{equation*}
+
+
+\subsection*{5.17.7 Expansions of $r^{N} Y_{L M}(\vartheta, \varphi)$}
+The expansion of this function in terms of bipolar harmonics of rank $L$ may be written as
+
+
+\begin{equation*}
+r^{N} Y_{L M}(\vartheta, \varphi)=4 \pi \sum_{l_{1}, l_{2}=0}^{\infty} a_{l_{1} l_{2}}^{N L}\left(r_{1}, r_{2}\right) \sqrt{\frac{\left(2 l_{1}+1\right)\left(2 l_{2}+1\right)}{4 \pi(2 L+1)}} C_{l_{1} 0 l_{2} 0}^{L 0}\left\{\mathbf{Y}_{l_{1}}\left(\Omega_{1}\right) \otimes \mathbf{Y}_{l_{2}}\left(\Omega_{2}\right)\right\}_{L M} \tag{38}
+\end{equation*}
+
+
+The sum is over all positive integer $l_{1}$ and $l_{2}$ allowed by the momentum addition rules and the parity selection rule ( $l_{1}+l_{2}-L$ is even). The expansion coefficients $a_{l_{1} l_{2}}^{N L}\left(r_{1}, r_{2}\right)$ are given by (see Ref. [98])
+
+
+\begin{align*}
+a_{l_{1} l_{2}}^{N L}\left(r_{1}, r_{2}\right)= & (-1)^{\frac{l_{1}-l_{2}-L}{2}} \frac{2^{l_{1}}}{\left(2 l_{1}+1\right)!!} \frac{\Gamma\left(\frac{l_{1}+l_{2}-N}{2}\right) \Gamma\left(\frac{L+N+3}{2}\right)}{\Gamma\left(\frac{L-N}{2}\right) \Gamma\left(\frac{-l_{1}+l_{2}+N+3}{2}\right)} \\
+& \times r_{2}^{N}\left(\frac{r_{1}}{r_{2}}\right)^{l_{1}} F\left(\frac{l_{1}+l_{2}-N}{2}, \frac{l_{1}-l_{2}-N-1}{2} ; l_{1}+\frac{3}{2} ; \frac{r_{1}^{2}}{r_{2}^{2}}\right),\left(r_{1}<r_{2}\right) . \tag{39}
+\end{align*}
+
+
+If $r_{1}>r_{2}$, the expression for the expansion coefficients may be obtained from Eq. (39) by interchanging $r_{1}$ and $r_{2}, l_{1}$ and $l_{2}$ and introducing the additional factor $(-1)^{L}$. The expression (39) was studied in detail in Ref. [78]. For different values of $N$ and $L$ the expansion coefficients are determined by the following relations. For $N=L, L+2, L+4, \ldots$ we have
+
+\[
+a_{l_{1} l_{2}}^{N L}\left(r_{1}, r_{2}\right)= \begin{cases}(-1)^{l_{2}}(N+L+1)!!(N-L)!! & \sum_{e_{1}, e_{2}=0}^{\infty} \frac{r_{1}^{l_{1}+2 e_{1} r_{2}+2 e_{2}}}{\left(2 e_{1}\right) 11\left(2 e_{1}+2 l_{1}+1\right) 11\left(2 e_{2}\right) 11\left(2 e_{2}+2 l_{2}+1\right) 11}  \tag{40}\\ & \left(e_{1}+e_{2}=\frac{N-l_{1}-l_{2}}{5}\right) \\ & \text { if } l_{1}+l_{2} \leq N, \\ 0 & \text { if } l_{1}+l_{2}>N .\end{cases}
+\]
+
+For $N=L-2, L-4, L-6, \ldots$ one gets
+
+
+\begin{gather*}
+a_{l_{1} l_{2}}^{N L}\left(r_{1}, r_{2}\right)=(-1)^{l_{2}+\frac{N-2}{j}} \frac{(N+L+1)!!}{2(L-N-2)!!\left(N+l_{1}+l_{2}+2\right)!} r_{1}^{l_{1}} r_{2}^{l_{2}} \\
+\times\left(\frac{1}{r_{1}} \cdot \frac{\partial}{\partial r_{1}}\right)^{l_{1}}\left(\frac{1}{r_{2}} \cdot \frac{\partial}{\partial r_{2}}\right)^{l_{2}} \frac{1}{r_{1} r_{2}}\left[\left(r_{1}-r_{2}\right)^{N+l_{1}+l_{2}+2} \ln \left|r_{1}-r_{2}\right|-\left(r_{1}+r_{2}\right)^{N+l_{1}+l_{2}+2} \ln \left(r_{1}+r_{2}\right)\right] . \tag{41}
+\end{gather*}
+
+
+If $N$ is integer, $N-L$ is odd, and $r_{1}<r_{2}$, the expansion coefficient is given by
+
+\[
+a_{l_{1} l_{2}}^{N L}\left(r_{1}, r_{2}\right)= \begin{cases}(-1)^{N+l_{2}+1}+l_{1} & \frac{(N+L+1) \|}{(L-N-2) \|} r_{1}^{l_{1}} r_{2}^{N-l_{1}} \sum_{:=0}^{\frac{N-l_{1}+l_{2}+1}{2}} \frac{\left(\frac{r_{1}}{r_{2}}\right)^{2 \cdot}}{(2 \cdot)\left\|\left(N-l_{1}-l_{3}-2 \cdot\right)\right\|\left(N-l_{1}+l_{2}+1-2 \cdot\right)\left\|\left(2 l_{1}+2 \cdot+1\right)\right\|}  \tag{42}\\ 0 & \text { if } N-l_{1}+l_{2}+1 \geq 0, \\ & \text { if } N-l_{1}+l_{2}+1<0 .\end{cases}
+\]
+
+The expansion coefficient for $r_{1}>r_{2}$ may be obtained from (42) by interchanging $r_{1}$ and $r_{2}, l_{1}$ and $l_{2}$ and introducing the additional factor $(-1)^{L}$. It should be emphasised that if $N \leq-3$ the expansion coefficients contain additional terms involving the delta function $\delta\left(r_{1}-r_{2}\right)$ and its derivatives [78]
+
+
+\begin{align*}
+a_{l_{1} l_{2}}^{N L}\left(r_{1}, r_{2}\right)_{\delta}= & (-1)^{N+l_{1}-1} \frac{(N+L+1)!!}{(L-N-2)!!} \sum_{e_{1}=0}^{l_{1}} \sum_{\substack{e_{2}=0 \\
+e_{1}+e_{2}+N \leq-3}}^{l_{2}}(-1)^{e_{2}} \frac{\left(l_{1}+s_{1}\right)!\left(l_{2}+s_{2}\right)!}{\left(l_{1}-s_{1}\right)!\left(l_{2}-s_{2}\right)!} \\
+& \times \frac{1}{\left(2 s_{1}\right)!!\left(2 s_{2}\right)!!} \cdot \frac{1}{r_{2}^{\beta_{2}+1}}\left(\frac{\partial}{\partial r_{2}}\right)^{-N-s_{1}-e_{2}-3}\left[\frac{\delta\left(r_{1}-r_{2}\right)}{r_{1}^{2} r_{2}^{\beta_{1}-1}}\right] . \tag{43}
+\end{align*}
+
+
+These additional terms give finite contributions into the integrals involving the expansion (38).\\
+Finally, if $N$ is not integer, the expansion coefficient is given by
+
+
+\begin{gather*}
+a_{l_{1} l_{2}}^{N L}\left(r_{1}, r_{2}\right)=(-1)^{l_{1}+L+1} \frac{2^{L-1} \Gamma\left(\frac{N+L+3}{2}\right) \Gamma(N-L+2)}{\Gamma\left(\frac{N-L+3}{2}\right) \Gamma\left(N+l_{1}+l_{2}+3\right)} r_{1}^{l_{1}} r_{2}^{l_{2}} \\
+\times\left(\frac{1}{r_{1}} \frac{\partial}{\partial r_{1}}\right)^{l_{1}}\left(\frac{1}{r_{2}} \frac{\partial}{\partial r_{2}}\right)^{l_{2}} \frac{1}{r_{1} r_{2}}\left\{\left|r_{1}+r_{2}\right|^{N+l_{1}+l_{2}+2}-\left|r_{1}-r_{2}\right|^{N+l_{1}+l_{2}+2}\right\} \tag{44}
+\end{gather*}
+
+
+Note that all the expansions given in Secs. 5.17 .6 and 5.17.7 remain valid after substituting $\mathbf{R}(R, \Theta, \Phi)=\mathbf{r}_{1}+\mathbf{r}_{2}$ for $\mathbf{r}(r, \vartheta, \varphi)=\mathbf{r}_{1}-\mathbf{r}_{2}$ and introducing the additional factor $(-1)^{l_{2}}$ into the expansion coefficients.

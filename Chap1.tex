@@ -13,9 +13,9 @@ In a rectangular cartesian coordinate system the position of a point is specifie
 \end{equation}
 
 
-\begin{figure}[h]
+\begin{figure}[htb]
 \begin{center}
-  \includegraphics[alt={},max width=\textwidth]{572ba5df-125b-4d5b-a103-138445b6c6af-01_570_529_1850_790}
+  \includegraphics[alt={},max width=0.4\textwidth]{572ba5df-125b-4d5b-a103-138445b6c6af-01_570_529_1850_790}
 \caption{Cartesian coordinate system.}
 \label{chap1:fig:1}
 \end{center}
@@ -63,9 +63,9 @@ A detailed form of \eqref{chap1:eq:5} is
 \subsection{Polar Coordinate System}
 In a polar coordinate system ${ }^{1}$ the position of a point is determined by $r, \vartheta, \varphi$, where $r$ is the position vector length, $\vartheta$ is the colatitude, and $\varphi$ is the longitude (Fig.~\ref{chap1:fig:2}). The angles $\vartheta$ and $\varphi$ are called the polar angles of vector $\vect{r}$. The relations between cartesian and polar coordinates are
 
-\begin{figure}[h]
+\begin{figure}[htb]
 \begin{center}
-  \includegraphics[alt={},max width=\textwidth]{572ba5df-125b-4d5b-a103-138445b6c6af-02_679_672_1270_715}
+  \includegraphics[alt={},max width=0.4\textwidth]{572ba5df-125b-4d5b-a103-138445b6c6af-02_679_672_1270_715}
 \caption{Polar coordinate system.}
 \label{chap1:fig:2}
 \end{center}
@@ -645,48 +645,73 @@ A_{z} & =\sqrt{\frac{4 \pi}{3}}|\vect{A}| Y_{10}(\vartheta, \varphi) \notag
 \end{align}
 
 
-\begin{table}[h]
+\begin{table}[htb]
+  \scriptsize
 \begin{center}
 \caption{Matrix form of the transformations for vector components in different bases.}
 \label{chap1:tab:1}
-\begin{tabular}{|l|l|l|}
+\begin{tabular}{c|c|c}
+\hline
 \hline
 Cartesian coordinates & Spherical coordinates & Polar coordinates \\
 \hline
 $\mathrm{A}=A_{x} \mathrm{e}_{x}+A_{y} \mathrm{e}_{y}+A_{z} \mathrm{e}_{z}$ & $\vect{A}=A^{+1} \vect{e}_{+1}+A^{0} \vect{e}_{0}+A^{-1} \vect{e}_{-1}$ & $\vect{A}=A_{\varphi} \vect{e}_{\varphi}+A_{g} \vect{e}_{\vartheta}+A_{\varphi} \vect{e}_{\varphi}$ \\
-\hline
 In terms of spherical components & In terms of cartesian components & In terms of cartesian components \\
-\hline
 $\left(\begin{array}{l}A_{x} \\ A_{y} \\ A_{z}\end{array}\right)=M(x, y, z \leftarrow+1,0,-1)\left(\begin{array}{c}A^{+1} \\ A^{0} \\ A^{-1}\end{array}\right)$ & $\left(\begin{array}{c}A^{+1} \\ A^{0} \\ A^{-1}\end{array}\right)=M(+1,0,-1 \leftarrow x, y, z)\left(\begin{array}{l}A_{x} \\ A_{y} \\ A_{z}\end{array}\right)$ & $\left(\begin{array}{l}A_{r} \\ A_{\vartheta} \\ A_{\varphi}\end{array}\right)=M(r, \vartheta, \varphi \leftarrow x, y, z)\left(\begin{array}{l}A_{x} \\ A_{y} \\ A_{z}\end{array}\right)$ \\
-\hline
+In terms of polar components & In terms of polar components & In terms of spherical components \\
 $\left(\begin{array}{l}A_{x} \\ A_{y} \\ A_{z}\end{array}\right)=M(x, y, z \leftarrow r, \vartheta, \varphi)\left(\begin{array}{c}A_{\varphi} \\ A_{\vartheta} \\ A_{\varphi}\end{array}\right)$ & $\left(\begin{array}{c}A^{+1} \\ A^{0} \\ A^{-1}\end{array}\right)=M(+1,0,-1 \leftarrow r, \vartheta, \varphi)\left(\begin{array}{c}A_{r} \\ A_{\vartheta} \\ A_{\varphi}\end{array}\right)$ & $\left(\begin{array}{l}A_{r} \\ A_{\vartheta} \\ A_{\varphi}\end{array}\right)=M(r, \vartheta, \varphi \leftarrow+1,0,-1)\left(\begin{array}{c}A^{+1} \\ A^{0} \\ A^{-1}\end{array}\right)$ \\
+\hline
 \hline
 \end{tabular}
 \end{center}
 \end{table}
 
-Table 1.2\\
-Matrices of transformations between cartesian, spherical contravariant and polar components of vectors.
+\begin{table}[htb]
+\begin{center}
+\caption{Matrices of transformations between cartesian, spherical contravariant and polar components of vectors.}
+\label{chap1:tab:2}
+%\scriptsize
+\begin{tabular}{cc}
+$ M(x, y, z \leftarrow+1,0,-1) $ & $ M(+1,0,-1\leftarrow x, y, z ) $\\
+$
+\kbordermatrix{~& +1 & 0 & -1\cr
+x & -\frac{1}{\sqrt{2}} & 0 & \frac{1}{\sqrt{2}} \cr
+y & -\frac{i}{\sqrt{2}} & 0 & -\frac{i}{\sqrt{2}}\cr
+z & 0                   & 1 & 0}
+$ 
+&
+$
+\kbordermatrix{~& x & y & z\cr
+-1 &-\frac{1}{\sqrt{2}} & -\frac{i}{\sqrt{2}} & 0 \cr
+ 0 & 0                  & 0                   & 1 \cr
+ 1 & \frac{1}{\sqrt{2}} & -\frac{i}{\sqrt{2}} & 0}
+$\\[5mm]
+$M(x, y, z \leftarrow r, \vartheta, \varphi)$ &  $M(r, \vartheta, \varphi \leftarrow x, y, z)$ \\
+$
+\kbordermatrix{~& r &\vartheta & \varphi \cr
+x & \sin \vartheta \cos \varphi & \cos \vartheta \cos \varphi & -\sin\varphi\cr
+y & \sin \vartheta \sin \varphi & \cos \vartheta \sin \varphi & \cos\varphi \cr
+z & \cos \vartheta              & -\sin\vartheta & 0}
+$ 
+&
+$
+\kbordermatrix{~& x & y & z\cr
+r         & \sin \vartheta \cos \varphi & \sin \vartheta \sin \varphi & \cos \vartheta \cr
+\vartheta & \cos \vartheta \cos \varphi & \cos \vartheta \sin \varphi & -\sin\varphi\cr
+ \varphi  & -\sin\varphi & \cos\varphi & 0 }
+$\\[5mm]
 
-\[
-\begin{aligned}
-& M(x, y, z \leftarrow+1,0,-1) \\
-& M(+1,0,-1 \longleftarrow x, y, z) \\
-& \begin{array}{lll}
-+1 & 0 & -1
-\end{array} \\
-& \begin{array}{c}
-+1 \\
-0 \\
--1
-\end{array}\left(\begin{array}{ccc}
+\end{tabular}
+\end{center}
+\end{table}
+\begin{comment}
+\left(\begin{array}{ccc}
 x & y & z \\
 -\frac{1}{\sqrt{2}} & \frac{i}{\sqrt{2}} & 0 \\
 0 & 0 & 1 \\
 \frac{1}{\sqrt{2}} & \cdot \frac{i}{\sqrt{2}} & 0
 \end{array}\right) \\
 & \left.\begin{array}{c}
-M(x, y, z \leftarrow r, \vartheta, \varphi) \\
 r \\
 x \\
 y \\
@@ -695,11 +720,16 @@ y \\
 \sin \vartheta \cos \varphi \\
 \sin \vartheta \sin \varphi \\
 \cos \vartheta
-\end{array} \quad \cos \vartheta \cos \varphi \quad-\sin \varphi \quad \begin{array}{c}
+\end{array} 
+
+& M(+1,0,-1 \longleftarrow x, y, z) \\
+
+
+\quad \cos \vartheta \cos \varphi \quad-\sin \varphi \quad \begin{array}{c}
 \cos \varphi \\
 -\sin \vartheta
 \end{array} \quad 0 \quad\right) . \\
-& M(r, \vartheta, \varphi \longleftarrow x, y, z) \\
+&\\
 & \left.\begin{array}{l}
 x \\
 y \\
@@ -747,6 +777,7 @@ r \\
 \end{array}\right)
 \end{aligned}
 \]
+\end{comment}
 
 \subsection{Scalar Product of Vectors}
 The scalar product of vectors $\vect{A}$ and $\vect{B}$ in an arbitrary orthonormal basis is defined by
@@ -1241,7 +1272,7 @@ The polar components of curl $\vect{A}$ read
 \end{align}
 
 
-The above equations are summarized in Table~\ref{chap1:tab:2}.\\
+The above equations are summarized in Table~\ref{chap1:tab:3}.\\
 Note also the following differential operations of the second order
 
 
@@ -1250,10 +1281,10 @@ Note also the following differential operations of the second order
 \end{equation}
 
 
-\begin{table}[h]
+\begin{table}[htb]
 \begin{center}
 \caption{Differential operations.}
-\label{chap1:tab:2}
+\label{chap1:tab:3}
 \begin{tabular}{|l|l|l|l|}
 \hline
  & Cartesian coordinates & Spherical coordinates & Polar coordinates \\
@@ -1304,17 +1335,17 @@ Any rotation of the coordinate system $S\{x, y, z\} \rightarrow S^{\prime}\left\
 
 The same rotation $S\{x, y, z\} \rightarrow S^{\prime}\left\{x^{\prime}, y^{\prime}, z^{\prime}\right\}$ may also be performed by another succession of rotations Fig.~\ref{chap1:fig:4}),
 
-\begin{figure}[h]
+\begin{figure}[htb]
 \begin{center}
-  \includegraphics[alt={},max width=\textwidth]{572ba5df-125b-4d5b-a103-138445b6c6af-20_426_1198_408_459}
+  \includegraphics[alt={},max width=0.4\textwidth]{572ba5df-125b-4d5b-a103-138445b6c6af-20_426_1198_408_459}
 \caption{Succession of rotations of a coordinate system according to scheme $A$.}
 \label{chap1:fig:3}
 \end{center}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[htb]
 \begin{center}
-  \includegraphics[alt={},max width=\textwidth]{572ba5df-125b-4d5b-a103-138445b6c6af-20_462_1274_934_422}
+  \includegraphics[alt={},max width=0.4\textwidth]{572ba5df-125b-4d5b-a103-138445b6c6af-20_462_1274_934_422}
 \caption{Succession of rotations of a coordinate system according to scheme B.}
 \label{chap1:fig:4}
 \end{center}
@@ -1324,9 +1355,9 @@ $\vect{B}\left\{\begin{array}{l}\text { (a) rotation about the } z \text {-axis 
 Here the angles $\alpha, \beta, \gamma$ are the same as those in the first case.\\
 The relative orientations of initial and final coordinate axes $S\{x, y, z\}$ and $S^{\prime}\left\{x^{\prime}, y^{\prime}, z^{\prime}\right\}$, obtained in both cases, $\vect{A}$ and $\vect{B}$, are shown in Fig.~\ref{chap1:fig:5}.
 
-\begin{figure}[h]
+\begin{figure}[htb]
 \begin{center}
-  \includegraphics[alt={},max width=\textwidth]{572ba5df-125b-4d5b-a103-138445b6c6af-20_483_464_1800_813}
+  \includegraphics[alt={},max width=0.4\textwidth]{572ba5df-125b-4d5b-a103-138445b6c6af-20_483_464_1800_813}
 \caption{The Euler angles $\alpha, \beta, \gamma$.}
 \label{chap1:fig:5}
 \end{center}
@@ -1368,9 +1399,9 @@ The inverse relations are
 \subsection{Description of Rotations in Terms of Rotation Axis and Rotation Angle}
 Any rotation of a coordinate system $S\{x, y, z\} \rightarrow S^{\prime}\left\{x^{\prime}, y^{\prime}, z^{\prime}\right\}$ may be treated as one rotation through an angle $\omega(0 \leq \omega \leq \pi)$ about some axis $\vect{n}(\Theta, \Phi)$. The direction of this rotation axis $\vect{n}$ is defined by the polar angles $\Theta, \Phi(0 \leq \theta \leq \pi, 0 \leq \Phi<2 \pi)$ which are the same in the initial coordinate system $S\{x, y, z\}$ and in the inal one $S^{\prime}\left\{x^{\prime}, y^{\prime}, z^{\prime}\right\}$ (Fig.~\ref{chap1:fig:6}).
 
-\begin{figure}[h]
+\begin{figure}[htb]
 \begin{center}
-  \includegraphics[alt={},max width=\textwidth]{572ba5df-125b-4d5b-a103-138445b6c6af-21_670_684_1795_737}
+  \includegraphics[alt={},max width=0.4\textwidth]{572ba5df-125b-4d5b-a103-138445b6c6af-21_670_684_1795_737}
 \caption{Rotation of a coordinate system through an angle $\omega$ about an axis $\vect{n}(\Theta, \Phi)$.}
 \label{chap1:fig:6}
 \end{center}
@@ -1449,9 +1480,9 @@ U^{+}=U^{-1}, \quad \det U=1 \label{chap1:eq:136}
 \end{equation}
 
 
-\begin{figure}[h]
+\begin{figure}[htb]
 \begin{center}
-  \includegraphics[alt={},max width=\textwidth]{572ba5df-125b-4d5b-a103-138445b6c6af-23_782_796_390_651}
+  \includegraphics[alt={},max width=0.4\textwidth]{572ba5df-125b-4d5b-a103-138445b6c6af-23_782_796_390_651}
 \caption{Stereographic projection of a point on a sphere.}
 \label{chap1:fig:7}
 \end{center}
@@ -2006,9 +2037,9 @@ The following relations are useful for evaluation of $\alpha, \beta, \gamma$.
 \end{gather}
 
 
-\begin{figure}[h]
+\begin{figure}[htb]
 \begin{center}
-  \includegraphics[alt={},max width=\textwidth]{572ba5df-125b-4d5b-a103-138445b6c6af-31_858_926_397_557}
+  \includegraphics[alt={},max width=0.4\textwidth]{572ba5df-125b-4d5b-a103-138445b6c6af-31_858_926_397_557}
 \caption{Addition of rotations in terms of the spherical geometry.}
 \label{chap1:fig:8}
 \end{center}

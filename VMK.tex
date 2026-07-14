@@ -10,7 +10,68 @@
 \usepackage[export]{adjustbox}
 \graphicspath{ {./images/} }
 \usepackage{caption}
+\usepackage{comment}
+\usepackage{kbordermatrix} \renewcommand{\kbldelim}{(}
+\renewcommand{\kbrdelim}{)}
 \usepackage[a4paper,margin=2cm]{geometry}
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{ucharclasses}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[version=4]{mhchem}
+\usepackage{stmaryrd}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=blue, filecolor=magenta, urlcolor=cyan,}
+\urlstyle{same}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\graphicspath{ {./images/} }
+\usepackage{caption}
+\usepackage{mathrsfs}
+\usepackage{multirow}
+\usepackage{diagbox}
+\usepackage{bbold}
+\usepackage{mathtools}
+\usepackage{polyglossia}
+\usepackage{fontspec}
+\usepackage{newunicodechar}
+\setmainlanguage{english}
+\setotherlanguages{german, hindi, bengali}
+\IfFontExistsTF{Noto Serif Devanagari}
+{\newfontfamily\hindifont{Noto Serif Devanagari}}
+{\IfFontExistsTF{Kohinoor Devanagari}
+  {\newfontfamily\hindifont{Kohinoor Devanagari}}
+  {\IfFontExistsTF{Devanagari MT}
+    {\newfontfamily\hindifont{Devanagari MT}}
+    {\IfFontExistsTF{Lohit Devanagari}
+      {\newfontfamily\hindifont{Lohit Devanagari}}
+      {\IfFontExistsTF{FreeSerif}
+        {\newfontfamily\hindifont{FreeSerif}}
+        {\newfontfamily\hindifont{Arial Unicode MS}}
+}}}}
+\IfFontExistsTF{Noto Serif Bengali}
+{\newfontfamily\bengalifont{Noto Serif Bengali}}
+{\IfFontExistsTF{Kohinoor Bangla}
+  {\newfontfamily\bengalifont{Kohinoor Bangla}}
+  {\IfFontExistsTF{Bangla MN}
+    {\newfontfamily\bengalifont{Bangla MN}}
+    {\IfFontExistsTF{Lohit Bengali}
+      {\newfontfamily\bengalifont{Lohit Bengali}}
+      {\IfFontExistsTF{FreeSerif}
+        {\newfontfamily\bengalifont{FreeSerif}}
+        {\newfontfamily\bengalifont{Arial Unicode MS}}
+}}}}
+\IfFontExistsTF{CMU Serif}
+{\newfontfamily\lgcfont{CMU Serif}}
+{\IfFontExistsTF{DejaVu Sans}
+  {\newfontfamily\lgcfont{DejaVu Sans}}
+  {\newfontfamily\lgcfont{Georgia}}
+}
+\setDefaultTransitions{\lgcfont}{}
+\setTransitionsForDevanagari{\hindifont}{\rmfamily}
+\setTransitionsFor{Bengali}{\bengalifont}{\lgcfont}
 
 %New command to display footnote whose markers will always be hidden
 \let\svthefootnote\thefootnote
@@ -34,7 +95,7 @@
 \DeclareUnicodeCharacter{2207}{\ifmmode\nabla\else{$\nabla$}\fi}
 
 %Reset equation numbering at each chapter; see CONVERSION_RULES.md rule 7
-\numberwithin{equation}{chapter}
+\numberwithin{equation}{section}
 
 %Reset figure/table numbering at each chapter and match the source's
 %"Fig. 1.1. Title" / "Table 1.1. Title" caption style; see
@@ -56,8 +117,22 @@
 \newcommand{\vect}[1]{\mathbf{#1}}
 \newcommand{\mat}[1]{\boldsymbol{#1}}
 
+\newunicodechar{∇}{\ifmmode\nabla\else{$\nabla$}\fi}
+\newunicodechar{→}{\ifmmode\rightarrow\else{$\rightarrow$}\fi}
+\newunicodechar{𝜆}{\ifmmode\lambda\else{$\lambda$}\fi}
+\newunicodechar{⋅}{\ifmmode\cdot\else{$\cdot$}\fi}
+\newunicodechar{←}{\ifmmode\leftarrow\else{$\leftarrow$}\fi}
+\newunicodechar{⟶}{\ifmmode\longrightarrow\else{$\longrightarrow$}\fi}
+\newunicodechar{Ω}{\ifmmode\Omega\else{$\Omega$}\fi}
+
+\title{Quantum Theory Angular Momentum }
+
+\author{D. A. Varshalovich\\
+A. N. Moskalev\\
+V. K. Khersonskii}
+\date{}
 \begin{document}
-\captionsetup{singlelinecheck=false}
+\captionsetup{singlelinecheck=false}\maketitle
 \include{Chap0}
 \include{Chap1}
 \end{document}

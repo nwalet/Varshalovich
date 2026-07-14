@@ -1,0 +1,3494 @@
+\section*{Chapter 8}
+\section*{CLEBSCH-GORDAN COEFFICIENTS AND $3 j m$ SYMBOLS}
+\subsection*{8.1. DEFINITION}
+The Clebsch-Gordan coefficients are vector addition coefficients. They play an important role in the decomposition of reducible representations of rotation group into irreducible representations. All recoupling coefficients or $3 n j$ symbols can be determined as the sums of products of the Clebsch-Gordan coefficients. The aforesaid explains the extensive application of these coefficients in the quantum theory of angular momentum.
+
+\subsection*{8.1.1. The Clebsch-Gordan Coefficients}
+Let $\mathbf{j}_{1}$ and $\mathbf{j}_{2}$ be two angular momenta with projections $m_{1}$ and $m_{2}$ on the quantization axis. A ClebschGordan coefficients represents the probability amplitude that $\mathrm{j}_{1}$ and $\mathrm{j}_{2}$ are coupled into a resultant angular momentum $\mathbf{j}$ with projection $m$. In accordance with the vector addition rules $\mathbf{j}_{1}+\mathbf{j}_{2}=\mathbf{j}$, the Clebsch-Gordan coefficient vanishes unless the triangular conditions (triangular inequalities) are fulfilled, i.e.,
+
+
+\begin{equation*}
+\left|j_{1}-j_{2}\right| \leq j \leq j_{1}+j_{2} \tag{1}
+\end{equation*}
+
+
+and the requirement
+
+
+\begin{equation*}
+m_{1}+m_{2}=m \tag{2}
+\end{equation*}
+
+
+is satisfied. It will also be assumed that arguments of the Clebsch-Gordan coefficients satisfy the following conditions:\\
+(a) $j_{1}, j_{2}, j$ are integer or half-integer non-negative numbers; ${ }^{1}$\\
+(b) $m_{1}, m_{2}, m$ are integer or half-integer (positive or negative) numbers;\\
+(c) $\left|m_{1}\right| \leq j_{1},\left|m_{2}\right| \leq j_{2},|m| \leq j$;\\
+(d) $j_{1}+m_{1}, j_{2}+m_{2}, j+m, j_{1}+j_{2}+j$ are integer non-negative numbers.
+
+The absolute value of a Clebsch-Gordan coefficient is given by
+
+
+\begin{equation*}
+\left[C_{j_{1} m_{1} j_{2} m_{2}}^{j m}\right]^{2}=\frac{2 j+1}{8 \pi} \int_{0}^{2 \pi} d \alpha \int_{0}^{\pi} d \beta \sin \beta \int_{0}^{2 \pi} d \gamma D_{m_{1} m_{1}}^{j_{1}}(\alpha, \beta, \gamma) D_{m_{2} m_{2}}^{j_{2}}(\alpha, \beta, \gamma) D_{m m}^{j *}(\alpha, \beta, \gamma) \tag{4}
+\end{equation*}
+
+
+The phase of the Clebsch-Gordan coefficients may be chosen in different ways. The phase convention proposed by Condon and Shortley [10] is universally accepted. In accordance with this convention the Clebsch-Gordan
+
+\footnotetext{${ }^{1}$ The extension of the Clebsch-Gordan coefficients to negative values of momenta will be considered in Sec. 8.4.5.
+}
+coefficients are real and their phases are fixed by the additional relation
+
+\begin{equation*}
+C_{j_{1} m_{1} j_{2} m_{2}}^{j m} C_{j_{1} j_{1} j_{2}-j_{2}}^{j j_{1}-j_{2}}=\frac{2 j+1}{8 \pi} \int_{0}^{2 \pi} d \alpha \int_{0}^{\pi} d \beta \sin \beta \int_{0}^{2 \pi} d \gamma D_{m_{1} j_{1}}^{j_{1}}(\alpha, \beta, \gamma) D_{m_{2}-j_{2}}^{j_{2}}(\alpha, \beta, \gamma) D_{m j_{1}-j_{2}}^{j *}(\alpha, \beta, \gamma) \tag{5}
+\end{equation*}
+
+where
+$$
+C_{j_{1} j_{1} j_{2}-j_{2}}^{j j_{1}-j_{2}}>0 .
+$$
+
+Under such a phase definition the Clebsch-Gordan coefficients satisfy the relations
+
+
+\begin{gather*}
+C_{j m 00}^{j m}=1, \quad C_{j_{1} j_{1} j_{2} j_{2}}^{j_{1}+j_{2} j_{1}+j_{2}}=1, \quad C_{j_{1} m_{1} j_{2} m_{2}}^{j_{1}+j_{2} m_{1}+m_{2}}>0, \quad C_{j_{1} m_{1} j_{2}-j_{2}}^{j m}>0, \quad(-1)^{j_{1}+j_{2}-j} C_{j_{1} m_{1} j_{2} j_{2}}^{j m}>0, \\
+(-1)^{j_{1}-m_{1}} C_{j_{1} m_{1} j_{2} m_{2}}^{j j}>0, \quad(-1)^{j_{2}+m_{2}} C_{j_{1} m_{1} j_{2} m_{2}}^{j_{1}-j_{2} m}>0 . \tag{6}
+\end{gather*}
+
+
+The Clebsch-Gordan coefficients are elements of the unitary matrix which performs direct and inverse transformations between state vectors $\left|j_{1} m_{1} j_{2} m_{2}\right\rangle$ and $\left|j_{1} j_{2} j m\right\rangle$
+
+
+\begin{equation*}
+C_{j_{1} m_{1} j_{2} m_{2}}^{j m}=\left\langle j_{1} m_{1} j_{2} m_{2} \mid j_{1} j_{2} j m\right\rangle=\left\langle j_{1} j_{2} j m \mid j_{1} m_{1} j_{2} m_{2}\right\rangle . \tag{7}
+\end{equation*}
+
+
+The unitarity relation is
+
+
+\begin{gather*}
+\sum_{m_{1} m_{2}} C_{j_{1} m_{1} j_{2} m_{2}}^{j m} C_{j_{1} m_{1} j_{2} m_{2}}^{j^{\prime} m^{\prime}}=\delta_{j j^{\prime}} \delta_{m m^{\prime}} \\
+\sum_{j(m)} C_{j_{1} m_{1} j_{2} m_{2}}^{j m} C_{j_{1} m_{1}^{\prime} j_{2} m_{2}^{\prime}}^{j m}=\delta_{m_{1} m_{1}^{\prime}} \delta_{m_{2} m_{2}^{\prime}} \tag{8}
+\end{gather*}
+
+
+The direct product of two irreducible tensors $\mathfrak{M}_{j_{1} m_{1}}$ and $\mathfrak{N}_{j_{2} m_{2}}$ may be decomposed into irreducible tensors. The coefficients of this decomposition are just the Clebsch-Gordan coefficients:
+
+
+\begin{equation*}
+\mathfrak{M}_{j_{1} m_{1}} \mathfrak{N}_{j_{2} m_{2}}=\sum_{j(m)} C_{j_{1} m_{1} j_{2} m_{2}}^{j m}\left\{\mathfrak{N}_{j_{1}} \otimes \mathfrak{N}_{j_{2}}\right\}_{j m} . \tag{9}
+\end{equation*}
+
+
+The inverse relation is
+
+
+\begin{equation*}
+\left\{\mathfrak{M}_{j_{1}} \otimes \mathfrak{N}_{j_{2}}\right\}_{j m}=\sum_{m_{1} m_{2}} C_{j_{1} m_{1} j_{2} m_{2}}^{j m_{1}} \mathfrak{M}_{j_{1} m_{1}} \Re_{j_{2} m_{2}} . \tag{10}
+\end{equation*}
+
+
+\subsection*{8.1.2. The Wigner 3jm Symbols}
+Not infrequently the Wigner $3 j \mathrm{~m}$ symbols [110] are used instead of the Clebsch-Gordan coefficients. These symbols possess simpler symmetry properties. The $3 j \mathrm{~m}$ symbols are related to the Clebsch-Gordan coefficients by
+
+\[
+\left(\begin{array}{ccc}
+j_{1} & j_{2} & j_{3}  \tag{11}\\
+m_{1} & m_{2} & m_{3}
+\end{array}\right)=(-1)^{j_{3}+m_{3}+2 j_{1}} \frac{1}{\sqrt{2 j_{3}+1}} C_{j_{1}-m_{1} j_{2}-m_{3}}^{j_{3} m_{3}} .
+\]
+
+The inverse relation is
+
+\[
+C_{j_{1} m_{1} j_{2} m_{2}}^{j_{3} m_{3}}=(-1)^{j_{1}-j_{2}+m_{3}} \sqrt{2 j_{3}+1}\left(\begin{array}{ccc}
+j_{1} & j_{2} & j_{3}  \tag{12}\\
+m_{1} & m_{2} & -m_{3}
+\end{array}\right) .
+\]
+
+The $3 j \mathrm{~m}$ symbol represents the probability amplitude that three angular momenta $\mathrm{j}_{1}, \mathrm{j}_{2}$ and $\mathrm{j}_{3}$ with projections $m_{1}, m_{2}$ and $m_{3}$ are coupled to yield zero angular momentum:
+
+\[
+\left(\begin{array}{ccc}
+j_{1} & j_{2} & j_{3}  \tag{13}\\
+m_{1} & m_{2} & m_{3}
+\end{array}\right)=\eta \sum_{j^{\prime} m^{\prime}} C_{j_{1} m_{1} j_{2} m_{3}}^{j^{\prime} m^{\prime}} C_{j^{\prime} m^{\prime} j_{3} m_{3}}^{00}
+\]
+
+The phase factor $\eta=(-1)^{j_{1}-j_{2}+j_{3}}$ is chosen in such a way that any cyclic permutation of columns leaves the $3 j m$ symbol unchanged. Below we shall use, along with the letters $j, m$ other Latin letters ( $a, b, c$, etc.) to denote angular momenta, and Greek letters ( $\alpha, \beta, \gamma$, etc.) to denote momentum projections in the arguments of the $3 j m$ symbols and Clebsch-Gordan coefficients.
+
+\subsection*{8.1.3. Regge R-Symbols}
+The Wigner $3 j m$ symbol may be represented by a square $3 \times 3$ array $\left\|R_{i k}\right\|(i, k=1,2,3)$ which is called the Regge $R$-symbol [94]
+
+\[
+\left(\begin{array}{ccc}
+a & b & c  \tag{14}\\
+\alpha & \beta & \gamma
+\end{array}\right)=\left\|\begin{array}{lll}
+R_{11} & R_{12} & R_{13} \\
+R_{21} & R_{22} & R_{23} \\
+R_{31} & R_{32} & R_{33}
+\end{array}\right\|
+\]
+
+where
+
+\[
+\begin{array}{lll}
+R_{11}=-a+b+c, & R_{12}=a-b+c, & R_{13}=a+b-c, \\
+R_{21}=a+\alpha, & R_{22}=b+\beta, & R_{23}=c+\gamma, \\
+R_{31}=a-\alpha, & R_{32}=b-\beta, & R_{33}=c-\gamma \tag{15}
+\end{array}
+\]
+
+The inverse relations are
+
+\[
+\begin{array}{ll}
+2 a=R_{21}+R_{31}=R_{12}+R_{13}, & 2 \alpha=R_{21}-R_{31}=R_{32}-R_{22}+R_{33}-R_{23}, \\
+2 b=R_{22}+R_{32}=R_{11}+R_{13}, & 2 \beta=R_{22}-R_{32}=R_{31}-R_{21}+R_{33}-R_{23}, \\
+2 c=R_{23}+R_{33}=R_{11}+R_{12}, & 2 \gamma=R_{23}-R_{33}=R_{31}-R_{21}+R_{32}-R_{22} . \tag{16}
+\end{array}
+\]
+
+All nine elements $R_{i k}$ are non-negative integers which satisfy the relations
+
+
+\begin{equation*}
+\sum_{i} R_{i k}=J, \quad \sum_{k} R_{i k}=J \tag{17}
+\end{equation*}
+
+
+where
+
+
+\begin{equation*}
+J=a+b+c \tag{18}
+\end{equation*}
+
+
+\subsection*{8.2. EXPLICIT FORMS OF THE CLEBSCH-GORDAN COEFFICIENTS AND THEIR RELATIONS TO OTHER FUNCTIONS}
+Below we shall assume that the arguments of the Clebsch-Gordan coefficients and $3 j m$ symbols satisfy Eqs. 8.1(1)-8.1(3). In addition we introduce the $\Delta$-symbol defined by
+
+
+\begin{equation*}
+\Delta(a b c)=\left[\frac{(a+b-c)!(a-b+c)!(-a+b+c)!}{(a+b+c+1)!}\right]^{\frac{1}{2}} \tag{1}
+\end{equation*}
+
+
+The $\Delta$-symbol is invariant under permutations of $a, b, c$. Numerical values of the $\Delta$-symbol are given in Table 8.12 for $\frac{1}{2} \leq a, b, c \leq 5$. If one of the momenta $a, b, c$ equals zero, the $\Delta$-symbol is reduced to
+
+
+\begin{equation*}
+\Delta(a a 0)=\frac{1}{\sqrt{2 a+1}} \tag{2}
+\end{equation*}
+
+
+8.2.1 Representations of the Clebsch-Gordan Coefficients in the Form of Algebraic Sums
+
+$$
+\left.\left.\left.\begin{array}{rl}
+C_{a \alpha b \beta}^{c \gamma}= & \delta_{\gamma, \alpha+\beta} \Delta(a b c)[(a+\alpha)!(a-\alpha)!(b+\beta)!(b-\beta)!(c+\gamma)!(c-\gamma)!(2 c+1)]^{\frac{1}{2}} \\
+& \times \sum_{z} \frac{(-1)^{z}}{z!(a+b-c-z)!(a-\alpha-z)!(b+\beta-z)!(c-b+\alpha+z)!(c-a-\beta+z)!} \\
+& \quad(\text { Van der Waerden }[40], \text { Racah }[91]) \\
+C_{a \alpha b \beta}^{c \gamma}= & \delta_{\gamma, \alpha+\beta} \frac{\Delta(a b c)}{(c+a-b)!(c-a+b)!}\left[\frac{(a-\alpha)!(b-\beta)!(c+\gamma)!(c-\gamma)!(2 c+1)}{(a+\alpha)!(b+\beta)!}\right]^{\frac{1}{2}} \\
+& \times \sum_{z} \frac{(-1)^{a-\alpha+z}(a+\alpha+z)!(c+b-\alpha-z)!}{z!(a-\alpha-z)!(c-\gamma-z)!(b-c+\alpha+z)!} \\
+& \quad(\text { Racah }[91], \text { Fock }[68])
+\end{array}\right] ~ C_{a \alpha b \beta}^{c \gamma}=\delta_{\gamma, \alpha+\beta} \Delta(a b c)\left[\frac{(c+\gamma)!(c-\gamma)!(2 c+1)}{(a+\alpha)!(a-\alpha)!(b+\beta)!(b-\beta)!}\right]^{\frac{1}{2}}\right] ~(-1)^{b+\beta+z}(c+b+\alpha-z)!(a-\alpha+z)!\right] ~ \sum_{z} \frac{(c-a+b-z)!(c+\gamma-z)!(a-b-\gamma+z)!}{}
+$$
+
+(Wigner [43])
+
+
+\begin{align*}
+C_{a \alpha b \beta}^{c \gamma}= & \delta_{\gamma, \alpha+\beta} \frac{\Delta(a b c)}{(a-b+c)!(a+b-c)!}\left[\frac{(a+\alpha)!(a-\alpha)!(b-\beta)!(c+\gamma)!(2 c+1)}{(b+\beta)!(c-\gamma)!}\right]^{\frac{1}{2}} \\
+& \times \sum_{z} \frac{(-1)^{b+\beta+x}(2 c-z)!(a+b-c+z)!}{z!(c-a+b-z)!(c+\gamma-z)!(a-c-\beta+z)!} \tag{6}
+\end{align*}
+
+
+(Majumdar [82])
+
+
+\begin{align*}
+C_{a \alpha b \beta}^{c \gamma}= & \delta_{\gamma, \alpha+\beta} \frac{\Delta(a b c)(a+b+c+1)!}{(a-b+c)!}\left[\frac{(a-\alpha)!(c+\gamma)!(2 c+1)}{(a+\alpha)!(b+\beta)!(b-\beta)!(c-\gamma)!}\right]^{\frac{1}{2}} \\
+& \times \sum_{z} \frac{(-1)^{b+\beta+z}(2 c-z)!(c+b+\alpha-z)!}{z!(c-a+b-z)!(c+\gamma-z)!(a+b+c+1-z)!} \tag{7}
+\end{align*}
+
+
+(Bandzaitis and Yutsis [51])
+
+
+\begin{align*}
+C_{a \alpha b \beta}^{c \gamma}= & \frac{\delta_{\gamma, \alpha+\beta}}{\Delta(a b c)}\left[\frac{(a+\alpha)!(a-\alpha)!(c+\gamma)!(c-\gamma)!(2 c+1)}{(b+\beta)!(b-\beta)!}\right]^{\frac{1}{2}} \\
+& \times \sum_{z} \frac{(-1)^{a-\alpha+z}(a+b-\gamma-z)!(b+c-\alpha-z)!}{z!(a-\alpha-z)!(c-\gamma-z)!(a+b+c+1-z)!} \tag{8}
+\end{align*}
+
+
+(Bandzaitis and Yutsis [51]).\\
+In Eqs. (3)-(8) the summation index $z$ assumes integer values for which all the factorial arguments are nonnegative.
+
+\subsection*{8.2.2 Quasi-Binomial Representation of the Clebsch-Gordan Coefficients}
+The Clebsch-Gordan coefficients can be presented in the form of quasi-binomials $(u \pm v)^{(k)}[48]^{2}$
+
+
+\begin{equation*}
+\left.\left.C_{a \alpha b \beta}^{c \gamma}=\delta_{\gamma, \alpha+\beta} \frac{\Delta(a b c)}{(a+b-c)!}\left[\frac{(c-\gamma)!(c+\gamma)!(2 c+1)}{(a-\alpha)!(a+\alpha)!(b-\beta)!(b+\beta)!}\right]^{\frac{1}{2}} \right\rvert\,(a+\alpha)(b-\beta)-(a-\alpha)(b+\beta)\right]^{(a+b-c)} . \tag{9}
+\end{equation*}
+
+
+For calculating the quasi-binomial one should use the binomial formula with all powers replaced by quasipowers.
+
+
+\begin{equation*}
+(u \pm v)^{(k)}=\sum_{z}( \pm 1)^{z}\binom{k}{z} u^{(k-z)} v^{(z)} \tag{10}
+\end{equation*}
+
+
+Quasi-powers (or generalized powers) are defined by
+
+
+\begin{gather*}
+u^{(z)} \equiv u^{(1)(z)}=\frac{\Gamma(u+1)}{\Gamma(u-z+1)} \\
+u^{(-1)(z)}=(u+z)^{(z)}=\frac{\Gamma(u+z+1)}{\Gamma(u+1)} \tag{11}
+\end{gather*}
+
+
+If $z$ is integer and positive, we get
+
+
+\begin{align*}
+u^{(z)} & =u(u-1) \ldots(u-z+1) \\
+u^{(-1)(z)} & =(u+1)(u+2) \ldots(u+z) \tag{12}
+\end{align*}
+
+
+\subsection*{8.2.3. Clebsch-Gordan Coefficients and Finite Differences}
+The Clebsch-Gordan coefficient are related to finite differences [41]
+
+
+\begin{gather*}
+C_{a \alpha b \beta}^{c \gamma}=\delta_{\gamma, \alpha+\beta}(-1)^{a-c+\beta}\left[\frac{(c+\gamma)!(a+b-c)!(2 c+1)}{(c-\gamma)!(c+a-b)!(c-a+b)!(a+b+c+1)!}\right]^{\frac{1}{2}} \\
+\times\left[\frac{(a-\alpha)^{(a-b-\gamma)}}{(a+\alpha)^{(a-b+\gamma)}}\right]^{\frac{1}{2}} \Delta_{\alpha}^{c-\gamma}\left[\frac{(a+\alpha)^{(c+a-b)}}{(a-\alpha)^{(a-b-c)}}\right] \tag{13}
+\end{gather*}
+
+
+where the difference of order $k$ with respect to the argument $a$ is given by
+
+
+\begin{equation*}
+\Delta_{a}^{k} f(a)=\sum_{n=0}^{k}(-1)^{k-n} \frac{k!}{n!(k-n)!} f(a+n) \tag{14}
+\end{equation*}
+
+
+In particular,
+
+
+\begin{gather*}
+\Delta_{a} f(a)=f(a+1)-f(a), \\
+\Delta_{a} a^{(n)}=n a^{(n-1)} . \tag{15}
+\end{gather*}
+
+
+Finite differences are anologous to differentials, while quasi-powers are analogous to ordinary powers. From this it can be concluded that the Clebsch-Gordan coefficients are analogous to the Wigner $D$-functions [20, 58]. To illustrate this similarity let us introduce the notations
+
+
+\begin{equation*}
+j=b, \quad \mu=c-a, \quad \nu=\beta, \quad P=\frac{1}{2}(a+b+c), \quad Q=a+\alpha-\frac{1}{2}(a+b+c) . \tag{16}
+\end{equation*}
+
+
+\footnotetext{${ }^{2}$ This follows from the fact that the Clebsch-Gordan coefficients may be expressed in terms of orthogonal polynomials of a discrete variable (Hahn polynomials); see Refs. [142, 143].
+}Now, Eq. (3) may be rewritten in terms of quasi-powers
+
+
+\begin{align*}
+\sqrt{\frac{a+b+c+1}{2 c+1}} C_{a \alpha b \beta}^{c \gamma}= & {\left[\frac{(j+\mu)!(j-\mu)!(j+\nu)!(j-\nu)!}{(2 P)^{(2 j)}(P-Q)^{(j+\mu)}(P-Q)^{(j+\nu)}(P+Q)^{(-\mu-\nu)}}\right]^{\frac{1}{2}} } \\
+& \times \sum_{x}(-1)^{z} \frac{(P-Q)^{(j+\mu+z)}(P+Q)^{(j-\mu-z)}}{z!(j-\mu-z)!(j+\nu-z)!(\mu-\nu+z)!} \tag{17}
+\end{align*}
+
+
+Replacing quasi-powers in (17) by ordinary powers and introducing the angle $\vartheta$ according to
+
+
+\begin{equation*}
+\cos \theta=\frac{Q}{P}, \quad \cos \frac{\theta}{2}=\sqrt{\frac{P+Q}{2 P}}, \quad \sin \frac{\theta}{2}=\sqrt{\frac{P-Q}{2 P}} \tag{18}
+\end{equation*}
+
+
+we see that Eq. (17) reduces to the following relation for the Wigner $D$-function
+
+
+\begin{align*}
+& d_{\nu \mu}^{j}(\theta)=\left[\frac{(j+\mu)!(j-\mu)!(j+\nu)!(j-\nu)!}{(2 P)^{2 j}(P-Q)^{j+\mu}(P-Q)^{j+\nu}(P+Q)^{-\mu-\nu}}\right]^{\frac{1}{2}} \\
+& \times \sum_{x}(-1)^{x} \frac{(P-Q)^{j+\mu+x}(P+Q)^{j-\mu-x}}{z!(j-\mu-z)!(j+\nu-z)!(\mu-\nu+z)!} \tag{19}
+\end{align*}
+
+
+Equation (19) is similar to Eq. 4.3(4). The analogy between Eqs. (17) and (19) permits us to connect the recursion relations, symmetry properties, etc. of the Wigner D-functions and the Clebsch-Gordan coefficients [58]. Since for $u \gg z, u \gg 1$ quasi-powers became asymptotically equal to ordinary powers, a Clebsch-Gordan coefficient turns into a $D$-function in the large-momentum limit (Eq. 8.9(1)).
+
+\subsection*{8.2.4 Expressions for the Clebsch-Gordan Coefficients in Terms of the Binomial Coefficients [126]}
+
+\begin{equation*}
+C_{a \alpha b \beta}^{c \gamma}=\delta_{\gamma, \alpha+\beta}\left[\frac{\binom{2 a}{J-2 c}\binom{2 b}{J-2 c}}{\binom{J+1}{J-2 c}\binom{2 a}{a-\alpha}\binom{2 b}{b-\beta}\binom{2 c}{c-\gamma}}\right]^{\frac{1}{2}} \sum_{x}(-1)^{x}\binom{J-2 c}{z}\binom{J-2 b}{a-\alpha-z}\binom{J-2 a}{b+\beta-z}, \tag{20}
+\end{equation*}
+
+
+where $J=a+b+c$.
+
+\subsection*{8.2.5. Representations of the Clebsch-Gordan Coefficients in Terms of of the Hypergeometric Functions}
+The Clebsch-Gordan coefficients may be expressed via the generalized hypergeometric functions ${ }_{3} F_{2}$ of unit argument,
+
+
+\begin{gather*}
+C_{a \alpha b \beta}^{c \gamma}=\delta_{\gamma, \alpha+\beta} \frac{\Delta(a b c)}{(a+b-c)!(-b+c+\alpha)!(-a+c-\beta)!}\left[\frac{(a+\alpha)!(b-\beta)!(c+\gamma)!(c-\gamma)!(2 c+1)}{(a-\alpha)!(b+\beta)!}\right]^{\frac{1}{2}} \\
+\times{ }_{3} F_{2}\left[\left.\begin{array}{c}
+-a-b+c,-a+\alpha,-b-\beta \\
+-a+c-\beta+1,-b+c+\alpha+1
+\end{array} \right\rvert\, 1\right] \tag{21}
+\end{gather*}
+
+
+
+\begin{align*}
+& \begin{aligned}
+C_{a \alpha b \beta}^{c \gamma}= & \delta_{\gamma, \alpha+\beta}(-1)^{a-\alpha} \frac{\Delta(a b c)(b+c-\alpha)!}{(a-b+c)!(-a+b+c)!(b-c+\alpha)!}\left[\frac{(a+\alpha)!(b-\beta)!(c+\gamma)!(2 c+1)}{(a-\alpha)!(b+\beta)!(c-\gamma)!}\right]^{\frac{1}{2}} \\
+& \times{ }_{3} F_{2}\left[\left.\begin{array}{c}
+a+\alpha+1,-a+\alpha,-c+\gamma \\
+-b-c+\alpha, b-c+\alpha+1
+\end{array} \right\rvert\, 1\right],
+\end{aligned} \\
+& \begin{aligned}
+C_{a \alpha b \beta}^{c \gamma}= & \delta_{\gamma, \alpha+\beta}(-1)^{b+\beta} \frac{\Delta(a b c)(b+c+\alpha)!}{(-a+b+c)!(a-b-\gamma)!}\left[\frac{(a-\alpha)!(c-\gamma)!(2 c+1)}{(a+\alpha)!(b+\beta)!(b-\beta)!(c+\gamma)!}\right]^{\frac{1}{2}} \\
+& \quad \times_{3} F_{2}\left[\begin{array}{c}
+a-b-c, a-\alpha+1,-c-\gamma \\
+a-b-\gamma+1,-b-c-\alpha \\
+(\text { Rose }(30))
+\end{array}\right]
+\end{aligned}  \tag{22}\\
+& C_{a \alpha b \beta}^{c \gamma}=\delta_{\gamma, \alpha+\beta}(-1)^{b+\beta} \frac{\Delta(a b c)(2 c)!}{(a-b+c)!(-a+b+c)!(a-c-\beta)!}\left[\frac{(a+\alpha)!(a-\alpha)!(b-\beta)!(2 c+1)}{(b+\beta)!(c+\gamma)!(c-\gamma)!}\right]^{\frac{1}{2}} \\
+&  \tag{23}\\
+& \quad \times{ }_{3} F_{2}\left[\begin{array}{c}
+a-b-c, a+b-c+1,-c-\gamma \mid 1], \\
+-2 c, a-c-\beta+1
+\end{array}\right. \\
+& C_{a \alpha b \beta}^{c \gamma}=\delta_{\gamma, \alpha+\beta}(-1)^{b+\beta} \frac{\Delta(a b c)(2 c)!(b+c+\alpha)!}{(a-b+c)!(-a+b+c)!}\left[\frac{(a+\alpha)!(b+\beta)!(b-\beta)!(c+\gamma)!(c-\gamma)!}{(a-\alpha)}\right]^{\frac{1}{2}} \\
+& \quad \times{ }_{3} F_{2}\left[\begin{array}{c}
+a-b-c,-a-b-c-1,-c-\gamma \mid 1], \\
+-2 c,-b-c-\alpha
+\end{array}\right.  \tag{24}\\
+& C_{a \alpha b \beta}^{c \gamma}=\delta_{\gamma, \alpha+\beta}(-1)^{a-\alpha} \frac{(a+b-\gamma)!(b+c-\alpha)!}{\Delta(a b c)(a+b+c+1)!}\left[\frac{(a+\alpha)!(c+\gamma)!(2 c+1)}{(a-\alpha)!(b+\beta)!(b-\beta)!(c-\gamma)!}\right]^{\frac{1}{2}} \\
+& \quad \times{ }_{3} F_{2}\left[\begin{array}{c}
+-a-b-c-1,-a+\alpha,-c+\gamma \mid 1 \\
+-a-b+\gamma,-b-c+\alpha
+\end{array}\right] . \tag{25}
+\end{align*}
+
+
+Equations (21)-(26) may be associated with Eqs. (3)-(8), respectively.\\[0pt]
+According to Ref. [36], all ${ }_{3} F_{2}$-functions of unit argument, which are given by finite sums, may be expressed in terms of the Clebsch-Gordan coefficients. Any Clebsch-Gordan coefficient may also be represented in the form of derivatives of the hypergeometric functions [46]:
+
+
+\begin{gather*}
+C_{a \alpha b \beta}^{c \gamma}=\delta_{\gamma, \alpha+\beta}(-1)^{a+b-c} \frac{\Delta(a b c)}{(a+b-c)!(-a+b+c)!(a-b+\gamma)!}\left[\frac{(a+\alpha)!(a-\alpha)!(b+\beta)!(c+\gamma)!(2 c+1)}{(b-\beta)!(c-\gamma)!}\right]^{\frac{1}{2}} \\
+\times\left\{\frac{d^{b-\beta}}{(d t)^{b-\beta}}\left[(1-t)^{a+b-c} F(a-b-c,-c+\gamma ; a-b+\gamma+1 ; t)\right]\right\}_{t=0} \tag{27}
+\end{gather*}
+
+
+\subsection*{8.2.6. Representations of the $3 j \mathrm{~m}$ Symbols in the Form of Algebraic Sums}
+The explicit form of the Wigner $3 j m$ symbols may be obtained from Eqs. (3)-(8) for the Clebsch-Gordan coefficients. Rewriting these equations in terms of the $R$-symbol elements, we get the following relations for\\
+the $3 j m$ symbols [45]
+
+
+\begin{align*}
+& \left(\begin{array}{lll}
+a & b & c \\
+\alpha & \beta & \gamma
+\end{array}\right)=(-1)^{R_{21}+R_{32}}\left[\frac{\prod_{i, j=1}^{3}\left(R_{i j}\right)!}{(J+1)!}\right]^{\frac{1}{2}} \\
+& \times \sum_{x}(-1)^{x} \frac{1}{z!\left(R_{13}-z\right)!\left(R_{22}-z\right)!\left(R_{31}-z\right)!\left(R_{33}-R_{22}+z\right)!\left(R_{11}-R_{22}+z\right)!},  \tag{28}\\
+& \left(\begin{array}{ccc}
+a & b & c \\
+\alpha & \beta & \gamma
+\end{array}\right)=(-1)^{R_{21}+R_{31}+R_{32}}\left[\frac{R_{13}!R_{23}!R_{31}!R_{32}!R_{33}!}{(J+1)!R_{11}!R_{12}!R_{21}!R_{22}!}\right]^{\frac{1}{2}} \\
+& \times \sum_{x}(-1)^{x} \frac{\left(R_{21}+z\right)!\left(R_{11}+R_{31}-z\right)!}{z!\left(R_{31}-z\right)!\left(R_{23}-z\right)!\left(R_{13}-R_{31}+z\right)!},  \tag{29}\\
+& \left(\begin{array}{ccc}
+a & b & c \\
+\alpha & \beta & \gamma
+\end{array}\right)=(-1)^{R_{21}+R_{22}+R_{32}}\left[\frac{R_{11}!R_{12}!R_{13}!R_{23}!R_{33}!}{(J+1)!R_{21}!R_{22}!R_{31}!R_{32}!}\right]^{\frac{1}{2}} \sum_{z}(-1)^{z} \frac{\left(R_{31}+z\right)!\left(R_{32}+R_{33}-z\right)!}{z!\left(R_{11}-z\right)!\left(R_{33}-z\right)!\left(R_{12}-R_{33}+z\right)!}, \\
+& \left(\begin{array}{ccc}
+a & b & c \\
+\alpha & \beta & \gamma
+\end{array}\right)=(-1)^{R_{21}+R_{22}+R_{32}}\left[\frac{R_{11}!R_{21}!R_{31}!R_{32}!R_{33}!}{(J+1)!R_{12}!R_{13}!R_{22}!R_{33}!}\right]^{\frac{1}{2}} \sum_{z}(-1)^{z} \frac{\left(R_{13}+z\right)!\left(R_{23}+R_{33}-z\right)!}{z!\left(R_{11}-z\right)!\left(R_{33}-z\right)!\left(R_{21}-R_{33}+z\right)!},  \tag{30}\\
+& \left(\begin{array}{ccc}
+a & b & c \\
+\alpha & \beta & \gamma
+\end{array}\right)=(-1)^{R_{21}+R_{22}+R_{32}}\left[\frac{(J+1)!R_{11}!R_{13}!R_{31}!R_{39}!}{R_{12}!R_{21}!R_{22}!R_{23}!R_{32}!}\right]^{\frac{1}{3}} \sum_{z}(-1)^{z} \frac{\left(R_{11}+R_{21}-z\right)!\left(R_{23}+R_{33}-z\right)!}{z!\left(R_{11}-z\right)!\left(R_{33}-z\right)!(J+1-z)!},  \tag{31}\\
+& \left(\begin{array}{ccc}
+a & b & c \\
+\alpha & \beta & \gamma
+\end{array}\right)=(-1)^{R_{21}+R_{31}+R_{32}}\left[\frac{(J+1)!R_{21}!R_{23}!R_{31}!R_{39}!}{R_{11}!R_{12}!R_{13}!R_{22}!R_{32}!}\right]^{\frac{1}{2}} \sum_{z}(-1)^{z} \frac{\left(R_{11}+R_{31}-z\right)!\left(R_{13}+R_{23}-z\right)!}{z!\left(R_{23}-z\right)!\left(R_{31}-z\right)!(J+1-z)!}, \tag{32}
+\end{align*}
+
+
+where $J=a+b+c$.
+
+\subsection*{8.2.7. Quasi-binomial Representations of the 3jm Symbols}
+\[
+\left(\begin{array}{lll}
+a & b & c  \tag{34}\\
+\alpha & \beta \gamma
+\end{array}\right)=(-1)^{R_{21}+R_{32}}\left[\frac{R_{21}^{(-1)\left(R_{31}-R_{13}\right)} R_{31}^{(-1)\left(R_{32}-R_{13}\right)} R_{32}^{(-1)\left(R_{22}-R_{13}\right)} R_{22}^{(-1)\left(R_{21}-R_{13}\right)}}{(J+1)!R_{13}!}\right]^{\frac{1}{4}}(u-v)^{\left(R_{13}\right)} .
+\]
+
+The quasi-binomial may be evaluated according to Eqs. (10) and (11). Variables $u$ and $v$ may be chosen in different ways [45]:\\
+(a) $u=R_{21}^{(1)} R_{32}^{(1)}, \quad v=R_{22}^{(1)} R_{31}^{(1)}$,\\
+(b) $u=R_{21}^{(1)} R_{11}^{(-1)}, \quad v=R_{22}^{(1)} R_{12}^{(-1)}$,\\
+(c) $u=R_{11}^{(-1)} R_{23}^{(-1)}, \quad v=R_{32}^{(1)}(J+1)^{(1)}$.
+
+\subsection*{8.3. INTEGRAL REPRESENTATIONS}
+\subsection*{8.3.1. Integrals Involving Algebraic Functions}
+The Clebsch-Gordan coefficients may be represented by the following integrals [41] ( $J=a+b+c$ )
+
+
+\begin{gather*}
+C_{a \alpha b \beta}^{c \gamma}=\frac{(-1)^{a-c+\beta}}{2^{J+1}}\left[\frac{(c+\gamma)!(J-2 c)!(J+1)!(2 c+1)}{(a-\alpha)!(a+\alpha)!(b-\beta)!(b+\beta)!(c-\gamma)!(J-2 a)!(J-2 b)!}\right]^{\frac{1}{2}} \\
+\times \int_{-1}^{1}(1-x)^{a-\alpha}(1+x)^{b-\beta} \frac{d^{c-\gamma}}{(d x)^{c-\gamma}}\left[(1-x)^{J-2 a}(1+x)^{J-2 b}\right] d x  \tag{1}\\
+C_{a \alpha b \beta}^{c \gamma}=\frac{(-1)^{a-c+\beta}}{2^{J+1}}\left[\frac{(J-2 b)!(J-2 c)!(J+1)!(2 c+1)}{(a-\alpha)!(a+\alpha)!(b-\beta)!(b+\beta)!(c-\gamma)!(c+\gamma)!(J-2 a)!}\right]^{\frac{1}{2}} \\
+\times \int_{-1}^{1}(1-x)^{b+\beta}(1+x)^{b-\beta} \frac{d^{J-2 a}}{(d x)^{J-2 a}}\left[(1-x)^{c-\gamma}(1+x)^{c+\gamma}\right] d x \tag{2}
+\end{gather*}
+
+
+In particular, if $\alpha=\beta=\gamma=0$, then
+
+
+\begin{equation*}
+C_{a 0 b 0}^{c 0}=\frac{(-1)^{a-c}}{2^{J+1} a!b!c!}\left[\frac{(J-2 b)!(J-2 c)!(J+1)!(2 c+1)}{(J-2 a)!}\right]^{\frac{1}{2}} \int_{-1}^{1}\left(1-x^{2}\right)^{b} \frac{d^{J-2 a}}{(d x)^{J-2 a}}\left[\left(1-x^{2}\right)^{c}\right] d x \tag{3}
+\end{equation*}
+
+
+\subsection*{8.3.2. Integrals Involving the Wigner D-Functions}
+
+\begin{equation*}
+C_{a \alpha b \beta}^{c \gamma}=\frac{1}{8 \pi^{2}}\left[\frac{(a+b+c+1)!(a+b-c)!(2 c+1)}{(2 a)!(2 b)!}\right]^{\frac{1}{2}} \int d R D_{\alpha a}^{a}(R) D_{\beta-b}^{b}(R) D_{\gamma a-b}^{c *}(R) \tag{4}
+\end{equation*}
+
+
+where $R$ means the set of the Euler angles (see Sec. 4.12)
+
+$$
+\begin{aligned}
+C_{a \alpha b \beta}^{c \gamma}= & \frac{(-1)^{a+c-\alpha-\gamma}}{2^{a+b+1}}\left[\frac{(J-2 c)!(J+1)!(2 c+1)}{(a+\alpha)!(a-\alpha)!(b+\beta)!(b-\beta)!}\right]^{\frac{1}{2}} \\
+& \times \int_{-1}^{1}(\sin \theta)^{a+b}\left(\frac{1-\cos \theta}{1+\cos \theta}\right)^{\frac{\alpha-\beta}{2}} d_{b-a \gamma}^{c}(\theta) d(\cos \theta)
+\end{aligned}
+$$
+
+(Akim and Levin, [46])
+
+\subsection*{8.3.3. Integral Involving the Spherical Harmonics}
+If $a, b, c$ are integers and $J=a+b+c=2 g$ is even (i.e., $g$ is integer), then
+
+
+\begin{equation*}
+C_{a \alpha b \beta}^{c \gamma}=(-1)^{g-c}\left[\frac{4 \pi}{(2 a+1)(2 b+1)}\right]^{\frac{1}{2}} \frac{(g-a)!(g-b)!(g-c)!}{\Delta(a b c) g!} \int_{0}^{2 \pi} d \varphi \int_{0}^{\pi} d \vartheta \sin \vartheta Y_{a \alpha}(\vartheta, \varphi) Y_{b \beta}(\vartheta, \varphi) Y_{c \gamma}^{*}(\vartheta, \varphi) \tag{6}
+\end{equation*}
+
+
+\subsection*{8.3.4. Integral Representations for Products of the Clebsch-Gordan Coefficients}
+
+\begin{equation*}
+C_{a \alpha b \beta}^{c \gamma} C_{a \alpha^{\prime} b \beta^{\prime}}^{c \gamma^{\prime}}=\frac{2 c+1}{8 \pi^{2}} \int d R D_{\alpha \alpha^{\prime}}^{a}(R) D_{\beta \beta^{\prime}}^{b}(R) D_{\gamma \gamma^{\prime}}^{c *}(R) \tag{7}
+\end{equation*}
+
+
+In particular,
+
+
+\begin{equation*}
+\left[C_{a 060}^{c 0}\right]^{2}=\frac{2 c+1}{2} \int_{0}^{\pi} d \theta \sin \vartheta P_{a}(\cos \vartheta) P_{b}(\cos \vartheta) P_{c}(\cos \vartheta) \tag{8}
+\end{equation*}
+
+
+\subsection*{8.4. SYMMETRY PROPERTIES}
+The simplest way to formulate the symmetry properties of the Clebsch-Gordan coefficients and 3jm symbols is to use the representations of these coefficients in the form of the Regge $R$-symbols [94] (see Sec. 8.1.3).
+
+\subsection*{8.4.1. Symmetry Properties of the $R$-Symbols}
+The $R$-symbol possesses the following symmetry properties [94].\\
+(a) Permutations of columns
+
+\[
+\left\|\begin{array}{lll}
+R_{11} & R_{12} & R_{13}  \tag{1}\\
+R_{21} & R_{22} & R_{23} \\
+R_{31} & R_{32} & R_{33}
+\end{array}\right\|=\varepsilon\left\|\begin{array}{lll}
+R_{1 i} & R_{1 k} & R_{1 i} \\
+R_{2 i} & R_{2 k} & R_{2 l} \\
+R_{3 i} & R_{3 k} & R_{3 l}
+\end{array}\right\|,
+\]
+
+where
+
+\[
+c= \begin{cases}+1 & \text { for cyclic permutation (even number of permutations) }  \tag{2}\\ (-1)^{J} & \text { for non-cyclic permutation (odd number of permutations) }\end{cases}
+\]
+
+and
+
+$$
+J \equiv \sum_{k} R_{i k}=\sum_{i} R_{i k} ;
+$$
+
+\section*{(b) Permutations of rows}
+\[
+\left\|\begin{array}{lll}
+R_{11} & R_{12} & R_{13}  \tag{3}\\
+R_{21} & R_{22} & R_{23} \\
+R_{31} & R_{32} & R_{33}
+\end{array}\right\|=\left\|\begin{array}{lll}
+R_{i 1} & R_{i 2} & R_{i 3} \\
+R_{k 1} & R_{k 2} & R_{k 3} \\
+R_{i 1} & R_{i 2} & R_{i 3}
+\end{array}\right\|,
+\]
+
+(c) Transposition
+
+\[
+\left\|\begin{array}{lll}
+R_{11} & R_{12} & R_{13}  \tag{4}\\
+R_{21} & R_{22} & R_{23} \\
+R_{31} & R_{32} & R_{33}
+\end{array}\right\|=\left\|\begin{array}{lll}
+R_{11} & R_{21} & R_{31} \\
+R_{12} & R_{22} & R_{32} \\
+R_{13} & R_{23} & R_{33}
+\end{array}\right\|,
+\]
+
+These symmetry transformations relate $6 \times 6 \times 2=72$ generally different coefficients.
+
+\subsection*{8.4.2. Symmetry Properties of the $3 j m$ Symbols}
+The above relations are equivalent to the following symmetry properties of the $3 j m$ symbol.
+
+\section*{Classical symmetries [110]}
+(a) Permutations of columns (corresponding to permutations of columns of the $R$-symbol):
+
+
+\begin{align*}
+\left(\begin{array}{ccc}
+a & b & c \\
+\alpha & \beta & \gamma
+\end{array}\right)=\left(\begin{array}{ccc}
+b & c & a \\
+\beta & \gamma & \alpha
+\end{array}\right)=\left(\begin{array}{ccc}
+c & a & b \\
+\gamma & \alpha & \beta
+\end{array}\right) & =(-1)^{a+b+c}\left(\begin{array}{ccc}
+a & c & b \\
+\alpha & \gamma & \beta
+\end{array}\right) \\
+& =(-1)^{a+b+c}\left(\begin{array}{ccc}
+b & a & c \\
+\beta & \alpha & \gamma
+\end{array}\right)=(-1)^{\alpha+b+c}\left(\begin{array}{ccc}
+c & b & a \\
+\gamma & \beta & \alpha
+\end{array}\right) \tag{5}
+\end{align*}
+
+
+(b) Change of signs of momentum projections (corresponding to the permutation of the second and third rows of the $R$-symbol)
+
+\[
+\left(\begin{array}{ccc}
+a & b & c  \tag{6}\\
+\alpha & \beta & \gamma
+\end{array}\right)=(-1)^{a+b+c}\left(\begin{array}{rrr}
+a & b & c \\
+-\alpha & -\beta & -\gamma
+\end{array}\right)
+\]
+
+\section*{Regge symmetries [94]}
+(c) Replacement of arguments:
+
+\[
+\left(\begin{array}{lll}
+a & b & c  \tag{7}\\
+\alpha & \beta & \gamma
+\end{array}\right)=(-1)^{a+b+c}\left(\begin{array}{ccc}
+\frac{b+c+\alpha}{2} & \frac{a+c+\beta}{2} & \frac{a+b+\gamma}{2} \\
+a-\frac{b+c-\alpha}{2} & b-\frac{a+c-\beta}{2} & c-\frac{a+b-\gamma}{2}
+\end{array}\right)
+\]
+
+(corresponding to the permutation of the first and third rows of the $R$-symbol) and\\
+(d)
+
+\[
+\left(\begin{array}{lll}
+a & b & c  \tag{8}\\
+\alpha & \beta & \gamma
+\end{array}\right)=\left(\begin{array}{ccc}
+a & \frac{b+c-\alpha}{2} & \frac{b+c+\alpha}{2} \\
+-b+c & \frac{b-c-\alpha}{2}-\gamma & \frac{b-c+\alpha}{2}+\gamma
+\end{array}\right)
+\]
+
+This corresponds to the transposition of the $R$-symbol. According to the above symmetry properties, 72 formally different $3 j m$ symbols have the same absolute values. One can decompose these symbols into six groups ( 12 coefficients in each group). The $3 j m$ symbols which belong to different groups correspond to triangles of different forms but the same perimeter $J=a+b+c$. On the other hand, all $3 j m$ symbols which belong to one group are related by the classical symmetry properties (5) and (6). In Eq. (9) we list one $3 j m$ symbol from each group.
+
+
+\begin{align*}
+& \left(\begin{array}{ccc}
+a & b & c \\
+\alpha & \beta & \gamma
+\end{array}\right)=\left(\begin{array}{ccc}
+a & \frac{b+c-\alpha}{2} & \frac{b+c+\alpha}{2} \\
+c-b & \frac{b+\beta-c-\gamma}{2} & \frac{b-\beta-c+\gamma}{2}
+\end{array}\right)=\left(\begin{array}{ccc}
+b & \frac{a+c-\beta}{2} & \frac{a+c+\beta}{2} \\
+a-c & \frac{-a-\alpha+c+\gamma}{2} & \frac{-a+\alpha+c-\gamma}{2}
+\end{array}\right) \\
+& =\left(\begin{array}{ccc}
+c & \frac{a+b-\gamma}{2} & \frac{a+b+\gamma}{2} \\
+b-a & \frac{a+\alpha-b-\beta}{2} & \frac{a-\alpha-b+\beta}{2}
+\end{array}\right)=\left(\begin{array}{ccc}
+\frac{b+c-\alpha}{2} & \frac{a+c-\beta}{2} & \frac{a+b-\gamma}{2} \\
+a-\alpha-\frac{b+c-\alpha}{2} & b-\beta-\frac{a+c-\beta}{2} & c-\gamma-\frac{a+b-\gamma}{2}
+\end{array}\right) \\
+& =\left(\begin{array}{cc}
+\frac{b+c+\alpha}{2} & \frac{a+c+\beta}{2} \\
+\frac{b+c+\alpha}{2}-a-\alpha & \frac{a+b+\gamma}{2}
+\end{array}\right) . \tag{9}
+\end{align*}
+
+
+\subsection*{8.4.3. Symmetry Properties of the Clebsch-Gordan Coefficients}
+(a)
+
+
+\begin{align*}
+C_{a \alpha b \beta}^{c \gamma}=(-1)^{a+b-c} C_{b \beta a \alpha}^{c \gamma} & =(-1)^{a-\alpha} \sqrt{\frac{2 c+1}{2 b+1}} C_{a \alpha c-\gamma}^{b-\beta}=(-1)^{a-\alpha} \sqrt{\frac{2 c+1}{2 b+1}} C_{c \gamma a-\alpha}^{b \beta} \\
+& =(-1)^{b+\beta} \sqrt{\frac{2 c+1}{2 a+1}} C_{c-\gamma b \beta}^{a-\alpha}=(-1)^{b+\beta} \sqrt{\frac{2 c+1}{2 a+1}} C_{b-\beta c \gamma}^{a \alpha} \tag{10}
+\end{align*}
+
+
+(b)
+
+
+\begin{equation*}
+C_{a \alpha b \beta}^{c \gamma}=(-1)^{a+b-c} C_{a-\alpha b-\beta}^{c-\gamma} \tag{11}
+\end{equation*}
+
+
+(c)
+
+
+\begin{equation*}
+C_{a \alpha b \beta}^{c \gamma}=C_{a^{\prime} \alpha^{\prime} b^{\prime} \beta^{\prime}}^{c^{\prime} \gamma^{\prime}} \tag{12}
+\end{equation*}
+
+
+where
+
+
+\begin{align*}
+2 a^{\prime} & =(a+\alpha)+(b+\beta), & 2 a & =\left(a^{\prime}+a^{\prime}\right)+\left(b^{\prime}+\beta^{\prime}\right), \\
+2 \alpha^{\prime} & =(a+\alpha)-(b+\beta), & 2 \alpha & =\left(a^{\prime}+\alpha^{\prime}\right)-\left(b^{\prime}+\beta^{\prime}\right), \\
+2 b^{\prime} & =(a-\alpha)+(b-\beta), & 2 b & =\left(a^{\prime}-\alpha^{\prime}\right)+\left(b^{\prime}-\beta^{\prime}\right), \\
+2 \beta^{\prime} & =(a-\alpha)-(b-\beta), & 2 \beta & =\left(a^{\prime}-\alpha^{\prime}\right)-\left(b^{\prime}-\beta^{\prime}\right), \tag{13}
+\end{align*}
+
+
+$$
+\begin{aligned}
+c^{\prime} & =c, & c & =c^{\prime} \\
+\gamma^{\prime} & =a-b, & \gamma & =a^{\prime}-b^{\prime}
+\end{aligned}
+$$
+
+(d)
+
+
+\begin{equation*}
+C_{a \alpha b \beta}^{c \gamma}=(-1)^{b+\beta} \sqrt{\frac{2 c+1}{2 c^{\prime}+1}} C_{a^{\prime} \alpha^{\prime} b^{\prime} \beta^{\prime}}^{c^{\prime} \gamma^{\prime}} \tag{14}
+\end{equation*}
+
+
+where
+
+
+\begin{align*}
+2 a^{\prime} & =(b-\beta)+(c+\gamma), & 2 a & =\left(b^{\prime}-\beta^{\prime}\right)+\left(c^{\prime}+\gamma^{\prime}\right), \\
+2 \alpha^{\prime} & =2(a+\alpha)-(b-\beta)-(c+\gamma), & 2 \alpha & =2\left(a^{\prime}+\alpha^{\prime}\right)-\left(b^{\prime}-\beta^{\prime}\right)-\left(c^{\prime}+\gamma^{\prime}\right), \\
+2 b^{\prime} & =(a-\alpha)+(c+\gamma), & 2 b & =\left(a^{\prime}-\alpha^{\prime}\right)+\left(c^{\prime}+\gamma^{\prime}\right),  \tag{15}\\
+2 \beta^{\prime} & =2(b+\beta)-(a-\alpha)-(c+\gamma), & 2 \beta & =2\left(b^{\prime}+\beta^{\prime}\right)-\left(a^{\prime}-\alpha^{\prime}\right)-\left(c^{\prime}+\gamma^{\prime}\right), \\
+2 c^{\prime} & =(a-\alpha)+(b-\beta), & 2 c & =\left(a^{\prime}-\alpha^{\prime}\right)+\left(b^{\prime}-\beta^{\prime}\right), \\
+2 \gamma^{\prime} & =(a-\alpha)+(b-\beta)-2(c-\gamma), & 2 \gamma & =\left(a^{\prime}-\alpha^{\prime}\right)+\left(b^{\prime}-\beta^{\prime}\right)-2\left(c^{\prime}-\gamma^{\prime}\right) .
+\end{align*}
+
+
+\subsection*{8.4.4. "Mirror" Symmetry}
+The original relations which define the $3 j m$ symbols and the Clebsch-Gordan coefficients may be extended to the domain of negative integer or half-integer arguments $a, b, c$. In this case the following symmetry relations are valid [45] (here we denote $\bar{c} \equiv-c-1, \gamma \equiv-\gamma$, etc.).\\
+(a) The relations for the $3 j m$ symbols are
+
+\[
+\left(\begin{array}{ccc}
+a & b & c  \tag{16}\\
+\alpha & \beta & \gamma
+\end{array}\right)=(-1)^{b-c-\alpha}\left(\begin{array}{ccc}
+a & b & c \\
+\alpha & \beta & \gamma
+\end{array}\right)=i(-1)^{a+\alpha-\beta}\left(\begin{array}{ccc}
+a & b & c \\
+\alpha & \beta & \gamma
+\end{array}\right)=i(-1)^{a+b+c}\left(\begin{array}{ccc}
+\bar{a} & b & \bar{c} \\
+\alpha & \beta & \gamma
+\end{array}\right) .
+\]
+
+The $3 j \mathrm{~m}$ symbols with negative momenta obey the symmetry relations (5) and (6) provided $\bar{a}, \bar{b}, \bar{c}$ are replaced by $-a,-b,-c$, respectively, in the phase factors of these relations.\\
+(b) The relations for the Clebsch-Gordan coefficients are
+
+
+\begin{align*}
+C_{a \alpha b \beta}^{c \gamma}=(-1)^{a+b-c} C_{a \alpha \delta \beta}^{c \gamma} & =(-1)^{b-c-\alpha} C_{a \alpha b \beta}^{c \gamma}=(-1)^{b+\beta} C_{a \alpha b \beta}^{c \gamma}=(-1)^{a-\alpha} C_{a \alpha \delta \beta}^{c \gamma}=C_{a \alpha b \beta}^{c \gamma} \\
+& =\sqrt{\frac{2 c+1}{2 b+1}} C_{a \alpha c \gamma}^{b \beta}=\sqrt{\frac{2 c+1}{2 a+1}} C_{c \gamma b \beta}^{a \alpha}=\sqrt{\frac{2 c+1}{2 a+1}} C_{c \gamma b \beta}^{a \alpha} \tag{17}
+\end{align*}
+
+
+From Eqs. (17) one gets
+
+
+\begin{align*}
+& C_{a \bar{a} b \bar{\beta}}^{c \bar{\gamma}}=C_{a \alpha \bar{b} \beta}^{\overline{c \gamma}}  \tag{18}\\
+& C_{\bar{a} \bar{a} b \beta}^{c \gamma}=C_{a \alpha \bar{b} \bar{\beta}}^{\overline{c \gamma}}  \tag{19}\\
+& C_{a \alpha \bar{b} \bar{\beta}}^{c \gamma}=C_{a \bar{a} b \beta}^{\bar{c} \gamma} \tag{20}
+\end{align*}
+
+
+When tabulating formulas for the Clebsch-Gordan coefficients, it is convenient to use the "mirror" symmetry properties in the form
+
+
+\begin{equation*}
+C_{a \alpha b \beta}^{a+k \gamma}=(-1)^{b+\beta} C_{a \alpha b \beta}^{a-k \gamma} \tag{21}
+\end{equation*}
+
+
+\subsection*{8.4.5. Properties of the Vector-Addition Coefficients under Transformations of the Coordinate System and Time Reversal}
+The vector-addition coefficients are not invariant under transformations in question, although formally they are independent of coordinates and time.\\
+(a) Rotation of the coordinate system.
+
+The projections of angular momenta vary under rotations of the coordinate system. The $3 j m$ symbols and the Clebsch-Gordan coefficients in a new coordinate system may be expressed as superpositions of the corresponding quantities in the initial coordinate system. Thus
+
+
+\begin{align*}
+\hat{R}\left(\begin{array}{ccc}
+a & b & c \\
+\alpha & \beta & \gamma
+\end{array}\right) & \equiv\left(\begin{array}{ccc}
+a & b & c \\
+\alpha^{\prime} & \beta^{\prime} & \gamma^{\prime}
+\end{array}\right)=\sum_{\alpha \beta \gamma}\left(\begin{array}{ccc}
+a & b & c \\
+\alpha & \beta & \gamma
+\end{array}\right) D_{\alpha \alpha^{\prime}}^{a}(R) D_{\beta \beta^{\prime}}^{b}(R) D_{\gamma \gamma^{\prime}}^{c}(R)  \tag{22}\\
+\widehat{R} C_{a \alpha b \beta}^{c \gamma} & \equiv C_{a \alpha^{\prime} b \beta^{\prime}}^{c \gamma^{\prime}}=\sum_{\alpha \beta \gamma} C_{a \alpha b \beta}^{c \gamma} D_{\alpha \alpha^{\prime}}^{a}(R) D_{\beta \beta^{\prime}}^{b}(R) D_{\gamma \gamma^{\prime}}^{c *}(R)
+\end{align*}
+
+
+(b) Inversion of the coordinate system.
+
+The $3 j m$ symbols and the Clebsch-Gordan coefficients are invariant under inversion of the coordinate system, because angular momentum is a pseudovector.
+
+
+\begin{align*}
+\widehat{P}_{r}\left(\begin{array}{ccc}
+a & b & c \\
+\alpha & \beta & \gamma
+\end{array}\right) & =\left(\begin{array}{ccc}
+a & b & c \\
+\alpha & \beta & \gamma
+\end{array}\right)  \tag{23}\\
+\widehat{P}_{r} C_{a \alpha b \beta}^{c \gamma} & =C_{a \alpha b \beta}^{c \gamma}
+\end{align*}
+
+
+\section*{(c) Time reversal.}
+The time reversal changes signs of projections of all angular momenta (reversal of the rotation direction). Hence
+
+
+\begin{align*}
+\hat{P}_{t}\left(\begin{array}{lll}
+a & b & c \\
+\alpha & \beta & \gamma
+\end{array}\right) & =\left(\begin{array}{ccc}
+a & b & c \\
+-\alpha & -\beta & -\gamma
+\end{array}\right)=(-1)^{a+b+c}\left(\begin{array}{lll}
+a & b & c \\
+\alpha & \beta & \gamma
+\end{array}\right)  \tag{24}\\
+\widehat{P}_{t} C_{a \alpha b \beta}^{c \gamma} & =C_{a-\alpha b-\beta}^{c-\gamma}=(-1)^{a+b-c} C_{a \alpha b \beta}^{c \gamma}
+\end{align*}
+
+
+\subsection*{8.5. EXPLICIT FORMS OF THE CLEBSCH-GORDAN COEFFICIENTS FOR SPECIAL VALUES OF THE ARGUMENTS}
+\subsection*{8.5.1. Special Values of Momenta $a, b, c$}
+(a) $c=0$ or $b=0$ :
+
+
+\begin{align*}
+& C_{a \alpha b \beta}^{00}=(-1)^{a-\alpha} \frac{\delta_{\alpha b} \delta_{\alpha,-\beta}}{\sqrt{2 a+1}}  \tag{1}\\
+& C_{a \alpha 00}^{\alpha \gamma}=\delta_{a c} \delta_{\alpha \gamma} \tag{2}
+\end{align*}
+
+
+(b) $c=a+b$ :
+
+
+\begin{equation*}
+C_{a a b \beta}^{a+b \alpha+\beta}=\left[\frac{(2 a)!(2 b)!(a+b+\alpha+\beta)!(a+b-\alpha-\beta)!}{(2 a+2 b)!(a+\alpha)!(a-\alpha)!(b+\beta)!(b-\beta)!}\right]^{\frac{1}{2}} \tag{3}
+\end{equation*}
+
+
+The following two formulas are equivalent to Eq. (3) (i and $n$ are integer)
+
+
+\begin{gather*}
+C_{a a-n+i b b-i+1}^{a+b a+b-n+1}=\left[\frac{\binom{2 a}{n-i}\binom{2 b}{i-1}}{\binom{2 a+2 b}{n-1}}\right]^{\frac{1}{2}}  \tag{4}\\
+C_{a a+n-i b-b+i-1}^{a+b a-b+n-1}=\left[\frac{\binom{2 a}{i-n}\binom{2 b}{i-1}}{\binom{2 a+2 b}{2 a+n-1}}\right]^{\frac{1}{2}} \tag{5}
+\end{gather*}
+
+
+In particular,
+
+
+\begin{gather*}
+C_{a a b b}^{a+b a+b}=1  \tag{6}\\
+C_{a a b-b}^{a+b a-b}=\left[\frac{(2 a)!(2 b)!}{(2 a+2 b)!}\right]^{\frac{1}{2}} \tag{7}
+\end{gather*}
+
+
+(c) $c=a+b-1$ :
+
+
+\begin{equation*}
+C_{a \alpha b \beta}^{a+b-1 \alpha+\beta}=2(b \alpha-a \beta)\left[\frac{(2 a+2 b-1)(2 a-1)!(2 b-1)!(a+b+\alpha+\beta-1)!(a+b-\alpha-\beta-1)!}{(a+\alpha)!(a-\alpha)!(b+\beta)!(b-\beta)!(2 a+2 b)!}\right]^{\frac{1}{2}} . \tag{8}
+\end{equation*}
+
+
+In particular,
+
+
+\begin{gather*}
+C_{a \alpha b \beta}^{a+b-1 \alpha+\beta}=0, \quad \text { if } \quad \frac{\alpha}{\beta}=\frac{a}{b}  \tag{9}\\
+C_{a a-1 b b}^{a+b-1 a+b-1}=-\sqrt{\frac{b}{a+b}}  \tag{10}\\
+C_{a a b b-1}^{a+b-1 a+b-1}=\sqrt{\frac{a}{a+b}}  \tag{11}\\
+C_{a a b-b}^{a+b-1 a-b}=\left[\frac{(2 a)!(2 b)!(2 a-2 b-1)}{(2 a+2 b)!}\right]^{\frac{1}{2}} \tag{12}
+\end{gather*}
+
+
+(d) $c=a-b(a \geq b)$ :
+
+
+\begin{equation*}
+C_{a \alpha b \beta}^{a-b \alpha+\beta}=(-1)^{b+\beta}\left[\frac{(a+\alpha)!(a-\alpha)!(2 b)!(2 a-2 b+1)!}{(2 a+1)!(b+\beta)!(b-\beta)!(a-b+\alpha+\beta)!(a-b-\alpha-\beta)!}\right]^{\frac{1}{2}} \tag{13}
+\end{equation*}
+
+
+The following two formulas are equivalent to Eq. (13) ( $i$ and $n$ are integer)
+
+
+\begin{gather*}
+C_{a a-n+i b b-i+1}^{a-b a+b-n+1}=(-1)^{2 b-i+1}\left[\frac{2 a-2 b+1}{2 a+1} \frac{\binom{2 b}{i-1}\binom{2 a-2 b}{2 a-n+1}}{\binom{2 a}{n-i}}\right]^{\frac{1}{2}}  \tag{14}\\
+C_{a a-n+i b-b-i+1}^{a-b a-b-n+1}=(-1)^{i+1}\left[\frac{2 a-2 b+1}{2 a+1} \frac{\binom{2 b}{-i+1}\binom{2 a-2 b}{n-1}}{\binom{2 a}{n-i}}\right]^{\frac{1}{2}} \tag{15}
+\end{gather*}
+
+
+In particular
+
+
+\begin{equation*}
+C_{a a b-b}^{a-b a-b}=\sqrt{\frac{2 a-2 b+1}{2 a+1}} . \tag{16}
+\end{equation*}
+
+
+(e) $c=a-b+1(a+1 \geq b)$ :
+
+
+\begin{equation*}
+C_{a \alpha b \beta}^{a-b+1 \alpha+\beta}=(-1)^{b+\beta+1} 2(a \beta+b \alpha+\beta)\left[\frac{(2 a-2 b+3)(2 b-1)!(2 a-2 b+1)!(a+\alpha)!(a-\alpha)!}{(2 a+2)!(b+\beta)!(b-\beta)!(a-b+\alpha+\beta+1)!(a-b-\alpha-\beta+1)!}\right]^{\frac{1}{2}} . \tag{17}
+\end{equation*}
+
+
+In particular,
+
+
+\begin{equation*}
+C_{a a b-b}^{a-b+1 a-b}=\left[\frac{(2 a-2 b+3) 2 b}{(2 a+2)(2 a+1)}\right]^{\frac{1}{2}} \tag{18}
+\end{equation*}
+
+
+(f) $c=a+b-2$ :
+
+
+\begin{align*}
+C_{a \alpha b \beta}^{a+b-2 \alpha+\beta} & =\left[\frac{2 a(2 a-1) 2 b(2 b-1)}{2(2 a+2 b-2)(2 a+2 b-1)}\right]^{\frac{1}{2}}\left[\binom{2 a}{a-\alpha}\binom{2 b}{b-\beta}\binom{2 a+2 b-4}{a+b-\alpha-\beta-2}\right]^{-\frac{1}{2}} \\
+& \times\left\{\binom{2 a-2}{a-\alpha}\binom{2 b-2}{b+\beta}-2\binom{2 a-2}{a-\alpha-1}\binom{2 b-2}{b+\beta-1}+\binom{2 a-2}{a-\alpha-2}\binom{2 b-2}{b+\beta-2}\right\} . \tag{19}
+\end{align*}
+
+
+In particular,
+
+
+\begin{equation*}
+C_{a a b-b}^{a+b-2 a-b}=\left[\frac{(2 a)!(2 b)!(2 a+2 b-3)}{2(2 a+2 b-1)!}\right]^{\frac{1}{2}} \tag{20}
+\end{equation*}
+
+
+(g) $c=a-b+2(a+2 \geq b)$ :
+
+
+\begin{gather*}
+C_{a \alpha b \beta}^{a-b+2 \alpha+\beta}=\left[\frac{(2 b-1) 2 b(2 a-2 b+5)(2 a-2 b+4)(2 a-2 b+3)}{2(2 a+1)(2 a+2)(2 a+3)}\right]^{\frac{1}{2}} \\
+\times\left[\binom{2 a}{a-\alpha}\binom{2 b}{b-\beta}\binom{2 a-2 b+4}{a-b-\alpha-\beta+2}\right]^{-\frac{1}{2}}(-1)^{b+\beta}\left\{\binom{2 b-2}{b+\beta}\binom{2 a-2 b+2}{a-b-\alpha-\beta}\right. \\
+\left.-2\binom{2 b-2}{b+\beta-1}\binom{2 a-2 b+2}{a-b-\alpha-\beta+1}+\binom{2 b-2}{b+\beta-2}\binom{2 a-2 b+2}{a-b-\alpha-\beta+2}\right\} . \tag{21}
+\end{gather*}
+
+
+In particular,
+
+
+\begin{equation*}
+C_{a a b-b}^{a-b+2 a-b}=\left[\frac{(2 a-2 b+5) 2 b(2 b-1)}{(2 a+1)(2 a+2)(2 a+3)}\right]^{\frac{1}{2}} \tag{22}
+\end{equation*}
+
+
+(h) $a=b, \alpha=\beta$ :
+
+\[
+C_{a \alpha a \alpha}^{c \gamma}= \begin{cases}0, & \text { if } 2 a+c=2 g+1,  \tag{23}\\ \delta_{\gamma, 2 \alpha} \frac{(-1)^{g-c} \sqrt{2 c+1} g!}{\left(\frac{c+\gamma}{2}\right)!\left(\frac{\varepsilon-\gamma}{2}\right)!(g-c)!}\left[\frac{(c+\gamma)!(c-\gamma)!(2 g-2 c)!}{(2 g+1)!}\right]^{\frac{1}{2}}, & \text { if } 2 a+c=2 g,\end{cases}
+\]
+
+$g$ is integer and positive.\\
+(i) $b=a+\frac{1}{2}, \beta=\alpha \pm \frac{1}{2}, 2 a+c=2 g$ :
+
+
+\begin{align*}
+& C_{a \alpha a+\frac{1}{2} \alpha+\frac{1}{2}}^{c+\frac{1}{2} 2 \alpha+\frac{1}{2}}=\left[\frac{c+2 \alpha+1}{a+\alpha+1}\right]^{\frac{1}{2}} C  \tag{24}\\
+& C_{a a a+\frac{1}{2} \alpha-\frac{1}{2}}^{c+\frac{1}{2} 2 \alpha-\frac{1}{2}}=\left[\frac{c-2 \alpha+1}{a-\alpha+1}\right]^{\frac{1}{2}} C
+\end{align*}
+
+
+where
+
+
+\begin{equation*}
+C=\frac{(-1)^{c / 2-a}\left(a+\frac{c}{2}\right)!}{\left(a-\frac{c}{2}\right)!\left(\frac{c}{2}+\alpha\right)!\left(\frac{c}{2}-\alpha\right)!}\left[\frac{(2 a+c+2)(2 a-c)!(c+2 \alpha)!(c-2 \alpha)!}{2(2 a+c+1)!}\right]^{\frac{1}{2}} \tag{25}
+\end{equation*}
+
+
+$b=a+\frac{1}{2}, \beta=\alpha \pm \frac{1}{2}, 2 a+c=2 g+1:$
+
+
+\begin{align*}
+& C_{a \alpha a+\frac{1}{2} \alpha+\frac{1}{2}}^{c+\frac{1}{2} 2 \alpha+\frac{1}{2}}=\left[\frac{c-2 \alpha+1}{a+\alpha+1}\right]^{\frac{1}{3}} D \\
+& C_{a \alpha a+\frac{1}{2} \alpha-\frac{1}{2}}^{c+\frac{1}{2} 2 \alpha-\frac{1}{2}}=-\left[\frac{c+2 \alpha+1}{a-\alpha+1}\right]^{\frac{1}{2}} D \tag{26}
+\end{align*}
+
+
+where
+
+
+\begin{equation*}
+D=\frac{(-1)^{\frac{a-1}{2}-a}\left(a+\frac{c+1}{2}\right)!}{\left(a-\frac{c+1}{2}\right)!\left(\frac{c+1}{2}+\alpha\right)!\left(\frac{c+1}{2}-\alpha\right)!}\left[\frac{(2 a-c)!(c+2 \alpha+1)!(c-2 \alpha+1)!}{2(2 a+c+2)!}\right]^{\frac{1}{2}} \tag{27}
+\end{equation*}
+
+
+(k) $b=a+1 ; \beta=\alpha, \alpha \pm 1 ; 2 a+c=2 g$ :
+
+
+\begin{align*}
+C_{a \alpha a+1 a+1}^{c 2 a+1} & =-\left[\frac{(c+2 \alpha+1)(c-2 \alpha)}{(a+\alpha+2)(a+\alpha+1)}\right]^{\frac{1}{2}} E \\
+C_{a \alpha a+1 \alpha}^{c 2 \alpha} & =\frac{2 \alpha}{[(a+\alpha+1)(a-\alpha+1)]^{\frac{1}{2}}} E  \tag{28}\\
+C_{a \alpha a+1 \alpha-1}^{c 2 \alpha-1} & =\left[\frac{(c-2 \alpha+1)(c+2 \alpha)}{(a-\alpha+2)(a-\alpha+1)}\right]^{\frac{1}{2}} E
+\end{align*}
+
+
+where
+
+
+\begin{equation*}
+E=\frac{(-1)^{\frac{c}{2}-a}\left(a+\frac{c}{2}\right)!}{2\left(a-\frac{c}{2}\right)!\left(\frac{c}{2}+\alpha\right)!\left(\frac{c}{2}-\alpha\right)!}\left[\frac{(2 c+1)(2 a+c+2)(2 a-c+1)!(c+2 \alpha)!(c-2 \alpha)!}{c(c+1)(2 a+c+1)!}\right]^{\frac{1}{2}} \tag{29}
+\end{equation*}
+
+
+$b=a+1 ; \beta=\alpha, \alpha \pm 1 ; 2 a+c=2 g+1:$
+
+
+\begin{align*}
+C_{a \alpha a+1 \alpha+1}^{c 2 \alpha+1} & =\frac{c(c+1)+(2 \alpha+1)(2 a+2)}{2\left(\frac{c+1}{2}+\alpha\right)!\left(\frac{c+1}{2}-\alpha\right)!}\left[\frac{(c+2 \alpha+1)!(c-2 \alpha-1)!}{(a+\alpha+2)(a+\alpha+1)}\right]^{\frac{1}{2}} F, \\
+C_{a \alpha a+1 \alpha}^{c 2 \alpha} & =\frac{2 a+2}{\left(\frac{c-1}{2}+\alpha\right)!\left(\frac{c-1}{2}-\alpha\right)!}\left[\frac{(c+2 \alpha)!(c-2 \alpha)!}{(a+\alpha+1)(a-\alpha+1)}\right]^{\frac{1}{2}} F,  \tag{30}\\
+C_{a \alpha a+1 \alpha-1}^{c 2 \alpha-1} & =\frac{c(c+1)-(2 \alpha-1)(2 a+2)}{2\left(\frac{c+1}{2}-\alpha\right)!\left(\frac{c-1}{2}+\alpha\right)!}\left[\frac{(c+2 \alpha-1)!(c-2 \alpha+1)!}{(a-\alpha+2)(a-\alpha+1)}\right]^{\frac{1}{2}} F,
+\end{align*}
+
+
+where
+
+
+\begin{equation*}
+F=\frac{(-1)^{\frac{c-1}{2}-\alpha}\left(a+\frac{c+1}{2}\right)!}{\left(a-\frac{c-1}{2}\right)!}\left[\frac{(2 c+1)(2 a-c+1)!}{c(c+1)(2 a+c+2)!}\right]^{\frac{1}{2}} \tag{31}
+\end{equation*}
+
+
+Equations (24)-(31) were obtained by Stone [107].
+
+\subsection*{8.5.2 Special Values of Momentum Projections}
+(a) $\alpha=\beta=\gamma=0$ :
+
+\[
+C_{a 0 b 0}^{c 0}= \begin{cases}0, & \text { if } a+b+c=2 g+1  \tag{32}\\ \frac{(-1)^{g-c} \sqrt{2 c+1} g!}{(g-a)!(g-b)!(g-c)!}\left[\frac{(2 g-2 a)!(2 g-2 b)!(2 g-2 c)!}{(2 g+1)!}\right]^{\frac{1}{2}}, & \text { if } a+b+c=2 g\end{cases}
+\]
+
+$g$ is integer and positive. In particular,
+
+
+\begin{gather*}
+C_{a 0 b 0}^{a+b 0}=\frac{(a+b)!}{a!b!}\left[\frac{(2 a)!(2 b)!}{(2 a+2 b)!}\right]^{\frac{1}{2}}  \tag{33}\\
+C_{a 0 b 0}^{a-b 0}=(-1)^{b} \frac{a!}{b!(a-b)!}\left[\frac{(2 b)!(2 a-2 b+1)!}{(2 a+1)!}\right]^{\frac{1}{2}} \tag{34}
+\end{gather*}
+
+
+(b) $\gamma=c$ or $\alpha=a$ :
+
+
+\begin{gather*}
+C_{a \alpha b \beta}^{c c}=\delta_{\alpha+\beta, c}(-1)^{a-\alpha}\left[\frac{(2 c+1)!(a+b-c)!(a+\alpha)!(b+\beta)!}{(a+b+c+1)!(a-b+c)!(-a+b+c)!(a-\alpha)!(b-\beta)!}\right]^{\frac{1}{2}}  \tag{35}\\
+C_{a a b \beta}^{c \gamma}=\delta_{\gamma-\beta, \alpha}\left[\frac{(2 c+1)(2 a)!(-a+b+c)!(b-\beta)!(c+\gamma)!}{(a+b+c+1)!(a-b+c)!(a+b-c)!(b+\beta)!(c-\gamma)!}\right]^{\frac{1}{2}} \tag{36}
+\end{gather*}
+
+
+In particular,
+
+
+\begin{gather*}
+C_{a a b b}^{c c}=\delta_{a+b, c},  \tag{37}\\
+C_{a a b-b}^{c c}=\delta_{a-b, c}\left[\frac{2 c+1}{2 a+1}\right]^{\frac{1}{2}},  \tag{38}\\
+C_{a a b c-a}^{c c}=\left[\frac{(2 a)!(2 c+1)!}{(a+b+c+1)!(a-b+c)!}\right]^{\frac{1}{2}},  \tag{39}\\
+C_{a a-1 b c-a+1}^{c c}=-\left[\frac{(2 a-1)!(2 c+1)!(a+b-c)(-a+b+c+1)}{(a+b+c+1)!(a-b+c)!}\right]^{\frac{1}{2}},  \tag{40}\\
+C_{a a b c-a-1}^{c c-1}=\left[\frac{(2 a)!(2 c+1)!(a+b-c+1)(-a+b+c)}{(a+b+c+1)!(a-b+c)!2 c}\right]^{\frac{1}{2}},  \tag{41}\\
+C_{c c b 0}^{c c}=(2 c)!\left[\frac{2 c+1}{(2 c-b)!(2 c+b+1)!}\right]^{\frac{1}{2}},  \tag{42}\\
+C_{c c-b b b}^{c c}=(-1)^{b}\left[\frac{(2 c+1)(2 b)!}{(2 c+b+1)!b!}\right]^{\frac{1}{2}}, \tag{43}
+\end{gather*}
+
+
+(c) $\gamma=c-1$ or $\alpha=a-1$ :
+
+
+\begin{align*}
+C_{a \alpha b \beta}^{c c-1}= & \delta_{\alpha+\beta, c-1}(-1)^{a-\alpha}\{(b-\beta)(b+\beta+1)-(a-\alpha)(a+\alpha+1)\} \\
+& \times\left[\frac{(2 c+1)(2 c-1)!(a+b-c)!(a+\alpha)!(b+\beta)!}{(a+b+c+1)!(a-b+c)!(-a+b+c)!(a-\alpha)!(b-\beta)!}\right]^{\frac{1}{2}},  \tag{44}\\
+C_{a a-1 b \beta}^{c \gamma}= & \delta_{\gamma-\beta, a-1}\{(c-\gamma)(c+\gamma+1)-(b+\beta)(b-\beta+1)\} \\
+& \times\left[\frac{(2 c+1)(2 a-1)!(-a+b+c)!(b-\beta)!(c+\gamma)!}{(a+b+c+1)!(a-b+c)!(a+b-c)!(b+\beta)!(c-\gamma)!}\right]^{\frac{1}{2}}, \tag{45}
+\end{align*}
+
+
+In particular,
+
+
+\begin{gather*}
+C_{a a a \alpha}^{c c-1}=0  \tag{46}\\
+C_{a a-1 c-\gamma}^{c \gamma}=0  \tag{47}\\
+C_{a a-1 b \beta}^{c c-1}=\delta_{\beta, c-a}\{a(a+1)-b(b+1)+c(c+1)-2 a c\}\left[\frac{(2 c+1)(2 c-1)!(2 a-1)!}{(a+b+c+1)!(a-b+c)!}\right]^{\frac{1}{2}} . \tag{48}
+\end{gather*}
+
+
+\subsection*{8.6. RECURSION RELATIONS FOR THE CLEBSCH-GORDAN COEFFICIENTS}
+\subsection*{8.6.1. General Recursion Relations}
+
+\begin{align*}
+C_{a \alpha b \beta}^{c \gamma}= & {\left[\frac{(b+\beta-2 k)!(c+\gamma)!(a+b-c)!(-a+b+c)!(a+b+c+1)!(2 c+1)}{(b+\beta)!(c-\gamma)!(a-b+c)!}\right]^{\frac{1}{2}} } \\
+& \times \sum_{c^{\prime}=c-k}^{c+k}(-1)^{c^{\prime}+k-c} C_{a \alpha b-k \beta-k}^{c^{\prime} \gamma-k} \frac{\left(c^{\prime}-k+c\right)!(2 k)!}{\left(c+k-c^{\prime}\right)!\left(c+c^{\prime}+k+1\right)!\left(c^{\prime}+k-c\right)!} \\
+& \times\left[\frac{\left(c^{\prime}+k-\gamma\right)!\left(a-b+c^{\prime}+k\right)!\left(2 c^{\prime}+1\right)}{\left(c^{\prime}-k+\gamma\right)!\left(-a+b+c^{\prime}-k\right)!\left(a+b-c^{\prime}-k\right)!\left(a+b+c^{\prime}-k+1\right)!}\right]^{\frac{1}{2}} \tag{1}
+\end{align*}
+
+
+(Yutsis and Bandzaitis [45]) where $k$ is integer or half-integer, $0 \leq k \leq(b+\beta) / 2$. In accordance with the choice of $k$ Eq. (1) yields different recursion relations.
+
+Note also the relation obtained by Stone [107]
+
+
+\begin{align*}
+C_{a \alpha b \beta}^{c \gamma}= & {\left[\frac{(a+b+c+1)!(a-b+c)!(a+b-c)!(b+\beta)!(b-\beta)!(a-b+\alpha-\beta)!(a-b-\alpha+\beta)!}{(-a+b+c)!(a+\alpha)!(a-\alpha)!}\right]^{\frac{1}{2}} } \\
+& \times \sum_{b^{\prime}}(-1)^{b-b^{\prime} / 2} C_{a-b \alpha-\beta b^{\prime} 2 \beta}^{c \gamma} \frac{\left(2 b^{\prime}+1\right)\left(b+\frac{b^{\prime}}{2}\right)!}{\left(2 b+b^{\prime}+1\right)!\left(b-\frac{b^{\prime}}{2}\right)!\left(\frac{b^{\prime}}{2}+\beta\right)!\left(\frac{b^{\prime}}{2}-\beta\right)!} \\
+& \times\left[\frac{\left(-a+b+c+b^{\prime}\right)!\left(b^{\prime}+2 \beta\right)!\left(b^{\prime}-2 \beta\right)!}{\left(a-b+c+b^{\prime}+1\right)!\left(a-b+c-b^{\prime}\right)!\left(a-b-c+b^{\prime}\right)!}\right]^{\frac{1}{2}} \tag{2}
+\end{align*}
+
+
+Here $a-b \geq|\alpha-\beta| \geq 0, b^{\prime}$ is integer, $b^{\prime}+2 b$ is even, and $a-b+c \geq b^{\prime} \geq|-a+b+c|, 2 b \geq b^{\prime} \geq|2 \beta|$.\\[0pt]
+Equation (1) may be rewritten by the use of quasi-powers in the form [45]
+
+
+\begin{align*}
+C_{a \alpha b \beta}^{c \gamma}= & { \left.\left[\frac{2 c+1}{(b+\beta)^{(2 k)}}\right]^{\frac{1}{3}} \sum_{k^{\prime}=-k}^{k}(-1)^{k+k^{\prime}} C_{a \alpha b-k \beta-k}^{c+k^{\prime} \gamma-k} \right\rvert\,(c+\gamma)^{\left(k-k^{\prime}\right)}\left(c-\gamma+k+k^{\prime}\right)^{\left(k+k^{\prime}\right)}(a+b-c)^{\left(k+k^{\prime}\right)} } \\
+& \left.\times(-a+b+c)^{\left(k-k^{\prime}\right)}(a+b+c+1)^{\left(k-k^{\prime}\right)}\left(a-b+c+k+k^{\prime}\right)^{\left(k+k^{\prime}\right)}\left(2 c+2 k^{\prime}+1\right)\right]^{\frac{1}{2}} \\
+& \times \frac{(2 k)^{\left(k+k^{\prime}\right)}}{\left(2 c+k+k^{\prime}+1\right)^{(2 k+1)}\left(k+k^{\prime}\right)^{\left(k+k^{\prime}\right)}}, \tag{3}
+\end{align*}
+
+
+where
+
+$$
+a^{(n)}=\frac{a!}{(a-n)!}, \quad \frac{1}{2} \leq k \leq \frac{b-\kappa}{2}, \quad \kappa= \begin{cases}0 & \text { if } b \text { is integer }, \\ \frac{1}{2} & \text { if } b \text { is half-integer } .\end{cases}
+$$
+
+\subsection*{8.6.2. Arguments $\alpha, \beta, \gamma$ Change by 1}
+
+\begin{equation*}
+[(c \pm \gamma)(c \mp \gamma+1)]^{\frac{1}{2}} C_{a \alpha b \beta}^{c \gamma \mp 1}=[(a \mp \alpha)(a \pm \alpha+1)]^{\frac{1}{2}} C_{a \alpha \pm 1 b \beta}^{c \gamma}+[(b \mp \beta)(b \pm \beta+1)]^{\frac{1}{2}} C_{a \alpha b \beta \pm 1}^{c \gamma} \tag{4}
+\end{equation*}
+
+
+In particular, for $|\gamma|=c$ one has
+
+
+\begin{equation*}
+C_{a \alpha \mp 1 b \beta}^{c \pm c}=-C_{a \alpha b \beta \mp 1}^{c \pm c}\left[\frac{(b \pm \beta)(b \mp \beta+1)}{(a \pm \alpha)(a \mp \alpha+1)}\right]^{\frac{1}{2}} \tag{5}
+\end{equation*}
+
+
+when $|\alpha|=|\beta|=\frac{1}{2}$
+
+
+\begin{equation*}
+C_{a \frac{1}{2} b \frac{1}{2}}^{c 1}=C_{a \frac{1}{2} b-\frac{1}{2}}^{c 0} \frac{(2 b+1)+(-1)^{a+b-c}(2 a+1)}{2[c(c+1)]^{\frac{1}{2}}} \tag{6}
+\end{equation*}
+
+
+and for $|\alpha|=|\beta|=1, a+b+c$ even, one gets
+
+
+\begin{gather*}
+C_{a 1 b-1}^{c 0}=C_{a 0 b 0}^{c 0} \frac{c(c+1)-a(a+1)-b(b+1)}{2[a(a+1) b(b+1)]^{\frac{1}{3}}}  \tag{7}\\
+C_{a 1 b 1}^{c 2}=C_{a 0 b 0}^{c 0} \frac{a(a+1)[c(c+1)-a(a+1)+b(b+1)]+b(b+1)[c(c+1)+a(a+1)-b(b+1)]}{2[a(a+1) b(b+1)(c-1) c(c+1)(c+2)]^{\frac{4}{2}}} \tag{8}
+\end{gather*}
+
+
+\subsection*{8.6.3. Arguments Change by $\mathbf{1} \boldsymbol{/} \mathbf{2}$}
+
+\begin{gather*}
+(2 a+1)[b \pm \beta]^{\frac{1}{2}} C_{a \alpha b \beta}^{c \gamma}=\mp[(a \mp \alpha)(a+b-c)(a+b+c+1)]^{\frac{1}{2}} C_{a-\frac{1}{2} \alpha \pm \frac{1}{2} b-\frac{1}{2} \beta \mp \frac{1}{2}}^{c \gamma} \\
++[(a \pm \alpha+1)(-a+b+c)(a-b+c+1)]^{\frac{1}{2}} C_{a+\frac{1}{2} \alpha \pm \frac{1}{2} b-\frac{1}{2} \beta \mp \frac{1}{2}}^{c \gamma}  \tag{9}\\
+(2 a+1)[b \mp \beta+1]^{\frac{1}{2}} C_{a \alpha b \beta}^{c \gamma}=[(a \mp \alpha)(a-b+c)(-a+b+c+1)]^{\frac{1}{2}} C_{a-\frac{1}{2} \alpha \pm \frac{1}{2} b+\frac{1}{2} \beta \mp \frac{1}{2}}^{c \gamma} \\
+\pm[(a \pm \alpha+1)(a+b-c+1)(a+b+c+2)]^{\frac{1}{2}} C_{a+\frac{1}{2} \alpha \pm \frac{1}{2} b+\frac{1}{2} \beta \mp \frac{1}{2}}^{c \gamma}  \tag{10}\\
+{[(-a+b+c)(a-b+c+1)]^{\frac{1}{2}} C_{a \alpha b \beta}^{c \gamma}=[(a-\alpha+1)(b-\beta)]^{\frac{1}{2}} C_{a+\frac{1}{2} \alpha-\frac{1}{2} b-\frac{1}{2} \beta+\frac{1}{2}}^{c \gamma}} \\
++[(a+\alpha+1)(b+\beta)]^{\frac{1}{2}} C_{a+\frac{1}{2} \alpha+\frac{1}{2} b-\frac{1}{2} \beta-\frac{1}{2}}^{c \gamma}  \tag{11}\\
+{[(a-b+c)(-a+b+c+1)]^{\frac{1}{2}} C_{a \alpha b \beta}^{c \gamma}=[(a-\alpha)(b-\beta+1)]^{\frac{1}{2}} C_{a-\frac{1}{2} \alpha+\frac{1}{2} b+\frac{1}{2} \beta-\frac{1}{2}}^{c \gamma}} \\
++[(a+\alpha)(b+\beta+1)]^{\frac{1}{2}} C_{a-\frac{1}{2} \alpha-\frac{1}{2} b+\frac{1}{2} \beta+\frac{1}{2}}^{c \gamma}  \tag{12}\\
+{\left[\frac{2 c(-a+b+c)(a+b+c+1)}{2 c+1}\right]_{a \alpha b \beta}^{\frac{1}{2}}=[(b-\beta)(c-\gamma)]^{\frac{1}{2}} C_{a \alpha b-\frac{1}{2} \beta+\frac{1}{2}}^{c-\frac{1}{2} \gamma+\frac{1}{2}}[(b+\beta)(c+\gamma)]^{\frac{1}{2}} C_{a \alpha b-\frac{1}{2} \beta-\frac{1}{2}}^{c-\frac{1}{2} \gamma-\frac{1}{2}} \text { (13) }}  \tag{13}\\
+{\left[\frac{2 c(c \mp \gamma)(a+b+c+1)}{2 c+1}\right]_{a \alpha b \beta}^{\frac{1}{2}}=[(a \mp \alpha)(a-b+c)]^{\frac{1}{2}} C_{a-\frac{1}{2} \alpha \pm \frac{1}{2} b \beta+[(b \mp \beta)(-a+b+c)]^{\frac{1}{2}} C_{a \alpha b-\frac{1}{2} \beta \pm \frac{1}{2}}^{c-\frac{1}{2} \gamma \pm \frac{1}{2}}}^{\left[\frac{2 c(c \mp \gamma)(a+b-c+1)}{2 c+1}\right]_{a \alpha b \beta}^{\frac{1}{2}} C^{c \gamma}= \pm[(a \pm \alpha+1)(-a+b+c)]^{\frac{1}{2}} C_{a+\frac{1}{2} \alpha \pm \frac{1}{2} b \beta}^{c-\frac{1}{2} \gamma \pm \frac{1}{2}}}}  \tag{14}\\
+\mp[(b \pm \beta+1)(a-b+c)]^{\frac{1}{2}} C_{a \alpha b+\frac{1}{2} \beta \pm \frac{1}{2}}^{c-\frac{1}{2} \gamma \pm \frac{1}{2}} \\
+{\left[\frac{2(c+1)(c \pm \gamma+1)(a+b-c)}{2 c+1}\right]_{a \alpha b \beta}^{\frac{1}{2}}=\mp[(a \mp \alpha)(-a+b+c+1)]^{\frac{1}{2}} C_{a-\frac{1}{2} \alpha \pm \frac{1}{2} b \beta}^{c+\frac{1}{2} \gamma \pm \frac{1}{2}}}  \tag{15}\\
+\pm[(b \mp \beta)(a-b+c+1)]^{\frac{1}{2}} C_{a \alpha b-\frac{1}{2} \beta \pm \frac{1}{2}}^{c+\frac{1}{2} \gamma \pm \frac{1}{2}} \\
+\pm\left[\frac{(c \pm \gamma+1)(a-b+c+1)(a+b-c)}{2(c+1)} C_{a \alpha b-\frac{1}{2} \beta \pm \frac{1}{2}}^{\frac{1}{2}}\right. \tag{16}
+\end{gather*}
+
+
+In particular, Eqs. (9) and (10) yield
+
+
+\begin{equation*}
+C_{a \pm \frac{1}{2} b \mp \frac{1}{2}}^{c 0}= \pm C_{a-\frac{1}{2} 0 b-\frac{1}{2} 0}^{c 0}\left[\frac{(a+b-c)(a+b+c+1)}{(2 a+1)(2 b+1)}\right]^{\frac{1}{2}}=\mp C_{a+\frac{1}{2} 0 b+\frac{1}{2} 0}^{c 0}\left[\frac{(a+b-c+1)(a+b+c+2)}{(2 a+1)(2 b+1)}\right]^{\frac{1}{2}} \tag{18}
+\end{equation*}
+
+
+if $a+b+c$ is odd, and
+
+
+\begin{equation*}
+C_{a \pm \frac{1}{2} b \mp \frac{1}{2}}^{c 0}=C_{a+\frac{1}{2} 0 b-\frac{1}{2} 0}^{c 0}\left[\frac{(-a+b+c)(a-b+c+1)}{(2 a+1)(2 b+1)}\right]^{\frac{1}{2}}=C_{a-\frac{1}{2} 0 b+\frac{1}{2} 0}^{c 0}\left[\frac{(a-b+c)(-a+b+c+1)}{(2 a+1)(2 b+1)}\right]^{\frac{1}{2}} \tag{19}
+\end{equation*}
+
+
+if $a+b+c$ is even.
+
+\subsection*{8.6.4. The Case When $\alpha=\beta=\gamma=0$}
+Let $p$ be integer and $2 g=a+b+c$. Then
+
+
+\begin{equation*}
+C_{a+p 0 b-p 0}^{c 0}=C_{a 0 b 0}^{c 0} \frac{(g-a)!(g-b)!}{(g-a-p)!(g-b+p)!}\left[\frac{(2 g-2 a-2 p)!(2 g-2 b+2 p)!}{(2 g-2 a)!(2 g-2 b)!}\right]^{\frac{1}{2}} \tag{20}
+\end{equation*}
+
+
+In particular, Eq. (20) yields
+
+
+\begin{gather*}
+C_{a+10 b-10}^{c 0}=C_{a 0 b 0}^{c 0}\left[\frac{(-a+b+c)(a-b+c+1)}{(-a+b+c-1)(a-b+c+2)}\right]^{\frac{1}{2}}  \tag{21}\\
+C_{a 0 b+2 p 0}^{c 0}=C_{a 0 b 0}^{c 0}(-1)^{p} \frac{(g+p)!(g-a)!(g-b)!(g-c)!}{g!(g-a+p)!(g-b-p)!(g-c+p)!} \\
+\times\left[\frac{(a+b-c+2 p)!(a-b+c-2 p)!(-a+b+c+2 p)!(a+b+c+1)!}{(a+b-c)!(a-b+c)!(-a+b+c)!(a+b+c+2 p+1)!}\right]^{\frac{1}{2}} \tag{22}
+\end{gather*}
+
+
+Moreover, from Eq. (22) one gets
+
+
+\begin{equation*}
+C_{a 0 b+20}^{c 0}=-C_{a 0 b 0}^{c 0}\left[\frac{(a+b+c+2)(a+b-c+1)(a-b+c)(-a+b+c+1)}{(a+b+c+3)(a+b-c+2)(a-b+c-1)(-a+b+c+2)}\right]^{\frac{1}{2}} \tag{23}
+\end{equation*}
+
+
+\subsection*{8.6.5. Arguments $a, b, c$ Change by 1}
+
+\begin{align*}
+& 2\left[b^{2}-\beta^{2}\right]^{\frac{1}{2}} C_{a \alpha b-1 \beta}^{c \gamma}=\frac{1}{a(2 a+1)}\left[\left(a^{2}-\alpha^{2}\right)(-a+b+c)(-a+b+c+1)(a-b+c)(a-b+c+1)\right]^{\frac{1}{2}} \\
+& \quad \times C_{a-1 \alpha b \beta}^{c \gamma}+\frac{\alpha}{a(a+1)}[(-a+b+c)(a-b+c+1)(a+b-c)(a+b+c+1)]^{\frac{1}{2}} C_{a \alpha b \beta}^{c \gamma} \\
+& -\frac{1}{(a+1)(2 a+1)}\left\{\left[(a+1)^{2}-\alpha^{2}\right](a+b-c)(a+b-c+1)(a+b+c+1)(a+b+c+2)\right\}^{\frac{1}{2}} C_{a+1 \alpha b \beta}^{c \gamma},  \tag{24}\\
+& 2 \beta C_{a \alpha b \beta}^{c \gamma}=-\frac{1}{a(2 a+1)}\left[\left(a^{2}-\alpha^{2}\right)(-a+b+c+1)(a-b+c)(a+b-c)(a+b+c+1)\right]^{\frac{1}{2}} C_{a-1 \alpha b \beta}^{c \gamma} \\
+& \quad-\frac{\alpha}{a(a+1)}\{a(a+1)+b(b+1)-c(c+1)\} C_{a \alpha b \beta}^{c \gamma} \\
+& -\frac{1}{(a+1)(2 a+1)}\left\{\left[(a+1)^{2}-\alpha^{2}\right](-a+b+c)(a-b+c+1)(a+b-c+1)(a+b+c+2)\right\}^{\frac{1}{2}} C_{a+1 \alpha b \beta}^{c \gamma}, \tag{25}
+\end{align*}
+
+
+
+\begin{gather*}
+2\left[(b+1)^{2}-\left.\beta^{2}\right|^{\frac{1}{2}} C_{a \alpha b+1 \beta}^{c \gamma}=-\frac{1}{a(2 a+1)}\left[\left(a^{2}-\alpha^{2}\right)(a+b-c)(a+b-c+1)(a+b+c+1)(a+b+c+2)\right]^{\frac{1}{2}}\right. \\
+\times C_{a-1 \alpha b \beta}^{c \gamma}+\frac{\alpha}{a(a+1)}[(-a+b+c+1)(a-b+c)(a+b-c+1)(a+b+c+2)]^{\frac{1}{2}} C_{a \alpha b \beta}^{c \gamma} \\
++\frac{1}{(a+1)(2 a+1)}\left\{\left[(a+1)^{2}-\alpha^{2}\right](-a+b+c)(-a+b+c+1)(a-b+c)(a-b+c+1)\right\}^{\frac{1}{2}} C_{a+1 \alpha b \beta}^{c \gamma},(26  \tag{26}\\
+C_{a \alpha b \beta}^{c \gamma}=\left[\frac{4 c^{2}(2 c+1)(2 c-1)}{(c+\gamma)(c-\gamma)(-a+b+c)(a-b+c)(a+b-c+1)(a+b+c+1)}\right]^{\frac{1}{2}} \\
+\times\left\{\frac{(\alpha-\beta) c(c-1)-\gamma a(a+1)+\gamma b(b+1)}{2 c(c-1)} C_{a \alpha b \beta}^{c-1 \gamma}\right. \\
+\left.-\left[\frac{(c-\gamma-1)(c+\gamma-1)(-a+b+c-1)(a-b+c-1)(a+b-c+2)(a+b+c)}{4(c-1)^{2}(2 c-3)(2 c-1)}\right]^{\frac{1}{2}} C_{a \alpha b \beta}^{c-2 \gamma}\right\} . \tag{27}
+\end{gather*}
+
+
+\subsection*{8.6.6. Arguments $a, b, \alpha, \beta$ Change by 1}
+
+\begin{gather*}
+{[(b \pm \beta)(b \pm \beta+1)]^{\frac{1}{2}} C_{a \alpha b-1 \beta}^{c \gamma}} \\
+=\frac{1}{2 a(2 a+1)}[(a \pm \alpha)(a \pm \alpha-1)(-a+b+c)(-a+b+c+1)(a-b+c)(a-b+c+1)]^{\frac{1}{2}} C_{a-1 \alpha \mp 1 b \beta \pm 1}^{c \gamma} \\
+\mp \frac{1}{2 a(a+1)}[(a \pm \alpha)(a \mp \alpha+1)(-a+b+c)(a-b+c+1)(a+b-c)(a+b+c+1)]^{\frac{1}{2}} C_{a \alpha \mp 1 b \beta \pm 1}^{c \gamma} \\
++\frac{1}{2(a+1)(2 a+1)}[(a \mp \alpha+1)(a \mp \alpha+2)(a+b-c)(a+b-c+1)(a+b+c+1)(a+b+c+2)]^{\frac{1}{2}} \\
+\times C_{a+1 \alpha \mp 1 b \beta \pm 1}^{c \gamma} .  \tag{28}\\
+= \pm \frac{1}{2 a(2 a+1)}[(a \pm \alpha)(a \pm \alpha-1)(-a+b+c+1)(a-b+c)(a+b-c)(a+b+c+1)]^{\frac{1}{2}} C_{a-1 \alpha \mp 1 b \beta \pm 1}^{c \gamma} \\
+\left.\quad-\frac{1}{2 a(a+1)}\{a(a+1)+b(b+1)-c(c+1)\}(a \pm \alpha)(a \mp \alpha+1)\right]^{\frac{1}{2}} C_{a \alpha \mp 1 b \beta \pm 1}^{c \gamma} \\
+\mp \frac{1}{2(a+1)(2 a+1)}[(a \mp \alpha+1)(a \mp \alpha+2)(-a+b+c)(a-b+c+1)(a+b-c+1)(a+b+c+2)]^{\frac{1}{2}} \\
+\quad \times C_{a+1 \alpha \mp 1 b \beta \pm 1}^{c \gamma} .
+\end{gather*}
+
+
+
+\begin{gather*}
+{[(b \mp \beta)(b \mp \beta+1)]^{\frac{1}{2}} C_{a \alpha b+1 \beta}^{c \gamma}} \\
+=\frac{1}{2 a(2 a+1)}[(a \pm \alpha)(a \pm \alpha-1)(a+b-c)(a+b-c+1)(a+b+c+1)(a+b+c+2)]^{\frac{1}{2}} C_{a-1 \alpha \mp 1 b \beta \pm 1}^{c \gamma} \\
+\pm \frac{1}{2 a(a+1)}[(a \pm \alpha)(a \mp \alpha+1)(-a+b+c+1)(a-b+c)(a+b-c+1)(a+b+c+2)]^{\frac{1}{2}} C_{a \alpha \mp 1 b \beta \pm 1}^{c \gamma} \\
++\frac{1}{2(a+1)(2 a+1)}[(a \mp \alpha+1)(a \mp \alpha+2)(-a+b+c)(-a+b+c+1)(a-b+c)(a-b+c+1)]^{\frac{1}{2}} \\
+\times C_{a+1 \alpha \mp 1 b \beta \pm 1}^{c \gamma} \tag{30}
+\end{gather*}
+
+
+\subsection*{8.6.7. Arguments $c, b, \gamma, \beta$ Change by 1}
+
+\begin{gather*}
+{\left[\frac{(-a+b+c)(a-b+c)(a+b-c+1)(a+b+c+1)(2 c-1)}{(2 c+1)}\right]^{\frac{1}{2}} C_{a \alpha b \beta}^{c \gamma}} \\
+=[(b+\beta)(b-\beta+1)(c+\gamma)(c+\gamma-1)]^{\frac{1}{2}} C_{a \alpha b \beta-1}^{c-1 \gamma-1}-2 \beta\left[c^{2}-\gamma^{2}\right]^{\frac{1}{2}} C_{a \alpha b \beta}^{c-1 \gamma} \\
+-[(b-\beta)(b+\beta+1)(c-\gamma)(c-\gamma-1)]^{\frac{1}{2}} C_{a \alpha b \beta+1}^{c-1 \gamma+1} .  \tag{31}\\
+{[(b \mp \beta)(b \mp \beta+1)]^{\frac{1}{2}} C_{a \alpha b-1 \beta}^{c \gamma}} \\
+=\frac{1}{2 c}\left[\frac{(c \pm \gamma)(c \pm \gamma-1)(a-b+c)(a-b+c+1)(a+b-c)(a+b-c+1)}{(2 c-1)(2 c+1)}\right]^{\frac{1}{2}} C_{a \alpha b \beta \mp 1}^{c-1 \gamma \mp 1} \\
+\pm \frac{1}{2 c(c+1)}[(c \pm \gamma)(c \mp \gamma+1)(-a+b+c)(a-b+c+1)(a+b-c)(a+b+c+1)]^{\frac{1}{2}} C_{a \alpha b \beta \mp 1}^{c \gamma \mp 1} \\
++\frac{1}{2(c+1)}\left[\frac{(c \mp \gamma+1)(c \mp \gamma+2)(-a+b+c)(-a+b+c+1)(a+b+c+1)(a+b+c+2)}{(2 c+1)(2 c+3)}\right]^{\frac{1}{2}} C_{a \alpha b \beta \mp 1}^{c+1 \gamma \mp 1}(  \tag{32}\\
+= \pm \frac{1}{2 c}\left[\frac{(c \pm \gamma)(c \pm \gamma-1)(-a+b+c)(a-b+c)(a+b-c+1)(a+b+c+1)}{(2 c-1)(2 c+1)}\right]^{\frac{1}{2}} C_{a \alpha b \beta \mp 1}^{c-1 \gamma \mp 1} \\
++\frac{1}{2 c(c+1)}\{-a(a+1)+b(b+1)+c(c+1)\}[(c \pm \gamma)(c \mp \gamma+1)]^{\frac{1}{2}} C_{a \alpha b \beta \mp 1}^{c \gamma \mp 1} \\
+\mp \frac{1}{2(c+1)}\left[\frac{(c \mp \gamma+1)(c \mp \gamma+2)(-a+b+c+1)(a-b+c+1)(a+b-c)(a+b+c+2)}{(2 c+1)(2 c+3)}\right]^{\frac{1}{2}} C_{a \alpha b \beta \mp 1}^{c+1 \gamma \mp 1} \\
+=\frac{1}{2 c}\left[\frac{(c \pm \gamma)(c \pm \gamma-1)(-a+b+c)(-a+b+c+1)(a+b+c+1)(a+b+c+2)}{(2 c-1)(2 c+1)}\right]^{\frac{1}{2}} C_{a \alpha b \beta \mp 1}^{c-1 \gamma \mp 1}  \tag{33}\\
+\mp \frac{1}{2 c(c+1)}[(c \pm \gamma)(c \mp \gamma+1)(-a+b+c+1)(a-b+c)(a+b-c+1)(a+b+c+2)]^{\frac{1}{2}} C_{a \alpha b \beta \mp 1}^{c \gamma \mp 1} \\
++\frac{1}{2(c+1)}\left[\frac{(c \mp \gamma+1)(c \mp \gamma+2)(a-b+c)(a-b+c+1)(a+b-c)(a+b-c+1)}{(2 c+1)(2 c+3)}\right]^{\frac{1}{2}} C_{a \alpha b \beta \mp 1}^{c+1 \gamma \mp 1} .
+\end{gather*}
+
+
+\subsection*{8.6.8. Recursion Relations for the Regge Symbols}
+Recursion relations for the Regge $R$-symbols are very convenient because each relation is equivalent to a variety of formally different expressions for the Clebsch-Gordan coefficients. The formulas given below represent some recursion relations $[86,103]$. In these formulas we use the notation $J=\sum_{k=1}^{3} R_{i k}=\sum_{i=1}^{3} R_{i k}=a+b+c$.
+
+
+\begin{align*}
+& {\left[R_{11}(J+1)\right]^{\frac{1}{2}}\left\|\begin{array}{lll}
+R_{11} & R_{12} & R_{13} \\
+R_{21} & R_{22} & R_{23} \\
+R_{31} & R_{32} & R_{33}
+\end{array}\right\|-\left[R_{22} R_{33}\right]^{\frac{1}{2}}\left\|\begin{array}{lll}
+R_{11}-1 & R_{12} & R_{13} \\
+R_{21} & R_{22}-1 & R_{23} \\
+R_{31} & R_{32} & R_{33}-1
+\end{array}\right\|} \\
+& +\left[R_{23} R_{32}\right]^{\frac{1}{2}}\left\|\begin{array}{lll}
+R_{11}-1 & R_{12} & R_{13} \\
+R_{21} & R_{22} & R_{23}-1 \\
+R_{31} & R_{32}-1 & R_{33}
+\end{array}\right\|=0 .  \tag{35}\\
+& {\left[\left(R_{11}+1\right) R_{21}\right]^{\frac{1}{2}}\left\|\begin{array}{lll}
+R_{11}+1 & R_{12} & R_{13} \\
+R_{21}-1 & R_{22} & R_{23} \\
+R_{31} & R_{32} & R_{33}
+\end{array}\right\|+\left[\left(R_{12}+1\right) R_{22}\right]^{\frac{1}{2}}\left\|\begin{array}{lll}
+R_{11} & R_{12}+1 & R_{13} \\
+R_{21} & R_{22}-1 & R_{23} \\
+R_{31} & R_{32} & R_{33}
+\end{array}\right\|} \\
+& +\left[\left(R_{13}+1\right) R_{23}\right]^{\frac{1}{2}}\left\|\begin{array}{lll}
+R_{11} & R_{12} & R_{13}+1 \\
+R_{21} & R_{22} & R_{23}-1 \\
+R_{31} & R_{32} & R_{33}
+\end{array}\right\|=0 .  \tag{36}\\
+& {\left[R_{11} R_{22}(J+1)\right]^{\frac{1}{2}}\left\|\begin{array}{lll}
+R_{11} & R_{12} & R_{13} \\
+R_{21} & R_{22} & R_{23} \\
+R_{31} & R_{32} & R_{33}
+\end{array}\right\|-\left(R_{22}+R_{23}\right)\left[R_{33}\right]^{\frac{1}{2}}\left\|\begin{array}{lll}
+R_{11}-1 & R_{12} & R_{13} \\
+R_{21} & R_{22}-1 & R_{23} \\
+R_{31} & R_{32} & R_{33}-1
+\end{array}\right\|} \\
+& -\left[R_{23} R_{31}\left(R_{21}+1\right)\right]^{\frac{1}{2}}\left\|\begin{array}{lll}
+R_{11}-1 & R_{12} & R_{13} \\
+R_{21}+1 & R_{22}-1 & R_{23}-1 \\
+R_{31}-1 & R_{32} & R_{33}
+\end{array}\right\|=0 .  \tag{37}\\
+& \left(R_{11}+R_{12}+1\right)\left[R_{22}\right]^{\frac{1}{2}}\left\|\begin{array}{lll}
+R_{11} & R_{12} & R_{13} \\
+R_{21} & R_{22} & R_{23} \\
+R_{31} & R_{32} & R_{33}
+\end{array}\right\|+\left[R_{13}\left(R_{23}+1\right)\left(R_{12}+1\right)\right]^{\frac{1}{2}}\left\|\begin{array}{lll}
+R_{11} & R_{12}+1 & R_{13}-1 \\
+R_{21} & R_{22}-1 & R_{23}+1 \\
+R_{31} & R_{32} & R_{33}
+\end{array}\right\| \\
+& -\left[R_{11} R_{33}(J+1)\right]^{\frac{1}{2}}\left\|\begin{array}{lll}
+R_{11}-1 & R_{12} & R_{13} \\
+R_{21} & R_{22}-1 & R_{23} \\
+R_{31} & R_{32} & R_{33}-1
+\end{array}\right\|=0 .  \tag{38}\\
+& \left(R_{22}-R_{33}\right)\left[R_{11} R_{23} R_{32}\right]^{\frac{1}{2}}\left\|\begin{array}{lll}
+R_{11}-1 & R_{12} & R_{13} \\
+R_{21} & R_{22} & R_{23}-1 \\
+R_{31} & R_{32}-1 & R_{33}
+\end{array}\right\| \\
+& +\left(R_{33}-R_{11}\right)\left[R_{13} R_{22} R_{31}\right]^{\frac{1}{2}}\left\|\begin{array}{lll}
+R_{11} & R_{12} & R_{13}-1 \\
+R_{21} & R_{22}-1 & R_{23} \\
+R_{31}-1 & R_{32} & R_{33}
+\end{array}\right\| \\
+& +\left(R_{11}-R_{22}\right)\left[R_{12} R_{21} R_{33}\right]^{\frac{1}{2}}\left\|\begin{array}{lll}
+R_{11} & R_{12}-1 & R_{13} \\
+R_{21}-1 & R_{22} & R_{23} \\
+R_{31} & R_{32} & R_{33}-1
+\end{array}\right\|=0 . \tag{39}
+\end{align*}
+
+
+\subsection*{8.7. SUMS OF PRODUCTS OF THE CLEBSCH-GORDAN COEFFICIENTS}
+Sums of products of the vector-addition coefficients are more conveniently represented in terms of the $3 j m$ symbols than in terms of the Clebsch-Gordan coefficients, because the $3 j m$ symbols have simpler symmetry relations. The sums expressed in terms of the $3 j m$ symbols will be given in Sec. 12.2. Nevertheless the ClebschGordan coefficients are also widely used. That is why we present the formulas which seem to be most useful for sums of products containing the Clebsch-Gordan coefficients. For practical convenience we consider various versions of the formulas which differ by permutations of upper and lower arguments. In these formulas we use the notation
+
+$$
+\prod_{a b \ldots c}=[(2 a+1)(2 b+1) \ldots(2 c+1)]^{\frac{1}{2}}
+$$
+
+\subsection*{8.7.1. Sums Involving One Clebsch-Gordan Coefficient}
+
+\begin{gather*}
+\sum_{\alpha} C_{a \alpha b 0}^{a \alpha}=\prod_{a}^{2} \delta_{b 0}  \tag{1}\\
+\sum_{\alpha}(-1)^{a-\alpha} C_{a \alpha a-\alpha}^{c 0}=\prod_{a} \delta_{c 0}  \tag{2}\\
+\sum_{\alpha \beta \gamma}(-1)^{c+\gamma} C_{a \alpha b \beta}^{c \gamma}[(a+\alpha)!(a-\alpha)!(b+\beta)!(b-\beta)!(c+\gamma)!(c-\gamma)!]^{-\frac{1}{2}}=0 \tag{3}
+\end{gather*}
+
+
+\subsection*{8.7.2 Sums Involving Products of Two Clebsch-Gordan Coefficients}
+
+\begin{gather*}
+\sum_{\alpha \beta} C_{a \alpha b \beta}^{c \gamma} C_{a \alpha b \beta}^{c^{\prime} \gamma^{\prime}}=\delta_{c c^{\prime}} \delta_{\gamma \gamma^{\prime}}  \tag{4}\\
+\sum_{\alpha \gamma} C_{a \alpha b \beta}^{c \gamma} C_{a \alpha b^{\prime} \beta^{\prime}}^{c \gamma}=\frac{\Pi_{c}^{2}}{\Pi_{b}^{2}} \delta_{b b^{\prime}} \delta_{\beta \beta^{\prime}}  \tag{5}\\
+\sum_{\alpha \beta}(-1)^{b+\beta} C_{a \alpha b \beta}^{c \gamma} C_{c^{\prime}-\gamma^{\prime} a \alpha}^{b-\beta}=(-1)^{c+\gamma} \frac{\Pi_{b}}{\Pi_{c}} \delta_{c c^{\prime}} \delta_{\gamma \gamma^{\prime}}  \tag{6}\\
+\sum_{\alpha \beta}(-1)^{a+\alpha} C_{b \beta a \alpha}^{c \gamma} C_{a-\alpha c^{\prime} \gamma^{\prime}}^{b \beta}=\frac{\Pi_{b}}{\Pi_{c}} \delta_{c c^{\prime}} \delta_{\gamma \gamma^{\prime}}  \tag{7}\\
+\sum_{\alpha \beta} C_{c \gamma b \beta}^{a \alpha} C_{c^{\prime}-\gamma^{\prime} a \alpha}^{b \beta}=(-1)^{b-a-\gamma} \frac{\Pi_{a b}}{\Pi_{c}^{2}} \delta_{c c^{\prime}} \delta_{\gamma \gamma^{\prime}}  \tag{8}\\
+\sum_{c \gamma} C_{a \alpha b \beta}^{c \gamma} C_{a \alpha^{\prime} b \beta^{\prime}}^{c \gamma}=\delta_{\alpha \alpha^{\prime}} \delta_{\beta \beta^{\prime}}  \tag{9}\\
+\sum_{c \gamma} \prod_{c}^{2} C_{a \alpha c \gamma}^{b \beta} C_{a \alpha^{\prime} c \gamma}^{b \beta^{\prime}}=\prod_{b}^{2} \delta_{\alpha \alpha^{\prime}} \delta_{\beta \beta^{\prime}}  \tag{10}\\
+\sum_{a \alpha}(-1)^{a-\alpha} \prod_{a}^{2} C_{a \alpha b \beta}^{c \gamma} C_{a \alpha c \gamma^{\prime}}^{b \beta^{\prime}}=\prod_{b c} \delta_{\gamma,-\gamma^{\prime}} \delta_{\beta,-\beta^{\prime}} \tag{11}
+\end{gather*}
+
+
+8.7.3. Sums Involving Products of Three Clebsch-Gordan Coefficients
+
+
+\begin{gather*}
+\sum_{\alpha \beta \delta} C_{a \alpha b \beta}^{c \gamma} C_{d \delta b \beta}^{e \beta} C_{a \alpha f \varphi}^{d \delta}=\kappa_{1} \prod_{c d} C_{c \gamma f \varphi}^{e \beta}\left\{\begin{array}{lll}
+a & b & c \\
+e & f & d
+\end{array}\right\},  \tag{12}\\
+\sum_{\alpha \beta \delta} C_{b \beta c \gamma}^{a \alpha} C_{b \beta c e}^{d \delta} C_{a \alpha f \varphi}^{d \delta}=\kappa_{1} \frac{\prod_{a d d}}{\prod_{e}} C_{c \gamma f \varphi}^{e \varepsilon}\left\{\begin{array}{lll}
+a & b & c \\
+e & f & d
+\end{array}\right\},  \tag{13}\\
+\sum_{\alpha \beta \delta} C_{b \beta a \alpha}^{c \gamma} C_{b \beta d \delta}^{e \varepsilon} C_{a \alpha f \varphi}^{d \delta}=\kappa_{2} \prod_{c d} C_{c \gamma f \varphi}^{e \varepsilon}\left\{\begin{array}{lll}
+a & b & c \\
+e & f & d
+\end{array}\right\},  \tag{14}\\
+\sum_{\alpha \beta \delta}(-1)^{a-\alpha} C_{a \alpha b \beta}^{c \gamma} C_{d \delta b \beta}^{e \varepsilon} C_{d \delta a-\alpha}^{f \varphi}=\kappa_{1} \prod_{c f} C_{c \gamma f \varphi}^{e \varepsilon}\left\{\begin{array}{lll}
+a & b & c \\
+e & f & d
+\end{array}\right\},  \tag{15}\\
+\sum_{\alpha \beta \delta}(-1)^{b+\beta} C_{a \alpha b \beta}^{c \gamma} C_{b-\beta e \varepsilon}^{d \delta} C_{a \alpha f \varphi}^{d \delta}=\kappa_{1} \frac{\prod_{c d d}}{\prod_{e}} C_{c \gamma f \varphi}^{e \varepsilon}\left\{\begin{array}{lll}
+a & b & c \\
+e & f & d
+\end{array}\right\},  \tag{16}\\
+\sum_{\alpha \beta \delta}(-1)^{a-\alpha} C_{b \beta a \alpha}^{c \gamma} C_{b \beta d \delta}^{e \varepsilon} C_{d \delta a-\alpha}^{f \varphi}=\kappa_{2} \prod_{c f} C_{c \gamma f \varphi}^{e \varepsilon}\left\{\begin{array}{ll}
+a & b \\
+e & f \\
+e & d
+\end{array}\right\},  \tag{17}\\
+\sum_{\alpha \beta \delta}(-1)^{b+\beta} C_{b-\beta c \gamma}^{a \alpha} C_{d \delta b \beta}^{e \varepsilon} C_{a \alpha f \varphi}^{d \delta}=\kappa_{1} \prod_{a d} C_{c \gamma f \varphi}^{e \varepsilon}\left\{\begin{array}{ll}
+a & b \\
+e & f \\
+e & d
+\end{array}\right\},  \tag{18}\\
+\sum_{\alpha \beta \delta}(-1)^{a-\alpha} C_{a \alpha c-\gamma}^{b \beta} C_{d \delta b-\beta}^{e \varepsilon} C_{a \alpha f \varphi}^{d \delta}=\kappa_{1} \prod_{b d} C_{c \gamma f \varphi}^{e \varepsilon}\left\{\begin{array}{lll}
+a & b & c \\
+e & f & d
+\end{array}\right\}, \tag{19}
+\end{gather*}
+
+
+where $\kappa_{1}=(-1)^{b+c+d+f}, \kappa_{2}=(-1)^{a+b+e+f}$.\\
+8.7.4 Sums Involving Products of Four Clebsch-Gordan Coefficients
+
+
+\begin{align*}
+& \sum_{\beta \gamma \varepsilon \varphi} C_{b \beta c \gamma}^{a \alpha} C_{e c f \varphi}^{d \delta} C_{e c b \beta}^{q \eta} C_{f \varphi c \gamma}^{j \mu} \\
+& =(-1)^{a-b+c+d+e-f} \sum_{* \sigma} \prod_{s, a g} C_{a \alpha, \sigma}^{j \mu} C_{g \eta, \sigma}^{d \delta}\left\{\begin{array}{lll}
+b & c & a \\
+j & s & f
+\end{array}\right\}\left\{\begin{array}{lll}
+b & e & g \\
+d & s & f
+\end{array}\right\}=\prod_{a d g j} \sum_{k \kappa} C_{g \eta j \mu}^{k \kappa} C_{d \delta a \alpha}^{k \kappa}\left\{\begin{array}{lll}
+c & b & a \\
+f & e & d \\
+j & g & k
+\end{array}\right\},  \tag{20}\\
+& \sum_{\beta \gamma \varepsilon \varphi} C_{b \beta c-\gamma}^{a \alpha} C_{e \beta f-\varphi}^{d \delta} C_{b \beta e c}^{g \eta} C_{c \gamma \rho \varphi}^{j \mu}=(-1)^{b+e-g} \prod_{a d g j} \sum_{k c} C_{q \eta j-\mu}^{k \kappa} C_{d \delta a \alpha}^{k \kappa}\left\{\begin{array}{lll}
+c & b & a \\
+f & e & d \\
+j & g & k
+\end{array}\right\},  \tag{21}\\
+& \sum_{\beta \gamma \varepsilon \varphi} C_{b \beta a \alpha}^{c \gamma} C_{f \varphi j \mu}^{c \gamma} C_{b \beta g \eta}^{e \varepsilon} C_{f \varphi d b}^{e \varepsilon}=(-1)^{a-b+j-j} \prod_{c e}^{2} \sum_{k c} C_{g \eta j \mu}^{k \kappa} C_{d \delta a \alpha}^{k \kappa}\left\{\begin{array}{lll}
+c & b & a \\
+f & e & d \\
+j & g & k
+\end{array}\right\},  \tag{22}\\
+& \sum_{\beta \gamma \in \varphi} C_{a \alpha b \beta}^{c \gamma} C_{g \eta e c}^{b \beta} C_{d \delta j \varphi}^{e \delta} C_{j \mu c \gamma}^{f \varphi}=(-1)^{d+e-c-j} \prod_{b c e j} \sum_{k \kappa}(-1)^{k-\kappa} C_{g \eta j \mu}^{k-\kappa} C_{d \delta a \alpha}^{k \kappa}\left\{\begin{array}{lll}
+c & b & a \\
+f & e & d \\
+j & g & k
+\end{array}\right\},  \tag{23}\\
+& \sum_{\beta \gamma \varepsilon \varphi} C_{b \beta a-\alpha}^{c \gamma} C_{e \varepsilon d-\delta}^{f \varphi} C_{g \eta b-\beta}^{e \varepsilon} C_{j \mu c-\gamma}^{f \varphi}=(-1)^{b-c-g-\alpha+\eta} \prod_{c e f l} \sum_{k \pi} C_{g n j-\mu}^{k v c} C_{d \delta a \alpha}^{k c k}\left\{\begin{array}{lll}
+c & b & a \\
+f & e & d \\
+j & g & k
+\end{array}\right\}, \tag{24}
+\end{align*}
+
+
+
+\begin{align*}
+& \sum_{\beta \gamma \varepsilon \varphi} C_{b \beta c-\gamma}^{a \alpha} C_{e \varepsilon f \varphi}^{d \delta} C_{e-\varepsilon \eta \eta}^{b \beta} C_{f \varphi j \mu}^{c \gamma}=(-1)^{b+f-g-\delta} \prod_{a b c d} \sum_{k c} C_{g \eta j-\mu}^{k \kappa} C_{d \delta a \alpha}^{k \kappa}\left\{\begin{array}{lll}
+c & b & a \\
+f & e & d \\
+j & g & k
+\end{array}\right\},  \tag{25}\\
+& \sum_{\beta \gamma \varepsilon \varphi} C_{b \beta c \gamma}^{a \alpha} C_{e<f \varphi}^{d \delta} C_{e \varepsilon g \eta}^{b \beta} C_{f \varphi j \mu}^{c \gamma}=\sum_{k \kappa} \prod_{b c d k} C_{g \eta j \mu}^{k \alpha} C_{d \delta k c \kappa}^{a \alpha}\left\{\begin{array}{lll}
+a & b & c \\
+d & e & f \\
+k & g & j
+\end{array}\right\},  \tag{26}\\
+& \sum_{\beta \gamma \varepsilon \varphi} C_{b \beta c-\gamma}^{a \alpha} C_{e \beta f-\varphi}^{d \delta} C_{g \eta b-\beta}^{e \beta} C_{j \mu f-\varphi}^{c \gamma}=(-1)^{c+e-g+j+\alpha-\mu} \prod_{a d e c} \sum_{k c} C_{g \eta j-\mu}^{k \kappa} C_{d \delta a \alpha}^{k \kappa}\left\{\begin{array}{lll}
+c & b & a \\
+f & e & d \\
+j & g & k
+\end{array}\right\},  \tag{27}\\
+& \sum_{\beta \gamma \varepsilon \varphi} C_{b \beta c \gamma}^{a \alpha} C_{b \beta g \eta}^{e \varepsilon} C_{f \varphi d \delta}^{e \varepsilon} C_{f \varphi c \gamma}^{j \mu}=(-1)^{j-a+\delta-\eta} \prod_{a e e j} \sum_{k \kappa} C_{g \eta j-\mu}^{k \kappa} C_{d \delta a-\alpha}^{k \kappa}\left\{\begin{array}{ccc}
+c & b & a \\
+f & e & d \\
+j & g & k
+\end{array}\right\},  \tag{28}\\
+& \sum_{\beta \gamma \varepsilon \varphi} C_{b \beta c \gamma}^{a \alpha} C_{g \eta e c}^{b \beta} C_{f \varphi d \delta}^{e \varepsilon} C_{f \varphi c \gamma}^{j \mu}=(-1)^{j-a-g+\delta} \prod_{a b e j} \sum_{k e} C_{g-\eta j-\mu}^{k \kappa} C_{d \delta a-\alpha}^{k \kappa}\left\{\begin{array}{lll}
+c & b & a \\
+f & e & d \\
+j & g & k
+\end{array}\right\},  \tag{29}\\
+& \sum_{\beta \gamma \varepsilon}(-1)^{c-\gamma+e-\varepsilon} C_{a \alpha b \beta}^{c \gamma} C_{d \delta f \varphi}^{e \varepsilon} C_{e \varepsilon b \beta}^{g \eta} C_{c \gamma j \varphi}^{j \mu}=(-1)^{a+d-\alpha-\delta} \prod_{c e g j} \sum_{k x} C_{b \eta j-\mu}^{k \kappa} C_{d \delta a-\alpha}^{k \kappa}\left\{\begin{array}{lll}
+c & b & a \\
+f & e & d \\
+j & g & k
+\end{array}\right\} . \tag{30}
+\end{align*}
+
+
+8.7.5. Sums Involving Products of the Clebsch-Gordan Coefficients and One 6j Symbol
+
+
+\begin{align*}
+& \sum_{e \in}(-1)^{2 e} \prod_{c d} C_{b \beta d \delta}^{e s} C_{f \varphi c \gamma}^{e s}\left\{\begin{array}{lll}
+a & b & c \\
+e & f & d
+\end{array}\right\}=C_{a \alpha b \beta}^{c \gamma} C_{a \alpha f \varphi}^{d \delta},  \tag{31}\\
+& \sum_{f \varphi}(-1)^{c+d+f} \prod_{c e} C_{e c a \alpha}^{f \varphi} C_{d \delta c \gamma}^{f \varphi}\left\{\begin{array}{lll}
+b & a & c \\
+f & d & e
+\end{array}\right\}=C_{a \alpha b \beta}^{c q} C_{d \delta b \beta}^{e c},  \tag{32}\\
+& \sum_{c \gamma}(-1)^{2 e-d+\alpha+\varphi} \prod_{a e} C_{f-\varphi b \beta}^{c \gamma} C_{e \varepsilon a-\alpha}^{c \gamma}\left\{\begin{array}{lll}
+c & f & b \\
+d & e & a
+\end{array}\right\}=C_{b \beta d \delta}^{e \varepsilon} C_{f \varphi d \delta}^{a \alpha},  \tag{33}\\
+& \sum_{c \gamma}(-1)^{c+d-\beta-\varphi} \prod_{d}^{2} C_{a \alpha b \beta}^{c \gamma} C_{f-\varphi c e}^{c \gamma}\left\{\begin{array}{lll}
+a & b & c \\
+e & f & d
+\end{array}\right\}=C_{a \alpha f \varphi}^{d \delta} C_{b-\beta c e}^{d \delta},  \tag{34}\\
+& \sum_{c \gamma}(-1)^{2 e} \prod_{c d} C_{a \alpha b \beta}^{c \gamma} C_{f \varphi c \gamma}^{e \varepsilon}\left\{\begin{array}{lll}
+a & b & c \\
+e & f & d
+\end{array}\right\}=C_{b \beta d \delta}^{e \varepsilon} C_{a \alpha f \varphi}^{d \delta},  \tag{35}\\
+& \sum_{f \varphi}(-1)^{2 c} \prod_{e f} C_{b \rho d \delta}^{f \varphi} C_{a \alpha f \varphi}^{c \gamma}\left\{\begin{array}{lll}
+a & b & e \\
+d & c & f
+\end{array}\right\}=C_{b \beta a \alpha}^{e c} C_{d b e c}^{c \gamma},  \tag{36}\\
+& \sum_{c \gamma}(-1)^{e+d-\beta} \frac{\Pi_{c d d}}{\Pi_{e}} C_{a \alpha b \beta}^{c \gamma} C_{f \varphi c \gamma}^{e<}\left\{\begin{array}{lll}
+a & b & c \\
+e & f & d
+\end{array}\right\}=C_{b-\beta e c}^{d \delta} C_{a \alpha f \varphi}^{d \delta},  \tag{37}\\
+& \sum_{c \gamma}(-1)^{2 e} \frac{\prod_{a c c}}{\prod_{b}} C_{f \varphi c \gamma}^{b \beta} C_{c \gamma a \alpha}^{e s}\left\{\begin{array}{lll}
+c & f & b \\
+d & e & a
+\end{array}\right\}=C_{d \delta b \beta}^{e s} C_{f \varphi d b}^{a \alpha} . \tag{38}
+\end{align*}
+
+
+8.7.6. Sums Involving Products of the Clebsch-Gordan Coefficients and One 9j Symbol
+
+
+\begin{align*}
+& \sum_{a k} \prod_{a d g j} C_{b \beta c \gamma}^{a \alpha} C_{g \eta j \mu}^{k \kappa} C_{d \delta a \alpha}^{k \kappa}\left\{\begin{array}{ccc}
+c & b & a \\
+f & e & d \\
+j & g & k
+\end{array}\right\}=C_{e c f \varphi}^{d \delta} C_{e c b \beta}^{g \eta} C_{f \varphi c \gamma}^{j \mu},  \tag{39}\\
+& \sum_{g j} \prod_{a d g j} C_{g \eta j \mu}^{k \kappa} C_{e s b \beta}^{g \eta} C_{f \varphi c \gamma}^{j \mu}\left\{\begin{array}{lll}
+c & b & a \\
+f & e & d \\
+j & g & k
+\end{array}\right\}=C_{d \delta a \alpha}^{k \kappa} C_{e s f \varphi}^{d \delta} C_{b \beta c \gamma}^{a \alpha},  \tag{40}\\
+& \sum_{g j}(-1)^{b+e-g} \prod_{a d g j}^{-1} C_{g \eta j-\mu}^{k \alpha} C_{b \beta e \varepsilon}^{g \eta} C_{c \gamma f \varphi}^{j \mu}\left\{\begin{array}{ccc}
+c & b & a \\
+f & e & d \\
+j & g & k
+\end{array}\right\}=C_{d \delta a \alpha}^{k \kappa} C_{e \varepsilon f-\varphi}^{d \delta} C_{b \beta c-\gamma}^{a \alpha},  \tag{41}\\
+& \sum_{a d}(-1)^{b+f-g-\delta} \prod_{a b c d} C_{b \beta c-\gamma}^{a \alpha} C_{e c f \varphi}^{d \delta} C_{d \delta a \alpha}^{k \kappa}\left\{\begin{array}{lll}
+c & b & a_{i} \\
+f & e & d \\
+j & g & k
+\end{array}\right\}=C_{g \eta j-\mu}^{k \kappa} C_{e-\epsilon g \eta}^{b \beta} C_{f \varphi j_{j}}^{c \gamma},  \tag{42}\\
+& \sum_{a j}(-1)^{a-b-f+\varphi+d} \frac{\Pi_{d d j j_{0 q}}}{\Pi_{b c}} C_{b \eta j-\mu}^{k c c} C_{e-s g \eta}^{b \beta} C_{f \varphi j \mu}^{c \gamma}\left\{\begin{array}{lll}
+c & b & a \\
+f & e & d \\
+j & g & k
+\end{array}\right\}=C_{b \beta c-\gamma}^{a \alpha} C_{e s j \varphi}^{d \delta} C_{d \delta a \alpha}^{k \alpha} . \tag{43}
+\end{align*}
+
+
+Sums of larger numbers of the Clebsch-Gordan coefficients may be obtained from the above equations using the orthogonality refation (Eq. 8.1(8)).
+
+\subsection*{8.7.7. Some Additional Sums of Products of Two Clebsch-Gordan Coefficients}
+We note also some other sums of products of the Clebsch-Gordan coefficients. The first two sums, obtained by Morgan [136], are written as
+
+
+\begin{equation*}
+\sum_{l^{\prime}=0}^{l} \frac{1}{\left(2 l^{\prime}-1\right)\left(2 l-2 l^{\prime}+2 J+1\right)}\left(C_{10 l^{\prime}+30}^{l-l^{\prime}+30}\right)^{2}=-\frac{\delta_{10}}{2 J+1} \tag{44}
+\end{equation*}
+
+
+and
+
+
+\begin{equation*}
+\sum_{l^{\prime}=0}^{l}\left(\frac{1}{2 l^{\prime}+3}-\frac{l+1}{2 l+3} \frac{1}{2 l^{\prime}+1}\right) \frac{1}{2 l-2 l+2 J+1}\left(c_{10 l^{\prime}+30}^{l-l^{\prime}+30}\right)^{2}=0 . \tag{45}
+\end{equation*}
+
+
+In these equations $l, l^{\prime}, J$ are integers.\\[0pt]
+Din proved the following identity [134]
+
+
+\begin{equation*}
+\sum_{i=|c-b|}^{c+b} \frac{2 i+1}{i(i+1)-a(a+1)}\left(C_{i 060}^{c 0}\right)^{2}=0 \tag{46}
+\end{equation*}
+
+
+where $a, b, c$ are non-negative integers, with $a+b+c$ odd, which satisfy the triangular condition
+
+$$
+|c-b| \leq a \leq c+b .
+$$
+
+The sum runs only over values of $i$ for which the Clebsch-Gordan coefficient does not vanish. Dunlop and Judd [135] give the following relation
+
+
+\begin{equation*}
+\sum_{m} C_{a m k 0}^{a m} C_{c M-m k 0}^{c M-m}=(-1)^{k} \frac{(2 a+1)(2 c+1)}{2 k+1} \sqrt{\frac{(2 a-k)!(2 c+k+1)!}{(2 c-k)!(2 a+k+1)!}}, \tag{47}
+\end{equation*}
+
+
+which is valid for $a-c \geq|M|$.
+
+\subsection*{8.8. GENERATING FUNCTIONS}
+The Clebsch-Gordan coefficients may be generated by expansions of some functions in power series or finite sums. Below we present several generating functions. In these relations $J \equiv a+b+c$.
+
+\subsection*{8.8.1. Regge Determinant to Power $J$}
+\[
+\left|\begin{array}{ccc}
+u_{1} & u_{2} & u_{3}  \tag{1}\\
+v_{1} & v_{2} & v_{3} \\
+w_{1} & w_{2} & w_{3}
+\end{array}\right|^{J}=J!\sqrt{(J+1)!} \sum_{R_{i k}}\left\|\begin{array}{lll}
+R_{11} & R_{12} & R_{13} \\
+R_{21} & R_{22} & R_{23} \\
+R_{31} & R_{32} & R_{33}
+\end{array}\right\| \frac{u_{1}^{R_{11}} u_{2}^{R_{12}} u_{3}^{R_{13}} v_{1}^{R_{21}} v_{2}^{R_{22}} v_{3}^{R_{23}} w_{1}^{R_{31}} w_{2}^{R_{32}} w_{3}^{R_{33}}}{\left[R_{11}!R_{12}!R_{13}!R_{21}!R_{22}!R_{23}!R_{31}!R_{32}!R_{33}!\right]^{\frac{1}{2}}} .
+\]
+
+(Regge [94], Shelepin [106]). Here $R_{i k}$ are the elements of the $R$-symbol (see Sec. 8.1.3). The $R$-symbols and the Clebsch-Gordan coefficients are related by Eqs. 8.1(14) and 8.1(11).
+
+\subsection*{8.8.2 Products of Binomials}
+
+\begin{align*}
+= & {\left.\left[\frac{\left(t_{1}-t_{2}\right)^{J-2 c}\left(t_{2}-t_{3}\right)^{J-2 a}\left(t_{3}-t_{1}\right)^{J-2 b}}{2 c+1}\right)!(J-2 a)!(J-2 b)!(J-2 c)!\right]^{\frac{1}{2}} \sum_{\substack{\alpha, \beta, \gamma \\
+\alpha+\beta+\gamma=0}}(-1)^{a-b-\gamma} } \\
+\times & \frac{t_{1}^{a+\alpha} t_{2}^{b+\beta} t_{3}^{c+\gamma}}{[(a+\alpha)!(a-\alpha)!(b+\beta)!(b-\beta)!(c+\gamma)!(c-\gamma)!]^{\frac{1}{2}}} C_{a \alpha b \beta}^{c-\gamma}, \\
+& \left(v_{1} u_{2}-u_{1} v_{2}\right)^{J-2 c}\left(w_{1} v_{2}-w_{2} v_{1}\right)^{J-2 a}\left(u_{1} w_{2}-w_{1} u_{2}\right)^{J-2 b}  \tag{2}\\
+= & {\left[\frac{(J+1)!(J-2 a)!(J-2 b)!(J-2 c)!}{2 c+1}\right]_{\substack{\alpha, \beta, \gamma \\
+\frac{1}{2}}}(-1)^{a-b-\gamma} } \\
+& \times \frac{u_{1}^{a-\alpha} u_{2}^{a+\alpha} v_{1}^{b-\beta} v_{2}^{b+\beta} w_{1}^{c-\gamma} w_{2}^{c+\gamma}}{[(a+\alpha)!(a-\alpha)!(b+\beta)!(b-\beta)!(c+\gamma)!(c-\gamma)!]^{\frac{1}{2}}} C_{a \alpha b \beta}^{c-\gamma} .
+\end{align*}
+
+
+\subsection*{8.8.3. Exponential Function}
+$$
+=\sum_{\substack{a, b, c \\ \alpha, \beta, \gamma}} \frac{(-1)^{a-b-\gamma}}{\Delta(a b c)} \frac{\exp \left\{x_{1}\left(t_{2}-t_{3}\right)+x_{2}\left(t_{3}-t_{1}\right)+x_{3}\left(t_{1}-t_{2}\right)\right\}}{[(2 c+1)(a+\alpha)!(a-\alpha)!(b+\beta)!(b-\beta)!(c+\gamma)!(c-\gamma)!]^{\frac{1}{2}}} C_{a a b \beta}^{c-\gamma}
+$$
+
+where $\Delta(a b c)$ is given by Eq. 8.2(1).
+
+\subsection*{8.8.4. Hypergeometric Function}
+
+\begin{gather*}
+{\left[\frac{(J-2 b)!(c+\gamma)!(2 c+1)}{(J-2 a)!(J-2 c)!(c-\gamma)!(J+1)!}\right]^{\frac{1}{2}} \frac{(t-1)^{J-2 c}}{(a-b+\gamma)!} F(\gamma-c, a-b-c ; a-b+\gamma+1 ; t)} \\
+=\sum_{\substack{\alpha, \beta \\
+\alpha+\beta=\gamma}} C_{a \alpha b \beta}^{c \gamma} \frac{t^{b-\beta}}{[(a+\alpha)!(a-\alpha)!(b+\beta)!(b-\beta)!]^{\frac{1}{2}}} \tag{5}
+\end{gather*}
+
+
+(Akim and Levin [46])
+
+\subsection*{8.8.5. Wigner D-Function}
+
+\begin{equation*}
+\left[\frac{(2 c+1)}{(J+1)!(J-2 c)!}\right]^{\frac{1}{2}} d_{\gamma \gamma^{\prime}}^{c}(\theta)=\sum_{\substack{\alpha, \beta \\ \alpha+\beta=\gamma}}(-1)^{b+\beta} C_{a \alpha b \beta}^{c \gamma} \frac{\left(\cos \frac{\beta}{2}\right)^{a+b+\alpha-\beta}\left(\sin \frac{\theta}{2}\right)^{a+b-\alpha+\beta}}{\left\{\left.(a+\alpha)!(a-\alpha)!(b+\beta)!(b-\beta)!\right|^{\frac{1}{2}}\right.}, \tag{6}
+\end{equation*}
+
+
+where $a-b=\gamma^{\prime},|a-b| \leq c \leq a+b$.
+
+\subsection*{8.8.6. Generating Function for the Coefficients $C_{a 060}^{c 0}$}
+
+\begin{equation*}
+\frac{1}{1+u^{2}+v^{2}+w^{2}}=\sum_{a b c}(-1)^{a-b}\left[\frac{(J+1)!}{2 c+1}\right]^{\frac{1}{2}} C_{a+b 0}^{c 0} \frac{u^{J-2 a} v^{J-2 b} w^{J-2 c}}{[(J-2 a)!(J-2 b)!(J-2 c)!]^{\frac{1}{2}}} . \tag{7}
+\end{equation*}
+
+
+(Schwinger [101])
+
+\subsection*{8.9. CLASSICAL LIMIT AND ASYMPTOTIC EXPRESSIONS FOR THE CLEBSCH-GORDAN COEFFICIENTS}
+Asymptotic expressions permit us to simplify calculations of the Clebsch-Gordan coefficients. Note that these expressions appear to be accurate even if the arguments are not very large.\\
+8.9.1. Asymptotic Expressions for $a, c \gg b$
+
+
+\begin{gather*}
+C_{a \alpha b \beta}^{c \gamma} \approx[(b+\beta)!(b-\beta)!(b+\delta)!(b-\delta)!]^{\frac{1}{2}} \\
+\times \sum_{\cdot} \frac{(-1)^{b-\delta-\beta}\left(\cos \frac{\beta}{2}\right)^{20+\beta+\delta}\left(\sin \frac{\alpha}{2}\right)^{2 b-\beta-\delta-2 \beta}}{s!(s+\beta+\delta)!(b-\beta-s)!(b-\delta-s)!}=\delta_{\gamma-\alpha, \beta} D_{\beta \delta}^{b}(0, \vartheta, 0) \tag{1}
+\end{gather*}
+
+
+where $\delta=c-a, \vartheta$ is the angle between the momentum c and the $z$ axis,
+
+
+\begin{equation*}
+\cos \frac{\vartheta}{2}=\sqrt{\frac{c+\gamma+\frac{1}{2}}{2 c+1}}=C_{c \gamma \frac{1}{2} \frac{1}{2}}^{c+\frac{1}{2} \gamma+\frac{1}{2}}, \quad \sin \frac{\vartheta}{2}=\sqrt{\frac{c-\gamma+\frac{1}{2}}{2 c+1}}=C_{c \gamma \frac{1}{2}-\frac{1}{2}}^{c+\frac{1}{2} \gamma-\frac{1}{2}}, \quad \cos \vartheta=\frac{\gamma}{c+\frac{1}{2}} . \tag{2}
+\end{equation*}
+
+
+This formula was obtained by Edmonds [64], Brussard and Tolhock [60]. In particular,
+
+
+\begin{gather*}
+C_{a \alpha b b}^{c \gamma} \approx \delta_{b, \gamma-\alpha}(-1)^{b-\delta}\left[\frac{(2 b)!}{(b+\delta) H(b-\delta)!}\right]^{\frac{1}{2}}\left(\cos \frac{\vartheta}{2}\right)^{b+\delta}\left(\sin \frac{\vartheta}{2}\right)^{b-\delta}  \tag{3}\\
+C_{a \alpha b \beta}^{c c} \approx \delta_{\beta, c-\alpha} D_{\beta c-a}^{b}(0,0,0)=\delta_{\beta, c-\alpha} \delta_{\beta, c-a}  \tag{4}\\
+C_{a-\beta b \beta}^{c 0} \approx D_{\beta c-a}^{b}\left(0, \frac{\pi}{2}, 0\right)  \tag{5}\\
+C_{c \gamma b 0}^{c \gamma} \approx P_{b}(\cos \vartheta)  \tag{6}\\
+C_{c \alpha b \beta}^{c \gamma} \approx \delta_{\beta, \gamma-\alpha} \sqrt{\frac{4 \pi}{2 b+1}} Y_{b \beta}(\vartheta, 0)  \tag{7}\\
+C_{c \pm c b 0}^{c \pm c} \approx( \pm 1)^{b} \tag{8}
+\end{gather*}
+
+
+If $a, c \gg b \gg 1$ one can use in Eq. (1) the asymptotic expressions for the Wigner $D$-function (Eqs. 4.18(1)4.18(4)). Then the Clebsch-Gordan coefficients may be represented in the form
+
+
+\begin{gather*}
+C_{a \alpha b \beta}^{c \gamma} \approx \frac{(-1)^{\beta-\delta}}{(\beta-\delta)!}\left[\frac{2}{\pi} \frac{(b+\beta)!(b-\beta+1)!}{(b+\delta)!(b-\delta)!}\right]^{\frac{1}{2}} \frac{\cos \left[(2 b+1) \frac{\vartheta}{2}-\frac{\pi}{2}\left(\beta-\delta+\frac{1}{2}\right)\right]}{\sqrt{\sin \vartheta}},  \tag{9}\\
+\text { if } \beta \geq \delta, \beta \geq 0 \\
+C_{a \alpha b \beta}^{c \gamma} \approx \frac{1}{(\delta-\beta)!}\left[\frac{2}{\pi} \frac{(b+\delta)!(b-\delta+1)!}{(b+\beta)!(b-\beta)!}\right]^{\frac{1}{2}} \frac{\cos \left[(2 b+1) \frac{\vartheta}{2}-\frac{\pi}{2}\left(\delta-\beta+\frac{1}{2}\right)\right]}{\sqrt{\sin \vartheta}},  \tag{10}\\
+\text { if } \delta \geq \beta, \delta \geq 0 .
+\end{gather*}
+
+
+\subsection*{8.9.2 Asymptotic Expressions for $a, b, c, \gamma \gg a+b-\gamma$}
+
+\begin{equation*}
+C_{a \alpha b \beta}^{c \gamma} \approx(-1)^{a+b-c} \frac{(c+\gamma+1)^{b-\beta}}{(a-b-\alpha)!}\left[\frac{(2 c+1)(a-b+c)!(a-\alpha)!(b+\beta)!(c-\gamma)!(c+\gamma)!}{(a+b-c)!(-a+b+c)!(a+b+c+1)!(a+\alpha)!(b-\beta)!}\right]^{\frac{1}{2}} \tag{11}
+\end{equation*}
+
+
+(Akim and Levin [46]).
+
+\subsection*{8.9.3. Semiclassical Formulas for $a, b, c \gg 1$}
+
+\begin{equation*}
+C_{a \alpha b \beta}^{c \gamma} \approx(-1)^{2 b+c+\gamma+1} \sqrt{\frac{2 c+1}{2 \pi S}} \cos \left[j_{1} \theta_{1}+j_{2} \theta_{2}+j_{3} \theta_{3}-m_{2} \varphi_{1}+m_{1} \varphi_{2}+\frac{\pi}{4}\right], \tag{12}
+\end{equation*}
+
+
+(Ponzano and Regge [89]), where
+
+
+\begin{gather*}
+j_{1} \equiv a+\frac{1}{2}, j_{2} \equiv b+\frac{1}{2}, j_{3} \equiv c+\frac{1}{2}, m_{1} \equiv \alpha, \quad m_{2} \equiv \beta, \quad m_{3} \equiv-\gamma  \tag{13}\\
+S^{2}=\frac{1}{16}\left\{-j_{1}^{4}-j_{2}^{4}-j_{3}^{4}+2\left(j_{1}^{2} j_{2}^{2}+j_{1}^{2} j_{3}^{2}+j_{2}^{2} j_{3}^{2}\right)+4\left(j_{1}^{2} m_{2} m_{3}+j_{2}^{2} m_{1} m_{3}+j_{3}^{2} m_{1} m_{2}\right)\right\} \\
+=-\frac{1}{16}\left|\begin{array}{cccc}
+0 & j_{1}^{2}-m_{1}^{2} & j_{2}^{2}-m_{2}^{2} & 1 \\
+j_{1}^{2}-m_{1}^{2} & 0 & j_{3}^{2}-m_{3}^{2} & 1 \\
+j_{2}^{2}-m_{2}^{2} & j_{3}^{2}-m_{3}^{2} & 0 & 1 \\
+1 & 1 & 1 & 0
+\end{array}\right| . \tag{14}
+\end{gather*}
+
+
+If $m_{1}=m_{2}=m_{3}=0$, Eq. (14) reduces to
+
+
+\begin{gather*}
+S^{2}=\frac{1}{16}\left(a+b+c+\frac{5}{2}\right)\left(-a+b+c+\frac{1}{2}\right)\left(a-b+c+\frac{1}{2}\right)\left(a+b-c+\frac{1}{2}\right)  \tag{15}\\
+\cos \theta_{i}=\frac{2 j_{i}^{2} m_{l}+m_{i}\left(j_{i}^{2}-j_{k}^{2}+j_{l}^{2}\right)}{\sqrt{\left(j_{i}^{2}-m_{i}^{2}\right)\left(4 j_{i}^{2} j_{l}^{2}-\left(j_{i}^{2}-j_{k}^{2}+j_{l}^{2}\right)^{2}\right)}}  \tag{16}\\
+\cos \varphi_{i}=\frac{1}{2} \frac{j_{i}^{2}-j_{k}^{2}-j_{l}^{2}-2 m_{k} m_{l}}{\sqrt{\left(j_{k}^{2}-m_{k}^{2}\right)\left(j_{l}^{2}-m_{l}^{2}\right)}}
+\end{gather*}
+
+
+Indices $i, k, l$ in (16) are those which may be obtained by cyclic permutation of $1,2,3$. The quantities which enter Eqs. (14)-(16) have a simple geometrical interpretation. Three momenta $j_{1}=a+\frac{1}{2}, j_{2}=b+\frac{1}{2}$ and $j_{3}=c+\frac{1}{2}$ form a triangle oriented in space in such a manner that the projections of its sides on the $z$ axis are\\
+equal to $m_{1}, m_{2}$ and $m_{3}$, respectively (Fig. 8.1). $S$ is an area of the triangle projection onto the ( $x, y$ )-plane. Let us construct a trihedral prism whose sidelong edges are parallel to the $z$ axis and one of the crods sections coincides with the oriented triangle. Then $\theta_{i}$ is the angle between the normals to the planes adjacent to the edge $j_{i}$. The angles $\varphi_{i}$ are ahown in Fig 8.1.
+
+In particular, if $\alpha=\beta=\gamma=0$, we get $\theta_{1}=\theta_{2}=\theta_{3}=\pi / 2$.
+
+
+\begin{equation*}
+C_{a 060}^{c 0} \approx(-1)^{\frac{a+b-c}{3}}\left[\frac{1+(-1)^{a+b-c}}{2}\right] \sqrt{\frac{2 c+1}{2 \pi S}} . \tag{17}
+\end{equation*}
+
+
+Equations (12)-(17) are valid, if $S^{2}>0$.
+
+\begin{figure}[h]
+\begin{center}
+  \includegraphics[alt={},max width=\textwidth]{402d9a1b-ee97-49cb-ae14-75458391be12-279_609_631_712_731}
+\captionsetup{labelformat=empty}
+\caption{Fig. 8.1. Geometric interpretation of the parameters in the asymptotic relation Eq. 8.9(12).}
+\end{center}
+\end{figure}
+
+More accurate expressions valid not only for $S^{2}>0$ but also if $S^{2}<0$ or $S^{2} \approx 0$ were obtained by Schulten and Gordon [140]. In the case of $S^{2} \geq 0$ they derived
+
+
+\begin{gather*}
+C_{a \alpha b \beta}^{c \gamma}=(-1)^{2 b+c+\gamma+1} \sqrt{\frac{2 c+1}{2 S}} Z^{\frac{1}{4}} \\
+\times \begin{cases}\cos \Omega_{0} A i(-Z)-\sin \Omega_{0} B i(-Z), & \text { if } \Omega-\Omega_{0}<0, \\
+\cos \Omega_{0} B i(-Z)-\sin \Omega_{0} A i(-Z), & \text { if } \Omega-\Omega_{0}>0,\end{cases} \tag{18a}
+\end{gather*}
+
+
+while for $S^{2} \leq 0$
+
+
+\begin{gather*}
+C_{a \alpha b \beta}^{c \gamma}=(-1)^{2 b+c+\gamma+1} \sqrt{\frac{2 c+1}{2|S|}} Z^{\frac{1}{4}} \\
+\times \begin{cases}\cos \Omega_{0} A i(Z)-\sin \Omega_{0} B i(Z), & \text { if } \Omega-\Omega_{0}<0, \\
+\cos \Omega_{0} B i(Z)-\sin \Omega_{0} A i(Z), & \text { if } \Omega-\Omega_{0}>0 .\end{cases} \tag{18b}
+\end{gather*}
+
+
+In these equations $A i(Z)$ and $B i(Z)$ are the Airy functions
+
+$$
+\begin{aligned}
+Z & =\left(\frac{3}{2}\left|\Omega-\Omega_{0}\right|\right)^{\frac{1}{3}}, \\
+\Omega_{0} & =j_{1} \theta_{1}^{(0)}+j_{2} \theta_{2}^{(0)}+j_{3} \theta_{3}^{(0)}+m_{1} \varphi_{2}^{(0)}-m_{2} \varphi_{1}^{(0)}, \\
+\Omega & =j_{1} \theta_{1}+j_{2} \theta_{2}+j_{3} \theta_{3}-m_{2} \varphi_{1}+m_{1} \varphi_{2},
+\end{aligned}
+$$
+
+$\theta_{i}^{(0)}$ and $\varphi_{i}^{(0)}$ being determined by the relations
+
+$$
+\begin{aligned}
+& \theta_{i}^{(0)}= \begin{cases}0 & \text { if } 0 \leq \operatorname{Re} \theta_{i} \leq \pi / 2 \\
+\pi & \text { if } \pi / 2<\operatorname{Re} \theta_{i} \leq \pi\end{cases} \\
+& \varphi_{i}^{(0)}= \begin{cases}0 & \text { if } 0 \leq \operatorname{Re} \varphi_{i} \leq \pi / 2 \\
+\pi & \text { if } \pi / 2<\operatorname{Re} \varphi_{i} \leq \pi\end{cases}
+\end{aligned}
+$$
+
+\subsection*{8.9.4. Squares of the Clebsch-Gordan Coefficients in the Classical Limit}
+According to Sec. 8.1.1 the square of a Clebsch-Gordan coefficient represents the probability of the coupling of two angular momenta $\mathrm{j}_{1}$ and $\mathrm{j}_{2}$ with projections $m_{1}$ and $m_{2}$ into the resultant angular momentum j with , projection $m$. On the other hand, the same square is equal to the probability that the momenta $\mathbf{j}_{1}$ and $\mathbf{j}_{2}$ coupled into the momentum $j$ with the projection $m$ have the projections $m_{1}$ and $m_{2}$, respectively. Let us consider the square of the Clebsch-Gordan coefficients in the classical limit [60].
+
+If the vector $j$ as well as the magnitudes of $j_{1}$ and $j_{2}$ are given, the possible positions of the end of the vector $\mathrm{j}_{1}$ form a circle (Fig. 8.2). The probability in question is proportional to the length of the circle arc confined between the planes $z=m_{1}$ and $z=m_{2}$. In the classical limit (for $\left.j_{1}, j_{2}, j \gg 1\right)$ this probability may be expressed by
+
+
+\begin{equation*}
+\left(C_{j_{1} m_{1} j_{2} m_{2}}^{j m}\right)^{2} \approx \frac{2 j+1}{\pi}\left[-\left(j_{1}^{4}+j_{2}^{4}+j^{4}\right)+2\left(j_{1}^{2} j_{2}^{2}+j_{1}^{2} j^{2}+j_{2}^{2} j^{2}\right)-4\left(j_{1}^{2} m_{2} m+j_{2}^{2} m_{1} m-j^{2} m_{1} m_{2}\right)\right]^{-\frac{1}{2}} \tag{19}
+\end{equation*}
+
+
+Equation (19) is valid only on the average, because if $j_{1}, j_{2}$ and $j$ are large, even fairly minor relative variations of these quantities lead to rapid oscillations of the Clebsch-Gordan coefficients (See Eq. 8.9(12)). When $m_{1}=m_{2}=m=0$ and $j_{1}+j_{2}-j$ is even, one has
+
+
+\begin{equation*}
+C_{j_{1} 0 j_{2} 0}^{j 0} \approx(-1)^{\frac{i 1+j_{2}-j}{2}} \sqrt{\frac{2 j+1}{\pi}}\left[-\left(j_{1}^{4}+j_{2}^{4}+j^{4}\right)+2\left(j_{1}^{2} j_{2}^{2}+j_{1}^{2} j^{2}+j_{2}^{2} j^{2}\right)\right]^{-\frac{1}{4}} \tag{20}
+\end{equation*}
+
+
+\begin{figure}[h]
+\begin{center}
+  \includegraphics[alt={},max width=\textwidth]{402d9a1b-ee97-49cb-ae14-75458391be12-280_665_590_1606_725}
+\captionsetup{labelformat=empty}
+\caption{Fig. 8.2. Addition of angular momenta in the classical limit.}
+\end{center}
+\end{figure}
+
+\subsection*{8.10. ZEROS OF THE VECTOR-ADDITION COEFFICIENTS}
+A Clebsch-Gordan coefficient $C_{a \alpha b \beta}^{c \gamma}$ and associated $3 j m$ symbol $\left(\begin{array}{lll}a & b & c \\ \alpha & \beta & -\gamma\end{array}\right)$ vanish unless triangular conditions are satisfied (Eqs. 8.1(1) and 8.1(2)). However, there exist nontrivial cases when the Clebsch-Gordan coefficients are equal to sero although the triangular conditions are fulfilled. This leads to some additional selection rules which forbid the quantum transitions whose amplitudes are proportional to the appropriate Clebsch-Gordan coefficients. Here we point out the most important relations between the arguments for which the ClebschGordan coefficients vanish.\\
+(a) $C_{a 060}^{c 0}=0$, if $J \equiv a+b+c$ is odd;\\
+(b) $C_{\text {aqa } \alpha}^{c \gamma}=0, C_{a-\alpha c \gamma}^{a \alpha}=0, C_{c \gamma \alpha-\alpha}^{a \alpha}=0$, if $J=2 a+c$ is odd;\\
+(c) $C_{a J-3 a b J-3 b}^{c-(J-3 c)}=0$, if $J^{\prime}$ is odd;\\
+(d) $C_{a a b \beta}^{a+b-17}=0$, if $\frac{a}{\beta}=\frac{8}{b}$;\\
+(e) $C_{\text {aabs }}^{a-b+17}=0$ if $\frac{7}{\beta}=-\frac{a+1}{b}$;\\
+(f) $C_{a a b \rho}^{e c-1}=0$ if $a(a+1)-b(b+1)=(\alpha-\beta) c$, in particular
+
+$$
+C_{\text {adad }}^{c q-1}=0 .
+$$
+
+(g) $C_{\text {aabb-1 }}^{c 7}=0$ if $a(a+1)-c(c+1)=-(\alpha+\gamma) b_{p}$ in particular,
+
+$$
+C_{a \alpha b b-1}^{a-\alpha}=0 .
+$$
+
+Below we list particular 3jm symbols with $J=a+b+c \leq 17$ which vanish in nontrivial cases. They are arranged in the order of increasing $J$ and $a \leq b \leq c$. Roots of other 3jm symbols may be obtained by the use of the simplest symmetry properties of the $3 j \mathrm{~m}$ symbols, concerned with the permutations of momenta $a, b, c$ and sign changes of the projections $\alpha, \beta, \gamma$ (see Eqs. $8.4(5)$ and $8.4(6)$ ), Hence, any $3 j m$ symboli from the table given below generally represents 12 formally different veraions of the $3 j m$ symbols or the Clebsch-Gordan coefficients which are equal to sero. One should bear in mind that the $3 j \mathrm{~m}$ symbols and the Clebsch-Gordan coefficients are related by (see Sec. 8.1.2)
+
+$$
+\left(\begin{array}{rrr}
+a & b & c \\
+\alpha & \beta & -\gamma
+\end{array}\right)=(-1)^{a+b+\gamma} \frac{1}{\sqrt{2 c+1}} C_{a \alpha b \beta}^{c \gamma} .
+$$
+
+\subsection*{8.11. CONNECTION OF THE CLEBSCH-GORDAN COEFFICIENTS AND THE}
+3 jm SYMBOLS WITH ANALOGOUS FUNCTIONS OF OTHER AUTHORS
+
+$$
+C_{j_{1} m_{1} j_{2} m_{2}}^{j m}= \begin{cases}S_{j m_{1} m_{2}}^{j j_{2}} & \text { - Wigner [43], } \\
+A_{m m_{1} m_{2}}^{j j_{1} j_{2}} & \text { - Eckart [15], } \\
+C_{m_{1} m_{2}}^{j} & \text { - Vander Waerden [40], } \\
+\left(j_{1} j_{2} m_{1} m_{2} \mid j_{1} j_{2} j m\right) & \text { - Condon and Shortley [10], } \\
+C_{j m}^{j_{1} j_{2}}\left(m_{1} m_{2}\right) & \text { - Fock [68], } \\
+X\left(j, m_{1}, j_{1}, j_{2}, m_{1}\right) & \text { - Boys [59], } \\
+C\left(j m_{1} m_{1} m_{2}\right) & \text { - Blatt and Weisskopf [7], } \\
+C_{m_{1} m_{2} m}^{j_{1} j_{2} j} & \text { - Biedenharn [115], } \\
+C\left(j_{1} j_{2} j, m_{1} m_{2}\right) & \text { - Rose [30], } \\
+{\left[\begin{array}{lll}
+j_{1} & j_{2} & j \\
+m_{1} & m_{2} & m
+\end{array}\right]} & \text { - Yutsis and Bandzaitis [45], } \\
+\left\langle j_{1} m_{1} j_{2} m_{2} \mid\left(j_{1} j_{2}\right) j m\right\rangle & \text { - Fano [66]. }\end{cases}
+$$
+
+$$
+\begin{aligned}
+& \mathbf{J}=\mathbf{3}\left(\begin{array}{lll}
+1 & 1 & 1 \\
+0 & 0 & 0
+\end{array}\right) . \\
+& \mathrm{J}=5\left(\begin{array}{lll}
+1 & 2 & 2 \\
+0 & 0 & 0
+\end{array}\right),\left(\begin{array}{ccc}
+3 / 2 & 3 / 2 & 2 \\
+1 / 2 & 1 / 2 & -1
+\end{array}\right) . \\
+& \mathrm{J}=7\left(\begin{array}{lll}
+1 & 3 & 3 \\
+0 & 0 & 0
+\end{array}\right),\left(\begin{array}{lll}
+2 & 2 & 3 \\
+0 & 0 & 0
+\end{array}\right),\left(\begin{array}{ccc}
+2 & 2 & 3 \\
+1 & 1 & -2
+\end{array}\right),\left(\begin{array}{ccc}
+2 & 5 / 2 & 5 / 2 \\
+-1 & 1 / 2 & 1 / 2
+\end{array}\right) . \\
+& \mathrm{J}=8\left(\begin{array}{ccc}
+2 & 3 & 3 \\
+0 & 2 & -2
+\end{array}\right),\left(\begin{array}{ccc}
+3 / 2 & 3 & 7 / 2 \\
+1 / 2 & 1 & -3 / 2
+\end{array}\right) \text {. } \\
+& \mathbf{J}=\mathbf{9}\left(\begin{array}{lll}
+1 & 4 & 4 \\
+0 & 0 & 0
+\end{array}\right),\left(\begin{array}{lll}
+2 & 3 & 4 \\
+0 & 0 & 0
+\end{array}\right),\left(\begin{array}{lll}
+3 & 3 & 3 \\
+0 & 0 & 0
+\end{array}\right),\left(\begin{array}{ccc}
+3 & 3 & 3 \\
+1 & 1 & -2
+\end{array}\right), \\
+& \left(\begin{array}{ccc}
+2 & 7 / 2 & 7 / 2 \\
+-1 & 1 / 2 & 1 / 2
+\end{array}\right),\left(\begin{array}{ccc}
+5 / 2 & 3 & 7 / 2 \\
+3 / 2 & 0 & -3 / 2
+\end{array}\right),\left(\begin{array}{ccc}
+5 / 2 & 5 / 2 & 4 \\
+1 / 2 & 1 / 2 & -1
+\end{array}\right),\left(\begin{array}{ccc}
+5 / 2 & 5 / 2 & 4 \\
+3 / 2 & 3 / 2 & -3
+\end{array}\right) . \\
+& \mathbf{J}=11\left(\begin{array}{lll}
+1 & 5 & 5 \\
+0 & 0 & 0
+\end{array}\right),\left(\begin{array}{lll}
+2 & 4 & 5 \\
+0 & 0 & 0
+\end{array}\right),\left(\begin{array}{ccc}
+2 & 4 & 5 \\
+1 & 2 & -3
+\end{array}\right),\left(\begin{array}{lll}
+3 & 3 & 5 \\
+0 & 0 & 0
+\end{array}\right),\left(\begin{array}{ccc}
+3 & 3 & 5 \\
+1 & 1 & -2
+\end{array}\right),\left(\begin{array}{ccc}
+3 & 3 & 5 \\
+2 & 2 & -4
+\end{array}\right), \\
+& \left(\begin{array}{lll}
+3 & 4 & 4 \\
+0 & 0 & 0
+\end{array}\right),\left(\begin{array}{ccc}
+3 & 4 & 4 \\
+-2 & 1 & 1
+\end{array}\right),\left(\begin{array}{ccc}
+2 & 9 / 2 & 9 / 2 \\
+-1 & 1 / 2 & 1 / 2
+\end{array}\right),\left(\begin{array}{ccc}
+3 & 7 / 2 & 9 / 2 \\
+2 & 1 / 2 & -5 / 2
+\end{array}\right),\left(\begin{array}{ccc}
+7 / 2 & 7 / 2 & 4 \\
+1 / 2 & 1 / 2 & -1
+\end{array}\right), \\
+& \left(\begin{array}{ccc}
+7 / 2 & 7 / 2 & 4 \\
+3 / 2 & 3 / 2 & -3
+\end{array}\right),\left(\begin{array}{ccc}
+3 / 2 & 9 / 2 & 5 \\
+1 / 2 & 3 / 2 & -2
+\end{array}\right),\left(\begin{array}{ccc}
+5 / 2 & 4 & 9 / 2 \\
+1 / 2 & 3 & -7 / 2
+\end{array}\right) \text {. } \\
+& \mathbf{J}=\mathbf{1 3}\left(\begin{array}{lll}
+1 & 6 & 6 \\
+0 & 0 & 0
+\end{array}\right),\left(\begin{array}{lll}
+2 & 5 & 6 \\
+0 & 0 & 0
+\end{array}\right),\left(\begin{array}{lll}
+3 & 4 & 6 \\
+0 & 0 & 0
+\end{array}\right),\left(\begin{array}{lll}
+3 & 5 & 5 \\
+0 & 0 & 0
+\end{array}\right),\left(\begin{array}{ccc}
+3 & 5 & 5 \\
+-2 & 1 & 1
+\end{array}\right),\left(\begin{array}{lll}
+4 & 4 & 5 \\
+0 & 0 & 0
+\end{array}\right), \\
+& \left(\begin{array}{ccc}
+4 & 4 & 5 \\
+1 & 1 & -2
+\end{array}\right),\left(\begin{array}{ccc}
+4 & 4 & 5 \\
+2 & 2 & -4
+\end{array}\right),\left(\begin{array}{ccc}
+2 & 11 / 2 & 11 / 2 \\
+-1 & 1 / 2 & 1 / 2
+\end{array}\right),\left(\begin{array}{ccc}
+7 / 2 & 9 / 2 & 5 \\
+5 / 2 & -1 / 2 & -2
+\end{array}\right),\left(\begin{array}{ccc}
+7 / 2 & 4 & 11 / 2 \\
+5 / 2 & 1 & -7 / 2
+\end{array}\right), \\
+& \left(\begin{array}{ccc}
+4 & 9 / 2 & 9 / 2 \\
+-1 & 1 / 2 & 1 / 2
+\end{array}\right),\left(\begin{array}{ccc}
+4 & 9 / 2 & 9 / 2 \\
+-3 & 3 / 2 & 3 / 2
+\end{array}\right),\left(\begin{array}{ccc}
+7 / 2 & 7 / 2 & 6 \\
+1 / 2 & 1 / 2 & -1
+\end{array}\right),\left(\begin{array}{ccc}
+7 / 2 & 7 / 2 & 6 \\
+3 / 2 & 3 / 2 & -3
+\end{array}\right),\left(\begin{array}{ccc}
+7 / 2 & 7 / 2 & 6 \\
+5 / 2 & 5 / 2 & -5
+\end{array}\right) . \\
+& \mathrm{J}=14\left(\begin{array}{ccc}
+3 & 5 & 6 \\
+1 & -1 & 0
+\end{array}\right),\left(\begin{array}{ccc}
+3 & 5 & 6 \\
+2 & 1 & -3
+\end{array}\right),\left(\begin{array}{ccc}
+3 & 5 & 6 \\
+1 & 4 & -5
+\end{array}\right),\left(\begin{array}{ccc}
+4 & 4 & 6 \\
+0 & 2 & -2
+\end{array}\right),\left(\begin{array}{ccc}
+4 & 5 & 5 \\
+1 & 3 & -4
+\end{array}\right),\left(\begin{array}{ccc}
+4 & 5 & 5 \\
+2 & 1 & -3
+\end{array}\right), \\
+& \left(\begin{array}{ccc}
+3 & 9 / 2 & 13 / 2 \\
+1 & 3 / 2 & -5 / 2
+\end{array}\right),\left(\begin{array}{ccc}
+5 / 2 & 5 & 13 / 2 \\
+1 / 2 & 1 & -3 / 2
+\end{array}\right),\left(\begin{array}{ccc}
+5 / 2 & 5 & 13 / 2 \\
+3 / 2 & 3 & -9 / 2
+\end{array}\right),\left(\begin{array}{ccc}
+4 & 9 / 2 & 11 / 2 \\
+0 & 7 / 2 & -7 / 2
+\end{array}\right),\left(\begin{array}{ccc}
+3 / 2 & 6 & 13 / 2 \\
+1 / 2 & 2 & -5 / 2
+\end{array}\right),\left(\begin{array}{ccc}
+5 / 2 & 11 / 2 & 6 \\
+3 / 2 & 1 / 2 & -2
+\end{array}\right) . \\
+& \mathbf{J}=15\left(\begin{array}{lll}
+1 & 7 & 7 \\
+0 & 0 & 0
+\end{array}\right),\left(\begin{array}{lll}
+2 & 6 & 7 \\
+0 & 0 & 0
+\end{array}\right),\left(\begin{array}{ccc}
+2 & 6 & 7 \\
+1 & 3 & -4
+\end{array}\right),\left(\begin{array}{lll}
+3 & 5 & 7 \\
+0 & 0 & 0
+\end{array}\right),\left(\begin{array}{lll}
+3 & 6 & 6 \\
+0 & 0 & 0
+\end{array}\right),\left(\begin{array}{ccc}
+3 & 6 & 6 \\
+0 & 5 & -5
+\end{array}\right),\left(\begin{array}{ccc}
+3 & 6 & 6 \\
+-2 & 1 & 1
+\end{array}\right), \\
+& \left(\begin{array}{lll}
+4 & 5 & 6 \\
+0 & 0 & 0
+\end{array}\right),\left(\begin{array}{ccc}
+4 & 5 & 6 \\
+3 & 0 & -3
+\end{array}\right),\left(\begin{array}{lll}
+4 & 4 & 7 \\
+0 & 0 & 0
+\end{array}\right),\left(\begin{array}{ccc}
+4 & 4 & 7 \\
+1 & 1 & -2
+\end{array}\right),\left(\begin{array}{ccc}
+4 & 4 & 7 \\
+2 & 2 & -4
+\end{array}\right),\left(\begin{array}{ccc}
+4 & 4 & 7 \\
+3 & 3 & -6
+\end{array}\right),\left(\begin{array}{lll}
+5 & 5 & 5 \\
+0 & 0 & 0
+\end{array}\right), \\
+& \left(\begin{array}{ccc}
+5 & 5 & 5 \\
+1 & 1 & -2
+\end{array}\right),\left(\begin{array}{ccc}
+5 & 5 & 5 \\
+2 & 2 & -4
+\end{array}\right),\left(\begin{array}{ccc}
+2 & 13 / 2 & 13 / 2 \\
+-1 & 1 / 2 & 1 / 2
+\end{array}\right),\left(\begin{array}{ccc}
+4 & 9 / 2 & 13 / 2 \\
+3 & 3 / 2 & -9 / 2
+\end{array}\right),\left(\begin{array}{ccc}
+4 & 11 / 2 & 11 / 2 \\
+-1 & 1 / 2 & 1 / 2
+\end{array}\right),\left(\begin{array}{ccc}
+4 & 11 / 2 & 11 / 2 \\
+-3 & 3 / 2 & 3 / 2
+\end{array}\right), \\
+& \left(\begin{array}{ccc}
+9 / 2 & 5 & 11 / 2 \\
+3 / 2 & 0 & -3 / 2
+\end{array}\right),\left(\begin{array}{ccc}
+9 / 2 & 9 / 2 & 6 \\
+1 / 2 & 1 / 2 & -1
+\end{array}\right),\left(\begin{array}{ccc}
+9 / 2 & 9 / 2 & 6 \\
+3 / 2 & 3 / 2 & -3
+\end{array}\right),\left(\begin{array}{ccc}
+9 / 2 & 9 / 2 & 6 \\
+5 / 2 & 5 / 2 & -5
+\end{array}\right) . \\
+& \mathbf{J}=17\left(\begin{array}{lll}
+1 & 8 & 8 \\
+0 & 0 & 0
+\end{array}\right),\left(\begin{array}{lll}
+2 & 7 & 8 \\
+0 & 0 & 0
+\end{array}\right),\left(\begin{array}{lll}
+3 & 6 & 8 \\
+0 & 0 & 0
+\end{array}\right),\left(\begin{array}{ccc}
+3 & 6 & 8 \\
+2 & 4 & -6
+\end{array}\right),\left(\begin{array}{lll}
+3 & 7 & 7 \\
+0 & 0 & 0
+\end{array}\right),\left(\begin{array}{ccc}
+3 & 7 & 7 \\
+-2 & 1 & 1
+\end{array}\right),\left(\begin{array}{lll}
+4 & 5 & 8 \\
+0 & 0 & 0
+\end{array}\right),\left(\begin{array}{lll}
+4 & 6 & 7 \\
+0 & 0 & 0
+\end{array}\right), \\
+& \left(\begin{array}{lll}
+5 & 5 & 7 \\
+0 & 0 & 0
+\end{array}\right),\left(\begin{array}{ccc}
+5 & 5 & 7 \\
+1 & 1 & -2
+\end{array}\right),\left(\begin{array}{ccc}
+5 & 5 & 7 \\
+2 & 2 & -4
+\end{array}\right),\left(\begin{array}{ccc}
+5 & 5 & 7 \\
+3 & 3 & -6
+\end{array}\right),\left(\begin{array}{ccc}
+5 & 6 & 6 \\
+0 & 0 & 0
+\end{array}\right),\left(\begin{array}{ccc}
+5 & 6 & 6 \\
+-2 & 1 & 1
+\end{array}\right),\left(\begin{array}{ccc}
+5 & 6 & 6 \\
+-4 & 2 & 2
+\end{array}\right), \\
+& \left(\begin{array}{ccc}
+2 & 15 / 2 & 15 / 2 \\
+-1 & 1 / 2 & 1 / 2
+\end{array}\right),\left(\begin{array}{ccc}
+3 & 13 / 2 & 15 / 2 \\
+2 & 3 / 2 & -7 / 2
+\end{array}\right),\left(\begin{array}{ccc}
+4 & 13 / 2 & 13 / 2 \\
+-1 & 1 / 2 & 1 / 2
+\end{array}\right),\left(\begin{array}{ccc}
+4 & 13 / 2 & 13 / 2 \\
+-3 & 3 / 2 & 3 / 2
+\end{array}\right),\left(\begin{array}{ccc}
+5 & 11 / 2 & 13 / 2 \\
+2 & 1 / 2 & -5 / 2
+\end{array}\right),\left(\begin{array}{ccc}
+7 / 2 & 6 & 15 / 2 \\
+3 / 2 & 5 & -13 / 2
+\end{array}\right), \\
+& \left(\begin{array}{ccc}
+9 / 2 & 6 & 13 / 2 \\
+1 / 2 & -5 & 9 / 2
+\end{array}\right),\left(\begin{array}{ccc}
+9 / 2 & 6 & 13 / 2 \\
+-7 / 2 & 1 & 5 / 2
+\end{array}\right),\left(\begin{array}{ccc}
+11 / 2 & 11 / 2 & 6 \\
+1 / 2 & 1 / 2 & -1
+\end{array}\right),\left(\begin{array}{ccc}
+11 / 2 & 11 / 2 & 6 \\
+3 / 2 & 3 / 2 & -3
+\end{array}\right),\left(\begin{array}{ccc}
+11 / 2 & 11 / 2 & 6 \\
+5 / 2 & 5 / 2 & -5
+\end{array}\right),\left(\begin{array}{ccc}
+9 / 2 & 11 / 2 & 7 \\
+7 / 2 & 1 / 2 & -4
+\end{array}\right), \\
+& \left(\begin{array}{ccc}
+3 / 2 & 15 / 2 & 8 \\
+1 / 2 & 5 / 2 & -3
+\end{array}\right),\left(\begin{array}{ccc}
+9 / 2 & 9 / 2 & 8 \\
+1 / 2 & 1 / 2 & -1
+\end{array}\right),\left(\begin{array}{ccc}
+9 / 2 & 9 / 2 & 8 \\
+3 / 2 & 3 / 2 & -3
+\end{array}\right),\left(\begin{array}{ccc}
+9 / 2 & 9 / 2 & 8 \\
+5 / 2 & 5 / 2 & -5
+\end{array}\right),\left(\begin{array}{ccc}
+9 / 2 & 9 / 2 & 8 \\
+7 / 2 & 7 / 2 & -7
+\end{array}\right),\left(\begin{array}{ccc}
+9 / 2 & 5 & 15 / 2 \\
+7 / 2 & 2 & -11 / 2
+\end{array}\right) .
+\end{aligned}
+$$
+
+$$
+\left(\begin{array}{ccc}
+j_{1} & j_{2}, & j_{3} \\
+m_{1} & m_{2} & m_{3}
+\end{array}\right)= \begin{cases}(-1)^{-j_{1}+j_{2}+j_{3}} V\left(j_{1} j_{2} j_{3}, m_{1} m_{2} m_{3}\right) & - \text { Racah }[91] \\
+(-1)^{-j_{1}+j_{2}+j_{3}} \bar{V}\left(j_{1} j_{2} j_{3}, m_{1} m_{2} m_{3}\right) & - \text { Fano and Racah [18] } \\
+(-1)^{j_{1}-j_{2}+j_{3}} S_{j_{1} m_{1} j_{2} m_{2} j_{3} m_{3}} & - \text { Landau and Lifshitz [25] } \\
+(-1)^{j_{1}-j_{2}+j_{3}}\left(j_{1} m_{1}, j_{2} m_{2}, j_{3} m_{3}|0\rangle\right. & - \text { Fano [66] } \\
+X\left(j_{1} j_{2} j_{3}, m_{1} m_{2} m_{3}\right) & - \text { Schwinger [101] } \\
+(-1)^{j_{1}-j_{2}+j_{3}} U\left(j_{1} j_{2} m_{1} m_{2} \mid j_{3}-m_{3}\right) & - \text { Lubarskii [26] } \\
+\left(j_{1} j_{2} j_{3}\right)_{m_{1} m_{2} m_{3}} & - \text { Sharp [102] }\end{cases}
+$$
+
+\subsection*{8.12. ALGEBRAIC TABLES OF THE CLEBSCH-GORDAN COEFFICIENTS}
+Below we present tables of algebraic formulas for the Clebsch-Gordan coefficients $C_{a \alpha b \beta}^{c \gamma}$ with $b=1 / 2,1,3 / 2,2$, $5 / 2,3,7 / 2,4,9 / 2,5$. If $b=3,7 / 2,4,9 / 2,5$, we give $C_{a \alpha b \beta}^{c \gamma}$ with $\beta \geq 0$, while $C_{a \alpha b \beta}^{c \gamma}$ with $\beta<0$ may be obtained from the symmetry property
+
+$$
+C_{a \alpha b \beta}^{c \gamma}=(-1)^{a+b-c} C_{a-\alpha b-\beta}^{c-\gamma} .
+$$
+
+The algebraic tables of the Clebsch-Gordan coefficients are also available in Ref. [10] for $b=1 / 2,1,3 / 2,2$; in Ref. $[121,125]$ for $b=5 / 2$; in Refs. $[117,130]$ with $b=3$; and in Ref. $[126]$ with $b=7 / 2,4,9 / 2,5$.
+
+\subsection*{8.13. NUMERICAL TABLES OF THE CLEBSCH-GORDAN COEFFICIENTS}
+In Table 8.11 we present numerical values of the Clebsch-Gordan coefficients for $a, b, c \leq 3$. These values are given in the form of square roots of rational fractions and in decimals. The Clebsch-Gordan coefficients are separated into groups with respect to the values of $c$. The arguments $a, \alpha, b, \beta$ for the Clebsch-Gordan coefficients given in Table 8.11 satisfy the inequalities (a) $a \geq b, \alpha \geq 0$; (b) $\alpha \geq \beta$ for $a=b$. Other ClebschGordan coefficients with $a, b, c \leq 3$ may be reduced to those in Table 8.11 by the use of the symmetry properties
+
+$$
+C_{a \alpha b \beta}^{c \alpha+\beta}=(-1)^{a+b-c} C_{b \beta a \alpha}^{c \alpha+\beta}=(-1)^{a+b-c} C_{a-\alpha b-\beta}^{c-\alpha-\beta}=C_{b-\beta a-\alpha}^{c-\alpha-\beta}
+$$
+
+Numerical values of the Clebsch-Gordan coefficients are also given in Refs. [126, 127]. Reference [127] presents the Clebsch-Gordan coefficients for $\frac{1}{2} \leq a \leq 4, \frac{1}{2} \leq b, c \leq 9 / 2$ in decimals. Reference [126] gives the Clebsch-Gordan coefficients for $\frac{1}{2} \leq b \leq 6, a=5,11 / 2,6$ in the form of rational fractions. Numerical values of the $3 j m$ symbols are also available in Ref. [113].
+
+Tables 8.1. - 8.10. Algebraic Formulas for the Clebsch-Gordan Coefficients.
+
+\begin{table}[h]
+\begin{center}
+\captionsetup{labelformat=empty}
+\caption{Table 8.1.\\
+$C_{a \alpha \frac{1}{2} \beta}^{c \gamma}$}
+\begin{tabular}{c|c|c}
+\hline
+$c$ & $3=1 / 2$ & $3=-1 / 2$ \\
+\hline
+$a+1 / 2$ & $\left[\frac{c+\gamma}{2 c}\right]^{1 / 2}$ & $\left[\frac{c-\gamma}{2 c}\right]^{1 / 2}$ \\
+$a-1 / 2$ & $-\left[\frac{c-\gamma+1}{2 c+2}\right]^{1 / 2}$ & $\left[\frac{c+\gamma+1}{2 c+2}\right]^{1 / 2}$ \\
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[h]
+\begin{center}
+\captionsetup{labelformat=empty}
+\caption{Table 8.2.\\
+$C_{a \alpha 1 \beta}^{c \gamma}$}
+\begin{tabular}{|l|l|l|l|}
+\hline
+c & $\beta=1$ & $\beta=0$ & $\beta=-1$ \\
+\hline
+$a+1$ & $\left[\frac{(c+\gamma-1)(c+\gamma)}{(2 c-1) 2 c}\right]^{1 / 2}$ & \multirow{3}{*}{\(
+\begin{gathered}
+{\left[\frac{(c+\gamma)(c-\gamma)}{(2 c-1) c}\right]^{1 / 2}} \\
+\frac{\gamma}{[c(c+1)]^{1 / 2}} \\
+-\left[\frac{(c+\gamma+1)(c-\gamma+1)}{(c+1)(2 c+3)}\right]^{1 / 2}
+\end{gathered}
+\)} &  \\
+\hline
+${ }^{a}$ &  &  &  \\
+\hline
+$a-1$ & \( \begin{gathered} -\left[\frac{(c+\gamma)(c-\gamma+1)}{2 c(c+1)}\right]^{1 / 2} \\ {\left[\frac{(c-\gamma+1)(c-\gamma+2)}{(2 c+2)(2 c+3)}\right]^{1 / 2}} \end{gathered} \) &  & \( \begin{aligned} & {\left[\frac{(c-\gamma-1)(c-\gamma)}{(2 c-1) 2 c}\right]^{1 / 2}} \\ & {\left[\frac{(c+\gamma+1)(c-\gamma)}{2 c(c+1)}\right]^{1 / 2}} \\ & {\left[\frac{(c+\gamma+2)(c+\gamma+1)}{(2 c+2)(2 c+3)}\right]^{1 / 2}} \end{aligned} \) \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[h]
+\begin{center}
+\captionsetup{labelformat=empty}
+\caption{Table 8.3.\\
+$C_{a \alpha \frac{3}{2} \beta}^{c \gamma}$}
+\begin{tabular}{|l|l|l|l|}
+\hline
+$c$ & $3=3 / 2$ & $3=1 / 2$ & $\beta=-1 / 2$ \\
+\hline
+$a+3.2$ & $\left[\frac{(c+\gamma-2)(c+\gamma-1)(c+\gamma)}{(2 c-2)(2 c-1) 2 c}\right]^{1 / 2}$ & $\left[\frac{3(c+\gamma-1)(c+\gamma)(c-\gamma)}{(2 c-2)(2 c-1) 2 c}\right]^{1 / 2}$ & $\left[\frac{3(c+\gamma)(c-\gamma-1)(c-\gamma)}{(2 c-2)(2 c-1) 2 c}\right]^{1 / 2}$ \\
+\hline
+$a+1,2$ & $-\left[\frac{3(c+\gamma-1)(c+\gamma)(c-\gamma+1)}{(2 c-1) 2 c(2 c+2)}\right]^{1 / 2}$ & $-(c-3 \gamma+1)\left[\frac{c+\gamma}{(2 c-1) 2 c(2 c+2)}\right]^{1 / 2}$ & $(c+3 \gamma+1)\left[\frac{c-\gamma}{(2 c-1) 2 c(2 c+2)}\right]^{1 / 2}$ \\
+\hline
+$a-1 / 2$ & $\left[\frac{3(c+\gamma)(c-\gamma+1)(c-\gamma+2)}{2 c(2 c+2)(2 c+3)}\right]^{1 / 2}$ & $-(c+3 \gamma)\left[\frac{c-\gamma+1}{2 c(2 c+2)(2 c+3)}\right]^{1 / 2}$ & $-(c-3 \gamma)\left[\frac{c+\gamma+1}{2 c(2 c+2)(2 c+3)}\right]^{1 / 2}$ \\
+\hline
+$a-3 / 2$ & $-\left[\frac{(c-\gamma+1)(c-\gamma+2)(c-\gamma+3)}{(2 c+2)(2 c+3)(2 c+4)}\right]^{1 / 2}$ & $\left[\frac{3(c+\gamma+1)(c-\gamma+1)(c-\gamma+2)}{(2 c+2)(2 c+3)(2 c+4)}\right]^{1 / 2}$ & $-\left[\frac{3(c+\gamma+1)(c+\gamma+2)(c-\gamma+1)}{(2 c+2)(2 c+3)(2 c+4)}\right]^{1 / 2}$ \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[h]
+\begin{center}
+\captionsetup{labelformat=empty}
+\caption{Table 8.3. (Cont.)}
+\begin{tabular}{c|c}
+\hline
+$c$ & $3=-3 / 2$ \\
+\hline
+$a+3 / 2$ & $\left[\frac{(c-\gamma-2)(c-\gamma-1)(c-\gamma}{(2 c-2)(2 c-1) 2 c}\right]^{1 / 2}$ \\
+$a+1 / 2$ & $\left[\frac{3(c+\gamma+1)(c-\gamma-1)(c-\gamma)}{(2 c-1) 2 c(2 c+2)}\right]^{1 / 2}$ \\
+$a-1 / 2$ & $\left[\frac{3(c+\gamma+1)(c+\gamma+2)(c-\gamma)}{2 c(2 c+2)(2 c+3)}\right]^{1 / 2}$ \\
+$a-3 / 2$ & $\left[\frac{(c+\gamma+1)(c+\gamma+2)(c+\gamma+3)}{(2 c+2)(2 c+3)(2 c+4)}\right]^{1 / 2}$ \\
+\end{tabular}
+\end{center}
+\end{table}
+
+$$
+C_{a \alpha 2 \beta}^{c \gamma}
+$$
+
+\begin{table}[h]
+\begin{center}
+\captionsetup{labelformat=empty}
+\caption{Table 8.4.}
+\begin{tabular}{|l|l|l|}
+\hline
+$c$ & $3=2$ & $3=1$ \\
+\hline
+\begin{tabular}{l}
+\( a+2 \) \\
+$a+1$ \\
+a \( a-1 \) \\
+a - 2 \\
+\end{tabular} & \( \left[\begin{array}{l} {\left[\frac{(c+\gamma-3)(c+\gamma-2)(c+\gamma-1)(c+\gamma)}{(2 c-3)(2 c-2)(2 c-1) 2 c}\right]^{1 / 2}} \\ -\left[\frac{(c+\gamma-2)(c+\gamma-1)(c+\gamma)(c-\gamma+1)}{(2 c-2)(2 c-1) c(c+1)}\right]^{1 / 2} \\ {\left[\frac{3(c+\gamma-1)(c+\gamma)(c-\gamma+1)(c-\gamma+2)}{2(2 c-1) c(c+1)(2 c+3)}\right]^{1 / 2}} \\ -\left[\frac{(c+\gamma)(c-\gamma+1)(c-\gamma+2)(c-\gamma+3)}{c(c+1)(2 c+3)(2 c+4)}\right]^{1 / 2} \\ {\left[\frac{(c-\gamma+1)(c-\gamma+2)(c-\gamma+3)(c-\gamma+4)}{(2 c+2)(2 c+3)(2 c+4)(2 c+5)}\right]^{1 / 2}} \end{array}\right] \) & \begin{tabular}{l}
+\( \begin{gathered} {\left[\frac{(c+\gamma-2)(c+\gamma-1)(c+\gamma)(c-\gamma)}{(2 c-3)(c-1)(2 c-1) c}\right]^{1 / 2}} \\ -(c-2 \gamma+1)\left[\frac{(c+\gamma-1)(c+\gamma)}{(2 c-2)(2 c-1) c(c+1)}\right]^{1 / 2} \\ (1-2 \gamma)\left[\frac{3(c+\gamma)(c-\gamma+1)}{2(2 c-1) c(c+1)(2 c+3)}\right]^{1 / 2} \\ (c+2 \gamma)\left[\frac{(c-\gamma+1)(c-\gamma+2)}{c(c+1)(2 c+3)(2 c+4)}\right]^{1 / 2} \end{gathered} \) \\
+$\left[\frac{(c+\gamma+1)(c-\gamma+1)(c-\gamma+2)(c-\gamma+3}{(c+1)(2 c+3)(c+2)(2 c+5)}\right]^{1 / 2}$ \\
+\end{tabular} \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[h]
+\begin{center}
+\captionsetup{labelformat=empty}
+\caption{Table 8.4. (Cont.)}
+\begin{tabular}{|l|l|l|l|}
+\hline
+$c$ & $3=0$ & $\beta=-1$ & $\beta=-2$ \\
+\hline
+\multirow{5}{*}{\begin{tabular}{l}
+$a+2$ \\
+$a+1$ \\
+$а$ \\
+$a-1$ \\
+$a-2$ \\
+\end{tabular}} & $\left[\frac{3(c+\gamma-1)(c+\gamma)(c-\gamma-1)(c-\gamma)}{(2 c-3)(2 c-2)(2 c-1) c}\right]^{1 / 2}$ & $\left[\frac{(c+\gamma)(c-\gamma-2)(c-\gamma-1)(c-\gamma)}{(2 c-3)(c-1)(2 c-1) c}\right]^{/ 2}$ & $\left[\frac{(c-\gamma-3)(c-\gamma-2)(c-\gamma-1)(c-\gamma)}{(2 c-3)(2 c-2)(2 c-1) 2 c}\right]^{/ 2}$ \\
+\hline
+ & $\gamma\left[\frac{3(c+\gamma)(c-\gamma)}{(c-1)(2 c-1) c(c+1)}\right]^{7 / 2}$ & $(c+2 \gamma+1)\left[\frac{(c-\gamma-1)(c-\gamma)}{(2 c-2)(2 c-1) c(c+1)}\right]^{1 / 2}$ & $\left[\frac{(c+\gamma+1)(c-\gamma-2)(c-\gamma-1)(c-\gamma)}{(2 c-2)(2 c-1) c(c+1)}\right]^{1 / 2}$ \\
+\hline
+ & $[(2 c-1) c(c+1)(2 c+3)]^{1 / 2}$ & $(2 \gamma+1)\left[\frac{3(c+\gamma+1)(c-\gamma)}{2(2 c-1) c(c+1)(2 c+3)}\right]^{1 / 2}$ & $\left[\frac{3(c+\gamma+1)(c+\gamma+2)(c-\gamma-1)(c-\gamma)}{2(2 c-1) c(c+1)(2 c+3)}\right]^{1 / 2}$ \\
+\hline
+ &  & $-(c-2 \gamma)\left[\frac{(c+\gamma+1)(c+\gamma+2)}{c(c+1)(2 c+3)(2 c+4)}\right]^{/ 2}$ & $\left[\frac{(c+\gamma+1)(c+\gamma+2)(c+\gamma+3)(c-\gamma)}{c(c+1)(2 c+3)(2 c+4)}\right]^{/ 2}$ \\
+\hline
+ & $\left[\frac{3(c+\gamma+1)(c+\gamma+2)(c-\gamma+1)(c-\gamma+2)}{(c+1)(2 c+3)(2 c+4)(2 c+5)}\right]^{1 / 2}$ & $-\left[\frac{(c+\gamma+1)(c+\gamma+2)(c+\gamma+3)(c-\gamma+1)}{(c+1)(2 c+3)(c+2)(2 c+5)}\right]^{/ 2}$ & $\left[\frac{(c+\gamma+1)(c+\gamma+2)(c+\gamma+3)(c+\gamma+4)}{(2 c+2)(2 c+3)(2 c+4)(2 c+5)}\right]^{/ 2}$ \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+Table 8.5.
+
+\section*{$C_{a \alpha \frac{5}{2} \beta}^{c \gamma}$}
+\begin{center}
+\begin{tabular}{|l|l|l|}
+\hline
+$c$ & $\beta=5 / 2$ & $\beta=3 / 2$ \\
+\hline
+\( \begin{aligned} & a+5 / 2 \\ & a+3 / 2 \\ & a+1 / 2 \\ & a-1 / 2 \\ & a-3 / 2 \\ & a-5 / 2 \end{aligned} \) & \( \begin{gathered} {\left[\frac{(c+\gamma)!(2 c-5)!}{(c+\gamma-5)!(2 c)!}\right]^{1 / 2}} \\ -\left[\frac{5(c+\gamma)!(c-\gamma+1)(2 c+1)(2 c-4)!}{(c+\gamma-4)!(2 c+2)!}\right]^{/ 2} \\ {\left[\frac{10(c+\gamma)!(c-\gamma+2)!(2 c+1)(2 c-3)!}{(c+\gamma-3)!(c-\gamma)!(2 c+3)!}\right]^{/ 2}} \\ -\left[\frac{10(c+\gamma)!(c-\gamma+3)!(2 c+1)(2 c-2)!}{(c+\gamma-2)!(c-\gamma)!(2 c+4)!}\right]^{/ 2} \\ {\left[\frac{5(c+\gamma)(c-\gamma+4)!(2 c+1)(2 c-1)!}{(c-\gamma)!(2 c+5)!}\right]^{/ 2}} \\ -\left[\frac{(c-\gamma+5)!(2 c+1)!}{(c-\gamma)!(2 c+6)!}\right]^{/ 2} \end{gathered} \) & \( \begin{gathered} {\left[\frac{5(c+\gamma)!(c-\gamma)(2 c-5)!}{(c+\gamma-4)!(2 c)!}\right]^{1 / 2}} \\ -(3 c-5 \gamma+3)\left[\frac{(c+\gamma)!(2 c+1)(2 c-4)!}{(c+\gamma-3)!(2 c+2)!}\right]^{1 / 2} \\ (c-5 \gamma+4)\left[\frac{2(c+\gamma)!(c-\gamma+1)(2 c+1)(2 c-3)!}{(c+\gamma-2)!(2 c+3)!}\right]^{1 / 2} \\ (c+5 \gamma-3)\left[\frac{2(c+\gamma)(c-\gamma+2)!(2 c+1)(2 c-2)!}{(c-\gamma)!(2 c+4)!}\right]^{1 / 2} \\ -(3 c+5 \gamma)\left[\frac{(c-\gamma+3)!(2 c+1)(2 c-1)!}{(c-\gamma)!(2 c+5)!}\right]^{1 / 2} \\ {\left[\frac{5(c+\gamma+1)(c-\gamma+4)!(2 c+1)!}{(c-\gamma)!(2 c+6)!}\right]^{1 / 2}} \end{gathered} \) \\
+\hline
+$c$ & $\beta=1 / 2$ & $\beta=-1 / 2$ \\
+\hline
+\( \begin{aligned} & a+5 / 2 \\ & a+3 / 2 \\ & a+1 / 2 \\ & a-1 / 2 \\ & a-3 / 2 \\ & a-5 / 2 \end{aligned} \) & \( \begin{gathered} {\left[\frac{10(c+\gamma)!(c-\gamma)!(2 c-5)!}{(c+\gamma-3)!(c-\gamma-2)!(2 c)!}\right]^{/ 2}} \\ -(c-5 \gamma+1)\left[\frac{2(c+\gamma)!(c-\gamma)(2 c+1)(2 c-4)!}{(c+\gamma-2)!(2 c+2)!}\right]^{/ 2} \\ 2\{3 \gamma(2 \gamma-1)-(c+\gamma-1)(c+\gamma+1)\}\left[\frac{(c+\gamma)(2 c+1)(2 c-3)!}{(2 c+3)!}\right]^{/ 2} \\ -2(3 \gamma(2 \gamma-1)-(c-\gamma)(c-\gamma+2)\}\left[\frac{(c-\gamma+1)(2 c+1)(2 c-2)!}{(2 c+4)!}\right]^{/ 2} \\ (c+5 \gamma)\left[\frac{2(c+\gamma+1)(c-\gamma+2)!(2 c+1)(2 c-1)!}{(c-\gamma)!(2 c+5)!}\right]^{/ 2} \\ -\left[\frac{10(c+\gamma+2)!(c-\gamma+3)!(2 c+1)!}{(c+\gamma)!(c-\gamma)!(2 c+6)!}\right]^{/ 2} \end{gathered} \) & \( \begin{gathered} {\left[\frac{10(c+\gamma)!(c-\gamma)!(2 c-5)!}{(c+\gamma-2)!(c-\gamma-3)!(2 c)!}\right]^{1 / 2}} \\ (c+5 \gamma+1)\left[\frac{2(c+\gamma)(c-\gamma)!(2 c+1)(2 c-4)!}{(c-\gamma-2)!(2 c+2)!}\right]^{1 / 2} \\ 2\{3 \gamma(2 \gamma+1)-(c-\gamma-1)(c-\gamma+1)\}\left[\frac{(c-\gamma)(2 c+1)(2 c-3)!}{(2 c+3)!}\right]^{1 / 2} \\ 2\{3 \gamma(2 \gamma+1)-(c+\gamma)(c+\gamma+2)\}\left[\frac{(c+\gamma+1)(2 c+1)(2 c-2)!}{(2 c+4)!}\right]^{/ 2} \\ (c-5 \gamma)\left[\frac{2(c+\gamma+2)!(c-\gamma+1)(2 c+1)(2 c-1)!}{(c+\gamma)!(2 c+5)!}\right]^{/ 2} \\ {\left[\frac{10(c+\gamma+3)!(c-\gamma+2)!(2 c+1)!}{(c+\gamma)!(c-\gamma)!(2 c+6)!}\right]^{/ 2}} \end{gathered} \) \\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{table}[h]
+\begin{center}
+\captionsetup{labelformat=empty}
+\caption{Table 8.5. (Cont.)}
+\begin{tabular}{|l|l|l|}
+\hline
+$c$ & $3=-3 / 2$ & $\beta=-5 / 2$ \\
+\hline
+$a+5 / 2$ & $\left[\frac{5(c+\gamma)(c-\gamma)!(2 c-5)!}{(c-\gamma-4)!(2 c)!}\right]^{1 / 2}$ & $\left[\frac{(c-\gamma)!(2 c-5)!}{(c-\gamma-5)!(2 c)!}\right]^{1 / 2}$ \\
+\hline
+$a+3 / 2$ & $(3 c+5 \gamma+3)\left[\frac{(c-\gamma)!(2 c+1)(2 c-4)!}{(c-\gamma-3)!(2 c+2)!}\right]^{1 / 2}$ & $\left[\frac{5(c+\gamma+1)(c-\gamma)!(2 c+1)(2 c-4)!}{(c-\gamma-4)!(2 c+2)!}\right]^{/ 2}$ \\
+\hline
+$a+1 / 2$ & $(c+5 \gamma+4)\left[\frac{2(c+\gamma+1)(c-\gamma)!(2 c+1)(2 c-3)!}{(c-\gamma-2)!(2 c+3)!}\right]^{1 / 2}$ & $\left[\frac{10(c+\gamma+2)!(c-\gamma)!(2 c+1)(2 c-3)!}{(c+\gamma)!(c-\gamma-3)!(2 c+3)!}\right]^{1 / 2}$ \\
+\hline
+$a-1 / 2$ & $-(c-5 \gamma-3)\left[\frac{2(c+\gamma+2)!(c-\gamma)(2 c+1)(2 c-2)!}{(c+\gamma)!(2 c+4)!}\right]^{1 / 2}$ & $\left[\frac{10(c+\gamma+3)!(c-\gamma)!(2 c+1)(2 c-2)!}{(c+\gamma)!(c-\gamma-2)!(2 c+4)!}\right]^{1 / 2}$ \\
+\hline
+$a-3 / 2$ & $-(3 c-5 \gamma)\left[\frac{(c+\gamma+3)!(2 c+1)(2 c-1)!}{(c+\gamma)!(2 c+5)!}\right]^{1 / 2}$ & $\left[\frac{5(c+\gamma+4)!(c-\gamma)(2 c+1)(2 c-1)!}{(c+\gamma)!(2 c+5)!}\right]^{1 / 2}$ \\
+\hline
+$a-5 / 2$ & $-\left[\frac{5(c+\gamma+4)!(c-\gamma+1)(2 c+1)!}{(c+\gamma)!(2 c+6)!}\right]^{1 / 2}$ & $\left[\frac{(c+\gamma+5)!(2 c+1)!}{(c+\gamma)!(2 c+6)!}\right]^{1 / 2}$ \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[h]
+\begin{center}
+\captionsetup{labelformat=empty}
+\caption{Table 8.6. $C_{a \alpha 3 \beta}^{c \gamma}$}
+\begin{tabular}{|l|l|l|}
+\hline
+$c$ & $\beta=3$ & $\beta=2$ \\
+\hline
+$a+3$ & \( \begin{gathered} {\left[\frac{(c+\gamma)!(2 c-6)!}{(c+\gamma-6)!(2 c)!}\right]^{1 / 2}} \\ -\left[\frac{6(c+\gamma)!(c-\gamma+1)(2 c+1)(2 c-5)!}{(c+\gamma-5)!(2 c+2)!}\right]^{1 / 2} \end{gathered} \) & \( \begin{gathered} {\left[\frac{6(c+\gamma)!(c-\gamma)(2 c-6)!}{(c+\gamma-5)!(2 c)!}\right]^{1 / 2}} \\ -2(2 c-3 \gamma+2)\left[\frac{(c+\gamma)!(2 c+1)(2 c-5)!}{(c+\gamma-4)!(2 c+2)!}\right]^{1 / 2} \\ (c-3 \gamma+3)\left[\frac{10(c+\gamma)!(c-\gamma+1)(2 c+1)(2 c-4)!}{(c+\gamma-3)!(2 c+3)!}\right]^{1 / 2} \\ 2(\gamma-1)\left[\frac{30(c+\gamma)!(c-\gamma+2)!(2 c+1)(2 c-3)!}{(c+\gamma-2)!(c-\gamma)!(2 c+4)!}\right]^{1 / 2} \end{gathered} \) \\
+\hline
+ & $\left[\frac{15(c+\gamma)!(c-\gamma+2)!(2 c+1)(2 c-4)!}{(c+\gamma-4)!(c-\gamma)!(2 c+3)!}\right]^{1 / 2}$ &  \\
+\hline
+a & $-2\left[\frac{5(c+\gamma)!(c-\gamma+3)!(2 c+1)(2 c-3)!}{(c+\gamma-3)!(c-\gamma)!(2 c+4)!}\right]^{/ 2}$ &  \\
+\hline
+$a-1$ & $\left[\frac{15(c+\gamma)!(c-\gamma+4)!(2 c+1)(2 c-2)!}{(c+\gamma-2)!(c-\gamma)!(2 c+5)!}\right]^{/ 2}$ & $-(c+3 \gamma-2)\left[\frac{10(c+\gamma)(c-\gamma+3)!(2 c+1)(2 c-2)!}{(c-\gamma)!(2 c+5)!}\right]^{/ 2}$ \\
+\hline
+ & $-\left[\frac{6(c+\gamma)(c-\gamma+5)!(2 c+1)(2 c-1)!}{(c-\gamma)!(2 c+6)!}\right]^{1 / 2}$ & $2(2 c+3 \gamma)\left[\frac{(c-\gamma+4)!(2 c+1)(2 c-1)!}{(c-\gamma)!(2 c+6)!}\right]^{1 / 2}$ \\
+\hline
+$a-3$ &  & $-\left[\frac{6(c+\gamma+1)(c-\gamma+5)!(2 c+1)!}{(c-\gamma)!(2 c+7)!}\right]^{/ 2}$ \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[h]
+\begin{center}
+\captionsetup{labelformat=empty}
+\caption{Table 8.6. (Cont.)}
+\begin{tabular}{|l|l|l|}
+\hline
+$c$ & $\beta=1$ & $\beta=0$ \\
+\hline
+$a+3$ & $\left[\frac{15(c+\gamma)!(c-\gamma)!(2 c-6)!}{(c+\gamma-4)!(c-\gamma-2)!(2 c)!}\right]^{1 / 2}$ & $2\left[\frac{5(c+\gamma)!(c-\gamma)!(2 c-6)!}{(c+\gamma-3)!(c-\gamma-3)!(2 c)!}\right]^{/ 2}$ \\
+\hline
+$a+2$ & $-(c-3 \gamma+1)\left[\frac{10(c+\gamma)!(c-\gamma)(2 c+1)(2 c-5)!}{(c+\gamma-3)!(2 c+2)!}\right]^{/ 2}$ & $2 \gamma\left[\frac{30(c+\gamma)!(c-\gamma)!(2 c+1)(2 c-5)!}{(c+\gamma-2)!(c-\gamma-2)!(2 c+2)!}\right]^{/ 3}$ \\
+\hline
+$a+1$ & $-\{(c-1)(c+6)+5(\gamma-1)(2 c-3 \gamma)\}\left[\frac{(c+\gamma)!(2 c+1)(2 c-4)!}{(c+\gamma-2)!(2 c+3)!}\right]^{/ 2}$ & $-2\left\{(c-1)(c+1)-5 \gamma^{2}\right\}\left[\frac{3(c+\gamma)(c-\gamma)(2 c+1)(2 c-4)!}{(2 c+3)!}\right]^{7 / 2}$ \\
+\hline
+a & $2\langle c(c+1)-5 \gamma(\gamma-1)-2\}\left[\frac{3(c+\gamma)(c-\gamma+1)(2 c+1)(2 c-3)!}{(2 c+4)!}\right]^{/ 2}$ & $-4 \gamma\left\{3 c(c+1)-5 \gamma^{2}-1\right\}\left[\frac{(2 c+1)(2 c-3)!}{(2 c+4)!}\right]^{/ 2}$ \\
+\hline
+$a-1$ & $-\{(c+2)(c-5)-5(\gamma-1)(2 c+3 \gamma+2)\}\left[\frac{(c-\gamma+2)!(2 c+1)(2 c-2)!}{(c-\gamma)!(2 c+5)!}\right]^{/ 2}$ & $2\left((c+1)^{2}-5 \gamma^{2}-1\right)\left[\frac{3(c+\gamma+1)(c-\gamma+1)(2 c+1)(2 c-2)!}{(2 c+5)!}\right]^{1 / 3}$ \\
+\hline
+$a-2$ & $-(c+3 \gamma)\left[\frac{10(c+\gamma+1)(c-\gamma+3)!(2 c+1)(2 c-1)!}{(c-\gamma)!(2 c+6)!}\right]^{/ 2}$ & $2 \gamma\left[\frac{30(c+\gamma+2)!(c-\gamma+2)!(2 c+1)(2 c-1)!}{(c+\gamma)!(c-\gamma)!(2 c+6)!}\right]^{/ 2}$ \\
+\hline
+$a-3$ & $\left[\frac{15(c+\gamma+2)!(c-\gamma+4)!(2 c+1)!}{(c+\gamma)!(c-\gamma)!(2 c+7)!}\right]^{/ 2}$ & $-2\left[\frac{5(c+\gamma+3)!(c-\gamma+3)!(2 c+1)!}{(c+\gamma)!(c-\gamma)!(2 c+7)!}\right]^{1 / 2}$ \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[h]
+\begin{center}
+\captionsetup{labelformat=empty}
+\caption{Table 8.7.\\
+$C_{a \alpha \frac{7}{2} \beta}^{c \gamma}$}
+\begin{tabular}{|l|l|l|l|}
+\hline
+$c$ & $\beta=7 / 2$ & $\beta=5 / 2$ &  \\
+\hline
+$a+7 / 2$ & $\left[\frac{(c+\gamma)!(2 c-7)!}{(c+\gamma-7)!(2 c)!}\right]^{/ 2}$ & $\left[\frac{7(c+\gamma)!(c-\gamma)(2 c-7)!}{(c+\gamma-6)!(2 c)!}\right]^{1 / 2}$ & uniuauow Apnsu \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+$$
+\begin{gathered}
+-(5 c-7 \gamma+5)\left[\frac{(c+\gamma)!(2 c+1)(2 c-6)!}{(c+\gamma-5)!(2 c+2)!}\right]^{/ 2} \\
+(3 c-7 \gamma+8)\left[\frac{3(c+\gamma)!(c-\gamma+1)(2 c+1)(2 c-5)!}{(c+\gamma-4)!(2 c+3)!}\right]^{/ 2} \\
+-(c-7 \gamma+9)\left[\frac{5(c+\gamma)!(c-\gamma+2)!(2 c+1)(2 c-4)!}{(c+\gamma-3)!(c-\gamma)!(2 c+4)!}\right]^{/ 2} \\
+-(c+7 \gamma-8)\left[\frac{5(c+\gamma)!(c-\gamma+3)!(2 c+1)(2 c-3)!}{(c+\gamma-2)!(c-\gamma)!(2 c+5)!}\right]^{/ 2} \\
+(3 c+7 \gamma-5)\left[\frac{3(c+\gamma)(c-\gamma+4)!(2 c+1)(2 c-2)!}{(c-\gamma)!(2 c+6)!}\right]^{/ 2} \\
+-(5 c+7 \gamma)\left[\frac{(c-\gamma+5)!(2 c+1)(2 c-1)!}{(c-\gamma)!(2 c+7)!}\right]^{/ 2} \\
+{\left[\frac{7(c+\gamma+1)(c-\gamma+6)!(2 c+1)!}{(c-\gamma)!(2 c+8)!}\right]^{/ 2}}
+\end{gathered}
+$$
+
+\begin{table}[h]
+\begin{center}
+\captionsetup{labelformat=empty}
+\caption{Table 8.7. (Cont.)}
+\begin{tabular}{|l|l|}
+\hline
+$c$ & $\beta=3 / 2$ \\
+\hline
+\begin{tabular}{l}
+\( a+7 / 2 \) \\
+$a+5 / 2$ \\
+$a+3 / 2$ \( a+1 / 2 \) \\
+\end{tabular} & \( \begin{gathered} {\left[\frac{21(c+\gamma)!(c-\gamma)!(2 c-7)!}{(c+\gamma-5)!(c-\gamma-2)!(2 c)!}\right]^{1 / 2}} \\ -(3 c-7 \gamma+3)\left[\frac{3(c+\gamma)!(c-\gamma)(2 c+1)(2 c-6)!}{(c+\gamma-4)!(2 c+2)!}\right]^{1 / 2} \end{gathered} \) \\
+\hline
+c & $\beta=1 / 2$ \\
+\hline
+\( \begin{aligned} & a+7 / 2 \\ & a+5 / 2 \\ & a+3 / 2 \\ & a+1 / 2 \\ & a-1 / 2 \\ & a-3 / 2 \\ & a-5 / 2 \\ & a-7 / 2 \end{aligned} \) & \( \left[\frac{35(c+\gamma)!(c-\gamma)!(2 c-7)!}{(c+\gamma-4)!(c-\gamma-3)!(2 c)!}\right]^{1 / 2} \) \( \left[\frac{35(c+\gamma+3)!(c-\gamma+4)!(2 c+1)!}{(c+\gamma)!(c-\gamma)!(2 c+8)!}\right]^{/ 2} \) \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+Clebsch-Gordan Coefficients and 3jm Symbols 275
+
+\section*{Table 8.8.}
+$$
+C_{a \alpha 4 \beta}^{c \gamma}
+$$
+
+\begin{center}
+\begin{tabular}{|l|l|l|}
+\hline
+$c$ & $\beta=4$ & $\beta=3$ \\
+\hline
+\( \begin{gathered} a+4 \\ a+3 \\ a+2 \\ a+1 \\ a \\ a-1 \\ a-2 \\ a-3 \\ a-4 \end{gathered} \) & \( \begin{gathered} {\left[\frac{(c+\gamma)!(2 c-8)!}{(c+\gamma-8)!(2 c)!}\right]^{/ 2}} \\ -2\left[\frac{2(c+\gamma)!(c-\gamma+1)(2 c+1)(2 c-7)!}{(c+\gamma-\gamma)!(2 c+2)!}\right]^{/ 2} \\ 2\left[\frac{7(c+\gamma)!(c-\gamma+2)!(2 c+1)(2 c-6)!}{(c+\gamma-6)!(c-\gamma)!(2 c+3)!}\right]^{/ 2} \\ -2\left[\frac{14(c+\gamma)!(c-\gamma+3)!(2 c+1)(2 c-5)!}{(c+\gamma-5)!(c-\gamma)!(2 c+4)!}\right]^{/ 2} \\ {\left[\frac{70(c+\gamma)!(c-\gamma+4)!(2 c+1)(2 c-4)!}{(c+\gamma-4)!(c-\gamma)!(2 c+5)!}\right]^{/ 3}} \\ -2\left[\frac{14(c+\gamma)!(c-\gamma+5)!(2 c+1)(2 c-3)!}{(c+\gamma-3)!(c-\gamma)!(2 c+6)!}\right]^{/ 2} \\ 2\left[\frac{7(c+\gamma)!(c-\gamma+6)!(2 c+1)(2 c-2)!}{(c+\gamma-2)!(c-\gamma)!(2 c+7)!}\right]^{/ 2} \\ -2\left[\frac{2(c+\gamma)(c-\gamma+7)!(2 c+1)(2 c-1)!}{(c-\gamma)!(2 c+8)!}\right. \\ {\left[\frac{(c-\gamma+8)!(2 c+1)!}{(c-\gamma)!(2 c+9)!}\right]^{/ 2}} \end{gathered} \) & \( \begin{gathered} 2\left[\frac{2(c+\gamma)!(c-\gamma)(2 c-8)!}{(c+\gamma-\gamma)!(2 c)!}\right]^{/ 2} \\ -2(3 c-4 \gamma+3)\left[\frac{(c+\gamma)!(2 c+1)(2 c-7)!}{(c+\gamma-6)!(2 c+2)!}\right]^{/ 2} \\ (2 c-4 \gamma+5)\left[\frac{14(c+\gamma)!(c-\gamma+1)(2 c+1)(2 c-6)!}{(c+\gamma-5)!(2 c+3)!}\right]^{/ 2} \\ -2(c-4 \gamma+6)\left[\frac{7(c+\gamma)!(c-\gamma+2)!(2 c+1)(2 c-5)!}{(c+\gamma-4)!(c-\gamma)!(2 c+4)!}\right]^{/ 2} \\ 2(3-2 \gamma)\left[\frac{35(c+\gamma)!(c-\gamma+3)!(2 c+1)(2 c-4)!}{(c+\gamma-3)!(c-\gamma)!(2 c+5)!}\right]^{/ 2} \\ 2(c+4 \gamma-5)\left[\frac{7(c+\gamma)!(c-\gamma+4)!(2 c+1)(2 c-3)!}{(c+\gamma-2)!(c-\gamma)!(2 c+6)!}\right]^{/ 2} \\ -(2 c+4 \gamma-3)\left[\frac{14(c+\gamma)(c-\gamma+5)!(2 c+1)(2 c-2)!}{(c-\gamma)!(2 c+7)!}\right]^{/ 2} \\ 2(3 c+4 \gamma)\left[\frac{(c-\gamma+6)!(2 c+1)(2 c-1)!}{(c-\gamma)!(2 c+8)!}\right]^{/ 2} \\ -2\left[\frac{2(c+\gamma+1)(c-\gamma+7)!(2 c+1)!}{(c-\gamma)!(2 c+9)!}\right]^{/ 3} \end{gathered} \) \\
+\hline
+$c$ & \multicolumn{2}{|c|}{$\beta=2$} \\
+\hline
+\begin{tabular}{l}
+$a+4$ \( a+3 \) \\
+a \( a-1 \) \( a-2 \) \( a-3 \) \( a-4 \) \\
+\end{tabular} & \multicolumn{2}{|c|}{\(
+\begin{gathered}
+2\left[\frac{7(c+\gamma)!(c-\gamma)!(2 c-8)!}{(c+\gamma-6)!(c-\gamma-2)!(2 c)!}\right]^{7 / 2} \\
+-2(c-2 \gamma+1)\left[\frac{14(c+\gamma)!(c-\gamma)(2 c+1)(2 c-7)!}{(c+\gamma-5)!(2 c+2)!}\right]^{1 / 2}
+\end{gathered}
+\)
+\(
+\begin{gathered}
+2(2(c+5 \gamma-4)(c+2 \gamma)-3 \gamma(2 \gamma-3)\}\left[\frac{(c-\gamma+4)!(2 c+1)(2 c-2)!}{(c-\gamma)!(2 c+7)!}\right]^{1 / 2} \\
+-2(c+2 \gamma)\left[\frac{14(c+\gamma+1)(c-\gamma+5)!(2 c+1)(2 c-1)!}{(c-\gamma)!(2 c+8)!}\right]^{1 / 2}
+\end{gathered}
+\)} \\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{table}[h]
+\begin{center}
+\captionsetup{labelformat=empty}
+\caption{Table 8.8 (Cont.)}
+\begin{tabular}{|l|l|}
+\hline
+$\boldsymbol{c}$ & $\beta=1$ \\
+\hline
+$a+3$ & $-2\{3(c-\gamma)(c-\gamma+3)(c+4 \gamma-1)-20 \gamma(2 \gamma-1)(\gamma-1)\}\left[\frac{(c-\gamma+2)!(2 c+1)(2 c-3)!}{(c-\gamma)!(2 c+6)!}\right]^{/ 2}$ \\
+\hline
+c & $\beta=0$ \\
+\hline
+$a-1$ & $2\left\{3\left(c^{2}+2 c-5 \gamma^{2}\right)\left(c^{2}-5 \gamma^{2}-1\right)-10 \gamma^{2}\left(4 \gamma^{2}-1\right)\right\}\left[\frac{(2 c+1)(2 c-4)!}{(2 c+5)!}\right]^{1 / 2}$ \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+Clebsch-Gordan Coefficients and 3jm Symbols 277
+
+\begin{table}[h]
+\begin{center}
+\captionsetup{labelformat=empty}
+\caption{Table 8.9.\\
+$C_{a \alpha \frac{9}{2} \beta}^{c \gamma}$}
+\begin{tabular}{|l|l|}
+\hline
+$\boldsymbol{c}$ & $\beta=9 / 2$ \\
+\hline
+$a+9 / 2$ & \( \left[\frac{(c+\gamma)!(2 c-9)!}{(c+\gamma-9)!(2 c)!}\right]^{/ 2} \) \( -3\left[\frac{(c+\gamma)!(c-\gamma+1)(2 c+1)(2 c-8)!}{(c+\gamma-8)!(2 c+2)!}\right]^{/ 3} \) \\
+\hline
+$\boldsymbol{c}$ & $\beta=5 / 2$ \\
+\hline
+$a+9 / 2$ & \( 6\left[\frac{(c+\gamma)!(c-\gamma)!(2 c-9)!}{(c+\gamma-7)!(c-\gamma-2)!(2 c)!}\right]^{/ 2} \) \( -2\{(c-\gamma+3)(c+3 \gamma-5)-3(\gamma-1)(2 \gamma-1)\}\left[\frac{14(c+\gamma)!(c-\gamma+2)!(2 c+1)(2 c-5)!}{(c+\gamma-3)!(c-\gamma)!(2 c+5)!}\right]^{/ 3} \) \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[h]
+\begin{center}
+\captionsetup{labelformat=empty}
+\caption{Table 8.9. (Cont.)}
+\begin{tabular}{|l|l|}
+\hline
+c & $\beta=5 / 2$ \\
+\hline
+$a-1 / 2$ & $2\{(c+\gamma-2)(c-3 \gamma+6)-3(\gamma-1)(2 \gamma-1)\}\left[\frac{14(c+\gamma)!(c-\gamma+3)!(2 c+1)(2 c-4)!}{(c+\gamma-2)!(c-\gamma)!(2 c+6)!}\right]^{1 / 2}$ \\
+\hline
+$a-3 / 2$ & $2\{(c+\gamma-1)(4 \gamma-5)+\gamma(2 \gamma-1)\}\left[\frac{21(c+\gamma)(c-\gamma+4) 1(2 c+1)(2 c-3)!}{(c-\gamma)!(2 c+7)!}\right]^{1 / 2}$ \\
+\hline
+$a-5 / 2$ & $-2\{(c+\gamma)(4 c+16 \gamma-11)+\gamma(2 \gamma+1)\}\left[\frac{(c-\gamma+5)!(2 c+1)(2 c-2)!}{(c-\gamma)!(2 c+8)!}\right]^{1 / 2}$ \\
+\hline
+$a-7 / 2$ & $2(5 c+9 \gamma)\left[\frac{(c+\gamma+1)(c-\gamma+6)!(2 c+1)(2 c-1)!}{(c-\gamma)!(2 c+9)!}\right]^{1 / 2}$ \\
+\hline
+$a-9 / 2$ & $-6\left[\frac{(c+\gamma+2)!(c-\gamma+7)!(2 c+1)!}{(c+\gamma)!(c-\gamma)!(2 c+10)!}\right]^{/ 2}$ \\
+\hline
+$c$ & $\beta=3 / 2$ \\
+\hline
+$a+9 / 2$ & $2\left[\frac{21(c+\gamma)!(c-\gamma)!(2 c-9)!}{(c+\gamma-6)!(c-\gamma-3)!(2 c)!}\right]^{/ 2}$ \\
+\hline
+$a+7 / 2$ & $-2(c-3 \gamma+1)\left[\frac{21(c+\gamma)!(c-\gamma)!(2 c+1)(2 c-8)!}{(c+\gamma-5)!(c-\gamma-2)!(2 c+2)!}\right]^{/ 2}$ \\
+\hline
+$a+5 / 2$ & $2\{(c-\gamma+1)(3-4 \gamma)+\gamma(2 \gamma+1)\}\left[\frac{21(c+\gamma)!(c-\gamma)(2 c+1)(2 c-7)!}{(c+\gamma-4)!(2 c+3)!}\right]^{1 / 2}$ \\
+\hline
+$a+3 / 2$ & $2\left\{(c+1)(c+2)(4 c-15)-21_{\gamma}(c-\gamma)(2 \gamma-3)-21_{\gamma}(\gamma-4)\right\}\left[\frac{(c+\gamma)!(2 c+1)(2 c-6)!}{(c+\gamma-3)!(2 c+4)!}\right]^{1 / 2}$ \\
+\hline
+$a+1 / 2$ & $-2\left\{\left(c^{2}-4\right)(c-7 \gamma+6)-7 \gamma(\gamma-1)(c-3 \gamma+4)\right\}\left[\frac{6(c+\gamma)!(c-\gamma+1)(2 c+1)(2 c-5)!}{(c+\gamma-2)!(2 c+5)!}\right]^{1 / 2}$ \\
+\hline
+$a-1 / 2$ & $-2\{(c-1)(c+3)(c+7 \gamma-5)-7 \gamma(\gamma-1)(c+3 \gamma-3)\}\left[\frac{6(c+\gamma)(c-\gamma+2)!(2 c+1)(2 c-4)!}{(c-\gamma)!(2 c+6)!}\right]^{1 / 2}$ \\
+\hline
+$a-3 / 2$ & $2\{c(c-1)(4 c+19)-21 \gamma(2 \gamma-3)(c+\gamma+1)+21 \gamma(\gamma-4)\}\left[\frac{(c-\gamma+3)!(2 c+1)(2 c-3)!}{(c-\gamma)!(2 c+7)!}\right]^{/ 2}$ \\
+\hline
+$a-5 / 2$ & $2\{(c+\gamma)(4 \gamma-3)+\gamma(2 \gamma+1)\}\left[\frac{21(c+\gamma+1)(c-\gamma+4)!(2 c+1)(2 c-2)!}{(c-\gamma)!(2 c+8)!}\right]^{1 / 2}$ \\
+\hline
+$a-7 / 2$ & $-2(c+3 \gamma)\left[\frac{21(c+\gamma+2)!(c-\gamma+5)!(2 c+1)(2 c-1)!}{(c+\gamma)!(c-\gamma)!(2 c+9)!}\right]^{1 / 2}$ \\
+\hline
+$a-9 / 2$ & $2\left[\frac{21(c+\gamma+3)!(c-\gamma+6)!(2 c+1)!}{(c+\gamma)!(c-\gamma)!(2 c+10)!}\right]^{1 / 2}$ \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+Clebsch-Gordan Coefficients and 3jm Symbols 279
+
+\begin{table}[h]
+\begin{center}
+\captionsetup{labelformat=empty}
+\caption{Table 8.9. (Cont.)}
+\begin{tabular}{|l|l|}
+\hline
+c & $\beta=1 / 2$ \\
+\hline
+$a+9 / 2$ & $3\left[\frac{14(c+\gamma)!(c-\gamma)!(2 c-9)!}{(c+\gamma-5)!(c-\gamma-4)!(2 c)!}\right]^{1 / 2}$ \\
+\hline
+$a+7 / 2$ & $-(c-9 \gamma+1)\left[\frac{14(c+\gamma)!(c-\gamma)!(2 c+1)(2 c-8)!}{(c+\gamma-4)!(c-\gamma-3)!(2 c+2)!}\right]^{/ 2}$ \\
+\hline
+$a+5 / 2$ & $-2\{(c+3 \gamma-3)(c-\gamma+1)-3 \gamma(2 \gamma+1)\}\left[\frac{14(c+\gamma)!(c-\gamma)!(2 c+1)(2 c-7)!}{(c+\gamma-3)!(c-\gamma-2)!(2 c+3)!}\right]^{/ 2}$ \\
+\hline
+$a+3 / 2$ & $2\left\{(c+1)(c-2)(c-7 \gamma+2)-7 \gamma^{2}(c-3 \gamma+2)+7 \gamma\right)\left[\frac{6(c+\gamma)!(c-\gamma)(2 c+1)(2 c-6)!}{(c+\gamma-2)!(2 c+4)!}\right]^{/ 3}$ \\
+\hline
+$a+1 / 2$ & $2\left\{3\left(c^{2}-7 \gamma^{2}-4\right)\left(c^{2}-7 \gamma^{2}-1\right)+2 \gamma(2 c+5)\left(3 c^{2}-7 \gamma^{2}-5\right)-84 \gamma^{2}\right\}\left[\frac{(c+\gamma)(2 c+1)(2 c-5)!}{(2 c+5)!}\right]^{/ 2}$ \\
+\hline
+$a-1 / 2$ & $-2\left\{3\left(c^{2}+2 c-7 \gamma^{2}-3\right)\left(c^{2}+2 c-7 \gamma^{2}\right)-2 \gamma(2 c-3)\left(3 c^{2}+6 c-7 \gamma^{2}-2\right)-84 \gamma^{4}\right\}\left[\frac{(c-\gamma+1)(2 c+1)(2 c-4)!}{(2 c+6)!}\right]^{7 / 2}$ \\
+\hline
+$a-3 / 2$ & $-2\left(c(c+3)(c+7 \gamma-1)-7 \gamma^{2}(c+3 \gamma-1)-7 \gamma\right)\left[\frac{6(c+\gamma+1)(c-\gamma+2)!(2 c+1)(2 c-3)!}{(c-\gamma)!(2 c+7)!}\right]^{/ 2}$ \\
+\hline
+$a-5 / 2$ & $2((c-3 \gamma+4)(c+\gamma)-3 \gamma(2 \gamma+1))\left[\frac{14(c+\gamma+2)!(c-\gamma+3)!(2 c+1)(2 c-2)!}{(c+\gamma)!(c-\gamma)!(2 c+8)!}\right]^{/ 2}$ \\
+\hline
+$a-7 / 2$ & $(c+9 \gamma)\left[\frac{14(c+\gamma+3)!(c-\gamma+4)!(2 c+1)(2 c-1)!}{(c+\gamma)!(c-\gamma)!(2 c+9)!}\right]^{/ 2}$ \\
+\hline
+$a-9 / 2$ & $-3\left[\frac{14(c+\gamma+4)!(c-\gamma+5)!(2 c+1)!}{(c+\gamma)!(c-\gamma)!(2 c+10)!}\right]^{1 / 3}$ \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{center}
+\begin{tabular}{|l|l|l|}
+\hline
+\multicolumn{3}{|c|}{$C_{a \alpha 5 \beta}^{c \gamma}$} \\
+\hline
+$\boldsymbol{c}$ & $\beta=5$ & $\beta=4$ \\
+\hline
+$a+5$ & $\left[\frac{(c+\gamma)!(2 c-10)!}{(c+\gamma-10)!(2 c)!}\right]^{1 / 2}$ & $\left[\frac{10(c+\gamma)!(c-\gamma)(2 c-10)!}{(c+\gamma-9)!(2 c)!}\right]^{/ 2}$ \\
+\hline
+$a+4$ & $-\left[\frac{10(c+\gamma)!(c-\gamma+1)(2 c+1)(2 c-9)!}{(c+\gamma-9)!(2 c+2)!}\right]^{1 / 8}$ & $-2(4 c-5 \gamma+4)\left[\frac{(c+\gamma)!(2 c+1)(2 c-9)!}{(c+\gamma-8)(2 c+2)!}\right]^{/ 2}$ \\
+\hline
+$a+3$ & $3\left[\frac{5(c+\gamma)!(c-\gamma+2)!(2 c+1)(2 c-8)!}{(c+\gamma-8)!(c-\gamma)!(2 c+3)!}\right]^{1 / 2}$ & $3(3 c-5 \gamma+7)\left[\frac{2(c+\gamma)!(c-\gamma+1)(2 c+1)(2 c-8)!}{(c+\gamma-7)!(2 c+3)!}\right]^{/ 3}$ \\
+\hline
+$a+2$ & $-2\left[\frac{30(c+\gamma)!(c-\gamma+3)!(2 c+1)(2 c-7)!}{(c+\gamma-7)!(c-\gamma)!(2 c+4)!}\right]^{/ 2}$ & $-4(2 c-5 \gamma+9)\left[\frac{3(c+\gamma)!(c-\gamma+2)!(2 c+1)(2 c-7)}{(c+\gamma-6)!(c-\gamma)!(2 c+4)!}\right]^{1 / 3}$ \\
+\hline
+$a+1$ & $\left[\frac{210(c+\gamma)!(c-\gamma+4)!(2 c+1)(2 c-6)!}{(c+\gamma-6)!(c-\gamma)!(2 c+5)!}\right]^{/ 2}$ & $2(c-5 \gamma+10)\left[\frac{21(c+\gamma)!(c-\gamma+3)!(2 c+1)(2 c-6)!}{(c+\gamma-5)!(c-\gamma)(2 c+5)!}\right]^{1 / 2}$ \\
+\hline
+a & $-6\left[\frac{7(c+\gamma)!(c-\gamma+5)!(2 c+1)(2 c-5)!}{(c+\gamma-5)!(c-\gamma)!(2 c+6)!}\right]^{/ 2}$ & $6(\gamma-2)\left[\frac{70(c+\gamma)!(c-\gamma+4)!(2 c+1)(2 c-5)!}{(c+\gamma-4)!(c-\gamma)!(2 c+6)!}\right]^{/ 2}$ \\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{|l|l|l|}
+\hline
+$c$ & $\beta=5$ & $\beta=4$ \\
+\hline
+\begin{tabular}{l}
+\( a-1 \) \( a-3 \) \( a-4 \) \\
+$a-5$ \\
+\end{tabular} & \( \begin{gathered} {\left[\frac{210(c+\gamma)!(c-\gamma+6)!(2 c+1)(2 c-4)!}{(c+\gamma-4)!(c-\gamma)!(2 c+7)!}\right]^{/ 2}} \\ -2\left[\frac{30(c+\gamma)!(c-\gamma+7)!(2 c+1)(2 c-3)!}{(c+\gamma-3)!(c-\gamma)!(2 c+8)!}\right]^{7 / 2} \\ 3\left[\frac{5(c+\gamma)!(c-\gamma+8)!(2 c+1)(2 c-2)!}{(c+\gamma-2)!(c-\gamma)!(2 c+9)!}\right]^{1 / 2} \\ -\left[\frac{10(c+\gamma)(c-\gamma+9)!(2 c+1)(2 c-1)!}{(c-\gamma)!(2 c+10)!}\right]^{1 / 2} \\ {\left[\frac{(c-\gamma+10)!(2 c+1)!}{(c-\gamma)!(2 c+11)!}\right]^{1 / 2}} \end{gathered} \) & \( \begin{aligned} & -2(c+5 \gamma-9)\left[\frac{21(c+\gamma)!(c-\gamma+5)!(2 c+1)(2 c-4)!}{(c+\gamma-3)!(c-\gamma)!(2 c+7)!}\right]^{7 / 2} \\ & 4(2 c+5 \gamma-7)\left[\frac{3(c+\gamma)!(c-\gamma+6)!(2 c+1)(2 c-3)!}{(c+\gamma-2)!(c-\gamma)!(2 c+8)!}\right]^{7 / 2} \\ & -3(3 c+5 \gamma-4)\left[\frac{2(c+\gamma)(c-\gamma+7)!(2 c+1)(2 c-2)!}{(c-\gamma)!(2 c+9)!}\right]^{7 / 2} \\ & 2(4 c+5 \gamma)\left[\frac{(c-\gamma+8)!(2 c+1)(2 c-1)!}{(c-\gamma)!(2 c+10)!}\right]^{7 / 2} \\ & -\left[\frac{10(c+\gamma+1)(c-\gamma+9)!(2 c+1)!}{(c-\gamma)!(2 c+11)!}\right]^{1 / 2} \end{aligned} \) \\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{|l|l|}
+\hline
+$c$ & $\beta=3$ \\
+\hline
+$a+5$ & $3\left[\frac{5(c+\gamma)!(c-\gamma)!(2 c-10)!}{(c+\gamma-8)!(c-\gamma-2)!(2 c)!}\right]^{7 / 2}$ \\
+\hline
+$a+4$ & $-3(3 c-5 \gamma+3)\left[\frac{2(c+\gamma)!(c-\gamma)(2 c+1)(2 c-9)!}{(c+\gamma-7)!(2 c+2)!}\right]^{1 / 2}$ \\
+\hline
+$a+3$ & $\{(c-3 \gamma+1)(13 c-15 \gamma+42)+60 \gamma\}\left[\frac{(c+\gamma)\lfloor(2 c+1)(2 c-8)!}{(c+\gamma-6)!(2 c+3)!}\right]^{7 / 2}$ \\
+\hline
+$a+2$ & $-2\{(c-3 \gamma+2)(c-9 \gamma+15)-12 \gamma(\gamma-2)\}\left[\frac{6(c+\gamma)!(c-\gamma+1)(2 c+1)(2 c-7)!}{(c+\gamma-5)!(2 c+4))!}\right]^{/ 2}$ \\
+\hline
+$a+1$ & $-\{(c-2 \gamma+3)(c+8 \gamma-12)+(\gamma+1)(\gamma-4)\}\left[\frac{42(c+\gamma)!(c-\gamma+2)!(2 c+1)(2 c-6)!}{(c+\gamma-4)!(c-\gamma)!(2 c+5)!}\right]^{1 / 2}$ \\
+\hline
+a & $2\{c(c+1)-9 \gamma(\gamma-3)-24\}\left[\frac{35(c+\gamma)!(c-\gamma+3)!(2 c+1)(2 c-5)!}{(c+\gamma-3)!(c-\gamma)!(2 c+6)!}\right]^{1 / 2}$ \\
+\hline
+$a-1$ & $-\{(c+2 \gamma-2)(c-8 \gamma+13)+(\gamma+1)(\gamma-4)\}\left[\frac{42(c+\gamma)!(c-\gamma+4)!(2 c+1)(2 c-4)!}{(c+\gamma-2)!(c-\gamma)!(2 c+7)!}\right]^{/ 2}$ \\
+\hline
+$a-2$ & $-2\{(c+3 \gamma-1)(c+9 \gamma-14)-12 \gamma(\gamma-2))\left[\frac{6(c+\gamma)(c-\gamma+5)!(2 o+1)(2 c-3)!}{(c-\gamma)!(2 c+8)!}\right]^{/ / 2}$ \\
+\hline
+$a-3$ & $\{(c+3 \gamma)(13 c+15 \gamma-29)+60 \gamma\}\left[\frac{(c-\gamma+6)!(2 c+1)(2 c-2)!}{(c-\gamma)!(2 c+9)!}\right]^{1 / 2}$ \\
+\hline
+$a-4$ & $-3(3 c+5 \gamma)\left[\frac{2(c+\gamma+1)(c-\gamma+7)!(2 c+1)(2 c-1)!}{(c-\gamma)!(2 c+10)!}\right]^{/ 2}$ \\
+\hline
+$a-5$ & $3\left[\frac{5(c+\gamma+2)!(c-\gamma+8)!(2 c+1)!}{(c+\gamma)!(c-\gamma)!(2 c+11)!}\right]^{/ 2}$ \\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{table}[h]
+\begin{center}
+\captionsetup{labelformat=empty}
+\caption{Table 8.10. (Cont.)}
+\begin{tabular}{|l|l|}
+\hline
+$c$ & $\beta=2$ \\
+\hline
+$a+5$ & $2\left[\frac{30(c+\gamma)!(c-\gamma)!(2 c-10)!}{(c+\gamma-7)!(c-\gamma-3)!(2 c)!}\right]^{1 / 2}$ \\
+\hline
+$a+4$ & $-4(2 c-5 \gamma+2)\left[\frac{3(c+\gamma)!(c-\gamma)!(2 c+1)(2 c-9)!}{(c+\gamma-6)!(c-\gamma-2)!(2 c+2)!}\right]^{/ 2}$ \\
+\hline
+$a+3$ & $2\{(c+\gamma+1)(c-13 \gamma+9)+14 \gamma(2 \gamma-1)\}\left[\frac{6(c+\gamma)!(c-\gamma)(2 c+1)(2 c-8)!}{(c+\gamma-5)!(2 c+3)!}\right]^{1 / 2}$ \\
+\hline
+$a+2$ & $4\left\{(c+2)[2(c+6 \gamma+1)(c-3 \gamma+5)-25(c+1)]+30 \gamma\left(\gamma^{2}-1\right)\right\}\left[\frac{(c+\gamma)!(2 c+1)(2 c-7)!}{(c+\gamma-4)!(2 c+4)!}\right]^{/ 2}$ \\
+\hline
+$a+1$ & $-4\left\{(c+5)\left[(c+\gamma-1)^{2}-10 \gamma^{2}-4\right]-5 \gamma(c-1)^{2}+15\left(\gamma^{3}+5 \gamma-1\right)\right\}\left[\frac{7(c+\gamma)!(c-\gamma+1)(2 c+1)(2 c-6)!}{(c+\gamma-3)!(2 c+5)!}\right]^{/ 2}$ \\
+\hline
+a & $-4(\gamma-1)\left\{c(c+1)-3\left(\gamma^{2}-2 \gamma+2\right)\right\}\left[\frac{210(c+\gamma)!(c-\gamma+2)!(2 c+1)(2 c-5)!}{(c+\gamma-2)!(c-\gamma)!(2 c+6)!}\right]^{/ 2}$ \\
+\hline
+$a-1$ & $4\left\{(c-4)\left[(c-\gamma+2)^{2}-10 \gamma^{2}-4\right]+5 \gamma(c+2)^{2}-15\left(\gamma^{3}+5 \gamma-1\right)\right\}\left[\frac{7(c+\gamma)(c-\gamma+3)!(2 c+1)(2 c-4)!}{(c-\gamma)!(2 c+7)!}\right]^{1 / 2}$ \\
+\hline
+$a-2$ & $-4\left\{(c-1)[2(c-6 \gamma)(c+3 \gamma-4)+25 c]-30 \gamma\left(\gamma^{2}-1\right)\right\rangle\left[\frac{(c-\gamma+4)!(2 c+1)(2 c-3)!}{(c-\gamma)!(2 c+8)!}\right]^{/ 2}$ \\
+\hline
+$a-3$ & $-2\{(c-\gamma)(c+13 \gamma-8)+14 \gamma(2 \gamma-1)\}\left[\frac{6(c+\gamma+1)(c-\gamma+5)!(2 c+1)(2 c-2)!}{(c-\gamma)!(2 c+9)!}\right]^{/ 2}$ \\
+\hline
+$a-4$ & $4(2 c+5 \gamma)\left[\frac{3(c+\gamma+2)!(c-\gamma+6)!(2 c+1)(2 c-1)!}{(c+\gamma)!(c-\gamma)!(2 c+10)!}\right]^{/ 2}$ \\
+\hline
+a-5 & $-2\left[\frac{30(c+\gamma+3)!(c-\gamma+7)!(2 c+1)!}{(c+\gamma)!(c-\gamma)!(2 c+11)!}\right]^{/ 2}$ \\
+\hline
+$c$ & $\beta=1$ \\
+\hline
+$a+5$ & $\left[\frac{210(c+\gamma)!(c-\gamma)!(2 c-10)!}{(c+\gamma-6)!(c-\gamma-4)!(2 c)!}\right]^{/ 3}$ \\
+\hline
+$a+4$ & $-2(c-5 \gamma+1)\left[\frac{21(c+\gamma)!(c-\gamma)!(2 c+1)(2 c-9)!}{(c+\gamma-5)!(c-\gamma-3)!(2 c+2)!}\right]^{/ 2}$ \\
+\hline
+$a+3$ & $-\{(c+\gamma+1)(c+5 \gamma-6)-10 \gamma(2 \gamma-1)\}\left[\frac{42(c+\gamma)!(c-\gamma)!(2 c+1)(2 c-8)!}{(c+\gamma-4)!(c-\gamma-2)!(2 c+3)!}\right]^{1 / 2}$ \\
+\hline
+$a+2$ & $4((c+\gamma-3)(c+\gamma+1)(c-5 \gamma+2)+10 \gamma(\gamma-1)(2 \gamma-1)\}\left[\frac{7(c+\gamma)!(c-\gamma)(2 c+1)(2 c-7)!}{(c+\gamma-3)!(2 c+4)!}\right]^{/ 3}$ \\
+\hline
+$a+1$ & $2\left\{(c+1)\left(c^{2}-4\right)(c-14 \gamma-15)+14 c \gamma(c-2 \gamma+3)(3 c+3 \gamma-5)-28 \gamma(5 c \gamma+2)+105 \gamma(\gamma-1)\left(\gamma{ }^{2}-\gamma+2\right)\right]\left[\frac{(c+\gamma)!(2 c+1)(2 c-6)!}{(c+\gamma-2)!(2 c+5)!}\right]^{/ 2}$ \\
+\hline
+a & $-2\{[c(c+1)-2][c(c+1)-6]-7 \gamma(\gamma-1)[2 c(c+1)-3 \gamma(\gamma-1)-6]\}\left[\frac{30(c+\gamma)(c-\gamma+1)(2 c+1)(2 c-5)!}{(2 c+6)!}\right]^{/ 2}$ \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[h]
+\begin{center}
+\captionsetup{labelformat=empty}
+\caption{Table 8.10. (Cont.)}
+\begin{tabular}{|l|l|}
+\hline
+c & $\beta=1$ \\
+\hline
+$a-1$ & $4\{(c-\gamma+4)(c-\gamma)(c+5 \gamma-1)-10 \gamma(\gamma-1)(2 \gamma-1)\}\left[\frac{7(c+\gamma+1)(c-\gamma+3)!(2 c+1)(2 c-3)!}{(c-\gamma)!(2 c+8)!}\right]^{1 / 2}$ \\
+\hline
+$c$ & $\beta=0$ \\
+\hline
+$a+5$ & $6_{\gamma}\left[\frac{70(c+\gamma)!(c-\gamma)!(2 c+1)(2 c-9)!}{(c+\gamma-4)!(c-\gamma-4)!(2 c+2)!}\right]^{/ 2}$ \\
+\hline
+$a+3$ & $-2\left\{(c-3)(c+1)-9 \gamma^{2}\right\}\left[\frac{35(c+\gamma)!(c-\gamma)!(2 c+1)(2 c-8)!}{(c+\gamma-3)!(c-\gamma-3)!(2 c+3)!}\right]^{1 / 2}$ \\
+\hline
+$a+2$ & $-4 \gamma\left\{(c-2)(c+1)-3 \gamma^{2}-1\right\}\left[\frac{210(c+\gamma)!(c-\gamma)!(2 c+1)(2 c-7)!}{(c+\gamma-2)!(c-\gamma-2)!(2 c+4)!}\right]^{1 / 2}$ \\
+\hline
+$a+1$ & $2\left\{(c-1)(c+1)\left(c^{2}-14 \gamma^{2}-4\right)+21 \gamma^{2}\left(\gamma^{2}+1\right)\right\}\left[\frac{30(c+\gamma)(c-\gamma)(2 c+1)(2 c-6)!}{(2 c+5)!}\right]^{1 / 2}$ \\
+\hline
+a & $4 \gamma\left\{5 c(c+1)\left[3 c(c+1)-14 \gamma^{2}-10\right]+21 \gamma^{2}\left(3 \gamma^{2}+5\right)+12\right\}\left[\frac{(2 c+1)(2 c-5)!}{(2 c+6)!}\right]^{1 / 2}$ \\
+\hline
+$a-1$ & $-2\left\{c(c+2)\left[(c+1)^{2}-14 \gamma^{2}-4\right]+21 \gamma^{2}\left(\gamma^{2}+1\right)\right\}\left[\frac{30(c+\gamma+1)(c-\gamma+1)(2 c+1)(2 c-4)!}{(2 c+7)!}\right]^{1 / 2}$ \\
+\hline
+$a-2$ & $-4 \gamma\left\{(c+3) c-3 \gamma^{2}-1\right\}\left[\frac{210(c+\gamma+2)!(c-\gamma+2)!(2 c+1)(2 c-3)!}{(c+\gamma)!(c-\gamma)!(2 c+8)!}\right]^{1 / 2}$ \\
+\hline
+$a-3$ & $2\left\{(c+4) c-9 \gamma^{2}\right\}\left[\frac{35(c+\gamma+3)!(c-\gamma+3)!(2 c+1)(2 c-2)!}{(c+\gamma)!(c-\gamma)!(2 c+9)!}\right]^{/ 2}$ \\
+\hline
+$a-4$ & $6 \gamma\left[\frac{70(c+\gamma+4)!(c-\gamma+4)!(2 c+1)(2 c-1)!}{(c+\gamma)!(c-\gamma)!(2 c+10)!}\right]^{1 / 2}$ \\
+\hline
+$a-5$ & $-6\left[\frac{7(c+\gamma+5)!(c-\gamma+5)!(2 c+1)!}{(c+\gamma)!(c-\gamma)!(2 c+11)!}\right]^{1 / 2}$ \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+Clebsch-Gordan Coefficients and 3jm Symbols 283
+
+\begin{table}[h]
+\begin{center}
+\captionsetup{labelformat=empty}
+\caption{Table 8.11.\\
+Numerical Values of the Clebsch-Gordan Coefficients.}
+\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|}
+\hline
+$\boldsymbol{a}$ & $а$ & $\boldsymbol{b}$ & $\beta$ & \multicolumn{2}{|c|}{$C_{\text {oa } \delta \beta}^{0 \alpha+\beta}$} & $a$ & $а$ & $b$ & $\beta$ & \multicolumn{2}{|c|}{$C_{\text {as } 43}^{1 / 243}$} \\
+\hline
+0 & 0 & 0 & 0 & 1 & 1.000000 & 5/2 & 5/2 & 2 & -2 & $1 / \sqrt{3}$ & 0.577350 \\
+\hline
+1/2 & 1/2 & 1/2 & $-1 / 2$ & $1 / \sqrt{2}$ & 0.707107 & 5/2 & 3/2 & 2 & -1 & $-2 / \sqrt{3.5}$ & -0.516398 \\
+\hline
+1 & 1 & 1 & -1 & $1 / \sqrt{3}$ & 0.577350 & 5/2 & 3/2 & 2 & -2 & 1/ $\sqrt{3 \cdot 5}$ & 0.258199 \\
+\hline
+1 & 0 & 1 & 0 & $-1 / \sqrt{3}$ & -0.577350 & 5/2 & 1/2 & 2 & 0 & $1 / \sqrt{5}$ & 0.447214 \\
+\hline
+ &  &  &  &  &  & 5/2 & 1/2 & 2 & -1 & $-\sqrt{2 / 3 \cdot 5}$ & -0.365148 \\
+\hline
+3/2 & 3/2 & 3/2 & -3/2 & $-1 / 2$ & -0.500000 & 3 & 3 & 5/2 & -5/2 & $\sqrt{2 / 7}$ & 0.534522 \\
+\hline
+2 & 2 & 2 & -2 & $1 / \sqrt{5}$ & 0.447214 & 3 & 2 & 5/2 & -3/2 & $-\sqrt{5 / 3 \cdot 7}$ & -0.487950 \\
+\hline
+2 & 1 & 2 & -1 & $-1 / \sqrt{5}$ & -0.447214 & 3 & 2 & 5/2 & -5/2 & $1 / \sqrt{3 \cdot 7}$ & 0.218218 \\
+\hline
+2 & 0 & 2 & 0 & $1 / \sqrt{5}$ & 0.447214 & 3 & 1 & 5/2 & -1/2 & $2 / \sqrt{3 \cdot 7}$ & 0.436436 \\
+\hline
+ &  &  &  &  &  & 3 & 1 & 5/2 & $-3 / 2$ & $-\sqrt{2} / \sqrt{3.7}$ & -0.308607 \\
+\hline
+5/2 & 5/2 & 5/2 & -5/2 & $1 / \sqrt{2 \cdot 3}$ & 0.408248 & 3 & 0 & 5/2 & 1/2 & $-1 / \sqrt{7}$ & -0.377964 \\
+\hline
+5/2 & 3/2 & 5/2 & -3/2 & $-1 / \sqrt{2 \cdot 3}$ & -0.408248 &  &  &  &  &  &  \\
+\hline
+5/2 & 1/2 & 5/2 & -1/2 & $1 / \sqrt{2 \cdot 3}$ & 0.408248 & $a$ & $а$ & $b$ & $\beta$ & \multicolumn{2}{|c|}{$C_{\alpha \varepsilon}^{1 a+\beta}$} \\
+\hline
+3 & 3 & 3 & -3 & $1 / \sqrt{7}$ & 0.377964 &  &  &  &  &  &  \\
+\hline
+3 & 2 & 3 & -2 & $-1 / \sqrt{7}$ & -0.377964 & 1/2 & 1/2 & 1/2 & 1/2 & 1 & 1.000000 \\
+\hline
+3 & 1 & 3 & -1 & $1 / \sqrt{7}$ & 0.377964 & 1/2 & 1/2 & 1/2 & -1/2 & $1 / \sqrt{2}$ & 0.707107 \\
+\hline
+3 & 0 & 3 & 0 & $-1 / \sqrt{7}$ & -0.377964 &  & 1 & 0 & 0 & 1 & 1.000000 \\
+\hline
+ &  &  &  &  &  & 1 & 0 & 0 & 0 & 1 & 1.000000 \\
+\hline
+$а$ & $\alpha$ & $\boldsymbol{b}$ & $\beta$ & \multicolumn{2}{|c|}{$C_{a \alpha b \beta}^{1 / 2 \alpha+\beta}$} & 1 & 1 & 1 & 0 & $1 / \sqrt{2}$ & 0.707107 \\
+\hline
+ &  &  &  &  &  & 1 & 0 & 1 & -1 & $1 / \sqrt{2}$ & 0.707107 \\
+\hline
+1/2 & 1/2 & 0 & 0 & 1 & 1.000000 &  &  &  &  &  &  \\
+\hline
+1 & 1 & 1/2 & -1/2 & $\sqrt{2 / 3}$ & 0.816497 & 3/2 & 3/2 & 1/2 & -1/2 & $\sqrt{3 / 2}$ & 0.866025 \\
+\hline
+1 & 0 & 1/2 & 1/2 & $-1 / \sqrt{3}$ & -0.577350 & 3/2 & 1/2 & 1/2 & 1/2 & -1/2 & -0.500000 \\
+\hline
+3/2 & 3,2 & 1 & -1 & $1 / \sqrt{2}$ & 0.707107 & 3/2 & 1/2 & 1/2 & -1/2 & $1 / \sqrt{2}$ & 0.707107 \\
+\hline
+3/2 & 1/2 & 1 & 0 & $-1 / \sqrt{3}$ & -0.577350 & 3/2 & 3/2 & 3/2 & -1/2 & $\sqrt{3 / 2 \cdot 5}$ & 0.547723 \\
+\hline
+3/2 & 1/2 & 1 & -1 & $1 / \sqrt{2 \cdot 3}$ & 0.408248 & 3/2 & 3/2 & 3/2 & -3/2 & $3 /(2 \sqrt{5})$ & 0.670820 \\
+\hline
+2 & 2 & 3/2 & -3/2 & $\sqrt{2 / 5}$ & 0.632456 & 3/2 & 1/2 & 3/2 & 1/2 & $-\sqrt{2 / 5}$ & -0.632456 \\
+\hline
+2 & 1 & 3/2 & -1/2 & $-\sqrt{3 / 2 \cdot 5}$ & -0.547723 & 3/2 & 1/2 & 3/2 & $-1 / 2$ & $-1 /(2 \sqrt{5})$ & -0.223607 \\
+\hline
+2 & 1 & 3/2 & -3/2 & $1 / \sqrt{2 \cdot 5}$ & 0.316228 & 2 & 2 & 1 & -1 & $\sqrt{3 / 5}$ & 0.774597 \\
+\hline
+2 & 0 & 3,2 & 1/2 & 1/V5 & 0.447214 & 2 & 1 & 1 & 0 & $-\sqrt{3 / 2 \cdot 5}$ & -0.547723 \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[h]
+\begin{center}
+\captionsetup{labelformat=empty}
+\caption{Table 8.11. (Cont.)}
+\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|}
+\hline
+$a$ & $\alpha$ & $\boldsymbol{b}$ & $\beta$ & \multicolumn{2}{|c|}{$C_{a a b \beta}^{1 \alpha+\beta}$} & $a$ & $\boldsymbol{a}$ & $b$ & $\beta$ & \multicolumn{2}{|c|}{$C^{3 / 2 \alpha+\beta}$ яа ора} \\
+\hline
+2 & 1 & 1 & -1 & $\sqrt{3 / 2 \cdot 5}$ & 0.547723 & 3/2 & 3/2 & 1 & 0 & $\sqrt{3} / \sqrt{5}$ & 0.774597 \\
+\hline
+2 & 0 & 1 & 1 & 1/ $\sqrt{2 \cdot 5}$ & 0.316228 & 3/2 & 3/2 & 1 & -1 & $\sqrt{2} / \sqrt{5}$ & 0.632456 \\
+\hline
+2 & 0 & 1 & 0 & $-\sqrt{2 / 5}$ & -0.632456 & 3/2 & 1/2 & 1 & 1 & $-\sqrt{2} / \sqrt{5}$ & -0.632456 \\
+\hline
+2 & 2 & 2 & -1 & $1 / \sqrt{5}$ & 0.447214 & 3/2 & 1/2 & 1 & 0 & $1 / \sqrt{3 \cdot 5}$ & 0.258199 \\
+\hline
+2 & 2 & 2 & -2 & $\sqrt{2 / 5}$ & 0.632456 & 3/2 & 1/2 & 1 & -1 & $2 \sqrt{2} / \sqrt{3 \cdot 5}$ & 0.730297 \\
+\hline
+2 & 1 & 2 & 0 & $-\sqrt{3 / 2 \cdot 5}$ & -0.547723 & 2 & 2 & 1/2 & -1/2 & $2 / \sqrt{5}$ & 0.894427 \\
+\hline
+2 & 1 & 2 & -1 & $-1 / \sqrt{2 \cdot 5}$ & -0.316228 & 2 & 1 & 1/2 & 1/2 & $-1 / \sqrt{5}$ & -0.447214 \\
+\hline
+2 & 0 & 2 & 0 & 0 & 0.000000 & 2 & 1 & 1/2 & $-1 / 2$ & $\sqrt{3} / \sqrt{5}$ & 0.774597 \\
+\hline
+5/2 & 5/2 & 3/2 & -3/2 & $1 / \sqrt{2}$ & 0.707107 & 2 & 0 & 1/2 & 1/2 & $-\sqrt{2} / \sqrt{5}$ & -0.632456 \\
+\hline
+5/2 & 3/2 & 3/2 & -1/2 & $-\sqrt{3 / 2 \cdot 5}$ & -0.547723 & 2 & 2 & 3/2 & -1/2 & $\sqrt{2} / \sqrt{5}$ & 0.632456 \\
+\hline
+5/2 & 3/2 & 3/2 & $-\frac{3}{2}$ & 1/55 & 0.447214 & 2 & 2 & 3/2 & -3/2 & $\sqrt{2} / \sqrt{5}$ & 0.632456 \\
+\hline
+5/2 & 1/2 & 3/2 & 1/2 & $\sqrt{3} /(2 \sqrt{5})$ & 0.387298 & 2 & 1 & 3/2 & 1/2 & $-\sqrt{2} / \sqrt{5}$ & -0.632456 \\
+\hline
+5/2 & 1/2 & 3/2 & -1/2 & $-\sqrt{3 / 2 \cdot 5}$ & -0.547723 & 2 & 1 & 3/2 & -1/2 & 0 & 0.000000 \\
+\hline
+5/2 & 1/2 & 3/2 & -3/2 & $1 /(2 \sqrt{5})$ & 0.223607 & 2 & 1 & 3/2 & -3/2 & $\sqrt{2} / \sqrt{5}$ & 0.632456 \\
+\hline
+5/2 & 5/2 & 5/2 & -3/2 & $1 / \sqrt{7}$ & 0.377964 & 2 & 0 & 3/2 & 3/2 & $1 / \sqrt{5}$ & 0.447214 \\
+\hline
+5/2 & 5/2 & 5/2 & -5/2 & $\sqrt{5} / \sqrt{2 \cdot 7}$ & 0.597614 & 2 & 0 & 3/2 & 1/2 & $-1 / \sqrt{5}$ & -0.447214 \\
+\hline
+5/2 & 3/2 & 5/2 & -1/2 & $-2 \sqrt{2} / \sqrt{5 \cdot 7}$ & -0.478091 & 5/2 & 5/2 & 1 & -1 & $\sqrt{2} / \sqrt{3}$ & 0.816497 \\
+\hline
+5/2 & 3/2 & 5/2 & -3/2 & $-3 / \sqrt{2 \cdot 5 \cdot 7}$ & -0.358569 & 5/2 & 3/2 & 1 & 0 & $-2 / \sqrt{3 \cdot 5}$ & -0.516398 \\
+\hline
+5/2 & 1/2 & 5/2 & 1/2 & $3 / \sqrt{5 \cdot 7}$ & 0.507093 & 5/2 & 3/2 & 1 & -1 & $\sqrt{2} / \sqrt{5}$ & 0.632456 \\
+\hline
+5/2 & 1/2 & 5/2 & -1/2 & $1 / \sqrt{2 \cdot 5 \cdot 7}$ & 0.119523 & 5/2 & 1/2 & 1 & 1 & $1 / \sqrt{3 \cdot 5}$ & 0.258199 \\
+\hline
+3 & 3 & 2 & -2 & $\sqrt{3 / 7}$ & 0.654654 & 5/2 & 1/2 & 1 & 0 & $-\sqrt{2} / \sqrt{5}$ & -0.632456 \\
+\hline
+3 & 2 & 2 & -1 & $-\sqrt{2 / 7}$ & -0.534522 & 5/2 & 1/2 & 1 & -1 & $1 / \sqrt{5}$ & 0.447214 \\
+\hline
+3 & 2 & 2 & -2 & $1 / \sqrt{7}$ & 0.377964 & 5/2 & 5/2 & 2 & -1 & $\sqrt{2} / \sqrt{7}$ & 0.534522 \\
+\hline
+3 & 1 & 2 & 0 & $\sqrt{2 \cdot 3 / 5 \cdot 7}$ & 0.414039 & 5/2 & 5/2 & 2 & -2 & $2 \sqrt{2} / \sqrt{3 \cdot 7}$ & 0.617213 \\
+\hline
+3 & 1 & 2 & -1 & $-2 \sqrt{2} / \sqrt{5 \cdot 7}$ & -0.478091 & 5/2 & 3/2 & 2 & 0 & $-2 \sqrt{3} / \sqrt{5 \cdot 7}$ & -0.585540 \\
+\hline
+3 & 1 & 2 & -2 & $1 / \sqrt{5 \cdot 7}$ & 0.169031 & 5/2 & 3/2 & 2 & -1 & $-\sqrt{2} / \sqrt{3 \cdot 5 \cdot 7}$ & -0.138013 \\
+\hline
+3 & 0 & 2 & 1 & $-\sqrt{3 / 5 \cdot 7}$ & -0.292770 & 5/2 & 3/2 & 2 & -2 & $4 \sqrt{2} / \sqrt{3 \cdot 5 \cdot 7}$ & 0.552052 \\
+\hline
+3 & 0 & 2 & 0 & $3 / \sqrt{5 \cdot 7}$ & 0.507093 & 5/2 & 1/2 & 2 & 1 & $3 / \sqrt{5 \cdot 7}$ & 0.507093 \\
+\hline
+3 & 3 & 3 & -2 & $\sqrt{3} /(2 \sqrt{7})$ & 0.327327 & 5/2 & 1/2 & 2 & 0 & $-\sqrt{2} / \sqrt{5 \cdot 7}$ & -0.239046 \\
+\hline
+3 & 3 & 3 & -3 & $3 /(2 \sqrt{7})$ & 0.566947 & 5/2 & 1/2 & 2 & -1 & $-\sqrt{5} / \sqrt{3 \cdot 7}$ & -0.487950 \\
+\hline
+3 & 2 & 3 & -1 & $-\sqrt{5} /(2 \sqrt{7})$ & -0.422577 & 5/2 & 1/2 & 2 & -2 & $2 / \sqrt{5 \cdot 7}$ & 0.338062 \\
+\hline
+3 & 2 & 3 & -2 & $-1 / \sqrt{7}$ & -0.377964 & 3 & 3 & 3/2 & $-3 / 2$ & $2 / \sqrt{7}$ & 0.755929 \\
+\hline
+3 & 1 & 3 & 0 & $\sqrt{3} / \sqrt{2 \cdot 7}$ & 0.462910 & 3 & 2 & 3/2 & $-1 / 2$ & $-\sqrt{2} / \sqrt{7}$ & -0.534522 \\
+\hline
+3 & 1 & 3 & -1 & 1/(2 $\sqrt{7}$ ) & 0.188982 & 3 & 2 & 3/2 & -3/2 & $\sqrt{2} / \sqrt{7}$ & 0.534522 \\
+\hline
+3 & 0 & 3 & 0 & 0 & 0.000000 & 3 & 1 & 3/2 & 1/2 & $2 / \sqrt{5 \cdot 7}$ & 0.338062 \\
+\hline
+ &  &  &  & \multicolumn{2}{|c|}{\multirow[b]{2}{*}{$C_{a \alpha{ }_{b}{ }^{3 / 2}{ }_{b}^{\alpha+\beta}}$}} & 3 & 1 & 3/2 & -1/2 & $-2 \sqrt{3} / \sqrt{5 \cdot 7}$ & -0.585540 \\
+\hline
+${ }^{a}$ & ${ }^{a}$ & $\boldsymbol{b}$ & ś &  &  & 3 & 1 & 3/2 & -3/2 & $2 / \sqrt{5 \cdot 7}$ & 0.338062 \\
+\hline
+ &  &  &  &  &  & 3 & 0 & 3/2 & 3/2 & $-1 / \sqrt{5 \cdot 7}$ & -0.169031 \\
+\hline
+1 & 1 & 1/2 & 1/2 & 1 & 1.000000 & 3 & 0 & 3/2 & 1/2 & $3 / \sqrt{5 \cdot 7}$ & 0.507093 \\
+\hline
+1 & 1 & 1/2 & -1/2 & $1 / \sqrt{3}$ & 0.577350 &  &  &  &  &  &  \\
+\hline
+1 & 0 & 1/2 & 1/2 & $\sqrt{2} / \sqrt{3}$ & 0.816497 & 3 & 3 & 5/2 & -3/2 & $\sqrt{3} / \sqrt{2 \cdot 7}$ & 0.462910 \\
+\hline
+3/2 & 3/2 & 0 & 0 & 1 & 1.000000 & 3 & 2 & 5/2 & -1/2 & $-\sqrt{2} / \sqrt{7}$ & -0.534522 \\
+\hline
+3/2 & 1/2 & 0 & 0 & 1 & 1.000000 & 3 & 2 & 5/2 & -3/2 & $-1 / \sqrt{3 \cdot 7}$ & -0.218218 \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[h]
+\begin{center}
+\captionsetup{labelformat=empty}
+\caption{Table 8.11. (Cont.)}
+\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|}
+\hline
+$a$ & $\alpha$ & $b$ & $\beta$ & \multicolumn{2}{|c|}{$C_{a \alpha{ }_{b \beta}{ }^{3 / 2}{ }_{b]}^{+\beta}}$} & $a$ & $а$ & $b$ & $\beta$ & \multicolumn{2}{|c|}{$C_{\text {ą }{ }_{\beta}^{2 \alpha+\beta}}^{2 \alpha+{ }_{\beta B}}$} \\
+\hline
+3 & 2 & 5/2 & -5/2 & $\sqrt{5} / \sqrt{3 \cdot 7}$ & 0.487950 & 5/2 & 5/2 & 3/2 & -1/2 & $\sqrt{2 \cdot 5} / \sqrt{3 \cdot 7}$ & 0. 690066 \\
+\hline
+3 & 1 & 5/2 & 1/2 & $3 / \sqrt{5 \cdot 7}$ & 0.507093 & 5/2 & 5/2 & 3/2 & $-3 / 2$ & $\sqrt{5} / \sqrt{2 \cdot 7}$ & 06597614 \\
+\hline
+3 & 1 & 5/2 & -1/2 & $-1 / \sqrt{3 \cdot 5 \cdot 7}$ & →0.097590 & 5/2. & 3/2 & 3/2 & 1/2 & $-2 \sqrt{2} / \sqrt{3 \cdot 7}$ & -0.617213 \\
+\hline
+3 & 1 & 5/2 & -3/2 & $-\sqrt{7} / \sqrt{2 \cdot 3 \cdot 5}$ & -0.483046 & 5/2 & 3/2 & 3/2 & $-\frac{1}{2}$ & $1 / \sqrt{2 \cdot 3 \cdot 7}$ & 0.154303 \\
+\hline
+3 & 1 & 5/2 & -5/2 & $1 / \sqrt{2} \cdot 7$ & '0.267261 & 5/2 & 3,2 & 3/2 & -3/2 & $\sqrt{3} / \sqrt{7}$ & 0.654654 \\
+\hline
+3 & 0 & 5/2 & 3/2 & $-\sqrt{2 \cdot 3} / \sqrt{5 \cdot 7}$ & -0.414039 & 5/2 & 1/2 & 3/2 & 3/2 & $1 / \sqrt{7}$ & 0,377964 \\
+\hline
+3 & 0 & 5/2 & 1/2 & $2 / \sqrt{5 \cdot 7}$ & 0.338062 & 5/2 & 1/2 & 3/2 & 1/2 & $-5 /(2 \sqrt{3 \cdot 7})$ & -0,545545 \\
+\hline
+ &  &  &  &  &  & 5/2 & 1/2 & 3/2 & -1/2 & $-1 / \sqrt{2 \cdot 7}$ & -0,267261 \\
+\hline
+$a$ & $\alpha$ & $b$ & $\beta$ & \multicolumn{2}{|c|}{$C_{\sigma \alpha}^{2 \alpha+\beta}$} & 5/2 & 1/2 & 3/2 & -3/2 & 3/(2 $\sqrt{7}$ ) & 0,566947 \\
+\hline
+1 & 1 & 1 & 1 & 1 & 1.000000 & 5/2 & 5/2 & 5/2 & $-1 / 2$ & $\sqrt{5} /(2 \sqrt{7})$ & 0, 422577 \\
+\hline
+1 & 1 & 1 & 0 & $1 / \sqrt{2}$ &  & 52, & 5/2 & 5/2 & -3/2 & $\sqrt{5} / \sqrt{2 \cdot 7}$ & 0.597614 \\
+\hline
+1 & 1 & 1 & -1 & $4 / \sqrt{2 \cdot 3}$ & 0.707107 & 5/2 & 5/2 & 5/2 & - 52 & $5 /(2 \sqrt{3 \cdot 7})$ & 0.545545 \\
+\hline
+1 & 0 & 1 & 0 & $\sqrt{2} / \sqrt{3}$ & 0.408248 & 5/2 & 3/2 & 5/2 & 12 & $-3 /(2 \sqrt{7})$ & -0.566947 \\
+\hline
+ &  &  &  &  & 0.816497 & 5/2 & 3/2 & 5/21 & -1/2 & $-1 / \sqrt{7}$ & -0.377964 \\
+\hline
+3/2 & 3/2 & 1/2 & 1/2 & 1 & 1.000000 & 5/2 & 3/2 & 5/2 & -3/2 & $1 /(2 \sqrt{3 \cdot 7})$ & 0,109109 \\
+\hline
+3/2 & 3/2 & 1/2 & -1/2 & 1/2 & 0.500000 & 52 & 1/2 & 5/2 & 1/2 & 0 & 0,000000 \\
+\hline
+3/2 & 1/2 & 1/2 & 12 & $\sqrt{3 / 2}$ & 0.866025 & 5/2 & 1/2 & 5/2 & -1/2 & $-2 / \sqrt{3.7}$ & -0.436436 \\
+\hline
+3/2 & 1/2 & 1/2 & $-1 / 2$ & $\mathbf{1} / \sqrt{ } \overline{\mathbf{2}}$ & 0.707107 & 3 & 3 & 1 & -1 & $\sqrt{5} / \sqrt{7}$ & $\mathbf{0}_{\mathbf{8}} 845154$ \\
+\hline
+3/2 & 3/2 & 3/2 & 1/2 & $1 / \sqrt{2}$ & 0.707107 & 3 & 2 & 1 & 0 & $-\sqrt{5} / \sqrt{3 \cdot 7}$ & -0,487950 \\
+\hline
+3/2 & 3/2 & 3/2 & -1/2 & $1 / \sqrt{2}$ & 0.707107 & 3 & 2 & 1 & -1 & $\sqrt{2 \cdot 5} / \sqrt{3 \cdot 7}$ & 0.690066 \\
+\hline
+3/2 & 3/2 & 3/2 & -3/2 & 1/2 & 0.500000 & 3 &  &  &  &  &  \\
+\hline
+3/2 & 1/2 & 3/2 & 1/2 & 0 & 0.000000 & 3 & 1 & 1 & 1 & $1 / \sqrt{3 \cdot 7}$ & 0.218218 \\
+\hline
+3/2 & 1/2 & 3/2 & $-\frac{1}{2}$ & 1/2 & 0.500000 & 3 & 1 & 1 & 0 & $-2 \sqrt{2} / \sqrt{3.7}$ & -0.617213 \\
+\hline
+2 & 2 & 0 & 0 & 1 & 1.000000 & 3 & 1 & 1 & -1 & $\sqrt{2} / \sqrt{7}$ & 0.534522 \\
+\hline
+2 & 1 & 0 & 0 & 1 & 1.000001 & 3 & 0 & 1 & 1 & $1 / \sqrt{7}$ & 0.377964 \\
+\hline
+2 & 0 & 0 & 0 & 1 & 1.000000 & 3 & 0 & 1 & 0 & $-\sqrt{3} / \sqrt{7}$ & -0.654654 \\
+\hline
+2 & 2 & 1 & 0 & $\sqrt{2} / \sqrt{3}$ & 0.816497 & 3 & 3 & 2 & -1 & $\sqrt{5} / \sqrt{2 \cdot 7}$ & 0.597614 \\
+\hline
+2 & 2 & 1 & -1 & $1 / \sqrt{3}$ & 0.577350 & 3 & 3 & 2 & -2 & $\sqrt{5} / \sqrt{2 \cdot 7}$ & 0.597614 \\
+\hline
+2 & 1 & 1 & 1 & $-1 / \sqrt{3}$ & -0.577350 & 3 & 2 & 2 & 0 & $-\sqrt{5} / \sqrt{2 \cdot 7}$ & -0.597614 \\
+\hline
+2 & 1 & 1 & 0 & $1 / \sqrt{2 \cdot 3}$ & 0.408248 & 3 & 2 & 2 & -1 & 0 & 0.000000 \\
+\hline
+2 & 1 & 1 & -1 & $1 / \sqrt{2}$ & 0.707107 & 3 & 2 & 2 & -2 & $\sqrt{5} / \sqrt{2 \cdot 7}$ & 0.597614 \\
+\hline
+2 & 0 & 1 & 1 & $-1 / \sqrt{2}$ & -0.707107 & 3 & 1 & 2 & 1 & $\sqrt{3} / \sqrt{2 \cdot 7}$ & 0.462910 \\
+\hline
+ &  &  &  & 0 & 0.000000 & 3 & 1 & 2 & 0 & $-1 / \sqrt{7}$ & -0.377964 \\
+\hline
+2 & 2 & 2 & 0 & $\sqrt{2} / \sqrt{7}$ & 0.534522 & 3 & 1 & 2 & -1 & $-1 / \sqrt{7}$ & -0.377964 \\
+\hline
+2 & 2 & 2 & -1 & $\sqrt{3} / \sqrt{7}$ & 0.654654 & 3 & 1 & 2 & -2 & $\sqrt{3} / \sqrt{2 \cdot 7}$ & 0,462910 \\
+\hline
+2 & 2 & 2 & -2 & $\sqrt{2} / \sqrt{7}$ & 0.534522 & 3 & 0 & 2 & 2 & $-1 / \sqrt{2 \cdot 7}$ & -0.267261 \\
+\hline
+2 & 1 & 2 & 1 & $-\sqrt{3} / \sqrt{7}$ & -0.654654 & 3 & 0 & 2 & 1 & $\sqrt{2} / \sqrt{7}$ & 0.534522 \\
+\hline
+2 & 1 & 2 & 0 & $-4 / \sqrt{2.7}$ & -0.267261 &  & 0 & 2 & 0 & 0 & 0,000000 \\
+\hline
+2 & 1 & 2 & -1 & $1 / \sqrt{2 \cdot 7}$ & 0.267261 & 3 & 3 & 3 & -1 & $\sqrt{5} / \sqrt{2 \cdot 3 \cdot 7}$ & 0.345033 \\
+\hline
+2 & 0 & 2 & 0 & $-\sqrt{2} / \sqrt{7}$ & -0.534522 & 3 & 3 & 3 & -2 & $5 /(2 \sqrt{3 \cdot 7})$ & 0.545545 \\
+\hline
+5/2 & 5/2 & 1/2 & -1/2 & $\sqrt{5} / \sqrt{2 \cdot 3}$ & 0.012871 & 3 & 3 & 3 & -3 & $5 /(2 \sqrt{3 \cdot 7})$ & 0.545545 \\
+\hline
+5/2 & 3/2 & 1/2 & 1/2 & $-1 / \sqrt{2 \cdot 3}$ & -0.40824S & 3 & 2 & 3 & 0 & $-\sqrt{5} / \sqrt{3.7}$ & -0.487950 \\
+\hline
+5/2 & 3/2 & 1/2 & -1/2 & $\sqrt{2} / \sqrt{3}$ & 0.816497 & 3 & 2 & 3 & -1 & $-\sqrt{5} /(2 \sqrt{7})$ & -0.422577 \\
+\hline
+5/2 & 1/2 & 1/2 & 1/2 & $-1 / \sqrt{3}$ & -0.577350 & 3 & 2 & 3 & -2 & 0 & 0.000000 \\
+\hline
+5,2 & 1/2 & 1/2 & -1/2 & $1 / \sqrt{2}$ & 0.707107 & 3 &  &  &  & $\sqrt{2} / \sqrt{7}$ & 0.534522 \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[h]
+\begin{center}
+\captionsetup{labelformat=empty}
+\caption{Table 8.11. (Cont.)}
+\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|}
+\hline
+$a$ & $\alpha$ & $b$ & $\beta$ & \multicolumn{2}{|c|}{$C_{\sigma \alpha}^{2 \alpha+3}$} & $a$ & $\alpha$ & $b$ & $\beta$ & \multicolumn{2}{|c|}{$C_{a_{\alpha} b 3}^{5 / 2 \alpha+\beta}$} \\
+\hline
+3 & 1 & 3 & 0 & $1 / \sqrt{2 \cdot 3 \cdot 7}$ & 0.154303 & 5/2 & 3/2 & 2 & 0 & $-1 / \sqrt{2 \cdot 5 \cdot 7}$ & -0.119523 \\
+\hline
+3 & 1 & 3 & -1 & $-\sqrt{3} /(2 \sqrt{7})$ & -0.327327 & 5/2 & 3/2 & 2 & -1 & $\sqrt{2 \cdot 3} / \sqrt{5 \cdot 7}$ & 0.414039 \\
+\hline
+3 & 0 & 3 & 0 & $2 / \sqrt{3 \cdot 7}$ & 0.436436 & 5/2 & 3/2 & 2 & -2 & $3 \sqrt{3} / \sqrt{2 \cdot 5 \cdot 7}$ & 0.621059 \\
+\hline
+\multirow{2}{*}{$a$} &  &  &  & \multicolumn{2}{|c|}{\multirow[b]{2}{*}{$C_{a \alpha b_{\beta}^{\beta}}^{3 / 2 \alpha+\beta}$}} & 5/2 & 1/2 & 2 & 2 & $\sqrt{3} / \sqrt{2 \cdot 7}$ & 0.462910 \\
+\hline
+ & $а$ & $b$ & $\beta$ &  &  & $5 / 2$ & 1/2 & 2 & 1 & $-\sqrt{2 \cdot 3} / \sqrt{5 \cdot 7}$ & -0.414039 \\
+\hline
+\multicolumn{6}{|c|}{\multirow{2}{*}{}} & 5/2 & 1/2 & 2 & 0 & $-2 \sqrt{2} / \sqrt{5 \cdot 7}$ & -0.478091 \\
+\hline
+ &  &  &  &  &  & 5/2 & 1/2 & 2 & -1 & 0 & 0.000000 \\
+\hline
+3/2 & 3/2 & 1 & 0 & $\sqrt{2 / 5}$ & 0.632456 & 5/2 & 1/2 & 2 & -2 & $3 \sqrt{3} / \sqrt{2 \cdot 5 \cdot 7}$ & 0.621059 \\
+\hline
+3/2 & 3/2 & 1 & -1 & $1 / \sqrt{2 \cdot 5}$ & 0.316228 & 3 & 3 & 1/2 & $-1 / 2$ & $\sqrt{2 \cdot 3} / \sqrt{7}$ & 0.925820 \\
+\hline
+3/2 & 1/2 & 1 & 1 & $\sqrt{3 / 5}$ & 0.774597 & 3 & 2 & 1/2 & 1/2 & $-1 / \sqrt{7}$ & -0.377964 \\
+\hline
+3/2 & 1/2 & 1 & 0 & $\sqrt{3 / 5}$ & 0.774597 & 3 & 2 & 1/2 & $-1 / 2$ & $\sqrt{5 / 7}$ & 0.845154 \\
+\hline
+3/2 & 1/2 & 1 & -1 & $\sqrt{3 / 2 \cdot 5}$ & 0.547723 & 3 & 1 & 1/2 & 1/2 & $-\sqrt{2 / 7}$ & -0.534522 \\
+\hline
+2 & 2 & 1/2 & 1/2 & 1 & 1.000000 & 3 & 1 & 1/2 & $-1 / 2$ & $2 / \sqrt{7}$ & 0.755929 \\
+\hline
+2 & 2 & 1/2 & -1/2 & $1 / \sqrt{5}$ & 0.447214 & 3 & 0 & 1/2 & 1/2 & $--\sqrt{3 / 7}$ & -0.654654 \\
+\hline
+2 & 1 & 1/2 & 1/2 & $2 / \sqrt{5}$ & 0.894427 & 3 & 3 & 3/2 & $-1 / 2$ & $\sqrt{3 \cdot 5} /(2 \sqrt{7})$ & 0.731925 \\
+\hline
+2 & 1 & 1/2 & -1/2 & $\sqrt{2 / 5}$ & 0.632456 & 3 & 3 & 3/2 & -3/2 & $3 /(2 \sqrt{7})$ & 0.566947 \\
+\hline
+2 & 0 & 1/2 & 1/2 & $\sqrt{3 / 5}$ & 0.774597 & 3 & 2 & 3/2 & 1/2 & $-\sqrt{5} / \sqrt{2 \cdot 7}$ & -0.597614 \\
+\hline
+2 & 2 & 3/2 & 1/2 & $2 / \sqrt{7}$ & 0.755929 & 3 & 2 & 3/2 & -1/2 & $1 / \sqrt{2 \cdot 7}$ & 0.267261 \\
+\hline
+2 & 2 & 3/2 & -1/2 & $4 / \sqrt{5 \cdot 7}$ & 0.676123 & 3 & 2 & 3/2 & -3/2 & $\sqrt{3} / \sqrt{7}$ & 0.654654 \\
+\hline
+2 & 2 & 3/2 & -3/2 & $\sqrt{2 \cdot 3} / \sqrt{5 \cdot 7}$ & 0.414039 & 3 & 1 & 3/2 & 3/2 & $\sqrt{3} /(2 \sqrt{7})$ & 0.327327 \\
+\hline
+2 & 1 & 3/2 & 3/2 & $-\sqrt{3 / 7}$ & -0.654654 & 3 & 1 & 3/2 & 1/2 & $-\sqrt{7} /(2 \sqrt{5})$ & -0.591608 \\
+\hline
+2 & 1 & 3/2 & 1/2 & $1 / \sqrt{5 \cdot 7}$ & 0.169031 & 3 & 1 & 3/2 & -1/2 & $-1 / \sqrt{2 \cdot 5 \cdot 7}$ & -0.119523 \\
+\hline
+2 & 1 & 3/2 & -1/2 & $\sqrt{5} / \sqrt{2 \cdot 7}$ & 0.597614 & 3 & 1 & 3/2 & -3/2 & $3 \sqrt{3} / \sqrt{2 \cdot 5 \cdot 7}$ & 0.621059 \\
+\hline
+2 & 1 & 3/2 & -3/2 & $3 \sqrt{3} / \sqrt{2 \cdot 5 \cdot 7}$ & 0.621059 & 3 & 0 & 3/2 & 3/2 & $3 / \sqrt{5 \cdot 7}$ & 0.507093 \\
+\hline
+2 & 0 & 3/2 & 3/2 & $-3 \sqrt{2} / \sqrt{5 \cdot 7}$ & -0.717137 & 3 & 0 & 3/2 & 1/2 & $-\sqrt{2 \cdot 3} / \sqrt{5 \cdot 7}$ & -0.414039 \\
+\hline
+2 & 0 & 3/2 & 1/2 & $-\sqrt{3} / \sqrt{5 \cdot 7}$ & -0.292770 &  &  &  &  &  &  \\
+\hline
+ &  &  &  &  &  & 3 & 3 & 5/2 & -1/2 & $\sqrt{5} / \sqrt{3 \cdot 7}$ & 0.487950 \\
+\hline
+5/2 & 5/2 & 0 & 0 & 1 & 1.000000 & 3 & 3 & 5/2 & -3/2 & $2 \sqrt{2} / \sqrt{3 \cdot 7}$ & 0.617213 \\
+\hline
+5/2 & 1/2 & 0 & 0 & 1 & 1.000000 & 3 & 3 & 5/2 & -5/2 & $\sqrt{5} / \sqrt{3 \cdot 7}$ & 0.487950 \\
+\hline
+5/2 & 5/2 & 1 & 0 & $\sqrt{5 / 7}$ & 0.845154 & 3 & 2 & 5/2 & 1/2 & $-\sqrt{5} / \sqrt{2 \cdot 7}$ & -0.597614 \\
+\hline
+5/2 & 5/2 & 1 & -1 & $\sqrt{2 / 7}$ & 0.534522 & 3 & 2 & 5/2 & -1/2 & $-1 / \sqrt{2 \cdot 7}$ & -0.267261 \\
+\hline
+5/2 & 3/2 & 1 & 1 & $-\sqrt{2 / 7}$ & -0.534522 & 3 & 2 & 5/2 & -3/2 & $1 / \sqrt{2 \cdot 7}$ & 0.267261 \\
+\hline
+5/2 & 3/2 & 1 & 0 & $3 / \sqrt{5.7}$ & 0.507093 & 3 & 2 & 5/2 & -5/2 & $\sqrt{5} / \sqrt{2 \cdot 7}$ & 0.597614 \\
+\hline
+5/2 & 3/2 & 1 & -1 & $4 / \sqrt{5 \cdot 7}$ & 0.676123 & 3 & 1 & 5/2 & 3/2 & $\sqrt{2 / 7}$ & 0.534522 \\
+\hline
+5/2 & 1/2 & 1 & 1 & $-4 / \sqrt{5.7}$ & -0.676123 & 3 & 1 & 5/2 & 1/2 & $-1 / \sqrt{5 \cdot 7}$ & -0.169031 \\
+\hline
+5/2 & 1/2 & 1 & 0 & $1 / \sqrt{5 \cdot 7}$ & 0.169031 & 3 & 1 & 5/2 & $-\frac{1}{2}$ & $-2 \sqrt{2} / \sqrt{5 \cdot 7}$ & -0.478091 \\
+\hline
+5/2 & 1/2 & 1 & -1 & $3 \sqrt{2} / \sqrt{5 \cdot 7}$ & 0.717137 & 3 & 1 & 5/2 & -3/2 & $-1 / \sqrt{5 \cdot 7}$ & -0.169031 \\
+\hline
+ &  &  &  &  &  & 3 & 1 & 5/2 & -5/2 & $\sqrt{2 / 7}$ & 0.534522 \\
+\hline
+5/2 & 5/2 & 2 & 0 & $\sqrt{5} / \sqrt{2 \cdot 7}$ & 0.597614 & 3 & 0 & 5/2 & 5/2 & $-\sqrt{5} / \sqrt{2 \cdot 3 \cdot 7}$ & -0.345033 \\
+\hline
+5/2 & 5/2 & 2 & -1 & $\sqrt{3 / 7}$ & 0.654654 & 3 & 0 & 5 & 3/2 & $\sqrt{7} / \sqrt{2 \cdot 3 \cdot 5}$ & 0.483046 \\
+\hline
+5/2 & 5/2 & 2 & -2 & $\sqrt{3} / \sqrt{2 \cdot 7}$ & 0.462910 & 3 & 0 & 5/2 & 12 & $2 \sqrt{2} / \sqrt{3 \cdot 5 \cdot 7}$ & 0.276026 \\
+\hline
+5/2 & 3/2 & 2 & 1 & $-\sqrt{3} / \sqrt{7}$ & -0.654654 &  &  &  &  & \multicolumn{2}{|c|}{} \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[h]
+\begin{center}
+\captionsetup{labelformat=empty}
+\caption{Table 8.11. (Cont.)}
+\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|}
+\hline
+$а$ & $\alpha$ & $b$ & $\beta$ & \multicolumn{2}{|c|}{$C_{\sigma \alpha}^{3 \alpha+\beta}{ }_{b \beta}$} & $\boldsymbol{a}$ & $\alpha$ & $b$ & $\beta$ & \multicolumn{2}{|c|}{$C_{a \alpha b \beta}^{3 \alpha+\beta} \boldsymbol{b} \boldsymbol{\beta}$} \\
+\hline
+3/2 & 3/2 & 3/2 & 3/2 & 1 & 1.000000 & 5/2 & 3/2 & 5/2 & 3/2 & -2/3 & -0.666667 \\
+\hline
+3/2 & 3/2 & 3/2 & 1/2 & $1 / \sqrt{2}$ & 0.707107 & 52 & 32 & 5/2 & 1/2 & $-1 /(2 \sqrt{3})$ & -0.288675 \\
+\hline
+3/2 & 3/2 & 3/2 & -1/2 & $1 / \sqrt{5}$ & 0.447214 & 5/2 & 3/2 & 5/2 & $-1 / 2$ & $1 / \sqrt{2 \cdot 3 \cdot 5}$ & 0.182574 \\
+\hline
+3/2 & 3/2 & 3/2 & -3/2 & $1 /(2 \sqrt{5})$ & 0.223607 & 5/2 & 3/2 & 5/2 & $-9 / 2$ & $7 /(2 \cdot 3 \sqrt{5})$ & 0.521749 \\
+\hline
+3/2 & 1/2 & 3/2 & 1/2 & $\sqrt{3} / \sqrt{5}$ & 0.774597 & 52 & 1/2 & 5/2 & 1/2 & $-2 / \sqrt{3 \cdot 5}$ & -0.516398 \\
+\hline
+3,2 & 1/2 & 3/2 & -1/2 & $3 /(2 \sqrt{5})$ & 0.670820 & 5/2 & 1/2 & 5/2 & $-1 / 2$ & $-2 /(3 \sqrt{5})$ & -0.298142 \\
+\hline
+2 & 2 & 1 & 1 & 1 & 1.000000 & 3 & 3 & 0 & 0 & 1 & 1,000000 \\
+\hline
+2 & 2 & 1 & 0 & $1 / \sqrt{3}$ & 0.577350 & 3 & 2 & 0 & 0 & 1 & 1.000000 \\
+\hline
+2 & 2 & 1 & -1 & $1 / \sqrt{3 \cdot 5}$ & 0.258199 & 3 & 0 & 0 & 0 & 1 & 1.000000 \\
+\hline
+2 & 1 & 1 & 1 & $\sqrt{2} / \sqrt{3}$ & 0.816497 & 3 & 3 & 1 & 0 & $\sqrt{3} / 2$ & 0.866025 \\
+\hline
+2 & 1 & 1 & 0 & $2 \sqrt{2} / \sqrt{3 \cdot 5}$ & 0.730297 & 3 & 3 & 1 & -1 & 1.2 & 0.500000 \\
+\hline
+2 & 1 & 1 & -1 & $1 / \sqrt{5}$ & 0.447214 &  & 2 & 1 & 1 & -1,2 & -0.500000 \\
+\hline
+2 & 0 & 1 & 1 & $\sqrt{2} / \sqrt{5}$ & 0.632456 & 3 & 2 & 1 & 0 & $1 / \sqrt{3}$ & 0.577350 \\
+\hline
+2 & 0 & 1 & 0 & $\sqrt{3} / \sqrt{5}$ & 0.774597 & 3 & 2 & 1 & -1 & $\sqrt{5} /(2 \sqrt{3})$ & 0.645497 \\
+\hline
+2 & 2 & 2 & 1 & $1 / \sqrt{2}$ & 0.707107 & 3 & 1 & 1 & 1 & $-\sqrt{5} /(2 \sqrt{3})$ & -0.645497 \\
+\hline
+2 & 2 & 2 & 0 & $1 / \sqrt{2}$ & 0.707107 & 3 & 1 & 1 & 0 & $1 /(2 \sqrt{3})$ & 0.288675 \\
+\hline
+2 & 2 & 2 & -1 & $\sqrt{3} / \sqrt{2 \cdot 5}$ &  & 3 & 1 & 1 & -1 & - $1 / \sqrt{2}$ & 0.707107 \\
+\hline
+2 & 2 & 2 & -2 & $1 / \sqrt{2 \cdot 5}$ & 0.547723 & 3 & 0 & 1 & 1 & $-1 / \sqrt{2}$ & -0.707107 \\
+\hline
+ &  &  &  &  &  & 3 & 0 & 1 & 0 & 0 & 0.000000 \\
+\hline
+2 & 1 & 2 & 1 & 0 & 0.000000 &  &  &  &  &  &  \\
+\hline
+2 & 1 & 2 & 0 & $1 / \sqrt{5}$ & 0.447214 & 3 & 3 & 2 & 0 & $\sqrt{5} /(2 \sqrt{3})$ & 0.645497 \\
+\hline
+2 & 1 & 2 & -1 & $\sqrt{2} / \sqrt{5}$ & 0.632456 & 3 & 3 & 2 & -1 & $\sqrt{5} /(2 \sqrt{3})$ & 0.645497 \\
+\hline
+2 & 0 & 2 & 0 & 0 & 0.000000 & 3 & 3 & 2 & -2 & $1 / \sqrt{2 \cdot 3}$ & 0.408248 \\
+\hline
+5/2 & 5/2 & 1/2 & $1 \frac{1}{2}$ & 1 & 1.000000 & 3 & 2 & 2 & 1 & $-\sqrt{5} /(2 \sqrt{3})$ & -0.645497 \\
+\hline
+ &  &  &  &  &  & 3 & 2 & 2 & 0 & 0 & 0.000000 \\
+\hline
+5/2 & 5/2 & 1/2 & -1/2 & $1 / \sqrt{2 \cdot 3}$ & 0.408248 & 3 & 2 & 2 & -1 & 1/2 & 0.500000 \\
+\hline
+5/2 & 3/2 & 1/2 & 1/2 & $\sqrt{5} / \sqrt{2 \cdot 3}$ & 0.912871 & 3 & 2 & 2 & -2 & $1 / \sqrt{3}$ & 0.577350 \\
+\hline
+5/2 & 3/2 & 1/2 & -1/2 & $1 / \sqrt{3}$ & 0.577350 & 3 & 1 & 2 & 2 & $1 / \sqrt{2 \cdot 3}$ & 0.408248 \\
+\hline
+5/2 & 1/2 & 1/2 & 1/2 & $\sqrt{2} / \sqrt{3}$ & 0.816497 & 3 & 1 & 2 & 1 & $-1 / 2$ & -0.500000 \\
+\hline
+5/2 & 1/2 & 1/2 & -1/2 & $1 / \sqrt{2}$ & 0.707107 & 3 & 1 & 2 & 0 & $-\sqrt{3} /(2 \sqrt{5})$ & -0.387298 \\
+\hline
+52 &  & 3/2 &  &  &  & 3 & 1 & 2 & -1 & $1 / \sqrt{2 \cdot 3 \cdot 5}$ & 0.182574 \\
+\hline
+ & 5/2 & 3/2 & 1/2 & $\sqrt{5} /(2 \sqrt{2})$ & 0.790569 & 3 & 1 & 2 & -2 & $\sqrt{2} / \sqrt{5}$ & 0.632456 \\
+\hline
+5/2 & 5/2 & 3/2 & -1/2 & $\sqrt{5} /(2 \sqrt{3})$ & 0.645497 & 3 & 0 & 2 & 2 & $1 / \sqrt{3}$ & 0.577350 \\
+\hline
+5/2 & 5/2 & 3/2 & -3/2 & $1 /(2 \sqrt{2})$ & 0.353553 & 3 & 0 & 2 &  & $-1 / \sqrt{2 \cdot 3 \cdot 5}$ & -0.182574 \\
+\hline
+5/2 & 3/2 & 3/2 & 3/2 & $-\sqrt{3} /(2 \sqrt{2})$ & -0.612372 & 3 & 0 & 2 & 0 & $-2 / \sqrt{3 \cdot 5}$ & -0.516398 \\
+\hline
+5/2 & 3/2 & 3/2 & 1/2 & $1 /(2 \sqrt{3})$ & 0.288675 &  &  &  &  &  &  \\
+\hline
+5/2 & 3/2 & 3/2 & -1/2 & $7 /(2 \sqrt{2 \cdot 3 \cdot 5})$ & 0.639010 & 3 & 3 & 3 & 0 & $1 / \sqrt{2 \cdot 3}$ & 0.408248 \\
+\hline
+5/2 & 3/2 & 3/2 & -3/2 & $\sqrt{3} / \sqrt{2 \cdot 5}$ & 0.547723 & 3 & 3 & 3 & -1 & $1 / \sqrt{3}$ & 0.577350 \\
+\hline
+5/2 & 1/2 & 3/2 & 3/2 & $-1 / \sqrt{2}$ & -0.707107 & 3 & 3 & 3 & -2 & $1 / \sqrt{3}$ & 0.577350 \\
+\hline
+5/2 & 1/2 & 3/2 & 1/2 & $-1 /(2 \sqrt{3 \cdot 5})$ & -0.129099 & 3 & 3 & 3 & -3 & $1 / \sqrt{2 \cdot 3}$ & 0.408248 \\
+\hline
+5/2 & 1/2 & 3/2 & -1/2 & $1 / \sqrt{5}$ & 0.447214 & 3 & 2 & 3 & 1 & $-1 / \sqrt{3}$ & -0.577350 \\
+\hline
+5/2 & 1/2 & 3/2 & -3/2 & $3 /(2 \sqrt{5})$ & 0.670820 & 3 & 2 & 3 & 0 & $-1 / \sqrt{2 \cdot 3}$ & -0.408248 \\
+\hline
+ &  &  &  &  &  & 3 & 2 & 3 & -1 & 0 & 0.000000 \\
+\hline
+5/2 & 5/2 & 5/2 & 1/2 & $\sqrt{5} /(3 \sqrt{2})$ & 0.527046 & 3 & 2 & 3 & -2 & $1 / \sqrt{2 \cdot 3}$ & 0.408248 \\
+\hline
+5/2 & 5/2 & 5/2 & -1/2 & $\sqrt{5} /(2 \sqrt{3})$ & 0.645497 & 3 & 1 & 3 & 1 & 0 & 0.000000 \\
+\hline
+5/2 & $\frac{5}{2}$ & 5/2 & $-3 / 2$ & $1 / \sqrt{3}$ & 0.577350 & 3 & 1 & 3 & 0 & $-1 / \sqrt{2 \cdot 3}$ & -0.408248 \\
+\hline
+5/2 & \includegraphics[max width=\textwidth, alt={}]{402d9a1b-ee97-49cb-ae14-75458391be12-301_36_45_2411_358}
+ &  &  & \multicolumn{2}{|c|}{} & 3 3 & 1 & 3 & -1 & $-1 / \sqrt{2 \cdot 3}$ & -0.408248 \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[h]
+\begin{center}
+\captionsetup{labelformat=empty}
+\caption{Table 8.12.\\
+Numerical Values of $\Delta(a b c)$ for $\frac{1}{2} \leqslant a, b, c \leqslant 5$.}
+\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|}
+\hline
+$а$ & $b$ & c & $\frac{1}{\Delta(a b c)}$ & $\Delta(a b c)$ & $а$ & $b$ & c & $\frac{1}{\Delta(a b c)}$ & $\Delta(a b c)$ \\
+\hline
+1/2 & 1/2 & 1 & $\sqrt{2 \cdot 3}$ & 0.408248 & 2 & 5/2 & 5/2 & $4 \sqrt{3 \cdot 5 \cdot 7}$ & $0.243975 \cdot 10^{-1}$ \\
+\hline
+1/2 & 1 & 3/2 & $2 \sqrt{3}$ & 0.288675 & 2 & 5/2 & 7/2 & $2 \cdot 3 \sqrt{2 \cdot 5 \cdot 7}$ & $0.199205 \cdot 10^{-1}$ \\
+\hline
+1/2 & 3/2 & 2 & $2 \sqrt{5}$ & 0.223607 & 2 & 5/2 & 9/2 & $2 \cdot 3 \sqrt{5 \cdot 7}$ & $0.281718 \cdot 10^{-1}$ \\
+\hline
+1/2 & 2 & 5/2 & $\sqrt{2 \cdot 3 \cdot 5}$ & 0.182574 & 2 & 3 & 3 & $2 \cdot 3 \sqrt{3 \cdot 5 \cdot 7}$ & $0.162650 \cdot 10^{-1}$ \\
+\hline
+1/2 & 5/2 & 3 & $\sqrt{2 \cdot 3 \cdot 7}$ & 0.154303 & 2 & 3 & 4 & $4 \cdot 3 \sqrt{5 \cdot 7}$ & $0.140859 \cdot 10^{-1}$ \\
+\hline
+1/2 & 3 & 7/2 & $2 \sqrt{2 \cdot 7}$ & 0.133631 & 2 & 3 & 5 & $\sqrt{2 \cdot 3 \cdot 5 \cdot 7 \cdot 11}$ & $0.208063 \cdot 10^{-1}$ \\
+\hline
+1/2 & 7/2 & 4 & $2 \cdot 3 \sqrt{2}$ & 0.117851 & 2 & 7/2 & 7/2 & $2 \cdot 3 \sqrt{2 \cdot 3 \cdot 5 \cdot 7}$ & $0.115011 \cdot 10^{-1}$ \\
+\hline
+1/2 & 4 & 9/2 & $3 \sqrt{2 \cdot 5}$ & 0.105409 & 2 & 7/2 & 9/2 & $2 \sqrt{2 \cdot 3 \cdot 5 \cdot 7 \cdot 11}$ & $0.104031 \cdot 10^{-1}$ \\
+\hline
+1/2 & 9/2 & 5 & $\sqrt{2 \cdot 5 \cdot 11}$ & $0.953463 \cdot 10^{-1}$ & 2 & 4 & 4 & $2 \cdot 3 \sqrt{5 \cdot 7 \cdot 11}$ & $0.849412 \cdot 10^{-2}$ \\
+\hline
+1 & 1 & 1 & $2 \sqrt{2 \cdot 3}$ & 0.204124 & 2 & 4 & 5 & $4 \cdot 3 \sqrt{2 \cdot 5 \cdot 11}$ & $0.794552 \cdot 10^{-2}$ \\
+\hline
+1 & 1 & 2 & $\sqrt{2 \cdot 3 \cdot 5}$ & 0.182574 & 2 & 9/2 & 9/2 & $4 \cdot 3 \sqrt{3 \cdot 5 \cdot 11}$ & $0.648749 \cdot 10^{-2}$ \\
+\hline
+1 & 3/2 & 3/2 & $2 \sqrt{3 \cdot 5}$ & 0.129099 & 2 & 5 & 5 & $3 \sqrt{2 \cdot 3 \cdot 5 \cdot 11 \cdot 13}$ & $0.508921 \cdot 10^{-2}$ \\
+\hline
+1 & 3/2 & 5/2 & $2 \sqrt{3 \cdot 5}$ & 0.129099 & 5/2 & 5/2 & 3 & $4 \cdot 3 \sqrt{5 \cdot 7}$ & $0.140859 \cdot 20^{-1}$ \\
+\hline
+1 & 2 & 2 & $2 \sqrt{2 \cdot 3 \cdot 5}$ & $0.912871 \cdot 10^{-1}$ & 5/2 & 5/2 & 4 & $2 \cdot 3 \cdot 5 \sqrt{7}$ & $0.125988 \cdot 10^{-1}$ \\
+\hline
+1 & 2 & 3 & $\sqrt{3 \cdot 5 \cdot 7}$ & $0.975900 \cdot 10^{-1}$ & 5/2 & 5/2 & 5 & $2 \cdot 3 \sqrt{7 \cdot 11}$ & $0.189934 \cdot 10^{-1}$ \\
+\hline
+1 & 5/2 & 5/2 & $\sqrt{2 \cdot 3 \cdot 5 \cdot 7}$ & $0.690066 \cdot 10^{-1}$ & 5/2 & 3 & 7/2 & $2 \cdot 3 \cdot 5 \sqrt{2 \cdot 7}$ & $0.890871 \cdot 10^{-2}$ \\
+\hline
+1 & 5/2 & 7/2 & $2 \sqrt{2 \cdot 3 \cdot 7}$ & $0.771517 \cdot 10^{-1}$ & 5/2 & 3 & 9/2 & $2 \cdot 3 \sqrt{5 \cdot 7 \cdot 11}$ & $0.849412 \cdot 10^{-2}$ \\
+\hline
+1 & 3 & 3 & $4 \sqrt{3 \cdot 7}$ & $0.545545 \cdot 10^{-1}$ & 5/2 & 7/2 & 4 & $2 \cdot 3 \sqrt{2 \cdot 5 \cdot 7 \cdot 11}$ & $0.600625 \cdot 10^{-2}$ \\
+\hline
+1 & 3 & 4 & $2 \cdot 3 \sqrt{7}$ & $0.629941 \cdot 10^{-1}$ & 5/2 & 7/2 & 5 & $2 \cdot 3 \sqrt{2 \cdot 5 \cdot 7 \cdot 11}$ & $0.600625 \cdot 10^{-2}$ \\
+\hline
+1 & 7/2 & 7/2 & $2 \cdot 3 \sqrt{2 \cdot 7}$ & $0.445435 \cdot 10^{-1}$ & 5/2 & 4 & 9/2 & $4 \cdot 3 \sqrt{5 \cdot 7 \cdot 11}$ & $0.424706 \cdot 10^{-2}$ \\
+\hline
+1 & 7/2 & 9/2 & $2 \cdot 3 \sqrt{2 \cdot 5}$ & $0.527046 \cdot 10^{-1}$ & 5/2 & 9/2 & 5 & $4 \cdot 3 \sqrt{5 \cdot 11 \cdot 13}$ & $0.311649 \cdot 10^{-2}$ \\
+\hline
+1 & 4 & 4 & $4 \cdot 3 \sqrt{5}$ & $0.372678 \cdot 10^{-1}$ & 3 & 3 & 3 & $4 \cdot 5 \sqrt{2 \cdot 3 \cdot 7}$ & $0.771517 \cdot 10^{-2}$ \\
+\hline
+1 & 4 & 5 & $3 \sqrt{5 \cdot 11}$ & $0.449467 \cdot 10^{-1}$ & 3 & 3 & 4 & $3 \cdot 5 \sqrt{2 \cdot 7 \cdot 11}$ & $0.537215 \cdot 10^{-2}$ \\
+\hline
+1 & 9/2 & 9/2 & $3 \sqrt{2 \cdot 5 \cdot 11}$ & $0.317821 \cdot 10^{-1}$ & 3 & 3 & 5 & $4 \cdot 3 \sqrt{3 \cdot 7 \cdot 11}$ & $0.548293 \cdot 10^{-2}$ \\
+\hline
+1 & 5 & 5 & $2 \sqrt{2 \cdot 3 \cdot 5 \cdot 11}$ & $0.275241 \cdot 10^{-1}$ & 3 & 7/2 & 7/2 & $2 \cdot 5 \sqrt{2 \cdot 3 \cdot 7 \cdot 11}$ & $0.465242 \cdot 10^{-2}$ \\
+\hline
+3/2 & 3/2 & 2 & $2 \cdot 3 \sqrt{5}$ & $0.745356 \cdot 10^{-1}$ & 3 & 7/2 & 9/2 & $2 \cdot 3 \sqrt{2 \cdot 3 \cdot 5 \cdot 7 \cdot 11}$ & $0.346771 \cdot 10^{-2}$ \\
+\hline
+3/2 & 3/2 & 3 & $2 \sqrt{5 \cdot 7}$ & $0.845154 \cdot 10^{-1}$ & 3 & 4 & 4 & $4 \cdot 3 \sqrt{2 \cdot 5 \cdot 7 \cdot 11}$ & $0.300312 \cdot 10^{-2}$ \\
+\hline
+3/2 & 2 & 5/2 & $2 \sqrt{3 \cdot 5 \cdot 7}$ & $0.487950 \cdot 10^{-1}$ & 3 & 4 & 5 & $2 \cdot 3 \sqrt{5 \cdot 7 \cdot 11 \cdot 13}$ & $0.235584 \cdot 10^{-2}$ \\
+\hline
+3/2 & 2 & 7/2 & $2 \sqrt{2 \cdot 5 \cdot 7}$ & $0.597614 \cdot 10^{-1}$ & 3 & 9/2 & 9/2 & $4 \sqrt{3 \cdot 5 \cdot 7 \cdot 11 \cdot 13}$ & $0.204022 \cdot 10^{-2}$ \\
+\hline
+3/2 & 5/2 & 3 & $2 \sqrt{2 \cdot 3 \cdot 5 \cdot 7}$ & $0.345033 \cdot 10^{-1}$ & 3 & 5 & 5 & $4 \sqrt{2 \cdot 3 \cdot 5 \cdot 7 \cdot 11 \cdot 13}$ & $0.144265 \cdot 10^{-2}$ \\
+\hline
+3/2 & 5/2 & 4 & $2 \cdot 3 \sqrt{2 \cdot 7}$ & $0.445435 \cdot 10^{-1}$ & 7/2 & 7/2 & 4 & $2 \cdot 3 \cdot 5 \sqrt{2 \cdot 7 \cdot 11}$ & $0.268608 \cdot 10^{-2}$ \\
+\hline
+$3!2$ & 3 & 7/2 & $2 \cdot 3 \sqrt{2 \cdot 3 \cdot 7}$ & $0.257172 \cdot 10^{-1}$ & 7/2 & 7/2 & 5 & $2 \cdot 3 \sqrt{2 \cdot 3 \cdot 7 \cdot 11 \cdot 13}$ & $0.215058 \cdot 10^{-2}$ \\
+\hline
+3/2 & 3 & 9/2 & $2 \sqrt{2 \cdot 3 \cdot 5 \cdot 7}$ & $0.345033 \cdot 10^{-1}$ & 7/2 & 4 & 9/2 & $2 \cdot 3 \sqrt{2 \cdot 5 \cdot 7 \cdot 11 \cdot 13}$ & $0.166583 \cdot 10^{-2}$ \\
+\hline
+3/2 & 7/2 & 4 & $2 \cdot 3 \sqrt{2 \cdot 5 \cdot 7}$ & $0.199205 \cdot 10^{-1}$ & 7/2 & 9/2 & 5 & $2 \cdot 7 \sqrt{2 \cdot 3 \cdot 5 \cdot 11 \cdot 13}$ & $0.109054 \cdot 10^{-2}$ \\
+\hline
+3/2 & 7/2 & 5 & $2 \sqrt{2 \cdot 3 \cdot 5 \cdot 11}$ & $0.275241 \cdot 10^{-1}$ & 4 & 4 & 4 & $3 \cdot 5 \sqrt{2 \cdot 7 \cdot 11 \cdot 13}$ & $0.148997 \cdot 10^{-2}$ \\
+\hline
+3/2 & 4 & 9/2 & $2 \cdot 3 \sqrt{2 \cdot 5 \cdot 11}$ & $0.158910 \cdot 10^{-1}$ & 4 & 4 & 5 & $4 \cdot 3 \cdot 7 \sqrt{11 \cdot 13}$ & $0.995526 \cdot 10^{-3}$ \\
+\hline
+3/2 & 9/2 & 5 & $2 \cdot 3 \sqrt{3 \cdot 5 \cdot 11}$ & $0.129750 \cdot 10^{-1}$ & 4 & 9/2 & 9/2 & $2 \cdot 3 \cdot 7 \sqrt{5 \cdot 11 \cdot 13}$ & $0.890426 \cdot 10^{-3}$ \\
+\hline
+2 & 2 & 2 & $3 \sqrt{2 \cdot 5 \cdot 7}$ & $0.398410 \cdot 10^{-1}$ & 4 & 5 & 5 & $3 \cdot 5 \cdot 7 \sqrt{2 \cdot 11 \cdot 13}$ & $0.563155 \cdot 10^{-3}$ \\
+\hline
+2 & 2 & 3 & $4 \sqrt{2 \cdot 5 \cdot 7}$ & $0.298807 \cdot 10^{-1}$ & 9/2 & 9/2 & 5 & $2 \cdot 3 \cdot 7 \sqrt{3 \cdot 5 \cdot 11 \cdot 13}$ & $0.514088 \cdot 10^{-3}$ \\
+\hline
+2 & 2 & 4 & $3 \sqrt{2 \cdot 5 \cdot 7}$ & $0.398410 \cdot 10^{-1}$ & 5 & 5 & 5 & $8 \cdot 3 \cdot 7 \sqrt{3 \cdot 11 \cdot 13}$ & $0.287384 \cdot 10^{-3}$ \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}

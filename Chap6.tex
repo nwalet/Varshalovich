@@ -1,0 +1,1891 @@
+\section*{Chapter 6}
+\section*{SPIN FUNCTIONS}
+\subsection*{6.1. SPIN FUNCTIONS OF PARTICLES WITH ARBITRARY SPIN}
+\subsection*{6.1.1. Definition}
+Spin functions describe polarization states of particles ${ }^{1}$ of definite spin, i.e. definite intrinsic angular momentum.
+
+The spin functions $\chi(\sigma)$ may be treated as functions of a discrete variable $\sigma$ which is the spin projection on the $z$-axis. The variable $\sigma$ takes $2 S+1$ values, $\sigma=-S,-S+1, \ldots, S-1, S$, where $S$ is the particle spin (integer or half integer nonnegative number). The quantity $|\chi(\sigma)|^{2}$ gives the probability that the spin projection on the $z$-axis in a given state equals $\sigma$.
+
+The spin functions are commonly written as column matrices which contain $2 S+1$ elements:
+
+\[
+\chi=\left(\begin{array}{c}
+\chi(S)  \tag{1}\\
+\chi(S-1) \\
+\vdots \\
+\chi(-S+1) \\
+\chi(-S)
+\end{array}\right)
+\]
+
+The elements of this matrix give the values of the spin function $\chi(\sigma)$ for corresponding values of spin variable $\sigma$. The quantities $\chi(\sigma)$ are called the contravariant components of the spin function $\chi$ (see Sec. 6.1.4 below).
+
+In such a representation operators acting on the spin variables take the form of square $(2 S+1) \times(2 S+1)$ matrices, and summation over the spin variable is replaced by matrix multiplication. The Hermitian conjugate function $\chi^{\dagger}$ has the form of a row matrix
+
+
+\begin{equation*}
+\chi^{\dagger}=\left(\chi^{*}(S), \chi^{*}(S-1), \ldots \chi^{*}(-S+1), \chi^{*}(-S)\right) . \tag{2}
+\end{equation*}
+
+
+The interpretation of $|\chi(\sigma)|^{2}$ as the probability for the spin projection on the $z$-axis to be equal to $\sigma$ is possible only if $\chi(\sigma)$ satisfies the normalization condition
+
+
+\begin{equation*}
+\sum_{\sigma=-S}^{S}|\chi(\sigma)|^{2}=1 \tag{3}
+\end{equation*}
+
+
+\footnotetext{${ }^{1}$ We use the name "particle" not only for an elementary particle (electron, nucleon, etc.) but also for any composite system (atom, molecule) which can be treated in phenomena under consideration as one object.
+}This condition may be written also in a matrix form
+
+
+\begin{equation*}
+\chi^{\dagger} \chi=1 \tag{4}
+\end{equation*}
+
+
+The above representation of spin functions is called the spherical basis representation. When the spin value is integer, one may also use the cartesian basis representation. The latter representation is considered below (Sec. 6.3) for spin-1 particles.
+
+\subsection*{6.1.2 Basis Spin Functions}
+According to definition, the basis spin functions describe the states with definite spin and spin projection on the $z$-axis. The basis spin functions are eigenfunctions of the operators $\widehat{\mathbf{S}}^{2}$ and $\widehat{S}_{z}$, where $\widehat{\mathbf{S}}$ is the spin operator (see Sec. 2.3)
+
+
+\begin{equation*}
+\widehat{\mathbf{S}}^{2} \chi_{S m}=S(S+1) \chi_{S m}, \widehat{S}_{z} \chi_{S m}=m \chi_{S m} \tag{5}
+\end{equation*}
+
+
+As follows from the definition, the dependence of the basis spin functions $\chi_{s_{m}}(\sigma)$ on the spin variable $\sigma$ is given by
+
+
+\begin{equation*}
+\chi s_{m}(\sigma)=\delta_{m \sigma} \tag{6}
+\end{equation*}
+
+
+In other words, contravariant components of the basis spin functions $\chi_{S_{m}}$ have the form
+
+
+\begin{equation*}
+\left[x_{s_{m}}\right]^{\sigma}=\delta_{m \sigma} \tag{7}
+\end{equation*}
+
+
+If the basis spin functions are written as column matrices, then
+
+\[
+\chi s s=\left(\begin{array}{c}
+1  \tag{8}\\
+0 \\
+\vdots \\
+0 \\
+0
+\end{array}\right), \quad \chi s s-1=\left(\begin{array}{c}
+0 \\
+1 \\
+\vdots \\
+0 \\
+0
+\end{array}\right), \ldots, \quad \chi_{s-s}=\left(\begin{array}{c}
+0 \\
+0 \\
+\vdots \\
+0 \\
+1
+\end{array}\right) .
+\]
+
+The collection of $2 S+1$ basis functions $\chi_{S m}(m=S, S-1, \ldots,-S)$ constitutes a complete orthonormal set of functions. The orthonormality condition for the basis functions is
+
+
+\begin{equation*}
+\chi_{S m}^{\dagger} \chi_{S_{m^{\prime}}}=\delta_{m m^{\prime}} \tag{9}
+\end{equation*}
+
+
+The completeness condition for the basis spin functions may be written in matrix form
+
+
+\begin{equation*}
+\sum_{m=-s}^{s} \chi_{s m} \chi_{S m}^{\dagger}=\widehat{I} \tag{10}
+\end{equation*}
+
+
+where $\widehat{I}$ is the unit $(2 S+1) \times(2 S+1)$ matrix.\\
+Matrix products $\chi_{S m} \chi_{S m^{\prime}}^{\dagger}$ of the basis spin functions are the square $(2 S+1) \times(2 S+1)$ matrices. They may be expanded in terms of the polarization operators $\widehat{T}_{L M}(S)$ (see 2.4),
+
+
+\begin{equation*}
+\chi_{S m} \chi_{S m^{\prime}}^{\dagger}=\sum_{L} \sqrt{\frac{2 L+1}{2 S+1}} C_{S m^{\prime} L M}^{S m} \hat{T}_{L M}(S) . \tag{11}
+\end{equation*}
+
+
+Matrix elements of spherical components of the spin operator $\widehat{S}_{\mu}(\mu= \pm 1,0)$ between the basis spin functions are given by
+
+
+\begin{equation*}
+\chi_{S m^{\prime}}^{\dagger} \widehat{S}_{\mu} \chi_{S m}=\sqrt{S(S+1)} C_{S m 1 \mu}^{S m^{\prime}} ; \tag{12}
+\end{equation*}
+
+
+The only nonvanishing matrix elements are the following:
+
+
+\begin{gather*}
+\chi_{S m+1}^{\dagger} \widehat{S}_{+1} \chi_{S m}=-\frac{1}{\sqrt{2}} \sqrt{(S-m)(S+m+1)} \\
+\chi_{S m}^{\dagger} S_{0} \chi_{S_{m}}=m  \tag{13}\\
+\chi_{S m-1}^{\dagger} \widehat{S}_{-1} \chi_{S m}=\frac{1}{\sqrt{2}} \sqrt{(S+m)(S-m+1)}
+\end{gather*}
+
+
+For cartesian components of the spin operator $\widehat{S}_{i}(i=x, y, z)$ the nonvanishing matrix elements are
+
+
+\begin{align*}
+& \chi_{S m \pm 1}^{\dagger} \widehat{S}_{x} \chi_{S m}=\frac{1}{2} \sqrt{(S \mp m)(S \pm m+1)} \\
+& \chi_{S m \pm 1}^{\dagger} \widehat{S}_{y} \chi_{S m}=\mp \frac{i}{2} \sqrt{(S \mp m)(S \pm m+1)}  \tag{14}\\
+& \chi_{S m}^{\dagger} \widehat{S}_{z} \chi_{S m}=m
+\end{align*}
+
+
+The matrix elements of the polarization operators $\hat{T}_{L M}(S)$ between the basis spin functions may be written as
+
+
+\begin{equation*}
+\chi_{S m^{\prime}}^{\dagger} \hat{T}_{L M}(S)_{\chi S_{m}}=\sqrt{\frac{2 L+1}{2 S+1}} C_{S m L M}^{S m^{\prime}} \tag{15}
+\end{equation*}
+
+
+Under rotations of the coordinate system the basis spin functions are transformed either by the rotation operator $\hat{D}^{S}(\alpha, \beta, \gamma)$ (Eq. 2.4(17)), if rotations are defined by the Euler angles $\alpha, \beta, \gamma$, or by the rotation operator $\hat{U}^{S}(\omega ; \theta, \Phi)$ (Eq. $2.4(18)$ ) if rotations are described by the rotation axis $\mathbf{n}(\theta, \Phi)$ and the rotation angle $\omega$
+
+
+\begin{align*}
+& \chi_{S m^{\prime}}^{\prime} \equiv \hat{D}^{S}(\alpha, \beta, \gamma) \chi_{S_{m^{\prime}}}=\sum_{m} D_{m m^{\prime}}^{S}(\alpha, \beta, \gamma) \chi_{S m} \\
+& \chi_{S m^{\prime}}^{\prime} \equiv \hat{U}^{S}(\omega ; \Theta, \Phi) \chi_{m_{m^{\prime}}}=\sum_{m} U_{m m^{\prime}}^{S}(\omega ; \Theta, \Phi) \chi_{S m} \tag{16}
+\end{align*}
+
+
+where $D_{m m^{\prime}}^{S}$ are the Wigner $D$-functions (Chap. 4), and $U_{m m^{\prime}}^{S}$ are the functions defined in Sec. 4.5. The functions $\chi_{S m^{\prime}}^{\prime}$ describe quantum states with definite spin $S$ and spin projection $m^{\prime}$ on the new $z^{\prime}$-axis. They are eigenfunctions of the operators $\widehat{\mathbf{S}}^{\prime 2}$ and $\widehat{S}_{x}^{\prime}$,
+
+
+\begin{gather*}
+\hat{\mathbf{s}}^{\prime 2} \chi_{S m^{\prime}}^{\prime}=S(S+1) \chi_{S m^{\prime}}^{\prime}  \tag{17}\\
+\hat{S}_{z}^{\prime} \chi_{S m^{\prime}}^{\prime}=m^{\prime} \chi_{S m^{\prime}}^{\prime}
+\end{gather*}
+
+
+Here $\widehat{\mathbf{S}}^{\prime}$ is the spin operator in the rotated coordinate system
+
+
+\begin{equation*}
+\widehat{S}_{\mu}^{\prime}=\sum_{\nu} D_{\nu \mu}^{1}(\alpha, \beta, \gamma) \widehat{S}_{\nu}, \quad(\mu, \nu= \pm 1,0) \tag{18}
+\end{equation*}
+
+
+\subsection*{6.1.3. Helicity Basis Functions}
+The spin projection on the linear momentum direction of a particle is called the helicity. For particles of spin $S$ the helicity $\lambda$ assumes $(2 S+1)$ values, $\lambda=S, S-1, \ldots,-S+1, S$.
+
+The helicity basis functions $\chi_{S \lambda}(\vartheta, \varphi)$, by definition, are the eigenfunctions of the operators $\widehat{\mathbf{S}}^{2}$ and $\widehat{\mathbf{S}} \cdot \mathbf{n}$ where $\widehat{\mathbf{S}}$ is the spin operator, $\mathbf{n}=\mathbf{p} / \mathbf{p}$ is the momentum direction of the particles, $\vartheta$ and $\varphi$ are the polar angles of the vector $n$,
+
+
+\begin{gather*}
+\widehat{\mathbf{S}}^{2} \chi_{S \lambda}(\vartheta, \varphi)=S(S+1) \chi_{S \lambda}(\vartheta, \varphi)  \tag{19}\\
+\widehat{\mathbf{S}} \cdot \mathbf{n}_{\chi_{s \lambda}}(\vartheta, \varphi)=\lambda \chi_{s_{\lambda}}(\vartheta, \varphi)
+\end{gather*}
+
+
+The function $\chi_{s \lambda}(\vartheta, \varphi)$ describes a quantum state with definite spin $S$ and helicity $\lambda$.\\
+The helicity basis functions $\chi_{S \lambda}(\vartheta, \varphi)$ may be expressed in terms of the basis functions $\chi_{S m}$ by means of the rotation which turns the $z$-axis parallel to $\mathbf{n}(\vartheta, \varphi)$. Such a rotation is determined by the Euler angles $\alpha=\varphi$, $\beta=\vartheta$. The third Euler angle $\gamma$ (the angle of rotation about the new $z^{\prime}$-axis) is arbitrary. For simplicity, let us adopt $\gamma=0$. In this case the rotated cartesian basis vectors $\mathrm{e}_{x}^{\prime}, \mathrm{e}_{y}^{\prime}, \mathrm{e}_{x}^{\prime}$ will coincide with the polar basis vectors $\mathbf{e}_{\theta}, \mathbf{e}_{\varphi}, \mathbf{e}_{\rho}$, respectively (Sec. 1.1.2). Making use of the transformation properties of the basis spin functions $\chi S_{m}$ under the rotation (16) we obtain
+
+
+\begin{gather*}
+\chi s_{\lambda}(\vartheta, \varphi)=\sum_{m} D_{m \lambda}^{S}(\varphi, \vartheta, 0) \chi_{s m}  \tag{20}\\
+\chi_{s m}=\sum_{\lambda} D_{-\lambda-m}^{s}(0, \vartheta, \varphi) \chi_{s \lambda}(\vartheta, \varphi)
+\end{gather*}
+
+
+For Hermitian adjoint functions we have
+
+
+\begin{align*}
+& \chi_{S \lambda}^{\dagger}(\vartheta, \varphi)=\sum_{m}(-1)^{\lambda-m} D_{-m-\lambda}^{S}(\varphi, \vartheta, 0) \chi_{S m}^{\dagger} \\
+& \chi_{S m}^{\dagger}=\sum_{\lambda}(-1)^{\lambda-m} D_{\lambda m}^{S}(0, \vartheta, \varphi) \chi_{S \lambda}^{\dagger}(\vartheta, \varphi) \tag{21}
+\end{align*}
+
+
+It follows from (7), (20), (21) that the contravariant components of the helicity basis functions have the form
+
+
+\begin{gather*}
+{\left[\chi_{s \lambda}(\vartheta, \varphi)\right]^{\sigma}=D_{\sigma \lambda}^{S}(\varphi, \vartheta, 0),} \\
+{\left[\chi_{S \lambda}^{\dagger}(\vartheta, \varphi)\right]^{\sigma}=(-1)^{\lambda-\sigma} D_{-\sigma-\lambda}^{S}(\varphi, \vartheta, 0) .} \tag{22}
+\end{gather*}(\sigma, \lambda=-S,-S+1, \ldots S-1, S)
+
+
+The collection of $2 S+1$ helicity basis functions $\chi_{s \lambda}(\vartheta, \varphi)(\lambda=S, S-1, \ldots,-S)$ as well as the set of the functions $\chi_{S m}$ form complete orthonormal sets. The orthonormality condition for the helicity basis functions is
+
+
+\begin{equation*}
+\chi_{S \lambda}^{\dagger}(\vartheta, \varphi) \chi_{S \lambda^{\prime}}(\vartheta, \varphi)=\delta_{\lambda \lambda^{\prime}} \tag{23}
+\end{equation*}
+
+
+The completeness condition for these functions has the following matrix form
+
+
+\begin{equation*}
+\sum_{\lambda} \chi_{s \lambda}(\vartheta, \varphi) \chi_{S \lambda}^{\dagger}(\vartheta, \varphi)=\hat{I} \tag{24}
+\end{equation*}
+
+
+Matrix products $\chi_{S \lambda}(\vartheta, \varphi) \chi_{S \lambda^{\prime}}^{\dagger}(\vartheta, \varphi)$ of the helicity basis functions are the square $(2 S+1) \times(2 S+1)$ matrices. They may be expanded in terms of the polarization operators $\widehat{T}_{L M}(S)$ (see Sec. 2.4) as
+
+
+\begin{equation*}
+\chi_{S \lambda}(\vartheta, \varphi) \chi_{S \lambda^{\prime}}^{\dagger}(\vartheta, \varphi)=\sum_{L M} \sqrt{\frac{2 L+1}{2 S+1}} C_{S \lambda^{\prime} L A}^{S \lambda} D_{M A}^{L}(\varphi, \vartheta, 0) \widehat{T}_{L M}(S) \tag{25}
+\end{equation*}
+
+
+Matrix elements of the polarization operators between the helicity basis functions are given by
+
+
+\begin{equation*}
+\chi_{S \lambda^{\prime}}^{\dagger}(\vartheta, \varphi) \hat{T}_{L M}(S) \chi_{S \lambda}(\vartheta, \varphi)=\sqrt{\frac{2 L+1}{2 S+1}}(-1)^{M+\Lambda} C_{S \lambda L A}^{S \lambda^{\prime}} D_{-M-A}^{L}(\varphi, \vartheta, 0) \tag{26}
+\end{equation*}
+
+
+In particular, the diagonal matrix elements are
+
+
+\begin{equation*}
+\chi_{S \lambda}^{\dagger}(\vartheta, \varphi) \hat{T}_{L M}(S) \chi_{S \lambda}(\vartheta, \varphi)=\sqrt{\frac{4 \pi}{2 S+1}} C_{S \lambda L 0}^{S \lambda} Y_{L M}(\vartheta, \varphi) \tag{27}
+\end{equation*}
+
+
+\subsection*{6.1.4. General Spin Functions}
+Any spin function (1) of particles of spin $S$ can be expanded in sum of the basis spin functions $\chi_{S m}$,
+
+
+\begin{equation*}
+\chi=\sum_{m=-S}^{S} a^{m} \chi_{s_{m}}, \tag{28}
+\end{equation*}
+
+
+where $a^{m} \equiv \chi(m)$ is a contravariant component of some irreducible tensor of rank $S$. Similarly, the expansion of the Hermitian adjoint function $\chi^{\dagger}$ has the form
+
+
+\begin{equation*}
+\chi^{\dagger}=\sum_{m=-s^{\prime}}^{s}\left(a^{m}\right)^{*} \chi_{S m}^{\dagger} \tag{29}
+\end{equation*}
+
+
+In general, $\left(a^{m}\right)^{*} \neq a_{m}$, i.e., the corresponding irreducible tensor is not real. The normalization condition (4) imposes a restriction on $a^{m}$ :
+
+$$
+\sum_{m=-S}^{S}\left|a^{m}\right|^{2}=1
+$$
+
+The product $\chi \chi^{\dagger}$ of two spin functions represents the square $(2 S+1) \times(2 S+1)$ matrix which may be expanded in terms of the polarization operators $\widehat{T}_{L M}(S)$ (Sec. 2.4)
+
+
+\begin{equation*}
+\chi \chi^{\dagger}=\sum_{L=0}^{2 S} \sum_{M=-L}^{L}(-1)^{M} P_{L-M} \hat{T}_{L M}(S), \tag{30}
+\end{equation*}
+
+
+where the expansion coefficients may be expressed through $a^{m}$ as
+
+
+\begin{equation*}
+P_{L M}=\sqrt{\frac{2 L+1}{2 S+1}} \sum_{m, n=-S}^{S} C_{S m L M}^{S n}\left(a^{n}\right)^{*} a^{m} . \tag{31}
+\end{equation*}
+
+
+In particular, $P_{00}=1 / \sqrt{2 S+1}$.\\
+The quantities $P_{L M}(M=-L,-L+1, \ldots, L)$ are covariant components of some irreducible tensor of rank $L$. They represent the mean values of the polarization operators $\widehat{T}_{L M}(S)$ in the states described by the spin functions $\chi$ :
+
+
+\begin{equation*}
+\chi^{\dagger} \hat{T}_{L M}(S)_{\chi}=P_{L M} \tag{32}
+\end{equation*}
+
+
+Under complex conjugation $P_{L M}$ transforms as
+
+
+\begin{equation*}
+\left(P_{L M}\right)^{*}=(-1)^{M} P_{L-M} \tag{33}
+\end{equation*}
+
+
+The equality $\chi \chi^{\dagger} \chi \chi^{\dagger}=\chi \chi^{\dagger}$ implies the following conditions for the coefficients $P_{L M}$,
+
+\[
+P_{L M}=\sum_{L_{1} M_{1} L_{2} M_{2}}(-1)^{2 S+L_{1}+L_{2}} \sqrt{\left(2 L_{1}+1\right)\left(2 L_{2}+1\right)}\left\{\begin{array}{lll}
+L_{1} & L_{2} & L  \tag{34}\\
+S & S & S
+\end{array}\right\} C_{L_{1} M_{1} L_{2} M_{2}}^{L M} P_{L_{1} M_{1}} P_{L_{2} M_{2}}
+\]
+
+In particular, Eq. (34) gives the normalization condition
+
+
+\begin{equation*}
+\sum_{L=0}^{2 S} \sum_{M=-L}^{L}\left|P_{L M}\right|^{2}=1 \tag{35}
+\end{equation*}
+
+
+Under rotations of the coordinate system specified by the Euler angles $\alpha, \beta, \gamma$ the spin function $\chi$ is transformed by the rotation operator $\widehat{D}^{S}(\alpha, \beta, \gamma)$ (Eq. 2.4(17)) into
+
+
+\begin{equation*}
+\chi^{\prime}=\widehat{D}^{S}(\alpha, \beta, \gamma) \chi \tag{36}
+\end{equation*}
+
+
+The spin function $\chi^{\prime}$ in the rotated coordinate system may be expanded in sum of basis spin functions $\chi_{S m}$ or $\chi_{S m}^{\prime}$ in the original or rotated coordinate systems:
+
+
+\begin{equation*}
+\chi^{\prime}=\sum_{m=-S}^{S} a^{\prime m} \chi_{S m}=\sum_{m=-S}^{S} a^{m} \chi_{S m}^{\prime} \tag{37}
+\end{equation*}
+
+
+where $a^{m}$ and $a^{\prime m}$ are components of the spin function in the original and rotated systems, respectively. The relations between the basis functions $\chi_{S_{m}}$ and $\chi_{S_{m}}^{\prime}$ are given by Eq. (16). The transformation properties of $a^{m}$ under rotations are
+
+
+\begin{align*}
+a^{\prime m} & =\sum_{n=-S}^{S} D_{m n}^{S}(\alpha, \beta, \gamma) a^{n}  \tag{38}\\
+a^{n} & =\sum_{m=-S}^{S} D_{m n}^{S *}(\alpha, \beta, \gamma) a^{\prime m}
+\end{align*}
+
+
+in accordance with general transformation rule for contravariant components (Sec. 4.1.2).
+
+\subsection*{6.1.5. Polarization Density Matrix}
+Spin functions enable one to describe only the totally polarized (pure) particle states.\\
+For describing partially polarized states which are incoherent statistical mixtures of the pure states, the polarization density matrix is used.
+
+The polarization density matrix $\hat{\rho}$ of the particles of spin $S$ is the square $(2 S+1) \times(2 S+1)$ matrix defined by
+
+
+\begin{equation*}
+\rho_{\sigma \sigma^{\prime}}=\left\langle\chi(\sigma) \chi^{*}\left(\sigma^{\prime}\right)\right\rangle_{\xi} \tag{39}
+\end{equation*}
+
+
+or in a matrix form by
+
+
+\begin{equation*}
+\hat{\rho}=\left\langle x x^{\dagger}\right\rangle_{\xi}, \tag{40}
+\end{equation*}
+
+
+where ()$_{\epsilon}$ denotes the statistical average. In particular, for pure states one gets
+
+
+\begin{equation*}
+\hat{\rho}=\chi \chi^{\dagger} \tag{41}
+\end{equation*}
+
+
+The density matrix is Hermitian,
+
+
+\begin{equation*}
+\hat{\rho}^{\dagger}=\hat{\rho}, \quad \text { i.e., } \rho_{\sigma \sigma^{\prime}}^{*}=\rho_{\sigma^{\prime} \sigma} ; \tag{42}
+\end{equation*}
+
+
+and normalized,
+
+
+\begin{equation*}
+\operatorname{Tr} \hat{\rho}=1, \text { i.e., } \sum_{\sigma} \rho_{\sigma \sigma}=1 . \tag{43}
+\end{equation*}
+
+
+The conditions (42), (43) reveal that the density matrix of particles of spin $S$ is completely determined by $(2 S+1)^{2}-1=4 S(S+1)$ real parameters.
+
+An expectation value of any polarization operator $\widehat{T}$ in a state described by the density matrix $\widehat{\rho}$ may be evaluated by
+
+
+\begin{equation*}
+\langle\widehat{T}\rangle=\operatorname{Tr}\{\widehat{T} \widehat{\rho}\}=\operatorname{Tr}\{\widehat{\rho} \widehat{T}\} \tag{44}
+\end{equation*}
+
+
+Note also the following property of the density matrix
+
+
+\begin{equation*}
+\operatorname{Tr}\left\{\hat{\rho}^{2}\right\} \leq 1, \tag{45}
+\end{equation*}
+
+
+where the equality holds only for pure states. The density matrix of pure states satisfies the relation
+
+
+\begin{equation*}
+\hat{p}^{2} \pm \hat{p} . \tag{46}
+\end{equation*}
+
+
+The density matrix $\hat{\rho}$ may be expanded into a sum of the polarisation operators $\hat{T}_{L M}(S)$,
+
+
+\begin{equation*}
+\hat{\rho}=\sum_{L=0}^{2 S} \sum_{M=-L}^{L}(-1)^{M} t_{L-M} \hat{T}_{L M}(S) . \tag{47}
+\end{equation*}
+
+
+The expansion coefficients $t_{L M}$ are called the statistifal tensors. They represent expectation values of the polarization operators $\hat{T}_{L M}(S)$ in a state described by the density matrix $\hat{\rho}$,
+
+
+\begin{equation*}
+t_{L M}=\left\langle\widehat{T}_{L M}(S)\right\rangle=\operatorname{Tr}\left\{\hat{\rho} \widehat{T}_{L M}(S)\right\} . \tag{48}
+\end{equation*}
+
+
+The statistical tensors are related to the density matrix elements by
+
+
+\begin{gather*}
+t_{L M}=\sqrt{\frac{2 L+1}{2 S+1}} \sum_{\sigma, \sigma^{\prime}=-s}^{s} C_{S \sigma L M}^{S \sigma^{\prime}} \rho_{\sigma \sigma^{\prime}}  \tag{49}\\
+\rho_{\sigma \sigma^{\prime}}=\sum_{L, M} \sqrt{\frac{2 L+1}{2 S+1}} C_{S \sigma_{L M}^{\prime}}^{S \sigma_{L M}^{\prime}} \tag{50}
+\end{gather*}
+
+
+In particular,
+
+
+\begin{equation*}
+t_{00}=\frac{1}{\sqrt{2 S+1}} . \tag{51}
+\end{equation*}
+
+
+Under complex conjugation the statistical tensors transform as
+
+$$
+t_{L M}^{*}=(-1)^{M} t_{L-M} .
+$$
+
+The properties of the statistical tensors for pure (completely polarized) states have been considered above (Eqs. (31)-(35)). For unpolarised states all statistical tensors vanish except $t_{00}$, thus
+
+
+\begin{equation*}
+\hat{\rho}_{\text {unpol }}=\frac{1}{2 S+1} \hat{I}, \tag{52}
+\end{equation*}
+
+
+where $\widehat{I}$ is the unit matrix.\\
+The quantities $t_{L M}$ are covariant components of some irreducible tensor of rank $L$. Under rotations they transform in accordance with Eq. 4.1(2).
+
+\subsection*{6.1.6. Two Particles with Arbitrary Spins}
+Let us consider a system of two particles, 1 and 2 , with spins $S_{1}$ and $S_{2}$. Total spin $S$ of the system takes the values $\left|S_{1}-S_{2}\right|,\left|S_{1}-S_{2}\right|+1, \ldots, S_{1}+S_{2}$. The spin function $\chi_{S_{m}}(1,2)$ which describes the system with total spin $S$ and spin projection $m$ may be written as
+
+
+\begin{equation*}
+\chi S_{S_{m}}(1,2)=\sum_{m_{1} m_{2}} C_{S_{1} m_{1} s_{2} m_{2}}^{S m} \chi S_{S_{1} m_{1}}(1) \chi S_{S_{2} m_{2}}(2) . \tag{53}
+\end{equation*}
+
+
+The inverse relation is
+
+
+\begin{equation*}
+\chi_{S_{1} m_{1}}(1) \chi_{S_{2} m_{3}}(2)=\sum_{S} C_{S_{1} m_{1} S_{2} m_{2}}^{S m} \chi_{S m}(1,2) \tag{54}
+\end{equation*}
+
+
+Spin functions (53) are orthonormalized
+
+
+\begin{equation*}
+\chi_{S m}^{\dagger}(1,2) \chi_{S^{\prime} m^{\prime}}(1,2)=\delta_{S S^{\prime}} \delta_{m m^{\prime}} \tag{55}
+\end{equation*}
+
+
+and satisfy the completeness condition
+
+
+\begin{equation*}
+\sum_{S, m} \chi_{S m}(1,2) \chi_{S m}^{\dagger}(1,2)=\widehat{I} \tag{56}
+\end{equation*}
+
+
+Let the polarization operator $\widehat{T}_{L M}(i)(i=1,2)$ act on spin variables of a particle $i$ only. Then we have
+
+
+\begin{gather*}
+\widehat{T}_{L_{1} M_{1}}(1) \times{ }_{S m}(1,2)=(-1)^{S_{1}+S_{2}+S+L_{1}} \sqrt{\left(2 L_{1}+1\right)(2 S+1)} \\
+\times \sum_{S^{\prime}}\left\{\begin{array}{lll}
+S_{1} & S_{2} & S \\
+S^{\prime} & L_{1} & S_{1}
+\end{array}\right\} C_{S m L_{1} M_{1}}^{S^{\prime} m^{\prime}} \times S_{S^{\prime} m^{\prime}}(1,2)  \tag{57}\\
+\hat{T}_{L_{2} M_{2}}(2) \chi_{S m}(1,2)=(-1)^{2 S+L_{2}} \sqrt{\left(2 L_{2}+1\right)(2 S+1)} \\
+\times \sum_{S^{\prime}}\left\{\begin{array}{lll}
+S_{1} & S_{2} & S \\
+L_{2} & S^{\prime} & S_{2}
+\end{array}\right\} C_{S m L_{2} M_{2}}^{S^{\prime} m^{\prime}} \chi_{S^{\prime} m^{\prime}}(1,2) \tag{58}
+\end{gather*}
+
+
+One may also consider a set of scalar operators $\widehat{Q}_{L}(1,2)$ with $0 \leq L \leq \min \left\{2 S_{1}, 2 S_{2}\right\}$
+
+
+\begin{equation*}
+\widehat{Q}_{L}(1,2)=\sum_{M}(-1)^{M} \widehat{T}_{L M}(1) \hat{T}_{L-M}(2) \tag{59}
+\end{equation*}
+
+
+These operators leave the spin of a system and spin projection unchanged:
+
+\[
+\hat{Q}_{L}(1,2) \chi_{S m}(1,2)=(-1)^{S_{1}+S_{2}+S}(2 L+1)\left\{\begin{array}{lll}
+S_{1} & S_{2} & L  \tag{60}\\
+S_{1} & S_{2} & S
+\end{array}\right\} \chi_{S m}(1,2)
+\]
+
+Among scalar operators the so-called projection operators $\widehat{P}_{S}(1,2)\left(\left|S_{1}-S_{2}\right| \leq S \leq S_{1}+S_{2}\right)$ are of special interest. When applied to arbitrary spin function $\chi(1,2)$, the operator $\widehat{P}_{S}(1,2)$ gives the component of this function with definite total spin $S$. Thus, the projection operator $\widehat{P}_{S}(1,2)$ may be defined by the equations
+
+
+\begin{equation*}
+\widehat{P}_{S}(1,2) \chi_{S^{\prime} m^{\prime}}(1,2)=\delta_{S S^{\prime}} \chi_{S^{\prime} m^{\prime}}(1,2) \tag{61}
+\end{equation*}
+
+
+From Eqs. (61) one may obtain the following properties of the projection operators
+
+
+\begin{gather*}
+\hat{P}_{S}(1,2) \hat{P}_{S^{\prime}}(1,2)=\delta_{S S^{\prime}} \hat{P}_{S}(1,2)  \tag{62}\\
+\sum_{S} \hat{P}_{S}(1,2)=\hat{I} \tag{63}
+\end{gather*}
+
+
+The form of $\widehat{P}_{S}(1,2)$ may be written explicitly as
+
+
+\begin{equation*}
+\widehat{P}_{S}(1,2)=\sum_{m} \chi_{S_{m}}(1,2) \chi_{S_{m}}^{\dagger}(1,2) \tag{64}
+\end{equation*}
+
+
+or, in terms of scalar operators $\widehat{Q}_{L}(1,2)$,
+
+\[
+\hat{P}_{S}(1,2)=(-1)^{S_{1}+S_{2}+S}(2 S+1) \sum_{L}\left\{\begin{array}{lll}
+S_{1} & S_{1} & L  \tag{65}\\
+S_{1} & S_{2} & S
+\end{array}\right\} \hat{Q}_{L}(1,2)
+\]
+
+\subsection*{6.2. SPIN FUNCTIONS FOR $S=1 / 2$}
+\subsection*{6.2.1. Basis Spin Functions}
+The basis functions $\chi_{\frac{1}{2} m}(m= \pm 1 / 2)$ are the eigenfunctions of the operators $\widehat{S}^{2}$ and $\widehat{S}_{z}$ :
+
+
+\begin{align*}
+& \widehat{\mathbf{S}}^{2} X_{\frac{1}{2} m}=\frac{3}{4} X_{\frac{1}{2} m}  \tag{1}\\
+& \widehat{S}_{x} X_{\frac{1}{2} m}=m X_{\frac{1}{2} m}
+\end{align*}
+
+
+A function $\chi_{\frac{1}{2} m}$ describes the state of a spin- $\frac{1}{2}$ particle with definite spin projection, $m$, on the $z$-axis.\\
+The dependence of the basis functions $\chi_{\frac{1}{2} m}(\sigma)$ on the spin variable $\sigma$ is given by
+
+
+\begin{equation*}
+x_{\frac{1}{2} m}(\sigma)=\delta_{m \sigma} \tag{2}
+\end{equation*}
+
+
+According to Eq. $6.1(1)$, the basis functions $\chi_{1} m$ may be written as
+
+
+\begin{equation*}
+x_{\frac{1}{2} \frac{1}{3}}=\binom{1}{0}, x_{\frac{1}{2}-\frac{1}{2}}=\binom{0}{1} . \tag{3}
+\end{equation*}
+
+
+The Hermitian conjugate functions $\chi_{\frac{1}{2} m}^{\dagger}$ have the form
+
+
+\begin{equation*}
+\chi_{\frac{1}{2} \frac{1}{2}}^{\dagger}=(1,0), \chi_{\frac{1}{2}-\frac{1}{2}}^{\dagger}=(0,1) . \tag{4}
+\end{equation*}
+
+
+The following compact notations for the basis functions are widely used:
+
+
+\begin{equation*}
+x_{\frac{1}{2} \frac{1}{2}} \equiv \alpha, x_{\frac{1}{2}-\frac{1}{2}} \equiv \beta . \tag{5}
+\end{equation*}
+
+
+The basis functions $\chi_{\frac{1}{2} m}$ satisfy the orthonormality condition
+
+
+\begin{equation*}
+x_{\frac{1}{2} m^{\prime}}^{\dagger} x_{\frac{1}{2} m}=\delta_{m^{\prime} m} . \tag{6}
+\end{equation*}
+
+
+The completeness condition for the basis functions is
+
+
+\begin{equation*}
+\sum_{m} x_{\frac{1}{2} m} x_{\frac{1}{2} m}^{t}=\widehat{I}, \tag{7}
+\end{equation*}
+
+
+where $\widehat{I}$ is the unit $2 \times 2$ matrix.
+
+\subsection*{6.2.2. Expansions of Products of Basis Functions}
+The products $\chi_{\frac{1}{2} m} \chi_{\frac{1}{2} m}^{\dagger}$ represent $2 \times 2$ square matrices whose elements are
+
+
+\begin{equation*}
+\left[\chi_{\frac{1}{2} m} \chi_{\frac{1}{2} m^{\prime}}^{\dagger}\right]_{\sigma \sigma^{\prime}} \equiv \chi_{\frac{1}{2} \sigma}^{\dagger}\left(\chi_{\frac{1}{2} m} \chi_{\frac{1}{3} m^{\prime}}^{\dagger}\right) \chi_{\frac{1}{2} \sigma^{\prime}}=\delta_{\sigma m} \delta_{\sigma^{\prime} m^{\prime}} \tag{8}
+\end{equation*}
+
+
+The expansions of these products in terms of the spin matrices are given by
+
+
+\begin{equation*}
+\chi_{\frac{1}{2} m} \chi_{\frac{1}{2} m^{\prime}}^{\dagger}=\frac{1}{2} \delta_{m m^{\prime}} \widehat{I}-\sqrt{3} C_{1 \mu \frac{1}{2} m^{\prime}}^{\frac{1}{2} m} \widehat{S}_{\mu} \tag{9}
+\end{equation*}
+
+
+where $S_{\mu}(\mu= \pm 1,0)$ are spherical components of the spin operator (Sec. 2.5). In more detailed form Eq. (9) may be written as
+
+
+\begin{align*}
+& \alpha \alpha^{\dagger} \equiv \chi_{\frac{1}{2} \frac{1}{2}} \chi_{\frac{1}{2} \frac{1}{2}}^{\dagger}=\frac{1}{2} \widehat{I}+\widehat{S}_{z}=\frac{1}{2} \widehat{I}+\widehat{S}_{0} \\
+& \alpha \beta^{\dagger} \equiv \chi_{\frac{1}{2} \frac{1}{2}} \chi_{\frac{1}{2}-\frac{1}{2}}^{\dagger}=\widehat{S}_{x}+i \widehat{S}_{y}=-\sqrt{2} \widehat{S}_{+1}  \tag{10}\\
+& \beta \alpha^{\dagger} \equiv \chi_{\frac{1}{3}-\frac{1}{2}} \chi_{\frac{1}{2} \frac{1}{2}}^{\dagger}=\widehat{S}_{x}-i \widehat{S}_{y}=\sqrt{2} \widehat{S}_{-1} \\
+& \beta \beta^{\dagger} \equiv \chi_{\frac{1}{2}-\frac{1}{2}} \chi_{\frac{1}{2}-\frac{1}{2}}^{\dagger}=\frac{1}{2} \widehat{I}-\widehat{S}_{z}=\frac{1}{2} \widehat{I}-\widehat{S}_{0}
+\end{align*}
+
+
+\subsection*{6.2.3. Action of Spin Operators on Basis Functions}
+Cartesian components of a spin operator $\widehat{S}_{i}$ (see Sec. 2.5) applied to the basis functions yield
+
+\[
+\begin{array}{ll}
+\widehat{S}_{x} \chi_{\frac{1}{2} \frac{1}{2}}=\frac{1}{2} \chi_{\frac{1}{2}-\frac{1}{2}}, & \widehat{S}_{x} \chi_{\frac{1}{2}-\frac{1}{2}}=\frac{1}{2} \chi_{\frac{1}{2} \frac{1}{2}} \\
+\widehat{S}_{y} \chi_{\frac{1}{2} \frac{1}{2}}=\frac{i}{2} \chi_{\frac{1}{2}-\frac{1}{2}}, & \widehat{S}_{y} \chi_{\frac{1}{2}-\frac{1}{2}}=-\frac{i}{2} \chi_{\frac{1}{2} \frac{1}{2}}  \tag{11}\\
+\widehat{S}_{z} \chi_{\frac{1}{2} \frac{1}{2}}=\frac{1}{2} \chi_{\frac{1}{2} \frac{1}{2}}, & \widehat{S}_{z} \chi_{\frac{1}{2}-\frac{1}{2}}=-\frac{1}{2} \chi_{\frac{1}{2}-\frac{1}{2}}
+\end{array}
+\]
+
+Spherical components of the spin operator $\widehat{S}_{\mu}$ (see Sec. 2.5) act on the basis functions as follows:
+
+
+\begin{equation*}
+\widehat{S}_{\mu} \chi_{\frac{1}{2} m}=-\frac{\sqrt{3}}{2} C_{1 \mu \frac{1}{2} m}^{\frac{1}{2} m^{\prime}} \chi_{\frac{1}{2} m^{\prime}} \tag{12}
+\end{equation*}
+
+
+More explicitly Eq. (12) is
+
+
+\begin{align*}
+\widehat{S}_{+1} \chi_{\frac{1}{2} \frac{1}{2}} & =0, & \widehat{S}_{+1} \chi_{\frac{1}{2}-\frac{1}{2}} & =-\frac{1}{\sqrt{2}} \chi_{\frac{1}{2} \frac{1}{2}} \\
+\widehat{S}_{0} \chi_{\frac{1}{2} \frac{1}{2}} & =\frac{1}{2} \chi_{\frac{1}{2} \frac{1}{2}}, & \widehat{S}_{0} \chi_{\frac{1}{3}-\frac{1}{2}} & =-\frac{1}{2} \chi_{\frac{1}{2}-\frac{1}{2}}  \tag{13}\\
+\widehat{S}_{-1} \chi_{\frac{1}{2} \frac{1}{2}} & =\frac{1}{\sqrt{2}} \chi_{\frac{1}{2}-\frac{1}{2}}, & \widehat{S}_{-1} \chi_{\frac{1}{2}-\frac{1}{2}} & =0
+\end{align*}
+
+
+According to (12), matrix elements of the operator $\widehat{S} \cdot$ a for any vector a have the form
+
+
+\begin{equation*}
+[\widehat{\mathbf{S}} \cdot \mathbf{a}]_{\sigma \sigma^{\prime}}=\chi_{\frac{1}{2} \sigma}^{\dagger} \widehat{\mathbf{S}} \cdot \mathbf{a} \chi_{\frac{1}{2} \sigma^{\prime}}=(-1)^{1-\mu} \frac{\sqrt{3}}{2} C_{1 \mu \frac{1}{2} \sigma^{\prime}}^{\frac{1}{2} \sigma} a_{-\mu} \tag{14}
+\end{equation*}
+
+
+where $a_{-\mu}(\mu= \pm 1,0)$ are covariant spherical components of a (Sec.1.2).
+
+\subsection*{6.2.4 Transformation of the Basis Functions Under Rotations of the Coordinate System}
+The basis functions $\chi_{\frac{1}{2} m}$ are covariant. Under rotations $S \rightarrow S^{\prime}$ of the coordinate system these functions are transformed by the rotation operator $\widehat{D}^{\frac{1}{2}}(\alpha, \beta, \gamma)$ (Eq. $2.5(32)$ ) if rotations are described by the Euler\\
+angles $\alpha, \beta, \gamma$, or by the rotation operator $\int^{\frac{1}{2}}(\omega ; \Theta, \Phi)$ (Eq. $2.5(36)$ ), if rotations are defined by the rotation axis $n(\theta, \Phi)$ and the rotation angle $\omega$ :
+
+
+\begin{align*}
+& x_{\frac{1}{2} m^{\prime}}^{\prime}=\hat{D}^{\frac{1}{2}}(\alpha, \beta, \gamma) x_{\frac{1}{2} m^{\prime}}=\sum_{m} x_{\frac{1}{2} m} D_{m m^{\prime}}^{\frac{1}{2}}(\alpha, \beta, \gamma) \\
+& x_{\frac{1}{2} m^{\prime}}^{\prime}=\hat{U}^{\frac{1}{2}}(\omega ; \theta, \Phi) x_{\frac{1}{2} m^{\prime}}=\sum_{m} x_{\frac{1}{2} m} U_{m m^{\prime}}^{\frac{1}{2}}(\omega ; \theta, \Phi) \tag{15}
+\end{align*}
+
+
+where $D_{m m^{\prime}}^{\frac{1}{2}}(\alpha, \beta, \gamma)$ are the Wigner D-functions (Chap. 4), and $U_{m m^{\prime}}^{\frac{1}{3}}$ are defined in Sec. 4.5.\\
+A function $\chi_{\frac{1}{2} m^{\prime}}^{\prime}$ describes a state in which a particle of spin $\frac{1}{2}$ has the spin projection $m^{\prime}$ on the new $z^{\prime}$-axis. The functions $\chi_{\frac{1}{2} m^{\prime}}^{\prime}$ are eigenfunctions of the operators $\widehat{\mathbf{S}}^{\prime 2}$ and $\widehat{S}_{x}^{\prime}, \widehat{\mathbf{S}}^{\prime}$ being the spin operator in the rotated coordinate system (Eqs.2.5(40) and 2.5(41)):
+
+
+\begin{align*}
+\widehat{\mathbf{S}}^{\prime 2} \chi_{\frac{1}{3} m^{\prime}}^{\prime} & =\frac{3}{4} \chi_{\frac{1}{3} m^{\prime \prime}}^{\prime}  \tag{16}\\
+\widehat{S}_{x}^{\prime} \chi_{\frac{1}{2} m^{\prime}}^{\prime} & =m^{\prime} \chi_{\frac{1}{3} m^{\prime}}^{\prime}
+\end{align*}
+
+
+The explicit form of the basis spin functions in the rotated coordinate system is
+
+
+\begin{equation*}
+x_{\frac{1}{2} \frac{1}{2}}^{\prime}=\binom{\cos \frac{\beta}{2} e^{-i \alpha \frac{\alpha}{2}}}{\sin \frac{\beta}{2} e^{i \frac{\alpha-\alpha}{2}}}, \quad x_{\frac{1}{2}-\frac{1}{2}}^{\prime}=\binom{-\sin \frac{\beta}{2} e^{i \frac{\alpha}{2}-\alpha}}{\cos \frac{\beta}{2} e^{i \frac{\alpha+\alpha}{2}}}, \tag{17}
+\end{equation*}
+
+
+if the rotation is specified by the Euler angles $\alpha, \beta, \gamma$ and
+
+
+\begin{equation*}
+x_{\frac{1}{2}}^{\prime}=\binom{\cos \frac{\omega}{2}-i \sin \frac{\omega}{2} \cos \theta}{-i \sin \frac{\omega}{2} \sin \theta e^{i \phi}}, x_{\frac{1}{4}-\frac{1}{2}}^{\prime}=\binom{-i \sin \frac{\omega}{2} \sin \theta e^{-i \phi}}{\cos \frac{\omega}{2}+i \sin \frac{\omega}{2} \cos \theta} \tag{18}
+\end{equation*}
+
+
+in terms of the angles $\omega, \theta, \Phi$.\\
+The functions $\chi_{\frac{1}{2} m}^{\prime}$, satisfy the orthonormality and completeness conditions (6), (7) as well as the relations (9)-(13) in which the spin operator $\widehat{\mathbf{S}}$ should be replaced by $\widehat{\mathbf{S}}^{\prime}$.
+
+\subsection*{6.2.5. Helicity Basis Functions}
+The helicity basis functions $\chi_{\frac{1}{2} \lambda}(\vartheta, \varphi)\left(\lambda= \pm \frac{1}{2}\right)$ describe states in which the spin projection on the linear momentum direction $\mathbf{n}(\vartheta, \varphi) \equiv \mathbf{p} / \mathbf{p}$ is equal to $\lambda$. These functions are eigenfunctions of the operators $\widehat{\mathbf{S}}^{2}$ and $\hat{\mathbf{S}} \cdot \mathbf{n}$
+
+
+\begin{align*}
+\hat{\mathbf{S}}^{2} \chi_{\frac{1}{2} \lambda}(\vartheta, \phi) & =\frac{3}{4} \chi_{\frac{1}{2} \lambda}(\vartheta, \varphi)  \tag{19}\\
+\hat{\mathbf{S}} \cdot \mathbf{n} \chi_{\frac{1}{2} \lambda}(\vartheta, \varphi) & =\lambda \chi_{\frac{1}{2} \lambda}(\vartheta, \varphi)
+\end{align*}
+
+
+According to Eq. (15) the helicity functions $\chi_{\frac{1}{2} \lambda}(\vartheta, \varphi)$ are related to the basis functions $\chi_{\frac{1}{3} m}$ by
+
+
+\begin{gather*}
+\chi_{\frac{1}{2} \lambda}(\vartheta, \varphi)=\sum_{m} D_{m \lambda}^{\frac{1}{3}}(\varphi, \vartheta, 0) \chi_{\frac{1}{3} m} \\
+\chi_{\frac{1}{2} m}=\sum_{\lambda} D_{-\lambda-m}^{\frac{1}{2}}(0, \vartheta, \varphi) \chi_{\frac{1}{2} \lambda}(\vartheta, \varphi) \tag{20}
+\end{gather*}
+
+
+For Hermitian adjoint functions Eqs. (20) yield
+
+
+\begin{align*}
+& \chi_{\frac{1}{2} \lambda}^{\dagger}(\vartheta, \varphi)=\sum_{m}(-1)^{\lambda-m} D_{-m-\lambda}^{\frac{1}{2}}(\varphi, \vartheta, 0) \chi_{\frac{1}{2} m}^{\dagger} \\
+& \chi_{\frac{1}{2} m}^{\dagger}=\sum_{\lambda}(-1)^{\lambda-m} D_{\lambda m}^{\frac{1}{3}}(0, \vartheta, \varphi) \chi_{\frac{1}{2} \lambda}^{\dagger}(\vartheta, \varphi) \tag{21}
+\end{align*}
+
+
+The explicit form of the helicity functions is given by
+
+
+\begin{gather*}
+x_{\frac{1}{2} \frac{1}{2}}(\vartheta, \varphi)=\binom{\cos \frac{\vartheta}{2} e^{-i \frac{\psi}{2}}}{\sin \frac{\vartheta}{2} e^{i \frac{\psi}{2}}}, \quad x_{\frac{1}{2}-\frac{1}{2}}(\vartheta, \varphi)=\binom{-\sin \frac{\vartheta}{2} e^{-i \frac{\psi}{2}}}{\cos \frac{\vartheta}{2} e^{i \frac{\psi}{2}}},  \tag{22}\\
+x_{\frac{1}{3} \frac{1}{2}}^{\dagger}(\vartheta, \varphi)=\left(\cos \frac{\vartheta}{2} e^{i \frac{\psi}{2}}, \sin \frac{\vartheta}{2} e^{-i \frac{\psi}{2}}\right), \quad x_{\frac{1}{2}-\frac{1}{2}}^{\dagger}(\vartheta, \varphi)=\left(-\sin \frac{\vartheta}{2} e^{i \frac{\psi}{3}}, \cos \frac{\vartheta}{2} e^{-i \frac{\psi}{2}}\right) . \tag{23}
+\end{gather*}
+
+
+The helicity functions $\chi_{\frac{1}{2} \lambda}(\vartheta, \varphi)$ as well as $\chi_{\frac{1}{3} m}$ constitute an orthonormalised basis. The orthonormality condition for the helicity functions may be written as
+
+
+\begin{equation*}
+\chi_{\frac{1}{2} \lambda^{\prime}}^{\dagger}(\vartheta, \varphi) \chi_{\frac{1}{2} \lambda}(\vartheta, \varphi)=\delta_{\lambda^{\prime} \lambda} \tag{24}
+\end{equation*}
+
+
+The completeness condition is
+
+
+\begin{equation*}
+\sum_{\lambda} x_{\frac{1}{2} \lambda}(\vartheta, \varphi) \chi_{\frac{1}{3} \lambda}^{\dagger}(\vartheta, \varphi)=\hat{I} . \tag{25}
+\end{equation*}
+
+
+The expansion of products of the helicity functions has the form
+
+
+\begin{equation*}
+\chi_{\frac{1}{2} \lambda}(\vartheta, \varphi) \chi_{\frac{1}{3} \lambda^{\prime}}^{\dagger}(\vartheta, \varphi)=\frac{1}{2} \delta_{\lambda \lambda^{\prime}} \widehat{I}+\sqrt{3} \sum_{\mu, \nu} C_{\frac{1}{2} \lambda^{\prime} 1 \mu}^{\frac{1}{2} \lambda} D_{\nu \mu}^{1}(\varphi, \vartheta, 0) \widehat{S}_{\nu} \tag{26}
+\end{equation*}
+
+
+Explicitly, this gives
+
+
+\begin{align*}
+x_{\frac{1}{2} \frac{1}{2}}(\vartheta, \varphi) x_{\frac{1}{2} \frac{1}{3}}^{\dagger}(\vartheta, \varphi) & =\frac{1}{2}\left(\begin{array}{cc}
+1+\cos \vartheta & \sin \vartheta e^{-i \varphi} \\
+\sin \vartheta e^{i \varphi} & 1-\cos \vartheta
+\end{array}\right)=\frac{1}{2} \widehat{I}+\mathrm{n} \cdot \widehat{\mathrm{~S}}, \\
+x_{\frac{1}{3} \frac{1}{2}}(\vartheta, \varphi) x_{\frac{1}{2}-\frac{1}{2}}^{\dagger}(\vartheta, \varphi) & =\frac{1}{2}\left(\begin{array}{cc}
+-\sin \vartheta & (\cos \vartheta+1) e^{-i \varphi} \\
+(\cos \vartheta-1) e^{i \varphi} & \sin \vartheta
+\end{array}\right)=-\sqrt{2} \sum_{\nu} D_{\nu 1}^{1}(\varphi, \vartheta, 0) \widehat{S}_{\nu}, \\
+x_{\frac{1}{2}-\frac{1}{2}}(\vartheta, \varphi) x_{\frac{1}{3} \frac{1}{2}}^{\dagger}(\vartheta, \varphi) & =\frac{1}{2}\left(\begin{array}{cc}
+-\sin \vartheta & (\cos \vartheta-1) e^{-i \varphi} \\
+(\cos \vartheta+1) e^{i \varphi} & \sin \vartheta
+\end{array}\right)=\sqrt{2} \sum_{\nu} D_{\nu-1}^{1}(\varphi, \vartheta, 0) \widehat{S}_{\nu},  \tag{27}\\
+x_{\frac{1}{2}-\frac{1}{2}}(\vartheta, \varphi) x_{\frac{1}{2}-\frac{1}{2}}^{\dagger}(\vartheta, \varphi) & =\frac{1}{2}\left(\begin{array}{cc}
+1-\cos \vartheta & -\sin \vartheta e^{-i \varphi} \\
+-\sin \vartheta e^{i \varphi} & 1+\cos \vartheta
+\end{array}\right)=\frac{1}{2} \widehat{I}-\mathrm{n} \cdot \widehat{\mathrm{~S}} .
+\end{align*}
+
+
+Matrix elements of the spherical components of the spin operator $\widehat{S}_{\mu}(\mu= \pm 1,0)$ between the helicity states are given by
+
+
+\begin{equation*}
+\chi_{\frac{1}{2} \lambda^{\prime}}^{\dagger}(\vartheta, \varphi) \widehat{S}_{\mu \chi_{\frac{1}{2} \lambda}}(\vartheta, \varphi)=(-1)^{\mu+\nu} \frac{\sqrt{3}}{2} C_{\frac{1}{2} \lambda 1 \nu}^{\frac{1}{2} \lambda^{\prime}} D_{-\mu-\nu}^{1}(\varphi, \vartheta, 0) . \tag{28}
+\end{equation*}
+
+
+or, in a detailed form
+
+
+\begin{align*}
+\langle+| \widehat{S}_{+1}|+\rangle & =-\frac{\sin \vartheta}{2 \sqrt{2}} e^{i \varphi} & \langle+| \widehat{S}_{+1}|-\rangle & =-\frac{1+\cos \vartheta}{2 \sqrt{2}} e^{i \varphi} \\
+\langle+| \widehat{S}_{0}|+\rangle & =\frac{1}{2} \cos \vartheta & \langle+| \widehat{S}_{0}|-\rangle & =-\frac{1}{2} \sin \vartheta \\
+\langle+| \widehat{S}_{-1}|+\rangle & =\frac{\sin \vartheta}{2 \sqrt{2}} e^{-i \varphi}, & \langle+| \widehat{S}_{-1}|-\rangle & =-\frac{1-\cos \vartheta}{2 \sqrt{2}} e^{-i \varphi}  \tag{29}\\
+\langle-| \widehat{S}_{+1}|+\rangle & =\frac{1-\cos \vartheta}{2 \sqrt{2}} e^{i \varphi}, & \langle-| \widehat{S}_{+1}|-\rangle & =\frac{\sin \vartheta}{2 \sqrt{2}} e^{i \varphi} \\
+\langle-| \widehat{S}_{0}|+\rangle & =-\frac{1}{2} \sin \vartheta, & \langle-| \widehat{S}_{0}|-\rangle & =-\frac{1}{2} \cos \vartheta \\
+\langle-| \widehat{S}_{-1}|+\rangle & =\frac{1+\cos \vartheta}{2 \sqrt{2}} e^{-i \varphi}, & \langle-| \widehat{S}_{-1}|-\rangle & =-\frac{\sin \vartheta}{2 \sqrt{2}} e^{-i \varphi}
+\end{align*}
+
+
+Here we use the abbreviations
+
+$$
+\begin{aligned}
+& \langle+| \widehat{S}_{\mu}|+\rangle \equiv \chi_{\frac{1}{2} \frac{1}{2}}^{\dagger}(\vartheta, \varphi) \widehat{S}_{\mu} \chi_{\frac{1}{2} \frac{1}{3}}(\vartheta, \varphi) \\
+& \langle+| \widehat{S}_{\mu}|-\rangle \equiv \chi_{\frac{1}{2} \frac{1}{2}}^{\dagger}(\vartheta, \varphi) \widehat{S}_{\mu} \chi_{\frac{1}{2}-\frac{1}{2}}(\vartheta, \varphi), \text { etc. }
+\end{aligned}
+$$
+
+Matrix elements of cartesian components of the spin matrices $\widehat{S}_{i}(i=x, y, z)$ have the form
+
+\[
+\begin{array}{ll}
+\langle+| \hat{S}_{x}|+\rangle=\frac{1}{2} \sin \vartheta \cos \varphi, & \langle+| \hat{S}_{x}|-\rangle=\frac{1}{2}(\cos \vartheta \cos \varphi+i \sin \varphi), \\
+\langle+| \hat{S}_{y}|+\rangle=\frac{1}{2} \sin \vartheta \sin \varphi, & \langle+| \hat{S}_{y}|-\rangle=\frac{1}{2}(\cos \vartheta \sin \varphi-i \cos \varphi), \\
+\langle+| \hat{S}_{x}|+\rangle=\frac{1}{2} \cos \vartheta, & \langle+| \hat{S}_{x}|-\rangle=-\frac{1}{2} \sin \vartheta,  \tag{30}\\
+\langle-| \hat{S}_{x}|+\rangle=\frac{1}{2}(\cos \vartheta \cos \varphi-i \sin \varphi), & \langle-| \hat{S}_{x}|-\rangle=-\frac{1}{2} \sin \vartheta \cos \varphi, \\
+\langle-| \hat{S}_{y}|+\rangle=\frac{1}{2}(\cos \vartheta \sin \varphi+i \cos \varphi), & \langle-| \hat{S}_{y}|-\rangle=-\frac{1}{2} \sin \vartheta \sin \varphi, \\
+\langle-| \hat{S}_{x}|+\rangle=-\frac{1}{2} \sin \vartheta, & \langle-| \hat{S}_{x}|-\rangle=-\frac{1}{2} \cos \vartheta
+\end{array}
+\]
+
+Note that the diagonal matrix elements of the spin operator may be written as
+
+
+\begin{equation*}
+\chi_{\frac{1}{2} \lambda}^{\dagger}(\vartheta, \varphi) \hat{\mathbf{S}}_{\chi_{\frac{1}{2} \lambda}}(\vartheta, \varphi)=\lambda \mathbf{n}(\vartheta, \varphi) . \tag{31}
+\end{equation*}
+
+
+\subsection*{6.2.6. General Spin Functions for $S=\frac{1}{2}$}
+An arbitrary spin function $\chi_{\frac{1}{2}}$ of a particle of spin $\frac{1}{2}$ may be expanded in terms of the basis spin functions $\chi_{\frac{1}{2} m}$,
+
+
+\begin{equation*}
+x_{\frac{1}{2}}=\sum_{m=-\frac{1}{3}}^{\frac{1}{2}} a^{m} x_{\frac{1}{2} m}=\binom{a^{\frac{1}{2}}}{a^{-\frac{1}{2}}} \tag{32}
+\end{equation*}
+
+
+An analogous expansion of the Hermitian conjugate function $\chi_{\frac{1}{2}}^{\dagger}$ is
+
+
+\begin{equation*}
+\chi_{\frac{1}{2}}^{\dagger}=\sum_{m=-\frac{1}{2}}^{\frac{1}{2}} a^{m *} \chi_{\frac{1}{2} m}^{\dagger}=\left(a^{\frac{1}{3} *}, a^{-\frac{1}{2} *}\right) \tag{33}
+\end{equation*}
+
+
+Here $a^{m}\left(m= \pm \frac{1}{2}\right)$ is the contravariant component of the spinor $\chi_{\frac{1}{2}}$ (see below). The normalization condition
+
+
+\begin{equation*}
+\chi_{\frac{1}{2}}^{\dagger} \chi_{\frac{1}{2}}=1 \tag{34}
+\end{equation*}
+
+
+imposes the following restriction
+
+$$
+\left|a^{\frac{1}{2}}\right|^{2}+\left|a^{-\frac{1}{2}}\right|^{2}=1 .
+$$
+
+The coefficient $a^{m}$ may be interpreted as the probability amplitude that the spin projection on the $z$-axis for the particle in a given state $\chi_{\frac{1}{2}}$ is equal to $m$.
+
+\section*{Special cases}
+(a) Spin is directed along the $z$-axis:
+
+
+\begin{equation*}
+a^{\frac{1}{2}}=1, a^{-\frac{1}{2}}=0, \chi_{\frac{1}{2}}=\chi_{\frac{1}{2} \frac{1}{2}}=\binom{1}{0} . \tag{35}
+\end{equation*}
+
+
+(b) Spin is directed along the negative $z$-axis:
+
+
+\begin{equation*}
+a^{\frac{1}{2}}=0, a^{-\frac{1}{2}}=1, \quad \chi_{\frac{1}{2}}=\chi_{\frac{1}{2}-\frac{1}{2}}=\binom{0}{1} . \tag{36}
+\end{equation*}
+
+
+(c) Spin is parallel to $\mathbf{n}(\vartheta, \varphi)$ :
+
+
+\begin{equation*}
+a^{\frac{1}{2}}=\cos \frac{\vartheta}{2} e^{-i \frac{\varphi}{2}}, a^{-\frac{1}{2}}=\sin \frac{\vartheta}{2} e^{i \frac{\varphi}{2}}, \chi_{\frac{1}{2}}=\chi_{\frac{1}{2} \frac{1}{2}}(\vartheta, \varphi)=\binom{\cos \frac{\vartheta}{2} e^{-i \frac{\varphi}{2}}}{\sin \frac{\vartheta}{2} e^{i \frac{\varphi}{2}}} . \tag{37}
+\end{equation*}
+
+
+(d) Spin is antiparallel to $\mathbf{n}(\vartheta, \varphi)$ :
+
+
+\begin{equation*}
+a^{\frac{1}{2}}=-\sin \frac{\vartheta}{2} e^{-i \frac{\varphi}{2}}, a^{-\frac{1}{2}}=\cos \frac{\vartheta}{2} e^{i \frac{\varphi}{2}}, \chi_{\frac{1}{2}}=\chi_{\frac{1}{2}-\frac{1}{2}}(\vartheta, \varphi)=\binom{-\sin \frac{\vartheta}{2} e^{-i \frac{\varphi}{2}}}{\cos \frac{\vartheta}{2} e^{i \frac{\varphi}{2}}} . \tag{38}
+\end{equation*}
+
+
+In general, the spin function (32) describes a spin- $\frac{1}{2}$ particle whose spin is directed along some unit vector n with cartesian components
+
+
+\begin{equation*}
+n_{x}=2 \operatorname{Re}\left(a^{\frac{1}{2} *} a^{-\frac{1}{2}}\right), n_{y}=2 \operatorname{Im}\left(a^{\frac{1}{2} *} a^{-\frac{1}{2}}\right), n_{x}=\left|a^{\frac{1}{2}}\right|^{2}-\left|a^{-\frac{1}{2}}\right|^{2} . \tag{39}
+\end{equation*}
+
+
+The spherical components of this unit vector $n$ are given by
+
+
+\begin{equation*}
+n_{\mu}=\sqrt{3} \sum_{m, m^{\prime}} C_{\frac{1}{2} m 1 \mu}^{\frac{1}{2} m^{\prime}} a^{m^{\prime} *} a^{m} \tag{40}
+\end{equation*}
+
+
+or more explicitly
+
+
+\begin{equation*}
+n_{+1}=-\sqrt{2} a^{\frac{1}{2} *} a^{-\frac{1}{2}}, n_{0}=\left|a^{\frac{1}{2}}\right|^{2}-\left|a^{-\frac{1}{2}}\right|^{2}, n_{-1}=\sqrt{2} a^{-\frac{1}{2} *} a^{\frac{1}{2}} \tag{41}
+\end{equation*}
+
+
+The product of the spin functions $\chi_{\frac{1}{2}} \chi_{\frac{1}{2}}^{\dagger}$ may be expressed in terms of the spin matrices
+
+\[
+\chi_{\frac{1}{2}} \chi_{\frac{1}{2}}^{\dagger}=\left(\begin{array}{cc}
+\left|a^{\frac{1}{2}}\right|^{2} & a^{-\frac{1}{2} *} a^{\frac{1}{2}}  \tag{42}\\
+a^{\frac{1}{2} *} a^{-\frac{1}{2}} & \left|a^{-\frac{1}{2}}\right|^{2}
+\end{array}\right)=\frac{1}{2} \widehat{I}+\mathrm{n} \widehat{\mathrm{~S}},
+\]
+
+where $n$ specifies the spin direction (39)-(41).
+
+Matrix elements of the spin operator $\widehat{\mathbf{S}}$ may be written in terms of the vector $\mathbf{n}$ as
+
+
+\begin{equation*}
+\chi_{\frac{1}{2}}^{\dagger} \widehat{\mathbf{S}}_{\chi_{\frac{1}{2}}}=\frac{1}{2} \mathrm{n} . \tag{43}
+\end{equation*}
+
+
+The transformation of spin functions under rotations of coordinate system is effected by the rotation operators $\widehat{D}^{\frac{1}{2}}(\alpha, \beta, \gamma)$ (Eq. 2.5(32)) or $\widehat{U}^{\frac{1}{2}}(\omega ; \theta, \Phi)$ (Eq. 2.5(36)), depending on the choice of the parameters to describe rotations:
+
+
+\begin{equation*}
+\chi_{\frac{1}{2}}^{\prime}=\widehat{D}^{\frac{1}{2}}(\alpha, \beta, \gamma) \chi_{\frac{1}{2}}=\widehat{U}^{\frac{1}{2}}(\omega ; \theta, \Phi) \chi_{\frac{1}{2}} \tag{44}
+\end{equation*}
+
+
+The spin functions $\chi_{\frac{1}{2}}^{\prime}$ in the rotated coordinate system may be expressed in terms of the basis spin functions, $\chi_{\frac{1}{3} m}$ or $\chi_{\frac{1}{2} m}^{\prime}$, referred to the original or rotated coordinate systems, respectively.
+
+
+\begin{equation*}
+\chi_{\frac{1}{2}}^{\prime}=\binom{a^{\prime \frac{1}{2}}}{a^{\prime-\frac{1}{2}}}=\sum_{\dot{m}} a^{\prime m} \chi_{\frac{1}{2} m}=\sum_{m} a^{m} \chi_{\frac{1}{2} m}^{\prime} . \tag{45}
+\end{equation*}
+
+
+In this case $a^{m}$ and $a^{m}$ are spinor components in the original and rotated coordinate systems. The relation between the basis functions $\chi_{\frac{1}{2} m}^{\prime}$ and $\chi_{\frac{1}{2} m}$ is given by Eq. (15). The transformation properties of $a^{m}$ are as follows.
+
+
+\begin{align*}
+a^{\prime m} & =\sum_{n} D_{m n}^{\frac{1}{2}}(\alpha, \beta, \gamma) a^{n}, \\
+a^{n} & =\sum_{m} D_{m n}^{\frac{1}{2}}(\alpha, \beta, \gamma) a^{\prime m} .
+\end{align*} \quad\left(\dot{m}, n= \pm \frac{1}{2}\right) .
+
+
+Thus, $a^{m}$ are contravariant spinor components (see Eq. 4.1(2)).
+
+\subsection*{6.2.7. Polarization Density Matrix}
+The polarisation density matrix for particles of spin $\frac{1}{2}$ may be written in the form
+
+
+\begin{equation*}
+\hat{\rho}=\frac{1}{2}\{\hat{I}+2 \mathbf{P} \hat{\mathbf{S}}\}, \tag{47}
+\end{equation*}
+
+
+where the real vector $\mathbf{P}$ is called the polarisation vector. This vector gives the expectation value of the spin operator multiplied by 2 ,
+
+
+\begin{equation*}
+\mathbf{P}=2\langle\mathbf{S}\rangle=2 \operatorname{Tr}\{\hat{\rho} \widehat{\mathbf{S}}\} . \tag{48}
+\end{equation*}
+
+
+The absolute value of the vector $\mathbf{P}$ is called the polarization degree; it ranges from 0 (for unpolarised states) to 1 (for pure, i.e., totally polarized states):
+
+
+\begin{equation*}
+0 \leq|P| \leq 1 . \tag{49}
+\end{equation*}
+
+
+The spherical components of the polarization vector are related to the elements of the density matrix by
+
+
+\begin{equation*}
+P_{\mu}=\sqrt{3} \sum_{\sigma \sigma!} C_{\frac{1}{2} \sigma 1 \mu}^{\frac{1}{2} \sigma^{\prime}} \rho_{\sigma \sigma^{\prime}} \tag{50}
+\end{equation*}
+
+
+or in an expanded form
+
+
+\begin{equation*}
+P_{+1}=-\sqrt{2} \rho_{-\frac{1}{2} \frac{1}{2}}, P_{0}=\rho_{\frac{1}{2} \frac{1}{2}}-\rho_{-\frac{1}{2}-\frac{1}{2}}, P_{-1}=\sqrt{2} \rho_{\frac{1}{2}-\frac{1}{2}} . \tag{51}
+\end{equation*}
+
+
+Cartesian components of the polarization vector are given by
+
+
+\begin{equation*}
+P_{x}=\rho_{\frac{1}{2}-\frac{1}{2}}+\rho_{-\frac{1}{2} \frac{1}{2}}, P_{y}=i\left(\rho_{\frac{1}{2}-\frac{1}{2}}-\rho_{-\frac{1}{2} \frac{1}{2}}\right), P_{z}=\rho_{\frac{1}{2} \frac{1}{2}}-\rho_{-\frac{1}{2}-\frac{1}{2}} . \tag{52}
+\end{equation*}
+
+
+For a pure state described by a spin function $\chi_{\frac{1}{2}}$ the density matrix $\hat{\rho}$ has the form
+
+
+\begin{equation*}
+\hat{\rho}_{\text {pure }}=\chi_{\frac{1}{2}} \chi_{\frac{1}{2}}^{\dagger} \tag{53}
+\end{equation*}
+
+
+and the polarization vector $\mathbf{P}$ coincides with the unit vector $\mathbf{n}$ (see Eqs. (39)-(41)). For an unpolarized state
+
+
+\begin{equation*}
+\hat{\rho}_{\text {unpol }}=\frac{1}{2} \widehat{I} \tag{54}
+\end{equation*}
+
+
+\subsection*{6.3. SPIN FUNCTIONS FOR $S=1$}
+\subsection*{6.3.1. Basis Spin Functions}
+The basis functions $\chi_{1 m}(m= \pm 1,0)$ are eigenfunctions of the operators $\widehat{S}^{2}$ and $\widehat{S}_{z}$
+
+
+\begin{align*}
+& \widehat{\mathbf{S}}^{2} \chi_{1 m}=2 \chi_{1 m}  \tag{1}\\
+& \widehat{S}_{z} \chi_{1 m}=m \chi_{1 m}
+\end{align*}
+
+
+The function $\chi_{1 m}$ describes the state of a spin- 1 particle with definite spin projection $m$ on the $z$-axis. The three basis functions $\chi_{1 m}(m= \pm 1,0)$ may be treated as spherical covariant basis vectors $\mathbf{e}_{m}$ (see Sec. 1.1) written in column form. Instead of $\chi_{1 m}$ one may use the basis functions $\chi_{i}(i=x, y, z)$ which are the cartesian basis vectors $\mathbf{e}_{i}$ :
+
+\[
+\begin{array}{ll}
+\chi_{11}=-\frac{1}{\sqrt{2}}\left(\chi_{x}+i \chi_{y}\right), & \chi_{x}=\frac{1}{\sqrt{2}}\left(\chi_{1-1}-\chi_{11}\right) \\
+\chi_{10}=\chi_{x}, & \chi_{y}=\frac{i}{\sqrt{2}}\left(\chi_{1-1}+\chi_{11}\right)  \tag{2}\\
+\chi_{1-1}=\frac{1}{\sqrt{2}}\left(\chi_{x}-i \chi_{y}\right), & \chi_{z}=\chi_{10} .
+\end{array}
+\]
+
+The functions $\chi_{1 m}(m= \pm 1,0)$ as well as $\chi_{i}(i=x, y, z)$ constitute an orthonormal basis. The orthonormality conditions read
+
+
+\begin{equation*}
+\chi_{1 m^{\prime}}^{\dagger} \chi_{1 m}=\delta_{m^{\prime} m}, \quad \chi_{i}^{\dagger} \chi_{k}=\delta_{i k} . \tag{3}
+\end{equation*}
+
+
+The completeness condition for basis functions may be written as
+
+
+\begin{equation*}
+\sum_{m= \pm 1,0} \chi_{1 m} \chi_{1 m}^{\dagger}=\widehat{I}, \quad \sum_{i=x, y, x} \chi_{i} \chi_{i}^{\dagger}=\widehat{I}, \tag{4}
+\end{equation*}
+
+
+where $\widehat{I}$ is the unit $3 \times 3$ matrix.\\
+To describe the states of particles with spin 1 one may use the spherical basis representation or the cartesian basis representation.
+
+\section*{Spherical basis representation}
+In the spherical basis representation the dependence of the functions $\chi_{1 m}(\sigma)$ on the spin variable $\sigma$ is given by
+
+
+\begin{equation*}
+\chi_{1 m}(\sigma)=\delta_{m \sigma} \tag{5}
+\end{equation*}
+
+
+According to Eq. 6.1(1), the basis spin functions $\chi_{1 m}$ may be written as
+
+\[
+\chi_{11}=\left(\begin{array}{l}
+1  \tag{6}\\
+0 \\
+0
+\end{array}\right), \quad \chi_{10}=\left(\begin{array}{l}
+0 \\
+1 \\
+0
+\end{array}\right), \quad \chi_{1-1}=\left(\begin{array}{l}
+0 \\
+0 \\
+1
+\end{array}\right)
+\]
+
+and the Hermitian conjugate functions $\chi_{1 m}^{\dagger}$ read
+
+
+\begin{equation*}
+\chi_{11}^{\dagger}=(1,0,0), \quad \chi_{10}^{\dagger}=(0,1,0), \quad \chi_{1-1}^{\dagger}=(0,0,1) . \tag{7}
+\end{equation*}
+
+
+In the spherical basis representation the functions $\chi_{i}(i=x, y, z)$ have the form
+
+
+\begin{gather*}
+\chi_{x}=\frac{1}{\sqrt{2}}\left(\begin{array}{r}
+-1 \\
+0 \\
+1
+\end{array}\right), \quad \chi_{y}=\frac{i}{\sqrt{2}}\left(\begin{array}{l}
+1 \\
+0 \\
+1
+\end{array}\right), \quad \chi_{z}=\left(\begin{array}{l}
+0 \\
+1 \\
+0
+\end{array}\right),  \tag{8}\\
+\chi_{x}^{\dagger}=\frac{1}{\sqrt{2}}(-1,0,1), \quad \chi_{y}^{\dagger}=-\frac{i}{\sqrt{2}}(1,0,1), \quad \chi_{z}^{\dagger}=(0,1,0) . \tag{9}
+\end{gather*}
+
+
+It follows from (6), (8) that in the spherical basis representation the functions $\chi_{1 m}$ are real,
+
+
+\begin{equation*}
+\chi_{1 m}^{*}=\chi_{1 m}, \quad(m= \pm 1,0), \tag{10}
+\end{equation*}
+
+
+and the functions $\chi_{i}$ satisfy the relations
+
+
+\begin{equation*}
+\chi_{x}^{*}=\chi_{x}, \quad \chi_{y}^{*}=-\chi_{y}, \quad \chi_{x}^{*}=\chi_{x} . \tag{11}
+\end{equation*}
+
+
+Explicit forms of the spin matrices and the polarization operators in the spherical basis representation are given by Eqs. 2.6(9)-2.6(22).
+
+\section*{Cartesian basis representation}
+In the cartesian basis representation the spin variable $\sigma$ assumes three possible values, $\sigma=x, y, z$. The dependence of the functions $\chi_{i}(\sigma)$ on $\sigma$ is given by
+
+
+\begin{equation*}
+x_{i}(\sigma)=\delta_{i \sigma} \tag{12}
+\end{equation*}
+
+
+Thus, the basis spin functions $\chi_{i}(i=x, y, z)$ in the cartesian basis representation may be written in the following form (see also Eq. 1.4(37))
+
+\[
+\begin{array}{ccc}
+\chi_{x}=\left(\begin{array}{l}
+1 \\
+0 \\
+0
+\end{array}\right), & \chi_{y}=\left(\begin{array}{l}
+0 \\
+1 \\
+0
+\end{array}\right), & \chi_{z}=\left(\begin{array}{l}
+0 \\
+0 \\
+1
+\end{array}\right) \\
+\chi_{x}^{\dagger}=(1,0,0), & \chi_{y}^{\dagger}=(0,1,0), & \chi_{z}^{\dagger}=(0,0,1) . \tag{14}
+\end{array}
+\]
+
+The basis functions $\chi_{1 m}(m= \pm 1,0)$ read
+
+
+\begin{align*}
+& \chi_{11}=-\frac{1}{\sqrt{2}}\left(\begin{array}{l}
+1 \\
+i \\
+0
+\end{array}\right), \quad \chi_{10}=\left(\begin{array}{l}
+0 \\
+0 \\
+1
+\end{array}\right), \quad \chi_{1-1}=\frac{1}{\sqrt{2}}\left(\begin{array}{r}
+1 \\
+-i \\
+0
+\end{array}\right),  \tag{15}\\
+& \chi_{11}^{\dagger}=-\frac{1}{\sqrt{2}}(1,-i, 0), \quad \chi_{10}^{\dagger}=(0,0,1), \quad \chi_{1-1}^{\dagger}=\frac{1}{\sqrt{2}}(1, i, 0) . \tag{16}
+\end{align*}
+
+
+It follows from Eqs. (13), (15) that in the cartesian basis representation the functions $\chi_{i}$ are real,
+
+
+\begin{equation*}
+\chi_{i}^{*}=\chi_{i} \quad(i=x, y, z), \tag{17}
+\end{equation*}
+
+
+and the functions $\chi_{1 m}$ satisfy the relations
+
+
+\begin{equation*}
+\chi_{1 m}^{*}=(-1)^{m} \chi_{1-m}(m= \pm 1,0) \tag{18}
+\end{equation*}
+
+
+The spin matrices and polarization operators in the cartesian basis representation are given by Eqs. $2.6(23)$ 2.6(35).
+
+The direct and reverse transformations from a spherical basis to a cartesian one can be performed by the use of the unitary $3 \times 3$ matrix $U$,
+
+
+\begin{align*}
+\chi(\text { spherical basis }) & =U \chi(\text { cartesian basis }) \\
+\chi(\text { cartesian basis }) & =U^{-1} \chi(\text { spherical basis }) \tag{19}
+\end{align*}
+
+
+The explicit form of $U$ is given by Eq. 2.6(37). The expressions below are independent of the representation used unless the contrary is indicated.
+
+\subsection*{6.3.2. Expansions of Products of Spin Functions}
+Products of the basis functions $\chi_{1 m} \chi_{1 m^{\prime}}^{\dagger}$ and $\chi_{i} \chi_{k_{1}}^{\dagger}$ are square $3 \times 3$ matrices which may be expanded in terms of the polarization matrices $\widehat{I}, \widehat{S}_{\mu}(\mu= \pm 1,0), \widehat{T}_{2 M}(M= \pm 2, \pm 1,0)$ or, equivalently, of the matrices $\widehat{I}, \widehat{S}_{i}, \widehat{Q}_{i k}(i, k=x, y, z)$ (Sec. 2.6). These expansions are given by
+
+
+\begin{gather*}
+\chi_{1 m} \chi_{1 m^{\prime}}^{\dagger}=\frac{1}{3} \delta_{m m^{\prime}} \hat{I}+\frac{1}{\sqrt{2}} C_{1 m^{\prime} 1 \mu}^{1 m} \hat{S}_{\mu}+\sqrt{\frac{5}{3}} C_{1 m^{\prime} 2 M}^{1 m} \hat{T}_{2 M}  \tag{20}\\
+\chi_{i} \chi_{k}^{\dagger}=\frac{1}{3} \delta_{i k} \hat{I}+\frac{i}{2} \varepsilon_{i k l} \widehat{S}_{l}-\widehat{Q}_{i k} \tag{21}
+\end{gather*}
+
+
+Written in component form these expansions yield
+
+
+\begin{align*}
+\chi_{11} \chi_{11}^{\dagger} & =\frac{1}{3} \widehat{I}+\frac{1}{2} \widehat{S}_{0}+\frac{1}{\sqrt{6}} \widehat{T}_{20}=\frac{1}{3} \widehat{I}+\frac{1}{2} \widehat{S}_{z}+\frac{1}{2} \widehat{Q}_{z z} \\
+\chi_{11} \chi_{10}^{\dagger} & =-\frac{1}{2} \widehat{S}_{+1}-\frac{1}{\sqrt{2}} \widehat{T}_{21}=\frac{1}{2 \sqrt{2}}\left(\widehat{S}_{x}+i \widehat{S}_{y}+2 \widehat{Q}_{x z}+2 i \widehat{Q}_{y z}\right) \\
+\chi_{11} \chi_{1-1}^{\dagger} & =\widehat{T}_{22}=\frac{1}{2}\left(\widehat{Q}_{x x}-\widehat{Q}_{y y}+2 i \widehat{Q}_{x y}\right) \\
+\chi_{10} \chi_{11}^{\dagger} & =\frac{1}{2} \widehat{S}_{-1}+\frac{1}{\sqrt{2}} \widehat{T}_{2-1}=\frac{1}{2 \sqrt{2}}\left(\widehat{S}_{x}-i \widehat{S}_{y}+2 \widehat{Q}_{x z}-2 i \widehat{Q}_{y z}\right) \\
+\chi_{10} \chi_{10}^{\dagger} & =\frac{1}{3} \widehat{I}-\sqrt{\frac{2}{3}} \widehat{T}_{20}=\frac{1}{3} \widehat{I}-\widehat{Q}_{x x}  \tag{22}\\
+\chi_{10} \chi_{1-1}^{\dagger} & =-\frac{1}{2} \widehat{S}_{+1}+\frac{1}{\sqrt{2}} \widehat{T}_{21}=\frac{1}{2 \sqrt{2}}\left(\widehat{S}_{x}+i \widehat{S}_{y}-2 \widehat{Q}_{x z}-2 i \widehat{Q}_{y z}\right) \\
+\chi_{1-1} \chi_{11}^{\dagger} & =\widehat{T}_{2-2}=\frac{1}{2}\left(\widehat{Q}_{x x}-\widehat{Q}_{y y}-2 i \widehat{Q}_{x y}\right) \\
+\chi_{1-1} \chi_{10}^{\dagger} & =\frac{1}{2} \widehat{S}_{-1}-\frac{1}{\sqrt{2}} \widehat{T}_{2-1}=\frac{1}{2 \sqrt{2}}\left(\widehat{S}_{x}-i \widehat{S}_{y}-2 \widehat{Q}_{x z}+2 i \widehat{Q}_{y z}\right) \\
+\chi_{1-1} \chi_{1-1}^{\dagger} & =\frac{1}{3} \widehat{I}-\frac{1}{2} \widehat{S}_{0}+\frac{1}{\sqrt{6}} \widehat{T}_{20}=\frac{1}{3} \widehat{I}-\frac{1}{2} \widehat{S}_{z}+\frac{1}{2} \widehat{Q}_{x z}
+\end{align*}
+
+
+
+\begin{align*}
+& \chi_{x} \chi_{x}^{\dagger}=\frac{1}{3} \widehat{I}-\frac{1}{2} \widehat{T}_{2-2}-\frac{1}{2} \widehat{T}_{22}+\frac{1}{\sqrt{6}} \widehat{T}_{20}=\frac{1}{3} \widehat{I}-\widehat{Q}_{x x}, \\
+& \chi_{x} \chi_{y}^{\dagger}=\frac{i}{2}\left(\widehat{S}_{0}-\widehat{T}_{2-2}+\widehat{T}_{22}\right)=\frac{i}{2} \widehat{S}_{z}-\widehat{Q}_{x y}, \\
+& \chi_{x} \chi_{z}^{\dagger}=\frac{1}{2 \sqrt{2}}\left(\widehat{S}_{-1}+\widehat{S}_{+1}\right)-\frac{1}{2}\left(\widehat{T}_{2-1}-\widehat{T}_{21}\right)=-\frac{i}{2} \widehat{S}_{y}-\widehat{Q}_{x z}, \\
+& \chi_{y} \chi_{z}^{\dagger}=-\frac{i}{2}\left(\widehat{S}_{0}+\widehat{T}_{2-2}-\widehat{T}_{22}\right)=-\frac{i}{2} \widehat{S}_{z}-\widehat{Q}_{x y}, \\
+& \chi_{y} \chi_{y}^{\dagger}=\frac{1}{3} \widehat{I}+\frac{1}{2} \widehat{T}_{2-2}+\frac{1}{2} \widehat{T}_{22}+\frac{1}{\sqrt{6}} \widehat{T}_{20}=\frac{1}{3} \widehat{I}-\widehat{Q}_{y y},  \tag{23}\\
+& \chi_{y} \chi_{z}^{\dagger}=\frac{i}{2 \sqrt{2}}\left(\widehat{S}_{-1}-\widehat{S}_{+1}\right)-\frac{i}{2}\left(\widehat{T}_{2-1}+\widehat{T}_{21}\right)=\frac{i}{2} \widehat{S}_{z}-\widehat{Q}_{y x}, \\
+& \chi_{z} \chi_{z}^{\dagger}=-\frac{1}{2 \sqrt{2}}\left(\widehat{S}_{-1}+\widehat{S}_{+1}\right)-\frac{1}{2}\left(\widehat{T}_{2-1}-\widehat{T}_{21}\right)=\frac{i}{2} \widehat{S}_{y}-\widehat{Q}_{z x}, \\
+& \chi_{z} \chi_{y}^{\dagger}=-\frac{i}{2 \sqrt{2}}\left(\widehat{S}_{-1}-\widehat{S}_{+1}\right)-\frac{i}{2}\left(\widehat{T}_{2-1}+\widehat{T}_{21}\right)=-\frac{i}{2} \widehat{S}_{z}-\widehat{Q}_{y z}, \\
+& \chi_{z} \chi_{z}^{\dagger}=\frac{1}{3} \widehat{I}-\sqrt{\frac{2}{3}} \widehat{T}_{20}=\frac{1}{3} \widehat{I}-\widehat{Q}_{z x} .
+\end{align*}
+
+
+\subsection*{6.3.3. Action of Spin Operators on Basis Functions}
+Spherical components of the spin operator $\widehat{S} \mu(\mu= \pm 1,0)$ and its cartesian components $\widehat{S}_{i}(i=x, y, z)$ act on the basis functions as follows
+
+
+\begin{align*}
+\widehat{S}_{\mu} \chi_{1 m} & =\sqrt{2} C_{1 m 1 \mu}^{1 m^{\prime}} \chi_{1 m^{\prime}}  \tag{24}\\
+\widehat{S}_{i} \chi_{k} & =i \varepsilon_{i k l} \chi_{l}
+\end{align*}
+
+
+In a more detailed form
+
+
+\begin{gather*}
+\widehat{S}_{+1} \chi_{11}=0 \quad \widehat{S}_{+1} \chi_{10}=-\chi_{11}, \quad \widehat{S}_{+1} \chi_{1-1}=-\chi_{10}, \\
+\widehat{S}_{0} \chi_{11}=\chi_{11}, \quad \widehat{S}_{0} \chi_{10}=0, \quad \widehat{S}_{0} \chi_{1-1}=-\chi_{1-1},  \tag{25}\\
+\widehat{S}_{-1} \chi_{11}=\chi_{10} \quad \widehat{S}_{-1} \chi_{10}=\chi_{1-1}, \quad \widehat{S}_{-1} \chi_{1-1}=0 . \\
+\widehat{S}_{+1} \chi_{x}=-\frac{1}{\sqrt{2}} \chi_{z}, \quad \widehat{S}_{+1} \chi_{y}=-\frac{i}{\sqrt{2}} \chi_{z}, \quad \widehat{S}_{+1} \chi_{z}=\frac{1}{\sqrt{2}}\left(\chi_{z}+i \chi_{y}\right), \\
+\widehat{S}_{0} \chi_{z}=i \chi_{y}, \quad \widehat{S}_{0} \chi_{y}=-i \chi_{z}, \quad \widehat{S}_{0} \chi_{z}=0,  \tag{26}\\
+\widehat{S}_{-1} \chi_{z}=-\frac{1}{\sqrt{2}} \chi_{z}, \quad \widehat{S}_{-1} \chi_{y}=\frac{i}{\sqrt{2}} \chi_{z}, \quad \widehat{S}_{-1} \chi_{z}=\frac{1}{\sqrt{2}}\left(\chi_{z}-i \chi_{y}\right) . \\
+\widehat{S}_{z} \chi_{11}=\frac{1}{\sqrt{2}} \chi_{10}, \quad \widehat{S}_{z} \chi_{10}=\frac{1}{\sqrt{2}}\left(\chi_{1-1}+\chi_{11}\right), \quad \widehat{S}_{z} \chi_{1-1}=\frac{1}{\sqrt{2}} \chi_{10}, \\
+\widehat{S}_{y} \chi_{11}=\frac{i}{\sqrt{2}} \chi_{10}, \quad \widehat{S}_{y} \chi_{10}=\frac{i}{\sqrt{2}}\left(\chi_{1-1}-\chi_{11}\right), \quad \widehat{S}_{y} \chi_{1-1}=-\frac{i}{\sqrt{2}} \chi_{10},  \tag{27}\\
+\widehat{S}_{z} \chi_{11}=\chi_{11}, \quad \widehat{S}_{z} \chi_{10}=0, \quad \widehat{S}_{z} \chi_{1-1}=-\chi_{1-1} . \\
+\widehat{S}_{z} \chi_{z}=0, \quad \widehat{S}_{z} \chi_{y}=i \chi_{z}, \quad \widehat{S}_{z} \chi_{z}=-i \chi_{y}, \\
+\widehat{S}_{y} \chi_{z}=-i \chi_{z}, \quad \widehat{S}_{y} \chi_{y}=0, \quad \widehat{S}_{y} \chi_{z}=i \chi_{z},  \tag{28}\\
+\widehat{S}_{z} \chi_{z}=i \chi_{y}, \quad \widehat{S}_{z} \chi_{y}=-i \chi_{z}, \quad \widehat{S}_{z} \chi_{z}=0 .
+\end{gather*}
+
+
+\subsection*{6.3.4. Action of Quadrupole Operators on Basis Functions}
+The operators $\widehat{T}_{2 M}(M= \pm 2, \pm 1,0)$ and $\widehat{Q}_{i k}(i, k=x, y, z)$ act on basis functions in accordance with
+
+
+\begin{gather*}
+\hat{T}_{2 M} \chi_{1 m}=\sqrt{\frac{5}{3}} C_{1 m 2 M}^{1 m^{\prime}} \chi_{1 m^{\prime}}  \tag{29}\\
+\hat{Q}_{i k} \chi_{l}=\frac{1}{2}\left(\frac{2}{3} \delta_{i k} \chi_{l}-\delta_{i l} \chi_{k}-\delta_{k l} \chi_{i}\right)
+\end{gather*}
+
+
+In detailed form we have
+
+\[
+\begin{array}{lll}
+\hat{T}_{22} \chi_{11}=0, & \hat{T}_{22} \chi_{10}=0, & \hat{T}_{22} \chi_{1-1}=\chi_{11}, \\
+\hat{T}_{21} \chi_{11}=0, & \hat{T}_{21} \chi_{10}=-\frac{1}{\sqrt{2}} \chi_{11}, & \hat{T}_{21} \chi_{1-1}=\frac{1}{\sqrt{2}} \chi_{10}, \\
+\hat{T}_{20} \chi_{11}=\frac{1}{\sqrt{6}} \chi_{11}, & \hat{T}_{20} \chi_{10}=-\sqrt{\frac{2}{3}} \chi_{10}, & \hat{T}_{20} \chi_{1-1}=\frac{1}{\sqrt{6}} \chi_{1-1},  \tag{30}\\
+\hat{T}_{2-1} \chi_{11}=\frac{1}{\sqrt{2}} \chi_{10}, & \hat{T}_{2-1} \chi_{10}=-\frac{1}{\sqrt{2}} \chi_{1-1}, & \hat{T}_{2-1} \chi_{1-1}=0, \\
+\hat{T}_{2-2} \chi_{11}=\chi_{1-1}, & \hat{T}_{2-2} \chi_{10}=0, & \hat{T}_{2-2} \chi_{1-1}=0 .
+\end{array}
+\]
+
+\[
+\begin{array}{lll}
+\hat{T}_{22} \chi_{x}=-\frac{1}{2}\left(\chi_{x}+i \chi_{y}\right), & \hat{T}_{22} \chi_{y}=\frac{1}{2}\left(\chi_{y}-i \chi_{x}\right), & \hat{T}_{22} \chi_{z}=0 \\
+\hat{T}_{21} \chi_{x}=\frac{1}{2} \chi_{z}, & \hat{T}_{21} \chi_{y}=\frac{i}{2} \chi_{z}, & \hat{T}_{21} \chi_{z}=\frac{1}{2}\left(\chi_{x}+i \chi_{y}\right), \\
+\hat{T}_{20} \chi_{x}=\frac{1}{\sqrt{6}} \chi_{x}, & \hat{T}_{20} \chi_{y}=\frac{1}{\sqrt{6}} \chi_{y}, & \hat{T}_{20} \chi_{x}=-\sqrt{\frac{2}{3}} \chi_{x},  \tag{31}\\
+\hat{T}_{2-1} \chi_{x}=-\frac{1}{2} \chi_{z}, & \hat{T}_{2-1} \chi_{y}=\frac{i}{2} \chi_{z}, & \hat{T}_{2-1} \chi_{x}=-\frac{1}{2}\left(\chi_{x}-i \chi_{y}\right), \\
+\hat{T}_{2-2} \chi_{x}=-\frac{1}{2}\left(\chi_{x}-i \chi_{y}\right), & \hat{T}_{2-2} \chi_{y}=\frac{1}{2}\left(\chi_{y}+i \chi_{x}\right) & \hat{T}_{2-2} \chi_{x}=0 .
+\end{array}
+\]
+
+\[
+\begin{array}{lll}
+\hat{Q}_{x x} \chi_{11}=\frac{1}{2} \chi_{1-1}-\frac{1}{6} \chi_{11}, & \hat{Q}_{x x} \chi_{10}=\frac{1}{3} \chi_{10}, & \hat{Q}_{x x} \chi_{1-1}=\frac{1}{2} \chi_{11}-\frac{1}{6} \chi_{1-1}, \\
+\hat{Q}_{y y} \chi_{11}=-\frac{1}{2} \chi_{1-1}-\frac{1}{6} \chi_{11}, & \hat{Q}_{y y} \chi_{10}=\frac{1}{3} \chi_{10}, & \hat{Q}_{y y} \chi_{1-1}=-\frac{1}{2} \chi_{11}-\frac{1}{6} \chi_{1-1}, \\
+\hat{Q}_{x x} \chi_{11}=\frac{1}{3} \chi_{11}, & \hat{Q}_{x x} \chi_{10}=-\frac{2}{3} \chi_{10}, & \hat{Q}_{x z} \chi_{1-1}=\frac{1}{3} \chi_{1-1}, \\
+\hat{Q}_{x y} \chi_{11}=\frac{i}{2} \chi_{1-1}, & \hat{Q}_{x y} \chi_{10}=0, & \hat{Q}_{x y} \chi_{1-1}=-\frac{i}{2} \chi_{11}, \\
+\hat{Q}_{x x} \chi_{11}=\frac{1}{2 \sqrt{2}} \chi_{10}, & \hat{Q}_{x x} \chi_{10}=\frac{1}{2 \sqrt{2}}\left(\chi_{11}-\chi_{1-1}\right), & \hat{Q}_{x x} \chi_{1-1}=-\frac{1}{2 \sqrt{2}} \chi_{10},  \tag{32}\\
+\hat{Q}_{y z} \chi_{11}=\frac{i}{2 \sqrt{2}} \chi_{10}, & \hat{Q}_{y z} \chi_{10}=-\frac{i}{2 \sqrt{2}}\left(\chi_{11}+\chi_{1-1}\right), & \hat{Q}_{y z} \chi_{1-1}=\frac{i}{2 \sqrt{2}} \chi_{10} .
+\end{array}
+\]
+
+\[
+\begin{array}{lll}
+\hat{Q}_{x x} \chi_{x}=-\frac{2}{3} \chi_{x}, & \hat{Q}_{x x} \chi_{y}=\frac{1}{3} \chi_{y}, & \hat{Q}_{x x} \chi_{z}=\frac{1}{3} \chi_{z} \\
+\hat{Q}_{y y} \chi_{x}=\frac{1}{3} \chi_{x}, & \hat{Q}_{y y} \chi_{y}=-\frac{2}{3} \chi_{y}, & \hat{Q}_{y y} \chi_{z}=\frac{1}{3} \chi_{z} \\
+\hat{Q}_{z x} \chi_{x}=\frac{1}{3} \chi_{x}, & \hat{Q}_{z x} \chi_{y}=\frac{1}{3} \chi_{y}, & \hat{Q}_{z z} \chi_{z}=-\frac{2}{3} \chi_{z}  \tag{33}\\
+\hat{Q}_{x y} \chi_{x}=-\frac{1}{2} \chi_{y}, & \hat{Q}_{x y} \chi_{y}=-\frac{1}{2} \chi_{x}, & \hat{Q}_{x y} \chi_{z}=0 \\
+\hat{Q}_{x z} \chi_{x}=-\frac{1}{2} \chi_{z}, & \hat{Q}_{x z} \chi_{y}=0, & \hat{Q}_{x z} \chi_{z}=-\frac{1}{2} \chi_{x} \\
+\hat{Q}_{y z} \chi_{x}=0, & \hat{Q}_{y z} \chi_{y}=-\frac{1}{2} \chi_{z}, & \hat{Q}_{y z} \chi_{z}=-\frac{1}{2} \chi_{y}
+\end{array}
+\]
+
+\subsection*{6.3.5. Transformation of Basis Functions Under Rotations of the Coordinate Systems}
+The spin functions $\chi_{1 m}(m= \pm 1,0)$ and $\chi_{i}(i=x, y, z)$ constitute the covariant spherical basis and cartesian basis, respectively. Under rotations they transform through the rotation operator $\widehat{D}^{1}(\alpha, \beta, \gamma)$ (Eqs. $2.6(75)$ (78)) if rotations are specified by the Euler angles $\alpha, \beta, \gamma$ or through the rotation operator $\widehat{U}^{1}(\omega ; \Theta, \Phi)$ (Eqs. $2.6(79)$-(83)) if rotations are described by the rotation angle $\omega$ and the rotation axis $n(\Theta, \Phi)$.
+
+
+\begin{gather*}
+\chi_{1 m^{\prime}}^{\prime}=\hat{D}^{1}(\alpha, \beta, \gamma) \chi_{1 m^{\prime}}=\sum_{m= \pm 1,0} D_{m m^{\prime}}^{1}(\alpha, \beta, \gamma) \chi_{1 m} \\
+\chi_{i}^{\prime}=\hat{D}^{1}(\alpha, \beta, \gamma) \chi_{i}=\sum_{k=x, y, z} a_{k i} \chi_{k} \tag{34}
+\end{gather*}
+
+
+Here $D_{m m^{\prime}}^{1}(\alpha, \beta, \gamma)$ are the Wigner $D$-functions (Chap. 4) and $a_{i k}$ are elements of the rotation matrix (Sec. 1.4.6).
+
+The functions $\chi_{1 m^{\prime}}^{\prime}$ describe quantum states in which a particle of spin 1 has the spin projection $m^{\prime}$ on the new $z^{\prime}$-axis. These functions are eigenfunctions of the operators $\widehat{\mathbf{S}}^{\prime 2}$ and $\widehat{S}_{z}^{\prime}$ where $\widehat{\mathbf{S}}^{\prime}$ is the spin operator in the rotated coordinate system (Eqs. 2.6 (85) and 2.6(87))
+
+
+\begin{align*}
+\widehat{\mathbf{S}}^{\prime 2} \chi_{1 m^{\prime}}^{\prime} & =2 \chi_{1 m^{\prime}}^{\prime}  \tag{35}\\
+\widehat{S}_{z}^{\prime} \chi_{1 m^{\prime}}^{\prime} & =m^{\prime} \chi_{1 m^{\prime}}^{\prime}
+\end{align*}
+
+
+In the spherical basis representation the functions $\chi_{1 m^{\prime}}^{\prime}$ have the form
+
+\[
+\chi_{11}^{\prime}=\left(\begin{array}{c}
+\frac{1+\cos \beta}{2} e^{-i(\alpha+\gamma)}  \tag{36}\\
+\frac{\sin \beta}{\sqrt{2}} e^{-i \gamma} \\
+\frac{1-\cos \beta}{2} e^{i(\alpha-\gamma)}
+\end{array}\right), \quad \chi_{10}^{\prime}=\left(\begin{array}{c}
+-\frac{\sin \beta}{\sqrt{2}} e^{-i \alpha} \\
+\cos \beta \\
+\frac{\sin \beta}{\sqrt{2}} e^{i \alpha}
+\end{array}\right), \quad \chi_{1-1}^{\prime}=\left(\begin{array}{c}
+\frac{1-\cos \beta}{2} e^{-i(\alpha-\gamma)} \\
+-\frac{\sin \beta}{\sqrt{2}} e^{i \gamma} \\
+\frac{1+\cos \beta}{2} e^{i(\alpha+\gamma)}
+\end{array}\right),
+\]
+
+and the functions $\chi_{i}^{\prime}$ are given by
+
+\[
+\chi_{x}^{\prime}=\left(\begin{array}{c}
+-\frac{\cos \beta \cos \gamma-i \sin \gamma}{\sqrt{2}} e^{-i \alpha}  \tag{37}\\
+-\sin \beta \cos \gamma \\
+\frac{\cos \beta \cos \gamma+i \sin \gamma}{\sqrt{2}} e^{i \alpha}
+\end{array}\right), \quad \chi_{y}^{\prime}=\left(\begin{array}{c}
+\frac{\cos \beta \sin \gamma+i \cos \gamma}{\sqrt{2}} e^{-i \alpha} \\
+\sin \beta \sin \gamma \\
+-\frac{\cos \beta \sin \gamma-i \cos \gamma}{\sqrt{2}} e^{i \alpha}
+\end{array}\right), \quad \chi_{z}^{\prime}=\left(\begin{array}{c}
+-\frac{\sin \beta}{\sqrt{2}} e^{-i \alpha} \\
+\cos \beta \\
+\frac{\sin \beta}{\sqrt{2}} e^{i \alpha}
+\end{array}\right) .
+\]
+
+In the cartesian basis representation these functions read
+
+
+\begin{gather*}
+\chi_{11}^{\prime}=\left(\begin{array}{c}
+-\frac{\cos \beta \cos \alpha-i \sin \alpha}{\sqrt{2}} e^{-i \gamma} \\
+-\frac{\cos \beta \sin \alpha+i \cos \alpha}{\sqrt{2}} e^{-i \gamma} \\
+\frac{\sin \beta}{\sqrt{2}} e^{-i \gamma}
+\end{array}\right), \quad \chi_{10}^{\prime}=\left(\begin{array}{c}
+\sin \beta \cos \alpha \\
+\sin \beta \sin \alpha \\
+\cos \beta
+\end{array}\right), \quad \chi_{1-1}^{\prime}=\left(\begin{array}{c}
+\frac{\cos \beta \cos \alpha+i \sin \alpha}{\sqrt{2}} e^{i \gamma} \\
+\frac{\cos \beta \sin \alpha-i \cos \alpha}{\sqrt{2}} e^{i \gamma} \\
+-\frac{\sin \beta}{\sqrt{2}} e^{i \gamma}
+\end{array}\right),  \tag{38}\\
+\chi_{x}^{\prime}=\left(\begin{array}{c}
+\cos \beta \cos \alpha \cos \gamma-\sin \alpha \sin \gamma \\
+\cos \beta \sin \alpha \cos \gamma+\cos \alpha \sin \gamma \\
+-\sin \beta \cos \gamma
+\end{array}\right), \quad \chi_{y}^{\prime}=\left(\begin{array}{c}
+-\cos \beta \cos \alpha \sin \gamma-\sin \alpha \cos \gamma \\
+-\cos \beta \sin \alpha \sin \gamma+\cos \alpha \cos \gamma \\
+\sin \beta \sin \gamma
+\end{array}\right), \quad \chi_{x}^{\prime}=\left(\begin{array}{c}
+\sin \beta \cos \alpha \\
+\sin \beta \sin \alpha \\
+\cos \beta
+\end{array}\right) \tag{39}
+\end{gather*}
+
+
+The expansions for the basis functions in the rotated coordinate system in terms of the angles $\omega, \Theta, \Phi$ may be obtained by the use of the rotation operator $\hat{U}^{1}(\omega ; \Theta, \Phi)$ (Eqs. 2.6(80)-(81)).
+
+\subsection*{6.3.6. Helicity Basis Functions for $S=1$}
+The helicity basis functions $\chi_{1 \lambda}(\vartheta, \varphi)(\lambda= \pm 1,0)$ describe the states in which the spin projection on the linear momentum direction $\mathbf{n}(\vartheta, \varphi) \equiv \mathbf{p} /|\mathbf{p}|$ is equal to $\lambda$. The functions $\chi_{1 \lambda}(\vartheta, \varphi)$ are eigenfunctions of the operators $\widehat{\mathbf{S}}^{2}$ and $\widehat{\mathbf{S}} \cdot \mathbf{n}$
+
+
+\begin{align*}
+\widehat{\mathbf{S}}^{2} \chi_{1 \lambda}(\vartheta, \varphi) & =2 \chi_{1 \lambda}(\vartheta, \varphi) \\
+\widehat{\mathbf{S}} \mathbf{n}_{\chi_{1 \lambda}}(\vartheta, \varphi) & =\lambda_{\chi_{1 \lambda}}(\vartheta, \varphi) \tag{40}
+\end{align*}
+
+
+According to Eq. $6.1(20)$, the helicity basis functions may be derived from the functions $\chi_{1 m}$ by a coordinate rotation
+
+
+\begin{gather*}
+\chi_{1 \lambda}(\vartheta, \varphi)=\sum_{m} D_{m \lambda}^{1}(\varphi, \vartheta, 0) \chi_{1 m} \\
+\chi_{1 m}=\sum_{\lambda} D_{-\lambda-m}^{1}(0, \vartheta, \varphi) \chi_{1 \lambda}(\vartheta, \varphi) \tag{41}
+\end{gather*}
+
+
+For Hermitian adjoint functions Eqs. (41) assume the form
+
+
+\begin{align*}
+& \chi_{1 \lambda}^{\dagger}(\vartheta, \varphi)=\sum_{m}(-1)^{\lambda-m} D_{-m-\lambda}^{1}(\varphi, \vartheta, 0) \chi_{1 m}^{\dagger} \\
+& \chi_{1 m}^{\dagger}=\sum_{\lambda}(-1)^{\lambda-m} D_{\lambda m}^{1}(0, \vartheta, \varphi) \chi_{1 \lambda}^{\dagger}(\vartheta, \varphi) \tag{42}
+\end{align*}
+
+
+The helicity functions $\chi_{1 \lambda}(\vartheta, \varphi)$ may be treated as the covariant helicity basis vectors $\mathbf{e}_{\lambda}^{\prime}$ (see Sec. 1.1.4) written as column matrices
+
+
+\begin{equation*}
+\chi_{1 \lambda}(\vartheta, \varphi)=\mathbf{e}_{\lambda}^{\prime} \quad(\lambda= \pm 1,0) \tag{43}
+\end{equation*}
+
+
+One can construct the following linear combinations $\chi_{i}(\vartheta, \varphi)(i=x, y, z)$ of the helicity functions $\chi_{1 \lambda}(\vartheta, \varphi)$ :
+
+
+\begin{align*}
+& \chi_{x}(\vartheta, \varphi)=\frac{1}{\sqrt{2}}\left\{\chi_{1-1}(\vartheta, \varphi)-\chi_{11}(\vartheta, \varphi)\right\} \\
+& \chi_{y}(\vartheta, \varphi)=\frac{i}{\sqrt{2}}\left\{\chi_{1-1}(\vartheta, \varphi)+\chi_{11}(\vartheta, \varphi)\right\}  \tag{44}\\
+& \chi_{z}(\vartheta, \varphi)=\chi_{10}(\vartheta, \varphi)
+\end{align*}
+
+
+The functions $\chi_{i}(\vartheta, \varphi)(i=x, y, z)$ coincide with the polar basis vectors (see Sec. 1.1.3):
+
+
+\begin{equation*}
+\chi_{x}(\vartheta, \varphi) \equiv \mathbf{e}_{\vartheta}, \quad \chi_{y}(\vartheta, \varphi) \equiv \mathbf{e}_{\varphi}, \quad \chi_{z}(\vartheta, \varphi)=\mathbf{e}_{p} \tag{45}
+\end{equation*}
+
+
+It should be emphasized that the functions $\chi_{i}(\vartheta, \varphi)$ describe the states with no definite helicity. These functions are related to the basis functions $\chi_{k}(k=x, y, z)$ (Sec. 6.3.1) by
+
+
+\begin{align*}
+& \chi_{i}(\vartheta, \varphi)=\sum_{k} a_{k i}(\varphi, \vartheta, 0) \chi_{k}, \\
+& \chi_{k}=\sum_{i} a_{i k}(\varphi, \vartheta, 0) \chi_{i}(\vartheta, \varphi), \tag{46}
+\end{align*}
+
+
+where $a_{i k}(\alpha, \beta, \gamma)$ are elements of the rotation matrix given by Eqs. 1.4(54). The relations between the Hermitian conjugate functions $\chi_{i}^{\dagger}(\vartheta, \varphi)$ and $\chi_{k}^{\dagger}$ are also given by Eq. (46) because the elements $a_{i k}$ are real.
+
+Three helicity functions $\chi_{1 \lambda}(\vartheta, \varphi)$ with $\lambda= \pm 1,0$ or, equivalently, three functions $\chi_{i}(\vartheta, \varphi)$ with $i=x, y, z$ constitute an orthonormalized basis. The orthogonality and normalization conditions have the form
+
+
+\begin{gather*}
+\chi_{i \lambda}^{\dagger}(\vartheta, \varphi) \chi_{1 \lambda^{\prime}}(\vartheta, \varphi)=\delta_{\lambda \lambda^{\prime}} \\
+\chi_{i}^{\dagger}(\vartheta, \varphi) \chi_{k}(\vartheta, \varphi)=\delta_{i k} \tag{47}
+\end{gather*}
+
+
+The completeness conditions are
+
+
+\begin{align*}
+& \sum_{\lambda= \pm 1,0} \chi_{1 \lambda}(\vartheta, \varphi) \chi_{1 \lambda}^{\dagger}(\vartheta, \varphi)=\widehat{I}, \\
+& \sum_{i=x, y, x} \chi_{i}(\vartheta, \varphi) \chi_{i}^{\dagger}(\vartheta, \varphi)=\widehat{I} . \tag{48}
+\end{align*}
+
+
+Explicit form of the helicity functions $\chi_{1 \lambda}(\vartheta, \varphi)$ and the functions $\chi_{i}(\vartheta, \varphi)$\\
+(a) Spherical basis representation:
+
+
+\begin{gather*}
+\chi_{11}(\vartheta, \varphi)=\left(\begin{array}{c}
+\frac{1+\cos \theta}{2} e^{-i \varphi} \\
+\frac{\sin \theta}{\sqrt{2}} \\
+\frac{1-\cos \vartheta}{2} e^{i \varphi}
+\end{array}\right), \quad \chi_{10}(\vartheta, \varphi)=\left(\begin{array}{c}
+-\frac{\sin \vartheta}{\sqrt{2}} e^{-i \varphi} \\
+\cos \vartheta \\
+\frac{\sin \vartheta}{\sqrt{2}} e^{i \varphi}
+\end{array}\right), \quad \chi_{1-1}(\vartheta, \varphi)=\left(\begin{array}{c}
+\frac{1-\cos \theta}{2} e^{-i \varphi} \\
+-\frac{\sin \vartheta}{\sqrt{2}} \\
+\frac{1+\cos \vartheta}{2} e^{i \varphi}
+\end{array}\right),  \tag{49}\\
+\chi_{x}(\vartheta, \varphi)=\left(\begin{array}{c}
+-\frac{\cos \theta}{\sqrt{2}} e^{-i \varphi} \\
+-\sin \vartheta \\
+\frac{\cos \vartheta}{\sqrt{2}} e^{i \varphi}
+\end{array}\right), \quad \chi_{y}(\vartheta, \varphi)=\left(\begin{array}{c}
+\frac{i}{\sqrt{2}} e^{-i \varphi} \\
+0 \\
+\frac{i}{\sqrt{2}} e^{i \varphi}
+\end{array}\right), \quad \chi_{x}(\vartheta, \varphi)=\left(\begin{array}{c}
+-\frac{\sin \vartheta}{\sqrt{2}} e^{-i \varphi} \\
+\cos \vartheta \\
+\frac{\sin \vartheta}{\sqrt{2}} e^{i \varphi}
+\end{array}\right) . \tag{50}
+\end{gather*}
+
+
+(b) Cartesian basis representation:
+
+
+\begin{gather*}
+\chi_{11}(\vartheta, \varphi)=-\frac{1}{\sqrt{2}}\left(\begin{array}{c}
+\cos \vartheta \cos \varphi-i \sin \varphi \\
+\cos \vartheta \sin \varphi+i \cos \varphi \\
+-\sin \vartheta
+\end{array}\right), \quad \chi_{10}(\vartheta, \varphi)=\left(\begin{array}{c}
+\sin \vartheta \cos \varphi \\
+\sin \vartheta \sin \varphi \\
+\cos \vartheta
+\end{array}\right), \\
+\chi_{1-1}(\vartheta, \varphi)=\frac{1}{\sqrt{2}}\left(\begin{array}{c}
+\cos \vartheta \cos \varphi+i \sin \varphi \\
+\cos \vartheta \sin \varphi-i \cos \varphi \\
+-\sin \vartheta
+\end{array}\right),  \tag{51}\\
+\chi_{x}(\vartheta, \varphi)=\left(\begin{array}{c}
+\cos \vartheta \cos \varphi \\
+\cos \vartheta \sin \varphi \\
+-\sin \vartheta
+\end{array}\right), \quad \chi_{y}(\vartheta, \varphi)=\left(\begin{array}{c}
+-\sin \varphi \\
+\cos \varphi \\
+0
+\end{array}\right), \quad \chi_{z}(\vartheta, \varphi)=\left(\begin{array}{c}
+\sin \vartheta \cos \varphi \\
+\sin \vartheta \sin \varphi \\
+\cos \vartheta
+\end{array}\right) . \tag{52}
+\end{gather*}
+
+
+In the cartesian basis representation these functions satisfy the relations
+
+
+\begin{gather*}
+\chi_{1 \lambda}^{*}(\vartheta, \varphi)=(-1)^{\lambda} \chi_{1-\lambda}(\vartheta, \varphi), \quad(\lambda= \pm 1,0)  \tag{53}\\
+\chi_{i}^{*}(\vartheta, \varphi)=\chi_{i}(\vartheta, \varphi), \quad(i=x, y, z)
+\end{gather*}
+
+
+The expansions of products of the helicity basis functions in series of spin matrices and quadrupole operators (Sec. 2.6) are given by
+
+
+\begin{align*}
+\chi_{1 \lambda}(\vartheta, \varphi) \chi_{1 \lambda^{\prime}}^{\dagger}(\vartheta, \varphi)=\frac{1}{3} \delta_{\lambda \lambda^{\prime}} \widehat{I} & +\frac{1}{\sqrt{2}} C_{1 \lambda^{\prime} 1 \nu}^{1 \lambda} \sum_{\mu=-1}^{1} D_{\mu \nu}^{1}(\varphi, \vartheta, 0) \widehat{S}_{\mu} \\
+& +\sqrt{\frac{5}{3}} C_{1 \lambda^{\prime} 2 N}^{1 \lambda} \sum_{M=-2}^{2} D_{M N}^{2}(\varphi, \vartheta, 0) \widehat{T}_{2 M} \tag{54}
+\end{align*}
+
+
+Analogous expansions for $\chi_{i}(\vartheta, \varphi)$ can be written as
+
+
+\begin{equation*}
+\chi_{i}(\vartheta, \varphi) \chi_{k}^{\dagger}(\vartheta, \varphi)=\frac{1}{3} \delta_{i k} \widehat{I}+\frac{i}{2} \varepsilon_{i k l} \sum_{m=x, y, z} a_{m l}(\varphi, \vartheta, 0) \widehat{S}_{m}-\sum_{m, n=x, y, z} a_{m i}(\varphi, \vartheta, 0) a_{n k}(\varphi, \vartheta, 0) \widehat{Q}_{m n} \tag{55}
+\end{equation*}
+
+
+where $a_{m l}(\alpha, \beta, \gamma)$ are elements of the rotation matrix (Eq. 1.4(54)).\\
+Matrix elements of the spin operator between the helicity states $\chi_{1 \lambda}(\vartheta, \varphi)$ or between the states $\chi_{i}(\vartheta, \varphi)$ are
+
+
+\begin{gather*}
+\chi_{1 \lambda}^{\dagger}(\vartheta, \varphi) \hat{S}_{\mu} \chi_{1 \lambda^{\prime}}(\vartheta, \varphi)=(-1)^{\mu+\nu} \sqrt{2} C_{1 \lambda^{\prime} 1 \nu}^{1 \lambda} D_{-\mu-\nu}^{1}(\varphi, \vartheta, 0)  \tag{56}\\
+\chi_{i}^{\dagger}(\vartheta, \varphi) \hat{S}_{l} \chi_{k}(\vartheta, \varphi)=-i \sum_{m} \varepsilon_{i k m} a_{l m}(\varphi, \vartheta, 0) \tag{57}
+\end{gather*}
+
+
+In particular, the expectation value of the spin operator $\widehat{\mathbf{S}}$ in a state with the helicity $\lambda$ is given by
+
+
+\begin{equation*}
+\chi_{1 \lambda}^{\dagger}(\vartheta, \varphi) \widehat{\mathbf{S}}_{\chi_{1 \lambda}}(\vartheta, \varphi)=\lambda \operatorname{n}(\vartheta, \varphi), \quad(\lambda= \pm 1,0) \tag{58}
+\end{equation*}
+
+
+The expectation value of the operator $\widehat{\mathbf{S}}$ in the states $\chi_{i}(\vartheta, \varphi)$ is zero.
+
+
+\begin{equation*}
+\chi_{i}^{\dagger}(\vartheta, \varphi) \widehat{\mathbf{S}}_{\chi_{i}}(\vartheta, \varphi)=0, \quad(i=x, y, z) \tag{59}
+\end{equation*}
+
+
+The evaluation of matrix elements of the quadrupole operators $\hat{T}_{2 M}(M= \pm 2, \pm 1,0)$ and $\hat{Q}_{i k}(i, k=x, y, z)$ gives
+
+
+\begin{gather*}
+\chi_{1 \lambda}^{\dagger}(\vartheta, \varphi) \hat{T}_{2 M} \chi_{1 \lambda^{\prime}}(\vartheta, \varphi)=(-1)^{M+N} \sqrt{\frac{5}{3}} C_{1 \lambda^{\prime} 2 N}^{1 \lambda} D_{-M-N}^{2}(\varphi, \vartheta, 0)  \tag{60}\\
+\chi_{i}^{\dagger}(\vartheta, \varphi) \hat{Q}_{l m} \chi_{k}(\vartheta, \varphi)=-\frac{1}{2}\left\{a_{l i}(\varphi, \vartheta, 0) a_{m k}(\varphi, \vartheta, 0)+a_{l k}(\varphi, \vartheta, 0) a_{m i}(\varphi, \vartheta, 0)-\frac{2}{3} \delta_{i k} \delta_{l m}\right\} . \tag{61}
+\end{gather*}
+
+
+In particular, the expectation values of the quadrupole operators $\hat{T}_{2 M}$ in states with helicity $\lambda$ are equal to
+
+
+\begin{gather*}
+\chi_{1 \lambda}^{\dagger}(\vartheta, \varphi) \hat{T}_{2 M} \chi_{1 \lambda}(\vartheta, \varphi)=\frac{(-1)^{1+\lambda}}{1+|\lambda|} \sqrt{\frac{8 \pi}{15}} Y_{2 M}(\vartheta, \varphi)  \tag{62}\\
+(\lambda= \pm 1,0 ; M= \pm 2, \pm 1,0)
+\end{gather*}
+
+
+\subsection*{6.3.7. General Spin Functions for $S=1$}
+An arbitrary spin function $\chi_{1}$ of a particle of spin 1 may be expanded in terms of basis spin functions, i.e., written in the following form:
+
+
+\begin{equation*}
+\chi_{1}=\sum_{m= \pm 1,0} a^{m} \chi_{1 m}=\sum_{m= \pm 1,0}(-1)^{m} a_{-m} \chi_{1 m}=\sum_{i=x, y, x} a_{i} \chi_{i} \tag{63}
+\end{equation*}
+
+
+The expansion of the Hermitian conjugate function $\chi_{1}^{\dagger}$ is given by
+
+
+\begin{equation*}
+\chi_{1}^{\dagger}=\sum_{m= \pm 1,0}\left(a^{m}\right)^{*} \chi_{1 m}^{\dagger}=\sum_{m= \pm 1,0}(-1)^{m}\left(a_{-m}\right)^{*} \chi_{1 m}^{\dagger}=\sum_{i=x, y, x} a_{i}^{*} \chi_{i}^{\dagger} \tag{64}
+\end{equation*}
+
+
+In a spherical basis the function $\chi_{1}$ has the form
+
+\[
+\chi_{1}=\left(\begin{array}{c}
+a^{+1}  \tag{65}\\
+a^{0} \\
+a^{-1}
+\end{array}\right)=\left(\begin{array}{c}
+-a_{-1} \\
+a_{0} \\
+-a_{+1}
+\end{array}\right)=\left(\begin{array}{c}
+-\frac{1}{\sqrt{2}}\left(a_{x}-i a_{y}\right) \\
+a_{x} \\
+\frac{1}{\sqrt{2}}\left(a_{x}+i a_{y}\right)
+\end{array}\right)
+\]
+
+and in a cartesian basis this function reads
+
+\[
+\chi_{1}=\left(\begin{array}{c}
+\frac{1}{\sqrt{2}}\left(a^{-1}-a^{+1}\right)  \tag{66}\\
+-\frac{i}{\sqrt{2}}\left(a^{-1}+a^{+1}\right) \\
+a^{0}
+\end{array}\right)=\left(\begin{array}{c}
+\frac{1}{\sqrt{2}}\left(a_{-1}-a_{+1}\right) \\
+\frac{i}{\sqrt{2}}\left(a_{-1}+a_{+1}\right) \\
+a_{0}
+\end{array}\right)=\left(\begin{array}{c}
+a_{x} \\
+a_{y} \\
+a_{x}
+\end{array}\right) .
+\]
+
+The expansion coefficients $a^{m}$ are contravariant spherical components of some generally complex vector $\mathbf{a}, a_{m}$ are covariant spherical components of $\mathbf{a}$ and $a_{i}$ are cartesian components. Sometimes a is called the polarization vector of particles of spin 1.
+
+Under complex conjugation components of this vector transform as
+
+
+\begin{equation*}
+\left(a^{m}\right)^{*}=\left(a^{*}\right)_{m},\left(a_{m}\right)^{*}=\left(a^{*}\right)^{m},\left(a_{i}\right)^{*}=\left(a^{*}\right)_{i} \tag{67}
+\end{equation*}
+
+
+The normalization condition
+
+
+\begin{equation*}
+\chi_{1}^{\dagger} \chi_{1}=1 \tag{68}
+\end{equation*}
+
+
+imposes a restriction to the components of a
+
+
+\begin{equation*}
+\left|a^{+1}\right|^{2}+\left|a^{0}\right|^{2}+\left|a^{-1}\right|^{2}=\left|a_{+1}\right|^{2}+\left|a_{0}\right|^{2}+\left|a_{-1}\right|^{2}=\left|a_{x}\right|^{2}+\left|a_{y}\right|^{2}+\left|a_{z}\right|^{2}=1, \tag{69}
+\end{equation*}
+
+
+or, in compact form
+
+
+\begin{equation*}
+|\mathbf{a}|^{2}=\mathbf{a}^{*} \cdot \mathbf{a}=1 \tag{70}
+\end{equation*}
+
+
+The spin function product $\chi_{1} \chi_{1}^{\dagger}$ may be expanded in series of the spin matrices $\widehat{\mathbf{S}}$ and quadrupole momentum operators, $\widehat{T}_{2 M}$ or $\widehat{Q}_{i k}$ (see Sec. 2.6),
+
+
+\begin{align*}
+& \chi_{1} \chi_{1}^{\dagger}=\frac{1}{3} \widehat{I}+\frac{1}{2} \sum_{\mu=-1}^{1}(-1)^{\mu} P_{-\mu} \widehat{S}_{\mu}+\sum_{M=-2}^{2}(-1)^{M} P_{2-M} \widehat{T}_{2 M} \\
+& \chi_{1} \chi_{1}^{\dagger}=\frac{1}{3} \widehat{I}+\frac{1}{2} \sum_{i=x, y, x} P_{i} \widehat{S}_{i}+\sum_{i, k=x, y, x} P_{i k} \widehat{Q}_{i k} \tag{71}
+\end{align*}
+
+
+or in more compact form,
+
+
+\begin{equation*}
+\chi_{1} \chi_{1}^{\dagger}=\frac{1}{3} \widehat{\mathbf{I}}+\frac{1}{2} \mathbf{P} \cdot \widehat{\mathbf{S}}+\left(\mathbf{P}_{2} \cdot \widehat{\mathbf{T}}_{2}\right), \tag{72}
+\end{equation*}
+
+
+where ( $\mathbf{P}_{2} \cdot \widehat{\mathbf{T}}_{2}$ ) is scalar product to two irreducible tensors of rank 2 (see Eq. 3.1(31)).\\
+The real vector $\mathbf{P}$ can be expressed in terms of the polarization vector $\mathbf{a}$ as
+
+
+\begin{equation*}
+\mathbf{P}=i\left[\mathbf{a} \times \mathbf{a}^{*}\right], \tag{73}
+\end{equation*}
+
+
+or, in components,
+
+
+\begin{gather*}
+P_{\mu}=\sqrt{2} \sum_{m, n} C_{1 m 1 \mu}^{1 n}\left(a^{n}\right)^{*} a^{m}, \quad(m, n, \mu= \pm 1,0) \\
+P_{i}=i \sum_{k, l} \varepsilon_{i k l} a_{k} a_{l}^{*}, \quad(i, k, l=x, y, z) \tag{74}
+\end{gather*}
+
+
+Spherical and cartesian components of a real irreducible tensor $\mathbf{P}_{2}$ of rank 2 may be expressed in terms of components of $\mathbf{a}$ by
+
+
+\begin{gather*}
+P_{2 M}=\sqrt{\frac{5}{3}} \sum_{m, n} C_{1 m 2 M}^{1 n}\left(a^{n}\right)^{*} a^{m}, \quad(m, n= \pm 1,0 ; M= \pm 2, \pm 1,0), \\
+P_{i k}=-\frac{1}{2}\left\{a_{i} a_{k}^{*}+a_{k} a_{i}^{*}-\frac{2}{3} \delta_{i k}\right\}, \quad(i, k=x, y, z),  \tag{75}\\
+P_{i k}=P_{k i}, \sum_{i} P_{i i}=0 .
+\end{gather*}
+
+
+The vector $\mathbf{P}$ and tensor $\mathbf{P}_{2}$ give the following expectation values of the spin operator and the quadrupole momentum operator, respectively:
+
+
+\begin{gather*}
+\langle\widehat{\mathbf{S}}\rangle \equiv \chi_{1}^{\dagger} \widehat{\mathbf{S}}_{\chi_{1}}=\mathbf{P} \\
+\left\langle\widehat{T}_{2 M}\right\rangle \equiv \chi_{1}^{\dagger} \hat{T}_{2 M} \chi_{1}=P_{2 M}  \tag{76}\\
+\left\langle\hat{Q}_{i k}\right\rangle \equiv \chi_{1}^{\dagger} \hat{Q}_{i k} \chi_{1}=P_{i k}
+\end{gather*}
+
+
+The transformation of the spin function $\chi_{1}$ under rotations of coordinate systems is performed by the rotation operators $\hat{D}^{1}(\alpha, \beta, \gamma)$ (Eqs. $2.6(76)-(77)$ ) or $\hat{U}^{1}(\omega ; \Theta, \Phi)$ (Eqs. $2.6(80)-(81)$ ) depending on the choice of the parameters to describe rotations
+
+
+\begin{equation*}
+\chi_{1}^{\prime}=\hat{D}^{1}(\alpha, \beta, \gamma) \chi_{1}=\hat{U}^{1}(\omega ; \Theta, \Phi) \chi_{1} \tag{77}
+\end{equation*}
+
+
+Spin functions in a rotated coordinate system may be expanded into sums of basis spin functions $\chi_{1 m}, \chi_{i}$ in the original coordinate system as well as into sums of functions $\chi_{1 m}^{\prime}, \chi_{i}^{\prime}$ in the rotated coordinate system:
+
+
+\begin{align*}
+\chi_{1}^{\prime}=\sum_{m= \pm 1,0} a^{\prime m} \chi_{1 m} & =\sum_{m= \pm 1,0} a^{m} \chi_{1 m}^{\prime} \\
+\chi_{1}^{\prime}=\sum_{m= \pm 1,0}(-1)^{m} a_{-m}^{\prime} \chi_{1 m} & =\sum_{m= \pm 1,0}(-1)^{m} a_{-m} \chi_{1 m}^{\prime}  \tag{78}\\
+\chi_{1}^{\prime}=\sum_{i=x, y, z} a_{i}^{\prime} \chi_{i} & =\sum_{i=x, y, z} a_{i} \chi_{i}^{\prime}
+\end{align*}
+
+
+The relations between basis functions in the rotated and original coordinate systems are given by Eqs. (34). The components of $\mathbf{a}$ in the above systems are related by
+
+\[
+\begin{array}{rlrl}
+a^{\prime m} & =\sum_{n} D_{m n}^{1}(\alpha, \beta, \gamma) a^{n}, & a^{n} & =\sum_{m} D_{m n}^{1 *}(\alpha, \beta, \gamma) a^{\prime m} \\
+a_{m}^{\prime} & =\sum_{n} D_{n m}^{1}(\alpha, \beta, \gamma) a_{n}, & a_{n} & =\sum_{m} D_{n m}^{1 *}(\alpha, \beta, \gamma) a_{m}^{\prime}  \tag{79}\\
+a_{i}^{\prime} & =\sum_{k} a_{i k} a_{k}, & a_{k} & =\sum_{i} a_{i k} a_{i}^{\prime} \\
+(m, n= \pm 1,0 ; & i, k & =x, y, z)
+\end{array}
+\]
