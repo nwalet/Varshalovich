@@ -484,7 +484,20 @@ k_{1} & k_{2} & j_{3} \\
 \end{gathered}
 \]
 \begin{center}
-\includegraphics[max width=\textwidth, alt={}]{402d9a1b-ee97-49cb-ae14-75458391be12-434_421_222_875_1536}
+\begin{center}
+\begin{tikzpicture}[baseline=0pt]
+\coordinate (T) at (0,1.1); \coordinate (L) at (-1.1,0); \coordinate (R) at (1.1,0); \coordinate (B) at (0,-1.1);
+\node[dotnode,label={above:$+$}] at (T) {}; \node[dotnode] at (L) {}; \node[dotnode] at (R) {}; \node[dotnode,label={below:$+$}] at (B) {};
+\draw[jmline] (T) -- (L) node[midway,above left]{$j_1$};
+\draw[jmline] (T) -- (R) node[midway,above right]{$j_3$};
+\draw[jmline] (L) -- (B) node[midway,below left]{$k_3$};
+\draw[jmline] (R) -- (B) node[midway,below right]{$k_1$};
+\draw[jmline] (T) -- (B) node[midway,right]{$j_2$};
+\draw[jmline] (L) -- (R) node[midway,above]{$k_2$};
+\end{tikzpicture}
+\qquad
+\tricenter{k_3}{j_3}{k_1}{j_1}{j_2}{k_2}{+}
+\end{center}
 \end{center}
 
 9j Symbol
@@ -532,7 +545,27 @@ j_{3} & k_{3} & l_{3} \\
 \end{gathered}
 \]
 \begin{center}
-\includegraphics[max width=\textwidth, alt={}]{402d9a1b-ee97-49cb-ae14-75458391be12-434_248_259_1427_1532}
+\begin{center}
+\begin{tikzpicture}[baseline=0pt]
+\foreach \i/\lbl/\pos in {0/j_1/above,1/j_3/above,2/k_3/right,3/k_2/below,4/l_2/below,5/l_1/left}{
+  \coordinate (P\i) at ({90-\i*60}:1.4);
+}
+\node[dotnode,label={above:$+$}] at (P0) {};
+\node[dotnode,label={above right:$-$}] at (P1) {};
+\node[dotnode,label={below right:$+$}] at (P2) {};
+\node[dotnode,label={below:$-$}] at (P3) {};
+\node[dotnode,label={below left:$+$}] at (P4) {};
+\node[dotnode,label={above left:$-$}] at (P5) {};
+\draw[jmline] (P0) -- (P1) node[midway,above]{$j_3$};
+\draw[jmline] (P1) -- (P2) node[midway,right]{$k_3$};
+\draw[jmline] (P2) -- (P3) node[midway,below right]{$k_2$};
+\draw[jmline] (P3) -- (P4) node[midway,below]{$l_2$};
+\draw[jmline] (P4) -- (P5) node[midway,left]{$l_1$};
+\draw[jmline] (P5) -- (P0) node[midway,above left]{$l_3$};
+\draw[jmline] (P0) -- (P3) node[midway,right]{$j_2$};
+\draw[jmline] (P1) -- (P4) node[midway,left]{$k_1$};
+\end{tikzpicture}
+\end{center}
 \end{center}
 
 \subsection{Summation over Angular Momentum}
@@ -641,7 +674,15 @@ The resultant $\Omega$-line has the same direction as the original $|\Omega\rang
 \[
 \int Y_{l m}^{*}(\Omega) Y_{l^{\prime} m^{\prime}}(\Omega) d \Omega=\braket{l m}{\Omega}\left(\Omega\left|l^{\prime} m^{\prime}\right\rangle\right.
 \]
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-435_64_368_2229_1361}\\
+\begin{center}
+\begin{tikzpicture}[baseline=0pt]
+\draw[jmline] (0,0) node[left]{$lm$} -- (1,0);
+\node[deltanode] at (1,0) {};
+\draw[omline] (1,0) -- (2,0) node[midway,above]{$\Omega$};
+\node[deltanode] at (2,0) {};
+\draw[jmline] (2,0) -- (3,0) node[right]{$l^{\prime}m^{\prime}$};
+\end{tikzpicture}
+\end{center}
 whereas $\Omega_{0}=4 \pi$ for integration of the functions $C_{l m}(\Omega)=|4 \pi /(2 l+1)|^{1 / 2} Y_{l m}(\Omega)$.
 
 \subsection{Integration over Rotation Parameters}
@@ -795,35 +836,39 @@ $6j$ Symbol $\sixj{a}{b}{c}{A}{B}{C}$
 \end{center}
 \end{table}
 
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-438_179_215_543_1372}\\
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-438_190_181_729_1363}
+\begin{center}
+\tricenter{B}{A}{C}{a}{b}{c}{+} \quad$=(-1)^{2(A+B+C)}$\quad
+\tricenter{B}{A}{C}{a}{b}{c}{-} \quad$=(-1)^{a+b+c}$\quad
+\tricenter{B}{A}{C}{a}{b}{c}{+}
+\end{center}
 
 \subsubsection{Reversal of Node Sign}
 \begin{center}
-\includegraphics[max width=\textwidth, alt={}]{402d9a1b-ee97-49cb-ae14-75458391be12-438_220_985_1155_550}
+\tricenter{B}{A}{C}{a}{b}{c}{+} \quad$=(-1)^{2(A+B+C)}$\quad \tricenter{B}{A}{C}{a}{b}{c}{-} \quad$=(-1)^{a+b+c}$\quad \tricenter{B}{A}{C}{a}{b}{c}{+}
 \end{center}
 
 \subsubsection{Reversal of Line Direction}
 \begin{center}
-\includegraphics[max width=\textwidth, alt={}]{402d9a1b-ee97-49cb-ae14-75458391be12-438_215_1229_1545_430}
+\tricenter{B}{A}{C}{a}{b}{c}{+} \quad$=$\quad \tricenter{B}{A}{C}{a}{b}{c}{+}
 \end{center}
 
 \subsubsection{Argument Permutation}
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-438_219_1260_1930_399}\\
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-438_211_1243_2194_399}
+\begin{center}
+\tricenter{A}{B}{C}{a}{b}{c}{+} \quad$=$\quad \tricenter{C}{A}{B}{c}{a}{b}{+}
+\end{center}
 \[
 9 j \text { Symbol }\ninej{a_{1}}{a_{2}}{a_{3}}{c_{1}}{c_{2}}{c_{3}}{b_{1}}{b_{2}}{b_{3}}
 \]
 Reversal of Node Sign\\
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-439_242_685_556_292}
+\tricenter{A}{B}{C}{a}{b}{c}{-}
 
 \begin{center}
 \textbf{Table~\ref{chap11:tab:2} (continued)}
-  \includegraphics[alt={},max width=\textwidth]{402d9a1b-ee97-49cb-ae14-75458391be12-439_240_397_554_1056}
+\tricenter{B}{C}{A}{b}{c}{a}{+}
 \end{center}
 
 \begin{center}
-\includegraphics[max width=\textwidth, alt={}]{402d9a1b-ee97-49cb-ae14-75458391be12-439_231_252_556_1522}
+\tricenter{C}{A}{B}{c}{a}{b}{-}
 \end{center}
 
 \subsubsection{Reversal of Line Direction}

@@ -89,6 +89,29 @@
 \end{tikzpicture}%
 }
 
+%\tricenter{A}{B}{C}{a}{b}{c}{centersign}: outer triangle (vertices all
+%"+") with edges A,B,C, and an inner node (sign centersign) connected to
+%each vertex by a,b,c -- the recurring 9j-symbol "triangle with inner
+%node" diagram
+\newcommand{\tricenter}[7]{%
+\begin{tikzpicture}[baseline=-2pt]
+\coordinate (T) at (0,1.1);
+\coordinate (L) at (-1.1,-0.6);
+\coordinate (R) at (1.1,-0.6);
+\coordinate (M) at (0,-0.15);
+\node[dotnode,label={above:$+$}] at (T) {};
+\node[dotnode,label={below:$+$}] at (L) {};
+\node[dotnode,label={below:$+$}] at (R) {};
+\node[dotnode,label={right:$#7$}] at (M) {};
+\draw[jmline] (T) -- (L) node[midway,above left]{$#1$};
+\draw[jmline] (R) -- (T) node[midway,above right]{$#2$};
+\draw[jmline] (L) -- (R) node[midway,below]{$#3$};
+\draw[jmline] (M) -- (T) node[midway,right]{$#6$};
+\draw[jmline] (M) -- (L) node[midway,below]{$#4$};
+\draw[jmline] (R) -- (M) node[midway,below]{$#5$};
+\end{tikzpicture}%
+}
+
 %New command to display footnote whose markers will always be hidden
 \let\svthefootnote\thefootnote
 \newcommand\blfootnotetext[1]{%
