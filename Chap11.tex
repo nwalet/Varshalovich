@@ -1586,14 +1586,14 @@ J & j_{2} & j_{1} \\
 \end{array}\right)
 \end{gathered}
 \]
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-452_294_708_1732_1091}\\
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-452_273_708_2066_1091}
+\threenode{J}{j_1}{j_2}{above:$+$}\quad$=(-1)^{2j_1}\sqrt{2J+1}\times$
+\begin{tikzpicture}[baseline=0pt]\draw[jmline] (0,0) node[left]{$J$} -- (1,0) node[right]{$M$};\end{tikzpicture}
 
 \begin{table}[h]
 \begin{center}
 \caption{Metric Tensor for $(2 j+1)$-Dimensional Space of Functions $|j m\rangle$.}
 \label{chap11:tab:8}
-  \includegraphics[alt={},max width=\textwidth]{402d9a1b-ee97-49cb-ae14-75458391be12-453_2006_1677_351_201}
+  \begin{tikzpicture}[baseline=0pt]\draw[jmline] (0,0) node[left]{$jm$} to[bend left=40] node[midway,above]{$j$} (1.6,0); \draw[jmline] (0,0) to[bend right=40] (1.6,0); \node[right] at (1.6,0) {$jm^{\prime}$};\end{tikzpicture}
 \end{center}
 \end{table}
 
@@ -1610,7 +1610,7 @@ C_{l m}^{*}(\Omega)=(-1)^{m} C_{l-m}(\Omega)=(l m \mid \Omega) .
 \end{gathered}
 \]
 \begin{center}
-\includegraphics[max width=\textwidth, alt={}]{402d9a1b-ee97-49cb-ae14-75458391be12-454_143_260_480_1341}
+\begin{tikzpicture}[baseline=0pt]\draw[omline] (0,0) node[left]{$\Omega$} -- (1,0); \node[deltanode] at (1,0){}; \draw[jmline] (1,0) -- (2,0) node[right]{$lm$};\end{tikzpicture}
 \end{center}
 \[
 \sum_{m} C_{l m}\left(\Theta_{1}\right) C_{l m}^{*}\left(\Theta_{2}\right)=P_{l}\left(\cos \omega_{12}\right),
@@ -1621,7 +1621,7 @@ where $\omega_{12}$ is the angle between $\Omega_{1}$ and $\Omega_{2}$
 \begin{center}
 \caption{Addition Theorem}
 \label{chap11:fig:3}
-  \includegraphics[alt={},max width=\textwidth]{402d9a1b-ee97-49cb-ae14-75458391be12-454_152_596_679_1166}
+  \begin{tikzpicture}[baseline=0pt]\draw[omline] (0,0) node[left]{$\Omega_1$} to[bend left=40] node[midway,above]{$l$} (2,0); \draw[omline] (0,0) to[bend right=40] (2,0); \node[right] at (2,0) {$\Omega_2$};\end{tikzpicture}
 \end{center}
 \end{figure}
 
@@ -1630,7 +1630,7 @@ where $\omega_{12}$ is the angle between $\Omega_{1}$ and $\Omega_{2}$
 \sum_{l m}(2 l+1) C_{l m}\left(Q_{1}\right) C_{l m}^{*}\left(Q_{2}\right)=4 \pi \delta\left(Q_{1}-Q_{2}\right) .
 \]
 \begin{center}
-\includegraphics[max width=\textwidth, alt={}]{402d9a1b-ee97-49cb-ae14-75458391be12-454_95_537_893_1181}
+\begin{tikzpicture}[baseline=0pt]\draw[omline] (0,0) node[left]{$\Omega_1$} to[bend left=40] node[midway,above]{$l$} (2,0); \draw[omline] (0,0) to[bend right=40] (2,0); \node[right] at (2,0) {$\Omega_2$};\end{tikzpicture}
 \end{center}
 
 \subsubsection{Orthonormality}
@@ -1638,7 +1638,7 @@ where $\omega_{12}$ is the angle between $\Omega_{1}$ and $\Omega_{2}$
 \int C_{l_{1} m_{1}}^{*}(Q) C_{l_{2} m_{2}}(Q) \frac{d Q}{4 \pi}=\frac{\delta_{l_{1} l_{2}} \delta_{m_{1}, m_{2}}}{\left(2 l_{1}+1\right)} .
 \]
 \begin{center}
-\includegraphics[max width=\textwidth, alt={}]{402d9a1b-ee97-49cb-ae14-75458391be12-454_322_576_1071_1178}
+\begin{tikzpicture}[baseline=0pt]\draw[omline] (0,0) node[left]{$l_1m_1$} -- (1,0); \node[deltanode] at (1,0){}; \draw[omline] (1,0) -- (2,0) node[right]{$l_2m_2$};\end{tikzpicture}
 \end{center}
 \[
 \int C_{l_{1} m_{1}}(\Omega) C_{l_{2} m_{2}}(\Omega) C_{l_{3} m_{3}}(\Omega) \frac{d Q}{4 \pi}=\left(\begin{array}{ccc}
@@ -1653,7 +1653,7 @@ m_{1} & m_{2} & m_{3}
 \begin{center}
 \caption{Integral of a Product of Three Harmonics}
 \label{chap11:fig:4}
-  \includegraphics[alt={},max width=\textwidth]{402d9a1b-ee97-49cb-ae14-75458391be12-454_267_716_1470_1110}
+  \threenode{l_1}{l_3}{l_2}{above:$+$}
 \end{center}
 \end{figure}
 
