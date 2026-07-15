@@ -338,17 +338,17 @@ may be represented by\\
 \begin{tikzpicture}[baseline=0pt]
   \coordinate (O) at (0,0);
   \coordinate (B) at (0,-1.1);
-  \coordinate (L) at ($(-1.1*sqrt(3)/2,1.1/2)$);
-  \coordinate (R) at ($(1.1*sqrt(3)/2,1.1/2)$);
+  \coordinate (L) at ($({-1.1*sqrt(3)/2},{1.1/2})$);
+  \coordinate (R) at ($({1.1*sqrt(3)/2},{1.1/2})$);
 
 \node[plusnode,label={left:}] at (L) {};
 \node[plusnode] at (R) {};
-\draw[jmline] (B) -- (L) node[midway,above left]{$c$};
-\draw[jmline] (B) -- (R) node[midway,above right]{$a$};
-\draw[jmline] (L) -- (R) node[midway,below]{$b$};
-\draw[jmline] (B) -- (O) node[midway,above left]{$B$};
-\draw[jmline] (L) -- (O) node[midway,above left]{$A$};
-\draw[jmline] (R) -- (O) node[midway,above left]{$C$};
+\draw[jmline,arrowmid] (L) -- (R) node[midway,above left]{$c$};
+\draw[jmline,arrowmid] (B) -- (R) node[midway,above right]{$a$};
+\draw[jmline,arrowmid] (R) -- (L) node[midway,below]{$b$};
+\draw[jmline,arrowmid] (B) -- (O) node[midway,above left]{$B$};
+\draw[jmline,arrowmid] (L) -- (O) node[midway,above left]{$A$};
+\draw[jmline,arrowmid] (R) -- (O) node[midway,above left]{$C$};
 \end{tikzpicture}
 \end{center}
 
