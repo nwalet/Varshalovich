@@ -448,9 +448,12 @@ of a point $\vect{r}$ may be written as
 - Applied so far: [Chap0.tex](Chap0.tex) (rules 1-5), [Chap1.tex](Chap1.tex),
   [Chap2.tex](Chap2.tex), [Chap3.tex](Chap3.tex), [Chap4.tex](Chap4.tex),
   [Chap5.tex](Chap5.tex), [Chap6.tex](Chap6.tex), [Chap7.tex](Chap7.tex),
-  [Chap8.tex](Chap8.tex) and [Chap9.tex](Chap9.tex) (all rules — Chap2.tex,
-  Chap3.tex and Chap6.tex have no figures/tables, so rules 8-9 didn't apply
-  there; Chap7.tex has no figures, so only rule 9 applied there).
+  [Chap8.tex](Chap8.tex), [Chap9.tex](Chap9.tex) and [Chap10.tex](Chap10.tex)
+  (all rules — Chap2.tex, Chap3.tex and Chap6.tex have no figures/tables, so
+  rules 8-9 didn't apply there; Chap7.tex has no figures, so only rule 9
+  applied there; Chap10.tex has no figures and all its tables live inside an
+  untouched comment block, so neither rule 8 nor rule 9 applied to its
+  active content).
 - **Chap8.tex's back half (numerical-value tables, roughly the last third of
   the chapter) is wrapped in `\begin{comment}...\end{comment}`** by the
   project owner (predates this pass, `comment` package already loaded in
@@ -655,8 +658,8 @@ of a point $\vect{r}$ may be written as
   chapter — 13 of Chap7.tex's 56 `C_{...}^{...}` instances had glued
   subscript tokens needing a space inserted (e.g. `C_{L 010}^{L'0}` →
   `C_{L 0 1 0}^{L'0}` for $L,m{=}0,S{=}1,\sigma{=}0$; `C_{10 L 0}^{J0}` →
-  `C_{1 0 L 0}^{J0}$ for $j_1{=}1,m_1{=}0$; `C_{L M+\mu S-\mu}^{JM}` →
-  `C_{L M+\mu S -\mu}^{JM}$ with the sign glued onto $S$). One pair
+  `C_{1 0 L 0}^{J0}` for $j_1{=}1,m_1{=}0$; `C_{L M+\mu S-\mu}^{JM}` →
+  `C_{L M+\mu S -\mu}^{JM}` with the sign glued onto $S$). One pair
   (`C_{J M 2 n 0}^{JM}`, `C_{J 02 n 0}^{J0}`) needed the opposite fix —
   *joining* an OCR-split `2 n` into the single symbolic token `2n` (an even
   integer, not two separate quantum numbers) — which a token-count check
@@ -920,10 +923,82 @@ of a point $\vect{r}$ may be written as
     warn on the bookmark/TOC copy.
   - Rule 10: found only genuine vector `\mathbf{j}`/`\mathbf{j}_1`/etc.
     (angular-momentum vectors, Sec. 9.1) alongside one bolded-numerals OCR
-    artifact, `\mathbf{1} / \mathbf{2}$` in a heading title ("Relations in
+    artifact, `\mathbf{1} / \mathbf{2}` in a heading title ("Relations in
     Which Arguments are Changed by 1/2") — bold dropped entirely, same
     precedent as Chap2.tex's and Chap8.tex's bolded-numeral cases. No
     `\boldsymbol` occurrences at all. `\operatorname{Re}`, `\operatorname{Im}`
     (upright-text, not the Fraktur `\Re`/`\Im`) and `\operatorname{sign}`
     (not an amsmath builtin) were all left untouched, consistent with
     established policy.
+- **Chap10.tex ("9j and 12j Symbols") had a `\begin{comment}...\end{comment}`
+  block at the very end** covering Tables 10.1-10.14 (both the algebraic-
+  formula tables Sec. 10.11 nominally points to and the numerical-value
+  tables Sec. 10.12 nominally points to) — physically located after all of
+  Sec. 10.13's prose in the source file, not right after their own stub
+  headings. All 44 `\begin{table}` environments in the chapter live inside
+  this one block, so **rules 8-9 didn't apply to the active content at
+  all** (0 tables, 0 figures outside the comment). Used the same
+  split-convert-reassemble technique introduced for Chap9.tex.
+  - Four headings had the "collapsed to plain text, no sectioning command
+    at all" bug (`10.2.1`, `10.3.1`, `10.3.2`, `10.3.3`), plus two more
+    `\subsection*{...}` headings were missing the period after their
+    number (`10.8.4 Three...`, `10.9.2 One...`) which broke the
+    depth-by-dot-count classifier until fixed.
+  - **Two long runs of lettered `(a)/(b)/(c)...` items — ten items
+    (`a`-`j`) under Sec. 10.13.2 and nine items (`a`-`i`) under
+    Sec. 10.13.3 — were converted to `\subsubsection`s**, each spanning
+    tens to hundreds of lines of dedicated content (unlike this book's
+    usual short inline case-condition lists, which stay plain text per
+    Chap9.tex's/Chap2.tex's precedent). Distinguishing signal: each letter
+    starts a fresh independent sentence ending in its own period/colon and
+    introducing substantial standalone content, versus the excluded cases
+    (Sec. 10.5.2's `(a) for a'=..., one has [eq]; (b) for..., one obtains
+    [eq]; (c) for..., one gets [eq].` and similar) which are grammatically
+    one continuous sentence joined by semicolons around brief inline case
+    labels. Titles were taken verbatim from the source's lead clause,
+    truncated at the point the sentence turns into equation-introducing
+    filler (`Symmetry properties: To discuss...` → title "Symmetry
+    properties", body starts "To discuss..."); this occasionally leaves a
+    title that reads as a sentence fragment (`(d) The 12j(I) symbols may be
+    represented by`) when the source's own lead clause hangs directly into
+    the equation — left as-is rather than fabricating a smoother title.
+    Nested `(i)/(ii)/(iii)` condition sub-lists inside a couple of these
+    items (e.g. inside `(b) Arguments of a 12j(I) symbol satisfy the
+    following conditions`) were left as plain text, same as the
+    already-established policy for short inline condition lists.
+  - A `\tag{11}` sat inside `\[ \begin{aligned}...\end{aligned} \]`
+    (converted from the source's `$$...$$` display math) but wasn't
+    accepted by amsmath — `\tag` only works when the immediately-enclosing
+    environment is itself one of amsmath's numbered-capable top-level
+    environments, and nesting it inside a bare `aligned` block one level
+    inside `\[...\]` doesn't count even though `\[...\]` alone does.
+    Fixed by dropping the redundant `\[...\]`/`aligned` wrapper pair and
+    using `\begin{align*}...\end{align*}` directly instead.
+  - A "12j(1)" OCR-rendering variant (digit `1` instead of roman numeral
+    `I`, used interchangeably with "12j(I)" throughout Sec. 10.13.2)
+    produced a new false-positive class for the rule 7 prose-`\eqref` scan
+    on top of Chap9.tex's Pochhammer-superscript one: a bare `(1)` inside
+    the symbol's own name, not an equation citation. Also found a compact
+    inline enumerated case list, `in the cases: (1) ...; (2) ...; (3)
+    ...; (4) ...`, matching Chap9.tex's/Chap2.tex's established
+    enumerated-list exclusion.
+  - One Clebsch-Gordan instance had a superscript OCR'd as `j_{m}` (a
+    single glued subscript token) where the token-count check correctly
+    flagged it as not fitting the required 4+2 split — resolved by hand
+    to superscript `j`, `m` (two separate tokens), matching how the
+    bra-ket notation on the same line already reads `j m`.
+  - Another Clebsch-Gordan instance had a superscript OCR'd as
+    `j_{3} m_{3}` where the correct value, `j_{34} m_{34}`, was
+    unambiguous from the two sibling equations immediately above and
+    below it (analogous coupling-scheme definitions for II and III, whose
+    corresponding Clebsch-Gordan coefficients correctly read `j_{24}
+    m_{24}` and `j_{23} m_{23}`) — same "fix confirmed by a sibling
+    formula's parallel structure" precedent as Chap8.tex.
+  - Two more `\subsubsection` headings needed `\protect\eqref` for an
+    equation citation embedded in the title text, same as Chap9.tex's
+    precedent.
+  - Found and fixed an unrelated pre-existing typo, `\renewcomman` (missing
+    the final `d`) instead of `\renewcommand`, in Chap6.tex — this file had
+    uncommitted local edits already in progress (not part of this pass)
+    that broke the full-document compile; only the typo was touched, the
+    rest of those edits were left alone.

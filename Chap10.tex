@@ -1,118 +1,86 @@
 \chapter{9j AND 12j SYMBOLS}
-\subsection*{10.1. DEFINITION OF THE $9 j$ SYMBOLS}
-\subsection*{10.1.1. 9j Symbols as Recoupling Coefficients}
+\section{DEFINITION OF THE $9 j$ SYMBOLS}
+\subsection{9j Symbols as Recoupling Coefficients}
 The Wigner $9 j$ symbols [110] (or Fano coefficients [66]) are associated with the coefficients of unitary transformations which connect state vectors corresponding to different coupling schemes of four angular momenta.
 
-Let us consider an addition of four angular momenta $\mathbf{j}_{1}, \mathbf{j}_{2}, \mathbf{j}_{3}$ and $\mathbf{j}_{4}$ to form a resultant angular momentum $j$ with projection $m$. There exist different coupling schemes of these angular momenta. We pay attention to the following schemes ${ }^{1}$
-
-\[
+Let us consider an addition of four angular momenta $\vect{j}_{1}, \vect{j}_{2}, \vect{j}_{3}$ and $\vect{j}_{4}$ to form a resultant angular momentum $j$ with projection $m$. There exist different coupling schemes of these angular momenta. We pay attention to the following schemes ${ }^{1}$
+\begin{equation}
 \begin{array}{rll}
-\text { I) } \mathbf{j}_{1}+\mathbf{j}_{2}=\mathbf{j}_{12}, & \mathbf{j}_{3}+\mathbf{j}_{4}=\mathbf{j}_{34}, & \mathbf{j}_{12}+\mathbf{j}_{34}=\mathbf{j} ; \\
-\text { II) } \mathbf{j}_{1}+\mathbf{j}_{3}=\mathbf{j}_{13}, & \mathbf{j}_{2}+\mathbf{j}_{4}=\mathbf{j}_{24}, & \mathbf{j}_{13}+\mathbf{j}_{24}=\mathbf{j} ; \\
-\text { III) } \mathbf{j}_{1}+\mathbf{j}_{4}=\mathbf{j}_{14}, & \mathbf{j}_{2}+\mathbf{j}_{3}=\mathbf{j}_{23}, & \mathbf{j}_{14}+\mathbf{j}_{23}=\mathbf{j} ; \tag{1}
+\text { I) } \vect{j}_{1}+\vect{j}_{2}=\vect{j}_{12}, & \vect{j}_{3}+\vect{j}_{4}=\vect{j}_{34}, & \vect{j}_{12}+\vect{j}_{34}=\vect{j} ; \\
+\text { II) } \vect{j}_{1}+\vect{j}_{3}=\vect{j}_{13}, & \vect{j}_{2}+\vect{j}_{4}=\vect{j}_{24}, & \vect{j}_{13}+\vect{j}_{24}=\vect{j} ; \\
+\text { III) } \vect{j}_{1}+\vect{j}_{4}=\vect{j}_{14}, & \vect{j}_{2}+\vect{j}_{3}=\vect{j}_{23}, & \vect{j}_{14}+\vect{j}_{23}=\vect{j} ; \label{chap10:eq:1}
 \end{array}
-\]
-
+\end{equation}
 Let $\left|j_{1} j_{2}\left(j_{12}\right) j_{3} j_{4}\left(j_{34}\right) j m\right\rangle$ be a state vector which corresponds to scheme I. This vector is an eigenvector of the operators $\widehat{\mathrm{j}}_{1}^{2}, \widehat{\mathrm{j}}_{2}^{2}, \widehat{\mathrm{j}}_{3}^{2}, \widehat{\mathrm{j}}_{4}^{2}, \widehat{\mathrm{j}}_{12}^{2}, \widehat{\mathrm{j}}_{34}^{2}, \widehat{\mathrm{j}}^{2}$ and $\widehat{j}_{x}$ and may be written as
-
-
-\begin{equation*}
-\left|j_{1} j_{2}\left(j_{12}\right) j_{3} j_{4}\left(j_{34}\right) j m\right\rangle=\sum_{\substack{m_{1} m_{2} m_{3} m_{4} \\ m_{12} m_{34}}} C_{j_{12} m_{12} j_{34} m_{34}}^{j m} C_{j_{1} m_{1} j_{2} m_{2}}^{j_{12} m_{12}} C_{j_{3} m_{3} j_{4} m_{4}}^{j_{3} m_{3}}\left|j_{1} m_{1}, j_{2} m_{2}, j_{3} m_{3}, j_{4} m_{4}\right\rangle . \tag{2}
-\end{equation*}
-
-
+\begin{equation}
+\left|j_{1} j_{2}\left(j_{12}\right) j_{3} j_{4}\left(j_{34}\right) j m\right\rangle=\sum_{\substack{m_{1} m_{2} m_{3} m_{4} \\ m_{12} m_{34}}} \clebsch{j_{12}}{m_{12}}{j_{34}}{m_{34}}{j}{m} \clebsch{j_{1}}{m_{1}}{j_{2}}{m_{2}}{j_{12}}{m_{12}} \clebsch{j_{3}}{m_{3}}{j_{4}}{m_{4}}{j_{34}}{m_{34}}\left|j_{1} m_{1}, j_{2} m_{2}, j_{3} m_{3}, j_{4} m_{4}\right\rangle . \label{chap10:eq:2}
+\end{equation}
 Here $\left|j_{1} m_{1}, j_{2} m_{2}, j_{3} m_{3}, j_{4} m_{4}\right\rangle$ is eigenvector of the operators $\hat{j}_{i}^{2}$ and $\hat{j}_{i x}(i=1,2,3,4)$. A state vector which corresponds to scheme II is the eigenvector of the operators $\widehat{\mathrm{j}}_{1}^{2}, \widehat{\mathrm{j}}_{2}^{2}, \widehat{\mathrm{j}}_{3}^{2}, \widehat{\mathrm{j}}_{4}^{2}, \widehat{\mathrm{j}}_{13}^{2}, \widehat{\mathrm{j}}_{24}^{2}, \widehat{\mathrm{j}}^{2}$ and $\widehat{\mathrm{j}}_{z}$. It can be represented in the form
-
-
-\begin{equation*}
-\left|j_{1} j_{3}\left(j_{13}\right) j_{2} j_{4}\left(j_{24}\right) j m\right\rangle=\sum_{\substack{m_{1} m_{2} m_{3} m_{4} \\ m_{13} m_{24}}} C_{j_{13} m_{13} j_{24} m_{24}}^{j m} C_{j_{1} m_{1} j_{3} m_{3}}^{j_{13} m_{13}} C_{j_{2} m_{2} j_{4} m_{4}}^{j_{24} m_{24}}\left|j_{1} m_{1}, j_{2} m_{2}, j_{3} m_{3}, j_{4} m_{4}\right\rangle \tag{3}
-\end{equation*}
-
-
-Similarly, a state vector, which corresponds to scheme III, is the eigenvector of the operators $\widehat{\mathbf{j}}_{1}^{2}, \widehat{\mathbf{j}}_{2}^{2}, \widehat{\mathbf{j}}_{3}^{2}, \widehat{\mathbf{j}}_{4}^{2}, \widehat{\mathbf{j}}_{14}^{2}, \widehat{\mathbf{j}}_{23}^{2}$, $\widehat{\mathrm{j}}^{2}$ and $\widehat{j}_{x}$. This state vector is given by
-
-
-\begin{equation*}
-\left|j_{1} j_{4}\left(j_{14}\right) j_{2} j_{3}\left(j_{23}\right) j m\right\rangle=\sum_{\substack{m_{1} m_{2} m_{3} m_{4} \\ m_{14} m_{23}}} C_{j_{14} m_{14} j_{23} m_{23}}^{j_{m}} C_{j_{1} m_{1} j_{4} m_{4}}^{j_{14} m_{14}} C_{j_{2} m_{2} j_{3} m_{3}}^{j_{23} m_{23}}\left|j_{1} m_{1}, j_{2} m_{2}, j_{3} m_{3}, j_{4} m_{4}\right\rangle \tag{4}
-\end{equation*}
-
-
-\footnotetext{${ }^{1}$ Along with the coupling schemes (1) there exist some other ones, e.g., $\mathbf{j}_{1}+\mathbf{j}_{2}=\mathbf{j}_{12}, \mathbf{j}_{12}+\mathbf{j}_{3}=\mathbf{j}_{123}, \mathbf{j}_{123}+\mathbf{j}_{4}=\mathbf{j}$. However, the coefficients of transformation which connects a state vector in this coupling scheme with vectors in coupling schemes, I, II or III are related to the products of two $6 j$ symbols rather than to the $9 j$ symbols.
+\begin{equation}
+\left|j_{1} j_{3}\left(j_{13}\right) j_{2} j_{4}\left(j_{24}\right) j m\right\rangle=\sum_{\substack{m_{1} m_{2} m_{3} m_{4} \\ m_{13} m_{24}}} \clebsch{j_{13}}{m_{13}}{j_{24}}{m_{24}}{j}{m} \clebsch{j_{1}}{m_{1}}{j_{3}}{m_{3}}{j_{13}}{m_{13}} \clebsch{j_{2}}{m_{2}}{j_{4}}{m_{4}}{j_{24}}{m_{24}}\left|j_{1} m_{1}, j_{2} m_{2}, j_{3} m_{3}, j_{4} m_{4}\right\rangle \label{chap10:eq:3}
+\end{equation}
+Similarly, a state vector, which corresponds to scheme III, is the eigenvector of the operators $\widehat{\vect{j}}_{1}^{2}, \widehat{\vect{j}}_{2}^{2}, \widehat{\vect{j}}_{3}^{2}, \widehat{\vect{j}}_{4}^{2}, \widehat{\vect{j}}_{14}^{2}, \widehat{\vect{j}}_{23}^{2}$, $\widehat{\mathrm{j}}^{2}$ and $\widehat{j}_{x}$. This state vector is given by
+\begin{equation}
+\left|j_{1} j_{4}\left(j_{14}\right) j_{2} j_{3}\left(j_{23}\right) j m\right\rangle=\sum_{\substack{m_{1} m_{2} m_{3} m_{4} \\ m_{14} m_{23}}} \clebsch{j_{14}}{m_{14}}{j_{23}}{m_{23}}{j}{m} \clebsch{j_{1}}{m_{1}}{j_{4}}{m_{4}}{j_{14}}{m_{14}} \clebsch{j_{2}}{m_{2}}{j_{3}}{m_{3}}{j_{23}}{m_{23}}\left|j_{1} m_{1}, j_{2} m_{2}, j_{3} m_{3}, j_{4} m_{4}\right\rangle \label{chap10:eq:4}
+\end{equation}
+\footnotetext{${ }^{1}$ Along with the coupling schemes \eqref{chap10:eq:1} there exist some other ones, e.g., $\vect{j}_{1}+\vect{j}_{2}=\vect{j}_{12}, \vect{j}_{12}+\vect{j}_{3}=\vect{j}_{123}, \vect{j}_{123}+\vect{j}_{4}=\vect{j}$. However, the coefficients of transformation which connects a state vector in this coupling scheme with vectors in coupling schemes, I, II or III are related to the products of two $6 j$ symbols rather than to the $9 j$ symbols.
 }The state vectors associated with each of these coupling schemes form a complete set of functions. Any transformation which connects the state vectors in different coupling schemes, is determined by a unitary matrix. Such a matrix relates the state vectors with the same resultant angular momentum $j$ and its projection $m$. It may be shown that the transformation matrix is independent of $m$. The Wigner $9 j$ symbols are proportional to the matrix elements (transformation coefficient). Thus, the Wigner $9 j$ symbols (or, equivalently, the Fano coefficients)
-
-$$
+\[
 \left\{\begin{array}{ccc}
 j_{1} & j_{2} & j_{12} \\
 j_{3} & j_{4} & j_{34} \\
 j_{13} & j_{24} & j
 \end{array}\right\}
-$$
-
+\]
 are related to the coefficients of the transformation between state vectors in schemes I and II by
-
-
-\begin{gather*}
-\left\langle j_{1} j_{2}\left(j_{12}\right) j_{3} j_{4}\left(j_{34}\right) j m \mid j_{1} j_{3}\left(j_{13}\right) j_{2} j_{4}\left(j_{24}\right) j^{\prime} m^{\prime}\right\rangle \\
+\begin{gather}
+\left\langle j_{1} j_{2}\left(j_{12}\right) j_{3} j_{4}\left(j_{34}\right) j m \mid j_{1} j_{3}\left(j_{13}\right) j_{2} j_{4}\left(j_{24}\right) j^{\prime} m^{\prime}\right\rangle  \notag\\
 =\delta_{j j^{\prime}} \delta_{m m^{\prime}}\left[\left(2 j_{12}+1\right)\left(2 j_{13}+1\right)\left(2 j_{24}+1\right)\left(2 j_{34}+1\right)\right]^{\frac{1}{2}}\left\{\begin{array}{lll}
 j_{1} & j_{2} & j_{12} \\
 j_{3} & j_{4} & j_{34} \\
 j_{13} & j_{24} & j
-\end{array}\right\} \tag{5}
-\end{gather*}
-
-
+\end{array}\right\} \label{chap10:eq:5}
+\end{gather}
 Using this definition, we may also obtain
-
-
-\begin{gather*}
-\left\langle j_{1} j_{2}\left(j_{12}\right) j_{3} j_{4}\left(j_{34}\right) j m \mid j_{1} j_{4}\left(j_{14}\right) j_{2} j_{3}\left(j_{23}\right) j^{\prime} m^{\prime}\right\rangle \\
+\begin{gather}
+\left\langle j_{1} j_{2}\left(j_{12}\right) j_{3} j_{4}\left(j_{34}\right) j m \mid j_{1} j_{4}\left(j_{14}\right) j_{2} j_{3}\left(j_{23}\right) j^{\prime} m^{\prime}\right\rangle  \notag\\
 =\delta_{j j^{\prime}} \delta_{m m^{\prime}}(-1)^{j_{3}+j_{4}-j_{34}}\left[\left(2 j_{12}+1\right)\left(2 j_{14}+1\right)\left(2 j_{23}+1\right)\left(2 j_{34}+1\right)\right]^{\frac{1}{2}}\left\{\begin{array}{ccc}
 j_{1} & j_{2} & j_{12} \\
 j_{4} & j_{3} & j_{34} \\
 j_{14} & j_{23} & j
-\end{array}\right\},  \tag{6}\\
-\left\langle j_{1} j_{3}\left(j_{13}\right) j_{2} j_{4}\left(j_{24}\right) j m \mid j_{1} j_{4}\left(j_{14}\right) j_{2} j_{3}\left(j_{23}\right) j^{\prime} m^{\prime}\right\rangle \\
+\end{array}\right\},  \label{chap10:eq:6}\\
+\left\langle j_{1} j_{3}\left(j_{13}\right) j_{2} j_{4}\left(j_{24}\right) j m \mid j_{1} j_{4}\left(j_{14}\right) j_{2} j_{3}\left(j_{23}\right) j^{\prime} m^{\prime}\right\rangle  \notag\\
 =\delta_{j j^{\prime}} \delta_{m m^{\prime}}(-1)^{j_{3}-j_{4}-j_{23}+j_{24}}\left[\left(2 j_{13}+1\right)\left(2 j_{14}+1\right)\left(2 j_{24}+1\right)\left(2 j_{23}+1\right)\right]^{\frac{1}{2}}\left\{\begin{array}{ccc}
 j_{1} & j_{3} & j_{13} \\
 j_{4} & j_{2} & j_{24} \\
 j_{14} & j_{23} & j
-\end{array}\right\} . \tag{7}
-\end{gather*}
-
-
-As follows from definition (5) a $9 j$ symbol can be represented as a sum of products of the Clebsch-Gordan coefficients:
-
-
-\begin{align*}
-& \sum_{m_{1} m_{1 k}} C_{j_{1} m_{1} j_{2} m_{2}}^{j_{12} m_{12}} C_{j_{3} m_{3} j_{4} m_{4}}^{j_{3} m_{34}} C_{j_{12} m_{12} j_{34} m_{34}}^{j m^{2}} C_{j_{2} m_{1} j_{3} m_{3}}^{j_{13} m_{13}} C_{j_{2} m_{2} j_{4} m_{4}}^{j_{24} m_{24}} C_{j_{13} m_{13} j_{24} m_{24}}^{j^{\prime} m^{\prime}} \\
+\end{array}\right\} . \label{chap10:eq:7}
+\end{gather}
+As follows from definition \eqref{chap10:eq:5} a $9 j$ symbol can be represented as a sum of products of the Clebsch-Gordan coefficients:
+\begin{align}
+& \sum_{m_{1} m_{1 k}} \clebsch{j_{1}}{m_{1}}{j_{2}}{m_{2}}{j_{12}}{m_{12}} \clebsch{j_{3}}{m_{3}}{j_{4}}{m_{4}}{j_{3}}{m_{34}} \clebsch{j_{12}}{m_{12}}{j_{34}}{m_{34}}{j}{m^{2}} \clebsch{j_{2}}{m_{1}}{j_{3}}{m_{3}}{j_{13}}{m_{13}} \clebsch{j_{2}}{m_{2}}{j_{4}}{m_{4}}{j_{24}}{m_{24}} \clebsch{j_{13}}{m_{13}}{j_{24}}{m_{24}}{j^{\prime}}{m^{\prime}}  \notag\\
 & \quad=\delta_{j j^{\prime}} \delta_{m m^{\prime}}\left[\left(2 j_{12}+1\right)\left(2 j_{13}+1\right)\left(2 j_{24}+1\right)\left(2 j_{34}+1\right)\right]^{\frac{1}{3}}\left\{\begin{array}{lll}
 j_{1} & j_{2} & j_{12} \\
 j_{3} & j_{4} & j_{34} \\
 j_{13} & j_{24} & j
-\end{array}\right\} \tag{8}
-\end{align*}
-
-
+\end{array}\right\} \label{chap10:eq:8}
+\end{align}
 This equation unambiguously fixes the absolute value and phase of the $9 j$ symbol. The $9 j$ symbols are real.\\
 Below we shall also use Latin letters ( $a, b, c$, etc.) to denote arguments of the $9 j$ symbols.\\
 In accordance with the quantum mechanical rules of angular momentum addition, arguments of the $9 j$ symbol
-
-$$
+\[
 \left\{\begin{array}{lll}
 a & b & c \\
 d & e & f \\
 g & h & j
 \end{array}\right\}
-$$
-
+\]
 satisfy the following conditions.\\
 (a) Arguments $a, b, c \ldots, j$ are integer or half-integer non-negative numbers (generalization of the $9 j$ symbols to the case of negative arguments will be considered in Sec. 10.4.3).\\
 (b) A $9 j$ symbol vanishes unless the triangular conditions (see Sec. 8.1.1) are fulfilled for triads (abc), (def), $(g h j),(a d g),(b e h)$ and (cfj).
 
 The $9 j$ symbols satisfy the orthogonality and normalization relations
-
-
-\begin{align*}
+\begin{align}
 & \sum_{g h}(2 g+1)(2 h+1)\left\{\begin{array}{lll}
 a & b & c \\
 d & e & f \\
@@ -121,7 +89,7 @@ g & h & j
 a & b & c^{\prime} \\
 d & e & f^{\prime} \\
 g & h & j
-\end{array}\right\}=\delta_{c c^{\prime}} \delta_{f f^{\prime}}\{a b c\}\{d e f\}\{c f j\} \frac{1}{(2 c+1)(2 f+1)},  \tag{9}\\
+\end{array}\right\}=\delta_{c c^{\prime}} \delta_{f f^{\prime}}\{a b c\}\{d e f\}\{c f j\} \frac{1}{(2 c+1)(2 f+1)},  \label{chap10:eq:9}\\
 & \sum_{c f}(2 c+1)(2 f+1)\left\{\begin{array}{lll}
 a & b & c \\
 d & e & f \\
@@ -130,18 +98,15 @@ g & h & j
 a & b & c \\
 d & e & f \\
 g^{\prime} & h^{\prime} & j
-\end{array}\right\}=\delta_{g g^{\prime}} \delta_{h h^{\prime}}\{a d g\}\{b e h\}\{g h j\} \frac{1}{(2 g+1)(2 h+1)} . \tag{10}
-\end{align*}
-
-
+\end{array}\right\}=\delta_{g g^{\prime}} \delta_{h h^{\prime}}\{a d g\}\{b e h\}\{g h j\} \frac{1}{(2 g+1)(2 h+1)} . \label{chap10:eq:10}
+\end{align}
 These relations follow from the unitarity of transformations which relate state vectors in different coupling schemes.
 
-\subsection*{10.1.2. 9j Symbol and $r$ Symbol}
+\subsection{9j Symbol and $r$ Symbol}
 A $9 j$ symbol may be represented as a $3 \times 6$ array $\left\|r_{i k}, r_{i k}^{\prime}\right\|$ (Shelepin [105], Wu [111]) which is called the $r$-symbol: ${ }^{2}$
-
-\[
+\begin{equation}
 \left\{\begin{array}{ccc}
-a & b & c  \tag{11}\\
+a & b & c  \label{chap10:eq:11}\\
 d & e & f \\
 g & h & j
 \end{array}\right\} \equiv\left\|\begin{array}{llllll}
@@ -149,141 +114,110 @@ r_{11} & r_{12} & r_{13} & r_{11}^{\prime} & r_{12}^{\prime} & r_{13}^{\prime} \
 r_{21} & r_{22} & r_{23} & r_{21}^{\prime} & r_{22}^{\prime} & r_{23}^{\prime} \\
 r_{31} & r_{32} & r_{33} & r_{31}^{\prime} & r_{32}^{\prime} & r_{33}^{\prime}
 \end{array}\right\|,
-\]
-
+\end{equation}
 where
-
-\[
+\begin{equation}
 \begin{array}{lll}
 r_{11}=-a+b+c, & r_{12}=a-b+c, & r_{13}=a+b-c, \\
 r_{21}=-d+e+f, & r_{22}=d-e+f, & r_{23}=d+e-f, \\
 r_{31}=-g+h+j, & r_{32}=g-h+j, & r_{33}=g+h-j, \\
 r_{11}^{\prime}=-a+d+g, & r_{12}^{\prime}=-b+e+h, & r_{13}^{\prime}=-c+f+j, \\
 r_{21}^{\prime}=a-d+g, & r_{22}^{\prime}=b-e+h, & r_{23}^{\prime}=c-f+j, \\
-r_{31}^{\prime}=a+d-g, & r_{32}^{\prime}=b+e-h, & r_{33}^{\prime}=c+f-j . \tag{12}
+r_{31}^{\prime}=a+d-g, & r_{32}^{\prime}=b+e-h, & r_{33}^{\prime}=c+f-j . \label{chap10:eq:12}
 \end{array}
-\]
-
+\end{equation}
 The inverse relations are as follows
-
-\[
+\begin{equation}
 \begin{array}{lll}
 2 a=r_{12}+r_{13}=r_{21}^{\prime}+r_{31}^{\prime}, & 2 d=r_{22}+r_{23}=r_{11}^{\prime}+r_{31}^{\prime}, & 2 g=r_{32}+r_{33}=r_{11}^{\prime}+r_{21}^{\prime}, \\
 2 b=r_{11}+r_{13}=r_{22}^{\prime}+r_{32}^{\prime}, & 2 e=r_{21}+r_{23}=r_{12}^{\prime}+r_{32}^{\prime}, & 2 h=r_{31}+r_{33}=r_{12}^{\prime}+r_{22}^{\prime}, \\
-2 c=r_{11}+r_{12}=r_{23}^{\prime}+r_{33}^{\prime}, & 2 f=r_{21}+r_{22}=r_{13}^{\prime}+r_{33}^{\prime}, & 2 j=r_{31}+r_{32}=r_{13}^{\prime}+r_{23}^{\prime} . \tag{13}
+2 c=r_{11}+r_{12}=r_{23}^{\prime}+r_{33}^{\prime}, & 2 f=r_{21}+r_{22}=r_{13}^{\prime}+r_{33}^{\prime}, & 2 j=r_{31}+r_{32}=r_{13}^{\prime}+r_{23}^{\prime} . \label{chap10:eq:13}
 \end{array}
-\]
-
+\end{equation}
 All eighteen elements $r_{i k}, r_{i k}^{\prime}$ are integer and non-negative. Only nine of them are linearly independent. The
 
 \footnotetext{${ }^{2}$ The array $\left\|r_{i k}, r_{i k}^{\prime}\right\|$ under discussion (Wu [111]) differs from the $r$-symbol introduced by Shelepin [105].
 }
 elements $r_{i k}$ and $r_{i k}^{\prime}$ satisfy the following relations
-
-\begin{gather*}
-\sum_{i=1}^{3} r_{1 i}=a+b+c, \quad \sum_{i=1}^{3} r_{2 i}=d+e+f, \quad \sum_{i=1}^{3} r_{3 i}=g+h+j, \\
-\sum_{i=1}^{3} r_{i 1}=R-2(a+d+g), \quad \sum_{i=1}^{3} r_{i 2}=R-2(b+e+h), \quad \sum_{i=1}^{3} r_{i 3}=R-2(c+f+j), \\
-\sum_{i=1}^{3} r_{1 i}^{\prime}=R-2(a+b+c), \quad \sum_{i=1}^{3} r_{2 i}^{\prime}=R-2(d+e+f), \quad \sum_{i=1}^{3} r_{3 i}^{\prime}=R-2(g+h+j),  \tag{14}\\
-\sum_{i=1}^{3} r_{i 1}^{\prime}=a+d+g, \quad \sum_{i=1}^{3} r_{i 2}^{\prime}=b+e+h, \quad \sum_{i=1}^{3} r_{i 3}^{\prime}=c+f+j, \\
-\sum_{i, k=1}^{3} r_{i k}=R, \quad \sum_{i, k=1}^{3} r_{i k}^{\prime}=R,
-\end{gather*}
-
+\begin{gather}
+\sum_{i=1}^{3} r_{1 i}=a+b+c, \quad \sum_{i=1}^{3} r_{2 i}=d+e+f, \quad \sum_{i=1}^{3} r_{3 i}=g+h+j,  \notag\\
+\sum_{i=1}^{3} r_{i 1}=R-2(a+d+g), \quad \sum_{i=1}^{3} r_{i 2}=R-2(b+e+h), \quad \sum_{i=1}^{3} r_{i 3}=R-2(c+f+j),  \notag\\
+\sum_{i=1}^{3} r_{1 i}^{\prime}=R-2(a+b+c), \quad \sum_{i=1}^{3} r_{2 i}^{\prime}=R-2(d+e+f), \quad \sum_{i=1}^{3} r_{3 i}^{\prime}=R-2(g+h+j),  \label{chap10:eq:14}\\
+\sum_{i=1}^{3} r_{i 1}^{\prime}=a+d+g, \quad \sum_{i=1}^{3} r_{i 2}^{\prime}=b+e+h, \quad \sum_{i=1}^{3} r_{i 3}^{\prime}=c+f+j,  \notag\\
+\sum_{i, k=1}^{3} r_{i k}=R, \quad \sum_{i, k=1}^{3} r_{i k}^{\prime}=R, \notag
+\end{gather}
 where
-
-\begin{equation*}
-R=a+b+c+d+e+f+g+h+j . \tag{15}
-\end{equation*}
-
-
-\subsection*{10.2. EXPLICIT FORMS OF THE $9 j$ SYMBOLS AND THEIR RELATIONS TO OTHER FUNCTIONS}
+\begin{equation}
+R=a+b+c+d+e+f+g+h+j . \label{chap10:eq:15}
+\end{equation}
+\section{EXPLICIT FORMS OF THE $9 j$ SYMBOLS AND THEIR RELATIONS TO OTHER FUNCTIONS}
 The expressions given below represent the $9 j$ symbols in the forms of algebraic sums and sums involving products of the Clebsch-Gordan coefficients, $3 j m$ and $6 j$ symbols. Unlike the $3 j m$ and $6 j$ symbols the expressions for the $9 j$ symbols in terms of the generalized hypergeometric functions are still unknown. Convenient expressions for the $9 j$ symbols in terms of quasi-binomials can be obtained only in some special cases.\\
-10.2.1. Expressions for the $9 j$ Symbols in the Forms of Algebraic Sums
-
-
-\begin{gather*}
+\subsection{Expressions for the $9 j$ Symbols in the Forms of Algebraic Sums}
+\begin{gather}
 \left\{\begin{array}{lll}
 a & b & c \\
 d & e & f \\
 g & h & j
-\end{array}\right\}=\frac{\Delta(a b c) \Delta(d e f) \Delta(b e h) \Delta(g h j)}{\Delta(a d g) \Delta(c f j)} \\
-\times \frac{(a+d-g)!(c+f-j)!(g+h+j+1)!}{(a+d+g+1)!(a-b+c)!(-a+b+c)!(d-e+f)!(-d+e+f)!(b-e+h)!(-b+e+h)!} \\
-\times \sum_{x y x t}(-1)^{a-c+e-g+j+x+y+x+t} \frac{(2 a-x)!(2 b-y)!(2 d-z)!(2 e-t)!}{x!y!z!t!} \\
-\times \frac{(-a+b+c+x)!(-b+e+h+y)!(-d+e+f+z)!(b-e+g-j+t)!(-a-e+f+g+x+t)!}{(a+b-c-x)!(b+e-h-y)!(d+e-f-z)!(b+e-g+j-t)!(a+d-g-x-z)!(e-b+h+y-t)!} \\
-\times \frac{(c-d+e+j+z-t)!}{(-d+e+f+z-t)!(b-e+g-j-y+t)!(-a+c-e+g-j+x+t)!\times} \\
-\times(-a+c-d+f+g+j+1+x+z)!. \tag{1}
-\end{gather*}
+\end{array}\right\}=\frac{\Delta(a b c) \Delta(d e f) \Delta(b e h) \Delta(g h j)}{\Delta(a d g) \Delta(c f j)}  \notag\\
+\times \frac{(a+d-g)!(c+f-j)!(g+h+j+1)!}{(a+d+g+1)!(a-b+c)!(-a+b+c)!(d-e+f)!(-d+e+f)!(b-e+h)!(-b+e+h)!}  \notag\\
+\times \sum_{x y x t}(-1)^{a-c+e-g+j+x+y+x+t} \frac{(2 a-x)!(2 b-y)!(2 d-z)!(2 e-t)!}{x!y!z!t!}  \notag\\
+\times \frac{(-a+b+c+x)!(-b+e+h+y)!(-d+e+f+z)!(b-e+g-j+t)!(-a-e+f+g+x+t)!}{(a+b-c-x)!(b+e-h-y)!(d+e-f-z)!(b+e-g+j-t)!(a+d-g-x-z)!(e-b+h+y-t)!}  \notag\\
+\times \frac{(c-d+e+j+z-t)!}{(-d+e+f+z-t)!(b-e+g-j-y+t)!(-a+c-e+g-j+x+t)!\times}  \notag\\
+\times(-a+c-d+f+g+j+1+x+z)!. \label{chap10:eq:16}
+\end{gather}
+In Eq. \eqref{chap10:eq:16} the sums are over all integer values of $x, y, z, t$ for which the factorial arguments are greater than or equal to zero. An expression for the $9 j$ symbols in the form of triple sum was proposed by Alisauskas and Yutsis [131].
 
-
-In Eq. (1) the sums are over all integer values of $x, y, z, t$ for which the factorial arguments are greater than or equal to zero. An expression for the $9 j$ symbols in the form of triple sum was proposed by Alisauskas and Yutsis [131].
-
-\subsection*{10.2.2. Wu Formulas [111]}
-
-\begin{align*}
+\subsection{Wu Formulas [111]}
+\begin{align}
 & \left\{\begin{array}{lll}
 j_{11} & j_{12} & j_{13} \\
 j_{21} & j_{22} & j_{23} \\
 j_{31} & j_{32} & j_{33}
-\end{array}\right\}=\Delta\left(j_{11} j_{12} j_{13}\right) \Delta\left(j_{21} j_{22} j_{23}\right) \Delta\left(j_{31} j_{32} j_{33}\right) \Delta\left(j_{11} j_{21} j_{31}\right) \\
-& \times \Delta\left(j_{12} j_{22} j_{32}\right) \Delta\left(j_{13} j_{23} j_{33}\right) \sum_{\nu, \omega}(-1)^{\omega_{4}+\omega_{8}+\omega_{6}} \frac{(n+1)!}{\prod_{p, q=1}^{3} \nu_{p q}!\prod_{\alpha=1}^{6} \omega_{\alpha}!} \tag{2}
-\end{align*}
-
-
+\end{array}\right\}=\Delta\left(j_{11} j_{12} j_{13}\right) \Delta\left(j_{21} j_{22} j_{23}\right) \Delta\left(j_{31} j_{32} j_{33}\right) \Delta\left(j_{11} j_{21} j_{31}\right)  \notag\\
+& \times \Delta\left(j_{12} j_{22} j_{32}\right) \Delta\left(j_{13} j_{23} j_{33}\right) \sum_{\nu, \omega}(-1)^{\omega_{4}+\omega_{8}+\omega_{6}} \frac{(n+1)!}{\prod_{p, q=1}^{3} \nu_{p q}!\prod_{\alpha=1}^{6} \omega_{\alpha}!} \label{chap10:eq:17}
+\end{align}
 where
-
-
-\begin{equation*}
-n=\sum_{p, q=1}^{3} \nu_{p q}+\sum_{\alpha=1}^{6} \omega_{\alpha} \tag{3}
-\end{equation*}
-
-
-In Eq. (3) the summation is over 15 integer and non-negative variables $\nu_{p q}(p, q=1,2,3), \omega_{\alpha}(\alpha=1,2, \ldots, 6)$. These variables satisfy the following conditions owing to which only six variables are independent:
-
-\[
+\begin{equation}
+n=\sum_{p, q=1}^{3} \nu_{p q}+\sum_{\alpha=1}^{6} \omega_{\alpha} \label{chap10:eq:18}
+\end{equation}
+In Eq. \eqref{chap10:eq:18} the summation is over 15 integer and non-negative variables $\nu_{p q}(p, q=1,2,3), \omega_{\alpha}(\alpha=1,2, \ldots, 6)$. These variables satisfy the following conditions owing to which only six variables are independent:
+\begin{equation}
 \begin{array}{ll}
 \omega_{1}+\omega_{4}+\nu_{21}+\nu_{31}=r_{11}, & \omega_{1}+\omega_{4}+\nu_{12}+\nu_{13}=r_{11}^{\prime} \\
 \omega_{3}+\omega_{6}+\nu_{22}+\nu_{32}=r_{12}, & \omega_{3}+\omega_{6}+\nu_{11}+\nu_{13}=r_{12}^{\prime} \\
 \omega_{2}+\omega_{5}+\nu_{23}+\nu_{33}=r_{13}, & \omega_{2}+\omega_{5}+\nu_{11}+\nu_{12}=r_{13}^{\prime} \\
 \omega_{3}+\omega_{5}+\nu_{11}+\nu_{31}=r_{21}, & \omega_{3}+\omega_{5}+\nu_{22}+\nu_{23}=r_{21}^{\prime} \\
-\omega_{2}+\omega_{4}+\nu_{12}+\nu_{32}=r_{22}, & \omega_{2}+\omega_{4}+\nu_{21}+\nu_{23}=r_{22}^{\prime}  \tag{4}\\
+\omega_{2}+\omega_{4}+\nu_{12}+\nu_{32}=r_{22}, & \omega_{2}+\omega_{4}+\nu_{21}+\nu_{23}=r_{22}^{\prime}  \label{chap10:eq:19}\\
 \omega_{1}+\omega_{6}+\nu_{13}+\nu_{33}=r_{23}, & \omega_{1}+\omega_{6}+\nu_{21}+\nu_{22}=r_{23}^{\prime} \\
 \omega_{2}+\omega_{6}+\nu_{11}+\nu_{21}=r_{31}, & \omega_{2}+\omega_{6}+\nu_{32}+\nu_{33}=r_{31}^{\prime} \\
 \omega_{1}+\omega_{5}+\nu_{12}+\nu_{22}=r_{32}, & \omega_{1}+\omega_{5}+\nu_{31}+\nu_{33}=r_{32}^{\prime} \\
 \omega_{3}+\omega_{4}+\nu_{13}+\nu_{23}=r_{33}, & \omega_{3}+\omega_{4}+\nu_{31}+\nu_{32}=r_{33}^{\prime}
 \end{array}
-\]
-
+\end{equation}
 $\nu_{p q}$ and $\omega_{\alpha}$ are related to arguments of the $9 j$ symbols by
-
-\[
+\begin{equation}
 \begin{array}{cl}
 \sum_{q=1}^{3} \nu_{p q}=n-\sum_{q=1}^{3} r_{p q}, & \sum_{q=1}^{3} \nu_{q p}=n-\sum_{q=1}^{3} r_{q p}^{\prime} . \\
 n+\omega_{1}+\omega_{4}-\nu_{11}=j_{12}+j_{13}+j_{21}+j_{31}, & n+\omega_{3}+\omega_{5}-\nu_{21}=j_{22}+j_{23}+j_{11}+j_{31}, \\
 n+\omega_{3}+\omega_{6}-\nu_{12}=j_{11}+j_{13}+j_{22}+j_{32}, & n+\omega_{2}+\omega_{4}-\nu_{22}=j_{21}+j_{23}+j_{12}+j_{32}, \\
-n+\omega_{2}+\omega_{5}-\nu_{13}=j_{11}+j_{12}+j_{23}+j_{33}, & n+\omega_{1}+\omega_{6}-\nu_{23}=j_{21}+j_{22}+j_{13}+j_{33},  \tag{6}\\
+n+\omega_{2}+\omega_{5}-\nu_{13}=j_{11}+j_{12}+j_{23}+j_{33}, & n+\omega_{1}+\omega_{6}-\nu_{23}=j_{21}+j_{22}+j_{13}+j_{33},  \label{chap10:eq:20}\\
 n+\omega_{2}+\omega_{6}-\nu_{31}=j_{32}+j_{33}+j_{11}+j_{21}, \\
 n+\omega_{1}+\omega_{5}-\nu_{32}=j_{31}+j_{33}+j_{12}+j_{22}, \\
 n+\omega_{3}+\omega_{4}-\nu_{33}=j_{31}+j_{32}+j_{13}+j_{23} .
 \end{array}
-\]
-
+\end{equation}
 A choice of independent summation variables can be made in many ways, leading to formally different representations of the $9 j$ symbols. Some of them are given below.\\
 (a)
-
-
-\begin{align*}
+\begin{align}
 \left\{\begin{array}{lll}
 j_{11} & j_{12} & j_{13} \\
 j_{21} & j_{22} & j_{23} \\
 j_{31} & j_{32} & j_{33}
-\end{array}\right\}= & \Delta\left(j_{11} j_{12} j_{13}\right) \Delta\left(j_{21} j_{22} j_{23}\right) \Delta\left(j_{31} j_{32} j_{33}\right) \Delta\left(j_{11} j_{21} j_{31}\right) \Delta\left(j_{12} j_{22} j_{32}\right) \Delta\left(j_{13} j_{23} j_{33}\right) \\
-& \times \sum_{x_{\alpha}} \frac{(-1)^{\frac{1}{2} R+\frac{1}{2} \sum_{\beta=1}^{3} x_{\beta}+x_{6}+x_{5}+x_{6}}\left(1+\sum_{\beta=1}^{6} z_{\beta}\right)!}{\prod_{p, q=1}^{3}\left(z_{p q}-j_{p q}\right)!\prod_{\alpha=1}^{6}\left\{\frac{1}{2}\left(R-\sum_{\beta=1}^{6} z_{\beta}\right)+z_{\alpha}-h_{\alpha}\right\}!} \tag{7}
-\end{align*}
-
-
+\end{array}\right\}= & \Delta\left(j_{11} j_{12} j_{13}\right) \Delta\left(j_{21} j_{22} j_{23}\right) \Delta\left(j_{31} j_{32} j_{33}\right) \Delta\left(j_{11} j_{21} j_{31}\right) \Delta\left(j_{12} j_{22} j_{32}\right) \Delta\left(j_{13} j_{23} j_{33}\right)  \notag\\
+& \times \sum_{x_{\alpha}} \frac{(-1)^{\frac{1}{2} R+\frac{1}{2} \sum_{\beta=1}^{3} x_{\beta}+x_{6}+x_{5}+x_{6}}\left(1+\sum_{\beta=1}^{6} z_{\beta}\right)!}{\prod_{p, q=1}^{3}\left(z_{p q}-j_{p q}\right)!\prod_{\alpha=1}^{6}\left\{\frac{1}{2}\left(R-\sum_{\beta=1}^{6} z_{\beta}\right)+z_{\alpha}-h_{\alpha}\right\}!} \label{chap10:eq:21}
+\end{align}
 where
-
-
-\begin{gather*}
+\begin{gather}
 \left(z_{p q}\right) \equiv\left(\begin{array}{lll}
 z_{11} & z_{12} & z_{13} \\
 z_{21} & z_{22} & z_{23} \\
@@ -292,47 +226,36 @@ z_{31} & z_{32} & z_{33}
 z_{1}+z_{4} & z_{3}+z_{6} & z_{2}+z_{5} \\
 z_{3}+z_{5} & z_{2}+z_{4} & z_{1}+z_{6} \\
 z_{2}+z_{6} & z_{1}+z_{5} & z_{3}+z_{4}
-\end{array}\right)  \tag{8}\\
-h_{1}=j_{11}+j_{23}+j_{32}, \quad h_{4}=j_{11}+j_{22}+j_{33} \\
-h_{2}=j_{31}+j_{22}+j_{13}, \quad h_{5}=j_{21}+j_{32}+j_{13}  \tag{9}\\
-h_{3}=j_{21}+j_{12}+j_{33}, \quad h_{6}=j_{31}+j_{12}+j_{23} \\
-R=\sum_{p, q=1}^{3} j_{p q} \tag{10}
-\end{gather*}
-
-
-Summation in Eq. (7) is over all integer and half-integer $z_{\alpha} \geq 0$.\\
+\end{array}\right)  \label{chap10:eq:22}\\
+h_{1}=j_{11}+j_{23}+j_{32}, \quad h_{4}=j_{11}+j_{22}+j_{33}  \notag\\
+h_{2}=j_{31}+j_{22}+j_{13}, \quad h_{5}=j_{21}+j_{32}+j_{13}  \label{chap10:eq:23}\\
+h_{3}=j_{21}+j_{12}+j_{33}, \quad h_{6}=j_{31}+j_{12}+j_{23}  \notag\\
+R=\sum_{p, q=1}^{3} j_{p q} \label{chap10:eq:24}
+\end{gather}
+Summation in Eq. \eqref{chap10:eq:21} is over all integer and half-integer $z_{\alpha} \geq 0$.\\
 (b)
-
-
-\begin{gather*}
+\begin{gather}
 \left\{\begin{array}{lll}
 j_{11} & j_{12} & j_{13} \\
 j_{21} & j_{22} & j_{23} \\
 j_{31} & j_{32} & j_{33}
-\end{array}\right\}=\Delta\left(j_{11} j_{12} j_{13}\right) \Delta\left(j_{21} j_{22} j_{23}\right) \Delta\left(j_{31} j_{32} j_{33}\right) \Delta\left(j_{11} j_{21} j_{31}\right) \Delta\left(j_{12} j_{22} j_{32}\right) \Delta\left(j_{13} j_{23} j_{33}\right) \\
-\quad \times(-1)^{R} \sum_{z_{\alpha}} \frac{(-1)^{z_{4}+z_{s}+z_{6}}\left(1+\sum_{\beta=1}^{6} z_{\beta}\right)!}{\prod_{p, q=1}^{3}\left(z_{p q}-j_{p q}\right)!\prod_{p=1}^{3}\left[\left(R-\sum_{\beta=1}^{6} z_{\beta}+z_{p}-h_{p}\right)!\left(z_{p+3}-h_{p+3}\right)!\right]} \tag{11}
-\end{gather*}
-
-
-Summation in (11) is over all integer and half-integer $z_{\alpha} \geq 0 ; z_{p q}$ and $h_{p}$ are determined by Eqs. (8) and (9).\\
+\end{array}\right\}=\Delta\left(j_{11} j_{12} j_{13}\right) \Delta\left(j_{21} j_{22} j_{23}\right) \Delta\left(j_{31} j_{32} j_{33}\right) \Delta\left(j_{11} j_{21} j_{31}\right) \Delta\left(j_{12} j_{22} j_{32}\right) \Delta\left(j_{13} j_{23} j_{33}\right)  \notag\\
+\quad \times(-1)^{R} \sum_{z_{\alpha}} \frac{(-1)^{z_{4}+z_{s}+z_{6}}\left(1+\sum_{\beta=1}^{6} z_{\beta}\right)!}{\prod_{p, q=1}^{3}\left(z_{p q}-j_{p q}\right)!\prod_{p=1}^{3}\left[\left(R-\sum_{\beta=1}^{6} z_{\beta}+z_{p}-h_{p}\right)!\left(z_{p+3}-h_{p+3}\right)!\right]} \label{chap10:eq:25}
+\end{gather}
+Summation in \eqref{chap10:eq:25} is over all integer and half-integer $z_{\alpha} \geq 0 ; z_{p q}$ and $h_{p}$ are determined by Eqs. \eqref{chap10:eq:22} and \eqref{chap10:eq:23}.\\
 (c)
-
-
-\begin{align*}
+\begin{align}
 & \left\{\begin{array}{lll}
 j_{11} & j_{12} & j_{13} \\
 j_{21} & j_{22} & j_{23} \\
 j_{31} & j_{32} & j_{33}
-\end{array}\right\}=\Delta\left(j_{11} j_{12} j_{13}\right) \Delta\left(j_{21} j_{22} j_{23}\right) \Delta\left(j_{31} j_{32} j_{33}\right) \Delta\left(j_{11} j_{21} j_{31}\right) \Delta\left(j_{12} j_{22} j_{32}\right) \Delta\left(j_{13} j_{23} j_{33}\right) \\
-& \times \sum_{x_{\alpha}} \frac{(-1)^{x_{4}+x_{5}+x_{6}}\left(1+R-2 t+\sum_{\beta=1}^{6} x_{\beta}-x_{4}\right)!}{\left(\prod_{p=1}^{3} x_{p}!\right) x_{4}!\left(x_{5}+x_{4}\right)!\left(x_{6}+x_{4}\right)!\prod_{p \neq q=1}^{3}\left(x_{p q}+t_{p q}\right)!\prod_{p=1}^{3}\left(t-j_{q r}-j_{r q}+x_{p}-\sum_{\beta=1}^{6} x_{\beta}\right)!} \tag{12}
-\end{align*}
-
-
+\end{array}\right\}=\Delta\left(j_{11} j_{12} j_{13}\right) \Delta\left(j_{21} j_{22} j_{23}\right) \Delta\left(j_{31} j_{32} j_{33}\right) \Delta\left(j_{11} j_{21} j_{31}\right) \Delta\left(j_{12} j_{22} j_{32}\right) \Delta\left(j_{13} j_{23} j_{33}\right)  \notag\\
+& \times \sum_{x_{\alpha}} \frac{(-1)^{x_{4}+x_{5}+x_{6}}\left(1+R-2 t+\sum_{\beta=1}^{6} x_{\beta}-x_{4}\right)!}{\left(\prod_{p=1}^{3} x_{p}!\right) x_{4}!\left(x_{5}+x_{4}\right)!\left(x_{6}+x_{4}\right)!\prod_{p \neq q=1}^{3}\left(x_{p q}+t_{p q}\right)!\prod_{p=1}^{3}\left(t-j_{q r}-j_{r q}+x_{p}-\sum_{\beta=1}^{6} x_{\beta}\right)!} \label{chap10:eq:26}
+\end{align}
 where
-
-\[
+\begin{equation}
 \left(x_{p q}\right) \equiv\left(\begin{array}{lll}
-x_{11} & x_{12} & x_{13}  \tag{13}\\
+x_{11} & x_{12} & x_{13}  \label{chap10:eq:27}\\
 x_{21} & x_{22} & x_{23} \\
 x_{31} & x_{32} & x_{33}
 \end{array}\right)=\left(\begin{array}{ccc}
@@ -340,33 +263,27 @@ x_{1} & x_{3}+x_{6} & x_{2}+x_{5} \\
 x_{3}+x_{5} & x_{2} & x_{1}+x_{6} \\
 x_{2}+x_{6} & x_{1}+x_{5} & x_{3}
 \end{array}\right)
-\]
-
-Summation in Eq. (12) is over all integer $x_{\alpha} \geq 0$.
-
-
-\begin{align*}
-t_{p q} & \equiv j_{q r}+j_{r p}-j_{p p}-j_{q q}, \quad(p \neq q \neq r=1,2,3)  \tag{14}\\
-t & =j_{11}+j_{22}+j_{33}
-\end{align*}
-
-
-\subsection*{10.2.3. 9j Symbols as Sums of Products of the Clebsch-Gordan Coefficients or the 3jm Symbols [110]}
-
-\begin{gather*}
+\end{equation}
+Summation in Eq. \eqref{chap10:eq:26} is over all integer $x_{\alpha} \geq 0$.
+\begin{align}
+t_{p q} & \equiv j_{q r}+j_{r p}-j_{p p}-j_{q q}, \quad(p \neq q \neq r=1,2,3)  \label{chap10:eq:28}\\
+t & =j_{11}+j_{22}+j_{33} \notag
+\end{align}
+\subsection{9j Symbols as Sums of Products of the Clebsch-Gordan Coefficients or the 3jm Symbols [110]}
+\begin{gather}
 \left\{\begin{array}{lll}
 a & b & c \\
 d & e & f \\
 g & h & j
 \end{array}\right\}=\left[\left.(2 c+1)(2 f+1)(2 g+1)(2 h+1)\right|^{-\frac{1}{2}}(2 j+1)^{-1} \sum_{\substack{\alpha \beta \gamma \delta \varepsilon \varphi \\
-\eta \mu \nu}} C_{a \alpha b \beta}^{c \gamma} C_{d \delta e c}^{f \varphi} C_{c \gamma f \varphi}^{j \nu} C_{a \alpha d \delta}^{g \eta} C_{b \beta e c}^{h \mu} C_{g \eta h \mu}^{j \nu}\right.  \tag{15}\\
+\eta \mu \nu}} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} \clebsch{d}{\delta}{e}{c}{f}{\varphi} \clebsch{c}{\gamma}{f}{\varphi}{j}{\nu} \clebsch{a}{\alpha}{d}{\delta}{g}{\eta} \clebsch{b}{\beta}{e}{c}{h}{\mu} \clebsch{g}{\eta}{h}{\mu}{j}{\nu}\right.  \label{chap10:eq:29}\\
 \left\{\begin{array}{lll}
 a & b & c \\
 d & e & f \\
 g & h & j
 \end{array}\right\}=\frac{(-1)^{2(c+g)}}{(2 a+1)(2 e+1)(2 j+1)} \sum_{\substack{\alpha \beta \gamma \\
 \delta \varepsilon \varphi \\
-\eta \mu \nu}} C_{c \gamma b \beta}^{a \alpha} C_{g \eta d \delta}^{a \alpha} C_{b \beta h \mu}^{e \varepsilon} C_{d \delta f \varphi}^{e \varepsilon} C_{h \mu g \eta}^{j \nu} C_{f \varphi c \gamma}^{j \nu}  \tag{16}\\
+\eta \mu \nu}} \clebsch{c}{\gamma}{b}{\beta}{a}{\alpha} \clebsch{g}{\eta}{d}{\delta}{a}{\alpha} \clebsch{b}{\beta}{h}{\mu}{e}{\varepsilon} \clebsch{d}{\delta}{f}{\varphi}{e}{\varepsilon} \clebsch{h}{\mu}{g}{\eta}{j}{\nu} \clebsch{f}{\varphi}{c}{\gamma}{j}{\nu}  \label{chap10:eq:30}\\
 \left\{\begin{array}{lll}
 a & b & c \\
 d & e & f \\
@@ -390,36 +307,28 @@ b & e & h \\
 \end{array}\right)\left(\begin{array}{lll}
 c & f & j \\
 \gamma & \varphi & \nu
-\end{array}\right) \tag{17}
-\end{gather*}
-
-
+\end{array}\right) \label{chap10:eq:31}
+\end{gather}
 The following two relations were obtained in Ref. [45]:
-
-
-\begin{gather*}
+\begin{gather}
 \left\{\begin{array}{ccc}
 a & b & c \\
 d & e & f \\
 g & h & j
-\end{array}\right\}=\frac{\Delta(a b c) \Delta(d e f)}{\Delta(a d g) \Delta(c f j)}\left[\frac{(g+h+j+1)!(g-h+j)!}{(2 h+1)}\right]^{\frac{1}{2}} \\
-\times \frac{(c+f-j)!(a+d-g)!}{(a+d+g+1)!(a-b+c)!(-a+b+c)!(d-e+f)!(-d+e+f)!} \\
-\times \sum_{x y \beta}(-1)^{a-c+\beta+x+y} \frac{(2 a-x)!(2 d-y)!(-a+b+c+x)!(-d+e+f+y)!}{x!y!(a+b-c-x)!(d+e-f-y)!(-a+c-\beta+x)!(-d+f+g-j+\beta+y)!} \\
-\times \frac{(-a+f+j-\beta+x)!(-d+c+g+\beta+y)!}{(a+d-g-x-y)!(-a+c-d+f+g+j+1+x+y)!}\left[\frac{(b-\beta)!(e+g-j+\beta)!}{(b+\beta)!(e-g+j-\beta)!}\right]^{\frac{1}{2}} C_{b \beta e j-g-\beta}^{h j-g}  \tag{18}\\
+\end{array}\right\}=\frac{\Delta(a b c) \Delta(d e f)}{\Delta(a d g) \Delta(c f j)}\left[\frac{(g+h+j+1)!(g-h+j)!}{(2 h+1)}\right]^{\frac{1}{2}}  \notag\\
+\times \frac{(c+f-j)!(a+d-g)!}{(a+d+g+1)!(a-b+c)!(-a+b+c)!(d-e+f)!(-d+e+f)!}  \notag\\
+\times \sum_{x y \beta}(-1)^{a-c+\beta+x+y} \frac{(2 a-x)!(2 d-y)!(-a+b+c+x)!(-d+e+f+y)!}{x!y!(a+b-c-x)!(d+e-f-y)!(-a+c-\beta+x)!(-d+f+g-j+\beta+y)!}  \notag\\
+\times \frac{(-a+f+j-\beta+x)!(-d+c+g+\beta+y)!}{(a+d-g-x-y)!(-a+c-d+f+g+j+1+x+y)!}\left[\frac{(b-\beta)!(e+g-j+\beta)!}{(b+\beta)!(e-g+j-\beta)!}\right]^{\frac{1}{2}} \clebsch{b}{\beta}{e}{j-g-\beta}{h}{j-g}  \label{chap10:eq:32}\\
 \left\{\begin{array}{lll}
 a & b & c \\
 d & e & f \\
 g & h & j
-\end{array}\right\}=\left[\frac{(a+d-g)!(c+f-j)!(g-h+j)!(g+h+j+1)!}{(-a+d+g)!(a-d+g)!(a+d+g+1)!(c+f+j+1)!(c-f+j)!(-c+f+j)!}\right]^{\frac{1}{2}} \\
-\times \frac{1}{[(2 c+1)(2 f+1)(2 h+1)]^{\frac{1}{2}}} \sum_{\alpha \beta}(-1)^{a-c+\beta}\left[\frac{(a+\alpha)!(d+g-\alpha)!(c+\alpha+\beta)!(f+j-\alpha-\beta)!}{(a-\alpha)!(d-g+\alpha)!(c-\alpha-\beta)!(f-j+\alpha+\beta)!}\right]^{\frac{1}{2}} \\
-\times C_{b \beta e j-g-\beta}^{h j-g} C_{a \alpha b \beta}^{c \alpha+\beta} C_{d g-\alpha e j-g-\beta}^{f j-\alpha-\beta} \tag{19}
-\end{gather*}
-
-
+\end{array}\right\}=\left[\frac{(a+d-g)!(c+f-j)!(g-h+j)!(g+h+j+1)!}{(-a+d+g)!(a-d+g)!(a+d+g+1)!(c+f+j+1)!(c-f+j)!(-c+f+j)!}\right]^{\frac{1}{2}}  \notag\\
+\times \frac{1}{[(2 c+1)(2 f+1)(2 h+1)]^{\frac{1}{2}}} \sum_{\alpha \beta}(-1)^{a-c+\beta}\left[\frac{(a+\alpha)!(d+g-\alpha)!(c+\alpha+\beta)!(f+j-\alpha-\beta)!}{(a-\alpha)!(d-g+\alpha)!(c-\alpha-\beta)!(f-j+\alpha+\beta)!}\right]^{\frac{1}{2}}  \notag\\
+\times \clebsch{b}{\beta}{e}{j-g-\beta}{h}{j-g} \clebsch{a}{\alpha}{b}{\beta}{c}{\alpha+\beta} \clebsch{d}{g-\alpha}{e}{j-g-\beta}{f}{j-\alpha-\beta} \label{chap10:eq:33}
+\end{gather}
 10.2.4. 9j Symbols as Sums of Products of the 6j Symbols or the Racah Coefficients [110,74]
-
-
-\begin{align*}
+\begin{align}
 & \left\{\begin{array}{lll}
 a & b & c \\
 d & e & f \\
@@ -433,135 +342,96 @@ b & x & h
 \end{array}\right\}\left\{\begin{array}{lll}
 g & h & j \\
 x & a & d
-\end{array}\right\},  \tag{20}\\
+\end{array}\right\},  \label{chap10:eq:34}\\
 & \left\{\begin{array}{lll}
 a & b & c \\
 d & e & f \\
 g & h & j
-\end{array}\right\}=\sum_{x}(2 x+1) W(\text { aech; } x b) W(\text { aegf } ; x d) W(\text { ch } f g ; x j) . \tag{21}
-\end{align*}
-
-
-\subsection*{10.3. INTEGRAL REPRESENTATIONS OF THE 9j SYMBOLS}
-10.3.1. Representation Involving the Generalised Hypergeometric Function
-
-
-\begin{gather*}
+\end{array}\right\}=\sum_{x}(2 x+1) W(\text { aech; } x b) W(\text { aegf } ; x d) W(\text { ch } f g ; x j) . \label{chap10:eq:35}
+\end{align}
+\section{INTEGRAL REPRESENTATIONS OF THE 9j SYMBOLS}
+\subsection{Representation Involving the Generalised Hypergeometric Function}
+\begin{gather}
 \left\{\begin{array}{lll}
 a & b & c \\
 d & e & f \\
 g & h & j
-\end{array}\right\}=\frac{(-1)^{a+b-c-g-h+j}}{2^{b+e+h+1}} \cdot \frac{\Delta(a b c) \Delta(d e f) \Delta(b e h)}{\Delta(a d g) \Delta(c f j) \Delta(g h j)} \\
-\times \frac{(a+d-g)!(c+f-j)!(g-h+j)!(b+e+h+1)!}{(a-b+c)!(-a+b+c)!(d-e+f)!(-d+e+f)!(a+d+g+1)!(-b+e+h)!(b+e+j-g)!} \\
-\times \sum_{x y} \frac{(-1)^{x+v}(2 a-x)!(-a+b+c+x)!(-a-e+f+g+x)!(2 d-y)!(c-d+e!+j+y)!}{x!y!(a+b-c-x)!(-a+c-e+g-j+x)!(d+e-f-y)!} \\
-\times \frac{1}{(a+d-g-x-y)!(-a-d+g+c+f+j+1+x+y)!} \\
+\end{array}\right\}=\frac{(-1)^{a+b-c-g-h+j}}{2^{b+e+h+1}} \cdot \frac{\Delta(a b c) \Delta(d e f) \Delta(b e h)}{\Delta(a d g) \Delta(c f j) \Delta(g h j)}  \notag\\
+\times \frac{(a+d-g)!(c+f-j)!(g-h+j)!(b+e+h+1)!}{(a-b+c)!(-a+b+c)!(d-e+f)!(-d+e+f)!(a+d+g+1)!(-b+e+h)!(b+e+j-g)!}  \notag\\
+\times \sum_{x y} \frac{(-1)^{x+v}(2 a-x)!(-a+b+c+x)!(-a-e+f+g+x)!(2 d-y)!(c-d+e!+j+y)!}{x!y!(a+b-c-x)!(-a+c-e+g-j+x)!(d+e-f-y)!}  \notag\\
+\times \frac{1}{(a+d-g-x-y)!(-a-d+g+c+f+j+1+x+y)!}  \notag\\
 \times \int_{-1}^{1}(1+z)^{2 e}{ }_{3} F_{2}\left[\begin{array}{c}
 -b-e+g-j,-a-e+f+g+1+x, d-e-f-y ; z-1 \\
 -a+c-e+g-j+1+x,-c+d-e-j-y ; \\
 z+1
-\end{array}\right] \\
-\times \frac{d^{-b+e+h}}{(d z)^{-b+e+h}}\left[(1-z)^{g+h-j}(1+z)^{-g+h+j}\right] d z . \tag{1}
-\end{gather*}
-
-
-10.3.2. Representation Involving the Wigner $D$ Functions
-
-
-\begin{align*}
+\end{array}\right]  \notag\\
+\times \frac{d^{-b+e+h}}{(d z)^{-b+e+h}}\left[(1-z)^{g+h-j}(1+z)^{-g+h+j}\right] d z . \label{chap10:eq:36}
+\end{gather}
+\subsection{Representation Involving the Wigner $D$ Functions}
+\begin{align}
 & \left\{\begin{array}{lll}
 a & b & c \\
 d & e & f \\
 g & h & j
-\end{array}\right\} C_{c \gamma \rho \varphi}^{j \mu}=(-1)^{c-f-g+h} \frac{[(2 j+1)(a+b-c)!(a+b+c+1)!(d+e-f)!(d+e+f+1)!]^{\frac{d}{2}}}{(a+d+g+1)!(b+e+h+1)!\Delta(a d g) \Delta(b e h)} \\
-& \times[(g+h-j)!(g+h+j+1)!]^{\frac{1}{2}} \int d R_{1} d R_{2} d R_{3} B_{b c h}^{a d g}\left(R_{1}, R_{2}, R_{3}\right) D_{b-a, \gamma}^{o}\left(R_{1}\right) D_{c-d, \varphi}^{j}\left(R_{2}\right) D_{g-h, \mu}^{j *}\left(R_{3}\right) \tag{2}
-\end{align*}
-
-
+\end{array}\right\} \clebsch{c}{\gamma}{\rho}{\varphi}{j}{\mu}=(-1)^{c-f-g+h} \frac{[(2 j+1)(a+b-c)!(a+b+c+1)!(d+e-f)!(d+e+f+1)!]^{\frac{d}{2}}}{(a+d+g+1)!(b+e+h+1)!\Delta(a d g) \Delta(b e h)}  \notag\\
+& \times[(g+h-j)!(g+h+j+1)!]^{\frac{1}{2}} \int d R_{1} d R_{2} d R_{3} B_{b c h}^{a d g}\left(R_{1}, R_{2}, R_{3}\right) D_{b-a, \gamma}^{o}\left(R_{1}\right) D_{c-d, \varphi}^{j}\left(R_{2}\right) D_{g-h, \mu}^{j *}\left(R_{3}\right) \label{chap10:eq:37}
+\end{align}
 In this equation $\gamma, \varphi, \mu$ are arbitrary integer or half-integer numbers and
-
-
-\begin{equation*}
-d R_{i}=\frac{1}{8 \pi^{2}} \sin \beta_{i} d \alpha_{i} d \beta_{i} d \gamma_{i}, \quad(i=1,2,3) \tag{3}
-\end{equation*}
-
-
+\begin{equation}
+d R_{i}=\frac{1}{8 \pi^{2}} \sin \beta_{i} d \alpha_{i} d \beta_{i} d \gamma_{i}, \quad(i=1,2,3) \label{chap10:eq:38}
+\end{equation}
 The integration limits are standard (see Eq. 4.10(4)). $B_{b e h}^{a d g}\left(R_{1}, R_{2}, R_{3}\right)$ may be presented in the form
-
-
-\begin{gather*}
-B_{b c h}^{a d g}\left(R_{1}, R_{2}, R_{3}\right)=B_{12}^{a+d-g} B_{12}^{* b+e-h} B_{31}^{a-d+g} B_{31}^{* b-e+h} B_{32}^{-a+d+g} B_{32}^{*-b+e+h}  \tag{4}\\
-B_{i k} \equiv e^{-\frac{i}{2}\left(\alpha_{i}+\alpha_{k}\right)}\left\{\sin \frac{\beta_{i}}{2} \cos \frac{\beta_{k}}{2} e^{\frac{i}{2}\left(\gamma_{i}-\gamma_{k}\right)}-\cos \frac{\beta_{i}}{2} \sin \frac{\beta_{k}}{2} e^{-\frac{i}{2}\left(\gamma_{i}-\gamma_{k}\right)}\right\} \\
-=\sum_{M}(-1)^{\frac{1}{2}-M} D_{\frac{1}{2} M}^{\frac{1}{2}}\left(R_{i}\right) D_{\frac{1}{2}-M}^{\frac{1}{2}}\left(R_{k}\right)=-D_{\frac{1}{2}-\frac{1}{2}}^{\frac{1}{2}}\left(R_{i} R_{k}^{-1}\right) \tag{5}
-\end{gather*}
-
-
+\begin{gather}
+B_{b c h}^{a d g}\left(R_{1}, R_{2}, R_{3}\right)=B_{12}^{a+d-g} B_{12}^{* b+e-h} B_{31}^{a-d+g} B_{31}^{* b-e+h} B_{32}^{-a+d+g} B_{32}^{*-b+e+h}  \label{chap10:eq:39}\\
+B_{i k} \equiv e^{-\frac{i}{2}\left(\alpha_{i}+\alpha_{k}\right)}\left\{\sin \frac{\beta_{i}}{2} \cos \frac{\beta_{k}}{2} e^{\frac{i}{2}\left(\gamma_{i}-\gamma_{k}\right)}-\cos \frac{\beta_{i}}{2} \sin \frac{\beta_{k}}{2} e^{-\frac{i}{2}\left(\gamma_{i}-\gamma_{k}\right)}\right\}  \notag\\
+=\sum_{M}(-1)^{\frac{1}{2}-M} D_{\frac{1}{2} M}^{\frac{1}{2}}\left(R_{i}\right) D_{\frac{1}{2}-M}^{\frac{1}{2}}\left(R_{k}\right)=-D_{\frac{1}{2}-\frac{1}{2}}^{\frac{1}{2}}\left(R_{i} R_{k}^{-1}\right) \label{chap10:eq:40}
+\end{gather}
 The coefficients $B_{i k}$ possess the following properties:
-
-
-\begin{gather*}
-\left(B_{i k}\right)^{2 j}=\sum_{m}(-1)^{j-m} D_{j m}^{j}\left(R_{i}\right) D_{j-m}^{j}\left(R_{k}\right)=(-1)^{2 j} D_{j-j}^{j}\left(R_{i} R_{k}^{-1}\right)  \tag{6}\\
-\left(B_{i k}^{*}\right)^{2 j}=\sum_{m}(-1)^{j-m} D_{-j m}^{j}\left(R_{i}\right) D_{-j-m}^{j}\left(R_{k}\right)=D_{-j j}^{j}\left(R_{i} R_{k}^{-1}\right)  \tag{7}\\
-\left|B_{i k}\right|=\sin \frac{\Omega_{i k}}{2} \tag{8}
-\end{gather*}
-
-
+\begin{gather}
+\left(B_{i k}\right)^{2 j}=\sum_{m}(-1)^{j-m} D_{j m}^{j}\left(R_{i}\right) D_{j-m}^{j}\left(R_{k}\right)=(-1)^{2 j} D_{j-j}^{j}\left(R_{i} R_{k}^{-1}\right)  \label{chap10:eq:41}\\
+\left(B_{i k}^{*}\right)^{2 j}=\sum_{m}(-1)^{j-m} D_{-j m}^{j}\left(R_{i}\right) D_{-j-m}^{j}\left(R_{k}\right)=D_{-j j}^{j}\left(R_{i} R_{k}^{-1}\right)  \label{chap10:eq:42}\\
+\left|B_{i k}\right|=\sin \frac{\Omega_{i k}}{2} \label{chap10:eq:43}
+\end{gather}
 where
-
-
-\begin{equation*}
-\cos \Omega_{i k}=\cos \beta_{i} \cos \beta_{k}+\sin \beta_{i} \sin \beta_{k} \cos \left(\gamma_{i}-\gamma_{k}\right) \tag{9}
-\end{equation*}
-
-
-In particular, when $a=b, d=e, g=h$, from Eq. (2), one has [63]
-
-
-\begin{gather*}
+\begin{equation}
+\cos \Omega_{i k}=\cos \beta_{i} \cos \beta_{k}+\sin \beta_{i} \sin \beta_{k} \cos \left(\gamma_{i}-\gamma_{k}\right) \label{chap10:eq:44}
+\end{equation}
+In particular, when $a=b, d=e, g=h$, from Eq. \eqref{chap10:eq:37}, one has [63]
+\begin{gather}
 \left\{\begin{array}{ccc}
 a & a & c \\
 d & d & f \\
 g & g & j
-\end{array}\right\} C_{c 0 \rho 0}^{j 0}=(-1)^{c+f} \frac{1}{[(a+d-g+1)!]^{2} \Delta^{2}(a d g)} \\
-\times[(2 j+1)(2 a-c)!(2 a+c+1)!(2 d-f)!(2 d+f+1)!(2 g-j)!(2 g+j+1)!]^{\frac{1}{2}} \\
-\times \int d \Omega_{1} d \Omega_{2} d \Omega_{3} B_{a d g}\left(\Omega_{1}, \Omega_{2}, \Omega_{3}\right) P_{c}\left(\cos \beta_{1}\right) P_{f}\left(\cos \beta_{2}\right) P_{j}\left(\cos \beta_{3}\right) \tag{10}
-\end{gather*}
-
-
+\end{array}\right\} \clebsch{c}{0}{\rho}{0}{j}{0}=(-1)^{c+f} \frac{1}{[(a+d-g+1)!]^{2} \Delta^{2}(a d g)}  \notag\\
+\times[(2 j+1)(2 a-c)!(2 a+c+1)!(2 d-f)!(2 d+f+1)!(2 g-j)!(2 g+j+1)!]^{\frac{1}{2}}  \notag\\
+\times \int d \Omega_{1} d \Omega_{2} d \Omega_{3} B_{a d g}\left(\Omega_{1}, \Omega_{2}, \Omega_{3}\right) P_{c}\left(\cos \beta_{1}\right) P_{f}\left(\cos \beta_{2}\right) P_{j}\left(\cos \beta_{3}\right) \label{chap10:eq:45}
+\end{gather}
 Here
-
-
-\begin{gather*}
-d \Omega_{i}=\frac{1}{4 \pi} \sin \beta_{i} d \beta_{i} d \gamma_{i}  \tag{11}\\
-B_{a d g}\left(\Omega_{1}, \Omega_{2}, \Omega_{3}\right)=\left(\sin \frac{\Omega_{12}}{2}\right)^{2(a+d-g)}\left(\sin \frac{\Omega_{31}}{2}\right)^{2(a-d+g)}\left(\sin \frac{\Omega_{32}}{2}\right)^{2(-a+d+g)} . \tag{12}
-\end{gather*}
-
-
-10.3.3. Integrals Involving Characters of Irreducible Representations of Rotation Group
-
-
-\begin{gather*}
+\begin{gather}
+d \Omega_{i}=\frac{1}{4 \pi} \sin \beta_{i} d \beta_{i} d \gamma_{i}  \label{chap10:eq:46}\\
+B_{a d g}\left(\Omega_{1}, \Omega_{2}, \Omega_{3}\right)=\left(\sin \frac{\Omega_{12}}{2}\right)^{2(a+d-g)}\left(\sin \frac{\Omega_{31}}{2}\right)^{2(a-d+g)}\left(\sin \frac{\Omega_{32}}{2}\right)^{2(-a+d+g)} . \label{chap10:eq:47}
+\end{gather}
+\subsection{Integrals Involving Characters of Irreducible Representations of Rotation Group}
+\begin{gather}
 \left\{\begin{array}{lll}
 a & b & c \\
 d & e & f \\
 g & h & j
-\end{array}\right\}^{2}=\frac{1}{\left(8 \pi^{2}\right)^{5}} \int d R_{1} d R_{2} d R_{3} d R_{4} d R_{5} \chi^{c}\left(R_{1}\right) \chi^{f}\left(R_{2}\right) \chi^{j}\left(R_{3}\right) \chi^{a}\left(R_{1} R_{4}\right) \chi^{b}\left(R_{1} R_{5}\right) \chi^{d}\left(R_{2} R_{4}\right) \\
-\times \chi^{e}\left(R_{2} R_{5}\right) \chi^{g}\left(R_{3} R_{4}\right) \chi^{h}\left(R_{3} R_{5}\right)  \tag{13}\\
+\end{array}\right\}^{2}=\frac{1}{\left(8 \pi^{2}\right)^{5}} \int d R_{1} d R_{2} d R_{3} d R_{4} d R_{5} \chi^{c}\left(R_{1}\right) \chi^{f}\left(R_{2}\right) \chi^{j}\left(R_{3}\right) \chi^{a}\left(R_{1} R_{4}\right) \chi^{b}\left(R_{1} R_{5}\right) \chi^{d}\left(R_{2} R_{4}\right)  \notag\\
+\times \chi^{e}\left(R_{2} R_{5}\right) \chi^{g}\left(R_{3} R_{4}\right) \chi^{h}\left(R_{3} R_{5}\right)  \label{chap10:eq:48}\\
 \left\{\begin{array}{lll}
 a & a & b \\
 a & a & c \\
 b & c & d
-\end{array}\right\}=\frac{1}{\left(8 \pi^{2}\right)^{3}} \int d R_{1} d R_{2} d R_{3} \chi^{a}\left(R_{1}\right) \chi^{a}\left(R_{2}\right) \chi^{d}\left(R_{3}\right) \chi^{a}\left(R_{2} R_{1}\right) \chi^{b}\left(R_{3} R_{1}^{-1}\right) \chi^{c}\left(R_{3} R_{2}^{-1}\right) \tag{14}
-\end{gather*}
-
-
-\subsection*{10.4. SYMMETRY PROPERTIES OF THE 9j SYMBOLS}
-\subsection*{10.4.1. Permutation Symmetry}
+\end{array}\right\}=\frac{1}{\left(8 \pi^{2}\right)^{3}} \int d R_{1} d R_{2} d R_{3} \chi^{a}\left(R_{1}\right) \chi^{a}\left(R_{2}\right) \chi^{d}\left(R_{3}\right) \chi^{a}\left(R_{2} R_{1}\right) \chi^{b}\left(R_{3} R_{1}^{-1}\right) \chi^{c}\left(R_{3} R_{2}^{-1}\right) \label{chap10:eq:49}
+\end{gather}
+\section{SYMMETRY PROPERTIES OF THE 9j SYMBOLS}
+\subsection{Permutation Symmetry}
 Any $9 j$ symbol possesses the following symmetry properties with respect to permutations [74]: even permutations of columns or rows as well as transposition leave the $9 j$ symbol unchanged; odd permutations of columns or rows introduce the phase factor $(-1)^{R}$, where $R$ is sum of all arguments of the $9 j$ symbol. These symmetry properties may be written as follows\\
-(a) Column permutations
-
-\[
+\subsubsection{Column permutations}
+\begin{equation}
 \left\{\begin{array}{lll}
-j_{11} & j_{12} & j_{13}  \tag{1}\\
+j_{11} & j_{12} & j_{13}  \label{chap10:eq:50}\\
 j_{21} & j_{22} & j_{23} \\
 j_{31} & j_{32} & j_{33}
 \end{array}\right\}=\varepsilon\left\{\begin{array}{lll}
@@ -569,13 +439,11 @@ j_{1 i} & j_{1 k} & j_{1 l} \\
 j_{2 i} & j_{2 k} & j_{2 l} \\
 j_{3 i} & j_{3 k} & j_{3 l}
 \end{array}\right\}
-\]
-
-(b) Row permutations
-
-\[
+\end{equation}
+\subsubsection{Row permutations}
+\begin{equation}
 \left\{\begin{array}{lll}
-j_{11} & j_{12} & j_{13}  \tag{2}\\
+j_{11} & j_{12} & j_{13}  \label{chap10:eq:51}\\
 j_{21} & j_{22} & j_{23} \\
 j_{31} & j_{32} & j_{33}
 \end{array}\right\}=\varepsilon\left\{\begin{array}{lll}
@@ -583,13 +451,11 @@ j_{i 1} & j_{i 2} & j_{i 3} \\
 j_{k 1} & j_{k 2} & j_{k 3} \\
 j_{i 1} & j_{i 2} & j_{i 3}
 \end{array}\right\}
-\]
-
-(c) Transposition
-
-\[
+\end{equation}
+\subsubsection{Transposition}
+\begin{equation}
 \left\{\begin{array}{lll}
-j_{11} & j_{12} & j_{13}  \tag{3}\\
+j_{11} & j_{12} & j_{13}  \label{chap10:eq:52}\\
 j_{21} & j_{22} & j_{23} \\
 j_{31} & j_{32} & j_{33}
 \end{array}\right\}=\left\{\begin{array}{lll}
@@ -597,23 +463,17 @@ j_{11} & j_{21} & j_{31} \\
 j_{12} & j_{22} & j_{32} \\
 j_{13} & j_{23} & j_{33}
 \end{array}\right\}
-\]
-
+\end{equation}
 Here
-
-
-\begin{gather*}
+\begin{gather}
 \varepsilon= \begin{cases}1 & \text { for even permutations } \\
 (-1)^{R} & \text { (cyclic permutations) } \\
 & \text { for odd permutations } \\
-& \text { (non-cyclic permutations). }\end{cases}  \tag{4}\\
-R=\sum_{i, k=1}^{3} j_{i k} \tag{5}
-\end{gather*}
-
-
-All these symmetry properties are independent and relate $3!\times 3!\times 2=729 j$ symbols given below (Eq. (6)). The $9 j$ symbols obtained by column permutations are arranged horizontally. The $9 j$ symbols obtained by row permutations are arranged vertically. The six lower rows represent the transposed $9 j$ symbols.
-
-$$
+& \text { (non-cyclic permutations). }\end{cases}  \label{chap10:eq:53}\\
+R=\sum_{i, k=1}^{3} j_{i k} \label{chap10:eq:54}
+\end{gather}
+All these symmetry properties are independent and relate $3!\times 3!\times 2=729 j$ symbols given below (Eq. \eqref{chap10:eq:55}). The $9 j$ symbols obtained by column permutations are arranged horizontally. The $9 j$ symbols obtained by row permutations are arranged vertically. The six lower rows represent the transposed $9 j$ symbols.
+\[
 \begin{aligned}
 & \left\{\begin{array}{lll}
 a & b & c \\
@@ -691,10 +551,8 @@ g & j & h \\
 a & c & b
 \end{array}\right\}
 \end{aligned}
-$$
-
-
-\begin{align*}
+\]
+\begin{align}
 & =\varepsilon\left\{\begin{array}{lll}
 d & e & f \\
 a & b & c \\
@@ -719,7 +577,7 @@ j & h & g
 d & f & e \\
 a & c & b \\
 g & j & h
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 & =\varepsilon\left\{\begin{array}{lll}
 g & h & j \\
 d & e & f \\
@@ -744,7 +602,7 @@ c & b & a
 g & j & h \\
 d & f & e \\
 a & c & b
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 & =\varepsilon\left\{\begin{array}{lll}
 a & b & c \\
 g & h & j \\
@@ -769,7 +627,7 @@ f & e & d
 a & c & b \\
 g & j & h \\
 d & f & e
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 & =\left\{\begin{array}{lll}
 a & d & g \\
 b & e & h \\
@@ -795,7 +653,7 @@ f
 a & g & d \\
 b & h & e \\
 c & j & f
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 & =\left\{\begin{array}{lll}
 c & f & j \\
 a & d & g \\
@@ -821,7 +679,7 @@ b
 c & j & f \\
 a & g & d \\
 b & h & e
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 & =\left\{\begin{array}{lll}
 b & e & h \\
 c & f & j \\
@@ -846,7 +704,7 @@ g & d & a
 b & h & e \\
 c & j & f \\
 a & g & d
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 & =\varepsilon\left\{\begin{array}{lll}
 b & e & h \\
 a & d & g \\
@@ -871,7 +729,7 @@ j & f & c
 b & h & e \\
 a & g & d \\
 c & j & f
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 & =\varepsilon\left\{\begin{array}{lll}
 c & f & j \\
 b & e & h \\
@@ -896,7 +754,7 @@ g & d & a
 c & j & f \\
 b & h & e \\
 a & g & d
-\end{array}\right\} .  \tag{6}\\
+\end{array}\right\} .  \label{chap10:eq:55}\\
 & =\varepsilon\left\{\begin{array}{lll}
 a & d & g \\
 c & f & j \\
@@ -921,17 +779,14 @@ h & e & b
 a & g & d \\
 c & j & f \\
 b & h & e
-\end{array}\right\}
-\end{align*}
-
-
-\subsection*{10.4.2. Symmetries of the $r$ Symbol}
+\end{array}\right\} \notag
+\end{align}
+\subsection{Symmetries of the $r$ Symbol}
 Any $r$ symbol possesses the following symmetry properties:\\
-(a) Permutations of rows introduce the phase factor $\varepsilon$ (see Eq. (4)).
-
-\[
+\subsubsection{Permutations of rows introduce the phase factor $\varepsilon$ (see Eq. \protect\eqref{chap10:eq:53})}
+\begin{equation}
 \left\|\begin{array}{llllll}
-r_{11} & r_{12} & r_{13} & r_{11}^{\prime} & r_{12}^{\prime} & r_{13}^{\prime}  \tag{7}\\
+r_{11} & r_{12} & r_{13} & r_{11}^{\prime} & r_{12}^{\prime} & r_{13}^{\prime}  \label{chap10:eq:56}\\
 r_{21} & r_{22} & r_{23} & r_{21}^{\prime} & r_{22}^{\prime} & r_{23}^{\prime} \\
 r_{31} & r_{32} & r_{33} & r_{31}^{\prime} & r_{32}^{\prime} & r_{33}^{\prime}
 \end{array}\right\|=\varepsilon\left\|\begin{array}{llllll}
@@ -939,14 +794,12 @@ r_{i 1} & r_{i 2} & r_{i 3} & r_{i 1}^{\prime} & r_{i 2}^{\prime} & r_{i 3}^{\pr
 r_{k 1} & r_{k 2} & r_{k 3} & r_{k 1}^{\prime} & r_{k 2}^{\prime} & r_{k 3}^{\prime} \\
 r_{l 1} & r_{l 2} & r_{l 3} & r_{l 1}^{\prime} & r_{l 2}^{\prime} & r_{l 3}^{\prime}
 \end{array}\right\|,
-\]
-
+\end{equation}
 These permutations correspond to permutations of rows for the $9 j$ symbols.\\
-(b) Simultaneous permutations of appropriate columns in both parts of the $r$ symbol (i.e., $r_{i k}$ and $r_{i k}^{\prime}$ ) introduce the same phase factor $\varepsilon$.
-
-\[
+\subsubsection{Simultaneous permutations of appropriate columns in both parts of the $r$ symbol (i.e., $r_{i k}$ and $r_{i k}^{\prime}$ ) introduce the same phase factor $\varepsilon$}
+\begin{equation}
 \left\|\begin{array}{llllll}
-r_{11} & r_{12} & r_{13} & r_{11}^{\prime} & r_{12}^{\prime} & r_{13}^{\prime}  \tag{8}\\
+r_{11} & r_{12} & r_{13} & r_{11}^{\prime} & r_{12}^{\prime} & r_{13}^{\prime}  \label{chap10:eq:57}\\
 r_{21} & r_{22} & r_{23} & r_{21}^{\prime} & r_{22}^{\prime} & r_{23}^{\prime} \\
 r_{31} & r_{32} & r_{33} & r_{31}^{\prime} & r_{32}^{\prime} & r_{33}^{\prime}
 \end{array}\right\|=\varepsilon\left\|\begin{array}{llllll}
@@ -954,15 +807,12 @@ r_{1 i} & r_{1 k} & r_{1 l} & r_{1 i}^{\prime} & r_{1 k}^{\prime} & r_{1 l}^{\pr
 r_{2 i} & r_{2 k} & r_{2 l} & r_{2 i}^{\prime} & r_{2 k}^{\prime} & r_{2 l}^{\prime} \\
 r_{3 i} & r_{3 k} & r_{3 l} & r_{3 i}^{\prime} & r_{3 k}^{\prime} & r_{3 l}^{\prime}
 \end{array}\right\| .
-\]
-
+\end{equation}
 This symmetry corresponds to the symmetry of the $9 j$ symbols with respect to column permutations.\\
-(c) Transposition of both parts of the $r$ symbol with their simultaneous permutation is equivalent to\\
-transposition of the $9 j$ symbols:
-
-\[
+\subsubsection{Transposition of both parts of the $r$ symbol with their simultaneous permutation is equivalent to transposition of the $9 j$ symbols}
+\begin{equation}
 \left\|\begin{array}{llllll}
-r_{11} & r_{12} & r_{13} & r_{11}^{\prime} & r_{12}^{\prime} & r_{13}^{\prime}  \tag{9}\\
+r_{11} & r_{12} & r_{13} & r_{11}^{\prime} & r_{12}^{\prime} & r_{13}^{\prime}  \label{chap10:eq:58}\\
 r_{21} & r_{22} & r_{23} & r_{21}^{\prime} & r_{22}^{\prime} & r_{23}^{\prime} \\
 r_{31} & r_{32} & r_{33} & r_{31}^{\prime} & r_{32}^{\prime} & r_{33}^{\prime}
 \end{array}\right\|=\left\|\begin{array}{llllll}
@@ -970,13 +820,10 @@ r_{11}^{\prime} & r_{21}^{\prime} & r_{31}^{\prime} & r_{11} & r_{21} & r_{31} \
 r_{12}^{\prime} & r_{22}^{\prime} & r_{32}^{\prime} & r_{12} & r_{22} & r_{32} \\
 r_{13}^{\prime} & r_{23}^{\prime} & r_{33}^{\prime} & r_{13} & r_{23} & r_{33}
 \end{array}\right\| .
-\]
-
-\subsection*{10.4.3. "Mirror" Symmetry}
+\end{equation}
+\subsection{"Mirror" Symmetry}
 The original relations which define the $9 j$ symbols may be extended to the domain of negative integer or half-integer arguments. Introducing the notations $a=-a-1, b=-b-1, \ldots$, etc., we obtain the following symmetry properties [45]
-
-
-\begin{align*}
+\begin{align}
 &\left\{\begin{array}{lll}
 a & b & c \\
 d & e & f \\
@@ -993,7 +840,7 @@ g & h & j
 a & b & c \\
 d & e & f \\
 g & h & j
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 &=i \eta_{2}\left\{\begin{array}{ll}
 a & b \\
 d & c \\
@@ -1010,7 +857,7 @@ g & h & j
 a & b & c \\
 d & e & f \\
 g & h & j
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 &=i \eta_{4}\left\{\begin{array}{lll}
 a & b & c \\
 d & e & f \\
@@ -1027,7 +874,7 @@ g & h & j
 a & b & c \\
 d & e & f \\
 g & h & j
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 &=i \eta_{6}\left\{\begin{array}{lll}
 a & b & c \\
 d & e & f \\
@@ -1044,7 +891,7 @@ g & h & j
 a & b & c \\
 d & e & f \\
 g & h & j
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 &=\eta_{5}\left\{\begin{array}{lll}
 a & b & c \\
 d & c & f \\
@@ -1061,7 +908,7 @@ g & h & j
 a & b & c \\
 d & e & f \\
 g & h & j
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 &=-i \eta_{6}\left\{\begin{array}{lll}
 a & b & c \\
 d & e & f \\
@@ -1078,7 +925,7 @@ g & h & j
 a & b & c \\
 d & e & f \\
 g & h & j
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 &=-\left\{\begin{array}{lll}
 a & b & c \\
 d & e & f \\
@@ -1087,26 +934,20 @@ g & h & j
 a & b & c \\
 d & e & f \\
 g & h & j
-\end{array}\right\} . \tag{10}
-\end{align*}
-
-
+\end{array}\right\} . \label{chap10:eq:59}
+\end{align}
 In these equations
-
-\[
+\begin{equation}
 \begin{array}{ll}
 \eta_{1}=(-1)^{b-c-d+g}, & \eta_{5}=(-1)^{c-f-g+h+1}, \\
 \eta_{2}=(-1)^{c+d-e-g+h}, & \eta_{6}=(-1)^{g-h-j}, \\
 \eta_{3}=(-1)^{c+f-g-h}, & \eta_{7}=(-1)^{2(a+e+j)}, \\
-\eta_{4}=(-1)^{R}, & \eta_{8}=(-1)^{R-d+e-f+1} . \tag{11}
+\eta_{4}=(-1)^{R}, & \eta_{8}=(-1)^{R-d+e-f+1} . \label{chap10:eq:60}
 \end{array}
-\]
-
+\end{equation}
 When tabulating formulas for the $9 j$ symbols, it is convenient to use the "mirror" symmetry properties in\\[0pt]
 the form [45]
-
-
-\begin{align*}
+\begin{align}
 & \left\{\begin{array}{ccc}
 d-\delta & e+\varepsilon & f+\varphi \\
 d & e & f \\
@@ -1115,7 +956,7 @@ g & h & j
 \bar{d}+\delta & e+\varepsilon & f+\varphi \\
 \bar{d} & e & f \\
 g & h & j
-\end{array}\right\},  \tag{12}\\
+\end{array}\right\},  \label{chap10:eq:61}\\
 & \left\{\begin{array}{ccc}
 d+\delta & e-\varepsilon & f+\varphi \\
 d & e & f \\
@@ -1124,7 +965,7 @@ g & h & j
 d+\delta & \bar{e}+\varepsilon & f+\varphi \\
 d & \bar{e} & f \\
 g & h & j
-\end{array}\right\},  \tag{13}\\
+\end{array}\right\},  \label{chap10:eq:62}\\
 & \left\{\begin{array}{ccc}
 d+\delta & e+\varepsilon & f-\varphi \\
 d & e & f \\
@@ -1133,7 +974,7 @@ g & h & j
 d+\delta & e+\varepsilon & \bar{f}+\varphi \\
 d & e & \bar{f} \\
 g & h & j
-\end{array}\right\},  \tag{14}\\
+\end{array}\right\},  \label{chap10:eq:63}\\
 & \left\{\begin{array}{ccc}
 d-\delta & e-\varepsilon & f+\varphi \\
 d & e & f \\
@@ -1142,7 +983,7 @@ g & h & j
 d+\delta & \bar{e}+\varepsilon & f+\varphi \\
 \bar{d} & \bar{e} & f \\
 g & h & j
-\end{array}\right\},  \tag{15}\\
+\end{array}\right\},  \label{chap10:eq:64}\\
 & \left\{\begin{array}{ccc}
 d-\delta & e+\varepsilon & f-\varphi \\
 d & e & f \\
@@ -1151,7 +992,7 @@ g & h & j
 d+\delta & e+\varepsilon & \bar{f}+\varphi \\
 \bar{d} & e & \bar{f} \\
 g & h & j
-\end{array}\right\},  \tag{16}\\
+\end{array}\right\},  \label{chap10:eq:65}\\
 & \left\{\begin{array}{ccc}
 d+\delta & e-\varepsilon & f-\varphi \\
 d & e & f \\
@@ -1160,7 +1001,7 @@ g & h & j
 d+\delta & \bar{e}+\varepsilon & \bar{f}+\varphi \\
 d & \bar{e} & \bar{f} \\
 g & h & j
-\end{array}\right\},  \tag{17}\\
+\end{array}\right\},  \label{chap10:eq:66}\\
 & \left\{\begin{array}{cc}
 d-\delta & e-\varepsilon \\
 d & f-\varphi \\
@@ -1170,17 +1011,13 @@ h & j
 d+\delta & \bar{e}+\varepsilon \\
 \bar{d} & \bar{e} \\
 g & h
-\end{array}\right\}  \tag{18}\\
-& l
-\end{align*}
-
-
-\subsection*{10.5. RECURSION RELATIONS FOR THE $9 j$ SYMBOLS}
-\subsection*{10.5.1. General Form of the Recursion Relation}
+\end{array}\right\}  \label{chap10:eq:67}\\
+& l \notag
+\end{align}
+\section{RECURSION RELATIONS FOR THE $9 j$ SYMBOLS}
+\subsection{General Form of the Recursion Relation}
 Recursion relations for the $9 j$ symbols may be obtained for instance, using the following equation [77]
-
-
-\begin{align*}
+\begin{align}
 & (-1)^{a+f+b+j} \sum_{x}(-1)^{2 x}(2 x+1)\left\{\begin{array}{lll}
 a & b & x \\
 d & e & f \\
@@ -1191,7 +1028,7 @@ c & \lambda & a^{\prime}
 \end{array}\right\}\left\{\begin{array}{lll}
 j & f & x \\
 \lambda & c & f^{\prime}
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 = & (-1)^{a^{\prime}+f^{\prime}+g+e} \sum_{y}(-1)^{2 y}(2 y+1)\left\{\begin{array}{lll}
 a^{\prime} & b & c \\
 y & e & f^{\prime} \\
@@ -1202,102 +1039,86 @@ d & \lambda & f
 \end{array}\right\}\left\{\begin{array}{lll}
 g & a^{\prime} & y \\
 \lambda & d & a
-\end{array}\right\} . \tag{1}
-\end{align*}
+\end{array}\right\} . \label{chap10:eq:68}
+\end{align}
+Specifying $\lambda=\frac{1}{2}, 1, \frac{3}{2}, 2$, etc. and using explicit forms of the $6 j$ symbols, we may obtain various recursion relations. Examples of such relations are given below (Eqs. \eqref{chap10:eq:69}-\eqref{chap10:eq:72}).
 
-
-Specifying $\lambda=\frac{1}{2}, 1, \frac{3}{2}, 2$, etc. and using explicit forms of the $6 j$ symbols, we may obtain various recursion relations. Examples of such relations are given below (Eqs. (2)-(5)).
-
-\subsection*{10.5.2. Relations Involving Four $9 j$ Symbols}
-Equations (2)-(4) are derived by putting $\lambda=\frac{1}{2}$ in Eq. (1) and specifying the values of $a^{\prime}$ and $f^{\prime}$. In particular\\
+\subsection{Relations Involving Four $9 j$ Symbols}
+Equations \eqref{chap10:eq:69}-\eqref{chap10:eq:71} are derived by putting $\lambda=\frac{1}{2}$ in Eq. \eqref{chap10:eq:68} and specifying the values of $a^{\prime}$ and $f^{\prime}$. In particular\\
 (a) for $a^{\prime}=a-\frac{1}{2}, f^{\prime}=f-\frac{1}{2}$, one has
-
-
-\begin{gather*}
+\begin{gather}
 \frac{1}{2 c+1}\left[\left(a-b+c+\frac{1}{2}\right)\left(a+b+c+\frac{3}{2}\right)\left(c+f-j+\frac{1}{2}\right)\left(c+f+j+\frac{3}{2}\right)\right]^{\frac{1}{2}}\left\{\begin{array}{ccc}
 a & b & c+\frac{1}{2} \\
 d & e & f \\
 g & h & j
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 +\frac{1}{2 c+1}\left[\left(-a+b+c+\frac{1}{2}\right)\left(a+b-c+\frac{1}{2}\right)\left(-c+f+j+\frac{1}{2}\right)\left(c-f+j+\frac{1}{2}\right)\right]^{\frac{1}{2}}\left\{\begin{array}{ccc}
 a & b & c-\frac{1}{2} \\
 d & e & f \\
 g & h & j
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 =\frac{1}{2 d+1}[(d+e-f+1)(-d+e+f)(-a+g+d+1)(a-d+g)]^{\frac{1}{2}}\left\{\begin{array}{ccc}
 a-\frac{1}{2} & b & c \\
 d+\frac{1}{2} & e & f-\frac{1}{2} \\
 g & h & j
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 +\frac{1}{2 d+1}[(d-e+f)(d+e+f+1)(a+d-g)(a+d+g+1)]^{\frac{1}{2}}\left\{\begin{array}{ccc}
 a-\frac{1}{2} & b & c \\
 d-\frac{1}{2} & e & f-\frac{1}{2} \\
 g & h & j
-\end{array}\right\} ; \tag{2}
-\end{gather*}
-
-
+\end{array}\right\} ; \label{chap10:eq:69}
+\end{gather}
 (b) for $a^{\prime}=a+\frac{1}{2}, f^{\prime}=f+\frac{1}{2}$, one obtains
-
-
-\begin{align*}
+\begin{align}
 & \frac{1}{2 c+1}\left[\left(-a+b+c+\frac{1}{2}\right)\left(a+b-c+\frac{1}{2}\right)\left(-c+f+j+\frac{1}{2}\right)\left(c-f+j+\frac{1}{2}\right)\right]^{\frac{1}{2}}\left\{\begin{array}{ccc}
 a & b & c+\frac{1}{2} \\
 d & e & f \\
 g & h & j
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 & +\frac{1}{2 c+1}\left[\left(a-b+c+\frac{1}{2}\right)\left(a+b+c+\frac{3}{2}\right)\left(c+f-j+\frac{1}{2}\right)\left(c+f+j+\frac{3}{2}\right)\right]^{\frac{1}{2}}\left\{\begin{array}{ccc}
 a & b & c-\frac{1}{2} \\
 d & e & f \\
 g & h & j
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 & \quad=\frac{1}{2 d+1}[(d-e+f+1)(d+e+f+2)(a+d-g+1)(a+d+g+2)]^{\frac{1}{2}}\left\{\begin{array}{ccc}
 a+\frac{1}{2} & b & c \\
 d+\frac{1}{2} & e & f+\frac{1}{2} \\
 g & h & j
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 & \quad+\frac{1}{2 d+1}[(-d+e+f+1)(d+e-f)(-a+d+g)(a-d+g+1)]^{\frac{1}{2}}\left\{\begin{array}{ccc}
 a+\frac{1}{2} & b & c \\
 d-\frac{1}{2} & e & f+\frac{1}{2} \\
 g & h & j
-\end{array}\right\} \tag{3}
-\end{align*}
-
-
+\end{array}\right\} \label{chap10:eq:70}
+\end{align}
 (c) for $a^{\prime}=a-\frac{1}{2}, f^{\prime}=f+\frac{1}{2}$, one gets
-
-
-\begin{gather*}
+\begin{gather}
 \frac{1}{2 c+1}\left[\left(a-b+c+\frac{1}{2}\right)\left(a+b+c+\frac{3}{2}\right)\left(-c+f+j+\frac{1}{2}\right)\left(c-f+j+\frac{1}{2}\right)\right]^{\frac{1}{2}}\left\{\begin{array}{ccc}
 a & b & c+\frac{1}{2} \\
 d & e & f \\
 g & h & j
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 -\frac{1}{2 c+1}\left[\left(-a+b+c+\frac{1}{2}\right)\left(a+b-c+\frac{1}{2}\right)\left(c+f-j+\frac{1}{2}\right)\left(c+f+j+\frac{3}{2}\right)\right]^{\frac{1}{2}}\left\{\begin{array}{ccc}
 a & b & c-\frac{1}{2} \\
 d & e & f \\
 g & h & j
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 =\frac{1}{2 d+1}[(d-e+f+1)(d+e+f+2)(-a+d+g+1)(a-d+g)]^{\frac{1}{2}}\left\{\begin{array}{ccc}
 a-\frac{1}{2} & b & c \\
 d+\frac{1}{2} & e & f+\frac{1}{2} \\
 g & h & j
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 -\frac{1}{2 d+1}[(-d+e+f+1)(d+e-f)(a+d-g)(a+d+g+1)]^{\frac{1}{2}}\left\{\begin{array}{ccc}
 a-\frac{1}{2} & b & c \\
 d-\frac{1}{2} & e & f+\frac{1}{2} \\
 g & h & j
-\end{array}\right\} . \tag{4}
-\end{gather*}
+\end{array}\right\} . \label{chap10:eq:71}
+\end{gather}
+The relation for $a^{\prime}=a+\frac{1}{2}$ and $f^{\prime}=f-\frac{1}{2}$ is equivalent to Eq. \eqref{chap10:eq:71}.
 
-
-The relation for $a^{\prime}=a+\frac{1}{2}$ and $f^{\prime}=f-\frac{1}{2}$ is equivalent to Eq. (4).
-
-\subsection*{10.5.3. Relations Involving Five $9 j$ Symbols [45]}
-Putting $\lambda=1, a^{\prime}=a$ and $f^{\prime}=f$ in Eq. (1), we get
-
-
-\begin{gather*}
+\subsection{Relations Involving Five $9 j$ Symbols [45]}
+Putting $\lambda=1, a^{\prime}=a$ and $f^{\prime}=f$ in Eq. \eqref{chap10:eq:68}, we get
+\begin{gather}
 \frac{A_{c+1}(a b, f j)}{(c+1)(2 c+1)}\left\{\begin{array}{ccc}
 a & b & c+1 \\
 d & e & f \\
@@ -1310,185 +1131,159 @@ g & h & j
 a & b & c \\
 d+1 & e & f \\
 g & h & j
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 -\frac{A_{d}(e f, a g)}{d(2 d+1)}\left\{\begin{array}{ccc}
 a & b & c \\
 d-1 & e & f \\
 g & h & j
-\end{array}\right\} \\
-=\left\{\frac{[a(a+1)+d(d+1)-g(g+1)][d(d+1)-e(e+1)+f(f+1)]}{d(d+1)}\right. \\
+\end{array}\right\}  \notag\\
+=\left\{\frac{[a(a+1)+d(d+1)-g(g+1)][d(d+1)-e(e+1)+f(f+1)]}{d(d+1)}\right.  \notag\\
 \left.-\frac{[a(a+1)-b(b+1)+c(c+1)][c(c+1)+f(f+1)-j(j+1)]}{c(c+1)}\right\}\left\{\begin{array}{lll}
 a & b & c \\
 d & e & f \\
 g & h & j
-\end{array}\right\}, \tag{5}
-\end{gather*}
-
-
+\end{array}\right\}, \label{chap10:eq:72}
+\end{gather}
 where
-
-
-\begin{align*}
-A_{q}(p r, s t)= & {[(-p+r+q)(p-r+q)(p+r-q+1)(p+r+q+1)} \\
-& \times(-s+t+q)(s-t+q)(s+t-q+1)(s+t+q+1)]^{\frac{1}{2}} \tag{6}
-\end{align*}
-
-
+\begin{align}
+A_{q}(p r, s t)= & {[(-p+r+q)(p-r+q)(p+r-q+1)(p+r+q+1)}  \notag\\
+& \times(-s+t+q)(s-t+q)(s+t-q+1)(s+t+q+1)]^{\frac{1}{2}} \label{chap10:eq:73}
+\end{align}
 We also present the relations of another type between five $9 j$ symbols [75]:
-
-
-\begin{gather*}
+\begin{gather}
 {\left[\frac{(g+h+j+1)(g+h-j)(-b+e+h)(b+e-h+1)}{(a+d+g+2)(a-d+g+1)}\right]^{\frac{1}{2}}\left\{\begin{array}{ccc}
 a+\frac{1}{2} & b+\frac{1}{2} & c \\
 d & e & f \\
 g-\frac{1}{2} & h-\frac{1}{2} & j
-\end{array}\right\}} \\
+\end{array}\right\}}  \notag\\
 +\left[\frac{(g-h+j)(-g+h+j+1)(b+e+h+2)(b-e+h+1)}{(a+d+g+2)(a-d+g+1)}\right]^{\frac{1}{2}}\left\{\begin{array}{ccc}
 a+\frac{1}{2} & b+\frac{1}{2} & c \\
 d & e & f \\
 g-\frac{1}{2} & h+\frac{1}{2} & j
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 +\left[\frac{(g+h+j+2)(g+h-j+1)(b+e+h+2)(b-e+h+1)}{(a+d-g+1)(-a+d+g)}\right]^{\frac{1}{2}}\left\{\begin{array}{ccc}
 a+\frac{1}{2} & b+\frac{1}{2} & c \\
 d & e & f \\
 g+\frac{1}{2} & h+\frac{1}{2} & j
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 -\left[\frac{(g-h+j+1)(-g+h+j)(b+e-h+1)(-b+e+h)}{(a+d-g+1)(-a+d+g)}\right]^{\frac{1}{2}}\left\{\begin{array}{ccc}
 a+\frac{1}{2} & b+\frac{1}{2} & c \\
 d & e \\
 g+\frac{1}{2} & h-\frac{1}{2} & j
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 =(2 g+1)(2 h+1)\left[\frac{(a+b+c+2)(a+b-c+1)}{(a+d+g+2)(a-d+g+1)(a+d-g+1)(-a+d+g)}\right]^{\frac{1}{2}}\left\{\begin{array}{lll}
 a & b & c \\
 d & e & f \\
 g & h & j
-\end{array}\right\} . \tag{7}
-\end{gather*}
-
-
-
-\begin{align*}
+\end{array}\right\} . \label{chap10:eq:74}
+\end{gather}
+\begin{align}
 & {\left[\frac{(g+h+j+1)(g+h-j)(b+e+h+1)(b+h-e)}{(a+d-g)(-a+d+g+1)}\right]^{\frac{1}{2}}\left\{\begin{array}{ccc}
 a-\frac{1}{2} & b-\frac{1}{2} & c \\
 d & e & f \\
 g-\frac{1}{2} & h-\frac{1}{2} & j
-\end{array}\right\}} \\
+\end{array}\right\}}  \notag\\
 & -\left[\frac{(-g+h+j+1)(g-h+j)(-b+e+h+1)(b+e-h)}{(a+d-g)(-a+d+g+1)}\right]^{\frac{1}{2}}\left\{\begin{array}{ccc}
 a-\frac{1}{2} & b-\frac{1}{2} & c \\
 d & e & f \\
 g-\frac{1}{2} & h+\frac{1}{2} & j
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 & +\left[\frac{(g-h+j+1)(-g+h+j)(b+e+h+1)(b-e+h)}{(a+d+g+1)(a-d+g)}\right]^{\frac{1}{2}}\left\{\begin{array}{ccc}
 a-\frac{1}{2} & b-\frac{1}{2} & c \\
 d & e & f \\
 g+\frac{1}{2} & h-\frac{1}{2} & j
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 & +\left[\frac{(g+h+j+2)(g+h-j+1)(-b+e+h+1)(b+e-h)}{(a+d+g+1)(a-d+g)}\right]^{\frac{1}{3}}\left\{\begin{array}{ccc}
 a-\frac{1}{2} & b-\frac{1}{2} & c \\
 d & e & f \\
 g+\frac{1}{2} & h+\frac{1}{2} & j
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 & =(2 g+1)(2 h+1)\left[\frac{(a+b+c+1)(a+b-c)}{(a+d+g+1)(a-d+g)(a+d-g)(-a+d+g+1)}\right]^{\frac{1}{2}}\left\{\begin{array}{lll}
 a & b & c \\
 d & e & f \\
 g & h & j
-\end{array}\right\} . \tag{8}
-\end{align*}
-
-
-\subsection*{10.5.4. Relation Involving Six $9 j$ Symbols}
-
-\begin{gather*}
+\end{array}\right\} . \label{chap10:eq:75}
+\end{align}
+\subsection{Relation Involving Six $9 j$ Symbols}
+\begin{gather}
 \frac{\left[(a+b+1)^{2}-(c+1)^{2}\right]^{\frac{1}{2}}\left[(c+1)^{2}-(a-b)^{2}\right]^{\frac{1}{2}}}{(2 c+1)}\left[\frac{f+j-c+1}{f+j-c}\right]^{\frac{1}{2}}\left\{\begin{array}{llc}
 a & b & c+1 \\
 d & e & f \\
 g & h & j
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 +\frac{\left[(d+e+1)^{2}-(f+1)^{2}\right]^{\frac{1}{3}}\left[(f+1)^{2}-(d-e)^{2}\right]^{\frac{1}{2}}}{(2 f+1)}\left[\frac{c-f+j+1}{c-f+j}\right]^{\frac{1}{2}}\left\{\begin{array}{ccc}
 a & b & c \\
 d & e & f+1 \\
 g & h & j
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 +\frac{\left[(g+h+1)^{2}-(j+1)^{2}\right]^{\frac{1}{2}}\left[(j+1)^{2}-(g-h)^{2}\right]^{\frac{1}{2}}}{(2 j+1)}\left[\frac{c+f-j+1}{c+f-j}\right]^{\frac{1}{2}}\left\{\begin{array}{ccc}
 a & b & c \\
 d & e & f \\
 g & h & j+1
-\end{array}\right\} \\
-=\left[\frac{(-c+f+j+1)(c-f+j+1)(c+f-j+1)(c+f+j+2)}{(-c+f+j)(c-f+j)(c+f-j)(c+f+j+1)}\right]^{\frac{1}{2}} \\
+\end{array}\right\}  \notag\\
+=\left[\frac{(-c+f+j+1)(c-f+j+1)(c+f-j+1)(c+f+j+2)}{(-c+f+j)(c-f+j)(c+f-j)(c+f+j+1)}\right]^{\frac{1}{2}}  \notag\\
 \times\left\{\frac{\left[(a+b+1)^{2}-c^{2}\right]^{\frac{1}{2}}\left[c^{2}-(a-b)^{2}\right]^{\frac{1}{2}}}{2 c+1}\left[\frac{-c+f+j}{-c+f+j+1}\right]^{\frac{1}{2}}\left\{\begin{array}{lll}
 a & b & c-1 \\
 d & e & f \\
 g & h & j
-\end{array}\right\}\right. \\
+\end{array}\right\}\right.  \notag\\
 +\frac{\left[(d+e+1)^{2}-f^{2}\right]^{\frac{1}{2}}\left[f^{2}-(d-e)^{2}\right]^{\frac{1}{2}}}{2 f+1}\left[\frac{c-f+j}{c-f+j+1}\right]^{\frac{1}{2}}\left\{\begin{array}{lll}
 a & b & c \\
 d & e & f-1 \\
 g & h & j
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 \left.+\frac{\left[(g+h+1)^{2}-j^{2}\right]^{\frac{1}{2}}\left[j^{2}-(g-h)^{2}\right]^{\frac{1}{2}}}{2 j+1}\left[\frac{c+f-j}{c+f-j+1}\right]^{\frac{1}{2}}\left\{\begin{array}{lll}
 a & b & c \\
 d & e & f \\
 g & h & j \\
 - & 1
-\end{array}\right\}\right\} \tag{10}
-\end{gather*}
-
-
-\subsection*{10.5.5. Recursion Relations for Some Special Cases}
+\end{array}\right\}\right\} \label{chap10:eq:76}
+\end{gather}
+\subsection{Recursion Relations for Some Special Cases}
 Somewhat simpler recursion relations may be obtained, if arguments of the $9 j$ symbols satisfy some special requirements.\\
 (a) If two columns (or two rows) are the same, then
-
-$$
-\begin{aligned}
+\begin{align}
 & \frac{1}{2 c+1}[(2 a+c+2)(2 a-c)(-c+f+j)(c-f+j+1)(c+f-j+1)(c+f+j+2)]^{\frac{1}{2}}\left\{\begin{array}{lll}
 a & a & c+1 \\
 d & d & f \\
 g & g & j
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 + & \frac{1}{2 c+1}[(2 a+c+1)(2 a-c+1)(-c+f+j+1)(c-f+j)(c+f-j)(c+f+j+1)]^{\frac{1}{2}}\left\{\begin{array}{lll}
 a & a & c-1 \\
 d & d & f \\
 g & g & j
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 = & \frac{1}{2 f+1}[(2 d+f+2)(2 d-f)(-c+f+j+1)(c-f+j)(c+f-j+1)(c+f+j+2)]^{\frac{1}{2}}\left\{\begin{array}{lll}
 a & a & c \\
 d & d & f+1 \\
 g & g & j
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 + & \frac{1}{2 f+1}[(2 d+f+1)(2 d-f+1)(-c+f+j)(c-f+j+1)(c+f-j)(c+f+j+1)]^{\frac{1}{2}}\left\{\begin{array}{lll}
 a & a & c \\
 d & d & f \\
 g & g & j
-\end{array}\right\}(11)
-\end{aligned}
-$$
-
+\end{array}\right\} \label{chap10:eq:77}
+\end{align}
 (b) If one of arguments in any triad is equal to the sum of two other arguments, one has [45]
-
-
-\begin{align*}
+\begin{align}
 & {\left[\frac{(-c+g+h-f)(c-g+h+f+1)(c+g-h+f+1)(c+g+h+f+2)}{(2 c+2 f+2)(2 c+2 f+3)}\right]^{\frac{1}{2}}\left\{\begin{array}{llc}
 a & b & c \\
 d & e & f \\
 g & h & c+f
-\end{array}\right\}} \\
+\end{array}\right\}}  \notag\\
 & \quad=\left[\frac{(-a+b+c+1)(a-b+c+1)(a+b-c)(a+b+c+2)}{(2 c+1)(2 c+2)}\right]^{\frac{1}{2}}\left\{\begin{array}{llc}
 a & b & c+1 \\
 d & e & f \\
 g & h & c+f+1
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 & \quad+\left[\frac{(-d+e+f+1)(d-e+f+1)(d+e-f)(d+e+f+2)}{(2 f+1)(2 f+2)}\right]^{\frac{1}{2}}\left\{\begin{array}{ccc}
 a & b & c \\
 d & e & f+1 \\
 g & h & c+f+1
-\end{array}\right\} \tag{12}
-\end{align*}
-
-
+\end{array}\right\} \label{chap10:eq:78}
+\end{align}
 (c) If one of arguments in any triad is equal to 0 or 1 , one gets [32, 75]:
-
-
-\begin{gather*}
+\begin{gather}
 \left\{\begin{array}{lll}
 a & b & c \\
 d & e & c \\
@@ -1497,71 +1292,59 @@ g & g & 1
 a & b & c \\
 d & e & c \\
 g & g & 0
-\end{array}\right\},  \tag{13}\\
+\end{array}\right\},  \label{chap10:eq:79}\\
 {[g(g+1)(c+1)(2 c+3)(2 d+c+2)(2 d-c)]^{\frac{1}{2}}\left\{\begin{array}{lll}
 a & a & c \\
 d & d & c+1 \\
 g & g & 1
-\end{array}\right\}} \\
+\end{array}\right\}}  \notag\\
 =[g(g+1) c(2 c-1)(2 d+c+1)(2 d-c+1)]^{\frac{1}{2}}\left\{\begin{array}{lll}
 a & a & c \\
 d & d & c \\
 g & g & 1
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 +(2 c+1)[d(d+1)+g(g+1)-a(a+1)]\left\{\begin{array}{lll}
 a & a & c \\
 d & d & c \\
 g & g & 0
-\end{array}\right\},  \tag{14}\\
+\end{array}\right\},  \label{chap10:eq:80}\\
 {[c(2 c+3)(d+e+c+2)(-d+e+c+1)(d-e+c+1)(d+e-c)]^{\frac{1}{2}}\left\{\begin{array}{lll}
 a & b & c \\
 d & e & c+1 \\
 g & g & 1
-\end{array}\right\}} \\
+\end{array}\right\}}  \notag\\
 -[(c+1)(2 c-1)(d+e+c+1)(-d+e+c)(d-e+c)(d+e-c+1)]^{\frac{1}{2}}\left\{\begin{array}{lll}
 a & b & c \\
 d & e & c-1 \\
 g & g & 1
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 =(2 c+1)\left\{d(d+1)-e(e+1)-c(c+1)+\frac{2 c(c+1)[e(e+1)+g(g+1)-b(b+1)]}{a(a+1)+e(e+1)-d(d+1)-b(b+1)}\right\}\left\{\begin{array}{ll}
 a & b \\
 d & e \\
 g & g \\
 g & 1
-\end{array}\right\}, \tag{15}
-\end{gather*}
-
-
+\end{array}\right\}, \label{chap10:eq:81}
+\end{gather}
 where either $a \neq b$ and $d \neq e$, or $a \neq d$ and $b \neq e$. In particular,
-
-
-\begin{gather*}
+\begin{gather}
 \left\{\begin{array}{ccc}
 a & b & c \\
 d & e & c+1 \\
 \frac{1}{2} & \frac{1}{2} & 1
-\end{array}\right\}=\left[\frac{2 c+1}{c+(a-d)(2 a+1)+(b-e)(2 b+1)}-1\right] \\
+\end{array}\right\}=\left[\frac{2 c+1}{c+(a-d)(2 a+1)+(b-e)(2 b+1)}-1\right]  \notag\\
 \times\left[\frac{c(2 c-1)(d+e-c)(-d+e+c+1)(d-e+c+1)(d+e+c+2)}{(c+1)(2 c+3)(d+e-c+1)(-d+e+c)(d-e+c)(d+e+c+1)}\right]^{\frac{1}{2}}\left\{\begin{array}{ccc}
 a & b & c \\
 d & e & c-1 \\
 \frac{1}{2} & \frac{1}{2} & 1
-\end{array}\right\} . \tag{16}
-\end{gather*}
-
-
-\subsection*{10.6. GENERATING FUNCTION OF THE $9 j$ SYMBOLS}
+\end{array}\right\} . \label{chap10:eq:82}
+\end{gather}
+\section{GENERATING FUNCTION OF THE $9 j$ SYMBOLS}
 The following function of eighteen variables $\tau_{i k}, \tau_{i k}^{\prime}(i, k=1,2,3)[111]$
-
-
-\begin{equation*}
-\left[1-\sum_{p, q=1}^{3} a_{p q}-\sum_{\alpha=1}^{6} b_{\alpha}\right]^{-1} \tag{1}
-\end{equation*}
-
-
+\begin{equation}
+\left[1-\sum_{p, q=1}^{3} a_{p q}-\sum_{\alpha=1}^{6} b_{\alpha}\right]^{-1} \label{chap10:eq:83}
+\end{equation}
 may be regarded as a generating function for the $9 j$ symbols. Here $a_{p q}$ and $b_{\alpha}$ are given by the arrays
-
-
-\begin{align*}
+\begin{align}
 & \left(a_{p q}\right)=\left(\begin{array}{lll}
 a_{11} & a_{12} & a_{13} \\
 a_{21} & a_{22} & a_{23} \\
@@ -1570,7 +1353,7 @@ a_{31} & a_{32} & a_{33}
 \tau_{21} & \tau_{31} & \tau_{12}^{\prime} & \tau_{13}^{\prime} & \tau_{22} & \tau_{32} & \tau_{11}^{\prime} & \tau_{13}^{\prime} & \tau_{23} & \tau_{33} & \tau_{11}^{\prime} & \tau_{12}^{\prime} \\
 \tau_{11} & \tau_{31} & \tau_{22}^{\prime} & \tau_{23}^{\prime} & \tau_{12} & \tau_{32} & \tau_{21}^{\prime} & \tau_{23}^{\prime} & \tau_{13} & \tau_{33} & \tau_{21}^{\prime} & \tau_{22}^{\prime} \\
 \tau_{11} & \tau_{21} & \tau_{32}^{\prime} & \tau_{33}^{\prime} & \tau_{12} & \tau_{22} & \tau_{31}^{\prime} & \tau_{33}^{\prime} & \tau_{13} & \tau_{23} & \tau_{31}^{\prime} & \tau_{32}^{\prime}
-\end{array}\right),  \tag{2}\\
+\end{array}\right),  \label{chap10:eq:84}\\
 & \left(b_{\alpha}\right)=\left(\begin{array}{l}
 b_{1} \\
 b_{2} \\
@@ -1585,140 +1368,106 @@ b_{6}
 -\tau_{11} & \tau_{11}^{\prime} & \tau_{22} & \tau_{22}^{\prime} & \tau_{33} & \tau_{33}^{\prime} \\
 -\tau_{21} & \tau_{21}^{\prime} & \tau_{32} & \tau_{32}^{\prime} & \tau_{13} & \tau_{13}^{\prime} \\
 -\tau_{31} & \tau_{31}^{\prime} & \tau_{12} & \tau_{12}^{\prime} & \tau_{23} & \tau_{23}^{\prime}
-\end{array}\right) . \tag{3}
-\end{align*}
-
-
+\end{array}\right) . \label{chap10:eq:85}
+\end{align}
 The elements $b_{\alpha}$ satisfy the equation
-
-\[
+\begin{equation}
 \sum_{\alpha=1}^{6} b_{\alpha}=-\left|\begin{array}{llllll}
-\tau_{11} & \tau_{11}^{\prime} & \tau_{12} & \tau_{12}^{\prime} & \tau_{13} & \tau_{13}^{\prime}  \tag{4}\\
+\tau_{11} & \tau_{11}^{\prime} & \tau_{12} & \tau_{12}^{\prime} & \tau_{13} & \tau_{13}^{\prime}  \label{chap10:eq:86}\\
 \tau_{21} & \tau_{21}^{\prime} & \tau_{22} & \tau_{22}^{\prime} & \tau_{23} & \tau_{23}^{\prime} \\
 \tau_{31} & \tau_{31}^{\prime} & \tau_{32} & \tau_{32}^{\prime} & \tau_{33} & \tau_{33}^{\prime}
 \end{array}\right|
-\]
-
-The function (1) can be expanded into a power series whose expansion coefficients are proportional to the $9 j$ symbols:
-
-\[
+\end{equation}
+The function \eqref{chap10:eq:83} can be expanded into a power series whose expansion coefficients are proportional to the $9 j$ symbols:
+\begin{equation}
 \frac{1}{1-\sum_{p, q=1}^{3} a_{p q}-\sum_{\alpha=1}^{6} b_{\alpha}}=\sum_{r, r^{\prime}}\left[\frac{\prod_{p=1}^{3}\left(\sum_{q=1}^{3} r_{p q}+1\right)!\left(\sum_{q=1}^{3} r_{q p}^{\prime}+1\right)!}{\prod_{p, q=1}^{3} r_{p q}!r_{p q}^{\prime}!}\right]^{\frac{1}{2}}\left\{\begin{array}{lll}
-a & b & c  \tag{5}\\
+a & b & c  \label{chap10:eq:87}\\
 d & e & f \\
 g & h & j
 \end{array}\right\} \prod_{p, q=1}^{3}\left(\tau_{p q}\right)^{r_{p q}}\left(\tau_{p q}^{\prime}\right)^{r_{p q}^{\prime}} .
-\]
-
+\end{equation}
 The exponents $r_{p q}$ and $r_{p q}^{\prime}$ are the elements of some $r$ symbol.
 
-\subsection*{10.7. ASYMPTOTIC EXPRESSION FOR A $9 j$ SYMBOL}
+\section{ASYMPTOTIC EXPRESSION FOR A $9 j$ SYMBOL}
 If $a, b, c, d, e, f, g, h, j \gg 1$, we obtain
-
-\[
+\begin{equation}
 \left\{\begin{array}{lll}
-a & b & c  \tag{1}\\
+a & b & c  \label{chap10:eq:88}\\
 d & e & f \\
 g & h & j
 \end{array}\right\} \approx \frac{2 \Theta(B)(-1)^{a+c-e+g+j} \cos \left[(d-h) \delta_{1}+(a-j) \delta_{2}+(b-f) \delta_{3}\right]}{\pi \sqrt{B(2 a+1)(2 b+1)(2 d+1)(2 f+1)(2 h+1)(2 j+1)}}
-\]
-
+\end{equation}
 In this equation
-
-
-\begin{gather*}
+\begin{gather}
 B=\left|\begin{array}{ccc}
 1 & \cos \vartheta_{3} & \cos \vartheta_{1} \\
 \cos \vartheta_{3} & 1 & \cos \vartheta_{2} \\
 \cos \vartheta_{1} & \cos \vartheta_{2} & 1
-\end{array}\right|,  \tag{2}\\
+\end{array}\right|,  \label{chap10:eq:89}\\
 \Theta(B)=\left\{\begin{array}{cc}
 1 & \text { if } B>0 \\
 0 & \text { if } B<0
-\end{array}\right. \tag{3}
-\end{gather*}
-
-
+\end{array}\right. \label{chap10:eq:90}
+\end{gather}
 The angles $\delta_{1}, \delta_{2}$ and $\delta_{3}$ are determined by the relations
-
-\[
+\begin{equation}
 \begin{array}{ll}
 \cos \delta_{1}=\frac{\cos \vartheta_{1} \cos \vartheta_{3}-\cos \vartheta_{2}}{\sin \vartheta_{1} \sin \vartheta_{3}}, & \frac{\sin \delta_{2}}{\sin \delta_{3}}=\frac{\sin \vartheta_{1}}{\sin \vartheta_{3}} \\
-\cos \delta_{2}=\frac{\cos \vartheta_{2} \cos \vartheta_{3}-\cos \vartheta_{1}}{\sin \vartheta_{2} \sin \vartheta_{3}}, & \frac{\sin \delta_{1}}{\sin \delta_{2}}=\frac{\sin \vartheta_{2}}{\sin \vartheta_{1}}  \tag{4}\\
+\cos \delta_{2}=\frac{\cos \vartheta_{2} \cos \vartheta_{3}-\cos \vartheta_{1}}{\sin \vartheta_{2} \sin \vartheta_{3}}, & \frac{\sin \delta_{1}}{\sin \delta_{2}}=\frac{\sin \vartheta_{2}}{\sin \vartheta_{1}}  \label{chap10:eq:91}\\
 \cos \delta_{3}=\frac{\cos \vartheta_{1} \cos \vartheta_{2}-\cos \vartheta_{3}}{\sin \vartheta_{1} \sin \vartheta_{2}}, & \frac{\sin \delta_{3}}{\sin \delta_{1}}=\frac{\sin \vartheta_{3}}{\sin \vartheta_{2}}
 \end{array}
-\]
-
+\end{equation}
 The angles $\vartheta_{1}, \vartheta_{2}$ and $\vartheta_{3}$ may in turn be evaluated using the equations
-
-\[
+\begin{equation}
 \begin{array}{ll}
 \cos \vartheta_{1}=\frac{a(a+1)+b(b+1)-c(c+1)}{2 \sqrt{a(a+1) b(b+1)}}, & 0 \leq \vartheta_{1} \leq \pi, \\
-\cos \vartheta_{2}=-\frac{d(d+1)-e(e+1)+f(f+1)}{2 \sqrt{d(d+1) f(f+1)}}, & 0 \leq \vartheta_{2} \leq \pi,  \tag{5}\\
+\cos \vartheta_{2}=-\frac{d(d+1)-e(e+1)+f(f+1)}{2 \sqrt{d(d+1) f(f+1)}}, & 0 \leq \vartheta_{2} \leq \pi,  \label{chap10:eq:92}\\
 \cos \vartheta_{3}=\frac{-g(g+1)+h(h+1)+j(j+1)}{2 \sqrt{h(h+1) j(j+1)}}, & 0 \leq \vartheta_{3} \leq \pi .
 \end{array}
-\]
-
-\subsection*{10.8. EXPLICIT FORMS OF THE 9j SYMBOLS AT SOME RELATIONS BETWEEN ARGUMENTS}
-\subsection*{10.8.1. Two Rows (or Columns) are Identical}
+\end{equation}
+\section{EXPLICIT FORMS OF THE 9j SYMBOLS AT SOME RELATIONS BETWEEN ARGUMENTS}
+\subsection{Two Rows (or Columns) are Identical}
 In this case a $9 j$ symbol vanishes unless the sum of all arguments is even [49], or
-
-
-\begin{gather*}
+\begin{gather}
 \left\{\begin{array}{lll}
 a & b & c \\
 a & b & c \\
 g & h & j
-\end{array}\right\}=0, \text { if } g+h+j=2 k+1, \\
+\end{array}\right\}=0, \text { if } g+h+j=2 k+1,  \notag\\
 \left\{\begin{array}{lll}
 a & a & c \\
 d & d & f \\
 g & g & j
-\end{array}\right\}=0, \text { if } c+f+j=2 k+1,  \tag{1}\\
-k=0,1, \ldots
-\end{gather*}
-
-
-\subsection*{10.8.2. One Degenerate Triad}
+\end{array}\right\}=0, \text { if } c+f+j=2 k+1,  \label{chap10:eq:93}\\
+k=0,1, \ldots \notag
+\end{gather}
+\subsection{One Degenerate Triad}
 Let one argument of a triad be equal to the sum of the other two. For brevity, we shall refer to such a triad as a "degenerate" triad. If some $9 j$ symbol has one degenerate triad, it may be expressed as
-
-
-\begin{gather*}
+\begin{gather}
 \left\{\begin{array}{ccc}
 a & b & c \\
 d & e & f \\
 a+d & h & j
-\end{array}\right\}=\frac{\Delta(h, j, a+d)}{\Delta(a b c) \Delta(b e h) \Delta(d e f) \Delta(c f j)}\left[\frac{(2 a)!(2 d)!}{(2 a+2 d+1)!}\right]^{\frac{1}{2}} \\
-\times \frac{(b+c-a)!(b+e-h)!(e+f-d)!(c+f-j)!(a+d+h+j+1)!}{(a+b+c+1)!(b+c+h+1)!(d+c+f+1)!(c+f+j+1)!} \\
-\times \sum_{x y} \frac{(-1)^{x+y}(2 c-x)!(2 e-y)!(j+f-c+x)!(h+b-e+y)!}{x!y!(c+f-j-x)!(b+e-h-y)!(c-c-a+h-x+y)!(e-c-d+j+x-y)!} \tag{2}
-\end{gather*}
-
-
+\end{array}\right\}=\frac{\Delta(h, j, a+d)}{\Delta(a b c) \Delta(b e h) \Delta(d e f) \Delta(c f j)}\left[\frac{(2 a)!(2 d)!}{(2 a+2 d+1)!}\right]^{\frac{1}{2}}  \notag\\
+\times \frac{(b+c-a)!(b+e-h)!(e+f-d)!(c+f-j)!(a+d+h+j+1)!}{(a+b+c+1)!(b+c+h+1)!(d+c+f+1)!(c+f+j+1)!}  \notag\\
+\times \sum_{x y} \frac{(-1)^{x+y}(2 c-x)!(2 e-y)!(j+f-c+x)!(h+b-e+y)!}{x!y!(c+f-j-x)!(b+e-h-y)!(c-c-a+h-x+y)!(e-c-d+j+x-y)!} \label{chap10:eq:94}
+\end{gather}
 This equation may be rewritten in the form of a sum involving the Clebsch-Gordan coefficients [104]
-
-
-\begin{align*}
+\begin{align}
 &\left\{\begin{array}{ccc}
 a & b & c \\
 d & e & f \\
 a+d & h & j
-\end{array}\right\}= \frac{[(a+d+j-h)!(h+j+a+d+1)!]^{\frac{1}{2}}}{\Delta(a b c) \Delta(d e f) \Delta(c f j)}\left[\frac{(2 a)!(2 d)!}{(2 a+2 d+1)!(2 h+1)}\right]^{\frac{1}{2}} \\
-& \times \frac{(c+b-a)!(f+e-d)!(f+c-j)!}{(a+b+c+1)!(f+e+d+1)!(f+c+j+1)!} \\
-& \times \sum_{x}(-1)^{x} \frac{(f+j-c+x)!(2 c-x)!}{x!(f+c-j-x)!}\left[\frac{(b+a-c+x)!(e+d+c-j-x)!}{(b+c-a-x)!(e+j-c-d+x)!}\right]^{\frac{1}{2}} C_{b c-a-x e j-d-c+x}^{h j-a-d} \tag{3}
-\end{align*}
-
-
-Equation (2) may also be rewritten in the quasi-trinomial form
-
-
-\begin{equation*}
-\left(A^{(1)}-B^{(1)}-C^{(1)}\right)^{(k)}=\sum_{x, y}\binom{k}{x}\binom{k-x}{y}(-1)^{x+y} C^{(x)} B^{(y)} A^{(k-x-y)}, \tag{4}
-\end{equation*}
-
-
-where $A^{(x)}, B^{(y)}$ and $C^{(k-x-y)}$ are quasi-powers (Eq. 8.2(11)). Using Eq. (4), one gets [45]
-
-
-\begin{align*}
+\end{array}\right\}= \frac{[(a+d+j-h)!(h+j+a+d+1)!]^{\frac{1}{2}}}{\Delta(a b c) \Delta(d e f) \Delta(c f j)}\left[\frac{(2 a)!(2 d)!}{(2 a+2 d+1)!(2 h+1)}\right]^{\frac{1}{2}}  \notag\\
+& \times \frac{(c+b-a)!(f+e-d)!(f+c-j)!}{(a+b+c+1)!(f+e+d+1)!(f+c+j+1)!}  \notag\\
+& \times \sum_{x}(-1)^{x} \frac{(f+j-c+x)!(2 c-x)!}{x!(f+c-j-x)!}\left[\frac{(b+a-c+x)!(e+d+c-j-x)!}{(b+c-a-x)!(e+j-c-d+x)!}\right]^{\frac{1}{2}} \clebsch{b}{c-a-x}{e}{j-d-c+x}{h}{j-a-d} \label{chap10:eq:95}
+\end{align}
+Equation \eqref{chap10:eq:94} may also be rewritten in the quasi-trinomial form
+\begin{equation}
+\left(A^{(1)}-B^{(1)}-C^{(1)}\right)^{(k)}=\sum_{x, y}\binom{k}{x}\binom{k-x}{y}(-1)^{x+y} C^{(x)} B^{(y)} A^{(k-x-y)}, \label{chap10:eq:96}
+\end{equation}
+where $A^{(x)}, B^{(y)}$ and $C^{(k-x-y)}$ are quasi-powers (Eq. 8.2(11)). Using Eq. \eqref{chap10:eq:96}, one gets [45]
+\begin{align}
 & \left\{\begin{array}{ccc}
 a & b & c \\
 d & e & f \\
@@ -1729,16 +1478,13 @@ a+d & h & j
 (e-d+f)!(d-e+f)!(d+e-f)!(e+d+f+1)!(f-j+c)!\times \\
 \times(e+h-b)!(e-h+b)!(f+j-c)!(b+e+h+1)^{(2 e+1)} \times \\
 \times(c+f+j+1)^{(2 f+1)}(2 a)^{(-1)(2 d+1)}
-\end{array}\right]^{\frac{1}{2}} \\
-& \times(2 e)!(2 f)!\left[(h+j-a-d)^{(1)}-\frac{(e-h+b)^{(1)}(b-e+h)^{(-1)}}{(2 e)^{(1)}}-\frac{(f-j+c)^{(1)}(c-f+j)^{(-1)}}{(2 f)^{(1)}}\right]^{(e+f-d)} \tag{5}
-\end{align*}
-
-
+\end{array}\right]^{\frac{1}{2}}  \notag\\
+& \times(2 e)!(2 f)!\left[(h+j-a-d)^{(1)}-\frac{(e-h+b)^{(1)}(b-e+h)^{(-1)}}{(2 e)^{(1)}}-\frac{(f-j+c)^{(1)}(c-f+j)^{(-1)}}{(2 f)^{(1)}}\right]^{(e+f-d)} \label{chap10:eq:97}
+\end{align}
 If one argument is equal to the difference of the other two from the same triad, the expression for the $9 j$ symbol may be obtained from the above equations either by using the "mirror" symmetry properties (Sec. 10.4.3),
-
-\[
+\begin{equation}
 \left\{\begin{array}{ccc}
-a & b & c  \tag{6}\\
+a & b & c  \label{chap10:eq:98}\\
 d & e & f \\
 a-d & h & j
 \end{array}\right\}=i(-1)^{d+h-b-j+c}\left\{\begin{array}{ccc}
@@ -1746,13 +1492,11 @@ a-d & h & j
 d & e & f \\
 \bar{a}+d & h & j
 \end{array}\right\},
-\]
-
+\end{equation}
 or by renaming and permutating the arguments:
-
-\[
+\begin{equation}
 \left\{\begin{array}{ccc}
-a & b & c  \tag{7}\\
+a & b & c  \label{chap10:eq:99}\\
 d & e & f \\
 a-d & h & j
 \end{array}\right\} \underset{a=d+g}{\longrightarrow}\left\{\begin{array}{ccc}
@@ -1764,225 +1508,195 @@ d & e & f \\
 g & h & j \\
 d+g & b & c
 \end{array}\right\} .
-\]
+\end{equation}
+The equations of Sections 10.8.3-10.8.6 may be derived from Eqs. \eqref{chap10:eq:94}-\eqref{chap10:eq:97}.
 
-The equations of Sections 10.8.3-10.8.6 may be derived from Eqs. (2)-(5).
-
-\subsection*{10.8.3. Two Degenerate Triads}
+\subsection{Two Degenerate Triads}
 In this case there exist five types of relations which cannot be transformed to one another by renaming and permutating the arguments [45, 104]. All these relations are given below
-
-
-\begin{gather*}
+\begin{gather}
 \left\{\begin{array}{ccc}
 a & b & c \\
 d & e & f \\
 a+d & b+e & j
-\end{array}\right\}=\frac{\Delta(a+d b+e j)}{\Delta(a b c) \Delta(d e f) \Delta(c f j)}\left[\frac{(2 a)!(2 b)!(2 d)!(2 e)!}{(2 a+2 b+1)!(2 d+2 e+1)!}\right]^{\frac{1}{2}} \\
-\times \frac{(a+b+d+e+j+1)!(a-b+c)!(d-e+f)!(c+f-j)!}{(a+b+c+1)!(d+e+f+1)!(c+f+j+1)!} \\
-\times \sum_{z} \frac{(-1)^{z}(2 f-z)!(j+c-f+z)!}{z!(c+f-j-z)!(d+f-e-z)!(a-b-f+j+z)!} . \tag{8}
-\end{gather*}
-
-
-Equation (8) may be rewritten in terms of the Clebsch-Gordan coefficients:
-
-
-\begin{align*}
+\end{array}\right\}=\frac{\Delta(a+d b+e j)}{\Delta(a b c) \Delta(d e f) \Delta(c f j)}\left[\frac{(2 a)!(2 b)!(2 d)!(2 e)!}{(2 a+2 b+1)!(2 d+2 e+1)!}\right]^{\frac{1}{2}}  \notag\\
+\times \frac{(a+b+d+e+j+1)!(a-b+c)!(d-e+f)!(c+f-j)!}{(a+b+c+1)!(d+e+f+1)!(c+f+j+1)!}  \notag\\
+\times \sum_{z} \frac{(-1)^{z}(2 f-z)!(j+c-f+z)!}{z!(c+f-j-z)!(d+f-e-z)!(a-b-f+j+z)!} . \label{chap10:eq:100}
+\end{gather}
+Equation \eqref{chap10:eq:100} may be rewritten in terms of the Clebsch-Gordan coefficients:
+\begin{align}
 & \left\{\begin{array}{ccc}
 a & b & c \\
 d & e & f \\
 a+d & b+e & j
-\end{array}\right\} \\
-& =\left[\frac{(2 a)!(2 b)!(2 d)!(2 e)!(a+b+d+e+j+1)!(a+d+e+b-j)!}{(2 a+2 d+1)!(2 b+2 e+1)!(a+b+c+1)!(a+b-c)!(d+e+f+1)!(d+e-f)!(2 j+1)}\right]^{\frac{1}{2}} \\
-& \times C_{c a-b / d-e}^{j a-b+d-e},  \tag{9}\\
+\end{array}\right\}  \notag\\
+& =\left[\frac{(2 a)!(2 b)!(2 d)!(2 e)!(a+b+d+e+j+1)!(a+d+e+b-j)!}{(2 a+2 d+1)!(2 b+2 e+1)!(a+b+c+1)!(a+b-c)!(d+e+f+1)!(d+e-f)!(2 j+1)}\right]^{\frac{1}{2}}  \notag\\
+& \times \clebsch{c}{a-b}{/}{d-e}{j}{a-b+d-e},  \label{chap10:eq:101}\\
 & \left\{\begin{array}{ccc}
 d+g & b & c \\
 d & e & f \\
 g & h & c+f
-\end{array}\right\}=(-1)^{d+h-b-f}\left[\frac{(2 c)!(2 f)!(2 d)!(2 g)!}{(2 c+2 f+1)!(2 d+2 g+1)!}\right]^{\frac{1}{2}} \frac{(d+c-f)!}{\Delta(d+g b c) \Delta(c+f g h)} \\
-& \times \frac{(b+e-h)!(d+g+b-c)!(c+f+h-g)!}{\Delta(b e h) \Delta(d e f)(d+e+f+1)!(b+e+h+1)!(d+g+b+c+1)!} \\
-& \times \sum_{x} \frac{(2 e-x)!(h+b-e+x)!(d+g+e+c-h-x)!}{x!(b+e-h-x)!(d+e-f-x)!} .  \tag{10}\\
+\end{array}\right\}=(-1)^{d+h-b-f}\left[\frac{(2 c)!(2 f)!(2 d)!(2 g)!}{(2 c+2 f+1)!(2 d+2 g+1)!}\right]^{\frac{1}{2}} \frac{(d+c-f)!}{\Delta(d+g b c) \Delta(c+f g h)}  \notag\\
+& \times \frac{(b+e-h)!(d+g+b-c)!(c+f+h-g)!}{\Delta(b e h) \Delta(d e f)(d+e+f+1)!(b+e+h+1)!(d+g+b+c+1)!}  \notag\\
+& \times \sum_{x} \frac{(2 e-x)!(h+b-e+x)!(d+g+e+c-h-x)!}{x!(b+e-h-x)!(d+e-f-x)!} .  \label{chap10:eq:102}\\
 & \left\{\begin{array}{ccc}
 a & b & a+b \\
 d & e & f \\
 a+d & h & j
-\end{array}\right\}=\frac{\Delta(a+b f j) \Delta(a+d h j)}{\Delta(b e h) \Delta(d e f)}\left[\frac{(2 b)!(2 d)!}{(2 a+2 b+1)!(2 a+2 d+1)!}\right]^{\frac{1}{2}} \\
-& \times \frac{(a+b+f+j+1)!(a+d+h+j+1)!(h-b+e)!(e-d+f)!}{(f+j-a-b)!(h+j-a-d)!(b+e+h+1)!(d+e+f+1)!} \\
-& \times \sum_{x} \frac{(-1)^{x}(a+b+e+d-j-x)!(j+f-a-b+x)!(j+h-a-d+x)!}{x!(a+b+f-j-x)!(a+d+h-j-x)!(j+e-a-b-d+x)!(2 j+1+x)!},  \tag{11}\\
+\end{array}\right\}=\frac{\Delta(a+b f j) \Delta(a+d h j)}{\Delta(b e h) \Delta(d e f)}\left[\frac{(2 b)!(2 d)!}{(2 a+2 b+1)!(2 a+2 d+1)!}\right]^{\frac{1}{2}}  \notag\\
+& \times \frac{(a+b+f+j+1)!(a+d+h+j+1)!(h-b+e)!(e-d+f)!}{(f+j-a-b)!(h+j-a-d)!(b+e+h+1)!(d+e+f+1)!}  \notag\\
+& \times \sum_{x} \frac{(-1)^{x}(a+b+e+d-j-x)!(j+f-a-b+x)!(j+h-a-d+x)!}{x!(a+b+f-j-x)!(a+d+h-j-x)!(j+e-a-b-d+x)!(2 j+1+x)!},  \label{chap10:eq:103}\\
 & \left\{\begin{array}{ccc}
 a & b & a-b \\
 d & e & f \\
 a-d & h & j
-\end{array}\right\}=(-1)^{b+f-d-h} \frac{[(2 a-2 b)!(2 a-2 d)!(2 b)!(2 d)!]^{\frac{1}{2}}}{\Delta(a-b f j) \Delta(a-d h j) \Delta(b e h) \Delta(d e f)} \\
-& \times \frac{(b+f+j-a)!(d+h+j-a)!(h-b+e)!(e-d+f)!}{(a-b+f+j+1)!(a-d+h+j+1)!(b+e+h+1)!(d+e+f+1)!} \\
-& \times \sum_{x} \frac{(x-1)!(b+e+d-a-j+x-1)!(a-d+h+j-x+1)!(a-b+f+j-x+1)!}{(2 j+1-x)!(b+f-a-j+x-1)!(d+h-a-j+x-1)!(a+e+j-b-d-x+1)!},  \tag{12}\\
+\end{array}\right\}=(-1)^{b+f-d-h} \frac{[(2 a-2 b)!(2 a-2 d)!(2 b)!(2 d)!]^{\frac{1}{2}}}{\Delta(a-b f j) \Delta(a-d h j) \Delta(b e h) \Delta(d e f)}  \notag\\
+& \times \frac{(b+f+j-a)!(d+h+j-a)!(h-b+e)!(e-d+f)!}{(a-b+f+j+1)!(a-d+h+j+1)!(b+e+h+1)!(d+e+f+1)!}  \notag\\
+& \times \sum_{x} \frac{(x-1)!(b+e+d-a-j+x-1)!(a-d+h+j-x+1)!(a-b+f+j-x+1)!}{(2 j+1-x)!(b+f-a-j+x-1)!(d+h-a-j+x-1)!(a+e+j-b-d-x+1)!},  \label{chap10:eq:104}\\
 & \left\{\begin{array}{ccc}
 a & b & a+b \\
 d & e & f \\
 g & h & a+b+f
-\end{array}\right\}=(-1)^{a+d-g} \frac{\Delta(a+b+f g h)}{\Delta(a d g) \Delta(b e h) \Delta(d e f)}\left[\frac{(2 a)!(2 b)!(2 f)!}{(2 a+2 b+1)(2 a+2 b+2 f+1)!}\right]^{\frac{1}{2}} \\
-& \times \frac{(a+b+g+h+f+1)!(g-a+d)!(e-b+h)!(d+e-f)!}{(g+h-a-b-f)!(a+g+d+1)!(b+e+h+1)!(d+e+f+1)!} . \tag{13}
-\end{align*}
-
-
-\subsection*{10.8.4 Three Degenerate Triads}
+\end{array}\right\}=(-1)^{a+d-g} \frac{\Delta(a+b+f g h)}{\Delta(a d g) \Delta(b e h) \Delta(d e f)}\left[\frac{(2 a)!(2 b)!(2 f)!}{(2 a+2 b+1)(2 a+2 b+2 f+1)!}\right]^{\frac{1}{2}}  \notag\\
+& \times \frac{(a+b+g+h+f+1)!(g-a+d)!(e-b+h)!(d+e-f)!}{(g+h-a-b-f)!(a+g+d+1)!(b+e+h+1)!(d+e+f+1)!} . \label{chap10:eq:105}
+\end{align}
+\subsection{Three Degenerate Triads}
 Below we present the simplest expressions of $9 j$ symbols
-
-
-\begin{align*}
+\begin{align}
 & \left\{\begin{array}{lll}
 a & b & a+b \\
 d & e & d+e \\
 g & h & g+h
-\end{array}\right\}=\frac{\Delta(a+b d+e g+h)}{\Delta(a d g) \Delta(b e h)} \cdot \frac{(a+b+e+d+g+h+1)!}{(a+d+g+1)!(b+e+h+1)!} \\
-& \times\left[\frac{(2 a)!(2 b)!(2 d)!(2 e)!(2 g)!(2 h)!}{(2 a+2 b+1)!(2 d+2 e+1)!(2 g+2 h+1)!}\right]^{\frac{1}{2}},  \tag{14}\\
+\end{array}\right\}=\frac{\Delta(a+b d+e g+h)}{\Delta(a d g) \Delta(b e h)} \cdot \frac{(a+b+e+d+g+h+1)!}{(a+d+g+1)!(b+e+h+1)!}  \notag\\
+& \times\left[\frac{(2 a)!(2 b)!(2 d)!(2 e)!(2 g)!(2 h)!}{(2 a+2 b+1)!(2 d+2 e+1)!(2 g+2 h+1)!}\right]^{\frac{1}{2}},  \label{chap10:eq:106}\\
 & \left\{\begin{array}{ccc}
 c+b & b & c \\
 d & e & d+e \\
 g & h & g+h
-\end{array}\right\}=(-1)^{b+e-h} \frac{\Delta(c+b d g)}{\Delta(c d+e g+h) \Delta(b e h)} \cdot \frac{(d+e-c+g+h)!}{(b+e+h+1)!(d-b-c+g)!} \\
-& \times\left[\frac{(2 b)!(2 c)!(2 d)!(2 e)!(2 g)!(2 h)!}{(2 b+2 c+1)!(2 d+2 e+1)!(2 g+2 h+1)!}\right]^{\frac{1}{2}},  \tag{15}\\
+\end{array}\right\}=(-1)^{b+e-h} \frac{\Delta(c+b d g)}{\Delta(c d+e g+h) \Delta(b e h)} \cdot \frac{(d+e-c+g+h)!}{(b+e+h+1)!(d-b-c+g)!}  \notag\\
+& \times\left[\frac{(2 b)!(2 c)!(2 d)!(2 e)!(2 g)!(2 h)!}{(2 b+2 c+1)!(2 d+2 e+1)!(2 g+2 h+1)!}\right]^{\frac{1}{2}},  \label{chap10:eq:107}\\
 & \left\{\begin{array}{ccc}
 a & b & a+b \\
 e+f & e & f \\
 g & h & a+b+f
-\end{array}\right\}=(-1)^{a+e+f-g} \frac{\Delta(a+b+f g h)}{\Delta(a g e+f) \Delta(b e h)} \cdot \frac{(a+b+g+h+f+1)!(e-b+h)!}{(g+h-a-b-f)!(b+e+h+1)!} \\
-& \times \frac{(e+g+f-a)!}{(a+e+f+g+1)!}\left[\frac{(2 a)!(2 b)!(2 e)!}{(2 a+2 b+1)(2 e+2 f+1)!(2 a+2 b+2 f+1)!}\right]^{\frac{1}{2}},  \tag{16}\\
+\end{array}\right\}=(-1)^{a+e+f-g} \frac{\Delta(a+b+f g h)}{\Delta(a g e+f) \Delta(b e h)} \cdot \frac{(a+b+g+h+f+1)!(e-b+h)!}{(g+h-a-b-f)!(b+e+h+1)!}  \notag\\
+& \times \frac{(e+g+f-a)!}{(a+e+f+g+1)!}\left[\frac{(2 a)!(2 b)!(2 e)!}{(2 a+2 b+1)(2 e+2 f+1)!(2 a+2 b+2 f+1)!}\right]^{\frac{1}{2}},  \label{chap10:eq:108}\\
 & \left\{\begin{array}{ccc}
 a & b & c \\
 d & d+f & f \\
 a+d & b+d+f & j
-\end{array}\right\}=\frac{\Delta(a+d b+d+f j)}{\Delta(a b c) \Delta(c f j)} \cdot \frac{(a+b+2 d+f+j+1)!(a-b+c)!(j+c-f)!}{(a+b+c+1)!(c+f+j+1)!(a-b-f+j)!} \\
-& \times\left[\frac{(2 a)!(2 b)!(2 f)!}{(2 a+2 d+1)!(2 f+2 d+1)(2 b+2 d+2 f+1)!}\right]^{\frac{1}{2}} . \tag{17}
-\end{align*}
-
-
-\subsection*{10.8.5. Four Degenerate Triads}
-
-\begin{gather*}
+\end{array}\right\}=\frac{\Delta(a+d b+d+f j)}{\Delta(a b c) \Delta(c f j)} \cdot \frac{(a+b+2 d+f+j+1)!(a-b+c)!(j+c-f)!}{(a+b+c+1)!(c+f+j+1)!(a-b-f+j)!}  \notag\\
+& \times\left[\frac{(2 a)!(2 b)!(2 f)!}{(2 a+2 d+1)!(2 f+2 d+1)(2 b+2 d+2 f+1)!}\right]^{\frac{1}{2}} . \label{chap10:eq:109}
+\end{align}
+\subsection{Four Degenerate Triads}
+\begin{gather}
 \left\{\begin{array}{ccc}
 a & b & a+b \\
 d & e & f \\
 a+d & b+e & a+b+f
-\end{array}\right\}=\frac{\Delta(a+b+f a+d b+e)}{\Delta(d e f)} \cdot \frac{(2 a+2 b+d+e+f+1)!}{(d+e+f+1)!} \\
-\times\left[\frac{(2 e)!(2 d)!(2 f)!}{(2 a+2 b+1)(2 a+2 d+1)!(2 e+2 b+1)!(2 a+2 b+2 f+1)!)}\right]^{\frac{1}{2}}  \tag{18}\\
+\end{array}\right\}=\frac{\Delta(a+b+f a+d b+e)}{\Delta(d e f)} \cdot \frac{(2 a+2 b+d+e+f+1)!}{(d+e+f+1)!}  \notag\\
+\times\left[\frac{(2 e)!(2 d)!(2 f)!}{(2 a+2 b+1)(2 a+2 d+1)!(2 e+2 b+1)!(2 a+2 b+2 f+1)!)}\right]^{\frac{1}{2}}  \label{chap10:eq:110}\\
 \left\{\begin{array}{cc}
 c+b & b \\
 d & b+h \\
 g & h \\
 h & g+h
-\end{array}\right\}=(-1)^{2 b} \frac{\Delta(c+b d g)}{\Delta(c d+b+h g+h)} \cdot \frac{(2 h+b+d+g-c)!}{(d+g-b-c)!} \\
-\times\left[\frac{(2 c)!(2 d)!(2 g)!}{(2 b+2 h+1)(2 b+2 c+1)!(2 b+2 d+2 h+1)!(2 g+2 h+1)!}\right]^{\frac{1}{2}} \tag{19}
-\end{gather*}
-
-
-
-\begin{align*}
+\end{array}\right\}=(-1)^{2 b} \frac{\Delta(c+b d g)}{\Delta(c d+b+h g+h)} \cdot \frac{(2 h+b+d+g-c)!}{(d+g-b-c)!}  \notag\\
+\times\left[\frac{(2 c)!(2 d)!(2 g)!}{(2 b+2 h+1)(2 b+2 c+1)!(2 b+2 d+2 h+1)!(2 g+2 h+1)!}\right]^{\frac{1}{2}} \label{chap10:eq:111}
+\end{gather}
+\begin{align}
 & \left\{\begin{array}{ccc}
 a & b & a+b \\
 a+g & b+h & f \\
 g & h & a+b+f
-\end{array}\right\}=(-1)^{2 a} \frac{\Delta(a+b+f g h)}{\Delta(a+g b+h f)} \cdot \frac{(a+b+g+h-f)!}{(-a-b+g+h-f)!} \\
-& \times\left[\frac{(2 f)!(2 g)!(2 h)!}{(2 a+2 b+1)(2 a+2 b+2 f+1)!(2 a+2 g+1)!(2 b+2 h+1)!}\right]^{\frac{1}{2}},  \tag{20}\\
+\end{array}\right\}=(-1)^{2 a} \frac{\Delta(a+b+f g h)}{\Delta(a+g b+h f)} \cdot \frac{(a+b+g+h-f)!}{(-a-b+g+h-f)!}  \notag\\
+& \times\left[\frac{(2 f)!(2 g)!(2 h)!}{(2 a+2 b+1)(2 a+2 b+2 f+1)!(2 a+2 g+1)!(2 b+2 h+1)!}\right]^{\frac{1}{2}},  \label{chap10:eq:112}\\
 & \left\{\begin{array}{ccc}
 a & b & a+b \\
 d & b+h & f \\
 a+d & h & a+b+f
-\end{array}\right\}=\frac{\Delta(h a+d a+b+f)}{\Delta(d f b+h)} \cdot \frac{(2 a+b+d+h+f+1)!(d+b+h-f)!}{(h+d+b+f+1)!(d+h-f-b)!} \\
-& \times\left[\frac{(2 d)!(2 f)!(2 h)!}{(2 a+2 b+1)(2 a+2 d+1)!(2 b+2 h+1)!(2 a+2 b+2 f+1)!}\right]^{\frac{1}{3}},  \tag{21}\\
+\end{array}\right\}=\frac{\Delta(h a+d a+b+f)}{\Delta(d f b+h)} \cdot \frac{(2 a+b+d+h+f+1)!(d+b+h-f)!}{(h+d+b+f+1)!(d+h-f-b)!}  \notag\\
+& \times\left[\frac{(2 d)!(2 f)!(2 h)!}{(2 a+2 b+1)(2 a+2 d+1)!(2 b+2 h+1)!(2 a+2 b+2 f+1)!}\right]^{\frac{1}{3}},  \label{chap10:eq:113}\\
 & \left\{\begin{array}{ccc}
 a & b & a+b \\
 a+g & a+g+f & f \\
 g & h & a+b+f
-\end{array}\right\}=(-1)^{2 a} \frac{\Delta(a+b+f g h)}{\Delta(b h a+g+f)} \cdot \frac{(a-b+f+g+h)!}{(g+h-a-b-f)!} \\
-& \times\left[\frac{(2 b)!(2 g)!}{(2 a+2 g+1)(2 a+2 b+1)(2 a+2 f+2 g+1)!(2 a+2 b+2 f+1)!}\right]^{\frac{1}{2}},  \tag{22}\\
+\end{array}\right\}=(-1)^{2 a} \frac{\Delta(a+b+f g h)}{\Delta(b h a+g+f)} \cdot \frac{(a-b+f+g+h)!}{(g+h-a-b-f)!}  \notag\\
+& \times\left[\frac{(2 b)!(2 g)!}{(2 a+2 g+1)(2 a+2 b+1)(2 a+2 f+2 g+1)!(2 a+2 b+2 f+1)!}\right]^{\frac{1}{2}},  \label{chap10:eq:114}\\
 & \left\{\begin{array}{ccc}
 a & b & a+b \\
 d & d+f & f \\
 a+d & h & a+b+f
-\end{array}\right\}=\frac{\Delta(a+b+f, a+d, h)}{\Delta(b, d+f, f)} \cdot \frac{(2 a+b+d+h+f+1)!(h-b+d+f)!}{(b+d+f+h+1)!(h+d-f-b)!} \\
-& \times\left[\frac{(2 b)!(2 d)!(2 d)!}{(2 a+2 b+1)(2 a+2 d+1)!(2 d+2 f+1)!(2 a+2 b+2 f+1)!}\right]^{\frac{1}{2}},  \tag{23}\\
+\end{array}\right\}=\frac{\Delta(a+b+f, a+d, h)}{\Delta(b, d+f, f)} \cdot \frac{(2 a+b+d+h+f+1)!(h-b+d+f)!}{(b+d+f+h+1)!(h+d-f-b)!}  \notag\\
+& \times\left[\frac{(2 b)!(2 d)!(2 d)!}{(2 a+2 b+1)(2 a+2 d+1)!(2 d+2 f+1)!(2 a+2 b+2 f+1)!}\right]^{\frac{1}{2}},  \label{chap10:eq:115}\\
 & \left\{\begin{array}{ccc}
 a & b & a+b \\
 d & d+f & f \\
 g & b+d+f & a+b+f
-\end{array}\right\}=(-1)^{a+d-g} \frac{\Delta(a+b+f, g, d+f+b)}{\Delta(a d g)} \cdot \frac{(2 b+2 f+a+d+g+1)!}{(a+d+g+1)!} \\
-& \times\left[\frac{(2 a)!(2 d)!}{(2 a+2 b+1)(2 d+2 f+1)(2 a+2 b+2 f+1)!(2 d+2 b+2 f+1)!}\right]^{\frac{1}{2}},  \tag{24}\\
+\end{array}\right\}=(-1)^{a+d-g} \frac{\Delta(a+b+f, g, d+f+b)}{\Delta(a d g)} \cdot \frac{(2 b+2 f+a+d+g+1)!}{(a+d+g+1)!}  \notag\\
+& \times\left[\frac{(2 a)!(2 d)!}{(2 a+2 b+1)(2 d+2 f+1)(2 a+2 b+2 f+1)!(2 d+2 b+2 f+1)!}\right]^{\frac{1}{2}},  \label{chap10:eq:116}\\
 & \left\{\begin{array}{ccc}
 a & b & a+b \\
 d & b+h & f \\
 a+b+f+h & h & a+b+f
-\end{array}\right\}=(-1)^{d-b-f-h} \frac{1}{\Delta(d, f, b+h) \Delta(a, d, a+b+f+h)} \\
-& \times \frac{(b+d+h-f)!}{(2 a+d+b+f+h+1)!(d+b+h+f+1)}\left[\frac{(2 a)!(2 f)!(2 a+2 b+2 h+2 f+1)!}{(2 a+2 b+1)(2 a+2 b+2 f+1)(2 b+2 h+1)!}\right]^{\frac{1}{2}},  \tag{25}\\
+\end{array}\right\}=(-1)^{d-b-f-h} \frac{1}{\Delta(d, f, b+h) \Delta(a, d, a+b+f+h)}  \notag\\
+& \times \frac{(b+d+h-f)!}{(2 a+d+b+f+h+1)!(d+b+h+f+1)}\left[\frac{(2 a)!(2 f)!(2 a+2 b+2 h+2 f+1)!}{(2 a+2 b+1)(2 a+2 b+2 f+1)(2 b+2 h+1)!}\right]^{\frac{1}{2}},  \label{chap10:eq:117}\\
 & \left\{\begin{array}{ccc}
 a & b & a+b \\
 e+f & e & f \\
 a+e+f & b+e & j
-\end{array}\right\}=(-1)^{f+a+b-j} \frac{\Delta(j, b+e, a+e+f)}{\Delta(f, a+b, j)} \frac{(f+j+b+a+2 e+1)!}{(f+a+b+j+1)!} \\
-& \times\left[\frac{(2 f)!(2 b)!(2 b)!}{(2 f+2 e+1)(2 e+2 b+1)!(2 a+2 b+1)!(2 f+2 e+2 a+1)!}\right]^{\frac{1}{2}} . \tag{26}
-\end{align*}
-
-
-\subsection*{10.8.6. Five or Six Degenerate Triads}
-\[
+\end{array}\right\}=(-1)^{f+a+b-j} \frac{\Delta(j, b+e, a+e+f)}{\Delta(f, a+b, j)} \frac{(f+j+b+a+2 e+1)!}{(f+a+b+j+1)!}  \notag\\
+& \times\left[\frac{(2 f)!(2 b)!(2 b)!}{(2 f+2 e+1)(2 e+2 b+1)!(2 a+2 b+1)!(2 f+2 e+2 a+1)!}\right]^{\frac{1}{2}} . \label{chap10:eq:118}
+\end{align}
+\subsection{Five or Six Degenerate Triads}
+\begin{equation}
 \left\{\begin{array}{ccc}
-a & b & a+b  \tag{27}\\
+a & b & a+b  \label{chap10:eq:119}\\
 d & e & d+e \\
 a+d & b+e & a+b+d+e
 \end{array}\right\}=\frac{1}{[(2 a+2 b+1)(2 d+2 e+1)(2 a+2 d+1)(2 b+2 e+1)]^{\frac{1}{2}}} .
-\]
-
-In particular, from Eq. (27) it follows that
-
-
-\begin{gather*}
+\end{equation}
+In particular, from Eq. \eqref{chap10:eq:119} it follows that
+\begin{gather}
 \left\{\begin{array}{ccc}
 a & b & a+b \\
 a & b & a+b \\
 2 a & 2 b & 2 a+2 b
-\end{array}\right\}=\frac{1}{(2 a+2 b+1)[(4 a+1)(4 b+1)]^{\frac{1}{2}}}  \tag{28}\\
+\end{array}\right\}=\frac{1}{(2 a+2 b+1)[(4 a+1)(4 b+1)]^{\frac{1}{2}}}  \label{chap10:eq:120}\\
 \left\{\begin{array}{ccc}
 a & a & 2 a \\
 a & a & 2 a \\
 2 a & 2 a & 4 a
-\end{array}\right\}=\frac{1}{(4 a+1)^{2}}  \tag{29}\\
+\end{array}\right\}=\frac{1}{(4 a+1)^{2}}  \label{chap10:eq:121}\\
 \left\{\begin{array}{ccc}
 a & b & a+b \\
 a+g & a+g+f & f \\
 g & a+b+f+g & a+b+f
-\end{array}\right\} \\
-=\frac{(-1)^{2 a}}{[(2 a+2 g+1)(2 a+2 b+1)(2 a+2 b+2 f+1)(2 a+2 g+2 f+1)]^{\frac{1}{2}}} \cdot \tag{30}
-\end{gather*}
-
-
+\end{array}\right\}  \notag\\
+=\frac{(-1)^{2 a}}{[(2 a+2 g+1)(2 a+2 b+1)(2 a+2 b+2 f+1)(2 a+2 g+2 f+1)]^{\frac{1}{2}}} \cdot \label{chap10:eq:122}
+\end{gather}
 In particular,
-
-\[
+\begin{equation}
 \left\{\begin{array}{ccc}
-a & b & a+b  \tag{31}\\
+a & b & a+b  \label{chap10:eq:123}\\
 a+b & a+b+f & f \\
 b & a+2 b+f & a+b+f
 \end{array}\right\}=\frac{(-1)^{2 a}}{(2 a+2 b+1)(2 a+2 b+2 f+1)} .
-\]
-
-\subsection*{10.9. EXPLICIT FORMS OF THE $9 j$ SYMBOLS FOR SPECIAL VALUES OF THE ARGUMENTS}
-\subsection*{10.9.1. One of Arguments Equals Zero}
+\end{equation}
+\section{EXPLICIT FORMS OF THE $9 j$ SYMBOLS FOR SPECIAL VALUES OF THE ARGUMENTS}
+\subsection{One of Arguments Equals Zero}
 In this case a $9 j$ symbol is reduced to a $6 j$ symbol [110]:
-
-\[
+\begin{equation}
 \left\{\begin{array}{lll}
-a & b & c  \tag{1}\\
+a & b & c  \label{chap10:eq:124}\\
 d & e & f \\
 g & h & 0
 \end{array}\right\}=\delta_{c f} \delta_{g h} \frac{(-1)^{b+c+d+g}}{[(2 c+1)(2 g+1)]^{\frac{1}{2}}}\left\{\begin{array}{lll}
 a & b & c \\
 e & d & g
 \end{array}\right\}=\delta_{c f} \delta_{g h}[(2 c+1)(2 g+1)]^{-\frac{1}{2}} W(b c g d ; a e) .
-\]
-
+\end{equation}
 Using the symmetry properties, we get
-
-
-\begin{gather*}
+\begin{gather}
 \left\{\begin{array}{lll}
 0 & c & c \\
 g & e & b \\
@@ -2015,48 +1729,39 @@ c & b & a \\
 d & c & e \\
 a & c & b \\
 g & 0 & g
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 \left.=\left\{\begin{array}{lll}
 a & b & c \\
 g & g & 0
 \end{array}\right\}=\frac{(-1)^{b+d+c+g}}{[(2 c+1)(2 g+1)]^{\frac{1}{2}}}\left\{\begin{array}{lll}
 a & b & c \\
 e & d & g
-\end{array}\right\}=\frac{W(b c g d ;}{a} e\right)  \tag{2}\\
-{[(2 c+1)(2 g+1)]^{\frac{1}{2}}}
-\end{gather*}
-
-
+\end{array}\right\}=\frac{W(b c g d ;}{a} e\right)  \label{chap10:eq:125}\\
+{[(2 c+1)(2 g+1)]^{\frac{1}{2}}} \notag
+\end{gather}
 In particular, if two arguments are equal to zero, one has
-
-\[
+\begin{equation}
 \left\{\begin{array}{lll}
-a & b & c  \tag{3}\\
+a & b & c  \label{chap10:eq:126}\\
 d & 0 & f \\
 g & h & 0
 \end{array}\right\}=\delta_{d f} \delta_{b h} \delta_{c f} \delta_{g h} \frac{(-1)^{a-b-c}}{(2 b+1)(2 c+1)}
-\]
-
+\end{equation}
 If three arguments are equal to zero, one obtains
-
-
-\begin{align*}
+\begin{align}
 & \left\{\begin{array}{lll}
 a & b & c \\
 d & e & f \\
 0 & 0 & 0
-\end{array}\right\}=\frac{\delta_{a d} \delta_{b e} \delta_{c f}}{[(2 a+1)(2 b+1)(2 c+1)]^{\frac{1}{2}}}  \tag{4}\\
+\end{array}\right\}=\frac{\delta_{a d} \delta_{b e} \delta_{c f}}{[(2 a+1)(2 b+1)(2 c+1)]^{\frac{1}{2}}}  \label{chap10:eq:127}\\
 & \left\{\begin{array}{lll}
 0 & b & c \\
 d & 0 & f \\
 g & h & 0
-\end{array}\right\}=\delta_{b c} \delta_{b d} \delta_{b f} \delta_{b g} \delta_{b h} \frac{(-1)^{2 b}}{(2 b+1)^{2}} \tag{5}
-\end{align*}
-
-
-\subsection*{10.9.2 One of Arguments Equals Unity [32]}
-
-\begin{gather*}
+\end{array}\right\}=\delta_{b c} \delta_{b d} \delta_{b f} \delta_{b g} \delta_{b h} \frac{(-1)^{2 b}}{(2 b+1)^{2}} \label{chap10:eq:128}
+\end{align}
+\subsection{One of Arguments Equals Unity [32]}
+\begin{gather}
 \left\{\begin{array}{lll}
 a & b & c \\
 d & e & c \\
@@ -2064,25 +1769,25 @@ g & g & 1
 \end{array}\right\}=(-1)^{b+d+g+c} 2 \frac{(a-d)(a+d+1)-(b-e)(b+e+1)}{[(2 g+2)(2 g+1) 2 g(2 c+2)(2 c+1) 2 c]^{\frac{1}{2}}}\left\{\begin{array}{lll}
 a & b & c \\
 e & d & g
-\end{array}\right\},  \tag{6}\\
+\end{array}\right\},  \label{chap10:eq:129}\\
 \left\{\begin{array}{ccc}
 a & b & c \\
 d & e & c \\
 g+1 & g & 1
-\end{array}\right\}(-1)^{b+d+g+c}\left[\frac{(2 g+3)(2 g+2)(2 g+1)(2 c+2)(2 c+1) 2 c}{2}\right]^{\frac{1}{2}} \\
+\end{array}\right\}(-1)^{b+d+g+c}\left[\frac{(2 g+3)(2 g+2)(2 g+1)(2 c+2)(2 c+1) 2 c}{2}\right]^{\frac{1}{2}}  \notag\\
 =[(b-e+g+1)(-b+e+g+1)(b+e+g+2)(b+e-g)]^{\frac{1}{2}}\left\{\begin{array}{lll}
 a & d & g+1 \\
 e & b & c
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 +[(a-d+g+1)(-a+d+g+1)(a+d+g+2)(a+d-g)]^{\frac{1}{2}}\left\{\begin{array}{ll}
 a & d \\
 e & b \\
 b
-\end{array}\right\},  \tag{7}\\
+\end{array}\right\},  \label{chap10:eq:130}\\
 \left\{\begin{array}{ccc}
 a & b & c+1 \\
 d+1 & e & c
-\end{array}\right\}[(c+1)(a-d)(a+d+1)-(g+1)(a-b)(a+b+1)+(g+1)(c+1)(g-c)] \\
+\end{array}\right\}[(c+1)(a-d)(a+d+1)-(g+1)(a-b)(a+b+1)+(g+1)(c+1)(g-c)]  \notag\\
 =(c-g) A_{a+\frac{1}{2}}\left(d, g+\frac{1}{2} ; b, c+\frac{1}{2}\right)\left\{\begin{array}{ll}
 a & d \\
 e & b \\
@@ -2090,23 +1795,20 @@ g
 \end{array}\right\}+(c+1) A_{d+\frac{1}{2}}\left(a, g+\frac{1}{2} ; e, c+\frac{1}{2}\right)\left\{\begin{array}{lll}
 a & b & c+1 \\
 e & d & g
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 -(g+1) A_{b+\frac{1}{2}}\left(a, c+\frac{1}{2} ; e, g+\frac{1}{2}\right)\left\{\begin{array}{ll}
 a & b \\
 e & d \\
 g+1
-\end{array}\right\} .
-\end{gather*}
+\end{array}\right\} . \notag
+\end{gather}
+The quantity $A_{q}(\lambda, \mu ; \sigma, \nu)$ is defined by Eq. \eqref{chap10:eq:73}.
 
-
-The quantity $A_{q}(\lambda, \mu ; \sigma, \nu)$ is defined by Eq. 10.5(6).
-
-\subsection*{10.9.3. One of Triads Equals ( $1 / 2,1 / 2,1$ )}
+\subsection{One of Triads Equals ( $1 / 2,1 / 2,1$ )}
 In this case a $9 j$ symbol may be expressed in terms of the $6 j$ symbols [16]:
-
-\[
+\begin{equation}
 \left\{\begin{array}{lll}
-a & b & c  \tag{9}\\
+a & b & c  \label{chap10:eq:131}\\
 d & e & f \\
 \frac{1}{2} & \frac{1}{2} & 1
 \end{array}\right\}\left\{\begin{array}{lll}
@@ -2122,13 +1824,11 @@ e & d & f \\
 a & b & c \\
 e & d & \frac{1}{2}
 \end{array}\right\} \delta_{f c}
-\]
-
+\end{equation}
 In addition, the $9 j$ symbols in question may be reduced to the $3 j m$ symbols [9]. If $d, e, c$ are integer and $d+e+c$ is even, one has
-
-\[
+\begin{equation}
 [6(2 c+1)(2 d+1)(2 e+1)]^{\frac{1}{2}}\left(\begin{array}{lll}
-c & d & e  \tag{10}\\
+c & d & e  \label{chap10:eq:132}\\
 0 & 0 & 0
 \end{array}\right)\left\{\begin{array}{lll}
 a & b & c \\
@@ -2138,12 +1838,9 @@ d & e & c \\
 a & b & c \\
 \frac{1}{2} & \frac{1}{2} & -1
 \end{array}\right)
-\]
-
+\end{equation}
 If $d+e+c$ is odd, one gets
-
-
-\begin{gather*}
+\begin{gather}
 \left(\begin{array}{ccc}
 c+1 & d & e \\
 0 & 0 & 0
@@ -2151,11 +1848,11 @@ c+1 & d & e \\
 a & b & c \\
 d & e & c+1 \\
 \frac{1}{2} & \frac{1}{2} & 1
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 =(-1)^{b+e+\frac{1}{2}} \frac{[(d-a)(2 a+1)+(e-b)(2 b+1)+c+1]}{[6(c+1)(2 c+1)(2 c+3)(2 d+1)(2 e+1)]^{\frac{1}{2}}}\left(\begin{array}{rrc}
 a & b & c \\
 \frac{1}{2} & -\frac{1}{2} & 0
-\end{array}\right)  \tag{11}\\
+\end{array}\right)  \label{chap10:eq:133}\\
 \left(\begin{array}{ccc}
 c-1 & d & e \\
 0 & 0 & 0
@@ -2163,16 +1860,14 @@ c-1 & d & e \\
 a & b & c \\
 d & e & c \\
 \frac{1}{2} & \frac{1}{2} & 1
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 =(-1)^{b+e+\frac{1}{2}} \frac{[(d-a)(2 a+1)+(e-b)(2 b+1)-c]}{[6 c(2 c+1)(2 c-1)(2 d+1)(2 e+1)]^{\frac{1}{2}}}\left(\begin{array}{rrc}
 a & b & c \\
 \frac{1}{2} & -\frac{1}{2} & 0
-\end{array}\right) \tag{12}
-\end{gather*}
-
-
-\subsection*{10.10. RELATIONS BETWEEN THE WIGNER $9 j$ SYMBOLS AND ANALOGOUS FUNCTIONS OF OTHER AUTHORS}
-$$
+\end{array}\right) \label{chap10:eq:134}
+\end{gather}
+\section{RELATIONS BETWEEN THE WIGNER $9 j$ SYMBOLS AND ANALOGOUS FUNCTIONS OF OTHER AUTHORS}
+\[
 \begin{aligned}
 \left\{\begin{array}{lll}
 a & b & c \\
@@ -2196,58 +1891,47 @@ d & e & f \\
 g & h & j
 \end{array}\right) & & \text { (Kennedy and Cliff [79]) }
 \end{aligned}
-$$
-
-\subsection*{10.11. TABLES OF ALGEBRAIC FORMULAS OF THE $9 j$ SYMBOLS}
+\]
+\section{TABLES OF ALGEBRAIC FORMULAS OF THE $9 j$ SYMBOLS}
 Tables 10.1-10.12 contain algebraic formulas for the $9 j$ symbols represented in the form
-
-$$
+\[
 \left\{\begin{array}{ccc}
 a+\lambda & b+\mu & c+\nu \\
 a & b & c \\
 \alpha & \beta & \gamma
 \end{array}\right\}
-$$
-
+\]
 with
-
-$$
+\[
 \begin{array}{rrrl}
 0 & \leq \alpha \leq 3, \quad 0 \leq \beta \leq 2, \quad \gamma=0,1 \\
 -\alpha & \leq \lambda \leq \alpha, \quad-\beta \leq \mu \leq \beta, \quad-\gamma \leq \nu \leq \gamma .
 \end{array}
-$$
-
+\]
 The formulas are given only for the $9 j$ symbols with $\alpha \geq \beta$. The $9 j$ symbols with $\alpha<\beta$ may be obtained using the symmetry properties.
 
 Algebraic tables of the $9 j$ symbols are also available in Ref. [120] for $\alpha, \beta=\frac{1}{2} ; \gamma=0,1 ; \nu=0, \pm 1 ; \lambda, \mu= \pm \frac{1}{2}$ and in Ref. [45] for $0<\alpha \leq 3,0<\beta \leq 2 ; \gamma=0,1 ; 0 \leq \lambda \leq \alpha ; 0 \leq \mu \leq \beta, \nu=0, \pm 1$.
 
 In the tables given below we use the following notations
-
-$$
+\[
 \begin{gathered}
 S=a+b+c, \\
 Z=-c(c+1)+a(a+1)+b(b+1) .
 \end{gathered}
-$$
-
-\subsection*{10.12. TABLES OF NUMERICAL VALUES OF THE 9j SYMBOLS}
+\]
+\section{TABLES OF NUMERICAL VALUES OF THE 9j SYMBOLS}
 In Tables 10.13-10.14 we present numerical values of the $9 j$ symbols
-
-$$
+\[
 \left\{\begin{array}{lll}
 a & b & c \\
 d & e & f \\
 g & h & j
 \end{array}\right\}
-$$
-
+\]
 with $(g h j)=\left(\frac{1}{2}, \frac{1}{2}, 0\right)$ or $\left(\frac{1}{2}, \frac{1}{2}, 1\right)$. Other arguments of these $9 j$ symbols are integer or half-integer numbers such as
-
-$$
+\[
 0 \leq a, b, c, d, e, f \leq 4
-$$
-
+\]
 All numerical values are given in the form of rational fractions and decimals. Each table contains the $9 j$ symbols with fixed $c$ and $f$. In addition, all tables are divided into two groups. The first group contains the $9 j$ symbols with integer $c$ and $f$, while the second group contains those with half-integer $c$ and $f$. The arrangement of tables inside each group is as follows:
 
 \begin{center}
@@ -2255,7 +1939,7 @@ All numerical values are given in the form of rational fractions and decimals. E
 \hline
 \multicolumn{6}{|r|}{$c$ and $f$ are integer (Tables 10.13)} & \multicolumn{6}{|r|}{$c$ and $f$ are half-integer (Tables 10.14)} \\
 \hline
-$c$ & $\boldsymbol{f}$ & $j$ & c & $\boldsymbol{f}$ & $j$ & $\boldsymbol{c}$ & $f$ & $j$ & $\boldsymbol{c}$ & $f$ & 1 \\
+$c$ & $f$ & $j$ & c & $f$ & $j$ & $c$ & $f$ & $j$ & $c$ & $f$ & 1 \\
 \hline
 0 & 0 & 0 & 1 & 2 & 1 & 1/2 & 1/2 & 0 & 3/2 & 5/2 & 1 \\
 \hline
@@ -2280,18 +1964,16 @@ $c$ & $\boldsymbol{f}$ & $j$ & c & $\boldsymbol{f}$ & $j$ & $\boldsymbol{c}$ & $
 
 Tables of numerical values of the $9 j$ symbols are also available in Refs. $|120,113|$ for $g, h=\frac{1}{2} ; j=0,1 ; a, b= 0,1,2,3,4 ; d, e=\frac{1}{2}, \frac{3}{2}, \frac{5}{2}, \frac{7}{2} ; c, f=0,1,2,3,4,5$ and in Ref. $[128]$ for integer arguments $j=1 ; a, b, c, f \leq 6$; $d, e \leq 11$. In Ref. [120] numerical values of the $9 j$ symbols are given in the form of rational fractions; in Ref. [113] they are given in the form of rational fractions and decimals; and in Ref. [128] in the form of decimals.
 
-\subsection*{10.13. 12j SYMBOLS}
-\subsection*{10.13.1. Some Remarks on the $3 n j$ Symbols}
+\section{12j SYMBOLS}
+\subsection{Some Remarks on the $3 n j$ Symbols}
 The $6 j$ and $9 j$ symbols represent special cases of the $3 n j$ symbols for $n=2$ and 3 , respectively. The $3 n j$ symbols of higher orders ( $n \geq 4$ ) are encountered in some special changes of the coupling scheme of five and more angular momenta. They are proportional to the coefficients of unitary transformations connecting the state vectors which correspond to different coupling schemes. The 3nj symbols are invariants with respect to rotations in three-dimensional space. If $n \geq 4$, there exist different kinds of the $3 n j$ symbols which are not reduced to products of the $3 n j$ symbols of lower order. Among them one can distinguish the $3 n j$ symbols of the first and second kinds which may be expressed as single sums of products of the $6 j$ symbols. Using the notations of Ref. [44], the $3 n j$ symbols of the first and second kinds may be be represented in the following forms:\\
-(a) The $3 n j$ symbols of the first kind
-
-
-\begin{align*}
+\subsubsection{The $3 n j$ symbols of the first kind}
+\begin{align}
 &\left\{\begin{array}{cccc}
 j_{1} & j_{2} & \ldots & j_{n} \\
 l_{1} & l_{2} & \ldots & l_{n} \\
 k_{1} & k_{2} & \ldots & k_{n}
-\end{array}\right\}=\sum_{x}(2 x+1)(-1)^{R_{n}+(n-1) x} \\
+\end{array}\right\}=\sum_{x}(2 x+1)(-1)^{R_{n}+(n-1) x}  \notag\\
 & \times\left\{\begin{array}{lll}
 j_{1} & k_{1} & x \\
 k_{2} & j_{2} & l_{1}
@@ -2304,19 +1986,15 @@ k_{n} & j_{n} & l_{n-1}
 \end{array}\right\}\left\{\begin{array}{lll}
 j_{n} & k_{n} & x \\
 j_{1} & k_{1} & l_{n}
-\end{array}\right\} . \tag{1}
-\end{align*}
-
-
-(b) The 3nj symbols of the second kind
-
-
-\begin{gather*}
+\end{array}\right\} . \label{chap10:eq:135}
+\end{align}
+\subsubsection{The 3nj symbols of the second kind}
+\begin{gather}
 {\left[\begin{array}{cccc}
 j_{1} & j_{2} & \ldots & j_{n} \\
 & l_{1} & l_{2} & \ldots \\
 k_{1} & k_{2} & \ldots & l_{n}
-\end{array}\right]=\sum_{x}(2 x+1)(-1)^{R_{n}+n x}} \\
+\end{array}\right]=\sum_{x}(2 x+1)(-1)^{R_{n}+n x}}  \notag\\
 \times\left\{\begin{array}{lll}
 j_{1} & k_{1} & x \\
 k_{2} & j_{2} & l_{1}
@@ -2329,25 +2007,21 @@ k_{n} & j_{n} & l_{n-1}
 \end{array}\right\}\left\{\begin{array}{lll}
 j_{n} & k_{n} & x \\
 k_{1} & j_{1} & l_{n}
-\end{array}\right\} . \tag{2}
-\end{gather*}
-
-
+\end{array}\right\} . \label{chap10:eq:136}
+\end{gather}
 In these equations $R_{n}=\sum_{i=1}^{n}\left(j_{i}+l_{i}+k_{i}\right)$.\\
 If $n \geq 5$, there appear the $3 n j$ symbols of other kinds (third, fourth, etc.). They may be represented by single sums of more complex products of the $6 j$ and $9 j$ symbols. The amount of different $3 n j$ symbols rapidly increases with $n$. For example, there exist five different $15 j$ symbols, eighteen different $18 j$ symbols, etc.
 
 Here we restrict ourselves to the consideration of the $12 j$ symbols because the $15 j$ symbols and symbols of higher orders are rarely used in applications. So far, the properties of the $12 j$ symbols have been examined $[17,44,45,74,137-139,141]$ less thoroughly than the properties of the $6 j$ and $9 j$ symbols. That is why our consideration is rather brief.
 
-\subsection*{10.13.2. $12 j$ Symbols of the First Kind (12 $j$ (I)-Symbols)}
-(a) A $12 j(\mathrm{I})$-symbol may be represented by the following invariant sum of products of eight $3 j m$ symbols
-
-
-\begin{gather*}
+\subsection{$12 j$ Symbols of the First Kind (12 $j$ (I)-Symbols)}
+\subsubsection{A $12 j(\mathrm{I})$-symbol may be represented by the following invariant sum of products of eight $3 j m$ symbols}
+\begin{gather}
 \left\{\begin{array}{cccc}
 a_{1} & a_{2} & a_{3} & a_{4} \\
 b_{12} & b_{23} & b_{34} & b_{41} \\
 c_{1} & c_{2} & c_{3} & c_{4}
-\end{array}\right\}=\sum_{\alpha_{i} \beta_{i k} \gamma_{i}}(-1)^{a_{4}+\alpha_{4}+c_{4}+\gamma_{4}} \\
+\end{array}\right\}=\sum_{\alpha_{i} \beta_{i k} \gamma_{i}}(-1)^{a_{4}+\alpha_{4}+c_{4}+\gamma_{4}}  \notag\\
 \times\left(\begin{array}{lll}
 a_{1} & a_{2} & b_{12} \\
 \alpha_{1} & \alpha_{2} & \beta_{12}
@@ -2360,7 +2034,7 @@ a_{3} & a_{4} & b_{34} \\
 \end{array}\right)\left(\begin{array}{lll}
 a_{4} & c_{1} & b_{41} \\
 -\alpha_{4} & \gamma_{1} & \beta_{41}
-\end{array}\right) \\
+\end{array}\right)  \notag\\
 \times\left(\begin{array}{lll}
 c_{1} & c_{2} & b_{12} \\
 \gamma_{1} & \gamma_{2} & \beta_{12}
@@ -2373,19 +2047,15 @@ c_{3} & c_{4} & b_{34} \\
 \end{array}\right)\left(\begin{array}{rcc}
 c_{4} & a_{1} & b_{41} \\
 -\gamma_{4} & \alpha_{1} & \beta_{41}
-\end{array}\right) . \tag{3}
-\end{gather*}
-
-
-Equation (3) unambiguously fixes the absolute value and phase of the $12 j(\mathrm{I})$ symbol. The $12 j(\mathrm{I})$ symbols are real.\\
-(b) Arguments of a $12 j(\mathrm{I})$ symbol satisfy the following conditions:\\
+\end{array}\right) . \label{chap10:eq:137}
+\end{gather}
+Equation \eqref{chap10:eq:137} unambiguously fixes the absolute value and phase of the $12 j(\mathrm{I})$ symbol. The $12 j(\mathrm{I})$ symbols are real.\\
+\subsubsection{Arguments of a $12 j(\mathrm{I})$ symbol satisfy the following conditions}
 (i) All arguments are integers or half-integers and non-negative.\\
 (ii) The $12 j$ (I) symbol vanishes unless the triangular conditions (see Sec. 8.1.1) are fulfilled for all the triads $\left(a_{1} b_{12} a_{2}\right),\left(a_{2} b_{23} a_{3}\right),\left(a_{3} b_{34} a_{4}\right),\left(a_{4} b_{41} c_{1}\right),\left(c_{1} b_{12} c_{2}\right),\left(c_{2} b_{23} c_{3}\right),\left(c_{3} b_{34} c_{4}\right)$ and $\left(c_{4} b_{41} a_{1}\right)$.\\
 (iii) The $12 j(\mathrm{I})$ symbol vanishes unless the tetragonal conditions are fulfilled for two tetrads of arguments, $\left(a_{1} c_{1} a_{3} c_{3}\right)$ and $\left(a_{2} c_{2} a_{4} c_{4}\right)$. The tetragonal conditions for the tetrad $\left(j_{1} j_{2} j_{3} j_{4}\right)$ mean that $j_{1}+j_{2}+j_{3}+j_{4}$ is integer and $j_{1} \leq j_{2}+j_{3}+j_{4}, j_{2} \leq j_{1}+j_{3}+j_{4}, j_{3} \leq j_{1}+j_{2}+j_{4}, j_{4} \leq j_{1}+j_{2}+j_{3}$.\\
-(c) The $12 j$ (I) symbols satisfy the orthogonality and normalisation relations
-
-
-\begin{gather*}
+\subsubsection{The $12 j$ (I) symbols satisfy the orthogonality and normalisation relations}
+\begin{gather}
 \sum_{a_{2} a_{3} a_{4}}\left(2 a_{2}+1\right)\left(2 a_{3}+1\right)\left(2 a_{4}+1\right)\left\{\begin{array}{cccc}
 a_{1} & a_{2} & a_{3} & a_{4} \\
 b_{12} & b_{23} & b_{34} & b_{41} \\
@@ -2394,13 +2064,10 @@ c_{1} & c_{2} & c_{3} & c_{4}
 a_{1} & a_{2} & a_{3} & a_{4} \\
 b_{12} & b_{23} & b_{34} & b_{41} \\
 c_{1} & c_{2}^{\prime} & c_{3}^{\prime} & c_{4}^{\prime}
-\end{array}\right\} \\
-=\frac{\delta_{c_{3}^{\prime} c_{2}} \delta_{c_{3}^{\prime} c_{3}} \delta_{c_{1}^{\prime}} c_{4}}{\left(2 c_{2}+1\right)\left(2 c_{3}+1\right)\left(2 c_{4}+1\right)}\left\{c_{1} b_{12} c_{2}\right\}\left\{c_{2} b_{23} c_{3}\right\}\left\{c_{3} b_{34} c_{4}\right\}\left\{c_{4} b_{41} a_{1}\right\} \tag{4}
-\end{gather*}
-
-
-
-\begin{gather*}
+\end{array}\right\}  \notag\\
+=\frac{\delta_{c_{3}^{\prime} c_{2}} \delta_{c_{3}^{\prime} c_{3}} \delta_{c_{1}^{\prime}} c_{4}}{\left(2 c_{2}+1\right)\left(2 c_{3}+1\right)\left(2 c_{4}+1\right)}\left\{c_{1} b_{12} c_{2}\right\}\left\{c_{2} b_{23} c_{3}\right\}\left\{c_{3} b_{34} c_{4}\right\}\left\{c_{4} b_{41} a_{1}\right\} \label{chap10:eq:138}
+\end{gather}
+\begin{gather}
 \sum_{c_{3} b_{41} c_{4}}\left(2 c_{3}+1\right)\left(2 b_{41}+1\right)\left(2 c_{4}+1\right)\left\{\begin{array}{cccc}
 a_{1} & a_{2} & a_{3} & a_{4} \\
 b_{12} & b_{23} & b_{34} & b_{41} \\
@@ -2409,20 +2076,16 @@ c_{1} & c_{2} & c_{3} & c_{4}
 a_{1} & a_{22}^{\prime} & a_{3}^{\prime} & a_{4} \\
 b_{12}^{\prime} & b_{23} & b_{34} & b_{41} \\
 c_{1} & c_{2} & c_{3} & c_{4}
-\end{array}\right\} \\
-=\frac{\delta_{a_{2}^{\prime} a_{2}} \delta_{a_{3}^{\prime} a_{3}} \delta_{b_{12}^{\prime} b_{12}}}{\left(2 a_{2}+1\right)\left(2 a_{3}+1\right)\left(2 b_{12}+1\right)}\left\{a_{1} b_{12} a_{2}\right\}\left\{a_{2} b_{23} a_{3}\right\}\left\{a_{3} b_{34} a_{4}\right\}\left\{c_{1} b_{12} c_{2}\right\} \tag{5}
-\end{gather*}
-
-
-(d) The $12 j(\mathrm{I})$ symbols may be represented by
-
-
-\begin{gather*}
+\end{array}\right\}  \notag\\
+=\frac{\delta_{a_{2}^{\prime} a_{2}} \delta_{a_{3}^{\prime} a_{3}} \delta_{b_{12}^{\prime} b_{12}}}{\left(2 a_{2}+1\right)\left(2 a_{3}+1\right)\left(2 b_{12}+1\right)}\left\{a_{1} b_{12} a_{2}\right\}\left\{a_{2} b_{23} a_{3}\right\}\left\{a_{3} b_{34} a_{4}\right\}\left\{c_{1} b_{12} c_{2}\right\} \label{chap10:eq:139}
+\end{gather}
+\subsubsection{The $12 j(\mathrm{I})$ symbols may be represented by}
+\begin{gather}
 \left\{\begin{array}{cccc}
 a_{1} & a_{2} & a_{3} & a_{4} \\
 b_{12} & b_{23} & b_{34} & b_{41} \\
 c_{1} & c_{2} & c_{3} & c_{4}
-\end{array}\right\}=\sum_{x}(-1)^{S-x}(2 x+1) \\
+\end{array}\right\}=\sum_{x}(-1)^{S-x}(2 x+1)  \notag\\
 \times\left\{\begin{array}{lll}
 a_{1} & a_{2} & b_{12} \\
 c_{2} & c_{1} & x
@@ -2435,19 +2098,15 @@ c_{4} & c_{3} & x
 \end{array}\right\}\left\{\begin{array}{lll}
 a_{4} & c_{1} & b_{41} \\
 a_{1} & c_{4} & x
-\end{array}\right\}, \tag{6}
-\end{gather*}
-
-
+\end{array}\right\}, \label{chap10:eq:140}
+\end{gather}
 where $S=\sum_{i=1}^{4}\left(a_{i}+c_{i}\right)+b_{12}+b_{23}+b_{34}+b_{41}$,
-
-
-\begin{gather*}
+\begin{gather}
 \left\{\begin{array}{cccc}
 a_{1} & a_{2} & a_{3} & a_{4} \\
 b_{12} & b_{23} & b_{34} & b_{41} \\
 c_{1} & c_{2} & c_{3} & c_{4}
-\end{array}\right\}=(-1)^{a_{1}-a_{3}-c_{1}+c_{3}} \sum_{x}(2 x+1) \\
+\end{array}\right\}=(-1)^{a_{1}-a_{3}-c_{1}+c_{3}} \sum_{x}(2 x+1)  \notag\\
 \times\left\{\begin{array}{lll}
 b_{23} & a_{2} & a_{3} \\
 c_{2} & b_{12} & c_{1} \\
@@ -2458,15 +2117,12 @@ c_{1} & b_{41} & x
 \end{array}\right\}\left\{\begin{array}{lll}
 b_{34} & c_{3} & c_{4} \\
 a_{1} & b_{41} & x
-\end{array}\right\} \tag{7}
-\end{gather*}
-
-
-(e) Symmetry properties: To discuss the symmetry properties it is convenient to separate all arguments of a $12 j$ (I) symbol into two groups: $\left(b_{12} b_{23} b_{34} b_{41}\right)$ and $\left(a_{1} a_{2} a_{3} a_{4} c_{1} c_{2} c_{3} c_{4}\right)$. Cyclic permutations of the arguments or inversion of argument order simultaneously in both groups leave the $12 j(\mathrm{I})$ symbol unchanged. These\\
+\end{array}\right\} \label{chap10:eq:141}
+\end{gather}
+\subsubsection{Symmetry properties}
+To discuss the symmetry properties it is convenient to separate all arguments of a $12 j$ (I) symbol into two groups: $\left(b_{12} b_{23} b_{34} b_{41}\right)$ and $\left(a_{1} a_{2} a_{3} a_{4} c_{1} c_{2} c_{3} c_{4}\right)$. Cyclic permutations of the arguments or inversion of argument order simultaneously in both groups leave the $12 j(\mathrm{I})$ symbol unchanged. These\\
 symmetry properties relate 16 formally different $12 j(1)$ symbols
-
-
-\begin{align*}
+\begin{align}
 & \left\{\begin{array}{cccc}
 a_{1} & a_{2} & a_{3} & a_{4} \\
 b_{12} & b_{23} & b_{34} & b_{41} \\
@@ -2475,7 +2131,7 @@ c_{1} & c_{2} & c_{3} & c_{4}
 a_{2} & a_{3} & a_{4} & c_{1} \\
 b_{23} & b_{34} & b_{41} & b_{12} \\
 c_{2} & c_{3} & c_{4} & a_{1}
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 = & \left\{\begin{array}{llll}
 a_{3} & a_{4} & c_{1} & c_{2} \\
 b_{34} & b_{41} & b_{12} & b_{23} \\
@@ -2484,7 +2140,7 @@ c_{3} & c_{4} & a_{1} & a_{2}
 a_{4} & c_{1} & c_{2} & c_{3} \\
 b_{41} & b_{12} & b_{23} & b_{34} \\
 c_{4} & a_{1} & a_{2} & a_{3}
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 = & \left\{\begin{array}{llll}
 a_{4} & a_{3} & a_{2} & a_{1} \\
 b_{34} & b_{23} & b_{12} & b_{41} \\
@@ -2493,7 +2149,7 @@ c_{4} & c_{3} & c_{2} & c_{1}
 c_{1} & a_{4} & a_{3} & a_{2} \\
 b_{41} & b_{34} & b_{23} & b_{12} \\
 a_{1} & c_{4} & c_{3} & c_{2}
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 = & \left\{\begin{array}{llll}
 c_{2} & c_{1} & a_{4} & a_{3} \\
 b_{12} & b_{41} & b_{34} & b_{23} \\
@@ -2502,7 +2158,7 @@ a_{2} & a_{1} & c_{4} & c_{3}
 c_{3} & c_{2} & c_{1} & a_{4} \\
 b_{23} & b_{12} & b_{41} & b_{34} \\
 a_{3} & a_{2} & a_{1} & c_{4}
-\end{array}\right\}  \tag{8}\\
+\end{array}\right\}  \label{chap10:eq:142}\\
 = & \left\{\begin{array}{llll}
 c_{1} & c_{2} & c_{3} & c_{4} \\
 b_{12} & b_{23} & b_{34} & b_{41} \\
@@ -2511,7 +2167,7 @@ a_{1} & a_{2} & a_{3} & a_{4}
 c_{2} & c_{3} & c_{4} & a_{1} \\
 b_{23} & b_{34} & b_{41} & b_{12} \\
 a_{2} & a_{3} & a_{4} & c_{1}
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 = & \left\{\begin{array}{llll}
 c_{3} & c_{4} & a_{1} & a_{2} \\
 b_{34} & b_{41} & b_{12} & b_{23} \\
@@ -2520,7 +2176,7 @@ a_{3} & a_{4} & c_{1} & c_{2}
 c_{4} & a_{1} & a_{2} & a_{3} \\
 b_{41} & b_{12} & b_{23} & b_{34} \\
 a_{4} & c_{1} & c_{2} & c_{3}
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 = & \left\{\begin{array}{llll}
 c_{4} & c_{3} & c_{2} & c_{1} \\
 b_{34} & b_{23} & b_{12} & b_{41} \\
@@ -2529,7 +2185,7 @@ a_{4} & a_{3} & a_{2} & a_{1}
 a_{1} & c_{4} & c_{3} & c_{2} \\
 b_{41} & b_{34} & b_{23} & b_{12} \\
 c_{1} & a_{4} & a_{3} & a_{2}
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 = & \left\{\begin{array}{llll}
 a_{2} & a_{1} & c_{4} & c_{3} \\
 b_{12} & b_{41} & b_{34} & b_{23} \\
@@ -2538,14 +2194,11 @@ c_{2} & c_{1} & a_{4} & a_{3}
 a_{3} & a_{2} & a_{1} & c_{4} \\
 b_{23} & b_{12} & b_{41} & b_{34} \\
 c_{3} & c_{2} & c_{1} & a_{4}
-\end{array}\right\} .
-\end{align*}
-
-
-(f) Recursion relations: These relations are very useful for the evaluation of the $12 j(\mathrm{I})$ symbols. Some of them may be derived from the properties of the $15 j$ symbols. For example,
-
-
-\begin{align*}
+\end{array}\right\} . \notag
+\end{align}
+\subsubsection{Recursion relations}
+These relations are very useful for the evaluation of the $12 j(\mathrm{I})$ symbols. Some of them may be derived from the properties of the $15 j$ symbols. For example,
+\begin{align}
 & (-1)^{a_{1}-a_{4}-c_{1}+c_{4}^{\prime}} \sum_{b_{41}^{\prime}}\left(2 b_{41}^{\prime}+1\right)\left\{\begin{array}{lll}
 c_{1} & a_{4} & b_{41}^{\prime} \\
 \lambda & b_{41} & a_{4}^{\prime}
@@ -2556,7 +2209,7 @@ a_{1} & c_{4}^{\prime} & b_{41}^{\prime} \\
 a_{1} & a_{2} & a_{3} & a_{4} \\
 b_{12} & b_{23} & b_{34} & b_{41}^{\prime} \\
 c_{1} & c_{2} & c_{3} & c_{4}^{\prime}
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 = & (-1)^{a_{3}+a_{4}^{\prime}-c_{3}-c_{4}} \sum_{b_{34}^{\prime}}\left(2 b_{34}^{\prime}+1\right)\left\{\begin{array}{lll}
 a_{3} & a_{4}^{\prime} & b_{34}^{\prime} \\
 \lambda & b_{34} & a_{4}
@@ -2567,46 +2220,38 @@ c_{3} & c_{4} & b_{34}^{\prime} \\
 a_{1} & a_{2} & a_{3} & a_{4}^{\prime} \\
 b_{12} & b_{23} & b_{34}^{\prime} & b_{41} \\
 c_{1} & c_{2} & c_{3} & c_{4}
-\end{array}\right\} . \tag{9}
-\end{align*}
-
-
+\end{array}\right\} . \label{chap10:eq:143}
+\end{align}
 Here $\lambda$ is any integer or half-integer non-negative number ( $\lambda=\frac{1}{2}, 1, \frac{3}{2}, 2$, etc.). Substituting explicit forms of the $6 j$ symbols for a given $\lambda$, we may obtain a recursion equation which relates the $12 j(\mathrm{I})$ symbols with arguments $c_{4}^{\prime}=c_{4} \pm \lambda, b_{41}^{\prime}=b_{41} \pm \lambda, a_{4}^{\prime}=a_{4} \pm \lambda, b_{34}^{\prime}=b_{34} \pm \lambda$. For example, when $\lambda=\frac{1}{2}, a_{4}^{\prime}=a_{4}-\frac{1}{2}$, and\\
 $c_{4}^{\prime}=c_{4}+\frac{1}{2}$ we have
-
-
-\begin{align*}
-& \left(2 b_{34}+1\right)\left\{\left[\left(-a_{1}+c_{4}+b_{41}+1\right)\left(a_{1}+c_{4}+b_{41}+2\right)\left(a_{4}-c_{1}+b_{41}+\frac{1}{2}\right)\left(a_{4}+c_{1}+b_{41}+\frac{3}{2}\right)\right]^{\frac{1}{2}}\right. \\
+\begin{align}
+& \left(2 b_{34}+1\right)\left\{\left[\left(-a_{1}+c_{4}+b_{41}+1\right)\left(a_{1}+c_{4}+b_{41}+2\right)\left(a_{4}-c_{1}+b_{41}+\frac{1}{2}\right)\left(a_{4}+c_{1}+b_{41}+\frac{3}{2}\right)\right]^{\frac{1}{2}}\right.  \notag\\
 & \times\left\{\begin{array}{llll}
 a_{1} & a_{2} & a_{3} & a_{4} \\
 b_{12} & b_{23} & b_{34} & b_{41}+\frac{1}{2} \\
 c_{1} & c_{2} & c_{3} & c_{4}+\frac{1}{2}
-\end{array}\right\} \\
-& +\left[\left(a_{1}-c_{4}+b_{41}\right)\left(a_{1}+c_{4}-b_{41}+1\right)\left(-a_{4}+c_{1}+b_{41}+\frac{1}{2}\right)\left(a_{4}+c_{1}-b_{41}+\frac{1}{2}\right)\right]^{\frac{1}{2}} \\
+\end{array}\right\}  \notag\\
+& +\left[\left(a_{1}-c_{4}+b_{41}\right)\left(a_{1}+c_{4}-b_{41}+1\right)\left(-a_{4}+c_{1}+b_{41}+\frac{1}{2}\right)\left(a_{4}+c_{1}-b_{41}+\frac{1}{2}\right)\right]^{\frac{1}{2}}  \notag\\
 & \left.\times\left\{\begin{array}{llll}
 a_{1} & a_{2} & a_{3} & a_{4} \\
 b_{12} & b_{23} & b_{34} \\
 c_{1} & c_{2} & c_{3} & c_{4}+\frac{1}{2}
-\end{array} b_{41}-\frac{1}{2}\right\}\right\} \\
-& =\left(2 b_{41}+1\right)\left\{\left[\left(a_{3}-a_{4}+b_{34}+1\right)\left(a_{3}+a_{4}-b_{34}\right)\left(c_{3}-c_{4}+b_{34}+\frac{1}{2}\right)\left(c_{3}+c_{4}-b_{34}+\frac{1}{2}\right)\right]^{\frac{1}{2}}\right. \\
+\end{array} b_{41}-\frac{1}{2}\right\}\right\}  \notag\\
+& =\left(2 b_{41}+1\right)\left\{\left[\left(a_{3}-a_{4}+b_{34}+1\right)\left(a_{3}+a_{4}-b_{34}\right)\left(c_{3}-c_{4}+b_{34}+\frac{1}{2}\right)\left(c_{3}+c_{4}-b_{34}+\frac{1}{2}\right)\right]^{\frac{1}{2}}\right.  \notag\\
 & \times\left\{\begin{array}{llll}
 a_{1} & a_{2} & a_{3} & a_{4}-\frac{1}{2} \\
 b_{12} & b_{23} & b_{34}+\frac{1}{2} & b_{41} \\
 c_{1} & c_{2} & c_{3} & c_{4}
-\end{array}\right\} \\
-& +\left[\left(-a_{3}+a_{4}+b_{34}\right)\left(a_{3}+a_{4}+b_{34}+1\right)\left(-c_{3}+c_{4}+b_{34}+\frac{1}{2}\right)\left(c_{3}+c_{4}+b_{94}+\frac{3}{2}\right)\right]^{\frac{1}{2}} \\
+\end{array}\right\}  \notag\\
+& +\left[\left(-a_{3}+a_{4}+b_{34}\right)\left(a_{3}+a_{4}+b_{34}+1\right)\left(-c_{3}+c_{4}+b_{34}+\frac{1}{2}\right)\left(c_{3}+c_{4}+b_{94}+\frac{3}{2}\right)\right]^{\frac{1}{2}}  \notag\\
 & \left.\times\left\{\begin{array}{llll}
 a_{1} & a_{2} & a_{3} & a_{4}-\frac{1}{2} \\
 b_{12} & b_{23} & b_{34}-\frac{1}{2} & \\
 c_{1} & c_{2} & c_{3} & c_{4}
-\end{array}\right\}\right\} . \tag{10}
-\end{align*}
-
-
+\end{array}\right\}\right\} . \label{chap10:eq:144}
+\end{align}
 Another recursion relation is written as
-
-
-\begin{align*}
+\begin{align}
 & (-1)^{a_{1}+b_{41}^{\prime}-c_{3}-b_{34}} \sum_{c_{4}^{\prime}}\left(2 c_{4}^{\prime}+1\right)\left\{\begin{array}{ccc}
 a_{1} & c_{4}^{\prime} & b_{41}^{\prime} \\
 \lambda & b_{41} & c_{4}
@@ -2617,7 +2262,7 @@ c_{3} & b_{34} & c_{4}^{\prime} \\
 a_{1} & a_{2} & a_{3} & a_{4} \\
 b_{12} & b_{23} & b_{34} & b_{41}^{\prime} \\
 c_{1} & c_{2} & c_{3} & c_{4}^{\prime}
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 = & (-1)^{c_{1}+b_{41}-a_{3}-b_{34}^{\prime}} \sum_{a_{4}^{\prime}}\left(2 a_{4}^{\prime}+1\right)\left\{\begin{array}{ccc}
 c_{1} & a_{4} & b_{41}^{\prime} \\
 \lambda & b_{41} & a_{4}^{\prime}
@@ -2628,56 +2273,41 @@ a_{3} & b_{34} & a_{4} \\
 a_{1} & a_{2} & a_{3} & a_{4}^{\prime} \\
 b_{12} & b_{23} & b_{34}^{\prime} & b_{41} \\
 c_{1} & c_{2} & c_{3} & c_{4}
-\end{array}\right\} . \tag{11}
-\end{align*}
+\end{array}\right\} . \label{chap10:eq:145}
+\end{align}
+\subsubsection{Explicit forms of the $12 j(1)$ symbols at some special relations between arguments}
+may be obtained from Eqs. \eqref{chap10:eq:140} and \eqref{chap10:eq:141}. Here we give some of such forms.
 
-
-(g) Explicit forms of the $12 j(1)$ symbols at some special relations between arguments may be obtained from Eqs. (6) and (7). Here we give some of such forms.
-
-If some argument in any tetrad is equal to the sum of three other arguments from the same tetrad, the sum in Eq. (7) contains only one term. For example,
-
-
-\begin{align*}
+If some argument in any tetrad is equal to the sum of three other arguments from the same tetrad, the sum in Eq. \eqref{chap10:eq:141} contains only one term. For example,
+\begin{align}
 & \left\{\begin{array}{lll}
 a_{1} & a_{2} & a_{3} \\
 b_{12} & b_{23} & a_{4} \\
 c_{1} & b_{2} & a_{1}+a_{3}+c_{1}
-\end{array} b_{4} b_{41}\right\}=(-1)^{a_{1}+b_{41}-c_{4}+c_{1}+b_{12}-c_{2}} \frac{\left(2 a_{1}\right)!\left(2 a_{3}\right)!\left(2 c_{1}\right)!}{\left(2 a_{1}+2 a_{3}+2 c_{1}+1\right)!} \\
-& \times \frac{D\left(a_{1} a_{2} b_{12}\right) D\left(c_{1} c_{2} b_{12}\right) D\left(a_{3} a_{2} b_{23}\right) D\left(a_{3} a_{4} b_{34}\right) D\left(a_{1} c_{4} b_{41}\right) D\left(c_{1} a_{4} b_{41}\right)}{D\left(a_{1}+a_{3}+c_{1} c_{2} b_{23}\right) D\left(a_{1}+a_{3}+c_{1} c_{4} b_{34}\right)} . \tag{12}
-\end{align*}
-
-
+\end{array} b_{4} b_{41}\right\}=(-1)^{a_{1}+b_{41}-c_{4}+c_{1}+b_{12}-c_{2}} \frac{\left(2 a_{1}\right)!\left(2 a_{3}\right)!\left(2 c_{1}\right)!}{\left(2 a_{1}+2 a_{3}+2 c_{1}+1\right)!}  \notag\\
+& \times \frac{D\left(a_{1} a_{2} b_{12}\right) D\left(c_{1} c_{2} b_{12}\right) D\left(a_{3} a_{2} b_{23}\right) D\left(a_{3} a_{4} b_{34}\right) D\left(a_{1} c_{4} b_{41}\right) D\left(c_{1} a_{4} b_{41}\right)}{D\left(a_{1}+a_{3}+c_{1} c_{2} b_{23}\right) D\left(a_{1}+a_{3}+c_{1} c_{4} b_{34}\right)} . \label{chap10:eq:146}
+\end{align}
 The quantity $D(a b c)$ is defined by
-
-
-\begin{equation*}
-D(a b c)=\left[\frac{(-a+b+c)!}{(a+b+c+1)!(a-b+c)!(a+b-c)!}\right]^{\frac{1}{2}} \tag{13}
-\end{equation*}
-
-
-Equation (7) for the $12 j(\mathrm{I})$ symbol may also be reduced to one term. For example,
-
-
-\begin{gather*}
+\begin{equation}
+D(a b c)=\left[\frac{(-a+b+c)!}{(a+b+c+1)!(a-b+c)!(a+b-c)!}\right]^{\frac{1}{2}} \label{chap10:eq:147}
+\end{equation}
+Equation \eqref{chap10:eq:141} for the $12 j(\mathrm{I})$ symbol may also be reduced to one term. For example,
+\begin{gather}
 \left\{\begin{array}{ccc}
 a_{1} & a_{2} & a_{3} \\
 b_{12} & b_{23} & a_{4} \\
 c_{1} & b_{34} & b_{41} \\
 c_{2}+b_{34}+b_{41} & c_{4}
-\end{array}\right\}=\left[\frac{\left(2 b_{34}\right)!\left(2 b_{41}\right)!}{\left(2 b_{34}+2 b_{41}\right)!\left(2 a_{1}+2 b_{41}+1\right)}\right]^{\frac{1}{2}} \\
+\end{array}\right\}=\left[\frac{\left(2 b_{34}\right)!\left(2 b_{41}\right)!}{\left(2 b_{34}+2 b_{41}\right)!\left(2 a_{1}+2 b_{41}+1\right)}\right]^{\frac{1}{2}}  \notag\\
 \times \frac{D\left(b_{34} a_{3} a_{4}\right) D\left(b_{41} c_{1} a_{4}\right)}{D\left(b_{34}+b_{41} c_{1} a_{3}\right)}\left\{\begin{array}{ccc}
 b_{23} & a_{2} & a_{3} \\
 c_{2} & b_{12} & c_{1} \\
 a_{1}+b_{34}+b_{41} & a_{1} & b_{34}+b_{41}
-\end{array}\right\} \delta_{c_{4} a_{1}+b_{41}} \tag{14}
-\end{gather*}
-
-
-Similar expressions may be obtained from Eq. (14) using the symmetries of the $12 j(\mathrm{I})$ symbols (see Eqs. (8)).\\
+\end{array}\right\} \delta_{c_{4} a_{1}+b_{41}} \label{chap10:eq:148}
+\end{gather}
+Similar expressions may be obtained from Eq. \eqref{chap10:eq:148} using the symmetries of the $12 j(\mathrm{I})$ symbols (see Eqs. \eqref{chap10:eq:142}).\\
 If arguments $a_{i}$ and $c_{i}$ satisfy the equalities $a_{i}=b_{i k} \pm a_{k}, c_{i}=b_{i k} \pm c_{k},(k=i \pm 1)$ one obtains
-
-
-\begin{gather*}
+\begin{gather}
 \left\{\begin{array}{cccc}
 b_{12}+a_{2} & a_{2} & a_{3} & a_{4} \\
 b_{12} & b_{23} & b_{34} & b_{41} \\
@@ -2685,15 +2315,12 @@ b_{12}-c_{2} & c_{2} & c_{3} & c_{4}
 \end{array}\right\}=\frac{(-1)^{2 c_{3}+b_{23}-b_{34}-a_{2}-a_{4}}}{2 a_{2}+2 c_{2}+1}\left\{\begin{array}{ccc}
 a_{3} & c_{3} & a_{2}+c_{2} \\
 c_{4} & a_{4} & b_{34}
-\end{array}\right\} \\
-\times\left[\frac{\left(2 a_{2}\right)!\left(2 c_{2}\right)!\left(2 b_{12}-2 c_{2}\right)!}{\left(2 b_{12}+1\right)\left(2 b_{12}+2 a_{2}+1\right)!}\right]^{\frac{1}{2}} \frac{D\left(a_{2} a_{3} b_{23}\right) D\left(c_{2} c_{3} b_{23}\right) D\left(b_{12}-c_{2} b_{41} a_{4}\right) D\left(a_{2}+c_{2} c_{4} a_{4}\right)}{D\left(a_{2}+c_{2} c_{3} a_{3}\right) D\left(b_{12}+a_{2} c_{4} b_{41}\right)} \tag{15}
-\end{gather*}
-
-
-(h) Explicit forms of the $12 j(\mathrm{I})$ symbols for special values of arguments. If one argument is equal to zero, the $12 j(\mathrm{I})$ symbol is reduced to a $9 j$ symbol or to a product of two $6 j$ symbols:
-
-
-\begin{gather*}
+\end{array}\right\}  \notag\\
+\times\left[\frac{\left(2 a_{2}\right)!\left(2 c_{2}\right)!\left(2 b_{12}-2 c_{2}\right)!}{\left(2 b_{12}+1\right)\left(2 b_{12}+2 a_{2}+1\right)!}\right]^{\frac{1}{2}} \frac{D\left(a_{2} a_{3} b_{23}\right) D\left(c_{2} c_{3} b_{23}\right) D\left(b_{12}-c_{2} b_{41} a_{4}\right) D\left(a_{2}+c_{2} c_{4} a_{4}\right)}{D\left(a_{2}+c_{2} c_{3} a_{3}\right) D\left(b_{12}+a_{2} c_{4} b_{41}\right)} \label{chap10:eq:149}
+\end{gather}
+\subsubsection{Explicit forms of the $12 j(\mathrm{I})$ symbols for special values of arguments}
+If one argument is equal to zero, the $12 j(\mathrm{I})$ symbol is reduced to a $9 j$ symbol or to a product of two $6 j$ symbols:
+\begin{gather}
 \left\{\begin{array}{cccc}
 a_{1} & a_{2} & a_{3} & a_{4} \\
 b_{12} & b_{23} & b_{34} & 0 \\
@@ -2702,45 +2329,37 @@ c_{1} & c_{2} & c_{3} & c_{4}
 a_{1} & b_{12} & a_{2} \\
 c_{3} & c_{2} & b_{23} \\
 b_{34} & c_{1} & a_{3}
-\end{array}\right\},  \tag{16}\\
+\end{array}\right\},  \label{chap10:eq:150}\\
 \left\{\begin{array}{cccc}
 a_{1} & a_{2} & a_{3} & a_{4} \\
 b_{12} & b_{23} & b_{34} & b_{41} \\
 c_{1} & c_{2} & c_{3} & 0
-\end{array}\right\}=(-1)^{b_{12}+b_{23}+b_{34}+b_{41}-a_{2}-c_{2}} \frac{1}{\sqrt{\left(2 b_{41}+1\right)\left(2 b_{34}+1\right)}} \\
+\end{array}\right\}=(-1)^{b_{12}+b_{23}+b_{34}+b_{41}-a_{2}-c_{2}} \frac{1}{\sqrt{\left(2 b_{41}+1\right)\left(2 b_{34}+1\right)}}  \notag\\
 \times\left\{\begin{array}{lll}
 b_{41} & a_{2} & b_{12} \\
 c_{2} & c_{1} & a_{4}
 \end{array}\right\}\left\{\begin{array}{ccc}
 a_{2} & a_{3} & b_{23} \\
 b_{34} & c_{2} & a_{4}
-\end{array}\right\} . \tag{17}
-\end{gather*}
-
-
+\end{array}\right\} . \label{chap10:eq:151}
+\end{gather}
 Simple expressions for the $12 j(1)$ symbols may also be obtained, if two of four arguments from one tetrad are equal to $\frac{1}{2}$, i.e., in the cases: (1) $a_{i}=c_{i}=\frac{1}{2}(i=1,2,3,4)$; (2) $a_{i}=a_{i \pm 2}=\frac{1}{2}$; (3) $c_{i}=c_{i \pm 2}=\frac{1}{2}$; (4) $c_{i}=a_{i \pm 2}=\frac{1}{2}(i \pm 2 \leq 4, i-2 \geq 1)$. For example, when $a_{4}=c_{4}=\frac{1}{2}$, one has
-
-
-\begin{gather*}
+\begin{gather}
 \left\{\begin{array}{cccc}
 a_{1} & a_{2} & a_{3} & \frac{1}{2} \\
 b_{12} & b_{23} & b_{34} & b_{41} \\
 c_{1} & c_{2} & c_{3} & \frac{1}{2}
-\end{array}\right\}=\frac{\delta_{a_{1} c_{1}} \delta_{a_{2} c_{2}} \delta_{a_{3} c_{3}}}{2\left(2 a_{1}+1\right)\left(2 a_{2}+1\right)\left(2 a_{3}+1\right)} \\
+\end{array}\right\}=\frac{\delta_{a_{1} c_{1}} \delta_{a_{2} c_{2}} \delta_{a_{3} c_{3}}}{2\left(2 a_{1}+1\right)\left(2 a_{2}+1\right)\left(2 a_{3}+1\right)}  \notag\\
 +(-1)^{c} \frac{D\left(\frac{1}{2} a_{1} b_{41}\right) D\left(\frac{1}{2} c_{1} b_{41}\right) D\left(\frac{1}{2} a_{3} b_{34}\right) D\left(\frac{1}{2} c_{3} b_{34}\right)}{2 D\left(1 a_{1} c_{1}\right) D\left(1 a_{3} c_{3}\right)}\left\{\begin{array}{ccc}
 a_{1} & a_{2} & b_{12} \\
 c_{2} & c_{1} & 1
 \end{array}\right\}\left\{\begin{array}{ccc}
 a_{2} & a_{3} & b_{23} \\
 c_{3} & c_{2} & 1
-\end{array}\right\}, \tag{18}
-\end{gather*}
-
-
+\end{array}\right\}, \label{chap10:eq:152}
+\end{gather}
 where $\varepsilon=a_{2}+c_{2}+b_{12}+b_{23}+b_{34}+b_{41}$. If $a_{1}=c_{3}=\frac{1}{2}$, then
-
-
-\begin{gather*}
+\begin{gather}
 \left\{\begin{array}{cccc}
 \frac{1}{2} & a_{2} & a_{3} & a_{4} \\
 b_{12} & b_{23} & b_{34} & b_{41} \\
@@ -2748,12 +2367,12 @@ c_{1} & c_{2} & \frac{1}{2} & c_{4}
 \end{array}\right\}=(-1)^{a_{2}+c_{2}+1} \frac{\delta_{a_{3} c_{1}}}{2\left(2 a_{3}+1\right)}\left\{\begin{array}{ccc}
 a_{2} & a_{3} & b_{23} \\
 c_{2} & \frac{1}{2} & b_{12}
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 \times\left\{\frac{(-1)^{a_{4}-c_{4}}}{2 b_{34}+1} \delta_{b_{34} b_{41}}+\frac{(-1)^{b_{34}+b_{41}-g+1}}{2 D^{2}\left(\frac{1}{2} a_{3} g\right)}\left[\frac{\left(2 a_{3}-1\right)!}{\left(2 a_{3}+2\right)!}\right]^{\frac{1}{2}} \frac{D\left(\frac{1}{2} b_{41} c_{4}\right) D\left(\frac{1}{2} b_{34} c_{4}\right)}{D\left(1 b_{34} b_{41}\right)}\left\{\begin{array}{ccc}
 b_{34} & b_{41} & 1 \\
 a_{3} & a_{3} & a_{4}
-\end{array}\right\}\right\} \\
-+(-1)^{b_{34}+b_{41}+2 g+1} \frac{D\left(\frac{1}{2} b_{41} c_{4}\right) D\left(\frac{1}{2} b_{34} c_{4}\right) D\left(1 a_{3} c_{1}\right)}{D\left(\frac{1}{2} c_{1} g\right) D\left(\frac{1}{2} a_{3} g\right) D\left(1 b_{34} b_{41}\right)} \\
+\end{array}\right\}\right\}  \notag\\
++(-1)^{b_{34}+b_{41}+2 g+1} \frac{D\left(\frac{1}{2} b_{41} c_{4}\right) D\left(\frac{1}{2} b_{34} c_{4}\right) D\left(1 a_{3} c_{1}\right)}{D\left(\frac{1}{2} c_{1} g\right) D\left(\frac{1}{2} a_{3} g\right) D\left(1 b_{34} b_{41}\right)}  \notag\\
 \times\left\{\begin{array}{ccc}
 b_{23} & a_{2} & a_{3} \\
 \frac{1}{2} & g & b_{12}
@@ -2763,14 +2382,10 @@ b_{12} & c_{2} & c_{1} \\
 \end{array}\right\}\left\{\begin{array}{ccc}
 b_{34} & b_{41} & 1 \\
 c_{1} & a_{3} & a_{4}
-\end{array}\right\}, \tag{19}
-\end{gather*}
-
-
-where $g$ is an arbitrary parameter which satisfies the triangular conditions for appropriate triads of the $6 j$ symbols in Eq. (19). The expressions for the $12 j$ (I) symbols are more simplified in the cases: (i) $a_{i}=a_{i \pm 2}=\frac{1}{2}$ and $c_{i}=c_{i \pm 2}$; (ii) $c_{i}=c_{i \pm 2}=\frac{1}{2}$ and $a_{i}=a_{i \pm 2}$; (iii) $a_{i}=c_{i \pm 2}=\frac{1}{2}$ and $c_{i}=a_{i \pm 2}$. In addition, if $a_{3}+b_{12}+c_{2}$ is even, then
-
-
-\begin{align*}
+\end{array}\right\}, \label{chap10:eq:153}
+\end{gather}
+where $g$ is an arbitrary parameter which satisfies the triangular conditions for appropriate triads of the $6 j$ symbols in Eq. \eqref{chap10:eq:153}. The expressions for the $12 j$ (I) symbols are more simplified in the cases: (i) $a_{i}=a_{i \pm 2}=\frac{1}{2}$ and $c_{i}=c_{i \pm 2}$; (ii) $c_{i}=c_{i \pm 2}=\frac{1}{2}$ and $a_{i}=a_{i \pm 2}$; (iii) $a_{i}=c_{i \pm 2}=\frac{1}{2}$ and $c_{i}=a_{i \pm 2}$. In addition, if $a_{3}+b_{12}+c_{2}$ is even, then
+\begin{align}
 & \left\{\begin{array}{cccc}
 \frac{1}{2} & a_{2} & a_{3} & a_{4} \\
 b_{12} & b_{23} & b_{34} & b_{41} \\
@@ -2778,7 +2393,7 @@ a_{3} & c_{2} & \frac{1}{2} & c_{4}
 \end{array}\right\}=(-1)^{c_{4}-a_{4}+a_{2}+c_{2}+1} \frac{\delta_{b_{34} b_{41}}}{2\left(2 a_{3}+1\right)\left(2 b_{34}+1\right)}\left\{\begin{array}{ccc}
 b_{23} & a_{2} & a_{3} \\
 b_{12} & c_{2} & \frac{1}{2}
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 & +\frac{(-1)^{b_{34}+b_{41}+2 a_{3}}}{2 \sqrt{\left(2 a_{3}+1\right)\left(2 c_{2}+1\right)\left(2 b_{12}+1\right)}} \frac{D\left(\frac{1}{2} b_{34} c_{4}\right) D\left(\frac{1}{2} b_{41} c_{4}\right)}{D\left(1 b_{34} b_{41}\right)}\left\{\begin{array}{ccc}
 b_{34} & b_{41} & 1 \\
 a_{3} & a_{3} & a_{4}
@@ -2788,42 +2403,36 @@ a_{2} & a_{3} & b_{23} \\
 \end{array}\right)}{\left(\begin{array}{ccc}
 a_{3} & c_{2} & b_{12} \\
 0 & 0 & 0
-\end{array}\right)} \tag{20}
-\end{align*}
-
-
+\end{array}\right)} \label{chap10:eq:154}
+\end{align}
 and if $a_{3}+b_{12}+c_{2}$ is odd, one has
-
-
-\begin{gather*}
+\begin{gather}
 \left\{\begin{array}{ccccc}
 \frac{1}{2} & a_{2} & a_{3} & a_{4} \\
 a_{3}+1 & b_{2} & \frac{1}{2} & c_{4}
-\end{array}\right\}=(-1)^{a_{2}+a_{3}-a_{4}+b_{12}+b_{41}+\frac{2}{2}} \frac{D\left(\frac{1}{2} b_{34} c_{4}\right) D\left(\frac{1}{2} b_{41} c_{4}\right) D\left(a_{3} a_{4} b_{34}\right)}{D\left(a_{3}+1 a_{4} b_{41}\right)} \\
+\end{array}\right\}=(-1)^{a_{2}+a_{3}-a_{4}+b_{12}+b_{41}+\frac{2}{2}} \frac{D\left(\frac{1}{2} b_{34} c_{4}\right) D\left(\frac{1}{2} b_{41} c_{4}\right) D\left(a_{3} a_{4} b_{34}\right)}{D\left(a_{3}+1 a_{4} b_{41}\right)}  \notag\\
 \times \frac{\left(c_{2}-b_{23}\right)\left(2 b_{23}+1\right)+\left(b_{12}-a_{2}\right)\left(2 a_{2}+1\right)+a_{3}+1}{\left(2 a_{3}+1\right)\left(2 a_{3}+2\right)\left(2 a_{3}+3\right) \sqrt{2\left(2 c_{2}+1\right)\left(2 b_{12}+1\right)}} \frac{\left(\begin{array}{ccc}
 a_{2} & a_{3} & b_{23} \\
 -\frac{1}{2} & 0 & \frac{1}{2}
 \end{array}\right)}{\left(\begin{array}{ccc}
 a_{3}+1 & c_{2} & b_{12} \\
 0 & 0 & 0
-\end{array}\right)}  \tag{21}\\
+\end{array}\right)}  \label{chap10:eq:155}\\
 \left\{\begin{array}{cccc}
 \frac{1}{2} & a_{2} & a_{3} & a_{4} \\
 a_{3}-1 & b_{2} & \frac{1}{2} & b_{4}
-\end{array}\right\}=(-1)^{a_{2}+a_{3}-a_{4}+b_{12}+b_{41}+\frac{3}{2}} \frac{D\left(\frac{1}{2} b_{34} c_{4}\right) D\left(\frac{1}{2} b_{41} c_{4}\right) D\left(a_{3}-1 a_{4} b_{34}\right)}{D\left(a_{3} a_{4} b_{34}\right)} \\
+\end{array}\right\}=(-1)^{a_{2}+a_{3}-a_{4}+b_{12}+b_{41}+\frac{3}{2}} \frac{D\left(\frac{1}{2} b_{34} c_{4}\right) D\left(\frac{1}{2} b_{41} c_{4}\right) D\left(a_{3}-1 a_{4} b_{34}\right)}{D\left(a_{3} a_{4} b_{34}\right)}  \notag\\
 \times \frac{\left(c_{2}-b_{23}\right)\left(2 b_{23}+1\right)+\left(b_{12}-a_{2}\right)\left(2 a_{2}+1\right)-a_{3}}{\left(2 a_{3}-1\right)\left(2 a_{3}\right)\left(2 a_{3}+1\right) \sqrt{2\left(2 c_{2}+1\right)\left(2 b_{12}+1\right)}} \frac{\left(\begin{array}{ccc}
 a_{2} & a_{3} & b_{23} \\
 -\frac{1}{2} & 0 & \frac{1}{2}
 \end{array}\right)}{\left(\begin{array}{ccc}
 a_{3}-1 & b_{12} & c_{2} \\
 0 & 0 & 0
-\end{array}\right)} \tag{22}
-\end{gather*}
-
-
-(i) Relations between the $12 j(1)$ symbols introduced in this book and analogous functions of other authors are given by
-
-$$
+\end{array}\right)} \label{chap10:eq:156}
+\end{gather}
+\subsubsection{Relations between the $12 j(1)$ symbols introduced in this book and analogous functions of other authors}
+are given by
+\[
 \begin{aligned}
 \left\{\begin{array}{cccc}
 a_{1} & a_{2} & a_{3} & a_{4} \\
@@ -2842,14 +2451,14 @@ c_{1} & c_{2} & c_{3} & c_{4}
 \end{array}\right\} 1\right\} \\
 & (\text { Elbaz and Castel [17]). }
 \end{aligned}
-$$
+\]
+\subsubsection{Tables of numerical values of the $12 j$ (I) symbols}
+are presented in Ref. [139]. These tables contain the 12j(I) symbols whose arguments are less than or equal 2 . Numerical values are given in decimals.
 
-(j) Tables of numerical values of the $12 j$ (I) symbols are presented in Ref. [139]. These tables contain the 12j(I) symbols whose arguments are less than or equal 2 . Numerical values are given in decimals.
-
-\subsection*{10.13.3. $12 j$ Symbols of the Second Kind (12 $j$ (II) Symbols)}
-(a) Instead of the $12 j$ (II) symbols determined by Eq. (2), we shall consider the somewhat more symmetric $12 j$ (II) symbols introduced in Ref. [141]. The latter 12j(II)-symbols may be represented by invariant sums of products of eight $3 j m$ symbols:
-
-\[
+\subsection{$12 j$ Symbols of the Second Kind (12 $j$ (II) Symbols)}
+\subsubsection{Instead of the $12 j$ (II) symbols determined by Eq. \protect\eqref{chap10:eq:136}, we shall consider the somewhat more symmetric $12 j$ (II) symbols introduced in Ref. [141]}
+The latter 12j(II)-symbols may be represented by invariant sums of products of eight $3 j m$ symbols:
+\begin{equation}
 \begin{array}{r}
 \left\{\begin{array}{cccc}
 - & a_{2} & a_{3} & a_{4} \\
@@ -2881,19 +2490,16 @@ d_{1} & d_{2} & d_{3} \\
 \end{array}\right)\left(\begin{array}{lll}
 d_{3} & b_{3} & a_{3} \\
 \delta_{3} & \beta_{3} & \alpha_{3}
-\end{array}\right) \tag{23}
+\end{array}\right) \label{chap10:eq:157}
 \end{array}
-\]
-
-Equation (23) unambiguously fixes the absolute values and phases of the $12 j$ (II) symbols. These symbols are real.\\
-(b) Arguments of the $12 j$ (II) symbols satisfy the following conditions.\\
+\end{equation}
+Equation \eqref{chap10:eq:157} unambiguously fixes the absolute values and phases of the $12 j$ (II) symbols. These symbols are real.\\
+\subsubsection{Arguments of the $12 j$ (II) symbols satisfy the following conditions}
 (i) All arguments are non-negative integers or half-integers.\\
 (ii) A $12 j$ (II) symbol vanishes unless the triangular conditions (see Sec.8.1.1) are fulfilled for the triads $\left(a_{2} a_{3} a_{4}\right),\left(b_{1} b_{3} b_{4}\right),\left(c_{1} c_{2} c_{4}\right),\left(d_{1} d_{2} d_{3}\right),\left(b_{1} c_{1} d_{1}\right),\left(a_{2} c_{2} d_{2}\right),\left(a_{3} b_{3} d_{3}\right)$ and $\left(a_{4} b_{4} c_{4}\right)$.\\
 (iii) A $12 j$ (II) symbol vanishes unless the tetragonal conditions (see Sec. 10.13.2) are fulfilled for three tetrads $\left(a_{2} c_{4} d_{3} b_{1}\right),\left(a_{3} b_{4} d_{2} c_{1}\right)$ and $\left(a_{4} b_{3} c_{2} d_{1}\right)$.\\
-(c) The $12 j$ (II) symbols satisfy the orthogonality and normalization condition
-
-
-\begin{align*}
+\subsubsection{The $12 j$ (II) symbols satisfy the orthogonality and normalization condition}
+\begin{align}
 & \sum_{x_{1} x_{2} x_{3}}\left(2 x_{1}+1\right)\left(2 x_{2}+1\right)\left(2 x_{3}+1\right)\left\{\begin{array}{cccc}
 - & a_{2} & a_{3} & a_{4} \\
 b_{1} & - & b_{3} & b_{4} \\
@@ -2904,21 +2510,17 @@ d_{1} & x_{2} & x_{3} & -
 b_{1}^{\prime} & - & b_{3} & b_{4}^{\prime} \\
 c_{1} & x_{1} & - & c_{4} \\
 d_{1} & x_{2} & x_{3} & -
-\end{array}\right\} \\
-& =\frac{\delta_{a_{4} a_{4}^{\prime}} \delta_{b_{1} b_{1}^{\prime}} \delta_{b_{4} b_{4}^{\prime}}}{\left(2 a_{4}+1\right)\left(2 b_{1}+1\right)\left(2 b_{4}+1\right)}\left\{a_{2} a_{3} a_{4}\right\}\left\{b_{1} b_{3} b_{4}\right\}\left\{b_{1} c_{1} d_{1}\right\}\left\{a_{4} b_{4} c_{4}\right\} \tag{24}
-\end{align*}
-
-
-(d) The $12 j$ (II)-symbols may be represented as the following sums
-
-
-\begin{gather*}
+\end{array}\right\}  \notag\\
+& =\frac{\delta_{a_{4} a_{4}^{\prime}} \delta_{b_{1} b_{1}^{\prime}} \delta_{b_{4} b_{4}^{\prime}}}{\left(2 a_{4}+1\right)\left(2 b_{1}+1\right)\left(2 b_{4}+1\right)}\left\{a_{2} a_{3} a_{4}\right\}\left\{b_{1} b_{3} b_{4}\right\}\left\{b_{1} c_{1} d_{1}\right\}\left\{a_{4} b_{4} c_{4}\right\} \label{chap10:eq:158}
+\end{align}
+\subsubsection{The $12 j$ (II)-symbols may be represented as the following sums}
+\begin{gather}
 \left\{\begin{array}{cccc}
 - & a_{2} & a_{3} & a_{4} \\
 b_{1} & - & b_{3} & b_{4} \\
 c_{1} & c_{2} & - & c_{4} \\
 d_{1} & d_{2} & d_{3} & -
-\end{array}\right\}=(-1)^{b_{3}-a_{4}-d_{1}+c_{2}} \sum_{x}(2 x+1) \\
+\end{array}\right\}=(-1)^{b_{3}-a_{4}-d_{1}+c_{2}} \sum_{x}(2 x+1)  \notag\\
 \times\left\{\begin{array}{ccc}
 a_{3} & b_{4} & x \\
 b_{1} & d_{3} & b_{3}
@@ -2931,7 +2533,7 @@ d_{2} & c_{1} & d_{1}
 \end{array}\right\}\left\{\begin{array}{ccc}
 c_{4} & a_{2} & x \\
 d_{2} & c_{1} & c_{2}
-\end{array}\right\}  \tag{25}\\
+\end{array}\right\}  \label{chap10:eq:159}\\
 \left\{\begin{array}{cccc}
 - & a_{2} & a_{3} & a_{4} \\
 b_{1} & - & b_{3} & b_{4} \\
@@ -2945,14 +2547,11 @@ a_{2} & b_{1} & x
 d_{2} & d_{1} & d_{3} \\
 c_{2} & c_{1} & c_{4} \\
 a_{2} & b_{1} & x
-\end{array}\right\} .
-\end{gather*}
-
-
-(e) Symmetry properties: Any $12 j$ (II) symbol is symmetric with respect to a permutation of any two columns and simultaneous permutation of the rows whose numbers coincide with the numbers of permutated columns. In addition, the $12 j$ (II) symbol does not change under transposition. These symmetry properties relate 48 formally different $12 j$ (II) symbols:
-
-
-\begin{align*}
+\end{array}\right\} . \notag
+\end{gather}
+\subsubsection{Symmetry properties}
+Any $12 j$ (II) symbol is symmetric with respect to a permutation of any two columns and simultaneous permutation of the rows whose numbers coincide with the numbers of permutated columns. In addition, the $12 j$ (II) symbol does not change under transposition. These symmetry properties relate 48 formally different $12 j$ (II) symbols:
+\begin{align}
 & \left\{\begin{array}{llll}
 - & a_{2} & a_{3} & a_{4} \\
 b_{1} & - & b_{3} & b_{4} \\
@@ -2973,7 +2572,7 @@ d_{3} & d_{1} & d_{2} & -
 a_{4} & - & a_{2} & a_{3} \\
 b_{4} & b_{1} & - & b_{3} \\
 c_{4} & c_{1} & c_{2} & -
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 & =\left\{\begin{array}{cccc}
 - & a_{4} & a_{2} & a_{3} \\
 d_{1} & - & d_{2} & d_{3} \\
@@ -2994,7 +2593,7 @@ b_{3} & b_{4} & b_{1} & -
 c_{4} & - & c_{1} & c_{2} \\
 a_{4} & a_{3} & - & a_{2} \\
 b_{4} & b_{3} & b_{1} & -
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 & =\left\{\begin{array}{cccc}
 - & a_{3} & a_{4} & a_{2} \\
 c_{1} & - & c_{4} & c_{2} \\
@@ -3015,7 +2614,7 @@ a_{3} & a_{2} & a_{4} & -
 b_{4} & - & b_{3} & b_{1} \\
 c_{4} & c_{2} & - & c_{1} \\
 a_{4} & a_{2} & a_{3} & -
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 & =\left\{\begin{array}{llll}
 - & a_{2} & a_{4} & a_{3} \\
 b_{1} & - & b_{4} & b_{3} \\
@@ -3036,7 +2635,7 @@ b_{3} & b_{1} & b_{4} & -
 a_{4} & - & a_{3} & a_{2} \\
 c_{4} & c_{1} & - & c_{2} \\
 b_{4} & b_{1} & b_{3} & -
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 & =\left\{\begin{array}{cccc}
 - & a_{3} & a_{2} & a_{4} \\
 c_{1} & - & c_{2} & c_{4} \\
@@ -3057,7 +2656,7 @@ d_{3} & d_{2} & d_{1} & -
 b_{4} & - & b_{1} & b_{3} \\
 a_{4} & a_{2} & - & a_{3} \\
 c_{4} & c_{2} & c_{1} & -
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 & =\left\{\begin{array}{cccc}
 - & a_{4} & a_{3} & a_{2} \\
 d_{1} & - & d_{3} & d_{2} \\
@@ -3078,7 +2677,7 @@ a_{3} & a_{4} & a_{2} & -
 c_{4} & - & c_{2} & c_{1} \\
 b_{4} & b_{3} & - & b_{1} \\
 a_{4} & a_{3} & a_{2} & -
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 & =\left\{\begin{array}{cccc}
 - & b_{1} & c_{1} & d_{1} \\
 a_{2} & - & c_{2} & d_{2} \\
@@ -3099,7 +2698,7 @@ c_{4} & a_{4} & b_{4} & -
 d_{1} & - & b_{1} & c_{1} \\
 d_{2} & a_{2} & - & c_{2} \\
 d_{3} & a_{3} & b_{3} & -
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 & =\left\{\begin{array}{cccc}
 - & d_{1} & b_{1} & c_{1} \\
 a_{4} & - & b_{4} & c_{4} \\
@@ -3120,7 +2719,7 @@ c_{2} & d_{2} & a_{2} & -
 d_{3} & - & a_{3} & b_{3} \\
 d_{1} & c_{1} & - & b_{1} \\
 d_{2} & c_{2} & a_{2} & -
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 & =\left\{\begin{array}{cccc}
 - & c_{1} & d_{1} & b_{1} \\
 a_{3} & - & d_{3} & b_{3} \\
@@ -3141,7 +2740,7 @@ c_{1} & b_{1} & d_{1} & -
 d_{2} & - & c_{2} & a_{2} \\
 d_{3} & b_{3} & - & a_{3} \\
 d_{1} & b_{1} & c_{1} & -
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 & =\left\{\begin{array}{cccc}
 - & b_{1} & d_{1} & c_{1} \\
 a_{2} & - & d_{2} & c_{2} \\
@@ -3162,7 +2761,7 @@ c_{2} & a_{2} & d_{2} & -
 d_{1} & - & c_{1} & b_{1} \\
 d_{3} & a_{3} & - & b_{3} \\
 d_{2} & a_{2} & c_{2} & -
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 & =\left\{\begin{array}{llll}
 - & c_{1} & b_{1} & d_{1} \\
 a_{3} & - & b_{3} & d_{3} \\
@@ -3183,7 +2782,7 @@ c_{4} & b_{4} & a_{4} & -
 d_{2} & - & a_{2} & c_{2} \\
 d_{1} & b_{1} & - & c_{1} \\
 d_{3} & b_{3} & a_{3} & -
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 & =\left\{\begin{array}{cccc}
 - & d_{1} & c_{1} & b_{1} \\
 a_{4} & - & c_{4} & b_{4} \\
@@ -3204,14 +2803,11 @@ c_{1} & d_{1} & b_{1} & -
 d_{3} & - & b_{3} & a_{3} \\
 d_{2} & c_{2} & - & a_{2} \\
 d_{1} & c_{1} & b_{1} & -
-\end{array}\right\} . \tag{27}
-\end{align*}
-
-
-(f) Recursion relations: These relations are useful for evaluation of the $12 j$ (II) symbols. We present only one relation:
-
-
-\begin{gather*}
+\end{array}\right\} . \label{chap10:eq:160}
+\end{align}
+\subsubsection{Recursion relations}
+These relations are useful for evaluation of the $12 j$ (II) symbols. We present only one relation:
+\begin{gather}
 \sum_{a_{3}^{\prime}}\left(2 a_{3}^{\prime}+1\right)\left\{\begin{array}{ccc}
 \lambda & a_{3} & a_{3}^{\prime} \\
 d_{3} & b_{3}^{\prime} & b_{3}
@@ -3223,7 +2819,7 @@ a_{2} & a_{4} & a_{4}^{\prime}
 b_{1} & - & b_{3}^{\prime} & b_{4} \\
 c_{1} & c_{2} & - & c_{4} \\
 d_{1} & d_{2} & d_{3} & -
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 =(-1)^{b_{1}+a_{2}-d_{3}-c_{4}} \sum_{b_{4}^{\prime}}\left(2 b_{4}^{\prime}+1\right)\left\{\begin{array}{ccc}
 \lambda & b_{4} & b_{4}^{\prime} \\
 c_{4} & a_{4}^{\prime} & a_{4}
@@ -3235,13 +2831,10 @@ b_{1} & b_{3} & b_{3}^{\prime}
 b_{1} & - & b_{3} & b_{4}^{\prime} \\
 c_{1} & c_{2} & - & c_{4} \\
 d_{1} & d_{2} & d_{3} & -
-\end{array}\right\} . \tag{28}
-\end{gather*}
-
-
-In particular, putting $\lambda=\frac{1}{2}, a_{4}^{\prime}=a_{4}-\frac{1}{2}$ and $b_{3}^{\prime}=b_{3}+\frac{1}{2}$ in Eq. (28) we obtain
-
-$$
+\end{array}\right\} . \label{chap10:eq:161}
+\end{gather}
+In particular, putting $\lambda=\frac{1}{2}, a_{4}^{\prime}=a_{4}-\frac{1}{2}$ and $b_{3}^{\prime}=b_{3}+\frac{1}{2}$ in Eq. \eqref{chap10:eq:161} we obtain
+\[
 \begin{aligned}
 & \left(2 b_{4}+1\right)\left\{\left[\left(a_{3}+b_{3}-d_{3}+1\right)\left(a_{3}+b_{3}+d_{3}+2\right)\left(-a_{2}+a_{3}+a_{4}+\frac{1}{2}\right)\left(a_{2}+a_{3}+a_{4}+\frac{3}{2}\right)\right]^{\frac{1}{2}}\left\{\begin{array}{cccc}
 - & a_{2} & a_{3}+\frac{1}{2} & a_{4} \\
@@ -3268,88 +2861,70 @@ c_{1} & c_{2} & - & c_{4} \\
 d_{1} & d_{2} & d_{3} & -
 \end{array}\right\}\right\} .
 \end{aligned}
-$$
-
-(g) Explicit forms of the $12 j$ (II)-symbols for some relations between arguments may be obtained, using Eqs. (25) and (26).
+\]
+\subsubsection{Explicit forms of the $12 j$ (II)-symbols for some relations between arguments}
+may be obtained, using Eqs. \eqref{chap10:eq:159} and (26).
 
 If one argument in any tetrad is equal to the sum of three other arguments from the same tetrad, one obtains
-
-
-\begin{align*}
+\begin{align}
 & \left\{\begin{array}{cccc}
 - & b_{1}+c_{4}+d_{3} & a_{3} & a_{4} \\
 b_{1} & - & b_{3} & b_{4} \\
 c_{1} & c_{2} & - & c_{4} \\
 d_{1} & d_{2} & d_{3} & -
-\end{array}\right\}=(-1)^{b_{3}-b_{4}+c_{1}-d_{1}} \frac{\left(2 b_{1}\right)!\left(2 c_{4}\right)!\left(2 d_{3}\right)!}{\left(2 b_{1}+2 c_{4}+2 d_{3}+1\right)!} \\
-& \quad \times \frac{D\left(b_{1} b_{3} b_{4}\right) D\left(c_{4} c_{1} c_{2}\right) D\left(d_{3} d_{1} d_{2}\right) D\left(b_{1} d_{1} c_{1}\right) D\left(c_{4} b_{4} a_{4}\right) D\left(d_{3} b_{3} a_{3}\right)}{D\left(b_{1}+d_{3}+c_{4} a_{4} a_{3}\right) D\left(b_{1}+d_{3}+c_{4} c_{2} d_{2}\right)} \tag{30}
-\end{align*}
-
-
+\end{array}\right\}=(-1)^{b_{3}-b_{4}+c_{1}-d_{1}} \frac{\left(2 b_{1}\right)!\left(2 c_{4}\right)!\left(2 d_{3}\right)!}{\left(2 b_{1}+2 c_{4}+2 d_{3}+1\right)!}  \notag\\
+& \quad \times \frac{D\left(b_{1} b_{3} b_{4}\right) D\left(c_{4} c_{1} c_{2}\right) D\left(d_{3} d_{1} d_{2}\right) D\left(b_{1} d_{1} c_{1}\right) D\left(c_{4} b_{4} a_{4}\right) D\left(d_{3} b_{3} a_{3}\right)}{D\left(b_{1}+d_{3}+c_{4} a_{4} a_{3}\right) D\left(b_{1}+d_{3}+c_{4} c_{2} d_{2}\right)} \label{chap10:eq:162}
+\end{align}
 Let each argument in any tetrad be equal to the sum of two arguments which form a triad with this argument. Then, the $12 j$ (II) symbol may be expressed as a sum involving products of two Clebsch-Gordan\\
 coefficients.
-
-
-\begin{gather*}
+\begin{gather}
 \left\{\begin{array}{cccc}
 - & a_{3}+a_{4} & a_{3} & a_{4} \\
 b_{3}+b_{4} & - & b_{3} & b_{4} \\
 c_{1} & c_{2} & - & c_{2}+c_{3} \\
 d_{1} & d_{2} & d_{1}+d_{2} & -
-\end{array}\right\}=(-1)^{b_{3}-a_{4}-d_{1}+c_{2}} f\left(a_{3} b_{3} d_{1}+d_{2}\right) f\left(a_{4} b_{4} c_{1}+c_{2}\right) \\
-\times f\left(d_{1} c_{1} b_{3}+b_{4}\right) f\left(d_{2} c_{2} a_{3}+a_{4}\right)\left[\frac{\left(2 a_{3}\right)!\left(2 a_{4}\right)!\left(2 b_{3}\right)!\left(2 b_{4}\right)!\left(2 c_{1}\right)!\left(2 c_{2}\right)!\left(2 d_{1}\right)!\left(2 d_{2}\right)!}{\left(2 a_{3}+2 a_{4}+1\right)!\left(2 b_{3}+2 b_{4}+1\right)!\left(2 c_{1}+2 c_{2}+1\right)!\left(2 d_{1}+2 d_{2}+1\right)!}\right]^{\frac{1}{2}} \\
-\times \sum_{x}\left[f\left(a_{3}+a_{4} b_{3}+b_{4} x\right) f\left(d_{1}+d_{2} c_{1}+c_{2} x\right)\right]^{-1} C_{d_{1}+d_{2} a_{3}-b_{3} c_{1}+c_{2} a_{4}-b_{4}}^{x a_{3}+a_{4}-b_{3}-b_{4}} C_{a_{3}+a_{4} d_{2}-c_{2} b_{3}+b_{4} d_{1}-c_{1}}^{x d_{1}+d_{2}-c_{1}-c_{2}} \tag{31}
-\end{gather*}
-
-
+\end{array}\right\}=(-1)^{b_{3}-a_{4}-d_{1}+c_{2}} f\left(a_{3} b_{3} d_{1}+d_{2}\right) f\left(a_{4} b_{4} c_{1}+c_{2}\right)  \notag\\
+\times f\left(d_{1} c_{1} b_{3}+b_{4}\right) f\left(d_{2} c_{2} a_{3}+a_{4}\right)\left[\frac{\left(2 a_{3}\right)!\left(2 a_{4}\right)!\left(2 b_{3}\right)!\left(2 b_{4}\right)!\left(2 c_{1}\right)!\left(2 c_{2}\right)!\left(2 d_{1}\right)!\left(2 d_{2}\right)!}{\left(2 a_{3}+2 a_{4}+1\right)!\left(2 b_{3}+2 b_{4}+1\right)!\left(2 c_{1}+2 c_{2}+1\right)!\left(2 d_{1}+2 d_{2}+1\right)!}\right]^{\frac{1}{2}}  \notag\\
+\times \sum_{x}\left[f\left(a_{3}+a_{4} b_{3}+b_{4} x\right) f\left(d_{1}+d_{2} c_{1}+c_{2} x\right)\right]^{-1} \clebsch{d_{1}+d_{2}}{a_{3}-b_{3}}{c_{1}+c_{2}}{a_{4}-b_{4}}{x}{a_{3}+a_{4}-b_{3}-b_{4}} \clebsch{a_{3}+a_{4}}{d_{2}-c_{2}}{b_{3}+b_{4}}{d_{1}-c_{1}}{x}{d_{1}+d_{2}-c_{1}-c_{2}} \label{chap10:eq:163}
+\end{gather}
 where
-
-
-\begin{equation*}
-f(a b c)=[(a+b+c+1)!(a+b-c)]^{-\frac{1}{2}} \tag{32}
-\end{equation*}
-
-
-(h) Explicit forms of the $12 j$ (II) symbols for special values of the arguments.
+\begin{equation}
+f(a b c)=[(a+b+c+1)!(a+b-c)]^{-\frac{1}{2}} \label{chap10:eq:164}
+\end{equation}
+\subsubsection{Explicit forms of the $12 j$ (II) symbols for special values of the arguments}
 
 If one argument is equal to zero, a $12 j(\mathrm{II})$ symbol is reduced to product of two $6 j$ symbols:
-
-
-\begin{align*}
+\begin{align}
 \left\{\begin{array}{cccc}
 - & 0 & a_{3} & a_{4} \\
 b_{1} & - & b_{3} & b_{4} \\
 c_{1} & c_{2} & - & c_{4} \\
 d_{1} & d_{2} & d_{3} & -
-\end{array}\right\}= & (-1)^{b_{3}+b_{4}-d_{1}-c_{1}} \frac{\delta_{a_{3} a_{4}} \delta_{c_{2} d_{2}}}{\sqrt{\left(2 a_{3}+1\right)\left(2 c_{2}+1\right)}} \\
+\end{array}\right\}= & (-1)^{b_{3}+b_{4}-d_{1}-c_{1}} \frac{\delta_{a_{3} a_{4}} \delta_{c_{2} d_{2}}}{\sqrt{\left(2 a_{3}+1\right)\left(2 c_{2}+1\right)}}  \notag\\
 & \times\left\{\begin{array}{lll}
 b_{1} & b_{3} & b_{4} \\
 a_{3} & c_{4} & d_{3}
 \end{array}\right\}\left\{\begin{array}{lll}
 c_{1} & c_{2} & c_{4} \\
 d_{3} & b_{1} & d_{1}
-\end{array}\right\} \tag{33}
-\end{align*}
-
-
+\end{array}\right\} \label{chap10:eq:165}
+\end{align}
 If two arguments from any tetrad are equal to $\frac{1}{2}$ we obtain
-
-
-\begin{gather*}
+\begin{gather}
 \left\{\begin{array}{cccc}
 - & a_{2} & \frac{1}{2} & a_{4} \\
 b_{1} & - & b_{3} & \frac{1}{2} \\
 c_{1} & c_{2} & - & c_{4} \\
 d_{1} & d_{2} & d_{3} & -
-\end{array}\right\}=\frac{\delta_{b_{1} d_{3}} \delta_{c_{4} a_{2}} \delta_{c_{1} d_{3}}}{2\left(2 b_{1}+1\right)\left(2 c_{1}+1\right)\left(2 c_{4}+1\right)} \\
+\end{array}\right\}=\frac{\delta_{b_{1} d_{3}} \delta_{c_{4} a_{2}} \delta_{c_{1} d_{3}}}{2\left(2 b_{1}+1\right)\left(2 c_{1}+1\right)\left(2 c_{4}+1\right)}  \notag\\
 +(-1)^{e}\left\{\begin{array}{lll}
 b_{1} & d_{3} & 1 \\
 d_{2} & c_{1} & d_{1}
 \end{array}\right\}\left\{\begin{array}{lll}
 c_{4} & a_{2} & 1 \\
 d_{2} & c_{1} & c_{2}
-\end{array}\right\} \frac{D\left(\frac{1}{2} a_{2} a_{4}\right) D\left(\frac{1}{2} b_{1} b_{3}\right) D\left(\frac{1}{2} c_{4} a_{4}\right) D\left(\frac{1}{2} b_{3} d_{3}\right)}{2 D\left(1 b_{1} b_{3}\right) D\left(1 a_{2} c_{4}\right)}  \tag{34}\\
-\varepsilon=b_{1}+b_{3}+c_{2}+c_{4}+a_{2}-a_{4}-d_{1}+d_{3} \\
+\end{array}\right\} \frac{D\left(\frac{1}{2} a_{2} a_{4}\right) D\left(\frac{1}{2} b_{1} b_{3}\right) D\left(\frac{1}{2} c_{4} a_{4}\right) D\left(\frac{1}{2} b_{3} d_{3}\right)}{2 D\left(1 b_{1} b_{3}\right) D\left(1 a_{2} c_{4}\right)}  \label{chap10:eq:166}\\
+\varepsilon=b_{1}+b_{3}+c_{2}+c_{4}+a_{2}-a_{4}-d_{1}+d_{3}  \notag\\
 \left\{\begin{array}{cccc}
 - & \frac{1}{2} & a_{3} & a_{4} \\
 \frac{1}{2} & - & b_{3} & b_{4} \\
@@ -3361,7 +2936,7 @@ b_{4} & b_{3} & d_{3}
 \end{array}\right\}\left\{\begin{array}{ccc}
 d_{2} & c_{2} & \frac{1}{2} \\
 c_{1} & d_{1} & d_{3}
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 +3(-1)^{b_{3}-a_{4}-d_{1}+c_{2}}\left\{\begin{array}{ccc}
 a_{3} & b_{3} & d_{3} \\
 a_{4} & b_{4} & c_{4} \\
@@ -3370,14 +2945,10 @@ a_{4} & b_{4} & c_{4} \\
 d_{2} & d_{1} & d_{3} \\
 c_{2} & c_{1} & c_{4} \\
 \frac{1}{2} & \frac{1}{2} & 1
-\end{array}\right\} . \tag{35}
-\end{gather*}
-
-
+\end{array}\right\} . \label{chap10:eq:167}
+\end{gather}
 At $c_{4}=d_{3}, d_{3} \pm 1$, a $12 j$ (II) symbol may be expressed in terms of the $3 j m$ and $6 j$ symbols:
-
-
-\begin{align*}
+\begin{align}
 & \left\{\begin{array}{cccc}
 - & \frac{1}{2} & a_{3} & a_{4} \\
 \frac{1}{2} & - & b_{3} & b_{4} \\
@@ -3389,7 +2960,7 @@ b_{4} & b_{3} & d_{3}
 \end{array}\right\}\left\{\begin{array}{lll}
 d_{2} & c_{2} & \frac{1}{2} \\
 c_{1} & d_{1} & d_{3}
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 & +\frac{(-1)^{b_{3}-a_{4}-d_{1}+c_{2}}}{2\left(2 d_{3}+1\right) \sqrt{\left(2 a_{4}+1\right)\left(2 b_{4}+1\right)\left(2 c_{1}+1\right)\left(2 c_{2}+1\right)}} \frac{\left(\begin{array}{ccc}
 a_{3} & b_{3} & d_{3} \\
 \frac{1}{2} & \frac{1}{2} & -1
@@ -3402,20 +2973,16 @@ a_{4} & b_{4} & d_{3} \\
 \end{array}\right)\left(\begin{array}{ccc}
 c_{1} & c_{2} & d_{3} \\
 0 & 0 & 0
-\end{array}\right)} \tag{36}
-\end{align*}
-
-
+\end{array}\right)} \label{chap10:eq:168}
+\end{align}
 This equation is valid, if $a_{4}+b_{4}+d_{3}$ and $c_{1}+c_{2}+d_{3}$ are even. If these numbers are odd, one has
-
-
-\begin{gather*}
+\begin{gather}
 \left\{\begin{array}{cccc}
 - & \frac{1}{2} & a_{3} & a_{4} \\
 \frac{1}{2} & - & b_{3} & b_{4} \\
 c_{1} & c_{2} & - & d_{3}+1 \\
 d_{1} & d_{2} & d_{3} & -
-\end{array}\right\}=\frac{\left(a_{4}-a_{3}\right)\left(2 a_{3}+1\right)+\left(b_{4}-b_{3}\right)\left(2 b_{3}+1\right)+d_{3}+1}{\left(2 d_{3}+1\right)\left(2 d_{3}+2\right)\left(2 d_{3}+3\right)} \\
+\end{array}\right\}=\frac{\left(a_{4}-a_{3}\right)\left(2 a_{3}+1\right)+\left(b_{4}-b_{3}\right)\left(2 b_{3}+1\right)+d_{3}+1}{\left(2 d_{3}+1\right)\left(2 d_{3}+2\right)\left(2 d_{3}+3\right)}  \notag\\
 \times \frac{\left(c_{2}-d_{2}\right)\left(2 d_{2}+1\right)+\left(c_{1}-d_{1}\right)\left(2 d_{1}+1\right)+d_{3}+1}{\sqrt{\left(2 a_{4}+1\right)\left(2 b_{4}+1\right)\left(2 c_{1}+1\right)\left(2 c_{2}+1\right)}} \frac{\left(\begin{array}{ccc}
 a_{3} & b_{3} & d_{3} \\
 \frac{1}{2} & -\frac{1}{2} & 0
@@ -3428,13 +2995,13 @@ a_{4} & b_{4} & d_{3}+1 \\
 \end{array}\right)\left(\begin{array}{ccc}
 c_{1} & c_{2} & d_{3}+1 \\
 0 & 0 & 0
-\end{array}\right)}  \tag{37}\\
+\end{array}\right)}  \label{chap10:eq:169}\\
 \left\{\begin{array}{cccc}
 -\frac{1}{2} & a_{3} & a_{4} \\
 \frac{1}{2} & - & b_{3} & b_{4} \\
 c_{1} & c_{2} & - & d_{3}-1 \\
 d_{1} & d_{2} & d_{3} & -
-\end{array}\right\}=\frac{\left(a_{4}-a_{3}\right)\left(2 a_{3}+1\right)+\left(b_{4}-b_{3}\right)\left(2 b_{3}+1\right)-d_{3}}{\left(2 d_{3}-1\right)\left(2 d_{3}\right)\left(2 d_{3}+1\right)} \\
+\end{array}\right\}=\frac{\left(a_{4}-a_{3}\right)\left(2 a_{3}+1\right)+\left(b_{4}-b_{3}\right)\left(2 b_{3}+1\right)-d_{3}}{\left(2 d_{3}-1\right)\left(2 d_{3}\right)\left(2 d_{3}+1\right)}  \notag\\
 \times \frac{\left(c_{2}-d_{2}\right)\left(2 d_{2}+1\right)+\left(c_{1}-d_{1}\right)\left(2 d_{1}+1\right)-d_{3}}{\sqrt{\left(2 a_{4}+1\right)\left(2 b_{4}+1\right)\left(2 c_{1}+1\right)\left(2 c_{2}+1\right)}} \frac{\left(\begin{array}{ccc}
 a_{3} & b_{3} & d_{3} \\
 \frac{1}{2} & -\frac{1}{2} & 0
@@ -3447,13 +3014,10 @@ a_{4} & b_{4} & d_{3}-1 \\
 \end{array}\right)\left(\begin{array}{ccc}
 c_{1} & c_{2} & d_{3}-1 \\
 0 & 0 & 0
-\end{array}\right)} \tag{38}
-\end{gather*}
-
-
-(i) Relations between the $12 j$ (II) symbols considered above and analogous functions of other authors:
-
-$$
+\end{array}\right)} \label{chap10:eq:170}
+\end{gather}
+\subsubsection{Relations between the $12 j$ (II) symbols considered above and analogous functions of other authors}
+\[
 \begin{gathered}
 \left\{\begin{array}{cccc}
 - & a_{2} & a_{3} & a_{4} \\
@@ -3473,18 +3037,15 @@ b_{3} & d_{1} & c_{2} & a_{4} \\
 b_{4} & b_{1} & c_{1} & c_{4}
 \end{array}\right],
 \end{gathered}
-$$
-
+\]
 (Yutsis, Levinson and Vanagus [44]),
-
-$$
+\[
 =(-1)^{a_{2}+a_{3}+d_{2}+d_{3}-b_{1}-b_{4}-c_{1}-c_{4}}\left\{\left.\begin{array}{cccc}
 a_{3} & d_{3} & d_{2} & a_{2} \\
 b_{3} & d_{1} & c_{2} & a_{4} \\
 b_{4} & b_{1} & c_{1} & c_{4}
 \end{array} \right\rvert\, 2\right\}
-$$
-
+\]
 (Elbaz and Castel [17]).
 \begin{comment}
 Table 10.1.
