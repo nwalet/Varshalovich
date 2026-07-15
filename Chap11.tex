@@ -1041,14 +1041,14 @@ For $n \leq 3$ the sum over $X_{i}$ may be reduced to the direct product of the 
 This means that the original sum becomes factorized. Therefore, the cases $n \leq 3$ are the most important ones for practical applications.
 
 The analytic transformations under study correspond to cutting the associated diagram into two subdiagrams which represent two factors. The necessary condition is that at least one of these subdiagrams should have no more external lines (apart from those $j$-lines which link the subdiagram together)\\
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-443_269_326_1520_653}\\
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-443_251_197_1540_1009}\\
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-443_249_195_1540_1229}
+\begin{tikzpicture}[baseline=0pt]\node[opbox,minimum width=14mm,minimum height=10mm](A) at (0,0){diagram}; \draw[dashed] (0.7,-0.6)--(0.7,0.6); \node[opbox,minimum width=10mm](L) at (2.6,0){$\mathfrak{M}$}; \node[opbox,minimum width=10mm](R) at (4,0){$\mathfrak{N}$}; \draw[jmline](L)--(R) node[midway,above]{$j$}; \node at (1.7,0){$\to$};\end{tikzpicture}
+
+
 
 The most important cases of cutting of one, two, three, as well as four, five, and six $j$-lines are presented in Table~\ref{chap11:tab:5}.
 
 In many cases, the successive use of these rules allows one to divide a diagram into several (three or more) subdiagrams representing invariant factors. For example,\\
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-443_201_1002_2004_535}
+\opline{\mathfrak{M}_1}{\mathfrak{M}_2}{j_1}\ \opline{\mathfrak{M}_2}{\mathfrak{M}_3}{j_2}\ \opline{\mathfrak{M}_3}{\mathfrak{M}_4}{j_3}
 
 The most important cases for the application of the cutting rules are in the separation of external lines of a diagram, i.e., in extracting the dependence on all the external variables in the form of the standard functions of the theory ( $\clebsch{j_{1}}{m_{1}}{j_{2}}{m_{2}}{j}{m}, D_{m m^{\prime}}^{j}(R), C_{j m}(\Omega)$, etc.). Such a separation is the essence of the Wigner-Eckart theorem which will be discussed in Sec. 11.4.2.
 
@@ -1056,8 +1056,8 @@ The most important cases for the application of the cutting rules are in the sep
 According to Sec. 11.2.3, a complete invariant sum over angular momentum $j$ and projection $m$ is graphically represented by a thick $j$-line. Such a summation may be easily performed by the diagram technique, if this thick $j$-line connects two identical nodes.
 
 Rule $\sum$ : Any thick $j$-line which connects identical pairs of thin $j$-lines, may be removed provided the ends of the thin lines with equal momenta are linked together. This is displayed below:\\
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-444_176_213_576_764}\\
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-444_172_285_580_1044}
+\begin{tikzpicture}[baseline=0pt]\node[opbox](M) at (0,0){$\mathfrak{M}$}; \node[opbox](N) at (2.4,0){$\mathfrak{N}$}; \draw[jmline,line width=1.4pt] (M) to[bend left=30] node[midway,above]{$j_1$} (N); \draw[jmline,line width=1.4pt] (M) to[bend right=30] node[midway,below]{$j_2$} (N);\end{tikzpicture}
+\begin{tikzpicture}[baseline=0pt]\node[opbox](M) at (0,0){$\mathfrak{M}$}; \node[opbox](N) at (2.4,0){$\mathfrak{N}$}; \draw[jmline] (M) to[bend left=30] node[midway,above]{$j_1$} (N); \draw[jmline] (M) to[bend right=30] node[midway,below]{$j_2$} (N);\end{tikzpicture}
 
 Such a graphical operation does not change the meaning of a diagram and corresponds to the equation
 \[
@@ -1090,13 +1090,13 @@ a & b & c \\
 \end{array}\right)=\delta_{\alpha \alpha^{\prime}} \delta_{\beta \beta^{\prime}},
 \]
 \begin{center}
-\includegraphics[max width=\textwidth, alt={}]{402d9a1b-ee97-49cb-ae14-75458391be12-444_221_778_1380_675}
+\threenode{a}{c}{b}{above:$+$}\ \threenode{a}{c}{b}{above:$+$}
 \end{center}
 \[
 \sum_{X}(2 X+1)\ninej{a}{b}{c}{b^{\prime}}{d}{e}{c}{e}{X}=\{a b c\}\{b d e\} \frac{\delta_{b b^{\prime}}}{(2 b+1)}
 \]
 \begin{center}
-\includegraphics[max width=\textwidth, alt={}]{402d9a1b-ee97-49cb-ae14-75458391be12-444_262_835_1751_667}
+\tricenter{c}{X}{e}{a}{b}{d}{+}
 \end{center}
 
 When a common thick $j$-line is included into two or more unlinked subdiagrams, one should preliminarily link these subdiagrams with the aid of the rules of subdiagram multiplication (Sec. 11.3.5) in order to arrive at one thick $j$-line. Only after this operation can one perform graphical summation over $j$ and $m$ according to Rule $\sum$. These combined graphical operations are displayed in Table~\ref{chap11:tab:5}.
@@ -1106,13 +1106,13 @@ The complete invariant summation over $j$ and $m$ may also be performed graphica
 \sum_{l m} Y_{l m}(\Omega) Y_{l m}^{*}\left(\Omega^{\prime}\right)=\delta\left(\Omega-\Omega^{\prime}\right)
 \]
 \begin{center}
-\includegraphics[max width=\textwidth, alt={}]{402d9a1b-ee97-49cb-ae14-75458391be12-444_73_755_2402_675}
+\begin{tikzpicture}[baseline=0pt]\draw[omline] (0,0) node[left]{$\Omega$} to[bend left=40] node[midway,above]{$l$} (2,0); \draw[omline] (0,0) to[bend right=40] node[midway,below]{$l$} (2,0); \node at (2.3,0){$\Omega^{\prime}$};\end{tikzpicture}
 \end{center}
 \[
 \sum_{J M M^{\prime}}(2 J+1) D_{M M^{\prime}}^{J}\left(R_{1}\right) D_{M^{\prime} M}^{J}\left(R_{2}\right)=16 \pi^{2} \delta\left(R_{1}-R_{2}\right),
 \]
 \begin{center}
-\includegraphics[max width=\textwidth, alt={}]{402d9a1b-ee97-49cb-ae14-75458391be12-445_215_803_383_638}
+\begin{tikzpicture}[baseline=0pt]\draw[bjmline] (0,0) node[left]{$R_1$} to[bend left=40] node[midway,above]{$J$} (2,0); \draw[bjmline] (0,0) to[bend right=40] node[midway,below]{$J$} (2,0); \node at (2.3,0){$R_2$};\end{tikzpicture}
 \end{center}
 
 In fact, all the rules for complete invariant summation formulated in this section follow from the completeness of $|j m\rangle$-functions.
@@ -1138,16 +1138,16 @@ K=( \pm 1)^{2 j_{1}} \frac{\delta_{j_{1} j_{2}}}{\sqrt{2 j_{1}+1}} .
 The phase of $K$ depends on the node sign and line direction. $K$ is positive if the node sign corresponds to the cyclic order of the coupling momenta $\left(j_{1}, j_{1}, j_{2}\right)$, the $j_{1}$-line is directed toward the node and the $j_{2}$-line is directed outward from the node. In this case the resultant $j_{1}=j_{2}$-line has the same direction as that before the node's removal. In other cases the phase of $K$ may be determined by means of the reduction of the diagram under study to the above case, using the rules of Sec. 11.3.2.
 
 Thus elimination of the $j=0$ line may be illustrated by\\
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-446_267_302_374_698}\\
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-446_312_339_333_999}\\
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-446_183_1005_743_539}
+\threenode{j_1}{0}{j_2}{above:$+$}\quad$=K\times$
+\begin{tikzpicture}[baseline=0pt]\draw[jmline] (0,0) node[left]{$j_1$} -- (1.4,0) node[right]{$j_2$};\end{tikzpicture}
+
 
 Some special cases of the $3 j m$ and $3 n j$ symbols with $j=0$ are presented in Table~\ref{chap11:tab:3}.
 
 \subsection{Elimination of the $R=1$ Line}
 In the particular case $R=1$, a double dashed $R$-line corresponds to no rotation, i.e., it represents a fictitious lependence. Hence, an $R=1$ line may be removed and the lines adjacent to the $R$-line have to be closed. This operation does not change the meaning of the diagram.\\
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-446_139_633_1248_698}\\
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-446_131_646_1423_696}
+\begin{tikzpicture}[baseline=0pt]\draw[bjmline,dashed] (0,0) node[left]{$\Omega_1$} -- (1.4,0) node[right]{$\Omega_2$}; \node at (0.7,0.3){$R=1$};\end{tikzpicture}\quad$=K\times$
+\begin{tikzpicture}[baseline=0pt]\draw[omline] (0,0) node[left]{$\Omega_1$} -- (1.4,0) node[right]{$\Omega_2$};\end{tikzpicture}
 
 Some examples of the expressions and diagrams containing $R=1$ are given in Table~\ref{chap11:tab:4}.\\
 A summary of the rules of graphical operations is presented in Table~\ref{chap11:tab:5}.
