@@ -490,12 +490,13 @@ this treatment.
 - Applied so far: [Chap0.tex](Chap0.tex) (rules 1-5), [Chap1.tex](Chap1.tex),
   [Chap2.tex](Chap2.tex), [Chap3.tex](Chap3.tex), [Chap4.tex](Chap4.tex),
   [Chap5.tex](Chap5.tex), [Chap6.tex](Chap6.tex), [Chap7.tex](Chap7.tex),
-  [Chap8.tex](Chap8.tex), [Chap9.tex](Chap9.tex) and [Chap10.tex](Chap10.tex)
-  (all rules — Chap2.tex, Chap3.tex and Chap6.tex have no figures/tables, so
-  rules 8-9 didn't apply there; Chap7.tex has no figures, so only rule 9
-  applied there; Chap10.tex has no figures and all its tables live inside an
-  untouched comment block, so neither rule 8 nor rule 9 applied to its
-  active content).
+  [Chap8.tex](Chap8.tex), [Chap9.tex](Chap9.tex), [Chap10.tex](Chap10.tex)
+  and [Chap11.tex](Chap11.tex) (all rules — Chap2.tex, Chap3.tex and
+  Chap6.tex have no figures/tables, so rules 8-9 didn't apply there;
+  Chap7.tex has no figures, so only rule 9 applied there; Chap10.tex has no
+  figures and all its tables live inside an untouched comment block, so
+  neither rule 8 nor rule 9 applied to its active content; Chap11.tex has
+  one deliberately-untouched region, see its note below).
 - **Chap8.tex's back half (numerical-value tables, roughly the last third of
   the chapter) is wrapped in `\begin{comment}...\end{comment}`** by the
   project owner (predates this pass, `comment` package already loaded in
@@ -1154,3 +1155,95 @@ this treatment.
     `\left\{`/`\right\}` counts before and after (a mismatch is the
     tell). Worth a sanity check like this after any brace-matching script
     touches a chapter with piecewise/cases definitions.
+- **Chap11.tex ("The Graphical Method in Angular Momentum Theory") has one
+  deliberately-untouched region: Secs. 11.1.1-11.1.2 (roughly lines
+  16-313), covering Tables 11.1-11.3.** Unlike every other corrupted region
+  found so far in this project, this one isn't just scrambled formulas —
+  the OCR pipeline lost the table/figure *structure itself*: content that
+  should be one continuous multi-row table is scattered across a mix of
+  proper `\begin{table}` blocks, standalone `\begin{figure}` blocks that
+  actually hold a single table row's image, and loose plain text with bare
+  `\includegraphics` calls and unwrapped table-title fragments (e.g.
+  "Table 11.2. Invariant Functions." sitting as a plain sentence, not a
+  caption). Reconstructing the real row/column layout isn't reliably
+  recoverable from the OCR text alone, and the `\includegraphics` filenames
+  do encode pixel-crop coordinates from the original PDF page (e.g.
+  `..._428_98_146_416_1349`) that could help a human cross-reference
+  against the source PDF page images directly. **Per explicit user
+  instruction, none of rules 1-12 were applied inside this region — left
+  completely untouched, including its own heading text**, flagged here as
+  needing manual reconstruction. Applied fully everywhere else in the
+  chapter.
+  - The chapter's bra-ket notation (rules 3-5) needed a purpose-built
+    brace/depth-aware parser (reused, generalized, from the targeted
+    `\braOket` conversion first developed for Chap6.tex) rather than the
+    usual simple regex substitution, because of how densely `\langle`
+    patterns are packed here (~200 occurrences) and how often the source
+    is itself corrupted around them. Converted 168 instances (28
+    `\braket`, 115 `\braOket`, 25 `\braOketred`); 11 left unconverted as
+    genuinely malformed (a bra with no matching ket at all — a real,
+    intentional notation in this chapter for a matrix element taken with
+    an implicit/empty state, e.g. `\langle j m|)$` closing with a bare
+    `)` instead of `\rangle`, or a standalone `\langle X|$` describing one
+    diagram "line" with no paired ket in the same expression).
+  - **Three recurring OCR corruption signatures found while building that
+    parser, worth checking for in any future chapter with heavy bra-ket
+    notation:**
+    1. A glued mismatched delimiter, `\left\rangle` or `\right\langle` —
+       OCR turning a plain closing `\rangle` into `\left\rangle` (or the
+       mirror case), which silently satisfies a naive `\langle`/`\rangle`
+       string search without being valid LaTeX. A parser that just counts
+       `\left`/`\right` opens and closes will pair the stray `\left` with
+       some *unrelated, much later* `\right`, corrupting everything in
+       between. Guard against it by rejecting any `\rangle` immediately
+       preceded by `\left` (and the mirror case for `\langle`/`\right`),
+       or — more robust — hard-excluding the whole line once it's known
+       to contain the glued pattern.
+    2. A genuine bra-with-no-ket (`\langle X|$`, closing the math span
+       right after the bar with no `\rangle` at all) followed later, in a
+       *separate* `$...$` span, by an unrelated bare ket. A parser
+       scanning for the next `\rangle` will treat the unrelated one as
+       this bra's partner unless it also refuses to let a bra-ket's body
+       cross a raw `$` (math-mode boundary) — a bra and its ket are never
+       legitimately split across two separate inline math spans, so this
+       check is safe in general, not just for this book.
+    3. A stray unmatched `\left.` sitting well before its own `\langle`
+       (e.g. `\left.\left\langle 00\|IR\| j_1j_2j_3\right\rangle=\left.\sum...`)
+       — pre-existing OCR corruption independent of the bra-ket notation
+       itself, where converting the *visually* well-formed
+       `\langle...\rangle` span still breaks the file, because the
+       macro's fresh internal `\left\langle...\right\rangle` pair no
+       longer supplies the literal `\rangle` token that the outer
+       (already-broken) `\left.` was relying on to balance. Only
+       detectable by attempting the conversion and checking the compile
+       log for `Missing \right. inserted` / `Extra \right.` — no amount
+       of pre-parsing catches it, since the span being converted is
+       itself completely well-formed.
+  - Rule 12 audit found one further corrupted 6j symbol (Sec. 11.4.2,
+    matrix element of the scalar product of two irreducible tensor
+    operators) missing an `&` column separator (merging two cells into
+    one, `j_2 J` instead of `j_2 & J`) and missing its third row entry
+    (the operator rank `k`, clearly implied by the surrounding
+    `\mathfrak{M}_k`/`\mathfrak{N}_k` notation) — fixed by hand using the
+    standard Racah recoupling-of-tensor-operators result before
+    converting to `\sixj`.
+  - Rule 9's figure→table reclassification followed the by-now-familiar
+    pattern (source captions all still said "Table N.M" even though OCR
+    filed them under `\begin{figure}`) with one new wrinkle: **Table
+    11.9's only captioned appearance was itself marked "(Cont'd)"**, with
+    no base table ever captioned anywhere in the source — treated as the
+    genuine (only) Table 11.9 rather than a continuation, per the
+    established "numbering follows what actually renders, not the
+    source's stale number" precedent (rule 9's note on Chap1.tex/Chap9.tex).
+    A handful of other "Table N.M" occurrences (11.5, 11.9's own
+    subsection-opening mention, 11.12, 11.15, and two more "(Cont'd)"
+    markers for 11.10 and 11.14) are plain-text section-title fragments
+    introducing a large multi-part span of content (many
+    `\subsubsection{Analytical Expression}`/`{Graphical Representation}`
+    pairs each), not a single table environment — left as plain text,
+    same as Chap1.tex's orphaned "Table 1.2" precedent.
+  - One `\operatorname{lm}` was OCR noise (the ket label "$l,m$" wrapped
+    as if it were a function name) — bold/operator-wrapping dropped
+    entirely, same precedent as Chap2.tex's/Chap8.tex's bolded-numeral
+    cases (rule 10 catches this class of noise beyond just
+    `\mathbf`/`\boldsymbol`).
