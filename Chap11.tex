@@ -1399,7 +1399,7 @@ m_{4} & m_{3} & M_{45}
 \begin{center}
 \caption{Rules for the Transformation of Diagrams.}
 \label{chap11:tab:5}
-  \includegraphics[alt={},max width=\textwidth]{402d9a1b-ee97-49cb-ae14-75458391be12-451_339_672_438_1139}
+  \opline{\mathfrak{M}}{\mathfrak{N}}{j}\qquad\threenode{j_1}{j_3}{j_2}{above:$+$}\qquad\tricenter{A}{B}{C}{a}{b}{c}{+}
 \end{center}
 \end{table}
 
@@ -1430,7 +1430,7 @@ M_{12} & M_{34} & M_{56}
 \end{array}\right),
 \end{gathered}
 \]
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-451_404_703_894_1141}\\
+\tricenter{J_{12}}{J_{34}}{J_{56}}{j_1{,}j_2}{j_3{,}j_4}{j_5{,}j_6}{+}
 and similarly for $\braOketred{J_{18} J_{34} J_{56} q}{92}{p}$.
 
 \subsubsection{Analytical Expression}
@@ -1449,7 +1449,7 @@ m_{3} & m_{2} & m_{1}
 \begin{center}
 \caption{3jm Symbols.}
 \label{chap11:tab:6}
-  \includegraphics[alt={},max width=\textwidth]{402d9a1b-ee97-49cb-ae14-75458391be12-451_221_485_1615_1302}
+  \threenode{j_1}{j_3}{j_2}{above:$+$}
 \end{center}
 \end{table}
 
@@ -1497,8 +1497,8 @@ m_{1} & m_{2} & m_{3}
 j_{1} & &
 \end{array}\right)
 \]
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-451_230_494_1907_1297}\\
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-451_219_491_2161_1304}
+\threenode{j_1}{j_3}{j_2}{above:$+$}\quad$=$\quad\threenode{j_1}{j_3}{j_2}{above:$-$}
+
 
 Table 11.10. (Cont'd)
 
@@ -1525,7 +1525,7 @@ m_{1} & m_{2} & m_{3}^{\prime}
 \end{gathered}
 \]
 \begin{center}
-\includegraphics[max width=\textwidth, alt={}]{402d9a1b-ee97-49cb-ae14-75458391be12-452_184_670_521_1170}
+\begin{tikzpicture}[baseline=0pt]\coordinate (L) at (0,0.9); \coordinate (R) at (0,-0.9); \node[dotnode,label={left:$+$}] at (L) {}; \node[dotnode,label={left:$-$}] at (R) {}; \draw[jmline] (L) to[bend left=50] node[midway,right]{$j_1$} (R); \draw[jmline] (L) to[bend right=50] node[midway,left]{$j_2$} (R); \draw[jmline] (L) -- (1.6,0.9) node[right]{$j_3$}; \draw[jmline] (R) -- (1.6,-0.9) node[right]{$j_3^{\prime}$};\end{tikzpicture}
 \end{center}
 
 \subsubsection{Completeness}
@@ -1549,14 +1549,14 @@ m_{1}^{\prime} & m_{2}^{\prime} & m_{3}
 \end{gathered}
 \]
 \begin{center}
-\includegraphics[max width=\textwidth, alt={}]{402d9a1b-ee97-49cb-ae14-75458391be12-452_213_572_898_1254}
+\begin{tikzpicture}[baseline=0pt]\coordinate (L) at (0,0.9); \coordinate (R) at (0,-0.9); \node[dotnode,label={left:$+$}] at (L) {}; \node[dotnode,label={left:$-$}] at (R) {}; \draw[jmline] (L) to[bend left=50] node[midway,right]{$j_3$} (R); \draw[jmline] (L) -- (1.6,0.9) node[right]{$j_1$}; \draw[jmline] (L) -- (1.6,0.2) node[right]{$j_2$}; \draw[jmline] (R) -- (1.6,-0.2) node[right]{$j_1^{\prime}$}; \draw[jmline] (R) -- (1.6,-0.9) node[right]{$j_2^{\prime}$};\end{tikzpicture}
 \end{center}
 
 \begin{table}[h]
 \begin{center}
 \caption{Relation of Clebsch-Gordan Coefficients to 3jm Symbols.}
 \label{chap11:tab:7}
-  \includegraphics[alt={},max width=\textwidth]{402d9a1b-ee97-49cb-ae14-75458391be12-452_392_1501_1320_214}
+  \threenode{a}{c}{b}{above:$+$}\quad$\;=\;\clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}$
 \end{center}
 \end{table}
 \[
