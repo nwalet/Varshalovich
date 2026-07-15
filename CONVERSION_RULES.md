@@ -447,10 +447,10 @@ of a point $\vect{r}$ may be written as
   around all arguments.
 - Applied so far: [Chap0.tex](Chap0.tex) (rules 1-5), [Chap1.tex](Chap1.tex),
   [Chap2.tex](Chap2.tex), [Chap3.tex](Chap3.tex), [Chap4.tex](Chap4.tex),
-  [Chap5.tex](Chap5.tex), [Chap6.tex](Chap6.tex), [Chap7.tex](Chap7.tex) and
-  [Chap8.tex](Chap8.tex) (all rules — Chap2.tex, Chap3.tex and Chap6.tex have
-  no figures/tables, so rules 8-9 didn't apply there; Chap7.tex has no
-  figures, so only rule 9 applied there).
+  [Chap5.tex](Chap5.tex), [Chap6.tex](Chap6.tex), [Chap7.tex](Chap7.tex),
+  [Chap8.tex](Chap8.tex) and [Chap9.tex](Chap9.tex) (all rules — Chap2.tex,
+  Chap3.tex and Chap6.tex have no figures/tables, so rules 8-9 didn't apply
+  there; Chap7.tex has no figures, so only rule 9 applied there).
 - **Chap8.tex's back half (numerical-value tables, roughly the last third of
   the chapter) is wrapped in `\begin{comment}...\end{comment}`** by the
   project owner (predates this pass, `comment` package already loaded in
@@ -870,3 +870,60 @@ of a point $\vect{r}$ may be written as
   `\begin` equivalent with leading content) on every new chapter *before*
   running the script, and move any trailing content onto the equation's
   last content line first.
+- **Chap9.tex's own back section (9.12, "NUMERICAL VALUES OF THE 6j
+  SYMBOLS") was, like Chap8.tex's, wrapped in `\begin{comment}...\end{comment}`**
+  by the project owner and left byte-for-byte untouched per explicit
+  instruction — but unlike Chap8.tex (where the block was converted in
+  place with the rest of the file), here the file was physically **split**
+  before conversion: the commented tail was extracted to a scratch file,
+  the active front (Secs. 9.1-9.11) was converted on its own as a
+  temporarily-standalone `Chap9.tex`, and the untouched tail was
+  concatenated back on afterward. This is cleaner than converting in place
+  when the active portion needs its own compile-and-check cycle (equation
+  numbering script, multi-pass xelatex) without the commented block's bulk
+  slowing that down — worth reusing for any future chapter with a large
+  disabled block. One thing to double check after reassembly: the join
+  point lands with no blank line between the last active line and
+  `\begin{comment}`, which is harmless (comment package doesn't care about
+  adjacent content) but easy to introduce if the split/concatenation isn't
+  done carefully with exact line counts on both halves.
+  - A new false-positive pattern for the rule 7 prose `\eqref` scan:
+    **Pochhammer-symbol-style superscripts**, `(\ldots)^{(1)}`, `D^{(1)}`,
+    `F^{(1)}`, `(\ldots)^{(-1)}`, inside a `\begin{gathered}` block of
+    auxiliary asymptotic-expansion definitions (Sec. 9.9) — these are not
+    equation citations at all (no comma/period/prose framing, just a bare
+    exponent-like superscript immediately after a factor), and the bare
+    `(N)` regex scan matches them just as readily as a real `Eq. (N)`
+    citation. Distinguish by context: a real citation always sits in prose
+    with words like "Eq.", "Eqs.", "given by", "presented in" nearby; a
+    Pochhammer superscript sits directly against a closing `\right)` or a
+    bare capital-letter symbol with no such framing.
+  - Two more genuine gaps (numbers referenced in prose but never actually
+    tagged anywhere in their scope, consistent with Chap1.tex's and
+    Chap6.tex's precedent): Sec. 9.5's "(11)" in "Some other cases are
+    given by Eqs. (5), (7), (11)." and Sec. 9.5's "(9)" in "See also Eqs.
+    (9) and (19)." — both left as plain, unconverted text while their
+    sibling numbers in the same sentence (which do resolve) were
+    converted.
+  - Two Clebsch-Gordan instances left unconverted, per the "flag rather
+    than guess" precedent: `C_{j_{2} m_{12} m_{2}}^{j_{12} m_{12}}` (missing
+    `j_1, m_1` entirely — only 3 subscript tokens present, no unambiguous
+    way to recover the 4th) and `C_{a 060}^{c 0}` in an asymptotic-6j
+    formula (mangled digit/letter merge beyond a confident single-split
+    fix).
+  - A `\subsubsection{...}` heading whose title itself contains an
+    equation citation (`(d) In particular, for $m=n=p=0$ Eq. (20)
+    yields the Wigner formula [43]`) needed `\eqref` wrapped in
+    `\protect` (`\protect\eqref{...}`) to survive safely inside the
+    moving argument hyperref uses for PDF bookmarks/TOC entries — plain
+    `\eqref` in a heading works for the visible page but can corrupt or
+    warn on the bookmark/TOC copy.
+  - Rule 10: found only genuine vector `\mathbf{j}`/`\mathbf{j}_1`/etc.
+    (angular-momentum vectors, Sec. 9.1) alongside one bolded-numerals OCR
+    artifact, `\mathbf{1} / \mathbf{2}$` in a heading title ("Relations in
+    Which Arguments are Changed by 1/2") — bold dropped entirely, same
+    precedent as Chap2.tex's and Chap8.tex's bolded-numeral cases. No
+    `\boldsymbol` occurrences at all. `\operatorname{Re}`, `\operatorname{Im}`
+    (upright-text, not the Fraktur `\Re`/`\Im`) and `\operatorname{sign}`
+    (not an amsmath builtin) were all left untouched, consistent with
+    established policy.

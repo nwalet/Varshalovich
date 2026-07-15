@@ -1,345 +1,267 @@
 \chapter{6j SYMBOLS AND THE RACAH COEFFICIENTS}
-\subsection*{9.1. DEFINITION}
-\subsection*{9.1.1. 6j Symbols}
+\section{DEFINITION}
+\subsection{6j Symbols}
 The Wigner $6 j$ symbols $[110]$ are related to the coefficients of transformations between different coupling schemes of three angular momenta. The angular momenta $\mathrm{j}_{1}, \mathrm{j}_{2}, \mathrm{j}_{3}$ may be coupled to give a resultant angular momentum $j$ and its projection $m$ in three different ways:
-
-\[
+\begin{equation}
 \begin{array}{rlrl}
-\text { I) } \mathbf{j}_{1}+\mathbf{j}_{2} & =\mathbf{j}_{12}, & \mathbf{j}_{12}+\mathbf{j}_{3}=\mathbf{j}, \\
-\text { II) } \mathbf{j}_{2}+\mathbf{j}_{3}=\mathbf{j}_{23}, & \mathbf{j}_{1}+\mathbf{j}_{23}=\mathbf{j}, \\
-\text { III) } \mathbf{j}_{1}+\mathbf{j}_{3}=\mathbf{j}_{13}, & \mathbf{j}_{13}+\mathbf{j}_{2}=\mathbf{j} . \tag{1}
+\text { I) } \vect{j}_{1}+\vect{j}_{2} & =\vect{j}_{12}, & \vect{j}_{12}+\vect{j}_{3}=\vect{j}, \\
+\text { II) } \vect{j}_{2}+\vect{j}_{3}=\vect{j}_{23}, & \vect{j}_{1}+\vect{j}_{23}=\vect{j}, \\
+\text { III) } \vect{j}_{1}+\vect{j}_{3}=\vect{j}_{13}, & \vect{j}_{13}+\vect{j}_{2}=\vect{j} . \label{chap9:eq:1}
 \end{array}
-\]
-
+\end{equation}
 Let $\left|j_{1} j_{2}\left(j_{12}\right) j_{3} j m\right\rangle$ denote the state vectors corresponding to the coupling scheme I. These vectors are eigenvectors of the operators $\widehat{j}_{1}^{2}, \widehat{j}_{2}^{2}, \hat{j}_{3}^{2}, \hat{j}_{12}^{2}, \hat{j}^{2}, \hat{j}_{x}$ and may be written as
-
-
-\begin{equation*}
-\left|j_{1} j_{2}\left(j_{12}\right) j_{33} j m\right\rangle=\sum_{m_{1} m_{2} m_{2}} C_{j_{12} m_{12} j_{2} m_{3}}^{j m} C_{j_{2} m_{12} m_{2}}^{j_{12} m_{12}}\left|j_{1} m_{1}, j_{2} m_{2}, j_{3} m_{3}\right\rangle . \tag{2}
-\end{equation*}
-
-
+\begin{equation}
+\left|j_{1} j_{2}\left(j_{12}\right) j_{33} j m\right\rangle=\sum_{m_{1} m_{2} m_{2}} \clebsch{j_{12}}{m_{12}}{j_{2}}{m_{3}}{j}{m} C_{j_{2} m_{12} m_{2}}^{j_{12} m_{12}}\left|j_{1} m_{1}, j_{2} m_{2}, j_{3} m_{3}\right\rangle . \label{chap9:eq:2}
+\end{equation}
 The state vectors corresponding to the coupling scheme II are eigenvectors of the operators $\widehat{j}_{1}^{2}, \widehat{j}_{2}^{2}, \widehat{j}_{3}^{2}, \widehat{j}_{23}^{2}, \widehat{j}^{2}, \widehat{j}_{x}$,
-
-
-\begin{equation*}
-\left|j_{1}, j_{2} j_{3}\left(j_{23}\right) j m\right\rangle=\sum_{m_{1} m_{2} m_{3}} C_{j_{1} m_{1} j_{23} m_{23}}^{j m} C_{j_{2} m_{2} j_{2} m_{3}}^{j_{2} m_{20}}\left|j_{1} m_{1}, j_{2} m_{2}, j_{3} m_{3}\right\rangle . \tag{3}
-\end{equation*}
-
-
-Similarly, the state vectors corresponding to the coupling scheme III are eigenvectors of the operators $\widehat{\mathbf{j}}_{\frac{1}{2}}^{2}, \widehat{\mathbf{j}}_{2}^{2}, \widehat{\mathbf{j}}_{3}^{2}$, $\widehat{j}_{13}^{2}, \widehat{j}^{2}, \widehat{j}_{x}$,
-
-
-\begin{equation*}
-\left|j_{1} j_{3}\left(j_{13}\right) \dot{j}_{2} j m\right\rangle=\sum_{m_{1} m_{2} m_{3}} C_{j_{13} m_{13} j_{2} m_{2}}^{j m} C_{j_{1} m_{1} j_{3} m_{2}}^{j_{13} m_{13}}\left|j_{1} m_{1}, j_{2} m_{2}, j_{3} m_{3}\right\rangle . \tag{4}
-\end{equation*}
-
-
+\begin{equation}
+\left|j_{1}, j_{2} j_{3}\left(j_{23}\right) j m\right\rangle=\sum_{m_{1} m_{2} m_{3}} \clebsch{j_{1}}{m_{1}}{j_{23}}{m_{23}}{j}{m} \clebsch{j_{2}}{m_{2}}{j_{2}}{m_{3}}{j_{2}}{m_{20}}\left|j_{1} m_{1}, j_{2} m_{2}, j_{3} m_{3}\right\rangle . \label{chap9:eq:3}
+\end{equation}
+Similarly, the state vectors corresponding to the coupling scheme III are eigenvectors of the operators $\widehat{\vect{j}}_{\frac{1}{2}}^{2}, \widehat{\vect{j}}_{2}^{2}, \widehat{\vect{j}}_{3}^{2}$, $\widehat{j}_{13}^{2}, \widehat{j}^{2}, \widehat{j}_{x}$,
+\begin{equation}
+\left|j_{1} j_{3}\left(j_{13}\right) \dot{j}_{2} j m\right\rangle=\sum_{m_{1} m_{2} m_{3}} \clebsch{j_{13}}{m_{13}}{j_{2}}{m_{2}}{j}{m} \clebsch{j_{1}}{m_{1}}{j_{3}}{m_{2}}{j_{13}}{m_{13}}\left|j_{1} m_{1}, j_{2} m_{2}, j_{3} m_{3}\right\rangle . \label{chap9:eq:4}
+\end{equation}
 States belonging to each coupling scheme form a complete set of states. A transition from one coupling scheme to another is performed by some unitary transformation which relates the states with the same total angular momentum $j$ and projection $m$. The coefficients $U$ of this transformation differ from the $6 j$ symbols only by normalization and phase factors. These factors are chosen in such a way to make the $6 j$ symbols more symmetric (Sec. 9.4).
 
 One defines the Wigner $6 j$ symbols $\left\{\begin{array}{lll}j_{1} & j_{2} & j_{12} \\ j_{3} & j & j_{23}\end{array}\right\}$ by the relation
-
-
-\begin{align*}
-& \left\langle j_{1} j_{2}\left(j_{12}\right) j_{3} j m \mid j_{1}, j_{2} j_{3}\left(j_{23}\right) j^{\prime} m^{\prime}\right\rangle=\delta_{j j^{\prime}} \delta_{m m^{\prime}} U\left(j_{1} j_{2} j j_{3} ; j_{12} j_{23}\right) \\
+\begin{align}
+& \braket{j_{1} j_{2}\left(j_{12}\right) j_{3} j m}{j_{1}, j_{2} j_{3}\left(j_{23}\right) j^{\prime} m^{\prime}}=\delta_{j j^{\prime}} \delta_{m m^{\prime}} U\left(j_{1} j_{2} j j_{3} ; j_{12} j_{23}\right)  \notag\\
 = & \delta_{j j^{\prime}} \delta_{m m^{\prime}}(-1)^{j_{1}+j_{2}+j_{3}+j} \sqrt{\left(2 j_{12}+1\right)\left(2 j_{23}+1\right)}\left\{\begin{array}{lll}
 j_{1} & j_{2} & j_{12} \\
 j_{3} & j & j_{23}
-\end{array}\right\} . \tag{5}
-\end{align*}
-
-
-From Eq. (5) one may obtain [92,64]
-
-
-\begin{gather*}
-\left\langle j_{1} j_{2}\left(j_{12}\right) j_{3} j m \mid j_{1} j_{3}\left(j_{13}\right) j_{2} j^{\prime} m^{\prime}\right\rangle=\delta_{j j^{\prime}} \delta_{m m^{\prime}}(-1)^{j+j_{1}-j_{12}-j_{13}} U\left(j_{2} j_{1} j j_{3} ; j_{12} j_{13}\right) \\
+\end{array}\right\} . \label{chap9:eq:5}
+\end{align}
+From Eq. \eqref{chap9:eq:5} one may obtain [92,64]
+\begin{gather}
+\braket{j_{1} j_{2}\left(j_{12}\right) j_{3} j m}{j_{1} j_{3}\left(j_{13}\right) j_{2} j^{\prime} m^{\prime}}=\delta_{j j^{\prime}} \delta_{m m^{\prime}}(-1)^{j+j_{1}-j_{12}-j_{13}} U\left(j_{2} j_{1} j j_{3} ; j_{12} j_{13}\right)  \notag\\
 =\delta_{j j^{\prime}} \delta_{m m^{\prime}}(-1)^{j_{2}+j_{3}+j_{12}+j_{13}} \sqrt{\left(2 j_{12}+1\right)\left(2 j_{13}+1\right)}\left\{\begin{array}{lll}
 j_{2} & j_{1} & j_{12} \\
 j_{3} & j & j_{13}
-\end{array}\right\}  \tag{6}\\
-\left\langle j_{1}, j_{2} j_{3}\left(j_{23}\right) j m \mid j_{1} j_{3}\left(j_{13}\right) j_{2} j^{\prime} m^{\prime}\right\rangle=\delta_{j j^{\prime}} \delta_{m m^{\prime}}(-1)^{j_{2}+j_{3}-j_{23}} U\left(j_{1} j_{3} j j_{2} ; j_{13} j_{23}\right) \\
+\end{array}\right\}  \label{chap9:eq:6}\\
+\braket{j_{1}, j_{2} j_{3}\left(j_{23}\right) j m}{j_{1} j_{3}\left(j_{13}\right) j_{2} j^{\prime} m^{\prime}}=\delta_{j j^{\prime}} \delta_{m m^{\prime}}(-1)^{j_{2}+j_{3}-j_{23}} U\left(j_{1} j_{3} j j_{2} ; j_{13} j_{23}\right)  \notag\\
 =\delta_{j j^{\prime}} \delta_{m m^{\prime}}(-1)^{j_{1}+j+j_{23}} \sqrt{\left(2 j_{13}+1\right)\left(2 j_{23}+1\right)}\left\{\begin{array}{lll}
 j_{1} & j_{3} & j_{13} \\
 j_{2} & j & j_{23}
-\end{array}\right\} . \tag{7}
-\end{gather*}
-
-
+\end{array}\right\} . \label{chap9:eq:7}
+\end{gather}
 According to the definition (5) the $6 j$ symbols may be given in terms of the Clebsch-Gordan coefficients
-
-
-\begin{gather*}
-\sum C_{j_{12} m_{12} j_{3} m_{3}}^{j m} C_{j_{1} m_{1} j_{2} m_{2}}^{j_{12} m_{12}} C_{j_{1} m_{1} j_{23} m_{23}}^{j^{\prime} m^{\prime}} C_{j_{2} m_{2} j_{3} m_{3}}^{j_{23} m_{23}} \\
+\begin{gather}
+\sum \clebsch{j_{12}}{m_{12}}{j_{3}}{m_{3}}{j}{m} \clebsch{j_{1}}{m_{1}}{j_{2}}{m_{2}}{j_{12}}{m_{12}} \clebsch{j_{1}}{m_{1}}{j_{23}}{m_{23}}{j^{\prime}}{m^{\prime}} \clebsch{j_{2}}{m_{2}}{j_{3}}{m_{3}}{j_{23}}{m_{23}}  \notag\\
 =\delta_{j j^{\prime}} \delta_{m m^{\prime}}(-1)^{j_{1}+j_{2}+j_{3}+j} \sqrt{\left(2 j_{12}+1\right)\left(2 j_{23}+1\right)}\left\{\begin{array}{lll}
 j_{1} & j_{2} & j_{12} \\
 j_{3} & j & j_{23}
-\end{array}\right\} . \tag{8}
-\end{gather*}
-
-
+\end{array}\right\} . \label{chap9:eq:8}
+\end{gather}
 Here the sum is over $m_{1}, m_{2}, m_{3}, m_{12}, m_{23}$ while $m$ and $m^{\prime}$ are fixed. This relation completely determines absolute values and phases of the $6 j$ symbols. The $6 j$ symbols turn out tô be real just as the Clebsch-Gordan coefficients are.
 
 The quantum-mechanical rules of vector addition impose some restrictions on possible values of momenta which are arguments of the $6 j$ symbol $\left\{\begin{array}{lll}j_{1} & j_{2} & j_{12} \\ j_{3} & j & j_{23}\end{array}\right\}$.\\
 (a) All momenta are integer or half-integer nonnegative numbers (with one exception considered in Sec. 9.4).\\
 (b) Each triad $\left(j_{1} j_{2} j_{12}\right),\left(j_{12} j_{3} j\right),\left(j_{2} j_{3} j_{23}\right)$ and $\left(j_{23} j_{1} j\right)$ should satisfy the triangular condition (Eq. 8.1(1)). The unitarity of the recoupling transformations implies the orthogonality and normalization conditions of the $6 j$ symbols.
-
-
-\begin{align*}
+\begin{align}
 & \sum_{j_{12}}\left(2 j_{12}+1\right)\left(2 j_{23}+1\right)\left\{\begin{array}{lll}
 j_{1} & j_{2} & j_{12} \\
 j_{3} & j & j_{23}
 \end{array}\right\}\left\{\begin{array}{lll}
 j_{1} & j_{2} & j_{12} \\
 j_{3} & j & j_{23}^{\prime}
-\end{array}\right\}=\delta_{j_{23} j_{23}^{\prime}}  \tag{9}\\
+\end{array}\right\}=\delta_{j_{23} j_{23}^{\prime}}  \label{chap9:eq:9}\\
 & \sum_{j_{23}}\left(2 j_{12}+1\right)\left(2 j_{23}+1\right)\left\{\begin{array}{lll}
 j_{1} & j_{2} & j_{12} \\
 j_{3} & j & j_{23}
 \end{array}\right\}\left\{\begin{array}{lll}
 j_{1} & j_{2} & j_{12}^{\prime} \\
 j_{3} & j & j_{23}
-\end{array}\right\}=\delta_{j_{12} j_{23}^{\prime}} \tag{10}
-\end{align*}
-
-
+\end{array}\right\}=\delta_{j_{12} j_{23}^{\prime}} \label{chap9:eq:10}
+\end{align}
 Below we shall use Latin letters $a, b, c$, etc., to denote arguments of the $6 j$ symbols.
 
-\subsection*{9.1.2 Racah Coefficients}
+\subsection{Racah Coefficients}
 Instead of the Wigner $6 j$ symbols the Racah coefficients [91] are often used, especially in spectroscopy theory. These coefficients differ from the $6 j$ symbols only by a phase factor:
-
-\[
+\begin{equation}
 \left\{\begin{array}{lll}
-a & b & c  \tag{11}\\
+a & b & c  \label{chap9:eq:11}\\
 d & e & f
 \end{array}\right\} \equiv(-1)^{a+b+d+e} W(a b e d ; c f)
-\]
-
+\end{equation}
 The Racah coefficients were introduced independently of the $6 j$ symbols. The phase of the Racah coefficients coincides with the phase of the coefficients which describe the transformation between I and II coupling schemes (Eq. (5)).
 
-\subsection*{9.1.3. $R$ Symbols}
+\subsection{$R$ Symbols}
 The $6 j$ symbols and the Racah coefficients may be written in the form of a $3 \times 4$ array $\left\|R_{i \alpha}\right\|(i=1,2,3 ; \alpha= 1,2,3,4)$ which is called the $R$-symbol (Shelepin [105])
-
-\[
+\begin{equation}
 \left\|\begin{array}{llll}
-R_{11} & R_{12} & R_{13} & R_{14}  \tag{12}\\
+R_{11} & R_{12} & R_{13} & R_{14}  \label{chap9:eq:12}\\
 R_{21} & R_{22} & R_{93} & R_{24} \\
 R_{31} & R_{32} & R_{33} & R_{34}
 \end{array}\right\| \equiv\left\{\begin{array}{lll}
 a & b & c \\
 d & e & f
 \end{array}\right\} \equiv(-1)^{a+b+d+e} W(\text { abed } ; c f)
-\]
-
+\end{equation}
 where
-
-\[
+\begin{equation}
 \begin{array}{llll}
 R_{11}=-c+d+e, & R_{12}=b+d-f, & R_{13}=a+e-f, & R_{14}=a+b-c, \\
 R_{21}=-b+d+f, & R_{22}=c+d-e . & R_{23}=a-b+c, & R_{24}=a-e+f, \\
-R_{31}=-a+e+f, & R_{32}=-a+b+c, & R_{33}=c-d+e, & R_{34}=b-d+f . \tag{13}
+R_{31}=-a+e+f, & R_{32}=-a+b+c, & R_{33}=c-d+e, & R_{34}=b-d+f . \label{chap9:eq:13}
 \end{array}
-\]
-
+\end{equation}
 The inverse relations are
-
-\[
+\begin{equation}
 \begin{array}{ll}
 2 a=R_{13}+R_{24}=R_{14}+R_{23}, & 2 d=R_{11}+R_{22}=R_{12}+R_{21}, \\
 2 b=R_{12}+R_{34}=R_{14}+R_{32}, & 2 e=R_{11}+R_{33}=R_{13}+R_{31}, \\
-2 c=R_{22}+R_{33}=R_{23}+R_{32}, & 2 f=R_{21}+R_{34}=R_{24}+R_{31} . \tag{14}
+2 c=R_{22}+R_{33}=R_{23}+R_{32}, & 2 f=R_{21}+R_{34}=R_{24}+R_{31} . \label{chap9:eq:14}
 \end{array}
-\]
-
+\end{equation}
 All 12 elements $R_{i \alpha}$ are integer nonnegative numbers. The differences between corresponding elements of rows and columns are constant:
-
-
 \begin{align*}
 R_{i \alpha}-R_{k \alpha} & =R_{i \beta}-R_{k \beta}, \\
-R_{i \alpha}-R_{i \beta} & =R_{k \alpha}-R_{k \beta},
-\end{align*} \quad(i, k=1,2,3 ; \alpha, \beta=1,2,3,4) .
-
-
+R_{i \alpha}-R_{i \beta} & =R_{k \alpha}-R_{k \beta}, \quad(i, k=1,2,3 ; \alpha, \beta=1,2,3,4) .
+\end{align*}
 Note the following relations:
-
-
-\begin{gather*}
-\sum_{i=1}^{3} R_{i 1}=2(d+e+f)-a-b-c, \quad \sum_{i=1}^{3} R_{i 3}=2(a+c+e)-b-d-f, \\
-\sum_{i=1}^{3} R_{i 2}=2(b+c+d)-a-e-f, \quad \sum_{i=1}^{3} R_{i 4}=2(a+b+f)-c-d-e,  \tag{16}\\
-\sum_{i, \alpha} R_{i \alpha}=2(a+b+c+d+e+f) .
-\end{gather*}
-
-
+\begin{gather}
+\sum_{i=1}^{3} R_{i 1}=2(d+e+f)-a-b-c, \quad \sum_{i=1}^{3} R_{i 3}=2(a+c+e)-b-d-f,  \notag\\
+\sum_{i=1}^{3} R_{i 2}=2(b+c+d)-a-e-f, \quad \sum_{i=1}^{3} R_{i 4}=2(a+b+f)-c-d-e,  \label{chap9:eq:15}\\
+\sum_{i, \alpha} R_{i \alpha}=2(a+b+c+d+e+f) . \notag
+\end{gather}
 One may also use the following parametrisation of the elements $R_{i \alpha}$ [45]:
-
-
-\begin{equation*}
-R_{i \alpha}=A_{i}-B_{\alpha} \tag{17}
-\end{equation*}
-
-
+\begin{equation}
+R_{i \alpha}=A_{i}-B_{\alpha} \label{chap9:eq:16}
+\end{equation}
 Here $A_{i}, B_{\alpha}$ are integer nonnegative numbers
-
-\[
+\begin{equation}
 \begin{array}{ll}
 A_{1}=a+b+d+e, & B_{1}=a+b+c \\
 A_{2}=a+c+d+f, & B_{2}=a+e+f \\
 A_{3}=b+c+e+f, & B_{3}=b+d+f \\
-& B_{4}=c+d+e \tag{18}
+& B_{4}=c+d+e \label{chap9:eq:17}
 \end{array}
-\]
-
+\end{equation}
 with
-
-
-\begin{equation*}
-\sum_{i=1}^{3} A_{i}=\sum_{\alpha=1}^{4} B_{\alpha}=2(a+b+c+d+e+f) \tag{19}
-\end{equation*}
-
-
+\begin{equation}
+\sum_{i=1}^{3} A_{i}=\sum_{\alpha=1}^{4} B_{\alpha}=2(a+b+c+d+e+f) \label{chap9:eq:18}
+\end{equation}
 The inverse relations are
-
-
-\begin{align*}
-2 a & =A_{1}+A_{2}-B_{3}-B_{4}, & 2 d & =A_{1}+A_{2}-B_{1}-B_{2}, \\
-2 b & =A_{1}+A_{3}-B_{2}-B_{4}, & 2 e & =A_{1}+A_{3}-B_{1}-B_{3}, \\
-2 c & =A_{2}+A_{3}-B_{2}-B_{3}, & 2 f & =A_{2}+A_{3}-B_{1}-B_{4} . \tag{20}
-\end{align*}
-
-
+\begin{align}
+2 a & =A_{1}+A_{2}-B_{3}-B_{4}, & 2 d & =A_{1}+A_{2}-B_{1}-B_{2},  \notag\\
+2 b & =A_{1}+A_{3}-B_{2}-B_{4}, & 2 e & =A_{1}+A_{3}-B_{1}-B_{3},  \notag\\
+2 c & =A_{2}+A_{3}-B_{2}-B_{3}, & 2 f & =A_{2}+A_{3}-B_{1}-B_{4} . \label{chap9:eq:19}
+\end{align}
 The $R$ symbols provide the simplest formulation of the symmetry properties of the $6 j$ symbols and Racah coefficients.
 
-\subsection*{9.2. GENERAL EXPRESSIONS FOR THE $6 j$ SYMBOLS. RELATIONS BETWEEN THE $6 j$ SYMBOLS AND OTHER FUNCTIONS}
-The $6 j$ symbols $\left\{\begin{array}{lll}a & b & c \\ d & e & f\end{array}\right\}$ vanish if at least one of the triads $(a b c),(c d e),(a e f)$ and $(b d f)$ does not obey the triangular conditions 8.1 (1). The expressions for the $6 j$ symbols given below are valid if all these conditions are satisfied. Corresponding expressions for the Racah coefficients may be obtained by the use of the relations between these coefficients and the $6 j$ symbols 9.1 (11).
+\section{GENERAL EXPRESSIONS FOR THE $6 j$ SYMBOLS. RELATIONS BETWEEN THE $6 j$ SYMBOLS AND OTHER FUNCTIONS}
+The $6 j$ symbols $\left\{\begin{array}{lll}a & b & c \\ d & e & f\end{array}\right\}$ vanish if at least one of the triads $(a b c),(c d e),(a e f)$ and $(b d f)$ does not obey the triangular conditions 8.1 (1). The expressions for the $6 j$ symbols given below are valid if all these conditions are satisfied. Corresponding expressions for the Racah coefficients may be obtained by the use of the relations between these coefficients and the $6 j$ symbols \eqref{chap9:eq:11}.
 
-\subsection*{9.2.1. Expressions for the 6j Symbols in Terms of Finite Sums}
+\subsection{Expressions for the 6j Symbols in Terms of Finite Sums}
 In the expressions presented below the sums are over all integer nonnegative values of $n$ so that no factorial in denominators has a negative argument. The quantities $\Delta(a b c)$ are defined by Eq. $8.2(1)$. Numerical values of $\Delta(a b c)$ are given in Table 8.12.
-
-
-\begin{gather*}
+\begin{gather}
 \left\{\begin{array}{lll}
 a & b & c \\
 d & e & f
-\end{array}\right\}=\Delta(a b c) \Delta(c d e) \Delta(a e f) \Delta(b d f) \\
-\times \sum_{n} \frac{(-1)^{n}(n+1)!}{(n-a-b-c)!(n-c-d-e)!(n-a-e-f)!(n-b-d-f)!(a+b+d+e-n)!} \\
-\times(a+c+d+f-n)!(b+c+e+f-n)! \\
-\text { (Racah [91]) } \tag{1}
-\end{gather*}
-
-
-By the replacement $n \rightarrow a+b+d+e-n$ one can rewrite Eq. (1) in the form
-
-
-\begin{gather*}
+\end{array}\right\}=\Delta(a b c) \Delta(c d e) \Delta(a e f) \Delta(b d f)  \notag\\
+\times \sum_{n} \frac{(-1)^{n}(n+1)!}{(n-a-b-c)!(n-c-d-e)!(n-a-e-f)!(n-b-d-f)!(a+b+d+e-n)!}  \notag\\
+\times(a+c+d+f-n)!(b+c+e+f-n)!  \notag\\
+\text { (Racah [91]) } \label{chap9:eq:20}
+\end{gather}
+By the replacement $n \rightarrow a+b+d+e-n$ one can rewrite Eq. \eqref{chap9:eq:20} in the form
+\begin{gather}
 \left\{\begin{array}{lll}
 a & b & c \\
 d & e & f
-\end{array}\right\}=(-1)^{a+b+d+e} \Delta(a b c) \Delta(c d e) \Delta(a e f) \Delta(b d f) \\
-\times \sum_{n} \frac{(-1)^{n}(a+b+d+e+1-n)!}{n!(a+b-c-n)!(-c+d+e-n)!(a+e-f-n)!(b+d-f-n)!} \\
-\times(-a+c-d+f+n)!(-b+c-e+f+n)! \\
-\text { (Racah [91]) } \tag{2}
-\end{gather*}
-
-
-Some other expressions for the $6 j$ symbols which cannot be easily reduced to (1) and (2) are [45,50].
-
-
-\begin{align*}
+\end{array}\right\}=(-1)^{a+b+d+e} \Delta(a b c) \Delta(c d e) \Delta(a e f) \Delta(b d f)  \notag\\
+\times \sum_{n} \frac{(-1)^{n}(a+b+d+e+1-n)!}{n!(a+b-c-n)!(-c+d+e-n)!(a+e-f-n)!(b+d-f-n)!}  \notag\\
+\times(-a+c-d+f+n)!(-b+c-e+f+n)!  \notag\\
+\text { (Racah [91]) } \label{chap9:eq:21}
+\end{gather}
+Some other expressions for the $6 j$ symbols which cannot be easily reduced to \eqref{chap9:eq:20} and \eqref{chap9:eq:21} are [45,50].
+\begin{align}
 & \left\{\begin{array}{lll}
 a & b & c \\
 d & e & f
-\end{array}\right\}=(-1)^{a+c+d+f} \frac{\Delta(a e f) \Delta(b d f)}{\Delta(a b c) \Delta(c d e)} \\
-& \times \sum_{n}(-1)^{n} \frac{(-a+b+c+n)!(c-d+e+n)!(a-c+d+f-n)!}{n!(a-e+f-n)!(-b+d+f-n)!(-a+b-d+e+n)!(b+c+e-f+1+n)!},  \tag{3}\\
+\end{array}\right\}=(-1)^{a+c+d+f} \frac{\Delta(a e f) \Delta(b d f)}{\Delta(a b c) \Delta(c d e)}  \notag\\
+& \times \sum_{n}(-1)^{n} \frac{(-a+b+c+n)!(c-d+e+n)!(a-c+d+f-n)!}{n!(a-e+f-n)!(-b+d+f-n)!(-a+b-d+e+n)!(b+c+e-f+1+n)!},  \label{chap9:eq:22}\\
 & \left\{\begin{array}{lll}
 a & b & c \\
 d & e & f
-\end{array}\right\}=(-1)^{a+c+d+f} \frac{\Delta(a b c) \Delta(b d f)}{\Delta(a e f) \Delta(c d e)} \\
-& \times \sum_{n}(-1)^{n} \frac{(a-b+d+e-n)!(-b+c+e+f-n)!(a+c+d+f+1-n)!}{n!(a-b+c-n)!(-b+d+f-n)!(a+e+f+1-n)!(c+d+e+1-n)!},  \tag{4}\\
+\end{array}\right\}=(-1)^{a+c+d+f} \frac{\Delta(a b c) \Delta(b d f)}{\Delta(a e f) \Delta(c d e)}  \notag\\
+& \times \sum_{n}(-1)^{n} \frac{(a-b+d+e-n)!(-b+c+e+f-n)!(a+c+d+f+1-n)!}{n!(a-b+c-n)!(-b+d+f-n)!(a+e+f+1-n)!(c+d+e+1-n)!},  \label{chap9:eq:23}\\
 & \left\{\begin{array}{lll}
 a & b & c \\
 d & e & f
-\end{array}\right\}=(-1)^{a+b+d+e} \frac{\Delta(a b c) \Delta(c d e) \Delta(a e f) \Delta(b d f)(a+e+f+1)!(b+d+f+1)!}{(a+b-c)!(a-b+c)!(-c+d+e)!(c+d-e)!(-a+e+f)!(b-d+f)!} \\
-& \times \sum_{n}(-1)^{n} \frac{(-a+e+f+n)!(b-d+f+n)!(a+c+d-f-n)!}{n!(a+e-f-n)!(b+d-f-n)!(-a+c-d+f+n)!(2 f+1+n)!},  \tag{5}\\
+\end{array}\right\}=(-1)^{a+b+d+e} \frac{\Delta(a b c) \Delta(c d e) \Delta(a e f) \Delta(b d f)(a+e+f+1)!(b+d+f+1)!}{(a+b-c)!(a-b+c)!(-c+d+e)!(c+d-e)!(-a+e+f)!(b-d+f)!}  \notag\\
+& \times \sum_{n}(-1)^{n} \frac{(-a+e+f+n)!(b-d+f+n)!(a+c+d-f-n)!}{n!(a+e-f-n)!(b+d-f-n)!(-a+c-d+f+n)!(2 f+1+n)!},  \label{chap9:eq:24}\\
 & \left\{\begin{array}{lll}
 a & b & c \\
 d & e & f
-\end{array}\right\}=(-1)^{b+c+e+f} \frac{\Delta(a b c) \Delta(c d e) \Delta(a e f) \Delta(b d f)(a+b+c+1)!(b+d+f+1)!}{(a+b-c)!(c-d+e)!(c+d-e)!(a-e+f)!(-a+e+f)!(b+d-f)!} \\
-& \times \sum_{n}(-1)^{n} \frac{(2 b-n)!(b+c-e+f-n)!(b+c+e+f+1-n)!}{n!(-a+b+c-n)!(b-d+f-n)!(a+b+c+1-n)!(b+d+f+1-n)!} . \tag{6}
-\end{align*}
-
-
-\subsection*{9.2.2 Bargmann Formula [58]}
-\[
+\end{array}\right\}=(-1)^{b+c+e+f} \frac{\Delta(a b c) \Delta(c d e) \Delta(a e f) \Delta(b d f)(a+b+c+1)!(b+d+f+1)!}{(a+b-c)!(c-d+e)!(c+d-e)!(a-e+f)!(-a+e+f)!(b+d-f)!}  \notag\\
+& \times \sum_{n}(-1)^{n} \frac{(2 b-n)!(b+c-e+f-n)!(b+c+e+f+1-n)!}{n!(-a+b+c-n)!(b-d+f-n)!(a+b+c+1-n)!(b+d+f+1-n)!} . \label{chap9:eq:25}
+\end{align}
+\subsection{Bargmann Formula [58]}
+\begin{equation}
 \left\{\begin{array}{lll}
-a & b & c  \tag{7}\\
+a & b & c  \label{chap9:eq:26}\\
 d & e & f
 \end{array}\right\} \equiv\left\|\begin{array}{llll}
 R_{11} & R_{12} & R_{13} & R_{14} \\
 R_{21} & R_{22} & R_{23} & R_{24} \\
 R_{31} & R_{32} & R_{33} & R_{34}
 \end{array}\right\|=\left[\frac{\prod_{i=1}^{3} \prod_{\alpha=1}^{4}\left(R_{i \alpha}\right)!}{\prod_{\alpha=1}^{4}\left(B_{\alpha}+1\right)!}\right]^{\frac{1}{2}} \sum_{x_{i}, y_{\alpha}} \frac{(-1)^{n}(n+1)!}{\prod_{i=1}^{3}\left(x_{i}\right)!\prod_{\alpha=1}^{4}\left(y_{\alpha}\right)!}
-\]
+\end{equation}
+Here $R_{i \alpha}$ are elements of the $R$ symbol (Sec. 9.1.3), $B_{\alpha}$ are given by Eq. \eqref{chap9:eq:17}, $x_{i}, y_{\alpha}$ are summation indices, $n \equiv \sum_{i=1}^{3} x_{i}+\sum_{\alpha=1}^{4} y_{\alpha}$. The sums are over all integer nonnegative values of $x_{i}, y_{\alpha}$ which satisfy the conditions $x_{i}+y_{\alpha}=R_{i \alpha}$. These conditions show that only one of the summation indices is independent. The sum in \eqref{chap9:eq:26} contains $r+1$ terms where $r=\min \left\{R_{i \alpha}\right\}$. If we take the quantity $n$ (integer nonnegative) as an independent summation index, then $x_{i}=A_{i}-n, y_{\alpha}=n-B_{\alpha}, A_{i}$ and $B_{\alpha}$ being given by Eq. \eqref{chap9:eq:17}. In this case the Bargmann formula \eqref{chap9:eq:26} reduces to the Racah formula \eqref{chap9:eq:20}.
 
-Here $R_{i \alpha}$ are elements of the $R$ symbol (Sec. 9.1.3), $B_{\alpha}$ are given by Eq. 9.1(18), $x_{i}, y_{\alpha}$ are summation indices, $n \equiv \sum_{i=1}^{3} x_{i}+\sum_{\alpha=1}^{4} y_{\alpha}$. The sums are over all integer nonnegative values of $x_{i}, y_{\alpha}$ which satisfy the conditions $x_{i}+y_{\alpha}=R_{i \alpha}$. These conditions show that only one of the summation indices is independent. The sum in (7) contains $r+1$ terms where $r=\min \left\{R_{i \alpha}\right\}$. If we take the quantity $n$ (integer nonnegative) as an independent summation index, then $x_{i}=A_{i}-n, y_{\alpha}=n-B_{\alpha}, A_{i}$ and $B_{\alpha}$ being given by Eq. 9.1(18). In this case the Bargmann formula (7) reduces to the Racah formula (1).
-
-\subsection*{9.2.3. Relations Between the $6 j$ Symbols and the Generalized Hypergeometric Functions}
+\subsection{Relations Between the $6 j$ Symbols and the Generalized Hypergeometric Functions}
 The $6 j$ symbols may be written in terms of the hypergeometric functions ${ }_{4} F_{3}$ with unit argument:
-
-
-\begin{align*}
+\begin{align}
 & \left\{\begin{array}{lll}
 a & b & c \\
 d & e & f
-\end{array}\right\}=(-1)^{a+b+d+e} \frac{\Delta(a b c) \Delta(c d e) \Delta(a e f) \Delta(b d f)(a+b+d+e+1)!}{(a+b-c)!(-c+d+e)!(a+e-f)!(b+d-f)!(-a+c-d+f)!(-b+c-e+f)!} \\
+\end{array}\right\}=(-1)^{a+b+d+e} \frac{\Delta(a b c) \Delta(c d e) \Delta(a e f) \Delta(b d f)(a+b+d+e+1)!}{(a+b-c)!(-c+d+e)!(a+e-f)!(b+d-f)!(-a+c-d+f)!(-b+c-e+f)!}  \notag\\
 & \times_{4} F_{3}\left[\left.\begin{array}{c}
 -a-b+c, c-d-e,-a-e+f,-b-d+f \\
 -a-b-d-e-1,-a+c-d+f+1,-b+c-e+f+1
-\end{array} \right\rvert\, 1\right], \quad(\text { Rose [30]) }  \tag{8}\\
+\end{array} \right\rvert\, 1\right], \quad(\text { Rose [30]) }  \label{chap9:eq:27}\\
 & \left\{\begin{array}{lll}
 a & b & c \\
 d & e & f
-\end{array}\right\}=(-1)^{a+c+d+f} \frac{\Delta(a e f) \Delta(b d f)(-a+b+c)!(c-d+e)!(a-c+d+f)!}{\Delta(a b c) \Delta(c d e)(a-e+f)!(-b+d+f)!(-a+b-d+e)!(b+c+e-f+1)!} \\
+\end{array}\right\}=(-1)^{a+c+d+f} \frac{\Delta(a e f) \Delta(b d f)(-a+b+c)!(c-d+e)!(a-c+d+f)!}{\Delta(a b c) \Delta(c d e)(a-e+f)!(-b+d+f)!(-a+b-d+e)!(b+c+e-f+1)!}  \notag\\
 & \times 4 F_{3}\left[\left.\begin{array}{c}
 -a+b+c+1, c-d+e+1,-a+e-f, b-d-f \\
 -a+c-d-f,-a+b-d+e+1, b+c+e-f+2
-\end{array} \right\rvert\, 1\right],  \tag{9}\\
+\end{array} \right\rvert\, 1\right],  \label{chap9:eq:28}\\
 & \left\{\begin{array}{lll}
 a & b & c \\
 d & e & f
-\end{array}\right\}=(-1)^{a+c+d+f} \frac{\Delta(a b c) \Delta(b d f)(a-b+d+e)!(-b+c+e+f)!(a+c+d+f+1)!}{\Delta(a e f) \Delta(c d e)(a-b+c)!(-b+d+f)!(a+e+f+1)!(c+d+e+1)!} \\
+\end{array}\right\}=(-1)^{a+c+d+f} \frac{\Delta(a b c) \Delta(b d f)(a-b+d+e)!(-b+c+e+f)!(a+c+d+f+1)!}{\Delta(a e f) \Delta(c d e)(a-b+c)!(-b+d+f)!(a+e+f+1)!(c+d+e+1)!}  \notag\\
 & \times 4 F_{3}\left[\left.\begin{array}{c}
 -a+b-c, b-d-f,-a-e-f-1,-c-d-e-1 \\
 -a+b-d-e, b-c-e-f,-a-c-d-f-1
-\end{array} \right\rvert\, 1\right],  \tag{10}\\
+\end{array} \right\rvert\, 1\right],  \label{chap9:eq:29}\\
 & \left\{\begin{array}{lll}
 a & b & c \\
 d & e & f
-\end{array}\right\}=(-1)^{a+b+d+e} \\
-& \times \frac{\Delta(a b c) \Delta(c d e) \Delta(a e f) \Delta(b d f)(a+e+f+1)!(b+d+f+1)!(a+c+d-f)!}{(a+b-c)!(a-b+c)!(-c+d+e)!(c+d-e)!(a+e-f)!(b+d-f)!(-a+c-d+f)!(2 f+1)!} \\
+\end{array}\right\}=(-1)^{a+b+d+e}  \notag\\
+& \times \frac{\Delta(a b c) \Delta(c d e) \Delta(a e f) \Delta(b d f)(a+e+f+1)!(b+d+f+1)!(a+c+d-f)!}{(a+b-c)!(a-b+c)!(-c+d+e)!(c+d-e)!(a+e-f)!(b+d-f)!(-a+c-d+f)!(2 f+1)!}  \notag\\
 & \times_{4} F_{3}\left[\left.\begin{array}{c}
 -a-e+f,-b-d+f,-a+e+f+1, b-d+f+1 \\
 -a-c-d+f,-a+c-d+f+1,2 f+2
-\end{array} \right\rvert\, 1\right],  \tag{11}\\
+\end{array} \right\rvert\, 1\right],  \label{chap9:eq:30}\\
 & \left\{\begin{array}{lll}
 a & b & c \\
 d & e & f
-\end{array}\right\}=(-1)^{b+c+e+f} \\
-& \times \frac{\Delta(a b c) \Delta(c d e) \Delta(a e f) \Delta(b d f)(2 b)!(b+c-e+f)!(b+c+e+f+1)!}{(-a+b+c)!(a+b-c)!(c-d+e)!(c+d-e)!(a-e+f)!(-a+e+f)!(b+d-f)!(b-d+f)!} \\
+\end{array}\right\}=(-1)^{b+c+e+f}  \notag\\
+& \times \frac{\Delta(a b c) \Delta(c d e) \Delta(a e f) \Delta(b d f)(2 b)!(b+c-e+f)!(b+c+e+f+1)!}{(-a+b+c)!(a+b-c)!(c-d+e)!(c+d-e)!(a-e+f)!(-a+e+f)!(b+d-f)!(b-d+f)!}  \notag\\
 & \times_{4} F_{3}\left[\left.\begin{array}{c}
 a-b-c,-b+d-f,-a-b-c-1,-b-d-f-1 \\
 -2 b,-b-c+e-f,-b-c-e-f-1
-\end{array} \right\rvert\, 1\right] . \tag{12}
-\end{align*}
+\end{array} \right\rvert\, 1\right] . \label{chap9:eq:31}
+\end{align}
+Equations \eqref{chap9:eq:27}-\eqref{chap9:eq:31} present Eqs. \eqref{chap9:eq:21}-\eqref{chap9:eq:25} in terms of the hypergeometric functions.
 
-
-Equations (8)-(12) present Eqs. (2)-(6) in terms of the hypergeometric functions.
-
-\subsection*{9.2.4. Relations Between the $6 j$ Symbols and the 3jm Symbols}
-The $6 j$ symbols may be written as sums of products of the Clebsch-Gordan coefficients (Eq. 9.1(8)) or 3jm symbols. The relations between the $6 j$ symbols and the $3 j m$ symbols are
-
-\[
+\subsection{Relations Between the $6 j$ Symbols and the 3jm Symbols}
+The $6 j$ symbols may be written as sums of products of the Clebsch-Gordan coefficients (Eq. \eqref{chap9:eq:8}) or 3jm symbols. The relations between the $6 j$ symbols and the $3 j m$ symbols are
+\begin{equation}
 \left\{\begin{array}{lll}
-a & b & c  \tag{13}\\
+a & b & c  \label{chap9:eq:32}\\
 d & e & f
 \end{array}\right\}=\sum(-1)^{d+e+f+\delta+e+\varphi}\left(\begin{array}{lll}
 a & b & c \\
@@ -354,149 +276,98 @@ d & b & f \\
 d & e & c \\
 \delta & -\varepsilon & \gamma
 \end{array}\right) .
-\]
+\end{equation}
+In Eq. \eqref{chap9:eq:32} the sum is over all possible values of $\alpha, \beta, \gamma, \delta, \varepsilon, \varphi$ with only three summation indices being independent. Some other sums of the $3 j \mathrm{~m}$ symbols which yield the $6 j$ symbols will be considered in Chap. 12 .
 
-In Eq. (13) the sum is over all possible values of $\alpha, \beta, \gamma, \delta, \varepsilon, \varphi$ with only three summation indices being independent. Some other sums of the $3 j \mathrm{~m}$ symbols which yield the $6 j$ symbols will be considered in Chap. 12 .
-
-\subsection*{9.2.5. Quasi-Binomial Representation of the 6j Symbols}
+\subsection{Quasi-Binomial Representation of the 6j Symbols}
 The $6 j$ symbols may be written in terms of quasi-binomials [45, 99] which are defined in Sec. 8.2.2. These representations are widely used in tabulating the formulas for the $6 j$ symbols.
 
 Let us introduce the following definitions:
-
-\[
+\begin{equation}
 \begin{array}{lll}
 k_{1} \equiv e-d, & B \equiv R_{21}=-b+d+f, & F \equiv R_{12}=b+d-f, \\
-k_{2} \equiv a-b, & D \equiv R_{34}=b-d+f, & E \equiv R_{12}+R_{21}+R_{34}+1=b+d+f+1 \tag{14}
+k_{2} \equiv a-b, & D \equiv R_{34}=b-d+f, & E \equiv R_{12}+R_{21}+R_{34}+1=b+d+f+1 \label{chap9:eq:33}
 \end{array}
-\]
-
+\end{equation}
 Then the dependence of the $6 j$ symbols on $k_{1}$ and $k_{2}$ is given by
-
-
-\begin{gather*}
+\begin{gather}
 \left\{\begin{array}{lll}
 a & b & c \\
 d & e & f
 \end{array}\right\} \equiv\left\{\begin{array}{ccc}
 b+k_{2} & b & c \\
 d & d+k_{1} & f
-\end{array}\right\} \\
-=(-1)^{E+k_{1}+k_{2}+1}\left[\frac{\left(c+k_{2}\right)^{\left(2 k_{2}\right)} B^{\left(k_{2}-k_{1}\right)} D^{(-1)\left(k_{2}-k_{1}\right)} E^{(-1)\left(k_{2}+k_{1}\right)} F^{(-1)\left(k_{2}+k_{1}\right)}}{\left(c+k_{1}\right)!\left(c-k_{1}\right)!\left(2 b+c+k_{2}+1\right)^{(2 c+1)}\left(2 d+c+k_{1}+1\right)^{(2 c+1)}}\right]^{\frac{1}{2}}(u-v)^{\left(c-k_{2}\right)} . \tag{15}
-\end{gather*}
-
-
+\end{array}\right\}  \notag\\
+=(-1)^{E+k_{1}+k_{2}+1}\left[\frac{\left(c+k_{2}\right)^{\left(2 k_{2}\right)} B^{\left(k_{2}-k_{1}\right)} D^{(-1)\left(k_{2}-k_{1}\right)} E^{(-1)\left(k_{2}+k_{1}\right)} F^{(-1)\left(k_{2}+k_{1}\right)}}{\left(c+k_{1}\right)!\left(c-k_{1}\right)!\left(2 b+c+k_{2}+1\right)^{(2 c+1)}\left(2 d+c+k_{1}+1\right)^{(2 c+1)}}\right]^{\frac{1}{2}}(u-v)^{\left(c-k_{2}\right)} . \label{chap9:eq:34}
+\end{gather}
 The quantities $u$ and $v$ may be chosen in different ways. This depends on which equations in Sec. 9.2.1. are supposed to be written in a quasi-binomial form [45].
 
-Equations (1) and (2) are obtained by putting
-
-
-\begin{align*}
-& u=\left(c+k_{1}\right)^{(1)}\left(B-k_{2}+k_{1}\right)^{(1)} D^{(1)} \\
-& v=\left(c-k_{1}\right)^{(1)} F^{(1)}\left(E+k_{1}+k_{2}\right)^{(-1)} \tag{16}
-\end{align*}
-
-
-Equation (3) is obtained, if
-
-
-\begin{align*}
-& u=\left(c+k_{1}\right)^{(1)} B^{(-1)}\left(D+k_{2}-k_{1}\right)^{(-1)} \\
-& v=\left(c-k_{1}\right)^{(1)}\left(F+k_{2}+k_{1}\right)^{(-1)} E^{(1)} \tag{17}
-\end{align*}
-
-
+Equations \eqref{chap9:eq:20} and \eqref{chap9:eq:21} are obtained by putting
+\begin{align}
+& u=\left(c+k_{1}\right)^{(1)}\left(B-k_{2}+k_{1}\right)^{(1)} D^{(1)}  \notag\\
+& v=\left(c-k_{1}\right)^{(1)} F^{(1)}\left(E+k_{1}+k_{2}\right)^{(-1)} \label{chap9:eq:35}
+\end{align}
+Equation \eqref{chap9:eq:22} is obtained, if
+\begin{align}
+& u=\left(c+k_{1}\right)^{(1)} B^{(-1)}\left(D+k_{2}-k_{1}\right)^{(-1)}  \notag\\
+& v=\left(c-k_{1}\right)^{(1)}\left(F+k_{2}+k_{1}\right)^{(-1)} E^{(1)} \label{chap9:eq:36}
+\end{align}
 or
-
-
-\begin{align*}
-& u=\left(2 d-c+k_{1}\right)^{(-1)} D^{(1)}\left(F+k_{2}+k_{1}\right)^{(-1)} \\
-& v=\left(2 d+c+k_{1}+1\right)^{(1)}\left(D+k_{2}-k_{1}\right)^{(-1)} F^{(1)} \tag{18}
-\end{align*}
-
-
-Equation (4) corresponds to
-
-
-\begin{align*}
-& u=\left(2 d+c+k_{1}+1\right)^{(1)}\left(B-k_{2}+k_{1}\right)^{(1)} E^{(1)} \\
-& v=\left(2 d-c+k_{1}\right)^{(-1)} B^{(-1)}\left(E+k_{2}+k_{1}\right)^{(-1)} \tag{19}
-\end{align*}
-
-
-Equation (5) is obtained provided
-
-
-\begin{align*}
-& u=\left(c+k_{2}\right)^{(-1)}\left(B-k_{2}+k_{1}\right)^{(1)}\left(D+k_{2}-k_{1}\right)^{(-1)} \\
-& v=\left(c-k_{1}\right)^{(1)}\left(2 b+c+k_{2}+1\right)^{(1)}\left(2 d-c+k_{1}\right)^{(-1)} \tag{20}
-\end{align*}
-
-
+\begin{align}
+& u=\left(2 d-c+k_{1}\right)^{(-1)} D^{(1)}\left(F+k_{2}+k_{1}\right)^{(-1)}  \notag\\
+& v=\left(2 d+c+k_{1}+1\right)^{(1)}\left(D+k_{2}-k_{1}\right)^{(-1)} F^{(1)} \label{chap9:eq:37}
+\end{align}
+Equation \eqref{chap9:eq:23} corresponds to
+\begin{align}
+& u=\left(2 d+c+k_{1}+1\right)^{(1)}\left(B-k_{2}+k_{1}\right)^{(1)} E^{(1)}  \notag\\
+& v=\left(2 d-c+k_{1}\right)^{(-1)} B^{(-1)}\left(E+k_{2}+k_{1}\right)^{(-1)} \label{chap9:eq:38}
+\end{align}
+Equation \eqref{chap9:eq:24} is obtained provided
+\begin{align}
+& u=\left(c+k_{2}\right)^{(-1)}\left(B-k_{2}+k_{1}\right)^{(1)}\left(D+k_{2}-k_{1}\right)^{(-1)}  \notag\\
+& v=\left(c-k_{1}\right)^{(1)}\left(2 b+c+k_{2}+1\right)^{(1)}\left(2 d-c+k_{1}\right)^{(-1)} \label{chap9:eq:39}
+\end{align}
 or
-
-
-\begin{align*}
-& u=\left(c+k_{1}\right)^{(1)}\left(2 b-c+k_{2}\right)^{(-1)}\left(2 d-c+k_{1}\right)^{(-1)}  \tag{21}\\
-& v=\left(c+k_{2}\right)^{(-1)} F^{(1)} E^{(1)}
-\end{align*}
-
-
-Equation (6) corresponds to
-
-
-\begin{align*}
-& u=D^{(1)} E^{(1)}\left(2 b+c+k_{2}+1\right)^{(1)} \\
-& v=\left(D+k_{2}-k_{1}\right)^{(-1)}\left(E+k_{2}+k_{1}\right)^{(-1)}\left(2 b-c+k_{2}\right)^{(-1)} \tag{22}
-\end{align*}
-
-
+\begin{align}
+& u=\left(c+k_{1}\right)^{(1)}\left(2 b-c+k_{2}\right)^{(-1)}\left(2 d-c+k_{1}\right)^{(-1)}  \label{chap9:eq:40}\\
+& v=\left(c+k_{2}\right)^{(-1)} F^{(1)} E^{(1)} \notag
+\end{align}
+Equation \eqref{chap9:eq:25} corresponds to
+\begin{align}
+& u=D^{(1)} E^{(1)}\left(2 b+c+k_{2}+1\right)^{(1)}  \notag\\
+& v=\left(D+k_{2}-k_{1}\right)^{(-1)}\left(E+k_{2}+k_{1}\right)^{(-1)}\left(2 b-c+k_{2}\right)^{(-1)} \label{chap9:eq:41}
+\end{align}
 or
-
-
-\begin{align*}
-& u=\left(c+k_{1}\right)^{(1)}\left(2 b+c+k_{2}+1\right)^{(1)}\left(2 d+c+k_{1}+1\right)^{(1)}  \tag{23}\\
-& v=\left(c+k_{2}\right)^{(-1)}\left(F+k_{2}+k_{1}\right)^{(-1)}\left(E+k_{2}+k_{1}\right)^{(-1)}
-\end{align*}
-
-
-Equation (15) for the $6 j$ symbols is valid, if all the exponents $2 k_{2}, k_{2}-k_{1}$ and $k_{2}+k_{1}$ are integer nonnegative numbers, i.e., if $k_{2} \geq\left|k_{1}\right| \geq 0$. If some of the exponents are negative, the corresponding quasi-power should be replaced in accordance with
-
-
-\begin{equation*}
-p^{(\sigma)} \rightarrow \frac{1}{p^{(-1)(|\sigma|)}}, \quad p^{(-1)(\sigma)} \rightarrow \frac{1}{p^{(|\sigma|)}} \quad \text { for } \sigma<0 \tag{24}
-\end{equation*}
-
-
-\subsection*{9.3. INTEGRAL REPRESENTATIONS OF THE $6 j$ SYMBOLS}
+\begin{align}
+& u=\left(c+k_{1}\right)^{(1)}\left(2 b+c+k_{2}+1\right)^{(1)}\left(2 d+c+k_{1}+1\right)^{(1)}  \label{chap9:eq:42}\\
+& v=\left(c+k_{2}\right)^{(-1)}\left(F+k_{2}+k_{1}\right)^{(-1)}\left(E+k_{2}+k_{1}\right)^{(-1)} \notag
+\end{align}
+Equation \eqref{chap9:eq:34} for the $6 j$ symbols is valid, if all the exponents $2 k_{2}, k_{2}-k_{1}$ and $k_{2}+k_{1}$ are integer nonnegative numbers, i.e., if $k_{2} \geq\left|k_{1}\right| \geq 0$. If some of the exponents are negative, the corresponding quasi-power should be replaced in accordance with
+\begin{equation}
+p^{(\sigma)} \rightarrow \frac{1}{p^{(-1)(|\sigma|)}}, \quad p^{(-1)(\sigma)} \rightarrow \frac{1}{p^{(|\sigma|)}} \quad \text { for } \sigma<0 \label{chap9:eq:43}
+\end{equation}
+\section{INTEGRAL REPRESENTATIONS OF THE $6 j$ SYMBOLS}
 Squares of the $6 j$ symbols may be expressed by integrals involving the characters of the representations of the rotation group [110]
-
-\[
+\begin{equation}
 \left\{\begin{array}{lll}
-a & b & c  \tag{1}\\
+a & b & c  \label{chap9:eq:44}\\
 d & e & f
 \end{array}\right\}^{2}=\frac{1}{\left(8 \pi^{2}\right)^{3}} \int d R_{1} d R_{2} d R_{3} \chi^{a}\left(R_{1}\right) \chi^{b}\left(R_{2}\right) \chi^{c}\left(R_{3}\right) \chi^{d}\left(R_{2} R_{3}^{-1}\right) \chi^{e}\left(R_{3} R_{1}^{-1}\right) \chi^{f}\left(R_{1} R_{2}^{-1}\right)
-\]
-
+\end{equation}
 Here
-
-$$
+\[
 \chi^{j}(R) \equiv \sum_{m} D_{m m}^{j}(R) \equiv \sum_{m} D_{m m}^{j}(\alpha, \beta, \gamma)
-$$
-
+\]
 is the character of the representation of rank $j$ (Sec. 4.14)
-
-$$
+\[
 \int f(R) d R \equiv \int_{0}^{2 \pi} d \alpha \int_{0}^{\pi} \sin \beta d \beta \int_{0}^{2 \pi} d \gamma f(\alpha, \beta, \gamma)
-$$
-
+\]
 Note also the following integral representations for some special $6 j$ symbols
-
-
-\begin{gather*}
+\begin{gather}
 \left\{\begin{array}{lll}
 a & b & c \\
 a & b & f
-\end{array}\right\}=\frac{(-1)^{2 c}}{\left(8 \pi^{2}\right)^{2}} \int d R_{1} d R_{2} \chi^{c}\left(R_{1}\right) \chi^{f}\left(R_{2}\right) \chi^{a}\left(R_{2} R_{1}\right) \chi^{b}\left(R_{2}^{-1} R_{1}\right),  \tag{2}\\
+\end{array}\right\}=\frac{(-1)^{2 c}}{\left(8 \pi^{2}\right)^{2}} \int d R_{1} d R_{2} \chi^{c}\left(R_{1}\right) \chi^{f}\left(R_{2}\right) \chi^{a}\left(R_{2} R_{1}\right) \chi^{b}\left(R_{2}^{-1} R_{1}\right),  \label{chap9:eq:45}\\
 \left\{\begin{array}{lll}
 a & b & g \\
 d & b & c
@@ -506,8 +377,8 @@ d & b & f
 \end{array}\right\}\left\{\begin{array}{lll}
 a & b & c \\
 d & b & f
-\end{array}\right\} \\
-=\frac{(-1)^{2 a}}{\left(8 \pi^{2}\right)^{4}} \int d R_{1} d R_{2} d R_{3} d R_{4} \chi^{c}\left(R_{1}\right) \chi^{g}\left(R_{2}\right) \chi^{f}\left(R_{3}\right) \chi^{a}\left(R_{4} R_{2}\right) \chi^{b}\left(R_{4} R_{3} R_{2} R_{1} R_{4}\right) \chi^{d}\left(R_{1} R_{4} R_{3}\right),  \tag{3}\\
+\end{array}\right\}  \notag\\
+=\frac{(-1)^{2 a}}{\left(8 \pi^{2}\right)^{4}} \int d R_{1} d R_{2} d R_{3} d R_{4} \chi^{c}\left(R_{1}\right) \chi^{g}\left(R_{2}\right) \chi^{f}\left(R_{3}\right) \chi^{a}\left(R_{4} R_{2}\right) \chi^{b}\left(R_{4} R_{3} R_{2} R_{1} R_{4}\right) \chi^{d}\left(R_{1} R_{4} R_{3}\right),  \label{chap9:eq:46}\\
 \left\{\begin{array}{lll}
 a & b & c \\
 d & e & f
@@ -520,20 +391,17 @@ a & b & c
 \end{array}\right\}\left\{\begin{array}{lll}
 d & e & c \\
 a & b & c
-\end{array}\right\} \\
-=\frac{(-1)^{2 d}}{\left(8 \pi^{2}\right)^{5}} \int d R_{1} d R_{2} d R_{3} d R_{4} d R_{5} \chi^{d}\left(R_{1}\right) \chi^{e}\left(R_{2}\right) \chi^{f}\left(R_{3}\right) \chi^{a}\left(R_{4}\right) \chi^{a}\left(R_{5}^{-1} R_{3} R_{2}\right) \chi^{b}\left(R_{6} R_{4} R_{2} R_{1}\right) \chi^{c}\left(R_{4}^{-1} R_{5} R_{1} R_{3}\right) \tag{4}
-\end{gather*}
-
-
-\subsection*{9.4. SYMMETRIES OF THE $6 j$ SYMBOLS AND THE RACAH COEFFICIENTS}
-\subsection*{9.4.1. R-Symbols}
+\end{array}\right\}  \notag\\
+=\frac{(-1)^{2 d}}{\left(8 \pi^{2}\right)^{5}} \int d R_{1} d R_{2} d R_{3} d R_{4} d R_{5} \chi^{d}\left(R_{1}\right) \chi^{e}\left(R_{2}\right) \chi^{f}\left(R_{3}\right) \chi^{a}\left(R_{4}\right) \chi^{a}\left(R_{5}^{-1} R_{3} R_{2}\right) \chi^{b}\left(R_{6} R_{4} R_{2} R_{1}\right) \chi^{c}\left(R_{4}^{-1} R_{5} R_{1} R_{3}\right) \label{chap9:eq:47}
+\end{gather}
+\section{SYMMETRIES OF THE $6 j$ SYMBOLS AND THE RACAH COEFFICIENTS}
+\subsection{R-Symbols}
 The symmetry properties of the $6 j$ symbols and the $W$-coefficients may be formulated in a fairly simple way if these coefficients are written in terms of the $R$ symbols (see Sec. 9.1.3).
 
 The value of the $R$ symbol is invariant under any permutation of its rows or columns [105]
-
-\[
+\begin{equation}
 \left\|\begin{array}{llll}
-R_{11} & R_{12} & R_{13} & R_{14}  \tag{1}\\
+R_{11} & R_{12} & R_{13} & R_{14}  \label{chap9:eq:48}\\
 R_{21} & R_{22} & R_{23} & R_{24} \\
 R_{31} & R_{32} & R_{33} & R_{34}
 \end{array}\right\|=\left\|\begin{array}{llll}
@@ -545,16 +413,14 @@ R_{1 \alpha} & R_{1 \beta} & R_{1 \gamma} & R_{1 \delta} \\
 R_{2 \alpha} & R_{2 \beta} & R_{2 \gamma} & R_{2 \delta} \\
 R_{3 \alpha} & R_{3 \beta} & R_{3 \gamma} & R_{3 \delta}
 \end{array}\right\| .
-\]
-
+\end{equation}
 In other words, any permutation of parameters $A_{i}$ or $B_{\alpha}$ (see Sec. 9.1.3) leaves the value of the $R$ symbol unchanged. These symmetry relations involve $3!\times 4!=144$ generally different Racah coefficients.
 
-\subsection*{9.4.2. 6j Symbols}
+\subsection{6j Symbols}
 The above-mentioned symmetries of the $R$ symbol are equivalent to the following symmetries of the $6 j$ symbols.\\[0pt]
-(a) Classical Symmetries [110]: The $6 j$ symbol is invariant under any permutation of its columns or under interchange of the upper and lower arguments in each of any two columns:
-
-
-\begin{align*}
+\subsubsection{(a) Classical Symmetries [110]}
+The $6 j$ symbol is invariant under any permutation of its columns or under interchange of the upper and lower arguments in each of any two columns:
+\begin{align}
 & \left\{\begin{array}{lll}
 a & b & c \\
 d & e & f
@@ -573,7 +439,7 @@ f & d & e
 \end{array}\right\}=\left\{\begin{array}{lll}
 c & b & a \\
 f & e & d
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 & =\left\{\begin{array}{lll}
 a & e & f \\
 d & b & c
@@ -592,7 +458,7 @@ c & d & b
 \end{array}\right\}=\left\{\begin{array}{lll}
 f & e & a \\
 c & b & d
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 & =\left\{\begin{array}{lll}
 d & e & c \\
 a & b & f
@@ -611,7 +477,7 @@ f & a & b
 \end{array}\right\}=\left\{\begin{array}{lll}
 c & e & d \\
 f & b & a
-\end{array}\right\}  \tag{2}\\
+\end{array}\right\}  \label{chap9:eq:49}\\
 & =\left\{\begin{array}{lll}
 d & b & f \\
 a & e & c
@@ -630,15 +496,12 @@ c & a & e
 \end{array}\right\}=\left\{\begin{array}{lll}
 f & b & d \\
 c & e & a
-\end{array}\right\} .
-\end{align*}
-
-
+\end{array}\right\} . \notag
+\end{align}
 These relations involve $3!\times 4=24$ different $6 j$ symbols.\\[0pt]
-(b) Regge Symmetries [95]: The relations below are functional ones, i.e. in general they cannot be obtained by interchanging the $6 j$ symbol arguments.
-
-
-\begin{gather*}
+\subsubsection{(b) Regge Symmetries [95]}
+The relations below are functional ones, i.e. in general they cannot be obtained by interchanging the $6 j$ symbol arguments.
+\begin{gather}
 \left\{\begin{array}{l}
 a b c \\
 d e f
@@ -649,7 +512,7 @@ s_{1}-e & s_{1}-f
 \end{array}\right\}=\left\{\begin{array}{l}
 s_{2}-a b s_{2}-c \\
 s_{2}-d e s_{2}-f
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 \left.=\left\{\begin{array}{l}
 s_{3}-a s_{3}-b c \\
 s_{3}-d \\
@@ -662,60 +525,40 @@ s_{3}-d s_{1}-e s_{2}-f \\
 s_{3}-a
 \end{array}\right\} \begin{array}{l}
 s_{1}-b s_{2}-c
-\end{array}\right\}, \tag{3}
-\end{gather*}
-
-
+\end{array}\right\}, \label{chap9:eq:50}
+\end{gather}
 where
-
-
-\begin{equation*}
-s_{1}=\frac{1}{2}(b+c+e+f), \quad s_{2}=\frac{1}{2}(a+c+d+f), \quad s_{3}=\frac{1}{2}(a+b+d+e) . \tag{4}
-\end{equation*}
-
-
+\begin{equation}
+s_{1}=\frac{1}{2}(b+c+e+f), \quad s_{2}=\frac{1}{2}(a+c+d+f), \quad s_{3}=\frac{1}{2}(a+b+d+e) . \label{chap9:eq:51}
+\end{equation}
 These relations are especially useful when $s_{i}$ equals one of the $6 j$ symbol arguments. Combining the Regge symmetries and the classical symmetries, one gets all 144 symmetry relations.
 
-\subsection*{9.4.3. Racah Coefficients}
+\subsection{Racah Coefficients}
 For the Racah coefficients the symmetry relations are the following.\\[0pt]
-(a) Classical Symmetries [91]:
-
-
-\begin{align*}
-& W(a b e d ; c f)=W(d e b a ; c f)=W(e d a b ; c f)=W(b a d e ; c f) \\
-&=W(a e b d ; f c)=W(d b e a ; f c)=W(b d a e ; f c)=W(e a d b ; f c) \\
-&=\varepsilon_{1} W(a c f d ; b e)=\varepsilon_{1} W(d f c a ; b e)=\varepsilon_{1} W(f d a c ; b e)=\varepsilon_{1} W(c a d f ; b e) \\
-&=\varepsilon_{1} W(a f c d ; e b)=\varepsilon_{1} W(d c f a ; e b)=\varepsilon_{1} W(c d a f ; e b)=\varepsilon_{1} W(f a d c ; e b)  \tag{5}\\
-&=\varepsilon_{2} W(c b e f ; a d)=\varepsilon_{2} W(f e b c ; a d)=\varepsilon_{2} W(e f c b ; a d)=\varepsilon_{2} W(b c f e ; a d) \\
-&=\varepsilon_{2} W(c e b f ; d a)=\varepsilon_{2} W(f b e c ; d a)=\varepsilon_{2} W(b f c e ; d a)=\varepsilon_{2} W(e c f b ; d a),
-\end{align*}
-
-
+\subsubsection{(a) Classical Symmetries [91]}
+\begin{align}
+& W(a b e d ; c f)=W(d e b a ; c f)=W(e d a b ; c f)=W(b a d e ; c f)  \notag\\
+&=W(a e b d ; f c)=W(d b e a ; f c)=W(b d a e ; f c)=W(e a d b ; f c)  \notag\\
+&=\varepsilon_{1} W(a c f d ; b e)=\varepsilon_{1} W(d f c a ; b e)=\varepsilon_{1} W(f d a c ; b e)=\varepsilon_{1} W(c a d f ; b e)  \notag\\
+&=\varepsilon_{1} W(a f c d ; e b)=\varepsilon_{1} W(d c f a ; e b)=\varepsilon_{1} W(c d a f ; e b)=\varepsilon_{1} W(f a d c ; e b)  \label{chap9:eq:52}\\
+&=\varepsilon_{2} W(c b e f ; a d)=\varepsilon_{2} W(f e b c ; a d)=\varepsilon_{2} W(e f c b ; a d)=\varepsilon_{2} W(b c f e ; a d)  \notag\\
+&=\varepsilon_{2} W(c e b f ; d a)=\varepsilon_{2} W(f b e c ; d a)=\varepsilon_{2} W(b f c e ; d a)=\varepsilon_{2} W(e c f b ; d a), \notag
+\end{align}
 where
+\begin{equation}
+\varepsilon_{1}=(-1)^{b+e-c-f}, \quad \varepsilon_{2}=(-1)^{a+d-c-f} \label{chap9:eq:53}
+\end{equation}
+\subsubsection{(b) Regge Symmetries}
+\begin{gather}
+W(a b e d ; c f)=W\left(s_{3}-a, s_{3}-b, s_{3}-e, s_{3}-d ; c f\right)=\varepsilon_{1} W\left(a, s_{1}-b, s_{1}-e, d ; s_{1}-c, s_{1}-f\right)  \notag\\
+=\varepsilon_{1} W\left(s_{2}-d, s_{3}-e, s_{3}-b, s_{2}-a ; s_{1}-f, s_{1}-c\right)=\varepsilon_{2} W\left(s_{2}-a, b, e, s_{2}-d ; s_{2}-c, s_{2}-f\right)  \notag\\
+=\varepsilon_{2} W\left(s_{3}-d, s_{1}-e, s_{1}-b, s_{3}-a ; s_{2}-f, s_{2}-c\right) \label{chap9:eq:54}
+\end{gather}
+Here $s_{1}, s_{2}, s_{3}$ are given by Eq. \eqref{chap9:eq:51} and $\varepsilon_{1}, \varepsilon_{2}$ by Eq. \eqref{chap9:eq:53}.
 
-
-\begin{equation*}
-\varepsilon_{1}=(-1)^{b+e-c-f}, \quad \varepsilon_{2}=(-1)^{a+d-c-f} \tag{6}
-\end{equation*}
-
-
-(b) Regge Symmetries:
-
-
-\begin{gather*}
-W(a b e d ; c f)=W\left(s_{3}-a, s_{3}-b, s_{3}-e, s_{3}-d ; c f\right)=\varepsilon_{1} W\left(a, s_{1}-b, s_{1}-e, d ; s_{1}-c, s_{1}-f\right) \\
-=\varepsilon_{1} W\left(s_{2}-d, s_{3}-e, s_{3}-b, s_{2}-a ; s_{1}-f, s_{1}-c\right)=\varepsilon_{2} W\left(s_{2}-a, b, e, s_{2}-d ; s_{2}-c, s_{2}-f\right) \\
-=\varepsilon_{2} W\left(s_{3}-d, s_{1}-e, s_{1}-b, s_{3}-a ; s_{2}-f, s_{2}-c\right) \tag{7}
-\end{gather*}
-
-
-Here $s_{1}, s_{2}, s_{3}$ are given by Eq. (4) and $\varepsilon_{1}, \varepsilon_{2}$ by Eq. (6).
-
-\subsection*{9.4.4. "Mirror" Symmetry}
+\subsection{"Mirror" Symmetry}
 The formulas for the $6 j$ symbols may be extended to include negative integer or half-integer values of arguments. In this case one has the following symmetry properties [45] corresponding to the replacement $j \rightarrow-j-1$,
-
-
-\begin{align*}
+\begin{align}
 & \left.\left\{\begin{array}{lll}
 a & b & c \\
 d & e & f
@@ -733,7 +576,7 @@ e
 \end{array}\right\}=(-1)^{\varphi_{1}+1}\left\{\begin{array}{l}
 a \\
 \bar{b}
-\end{array} \mathrm{c}\right)\right\} \\
+\end{array} \mathrm{c}\right)\right\}  \notag\\
 & =(-1)^{\varphi_{2}}\left\{\begin{array}{ll}
 \bar{a} & b \\
 \bar{d} & e \\
@@ -748,7 +591,7 @@ e
 \end{array}\right\}=i(-1)^{\varphi_{3}}\left\{\begin{array}{ll}
 a & b \bar{c} \\
 \bar{d} & \bar{e} \bar{f}
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 & =i(-1)^{\varphi_{4}}\left\{\begin{array}{ll}
 \bar{a} & \bar{b} \\
 d & \bar{c} \\
@@ -763,42 +606,27 @@ a & b \\
 \end{array}\right\}=(-1)^{\varphi_{5}+1}\left\{\begin{array}{lll}
 a & b & \bar{c} \\
 d & \bar{e} & \bar{f}
-\end{array}\right\} . \tag{8}
-\end{align*}
-
-
+\end{array}\right\} . \label{chap9:eq:55}
+\end{align}
 Here
-
-
-\begin{gather*}
-\bar{a} \equiv-a-1, \quad \bar{b} \equiv-b-1, \text { etc. } \\
-\varphi_{1}=b-c-e+f, \varphi_{2}=2(a+d), \varphi_{3}=c+d+e+2 f, \varphi_{4}=a+b+c, \varphi_{5}=2(c+f)+1 \tag{9}
-\end{gather*}
-
-
+\begin{gather}
+\bar{a} \equiv-a-1, \quad \bar{b} \equiv-b-1, \text { etc. }  \notag\\
+\varphi_{1}=b-c-e+f, \varphi_{2}=2(a+d), \varphi_{3}=c+d+e+2 f, \varphi_{4}=a+b+c, \varphi_{5}=2(c+f)+1 \label{chap9:eq:56}
+\end{gather}
 Similarly, for the Racah coefficients one gets
-
-
-\begin{gather*}
-W(a b e d ; c f)=-W(\bar{a} \bar{b} \bar{e} \bar{d} ; \bar{c} \bar{f})=W(\bar{a} b e \bar{d} ; c f)=-W(a \bar{b} \bar{e} d ; \bar{c} \bar{f}) \\
-=(-1)^{\psi_{1}+1} W(\bar{a} b e d ; c f)=(-1)^{\psi_{1}} W(a \bar{b} \bar{e} \bar{d} ; \bar{c} \bar{f})=i(-1)^{\psi_{2}} W(\bar{a} \bar{b} e d ; c f)=i(-1)^{\psi_{2}} W(a b \bar{e} d ; \bar{c} \bar{f}) \\
-=i(-1)^{\psi_{3}} W(\bar{a} \bar{b} e d ; \bar{c} f)=i(-1)^{\psi_{3}} W(a b \bar{e} \bar{d} ; c \bar{f})=(-1)^{\psi_{4}} W(\bar{a} \bar{b} e \bar{d} ; c f)=(-1)^{\psi_{4}+1} W(a b \bar{e} d ; \bar{c} f) . \tag{10}
-\end{gather*}
-
-
+\begin{gather}
+W(a b e d ; c f)=-W(\bar{a} \bar{b} \bar{e} \bar{d} ; \bar{c} \bar{f})=W(\bar{a} b e \bar{d} ; c f)=-W(a \bar{b} \bar{e} d ; \bar{c} \bar{f})  \notag\\
+=(-1)^{\psi_{1}+1} W(\bar{a} b e d ; c f)=(-1)^{\psi_{1}} W(a \bar{b} \bar{e} \bar{d} ; \bar{c} \bar{f})=i(-1)^{\psi_{2}} W(\bar{a} \bar{b} e d ; c f)=i(-1)^{\psi_{2}} W(a b \bar{e} d ; \bar{c} \bar{f})  \notag\\
+=i(-1)^{\psi_{3}} W(\bar{a} \bar{b} e d ; \bar{c} f)=i(-1)^{\psi_{3}} W(a b \bar{e} \bar{d} ; c \bar{f})=(-1)^{\psi_{4}} W(\bar{a} \bar{b} e \bar{d} ; c f)=(-1)^{\psi_{4}+1} W(a b \bar{e} d ; \bar{c} f) . \label{chap9:eq:57}
+\end{gather}
 Here
-
-
-\begin{equation*}
-\psi_{1}=-b+c-e+f, \quad \psi_{2}=-c+d+e+2 f, \quad \psi_{3}=a+b-c, \quad \psi_{4}=2(d+f) \tag{11}
-\end{equation*}
-
-
-\subsection*{9.5. EXPLICIT FORMS OF THE $6 j$ SYMBOLS FOR CERTAIN ARGUMENTS}
-\subsection*{9.5.1. One of Arguments is Equal to Zero}
+\begin{equation}
+\psi_{1}=-b+c-e+f, \quad \psi_{2}=-c+d+e+2 f, \quad \psi_{3}=a+b-c, \quad \psi_{4}=2(d+f) \label{chap9:eq:58}
+\end{equation}
+\section{EXPLICIT FORMS OF THE $6 j$ SYMBOLS FOR CERTAIN ARGUMENTS}
+\subsection{One of Arguments is Equal to Zero}
 For the $6 j$ symbols one obtains
-
-\[
+\begin{equation}
 \begin{array}{lll}
 \left\{\begin{array}{lll}
 0 & b & c \\
@@ -820,44 +648,35 @@ d & e & f
 \end{array}\right\}=(-1)^{a+e+f} \frac{\delta_{a b} \delta_{d e}}{\sqrt{(2 a+1)(2 d+1)}}, & \left\{\begin{array}{lll}
 a & b & c \\
 d & e & 0
-\end{array}\right\}=(-1)^{a+b+c} \frac{\delta_{a e} \delta_{b d}}{\sqrt{(2 a+1)(2 b+1)}} . \tag{1}
+\end{array}\right\}=(-1)^{a+b+c} \frac{\delta_{a e} \delta_{b d}}{\sqrt{(2 a+1)(2 b+1)}} . \label{chap9:eq:59}
 \end{array}
-\]
-
+\end{equation}
 Analogous relations for the Racah coefficients are
-
-$$
+\[
 \begin{array}{ll}
 W(0 b e d ; c f)=\frac{\delta_{b c} \delta_{e f}}{\sqrt{(2 b+1)(2 e+1)}}, & W(a 0 e d ; c f)=\frac{\delta_{a c} \delta_{d f}}{\sqrt{(2 a+1)(2 d+1)}}, \\
 W(a b 0 d ; c f)=\frac{\delta_{a f} \delta_{c d}}{\sqrt{(2 a+1)(2 c+1)}}, & W(a b e 0 ; c f)=\frac{\delta_{b f} \delta_{c e}}{\sqrt{(2 b+1)(2 c+1)}}, \\
 W(a b e d ; 0 f)=(-1)^{a+e-f} \frac{\delta_{a b} \delta_{d e}}{\sqrt{(2 a+1)(2 d+1)}}, & W(a b e d ; c 0)=(-1)^{a+b-c} \frac{\delta_{a e} \delta_{b d}}{\sqrt{(2 a+1)(2 b+1)}}
 \end{array}
-$$
-
+\]
 In this case all other arguments are supposed to satisfy the triangular condition.
 
-\subsection*{9.5.2. One of Arguments is Equal to the Sum of Two Others}
-If one of the $6 j$ symbol arguments is equal to sum of two others from the same triad (abc), (cde), (aef), (bdf), one may use the classical symmetries of the $6 j$ symbol (Eqs. 9.4(2)) to express it in the form
-
-
-\begin{gather*}
+\subsection{One of Arguments is Equal to the Sum of Two Others}
+If one of the $6 j$ symbol arguments is equal to sum of two others from the same triad (abc), (cde), (aef), (bdf), one may use the classical symmetries of the $6 j$ symbol (Eqs. \eqref{chap9:eq:49}) to express it in the form
+\begin{gather}
 \left\{\begin{array}{ccc}
 a & b & a+b \\
 d & e & f
-\end{array}\right\}=(-1)^{a+b+d+e} W(a b e d ; a+b f)=(-1)^{a+b+d+e} \\
-\times\left[\frac{(2 a)!(2 b)!(a+b+d+e+1)!(a+b-d+e)!(a+b+d-e)!(-a+e+f)!(-b+d+f)!}{(2 a+2 b+1)!(-a-b+d+e)!(a+e-f)!(a-e+f)!(a+e+f+1)!(b+d-f)!(b-d+f)!(b+d+f+1)!}\right]^{\frac{1}{2}} \tag{3}
-\end{gather*}
-
-
+\end{array}\right\}=(-1)^{a+b+d+e} W(a b e d ; a+b f)=(-1)^{a+b+d+e}  \notag\\
+\times\left[\frac{(2 a)!(2 b)!(a+b+d+e+1)!(a+b-d+e)!(a+b+d-e)!(-a+e+f)!(-b+d+f)!}{(2 a+2 b+1)!(-a-b+d+e)!(a+e-f)!(a-e+f)!(a+e+f+1)!(b+d-f)!(b-d+f)!(b+d+f+1)!}\right]^{\frac{1}{2}} \label{chap9:eq:60}
+\end{gather}
 In particular,
-
-
-\begin{align*}
+\begin{align}
 &\left\{\begin{array}{lll}
 a & b & a+b \\
 d & e & a+e
-\end{array}\right\}=(-1)^{a+b+d+e}\left[\frac{(2 b)!(2 e)!(a+b+d-e)!(a-b+d+e)!}{(2 a+2 b+1)!(2 a+2 e+1)!(-a-b+d+e)!(-a+b+d-e)!}\right]^{\frac{1}{2}}  \tag{4}\\
-& \times\left[2 a(a+b+d+e+1)(a+b-d+e) \frac{(2 b)!(2 e-1)!(a+b+d-e)!(a-b+d+e-1)!}{(2 a+2 b+1)!(2 a+2 e)!(-a-b+d+e)!(-a+b+d-e+1)!}\right]^{\frac{1}{2}}, \\
+\end{array}\right\}=(-1)^{a+b+d+e}\left[\frac{(2 b)!(2 e)!(a+b+d-e)!(a-b+d+e)!}{(2 a+2 b+1)!(2 a+2 e+1)!(-a-b+d+e)!(-a+b+d-e)!}\right]^{\frac{1}{2}}  \label{chap9:eq:61}\\
+& \times\left[2 a(a+b+d+e+1)(a+b-d+e) \frac{(2 b)!(2 e-1)!(a+b+d-e)!(a-b+d+e-1)!}{(2 a+2 b+1)!(2 a+2 e)!(-a-b+d+e)!(-a+b+d-e+1)!}\right]^{\frac{1}{2}},  \notag\\
 &\left\{\begin{array}{ll}
 a & b \\
 a & a+b \\
@@ -866,23 +685,21 @@ d & a+b
 a & b \\
 a & e \\
 a+b-1
-\end{array}\right\}=(-1)^{2 a+b+e} \frac{(2 a-1)!(b+e-1)!}{(2 a+2 b)!(-b+e)!}\left[\frac{2 a \cdot 2 b(b+e)(2 a+b-e)(2 a+b+e+1)}{(2 a+2 b+1)(-b+e+1)}\right]^{\frac{1}{2}}  \tag{5}\\
+\end{array}\right\}=(-1)^{2 a+b+e} \frac{(2 a-1)!(b+e-1)!}{(2 a+2 b)!(-b+e)!}\left[\frac{2 a \cdot 2 b(b+e)(2 a+b-e)(2 a+b+e+1)}{(2 a+2 b+1)(-b+e+1)}\right]^{\frac{1}{2}}  \label{chap9:eq:62}\\
 &\left\{\begin{array}{lll}
 a & b & a+b \\
 a & b & f
-\end{array}\right\}=(-1)^{2 a+2 b} \frac{(2 a)!(2 b)!}{(a+b-f)!(a+b+f+1)!},  \tag{6}\\
+\end{array}\right\}=(-1)^{2 a+2 b} \frac{(2 a)!(2 b)!}{(a+b-f)!(a+b+f+1)!},  \label{chap9:eq:63}\\
 &\left\{\begin{array}{lll}
 a & b & a+b \\
 b & a & f
-\end{array}\right\}=(-1)^{2 a+2 b} \frac{(2 a)!(2 b)!}{[(2 a-f)!(2 a+f+1)!(2 b-f)!(2 b+f+1)!]^{\frac{1}{2}}},  \tag{7}\\
+\end{array}\right\}=(-1)^{2 a+2 b} \frac{(2 a)!(2 b)!}{[(2 a-f)!(2 a+f+1)!(2 b-f)!(2 b+f+1)!]^{\frac{1}{2}}},  \label{chap9:eq:64}\\
 &\left\{\begin{array}{lll}
 a & b & a+b \\
 a & b & a+b
-\end{array}\right\}=(-1)^{2 a+2 b} \frac{(2 a)!(2 b)!}{(2 a+2 b+1)!}, \tag{8}
-\end{align*}
-
-
-$$
+\end{array}\right\}=(-1)^{2 a+2 b} \frac{(2 a)!(2 b)!}{(2 a+2 b+1)!}, \label{chap9:eq:65}
+\end{align}
+\[
 \left.\begin{array}{l}
 \left\{\begin{array}{ll}
 a & b \\
@@ -906,89 +723,66 @@ a+b \\
 a+e
 \end{array}\right\}=(-1)^{2(a+b+e)} \frac{1}{[(2 a+2 b+1)(2 a+2 e+1)]^{\frac{1}{2}}}
 \end{array}
-$$
-
-\subsection*{9.5.3. One of Arguments is Smaller by Unity than the Sum of Two Others}
-If the $6 j$ symbol has one argument which is one less than the sum of two others from the same triad $(a b c),(c d e),(a e f),(b d f)$, one may use the classical symmetries of the $6 j$ symbol (Eqs. 9.4.(2)) to bring it into the form
-
-
-\begin{gather*}
+\]
+\subsection{One of Arguments is Smaller by Unity than the Sum of Two Others}
+If the $6 j$ symbol has one argument which is one less than the sum of two others from the same triad $(a b c),(c d e),(a e f),(b d f)$, one may use the classical symmetries of the $6 j$ symbol (Eqs. \eqref{chap9:eq:49}) to bring it into the form
+\begin{gather}
 \left\{\begin{array}{ccc}
 a & b & a+b-1 \\
 d & e
-\end{array}\right\}=(-1)^{a+b+d+e} W(a b e d ; a+b-1 f) \\
-=(-1)^{a+b+d+e} 2\{a b(a+b)+(a+b) f(f+1)-a d(d+1)-b e(e+1)\} \\
-\times\left[\frac{(2 a-1)!(2 b-1)!(a+b+d+e)!(a+b-d+e-1)!(a+b+d-e-1)!(-a+e+f)!(-b+d+f)!}{(2 a+2 b)!(-a-b+d+e+1)!(a+e-f)!(a-e+f)!(a+e+f+1)!(b+d-f)!(b-d+f)!(b+d+f+1)!}\right]^{\frac{1}{2}} \tag{15}
-\end{gather*}
-
-
+\end{array}\right\}=(-1)^{a+b+d+e} W(a b e d ; a+b-1 f)  \notag\\
+=(-1)^{a+b+d+e} 2\{a b(a+b)+(a+b) f(f+1)-a d(d+1)-b e(e+1)\}  \notag\\
+\times\left[\frac{(2 a-1)!(2 b-1)!(a+b+d+e)!(a+b-d+e-1)!(a+b+d-e-1)!(-a+e+f)!(-b+d+f)!}{(2 a+2 b)!(-a-b+d+e+1)!(a+e-f)!(a-e+f)!(a+e+f+1)!(b+d-f)!(b-d+f)!(b+d+f+1)!}\right]^{\frac{1}{2}} \label{chap9:eq:66}
+\end{gather}
 In particular
-
-
-\begin{align*}
+\begin{align}
 & \left\{\begin{array}{lll}
 a & b & a+b-1 \\
 d & e & a+e-1
-\end{array}\right\}=(-1)^{a+b+d+e} 2\{a(a+b+e-1)(a+b+e)-a d(d+1)-2 b e\} \\
-& \times\left[\frac{(2 b-1)!(2 e-1)!(a+b+d-e-1)!(a-b+d+e-1)!}{(2 a+2 b)!(2 a+2 e)!(-a-b+d+e+1)!(-a+b+d-e+1)!}\right]^{\frac{1}{2}},  \tag{16}\\
+\end{array}\right\}=(-1)^{a+b+d+e} 2\{a(a+b+e-1)(a+b+e)-a d(d+1)-2 b e\}  \notag\\
+& \times\left[\frac{(2 b-1)!(2 e-1)!(a+b+d-e-1)!(a-b+d+e-1)!}{(2 a+2 b)!(2 a+2 e)!(-a-b+d+e+1)!(-a+b+d-e+1)!}\right]^{\frac{1}{2}},  \label{chap9:eq:67}\\
 & \left\{\begin{array}{lll}
 a & b & a+b-1 \\
 a & e & a+b-1
-\end{array}\right\}=(-1)^{2 a+b+e} 2\left\{b(2 a+b-1)(2 a+b)-b e(e+1)-2 a^{2}\right\} \frac{(2 a-1)!(b+e-1)!}{(2 a+2 b)!(-b+e+1)!},  \tag{17}\\
+\end{array}\right\}=(-1)^{2 a+b+e} 2\left\{b(2 a+b-1)(2 a+b)-b e(e+1)-2 a^{2}\right\} \frac{(2 a-1)!(b+e-1)!}{(2 a+2 b)!(-b+e+1)!},  \label{chap9:eq:68}\\
 & \left\{\begin{array}{ccc}
 a & b & a+b-1 \\
 a & b & f
-\end{array}\right\}=(-1)^{2 a+2 b} 2\left\{a b(a+b)+(a+b) f(f+1)-a^{2}(a+1)\right. \\
-& \left.-b^{2}(b+1)\right\} \frac{(2 a-1)!(2 b-1)!}{(a+b-f)!(a+b+f+1)!},  \tag{18}\\
+\end{array}\right\}=(-1)^{2 a+2 b} 2\left\{a b(a+b)+(a+b) f(f+1)-a^{2}(a+1)\right.  \notag\\
+& \left.-b^{2}(b+1)\right\} \frac{(2 a-1)!(2 b-1)!}{(a+b-f)!(a+b+f+1)!},  \label{chap9:eq:69}\\
 & \left\{\begin{array}{llc}
 a & b & a+b-1 \\
 b & a & f
-\end{array}\right\}=(-1)^{2 a+2 b} 2\{(a+b) f(f+1)-2 a b\} \frac{(2 a-1)!(2 b-1)!}{[(2 a-f)!(2 a+f+1)!(2 b-f)!(2 b+f+1)!]^{\frac{1}{2}}} ;  \tag{19}\\
+\end{array}\right\}=(-1)^{2 a+2 b} 2\{(a+b) f(f+1)-2 a b\} \frac{(2 a-1)!(2 b-1)!}{[(2 a-f)!(2 a+f+1)!(2 b-f)!(2 b+f+1)!]^{\frac{1}{2}}} ;  \label{chap9:eq:70}\\
 & \left\{\begin{array}{ccc}
 a & b & a+b-1 \\
 a+b+e-1 & e & a+e-1
-\end{array}\right\}=(-1)^{2(a+b+e)}\left[\frac{2 b \cdot 2 e}{(2 a+2 b)(2 a+2 b-1)(2 a+2 e)(2 a+2 e-1)}\right]^{\frac{1}{2}} . \tag{20}
-\end{align*}
+\end{array}\right\}=(-1)^{2(a+b+e)}\left[\frac{2 b \cdot 2 e}{(2 a+2 b)(2 a+2 b-1)(2 a+2 e)(2 a+2 e-1)}\right]^{\frac{1}{2}} . \label{chap9:eq:71}
+\end{align}
+Some other cases are given by Eqs. \eqref{chap9:eq:62}, \eqref{chap9:eq:64}, (11).
 
-
-Some other cases are given by Eqs. (5), (7), (11).
-
-\subsection*{9.5.4. Arguments $a, b, d, e$ are Equal in Pairs}
+\subsection{Arguments $a, b, d, e$ are Equal in Pairs}
 If $a=b$ and $d=e$ or $a=e$ and $b=d$, the Wigner $6 j$ symbol may be rewritten as [56]
-
-
-\begin{align*}
+\begin{align}
 \left\{\begin{array}{lll}
 a & a & c \\
 b & b & f
 \end{array}\right\} & =\left\{\begin{array}{lll}
 a & b & f \\
 b & a & c
-\end{array}\right\}=(-1)^{2 a+2 b} W(a a b b ; c f)=(-1)^{2 a+2 b} W(a b a b ; f c) \\
-& =(-1)^{a+b+c+J}\left[\frac{(2 a-c)!(2 b-c)!}{(2 a+c+1)!(2 b+c+1)!}\right]^{\frac{1}{2}} V_{c}(a, f, b) \tag{21}
-\end{align*}
-
-
-where $c$ is integer, and $V_{c}(a, f, b)=V_{c}(b, f, a)$. According to Eq. $9.6(6)$, the quantities $V_{c}$ satisfy the recursion relation
-
-
-\begin{equation*}
-V_{c+1}=\frac{2 c+1}{c+1} V_{1} V_{c}-c(2 c+1) V_{c}-\frac{c}{c+1}\left[4 a(a+1)+1-c^{2}\right]\left[4 b(b+1)+1-c^{2}\right] V_{c-1} \tag{22}
-\end{equation*}
-
-
+\end{array}\right\}=(-1)^{2 a+2 b} W(a a b b ; c f)=(-1)^{2 a+2 b} W(a b a b ; f c)  \notag\\
+& =(-1)^{a+b+c+J}\left[\frac{(2 a-c)!(2 b-c)!}{(2 a+c+1)!(2 b+c+1)!}\right]^{\frac{1}{2}} V_{c}(a, f, b) \label{chap9:eq:72}
+\end{align}
+where $c$ is integer, and $V_{c}(a, f, b)=V_{c}(b, f, a)$. According to Eq. \eqref{chap9:eq:92}, the quantities $V_{c}$ satisfy the recursion relation
+\begin{equation}
+V_{c+1}=\frac{2 c+1}{c+1} V_{1} V_{c}-c(2 c+1) V_{c}-\frac{c}{c+1}\left[4 a(a+1)+1-c^{2}\right]\left[4 b(b+1)+1-c^{2}\right] V_{c-1} \label{chap9:eq:73}
+\end{equation}
 Let us denote
-
-
-\begin{equation*}
-\tilde{a} \equiv a(a+1), \quad \tilde{b} \equiv b(b+1), \quad x \equiv f(f+1)-a(a+1)-b(b+1)=\tilde{f}-\tilde{a}-\tilde{b} \tag{23}
-\end{equation*}
-
-
+\begin{equation}
+\tilde{a} \equiv a(a+1), \quad \tilde{b} \equiv b(b+1), \quad x \equiv f(f+1)-a(a+1)-b(b+1)=\tilde{f}-\tilde{a}-\tilde{b} \label{chap9:eq:74}
+\end{equation}
 Then for some special values of $c$ the functions $V_{c}$ are given by
-
-
-\begin{align*}
+\begin{align}
 & \begin{array}{l}
 V_{0}(a, f, b)=1, \\
 V_{1}(a, f, b)=-2 x, \\
@@ -996,209 +790,179 @@ V_{2}(a, f, b)=6 x^{2}+6 x-8 \tilde{a} \tilde{b}, \\
 V_{3}(a, f, b)=-20 x^{3}-80 x^{2}-16 x[3+\tilde{a}+\tilde{b}-3 \tilde{a} \tilde{b}]+80 \tilde{a} \tilde{b}, \\
 V_{4}(a, f, b)=70 x^{4}+700 x^{3}+40 x^{2}[39+5 \tilde{a}+5 \tilde{b}-6 \tilde{a} \tilde{b}] \\
 \quad+80 x[9+6 \tilde{a}+6 \tilde{b}-17 \tilde{a} \tilde{b}]-48 \tilde{a} \tilde{b}[27+4 \tilde{a}+4 \tilde{b}-2 \tilde{a} \tilde{b}],
-\end{array}  \tag{24}\\
+\end{array}  \label{chap9:eq:75}\\
 & \begin{aligned}
 & V_{2 a-1}(a, f, b)=(-1)^{1+a-b+f} 2\left\{a^{2}+\tilde{f}-\tilde{b}\right\} \frac{(2 a)!(2 a-1)!(2 a+2 b)!(-a+b+f)!}{(2 b-2 a+1)!(a+b-f)!(a-b+f)!(a+b+f+1)!} \\
 & \quad\left(a \leq b+\frac{1}{2}\right),
-\end{aligned}  \tag{25}\\
+\end{aligned}  \label{chap9:eq:76}\\
 & \begin{aligned}
 & V_{2 b-1}(a, f, b)=(-1)^{1-a+b+f} 2\left\{b^{2}+\tilde{f}-\tilde{a}\right\} \frac{(2 b)!(2 b-1)!(2 a+2 b)!(a-b+f)!}{(2 a-2 b+1)!(a+b-f)!(-a+b+f)!(a+b+f+1)!} \\
 & \quad\left(b \leq a+\frac{1}{2}\right),
-\end{aligned}  \tag{26}\\
-& V_{2 a}(a, f, b)=(-1)^{a-b+f} \frac{(2 a)!(2 a)!(2 a+2 b+1)!(-a+b+f)!}{(2 b-2 a)!(a+b-f)!(a-b+f)!(a+b+f+1)!}  \tag{27}\\
-& \quad(a \leq b), \\
-& V_{2 b}(a, f, b)=(-1)^{-a+b+f} \frac{(2 b)!(2 b)!(2 a+2 b+1)!(a-b+f)!}{(2 a-2 b)!(a+b-f)!(-a+b+f)!(a+b+f+1)!}  \tag{28}\\
-& (b \leq a) . \tag{29}
-\end{align*}
-
-
+\end{aligned}  \label{chap9:eq:77}\\
+& V_{2 a}(a, f, b)=(-1)^{a-b+f} \frac{(2 a)!(2 a)!(2 a+2 b+1)!(-a+b+f)!}{(2 b-2 a)!(a+b-f)!(a-b+f)!(a+b+f+1)!}  \label{chap9:eq:78}\\
+& \quad(a \leq b),  \notag\\
+& V_{2 b}(a, f, b)=(-1)^{-a+b+f} \frac{(2 b)!(2 b)!(2 a+2 b+1)!(a-b+f)!}{(2 a-2 b)!(a+b-f)!(-a+b+f)!(a+b+f+1)!}  \label{chap9:eq:79}\\
+& (b \leq a) . \label{chap9:eq:80}
+\end{align}
 For special values of $f$ one has
+\begin{align}
+& V_{c}(a, a-b, b)=\frac{(2 b)!(2 a+c+1)!}{(2 a+1)!(2 b-c)!}, \quad(a \geq b)  \label{chap9:eq:81}\\
+& V_{c}(a, b-a, b)=\frac{(2 a)!(2 b+c+1)!}{(2 b+1)!(2 a-c)!}, \quad(a \leq b)  \label{chap9:eq:82}\\
+& V_{c}(a, a-b+1, b)=2\{2 b(a+1)-(a-b+1) c(c+1)\} \frac{(2 b-1)!(2 a+c+1)!}{(2 a+2)!(2 b-c)!},  \label{chap9:eq:83}\\
+&(a \geq b-1)  \notag\\
+& V_{c}(a, b-a+1, b)=2\{2 a(b+1)+(a-b-1) c(c+1)\} \frac{(2 a-1)!(2 b+c+1)!}{(2 b+2)!(2 a-c)!},  \label{chap9:eq:84}\\
+&(b \geq a-1),  \notag\\
+& V_{c}(a, a+b-1, b)=(-1)^{c+1} 2\{(a+b) c(c+1)-2 a b\} \frac{(2 a-1)!(2 b-1)!}{(2 a-c)!(2 b-c)!},  \label{chap9:eq:85}\\
+& V_{c}(a, a+b, b)=(-1)^{c} \frac{(2 a)!(2 b)!}{(2 a-c)!(2 b-c)!} \label{chap9:eq:86}
+\end{align}
+See also Eqs. (9) and \eqref{chap9:eq:70}.
 
-
-\begin{align*}
-& V_{c}(a, a-b, b)=\frac{(2 b)!(2 a+c+1)!}{(2 a+1)!(2 b-c)!}, \quad(a \geq b)  \tag{33}\\
-& V_{c}(a, b-a, b)=\frac{(2 a)!(2 b+c+1)!}{(2 b+1)!(2 a-c)!}, \quad(a \leq b)  \tag{34}\\
-& V_{c}(a, a-b+1, b)=2\{2 b(a+1)-(a-b+1) c(c+1)\} \frac{(2 b-1)!(2 a+c+1)!}{(2 a+2)!(2 b-c)!},  \tag{35}\\
-&(a \geq b-1) \\
-& V_{c}(a, b-a+1, b)=2\{2 a(b+1)+(a-b-1) c(c+1)\} \frac{(2 a-1)!(2 b+c+1)!}{(2 b+2)!(2 a-c)!},  \tag{36}\\
-&(b \geq a-1), \\
-& V_{c}(a, a+b-1, b)=(-1)^{c+1} 2\{(a+b) c(c+1)-2 a b\} \frac{(2 a-1)!(2 b-1)!}{(2 a-c)!(2 b-c)!},  \tag{37}\\
-& V_{c}(a, a+b, b)=(-1)^{c} \frac{(2 a)!(2 b)!}{(2 a-c)!(2 b-c)!} \tag{38}
-\end{align*}
-
-
-See also Eqs. (9) and (19).
-
-\subsection*{9.6. RECURSION RELATIONS}
-\subsection*{9.6.1. Relations in Which Arguments are Changed by $\mathbf{1} / \mathbf{2}$}
-
-\begin{gather*}
+\section{RECURSION RELATIONS}
+\subsection{Relations in Which Arguments are Changed by $1 / 2$}
+\begin{gather}
 {[(a+b+c+1)(-a+b+c)(c+d+e+1)(c+d-e)]^{\frac{1}{2}}\left\{\begin{array}{lll}
 a & b & c \\
 d & e & f
-\end{array}\right\}} \\
+\end{array}\right\}}  \notag\\
 =-2 c[(b+d+f+1)(b+d-f)]^{\frac{1}{2}}\left\{\begin{array}{cc}
 a & b-\frac{1}{2} \\
 c-\frac{1}{2} \\
 d-\frac{1}{2} & e \\
 f
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 +[(a+b-c+1)(a-b+c)(-c+d+e+1)(c-d+e)]^{\frac{1}{2}}\left\{\begin{array}{ccc}
 a & b & c-1 \\
 d & e & f
-\end{array}\right\},  \tag{1}\\
+\end{array}\right\},  \label{chap9:eq:87}\\
 (a-b-d+e)[(a+b+c+1)(c+d+e+1)]^{\frac{1}{2}}\left\{\begin{array}{ccc}
 a & b & c \\
 d & e & f
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 =-[(a-b+c)(c-d+e)(a+e-f)(a+e+f+1)]^{\frac{1}{2}}\left\{\begin{array}{ccc}
 a-\frac{1}{2} & b & c-\frac{1}{2} \\
 d & e-\frac{1}{2} & f
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 +[(-a+b+c)(c+d-e)(b+d-f)(b+d+f+1)]^{\frac{1}{2}}\left\{\begin{array}{cc}
 a & b-\frac{1}{2} \\
 d-\frac{1}{2} & e
-\end{array}\right\},  \tag{2}\\
+\end{array}\right\},  \label{chap9:eq:88}\\
 {[(-a+b+c)(a-b+c+1)(a+e-f+1)(b+d+f+1)]^{\frac{1}{2}}\left\{\begin{array}{ll}
 a & b \\
 d & e \\
 f
-\end{array}\right\},} \\
+\end{array}\right\},}  \notag\\
 =[(c+d-e)(c-d+e+1)(a+e+f+2)(b+d-f)]^{\frac{1}{2}}\left\{\begin{array}{cc}
 a+\frac{1}{2} & b-\frac{1}{2} \\
 d-\frac{1}{2} & e+\frac{1}{2} f
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 +(a-b-d+e+1)[(-a+b+c)(b-d+f)]^{\frac{1}{2}}\left\{\begin{array}{cc}
 a+\frac{1}{2} & b-\frac{1}{2} \\
 c & f-\frac{1}{2}
-\end{array}\right\}, \tag{3}
-\end{gather*}
-
-
-
-\begin{align*}
+\end{array}\right\}, \label{chap9:eq:89}
+\end{gather}
+\begin{align}
 & (2 d+1)(2 f+1)[(a+b+c+1)(a-b+c)]^{\frac{1}{2}}\left\{\begin{array}{lll}
 a & b & c \\
 d & e & f
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 & =-[(a+e+f+1)(a-e+f)(b+d+f+1)(-b+d+f)(c+d+e+1)(c+d-e)]^{\frac{1}{2}}\left\{\begin{array}{l}
 a-\frac{1}{2} b c-\frac{1}{2} \\
 d-\frac{1}{2} e f-\frac{1}{2}
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 & -[(-a+e+f+1)(a+e-f)(b-d+f+1)(b+d-f)(c+d+e+1)(c+d-e)]^{\frac{1}{2}}\left\{\begin{array}{l}
 a-\frac{1}{2} b c-\frac{1}{2} \\
 d-\frac{1}{2} e f+\frac{1}{2}
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 & -\left[(a+e+f+1)(a-e+f)(b+d-f+1)(b-d+f)(-c+d+e+1)(c-d+e) \|^{\frac{1}{2}}\left\{\begin{array}{ll}
 a-\frac{1}{2} & b \\
 d+\frac{1}{2} & e f-\frac{1}{2} \\
 d
-\end{array}\right\}\right. \\
-& +[(-a+e+f+1)(a+e-f)(b+d+f+2)(-b+d+f+1)(-c+d+e+1)(c-d+e)]^{\frac{1}{2}} \\
+\end{array}\right\}\right.  \notag\\
+& +[(-a+e+f+1)(a+e-f)(b+d+f+2)(-b+d+f+1)(-c+d+e+1)(c-d+e)]^{\frac{1}{2}}  \notag\\
 & \times\left\{\begin{array}{llll}
 a-\frac{1}{2} & b & c-\frac{1}{2} \\
 d+\frac{1}{2} & e & f+\frac{1}{2}
-\end{array}\right\} . \tag{4}
-\end{align*}
-
-
-\subsection*{9.6.2 Relations in Which Arguments are Changed by 1}
-
-\begin{gather*}
-(2 c+1)\{2[a(a+1) d(d+1)+b(b+1) e(e+1)-c(c+1) f(f+1)] \\
+\end{array}\right\} . \label{chap9:eq:90}
+\end{align}
+\subsection{Relations in Which Arguments are Changed by 1}
+\begin{gather}
+(2 c+1)\{2[a(a+1) d(d+1)+b(b+1) e(e+1)-c(c+1) f(f+1)]  \notag\\
 -[a(a+1)+b(b+1)-c(c+1)][d(d+1)+e(e+1)-c(c+1)]\}\left\{\begin{array}{lll}
 a & b & c \\
 d & e & f
-\end{array}\right\} \\
-=-c[(a+b+c+2)(-a+b+c+1)(a-b+c+1)(a+b-c) \\
+\end{array}\right\}  \notag\\
+=-c[(a+b+c+2)(-a+b+c+1)(a-b+c+1)(a+b-c)  \notag\\
 \times(d+e+c+2)(-d+e+c+1)(d-e+c+1)(d+e-c)]^{\frac{1}{2}}\left\{\begin{array}{lll}
 a & b & c+1 \\
 d & e & f
-\end{array}\right\} \\
--(c+1)[(a+b+c+1)(-a+b+c)(a-b+c)(a+b-c+1) \\
+\end{array}\right\}  \notag\\
+-(c+1)[(a+b+c+1)(-a+b+c)(a-b+c)(a+b-c+1)  \notag\\
 \times(d+e+c+1)(-d+e+c)(d-e+c)(d+e-c+1)]^{\frac{1}{2}}\left\{\begin{array}{lll}
 a & b & c-1 \\
 d & e & f
-\end{array}\right\} \tag{5}
-\end{gather*}
-
-
+\end{array}\right\} \label{chap9:eq:91}
+\end{gather}
 In particular
-
-
-\begin{align*}
+\begin{align}
 & (2 c+1)\{-2 a(a+1)-2 b(b+1)+2 f(f+1)+c(c+1)\}\left\{\begin{array}{lll}
 a & a & c \\
 b & b & f
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 & =(c+1)[(2 a+c+2)(2 a-c)(2 b+c+2)(2 b-c)]^{\frac{1}{2}}\left\{\begin{array}{ccc}
 a & a & c+1 \\
 b & b & f
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 & +c[(2 a+c+1)(2 a-c+1)(2 b+c+1)(2 b-c+1)]^{\frac{1}{2}}\left\{\begin{array}{ccc}
 a & a & c-1 \\
 b & b & f
-\end{array}\right\} \tag{6}
-\end{align*}
-
-
-
-\begin{gather*}
+\end{array}\right\} \label{chap9:eq:92}
+\end{align}
+\begin{gather}
 (2 c+1)\left\{[a(a+1)+b(b+1)-c(c+1)]^{2}-2\left[a^{2}(a+1)^{2}+b^{2}(b+1)^{2}-c(c+1) f(f+1)\right]\right\}\left\{\begin{array}{lll}
 a & b & c \\
 a & b & f
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 =c(a+b+c+2)(-a+b+c+1)(a-b+c+1)(a+b-c)\left\{\begin{array}{llc}
 a & b & c+1 \\
 a & b & f
-\end{array}\right\} \\
+\end{array}\right\}  \notag\\
 +(c+1)(a+b+c+1)(-a+b+c)(a-b+c)(a+b-c+1)\left\{\begin{array}{lll}
 a & b & c-1 \\
 a & b & f
-\end{array}\right\} \tag{7}
-\end{gather*}
-
-
-\subsection*{9.7. GENERATING FUNCTION}
+\end{array}\right\} \label{chap9:eq:93}
+\end{gather}
+\section{GENERATING FUNCTION}
 The $6 j$ symbols turn out to be the coefficients of a power series expansion of the generating function $f\left(\tau_{i \alpha}\right)$ [53], which depends on 12 variables $\tau_{i \alpha}(i=1,2,3 ; \alpha=1,2,3,4)$,
-
-\[
+\begin{equation}
 f\left(r_{i \alpha}\right) \equiv\left[1+\sum_{i=1}^{3} \prod_{\alpha=1}^{4} r_{i \alpha}+\sum_{\alpha=1}^{4} \prod_{i=1}^{3} r_{i \alpha}\right]^{-2}=\sum_{R_{i \alpha}} N\left(R_{i \alpha}\right)\left\{\begin{array}{lll}
-a & b & c  \tag{1}\\
+a & b & c  \label{chap9:eq:94}\\
 d & e & f
 \end{array}\right\} \prod_{i=1}^{3} \prod_{\alpha=1}^{4}\left(r_{i \alpha}\right)^{R_{i \alpha}}
-\]
+\end{equation}
+The exponents $R_{i \alpha}$ are elements of the $R$ symbol. The relation between $R_{i \alpha}$ and arguments $a, b, c$, etc. is given by Eqs. \eqref{chap9:eq:13}-\eqref{chap9:eq:14}. The normalization factors $N$ are
+\begin{equation}
+N\left(R_{i \alpha}\right)=\left[\frac{\prod_{\alpha=1}^{4}\left(B_{\alpha}+1\right)!}{\prod_{i=1}^{3} \prod_{\alpha=1}^{4}\left(R_{i \alpha}\right)!}\right]^{\frac{1}{2}}, \label{chap9:eq:95}
+\end{equation}
+where $B_{\alpha}$ are given by Eqs. \eqref{chap9:eq:17}.
 
-The exponents $R_{i \alpha}$ are elements of the $R$ symbol. The relation between $R_{i \alpha}$ and arguments $a, b, c$, etc. is given by Eqs. 9.1(13)-9.1(14). The normalization factors $N$ are
-
-
-\begin{equation*}
-N\left(R_{i \alpha}\right)=\left[\frac{\prod_{\alpha=1}^{4}\left(B_{\alpha}+1\right)!}{\prod_{i=1}^{3} \prod_{\alpha=1}^{4}\left(R_{i \alpha}\right)!}\right]^{\frac{1}{2}}, \tag{2}
-\end{equation*}
-
-
-where $B_{\alpha}$ are given by Eqs. 9.1(18).
-
-\subsection*{9.8. SUMS INVOLVING THE $6 j$ SYMBOLS}
+\section{SUMS INVOLVING THE $6 j$ SYMBOLS}
 In this section only the most important sums involving products of the $6 j$ symbols are presented. We shall use the notation $\{a b c\}$ for the symbol which is equal to 1 if $a, b, c$ satisfy the triangular conditions $8.1(1)$ and is zero otherwise. In the equations below the sum is over all possible values (integer or half-integer) of $X$ which obey all triangular conditions.
-
-
-\begin{align*}
+\begin{align}
 & \sum_{X}(2 X+1)\left\{\begin{array}{lll}
 a & b & X \\
 a & b & c
-\end{array}\right\}=(-1)^{2 c}\{a b c\},  \tag{1}\\
+\end{array}\right\}=(-1)^{2 c}\{a b c\},  \label{chap9:eq:96}\\
 & \sum_{X}(-1)^{a+b+X}(2 X+1)\left\{\begin{array}{lll}
 a & b & X \\
 b & a & c
-\end{array}\right\}=\delta_{c 0} \sqrt{(2 a+1)(2 b+1)},  \tag{2}\\
+\end{array}\right\}=\delta_{c 0} \sqrt{(2 a+1)(2 b+1)},  \label{chap9:eq:97}\\
 & \sum_{X}(2 X+1)\left\{\begin{array}{lll}
 a & b & X \\
 c & d & p
 \end{array}\right\}\left\{\begin{array}{lll}
 a & b & X \\
 c & d & q
-\end{array}\right\}=\delta_{p q} \frac{\{a d p\}\{b c p\}}{2 p+1},  \tag{3}\\
+\end{array}\right\}=\delta_{p q} \frac{\{a d p\}\{b c p\}}{2 p+1},  \label{chap9:eq:98}\\
 & \sum_{X}(-1)^{p+q+X}(2 X+1)\left\{\begin{array}{lll}
 a & b & X \\
 c & d & p
@@ -1208,7 +972,7 @@ d & c & q
 \end{array}\right\}=\left\{\begin{array}{lll}
 a & c & q \\
 b & d & p
-\end{array}\right\},  \tag{4}\\
+\end{array}\right\},  \label{chap9:eq:99}\\
 & \sum_{X}(-1)^{2 X}(2 X+1)\left\{\begin{array}{lll}
 a & b & X \\
 c & d & p
@@ -1222,7 +986,7 @@ a & b & r
 a & f & r \\
 d & q & e \\
 p & c & b
-\end{array}\right\},  \tag{5}\\
+\end{array}\right\},  \label{chap9:eq:100}\\
 & \sum_{X}(-1)^{R+X}(2 X+1)\left\{\begin{array}{lll}
 a & b & X \\
 c & d & p
@@ -1238,8 +1002,8 @@ e & a & d
 \end{array}\right\}\left\{\begin{array}{lll}
 p & q & r \\
 f & b & c
-\end{array}\right\},  \tag{6}\\
-& (R=a+b+c+d+e+f+p+q+r) \\
+\end{array}\right\},  \label{chap9:eq:101}\\
+& (R=a+b+c+d+e+f+p+q+r)  \notag\\
 & \sum_{X}(2 X+1)\left\{\begin{array}{lll}
 a & b & X \\
 c & d & p
@@ -1257,7 +1021,7 @@ a & b & s
 c & - & p & b \\
 f & r & - & g \\
 q & e & d & -
-\end{array}\right\},  \tag{7}\\
+\end{array}\right\},  \label{chap9:eq:102}\\
 & \sum_{X}(-1)^{T-X}(2 X+1)\left\{\begin{array}{lll}
 a & b & X \\
 c & d & p
@@ -1274,332 +1038,252 @@ b & a & s
 a & d & e & h \\
 p & q & r & s \\
 b & c & f & g
-\end{array}\right\}, \\
-& (T=a+b+c+d+e+f+g+h+p+q+r+s) . \tag{8}
-\end{align*}
-
-
+\end{array}\right\},  \notag\\
+& (T=a+b+c+d+e+f+g+h+p+q+r+s) . \label{chap9:eq:103}
+\end{align}
 Many other sums, involving the $6 j$ symbols as well as the $3 j m$ symbols and the $9 j$ symbols, will be given in Chap. 12.
 
-\subsection*{9.9. ASYMPTOTICS OF THE $6 j$ SYMBOLS FOR LARGE ANGULAR MOMENTA}
-\subsection*{9.9.1. Asymptotic Relations Between the 6j Symbols and the Clebsch-Gordan Coefficients}
+\section{ASYMPTOTICS OF THE $6 j$ SYMBOLS FOR LARGE ANGULAR MOMENTA}
+\subsection{Asymptotic Relations Between the 6j Symbols and the Clebsch-Gordan Coefficients}
 If $R \gg 1$ and $a, b, c$ etc. are arbitrary, one gets the following asymptotic relation
-
-\[
+\begin{equation}
 \left\{\begin{array}{ccc}
-a & b & c  \tag{1}\\
+a & b & c  \label{chap9:eq:104}\\
 d+R & e+R & f+R
-\end{array}\right\} \approx \frac{(-1)^{a+b+d+e}}{\sqrt{2 R(2 c+1)}} C_{a \alpha b \beta}^{c \gamma}
-\]
-
+\end{array}\right\} \approx \frac{(-1)^{a+b+d+e}}{\sqrt{2 R(2 c+1)}} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}
+\end{equation}
 where $\alpha=f-e, \beta=d-f, \gamma=d-e$.\\
 For the $6 j$ symbols and the $3 j m$ symbols this relation assumes the form [47]
-
-\[
+\begin{equation}
 \left\{\begin{array}{ccc}
-a & b & c  \tag{2}\\
+a & b & c  \label{chap9:eq:105}\\
 d+R & e+R & f+r
 \end{array}\right\} \approx \frac{(-1)^{a+b+c+2(d+e+f)}}{\sqrt{2 R}}\left(\begin{array}{ccc}
 a & b & c \\
 e-f & f-d & d-e
 \end{array}\right) .
-\]
-
+\end{equation}
 The asymptotic relation between the $R$ symbols which correspond to the $6 j$ symbols and the Clebsch-Gordan coefficients is written as
-
-
-\begin{align*}
+\begin{align}
 & \left\|\begin{array}{llll}
 -c+d+e+2 R & b+d-f & a+e-f & a+b-c \\
 -b+d+f+2 R & c+d-e & a-b+c & a-e+f \\
 -a+e+f+2 R & -a+b+c & c-d+e & b-d+f
-\end{array}\right\| \\
+\end{array}\right\|  \notag\\
 & \approx \frac{(-1)^{a+b+c+2(d+e+f)}}{\sqrt{2 R}}\left\|\begin{array}{ccc}
 -a+b+c & a-b+c & a+b-c \\
 a+e-f & b-d+f & c+d-e \\
 a-e+f & b+d-f & c-d+e
-\end{array}\right\| . \tag{3}
-\end{align*}
-
-
+\end{array}\right\| . \label{chap9:eq:106}
+\end{align}
 In particular, when $d=e=f=0$ one obtains [60]
-
-\[
+\begin{equation}
 \left\{\begin{array}{lll}
-a & b & c  \tag{4}\\
+a & b & c  \label{chap9:eq:107}\\
 R & R & R
 \end{array}\right\} \approx \frac{(-1)^{c}}{\sqrt{2 R(2 c+1)}} C_{a 060}^{c 0}
-\]
-
-\subsection*{9.9.2. Asymptotic Expressions for the $6 j$ Symbols}
-The asymptotic behaviour of the $6 j$ symbols $\left\{\begin{array}{lll}a & b & c \\ d & e & f\end{array}\right\}$ for large angular momenta is closely associated with geometric properties of the tetrahedron whose edges are $a+\frac{1}{2}, b+\frac{1}{2}$, etc. (Fig. 9.1).
+\end{equation}
+\subsection{Asymptotic Expressions for the $6 j$ Symbols}
+The asymptotic behaviour of the $6 j$ symbols $\left\{\begin{array}{lll}a & b & c \\ d & e & f\end{array}\right\}$ for large angular momenta is closely associated with geometric properties of the tetrahedron whose edges are $a+\frac{1}{2}, b+\frac{1}{2}$, etc. (Fig.~\ref{chap9:fig:1}).
 
 \begin{figure}[h]
 \begin{center}
   \includegraphics[alt={},max width=\textwidth]{402d9a1b-ee97-49cb-ae14-75458391be12-319_450_551_1897_737}
-\captionsetup{labelformat=empty}
-\caption{Fig. 9.1. The tetrahedron associated with asymptotic behaviour of the $6 j$ symbols.}
+\caption{The tetrahedron associated with asymptotic behaviour of the $6 j$ symbols.}
+\label{chap9:fig:1}
 \end{center}
 \end{figure}
 
-(a) The Ponzano-Regge Formula [89] (semiclassical approximation to the $6 j$ symbols): If $a, b, c, d, e, f \gg 1$, then
-
-\[
+\subsubsection{(a) The Ponzano-Regge Formula [89] (semiclassical approximation to the $6 j$ symbols)}
+If $a, b, c, d, e, f \gg 1$, then
+\begin{equation}
 \left\{\begin{array}{lll}
-a & b & c  \tag{5}\\
+a & b & c  \label{chap9:eq:108}\\
 d & e & f
 \end{array}\right\} \approx \frac{1}{\sqrt{12 \pi V}} \cos \left(\sum_{i, k=1}^{4} j_{i k} \Theta_{i k}+\frac{\pi}{4}\right), \quad\left(V^{2}>0\right)
-\]
-
+\end{equation}
 Here
-
-
-\begin{gather*}
-j_{12}=a+\frac{1}{2}, \quad j_{13}=b+\frac{1}{2}, \quad j_{14}=c+\frac{1}{2}, \\
-j_{23}=f+\frac{1}{2}, \quad j_{24}=e+\frac{1}{2}, \quad j_{34}=d+\frac{1}{2},  \tag{6}\\
-j_{i k}=j_{k i}, \quad j_{i i}=0 .
-\end{gather*}
-
-
+\begin{gather}
+j_{12}=a+\frac{1}{2}, \quad j_{13}=b+\frac{1}{2}, \quad j_{14}=c+\frac{1}{2},  \notag\\
+j_{23}=f+\frac{1}{2}, \quad j_{24}=e+\frac{1}{2}, \quad j_{34}=d+\frac{1}{2},  \label{chap9:eq:109}\\
+j_{i k}=j_{k i}, \quad j_{i i}=0 . \notag
+\end{gather}
 $V$ is the volume of the tetrahedron, $\Theta_{i k}$ is the angle between two external normals to the planes adjacent to the edge $j_{i k}$.
 
 The tetrahedron volume is equal to
-
-\[
+\begin{equation}
 V^{2}=\frac{1}{2^{3}(3!)^{2}}\left|\begin{array}{ccccc}
-0 & j_{34}^{2} & j_{24}^{2} & j_{23}^{2} & 1  \tag{7}\\
+0 & j_{34}^{2} & j_{24}^{2} & j_{23}^{2} & 1  \label{chap9:eq:110}\\
 j_{34}^{2} & 0 & j_{14}^{2} & j_{13}^{2} & 1 \\
 j_{24}^{2} & j_{14}^{2} & 0 & j_{12}^{2} & 1 \\
 j_{23}^{2} & j_{13}^{2} & j_{12}^{2} & 0 & 1 \\
 1 & 1 & 1 & 1 & 0
 \end{array}\right|
-\]
-
+\end{equation}
 The angles $\Theta_{i k}$ are given by
-
-
-\begin{equation*}
-S_{i} S_{k} \sin \Theta_{i k}=\frac{3}{2} V j_{i k}, \quad(i \neq k) \tag{8}
-\end{equation*}
-
-
-Here $S_{i}$ is the area of the triangle opposite to the vertex $p_{i}$ (Fig. 9.1). One can evaluate $S_{i}$, using the standard formulas. For example,
-
-\[
+\begin{equation}
+S_{i} S_{k} \sin \Theta_{i k}=\frac{3}{2} V j_{i k}, \quad(i \neq k) \label{chap9:eq:111}
+\end{equation}
+Here $S_{i}$ is the area of the triangle opposite to the vertex $p_{i}$ (Fig.~\ref{chap9:fig:1}). One can evaluate $S_{i}$, using the standard formulas. For example,
+\begin{equation}
 S_{1}^{2}=\frac{1}{16}\left(j_{12}+j_{13}+j_{14}\right)\left(j_{12}+j_{13}-j_{14}\right)\left(j_{12}-j_{13}+j_{14}\right)\left(-j_{12}+j_{13}+j_{14}\right)=-\frac{1}{16}\left|\begin{array}{cccc}
-0 & j_{12}^{2} & j_{13}^{2} & 1  \tag{9}\\
+0 & j_{12}^{2} & j_{13}^{2} & 1  \label{chap9:eq:112}\\
 j_{12}^{2} & 0 & j_{14}^{2} & 1 \\
 j_{13}^{2} & j_{14}^{2} & 0 & 1 \\
 1 & 1 & 1 & 0
 \end{array}\right| .
-\]
-
-The asymptotic expressions (5) are valid only if $V^{2}>0$ (classically allowed domain). If $V^{2}<0$ (classically forbidden domain, when an associated tetrahedron does not exist), the asymptotic expression becomes
-
-\[
+\end{equation}
+The asymptotic expressions \eqref{chap9:eq:108} are valid only if $V^{2}>0$ (classically allowed domain). If $V^{2}<0$ (classically forbidden domain, when an associated tetrahedron does not exist), the asymptotic expression becomes
+\begin{equation}
 \left\{\begin{array}{lll}
-a & b & c  \tag{10}\\
+a & b & c  \label{chap9:eq:113}\\
 d & e & f
 \end{array}\right\} \approx \frac{1}{2 \sqrt{12 \pi|V|}} \cos \Phi \exp \left\{-\left|\sum_{i, k=1}^{4} j_{i k} \operatorname{Im} \Theta_{i k}\right|\right\}, \quad\left(V^{2}<0\right)
-\]
-
+\end{equation}
 where
-
-
-\begin{equation*}
-\Phi=\sum_{i, k=1}^{4}\left(j_{i k}-\frac{1}{2}\right) \operatorname{Re} \Theta_{i k} \tag{11}
-\end{equation*}
-
-
+\begin{equation}
+\Phi=\sum_{i, k=1}^{4}\left(j_{i k}-\frac{1}{2}\right) \operatorname{Re} \Theta_{i k} \label{chap9:eq:114}
+\end{equation}
 In this case the $6 j$ symbols are exponentially small even if the triangular condition is satisfied.\\
-Near the classical domain boundary, where $V^{2} \approx 0$, Eqs. (5), (10) are of little use, although one may use the improved expressions [89]
-
-\[
+Near the classical domain boundary, where $V^{2} \approx 0$, Eqs. \eqref{chap9:eq:108}, \eqref{chap9:eq:113} are of little use, although one may use the improved expressions [89]
+\begin{equation}
 \left\{\begin{array}{lll}
-a & b & c  \tag{12}\\
+a & b & c  \label{chap9:eq:115}\\
 d & e & f
 \end{array}\right\} \approx 2^{-\frac{4}{3}}\left(\prod_{i=1}^{4} S_{i}\right)^{-\frac{1}{6}}\{\cos \Phi \mathrm{Ai}(z)+\sin \Phi \mathrm{Bi}(z)\}
-\]
-
+\end{equation}
 $\mathrm{Ai}(z)$ and $\mathrm{Bi}(z)$ being the Airy functions [27],
-
-\[
-z= \begin{cases}-(3 V)^{2}\left(4 \prod_{i=1}^{4} S_{i}\right)^{-\frac{2}{3}} & \text { if } V^{2}>0,  \tag{13}\\ (3|V|)^{2}\left(4 \prod_{i=1}^{4} S_{i}\right)^{-\frac{2}{3}} & \text { if } V^{2}<0 .\end{cases}
-\]
-
-Note that the Ponzano-Regge approximation is sufficiently accurate even at comparatively small angular momenta $a, b, c$ etc. Asymptotic expressions similar to (12) but extended over the entire domain of angular momenta are obtained in Ref. [140].\\[0pt]
-(b) The Edmonds' Formula [16]: If $f, m, n$ are arbitrary integers or half-integers and $a, b, c \gg f, m, n$, then
-
-\[
+\begin{equation}
+z= \begin{cases}-(3 V)^{2}\left(4 \prod_{i=1}^{4} S_{i}\right)^{-\frac{2}{3}} & \text { if } V^{2}>0,  \label{chap9:eq:116}\\ (3|V|)^{2}\left(4 \prod_{i=1}^{4} S_{i}\right)^{-\frac{2}{3}} & \text { if } V^{2}<0 .\end{cases}
+\end{equation}
+Note that the Ponzano-Regge approximation is sufficiently accurate even at comparatively small angular momenta $a, b, c$ etc. Asymptotic expressions similar to \eqref{chap9:eq:115} but extended over the entire domain of angular momenta are obtained in Ref. [140].\\[0pt]
+\subsubsection{(b) The Edmonds' Formula [16]}
+If $f, m, n$ are arbitrary integers or half-integers and $a, b, c \gg f, m, n$, then
+\begin{equation}
 \left\{\begin{array}{ccc}
-a & b & c  \tag{14}\\
+a & b & c  \label{chap9:eq:117}\\
 b+m & a+n & f
 \end{array}\right\} \approx \frac{(-1)^{a+b+c+f+m}}{\sqrt{(2 a+1)(2 b+1)}} d_{m n}^{f}(\theta),
-\]
-
-where $d_{m n}^{f}(\Theta)$ is the rotation matrix (Chap. 4), $\Theta$ is an angle between the tetrahedron edges $a+n+\frac{1}{2}$ and $b+m+\frac{1}{2}$ (Fig. 9.2)
-
-
-\begin{equation*}
-\cos \theta=\frac{a(a+1)+b(b+1)-c(c+1)}{2 \sqrt{a(a+1) b(b+1)}} . \tag{15}
-\end{equation*}
-
-
+\end{equation}
+where $d_{m n}^{f}(\Theta)$ is the rotation matrix (Chap. 4), $\Theta$ is an angle between the tetrahedron edges $a+n+\frac{1}{2}$ and $b+m+\frac{1}{2}$ (Fig.~\ref{chap9:fig:2})
+\begin{equation}
+\cos \theta=\frac{a(a+1)+b(b+1)-c(c+1)}{2 \sqrt{a(a+1) b(b+1)}} . \label{chap9:eq:118}
+\end{equation}
 \begin{figure}[h]
 \begin{center}
   \includegraphics[alt={},max width=\textwidth]{402d9a1b-ee97-49cb-ae14-75458391be12-321_325_518_1161_770}
-\captionsetup{labelformat=empty}
-\caption{Fig. 9.2. The angle $\Theta$ which enters Eq. 9.9(14).}
+\caption{The angle $\Theta$ which enters Eq. 9.9(14).}
+\label{chap9:fig:2}
 \end{center}
 \end{figure}
 
-In particular, if $m=n=0, a, b, c \gg f$ and $f$ is an arbitrary integer, then (14) turns into the Racah formula [93],
-
-\[
+In particular, if $m=n=0, a, b, c \gg f$ and $f$ is an arbitrary integer, then \eqref{chap9:eq:117} turns into the Racah formula [93],
+\begin{equation}
 \left\{\begin{array}{lll}
-a & b & c  \tag{16}\\
+a & b & c  \label{chap9:eq:119}\\
 b & a & f
 \end{array}\right\} \approx \frac{(-1)^{a+b+c+f}}{\sqrt{(2 a+1)(2 b+1)}} P_{f}(\cos \theta),
-\]
-
-where $P_{f}$ is the Legendre polynomial. If, in addition, $f$ is large ( $a, b, c \gg f \gg 1$ ), one can substitute into (16) asymptotic expressions for the Legendre polynomials to obtain
-
-\[
+\end{equation}
+where $P_{f}$ is the Legendre polynomial. If, in addition, $f$ is large ( $a, b, c \gg f \gg 1$ ), one can substitute into \eqref{chap9:eq:119} asymptotic expressions for the Legendre polynomials to obtain
+\begin{equation}
 \left\{\begin{array}{lll}
-a & b & c  \tag{17}\\
+a & b & c  \label{chap9:eq:120}\\
 b & a & f
 \end{array}\right\} \approx(-1)^{a+b+c+s}\left[\frac{4}{\pi(2 a+1)(2 b+1)(2 f+1) \sin \theta}\right]^{\frac{1}{3}} \cos \left[\left(f+\frac{1}{2}\right) \theta-\frac{\pi}{4}\right] .
-\]
-
-This expression may also be written in the form (cf. Eq. (5))
-
-\[
+\end{equation}
+This expression may also be written in the form (cf. Eq. \eqref{chap9:eq:108})
+\begin{equation}
 \left\{\begin{array}{lll}
-a & b & c  \tag{18}\\
+a & b & c  \label{chap9:eq:121}\\
 b & a & f
 \end{array}\right\} \approx \frac{(-1)^{a+b+c+f}}{\sqrt{12 \pi V}} \cos \left[\left(f+\frac{1}{2}\right) \Theta-\frac{\pi}{4}\right],
-\]
-
+\end{equation}
 where the tetrahedron volume is given by
-
-
-\begin{equation*}
-V=\frac{1}{6}\left(a+\frac{1}{2}\right)\left(b+\frac{1}{2}\right)\left(f+\frac{1}{2}\right) \sin \Theta . \tag{19}
-\end{equation*}
-
-
-(c) If $a, b, c, d, e, f \gg 1, m, n, p$ one has
-
-\[
+\begin{equation}
+V=\frac{1}{6}\left(a+\frac{1}{2}\right)\left(b+\frac{1}{2}\right)\left(f+\frac{1}{2}\right) \sin \Theta . \label{chap9:eq:122}
+\end{equation}
+\subsubsection{(c) If $a, b, c, d, e, f \gg 1, m, n, p$ one has}
+\begin{equation}
 \left\{\begin{array}{lll}
-a & b & c  \tag{20}\\
+a & b & c  \label{chap9:eq:123}\\
 d & e & f
 \end{array}\right\}\left\{\begin{array}{ccc}
 a & b & c \\
 d+m & e+n & f+p
 \end{array}\right\} \approx \frac{\Theta\left(V^{2}\right)}{24 \pi V} \cos \left(m \Theta_{1}+n \Theta_{2}+p \Theta_{3}\right) .
-\]
-
-where $V$ is the tetrahedron volume (7)
-
-\[
-\Theta\left(V^{2}\right)= \begin{cases}1, & \text { if } V^{2}>0,  \tag{21}\\ 0, & \text { if } V^{2}<0,\end{cases}
-\]
-
-$\Theta_{i}$ is the angle between two external normals to the planes adjacent to the edge $l_{i}+\frac{1}{2}$ (Fig. 9.3), with $l_{1} \equiv d, l_{2} \equiv e, l_{3} \equiv f$. The angles $\Theta_{i}$ can be evaluated from
-
-
-\begin{equation*}
-\cos \theta_{i}=\frac{\cos \varphi_{i k} \cos \varphi_{i l}-\cos \varphi_{k l}}{\sin \varphi_{i k} \sin \varphi_{i l}} \tag{22}
-\end{equation*}
-
-
+\end{equation}
+where $V$ is the tetrahedron volume \eqref{chap9:eq:110}
+\begin{equation}
+\Theta\left(V^{2}\right)= \begin{cases}1, & \text { if } V^{2}>0,  \label{chap9:eq:124}\\ 0, & \text { if } V^{2}<0,\end{cases}
+\end{equation}
+$\Theta_{i}$ is the angle between two external normals to the planes adjacent to the edge $l_{i}+\frac{1}{2}$ (Fig.~\ref{chap9:fig:3}), with $l_{1} \equiv d, l_{2} \equiv e, l_{3} \equiv f$. The angles $\Theta_{i}$ can be evaluated from
+\begin{equation}
+\cos \theta_{i}=\frac{\cos \varphi_{i k} \cos \varphi_{i l}-\cos \varphi_{k l}}{\sin \varphi_{i k} \sin \varphi_{i l}} \label{chap9:eq:125}
+\end{equation}
 where combinations $i, k, l$ are obtained by cyclic permutations of $1,2,3$.
 
 \begin{figure}[h]
 \begin{center}
   \includegraphics[alt={},max width=\textwidth]{402d9a1b-ee97-49cb-ae14-75458391be12-322_528_823_968_618}
-\captionsetup{labelformat=empty}
-\caption{Fig. 9.3. Geometrical interpretation of the angles in Eqs. 9.9(20)-9.9(23).}
+\caption{Geometrical interpretation of the angles in Eqs. 9.9(20)-9.9(23).}
+\label{chap9:fig:3}
 \end{center}
 \end{figure}
 
-In Eq. (22) $\varphi_{i k} \equiv \varphi_{k i}$ is the angle between the edges $l_{i}+\frac{1}{2}$ and $l_{k}+\frac{1}{2}$ of the tetrahedron (Fig. 9.3)
-
-
-\begin{equation*}
-\cos \varphi_{i k}=\frac{l_{i}\left(l_{i}+1\right)+l_{k}\left(l_{k}+1\right)-j(j+1)}{2 \sqrt{l_{i}\left(l_{i}+1\right) l_{k}\left(l_{k}+1\right)}} \tag{23}
-\end{equation*}
-
-
+In Eq. \eqref{chap9:eq:125} $\varphi_{i k} \equiv \varphi_{k i}$ is the angle between the edges $l_{i}+\frac{1}{2}$ and $l_{k}+\frac{1}{2}$ of the tetrahedron (Fig.~\ref{chap9:fig:3})
+\begin{equation}
+\cos \varphi_{i k}=\frac{l_{i}\left(l_{i}+1\right)+l_{k}\left(l_{k}+1\right)-j(j+1)}{2 \sqrt{l_{i}\left(l_{i}+1\right) l_{k}\left(l_{k}+1\right)}} \label{chap9:eq:126}
+\end{equation}
 with $i \neq k \neq l$ and $j_{1} \equiv a, j_{2} \equiv b, j_{3} \equiv c$.\\
-(d) In particular, for $m=n=p=0$ Eq. (20) yields the Wigner formula [43]
-
-\[
+\subsubsection{(d) In particular, for $m=n=p=0$ Eq. \protect\eqref{chap9:eq:123} yields the Wigner formula [43]}
+\begin{equation}
 \left\{\begin{array}{lll}
-a & b & c  \tag{24}\\
+a & b & c  \label{chap9:eq:127}\\
 d & e & f
 \end{array}\right\}^{2} \approx \frac{\Theta\left(V^{2}\right)}{24 \pi V}, \quad(a, b, c, d, e, f \gg 1)
-\]
-
+\end{equation}
 This formula is valid only on the average because the $6 j$ symbols oscillate rapidly with momentum variations in the region of large angular momenta.\\
-(e) If $a, b, c$, etc. are fixed and $R \rightarrow \infty$, one has [89]
-
-
-\begin{align*}
+\subsubsection{(e) If $a, b, c$, etc. are fixed and $R \rightarrow \infty$, one has [89]}
+\begin{align}
 \left\{\begin{array}{ll}
 a & b+R \\
 d & c+R
-\end{array}\right\} \approx & (-1)^{\varphi}\left[\frac{(a-b+c)!(a-e+f)!(c+d-e)!(-b+d+f)!}{(a+b-c)!(a+e-f)!(-c+d+e)!(b+d-f)!}\right]^{\frac{1}{2} \operatorname{sign}(c+f-b-e)} \\
-& \times \frac{(2 R)^{-1-|b+e-c-f|}}{|b+e-c-f|!}\left[1+0\left(\frac{1}{R^{2}}\right)\right] . \tag{25}
-\end{align*}
-
-
+\end{array}\right\} \approx & (-1)^{\varphi}\left[\frac{(a-b+c)!(a-e+f)!(c+d-e)!(-b+d+f)!}{(a+b-c)!(a+e-f)!(-c+d+e)!(b+d-f)!}\right]^{\frac{1}{2} \operatorname{sign}(c+f-b-e)}  \notag\\
+& \times \frac{(2 R)^{-1-|b+e-c-f|}}{|b+e-c-f|!}\left[1+0\left(\frac{1}{R^{2}}\right)\right] . \label{chap9:eq:128}
+\end{align}
 In this case
-
-
-\begin{gather*}
-\varphi=a+d+\min \{b+c, c+f\}, \\
+\begin{gather}
+\varphi=a+d+\min \{b+c, c+f\},  \notag\\
 \operatorname{sign} x= \begin{cases}1, & \text { if } x \geq 0 \\
--1, & \text { if } x<0\end{cases} \tag{26}
-\end{gather*}
-
-
-\subsection*{9.10. RELATIONS BETWEEN THE WIGNER $6 j$ SYMBOLS AND ANALOGOUS FUNCTIONS OF OTHER AUTHORS}
+-1, & \text { if } x<0\end{cases} \label{chap9:eq:129}
+\end{gather}
+\section{RELATIONS BETWEEN THE WIGNER $6 j$ SYMBOLS AND ANALOGOUS FUNCTIONS OF OTHER AUTHORS}
 Racah [91]:
-
-$$
+\[
 W(a b e d ; c f)=(-1)^{a+b+d+e}\left\{\begin{array}{lll}
 a & b & c \\
 d & e & f
 \end{array}\right\}
-$$
-
+\]
 Jahn [73]:
-
-$$
+\[
 U(a b e d ; c f)=[(2 c+1)(2 f+1)]^{\frac{1}{2}} W(a b e d ; c f)
-$$
-
+\]
 Biedenharn, Blatt and Rose [56]:
-
-$$
-\left.Z(a b e d ; c f)=i^{-a+e+f} \mid(2 a+1)(2 b+1)(2 d+1)(2 e+1)\right]^{\frac{1}{2}} C_{a 0 e 0}^{f 0} W(a b e d ; c f)
-$$
-
-\subsection*{9.11. TABLES OF ALGEBRAIC EXPRESSIONS FOR THE $6 j$ SYMBOLS}
+\[
+\left.Z(a b e d ; c f)=i^{-a+e+f} \mid(2 a+1)(2 b+1)(2 d+1)(2 e+1)\right]^{\frac{1}{2}} \clebsch{a}{0}{e}{0}{f}{0} W(a b e d ; c f)
+\]
+\section{TABLES OF ALGEBRAIC EXPRESSIONS FOR THE $6 j$ SYMBOLS}
 Algebraic expressions for the $6 j$ symbols $\left\{\begin{array}{lll}a & b & c \\ d & e & f\end{array}\right\}$ with $d=\frac{1}{2}, 1, \frac{3}{2}, 2, \frac{5}{2}, 3, \frac{7}{2}, 4$ are presented in Tables 9.1-9.8. We use the following notations
-
-$$
+\[
 \begin{gathered}
 s=a+b+c \\
 X=-a(a+1)+b(b+1)+c(c+1)
 \end{gathered}
-$$
-
+\]
 The tables of algebraic formulas for the $6 j$ symbols and Racah coefficients are also given in Refs. [3,45, 56].
 \begin{comment}
-\subsection*{9.12. NUMERICAL VALUES OF THE $6 j$ SYMBOLS}
+\section{NUMERICAL VALUES OF THE $6 j$ SYMBOLS}
 Numerical values of the $6 j$ symbols $\left\{\begin{array}{lll}a & b & c \\ d & e & f\end{array}\right\}$ with $a, b, c, d, e, f \leq 3$ are presented in Tables 9.9-9.11. These values are given exactly (i.e., as square roots of rational fractions) and in decimals. All arguments $a, b, c, d, e, f$ are supposed to differ from zero. Otherwise one should use Eqs. 9.5(1). Arguments of the $6 j$ symbols given in Tables 9.9-9.11 satisfy the following conditions:\\
 Table 9.9. 1. $a, b, d, e$ are half-integers; $c, f$ are integers.\\
 2. $a \geq b, d, e$ and $c \geq f$.\\
