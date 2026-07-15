@@ -66,13 +66,36 @@
 \newcommand{\clebsch}[6]{C_{#1 #2 #3 #4}^{#5 #6}}
 
 %Bracket notation, see CONVERSION_RULES.md for the source patterns each replaces
+\newcommand{\ket}[1]{\left| #1 \right\rangle}
+\newcommand{\rket}[1]{\left| #1 \right)}
+\newcommand{\bra}[1]{\left\langle #1 \right|}
+\newcommand{\rbra}[1]{\left( #1 \right|}
+
 \newcommand{\braket}[2]{\left\langle #1 \middle| #2 \right\rangle}
+\newcommand{\rbraket}[2]{\left( #1 \middle| #2 \right)}
 \newcommand{\braOket}[3]{\left\langle #1 \middle| #2 \middle| #3 \right\rangle}
 \newcommand{\braOketred}[3]{\left\langle #1 \middle\| #2 \middle\| #3 \right\rangle}
 
 %Vectors (upright bold) and matrices (italic bold); see CONVERSION_RULES.md rule 10
 \newcommand{\vect}[1]{\mathbf{#1}}
 \newcommand{\mat}[1]{\boldsymbol{#1}}
+
+%Wigner 6j symbol, reading order: top row then bottom row
+\newcommand{\sixj}[6]{\left\{\begin{array}{ccc} #1 & #2 & #3 \\ #4 & #5 & #6 \end{array}\right\}}
+
+%Wigner 9j symbol, reading order: top row, middle row, bottom row
+\newcommand{\ninej}[9]{\left\{\begin{array}{ccc} #1 & #2 & #3 \\ #4 & #5 & #6 \\ #7 & #8 & #9 \end{array}\right\}}
+
+%12-entry symbol from a sum of four 6j symbols, 4x4 layout (see
+%CONVERSION_RULES.md); a single \newcommand/\NewDocumentCommand cannot take
+%more than 9 arguments (a hard TeX limit), so each row is passed as one
+%pre-joined "a & b & c & d" argument by the caller instead of one argument
+%per cell. Used both for the dashed-diagonal form (call with "-" as one of
+%the four cells in each row) and the no-diagonal form.
+\newcommand{\twelvej}[4]{\left\{\begin{array}{cccc} #1 \\ #2 \\ #3 \\ #4 \end{array}\right\}}
+
+%Same idea as \twelvej but for the 3-row (12-entry, no diagonal) layout
+\newcommand{\twelvejalt}[3]{\left\{\begin{array}{cccc} #1 \\ #2 \\ #3 \end{array}\right\}}
 
 \newunicodechar{∇}{\ifmmode\nabla\else{$\nabla$}\fi}
 \newunicodechar{→}{\ifmmode\rightarrow\else{$\rightarrow$}\fi}
@@ -102,4 +125,5 @@ V. K. Khersonskii}
 \include{Chap8}
 \include{Chap9}
 \include{Chap10}
+\include{Chap11}
 \end{document}

@@ -436,6 +436,48 @@ of a point $\vect{r}$ may be written as
 \begin{figure}[tbh]
 ```
 
+## 12. 6j/9j/12j symbols → `\sixj`/`\ninej`/`\twelvej`/`\twelvejalt`
+
+Replace the OCR source's spelled-out `\left\{\begin{array}{lll} a & b & c \\
+d & e & f \end{array}\right\}` (Wigner 6j symbol, always a 2-row/3-column
+layout) with `\sixj{a}{b}{c}{d}{e}{f}` (reading order: top row left-to-right,
+then bottom row left-to-right). Do the analogous thing for the rarer 9j
+symbol (3-row/3-column) with `\ninej{a}{b}{c}{d}{e}{f}{g}{h}{i}`.
+
+```latex
+\newcommand{\sixj}[6]{\left\{\begin{array}{ccc} #1 & #2 & #3 \\ #4 & #5 & #6 \end{array}\right\}}
+\newcommand{\ninej}[9]{\left\{\begin{array}{ccc} #1 & #2 & #3 \\ #4 & #5 & #6 \\ #7 & #8 & #9 \end{array}\right\}}
+```
+
+Before converting, verify the argument entries against `orig/*.pdf` — OCR
+frequently scrambles these dense bracket-matrix formulas (wrong row/column
+splits, dropped entries, duplicated tokens); see the Chap9.tex notes below
+for the kinds of corruption found and how each was resolved. Only convert
+a block once its 6 (or 9) entries are confirmed correct; leave anything
+still-uncertain as a literal `\left\{\begin{array}...\end{array}\right\}`
+rather than wrapping unverified content in the macro (the macro should
+mean "verified", not just "shaped like a 6j symbol").
+
+A handful of identities in this book use a 12-entry bracket symbol (arising
+from summing four 6j symbols together). Because `\newcommand` and
+`\NewDocumentCommand` both hit a hard TeX limit of 9 macro parameters, these
+can't take one argument per cell the way `\sixj`/`\ninej` do — each row is
+instead passed as a single pre-`&`-joined argument:
+
+```latex
+\newcommand{\twelvej}[4]{\left\{\begin{array}{cccc} #1 \\ #2 \\ #3 \\ #4 \end{array}\right\}}
+\newcommand{\twelvejalt}[3]{\left\{\begin{array}{cccc} #1 \\ #2 \\ #3 \end{array}\right\}}
+```
+
+`\twelvej` is the 4-row form (used with a literal `-` placeholder in each
+row's diagonal cell, e.g. `\twelvej{- & h & a & s}{c & - & p & b}{f & r & -
+& g}{q & e & d & -}`); `\twelvejalt` is the 3-row/4-column form with no
+diagonal. Chapter 10's own native 12j(I)/12j(II) definitions use a further
+different layout again — a `[...]` bracket with a staggered/shifted second
+row baked into the definition itself (not an OCR artifact) — which neither
+of these two macros fits; that needs its own macro if/when Chapter 10 gets
+this treatment.
+
 ## Notes
 
 - **Compilation now requires `xelatex`** (or another Unicode engine), not
@@ -1002,3 +1044,113 @@ of a point $\vect{r}$ may be written as
     uncommitted local edits already in progress (not part of this pass)
     that broke the full-document compile; only the typo was touched, the
     rest of those edits were left alone.
+- **Chap9.tex's 6j-symbol audit (rule 12), done against `orig/*.pdf` at the
+  user's request, found real content corruption beyond the earlier
+  conversion pass's scope** (that pass fixed structural/LaTeX-syntax bugs
+  but didn't cross-check every symbol's actual argument values against the
+  source):
+  - Eqs. (1)-(4) of Sec. 9.6.1 ("Relations in Which Arguments are Changed
+    by 1/2", PDF pp. 303-304) had 8 6j symbols with scrambled row/column
+    splits — missing `&` separators merging multiple cells into one
+    (`a-\frac{1}{2} b c-\frac{1}{2}` instead of three separate cells),
+    entries silently dropped (a whole missing cell), and one entry
+    (`c`) relocated into the wrong row entirely. All 8 fixed by direct
+    transcription from the PDF and converted to `\sixj`.
+  - Sec. 9.4.4 ("Mirror" Symmetry, PDF p. 299 Eq. 8) is a dense chain of
+    12 bar-marked 6j symbols (corresponding to the negative-argument
+    replacement $j\to-j-1$) packed into 3 lines — the worst corruption
+    found in this book so far, with missing/duplicated/misplaced tokens
+    throughout. **6 of the 12 were recovered with high confidence**
+    (2 trivially — the plain and fully-barred baseline forms — plus 4
+    more where a clean, unambiguous sibling term in the same equation let
+    the corrupted partner be reconstructed as its exact complement) and
+    converted to `\sixj`; **the remaining 6 (row 1's 3rd-4th terms, all
+    of row 2) could not be reconstructed with confidence** even after two
+    careful re-reads of the source page — bar placement on individual
+    letters in a 6-way chain like this is right at the edge of what's
+    reliably legible from a scanned page image — and were deliberately
+    **left unconverted, still in their original (garbled) state**, per
+    explicit user sign-off to flag rather than guess here. Anyone
+    revisiting this: PDF p. 299, Eq. (8), `\eqref{chap9:eq:55}`.
+  - Two more one-off garbled 6j symbols were found and fixed by direct
+    PDF lookup: `\eqref{chap9:eq:66}` (Sec. 9.5.3, PDF p. 301 Eq. 15) was
+    missing its 6th argument (`f`) entirely; the asymptotic large-$R$
+    identity in Sec. 9.9.3(e) (PDF p. 309 Eq. 25) had only 4 of its 6
+    arguments present (missing `c+R` and `e+R`).
+  - Two `\label{...}` commands ended up **embedded inside a `\sixj`
+    argument** by the automated conversion script (when the source had
+    the label attached to a mid-array cell, e.g. `a \label{chap9:eq:11}`
+    as the array's 3rd cell) — a real bug in the conversion approach, not
+    an OCR issue. Fixed globally by re-parsing every `\sixj{...}` call,
+    detecting a `\label{}` inside any argument, stripping it out, and
+    re-inserting it immediately after the macro call instead. Two more
+    instances had the opposite adjacency problem — the source's trailing
+    `^{2}` (squaring the whole symbol) ended up split from the symbol by
+    an intervening label (`\sixj{...}  \label{...}^{2}`, attaching the
+    superscript to the label instead of the symbol) — fixed by hand,
+    reordering to `\sixj{...}^{2}  \label{...}`.
+  - Three symbols found in Sec. 9.8 ("Sums Involving the 6j Symbols", PDF
+    p. 305) don't fit `\sixj` at all and were verified correct as-is,
+    left as literal `\left\{\begin{array}...\end{array}\right\}`: one
+    genuine 9j symbol (3x3, `\eqref{chap9:eq:100}`, converted to
+    `\ninej` instead) and two 12-entry identities arising from summing
+    four 6j symbols (`\eqref{chap9:eq:102}`, a 4x4 grid with a dashed
+    diagonal; `\eqref{chap9:eq:103}`, a 3x4 grid with no diagonal) —
+    converted to `\twelvej`/`\twelvejalt` respectively, see rule 12.
+  - The book's `W(abcd;ef)` Racah-coefficient notation (21 occurrences)
+    is a deliberately different, valid notation — not converted, and not
+    in scope for this rule (it's a distinct symbol from the 6j one, related
+    by a phase factor, not just an alternate typesetting of the same
+    thing).
+- **Chap10.tex's rule-12 audit** (as a whole chapter, "9j and 12j Symbols" —
+  mostly 9j content, with 6j and two distinct 12-entry layouts also
+  appearing) converted 71 `\sixj`, 298 `\ninej`, 68 `\twelvej` and 45
+  `\twelvejalt` calls. About 20 individually-corrupted symbols were found
+  and fixed by direct PDF lookup (bad row/column splits, dropped entries,
+  misplaced fragments, tokens leaked outside the array) across Secs.
+  10.4.1, 10.5.1-10.5.4, 10.13.2 and 10.13.3 — same failure patterns as
+  Chap9.tex's audit, not repeated here in detail.
+  - **Chapter 10 has its own native 12j(I)/12j(II) definitions** (Sec.
+    10.13.2-10.13.3), structurally different from the "sum of four 6j
+    symbols" 12-entry identities `\twelvej`/`\twelvejalt` were built for
+    in Chap9.tex. The *general* form is a clean, unshifted 3-row/4-column
+    grid and fits `\twelvejalt` fine. But the special-value formulas (PDF
+    p. 366 Eqs. 21-22, one argument fixed to $\frac12$) use a genuinely
+    **staggered layout where row 2 is shifted one column right relative
+    to rows 1 and 3** — a real feature of the source's own typesetting,
+    not an OCR artifact — which neither `\twelvej` nor `\twelvejalt` can
+    represent. The two instances found were fixed by hand with a literal
+    5-column `\begin{array}{ccccc}` (row 2 given a leading blank cell)
+    rather than forcing them through the existing macros; no new macro
+    was written for this since only two instances exist. Revisit if more
+    turn up.
+  - **The 9j "Mirror" Symmetry equation (Sec. 10.4.3, PDF p. 344 Eq. 10)
+    lost bar-diacritics across essentially the entire equation** — of its
+    16 chained terms, only the 2 simplest (the plain baseline and the
+    fully-barred form) survived OCR; the other 14 all collapsed to
+    identical unbarred copies of the baseline. This is a larger-scale
+    version of Chap9.tex's analogous mirror-symmetry corruption. Per
+    explicit user sign-off, **left entirely unconverted** (not wrapped in
+    `\ninej`, since that would misrepresent unverified content as
+    verified) — flagged here for anyone revisiting: Chap10.tex's
+    `\subsection{"Mirror" Symmetry}` under Sec. 10.4, PDF p. 344 Eq. 10.
+  - One further 9j symbol (Sec. 10.8.5 "Four Degenerate Triads",
+    `\eqref{chap10:eq:111}`) has a garbled 4-row/2-column array that
+    couldn't be confidently reconstructed even from the surrounding
+    equations' pattern (unlike the other ~20 fixed corruptions, no
+    clean sibling term nor a locatable PDF page to check against was
+    found within reasonable effort) — left unconverted, flagged as a
+    known gap.
+  - A scanning-script bug worth remembering for future chapters: **the
+    invisible LaTeX delimiter is `\left.`/`\right.` — literally a period,
+    with no backslash before it** (`\left\.` is wrong; the dot is not a
+    special regex/LaTeX character that needs escaping here). A regex
+    that mistakenly required a backslash before the dot silently failed
+    to recognize `\right.`, which turned one `\Theta(B)=\left\{...\right.`
+    piecewise-function block (Sec. 10.7, not a 9j symbol at all) into a
+    runaway match spanning roughly 330 lines and ~45 legitimate 6j/9j
+    symbols, all silently skipped by the first bulk-conversion pass. Fixed
+    by correcting the regex and rerunning; caught by comparing raw
+    `\left\{`/`\right\}` counts before and after (a mismatch is the
+    tell). Worth a sanity check like this after any brace-matching script
+    touches a chapter with piecewise/cases definitions.

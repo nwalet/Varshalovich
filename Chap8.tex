@@ -125,16 +125,20 @@ The $\Delta$-symbol is invariant under permutations of $a, b, c$. Numerical valu
 \Delta(a a 0)=\frac{1}{\sqrt{2 a+1}} \label{chap8:eq:19}
 \end{equation}
 \subsection{Representations of the Clebsch-Gordan Coefficients in the Form of Algebraic Sums}
-\[
-\left.\left.\left.\begin{array}{rl}
-\clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}= & \delta_{\gamma, \alpha+\beta} \Delta(a b c)[(a+\alpha)!(a-\alpha)!(b+\beta)!(b-\beta)!(c+\gamma)!(c-\gamma)!(2 c+1)]^{\frac{1}{2}} \\
-& \times \sum_{z} \frac{(-1)^{z}}{z!(a+b-c-z)!(a-\alpha-z)!(b+\beta-z)!(c-b+\alpha+z)!(c-a-\beta+z)!} \\
-& \quad(\text { Van der Waerden }[40], \text { Racah }[91]) \\
-\clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}= & \delta_{\gamma, \alpha+\beta} \frac{\Delta(a b c)}{(c+a-b)!(c-a+b)!}\left[\frac{(a-\alpha)!(b-\beta)!(c+\gamma)!(c-\gamma)!(2 c+1)}{(a+\alpha)!(b+\beta)!}\right]^{\frac{1}{2}} \\
-& \times \sum_{z} \frac{(-1)^{a-\alpha+z}(a+\alpha+z)!(c+b-\alpha-z)!}{z!(a-\alpha-z)!(c-\gamma-z)!(b-c+\alpha+z)!} \\
-& \quad(\text { Racah }[91], \text { Fock }[68])
-\end{array}\right] ~ \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}=\delta_{\gamma, \alpha+\beta} \Delta(a b c)\left[\frac{(c+\gamma)!(c-\gamma)!(2 c+1)}{(a+\alpha)!(a-\alpha)!(b+\beta)!(b-\beta)!}\right]^{\frac{1}{2}}\right] ~(-1)^{b+\beta+z}(c+b+\alpha-z)!(a-\alpha+z)!\right] ~ \sum_{z} \frac{(c-a+b-z)!(c+\gamma-z)!(a-b-\gamma+z)!}{}
-\]
+\begin{align}
+\clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}= & \delta_{\gamma, \alpha+\beta} \Delta(a b c)[(a+\alpha)!(a-\alpha)!(b+\beta)!(b-\beta)!(c+\gamma)!(c-\gamma)!(2 c+1)]^{\frac{1}{2}} \notag \\
+& \times \sum_{z} \frac{(-1)^{z}}{z!(a+b-c-z)!(a-\alpha-z)!(b+\beta-z)!(c-b+\alpha+z)!(c-a-\beta+z)!} 
+\end{align}
+(Van der Waerden [40], Racah [91]) 
+\begin{align}
+\clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}= & \delta_{\gamma, \alpha+\beta} \frac{\Delta(a b c)}{(c+a-b)!(c-a+b)!}\left[\frac{(a-\alpha)!(b-\beta)!(c+\gamma)!(c-\gamma)!(2 c+1)}{(a+\alpha)!(b+\beta)!}\right]^{\frac{1}{2}} \notag \\
+& \times \sum_{z} \frac{(-1)^{a-\alpha+z}(a+\alpha+z)!(c+b-\alpha-z)!}{z!(a-\alpha-z)!(c-\gamma-z)!(b-c+\alpha+z)!} 
+\end{align}
+(Racah [91], Fock [68])
+\begin{align}
+\clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}=&\delta_{\gamma, \alpha+\beta} \Delta(a b c)\left[\frac{(c+\gamma)!(c-\gamma)!(2 c+1)}{(a+\alpha)!(a-\alpha)!(b+\beta)!(b-\beta)!}\right]^{\frac{1}{2}}\notag \\ &
+ \sum_{z} \frac{(-1)^{b+\beta+z}(c+b+\alpha-z)!(a-\alpha+z)!}{(c-a+b-z)!(c+\gamma-z)!(a-b-\gamma+z)!}
+\end{align}
 (Wigner [43])
 \begin{align}
 \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}= & \delta_{\gamma, \alpha+\beta} \frac{\Delta(a b c)}{(a-b+c)!(a+b-c)!}\left[\frac{(a+\alpha)!(a-\alpha)!(b-\beta)!(c+\gamma)!(2 c+1)}{(b+\beta)!(c-\gamma)!}\right]^{\frac{1}{2}}  \notag\\
@@ -1299,9 +1303,9 @@ In particular, if $\alpha=\beta=\gamma=0$, we get $\theta_{1}=\theta_{2}=\theta_
 \end{equation}
 Equations (12)-(17) are valid, if $S^{2}>0$.
 
-\begin{figure}[h]
+\begin{figure}[tbh]
 \begin{center}
-  \includegraphics[alt={},max width=\textwidth]{402d9a1b-ee97-49cb-ae14-75458391be12-279_609_631_712_731}
+  \includegraphics[alt={},max width=0.5\textwidth]{402d9a1b-ee97-49cb-ae14-75458391be12-279_609_631_712_731}
 \caption{Geometric interpretation of the parameters in the asymptotic relation \eqref{chap8:eq:225}.}
 \label{chap8:fig:1}
 \end{center}
@@ -1347,9 +1351,9 @@ If the vector $j$ as well as the magnitudes of $j_{1}$ and $j_{2}$ are given, th
 \begin{equation}
 \clebsch{j_{1}}{0}{j_{2}}{0}{j}{0} \approx(-1)^{\frac{i 1+j_{2}-j}{2}} \sqrt{\frac{2 j+1}{\pi}}\left[-\left(j_{1}^{4}+j_{2}^{4}+j^{4}\right)+2\left(j_{1}^{2} j_{2}^{2}+j_{1}^{2} j^{2}+j_{2}^{2} j^{2}\right)\right]^{-\frac{1}{4}} \label{chap8:eq:234}
 \end{equation}
-\begin{figure}[h]
+\begin{figure}[tbh!]
 \begin{center}
-  \includegraphics[alt={},max width=\textwidth]{402d9a1b-ee97-49cb-ae14-75458391be12-280_665_590_1606_725}
+  \includegraphics[alt={},max width=0.5\textwidth]{402d9a1b-ee97-49cb-ae14-75458391be12-280_665_590_1606_725}
 \caption{Addition of angular momenta in the classical limit.}
 \label{chap8:fig:2}
 \end{center}
@@ -1394,20 +1398,20 @@ m_{1} & m_{2} & m
 \end{array}\right]} & \text { - Yutsis and Bandzaitis [45], } \\
 \braket{j_{1} m_{1} j_{2} m_{2}}{\left(j_{1} j_{2}\right) j m} & \text { - Fano [66]. }\end{cases}
 \]
-\[
+\[\small\setlength{\arraycolsep}{2pt}
 \begin{aligned}
-& J=3\left(\begin{array}{lll}
+ J=3& \left(\begin{array}{lll}
 1 & 1 & 1 \\
 0 & 0 & 0
 \end{array}\right) . \\
-& \mathrm{J}=5\left(\begin{array}{lll}
+J=5 &\left(\begin{array}{lll}
 1 & 2 & 2 \\
 0 & 0 & 0
 \end{array}\right),\left(\begin{array}{ccc}
 3 / 2 & 3 / 2 & 2 \\
 1 / 2 & 1 / 2 & -1
 \end{array}\right) . \\
-& \mathrm{J}=7\left(\begin{array}{lll}
+J=7 &\left(\begin{array}{lll}
 1 & 3 & 3 \\
 0 & 0 & 0
 \end{array}\right),\left(\begin{array}{lll}
@@ -1420,14 +1424,14 @@ m_{1} & m_{2} & m
 2 & 5 / 2 & 5 / 2 \\
 -1 & 1 / 2 & 1 / 2
 \end{array}\right) . \\
-& \mathrm{J}=8\left(\begin{array}{ccc}
+J=8 &\left(\begin{array}{ccc}
 2 & 3 & 3 \\
 0 & 2 & -2
 \end{array}\right),\left(\begin{array}{ccc}
 3 / 2 & 3 & 7 / 2 \\
 1 / 2 & 1 & -3 / 2
 \end{array}\right) \text {. } \\
-& J=9\left(\begin{array}{lll}
+J=9 &\left(\begin{array}{lll}
 1 & 4 & 4 \\
 0 & 0 & 0
 \end{array}\right),\left(\begin{array}{lll}
@@ -1453,7 +1457,7 @@ m_{1} & m_{2} & m
 5 / 2 & 5 / 2 & 4 \\
 3 / 2 & 3 / 2 & -3
 \end{array}\right) . \\
-& J=11\left(\begin{array}{lll}
+J=11 &\left(\begin{array}{lll}
 1 & 5 & 5 \\
 0 & 0 & 0
 \end{array}\right),\left(\begin{array}{lll}
@@ -1498,7 +1502,7 @@ m_{1} & m_{2} & m
 5 / 2 & 4 & 9 / 2 \\
 1 / 2 & 3 & -7 / 2
 \end{array}\right) \text {. } \\
-& J=13\left(\begin{array}{lll}
+J=13 &\left(\begin{array}{lll}
 1 & 6 & 6 \\
 0 & 0 & 0
 \end{array}\right),\left(\begin{array}{lll}
@@ -1549,7 +1553,7 @@ m_{1} & m_{2} & m
 7 / 2 & 7 / 2 & 6 \\
 5 / 2 & 5 / 2 & -5
 \end{array}\right) . \\
-& \mathrm{J}=14\left(\begin{array}{ccc}
+J=14 &\left(\begin{array}{ccc}
 3 & 5 & 6 \\
 1 & -1 & 0
 \end{array}\right),\left(\begin{array}{ccc}
@@ -1587,7 +1591,7 @@ m_{1} & m_{2} & m
 5 / 2 & 11 / 2 & 6 \\
 3 / 2 & 1 / 2 & -2
 \end{array}\right) . \\
-& J=15\left(\begin{array}{lll}
+J=15 &\left(\begin{array}{lll}
 1 & 7 & 7 \\
 0 & 0 & 0
 \end{array}\right),\left(\begin{array}{lll}
@@ -1663,7 +1667,7 @@ m_{1} & m_{2} & m
 9 / 2 & 9 / 2 & 6 \\
 5 / 2 & 5 / 2 & -5
 \end{array}\right) . \\
-& J=17\left(\begin{array}{lll}
+J=17 &\left(\begin{array}{lll}
 1 & 8 & 8 \\
 0 & 0 & 0
 \end{array}\right),\left(\begin{array}{lll}
@@ -1797,7 +1801,7 @@ Numerical values of the Clebsch-Gordan coefficients are also given in Refs. [126
 
 Tables~\ref{chap8:tab:1}--\ref{chap8:tab:10}. Algebraic Formulas for the Clebsch-Gordan Coefficients.
 
-\begin{table}[h]
+\begin{table}[tbh!]
 \begin{center}
 \caption{$\clebsch{a}{\alpha}{\frac{1}{2}}{\beta}{c}{\gamma}$}
 \label{chap8:tab:1}
@@ -1811,31 +1815,28 @@ $a-1 / 2$ & $-\left[\frac{c-\gamma+1}{2 c+2}\right]^{1 / 2}$ & $\left[\frac{c+\g
 \end{center}
 \end{table}
 
-\begin{table}[h]
+\begin{table}[tbh!]
 \begin{center}
 \caption{$\clebsch{a}{\alpha}{1}{\beta}{c}{\gamma}$}
 \label{chap8:tab:2}
-\begin{tabular}{|l|l|l|l|}
+\begin{tabular}{c|c|c|c}
 \hline
 c & $\beta=1$ & $\beta=0$ & $\beta=-1$ \\
 \hline
-$a+1$ & $\left[\frac{(c+\gamma-1)(c+\gamma)}{(2 c-1) 2 c}\right]^{1 / 2}$ & \multirow{3}{*}{\(
-\begin{gathered}
-{\left[\frac{(c+\gamma)(c-\gamma)}{(2 c-1) c}\right]^{1 / 2}} \\
-\frac{\gamma}{[c(c+1)]^{1 / 2}} \\
--\left[\frac{(c+\gamma+1)(c-\gamma+1)}{(c+1)(2 c+3)}\right]^{1 / 2}
-\end{gathered}
-\)} &  \\
-\hline
-${ }^{a}$ &  &  &  \\
-\hline
-$a-1$ & \( \begin{gathered} -\left[\frac{(c+\gamma)(c-\gamma+1)}{2 c(c+1)}\right]^{1 / 2} \\ {\left[\frac{(c-\gamma+1)(c-\gamma+2)}{(2 c+2)(2 c+3)}\right]^{1 / 2}} \end{gathered} \) &  & \( \begin{aligned} & {\left[\frac{(c-\gamma-1)(c-\gamma)}{(2 c-1) 2 c}\right]^{1 / 2}} \\ & {\left[\frac{(c+\gamma+1)(c-\gamma)}{2 c(c+1)}\right]^{1 / 2}} \\ & {\left[\frac{(c+\gamma+2)(c+\gamma+1)}{(2 c+2)(2 c+3)}\right]^{1 / 2}} \end{aligned} \) \\
-\hline
+$a+1$ & $\left[\frac{(c+\gamma-1)(c+\gamma)}{(2 c-1) 2 c}\right]^{1 / 2}$ & 
+\(\left[\frac{(c+\gamma)(c-\gamma)}{(2 c-1) c}\right]^{1 / 2}\)& 
+\(\left[\frac{(c-\gamma-1)(c-\gamma)}{(2 c-1) 2c}\right]^{1 / 2}\)
+\\
+$a$ & \(-\left[\frac{(c+\gamma)(c-\gamma+1)}{2 c(c+1)}\right]^{1 / 2 }\) &\(\frac{\gamma}{[c(c+1)]^{1 / 2}}\)&
+$\left[\frac{(c+\gamma+1)(c-\gamma)}{2 c(c+1)}\right]^{1 / 2}$\\
+$a-1$ & \(  \left[\frac{(c-\gamma+1)(c-\gamma+2)}{(2 c+2)(2 c+3)}\right]^{1 / 2} \) 
+ & \(-\left[\frac{(c+\gamma+1)(c-\gamma+1)}{( c+1)(2 c+3)}\right]^{1 / 2} \)
+ & \( \left[\frac{(c+\gamma+2)(c+\gamma+1)}{(2 c+2)(2 c+3)}\right]^{1 / 2} \) 
 \end{tabular}
 \end{center}
 \end{table}
 
-\begin{table}[h]
+\begin{table}[tbh!]
 \begin{center}
 \caption{$\clebsch{a}{\alpha}{\frac{3}{2}}{\beta}{c}{\gamma}$}
 \label{chap8:tab:3}
@@ -1854,8 +1855,8 @@ $a-3 / 2$ & $-\left[\frac{(c-\gamma+1)(c-\gamma+2)(c-\gamma+3)}{(2 c+2)(2 c+3)(2
 \end{tabular}
 \end{center}
 \end{table}
-
-\begin{table}[h]
+\begin{comment}
+\begin{table}[tbh!]
 \begin{center}
 \textbf{Table~\ref{chap8:tab:3} (continued)}
 \begin{tabular}{c|c}
@@ -1870,7 +1871,7 @@ $a-3 / 2$ & $\left[\frac{(c+\gamma+1)(c+\gamma+2)(c+\gamma+3)}{(2 c+2)(2 c+3)(2 
 \end{center}
 \end{table}
 
-\begin{table}[h]
+\begin{table}[tbh!]
 \begin{center}
 \caption{$\clebsch{a}{\alpha}{2}{\beta}{c}{\gamma}$}
 \label{chap8:tab:4}
@@ -1892,7 +1893,7 @@ $\left[\frac{(c+\gamma+1)(c-\gamma+1)(c-\gamma+2)(c-\gamma+3}{(c+1)(2 c+3)(c+2)(
 \end{center}
 \end{table}
 
-\begin{table}[h]
+\begin{table}[tbh!]
 \begin{center}
 \textbf{Table~\ref{chap8:tab:4} (continued)}
 \begin{tabular}{|l|l|l|l|}
@@ -1919,7 +1920,7 @@ $a-2$ \\
 \end{center}
 \end{table}
 
-\begin{table}[h]
+\begin{table}[tbh!]
 \begin{center}
 \caption{$\clebsch{a}{\alpha}{\frac{5}{2}}{\beta}{c}{\gamma}$}
 \label{chap8:tab:5}
@@ -1937,7 +1938,7 @@ $c$ & $\beta=1 / 2$ & $\beta=-1 / 2$ \\
 \end{center}
 \end{table}
 
-\begin{table}[h]
+\begin{table}[tbh!]
 \begin{center}
 \textbf{Table~\ref{chap8:tab:5} (continued)}
 \begin{tabular}{|l|l|l|}
@@ -1960,7 +1961,7 @@ $a-5 / 2$ & $-\left[\frac{5(c+\gamma+4)!(c-\gamma+1)(2 c+1)!}{(c+\gamma)!(2 c+6)
 \end{center}
 \end{table}
 
-\begin{table}[h]
+\begin{table}[tbh!]
 \begin{center}
 \caption{$\clebsch{a}{\alpha}{3}{\beta}{c}{\gamma}$}
 \label{chap8:tab:6}
@@ -1984,7 +1985,7 @@ $a-3$ &  & $-\left[\frac{6(c+\gamma+1)(c-\gamma+5)!(2 c+1)!}{(c-\gamma)!(2 c+7)!
 \end{center}
 \end{table}
 
-\begin{table}[h]
+\begin{table}[tbh!]
 \begin{center}
 \textbf{Table~\ref{chap8:tab:6} (continued)}
 \begin{tabular}{|l|l|l|}
@@ -2009,7 +2010,7 @@ $a-3$ & $\left[\frac{15(c+\gamma+2)!(c-\gamma+4)!(2 c+1)!}{(c+\gamma)!(c-\gamma)
 \end{center}
 \end{table}
 
-\begin{table}[h]
+\begin{table}[tbh!]
 \begin{center}
 \caption{$\clebsch{a}{\alpha}{\frac{7}{2}}{\beta}{c}{\gamma}$}
 \label{chap8:tab:7}
@@ -2033,7 +2034,7 @@ $a+7 / 2$ & $\left[\frac{(c+\gamma)!(2 c-7)!}{(c+\gamma-7)!(2 c)!}\right]^{1/2}$
 {\left[\frac{7(c+\gamma+1)(c-\gamma+6)!(2 c+1)!}{(c-\gamma)!(2 c+8)!}\right]^{1/2}}
 \end{gathered}
 \]
-\begin{table}[h]
+\begin{table}[tbh!]
 \begin{center}
 \textbf{Table~\ref{chap8:tab:7} (continued)}
 \begin{tabular}{|l|l|}
@@ -2055,7 +2056,7 @@ c & $\beta=1 / 2$ \\
 \end{table}
 
 
-\begin{table}[h]
+\begin{table}[tbh!]
 \begin{center}
 \caption{$\clebsch{a}{\alpha}{4}{\beta}{c}{\gamma}$}
 \label{chap8:tab:8}
@@ -2087,7 +2088,7 @@ a \( a-1 \) \( a-2 \) \( a-3 \) \( a-4 \) \\
 \end{center}
 \end{table}
 
-\begin{table}[h]
+\begin{table}[tbh!]
 \begin{center}
 \textbf{Table~\ref{chap8:tab:8} (continued)}
 \begin{tabular}{|l|l|}
@@ -2105,7 +2106,7 @@ $a-1$ & $2\left\{3\left(c^{2}+2 c-5 \gamma^{2}\right)\left(c^{2}-5 \gamma^{2}-1\
 \end{table}
 
 
-\begin{table}[h]
+\begin{table}[tbh!]
 \begin{center}
 \caption{$\clebsch{a}{\alpha}{\frac{9}{2}}{\beta}{c}{\gamma}$}
 \label{chap8:tab:9}
@@ -2123,7 +2124,7 @@ $a+9 / 2$ & \( 6\left[\frac{(c+\gamma)!(c-\gamma)!(2 c-9)!}{(c+\gamma-7)!(c-\gam
 \end{center}
 \end{table}
 
-\begin{table}[h]
+\begin{table}[tbh!]
 \begin{center}
 \textbf{Table~\ref{chap8:tab:9} (continued)}
 \begin{tabular}{|l|l|}
@@ -2167,7 +2168,7 @@ $a-9 / 2$ & $2\left[\frac{21(c+\gamma+3)!(c-\gamma+6)!(2 c+1)!}{(c+\gamma)!(c-\g
 \end{table}
 
 
-\begin{table}[h]
+\begin{table}[tbh!]
 \begin{center}
 \textbf{Table~\ref{chap8:tab:9} (continued)}
 \begin{tabular}{|l|l|}
@@ -2198,7 +2199,7 @@ $a-9 / 2$ & $-3\left[\frac{14(c+\gamma+4)!(c-\gamma+5)!(2 c+1)!}{(c+\gamma)!(c-\
 \end{center}
 \end{table}
 
-\begin{table}[h]
+\begin{table}[tbh!]
 \begin{center}
 \caption{$\clebsch{a}{\alpha}{5}{\beta}{c}{\gamma}$}
 \label{chap8:tab:10}
@@ -2265,7 +2266,7 @@ $a-5$ & $3\left[\frac{5(c+\gamma+2)!(c-\gamma+8)!(2 c+1)!}{(c+\gamma)!(c-\gamma)
 \end{center}
 \end{table}
 
-\begin{table}[h]
+\begin{table}[tbh!]
 \begin{center}
 \textbf{Table~\ref{chap8:tab:10} (continued)}
 \begin{tabular}{|l|l|}
@@ -2312,7 +2313,7 @@ a & $-2\{[c(c+1)-2][c(c+1)-6]-7 \gamma(\gamma-1)[2 c(c+1)-3 \gamma(\gamma-1)-6]\
 \end{center}
 \end{table}
 
-\begin{table}[h]
+\begin{table}[tbh!]
 \begin{center}
 \textbf{Table~\ref{chap8:tab:10} (continued)}
 \begin{tabular}{|l|l|}
@@ -2346,11 +2347,10 @@ $a-5$ & $-6\left[\frac{7(c+\gamma+5)!(c-\gamma+5)!(2 c+1)!}{(c+\gamma)!(c-\gamma
 \end{tabular}
 \end{center}
 \end{table}
-\begin{comment}
 
 Clebsch-Gordan Coefficients and 3jm Symbols 283
 
-\begin{table}[h]
+\begin{table}[tbh!]
 \begin{center}
 \captionsetup{labelformat=empty}
 \caption{Table 8.11.\\
@@ -2423,7 +2423,7 @@ $а$ & $\alpha$ & $\boldsymbol{b}$ & $\beta$ & \multicolumn{2}{|c|}{$C_{a \alpha
 \end{center}
 \end{table}
 
-\begin{table}[h]
+\begin{table}[tbh!]
 \begin{center}
 \captionsetup{labelformat=empty}
 \caption{Table 8.11. (Cont.)}
@@ -2521,7 +2521,7 @@ ${ }^{a}$ & ${ }^{a}$ & $\boldsymbol{b}$ & ś &  &  & 3 & 1 & 3/2 & -3/2 & $2 / 
 \end{center}
 \end{table}
 
-\begin{table}[h]
+\begin{table}[tbh!]
 \begin{center}
 \captionsetup{labelformat=empty}
 \caption{Table 8.11. (Cont.)}
@@ -2623,7 +2623,7 @@ $a$ & $\alpha$ & $b$ & $\beta$ & \multicolumn{2}{|c|}{$C_{\sigma \alpha}^{2 \alp
 \end{center}
 \end{table}
 
-\begin{table}[h]
+\begin{table}[tbh!]
 \begin{center}
 \captionsetup{labelformat=empty}
 \caption{Table 8.11. (Cont.)}
@@ -2719,7 +2719,7 @@ $a$ & $\alpha$ & $b$ & $\beta$ & \multicolumn{2}{|c|}{$C_{\sigma \alpha}^{2 \alp
 \end{center}
 \end{table}
 
-\begin{table}[h]
+\begin{table}[tbh!]
 \begin{center}
 \captionsetup{labelformat=empty}
 \caption{Table 8.11. (Cont.)}
@@ -2826,7 +2826,7 @@ $а$ & $\alpha$ & $b$ & $\beta$ & \multicolumn{2}{|c|}{$C_{\sigma \alpha}^{3 \al
 \end{center}
 \end{table}
 
-\begin{table}[h]
+\begin{table}[tbh!]
 \begin{center}
 \captionsetup{labelformat=empty}
 \caption{Table 8.12.\\
