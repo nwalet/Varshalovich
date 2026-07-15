@@ -1762,9 +1762,9 @@ m_{3}^{\prime} & m_{2}^{\prime} & m_{1}^{\prime}
 & =D_{M_{11} M_{12}^{\prime}}^{J_{12}}\left(R_{1} R_{2}^{-1}\right) D_{M_{23} M_{22}^{\prime}}^{J_{2}}\left(R_{2} R_{3}^{-1}\right) D_{M_{31} M_{11}^{\prime}}^{J_{3}}\left(R_{3} R_{1}^{-1}\right) .
 \end{aligned}
 \]
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-457_323_730_1015_1141}\\
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-457_330_734_1343_1141}\\
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-457_382_732_1701_1145}
+\tricenter{J_{12}}{J_{23}}{J_{31}}{j_1}{j_2}{j_3}{+}
+
+
 
 Matrix element of an irreducible tensor operator of rank $k$ in the JM-representation\\
 (Wigner-Eckart theorem)
@@ -1780,7 +1780,7 @@ where $\left(\gamma J\left\|\mathfrak{M}_{k}\right\| \gamma^{\prime} J^{\prime}\
 \begin{center}
 \caption{Matrix Elements of Irreducible Tensor Operators.}
 \label{chap11:tab:10}
-  \includegraphics[alt={},max width=\textwidth]{402d9a1b-ee97-49cb-ae14-75458391be12-458_329_541_605_1264}
+  \begin{tikzpicture}[baseline=0pt]\node[opbox](M) at (0,0){$\mathfrak{M}_k$}; \draw[jmline](M) -- (-1.2,0.7) node[left]{$\gamma JM$}; \draw[jmline](M) -- (-1.2,-0.7) node[left]{$\gamma^{\prime}J^{\prime}M^{\prime}$}; \draw[jmline](M) -- (1.4,0) node[right]{$kq$};\end{tikzpicture}
 \end{center}
 \end{table}
 
@@ -1793,7 +1793,7 @@ Reduced matrix element of irreducible tensor product of irreducible tensor opera
 \end{gathered}
 \]
 \begin{center}
-\includegraphics[max width=\textwidth, alt={}]{402d9a1b-ee97-49cb-ae14-75458391be12-458_389_852_1089_968}
+\tricenter{J}{J^{\prime}}{J^{\prime\prime}}{k_1}{k_2}{k}{+}
 \end{center}
 
 Two coupled subsystems in the $j_{1} j_{2}$;JM-representation. Reduced matrix element of the irreducible tensor product of two irreducible tensor operators, one of which depends only on variables of the first subsystem and the other depends only on variables of the second subsystem.
@@ -1804,8 +1804,8 @@ Two coupled subsystems in the $j_{1} j_{2}$;JM-representation. Reduced matrix el
 & \times \sum_{\gamma^{\prime \prime}}\left(\gamma j_{1}\left\|\mathfrak{M}_{k_{1}}\right\| \gamma^{\prime \prime} j_{1}^{\prime}\right)\left(\gamma^{\prime \prime} j_{2}\left\|\Re_{k_{2}}\right\| \gamma^{\prime} j_{2}^{\prime}\right)
 \end{aligned}
 \]
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-458_283_386_1829_960}\\
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-458_378_436_1734_1388}
+\tricenter{j_1}{j_1^{\prime}}{k_1}{j_2}{j_2^{\prime}}{k_2}{+}
+
 
 Table 11.14. (Cont'd)
 
@@ -1820,8 +1820,8 @@ depend on variables of the first and the second subsystems, respectively.
 \times \sum_{\gamma^{\prime \prime}}\left(\tau j_{1}\left\|\mathfrak{M}_{k}\right\| \gamma^{\prime \prime} j_{1}^{\prime}\right)\left(\gamma^{\prime \prime} j_{2}\left\|\mathfrak{N}_{k}\right\| \gamma^{\prime} j_{2}^{\prime}\right)
 \end{gathered}
 \]
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-459_367_250_486_999}\\
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-459_369_387_482_1466}
+\sixjloop{j_1}{j_2}{J}{+}{-}
+
 
 Reduced matrix element of an irreducible tensor operator which depends only on variables of the first subsystem.
 \[
@@ -1831,9 +1831,9 @@ Reduced matrix element of an irreducible tensor operator which depends only on v
 \times\sixj{J}{k}{J^{\prime}}{j_{1}^{\prime}}{j_{2}}{j_{1}}\left(\gamma j_{1}\left\|\mathfrak{M}_{k}\right\| \gamma^{\prime} j_{1}^{\prime}\right) .
 \end{gathered}
 \]
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-459_250_240_968_1093}\\
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-459_156_230_918_1495}\\
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-459_231_144_1067_1536}
+\sixjloop{J}{k}{J^{\prime}}{+}{-}
+
+
 
 Reduced matrix element of the irreducible tensor operator which depends only on variables of the second subsystem.
 \[
@@ -1843,10 +1843,10 @@ Reduced matrix element of the irreducible tensor operator which depends only on 
 \times\sixj{J}{k}{J^{\prime}}{j_{2}^{\prime}}{j_{1}}{j_{2}}\left(\gamma j_{2}\left\|\Re_{k}\right\| \gamma^{\prime} j_{2}^{\prime}\right) .
 \end{gathered}
 \]
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-459_255_237_1400_1096}\\
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-459_69_52_1351_1508}\\
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-459_155_188_1347_1549}\\
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-459_238_188_1499_1549}
+\sixjloop{J}{k}{J^{\prime}}{+}{-}
+
+
+
 
 \section{SUMMARY OF THE GRAPHICAL TECHNIQUE}
 The preceeding sections present the principles of the graphical methods of angular momentum theory, i.e., graphical representations of the basis functions and operations (Secs. 11.1 and 11.2) as well as the rules of handling them (Sec. 11.3). This section resumes the discussion of the general properties of diagrams, the Wigner-Eckart theorem in diagrammatic form and the scheme for the application of the graphical technique.
