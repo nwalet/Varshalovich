@@ -1156,7 +1156,7 @@ A summary of the rules of graphical operations is presented in Table~\ref{chap11
 \begin{center}
 \caption{Zero Angular Momentum ( $J=0$ ).}
 \label{chap11:tab:3}
-  \includegraphics[alt={},max width=\textwidth]{402d9a1b-ee97-49cb-ae14-75458391be12-447_2058_1698_345_162}
+  \begin{tikzpicture}[baseline=0pt]\draw[omline] (0,0) node[left]{$\Omega$} -- (1.4,0) node[right]{$\Omega^{\prime}$}; \node[above=2pt] at (0.7,0) {$j=0$};\end{tikzpicture}\quad$=$\quad\begin{tikzpicture}[baseline=0pt]\draw[bjmline] (0,0) node[left]{$\Omega$} -- (1.4,0) node[right]{$\Omega^{\prime}$};\end{tikzpicture}
 \end{center}
 \end{table}
 
@@ -1176,7 +1176,7 @@ i.e.,
 \[
 \braOket{Q^{\prime}}{R}{Q}=\braket{Q^{\prime}}{Q} .
 \]
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-448_186_534_529_1170}\\
+\begin{tikzpicture}[baseline=0pt]\draw[bjmline] (0,0) node[left]{$Q^{\prime}$} -- (1,0); \node[deltanode] at (1,0){}; \draw[bjmline,dashed] (1,0)--(2,0) node[midway,above]{$R{=}1$}; \node[deltanode] at (2,0){}; \draw[bjmline] (2,0)--(3,0) node[right]{$Q$};\end{tikzpicture}
 (b) For $R=1$
 \[
 \delta_{j j^{\prime}} D_{m m^{\prime}}^{j}(000)=\delta_{j j^{\prime}} \delta_{m m^{\prime}}
@@ -1185,7 +1185,7 @@ i.e.,
 \[
 \braOket{j m}{D(1)}{j^{\prime} m^{\prime}}=\braket{j m}{j^{\prime} m^{\prime}} .
 \]
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-448_188_551_762_1157}\\
+\begin{tikzpicture}[baseline=0pt]\draw[jmline] (0,0) node[left]{$jm$} -- (1,0); \node[deltanode] at (1,0){}; \draw[bjmline,dashed] (1,0)--(2,0) node[midway,above]{$R{=}1$}; \node[deltanode] at (2,0){}; \draw[jmline] (2,0)--(3,0) node[right]{$j^{\prime}m^{\prime}$};\end{tikzpicture}
 (c) For $R^{-1} R=1$
 \[
 \int \delta\left(Q^{\prime \prime}-R^{-1} Q^{\prime}\right) d Q^{\prime} \delta\left(Q^{\prime}-R \Omega\right)=\delta\left(Q^{\prime \prime}-\Omega\right)
@@ -1194,7 +1194,7 @@ i.e.,
 \[
 \braOket{\Omega^{\prime \prime}}{R^{-1}}{Q^{\prime}}\braOket{Q^{\prime}}{R}{\Omega}=\braket{Q^{\prime \prime}}{\Omega} .
 \]
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-448_469_617_980_1126}\\
+\begin{tikzpicture}[baseline=0pt]\draw[bjmline] (0,0) node[left]{$\Omega^{\prime\prime}$} -- (1,0) node[midway,above]{$R^{-1}$}; \node[deltanode] at (1,0){}; \draw[bjmline] (1,0)--(2,0) node[midway,above]{$R$}; \node[deltanode] at (2,0){}; \draw[bjmline] (2,0)--(3,0) node[right]{$\Omega$};\end{tikzpicture}
 i.e,
 \[
 \braOket{j m^{\prime \prime}}{D\left(R^{-1}\right)}{j^{\prime} m^{\prime}}\braOket{j^{\prime} m^{\prime}}{D(R)}{j m}=\braket{j m^{\prime \prime}}{j m}
@@ -1203,7 +1203,7 @@ i.e,
 R^{-1} R=1
 \]
 \begin{center}
-\includegraphics[max width=\textwidth, alt={}]{402d9a1b-ee97-49cb-ae14-75458391be12-448_71_232_1442_1326}
+\begin{tikzpicture}[baseline=0pt]\draw[jmline] (0,0) node[left]{$jm^{\prime\prime}$} -- (1,0) node[midway,above]{$R^{-1}$}; \node[deltanode] at (1,0){}; \draw[jmline] (1,0)--(2,0) node[midway,above]{$R$}; \node[deltanode] at (2,0){}; \draw[jmline] (2,0)--(3,0) node[right]{$jm$};\end{tikzpicture}
 \end{center}
 
 Table 11.9.\\
@@ -1222,7 +1222,7 @@ Completeness Condition
 \int|\Omega\rangle d \Omega\braOket{\Omega}{=\sum_{J M}}{J M}\langle J M|=1
 \]
 Replacing dashed $\Omega$-line by thick solid $j$-line\\
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-448_187_673_1938_1159}
+\opline{\mathfrak{M}}{\mathfrak{M}}{JM}
 
 \subsubsection{Graphical Representation}
 Table 11.9. (Cont'd)
