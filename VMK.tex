@@ -29,6 +29,65 @@
 \usepackage{polyglossia}
 \usepackage{fontspec}
 \usepackage{newunicodechar}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,decorations.markings,positioning,calc}
+
+%Reusable styles for Chap11's graphical-method diagrams (hand-redrawn in
+%TikZ from the original figure images; see CONVERSION_RULES.md). A single
+%solid arrow is a covariant "ket" line |jm>; the same line with a double
+%arrowhead is the contravariant "bra" <jm|; a dashed arrow is an
+%Omega-line (continuous/coordinate variable); a "+"/"-" filled dot is a
+%node whose sign fixes the cyclic order of the lines meeting there; a
+%small open circle is a Kronecker-delta-style contraction node.
+\tikzset{
+  jmline/.style={-{Stealth[length=2.2mm]}, thick},
+  bjmline/.style={{Stealth[length=2.2mm]}-{Stealth[length=2.2mm]}, thick},
+  omline/.style={-{Stealth[length=2.2mm]}, thick, dashed},
+  plusnode/.style={circle, fill, inner sep=1pt, label={above:$+$}},
+  minusnode/.style={circle, fill, inner sep=1pt, label={below:$-$}},
+  dotnode/.style={circle, fill, inner sep=1pt},
+  deltanode/.style={circle, draw, fill=white, inner sep=1.2pt},
+  opbox/.style={draw, minimum width=6mm, minimum height=6mm, inner sep=2pt}
+}
+
+%\sixjloop{a}{b}{c}{top sign}{bottom sign}: the closed-loop "circle with a
+%vertical diameter" diagram for a 6j symbol {a b c \\ A B C}, only the
+%three visible lines a,b,c and the two node signs are drawn (A,B,C read
+%off the arcs are omitted from the picture and given in surrounding text)
+\newcommand{\sixjloop}[5]{%
+\begin{tikzpicture}[baseline=-2pt]
+\node[circle,draw,minimum size=16mm] (C) at (0,0) {};
+\draw[jmline] (C.north) -- (C.south) node[midway,right]{$#2$};
+\draw[jmline] (C.west) to[bend right=20] (C.south) node[midway,left]{$#1$};
+\draw[jmline] (C.north) to[bend right=20] (C.west);
+\draw[jmline] (C.east) to[bend left=20] (C.south);
+\draw[jmline] (C.north) to[bend left=20] (C.east) node[midway,right]{$#3$};
+\node[dotnode,label={above:$#4$}] at (C.north) {};
+\node[dotnode,label={below:$#5$}] at (C.south) {};
+\end{tikzpicture}%
+}
+
+%\threenode{a}{b}{c}{sign}: a single node with three jm-lines radiating
+%out (top-left a, top-right c, bottom b), labelled with the node sign
+\newcommand{\threenode}[4]{%
+\begin{tikzpicture}[baseline=-2pt]
+\coordinate (O) at (0,0);
+\node[dotnode,label={#4}] at (O) {};
+\draw[jmline] (O) -- (-0.9,0.9) node[left]{$#1$};
+\draw[jmline] (O) -- (0.9,0.9) node[right]{$#3$};
+\draw[jmline] (O) -- (0,-1.1) node[below]{$#2$};
+\end{tikzpicture}%
+}
+
+%\opline{left label}{right label}{line label}: two operator boxes joined
+%by a single labelled jm-line
+\newcommand{\opline}[3]{%
+\begin{tikzpicture}[baseline=0pt]
+\node[opbox] (M) at (0,0) {$#1$};
+\node[opbox] (N) at (2.2,0) {$#2$};
+\draw[jmline] (M) -- (N) node[midway,above]{$#3$};
+\end{tikzpicture}%
+}
 
 %New command to display footnote whose markers will always be hidden
 \let\svthefootnote\thefootnote

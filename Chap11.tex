@@ -326,7 +326,30 @@ A & B & C \\
 \end{array}\right)\sixj{A}{B}{C}{a}{b}{c}
 \]
 may be represented by\\
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-433_201_335_317_850}
+\begin{center}
+\begin{tikzpicture}[baseline=0pt]
+\coordinate (O) at (0,0);
+\node[plusnode] at (O) {};
+\draw[jmline] (O) -- (-0.9,0.9) node[left]{$A\alpha$};
+\draw[jmline] (O) -- (0.9,0.9) node[right]{$C\gamma$};
+\draw[jmline] (O) -- (0,-1.1) node[below]{$B\beta$};
+\end{tikzpicture}
+\qquad
+\begin{tikzpicture}[baseline=0pt]
+\coordinate (T) at (0,0.6);
+\coordinate (L) at (-0.9,-0.5);
+\coordinate (R) at (0.9,-0.5);
+\node[plusnode] at (T) {};
+\node[plusnode,label={left:}] at (L) {};
+\node[plusnode] at (R) {};
+\draw[jmline] (T) -- (L) node[midway,above left]{$b$};
+\draw[jmline] (T) -- (R) node[midway,above right]{$C$};
+\draw[jmline] (L) -- (R) node[midway,below]{$a$};
+\node[above=2pt of T] {$B$};
+\node[left=2pt of L] {$A$};
+\node[right=2pt of R] {$c$};
+\end{tikzpicture}
+\end{center}
 
 \subsection{Invariant Summation over Projections}
 The scalar product of two irreducible tensors of rank $j, \mathfrak{N}_{j m}$ and $\mathfrak{N}_{j m}$, i.e., the sum of bilinear combinations over all possible values of the projection $m$
@@ -334,7 +357,19 @@ The scalar product of two irreducible tensors of rank $j, \mathfrak{N}_{j m}$ an
 \sum_{m=-j}^{j}\braOket{}{\mathfrak{M}}{j m}\braOket{j m}{\Re}{},
 \]
 is represented by the conjunction (closure) of $|j m\rangle$ - and ( $j m \mid$-lines of subdiagrams corresponding to $\langle | \mathfrak{W} \mid j m)$ and $\braket{j m}{\Re}$\\
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-433_82_665_1050_683}
+\begin{center}
+\begin{tikzpicture}[baseline=0pt]
+\node[opbox] (M1) at (0,0) {$\mathfrak{M}$};
+\node[opbox] (N1) at (2.2,0) {$\mathfrak{N}$};
+\draw[jmline] ($(M1.east)+(0,0.08)$) -- ($(N1.west)+(0,0.08)$) node[midway,above]{$jm$};
+\draw[jmline] ($(M1.east)+(0,-0.08)$) -- ($(N1.west)+(0,-0.08)$) node[midway,below]{$jm$};
+\node[left=2pt of M1] {$\displaystyle\sum_m$};
+\node at (3.2,0) {$=$};
+\node[opbox] (M2) at (4.4,0) {$\mathfrak{M}$};
+\node[opbox] (N2) at (6.6,0) {$\mathfrak{N}$};
+\draw[jmline] (M2) -- (N2) node[midway,above]{$j$};
+\end{tikzpicture}
+\end{center}
 
 The resultant linking $j$-line has the same direction as the original $\mid j m)$ - and $\langle j m|$-lines.\\
 For example, the sum of product of two 3jm symbols over two projections, $\alpha$ and $\beta$
@@ -354,7 +389,32 @@ a & b & c^{\prime} \\
 \end{array}\right)
 \]
 may be displayed as\\
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-433_170_551_1555_749}
+\begin{center}
+\begin{tikzpicture}[baseline=0pt]
+\node at (-1.4,0) {$\displaystyle\sum_{\alpha,\beta}$};
+\coordinate (N1) at (0,0);
+\node[minusnode] at (N1) {};
+\draw[jmline] (N1) -- (-0.9,0.9) node[left]{$a\alpha$};
+\draw[jmline] (N1) -- (-0.9,-0.9) node[left]{$b\beta$};
+\draw[jmline] (N1) -- (0.9,0) node[right]{$c\gamma$};
+\coordinate (N2) at (1.8,0);
+\node[plusnode] at (N2) {};
+\draw[jmline] (N2) -- (0.9,0) node[left]{};
+\draw[jmline] (N2) -- (2.7,0.9) node[right]{$a\alpha$};
+\draw[jmline] (N2) -- (2.7,-0.9) node[right]{$b\beta$};
+\node at (3.6,0) {$=$};
+\coordinate (N3) at (5.4,0);
+\draw[jmline] (4.5,0) -- (N3) node[midway,above]{$c\gamma$};
+\node[minusnode] at (N3) {};
+\coordinate (N4) at (6.6,0);
+\node[plusnode] at (N4) {};
+\draw (N3) to[bend left=45] (N4);
+\draw (N3) to[bend right=45] (N4);
+\draw[jmline] (N4) -- (7.5,0) node[right]{$c^{\prime}\gamma^{\prime}$};
+\node[above=8pt of N3, xshift=18pt] {$a$};
+\node[below=8pt of N3, xshift=18pt] {$b$};
+\end{tikzpicture}
+\end{center}
 
 Thus, each internal $j$-line of a diagram represents a scalar product (contraction over $m$ ) of two irreducible tensors of rank $j$. To construct such a scalar product one of these tensors should be written in a covariant form $\langle | \mathfrak{M}|j m\rangle \equiv \mathfrak{M}_{j m}$ while the other should be written in the form $\langle j m| \Re\left\rangle=(-1)^{j-m} \mathfrak{N}_{j-m}\right.$ (Sec. 3.1.8). Graphically, this means that one of the corresponding subdiagrams has the external $\mid j m)$-line (with single outward arrow) and the other has the ( $j m /$-line ( $w i t h$ double inward arrow).
 
@@ -477,7 +537,13 @@ j_{3} & k_{3} & l_{3} \\
 
 \subsection{Summation over Angular Momentum}
 A thick $j$-line linking two subdiagrams\\
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-434_82_269_2010_922}\\
+\begin{center}
+\begin{tikzpicture}[baseline=0pt]
+\node[opbox] (M) at (0,0) {$\mathfrak{M}$};
+\node[opbox] (N) at (2.2,0) {$\mathfrak{N}$};
+\draw[jmline,line width=1.4pt] (M) -- (N) node[midway,above]{$j$};
+\end{tikzpicture}
+\end{center}
 represents the complete sum over $j$ and $m$ of scalar products of irreducible tensors of rank $j$
 \[
 \sum_{j=0}^{\infty} N_{j} \sum_{m=-j}^{j}\braOket{}{\mathfrak{M}}{j m}\braOket{j m}{\mathfrak{N}}{},
@@ -497,9 +563,51 @@ a^{\prime} & b^{\prime} & e \\
 \sum_{C}(2 C+1)\sixj{A}{B}{C}{a}{b}{c}\sixj{A}{B}{C}{a}{b}{c^{\prime}}
 \end{gathered}
 \]
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-435_176_308_362_1437}\\
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-435_69_248_601_1446}\\
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-435_232_427_714_1376}
+\begin{center}
+\begin{tikzpicture}[baseline=0pt]
+\coordinate (N1) at (0,0);
+\draw[jmline] (-1,0.9) node[left]{$a\alpha$} -- (N1);
+\draw[jmline] (-1,-0.9) node[left]{$b\beta$} -- (N1);
+\node[dotnode] at (N1) {};
+\coordinate (N2) at (1.4,0);
+\draw (N1) to[bend left=45] node[above]{$e$} (N2);
+\draw (N1) to[bend right=45] (N2);
+\node[dotnode] at (N2) {};
+\draw[jmline] (N2) -- (2.4,0.9) node[right]{$a^{\prime}\alpha^{\prime}$};
+\draw[jmline] (N2) -- (2.4,-0.9) node[right]{$b^{\prime}\beta^{\prime}$};
+\end{tikzpicture}
+\qquad
+\begin{tikzpicture}[baseline=0pt]
+\draw[bjmline] (0,0) node[left]{$\Omega$} -- (1,0);
+\node[deltanode] at (1,0) {};
+\draw[jmline] (1,0) -- (2,0) node[midway,above]{$l$};
+\node[deltanode] at (2,0) {};
+\draw[omline] (2,0) -- (3,0) node[right]{$\Omega^{\prime}$};
+\end{tikzpicture}
+\qquad
+\begin{tikzpicture}[baseline=0pt]
+\coordinate (T1) at (-0.6,0.9);
+\coordinate (L1) at (-1.6,-0.6);
+\coordinate (R1) at (0,-0.6);
+\node[plusnode] at (T1) {};
+\node[plusnode] at (L1) {};
+\coordinate (M) at (0.9,0);
+\draw[jmline] (T1) -- (L1) node[midway,left]{$c$};
+\draw[jmline] (T1) -- (M) node[midway,above right]{$b$};
+\draw[jmline] (L1) -- (M) node[midway,below]{$a$};
+\node at (0.3,0) {$C$};
+\node[dotnode] at (M) {};
+\coordinate (T2) at (2.4,0.9);
+\coordinate (L2) at (1.8,-0.6);
+\coordinate (R2) at (3.4,-0.6);
+\draw[jmline] (M) -- (T2) node[midway,above]{$b$};
+\draw[jmline] (M) -- (L2) node[midway,below]{$a$};
+\draw[jmline] (T2) -- (L2) node[midway,right]{$c^{\prime}$};
+\node[minusnode] at (T2) {};
+\node[minusnode] at (L2) {};
+\node at (2.1,0) {$C$};
+\end{tikzpicture}
+\end{center}
 
 A Clebsch-Gordan coefficient may be represented as a sum over $c^{\prime} \gamma^{\prime}$ of products of two $3 j m$ symbols (Table~\ref{chap11:tab:7})
 \[
@@ -566,7 +674,11 @@ Complete Summation over Angular Momentum and Projection
 \begin{center}
 \caption{Scalar Product of Irreducible Tensors}
 \label{chap11:fig:1}
-  \includegraphics[alt={},max width=\textwidth]{402d9a1b-ee97-49cb-ae14-75458391be12-436_92_569_1260_1139}
+\begin{tikzpicture}[baseline=0pt]
+\node[opbox] (M) at (0,0) {$\mathfrak{M}$};
+\node[opbox] (N) at (2.2,0) {$\mathfrak{N}$};
+\draw[jmline] (M) -- (N) node[midway,above]{$j$};
+\end{tikzpicture}
 \end{center}
 \end{figure}
 \[
@@ -579,7 +691,15 @@ Complete Summation over Angular Momentum and Projection
 \begin{center}
 \caption{Irreducible Tensor Product of Irreducible Tensors}
 \label{chap11:fig:2}
-  \includegraphics[alt={},max width=\textwidth]{402d9a1b-ee97-49cb-ae14-75458391be12-436_197_522_1557_1166}
+\begin{tikzpicture}[baseline=0pt]
+\node[opbox] (M) at (0,0) {$\mathfrak{M}$};
+\node[opbox] (N) at (2.2,0) {$\mathfrak{N}$};
+\coordinate (T) at (1.1,1);
+\node[plusnode] at (T) {};
+\draw[jmline] (M) -- (T) node[midway,above left]{$j_1$};
+\draw[jmline] (N) -- (T) node[midway,above right]{$j_2$};
+\draw[jmline] (T) -- (1.1,2) node[above]{$JM$};
+\end{tikzpicture}
 \end{center}
 \end{figure}
 
@@ -619,7 +739,41 @@ If the structure of the inner part of a diagram is unimportant, it may be replac
 As pointed out in Sec. 11.1.1, the length of the lines, their curvature and orientation are not important. Consequently, any diagram may be arbitrarily rotated and deformed, although the node signs have to be reversed for those nodes where the order of momentum coupling becomes changed.
 
 Thus, any deformation of a diagram performed under the proper check for the node signs does not change the meaning of the diagram, i.e., the deformed and original diagrams represent the same expression. Such diagrams will be called identical. An example of identical diagrams is given below:\\
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-437_232_980_1709_494}
+\begin{center}
+\begin{tikzpicture}[baseline=0pt]
+\coordinate (T) at (0,1.1);
+\coordinate (L) at (-1.1,0);
+\coordinate (R) at (1.1,0);
+\coordinate (B) at (0,-1.1);
+\node[plusnode] at (T) {};
+\node[minusnode] at (L) {};
+\node[minusnode] at (R) {};
+\node[plusnode] at (B) {};
+\draw[jmline] (T) -- (L) node[midway,above left]{$a$};
+\draw[jmline] (T) -- (R) node[midway,above right]{$c$};
+\draw[jmline] (L) -- (B) node[midway,below left]{$C$};
+\draw[jmline] (R) -- (B) node[midway,below right]{$A$};
+\draw[jmline] (T) -- (B) node[midway,right]{$b$};
+\draw[jmline] (L) -- (R) node[midway,above]{$B$};
+\end{tikzpicture}
+\qquad$=$\qquad
+\begin{tikzpicture}[baseline=0pt]
+\coordinate (T) at (0,1);
+\coordinate (L) at (-1.1,-0.6);
+\coordinate (R) at (1.1,-0.6);
+\coordinate (M) at (0,-0.15);
+\node[plusnode] at (T) {};
+\node[plusnode] at (L) {};
+\node[plusnode] at (R) {};
+\node[plusnode] at (M) {};
+\draw[jmline] (T) -- (L) node[midway,above left]{$A$};
+\draw[jmline] (T) -- (R) node[midway,above right]{$C$};
+\draw[jmline] (L) -- (R) node[midway,below]{$B$};
+\draw[jmline] (M) -- (T) node[midway,left]{$b$};
+\draw[jmline] (M) -- (L) node[midway,below]{$c$};
+\draw[jmline] (M) -- (R) node[midway,below]{$a$};
+\end{tikzpicture}
+\end{center}
 
 Two diagrams will be called topologically similar, if it is possible to make them coincident by means of rotations, deformations and/or reflections. Topologically similar diagrams have the same numbers of nodes and of lines, solid and dashed, but they may differ by directions of lines and by node signs.
 
@@ -632,7 +786,12 @@ Reversal of Node Sign and Line Direction, and Argument Permutation
 \begin{center}
 \caption{Symmetry of 3nj Symbol Diagrams.}
 \label{chap11:tab:2}
-  \includegraphics[alt={},max width=\textwidth]{402d9a1b-ee97-49cb-ae14-75458391be12-438_566_759_531_599}
+\begin{tabular}{ccc}
+\sixjloop{a}{b}{c}{+}{-} & $=(-1)^{a+b+c}$ & \sixjloop{a}{b}{c}{+}{+} \; $=(-1)^{a+b+c}$ \\[2em]
+\sixjloop{a}{b}{c}{+}{-} & $=$ & \sixjloop{a}{b}{c}{-}{+} \; $=(-1)^{2a}$
+\end{tabular}
+
+$6j$ Symbol $\sixj{a}{b}{c}{A}{B}{C}$
 \end{center}
 \end{table}
 
