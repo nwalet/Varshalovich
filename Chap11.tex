@@ -1286,17 +1286,17 @@ j^{\prime} & 0 & j \\
 \end{gathered}
 \]
 Elimination of thick solid/-line\\
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-449_184_671_494_1149}\\
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-449_269_664_683_1114}\\
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-449_345_411_984_1034}\\
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-449_345_409_980_1433}
+\begin{tikzpicture}[baseline=0pt]\node[opbox](M) at (0,0){$\mathfrak{M}$}; \node[opbox](N) at (2.4,0){$\mathfrak{N}$}; \draw[jmline,line width=1.4pt] (M)--(N) node[midway,above]{$j$};\end{tikzpicture}
+$=\displaystyle\sum_{jm}$\ \opline{\mathfrak{M}}{\mathfrak{N}}{jm}
+
+
 
 Linking subdiagrams containing identical $j$-line (at least one of subdiagrams should have no other external lines)\\
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-449_185_596_1602_1178}\\
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-449_284_744_1812_1100}
+\opline{\mathfrak{M}}{\mathfrak{N}}{j}
+
 
 Elimination of a $J=0$ line in a diagram\\
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-449_126_584_2237_1178}
+\threenode{j_1}{0}{j_2}{above:$+$}\quad$\to$\quad\begin{tikzpicture}[baseline=0pt]\draw[jmline] (0,0) node[left]{$j_1$} -- (1.4,0) node[right]{$j_2$};\end{tikzpicture}
 
 \subsubsection{Analytical Expression}
 Expression reduction for $R=1$
@@ -1360,15 +1360,15 @@ and similarly for $\braOketred{j_{3} j_{4} J q}{\mathscr{P}}{j_{1} j_{2} J p}$.
 
 \subsubsection{Graphical Representation}
 Elimination of the $R=1$ line\\
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-450_143_623_469_1178}
+\begin{tikzpicture}[baseline=0pt]\draw[jmline,dashed] (0,0) node[left]{$\Omega_1$} -- (1.4,0) node[right]{$\Omega_2$}; \node[above=2pt] at (0.7,0){$R{=}1$};\end{tikzpicture}\quad$\to$\quad\begin{tikzpicture}[baseline=0pt]\draw[omline] (0,0) node[left]{$\Omega_1$} -- (1.4,0) node[right]{$\Omega_2$};\end{tikzpicture}
 
 Cutting of a diagram into subdiagrams linked by one, two, or three $j$-lines (at least one of subdiagrams should have no additional external lines)\\
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-450_96_553_815_1174}\\
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-450_168_691_988_1149}\\
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-450_205_693_1334_1147}
+\opline{\mathfrak{M}_1}{\mathfrak{M}_2}{j_1}
+
+
 
 Cutting of a diagram into two subdiagrams linked by $n j$-lines $(n>4)$ (at least one of subdiagrams should have no additional external lines)\\
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-450_289_662_1930_1166}
+\begin{tikzpicture}[baseline=0pt]\node[opbox](M) at (0,0){$\mathfrak{M}$}; \node[opbox](N) at (2.4,0){$\mathfrak{N}$}; \draw[jmline] (M) to[bend left=45] node[midway,above]{$j_1$} (N); \draw[jmline] (M) -- (N) node[midway,above]{$\cdots$}; \draw[jmline] (M) to[bend right=45] node[midway,below]{$j_n$} (N);\end{tikzpicture}
 
 \subsubsection{Analytical Expression}
 \subsubsection{Graphical Representation}
