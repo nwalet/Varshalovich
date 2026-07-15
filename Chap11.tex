@@ -336,18 +336,19 @@ may be represented by\\
 \end{tikzpicture}
 \qquad
 \begin{tikzpicture}[baseline=0pt]
-\coordinate (T) at (0,0.6);
-\coordinate (L) at (-0.9,-0.5);
-\coordinate (R) at (0.9,-0.5);
-\node[plusnode] at (T) {};
+  \coordinate (O) at (0,0);
+  \coordinate (B) at (0,-1.1);
+  \coordinate (L) at ($(-1.1*sqrt(3)/2,1.1/2)$);
+  \coordinate (R) at ($(1.1*sqrt(3)/2,1.1/2)$);
+
 \node[plusnode,label={left:}] at (L) {};
 \node[plusnode] at (R) {};
-\draw[jmline] (T) -- (L) node[midway,above left]{$b$};
-\draw[jmline] (T) -- (R) node[midway,above right]{$C$};
-\draw[jmline] (L) -- (R) node[midway,below]{$a$};
-\node[above=2pt of T] {$B$};
-\node[left=2pt of L] {$A$};
-\node[right=2pt of R] {$c$};
+\draw[jmline] (B) -- (L) node[midway,above left]{$c$};
+\draw[jmline] (B) -- (R) node[midway,above right]{$a$};
+\draw[jmline] (L) -- (R) node[midway,below]{$b$};
+\draw[jmline] (B) -- (O) node[midway,above left]{$B$};
+\draw[jmline] (L) -- (O) node[midway,above left]{$A$};
+\draw[jmline] (R) -- (O) node[midway,above left]{$C$};
 \end{tikzpicture}
 \end{center}
 
@@ -361,8 +362,9 @@ is represented by the conjunction (closure) of $|j m\rangle$ - and ( $j m \mid$-
 \begin{tikzpicture}[baseline=0pt]
 \node[opbox] (M1) at (0,0) {$\mathfrak{M}$};
 \node[opbox] (N1) at (2.2,0) {$\mathfrak{N}$};
-\draw[jmline] ($(M1.east)+(0,0.08)$) -- ($(N1.west)+(0,0.08)$) node[midway,above]{$jm$};
-\draw[jmline] ($(M1.east)+(0,-0.08)$) -- ($(N1.west)+(0,-0.08)$) node[midway,below]{$jm$};
+\coordinate (M) at ($(M1.east)!0.5!(N1.west)$);
+\draw[jmline] ($(M1.east)$) -- (M) node[midway,above]{$jm$};
+\draw[jmline] (M) -- ($(N1.west)$) node[midway,below]{$jm$};
 \node[left=2pt of M1] {$\displaystyle\sum_m$};
 \node at (3.2,0) {$=$};
 \node[opbox] (M2) at (4.4,0) {$\mathfrak{M}$};

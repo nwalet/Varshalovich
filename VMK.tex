@@ -30,8 +30,7 @@
 \usepackage{fontspec}
 \usepackage{newunicodechar}
 \usepackage{tikz}
-\usetikzlibrary{arrows.meta,decorations.markings,positioning,calc}
-
+\usetikzlibrary{arrows.meta,decorations.markings,positioning,calc,decorations.pathreplacing,decorations.markings}
 %Reusable styles for Chap11's graphical-method diagrams (hand-redrawn in
 %TikZ from the original figure images; see CONVERSION_RULES.md). A single
 %solid arrow is a covariant "ket" line |jm>; the same line with a double
@@ -48,7 +47,9 @@
   dotnode/.style={circle, fill, inner sep=1pt},
   deltanode/.style={circle, draw, fill=white, inner sep=1.2pt},
   opbox/.style={draw, minimum width=6mm, minimum height=6mm, inner sep=2pt}
-}
+  arrowmid/.style={postaction={decorate,decoration={markings,mark=at position 0.5 with {\arrow{Stealth[length=2.2mm]}}}}}
+  doublearrowmid/.style={postaction={decorate,decoration={markings,mark=at position 0.45 with {\arrow{Stealth[length=2.2mm]}}},mark=at position 0.55 with {\arrowreversed{Stealth[length=2.2mm]}}}}
+  }
 
 %\sixjloop{a}{b}{c}{top sign}{bottom sign}: the closed-loop "circle with a
 %vertical diameter" diagram for a 6j symbol {a b c \\ A B C}, only the
