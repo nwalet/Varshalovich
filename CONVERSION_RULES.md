@@ -1247,3 +1247,73 @@ this treatment.
     entirely, same precedent as Chap2.tex's/Chap8.tex's bolded-numeral
     cases (rule 10 catches this class of noise beyond just
     `\mathbf`/`\boldsymbol`).
+
+## 13. Chap11's diagram images → hand-drawn TikZ
+
+At the user's request, Chap11.tex's `\includegraphics` calls (the
+extracted diagram images from the OCR pipeline, one per figure/table cell)
+were replaced with hand-drawn TikZ pictures redrawn from the original
+images (`images/*.jpg`, viewable directly — the crop coordinates are
+baked into each filename). This is a *content* rewrite, not a mechanical
+text transformation like rules 1-12, and by explicit agreement with the
+user the results are approximations of topology and labels rather than
+exact geometric reproductions ("doesn't have to be 100% right, I will
+review manually").
+
+Reusable building blocks added to VMK.tex's preamble (`\usepackage{tikz}`
+plus `arrows.meta`, `decorations.markings`, `positioning`, `calc`):
+
+- Line styles: `jmline` (solid arrow, a covariant $|jm\rangle$ line),
+  `bjmline` (double-headed arrow, the contravariant $\langle jm|$ form —
+  also reused for the double-dashed $R$-line and other "double" lines),
+  `omline` (dashed arrow, an $\Omega$/coordinate line).
+- Node styles: `plusnode`/`minusnode` (filled dot labelled $+$/$-$,
+  fixing the cyclic order of lines meeting there), `dotnode` (plain node,
+  used with an explicit `label=` when the sign varies per call),
+  `deltanode` (small open circle, a Kronecker-delta-style contraction),
+  `opbox` (square box, an operator/tensor block like $\mathfrak{M}$).
+- Macros for the diagram shapes that recur constantly throughout the
+  chapter: `\sixjloop{a}{b}{c}{topsign}{botsign}` (closed loop with a
+  vertical diameter — the canonical 6j-symbol diagram), `\threenode{a}{b}{c}{signlabel}`
+  (single node with three lines radiating out), `\opline{left}{right}{linelabel}`
+  (two operator boxes joined by one line), `\tricenter{A}{B}{C}{a}{b}{c}{centersign}`
+  (triangle with an inner node — the recurring 9j-symbol diagram, outer
+  vertices always $+$). All four take LaTeX math snippets as arguments (no
+  surrounding `$...$` needed inside the call) but the macro *call itself*
+  needs to sit inside math mode when used as a bare formula element (e.g.
+  right before `\clebsch{...}`, wrap the pair in one `$...$`) — several of
+  the replacements below tripped on this the first time through.
+- `\newcommand` (and `\NewDocumentCommand`, tried first) both cap out at 9
+  parameters — a hard TeX limit already documented under rule 12's
+  `\twelvej`/`\twelvejalt` note. `\tricenter` needed 10 logical inputs (3
+  outer edges, 3 inner edges, 4 node signs); solved the same way as
+  `\twelvej`/`\twelvejalt` — the 3 outer-vertex signs were dropped as
+  parameters (hardcoded to `+`, the overwhelmingly common case in this
+  chapter) rather than trying to pack them into fewer arguments.
+
+**Left completely untouched: the 24 images inside the already-flagged
+Table 11.1-11.3 region** (Secs. 11.1.1-11.1.2, see the rule-9 note above)
+— that region's own structure is still unresolved, so swapping its images
+for TikZ now would just be more content to redo once the table
+reconstruction happens. All 134 images outside that region were replaced.
+
+Two recurring mechanical snags worth flagging for any future chapter with
+embedded figures:
+- Removing a `\includegraphics[...]{...}` that had a trailing `\\` (source
+  formatting habit — a hard linebreak after almost every image) leaves a
+  bare `\\` immediately after whatever replaced it. If the replacement
+  ended in `\end{center}` (or another environment close), a bare `\\`
+  right after produces `LaTeX Error: There's no line here to end` — strip
+  the trailing `\\` along with the `\includegraphics` call itself, or use
+  a regex substitution that consumes an optional trailing `(\\\\)?`
+  (`re.sub` with a **function** replacement, not a plain string — a raw
+  replacement string containing backslash sequences like `\q` gets
+  misparsed as a regex backreference/escape by Python's `re` module).
+- Several of the source's own images turned out to be positioned in the
+  file at a point whose surrounding prose describes something else
+  entirely (the same "OCR reordered figure position relative to its own
+  caption text" issue seen in the flagged region, just less severe/more
+  localized here) — when what's actually drawn in the image conflicts
+  with what the nearby paragraph is talking about, draw what the image
+  shows, not what the paragraph implies; fixing the deeper
+  image/paragraph pairing bug is out of scope for a per-image swap.

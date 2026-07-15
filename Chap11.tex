@@ -447,7 +447,7 @@ j_{1} & j_{2} & j_{3} \\
 \begin{center}
 \caption{Sums of $3 j m$ Symbol Products.}
 \label{chap11:tab:1}
-  \includegraphics[alt={},max width=\textwidth]{402d9a1b-ee97-49cb-ae14-75458391be12-434_184_223_601_1549}
+  \sixjloop{j_1}{j_2}{j_3}{+}{-}
 \end{center}
 \end{table}
 
@@ -1871,13 +1871,13 @@ Standard functions of angular momentum theory may be used as a basis for the exp
 \[
 \braOket{00}{\mathfrak{M}}{j m}=\delta_{j 0} \delta_{m 0}\braOket{00}{\mathfrak{N}}{00}
 \]
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-460_135_1000_1466_531}\\
+\opline{\mathfrak{M}}{\mathfrak{N}}{j{=}0}
 (c) A diagram with two external lines corresponding to $\left\langle j_{1} m_{1}\right|$ and $\left|j_{2} m_{2}\right\rangle$ is non-zero only if $j_{1}=j_{2}$ and $m_{1}=m_{2}$
 \[
 \braOket{j_{1} m_{1}}{\mathfrak{M}}{j_{2} m_{2}}=\frac{\delta_{j_{1} j_{2}} \delta_{m_{1} m_{2}}}{2 j_{1}+1} \sum_{m}\braOket{j_{1} m}{\mathfrak{M}}{j_{1} m}
 \]
 \begin{center}
-\includegraphics[max width=\textwidth, alt={}]{402d9a1b-ee97-49cb-ae14-75458391be12-460_236_1039_1812_535}
+\begin{tikzpicture}[baseline=0pt]\node[opbox](M) at (0,0){$\mathfrak{M}$}; \draw[jmline] (M) to[bend left=45] node[midway,above]{$j_1$} (2,0); \draw[bjmline] (M) to[bend right=45] node[midway,below]{$j_2$} (2,0);\end{tikzpicture}
 \end{center}
 
 This follows from the fact that any dependence on two directions is, actually, the dependence on the angle between these directions, i.e. it may be represented by the scalar product of two functions $|j m\rangle$ and $\langle j m|$.\\
@@ -1895,7 +1895,7 @@ j_{1} & j_{2} & j_{3} \\
 m_{1} & m_{2} & m_{3}
 \end{array}\right),
 \]
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-461_133_652_486_710}\\
+\tricenter{j_1}{j_2}{j_3}{m_1}{m_2}{m_3}{+}
 (e) A diagram with four external $j$-lines corresponding $j_{1} m_{1}, j_{2} m_{2}, j_{3} m_{3}$ and $j_{4} m_{4}$ may be presented as a sum (over $j$ ) of the product of two $3 j m$ symbols
 \[
 \left(j_{1} m_{1} j_{2} m_{2}|\Re| j_{3} m_{3} j_{4} m_{4}\right\rangle=\sum_{j m}(2 j+1)\left(\begin{array}{lll}
@@ -1917,7 +1917,7 @@ m_{3} & m_{4} & m^{\prime}
 \end{array}\right)
 \]
 \begin{center}
-\includegraphics[max width=\textwidth, alt={}]{402d9a1b-ee97-49cb-ae14-75458391be12-461_188_790_1112_638}
+\begin{tikzpicture}[baseline=0pt]\node[opbox](M) at (0,0){$\mathfrak{N}$}; \draw[jmline] (M) -- (-1.3,0.8) node[left]{$j_1m_1$}; \draw[jmline] (M) -- (-1.3,-0.8) node[left]{$j_2m_2$}; \draw[jmline] (M) -- (1.3,0.8) node[right]{$j_3m_3$}; \draw[jmline] (M) -- (1.3,-0.8) node[right]{$j_4m_4$};\end{tikzpicture}
 \end{center}
 
 Table 11.15.\\
@@ -1933,7 +1933,7 @@ Analytical Expression
 \section*{where \\
  where}
 \begin{center}
-\includegraphics[max width=\textwidth, alt={}]{402d9a1b-ee97-49cb-ae14-75458391be12-462_155_602_688_1205}
+\sixjloop{j}{k}{j'}{+}{-}
 \end{center}
 \[
 \begin{gathered}
@@ -1964,7 +1964,7 @@ i_{1} & j_{2} & j_{3} \\
 \]
 \subsubsection{Graphical Representation}
 \begin{center}
-\includegraphics[max width=\textwidth, alt={}]{402d9a1b-ee97-49cb-ae14-75458391be12-462_92_464_512_1275}
+\begin{tikzpicture}[baseline=0pt]\node[opbox](M) at (0,0){$\mathfrak{M}_{j_2}$}; \draw[jmline] (M) -- (-1.3,0.6) node[left]{$j_1$}; \draw[jmline] (M) -- (1.3,0.6) node[right]{$j_3$}; \draw[omline] (M) -- (0,-1.2) node[below]{$Q$};\end{tikzpicture}
 \end{center}
 \[
 =\sum_{j_{1} m_{1}}\braket{Q}{j_{1} m_{1}}(-1)^{j_{1}-m_{1}}\left(\begin{array}{ccc}
@@ -1972,8 +1972,8 @@ j_{1} & j_{2} & j_{3} \\
 -m_{1} & m_{2} & m_{3}
 \end{array}\right)\braOketred{j_{1}}{\mathfrak{M}_{j_{3}}}{j_{3}} \cdot-\Omega_{1}-\sqrt[\Omega_{1}]{\frac{j_{2} m_{2}}{j_{3} m_{3}}}=-\Omega_{1}-\overbrace{j_{3} m_{3}}^{j_{2} m_{2}} \cdots \sum_{1}
 \]
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-462_270_514_1442_1079}\\
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-462_215_133_1444_1627}
+\threenode{j_1}{j_3}{j_2}{above:$+$}
+
 \[
 \begin{gathered}
 \braOket{Q_{1}}{\mathfrak{M}}{j_{2} m_{2} Q_{3}}=\sum_{j_{1} m_{1} j_{0} m_{3}}\braket{Q_{1}}{j_{1} m_{1}} \\
@@ -1983,8 +1983,8 @@ j_{1} & j_{2} & j_{3} \\
 \end{array}\right)\braket{j_{3} m_{3}}{Q_{3}}\braOketred{j_{1}}{\mathfrak{M}_{j_{2}}}{j_{3}} .
 \end{gathered}
 \]
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-462_246_555_2080_1075}\\
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-462_236_133_2086_1635}
+\begin{tikzpicture}[baseline=0pt]\node[opbox](M) at (0,0){$\mathfrak{M}_{j_2}$}; \draw[omline] (M) -- (-1.3,0.6) node[left]{$Q_1$}; \draw[jmline] (M) -- (1.3,0.6) node[right]{$j_2m_2$}; \draw[omline] (M) -- (0,-1.2) node[below]{$Q_3$};\end{tikzpicture}
+
 
 Analytical Expression
 \[
@@ -2011,11 +2011,11 @@ j_{1} & j_{2} & j_{3} \\
 \times\braket{j_{2} m_{2}}{Q_{2}}\braket{j_{3} m_{3}}{Q_{3}}
 \end{gathered}
 \]
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-463_300_593_546_1055}\\
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-463_236_147_545_1660}\\
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-463_176_384_1076_1288}\\
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-463_301_399_1271_1046}\\
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-463_227_345_1314_1450}
+\begin{tikzpicture}[baseline=0pt]\node[opbox](M) at (0,0){$\mathfrak{M}_{j_2}$}; \draw[omline] (M) -- (-1.3,0.6) node[left]{$Q_1$}; \draw[omline] (M) -- (1.3,0.6) node[right]{$Q_2$}; \draw[omline] (M) -- (0,-1.2) node[below]{$Q_3$};\end{tikzpicture}
+
+
+
+
 
 \subsection{Scheme for the Application of the Graphical Technique}
 The aim of calculations inherent in the angular momentum theory is to transform an original formula in such a way as to express all the dependence on the orientation of the coordinate system in the form of a simple standard function $\left(\clebsch{j_{1}}{m_{1}}{j_{2}}{m_{2}}{j}{m}, Y_{l m}(\Omega), D_{M M^{\prime}}^{J}(R)\right.$, or some related combination). The remaining factor (or the expansion coefficient) is invariant and can be represented as a product (or sum of products) of the standard $3 j, 6 j, 9 j$ symbols.
