@@ -362,9 +362,10 @@ is represented by the conjunction (closure) of $|j m\rangle$ - and ( $j m \mid$-
 \begin{tikzpicture}[baseline=0pt]
 \node[opbox] (M1) at (0,0) {$\mathfrak{M}$};
 \node[opbox] (N1) at (2.2,0) {$\mathfrak{N}$};
-\coordinate (M) at ($(M1.east)!0.5!(N1.west)$);
-\draw[jmline] ($(M1.east)$) -- (M) node[midway,above]{$jm$};
-\draw[jmline] (M) -- ($(N1.west)$) node[midway,below]{$jm$};
+\coordinate (ml) at ($(M1.east)!0.45!(N1.west)$);
+\coordinate (mr) at ($(M1.east)!0.55!(N1.west)$);
+\draw[jmline] ($(M1.east)$) -- (ml) node[midway,above]{$jm$};
+\draw[jmline,doublearrowmid] (mr) -- ($(N1.west)$) node[midway,below]{$jm$};
 \node[left=2pt of M1] {$\displaystyle\sum_m$};
 \node at (3.2,0) {$=$};
 \node[opbox] (M2) at (4.4,0) {$\mathfrak{M}$};
