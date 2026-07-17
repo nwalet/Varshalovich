@@ -18,12 +18,15 @@ The Dirac representation of quantum mechanical quantities seems to be most adequ
 
 A line with an arrow coming out of a node represents the "ket" $|\Psi\rangle$, i.e., a covariant (standard) state vector, whereas, a line with double arrow coming into the node represents the "bra" $\langle\Psi|$, i.e. a contravariant (Hermitian conjugate) state vector.
 
-A thin solid line corresponds to a state with some definite angular momentum $j$ and projection $m$ :
-
+A thin solid line corresponds to a state with some definite angular momentum $j$ and projection $m$ : 
 $$
 \begin{aligned}
-& \longmapsto|j m\rangle, \\
-& \Longrightarrow(j m) .
+& \begin{tikzpicture}[baseline=0pt]
+\draw[jmarrow] (0,0.0) -- (1,0.0) ;
+\end{tikzpicture}  \qquad \ket{jm}, \\
+& \begin{tikzpicture}[baseline=0pt]
+\draw[bjmarrow] (0,0.0) -- (1,0.0) ;
+\end{tikzpicture}  \qquad \bra{j m}, 
 \end{aligned}
 $$
 
@@ -32,8 +35,12 @@ A dashed line corresponds to a state with some definite direction of the positio
 
 $$
 \begin{aligned}
-& \vdash \rightarrow|\Omega\rangle, \\
-& \rightarrow \rightarrow\langle\Omega| .
+& \begin{tikzpicture}[baseline=0pt]
+\draw[omarrow] (0,0.0) -- (1,0.0) ;
+\end{tikzpicture}  \qquad \ket{\Omega}, \\
+& \begin{tikzpicture}[baseline=0pt]
+\draw[bomarrow] (0,0.0) -- (1,0.0) ;
+\end{tikzpicture}  \qquad \bra{\Omega}, 
 \end{aligned}
 $$
 
@@ -41,7 +48,9 @@ Such lines are referred to as the $\Omega$-lines.\\
 A double dashed line corresponds to a set of the Euler angles $\alpha, \beta, \gamma$ (or the angles $\omega, \Theta, \Phi$ ) which specify a rotation of the coordinate system, $R$. Such lines are called the $R$-lines
 
 $$
-====R
+\begin{tikzpicture}[baseline=0pt]
+\draw[rline] (0,0.0) -- (1,0.0) node[right]{$R$};
+\end{tikzpicture}
 $$
 
 The symbols $j m, \Omega$ and $R$ are usually indicated near the corresponding lines. Therefore, length, curvature, orientation, and position of the line are inessential. For example,
@@ -57,16 +66,16 @@ $$
 \left\langle j m \mid j^{\prime} m^{\prime}\right\rangle=\delta_{j j^{\prime}} \delta_{m m^{\prime}}
 $$
 
-is represented by the $j$-line with a bar node, whereas, a state vector $\mid j m$ ), which obeys the normalization condition
+is represented by the $j$-line with a bar node, whereas, a state vector $\mid j m)$, which obeys the normalization condition
 
 $$
 \left(j m \mid j^{\prime} m^{\prime}\right)=(2 j+1)^{-1} \delta_{j j^{\prime}} \delta_{m m^{\prime}}
 $$
 
-is represented by the $j$-line with a dot node. The completeness condition for wave functions $|j m\rangle$ or $\mid j m$ ) reads
+is represented by the $j$-line with a dot node. The completeness condition for wave functions $|j m\rangle$ or $\mid j m)$  reads
 
 $$
-\left.\sum_{j m}|j m\rangle\langle j m|=\sum_{j m} \mid j m\right)(2 j+1)(j m \mid=1
+\sum_{j m}|j m\rangle\langle j m|=\sum_{j m} \mid j m)(2 j+1)(j m \mid=1
 $$
 
 Similarly, a state vector $|\Omega\rangle$ normalized by the Dirac $\delta$-function
@@ -75,13 +84,13 @@ $$
 \left\langle\Omega \mid \Omega^{\prime}\right\rangle=\delta\left(\Omega-\Omega^{\prime}\right)
 $$
 
-corresponds to the $\Omega$-line with the bar node, whereas, a state vector $\mid \Omega$ ) normalized by
+corresponds to the $\Omega$-line with the bar node, whereas, a state vector $\mid \Omega)$ normalized by
 
 $$
 \left(\Omega \mid \Omega^{\prime}\right)=4 \pi \delta\left(\Omega-\Omega^{\prime}\right)
 $$
 
-corresponds to the $\Omega$-line with a dot node. The completeness condition for the functions $|\Omega\rangle$ or $\mid \Omega$ ) reads
+corresponds to the $\Omega$-line with a dot node. The completeness condition for the functions $|\Omega\rangle$ or $\mid \Omega)$ reads
 
 $$
 \left.\int|\Omega\rangle d \Omega\langle\Omega|=1 \quad \text { and } \quad \int \mid \Omega\right) \frac{d \Omega}{4 \pi}(\Omega \mid=1
@@ -90,7 +99,7 @@ $$
 respectively.
 
 \subsection{Diagrams of the Basic Functions of the Theory}
-Quantum mechanical quantities, i.e., state vectors and operators, may depend on many spin and angular variables (such as $j m$ or $\Omega$ ) and also on coordinate system rotation $R$. Accordingly, these state vectors and matrix elements of the operators may be represented graphically as blocks (i.e., as subdiagrams) with external $j m$-, $\Omega$ - and/or $R$-lines associated with the corresponding spin angular variables. A diagram corresponding to a composite expression will be a combination of such blocks connected by some of jm-, $\Omega$ - and $R$-lines.
+Quantum mechanical quantities, i.e., state vectors and operators, may depend on many spin and angular variables (such as $j m$ or $\Omega)$ and also on coordinate system rotation $R$. Accordingly, these state vectors and matrix elements of the operators may be represented graphically as blocks (i.e., as subdiagrams) with external $j m$-, $\Omega$ - and/or $R$-lines associated with the corresponding spin angular variables. A diagram corresponding to a composite expression will be a combination of such blocks connected by some of jm-, $\Omega$ - and $R$-lines.
 
 Diagrams of some spin and angular functions are listed in Tables 11.1-11.3; graphical displays of their properties and relations is given in Tables 11.4-11.14.
 
@@ -104,129 +113,275 @@ Matrix elements of the rotation operator in the $\Omega$-representation, $\langl
 
 Matrix elements of any irreducible tensor operator $\langle\Psi| T_{\lambda \mu}\left|\Psi^{\prime}\right\rangle$ are represented by a block with three external lines corresponding to $\langle\Psi|,\left|\Psi^{\prime}\right\rangle$ and $|\lambda \mu\rangle$; the operator symbol (and other possible quantum numbers) are indicated inside the block.
 
-\begin{table}[h]
+\begin{table}[tbh!]
 \begin{center}
 \captionsetup{labelformat=empty}
 \caption{Table 11.1. Basic Elements of Diagrams.}
-\begin{tabular}{|l|l|l|l|l|}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{lc}
 \hline
-\multicolumn{4}{|c|}{Analytical Expression} & Graphical Representation \\
+{Analytical Expression} & Graphical Representation \\
 \hline
-\multicolumn{2}{|c|}{} &  & jm-State Vector & \multirow[b]{2}{*}{\includegraphics[max width=\textwidth, alt={}]{402d9a1b-ee97-49cb-ae14-75458391be12-428_98_146_416_1349}
-\includegraphics[max width=\textwidth, alt={}]{402d9a1b-ee97-49cb-ae14-75458391be12-428_91_140_540_1353}
-} \\
-\hline
-"bra" & \( \begin{aligned} & \langle j m \\ & (j m) \end{aligned} \) &  &  &  \\
-\hline
+\multicolumn{2}{c}{$jm$-State Vector}\\
+"ket"  \( \begin{aligned} & \ket{j m} \\ & \rket{j m} \end{aligned} \) & \begin{tikzpicture}[baseline=0pt]
+\draw[jmarrow] (0,0.3) -- (1,0.3) node[midway,above]{$jm$};
+\draw[djmarrow] (0,-0.3) -- (1,-0.3) node[midway,above]{$jm$};
+\end{tikzpicture}
+\\
+"bra"  \( \begin{aligned} & \bra{j m} \\ & \rbra{j m} \end{aligned} \) & 
+\begin{tikzpicture}[baseline=0pt]
+\draw[bjmarrow] (0,0.3) -- (1,0.3) node[midway,above]{$jm$};
+\draw[dbjmarrow] (0,-0.3) -- (1,-0.3) node[midway,above]{$jm$};
+\end{tikzpicture}  \\
+\multicolumn{2}{c}{Kronecker $\delta$-Symbol}\\
+$ \left\langle j m \mid j^{\prime} m^{\prime}\right\rangle=\delta_{j j^{\prime}} \delta_{m m^{\prime}}$ &
+\begin{tikzpicture}
+\draw[bjmarrow] (0,0.) -- (1,0.) node[midway,above]{$jm$};
+\draw[jmarrow]  (1,0.) -- (2,0.) node[midway,above]{$j'm'$};
+\end{tikzpicture}
+ \\
+$ \left(j m \mid j^{\prime} m^{\prime}\right)=\frac{\delta_{j j^{\prime}} \delta_{m m^{\prime}}}{2 j+1}
+$ &
+\begin{tikzpicture}
+\draw[dbjmarrow] (0,0.) -- (0.9,0.) node[midway,above]{$jm$};
+\draw[djmarrow]  (1.1,0.) -- (2,0.) node[midway,above]{$j'm'$};
+\draw[thick] (1,0.) circle (0.15);
+\end{tikzpicture}
+ \\
+\multicolumn{2}{c}{$\Omega$-State Vector}\\
+"ket"  \( \begin{aligned} & \ket{\Omega} \\ & \rket{\Omega} \end{aligned} \) & \begin{tikzpicture}[baseline=0pt]
+\draw[omarrow] (0,0.3) -- (1,0.3) node[midway,above]{$\Omega$};
+\draw[domarrow] (0,-0.3) -- (1,-0.3) node[midway,above]{$\Omega$};
+\end{tikzpicture}
+\\
+"bra"  \( \begin{aligned} & \bra{\Omega} \\ & \rbra{\Omega} \end{aligned} \) & 
+\begin{tikzpicture}[baseline=0pt]
+\draw[dbomarrow] (0,0.3) -- (1,0.3) node[midway,above]{$\Omega$};
+\draw[bomarrow] (0,-0.3) -- (1,-0.3) node[midway,above]{$\Omega$};
+\end{tikzpicture}  \\
+\multicolumn{2}{c}{Dirac $\delta$-function}\\
+$ \left\langle\Omega  \mid\Omega^{\prime}\right\rangle=\delta(\Omega-\Omega')$ &
+\begin{tikzpicture}
+\draw[bomarrow] (0,0.) -- (1,0.) node[midway,above]{$\Omega$};
+\draw[dbomarrow]  (1,0.) -- (2,0.) node[midway,above]{$\Omega'$};
+\end{tikzpicture}
+ \\
+$ \left(\Omega \mid \Omega^{\prime}\right)={\delta(\Omega-\Omega')}{4 \pi}
+$ &
+\begin{tikzpicture}
+\draw[dbomarrow] (0,0.) -- (0.9,0.) node[midway,above]{$\Omega$};
+\draw[domarrow]  (1.1,0.) -- (2,0.) node[midway,above]{$\Omega'$};
+\draw[thick] (1,0.) circle (0.15);
+\end{tikzpicture}
+ \\$ \left\langle\Omega _1\Omega_2 \mid\Omega\right\rangle=\delta(\Omega_1-\Omega)\delta(\Omega_2-\Omega)$ &
+\begin{tikzpicture}[baseline=0pt]
+\draw[bomarrow] (0,0.5) -- (1,0.) node[midway,above]{$\Omega_1$};
+\draw[bomarrow] (0,-0.5) -- (1,0.) node[midway,below]{$\Omega_2$};
+\draw[omarrow]  (1,0.) -- (2,0.) node[midway,above]{$\Omega$};
+\end{tikzpicture}
+ \\
+ \multicolumn{2}{c}{Spherical Harmonics}\\
+$ \left\langle\Omega\mid lm \right\rangle=Y_{lm}(\Omega)$ &
+\begin{tikzpicture}
+\draw[bomarrow] (0,0.) -- (1,0.) node[midway,above]{$\Omega$};
+\draw[jmarrow]  (1,0.) -- (2,0.) node[midway,above]{$lm$};
+\end{tikzpicture}
+ \\
+ $ \left\langle lm\mid \Omega \right\rangle=Y^*_{lm}(\Omega)$ &
+\begin{tikzpicture}
+\draw[bjmarrow] (0,0.) -- (1,0.) node[midway,above]{$lm$};
+\draw[omarrow]  (1,0.) -- (2,0.) node[midway,above]{$\Omega$};
+\end{tikzpicture}
+ \\
+$ \left(\Omega\mid lm \right)=C_{lm}(\Omega)$ &
+\begin{tikzpicture}
+\draw[dbomarrow] (0,0.) -- (0.9,0.) node[midway,above]{$\Omega$};
+\draw[djmarrow]  (1.1,0.) -- (2,0.) node[midway,above]{$lm$};
+\draw[thick] (1,0.) circle (0.15);
+\end{tikzpicture}
+ \\
+$ \left(lm \mid \Omega \right)=C_{lm}^*(\Omega)$ & 
+\begin{tikzpicture}[baseline=0pt]
+\draw[dbjmarrow] (0,0.) -- (0.9,0.) node[midway,above]{$lm$};
+\draw[domarrow]  (1.1,0.) -- (2,0.) node[midway,above]{$\Omega$};
+\draw[thick] (1,0.) circle (0.15);
+\end{tikzpicture}$=$
+ \\
+\multicolumn{2}{c}{Clebsch-Gordan Coefficients}\\
+$ \clebsch{j_1}{n_1}{j_2}{m_2}{J}{M}=\left\langle j_1 m_1 j_2 m_2 \mid j_1 j_2 J M \right\rangle=\left\langle j_1j_2JM \mid j_1 m_1 j_2 m_2 \right\rangle$ &
+\begin{tikzpicture}[baseline=0pt]
+\draw[bjmarrow] (-0.5,0.71) -- ($0.06*(-0.5,0.71)$) node[at start,left]{$j_1 m_1$};
+\draw[bjmarrow] (-0.5,-0.71) -- ($0.06*(-0.5,-0.71)$) node[at start,left]{$j_2 m_2$};
+\draw[jmarrow]  ($0.06*(1,0.)$) -- (1,0.) node[near end,above]{$JM$};
+\node[label={left:$+$}] at (0,0) {};
+\end{tikzpicture}$=$\begin{tikzpicture}[baseline=0pt]
+\draw[bjmarrow] (-0.5,0.71) -- ($0.06*(-0.5,0.71)$) node[at start,left]{$j_2 m_2$};
+\draw[bjmarrow] (-0.5,-0.71) -- ($0.06*(-0.5,-0.71)$) node[at start,left]{$j_1 m_1$};
+\draw[jmarrow]  ($0.06*(1,0.)$) -- (1,0.) node[near end,above]{$JM$};
+\node[label={left:$-$}] at (0,0) {};
+\end{tikzpicture}\\
+&$=$\begin{tikzpicture}[baseline=0pt]
+\draw[bjmarrow]  (-1,0.) -- ($0.06*(-1,0.)$) node[near start,above]{$JM$};
+\draw[jmarrow]  ($0.06*(0.5,0.71)$) -- (0.5,0.71) node[at end,right]{$j_1 m_1$};
+\draw[jmarrow]  ($0.06*(0.5,-0.71)$) -- (0.5,-0.71) node[at end,right]{$j_2 m_2$};
+\node[label={right:$+$}] at (0,0) {};
+\end{tikzpicture}$=$
+\begin{tikzpicture}[baseline=0pt]
+\draw[bjmarrow]  (-1,0.) -- ($0.06*(-1,0.)$) node[near start,above]{$JM$};
+\draw[jmarrow]  ($0.06*(0.5,0.71)$) -- (0.5,0.71) node[at end,right]{$j_2 m_2$};
+\draw[jmarrow]  ($0.06*(0.5,-0.71)$) -- (0.5,-0.71) node[at end,right]{$j_1 m_2$};
+\node[label={right:$-$}] at (0,0) {};
+\end{tikzpicture}
 \end{tabular}
 \end{center}
 \end{table}
 
-Kronecker $\boldsymbol{\delta}$-Symbol\\
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-428_73_273_704_1289}
-
-$$
-\begin{aligned}
-& \left\langle j m \mid j^{\prime} m^{\prime}\right\rangle=\delta_{j j^{\prime}} \delta_{m m^{\prime}} \\
-& \left(j m \mid j^{\prime} m^{\prime}\right)=\frac{\delta_{j j^{\prime}} \delta_{m m^{\prime}}}{2 j+1}
-\end{aligned}
-$$
-
-"ket" \begin{tabular}{l}
-$|\Omega\rangle$ \\
-$|\Omega\rangle$ \\
-$\langle\Omega|$ \\
-$\langle$ bra" \\
-$(\Omega \mid$ \\
+\begin{table}[tbh!]
+\begin{center}
+\captionsetup{labelformat=empty}
+\caption{Table 11.1. (Cont'd).}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{lc}
+\hline
+{Analytical Expression} & Graphical Representation \\
+\hline
+\multicolumn{2}{c}Wigner $3jm$ Symbols\\
+$ \threej{j_1}{n_1}{j_2}{m_2}{j_3}{m_3}=\left( j_1 m_1 j_2 m_2 j_3 m_3 \mid 00 \right)=\left( 00 \mid j_1 m_1 j_2 m_2 j_3 m_3 \right)$ &
+\begin{tikzpicture}[baseline=0pt]
+\draw[dbjmarrow] (-0.5,0.71) -- ($-0.009*(-0.5,0.71)$) node[at start,left]{$j_1 m_1$};
+\draw[dbjmarrow] (-0.5,-0.71) -- ($-0.009*(-0.5,-0.71)$) node[at start,left]{$j_2 m_2$};
+\draw[djmarrow]  ($-0.009*(1,0.)$) -- (1,0.) node[near end,above]{$j_3m_3$};
+\node[label={left:$+$}] at (0,0) {};
+\end{tikzpicture}$=$\begin{tikzpicture}[baseline=0pt]
+\draw[dbjmarrow] (-0.5,0.71) -- ($-0.009*(-0.5,0.71)$) node[at start,left]{$j_2 m_2$};
+\draw[dbjmarrow] (-0.5,-0.71) -- ($-0.009*(-0.5,-0.71)$) node[at start,left]{$j_1 m_1$};
+\draw[djmarrow]  ($-0.009*(1,0.)$) -- (1,0.) node[near end,above]{$j_3m_3$};
+\node[label={left:$-$}] at (0,0) {};
+\end{tikzpicture}\\
+&$=$\begin{tikzpicture}[baseline=0pt]
+\draw[dbjmarrow]  (-1,0.) -- ($-0.009*(-1,0.)$) node[near start,above]{$j_3m_3$};
+\draw[djmarrow]  ($-0.009*(0.5,0.71)$) -- (0.5,0.71) node[at end,right]{$j_1 m_1$};
+\draw[djmarrow]  ($-0.009*(0.5,-0.71)$) -- (0.5,-0.71) node[at end,right]{$j_2 m_2$};
+\node[label={right:$+$}] at (0,0) {};
+\end{tikzpicture}$=$
+\begin{tikzpicture}[baseline=0pt]
+\draw[dbjmarrow]  (-1,0.) -- ($-0.009*(-1,0.)$) node[near start,above]{$j_3m)_3$};
+\draw[djmarrow]  ($-0.009*(0.5,0.71)$) -- (0.5,0.71) node[at end,right]{$j_2 m_2$};
+\draw[djmarrow]  ($-0.009*(0.5,-0.71)$) -- (0.5,-0.71) node[at end,right]{$j_1 m_2$};
+\node[label={right:$-$}] at (0,0) {};
+\end{tikzpicture}\\
+\multicolumn{2}{c}{Metric tensor}\\
+$\binom{j}{m m^{\prime}}=(-1)^{j+m} \delta_{m,-m^{\prime}}$& \\
+$\binom{j}{m^{\prime} m}=(-1)^{j-m} \delta_{-m, m^{\prime}}$& \\
 \end{tabular}
+\end{center}
+\end{table}
 
-$\left\langle\Omega \mid \Omega^{\prime}\right\rangle=\delta\left(\Omega-\Omega^{\prime}\right)$\\
-$\left(\Omega \mid \Omega^{\prime}\right)=4 \pi \delta\left(\Omega-\Omega^{\prime}\right)$\\
-$\left(\Omega_{1}, \Omega_{2} \mid \Omega\right)=\delta\left(\Omega_{1}-\Omega\right) \delta\left(\Omega_{2}-\Omega\right)$
 
-\section*{Dirac $\delta$-Function}
-\begin{figure}[h]
+
+
+
+\begin{table}[tbh!]
 \begin{center}
 \captionsetup{labelformat=empty}
-\caption{$\Omega$-State Vector}
-  \includegraphics[alt={},max width=\textwidth]{402d9a1b-ee97-49cb-ae14-75458391be12-428_82_279_786_1289}
+\caption{Table 11.2. Invariant Functions.}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{lc}
+\hline
+{Analytical Expression} & Graphical Representation \\
+\hline
+$(2 a+1)$ & \begin{tikzpicture}[baseline=0pt, inner sep=0.1em, font=\scriptsize]
+  \draw[
+        decoration={markings, mark=at position 0.01 with  {\arrow{Stealth[reversed,length=2.2mm]}}},
+        postaction={decorate},thick] (0,0.) circle (0.4);
+\draw[thick] (0,0.) node{$a$};  
+\end{tikzpicture}\\
+$\sqrt{2 a+1}$&
+\begin{tikzpicture}[baseline=0pt, inner sep=0.1em,font=\scriptsize] 
+  \draw[
+        decoration={markings, mark=at position 0.01 with  {\arrow{Stealth[reversed,length=2.2mm]}}},
+        postaction={decorate},thick] (0,0.) circle (0.4);
+  \node[label={right:$a$}] at (0.4,0.) {};
+  \node[dotnode, label={right:{$+$}}] at (-0.4,0.) {};
+\end{tikzpicture}\\
+$\delta_{a b} $&
+\begin{tikzpicture}[baseline=0pt, inner sep=0.1em,font=\scriptsize] 
+  \draw[
+        decoration={markings, mark=at position 0.01 with  {\arrow{Stealth[reversed,length=2.2mm]}}, mark=at position 0.51 with  {\arrow{Stealth[reversed,length=2.2mm]}}},
+        postaction={decorate},thick] (0,0.) circle (0.4);
+  \node[label={left:$a$}] at (-0.4,0.) {};
+  \node[label={right:$b$}] at (0.4,0.) {};
+  \node[dotnode, label={below:{\small$+$}}] at (0,0.4) {};
+  \node[dotnode, label={above:{\small$+$}}] at (0,-0.4) {};
+`'\end{tikzpicture}\\
+$\frac{\delta_{a b} \delta_{bc}}{\sqrt{2 a+1}}$&
+\begin{tikzpicture}[baseline=0pt, inner sep=0.2em,font=\scriptsize]
+  \coordinate (T) at ($0.6*(0,1)$);
+  \coordinate (L) at ($0.6*(-0.866,-0.5)$);
+  \coordinate (R) at ($0.6*(0.866,-0.5)$); 
+  \draw[jmline] (L) -- (T) node[midway, left]{$a$};
+  \draw[jmline] (T) -- (R) node[midway, right]{$b$};
+  \draw[jmline] (R) -- (L) node[midway, below]{$c$};
+  \node[dotnode, label={above right:{$+$}}] at (L) {};
+  \node[dotnode, label={below:{$+$}}] at (T) {};
+  \node[dotnode, label={above left:{$+$}}] at (R) {};
+\end{tikzpicture}\\
+$\frac{\delta_{a} \delta_{b a} \delta_{c d}}{(2 a+1)}$&
+\begin{tikzpicture}[baseline=0pt, inner sep=0.2em,font=\scriptsize] 
+  \coordinate (Tl) at ($0.4*(-1,1)$);
+  \coordinate (Tr) at ($0.4*(1,1)$);
+  \coordinate (Bl) at ($0.4*(-1,-1)$); 
+  \coordinate (Br) at ($0.4*(1,-1)$); 
+  \draw[jmline] (Bl) -- (Tl) node[midway, left]{$a$};
+  \draw[jmline] (Tl) -- (Tr) node[midway, above]{$b$};
+  \draw[jmline] (Tr) -- (Br) node[midway, right]{$c$};
+  \draw[jmline] (Br) -- (Bl) node[midway, below]{$d$};
+  \node[dotnode, label={above right:{$+$}}] at (Bl) {};
+  \node[dotnode, label={below right:{$+$}}] at (Tl) {};
+  \node[dotnode, label={below left:{$+$}}] at (Tr) {};
+  \node[dotnode, label={above left:{$+$}}] at (Br) {};
+\end{tikzpicture}\\
+\multicolumn{2}{c}{$3 j$ Symbol}\\
+$\{a b c\}$&
+\begin{tikzpicture}[baseline=0pt, inner sep=0.2em,font=\scriptsize] 
+  \coordinate (T) at ($0.6*(0,1)$);
+  \coordinate (B) at ($0.6*(0,-1)$);
+  \coordinate (L) at ($0.6*(-1,0)$);
+  \coordinate (R) at ($0.6*(1,0)$);
+  \draw[
+        decoration={markings, mark=at position 0.01 with  {\arrow{Stealth[reversed,length=2.2mm]}}, mark=at position 0.49 with  {\arrow{Stealth[length=2.2mm]}}},
+        postaction={decorate},thick] (0,0.) circle (0.6);
+  \draw[jmline] (T) -- (B) node[midway, left]{$b$};
+  \node[label={left:{$a$}}] at (L) {};
+  \node[label={right:{$c$}}] at (R) {};
+  \node[dotnode,label={above:{$+$}}] at (T) {};
+  \node[dotnode,label={below:{$-$}}] at (B) {};
+\end{tikzpicture}
+\end{tabular}
 \end{center}
-\end{figure}
+\end{table}
 
-$$
-\begin{aligned}
-& +-\frac{\Omega}{\Omega} \rightarrow \\
-& --\frac{\Omega}{-} \rightarrow \\
-& \rightarrow \frac{\Omega}{\Omega}-1 \\
-& \rightarrow-\frac{\Omega}{-} \rightarrow
-\end{aligned}
-$$
 
-Table 11.1. (Cont'd)
-
-\section*{Analytical Expression}
-\section*{Wigner Sjm Symbols}
-$$
-\begin{aligned}
-\left(\begin{array}{ccc}
-\dot{j}_{1} & j_{2} & j_{3} \\
-m_{1} & m_{2} & m_{3}
-\end{array}\right) & =\left(00 \mid j_{1} m_{1} j_{2} m_{2} j_{3} m_{3}\right) \\
-& =\left(j_{1} m_{1} j_{2} m_{2} j_{3} m_{3} \mid 00\right)
-\end{aligned}
-$$
-
-\begin{center}
-\includegraphics[max width=\textwidth, alt={}]{402d9a1b-ee97-49cb-ae14-75458391be12-429_400_566_453_1196}
-\end{center}
-
-Metric Tensor\\
-$\binom{j}{m m^{\prime}}=(-1)^{j+m} \delta_{m,-m^{\prime}}$\\
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-429_67_600_916_1211}\\
-$\binom{j}{m^{\prime} m}=(-1)^{j-m} \delta_{-m, m^{\prime}}$\\
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-429_63_602_1054_1213}
-
-Table 11.2. Invariant Functions.\\
-Analytical Expression\\
-Graphical Representation\\
-$(2 a+1)$\\
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-429_98_100_1413_1390}\\
-$\sqrt{2 a+1}$\\
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-429_94_127_1536_1388}\\
-$\delta_{a b}$\\
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-429_104_148_1666_1367}\\
-$\frac{\delta_{a b} \delta_{h_{c}}}{\sqrt{2 a+1}}$\\
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-429_153_156_1784_1363}\\
-$\frac{\delta_{a} \delta_{b a} \delta_{c d}}{(2 a+1)}$\\
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-429_205_205_1957_1334}\\
-$3 j$ Symbol\\
-$\{a b c\}$\\
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-429_168_159_2245_1343}
-
-\begin{table}[h]
+\begin{table}[tbh!]
 \begin{center}
 \captionsetup{labelformat=empty}
-\caption{Table 11.2. (Cont'd)}
-\begin{tabular}{|l|l|}
+\caption{Table 11.2. Cnt'd.}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{lc}
 \hline
-Analytical Expression & Graphical Representation \\
+{Analytical Expression} & Graphical Representation \\
 \hline
-$6 j$ Symbol &  \\
-\hline
-$\left\{\begin{array}{lll}a & b & c \\ A & B & C\end{array}\right\}$ & \includegraphics[max width=\textwidth, alt={}]{402d9a1b-ee97-49cb-ae14-75458391be12-430_202_449_456_1250}
+\multicolumn{2}{c}{$6 j$ Symbol} \\
+$\sixj{a}{b}{c}{A}{B}{C}$ & \sixjdiagramd{a}{b}{c}{A}{B}{C}{+}$=$\sixjdsq{a}{b}{c}{A}{B}{C}{+} \\
+\multicolumn{2}{c}{$9 j$ Symbol} \\
+$\left\{\begin{array}{lll}a_{1} & b_{1} & c_{1} \\ a_{2} & b_{2} & c_{2} \\ a_{3} & b_{3} & c_{3}\end{array}\right\}$ & \ninejd{a_1}{b_1}{c_1}{a_2}{b_2}{c_2}{a_3}{b_3}{c_3}
  \\
-\hline
-\multicolumn{2}{|c|}{$9 j$ Symbol} \\
-\hline
-$\left\{\begin{array}{lll}a_{1} & b_{1} & c_{1} \\ a_{2} & b_{2} & c_{2} \\ a_{3} & b_{3} & c_{3}\end{array}\right\}$ & \includegraphics[max width=\textwidth, alt={}]{402d9a1b-ee97-49cb-ae14-75458391be12-430_211_207_792_1374}
+ \multicolumn{2}{c}{$12 j$(I) Symbol} \\
+$\left\{\begin{array}{llll}a_{1} & a_{2} & a_{3} & a_{4} \\ & b_{1} & b_{2} & b_{3} \\ c_{1} & c_{2} & c_{3} & c_{4}\end{array}\right\}$ & \twIdiaga{a_1,a_2,a_3,a_4,b_1,b_2,b_3,c_1,c_2,c_3,c_4}
  \\
-\hline
-$\left\{\begin{array}{llll}a_{1} & a_{2} & a_{3} & a_{4} \\ & b_{1} & b_{2} & b_{3} \\ c_{1} & c_{2} & c_{3} & c_{4}\end{array}\right\}$ & \includegraphics[max width=\textwidth, alt={}]{402d9a1b-ee97-49cb-ae14-75458391be12-430_252_499_1191_1223}
+ \multicolumn{2}{c}{$12 j$(II) Symbol} \\
+$\left\{\begin{array}{cccc}- & c_{2} & b_{3} & a_{4} \\ c_{3} & - & a_{2} & b_{4} \\ b_{2} & a_{3} & - & c_{4} \\ a_{1} & b_{1} & c_{1} & -\end{array}\right\}$ & 
  \\
-\hline
-$\left\{\begin{array}{cccc}- & c_{2} & b_{3} & a_{4} \\ c_{3} & - & a_{2} & b_{4} \\ b_{2} & a_{3} & - & c_{4} \\ a_{1} & b_{1} & c_{1} & -\end{array}\right\}$ & \includegraphics[max width=\textwidth, alt={}]{402d9a1b-ee97-49cb-ae14-75458391be12-430_273_248_1540_1204}
- \\
-\hline
 \end{tabular}
 \end{center}
 \end{table}
@@ -343,12 +498,12 @@ may be represented by\\
 
 \node[plusnode,label={left:}] at (L) {};
 \node[plusnode] at (R) {};
-\draw[jmline,arrowmid] (L) -- (R) node[midway,above left]{$c$};
-\draw[jmline,arrowmid] (B) -- (R) node[midway,above right]{$a$};
-\draw[jmline,arrowmid] (R) -- (L) node[midway,below]{$b$};
-\draw[jmline,arrowmid] (B) -- (O) node[midway,above left]{$B$};
-\draw[jmline,arrowmid] (L) -- (O) node[midway,above left]{$A$};
-\draw[jmline,arrowmid] (R) -- (O) node[midway,above left]{$C$};
+\draw[jmlinem] (L) -- (R) node[midway,above left]{$c$};
+\draw[jmlinem] (B) -- (R) node[midway,above right]{$a$};
+\draw[jmlinem] (R) -- (L) node[midway,below]{$b$};
+\draw[jmlinem] (B) -- (O) node[midway,above left]{$B$};
+\draw[jmlinem] (L) -- (O) node[midway,above left]{$A$};
+\draw[jmlinem] (R) -- (O) node[midway,above left]{$C$};
 \end{tikzpicture}
 \end{center}
 
@@ -364,13 +519,13 @@ is represented by the conjunction (closure) of $|j m\rangle$ - and ( $j m \mid$-
 \node[opbox] (N1) at (2.2,0) {$\mathfrak{N}$};
 \coordinate (ml) at ($(M1.east)!0.45!(N1.west)$);
 \coordinate (mr) at ($(M1.east)!0.55!(N1.west)$);
-\draw[jmline] ($(M1.east)$) -- (ml) node[midway,above]{$jm$};
-\draw[jmline,doublearrowmid] (mr) -- ($(N1.west)$) node[midway,below]{$jm$};
+\draw[jmarrow] ($(M1.east)$) -- (ml) node[midway,above]{$jm$};
+\draw[bjmarrow] (mr) -- ($(N1.west)$) node[midway,below]{$jm$};
 \node[left=2pt of M1] {$\displaystyle\sum_m$};
 \node at (3.2,0) {$=$};
 \node[opbox] (M2) at (4.4,0) {$\mathfrak{M}$};
 \node[opbox] (N2) at (6.6,0) {$\mathfrak{N}$};
-\draw[jmline] (M2) -- (N2) node[midway,above]{$j$};
+\draw[jmarrow] (M2) -- (N2) node[midway,above]{$j$};
 \end{tikzpicture}
 \end{center}
 
@@ -499,7 +654,7 @@ k_{1} & k_{2} & j_{3} \\
 \draw[jmline] (L) -- (R) node[midway,above]{$k_2$};
 \end{tikzpicture}
 \qquad
-\tricenter{k_3}{j_3}{k_1}{j_1}{j_2}{k_2}{+}
+\sixjdiagramu{k_3}{j_3}{k_1}{j_1}{j_2}{k_2}{+}
 \end{center}
 \end{center}
 
@@ -614,11 +769,11 @@ a^{\prime} & b^{\prime} & e \\
 \end{tikzpicture}
 \qquad
 \begin{tikzpicture}[baseline=0pt]
-\draw[bjmline] (0,0) node[left]{$\Omega$} -- (1,0);
+\draw[bjmarrow] (0,0) node[left]{$\Omega$} -- (1,0);
 \node[deltanode] at (1,0) {};
 \draw[jmline] (1,0) -- (2,0) node[midway,above]{$l$};
 \node[deltanode] at (2,0) {};
-\draw[omline] (2,0) -- (3,0) node[right]{$\Omega^{\prime}$};
+\draw[omarrow] (2,0) -- (3,0) node[right]{$\Omega^{\prime}$};
 \end{tikzpicture}
 \qquad
 \begin{tikzpicture}[baseline=0pt]
@@ -681,7 +836,7 @@ The resultant $\Omega$-line has the same direction as the original $|\Omega\rang
 \begin{tikzpicture}[baseline=0pt]
 \draw[jmline] (0,0) node[left]{$lm$} -- (1,0);
 \node[deltanode] at (1,0) {};
-\draw[omline] (1,0) -- (2,0) node[midway,above]{$\Omega$};
+\draw[omarrow] (1,0) -- (2,0) node[midway,above]{$\Omega$};
 \node[deltanode] at (2,0) {};
 \draw[jmline] (2,0) -- (3,0) node[right]{$l^{\prime}m^{\prime}$};
 \end{tikzpicture}
@@ -840,38 +995,38 @@ $6j$ Symbol $\sixj{a}{b}{c}{A}{B}{C}$
 \end{table}
 
 \begin{center}
-\tricenter{B}{A}{C}{a}{b}{c}{+} \quad$=(-1)^{2(A+B+C)}$\quad
-\tricenter{B}{A}{C}{a}{b}{c}{-} \quad$=(-1)^{a+b+c}$\quad
-\tricenter{B}{A}{C}{a}{b}{c}{+}
+\sixjdiagramu{B}{A}{C}{a}{b}{c}{+} \quad$=(-1)^{2(A+B+C)}$\quad
+\sixjdiagramu{B}{A}{C}{a}{b}{c}{-} \quad$=(-1)^{a+b+c}$\quad
+\sixjdiagramu{B}{A}{C}{a}{b}{c}{+}
 \end{center}
 
 \subsubsection{Reversal of Node Sign}
 \begin{center}
-\tricenter{B}{A}{C}{a}{b}{c}{+} \quad$=(-1)^{2(A+B+C)}$\quad \tricenter{B}{A}{C}{a}{b}{c}{-} \quad$=(-1)^{a+b+c}$\quad \tricenter{B}{A}{C}{a}{b}{c}{+}
+\sixjdiagramu{B}{A}{C}{a}{b}{c}{+} \quad$=(-1)^{2(A+B+C)}$\quad \sixjdiagramu{B}{A}{C}{a}{b}{c}{-} \quad$=(-1)^{a+b+c}$\quad \sixjdiagramu{B}{A}{C}{a}{b}{c}{+}
 \end{center}
 
 \subsubsection{Reversal of Line Direction}
 \begin{center}
-\tricenter{B}{A}{C}{a}{b}{c}{+} \quad$=$\quad \tricenter{B}{A}{C}{a}{b}{c}{+}
+\sixjdiagramu{B}{A}{C}{a}{b}{c}{+} \quad$=$\quad \sixjdiagramu{B}{A}{C}{a}{b}{c}{+}
 \end{center}
 
 \subsubsection{Argument Permutation}
 \begin{center}
-\tricenter{A}{B}{C}{a}{b}{c}{+} \quad$=$\quad \tricenter{C}{A}{B}{c}{a}{b}{+}
+\sixjdiagramu{A}{B}{C}{a}{b}{c}{+} \quad$=$\quad \sixjdiagramu{C}{A}{B}{c}{a}{b}{+}
 \end{center}
 \[
 9 j \text { Symbol }\ninej{a_{1}}{a_{2}}{a_{3}}{c_{1}}{c_{2}}{c_{3}}{b_{1}}{b_{2}}{b_{3}}
 \]
 Reversal of Node Sign\\
-\tricenter{A}{B}{C}{a}{b}{c}{-}
+\sixjdiagramu{A}{B}{C}{a}{b}{c}{-}
 
 \begin{center}
 \textbf{Table~\ref{chap11:tab:2} (continued)}
-\tricenter{B}{C}{A}{b}{c}{a}{+}
+\sixjdiagramu{B}{C}{A}{b}{c}{a}{+}
 \end{center}
 
 \begin{center}
-\tricenter{C}{A}{B}{c}{a}{b}{-}
+\sixjdiagramu{C}{A}{B}{c}{a}{b}{-}
 \end{center}
 
 \subsubsection{Reversal of Line Direction}
@@ -903,7 +1058,7 @@ The reversal of the sign in a node joining $\left(j_{1} j_{2} j_{3}\right)$-line
 
 
 The reversal of signs of all the nodes in a diagram produces an additional phase factor of $(-1)^{2 J_{0}+J_{1}}$, where $J_{0}$ and $J_{1}$ are the algebraic sums of all the momenta for the internal and external lines, respectively. For example,\\
-\tricenter{A}{B}{C}{a}{b}{c}{+}\quad$=(-1)^{2J_0+J_1}$\quad\tricenter{A}{B}{C}{a}{b}{c}{-}
+\sixjdiagramu{A}{B}{C}{a}{b}{c}{+}\quad$=(-1)^{2J_0+J_1}$\quad\sixjdiagramu{A}{B}{C}{a}{b}{c}{-}
 
 
 
@@ -1099,7 +1254,7 @@ a & b & c \\
 \sum_{X}(2 X+1)\ninej{a}{b}{c}{b^{\prime}}{d}{e}{c}{e}{X}=\{a b c\}\{b d e\} \frac{\delta_{b b^{\prime}}}{(2 b+1)}
 \]
 \begin{center}
-\tricenter{c}{X}{e}{a}{b}{d}{+}
+\sixjdiagramu{c}{X}{e}{a}{b}{d}{+}
 \end{center}
 
 When a common thick $j$-line is included into two or more unlinked subdiagrams, one should preliminarily link these subdiagrams with the aid of the rules of subdiagram multiplication (Sec. 11.3.5) in order to arrive at one thick $j$-line. Only after this operation can one perform graphical summation over $j$ and $m$ according to Rule $\sum$. These combined graphical operations are displayed in Table~\ref{chap11:tab:5}.
@@ -1109,13 +1264,13 @@ The complete invariant summation over $j$ and $m$ may also be performed graphica
 \sum_{l m} Y_{l m}(\Omega) Y_{l m}^{*}\left(\Omega^{\prime}\right)=\delta\left(\Omega-\Omega^{\prime}\right)
 \]
 \begin{center}
-\begin{tikzpicture}[baseline=0pt]\draw[omline] (0,0) node[left]{$\Omega$} to[bend left=40] node[midway,above]{$l$} (2,0); \draw[omline] (0,0) to[bend right=40] node[midway,below]{$l$} (2,0); \node at (2.3,0){$\Omega^{\prime}$};\end{tikzpicture}
+\begin{tikzpicture}[baseline=0pt]\draw[omarrow] (0,0) node[left]{$\Omega$} to[bend left=40] node[midway,above]{$l$} (2,0); \draw[omarrow] (0,0) to[bend right=40] node[midway,below]{$l$} (2,0); \node at (2.3,0){$\Omega^{\prime}$};\end{tikzpicture}
 \end{center}
 \[
 \sum_{J M M^{\prime}}(2 J+1) D_{M M^{\prime}}^{J}\left(R_{1}\right) D_{M^{\prime} M}^{J}\left(R_{2}\right)=16 \pi^{2} \delta\left(R_{1}-R_{2}\right),
 \]
 \begin{center}
-\begin{tikzpicture}[baseline=0pt]\draw[bjmline] (0,0) node[left]{$R_1$} to[bend left=40] node[midway,above]{$J$} (2,0); \draw[bjmline] (0,0) to[bend right=40] node[midway,below]{$J$} (2,0); \node at (2.3,0){$R_2$};\end{tikzpicture}
+\begin{tikzpicture}[baseline=0pt]\draw[bjmarrow] (0,0) node[left]{$R_1$} to[bend left=40] node[midway,above]{$J$} (2,0); \draw[bjmarrow] (0,0) to[bend right=40] node[midway,below]{$J$} (2,0); \node at (2.3,0){$R_2$};\end{tikzpicture}
 \end{center}
 
 In fact, all the rules for complete invariant summation formulated in this section follow from the completeness of $|j m\rangle$-functions.
@@ -1149,8 +1304,8 @@ Some special cases of the $3 j m$ and $3 n j$ symbols with $j=0$ are presented i
 
 \subsection{Elimination of the $R=1$ Line}
 In the particular case $R=1$, a double dashed $R$-line corresponds to no rotation, i.e., it represents a fictitious lependence. Hence, an $R=1$ line may be removed and the lines adjacent to the $R$-line have to be closed. This operation does not change the meaning of the diagram.\\
-\begin{tikzpicture}[baseline=0pt]\draw[bjmline,dashed] (0,0) node[left]{$\Omega_1$} -- (1.4,0) node[right]{$\Omega_2$}; \node at (0.7,0.3){$R=1$};\end{tikzpicture}\quad$=K\times$
-\begin{tikzpicture}[baseline=0pt]\draw[omline] (0,0) node[left]{$\Omega_1$} -- (1.4,0) node[right]{$\Omega_2$};\end{tikzpicture}
+\begin{tikzpicture}[baseline=0pt]\draw[bjmarrow,dashed] (0,0) node[left]{$\Omega_1$} -- (1.4,0) node[right]{$\Omega_2$}; \node at (0.7,0.3){$R=1$};\end{tikzpicture}\quad$=K\times$
+\begin{tikzpicture}[baseline=0pt]\draw[omarrow] (0,0) node[left]{$\Omega_1$} -- (1.4,0) node[right]{$\Omega_2$};\end{tikzpicture}
 
 Some examples of the expressions and diagrams containing $R=1$ are given in Table~\ref{chap11:tab:4}.\\
 A summary of the rules of graphical operations is presented in Table~\ref{chap11:tab:5}.
@@ -1159,7 +1314,7 @@ A summary of the rules of graphical operations is presented in Table~\ref{chap11
 \begin{center}
 \caption{Zero Angular Momentum ( $J=0$ ).}
 \label{chap11:tab:3}
-  \begin{tikzpicture}[baseline=0pt]\draw[omline] (0,0) node[left]{$\Omega$} -- (1.4,0) node[right]{$\Omega^{\prime}$}; \node[above=2pt] at (0.7,0) {$j=0$};\end{tikzpicture}\quad$=$\quad\begin{tikzpicture}[baseline=0pt]\draw[bjmline] (0,0) node[left]{$\Omega$} -- (1.4,0) node[right]{$\Omega^{\prime}$};\end{tikzpicture}
+  \begin{tikzpicture}[baseline=0pt]\draw[omarrow] (0,0) node[left]{$\Omega$} -- (1.4,0) node[right]{$\Omega^{\prime}$}; \node[above=2pt] at (0.7,0) {$j=0$};\end{tikzpicture}\quad$=$\quad\begin{tikzpicture}[baseline=0pt]\draw[bjmarrow] (0,0) node[left]{$\Omega$} -- (1.4,0) node[right]{$\Omega^{\prime}$};\end{tikzpicture}
 \end{center}
 \end{table}
 
@@ -1179,7 +1334,7 @@ i.e.,
 \[
 \braOket{Q^{\prime}}{R}{Q}=\braket{Q^{\prime}}{Q} .
 \]
-\begin{tikzpicture}[baseline=0pt]\draw[bjmline] (0,0) node[left]{$Q^{\prime}$} -- (1,0); \node[deltanode] at (1,0){}; \draw[bjmline,dashed] (1,0)--(2,0) node[midway,above]{$R{=}1$}; \node[deltanode] at (2,0){}; \draw[bjmline] (2,0)--(3,0) node[right]{$Q$};\end{tikzpicture}
+\begin{tikzpicture}[baseline=0pt]\draw[bjmarrow] (0,0) node[left]{$Q^{\prime}$} -- (1,0); \node[deltanode] at (1,0){}; \draw[bjmarrow,dashed] (1,0)--(2,0) node[midway,above]{$R{=}1$}; \node[deltanode] at (2,0){}; \draw[bjmarrow] (2,0)--(3,0) node[right]{$Q$};\end{tikzpicture}
 (b) For $R=1$
 \[
 \delta_{j j^{\prime}} D_{m m^{\prime}}^{j}(000)=\delta_{j j^{\prime}} \delta_{m m^{\prime}}
@@ -1188,7 +1343,7 @@ i.e.,
 \[
 \braOket{j m}{D(1)}{j^{\prime} m^{\prime}}=\braket{j m}{j^{\prime} m^{\prime}} .
 \]
-\begin{tikzpicture}[baseline=0pt]\draw[jmline] (0,0) node[left]{$jm$} -- (1,0); \node[deltanode] at (1,0){}; \draw[bjmline,dashed] (1,0)--(2,0) node[midway,above]{$R{=}1$}; \node[deltanode] at (2,0){}; \draw[jmline] (2,0)--(3,0) node[right]{$j^{\prime}m^{\prime}$};\end{tikzpicture}
+\begin{tikzpicture}[baseline=0pt]\draw[jmline] (0,0) node[left]{$jm$} -- (1,0); \node[deltanode] at (1,0){}; \draw[bjmarrow,dashed] (1,0)--(2,0) node[midway,above]{$R{=}1$}; \node[deltanode] at (2,0){}; \draw[jmline] (2,0)--(3,0) node[right]{$j^{\prime}m^{\prime}$};\end{tikzpicture}
 (c) For $R^{-1} R=1$
 \[
 \int \delta\left(Q^{\prime \prime}-R^{-1} Q^{\prime}\right) d Q^{\prime} \delta\left(Q^{\prime}-R \Omega\right)=\delta\left(Q^{\prime \prime}-\Omega\right)
@@ -1197,7 +1352,7 @@ i.e.,
 \[
 \braOket{\Omega^{\prime \prime}}{R^{-1}}{Q^{\prime}}\braOket{Q^{\prime}}{R}{\Omega}=\braket{Q^{\prime \prime}}{\Omega} .
 \]
-\begin{tikzpicture}[baseline=0pt]\draw[bjmline] (0,0) node[left]{$\Omega^{\prime\prime}$} -- (1,0) node[midway,above]{$R^{-1}$}; \node[deltanode] at (1,0){}; \draw[bjmline] (1,0)--(2,0) node[midway,above]{$R$}; \node[deltanode] at (2,0){}; \draw[bjmline] (2,0)--(3,0) node[right]{$\Omega$};\end{tikzpicture}
+\begin{tikzpicture}[baseline=0pt]\draw[bjmarrow] (0,0) node[left]{$\Omega^{\prime\prime}$} -- (1,0) node[midway,above]{$R^{-1}$}; \node[deltanode] at (1,0){}; \draw[bjmarrow] (1,0)--(2,0) node[midway,above]{$R$}; \node[deltanode] at (2,0){}; \draw[bjmarrow] (2,0)--(3,0) node[right]{$\Omega$};\end{tikzpicture}
 i.e,
 \[
 \braOket{j m^{\prime \prime}}{D\left(R^{-1}\right)}{j^{\prime} m^{\prime}}\braOket{j^{\prime} m^{\prime}}{D(R)}{j m}=\braket{j m^{\prime \prime}}{j m}
@@ -1363,7 +1518,7 @@ and similarly for $\braOketred{j_{3} j_{4} J q}{\mathscr{P}}{j_{1} j_{2} J p}$.
 
 \subsubsection{Graphical Representation}
 Elimination of the $R=1$ line\\
-\begin{tikzpicture}[baseline=0pt]\draw[jmline,dashed] (0,0) node[left]{$\Omega_1$} -- (1.4,0) node[right]{$\Omega_2$}; \node[above=2pt] at (0.7,0){$R{=}1$};\end{tikzpicture}\quad$\to$\quad\begin{tikzpicture}[baseline=0pt]\draw[omline] (0,0) node[left]{$\Omega_1$} -- (1.4,0) node[right]{$\Omega_2$};\end{tikzpicture}
+\begin{tikzpicture}[baseline=0pt]\draw[jmline,dashed] (0,0) node[left]{$\Omega_1$} -- (1.4,0) node[right]{$\Omega_2$}; \node[above=2pt] at (0.7,0){$R{=}1$};\end{tikzpicture}\quad$\to$\quad\begin{tikzpicture}[baseline=0pt]\draw[omarrow] (0,0) node[left]{$\Omega_1$} -- (1.4,0) node[right]{$\Omega_2$};\end{tikzpicture}
 
 Cutting of a diagram into subdiagrams linked by one, two, or three $j$-lines (at least one of subdiagrams should have no additional external lines)\\
 \opline{\mathfrak{M}_1}{\mathfrak{M}_2}{j_1}
@@ -1402,7 +1557,7 @@ m_{4} & m_{3} & M_{45}
 \begin{center}
 \caption{Rules for the Transformation of Diagrams.}
 \label{chap11:tab:5}
-  \opline{\mathfrak{M}}{\mathfrak{N}}{j}\qquad\threenode{j_1}{j_3}{j_2}{above:$+$}\qquad\tricenter{A}{B}{C}{a}{b}{c}{+}
+  \opline{\mathfrak{M}}{\mathfrak{N}}{j}\qquad\threenode{j_1}{j_3}{j_2}{above:$+$}\qquad\sixjdiagramu{A}{B}{C}{a}{b}{c}{+}
 \end{center}
 \end{table}
 
@@ -1433,7 +1588,7 @@ M_{12} & M_{34} & M_{56}
 \end{array}\right),
 \end{gathered}
 \]
-\tricenter{J_{12}}{J_{34}}{J_{56}}{j_1{,}j_2}{j_3{,}j_4}{j_5{,}j_6}{+}
+\sixjdiagramu{J_{12}}{J_{34}}{J_{56}}{j_1{,}j_2}{j_3{,}j_4}{j_5{,}j_6}{+}
 and similarly for $\braOketred{J_{18} J_{34} J_{56} q}{92}{p}$.
 
 \subsubsection{Analytical Expression}
@@ -1613,7 +1768,7 @@ C_{l m}^{*}(\Omega)=(-1)^{m} C_{l-m}(\Omega)=(l m \mid \Omega) .
 \end{gathered}
 \]
 \begin{center}
-\begin{tikzpicture}[baseline=0pt]\draw[omline] (0,0) node[left]{$\Omega$} -- (1,0); \node[deltanode] at (1,0){}; \draw[jmline] (1,0) -- (2,0) node[right]{$lm$};\end{tikzpicture}
+\begin{tikzpicture}[baseline=0pt]\draw[omarrow] (0,0) node[left]{$\Omega$} -- (1,0); \node[deltanode] at (1,0){}; \draw[jmline] (1,0) -- (2,0) node[right]{$lm$};\end{tikzpicture}
 \end{center}
 \[
 \sum_{m} C_{l m}\left(\Theta_{1}\right) C_{l m}^{*}\left(\Theta_{2}\right)=P_{l}\left(\cos \omega_{12}\right),
@@ -1624,7 +1779,7 @@ where $\omega_{12}$ is the angle between $\Omega_{1}$ and $\Omega_{2}$
 \begin{center}
 \caption{Addition Theorem}
 \label{chap11:fig:3}
-  \begin{tikzpicture}[baseline=0pt]\draw[omline] (0,0) node[left]{$\Omega_1$} to[bend left=40] node[midway,above]{$l$} (2,0); \draw[omline] (0,0) to[bend right=40] (2,0); \node[right] at (2,0) {$\Omega_2$};\end{tikzpicture}
+  \begin{tikzpicture}[baseline=0pt]\draw[omarrow] (0,0) node[left]{$\Omega_1$} to[bend left=40] node[midway,above]{$l$} (2,0); \draw[omarrow] (0,0) to[bend right=40] (2,0); \node[right] at (2,0) {$\Omega_2$};\end{tikzpicture}
 \end{center}
 \end{figure}
 
@@ -1633,7 +1788,7 @@ where $\omega_{12}$ is the angle between $\Omega_{1}$ and $\Omega_{2}$
 \sum_{l m}(2 l+1) C_{l m}\left(Q_{1}\right) C_{l m}^{*}\left(Q_{2}\right)=4 \pi \delta\left(Q_{1}-Q_{2}\right) .
 \]
 \begin{center}
-\begin{tikzpicture}[baseline=0pt]\draw[omline] (0,0) node[left]{$\Omega_1$} to[bend left=40] node[midway,above]{$l$} (2,0); \draw[omline] (0,0) to[bend right=40] (2,0); \node[right] at (2,0) {$\Omega_2$};\end{tikzpicture}
+\begin{tikzpicture}[baseline=0pt]\draw[omarrow] (0,0) node[left]{$\Omega_1$} to[bend left=40] node[midway,above]{$l$} (2,0); \draw[omarrow] (0,0) to[bend right=40] (2,0); \node[right] at (2,0) {$\Omega_2$};\end{tikzpicture}
 \end{center}
 
 \subsubsection{Orthonormality}
@@ -1641,7 +1796,7 @@ where $\omega_{12}$ is the angle between $\Omega_{1}$ and $\Omega_{2}$
 \int C_{l_{1} m_{1}}^{*}(Q) C_{l_{2} m_{2}}(Q) \frac{d Q}{4 \pi}=\frac{\delta_{l_{1} l_{2}} \delta_{m_{1}, m_{2}}}{\left(2 l_{1}+1\right)} .
 \]
 \begin{center}
-\begin{tikzpicture}[baseline=0pt]\draw[omline] (0,0) node[left]{$l_1m_1$} -- (1,0); \node[deltanode] at (1,0){}; \draw[omline] (1,0) -- (2,0) node[right]{$l_2m_2$};\end{tikzpicture}
+\begin{tikzpicture}[baseline=0pt]\draw[omarrow] (0,0) node[left]{$l_1m_1$} -- (1,0); \node[deltanode] at (1,0){}; \draw[omarrow] (1,0) -- (2,0) node[right]{$l_2m_2$};\end{tikzpicture}
 \end{center}
 \[
 \int C_{l_{1} m_{1}}(\Omega) C_{l_{2} m_{2}}(\Omega) C_{l_{3} m_{3}}(\Omega) \frac{d Q}{4 \pi}=\left(\begin{array}{ccc}
@@ -1687,7 +1842,7 @@ m_{1} & m_{2} & m_{3}
 \begin{center}
 \caption{Wigner D-Functions.}
 \label{chap11:tab:9}
-  \begin{tikzpicture}[baseline=0pt]\draw[bjmline] (0,0) node[left]{$jm$} -- (1.6,0) node[right]{$jm^{\prime}$}; \node[above=2pt] at (0.8,0){$R$};\end{tikzpicture}
+  \begin{tikzpicture}[baseline=0pt]\draw[bjmarrow] (0,0) node[left]{$jm$} -- (1.6,0) node[right]{$jm^{\prime}$}; \node[above=2pt] at (0.8,0){$R$};\end{tikzpicture}
 \end{center}
 \end{table}
 
@@ -1719,11 +1874,11 @@ m_{1}^{\prime} & m_{2}^{\prime} & m_{3}^{\prime}
 \subsubsection{Addition Theorems}
 \begin{center}
 \textbf{Table~\ref{chap11:tab:9} (continued)}
-  \begin{tikzpicture}[baseline=0pt]\draw[bjmline] (0,0) node[left]{$J M$} to[bend left=40] node[midway,above]{$R_1$} (2,0); \draw[bjmline] (0,0) to[bend right=40] node[midway,below]{$R_2$} (2,0); \node[right] at (2,0) {$J M^{\prime}$};\end{tikzpicture}
+  \begin{tikzpicture}[baseline=0pt]\draw[bjmarrow] (0,0) node[left]{$J M$} to[bend left=40] node[midway,above]{$R_1$} (2,0); \draw[bjmarrow] (0,0) to[bend right=40] node[midway,below]{$R_2$} (2,0); \node[right] at (2,0) {$J M^{\prime}$};\end{tikzpicture}
 \end{center}
 
 \begin{center}
-\begin{tikzpicture}[baseline=0pt]\draw[bjmline] (0,0) node[left]{$JM$} to[bend left=40] node[midway,above]{$R_1$} (2,0); \draw[bjmline] (0,0) to[bend right=40] node[midway,below]{$R_2$} (2,0); \node[right] at (2,0) {$JM^{\prime}$};\end{tikzpicture}
+\begin{tikzpicture}[baseline=0pt]\draw[bjmarrow] (0,0) node[left]{$JM$} to[bend left=40] node[midway,above]{$R_1$} (2,0); \draw[bjmarrow] (0,0) to[bend right=40] node[midway,below]{$R_2$} (2,0); \node[right] at (2,0) {$JM^{\prime}$};\end{tikzpicture}
 \end{center}
 \[
 \begin{aligned}
@@ -1765,7 +1920,7 @@ m_{3}^{\prime} & m_{2}^{\prime} & m_{1}^{\prime}
 & =D_{M_{11} M_{12}^{\prime}}^{J_{12}}\left(R_{1} R_{2}^{-1}\right) D_{M_{23} M_{22}^{\prime}}^{J_{2}}\left(R_{2} R_{3}^{-1}\right) D_{M_{31} M_{11}^{\prime}}^{J_{3}}\left(R_{3} R_{1}^{-1}\right) .
 \end{aligned}
 \]
-\tricenter{J_{12}}{J_{23}}{J_{31}}{j_1}{j_2}{j_3}{+}
+\sixjdiagramu{J_{12}}{J_{23}}{J_{31}}{j_1}{j_2}{j_3}{+}
 
 
 
@@ -1796,7 +1951,7 @@ Reduced matrix element of irreducible tensor product of irreducible tensor opera
 \end{gathered}
 \]
 \begin{center}
-\tricenter{J}{J^{\prime}}{J^{\prime\prime}}{k_1}{k_2}{k}{+}
+\sixjdiagramu{J}{J^{\prime}}{J^{\prime\prime}}{k_1}{k_2}{k}{+}
 \end{center}
 
 Two coupled subsystems in the $j_{1} j_{2}$;JM-representation. Reduced matrix element of the irreducible tensor product of two irreducible tensor operators, one of which depends only on variables of the first subsystem and the other depends only on variables of the second subsystem.
@@ -1807,7 +1962,7 @@ Two coupled subsystems in the $j_{1} j_{2}$;JM-representation. Reduced matrix el
 & \times \sum_{\gamma^{\prime \prime}}\left(\gamma j_{1}\left\|\mathfrak{M}_{k_{1}}\right\| \gamma^{\prime \prime} j_{1}^{\prime}\right)\left(\gamma^{\prime \prime} j_{2}\left\|\Re_{k_{2}}\right\| \gamma^{\prime} j_{2}^{\prime}\right)
 \end{aligned}
 \]
-\tricenter{j_1}{j_1^{\prime}}{k_1}{j_2}{j_2^{\prime}}{k_2}{+}
+\sixjdiagramu{j_1}{j_1^{\prime}}{k_1}{j_2}{j_2^{\prime}}{k_2}{+}
 
 
 Table 11.14. (Cont'd)
@@ -1880,7 +2035,7 @@ Standard functions of angular momentum theory may be used as a basis for the exp
 \braOket{j_{1} m_{1}}{\mathfrak{M}}{j_{2} m_{2}}=\frac{\delta_{j_{1} j_{2}} \delta_{m_{1} m_{2}}}{2 j_{1}+1} \sum_{m}\braOket{j_{1} m}{\mathfrak{M}}{j_{1} m}
 \]
 \begin{center}
-\begin{tikzpicture}[baseline=0pt]\node[opbox](M) at (0,0){$\mathfrak{M}$}; \draw[jmline] (M) to[bend left=45] node[midway,above]{$j_1$} (2,0); \draw[bjmline] (M) to[bend right=45] node[midway,below]{$j_2$} (2,0);\end{tikzpicture}
+\begin{tikzpicture}[baseline=0pt]\node[opbox](M) at (0,0){$\mathfrak{M}$}; \draw[jmline] (M) to[bend left=45] node[midway,above]{$j_1$} (2,0); \draw[bjmarrow] (M) to[bend right=45] node[midway,below]{$j_2$} (2,0);\end{tikzpicture}
 \end{center}
 
 This follows from the fact that any dependence on two directions is, actually, the dependence on the angle between these directions, i.e. it may be represented by the scalar product of two functions $|j m\rangle$ and $\langle j m|$.\\
@@ -1898,7 +2053,7 @@ j_{1} & j_{2} & j_{3} \\
 m_{1} & m_{2} & m_{3}
 \end{array}\right),
 \]
-\tricenter{j_1}{j_2}{j_3}{m_1}{m_2}{m_3}{+}
+\sixjdiagramu{j_1}{j_2}{j_3}{m_1}{m_2}{m_3}{+}
 (e) A diagram with four external $j$-lines corresponding $j_{1} m_{1}, j_{2} m_{2}, j_{3} m_{3}$ and $j_{4} m_{4}$ may be presented as a sum (over $j$ ) of the product of two $3 j m$ symbols
 \[
 \left(j_{1} m_{1} j_{2} m_{2}|\Re| j_{3} m_{3} j_{4} m_{4}\right\rangle=\sum_{j m}(2 j+1)\left(\begin{array}{lll}
@@ -1967,7 +2122,7 @@ i_{1} & j_{2} & j_{3} \\
 \]
 \subsubsection{Graphical Representation}
 \begin{center}
-\begin{tikzpicture}[baseline=0pt]\node[opbox](M) at (0,0){$\mathfrak{M}_{j_2}$}; \draw[jmline] (M) -- (-1.3,0.6) node[left]{$j_1$}; \draw[jmline] (M) -- (1.3,0.6) node[right]{$j_3$}; \draw[omline] (M) -- (0,-1.2) node[below]{$Q$};\end{tikzpicture}
+\begin{tikzpicture}[baseline=0pt]\node[opbox](M) at (0,0){$\mathfrak{M}_{j_2}$}; \draw[jmline] (M) -- (-1.3,0.6) node[left]{$j_1$}; \draw[jmline] (M) -- (1.3,0.6) node[right]{$j_3$}; \draw[omarrow] (M) -- (0,-1.2) node[below]{$Q$};\end{tikzpicture}
 \end{center}
 \[
 =\sum_{j_{1} m_{1}}\braket{Q}{j_{1} m_{1}}(-1)^{j_{1}-m_{1}}\left(\begin{array}{ccc}
@@ -1986,7 +2141,7 @@ j_{1} & j_{2} & j_{3} \\
 \end{array}\right)\braket{j_{3} m_{3}}{Q_{3}}\braOketred{j_{1}}{\mathfrak{M}_{j_{2}}}{j_{3}} .
 \end{gathered}
 \]
-\begin{tikzpicture}[baseline=0pt]\node[opbox](M) at (0,0){$\mathfrak{M}_{j_2}$}; \draw[omline] (M) -- (-1.3,0.6) node[left]{$Q_1$}; \draw[jmline] (M) -- (1.3,0.6) node[right]{$j_2m_2$}; \draw[omline] (M) -- (0,-1.2) node[below]{$Q_3$};\end{tikzpicture}
+\begin{tikzpicture}[baseline=0pt]\node[opbox](M) at (0,0){$\mathfrak{M}_{j_2}$}; \draw[omarrow] (M) -- (-1.3,0.6) node[left]{$Q_1$}; \draw[jmline] (M) -- (1.3,0.6) node[right]{$j_2m_2$}; \draw[omarrow] (M) -- (0,-1.2) node[below]{$Q_3$};\end{tikzpicture}
 
 
 Analytical Expression
@@ -2014,7 +2169,7 @@ j_{1} & j_{2} & j_{3} \\
 \times\braket{j_{2} m_{2}}{Q_{2}}\braket{j_{3} m_{3}}{Q_{3}}
 \end{gathered}
 \]
-\begin{tikzpicture}[baseline=0pt]\node[opbox](M) at (0,0){$\mathfrak{M}_{j_2}$}; \draw[omline] (M) -- (-1.3,0.6) node[left]{$Q_1$}; \draw[omline] (M) -- (1.3,0.6) node[right]{$Q_2$}; \draw[omline] (M) -- (0,-1.2) node[below]{$Q_3$};\end{tikzpicture}
+\begin{tikzpicture}[baseline=0pt]\node[opbox](M) at (0,0){$\mathfrak{M}_{j_2}$}; \draw[omarrow] (M) -- (-1.3,0.6) node[left]{$Q_1$}; \draw[omarrow] (M) -- (1.3,0.6) node[right]{$Q_2$}; \draw[omarrow] (M) -- (0,-1.2) node[below]{$Q_3$};\end{tikzpicture}
 
 
 
