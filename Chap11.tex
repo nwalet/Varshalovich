@@ -372,15 +372,15 @@ $\{a b c\}$&
 {Analytical Expression} & Graphical Representation \\
 \hline
 \multicolumn{2}{c}{$6 j$ Symbol} \\
-$\sixj{a}{b}{c}{A}{B}{C}$ & \sixjdiagramd{a}{b}{c}{A}{B}{C}{+}$=$\sixjdsq{a}{b}{c}{A}{B}{C}{+} \\
+$\sixj{a}{b}{c}{A}{B}{C}$ & \sixjdiagramd{a,b,c,A,B,C,+}$=$\sixjdsq{a,b,c,A,B,C,+} \\
 \multicolumn{2}{c}{$9 j$ Symbol} \\
-$\left\{\begin{array}{lll}a_{1} & b_{1} & c_{1} \\ a_{2} & b_{2} & c_{2} \\ a_{3} & b_{3} & c_{3}\end{array}\right\}$ & \ninejd{a_1}{b_1}{c_1}{a_2}{b_2}{c_2}{a_3}{b_3}{c_3}
+$\ninej{a_1}{b_1}{c_1}{a_2}{b_2}{c_2}{a_3}{b_3}{c_3}$ & \ninejd{a_1,b_1,c_1,a_2,b_2,c_2,a_3,b_3,c_3}
  \\
  \multicolumn{2}{c}{$12 j$(I) Symbol} \\
-$\left\{\begin{array}{llll}a_{1} & a_{2} & a_{3} & a_{4} \\ & b_{1} & b_{2} & b_{3} \\ c_{1} & c_{2} & c_{3} & c_{4}\end{array}\right\}$ & \twIdiaga{a_1,a_2,a_3,a_4,b_1,b_2,b_3,b_4,c_1,c_2,c_3,c_4}
+ $\twelvejI{a_1,a_2,a_3,a_4,b_1,b_2,b_3,b_4,c_1,c_2,c_3,c_4}$& \twIdiaga{a_1,a_2,a_3,a_4,b_1,b_2,b_3,b_4,c_1,c_2,c_3,c_4}$=$\twIdiagb{a_1,a_2,a_3,a_4,b_1,b_2,b_3,b_4,c_1,c_2,c_3,c_4}
  \\
  \multicolumn{2}{c}{$12 j$(II) Symbol} \\
-$\left\{\begin{array}{cccc}- & c_{2} & b_{3} & a_{4} \\ c_{3} & - & a_{2} & b_{4} \\ b_{2} & a_{3} & - & c_{4} \\ a_{1} & b_{1} & c_{1} & -\end{array}\right\}$ & 
+$\twelvejII{a_1,a_2,a_3,a_4,b_1,b_2,b_3,b_4,c_1,c_2,c_3,c_4}$& \twIIdiaga{a_1,a_2,a_3,a_4,b_1,b_2,b_3,b_4,c_1,c_2,c_3,c_4}
  \\
 \end{tabular}
 \end{center}
@@ -654,7 +654,7 @@ k_{1} & k_{2} & j_{3} \\
 \draw[jmline] (L) -- (R) node[midway,above]{$k_2$};
 \end{tikzpicture}
 \qquad
-\sixjdiagramu{k_3}{j_3}{k_1}{j_1}{j_2}{k_2}{+}
+\sixjdiagramu{k_3,j_3,k_1,j_1,j_2,k_2,+}
 \end{center}
 \end{center}
 
@@ -995,38 +995,38 @@ $6j$ Symbol $\sixj{a}{b}{c}{A}{B}{C}$
 \end{table}
 
 \begin{center}
-\sixjdiagramu{B}{A}{C}{a}{b}{c}{+} \quad$=(-1)^{2(A+B+C)}$\quad
-\sixjdiagramu{B}{A}{C}{a}{b}{c}{-} \quad$=(-1)^{a+b+c}$\quad
-\sixjdiagramu{B}{A}{C}{a}{b}{c}{+}
+\sixjdiagramu{B,A,C,a,b,c,+} \quad$=(-1)^{2(A+B+C)}$\quad
+\sixjdiagramu{B,A,C,a,b,c,-} \quad$=(-1)^{a+b+c}$\quad
+\sixjdiagramu{B,A,C,a,b,c,+}
 \end{center}
 
 \subsubsection{Reversal of Node Sign}
 \begin{center}
-\sixjdiagramu{B}{A}{C}{a}{b}{c}{+} \quad$=(-1)^{2(A+B+C)}$\quad \sixjdiagramu{B}{A}{C}{a}{b}{c}{-} \quad$=(-1)^{a+b+c}$\quad \sixjdiagramu{B}{A}{C}{a}{b}{c}{+}
+\sixjdiagramu{B,A,C,a,b,c,+} \quad$=(-1)^{2(A+B+C)}$\quad \sixjdiagramu{B,A,C,a,b,c,-} \quad$=(-1)^{a+b+c}$\quad \sixjdiagramu{B,A,C,a,b,c,+}
 \end{center}
 
 \subsubsection{Reversal of Line Direction}
 \begin{center}
-\sixjdiagramu{B}{A}{C}{a}{b}{c}{+} \quad$=$\quad \sixjdiagramu{B}{A}{C}{a}{b}{c}{+}
+\sixjdiagramu{B,A,C,a,b,c,+} \quad$=$\quad \sixjdiagramu{B,A,C,a,b,c,+}
 \end{center}
 
 \subsubsection{Argument Permutation}
 \begin{center}
-\sixjdiagramu{A}{B}{C}{a}{b}{c}{+} \quad$=$\quad \sixjdiagramu{C}{A}{B}{c}{a}{b}{+}
+\sixjdiagramu{A,B,C,a,b,c,+} \quad$=$\quad \sixjdiagramu{C,A,B,c,a,b,+}
 \end{center}
 \[
 9 j \text { Symbol }\ninej{a_{1}}{a_{2}}{a_{3}}{c_{1}}{c_{2}}{c_{3}}{b_{1}}{b_{2}}{b_{3}}
 \]
 Reversal of Node Sign\\
-\sixjdiagramu{A}{B}{C}{a}{b}{c}{-}
+\sixjdiagramu{A,B,C,a,b,c,-}
 
 \begin{center}
 \textbf{Table~\ref{chap11:tab:2} (continued)}
-\sixjdiagramu{B}{C}{A}{b}{c}{a}{+}
+\sixjdiagramu{B,C,A,b,c,a,+}
 \end{center}
 
 \begin{center}
-\sixjdiagramu{C}{A}{B}{c}{a}{b}{-}
+\sixjdiagramu{C,A,B,c,a,b,-}
 \end{center}
 
 \subsubsection{Reversal of Line Direction}
@@ -1058,7 +1058,7 @@ The reversal of the sign in a node joining $\left(j_{1} j_{2} j_{3}\right)$-line
 
 
 The reversal of signs of all the nodes in a diagram produces an additional phase factor of $(-1)^{2 J_{0}+J_{1}}$, where $J_{0}$ and $J_{1}$ are the algebraic sums of all the momenta for the internal and external lines, respectively. For example,\\
-\sixjdiagramu{A}{B}{C}{a}{b}{c}{+}\quad$=(-1)^{2J_0+J_1}$\quad\sixjdiagramu{A}{B}{C}{a}{b}{c}{-}
+\sixjdiagramu{A,B,C,a,b,c,+}\quad$=(-1)^{2J_0+J_1}$\quad\sixjdiagramu{A,B,C,a,b,c,-}
 
 
 
@@ -1254,7 +1254,7 @@ a & b & c \\
 \sum_{X}(2 X+1)\ninej{a}{b}{c}{b^{\prime}}{d}{e}{c}{e}{X}=\{a b c\}\{b d e\} \frac{\delta_{b b^{\prime}}}{(2 b+1)}
 \]
 \begin{center}
-\sixjdiagramu{c}{X}{e}{a}{b}{d}{+}
+\sixjdiagramu{c,X,e,a,b,d,+}
 \end{center}
 
 When a common thick $j$-line is included into two or more unlinked subdiagrams, one should preliminarily link these subdiagrams with the aid of the rules of subdiagram multiplication (Sec. 11.3.5) in order to arrive at one thick $j$-line. Only after this operation can one perform graphical summation over $j$ and $m$ according to Rule $\sum$. These combined graphical operations are displayed in Table~\ref{chap11:tab:5}.
@@ -1557,7 +1557,7 @@ m_{4} & m_{3} & M_{45}
 \begin{center}
 \caption{Rules for the Transformation of Diagrams.}
 \label{chap11:tab:5}
-  \opline{\mathfrak{M}}{\mathfrak{N}}{j}\qquad\threenode{j_1}{j_3}{j_2}{above:$+$}\qquad\sixjdiagramu{A}{B}{C}{a}{b}{c}{+}
+  \opline{\mathfrak{M}}{\mathfrak{N}}{j}\qquad\threenode{j_1}{j_3}{j_2}{above:$+$}\qquad\sixjdiagramu{A,B,C,a,b,c,+}
 \end{center}
 \end{table}
 
@@ -1588,7 +1588,7 @@ M_{12} & M_{34} & M_{56}
 \end{array}\right),
 \end{gathered}
 \]
-\sixjdiagramu{J_{12}}{J_{34}}{J_{56}}{j_1{,}j_2}{j_3{,}j_4}{j_5{,}j_6}{+}
+\sixjdiagramu{J_{12},J_{34},J_{56},j_1{,}j_2,j_3{,}j_4,j_5{,}j_6,+}
 and similarly for $\braOketred{J_{18} J_{34} J_{56} q}{92}{p}$.
 
 \subsubsection{Analytical Expression}
@@ -1920,7 +1920,7 @@ m_{3}^{\prime} & m_{2}^{\prime} & m_{1}^{\prime}
 & =D_{M_{11} M_{12}^{\prime}}^{J_{12}}\left(R_{1} R_{2}^{-1}\right) D_{M_{23} M_{22}^{\prime}}^{J_{2}}\left(R_{2} R_{3}^{-1}\right) D_{M_{31} M_{11}^{\prime}}^{J_{3}}\left(R_{3} R_{1}^{-1}\right) .
 \end{aligned}
 \]
-\sixjdiagramu{J_{12}}{J_{23}}{J_{31}}{j_1}{j_2}{j_3}{+}
+\sixjdiagramu{J_{12},J_{23},J_{31},j_1,j_2,j_3,+}
 
 
 
@@ -1951,7 +1951,7 @@ Reduced matrix element of irreducible tensor product of irreducible tensor opera
 \end{gathered}
 \]
 \begin{center}
-\sixjdiagramu{J}{J^{\prime}}{J^{\prime\prime}}{k_1}{k_2}{k}{+}
+\sixjdiagramu{J,J^{\prime},J^{\prime\prime},k_1,k_2,k,+}
 \end{center}
 
 Two coupled subsystems in the $j_{1} j_{2}$;JM-representation. Reduced matrix element of the irreducible tensor product of two irreducible tensor operators, one of which depends only on variables of the first subsystem and the other depends only on variables of the second subsystem.
@@ -1962,7 +1962,7 @@ Two coupled subsystems in the $j_{1} j_{2}$;JM-representation. Reduced matrix el
 & \times \sum_{\gamma^{\prime \prime}}\left(\gamma j_{1}\left\|\mathfrak{M}_{k_{1}}\right\| \gamma^{\prime \prime} j_{1}^{\prime}\right)\left(\gamma^{\prime \prime} j_{2}\left\|\Re_{k_{2}}\right\| \gamma^{\prime} j_{2}^{\prime}\right)
 \end{aligned}
 \]
-\sixjdiagramu{j_1}{j_1^{\prime}}{k_1}{j_2}{j_2^{\prime}}{k_2}{+}
+\sixjdiagramu{j_1,j_1^{\prime},k_1,j_2,j_2^{\prime},k_2,+}
 
 
 Table 11.14. (Cont'd)
@@ -2053,7 +2053,7 @@ j_{1} & j_{2} & j_{3} \\
 m_{1} & m_{2} & m_{3}
 \end{array}\right),
 \]
-\sixjdiagramu{j_1}{j_2}{j_3}{m_1}{m_2}{m_3}{+}
+\sixjdiagramu{j_1,j_2,j_3,m_1,m_2,m_3,+}
 (e) A diagram with four external $j$-lines corresponding $j_{1} m_{1}, j_{2} m_{2}, j_{3} m_{3}$ and $j_{4} m_{4}$ may be presented as a sum (over $j$ ) of the product of two $3 j m$ symbols
 \[
 \left(j_{1} m_{1} j_{2} m_{2}|\Re| j_{3} m_{3} j_{4} m_{4}\right\rangle=\sum_{j m}(2 j+1)\left(\begin{array}{lll}

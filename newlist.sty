@@ -1,0 +1,19 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{diagrams}[2026/07/17 newlist command: use comma separated values]
+
+\RequirePackage{xparse}
+% define a new command \newlistcommand that takes two arguments: the name of the new command and the code to execute when the new command is called. The new command will take a single argument, which is a comma-separated list of values. The values will be stored in a clist variable, and the code provided in the second argument will be executed with access to the values via the \argx command.
+\ExplSyntaxOn
+\NewDocumentCommand{\newlistcommand}{mm}
+ {
+  \NewDocumentCommand{#1}{m}
+   {
+    \clist_set:Nn \l_xaero_args_clist { ##1 }
+    #2
+   }
+ }
+\NewExpandableDocumentCommand{\argx}{m}
+ {
+  \clist_item:Nn \l_xaero_args_clist { #1 }
+ }
+\ExplSyntaxOff

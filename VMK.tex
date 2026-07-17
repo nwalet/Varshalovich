@@ -29,210 +29,7 @@
 \usepackage{polyglossia}
 \usepackage{fontspec}
 \usepackage{newunicodechar}
-\usepackage{tikz}
-\usetikzlibrary{arrows.meta,decorations.markings,positioning,calc,decorations.pathreplacing,decorations.markings,math}
-%Reusable styles for Chap11's graphical-method diagrams (hand-redrawn in
-%TikZ from the original figure images; see CONVERSION_RULES.md). A single
-%solid arrow is a covariant "ket" line |jm>; the same line with a double
-%arrowhead is the contravariant "bra" <jm|; a dashed arrow is an
-%Omega-line (continuous/coordinate variable); a "+"/"-" filled dot is a
-%node whose sign fixes the cyclic order of the lines meeting there; a
-%small open circle is a Kronecker-delta-style contraction node.
-\tikzset{
-  %arrows: open
-  %ket jm-line: single arrowhead
-  jmarrow/.style={Bar[]-{Stealth[length=2.2mm]}, thick},
-  djmarrow/.style={{Circle[length=3pt]}-{Stealth[length=2.2mm]}, thick},
-  %bra jm-line: double arrowhead in the middle of the line
-  bjmarrow/.style={postaction={decorate,decoration={markings,mark=at position 0.65 with {\arrow{Stealth[length=2.2mm] Stealth[length=2.2mm]}},mark=at position 1.0 with {\arrow{Bar[]}}}},thick},
-  dbjmarrow/.style={postaction={decorate,decoration={markings,mark=at position 0.65 with {\arrow{Stealth[length=2.2mm] Stealth[length=2.2mm]}},mark=at position 1.0 with {\arrow{Circle[length=3pt]}}}},thick},
-  %Omega-line: dashed arrow
-  omarrow/.style={Bar[]-{Stealth[length=2.2mm]}, thick, dashed},
-  bomarrow/.style={postaction={decorate,decoration={markings,mark=at position 0.65 with {\arrow{Stealth[length=2.2mm] Stealth[length=2.2mm]}},mark=at position 1.0 with {\arrow{Bar[]}}}},thick,dashed},
-  domarrow/.style={{Circle[length=3pt]}-{Stealth[length=2.2mm]}, thick, dashed},
-  dbomarrow/.style={postaction={decorate,decoration={markings,mark=at position 0.65 with {\arrow{Stealth[length=2.2mm] Stealth[length=2.2mm]}},mark=at position 1.0 with {\arrow{Circle[length=3pt]}}}},thick,dashed},%rotations
-  rline/.style={double, thick, dashed},
-  %lines: connected to nodes
-  jmline/.style={-{Stealth[length=2.2mm]}, thick},
-  %jmlinem/bjmlinem take an optional fractional position (default 0.5, i.e.
-  %centred, unchanged from before): jmlinem=<pos> puts the single arrowhead
-  %at <pos> along the line; bjmlinem=<pos> keeps its two arrowheads at the
-  %same offsets from <pos> that they always had from 0.5. Used bare
-  %(no "=value") everywhere else in this file, they behave exactly as
-  %before -- pgfkeys substitutes the /.default value in that case.
-  %Unlike the ...arrow styles above (where the tip is meant to land exactly
-  %on an endpoint/node), a "mark=at position P with {\arrow{...}}" normally
-  %puts the arrow *tip* at P, not the arrowhead's centre -- wrong for these
-  %two, which mark a point *along* a line rather than terminate on one. The
-  %\pgftransformxshift shifts the local frame forward by half the
-  %Stealth[length=2.2mm] tip's own length (1.1mm) before drawing it, so the
-  %tip overshoots P and the whole arrowhead shape straddles it instead.
-  jmlinem/.style={postaction={decorate,decoration={markings,mark=at position #1 with {\pgftransformxshift{1.1mm}\arrow{Stealth[length=2.2mm]}}}}},
-  jmlinem/.default=0.5,
-  bjmlinem/.style={postaction={decorate,decoration={markings,
-    mark=at position {#1-0.05} with {\pgftransformxshift{1.1mm}\arrow{Stealth[length=2.2mm]}},
-    mark=at position {#1+0.1} with {\pgftransformxshift{1.1mm}\arrow{Stealth[length=2.2mm]}}}}},
-  bjmlinem/.default=0.5,
-  %other styles: nodes, boxes, etc.
-  plusnode/.style={circle, fill, inner sep=1pt, label={above:$+$}},
-  minusnode/.style={circle, fill, inner sep=1pt, label={below:$-$}},
-  dotnode/.style={circle, fill, inner sep=1pt},
-  deltanode/.style={circle, draw, fill=white, inner sep=1.2pt},
-  opbox/.style={draw, minimum width=6mm, minimum height=6mm, inner sep=2pt}
-  }
-
-%\normedge[style]{A}{B}{pos}{offset}{label text}: draws an edge from
-%coordinate A to B (in tikz style [style], default jmlinem) with a node
-%placed at fractional position "pos" (0-1; 0.5 = midway, 0.75 = TikZ's
-%"near end") along the path. Unlike TikZ's built-in "sloped" key, the label
-%text itself is never rotated -- it stays upright -- but its *position* is
-%displaced by "offset" (in the picture's local units, e.g. cm) along the
-%line's normal, computed via the line's own angle (calc+atan2). A positive
-%"offset" moves the label to the left of the A->B direction, negative to
-%the right; flip the sign per call to control which side of the line the
-%label lands on.
-%The [style] slot is spliced straight into \draw[...], so it also doubles
-%as the way to move the *arrowhead*, independently of the label: jmlinem
-%and bjmlinem both default to a centred arrowhead (position 0.5, exactly
-%as before) but now take an optional fractional position, e.g.
-%\normedge[jmlinem=0.3]{...} puts the arrowhead at 0.3 instead of the
-%middle; \normedge[bjmlinem=0.3]{...} likewise shifts bjmlinem's pair of
-%arrowheads, keeping their usual spacing around the new centre. Both keys
-%still work exactly as before when used bare (no "=value"), everywhere
-%else they're used in this file.
-\newcommand{\normedge}[6][jmlinem]{%
-\draw[#1] let \p1=(#2), \p2=(#3), \n1={atan2(\y2-\y1,\x2-\x1)} in
-  (\p1) -- (\p2) node[pos=#4,shift={(\n1+90:#5)}] {#6};
-}
-
-%\sixjloop{a}{b}{c}{top sign}{bottom sign}: the closed-loop "circle with a
-%vertical diameter" diagram for a 6j symbol {a b c \\ A B C}, only the
-%three visible lines a,b,c and the two node signs are drawn (A,B,C read
-%off the arcs are omitted from the picture and given in surrounding text)
-\newcommand{\sixjloop}[5]{%
-\begin{tikzpicture}[baseline=-2pt]
-\node[circle,draw,minimum size=16mm] (C) at (0,0) {};
-\draw[jmline] (C.north) -- (C.south) node[midway,right]{$#2$};
-\draw[jmline] (C.west) to[bend right=20] (C.south) node[midway,left]{$#1$};
-\draw[jmline] (C.north) to[bend right=20] (C.west);
-\draw[jmline] (C.east) to[bend left=20] (C.south);
-\draw[jmline] (C.north) to[bend left=20] (C.east) node[midway,right]{$#3$};
-\node[dotnode,label={above:$#4$}] at (C.north) {};
-\node[dotnode,label={below:$#5$}] at (C.south) {};
-\end{tikzpicture}%
-}
-
-%\threenode{a}{b}{c}{sign}: a single node with three jm-lines radiating
-%out (top-left a, top-right c, bottom b), labelled with the node sign
-\newcommand{\threenode}[4]{%
-\begin{tikzpicture}[baseline=-2pt]
-\coordinate (O) at (0,0);
-\node[dotnode,label={#4}] at (O) {};
-\draw[jmline] (O) -- (-0.9,0.9) node[left]{$#1$};
-\draw[jmline] (O) -- (0.9,0.9) node[right]{$#3$};
-\draw[jmline] (O) -- (0,-1.1) node[below]{$#2$};
-\end{tikzpicture}%
-}
-
-%\opline{left label}{right label}{line label}: two operator boxes joined
-%by a single labelled jm-line
-\newcommand{\opline}[3]{%
-\begin{tikzpicture}[baseline=0pt]
-\node[opbox] (M) at (0,0) {$#1$};
-\node[opbox] (N) at (2.2,0) {$#2$};
-\draw[jmline] (M) -- (N) node[midway,above]{$#3$};
-\end{tikzpicture}%
-}
-%\sixjdiagramd{a}{b}{c}{A}{B}{C}{sc}: the full closed-loop 
-%"downward triangle with a center point" diagram for a 6j symbol {a b c \\ A B C}, 
-% nodes are connected in the order 1-a->2-b->3-c->1, 1-B->M; 2-C->M; 3-A->M, 
-% and the three node signs + are placed at the three vertices of the triangle
-\newcommand{\sixjdiagramd}[7]{%
-\begin{tikzpicture}[baseline=0pt, inner sep=0.2em,font=\scriptsize] 
-\coordinate (B) at ($0.8*(0,-1)$);
-\coordinate (L) at ($0.8*(-0.866,0.5)$);
-\coordinate (R) at ($0.8*(0.866,0.5)$);
-\coordinate (M) at (0,0);
-\node[dotnode,label={below:$+$}] at (B) {};
-\node[dotnode,label={above left:$+$}] at (L) {};
-\node[dotnode,label={above right:$+$}] at (R) {};
-\node[dotnode,label={above:$#7$}] at (M) {};
-\draw[jmlinem] (B) -- (R) node[midway,right]{$#4$};
-\draw[jmlinem] (R) -- (L) node[midway,above]{$#5$};
-\draw[jmlinem] (L) -- (B) node[midway,left]{$#6$};
-\draw[jmlinem] (M) -- (L) node[midway,right]{$#1$};
-\draw[jmlinem] (M) -- (B) node[midway,above right]{$#2$};
-\draw[jmlinem] (M) -- (R) node[midway,below]{$#3$};
-\end{tikzpicture}%
-}
-%\sixjdiagramu{A}{B}{C}{a}{b}{c}{centersign}: outer triangle (vertices all
-%"+") with edges A,B,C, and an inner node (sign centersign) connected to
-%each vertex by a,b,c -- the recurring 9j-symbol "triangle with inner
-%node" diagram
-\newcommand{\sixjdiagramu}[7]{%
-\begin{tikzpicture}[baseline=0pt, inner sep=0.2em,font=\scriptsize] 
-\coordinate (T) at ($0.8*(0,1)$);
-\coordinate (L) at ($0.8*(-0.866,-0.5)$);
-\coordinate (R) at ($0.8*(0.866,-0.5)$);
-\coordinate (M) at (0,0);
-\node[dotnode,label={above:$+$}] at (T) {};
-\node[dotnode,label={below:$+$}] at (L) {};
-\node[dotnode,label={below:$+$}] at (R) {};
-\node[dotnode,label={right:$#7$}] at (M) {};
-\draw[jmlinem] (T) -- (L) node[midway,above left]{$#1$};
-\draw[jmlinem] (R) -- (T) node[midway,above right]{$#2$};
-\draw[jmlinem] (L) -- (R) node[midway,below]{$#3$};
-\draw[jmlinem] (M) -- (T) node[midway,right]{$#6$};
-\draw[jmlinem] (M) -- (L) node[midway,below]{$#4$};
-\draw[jmlinem] (R) -- (M) node[midway,below]{$#5$};
-\end{tikzpicture}%
-}
-
-%\sixjdsq{A}{B}{C}{a}{b}{c}{centersign}: square representation of the 6j-symbol diagram with a center node (sign centersign) connected to each corner by a,b,c, and the outer edges labelled A,B,C
-\newcommand{\sixjdsq}[7]{%
-\begin{tikzpicture}[baseline=0pt, inner sep=0.2em,font=\scriptsize] 
-\coordinate (T) at ($0.7*(0,1)$);
-\coordinate (L) at ($0.7*(-1,0)$);
-\coordinate (R) at ($0.7*(1,0)$);
-\coordinate (B) at ($0.7*(0,-1)$);
-\node[dotnode,label={above:$+$}] at (T) {};
-\node[dotnode,label={left:$-$}] at (L) {};
-\node[dotnode,label={right:$-$}] at (R) {};
-\node[dotnode,label={below:$+$}] at (B) {};
-\draw[jmlinem] (T) -- (L) node[midway,above left]{$#1$};
-\draw[jmlinem] (T) -- (B) node[midway,above right]{$#2$};
-\draw[jmlinem] (T) -- (R) node[midway,above right]{$#3$};
-\draw[jmlinem] (L) -- (B) node[midway,below left]{$#6$};
-\draw[jmlinem] (B) -- (R) node[midway,below right]{$#4$};
-\draw[jmlinem] (R) -- (L) node[midway,below left]{$#5$};
-\end{tikzpicture}%
-}
-
-\newcommand{\ninejd}[9]{%
-\begin{tikzpicture}[baseline=0pt, inner sep=0.2em,font=\scriptsize] 
-\coordinate (T) at ($0.8*(0,1)$);
-\coordinate (Lu) at ($0.8*(-0.866,0.5)$);
-\coordinate (Ld) at ($0.8*(-0.866,-0.5)$);
-\coordinate (B) at ($0.8*(0,-1)$);
-\coordinate (Rd) at ($0.8*(0.866,-0.5)$);
-\coordinate (Ru) at ($0.8*(0.866,0.5)$);
-\node[dotnode,label={above:$+$}] at (T) {};
-\node[dotnode,label={above left:$-$}] at (Lu) {};
-\node[dotnode,label={below left:$+$}] at (Ld) {};
-\node[dotnode,label={below:$-$}] at (B) {};
-\node[dotnode,label={below right:$+$}] at (Rd) {};
-\node[dotnode,label={above right:$-$}] at (Ru) {};
-\draw[jmlinem] (T) -- (Lu) node[midway,above left]{$#1$};
-\draw[jmlinem] (T) -- (B) node[midway,above right]{$#2$};
-\draw[jmlinem] (T) -- (Ru) node[midway,above right]{$#3$};
-\draw[jmlinem] (Rd) -- (Lu) node[midway,right]{$#4$};
-\draw[jmlinem] (Rd) -- (B) node[midway,below]{$#5$};
-\draw[jmlinem] (Rd) -- (Ru) node[midway,right]{$#6$};
-\draw[jmlinem] (Ld) -- (Lu) node[midway,left]{$#7$};
-\draw[jmlinem] (Ld) -- (B) node[midway,below left]{$#8$};
-\draw[jmlinem] (Ld) -- (Ru) node[midway,left]{$#9$};
-\end{tikzpicture}%
-}
+\usepackage{diagrams}
 %New command to display footnote whose markers will always be hidden
 \let\svthefootnote\thefootnote
 \newcommand\blfootnotetext[1]{%
@@ -251,22 +48,6 @@
     \else\svfootnotetext[#1]{#2}\fi%
   \fi
 }
-% define a new command \newlistcommand that takes two arguments: the name of the new command and the code to execute when the new command is called. The new command will take a single argument, which is a comma-separated list of values. The values will be stored in a clist variable, and the code provided in the second argument will be executed with access to the values via the \argx command.
-\usepackage{xparse}
-\ExplSyntaxOn
-\NewDocumentCommand{\newlistcommand}{mm}
- {
-  \NewDocumentCommand{#1}{m}
-   {
-    \clist_set:Nn \l_xaero_args_clist { ##1 }
-    #2
-   }
- }
-\NewExpandableDocumentCommand{\argx}{m}
- {
-  \clist_item:Nn \l_xaero_args_clist { #1 }
- }
-\ExplSyntaxOff
 %\DeclareUnicodeCharacter{2207}{\ifmmode\nabla\else{$\nabla$}\fi}
 
 %Reset equation numbering at each chapter; see CONVERSION_RULES.md rule 7
@@ -315,9 +96,7 @@
 
 %Same idea as \twelvej but for the 3-row (12-entry, no diagonal) layout
 %\newcommand{\twelvejalt}[3]{\left\{\begin{array}{cccc} #1 \\ #2 \\ #3 \end{array}\right\}}
-
-
-
+\RequirePackage{newlist}
 \newlistcommand{\twelvejI}{%
 {\left\{\begin{array}{llll} 
  \argx{1}     &\argx{2}     &\argx{3}     &\argx{4} \\
@@ -333,27 +112,8 @@
  \argx{10} & \argx{11}     & \argx{12}     & - \end{array}\right\}}
 }
 
-\newlistcommand{\twIdiaga}{%
-{\begin{tikzpicture}[baseline=0pt, inner sep=0.2em,font=\scriptsize]
-  \foreach \i in {0,...,7} {
-    \coordinate (tid\i) at (90+45*\i:0.8);
-    \node[dotnode,label={90+45*\i:$+$}] at (tid\i) {};
-  }
-  % lines
-  \normedge{tid2}{tid1}{0.5}{0.15}{$\argx{1}$} %a1
-  \normedge{tid0}{tid1}{0.5}{-0.15}{$\argx{2}$} %a2
-  \normedge{tid7}{tid0}{0.5}{-0.15}{$\argx{3}$} %a3
-  \normedge{tid7}{tid6}{0.5}{0.15}{$\argx{4}$} %a4
-  \normedge[jmlinem=0.75]{tid5}{tid1}{0.75}{0.15}{$\argx{5}$} %b1
-  \normedge[jmlinem=0.75]{tid4}{tid0}{0.8}{0.15}{$\argx{6}$} %b2
-  \normedge[jmlinem=0.75]{tid3}{tid7}{0.8}{0.18}{$\argx{7}$} %b3
-  \normedge[jmlinem=0.75]{tid2}{tid6}{0.8}{0.16}{$\argx{8}$} %b4
-  \normedge{tid5}{tid6}{0.5}{-0.15}{$\argx{9}$} %c1
-  \normedge{tid4}{tid5}{0.5}{-0.15}{$\argx{10}$} %c2
-  \normedge{tid3}{tid4}{0.5}{-0.15}{$\argx{11}$} %c3
-  \normedge{tid2}{tid3}{0.5}{-0.15}{$\argx{12}$} %c4
-\end{tikzpicture}}
-}
+
+
 
 \newunicodechar{∇}{\ifmmode\nabla\else{$\nabla$}\fi}
 \newunicodechar{→}{\ifmmode\rightarrow\else{$\rightarrow$}\fi}
