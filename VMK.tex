@@ -54,8 +54,25 @@
   rline/.style={double, thick, dashed},
   %lines: connected to nodes
   jmline/.style={-{Stealth[length=2.2mm]}, thick},
-  jmlinem/.style={postaction={decorate,decoration={markings,mark=at position 0.5 with {\arrow{Stealth[length=2.2mm]}}}}},
-  bjmlinem/.style={postaction={decorate,decoration={markings,mark=at position 0.45 with {\arrow{Stealth[length=2.2mm]}}},mark=at position 0.6 with {\arrow{Stealth[length=2.2mm]}}}},
+  %jmlinem/bjmlinem take an optional fractional position (default 0.5, i.e.
+  %centred, unchanged from before): jmlinem=<pos> puts the single arrowhead
+  %at <pos> along the line; bjmlinem=<pos> keeps its two arrowheads at the
+  %same offsets from <pos> that they always had from 0.5. Used bare
+  %(no "=value") everywhere else in this file, they behave exactly as
+  %before -- pgfkeys substitutes the /.default value in that case.
+  %Unlike the ...arrow styles above (where the tip is meant to land exactly
+  %on an endpoint/node), a "mark=at position P with {\arrow{...}}" normally
+  %puts the arrow *tip* at P, not the arrowhead's centre -- wrong for these
+  %two, which mark a point *along* a line rather than terminate on one. The
+  %\pgftransformxshift shifts the local frame forward by half the
+  %Stealth[length=2.2mm] tip's own length (1.1mm) before drawing it, so the
+  %tip overshoots P and the whole arrowhead shape straddles it instead.
+  jmlinem/.style={postaction={decorate,decoration={markings,mark=at position #1 with {\pgftransformxshift{1.1mm}\arrow{Stealth[length=2.2mm]}}}}},
+  jmlinem/.default=0.5,
+  bjmlinem/.style={postaction={decorate,decoration={markings,
+    mark=at position {#1-0.05} with {\pgftransformxshift{1.1mm}\arrow{Stealth[length=2.2mm]}},
+    mark=at position {#1+0.1} with {\pgftransformxshift{1.1mm}\arrow{Stealth[length=2.2mm]}}}}},
+  bjmlinem/.default=0.5,
   %other styles: nodes, boxes, etc.
   plusnode/.style={circle, fill, inner sep=1pt, label={above:$+$}},
   minusnode/.style={circle, fill, inner sep=1pt, label={below:$-$}},
@@ -64,7 +81,29 @@
   opbox/.style={draw, minimum width=6mm, minimum height=6mm, inner sep=2pt}
   }
 
-
+%\normedge[style]{A}{B}{pos}{offset}{label text}: draws an edge from
+%coordinate A to B (in tikz style [style], default jmlinem) with a node
+%placed at fractional position "pos" (0-1; 0.5 = midway, 0.75 = TikZ's
+%"near end") along the path. Unlike TikZ's built-in "sloped" key, the label
+%text itself is never rotated -- it stays upright -- but its *position* is
+%displaced by "offset" (in the picture's local units, e.g. cm) along the
+%line's normal, computed via the line's own angle (calc+atan2). A positive
+%"offset" moves the label to the left of the A->B direction, negative to
+%the right; flip the sign per call to control which side of the line the
+%label lands on.
+%The [style] slot is spliced straight into \draw[...], so it also doubles
+%as the way to move the *arrowhead*, independently of the label: jmlinem
+%and bjmlinem both default to a centred arrowhead (position 0.5, exactly
+%as before) but now take an optional fractional position, e.g.
+%\normedge[jmlinem=0.3]{...} puts the arrowhead at 0.3 instead of the
+%middle; \normedge[bjmlinem=0.3]{...} likewise shifts bjmlinem's pair of
+%arrowheads, keeping their usual spacing around the new centre. Both keys
+%still work exactly as before when used bare (no "=value"), everywhere
+%else they're used in this file.
+\newcommand{\normedge}[6][jmlinem]{%
+\draw[#1] let \p1=(#2), \p2=(#3), \n1={atan2(\y2-\y1,\x2-\x1)} in
+  (\p1) -- (\p2) node[pos=#4,shift={(\n1+90:#5)}] {#6};
+}
 
 %\sixjloop{a}{b}{c}{top sign}{bottom sign}: the closed-loop "circle with a
 %vertical diameter" diagram for a 6j symbol {a b c \\ A B C}, only the
@@ -212,7 +251,22 @@
     \else\svfootnotetext[#1]{#2}\fi%
   \fi
 }
-
+% define a new command \newlistcommand that takes two arguments: the name of the new command and the code to execute when the new command is called. The new command will take a single argument, which is a comma-separated list of values. The values will be stored in a clist variable, and the code provided in the second argument will be executed with access to the values via the \argx command.
+\usepackage{xparse}
+\ExplSyntaxOn
+\NewDocumentCommand{\newlistcommand}{mm}
+ {
+  \NewDocumentCommand{#1}{m}
+   {
+    \clist_set:Nn \l_xaero_args_clist { ##1 }
+    #2
+   }
+ }
+\NewExpandableDocumentCommand{\argx}{m}
+ {
+  \clist_item:Nn \l_xaero_args_clist { #1 }
+ }
+\ExplSyntaxOff
 %\DeclareUnicodeCharacter{2207}{\ifmmode\nabla\else{$\nabla$}\fi}
 
 %Reset equation numbering at each chapter; see CONVERSION_RULES.md rule 7
@@ -262,21 +316,7 @@
 %Same idea as \twelvej but for the 3-row (12-entry, no diagonal) layout
 %\newcommand{\twelvejalt}[3]{\left\{\begin{array}{cccc} #1 \\ #2 \\ #3 \end{array}\right\}}
 
-\usepackage{xparse}
-\ExplSyntaxOn
-\NewDocumentCommand{\newlistcommand}{mm}
- {
-  \NewDocumentCommand{#1}{m}
-   {
-    \clist_set:Nn \l_xaero_args_clist { ##1 }
-    #2
-   }
- }
-\NewExpandableDocumentCommand{\argx}{m}
- {
-  \clist_item:Nn \l_xaero_args_clist { #1 }
- }
-\ExplSyntaxOff
+
 
 \newlistcommand{\twelvejI}{%
 {\left\{\begin{array}{llll} 
@@ -294,29 +334,24 @@
 }
 
 \newlistcommand{\twIdiaga}{%
-{\begin{tikzpicture}[baseline=0pt, inner sep=0.2em,font=\scriptsize] 
-  \tikzmath{
-    coordinate \c[8];
-    for \i in {0,...,7} {
-      \c[\i] = (0.8*sin(45*\i),0.8*cos(45*\i));
-    }
-    % lines
-    draw[jmlinem] (\c[2]) -- (\c[1]) node[midway,sloped]{$\argx{1}$}; %a1
-    draw[jmlinem] (\c[0]) -- (\c[1]) node[midway,sloped]{$\argx{2}$}; %a2
-    draw[jmlinem] (\c[7]) -- (\c[0]) node[midway,sloped]{$\argx{3}$}; %a3
-    draw[jmlinem] (\c[7]) -- (\c[6]) node[midway,sloped]{$\argx{4}$}; %a4
-    draw[jmlinem] (\c[5]) -- (\c[1]) node[near end,sloped]{$\argx{5}$}; %b1
-    draw[jmlinem] (\c[4]) -- (\c[0]) node[near end,sloped]{$\argx{6}$}; %b2
-    draw[jmlinem] (\c[3]) -- (\c[7]) node[near end,sloped]{$\argx{7}$}; %b3
-    draw[jmlinem] (\c[2]) -- (\c[6]) node[midway,sloped]{$\argx{8}$}; %b4
-    draw[jmlinem] (\c[5]) -- (\c[6]) node[midway,sloped]{$\argx{9}$}; %c1
-    draw[jmlinem] (\c[4]) -- (\c[5]) node[midway,sloped]{$\argx{10}$}; %c2
-    draw[jmlinem] (\c[3]) -- (\c[4]) node[midway,sloped]{$\argx{11}$}; %c3
-    draw[jmlinem] (\c[2]) -- (\c[3]) node[midway,sloped]{$\argx{12}$}; %c4
-    for \i in {0,...,7} {
-      \node[dotnode,label={45*\i:$+$}] at (\c[\i]) {};
-    }
+{\begin{tikzpicture}[baseline=0pt, inner sep=0.2em,font=\scriptsize]
+  \foreach \i in {0,...,7} {
+    \coordinate (tid\i) at (90+45*\i:0.8);
+    \node[dotnode,label={90+45*\i:$+$}] at (tid\i) {};
   }
+  % lines
+  \normedge{tid2}{tid1}{0.5}{0.15}{$\argx{1}$} %a1
+  \normedge{tid0}{tid1}{0.5}{-0.15}{$\argx{2}$} %a2
+  \normedge{tid7}{tid0}{0.5}{-0.15}{$\argx{3}$} %a3
+  \normedge{tid7}{tid6}{0.5}{0.15}{$\argx{4}$} %a4
+  \normedge[jmlinem=0.75]{tid5}{tid1}{0.75}{0.15}{$\argx{5}$} %b1
+  \normedge[jmlinem=0.75]{tid4}{tid0}{0.8}{0.15}{$\argx{6}$} %b2
+  \normedge[jmlinem=0.75]{tid3}{tid7}{0.8}{0.18}{$\argx{7}$} %b3
+  \normedge[jmlinem=0.75]{tid2}{tid6}{0.8}{0.16}{$\argx{8}$} %b4
+  \normedge{tid5}{tid6}{0.5}{-0.15}{$\argx{9}$} %c1
+  \normedge{tid4}{tid5}{0.5}{-0.15}{$\argx{10}$} %c2
+  \normedge{tid3}{tid4}{0.5}{-0.15}{$\argx{11}$} %c3
+  \normedge{tid2}{tid3}{0.5}{-0.15}{$\argx{12}$} %c4
 \end{tikzpicture}}
 }
 
