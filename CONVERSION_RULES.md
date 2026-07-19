@@ -478,6 +478,20 @@ row baked into the definition itself (not an OCR artifact) — which neither
 of these two macros fits; that needs its own macro if/when Chapter 10 gets
 this treatment.
 
+The same OCR pattern occurs for the Wigner 3jm symbol, but with round
+parens instead of curly braces: `\left(\begin{array}{lll} a & b & c \\
+\alpha & \beta & \gamma \end{array}\right)`. Replace with
+`\threej{a}{b}{c}{\alpha}{\beta}{\gamma}` (same reading order as
+`\sixj`/`\ninej`; the original column-alignment spec — `lll`/`ccc`/`rrr`/
+mixed — is dropped since `\threej` always renders `ccc`, matching what
+`\sixj`/`\ninej` already do). Applied across Chap11.tex in one pass
+(2026-07-19): 124 of 129 occurrences converted mechanically; 5 were left
+as literal arrays (around Chap11.tex:1440-1470) because they sit inside a
+pre-existing garbled OCR passage (malformed `\begin{array}{c}` single-column
+blocks mixed with stray tokens like `\right.` instead of `\right)`) that
+needs manual reconstruction against `orig/*.pdf` before it can be verified
+as genuine 3jm symbols — same "don't wrap unverified content" rule as above.
+
 ## Notes
 
 - **Compilation now requires `xelatex`** (or another Unicode engine), not

@@ -25,16 +25,20 @@
   %arrows: open
   %ket jm-line: single arrowhead
   jmarrow/.style={Bar[]-{Stealth[length=2.2mm]}, thick},
+  jmarrown/.style={-{Stealth[length=2.2mm]}, thick},
   djmarrow/.style={{Circle[length=3pt]}-{Stealth[length=2.2mm]}, thick},
   %bra jm-line: double arrowhead in the middle of the line
   bjmarrow/.style={postaction={decorate,decoration={markings,mark=at position 0.65 with {\arrow{Stealth[length=2.2mm] Stealth[length=2.2mm]}},mark=at position 1.0 with {\arrow{Bar[]}}}},thick},
+  bjmarrown/.style={postaction={decorate,decoration={markings,mark=at position 0.65 with {\arrow{Stealth[length=2.2mm] Stealth[length=2.2mm]}}}},thick},
   dbjmarrow/.style={postaction={decorate,decoration={markings,mark=at position 0.65 with {\arrow{Stealth[length=2.2mm] Stealth[length=2.2mm]}},mark=at position 1.0 with {\arrow{Circle[length=3pt]}}}},thick},
   %Omega-line: dashed arrow
   omarrow/.style={Bar[]-{Stealth[length=2.2mm]}, thick, dashed},
+  omarrown/.style={-{Stealth[length=2.2mm]}, thick, dashed},
   bomarrow/.style={postaction={decorate,decoration={markings,mark=at position 0.65 with {\arrow{Stealth[length=2.2mm] Stealth[length=2.2mm]}},mark=at position 1.0 with {\arrow{Bar[]}}}},thick,dashed},
+  bomarrown/.style={postaction={decorate,decoration={markings,mark=at position 0.65 with {\arrow{Stealth[length=2.2mm] Stealth[length=2.2mm]}}}},thick,dashed},
   domarrow/.style={{Circle[length=3pt]}-{Stealth[length=2.2mm]}, thick, dashed},
   dbomarrow/.style={postaction={decorate,decoration={markings,mark=at position 0.65 with {\arrow{Stealth[length=2.2mm] Stealth[length=2.2mm]}},mark=at position 1.0 with {\arrow{Circle[length=3pt]}}}},thick,dashed},%rotations
-  rline/.style={double, thick, dashed},
+  rline/.style={double, thick, densely dashed},
   %lines: connected to nodes
   jmline/.style={-{Stealth[length=2.2mm]}, thick},
   %jmlinem/bjmlinem take an optional fractional position (default 0.5, i.e.
@@ -116,6 +120,18 @@
 \draw[jmline] (O) -- (0,-1.1) node[below]{$#2$};
 \end{tikzpicture}%
 }
+\newlistcommand{\threejdiag}{%
+{\begin{tikzpicture}[baseline=0pt,inner sep=0.1em,font=\scriptsize]
+\coordinate (B) at ($0.8*(0,-1)$);
+\coordinate (L) at ($0.8*(-0.866,0.5)$);
+\coordinate (R) at ($0.8*(0.866,0.5)$);
+\coordinate (M) at (0,0);
+\node[dotnode,label={above:\plusmark}] at (M) {};
+\draw[jmarrown] (M) -- (L) node[left]{$\argx{1}\argx{2}$};
+\draw[jmarrown] (M) -- (B) node[below]{$\argx{3}{\argx{4}}$};
+\draw[jmarrown] (M) -- (R) node[right]{$\argx{5}\argx{6}$};
+\end{tikzpicture}}
+}
 
 %\opline{left label}{right label}{line label}: two operator boxes joined
 %by a single labelled jm-line
@@ -135,7 +151,7 @@
 %Comma-separated \newlistcommand/\argx calling convention, like \twIdiaga;
 %edges use \normedge for upright, normal-offset labels instead of "sloped".
 \newlistcommand{\sixjdiagramd}{%
-{\begin{tikzpicture}[baseline=0pt, inner sep=0.2em,font=\scriptsize]
+{\begin{tikzpicture}[baseline=0pt, inner sep=0.1em,font=\scriptsize]
 \coordinate (B) at ($0.8*(0,-1)$);
 \coordinate (L) at ($0.8*(-0.866,0.5)$);
 \coordinate (R) at ($0.8*(0.866,0.5)$);
@@ -147,9 +163,9 @@
 \normedge{B}{R}{0.5}{-0.15}{$\argx{4}$} % A
 \normedge{R}{L}{0.5}{-0.2}{$\argx{5}$} % B
 \normedge{L}{B}{0.5}{-0.2}{$\argx{6}$} % C
-\normedge{M}{L}{0.5}{0.14}{$\argx{1}$} % a
-\normedge{M}{B}{0.5}{-0.15}{$\argx{2}$}  % b
-\normedge{M}{R}{0.5}{-0.15}{$\argx{3}$} % c 
+\normedge{M}{L}{0.4}{0.14}{$\argx{1}$} % a
+\normedge{M}{B}{0.4}{-0.15}{$\argx{2}$}  % b
+\normedge{M}{R}{0.4}{-0.15}{$\argx{3}$} % c 
 \end{tikzpicture}}
 }
 %\sixjdiagramu{A,B,C,a,b,c,centersign}: outer triangle (vertices all
@@ -191,11 +207,11 @@
 \node[dotnode,label={right:\minusmark}] at (R) {};
 \node[dotnode,label={below:\plusmark}] at (B) {};
 \normedge{T}{L}{0.5}{-0.15}{$\argx{1}$} % A
-\normedge[jmlinem=0.75]{T}{B}{0.5}{0.15}{$\argx{2}$} % B
+\normedge[jmlinem=0.75]{T}{B}{0.75}{0.15}{$\argx{2}$} % B
 \normedge{T}{R}{0.5}{0.2}{$\argx{3}$} % C
 \normedge{L}{B}{0.5}{-0.15}{$\argx{6}$} % c
 \normedge{B}{R}{0.5}{-0.15}{$\argx{4}$} % a
-\normedge[jmlinem=0.75]{R}{L}{0.5}{0.15}{$\argx{5}$} % b
+\normedge[jmlinem=0.75]{R}{L}{0.75}{0.15}{$\argx{5}$} % b
 \end{tikzpicture}}
 }
 
@@ -203,34 +219,30 @@
 %alternating +/- node signs, no sign argument). Comma-separated calling
 %convention, like \twIdiaga.
 \newlistcommand{\ninejd}{%
-{\begin{tikzpicture}[baseline=0pt, inner sep=0.2em,font=\scriptsize]
-\coordinate (T) at ($0.8*(0,1)$);
-\coordinate (Lu) at ($0.8*(-0.866,0.5)$);
-\coordinate (Ld) at ($0.8*(-0.866,-0.5)$);
-\coordinate (B) at ($0.8*(0,-1)$);
-\coordinate (Rd) at ($0.8*(0.866,-0.5)$);
-\coordinate (Ru) at ($0.8*(0.866,0.5)$);
-\node[dotnode,label={above:\plusmark}] at (T) {};
-\node[dotnode,label={above left:\minusmark}] at (Lu) {};
-\node[dotnode,label={below left:\plusmark}] at (Ld) {};
-\node[dotnode,label={below:\minusmark}] at (B) {};
-\node[dotnode,label={below right:\plusmark}] at (Rd) {};
-\node[dotnode,label={above right:\minusmark}] at (Ru) {};
-\normedge{T}{Lu}{0.5}{-0.2}{$\argx{1}$} %a1
-\normedge[jmlinem=0.75]{T}{B}{0.75}{0.15}{$\argx{2}$} %a2
-\normedge{T}{Ru}{0.5}{0.2}{$\argx{3}$} %a3
-\normedge[jmlinem=0.75]{Rd}{Lu}{0.75}{-0.2}{$\argx{4}$} %b1
-\normedge{Rd}{B}{0.5}{0.15}{$\argx{5}$} %b2
-\normedge{Rd}{Ru}{0.5}{-0.15}{$\argx{6}$} %b3
-\normedge{Ld}{Lu}{0.5}{0.15}{$\argx{7}$} %c1
-\normedge{Ld}{B}{0.5}{-0.2}{$\argx{8}$} %c2
-\normedge[jmlinem=0.75]{Ld}{Ru}{0.75}{0.15}{$\argx{9}$} %c3
+{\begin{tikzpicture}[baseline=0pt, inner sep=0.1em,font=\scriptsize]
+  \foreach \i in {0,...,5} {
+    \coordinate (tid\i) at (90+60*\i:0.8);
+    \ifodd\i
+      \node[dotnode,label={90+60*\i:\plusmark}] at (tid\i) {};
+    \else 
+      \node[dotnode,label={90+60*\i:\minusmark}] at (tid\i) {};
+    \fi
+  }
+\normedge{tid0}{tid1}{0.5}{-0.2}{$\argx{1}$} %a1
+\normedge[jmlinem=0.25]{tid4}{tid1}{0.25}{0.2}{$\argx{2}$} %a2
+\normedge{tid2}{tid1}{0.5}{0.28}{$\argx{3}$} %a3
+\normedge[jmlinem=0.25]{tid0}{tid3}{0.25}{-0.15}{$\argx{4}$} %b1
+\normedge{tid4}{tid3}{0.5}{0.2}{$\argx{5}$} %b2
+\normedge{tid2}{tid3}{0.5}{-0.2}{$\argx{6}$} %b3
+\normedge{tid0}{tid5}{0.5}{0.2}{$\argx{7}$} %c1
+\normedge{tid4}{tid5}{0.5}{-0.28}{$\argx{8}$} %c2
+\normedge[jmlinem=0.25]{tid2}{tid5}{0.25}{0.2}{$\argx{9}$} %c3
 \end{tikzpicture}}
 }
 
 
 \newlistcommand{\twIdiaga}{%
-{\begin{tikzpicture}[baseline=0pt, inner sep=0.2em,font=\scriptsize]
+{\begin{tikzpicture}[baseline=0pt, inner sep=0.1em,font=\scriptsize]
   \foreach \i in {0,...,7} {
     \coordinate (tid\i) at (90+45*\i:0.8);
     \node[dotnode,label={90+45*\i:\plusmark}] at (tid\i) {};
@@ -253,86 +265,88 @@
 
 
 \newlistcommand{\twIdiagb}{%
-{\begin{tikzpicture}[baseline=0pt, inner sep=0.2em,font=\scriptsize]
+{\begin{tikzpicture}[baseline=0pt, inner sep=0.15em,font=\scriptsize]
   \foreach \i in {0,...,7} {
     \coordinate (tid\i) at (90+22.5+45*\i:0.8);
-    \ifodd\i 
-      \node[dotnode,label={90+22.5+45*\i:\plusmark}] at (tid\i) {};
-    \else  
-      \node[dotnode,label={90+22.5+45*\i:\minusmark}] at (tid\i) {};
-    \fi
+  }
+  \foreach \i in {0,3,5,6} {
+    \node[dotnode,label={90+22.5+45*\i:\minusmark}] at (tid\i) {};
+  }
+  \foreach \i in {1,2,4,7} {
+    \node[dotnode,label={90+22.5+45*\i:\plusmark}] at (tid\i) {};
   }
   % lines
   \normedge{tid2}{tid1}{0.5}{0.2}{$\argx{1}$} %a1
-  \normedge{tid0}{tid1}{0.5}{-0.18}{$\argx{2}$} %a2
-  \normedge[jmlinem=0.75]{tid4}{tid0}{0.75}{-0.15}{$\argx{3}$} %a3
-  \normedge{tid5}{tid4}{0.5}{0.15}{$\argx{4}$} %a4
-  \normedge[jmlinem=0.75]{tid6}{tid1}{0.75}{-0.15}{$\argx{5}$} %b1
-  \normedge{tid7}{tid0}{0.5}{-0.15}{$\argx{6}$} %b2
+  \normedge{tid0}{tid1}{0.5}{-0.2}{$\argx{2}$} %a2
+  \normedge[jmlinem=0.2]{tid4}{tid0}{0.2}{0.2}{$\argx{3}$} %a3
+  \normedge{tid5}{tid4}{0.5}{0.2}{$\argx{4}$} %a4
+  \normedge[jmlinem=0.75]{tid6}{tid1}{0.75}{0.15}{$\argx{5}$} %b1
+  \normedge{tid7}{tid0}{0.5}{-0.2}{$\argx{6}$} %b2
   \normedge{tid3}{tid4}{0.5}{-0.18}{$\argx{7}$} %b3
-  \normedge[jmlinem=0.75]{tid2}{tid5}{0.75}{0.16}{$\argx{8}$} %b4
+  \normedge[jmlinem=0.75]{tid2}{tid5}{0.75}{0.2}{$\argx{8}$} %b4
   \normedge{tid6}{tid5}{0.5}{0.2}{$\argx{9}$} %c1
-  \normedge{tid7}{tid6}{0.5}{0.18}{$\argx{10}$} %c2
-  \normedge[jmlinem=0.75]{tid3}{tid7}{0.75}{-0.15}{$\argx{11}$} %c3
+  \normedge{tid7}{tid6}{0.5}{0.2}{$\argx{10}$} %c2
+  \normedge[jmlinem=0.65]{tid3}{tid7}{0.65}{-0.2}{$\argx{11}$} %c3
   \normedge{tid2}{tid3}{0.5}{-0.15}{$\argx{12}$} %c4
 \end{tikzpicture}}
 }
 
 \newlistcommand{\twIIdiaga}{%
-{\begin{tikzpicture}[baseline=0pt, inner sep=0.2em,font=\scriptsize]
+{\begin{tikzpicture}[baseline=0pt, inner sep=0.1em,font=\scriptsize]
   \foreach \i in {0,...,3} {
-    \coordinate (tid\i) at (225+90*\i:0.8);
+    \coordinate (tid\i) at ($(225+90*\i:0.8)-0.3*(0.71,0.71)$);
   }
   \foreach \i in {4,...,7} {
-    \coordinate (tid\i) at ($(225+90*\i:0.8)+(0.3,0.4)$);
+    \coordinate (tid\i) at ($(225+90*\i:0.8)+0.3*(0.71,0.71)$);
   }
   \node[dotnode,label={210:\minusmark}] at (tid0) {};
   \node[dotnode,label={-60:\minusmark}] at (tid1) {};
-  \node[dotnode,label={0:\minusmark}] at (tid2) {};
-  \node[dotnode,label={270:\plusmark}] at (tid3) {};
-  \node[dotnode,label={180:\minusmark}] at (tid4) {};
-  \node[dotnode,label={90:\plusmark}] at (tid5) {};
-  \node[dotnode,label={0:\minusmark}] at (tid6) {};
-  \node[dotnode,label={270:\minusmark}] at (tid7) {};
+  \node[dotnode,label={225:\plusmark}] at (tid2) {};
+  \node[dotnode,label={180:\minusmark}] at (tid3) {};
+  \node[dotnode,label={45:\plusmark}] at (tid4) {};
+  \node[dotnode,label={0:\minusmark}] at (tid5) {};
+  \node[dotnode,label={45:\minusmark}] at (tid6) {};
+  \node[dotnode,label={135:\minusmark}] at (tid7) {};
   % lines
   \normedge{tid4}{tid0}{0.5}{0.2}{$\argx{1}$} %a1
   \normedge{tid1}{tid5}{0.5}{-0.2}{$\argx{3}$} %a3
-  \normedge{tid6}{tid2}{0.5}{0.2}{$\argx{4}$} %a4
+  \normedge{tid6}{tid2}{0.5}{-0.2}{$\argx{4}$} %a4
   \normedge{tid3}{tid7}{0.5}{0.2}{$\argx{2}$} %a2
   \normedge{tid1}{tid0}{0.5}{0.18}{$\argx{6}$} %b2
-  \normedge{tid1}{tid2}{0.5}{-0.18}{$\argx{12}$} %c4
+  \normedge[jmlinem=0.6]{tid1}{tid2}{0.6}{-0.18}{$\argx{12}$} %c4
   \normedge{tid3}{tid2}{0.5}{0.18}{$\argx{8}$} %b4
   \normedge{tid3}{tid0}{0.5}{-0.18}{$\argx{11}$} %c3
-  \normedge{tid4}{tid5}{0.5}{-0.18}{$\argx{5}$} %b1
+  \normedge[jmlinem=0.4]{tid4}{tid5}{0.4}{-0.18}{$\argx{5}$} %b1
   \normedge{tid6}{tid5}{0.5}{0.18}{$\argx{10}$} %c2
   \normedge{tid6}{tid7}{0.5}{-0.18}{$\argx{7}$} %b3
-  \normedge{tid4}{tid7}{0.5}{0.18}{$\argx{9}$} %c1
+  \normedge[jmlinem=0.25]{tid4}{tid7}{0.25}{0.18}{$\argx{9}$} %c1
 \end{tikzpicture}}
 }
 
 
 \newlistcommand{\twIIdiagb}{%
-{\begin{tikzpicture}[baseline=0pt, inner sep=0.2em,font=\scriptsize]
+{\begin{tikzpicture}[baseline=0pt, inner sep=0.1em,font=\scriptsize]
   \foreach \i in {0,...,7} {
     \coordinate (tid\i) at (90+22.5+45*\i:0.8);
-    \ifodd\i 
-      \node[dotnode,label={90+22.5+45*\i:\plusmark}] at (tid\i) {};
-    \else  
-      \node[dotnode,label={90+22.5+45*\i:\minusmark}] at (tid\i) {};
-    \fi
+  }
+  \foreach \i in {0,1,4,5} {
+    \node[dotnode,label={90+22.5+45*\i:\minusmark}] at (tid\i) {};
+  }
+  \foreach \i in {2,3,6,7} {
+    \node[dotnode,label={90+22.5+45*\i:\plusmark}] at (tid\i) {};
   }
   % lines
-  \normedge{tid2}{tid3}{0.5}{0.2}{$\argx{1}$} %a1
-  \normedge{tid0}{tid1}{0.5}{-0.18}{$\argx{2}$} %a2
+  \normedge{tid2}{tid3}{0.5}{-0.2}{$\argx{1}$} %a1
+  \normedge{tid0}{tid1}{0.5}{-0.2}{$\argx{2}$} %a2
   \normedge{tid4}{tid5}{0.75}{-0.15}{$\argx{3}$} %a3
-  \normedge{tid6}{tid7}{0.5}{0.15}{$\argx{4}$} %a4
-  \normedge[jmlinem=0.75]{tid2}{tid5}{0.75}{-0.15}{$\argx{5}$} %b1
-  \normedge{tid4}{tid3}{0.5}{-0.15}{$\argx{6}$} %b2
-  \normedge[jmlinem=0.75]{tid6}{tid1}{0.5}{-0.18}{$\argx{7}$} %b3
-  \normedge{tid0}{tid7}{0.75}{0.16}{$\argx{8}$} %b4
+  \normedge{tid6}{tid7}{0.5}{-0.2}{$\argx{4}$} %a4
+  \normedge[jmlinem=0.5]{tid2}{tid5}{0.5}{-0.15}{$\argx{5}$} %b1
+  \normedge{tid4}{tid3}{0.5}{0.2}{$\argx{6}$} %b2
+  \normedge[jmlinem=0.5]{tid6}{tid1}{0.5}{-0.2}{$\argx{7}$} %b3
+  \normedge{tid0}{tid7}{0.5}{0.2}{$\argx{8}$} %b4
   \normedge{tid2}{tid1}{0.5}{0.2}{$\argx{9}$} %c1
-  \normedge{tid6}{tid5}{0.5}{0.18}{$\argx{10}$} %c2
-  \normedge[jmlinem=0.75]{tid0}{tid3}{0.7ß5}{-0.15}{$\argx{11}$} %c3
-  \normedge[jmlinem=0.75]{tid7}{tid4}{0.5}{-0.15}{$\argx{12}$} %c4
+  \normedge{tid6}{tid5}{0.5}{0.2}{$\argx{10}$} %c2
+  \normedge[jmlinem=0.5]{tid0}{tid3}{0.5}{-0.2}{$\argx{11}$} %c3
+  \normedge[jmlinem=0.5]{tid7}{tid4}{0.5}{-0.2}{$\argx{12}$} %c4
 \end{tikzpicture}}
 }

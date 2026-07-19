@@ -93,7 +93,7 @@ $$
 corresponds to the $\Omega$-line with a dot node. The completeness condition for the functions $|\Omega\rangle$ or $\mid \Omega)$ reads
 
 $$
-\left.\int|\Omega\rangle d \Omega\langle\Omega|=1 \quad \text { and } \quad \int \mid \Omega\right) \frac{d \Omega}{4 \pi}(\Omega \mid=1
+\int|\Omega\rangle d \Omega\langle\Omega|=1 \quad \text { and } \quad \int \mid \Omega) \frac{d \Omega}{4 \pi}(\Omega \mid=1\,,
 $$
 
 respectively.
@@ -105,7 +105,7 @@ Diagrams of some spin and angular functions are listed in Tables 11.1-11.3; grap
 
 A spherical harmonic $Y_{l m}(\vartheta, \varphi) \equiv\langle\Omega \mid l m\rangle$ is represented by a junction of a thin solid and dashed lines which correspond to $|l m\rangle$ and $\langle\Omega|$.
 
-A Wigner $3 j m$ symbol $\left(\begin{array}{ccc}a & b & c \\ \alpha & \beta & \gamma\end{array}\right) \equiv(00 \mid a \alpha b \beta c \gamma)$ is represented by a dot-node junction of three thin solid lines which correspond to $|a \alpha|, \mid b \beta)$ and $\mid c \gamma)$. The sign of the node determines the cyclic order of arguments, i.e., the sequence of coupling of momenta: plus corresponds to the anticlockwise one.
+A Wigner $3 j m$ symbol $\threej{a}{b}{c}{\alpha}{\beta}{\gamma} \equiv(00 \mid a \alpha b \beta c \gamma)$ is represented by a dot-node junction of three thin solid lines which correspond to $|a \alpha|, \mid b \beta)$ and $\mid c \gamma)$. The sign of the node determines the cyclic order of arguments, i.e., the sequence of coupling of momenta: plus corresponds to the anticlockwise one.
 
 The $3 j, 6 j$, and $9 j$ symbols, or, more generally speaking, the $3 n j$ symbols, may be represented graphically by closed diagrams without external lines because they are invariant under coordinate rotation. Such closed diagrams consist of $3 n j$-lines connected in $2 n$ dot nodes by three's, because the $3 n j$ symbols are actually the sums of $2 n$ various $3 j m$ symbols (Sec. 10.13). Any $3 n j$ symbol may be represented by several equivalent diagrams which differ in the arrow directions of internal the $j$ lines and in the node signs since each $3 n j$ symbol may be expressed through different sums of products of the 3 jm symbols; such sums turn into one another by replacing summation indices.
 
@@ -374,90 +374,160 @@ $\{a b c\}$&
 \multicolumn{2}{c}{$6 j$ Symbol} \\
 $\sixj{a}{b}{c}{A}{B}{C}$ & \sixjdiagramd{a,b,c,A,B,C,+}$=$\sixjdsq{a,b,c,A,B,C,+} \\
 \multicolumn{2}{c}{$9 j$ Symbol} \\
-$\ninej{a_1}{b_1}{c_1}{a_2}{b_2}{c_2}{a_3}{b_3}{c_3}$ & \ninejd{a_1,b_1,c_1,a_2,b_2,c_2,a_3,b_3,c_3}
+$\ninej{a_1}{a_2}{a_3}{b_1}{b_2}{b_3}{c_1}{c_2}{c_3}$ & \ninejd{a_1,a_2,a_3,b_1,b_2,b_3,c_1,c_2,c_3}
  \\
  \multicolumn{2}{c}{$12 j$(I) Symbol} \\
  $\twelvejI{a_1,a_2,a_3,a_4,b_1,b_2,b_3,b_4,c_1,c_2,c_3,c_4}$& \twIdiaga{a_1,a_2,a_3,a_4,b_1,b_2,b_3,b_4,c_1,c_2,c_3,c_4}$=$\twIdiagb{a_1,a_2,a_3,a_4,b_1,b_2,b_3,b_4,c_1,c_2,c_3,c_4}
  \\
  \multicolumn{2}{c}{$12 j$(II) Symbol} \\
-$\twelvejII{a_1,a_2,a_3,a_4,b_1,b_2,b_3,b_4,c_1,c_2,c_3,c_4}$& \twIIdiaga{a_1,a_2,a_3,a_4,b_1,b_2,b_3,b_4,c_1,c_2,c_3,c_4}
+$\twelvejII{a_1,a_2,a_3,a_4,b_1,b_2,b_3,b_4,c_1,c_2,c_3,c_4}$& \twIIdiaga{a_1,a_2,a_3,a_4,b_1,b_2,b_3,b_4,c_1,c_2,c_3,c_4}$=$\twIIdiagb{a_1,a_2,a_3,a_4,b_1,b_2,b_3,b_4,c_1,c_2,c_3,c_4}
  \\
+ \hline
 \end{tabular}
 \end{center}
 \end{table}
-
-Table 11.3. Matrix Elements.
-
-\section*{Analytical Expression Graphical Representation}
-\section*{Irreducible Tensor Operator}
-Ω-Representation
-
-$$
-\langle\gamma \Omega| \mathfrak{M}_{\lambda \mu}\left|\gamma^{\prime} \Omega^{\prime}\right\rangle
-$$
-
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-431_145_318_523_1289}\\
-$\gamma$ denotes all quantum numbers except $\Omega$
-
-Adjoint Matrix
-
-$$
-\langle\gamma \Omega| \mathfrak{M}_{\lambda \mu}^{+}\left|\gamma^{\prime} \Omega^{\prime}\right\rangle=(-1)^{\lambda-\mu}\left(\gamma^{\prime} \Omega^{\prime}\left|\mathfrak{M}_{\lambda-\mu}\right| \gamma \Omega\right)^{*}
-$$
-
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-431_147_316_927_1293}\\
-jm-Representation
-
-$$
-\langle\gamma j m| \mathfrak{M}_{\lambda \mu}\left|\gamma^{\prime} j^{\prime} m^{\prime}\right\rangle
-$$
-
-\includegraphics[max width=\textwidth, alt={}, center]{402d9a1b-ee97-49cb-ae14-75458391be12-431_148_345_1223_1295}\\
-$\gamma$ denotes all quantum numbers except $j m$\\
-Adjoint Matrix
-
-$$
-\left.\langle\gamma j m| \mathfrak{M}_{\lambda \mu}^{+}\left|\gamma^{\prime} j^{\prime} m^{\prime}\right\rangle=(-1)^{\lambda-\mu}\left\langle\gamma^{\prime} j^{\prime} m^{\prime}\right| \mathfrak{M}_{\lambda-\mu} \mid \gamma j m\right)^{*}
-$$
-
+\begin{table}[tbh!]
 \begin{center}
-\includegraphics[max width=\textwidth, alt={}]{402d9a1b-ee97-49cb-ae14-75458391be12-431_146_345_1571_1297}
-\end{center}
-
-Reduced Matrix Element
-
-$$
+\captionsetup{labelformat=empty}
+\caption{Table 11.3. Matrix Elements.}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{lc}
+\hline
+{Analytical Expression} & Graphical Representation \\
+\hline
+\multicolumn{2}{c}{Irreducible Tensor Operator}\\
+$\Omega$-Representation  $\braOket{\gamma \Omega}{\mathfrak{M}_{\lambda \mu}}{\gamma^{\prime} \Omega^{\prime}}$ & 
+\begin{tikzpicture}[baseline=0pt]
+\node[opbox] (M) at (0,0) {$\mathfrak{M}_{\gamma\gamma'}$};
+\draw[bomarrow] (2,0.5)--(M) node[at start,right]{$\Omega$};
+\draw[jmarrow] (M) --(2,0.) node[right]{$\lambda\mu$};
+\draw[omarrow] (M) --(2,-0.5) node[right]{$\Omega'$};
+\end{tikzpicture}\\
+$\gamma$ denotes all quantum numbers except $\omega$\\
+Adjoint Matrix $\braOket{\gamma \Omega}{\mathfrak{M}_{\lambda \mu}^{+}}{\gamma^{\prime} \Omega^{\prime}}=(-1)^{\lambda-\mu}\braOket{\gamma'\Omega'}{\mathfrak{M}_{\lambda-\mu}}{\gamma\Omega}^*$ & 
+\begin{tikzpicture}[baseline=0pt]
+\node[opbox] (M) at (0,0) {$\mathfrak{M}^*_{\gamma'\gamma}$};
+\draw[omarrow] (M) --(2,0.5) node[right]{$\Omega'$};
+\draw[bjmarrow] (2,0.)--(M) node[at start,right]{$\lambda\mu$};
+\draw[bomarrow] (2,-0.5)--(M) node[at start,right]{$\Omega$};
+\end{tikzpicture}\\
+$jm$-Representation $\braOket{\gamma j m}{\mathfrak{M}_{\lambda \mu}}{\gamma^{\prime} j^{\prime} m^{\prime}}$ & 
+\begin{tikzpicture}[baseline=0pt]
+\node[opbox] (M) at (0,0) {$\mathfrak{M}_{\gamma\gamma'}$};
+\draw[bjmarrow] (2,0.5)--(M) node[at start,right]{$jm$};
+\draw[jmarrow] (M) --(2,0.) node[right]{$\lambda\mu$};
+\draw[jmarrow] (M) --(2,-0.5) node[right]{$j'm'$};
+\end{tikzpicture}\\
+$\gamma$ denotes all quantum numbers except $\omega$\\
+Adjoint Matrix \\$\braOket{\gamma j m}{\mathfrak{M}_{\lambda \mu}^{+}}{\gamma^{\prime} j^{\prime} m^{\prime}}=(-1)^{\lambda-\mu}\braOket{\gamma'j'm'}{\mathfrak{M}_{\lambda-\mu}}{\gamma jm}^*$ & 
+\begin{tikzpicture}[baseline=0pt]
+\node[opbox] (M) at (0,0) {$\mathfrak{M}^*_{\gamma'\gamma}$};
+\draw[jmarrow] (M) --(2,0.5) node[right]{$j'm'$};
+\draw[bjmarrow] (2,0.)--(M) node[at start,right]{$\lambda\mu$};
+\draw[bjmarrow] (2,-0.5)--(M) node[at start,right]{$jm$};
+\end{tikzpicture}\\ 
+Reduced Matrix Element\\
+$
 \begin{aligned}
-\left\langle\gamma j\left\|\mathfrak{M}_{\lambda}\right\| \gamma^{\prime} j^{\prime}\right\rangle= & \sum_{m \mu m^{\prime}}\langle\gamma j m| \mathbb{T}_{\lambda \mu}\left|\gamma^{\prime} j^{\prime} m^{\prime}\right\rangle(-1)^{j-m} \\
-& \times\left(\begin{array}{rrr}
-j & \lambda & j^{\prime} \\
--m & \mu & m^{\prime}
-\end{array}\right)
+\left\langle\gamma j\left\|\mathfrak{M}_{\lambda}\right\| \gamma^{\prime} j^{\prime}\right\rangle= & \sum_{m \mu m^{\prime}}\langle\gamma j m| \mathfrak{M}_{\lambda \mu}\left|\gamma^{\prime} j^{\prime} m^{\prime}\right\rangle(-1)^{j-m} \\
+& \times\threej{j}{\lambda}{j^{\prime}}{-m}{\mu}{m^{\prime}}
 \end{aligned}
-$$
+$ &
+\begin{tikzpicture}[baseline=0pt]
+\node[opbox] (M) at (0,0) {$\mathfrak{M}_{\gamma\gamma'}$};
+\node[dotnode,label={0:\plusmark}] (E) at (2,0) {}; 
+\draw[jmlinem] (M) to [bend left] node[pos=0.4,above]{$j$} (E);
+\draw[jmlinem] (M) --(E) node[midway,above]{$\lambda$};
+\draw[jmlinem] (M) to[bend right] node[pos=0.4,below]{$j'$} (E) ;
+\end{tikzpicture}\\
+\hline
+\end{tabular}
+\end{center}    
+\end{table}
 
-\begin{center}
-\includegraphics[max width=\textwidth, alt={}]{402d9a1b-ee97-49cb-ae14-75458391be12-431_143_287_1870_1302}
-\end{center}
+
+
+
 
 \begin{table}[h]
 \begin{center}
 \captionsetup{labelformat=empty}
-\caption{Table 11.3. (Cont'd)}
-\begin{tabular}{|l|l|}
+\renewcommand{\arraystretch}{1.5}
+\caption{Table 11.3. Cnt'd}
+\begin{tabular}{lc}
 \hline
-Analytical Expression & Graphical Representation \\
+{Analytical Expression} & Graphical Representation \\
 \hline
-\multicolumn{2}{|c|}{Rotation Operator} \\
-\hline
-\multicolumn{2}{|l|}{jm-Representation} \\
-\hline
-$\langle\gamma j m| D(R)\left|\gamma^{\prime} j^{\prime} m^{\prime}\right\rangle=\delta_{\gamma \gamma^{\prime}} \delta_{j j^{\prime}} D_{m m^{\prime}}^{j}(R)$ & \includegraphics[max width=\textwidth, alt={}]{402d9a1b-ee97-49cb-ae14-75458391be12-432_215_473_783_1251}
+\multicolumn{2}{c}{Rotation Operator} \\
+$\Omega$ representation\\
+$\braOket{\gamma'\Omega'}{D(R)}{\gamma\Omega}=\delta_{\gamma\gamma'}(\Omega'-R\Omega)$&
+\begin{tikzpicture}[baseline=0pt, inner sep=0.1em,font=\scriptsize]
+    \coordinate (T) at ($0.8*(0,1)$);
+    \coordinate (L) at ($0.8*(-0.866,-0.5)$);
+    \coordinate (R) at ($0.8*(0.866,-0.5)$);
+    \coordinate (M) at (0,0);
+    \node[label={270:\plusmark}] {};
+    \draw[rline] (M) to node[at end,right]{$R$} (T);
+    \draw[omarrown] (M) to  node[at end,right]{$\Omega$} (R);
+    \draw[bomarrown] (L) to  node [at start,left]{$\Omega'$} (M);
+\end{tikzpicture}
+$=$
+\begin{tikzpicture}[baseline=0pt, inner sep=0.1em,font=\scriptsize]
+    \coordinate (B) at ($0.8*(0,-1)$);
+    \coordinate (L) at ($0.8*(-0.866,0.5)$);
+    \coordinate (R) at ($0.8*(0.866,0.5)$);
+    \coordinate (M) at (0,0);
+    \node[label={90:\minusmark}] {};
+    \draw[rline] (M) to node[at end,right]{$R$} (B);
+    \draw[omarrown] (M) to  node[at end,right]{$\Omega$} (R);
+    \draw[bomarrown] (L) to  node [at start,left]{$\Omega'$} (M);
+\end{tikzpicture}
+\\
+$jm$-Representation\\
+$\langle\gamma j m| D(R)\left|\gamma^{\prime} j^{\prime} m^{\prime}\right\rangle=\delta_{\gamma \gamma^{\prime}} \delta_{j j^{\prime}} D_{m m^{\prime}}^{j}(R)$ & \begin{tikzpicture}[baseline=0pt, inner sep=0.1em,font=\scriptsize]
+    \coordinate (T) at ($0.8*(0,1)$);
+    \coordinate (L) at ($0.8*(-0.866,-0.5)$);
+    \coordinate (R) at ($0.8*(0.866,-0.5)$); 
+    \coordinate (M) at (0,0);
+    \node[label={270:\minusmark}] {};
+    \draw[rline] (M) to node[at end,right]{$R$} (T);
+    \draw[jmarrown] (M) to  node[at end,right]{$j'm'$} (R);
+    \draw[bjmarrown] (L) to  node [at start,left]{$jm$} (M);
+\end{tikzpicture}
+$=$
+\begin{tikzpicture}[baseline=0pt, inner sep=0.1em,font=\scriptsize]
+    \coordinate (B) at ($0.8*(0,-1)$);
+    \coordinate (L) at ($0.8*(-0.866,0.5)$);
+    \coordinate (R) at ($0.8*(0.866,0.5)$);
+    \coordinate (M) at (0,0);
+    \node[label={90:\plusmark}] {};
+    \draw[rline] (M) to node[at end,right]{$R$} (B);
+    \draw[jmarrown] (M) to  node[at end,right]{$j'm'$} (R);
+    \draw[bjmarrown] (L) to  node [at start,left]{$jm$} (M);
+\end{tikzpicture}
  \\
-\hline
-Inverse Rotation Matrix &  \\
-\hline
-\( \begin{gathered} \langle\gamma j m| D^{+}(R)\left|\gamma^{\prime} j^{\prime} m^{\prime}\right\rangle=\delta_{\gamma \gamma^{\prime}} \delta_{j j^{\prime}} D_{m^{\prime} m}^{j *}(R) \\ =\langle\gamma j m| D^{-1}(R)\left|\gamma^{\prime} j^{\prime} m^{\prime}\right\rangle=\delta_{\gamma \gamma^{\prime}} \delta_{j j^{\prime}} D_{m m^{\prime}}^{j}\left(R^{-1}\right) \end{gathered} \) & \includegraphics[max width=\textwidth, alt={}]{402d9a1b-ee97-49cb-ae14-75458391be12-432_213_489_1101_1243}
+Inverse Rotation Matrix   \\
+\( \begin{gathered} \langle\gamma j m| D^{+}(R)\left|\gamma^{\prime} j^{\prime} m^{\prime}\right\rangle=\delta_{\gamma \gamma^{\prime}} \delta_{j j^{\prime}} D_{m^{\prime} m}^{j *}(R) \\ =\langle\gamma j m| D^{-1}(R)\left|\gamma^{\prime} j^{\prime} m^{\prime}\right\rangle=\delta_{\gamma \gamma^{\prime}} \delta_{j j^{\prime}} D_{m m^{\prime}}^{j}\left(R^{-1}\right) \end{gathered} \) & \begin{tikzpicture}[baseline=0pt, inner sep=0.1em,font=\scriptsize]
+    \coordinate (T) at ($0.8*(0,1)$);
+    \coordinate (L) at ($0.8*(-0.866,-0.5)$);
+    \coordinate (R) at ($0.8*(0.866,-0.5)$); 
+    \coordinate (M) at (0,0);
+    \node[label={270:\plusmark}] {};
+    \draw[rline] (M) to node[at end,right]{$R$} (T);
+    \draw[bjmarrown] (R) to  node[at start,right]{$j'm'$} (M);
+    \draw[jmarrown] (M) to  node [at end,left]{$jm$} (L);
+\end{tikzpicture}
+$=$
+\begin{tikzpicture}[baseline=0pt, inner sep=0.1em,font=\scriptsize]
+    \coordinate (B) at ($0.8*(0,-1)$);
+    \coordinate (L) at ($0.8*(-0.866,0.5)$);
+    \coordinate (R) at ($0.8*(0.866,0.5)$);
+    \coordinate (M) at (0,0);
+    \node[label={90:\minusmark}] {};
+    \draw[rline] (M) to node[at end,right]{$R$} (B);
+    \draw[bjmarrown] (R) to  node[at start,right]{$j'm'$} (M);
+    \draw[jmarrown] (M) to  node [at end,left]{$jm$} (L);
+\end{tikzpicture}
  \\
 \hline
 \end{tabular}
@@ -475,36 +545,13 @@ This section describes the graphical representation of those analytic operations
 \subsection{Multiplication}
 The product (direct product) of factors $\mathfrak{M}$ and $\mathfrak{N}$ is represented graphically by unlinked subdiagrams (blocks) which correspond to factors $\mathfrak{M}$ and $\mathfrak{N}$. The mutual disposition and orientation of these subdiagrams are inessential. For example, the product
 \[
-\left(\begin{array}{ccc}
-A & B & C \\
-\alpha & \beta & \gamma
-\end{array}\right)\sixj{A}{B}{C}{a}{b}{c}
+\threej{A}{B}{C}{\alpha}{\beta}{\gamma}\sixj{A}{B}{C}{a}{b}{c}
 \]
 may be represented by\\
 \begin{center}
-\begin{tikzpicture}[baseline=0pt]
-\coordinate (O) at (0,0);
-\node[plusnode] at (O) {};
-\draw[jmline] (O) -- (-0.9,0.9) node[left]{$A\alpha$};
-\draw[jmline] (O) -- (0.9,0.9) node[right]{$C\gamma$};
-\draw[jmline] (O) -- (0,-1.1) node[below]{$B\beta$};
-\end{tikzpicture}
+  \threejdiag{A,\alpha,B,\beta,C,\gamma}
 \qquad
-\begin{tikzpicture}[baseline=0pt]
-  \coordinate (O) at (0,0);
-  \coordinate (B) at (0,-1.1);
-  \coordinate (L) at ($({-1.1*sqrt(3)/2},{1.1/2})$);
-  \coordinate (R) at ($({1.1*sqrt(3)/2},{1.1/2})$);
-
-\node[plusnode,label={left:}] at (L) {};
-\node[plusnode] at (R) {};
-\draw[jmlinem] (L) -- (R) node[midway,above left]{$c$};
-\draw[jmlinem] (B) -- (R) node[midway,above right]{$a$};
-\draw[jmlinem] (R) -- (L) node[midway,below]{$b$};
-\draw[jmlinem] (B) -- (O) node[midway,above left]{$B$};
-\draw[jmlinem] (L) -- (O) node[midway,above left]{$A$};
-\draw[jmlinem] (R) -- (O) node[midway,above left]{$C$};
-\end{tikzpicture}
+\sixjdiagramd{A,B,C,a,b,c}
 \end{center}
 
 \subsection{Invariant Summation over Projections}
@@ -519,60 +566,61 @@ is represented by the conjunction (closure) of $|j m\rangle$ - and ( $j m \mid$-
 \node[opbox] (N1) at (2.2,0) {$\mathfrak{N}$};
 \coordinate (ml) at ($(M1.east)!0.45!(N1.west)$);
 \coordinate (mr) at ($(M1.east)!0.55!(N1.west)$);
-\draw[jmarrow] ($(M1.east)$) -- (ml) node[midway,above]{$jm$};
-\draw[bjmarrow] (mr) -- ($(N1.west)$) node[midway,below]{$jm$};
+\draw[jmarrown] ($(M1.east)$) -- (ml) node[midway,above]{$jm$};
+\draw[bjmarrown] (mr) -- ($(N1.west)$) node[midway,below]{$jm$};
 \node[left=2pt of M1] {$\displaystyle\sum_m$};
 \node at (3.2,0) {$=$};
 \node[opbox] (M2) at (4.4,0) {$\mathfrak{M}$};
 \node[opbox] (N2) at (6.6,0) {$\mathfrak{N}$};
-\draw[jmarrow] (M2) -- (N2) node[midway,above]{$j$};
+\draw[jmline] (M2) -- (N2) node[midway,above]{$j$};
 \end{tikzpicture}
 \end{center}
 
 The resultant linking $j$-line has the same direction as the original $\mid j m)$ - and $\langle j m|$-lines.\\
 For example, the sum of product of two 3jm symbols over two projections, $\alpha$ and $\beta$
 \[
-\sum_{\alpha, \beta}\left(\begin{array}{lll}
-a & b & c \\
-\alpha & \beta & \gamma
-\end{array}\right)\left(\begin{array}{lll}
-a & b & c^{\prime} \\
-\alpha & \beta & \gamma^{\prime}
-\end{array}\right)=\sum_{\alpha, \beta}(-1)^{a-\alpha+b-\beta+c-\gamma}\left(\begin{array}{rrr}
-a & b & c \\
--\alpha & -\beta & -\gamma
-\end{array}\right)\left(\begin{array}{lll}
-a & b & c^{\prime} \\
-\alpha & \beta & \gamma^{\prime}
-\end{array}\right)
+\sum_{\alpha, \beta}\threej{a}{b}{c}{\alpha}{\beta}{\gamma}\threej{a}{b}{c^{\prime}}{\alpha}{\beta}{\gamma^{\prime}}=\sum_{\alpha, \beta}(-1)^{a-\alpha+b-\beta+c-\gamma}\threej{a}{b}{c}{-\alpha}{-\beta}{-\gamma}\threej{a}{b}{c^{\prime}}{\alpha}{\beta}{\gamma^{\prime}}
 \]
-may be displayed as\\
-\begin{center}
-\begin{tikzpicture}[baseline=0pt]
-\node at (-1.4,0) {$\displaystyle\sum_{\alpha,\beta}$};
-\coordinate (N1) at (0,0);
-\node[minusnode] at (N1) {};
-\draw[jmline] (N1) -- (-0.9,0.9) node[left]{$a\alpha$};
-\draw[jmline] (N1) -- (-0.9,-0.9) node[left]{$b\beta$};
-\draw[jmline] (N1) -- (0.9,0) node[right]{$c\gamma$};
-\coordinate (N2) at (1.8,0);
-\node[plusnode] at (N2) {};
-\draw[jmline] (N2) -- (0.9,0) node[left]{};
-\draw[jmline] (N2) -- (2.7,0.9) node[right]{$a\alpha$};
-\draw[jmline] (N2) -- (2.7,-0.9) node[right]{$b\beta$};
-\node at (3.6,0) {$=$};
-\coordinate (N3) at (5.4,0);
-\draw[jmline] (4.5,0) -- (N3) node[midway,above]{$c\gamma$};
-\node[minusnode] at (N3) {};
-\coordinate (N4) at (6.6,0);
-\node[plusnode] at (N4) {};
-\draw (N3) to[bend left=45] (N4);
-\draw (N3) to[bend right=45] (N4);
-\draw[jmline] (N4) -- (7.5,0) node[right]{$c^{\prime}\gamma^{\prime}$};
-\node[above=8pt of N3, xshift=18pt] {$a$};
-\node[below=8pt of N3, xshift=18pt] {$b$};
-\end{tikzpicture}
-\end{center}
+may be displayed as
+\[\sum_{\alpha,\beta}
+\vcenter{\hbox{
+    \begin{tikzpicture}[baseline=0pt, inner sep=0.1em,font=\scriptsize]
+    \coordinate (L) at ($0.8*(-1,0)$);
+    \coordinate (TR) at ($0.8*(0.5,0.866)$);
+    \coordinate (BR) at ($0.8*(0.5,-0.866)$);
+    \coordinate (M) at (0,0);
+    \node[label={0:\minusmark}] {};
+    \draw[bjmarrown] (L) -- (M) node[near start,above]{$c\gamma$};
+    \draw[bjmarrown] (TR) -- (M) node[at start,above]{$a\alpha$};
+    \draw[bjmarrown] (BR) -- (M) node[at start,below]{$b\beta$};
+    \end{tikzpicture}
+    }
+}
+\vcenter{\hbox{\begin{tikzpicture}[baseline=0pt, inner sep=0.1em,font=\scriptsize] 
+    \coordinate (R) at ($0.8*(1,0)$);
+    \coordinate (TL) at ($0.8*(-0.5,0.866)$);
+    \coordinate (TR) at ($0.8*(-0.5,-0.866)$);
+    \coordinate (M) at (0,0);
+    \node[label={180:\plusmark}] {};
+    \draw[jmarrown] (M) -- (R) node[near end,above]{$c'\gamma'$};
+    \draw[jmarrown] (M) -- (TL) node[above]{$a\alpha$};
+    \draw[jmarrown] (M) -- (TR) node[below]{$b\beta$};
+\end{tikzpicture}}}
+=
+\vcenter{\hbox{\begin{tikzpicture}[baseline=0pt, inner sep=0.15em,font=\scriptsize]
+    \coordinate (R) at ($0.6*(1,0)$);
+    \coordinate (Rr) at ($1.2*(1,0)$);
+    \coordinate (L) at ($0.6*(-1,0)$);
+    \coordinate (Ll) at ($1.2*(-1,0)$);
+    \coordinate (M) at (0,0);
+    \node[label={180:\plusmark}] at (R) {};
+    \node[label={0:\minusmark}] at (L) {};
+    \draw[jmarrown] (R) -- (Rr) node[near end,above]{$c'\gamma'$};
+    \draw[bjmarrown] (Ll) -- (L) node[near start,above]{$c\gamma$};
+    \draw[jmlinem] (R) to[bend left=90]  node[midway,below]{$b$} (L);
+    \draw[jmlinem] (R) to[bend right=90] node[midway,above]{$a$} (L);
+\end{tikzpicture}}}
+\]
 
 Thus, each internal $j$-line of a diagram represents a scalar product (contraction over $m$ ) of two irreducible tensors of rank $j$. To construct such a scalar product one of these tensors should be written in a covariant form $\langle | \mathfrak{M}|j m\rangle \equiv \mathfrak{M}_{j m}$ while the other should be written in the form $\langle j m| \Re\left\rangle=(-1)^{j-m} \mathfrak{N}_{j-m}\right.$ (Sec. 3.1.8). Graphically, this means that one of the corresponding subdiagrams has the external $\mid j m)$-line (with single outward arrow) and the other has the ( $j m /$-line ( $w i t h$ double inward arrow).
 
@@ -582,149 +630,48 @@ Two diagrams which differ only by the direction of an internal $j$-line, corresp
 \]
 One should especially mention the entirely invariant sums of products of two, four, six, or more $3 j m$ symbols over all projections. Corresponding diagrams are closed with respect to all $j$-lines. These sums represent the Wigner $3 n j$ symbols (Table~\ref{chap11:tab:1}).
 
-Analytical Expression\\
-Graphical Representation
-
-3j Symbol
-\[
-\sum_{\mu_{i}}\left(\begin{array}{lll}
-j_{1} & j_{2} & j_{3} \\
-\mu_{1} & \mu_{2} & \mu_{3}
-\end{array}\right)\left(\begin{array}{lll}
-j_{1} & j_{2} & j_{3} \\
-\mu_{1} & \mu_{2} & \mu_{3}
-\end{array}\right)=\sum_{\mu_{i}}(-1)^{j_{1}-\mu_{1}+j_{2}-\mu_{2}+j_{3}-\mu_{3}}\left(\begin{array}{rrr}
-j_{1} & j_{2} & j_{3} \\
--\mu_{1} & -\mu_{2} & -\mu_{3}
-\end{array}\right)\left(\begin{array}{lll}
-j_{1} & j_{2} & j_{3} \\
-\mu_{1} & \mu_{2} & \mu_{3}
-\end{array}\right)=\left\{j_{1} j_{2} j_{3}\right\}
-\]
-\begin{table}[h]
+\begin{table}
 \begin{center}
-\caption{Sums of $3 j m$ Symbol Products.}
-\label{chap11:tab:1}
-  \sixjloop{j_1}{j_2}{j_3}{+}{-}
+\captionsetup{labelformat=empty}
+\renewcommand{\arraystretch}{1.5}
+\caption{Table 11.4. Sums of $3 j m$ Symbol Products.}
+\begin{tabular}{lc}
+\hline
+{Analytical Expression} & Graphical Representation \\
+\hline
+\multicolumn{2}{c}{$3j$ Symbol}\\
+\(
+\sum_{\mu_{i}}\threej{j_{1}}{j_{2}}{j_{3}}{\mu_{1}}{\mu_{2}}{\mu_{3}}\threej{j_{1}}{j_{2}}{j_{3}}{\mu_{1}}{\mu_{2}}{\mu_{3}}=\sum_{\mu_{i}}(-1)^{j_{1}-\mu_{1}+j_{2}-\mu_{2}+j_{3}-\mu_{3}}\threej{j_{1}}{j_{2}}{j_{3}}{-\mu_{1}}{-\mu_{2}}{-\mu_{3}}\threej{j_{1}}{j_{2}}{j_{3}}{\mu_{1}}{\mu_{2}}{\mu_{3}}=\left\{j_{1} j_{2} j_{3}\right\}
+\) &
+\sixjloop{j_1}{j_2}{j_3}{+}{-}
+\\
+\multicolumn{2}{c}{6j Symbol}\\
+\(
+\begin{gathered}
+\sum_{\mu_{i} x_{i}}(-1)^{k_{1}-x_{1}+k_{2}-x_{2}+k_{3}-x_{3}}\threej{j_{1}}{j_{2}}{j_{3}}{\mu_{1}}{\mu_{2}}{\mu_{3}}\threej{j_{1}}{k_{2}}{k_{3}}{\mu_{1}}{-x_{2}}{x_{3}}\threej{k_{1}}{j_{2}}{k_{3}}{x_{1}}{\mu_{2}}{-x_{3}}\threej{k_{1}}{k_{2}}{j_{3}}{-x_{1}}{x_{2}}{\mu_{3}} \\
+=\sum_{\mu_{i} x_{i}}(-1)^{j_{1}-\mu_{1}+j_{2}-\mu_{2}+j_{3}-\mu_{3}+k_{1}-x_{1}+k_{2}-x_{2}+k_{3}-x_{3}}\threej{j_{1}}{j_{2}}{j_{3}}{\mu_{1}}{\mu_{2}}{\mu_{3}}\threej{j_{1}}{k_{2}}{k_{3}}{-\mu_{1}}{-x_{2}}{x_{3}}\threej{k_{1}}{j_{2}}{k_{3}}{x_{1}}{-\mu_{2}}{-x_{3}} \\
+\times\threej{k_{1}}{k_{2}}{j_{3}}{-x_{1}}{x_{2}}{-\mu_{3}}=\sixj{j_{1}}{j_{2}}{j_{3}}{k_{1}}{k_{2}}{k_{3}}
+\end{gathered}
+\)&
+\begin{minipage}{3cm}
+\sixjdsq{j_1,j_2,j_3,k_1,k_2,k_3}\\
+\sixjdiagramd{j_1,j_2,j_3,j_4,j_5,j_6}
+\end{minipage}\\
+\multicolumn{2}{c}{9j Symbol}\\
+\(
+\begin{gathered}
+\sum_{\mu_{i} x_{i} \lambda_{i}}\threej{l_{1}}{j_{2}}{l_{3}}{\mu_{1}}{\mu_{2}}{\mu_{3}}\threej{k_{1}}{k_{2}}{k_{3}}{x_{1}}{x_{2}}{x_{3}}\threej{l_{1}}{l_{2}}{l_{3}}{\lambda_{1}}{\lambda_{2}}{\lambda_{3}}\threej{j_{1}}{k_{1}}{l_{1}}{\mu_{1}}{x_{1}}{\lambda_{1}}\threej{j_{2}}{k_{2}}{l_{2}}{\mu_{2}}{x_{2}}{\lambda_{2}}\threej{j_{3}}{k_{3}}{l_{3}}{\mu_{3}}{x_{3}}{\lambda_{3}} \\
+=\sum_{\mu_{3} x_{i} \lambda_{i}}(-1)^{j_{1}-\mu_{1}+j_{2}-\mu_{2}+j_{3}-\mu_{2}+h_{1}-x_{1}+k_{2}-x_{3}+\mu_{3}-x_{3}+l_{1}-\lambda_{1}+l_{2}-\lambda_{2}+l_{3}-\lambda_{3}}\threej{j_{1}}{j_{2}}{j_{3}}{\mu_{1}}{\mu_{2}}{\mu_{3}}\threej{k_{1}}{k_{2}}{k_{3}}{x_{1}}{x_{2}}{x_{3}} \\
+\times\threej{l_{1}}{l_{2}}{l_{3}}{\lambda_{1}}{\lambda_{2}}{\lambda_{3}}\threej{j_{1}}{k_{1}}{l_{1}}{-\mu_{1}}{-x_{1}}{-\lambda_{1}}\threej{j_{2}}{k_{2}}{l_{2}}{-\mu_{2}}{-x_{2}}{-\lambda_{2}}\threej{j_{3}}{k_{3}}{l_{3}}{-\mu_{3}}{-x_{3}}{-\lambda_{3}}=\ninej{j_{1}}{j_{2}}{j_{3}}{k_{1}}{k_{2}}{k_{3}}{l_{1}}{l_{2}}{l_{3}}
+\end{gathered}
+\)
+&
+\ninejd{j_1,j_2,j_3,k_1,k_2,k_3,l_1,l_2l_3}
+\\
+\hline
+\end{tabular}
 \end{center}
 \end{table}
-
-6j Symbol
-\[
-\begin{gathered}
-\sum_{\mu_{i} x_{i}}(-1)^{k_{1}-x_{1}+k_{2}-x_{2}+k_{3}-x_{3}}\left(\begin{array}{lll}
-j_{1} & j_{2} & j_{3} \\
-\mu_{1} & \mu_{2} & \mu_{3}
-\end{array}\right)\left(\begin{array}{lll}
-j_{1} & k_{2} & k_{3} \\
-\mu_{1} & -x_{2} & x_{3}
-\end{array}\right)\left(\begin{array}{lll}
-k_{1} & j_{2} & k_{3} \\
-x_{1} & \mu_{2} & -x_{3}
-\end{array}\right)\left(\begin{array}{rrr}
-k_{1} & k_{2} & j_{3} \\
--x_{1} & x_{2} & \mu_{3}
-\end{array}\right) \\
-=\sum_{\mu_{i} x_{i}}(-1)^{j_{1}-\mu_{1}+j_{2}-\mu_{2}+j_{3}-\mu_{3}+k_{1}-x_{1}+k_{2}-x_{2}+k_{3}-x_{3}}\left(\begin{array}{lll}
-j_{1} & j_{2} & j_{3} \\
-\mu_{1} & \mu_{2} & \mu_{3}
-\end{array}\right)\left(\begin{array}{rrr}
-j_{1} & k_{2} & k_{3} \\
--\mu_{1} & -x_{2} & x_{3}
-\end{array}\right)\left(\begin{array}{ccc}
-k_{1} & j_{2} & k_{3} \\
-x_{1} & -\mu_{2} & -x_{3}
-\end{array}\right) \\
-\times\left(\begin{array}{rrr}
-k_{1} & k_{2} & j_{3} \\
--x_{1} & x_{2} & -\mu_{3}
-\end{array}\right)=\sixj{j_{1}}{j_{2}}{j_{3}}{k_{1}}{k_{2}}{k_{3}}
-\end{gathered}
-\]
-\begin{center}
-\begin{center}
-\begin{tikzpicture}[baseline=0pt]
-\coordinate (T) at (0,1.1); \coordinate (L) at (-1.1,0); \coordinate (R) at (1.1,0); \coordinate (B) at (0,-1.1);
-\node[dotnode,label={above:$+$}] at (T) {}; \node[dotnode] at (L) {}; \node[dotnode] at (R) {}; \node[dotnode,label={below:$+$}] at (B) {};
-\draw[jmline] (T) -- (L) node[midway,above left]{$j_1$};
-\draw[jmline] (T) -- (R) node[midway,above right]{$j_3$};
-\draw[jmline] (L) -- (B) node[midway,below left]{$k_3$};
-\draw[jmline] (R) -- (B) node[midway,below right]{$k_1$};
-\draw[jmline] (T) -- (B) node[midway,right]{$j_2$};
-\draw[jmline] (L) -- (R) node[midway,above]{$k_2$};
-\end{tikzpicture}
-\qquad
-\sixjdiagramu{k_3,j_3,k_1,j_1,j_2,k_2,+}
-\end{center}
-\end{center}
-
-9j Symbol
-\[
-\begin{gathered}
-\sum_{\mu_{i} x_{i} \lambda_{i}}\left(\begin{array}{lll}
-l_{1} & j_{2} & l_{3} \\
-\mu_{1} & \mu_{2} & \mu_{3}
-\end{array}\right)\left(\begin{array}{lll}
-k_{1} & k_{2} & k_{3} \\
-x_{1} & x_{2} & x_{3}
-\end{array}\right)\left(\begin{array}{lll}
-l_{1} & l_{2} & l_{3} \\
-\lambda_{1} & \lambda_{2} & \lambda_{3}
-\end{array}\right)\left(\begin{array}{lll}
-j_{1} & k_{1} & l_{1} \\
-\mu_{1} & x_{1} & \lambda_{1}
-\end{array}\right)\left(\begin{array}{lll}
-j_{2} & k_{2} & l_{2} \\
-\mu_{2} & x_{2} & \lambda_{2}
-\end{array}\right)\left(\begin{array}{lll}
-j_{3} & k_{3} & l_{3} \\
-\mu_{3} & x_{3} & \lambda_{3}
-\end{array}\right) \\
-=\sum_{\mu_{3} x_{i} \lambda_{i}}(-1)^{j_{1}-\mu_{1}+j_{2}-\mu_{2}+j_{3}-\mu_{2}+h_{1}-x_{1}+k_{2}-x_{3}+\mu_{3}-x_{3}+l_{1}-\lambda_{1}+l_{2}-\lambda_{2}+l_{3}-\lambda_{3}}\left(\begin{array}{lll}
-j_{1} & j_{2} & j_{3} \\
-\mu_{1} & \mu_{2} & \mu_{3}
-\end{array}\right)\left(\begin{array}{lll}
-k_{1} & k_{2} & k_{3} \\
-x_{1} & x_{2} & x_{3}
-\end{array}\right) \\
-\times\left(\begin{array}{lll}
-l_{1} & l_{2} & l_{3} \\
-\lambda_{1} & \lambda_{2} & \lambda_{3}
-\end{array}\right)\left(\begin{array}{rrr}
-j_{1} & k_{1} & l_{1} \\
--\mu_{1} & -x_{1} & -\lambda_{1}
-\end{array}\right)\left(\begin{array}{rrr}
-j_{2} & k_{2} & l_{2} \\
--\mu_{2} & -x_{2} & -\lambda_{2}
-\end{array}\right)\left(\begin{array}{rrr}
-j_{3} & k_{3} & l_{3} \\
--\mu_{3} & -x_{3} & -\lambda_{3}
-\end{array}\right)=\ninej{j_{1}}{j_{2}}{j_{3}}{k_{1}}{k_{2}}{k_{3}}{l_{1}}{l_{2}}{l_{3}}
-\end{gathered}
-\]
-\begin{center}
-\begin{center}
-\begin{tikzpicture}[baseline=0pt]
-\foreach \i/\lbl/\pos in {0/j_1/above,1/j_3/above,2/k_3/right,3/k_2/below,4/l_2/below,5/l_1/left}{
-  \coordinate (P\i) at ({90-\i*60}:1.4);
-}
-\node[dotnode,label={above:$+$}] at (P0) {};
-\node[dotnode,label={above right:$-$}] at (P1) {};
-\node[dotnode,label={below right:$+$}] at (P2) {};
-\node[dotnode,label={below:$-$}] at (P3) {};
-\node[dotnode,label={below left:$+$}] at (P4) {};
-\node[dotnode,label={above left:$-$}] at (P5) {};
-\draw[jmline] (P0) -- (P1) node[midway,above]{$j_3$};
-\draw[jmline] (P1) -- (P2) node[midway,right]{$k_3$};
-\draw[jmline] (P2) -- (P3) node[midway,below right]{$k_2$};
-\draw[jmline] (P3) -- (P4) node[midway,below]{$l_2$};
-\draw[jmline] (P4) -- (P5) node[midway,left]{$l_1$};
-\draw[jmline] (P5) -- (P0) node[midway,above left]{$l_3$};
-\draw[jmline] (P0) -- (P3) node[midway,right]{$j_2$};
-\draw[jmline] (P1) -- (P4) node[midway,left]{$k_1$};
-\end{tikzpicture}
-\end{center}
-\end{center}
 
 \subsection{Summation over Angular Momentum}
 A thick $j$-line linking two subdiagrams\\
@@ -743,13 +690,7 @@ where $N_{j}$ is the weight factor; $N_{j}=2 j+1$ for a summation involving the 
 functions of the type $D_{m m^{\prime}}^{j}(R), C_{j m}(\Omega) \equiv[4 \pi /(2 j+1)]^{1 / 2} Y_{j m}(\Omega)$, or $P_{j}(\cos \omega)$. On the other hand, $N_{j}=1$ for summations involving $\clebsch{j_{1}}{m_{1}}{j_{2}}{m_{2}}{j}{m}, U\left(j_{1} j_{2} j_{3} j_{4} ; j j^{\prime}\right)$, or $Y_{j m}(\Omega)$. For example,
 \[
 \begin{gathered}
-\sum_{e e}(2 e+1)(-1)^{e-}\left(\begin{array}{ccc}
-a & b & e \\
-\alpha & \beta & -\varepsilon
-\end{array}\right)\left(\begin{array}{lll}
-a^{\prime} & b^{\prime} & e \\
-\alpha^{\prime} & \beta^{\prime} & e
-\end{array}\right) \\
+\sum_{e e}(2 e+1)(-1)^{e-}\threej{a}{b}{e}{\alpha}{\beta}{-\varepsilon}\threej{a^{\prime}}{b^{\prime}}{e}{\alpha^{\prime}}{\beta^{\prime}}{e} \\
 \sum_{l m} Y_{l m}(\Omega) Y_{l m}^{*}(\Omega)=\braket{\Omega}{l m}\braket{l m}{\Omega^{\prime}} \\
 \sum_{C}(2 C+1)\sixj{A}{B}{C}{a}{b}{c}\sixj{A}{B}{C}{a}{b}{c^{\prime}}
 \end{gathered}
@@ -803,20 +744,8 @@ a^{\prime} & b^{\prime} & e \\
 A Clebsch-Gordan coefficient may be represented as a sum over $c^{\prime} \gamma^{\prime}$ of products of two $3 j m$ symbols (Table~\ref{chap11:tab:7})
 \[
 \begin{aligned}
-\clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} & \equiv\braket{a \alpha b \beta}{c \gamma}=(-1)^{a-b-c} \sum_{c^{\prime} \gamma^{\prime}}\left(2 c^{\prime}+1\right)\left(\begin{array}{ccc}
-a & b & c^{\prime} \\
-\alpha & \beta & \gamma^{\prime}
-\end{array}\right)\left(\begin{array}{ccc}
-c^{\prime} & c & 0 \\
-\gamma^{\prime} & \gamma & 0
-\end{array}\right) \\
-& =(-1)^{2 a} \sum_{c^{\prime} \gamma^{\prime}}\left(2 c^{\prime}+1\right)(-1)^{a-\alpha+b-\beta+c^{\prime}-\gamma^{\prime}}\left(\begin{array}{rrr}
-b & a & c^{\prime} \\
--\beta & -\alpha & -\gamma^{\prime}
-\end{array}\right)\left(\begin{array}{ccc}
-c^{\prime} & c & 0 \\
-\gamma^{\prime} & \gamma & 0
-\end{array}\right),
+\clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} & \equiv\braket{a \alpha b \beta}{c \gamma}=(-1)^{a-b-c} \sum_{c^{\prime} \gamma^{\prime}}\left(2 c^{\prime}+1\right)\threej{a}{b}{c^{\prime}}{\alpha}{\beta}{\gamma^{\prime}}\threej{c^{\prime}}{c}{0}{\gamma^{\prime}}{\gamma}{0} \\
+& =(-1)^{2 a} \sum_{c^{\prime} \gamma^{\prime}}\left(2 c^{\prime}+1\right)(-1)^{a-\alpha+b-\beta+c^{\prime}-\gamma^{\prime}}\threej{b}{a}{c^{\prime}}{-\beta}{-\alpha}{-\gamma^{\prime}}\threej{c^{\prime}}{c}{0}{\gamma^{\prime}}{\gamma}{0},
 \end{aligned}
 \]
 \subsection{Invariant Integration over Directions}
@@ -1086,23 +1015,11 @@ in the associated analytic expression. In other words, the replacement of a sing
 
 For example,
 \[
-\sum_{\alpha^{\prime}}\binom{a}{\alpha^{\prime} \alpha}\left(\begin{array}{ccc}
-a & b & c \\
-\alpha^{\prime} & \beta & \gamma
-\end{array}\right)=(-1)^{a-\alpha}\left(\begin{array}{rrr}
-a & b & c \\
--\alpha & \beta & \gamma
-\end{array}\right),
+\sum_{\alpha^{\prime}}\binom{a}{\alpha^{\prime} \alpha}\threej{a}{b}{c}{\alpha^{\prime}}{\beta}{\gamma}=(-1)^{a-\alpha}\threej{a}{b}{c}{-\alpha}{\beta}{\gamma},
 \]
 and, conversely,
 \[
-\sum_{\alpha^{\prime}}\binom{a}{\alpha \alpha^{\prime}}(-1)^{a-\alpha^{\prime}}\left(\begin{array}{rcc}
-a & b & c \\
--\alpha^{\prime} & \beta & \gamma
-\end{array}\right)=\left(\begin{array}{ccc}
-a & b & c \\
-\alpha & \beta & \gamma
-\end{array}\right) .
+\sum_{\alpha^{\prime}}\binom{a}{\alpha \alpha^{\prime}}(-1)^{a-\alpha^{\prime}}\threej{a}{b}{c}{-\alpha^{\prime}}{\beta}{\gamma}=\threej{a}{b}{c}{\alpha}{\beta}{\gamma} .
 \]
 \subsection{Change of Direction of Integral Lines}
 The reversal of the direction of any internal $j$-line produces the phase factor $(-1)^{2 j}$ in the associated analytic expression, because
@@ -1132,13 +1049,7 @@ The necessary condition for such a linking is that at least one of these subdiag
 This is equivalent to the relation
 \[
 \begin{gathered}
-{\left[\sum_{m_{1} m_{2} m_{3}}\braOket{00}{\mathfrak{M}}{j_{1} m_{1} j_{2} m_{2} j_{3} m_{3}}\left(\begin{array}{ccc}
-j_{1} & j_{2} & j_{3} \\
-m_{1} & m_{2} & m_{3}
-\end{array}\right)\right] \times\left[\sum_{m_{1}^{\prime} m_{3}^{\prime} m_{3}^{\prime}}\left(\begin{array}{ccc}
-j_{1} & j_{2} & j_{3} \\
-m_{1}^{\prime} & m_{2}^{\prime} & m_{3}^{\prime}
-\end{array}\right)\braOket{j_{1} m_{1}^{\prime} j_{2} m_{2}^{\prime} j_{3} m_{3}^{\prime}}{\mathfrak{M}}{}\right]} \\
+{\left[\sum_{m_{1} m_{2} m_{3}}\braOket{00}{\mathfrak{M}}{j_{1} m_{1} j_{2} m_{2} j_{3} m_{3}}\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{m_{2}}{m_{3}}\right] \times\left[\sum_{m_{1}^{\prime} m_{3}^{\prime} m_{3}^{\prime}}\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}^{\prime}}{m_{2}^{\prime}}{m_{3}^{\prime}}\braOket{j_{1} m_{1}^{\prime} j_{2} m_{2}^{\prime} j_{3} m_{3}^{\prime}}{\mathfrak{M}}{}\right]} \\
 =\left\{j_{1} j_{2} j_{3}\right\} \sum_{m_{1} m_{3} m_{3}}\braOket{00}{\mathfrak{M}}{j_{1} m_{1} j_{2} m_{2} j_{3} m_{3}}\braOket{j_{1} m_{1} j_{2} m_{2} j_{3} m_{3}}{\Re}{}
 \end{gathered}
 \]
@@ -1167,27 +1078,9 @@ These factors represent contractions of the original tensors and $3 j m$ symbols
 \[
 \begin{gathered}
 \mathfrak{M}_{j_{1} j_{2} \ldots j_{n}}\left(X_{1} X_{2} \ldots X_{k}\right) \\
-\equiv \sum_{m_{i} M_{i}} \mathfrak{M}_{j_{1} m_{1} j_{2} m_{2} \ldots j_{n} m_{n}}\left(\begin{array}{lll}
-j_{1} & j_{2} & X_{1} \\
-m_{1} & m_{2} & -M_{1}
-\end{array}\right)(-1)^{X_{1}-M_{1}}\left(\begin{array}{lll}
-X_{1} & j_{3} & X_{2} \\
-M_{1} & m_{3} & -M_{2}
-\end{array}\right)(-1)^{X_{2}-M_{2}} \ldots\left(\begin{array}{lll}
-X_{k} & j_{n-1} & j_{n} \\
-M_{k} & m_{n-1} & m_{n}
-\end{array}\right) \\
-\left.\equiv \sum_{m_{i} M_{i}} \mathfrak{N}_{j_{1} j_{2} \ldots j_{n}}^{m_{1} m_{2} \ldots m_{n}}\left(\begin{array}{lll}
-j_{1} & j_{2} & X_{1} \\
-m_{1} & m_{2} & -M_{1}
-\end{array}\right)(-1)^{\mathfrak{N}_{j_{1} j_{2} \ldots j_{n}}\left(X_{1} X_{2} \ldots\right.} X_{k}\right) \\
-\left(\begin{array}{lll}
-X_{1} & j_{3} & X_{2} \\
-M_{1} & m_{3} & -M_{2}
-\end{array}\right)(-1)^{X_{2}-M_{2}} \ldots\left(\begin{array}{lll}
-X_{k} & j_{n-1} & j_{n} \\
-M_{k} & m_{n-1} & m_{n}
-\end{array}\right)
+\equiv \sum_{m_{i} M_{i}} \mathfrak{M}_{j_{1} m_{1} j_{2} m_{2} \ldots j_{n} m_{n}}\threej{j_{1}}{j_{2}}{X_{1}}{m_{1}}{m_{2}}{-M_{1}}(-1)^{X_{1}-M_{1}}\threej{X_{1}}{j_{3}}{X_{2}}{M_{1}}{m_{3}}{-M_{2}}(-1)^{X_{2}-M_{2}} \ldots\threej{X_{k}}{j_{n-1}}{j_{n}}{M_{k}}{m_{n-1}}{m_{n}} \\
+\left.\equiv \sum_{m_{i} M_{i}} \mathfrak{N}_{j_{1} j_{2} \ldots j_{n}}^{m_{1} m_{2} \ldots m_{n}}\threej{j_{1}}{j_{2}}{X_{1}}{m_{1}}{m_{2}}{-M_{1}}(-1)^{\mathfrak{N}_{j_{1} j_{2} \ldots j_{n}}\left(X_{1} X_{2} \ldots\right.} X_{k}\right) \\
+\threej{X_{1}}{j_{3}}{X_{2}}{M_{1}}{m_{3}}{-M_{2}}(-1)^{X_{2}-M_{2}} \ldots\threej{X_{k}}{j_{n-1}}{j_{n}}{M_{k}}{m_{n-1}}{m_{n}}
 \end{gathered}
 \]
 Again, at least one of these contracted quantities must be a true invariant, i.e., should not depend on any additional momentum projection or direction.
@@ -1223,29 +1116,11 @@ Such a graphical operation does not change the meaning of a diagram and correspo
 \]
 where
 \[
-\braOket{j_{1} m_{1} j_{2} m_{2}}{\mathfrak{M}}{j_{1}^{\prime} m_{1}^{\prime} j_{2}^{\prime} m_{2}^{\prime}}=\sum_{j m}(2 j+1)\left(\begin{array}{lll}
-j_{1} & j_{2} & j \\
-m_{1} & m_{2} & m
-\end{array}\right)\braOket{j_{1} j_{2} j m}{\mathfrak{M}}{j_{1}^{\prime} j_{2}^{\prime} j m}\left(\begin{array}{lll}
-j_{1}^{\prime} & j_{2}^{\prime} & j \\
-m_{1}^{\prime} & m_{2}^{\prime} & m
-\end{array}\right) .
+\braOket{j_{1} m_{1} j_{2} m_{2}}{\mathfrak{M}}{j_{1}^{\prime} m_{1}^{\prime} j_{2}^{\prime} m_{2}^{\prime}}=\sum_{j m}(2 j+1)\threej{j_{1}}{j_{2}}{j}{m_{1}}{m_{2}}{m}\braOket{j_{1} j_{2} j m}{\mathfrak{M}}{j_{1}^{\prime} j_{2}^{\prime} j m}\threej{j_{1}^{\prime}}{j_{2}^{\prime}}{j}{m_{1}^{\prime}}{m_{2}^{\prime}}{m} .
 \]
 For example,
 \[
-\sum_{c \gamma}(2 c+1)(-1)^{a-\alpha+b-\beta+c-\gamma}\left(\begin{array}{ccc}
-a & b & c \\
--\alpha & -\beta & -\gamma
-\end{array}\right)\left(\begin{array}{ccc}
-a & b & c \\
-\alpha^{\prime} & \beta^{\prime} & \gamma^{\prime}
-\end{array}\right)=\sum_{c \gamma}(2 c+1)\left(\begin{array}{ccc}
-a & b & c \\
-\alpha & \beta & \gamma
-\end{array}\right)\left(\begin{array}{ccc}
-a & b & c \\
-\alpha^{\prime} & \beta^{\prime} & \gamma^{\prime}
-\end{array}\right)=\delta_{\alpha \alpha^{\prime}} \delta_{\beta \beta^{\prime}},
+\sum_{c \gamma}(2 c+1)(-1)^{a-\alpha+b-\beta+c-\gamma}\threej{a}{b}{c}{-\alpha}{-\beta}{-\gamma}\threej{a}{b}{c}{\alpha^{\prime}}{\beta^{\prime}}{\gamma^{\prime}}=\sum_{c \gamma}(2 c+1)\threej{a}{b}{c}{\alpha}{\beta}{\gamma}\threej{a}{b}{c}{\alpha^{\prime}}{\beta^{\prime}}{\gamma^{\prime}}=\delta_{\alpha \alpha^{\prime}} \delta_{\beta \beta^{\prime}},
 \]
 \begin{center}
 \threenode{a}{c}{b}{above:$+$}\ \threenode{a}{c}{b}{above:$+$}
@@ -1408,38 +1283,23 @@ where
 \[
 \begin{gathered}
 \braOket{j_{1} f_{2} ; J M}{\mathfrak{M}}{j_{2} j_{6} ; J M} \\
-\equiv \sum_{m_{4}}\left(\begin{array}{ccc}
-j_{1} & j_{2} & J \\
-m_{1} & m_{2} & M
-\end{array}\right)\braOket{j_{1} m_{1} j_{2} m_{2}}{\mathfrak{M}}{j_{2} m_{2} j_{4} m_{4}}
-\end{gathered}\left(\begin{array}{ccc}
-j_{2} & j_{4} & J \\
-m_{3} & m_{4} & M
-\end{array}\right) .
+\equiv \sum_{m_{4}}\threej{j_{1}}{j_{2}}{J}{m_{1}}{m_{2}}{M}\braOket{j_{1} m_{1} j_{2} m_{2}}{\mathfrak{M}}{j_{2} m_{2} j_{4} m_{4}}
+\end{gathered}\threej{j_{2}}{j_{4}}{J}{m_{3}}{m_{4}}{M} .
 \]
 Transformation of product of invariant sums into invariant sum of products (at least one of two factors must be a perfect invariant).
 \[
 \begin{aligned}
 &\left(\sum_{m}\braOket{j m}{\mathfrak{M}}{j m}\right)\left(\sum_{m^{\prime}}\braOket{j m^{\prime}}{\Re}{j m^{\prime}}\right) \\
 &=(2 j+1) \sum_{m m^{\prime}}\braOket{j m}{\Re}{j m^{\prime}}\braOket{j m^{\prime}}{\Re}{j m} \\
-& {\left[\sum_{m_{1} m_{2} m_{3}}\braOket{}{\mathfrak{R}}{f_{1} m_{1} f_{2} m_{3} f_{3} m_{3}}\left(\begin{array}{ccc}
-f_{1} & f_{2} & f_{3} \\
-m_{1} & m_{2} & m_{3}
-\end{array}\right)\right] } \\
-& \times {\left[\sum_{m_{1} m_{2} m_{3}}\left(\begin{array}{ccc}
-f_{1} & f_{2} & f_{3} \\
-m_{1} & m_{2} & m_{3}
-\end{array}\right)\braOket{j_{1} m_{1} j_{2} m_{2} f_{2} m_{3}}{\Re}{}\right] } \\
+& {\left[\sum_{m_{1} m_{2} m_{3}}\braOket{}{\mathfrak{R}}{f_{1} m_{1} f_{2} m_{3} f_{3} m_{3}}\threej{f_{1}}{f_{2}}{f_{3}}{m_{1}}{m_{2}}{m_{3}}\right] } \\
+& \times {\left[\sum_{m_{1} m_{2} m_{3}}\threej{f_{1}}{f_{2}}{f_{3}}{m_{1}}{m_{2}}{m_{3}}\braOket{j_{1} m_{1} j_{2} m_{2} f_{2} m_{3}}{\Re}{}\right] } \\
 &= \sum_{m_{2} m_{2} m_{3}}\braOket{}{\mathfrak{R}}{f_{1} m_{1} f_{2} m_{2} f_{3} m_{3}}\braOket{j_{1} m_{1} j_{2} m_{2} j_{2} m_{3}}{\Re}{} .
 \end{aligned}
 \]
 Expression reduction for $J=0$
 \[
 \begin{gathered}
-\sum_{m^{\prime}}\braOket{j m}{\mathfrak{M}}{j^{\prime} m^{\prime}}(-1)^{j^{\prime}-m^{\prime}}\left(\begin{array}{ccc}
-j^{\prime} & 0 & j \\
--m^{\prime} & 0 & m
-\end{array}\right) \\
+\sum_{m^{\prime}}\braOket{j m}{\mathfrak{M}}{j^{\prime} m^{\prime}}(-1)^{j^{\prime}-m^{\prime}}\threej{j^{\prime}}{0}{j}{-m^{\prime}}{0}{m} \\
 =\frac{8, j^{\prime}}{\sqrt{2 j+1}} \sum_{m}\braOket{j m}{\mathfrak{R}}{i m}
 \end{gathered}
 \]
@@ -1488,13 +1348,7 @@ Here the reduced matrix elements are
 \[
 \begin{gathered}
 \braOketred{0}{\mathfrak{R}}{j_{1} j_{2} j_{3}} \equiv \sum_{m_{1} m_{2} m_{3}}\braOket{00}{\mathfrak{R}}{j_{1} m_{1} j_{2} m_{2} j_{3} m_{3}} \\
-\times\left(\begin{array}{ccc}
-j_{1} & j_{2} & j_{3} \\
-m_{1} & m_{2} & m_{3}
-\end{array}\right),\braOket{j_{1} j_{2} j_{3} q}{\Re}{p} \equiv \sum_{m_{1} m_{2} m_{3}}\left(\begin{array}{ccc}
-j_{1} & j_{2} & j_{3} \\
-m_{1} & m_{2} & m_{3}
-\end{array}\right) \\
+\times\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{m_{2}}{m_{3}},\braOket{j_{1} j_{2} j_{3} q}{\Re}{p} \equiv \sum_{m_{1} m_{2} m_{3}}\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{m_{2}}{m_{3}} \\
 \times\braOket{j_{1} m_{1} j_{2} m_{2} j_{3} m_{3} q}{\Re}{p} .
 \end{gathered}
 \]
@@ -1509,10 +1363,7 @@ m_{3} m_{4}}}\braOket{j_{1} m_{1} j_{2} m_{2}}{\cdots}{j_{3} m_{3} j_{4} m_{4}}\
 where
 \[
 \equiv \sum_{\substack{m_{1} m_{2} M \\
-m_{3} m_{4}}}\left(\begin{array}{ccc}
-j_{1} & j_{2} & J \\
-m_{1} & m_{2} & M
-\end{array}\right)\braOketred{j_{1} j_{2} J}{M}{j_{3} j_{4} J}
+m_{3} m_{4}}}\threej{j_{1}}{j_{2}}{J}{m_{1}}{m_{2}}{M}\braOketred{j_{1} j_{2} J}{M}{j_{3} j_{4} J}
 \]
 and similarly for $\braOketred{j_{3} j_{4} J q}{\mathscr{P}}{j_{1} j_{2} J p}$.
 
@@ -1541,16 +1392,7 @@ where
 \[
 \begin{gathered}
 \braOketred{0}{\mathfrak{M}}{J_{12} J_{3} J_{45}}=\sum_{m_{i} M_{i k}}\braOket{00}{\mathfrak{M}}{j_{1} m_{1} \ldots j_{5} m_{5}} \\
-\times\left(\begin{array}{ccc}
-j_{1} & j_{2} & J_{12} \\
-m_{1} & m_{2} & M_{12}
-\end{array}\right)(-1)^{j_{3}-m},\left(\begin{array}{ccc}
-J_{12} & j_{3} & J_{45} \\
-M_{12} & -m_{3} & M_{45}
-\end{array}\right)\left(\begin{array}{ccc}
-j_{4} & j_{5} & J_{45} \\
-m_{4} & m_{3} & M_{45}
-\end{array}\right),
+\times\threej{j_{1}}{j_{2}}{J_{12}}{m_{1}}{m_{2}}{M_{12}}(-1)^{j_{3}-m},\threej{J_{12}}{j_{3}}{J_{45}}{M_{12}}{-m_{3}}{M_{45}}\threej{j_{4}}{j_{5}}{J_{45}}{m_{4}}{m_{3}}{M_{45}},
 \end{gathered}
 \]
 \begin{table}[h]
@@ -1573,19 +1415,7 @@ where
 \[
 \begin{gathered}
 \braOketred{0}{\mathfrak{M}}{J_{12} J_{34} J_{56}}=\sum_{m_{i} M_{i k}}\braOket{00}{\mathfrak{M}}{j_{1} m_{1} \ldots j_{6} m_{6}} \\
-\times\left(\begin{array}{lll}
-j_{1} & j_{2} & J_{12} \\
-m_{1} & m_{2} & M_{12}
-\end{array}\right)\left(\begin{array}{lll}
-j_{3} & j_{4} & J_{34} \\
-m_{3} & m_{4} & M_{34}
-\end{array}\right)\left(\begin{array}{lll}
-j_{5} & j_{6} & J_{56} \\
-m_{5} & m_{6} & M_{56}
-\end{array}\right)\left(\begin{array}{lll}
-J_{12} & J_{34} & J_{56} \\
-M_{12} & M_{34} & M_{56}
-\end{array}\right),
+\times\threej{j_{1}}{j_{2}}{J_{12}}{m_{1}}{m_{2}}{M_{12}}\threej{j_{3}}{j_{4}}{J_{34}}{m_{3}}{m_{4}}{M_{34}}\threej{j_{5}}{j_{6}}{J_{56}}{m_{5}}{m_{6}}{M_{56}}\threej{J_{12}}{J_{34}}{J_{56}}{M_{12}}{M_{34}}{M_{56}},
 \end{gathered}
 \]
 \sixjdiagramu{J_{12},J_{34},J_{56},j_1{,}j_2,j_3{,}j_4,j_5{,}j_6,+}
@@ -1595,13 +1425,7 @@ and similarly for $\braOketred{J_{18} J_{34} J_{56} q}{92}{p}$.
 \subsubsection{Graphical Representation}
 \subsubsection{Reversal of Cyclic Order of Momentum Coupling}
 \[
-\left(\begin{array}{ccc}
-j_{1} & j_{2} & j_{3} \\
-m_{1} & m_{2} & m_{3}
-\end{array}\right)=(-1)^{j_{1}+j_{1}+j_{3}}\left(\begin{array}{ccc}
-j_{3} & j_{2} & j_{1} \\
-m_{3} & m_{2} & m_{1}
-\end{array}\right)
+\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{m_{2}}{m_{3}}=(-1)^{j_{1}+j_{1}+j_{3}}\threej{j_{3}}{j_{2}}{j_{1}}{m_{3}}{m_{2}}{m_{1}}
 \]
 \begin{table}[h]
 \begin{center}
@@ -1614,27 +1438,15 @@ m_{3} & m_{2} & m_{1}
 \subsubsection{Hermitian Conjugation}
 \[
 \left.\begin{array}{c}
-\sum_{m_{1}^{\prime}}\binom{j_{1}}{m_{1}^{\prime} m_{1}}\left(\begin{array}{ccc}
-j_{1} & j_{2} & j_{3} \\
-m_{1}^{\prime} & m_{2} & m_{3}
-\end{array}\right)=(-1)^{j_{1}-m_{1}}\left(\begin{array}{ccc}
-j_{1} & j_{2} & j_{3} \\
--m_{1} & m_{2} & m_{3}
-\end{array}\right) \\
-=\sum_{m_{2}^{\prime} m_{3}^{\prime}}\left(\begin{array}{ccc}
-j_{1} & j_{2} & j_{3} \\
-m_{1} & m_{2}^{\prime} & m_{3}^{\prime}
-\end{array}\right)\left(\begin{array}{c}
+\sum_{m_{1}^{\prime}}\binom{j_{1}}{m_{1}^{\prime} m_{1}}\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}^{\prime}}{m_{2}}{m_{3}}=(-1)^{j_{1}-m_{1}}\threej{j_{1}}{j_{2}}{j_{3}}{-m_{1}}{m_{2}}{m_{3}} \\
+=\sum_{m_{2}^{\prime} m_{3}^{\prime}}\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{m_{2}^{\prime}}{m_{3}^{\prime}}\left(\begin{array}{c}
 j_{2} \\
 m_{2}
 \end{array} m_{2}^{\prime}\right)\left(\begin{array}{c}
 j_{3} \\
 m_{3}
 \end{array} m_{3}^{\prime}\right.
-\end{array}\right)=(-1)^{j_{2}+m_{2}+j_{3}+m_{3}}\left(\begin{array}{ccc}
-j_{1} & j_{2} & j_{3} \\
-m_{1} & -m_{2} & -m_{3}
-\end{array}\right) ~ \sum_{m_{1}^{\prime} m_{2}^{\prime} m_{3}^{\prime}}\left(\begin{array}{c}
+\end{array}\right)=(-1)^{j_{2}+m_{2}+j_{3}+m_{3}}\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{-m_{2}}{-m_{3}} ~ \sum_{m_{1}^{\prime} m_{2}^{\prime} m_{3}^{\prime}}\left(\begin{array}{c}
 j_{1} \\
 m_{1}^{\prime} \\
 m_{1}
@@ -1642,16 +1454,7 @@ m_{1}
 j_{2} \\
 m_{2}^{\prime} \\
 m_{2}
-\end{array}\right)\binom{j_{3}}{m_{3}^{\prime} m_{3}}\left(\begin{array}{ccc}
-j_{1} & j_{3} & j_{3} \\
-m_{1}^{\prime} & m_{2}^{\prime} & m_{3}^{\prime}
-\end{array}\right) ~\left(\begin{array}{ccc}
-j_{1} & j_{2} & j_{3} \\
--m_{1} & -m_{2} & -m_{3}
-\end{array}\right)=\left(\begin{array}{ccc}
-j_{1} & j_{2} & j_{3} \\
-m_{1} & m_{2} & m_{3}
-\end{array}\right) ~ c_{1}^{j_{1}-m_{1}+j_{2}-m_{2}+j_{3}-m_{3}}\left(\begin{array}{ccc}
+\end{array}\right)\binom{j_{3}}{m_{3}^{\prime} m_{3}}\threej{j_{1}}{j_{3}}{j_{3}}{m_{1}^{\prime}}{m_{2}^{\prime}}{m_{3}^{\prime}} ~\threej{j_{1}}{j_{2}}{j_{3}}{-m_{1}}{-m_{2}}{-m_{3}}=\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{m_{2}}{m_{3}} ~ c_{1}^{j_{1}-m_{1}+j_{2}-m_{2}+j_{3}-m_{3}}\left(\begin{array}{ccc}
 j_{1} & &
 \end{array}\right)
 \]
@@ -1665,20 +1468,8 @@ Analytical Expression
 Orthonormality
 \[
 \begin{gathered}
-\sum_{m_{1} m_{2}}\left(\begin{array}{ccc}
-j_{1} & j_{2} & j_{3} \\
-m_{1} & m_{2} & m_{3}
-\end{array}\right)\left(\begin{array}{ccc}
-j_{1} & j_{2} & j_{3}^{\prime} \\
-m_{1} & m_{2} & m_{3}^{\prime}
-\end{array}\right) \\
-=\sum_{m_{1} m_{2}}(-1)^{j_{1}-m_{1}+j_{2}-m_{2}+j_{3}-m_{3}}\left(\begin{array}{ccc}
-j_{1} & j_{2} & j_{3} \\
--m_{1} & -m_{2} & -m_{3}
-\end{array}\right)\left(\begin{array}{ccc}
-j_{1} & j_{2} & j_{3}^{\prime} \\
-m_{1} & m_{2} & m_{3}^{\prime}
-\end{array}\right) \\
+\sum_{m_{1} m_{2}}\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{m_{2}}{m_{3}}\threej{j_{1}}{j_{2}}{j_{3}^{\prime}}{m_{1}}{m_{2}}{m_{3}^{\prime}} \\
+=\sum_{m_{1} m_{2}}(-1)^{j_{1}-m_{1}+j_{2}-m_{2}+j_{3}-m_{3}}\threej{j_{1}}{j_{2}}{j_{3}}{-m_{1}}{-m_{2}}{-m_{3}}\threej{j_{1}}{j_{2}}{j_{3}^{\prime}}{m_{1}}{m_{2}}{m_{3}^{\prime}} \\
 =\frac{\delta_{j_{3} j_{3}^{\prime} m_{3} m_{3}^{\prime}}}{\left(2 j_{3}+1\right)}\left\langle j_{1} j_{2} j_{3}\right\}
 \end{gathered}
 \]
@@ -1689,20 +1480,8 @@ m_{1} & m_{2} & m_{3}^{\prime}
 \subsubsection{Completeness}
 \[
 \begin{gathered}
-\sum_{j_{3} m_{3}}\left(2 j_{3}+1\right)\left(\begin{array}{ccc}
-j_{1} & j_{2} & j_{3} \\
-m_{1} & m_{2} & m_{3}
-\end{array}\right)\left(\begin{array}{ccc}
-j_{1} & j_{2} & j_{3} \\
-m_{1}^{\prime} & m_{2}^{\prime} & m_{3}
-\end{array}\right) \\
-=\sum_{j_{3} m_{3}}\left(2 j_{3}+1\right)(-1)^{j_{1}-m_{1}+j_{2}-m_{2}+j_{3}-m_{3}}\left(\begin{array}{ccc}
-j_{1} & j_{2} & j_{3} \\
--m_{1} & -m_{2} & -m_{3}
-\end{array}\right)\left(\begin{array}{ccc}
-j_{1} & j_{2} & j_{3} \\
-m_{1}^{\prime} & m_{2}^{\prime} & m_{3}
-\end{array}\right) \\
+\sum_{j_{3} m_{3}}\left(2 j_{3}+1\right)\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{m_{2}}{m_{3}}\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}^{\prime}}{m_{2}^{\prime}}{m_{3}} \\
+=\sum_{j_{3} m_{3}}\left(2 j_{3}+1\right)(-1)^{j_{1}-m_{1}+j_{2}-m_{2}+j_{3}-m_{3}}\threej{j_{1}}{j_{2}}{j_{3}}{-m_{1}}{-m_{2}}{-m_{3}}\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}^{\prime}}{m_{2}^{\prime}}{m_{3}} \\
 =\delta_{m_{1} m_{1}^{\prime} \delta_{m_{2} m_{2}^{\prime}}}
 \end{gathered}
 \]
@@ -1720,28 +1499,10 @@ m_{1}^{\prime} & m_{2}^{\prime} & m_{3}
 \[
 \begin{gathered}
 \clebsch{j_{1}}{m_{1}}{j_{2}}{m_{2}}{J}{M}=\braket{j_{1} m_{1} j_{2} m_{2}}{j_{1} j_{2} J M}=\braket{j_{1} j_{2} J M}{j_{1} m_{1} j_{2} m_{2}} \\
-=(-1)^{2 j_{1}} \sum_{j_{3} m_{2}}\left(2 j_{3}+1\right)\left(\begin{array}{ccc}
-J & 0 & j_{3} \\
-M & 0 & m_{3}
-\end{array}\right)\left(\begin{array}{ccc}
-j_{3} & j_{2} & j_{1} \\
-m_{3} & m_{2} & m_{1}
-\end{array}\right) \\
-=(-1)^{2 j_{1} \sqrt{2 J}+1}(-1)^{J+M}\left(\begin{array}{ccc}
-J & j_{2} & j_{1} \\
--M & m_{2} & m_{1}
-\end{array}\right) \\
-=(-1)^{2 j_{2}} \sum_{j_{3} m_{3}}\left(2 j_{3}+1\right)\left(\begin{array}{ccc}
-0 & J & j_{3} \\
-0 & M & m_{3}
-\end{array}\right)\left(\begin{array}{ccc}
-j_{3} & j_{2} & j_{1} \\
-m_{2} & m_{2} & m_{1}
-\end{array}\right) \\
-=(-1)^{2 j_{3} \sqrt{2 J+1}}(-1)^{J-M}\left(\begin{array}{rrr}
-J & j_{2} & j_{1} \\
--M & m_{2} & m_{1}
-\end{array}\right)
+=(-1)^{2 j_{1}} \sum_{j_{3} m_{2}}\left(2 j_{3}+1\right)\threej{J}{0}{j_{3}}{M}{0}{m_{3}}\threej{j_{3}}{j_{2}}{j_{1}}{m_{3}}{m_{2}}{m_{1}} \\
+=(-1)^{2 j_{1} \sqrt{2 J}+1}(-1)^{J+M}\threej{J}{j_{2}}{j_{1}}{-M}{m_{2}}{m_{1}} \\
+=(-1)^{2 j_{2}} \sum_{j_{3} m_{3}}\left(2 j_{3}+1\right)\threej{0}{J}{j_{3}}{0}{M}{m_{3}}\threej{j_{3}}{j_{2}}{j_{1}}{m_{2}}{m_{2}}{m_{1}} \\
+=(-1)^{2 j_{3} \sqrt{2 J+1}}(-1)^{J-M}\threej{J}{j_{2}}{j_{1}}{-M}{m_{2}}{m_{1}}
 \end{gathered}
 \]
 \threenode{J}{j_1}{j_2}{above:$+$}\quad$=(-1)^{2j_1}\sqrt{2J+1}\times$
@@ -1799,13 +1560,7 @@ where $\omega_{12}$ is the angle between $\Omega_{1}$ and $\Omega_{2}$
 \begin{tikzpicture}[baseline=0pt]\draw[omarrow] (0,0) node[left]{$l_1m_1$} -- (1,0); \node[deltanode] at (1,0){}; \draw[omarrow] (1,0) -- (2,0) node[right]{$l_2m_2$};\end{tikzpicture}
 \end{center}
 \[
-\int C_{l_{1} m_{1}}(\Omega) C_{l_{2} m_{2}}(\Omega) C_{l_{3} m_{3}}(\Omega) \frac{d Q}{4 \pi}=\left(\begin{array}{ccc}
-l_{1} & l_{2} & l_{3} \\
-0 & 0 & 0
-\end{array}\right)\left(\begin{array}{ccc}
-l_{1} & l_{2} & l_{3} \\
-m_{1} & m_{2} & m_{3}
-\end{array}\right) .
+\int C_{l_{1} m_{1}}(\Omega) C_{l_{2} m_{2}}(\Omega) C_{l_{3} m_{3}}(\Omega) \frac{d Q}{4 \pi}=\threej{l_{1}}{l_{2}}{l_{3}}{0}{0}{0}\threej{l_{1}}{l_{2}}{l_{3}}{m_{1}}{m_{2}}{m_{3}} .
 \]
 \begin{figure}[h]
 \begin{center}
@@ -1817,24 +1572,12 @@ m_{1} & m_{2} & m_{3}
 
 Clebsch-Gordan Expansion
 \[
-C_{l_{1} m_{1}}(\Omega) C_{l_{2} m_{2}}(\Omega)=\sum_{l_{3} m_{3}}\left(\begin{array}{ccc}
-l_{1} & l_{2} & l_{3} \\
-0 & 0 & 0
-\end{array}\right)\left(\begin{array}{ccc}
-l_{1} & l_{2} & l_{3} \\
-m_{1} & m_{2} & m_{3}
-\end{array}\right) C_{l_{3} m_{2}}^{*}(\Omega) . \Omega_{l_{1} m_{1}}^{\Omega}=-\Omega_{l_{1} m_{1}}^{l_{2} m_{2}}
+C_{l_{1} m_{1}}(\Omega) C_{l_{2} m_{2}}(\Omega)=\sum_{l_{3} m_{3}}\threej{l_{1}}{l_{2}}{l_{3}}{0}{0}{0}\threej{l_{1}}{l_{2}}{l_{3}}{m_{1}}{m_{2}}{m_{3}} C_{l_{3} m_{2}}^{*}(\Omega) . \Omega_{l_{1} m_{1}}^{\Omega}=-\Omega_{l_{1} m_{1}}^{l_{2} m_{2}}
 \]
 Sum of Scalar Products of Three Harmonics
 \[
 \begin{aligned}
-& \sum_{m_{1} m_{2} m_{3}}\left(2 l_{1}+1\right)\left(\begin{array}{ccc}
-l_{1} & l_{2} & l_{3} \\
-0 & 0 & 0
-\end{array}\right)\left(\begin{array}{ccc}
-l_{1} & l_{2} & l_{3} \\
-m_{1} & m_{2} & m_{3}
-\end{array}\right) C_{l_{1} m_{1}}\left(Q_{1}\right) C_{l_{2} m_{2}}\left(Q_{2}\right) C_{l_{3} m_{3}}\left(Q_{3}\right) \\
+& \sum_{m_{1} m_{2} m_{3}}\left(2 l_{1}+1\right)\threej{l_{1}}{l_{2}}{l_{3}}{0}{0}{0}\threej{l_{1}}{l_{2}}{l_{3}}{m_{1}}{m_{2}}{m_{3}} C_{l_{1} m_{1}}\left(Q_{1}\right) C_{l_{2} m_{2}}\left(Q_{2}\right) C_{l_{3} m_{3}}\left(Q_{3}\right) \\
 & =P_{l_{2}}\left(\cos \omega_{21}\right) P_{l_{3}}\left(\cos \omega_{31}\right) .
 \end{aligned}
 \]
@@ -1854,13 +1597,7 @@ m_{1} & m_{2} & m_{3}
 \[
 \begin{gathered}
 \int D_{m_{1} m_{1}}^{j_{1}}(R) D_{m_{2} m_{2}}^{j_{2}}(R) D_{m_{3} m_{3}^{\prime}}^{j_{3}}(R) \frac{d R}{16 \pi^{2}} \\
-=\left(\begin{array}{ccc}
-j_{1} & j_{2} & j_{3} \\
-m_{1} & m_{2} & m_{3}
-\end{array}\right)\left(\begin{array}{ccc}
-j_{1} & j_{2} & j_{3} \\
-m_{1}^{\prime} & m_{2}^{\prime} & m_{3}^{\prime}
-\end{array}\right) .
+=\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{m_{2}}{m_{3}}\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}^{\prime}}{m_{2}^{\prime}}{m_{3}^{\prime}} .
 \end{gathered}
 \]
 \begin{figure}[h]
@@ -1883,40 +1620,16 @@ m_{1}^{\prime} & m_{2}^{\prime} & m_{3}^{\prime}
 \[
 \begin{aligned}
 & m_{j} \\
-& \sixj{j_{1}}{j_{2}}{j_{3}}{j_{23}}{j_{31}}{j_{13}} \sum_{m_{1} m_{3} m_{3}}\left(\begin{array}{ccc}
-j_{1} & j_{2} & j_{3} \\
-m_{1} & m_{2} & m_{3}
-\end{array}\right) D_{m_{1} m_{1}^{\prime}}^{j_{1}}\left(R_{1}\right) D_{m_{2} m_{3}^{\prime}}^{j_{3}}\left(R_{2}\right) D_{m_{3} m_{3}^{\prime}}^{j_{3}}\left(R_{3}\right) \\
+& \sixj{j_{1}}{j_{2}}{j_{3}}{j_{23}}{j_{31}}{j_{13}} \sum_{m_{1} m_{3} m_{3}}\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{m_{2}}{m_{3}} D_{m_{1} m_{1}^{\prime}}^{j_{1}}\left(R_{1}\right) D_{m_{2} m_{3}^{\prime}}^{j_{3}}\left(R_{2}\right) D_{m_{3} m_{3}^{\prime}}^{j_{3}}\left(R_{3}\right) \\
 & =\sum_{\substack{M_{1}, M_{22} M_{23} \\
 M_{12} M_{22}^{\prime} M_{31}^{\prime}}}(-1)^{J_{12}-M_{12}+J_{22}-M_{22}+J_{m-} M_{21}} \\
-& \times\left(\begin{array}{rrr}
-J_{12} & J_{1} & J_{22} \\
-M_{12} & m_{1}^{\prime} & -M_{31}^{\prime}
-\end{array}\right)\left(\begin{array}{rrr}
-J_{23} & J_{2} & J_{12} \\
-M_{23} & m_{2}^{\prime} & -M_{12}^{\prime}
-\end{array}\right)\left(\begin{array}{rrr}
-J_{31} & J_{2} & J_{23} \\
-M_{31} & m_{3}^{\prime} & -M_{23}^{\prime}
-\end{array}\right) \\
+& \times\threej{J_{12}}{J_{1}}{J_{22}}{M_{12}}{m_{1}^{\prime}}{-M_{31}^{\prime}}\threej{J_{23}}{J_{2}}{J_{12}}{M_{23}}{m_{2}^{\prime}}{-M_{12}^{\prime}}\threej{J_{31}}{J_{2}}{J_{23}}{M_{31}}{m_{3}^{\prime}}{-M_{23}^{\prime}} \\
 & \times D_{M_{11} M_{11}^{\prime}}^{J_{31}}\left(R_{3}^{-1} R_{1}\right) D_{M_{12} M_{12}^{\prime}}^{J_{12}}\left(R_{1}^{-1} R_{2}\right) D_{M_{22} M_{12}^{\prime}}^{J_{22}}\left(R_{2}^{-1} R_{3}\right) . \\
 & \sum_{j_{1} j_{2} j_{2}}\left(2 j_{1}+1\right)\left(2 j_{2}+1\right)\left(2 j_{3}+1\right)\sixj{j_{2}}{j_{2}}{j_{2}}{j_{22}}{j_{21}}{j_{12}} \\
 & \times \sum_{\substack{m, m_{2}, m_{2} \\
 m, m_{1}^{\prime}, m_{2}, m_{3}}}(-1)^{J_{1}-M_{12}+J_{2 n}-M_{22}+J_{21}-M_{21}} \\
-& \times\left(\begin{array}{ccc}
-J_{31} & J_{1} & J_{12} \\
-M_{31}^{\prime} & m_{1} & -M_{12}
-\end{array}\right)\left(\begin{array}{ccc}
-J_{12} & J_{2} & J_{23} \\
-M_{12}^{\prime} & m_{2} & -M_{23}
-\end{array}\right)\left(\begin{array}{ccc}
-J_{23} & J_{3} & J_{31} \\
-M_{23}^{\prime} & m_{3} & -M_{31}
-\end{array}\right) \\
-& \times D_{m_{1} m_{1}^{\prime}}^{f_{1}^{\prime}}\left(R_{1}\right) D_{m_{2} m_{2}^{\prime}}^{f_{2}^{\prime}}\left(R_{2}\right) D_{m_{2} m_{3}^{\prime}}^{j_{3}^{\prime}}\left(R_{3}\right)\left(\begin{array}{ccc}
-f_{3} & f_{2} & f_{1} \\
-m_{3}^{\prime} & m_{2}^{\prime} & m_{1}^{\prime}
-\end{array}\right) \\
+& \times\threej{J_{31}}{J_{1}}{J_{12}}{M_{31}^{\prime}}{m_{1}}{-M_{12}}\threej{J_{12}}{J_{2}}{J_{23}}{M_{12}^{\prime}}{m_{2}}{-M_{23}}\threej{J_{23}}{J_{3}}{J_{31}}{M_{23}^{\prime}}{m_{3}}{-M_{31}} \\
+& \times D_{m_{1} m_{1}^{\prime}}^{f_{1}^{\prime}}\left(R_{1}\right) D_{m_{2} m_{2}^{\prime}}^{f_{2}^{\prime}}\left(R_{2}\right) D_{m_{2} m_{3}^{\prime}}^{j_{3}^{\prime}}\left(R_{3}\right)\threej{f_{3}}{f_{2}}{f_{1}}{m_{3}^{\prime}}{m_{2}^{\prime}}{m_{1}^{\prime}} \\
 & =D_{M_{11} M_{12}^{\prime}}^{J_{12}}\left(R_{1} R_{2}^{-1}\right) D_{M_{23} M_{22}^{\prime}}^{J_{2}}\left(R_{2} R_{3}^{-1}\right) D_{M_{31} M_{11}^{\prime}}^{J_{3}}\left(R_{3} R_{1}^{-1}\right) .
 \end{aligned}
 \]
@@ -1927,10 +1640,7 @@ m_{3}^{\prime} & m_{2}^{\prime} & m_{1}^{\prime}
 Matrix element of an irreducible tensor operator of rank $k$ in the JM-representation\\
 (Wigner-Eckart theorem)
 \[
-\braOket{\gamma J M}{\mathfrak{M}_{k,}}{\gamma^{\prime} J^{\prime} M^{\prime}}=(-1)^{J-M}\left(\begin{array}{ccc}
-J & k & J^{\prime} \\
--M & q & M^{\prime}
-\end{array}\right)\left(\gamma^{J}\left\|\mathfrak{M}_{k}\right\| \gamma^{\prime} J^{\prime}\right) .
+\braOket{\gamma J M}{\mathfrak{M}_{k,}}{\gamma^{\prime} J^{\prime} M^{\prime}}=(-1)^{J-M}\threej{J}{k}{J^{\prime}}{-M}{q}{M^{\prime}}\left(\gamma^{J}\left\|\mathfrak{M}_{k}\right\| \gamma^{\prime} J^{\prime}\right) .
 \]
 where $\left(\gamma J\left\|\mathfrak{M}_{k}\right\| \gamma^{\prime} J^{\prime}\right)$ is the reduced matrix element
 
@@ -2039,40 +1749,22 @@ Standard functions of angular momentum theory may be used as a basis for the exp
 \end{center}
 
 This follows from the fact that any dependence on two directions is, actually, the dependence on the angle between these directions, i.e. it may be represented by the scalar product of two functions $|j m\rangle$ and $\langle j m|$.\\
-(d) A diagram with three external $j$-lines which represent $\left.\left|j_{1} m_{1}\right|, \mid j_{2} m_{2}\right)$ and $\left.\mid j_{3} m_{3}\right)$ is proportional to the $3 j m$ symbol $\left(\begin{array}{lll}j_{1} & j_{2} & j_{3} \\ m_{1} & m_{2} & m_{3}\end{array}\right)$
+(d) A diagram with three external $j$-lines which represent $\left.\left|j_{1} m_{1}\right|, \mid j_{2} m_{2}\right)$ and $\left.\mid j_{3} m_{3}\right)$ is proportional to the $3 j m$ symbol $\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{m_{2}}{m_{3}}$
 \[
-\braOket{00}{\mathfrak{M}}{j_{1} m_{1} j_{2} m_{2} j_{3} m_{3}}=\braOketred{0}{\mathfrak{M}}{j_{1} j_{2} j_{3}}\left(\begin{array}{lll}
-j_{1} & j_{2} & j_{3} \\
-m_{1} & m_{2} & m_{3}
-\end{array}\right),
+\braOket{00}{\mathfrak{M}}{j_{1} m_{1} j_{2} m_{2} j_{3} m_{3}}=\braOketred{0}{\mathfrak{M}}{j_{1} j_{2} j_{3}}\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{m_{2}}{m_{3}},
 \]
 where $\braOketred{0}{{ } \Re}{j_{1} j_{2} j_{3}}$ is the reduced matrix element defined by
 \[
-\left.\left\langle 00\|I R\| j_{1} j_{2} j_{3}\right\rangle=\left.\sum_{m_{1} m_{2} m_{3}}\langle 00| 9\right|_{j 1} m_{1} j_{2} m_{2} j_{3} m_{3}\right\rangle\left(\begin{array}{lll}
-j_{1} & j_{2} & j_{3} \\
-m_{1} & m_{2} & m_{3}
-\end{array}\right),
+\left.\left\langle 00\|I R\| j_{1} j_{2} j_{3}\right\rangle=\left.\sum_{m_{1} m_{2} m_{3}}\langle 00| 9\right|_{j 1} m_{1} j_{2} m_{2} j_{3} m_{3}\right\rangle\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{m_{2}}{m_{3}},
 \]
 \sixjdiagramu{j_1,j_2,j_3,m_1,m_2,m_3,+}
 (e) A diagram with four external $j$-lines corresponding $j_{1} m_{1}, j_{2} m_{2}, j_{3} m_{3}$ and $j_{4} m_{4}$ may be presented as a sum (over $j$ ) of the product of two $3 j m$ symbols
 \[
-\left(j_{1} m_{1} j_{2} m_{2}|\Re| j_{3} m_{3} j_{4} m_{4}\right\rangle=\sum_{j m}(2 j+1)\left(\begin{array}{lll}
-j_{1} & j_{2} & j \\
-m_{1} & m_{2} & m
-\end{array}\right)\braOket{j_{1} j_{2} j m}{\Re}{j_{3} j_{4} j m}\left(\begin{array}{lll}
-j_{3} & j_{4} & j \\
-m_{3} & m_{4} & m
-\end{array}\right),
+\left(j_{1} m_{1} j_{2} m_{2}|\Re| j_{3} m_{3} j_{4} m_{4}\right\rangle=\sum_{j m}(2 j+1)\threej{j_{1}}{j_{2}}{j}{m_{1}}{m_{2}}{m}\braOket{j_{1} j_{2} j m}{\Re}{j_{3} j_{4} j m}\threej{j_{3}}{j_{4}}{j}{m_{3}}{m_{4}}{m},
 \]
 where
 \[
-\braOket{j_{1} j_{2} j m}{\Re}{j_{3} j_{4} j m} \equiv \sum_{m_{1} m_{2} m_{3} m_{6}}\left(\begin{array}{lll}
-j_{1} & j_{2} & j \\
-m_{1} & m_{2} & m
-\end{array}\right)\left(j_{1} m_{1} j_{2} m_{2}|\Re| j_{3} m_{3} j_{4} m_{4}\right)\left(\begin{array}{lll}
-j_{3} & j_{4} & j^{\prime} \\
-m_{3} & m_{4} & m^{\prime}
-\end{array}\right)
+\braOket{j_{1} j_{2} j m}{\Re}{j_{3} j_{4} j m} \equiv \sum_{m_{1} m_{2} m_{3} m_{6}}\threej{j_{1}}{j_{2}}{j}{m_{1}}{m_{2}}{m}\left(j_{1} m_{1} j_{2} m_{2}|\Re| j_{3} m_{3} j_{4} m_{4}\right)\threej{j_{3}}{j_{4}}{j^{\prime}}{m_{3}}{m_{4}}{m^{\prime}}
 \]
 \begin{center}
 \begin{tikzpicture}[baseline=0pt]\node[opbox](M) at (0,0){$\mathfrak{N}$}; \draw[jmline] (M) -- (-1.3,0.8) node[left]{$j_1m_1$}; \draw[jmline] (M) -- (-1.3,-0.8) node[left]{$j_2m_2$}; \draw[jmline] (M) -- (1.3,0.8) node[right]{$j_3m_3$}; \draw[jmline] (M) -- (1.3,-0.8) node[right]{$j_4m_4$};\end{tikzpicture}
@@ -2104,19 +1796,13 @@ where $\omega_{12}$ is the angle $\widehat{\Omega_{1} \Omega_{2}}$
 \begin{gathered}
 P_{1}\left(\cos \omega_{12}\right)=\sum_{m}\braket{Q_{1}}{l m}\braket{l m}{Q_{2}} . \\
 \braOket{j_{1} m_{1}}{\mathfrak{M}}{j_{2} m_{2} j_{3} m_{3}} \\
-=(-1)^{j_{1}-m_{2}}\left(\begin{array}{ccc}
-j_{1} & j_{2} & j_{3} \\
--m_{1} & m_{2} & m_{3}
-\end{array}\right)\braOketred{j_{1}}{\mathfrak{M}_{j_{2}}}{j_{3}},
+=(-1)^{j_{1}-m_{2}}\threej{j_{1}}{j_{2}}{j_{3}}{-m_{1}}{m_{2}}{m_{3}}\braOketred{j_{1}}{\mathfrak{M}_{j_{2}}}{j_{3}},
 \end{gathered}
 \]
 where
 \[
 \begin{aligned}
-&\braOketred{j_{1}}{\mathfrak{M}_{j_{2}}}{j_{3}} \equiv \sum_{m_{1} m_{2} m_{3}}(-1)^{j_{1}-m_{1}}\left(\begin{array}{ccc}
-i_{1} & j_{2} & j_{3} \\
--m_{1} & m_{2} & m_{3}
-\end{array}\right) \\
+&\braOketred{j_{1}}{\mathfrak{M}_{j_{2}}}{j_{3}} \equiv \sum_{m_{1} m_{2} m_{3}}(-1)^{j_{1}-m_{1}}\threej{i_{1}}{j_{2}}{j_{3}}{-m_{1}}{m_{2}}{m_{3}} \\
 & \times\braOket{j_{1} m_{1}}{\mathfrak{M}_{2}}{j_{2} m_{2} j_{3} m_{\Omega}}
 \end{aligned}
 \]
@@ -2125,20 +1811,14 @@ i_{1} & j_{2} & j_{3} \\
 \begin{tikzpicture}[baseline=0pt]\node[opbox](M) at (0,0){$\mathfrak{M}_{j_2}$}; \draw[jmline] (M) -- (-1.3,0.6) node[left]{$j_1$}; \draw[jmline] (M) -- (1.3,0.6) node[right]{$j_3$}; \draw[omarrow] (M) -- (0,-1.2) node[below]{$Q$};\end{tikzpicture}
 \end{center}
 \[
-=\sum_{j_{1} m_{1}}\braket{Q}{j_{1} m_{1}}(-1)^{j_{1}-m_{1}}\left(\begin{array}{ccc}
-j_{1} & j_{2} & j_{3} \\
--m_{1} & m_{2} & m_{3}
-\end{array}\right)\braOketred{j_{1}}{\mathfrak{M}_{j_{3}}}{j_{3}} \cdot-\Omega_{1}-\sqrt[\Omega_{1}]{\frac{j_{2} m_{2}}{j_{3} m_{3}}}=-\Omega_{1}-\overbrace{j_{3} m_{3}}^{j_{2} m_{2}} \cdots \sum_{1}
+=\sum_{j_{1} m_{1}}\braket{Q}{j_{1} m_{1}}(-1)^{j_{1}-m_{1}}\threej{j_{1}}{j_{2}}{j_{3}}{-m_{1}}{m_{2}}{m_{3}}\braOketred{j_{1}}{\mathfrak{M}_{j_{3}}}{j_{3}} \cdot-\Omega_{1}-\sqrt[\Omega_{1}]{\frac{j_{2} m_{2}}{j_{3} m_{3}}}=-\Omega_{1}-\overbrace{j_{3} m_{3}}^{j_{2} m_{2}} \cdots \sum_{1}
 \]
 \threenode{j_1}{j_3}{j_2}{above:$+$}
 
 \[
 \begin{gathered}
 \braOket{Q_{1}}{\mathfrak{M}}{j_{2} m_{2} Q_{3}}=\sum_{j_{1} m_{1} j_{0} m_{3}}\braket{Q_{1}}{j_{1} m_{1}} \\
-\times(-1)^{j_{1}-m_{1}}\left(\begin{array}{ccc}
-j_{1} & j_{2} & j_{3} \\
--m_{1} & m_{2} & m_{3}
-\end{array}\right)\braket{j_{3} m_{3}}{Q_{3}}\braOketred{j_{1}}{\mathfrak{M}_{j_{2}}}{j_{3}} .
+\times(-1)^{j_{1}-m_{1}}\threej{j_{1}}{j_{2}}{j_{3}}{-m_{1}}{m_{2}}{m_{3}}\braket{j_{3} m_{3}}{Q_{3}}\braOketred{j_{1}}{\mathfrak{M}_{j_{2}}}{j_{3}} .
 \end{gathered}
 \]
 \begin{tikzpicture}[baseline=0pt]\node[opbox](M) at (0,0){$\mathfrak{M}_{j_2}$}; \draw[omarrow] (M) -- (-1.3,0.6) node[left]{$Q_1$}; \draw[jmline] (M) -- (1.3,0.6) node[right]{$j_2m_2$}; \draw[omarrow] (M) -- (0,-1.2) node[below]{$Q_3$};\end{tikzpicture}
@@ -2148,24 +1828,15 @@ Analytical Expression
 \[
 \begin{gathered}
 \braOket{j_{1} m_{1} j_{2} m_{2}}{\mathfrak{M}}{j_{3} m_{3} j_{4} m_{4}} \\
-=\sum_{J M}(2 J+1)\left(\begin{array}{ccc}
-j_{1} & j_{2} & J \\
-m_{1} & m_{2} & M
-\end{array}\right)\braOket{j_{1} j_{2} ; J M}{\mathfrak{M}}{j_{3} j_{4} ; J M} \\
-\times\left(\begin{array}{ccc}
-j_{3} & j_{4} & J \\
-m_{3} & m_{4} & M
-\end{array}\right)
+=\sum_{J M}(2 J+1)\threej{j_{1}}{j_{2}}{J}{m_{1}}{m_{2}}{M}\braOket{j_{1} j_{2} ; J M}{\mathfrak{M}}{j_{3} j_{4} ; J M} \\
+\times\threej{j_{3}}{j_{4}}{J}{m_{3}}{m_{4}}{M}
 \end{gathered}
 \]
 \subsubsection{Graphical Representation}
 \[
 \begin{gathered}
 \braOket{Q_{1}}{\mathfrak{M}}{Q_{2} Q_{3}}=\sum_{j_{1} j_{2} j_{3}}\braOketred{j_{1}}{\mathfrak{M}_{j_{2}}}{j_{3}} \\
-\times \sum_{m_{1} m_{2} m_{3}}\braket{Q_{1}}{j_{1} m_{1}}(-1)^{j_{1}-m_{1}}\left(\begin{array}{ccc}
-j_{1} & j_{2} & j_{3} \\
--m_{1} & m_{2} & m_{3}
-\end{array}\right) \\
+\times \sum_{m_{1} m_{2} m_{3}}\braket{Q_{1}}{j_{1} m_{1}}(-1)^{j_{1}-m_{1}}\threej{j_{1}}{j_{2}}{j_{3}}{-m_{1}}{m_{2}}{m_{3}} \\
 \times\braket{j_{2} m_{2}}{Q_{2}}\braket{j_{3} m_{3}}{Q_{3}}
 \end{gathered}
 \]

@@ -1,0 +1,43 @@
+\documentclass[crop,math]{standalone}
+\usepackage{diagrams}
+\begin{document}
+\[\sum_{\alpha,\beta}
+\vcenter{\hbox{
+    \begin{tikzpicture}[baseline=0pt, inner sep=0.1em,font=\scriptsize]
+    \coordinate (L) at ($0.8*(-1,0)$);
+    \coordinate (TR) at ($0.8*(0.5,0.866)$);
+    \coordinate (BR) at ($0.8*(0.5,-0.866)$);
+    \coordinate (M) at (0,0);
+    \node[label={0:\minusmark}] {};
+    \draw[bjmarrown] (L) -- (M) node[near start,above]{$c\gamma$};
+    \draw[bjmarrown] (TR) -- (M) node[at start,above]{$a\alpha$};
+    \draw[bjmarrown] (BR) -- (M) node[at start,below]{$b\beta$};
+    \end{tikzpicture}
+    }
+}
+\vcenter{\hbox{\begin{tikzpicture}[baseline=0pt, inner sep=0.1em,font=\scriptsize] 
+    \coordinate (R) at ($0.8*(1,0)$);
+    \coordinate (TL) at ($0.8*(-0.5,0.866)$);
+    \coordinate (TR) at ($0.8*(-0.5,-0.866)$);
+    \coordinate (M) at (0,0);
+    \node[label={180:\plusmark}] {};
+    \draw[jmarrown] (M) -- (R) node[near end,above]{$c'\gamma'$};
+    \draw[jmarrown] (M) -- (TL) node[above]{$a\alpha$};
+    \draw[jmarrown] (M) -- (TR) node[below]{$b\beta$};
+\end{tikzpicture}}}
+=
+\vcenter{\hbox{\begin{tikzpicture}[baseline=0pt, inner sep=0.15em,font=\scriptsize]
+    \coordinate (R) at ($0.6*(1,0)$);
+    \coordinate (Rr) at ($1.2*(1,0)$);
+    \coordinate (L) at ($0.6*(-1,0)$);
+    \coordinate (Ll) at ($1.2*(-1,0)$);
+    \coordinate (M) at (0,0);
+    \node[label={180:\plusmark}] at (R) {};
+    \node[label={0:\minusmark}] at (L) {};
+    \draw[jmarrown] (R) -- (Rr) node[near end,above]{$c'\gamma'$};
+    \draw[bjmarrown] (Ll) -- (L) node[near start,above]{$c\gamma$};
+    \draw[jmlinem] (R) to[bend left=90]  node[midway,below]{$b$} (L);
+    \draw[jmlinem] (R) to[bend right=90] node[midway,above]{$a$} (L);
+\end{tikzpicture}}}
+\]
+\end{document}
