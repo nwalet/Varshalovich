@@ -92,21 +92,34 @@
   (\p1) -- (\p2) node[pos=#4,shift={(\n1+90:#5)}] {#6};
 }
 
-%\threejs{a}{b}{c}{top sign}{bottom sign}: the closed-loop "circle with a
-%vertical diameter" diagram for a 6j symbol {a b c \\ A B C}, only the
-%three visible lines a,b,c and the two node signs are drawn (A,B,C read
-%off the arcs are omitted from the picture and given in surrounding text)
-\newcommand{\threejs}[5]{%
+%\threejs[dirs]{a}{b}{c}{top sign}{bottom sign}: the closed "circle with a
+%vertical diameter" 3jm-invariant diagram {abc}: left arc a, diameter b,
+%right arc c, joining a top node and a bottom node whose signs are the
+%last two arguments (+/-). The optional [dirs] argument is three letters,
+%one per line in the order a,b,c: "d" draws that line from the top node
+%down to the bottom node (the default, [ddd], matching the basis diagram
+%of Tables 11.2/11.6), "u" draws it upwards instead. Table 11.6's
+%line-direction-reversal identities use e.g. \threejs[uuu]{...} (all
+%lines reversed) and \threejs[udd]{...} (only a reversed).
+\newcommand{\threejs}[6][ddd]{%
 \begin{tikzpicture}[baseline=0pt, inner sep=0.2em,font=\scriptsize]
-  \coordinate (T) at ($0.5*(0,1.)$);
-  \coordinate (B) at ($0.5*(0,-1.)$);
-  \draw[jmlinem] (T) to node[midway,right]{$#2$} (B);
-  \draw[jmlinem] (T) to [bend left=90,distance=0.7cm] node[midway,right]{$#1$} (B);
-  \draw[jmlinem] (T) to [bend right=90,distance=0.7cm] node[midway,right]{$#3$} (B);
-  \node[dotnode,label={above:$#4$}] at (T) {};
-  \node[dotnode,label={below:$#5$}] at (B) {};
+  \coordinate (T) at (0,0.5);
+  \coordinate (B) at (0,-0.5);
+  \threejs@split#1\relax
+  \if d\threejs@da\draw[jmlinem] (T) arc[start angle=90, end angle=270, radius=0.5];
+  \else\draw[jmlinem] (B) arc[start angle=270, end angle=90, radius=0.5];\fi
+  \if d\threejs@db\draw[jmlinem] (T) -- (B);
+  \else\draw[jmlinem] (B) -- (T);\fi
+  \if d\threejs@dc\draw[jmlinem] (T) arc[start angle=90, end angle=-90, radius=0.5];
+  \else\draw[jmlinem] (B) arc[start angle=-90, end angle=90, radius=0.5];\fi
+  \node at (-0.3,0) {$#2$};
+  \node at (0.17,0) {$#3$};
+  \node at (0.67,0) {$#4$};
+  \node[dotnode,label={above:$#5$}] at (T) {};
+  \node[dotnode,label={below:$#6$}] at (B) {};
   \end{tikzpicture}%
 }
+\def\threejs@split#1#2#3\relax{\def\threejs@da{#1}\def\threejs@db{#2}\def\threejs@dc{#3}}
 
 %\threenode{a}{b}{c}{sign}: a single node with three jm-lines radiating
 %out (top-left a, top-right c, bottom b), labelled with the node sign
@@ -236,6 +249,97 @@
 \normedge{tid0}{tid5}{0.5}{0.2}{$\argx{7}$} %c1
 \normedge{tid4}{tid5}{0.5}{-0.28}{$\argx{8}$} %c2
 \normedge[jmlinem=0.25]{tid2}{tid5}{0.25}{0.2}{$\argx{9}$} %c3
+\end{tikzpicture}}
+}
+
+%Character-splitting helpers for the sign/direction string arguments of
+%\sixjdgen and \ninejdgen below: each takes a fixed-length string of
+%single characters (already fully expanded via \edef) delimited by \relax
+%and stores the characters in one macro each. Comparisons against these
+%use \if (character-code comparison), not \ifx, so the catcode-12
+%characters produced by \edef compare equal to normal input characters.
+\def\vmk@splitfour#1#2#3#4\relax{\def\vmk@sA{#1}\def\vmk@sB{#2}\def\vmk@sC{#3}\def\vmk@sD{#4}}
+\def\vmk@splitsix#1#2#3#4#5#6\relax{\def\vmk@dA{#1}\def\vmk@dB{#2}\def\vmk@dC{#3}\def\vmk@dD{#4}\def\vmk@dE{#5}\def\vmk@dF{#6}}
+\def\vmk@splitninesigns#1#2#3#4#5#6\relax{\def\vmk@nsA{#1}\def\vmk@nsB{#2}\def\vmk@nsC{#3}\def\vmk@nsD{#4}\def\vmk@nsE{#5}\def\vmk@nsF{#6}}
+\def\vmk@splitnine#1#2#3#4#5#6#7#8#9\relax{\def\vmk@nA{#1}\def\vmk@nB{#2}\def\vmk@nC{#3}\def\vmk@nD{#4}\def\vmk@nE{#5}\def\vmk@nF{#6}\def\vmk@nG{#7}\def\vmk@nH{#8}\def\vmk@nI{#9}}
+%\vmk@sign{<char macro>}: renders + as \plusmark, anything else as \minusmark
+\def\vmk@sign#1{\if+#1\plusmark\else\minusmark\fi}
+
+%\sixjdgen{l,r,b,ll,lr,v,SIGNS,DIRS}: fully general form of the Table 11.6
+%"upward triangle with center node" 6j diagram. Items 1-6 are the edge
+%labels by slot: 1 = left side (T-L), 2 = right side (T-R), 3 = bottom
+%(L-R), 4 = lower-left spoke (L-M), 5 = lower-right spoke (M-R), 6 =
+%vertical spoke (M-T); the basis diagram of {a b c; A B C} is
+%\sixjdgen{B,A,C,a,b,c,++++,dddddd}, i.e. the same comma order as
+%\sixjdiagramu. Item 7 = four sign characters for the T,L,R,M nodes.
+%Item 8 = six direction characters (slot order as items 1-6): "d" is the
+%book's standard direction (left: L->T, right: T->R, bottom: L->R,
+%lower-left: L->M, lower-right: M->R, vertical: M->T), "r" reverses that
+%edge (arrowhead flipped in place; the label stays on the same side).
+%Unlike \sixjdiagramu (kept unchanged for its validated pre-Table-11.5
+%call sites), this macro matches the direction conventions of the
+%Table 11.6 originals (orig pp. 438).
+\newlistcommand{\sixjdgen}{%
+{\begin{tikzpicture}[baseline=0pt, inner sep=0.2em,font=\scriptsize]
+\coordinate (T) at ($0.8*(0,1)$);
+\coordinate (L) at ($0.8*(-0.866,-0.5)$);
+\coordinate (R) at ($0.8*(0.866,-0.5)$);
+\coordinate (M) at (0,0);
+\edef\vmk@tmp{\argx{7}}\expandafter\vmk@splitfour\vmk@tmp\relax
+\edef\vmk@tmp{\argx{8}}\expandafter\vmk@splitsix\vmk@tmp\relax
+\node[dotnode,label={above:\vmk@sign\vmk@sA}] at (T) {};
+\node[dotnode,label={below left:\vmk@sign\vmk@sB}] at (L) {};
+\node[dotnode,label={below right:\vmk@sign\vmk@sC}] at (R) {};
+\node[dotnode,label={below:\vmk@sign\vmk@sD}] at (M) {};
+\if d\vmk@dA\normedge{L}{T}{0.5}{0.18}{$\argx{1}$}\else\normedge{T}{L}{0.5}{-0.18}{$\argx{1}$}\fi
+\if d\vmk@dB\normedge{T}{R}{0.5}{0.18}{$\argx{2}$}\else\normedge{R}{T}{0.5}{-0.18}{$\argx{2}$}\fi
+\if d\vmk@dC\normedge{L}{R}{0.5}{-0.18}{$\argx{3}$}\else\normedge{R}{L}{0.5}{0.18}{$\argx{3}$}\fi
+\if d\vmk@dD\normedge{L}{M}{0.45}{0.14}{$\argx{4}$}\else\normedge{M}{L}{0.55}{-0.14}{$\argx{4}$}\fi
+\if d\vmk@dE\normedge{M}{R}{0.45}{0.14}{$\argx{5}$}\else\normedge{R}{M}{0.55}{-0.14}{$\argx{5}$}\fi
+\if d\vmk@dF\normedge{M}{T}{0.4}{0.13}{$\argx{6}$}\else\normedge{T}{M}{0.6}{-0.13}{$\argx{6}$}\fi
+\end{tikzpicture}}
+}
+
+%\ninejdgen{s1,...,s9,SIGNS,DIRS}: fully general form of the Table 11.6
+%9j hexagon. Items 1-9 are the labels by structural slot (named after
+%where the standard basis diagram of {a1 a2 a3; c1 c2 c3; b1 b2 b3} puts
+%its own labels): 1 = upper-left edge (UL-T, "a1"), 2 = vertical diameter
+%(T-B, "a2"), 3 = upper-right edge (T-UR, "a3"), 4 = left side (UL-LL,
+%"b1"), 5 = lower-left edge (LL-B, "b2"), 6 = oblique diameter UL-LR
+%("b3"), 7 = oblique diameter LL-UR ("c1"), 8 = lower-right edge (B-LR,
+%"c2"), 9 = right side (LR-UR, "c3"). Item 10 = six sign characters for
+%the T,UL,UR,LL,LR,B nodes (standard pattern "+--++-"). Item 11 = nine
+%direction characters (slot order): "d" = the book's standard direction
+%(1: UL->T, 2: T->B, 3: T->UR, 4: UL->LL, 5: LL->B, 6: UL->LR,
+%7: LL->UR, 8: B->LR, 9: LR->UR), "r" = reversed in place. The basis is
+%\ninejdgen{a_1,a_2,a_3,b_1,b_2,b_3,c_1,c_2,c_3,+--++-,ddddddddd}.
+%(\ninejd, kept unchanged, draws the differently-labelled Table 11.2
+%hexagon of {a1 b1 c1; a2 b2 c2; a3 b3 c3}.)
+\newlistcommand{\ninejdgen}{%
+{\begin{tikzpicture}[baseline=0pt, inner sep=0.1em,font=\scriptsize]
+\coordinate (T)  at (90:0.8);
+\coordinate (UL) at (150:0.8);
+\coordinate (LL) at (210:0.8);
+\coordinate (B)  at (270:0.8);
+\coordinate (LR) at (330:0.8);
+\coordinate (UR) at (30:0.8);
+\edef\vmk@tmp{\argx{10}}\expandafter\vmk@splitninesigns\vmk@tmp\relax
+\edef\vmk@tmp{\argx{11}}\expandafter\vmk@splitnine\vmk@tmp\relax
+\node[dotnode,label={90:\vmk@sign\vmk@nsA}] at (T) {};
+\node[dotnode,label={150:\vmk@sign\vmk@nsB}] at (UL) {};
+\node[dotnode,label={30:\vmk@sign\vmk@nsC}] at (UR) {};
+\node[dotnode,label={210:\vmk@sign\vmk@nsD}] at (LL) {};
+\node[dotnode,label={330:\vmk@sign\vmk@nsE}] at (LR) {};
+\node[dotnode,label={270:\vmk@sign\vmk@nsF}] at (B) {};
+\if d\vmk@nA\normedge{UL}{T}{0.5}{0.2}{$\argx{1}$}\else\normedge{T}{UL}{0.5}{-0.2}{$\argx{1}$}\fi
+\if d\vmk@nB\normedge[jmlinem=0.3]{T}{B}{0.22}{0.16}{$\argx{2}$}\else\normedge[jmlinem=0.7]{B}{T}{0.78}{-0.16}{$\argx{2}$}\fi
+\if d\vmk@nC\normedge{T}{UR}{0.5}{0.2}{$\argx{3}$}\else\normedge{UR}{T}{0.5}{-0.2}{$\argx{3}$}\fi
+\if d\vmk@nD\normedge{UL}{LL}{0.5}{-0.15}{$\argx{4}$}\else\normedge{LL}{UL}{0.5}{0.15}{$\argx{4}$}\fi
+\if d\vmk@nE\normedge{LL}{B}{0.5}{-0.2}{$\argx{5}$}\else\normedge{B}{LL}{0.5}{0.2}{$\argx{5}$}\fi
+\if d\vmk@nF\normedge[jmlinem=0.65]{UL}{LR}{0.3}{0.2}{$\argx{6}$}\else\normedge[jmlinem=0.35]{LR}{UL}{0.7}{-0.2}{$\argx{6}$}\fi
+\if d\vmk@nG\normedge[jmlinem=0.35]{LL}{UR}{0.62}{-0.2}{$\argx{7}$}\else\normedge[jmlinem=0.65]{UR}{LL}{0.38}{0.2}{$\argx{7}$}\fi
+\if d\vmk@nH\normedge{B}{LR}{0.5}{-0.2}{$\argx{8}$}\else\normedge{LR}{B}{0.5}{0.2}{$\argx{8}$}\fi
+\if d\vmk@nI\normedge{LR}{UR}{0.5}{-0.15}{$\argx{9}$}\else\normedge{UR}{LR}{0.5}{0.15}{$\argx{9}$}\fi
 \end{tikzpicture}}
 }
 

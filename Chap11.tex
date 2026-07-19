@@ -945,79 +945,76 @@ Two diagrams will be called topologically similar, if it is possible to make the
 
 The expressions corresponding to two topologically similar diagrams are equal in absolute value, but may differ by a phase factor. One may find this factor by means of successive reductions of one diagram to the other, i.e., by reversals of node signs and line directions (where necessary) in accordance with the rules formulated in Secs. 11.3.2 and 11.3.3. In this way one may reduce any diagram to the topologically similar diagram of some basis function of the theory, and determine the additional phase factor. Several examples of such transformation for the $3 j, 6 j$, and $9 j$ symbols are displayed in Table~\ref{chap11:tab:2}.
 
-3j Symbol $\{a b c\}$\\
-Reversal of Node Sign and Line Direction, and Argument Permutation
-
 \begin{table}[tbh!]
 \begin{center}
 \caption{Symmetry of 3nj Symbol Diagrams.}
 \label{chap11:tab:2}
-\begin{tabular}{ccc}
-\threejs{a}{b}{c}{+}{-} & $=(-1)^{a+b+c}$ & \threejs{a}{b}{c}{+}{+} \; $=(-1)^{a+b+c}$ \\[2em]
-\threejs{a}{b}{c}{+}{-} & $=$ & \threejs{a}{b}{c}{-}{+} \; $=(-1)^{2a}$
-\end{tabular}
 
-$6j$ Symbol $\sixj{a}{b}{c}{A}{B}{C}$
+$3j$ Symbol $\{a b c\}$\\[2pt]
+Reversal of Node Sign and Line Direction, and Argument Permutation\\[6pt]
+\begin{tabular}{ccccc}
+\threejs{a}{b}{c}{+}{-} & $=(-1)^{a+b+c}$ & \threejs{a}{b}{c}{+}{+} & $=(-1)^{a+b+c}$ & \threejs{a}{b}{c}{-}{-}\;$=$ \\[1.5em]
+\threejs[uuu]{a}{b}{c}{+}{-} & $=$ & \threejs{a}{b}{c}{-}{+} & $=(-1)^{2a}$ & \threejs[udd]{a}{b}{c}{+}{-}
+\end{tabular}\\[10pt]
+
+$6j$ Symbol $\sixj{a}{b}{c}{A}{B}{C}$\\[6pt]
+Reversal of Node Sign\\[4pt]
+\sixjdgen{B,A,C,a,b,c,++++,dddddd} $=(-1)^{2(A+B+C)}$
+\sixjdgen{B,A,C,a,b,c,----,dddddd} $=(-1)^{a+b+c}$
+\sixjdgen{B,A,C,a,b,c,+++-,dddddd}\\[10pt]
+Reversal of Line Direction\\[4pt]
+\sixjdgen{B,A,C,a,b,c,++++,dddddd} $=(-1)^{2(A+B+C)}$
+\sixjdgen{B,A,C,a,b,c,++++,rrrddd} $=$
+\sixjdgen{B,A,C,a,b,c,++++,dddrrr} $=(-1)^{2(A+B+C)}$
+\sixjdgen{B,A,C,a,b,c,++++,rrrrrr}
 \end{center}
 \end{table}
 
 \begin{center}
-\sixjdiagramu{B,A,C,a,b,c,+} \quad$=(-1)^{2(A+B+C)}$\quad
-\sixjdiagramu{B,A,C,a,b,c,-} \quad$=(-1)^{a+b+c}$\quad
-\sixjdiagramu{B,A,C,a,b,c,+}
-\end{center}
-
-\subsubsection{Reversal of Node Sign}
-\begin{center}
-\sixjdiagramu{B,A,C,a,b,c,+} \quad$=(-1)^{2(A+B+C)}$\quad \sixjdiagramu{B,A,C,a,b,c,-} \quad$=(-1)^{a+b+c}$\quad \sixjdiagramu{B,A,C,a,b,c,+}
-\end{center}
-
-\subsubsection{Reversal of Line Direction}
-\begin{center}
-\sixjdiagramu{B,A,C,a,b,c,+} \quad$=$\quad \sixjdiagramu{B,A,C,a,b,c,+}
-\end{center}
-
-\subsubsection{Argument Permutation}
-\begin{center}
-\sixjdiagramu{A,B,C,a,b,c,+} \quad$=$\quad \sixjdiagramu{C,A,B,c,a,b,+}
-\end{center}
-\[
-9 j \text { Symbol }\ninej{a_{1}}{a_{2}}{a_{3}}{c_{1}}{c_{2}}{c_{3}}{b_{1}}{b_{2}}{b_{3}}
-\]
-Reversal of Node Sign\\
-\sixjdiagramu{A,B,C,a,b,c,-}
-
-\begin{center}
-\textbf{Table~\ref{chap11:tab:2} (continued)}
-\sixjdiagramu{B,C,A,b,c,a,+}
+\textbf{Table~\ref{chap11:tab:2} (continued)}\\[6pt]
+Argument Permutation\\[4pt]
+\sixjdgen{B,A,C,a,b,c,++++,dddddd} $=$
+\sixjdgen{A,B,C,b,a,c,++++,dddddd} $=$
+\sixjdgen{a,b,C,B,A,c,++++,dddddd} $=$
+\sixjdgen{b,a,C,A,B,c,++++,dddddd} $=$\\[1.5em]
+\sixjdgen{c,A,b,a,C,B,++++,dddddd} $=$
+\sixjdgen{A,c,b,C,a,B,++++,dddddd} $=$
+\sixjdgen{B,c,a,C,b,A,++++,dddddd} $=$
+\sixjdgen{c,B,a,b,C,A,++++,dddddd}
 \end{center}
 
 \begin{center}
-\sixjdiagramu{C,A,B,c,a,b,-}
+\textbf{Table~\ref{chap11:tab:2} (continued)}\\[6pt]
+$9j$ Symbol $\ninej{a_{1}}{a_{2}}{a_{3}}{c_{1}}{c_{2}}{c_{3}}{b_{1}}{b_{2}}{b_{3}}$\\[6pt]
+Reversal of Node Sign\\[4pt]
+\ninejdgen{a_1,a_2,a_3,b_1,b_2,b_3,c_1,c_2,c_3,+--++-,ddddddddd} $=$
+\ninejdgen{a_1,a_2,a_3,b_1,b_2,b_3,c_1,c_2,c_3,-++--+,ddddddddd} $=(-1)^{J_0}$
+\ninejdgen{a_1,a_2,a_3,b_1,b_2,b_3,c_1,c_2,c_3,++++++,ddddddddd} $=(-1)^{J_0}$
+\ninejdgen{a_1,a_2,a_3,b_1,b_2,b_3,c_1,c_2,c_3,------,ddddddddd}\\[10pt]
+Reversal of Line Direction\\[4pt]
+\ninejdgen{a_1,a_2,a_3,b_1,b_2,b_3,c_1,c_2,c_3,+--++-,ddddddddd} $=$
+\ninejdgen{a_1,a_2,a_3,b_1,b_2,b_3,c_1,c_2,c_3,+--++-,rrrrrrrrr} $=(-1)^{2(a_2+b_3+c_1)}$
+\ninejdgen{a_1,a_2,a_3,b_1,b_2,b_3,c_1,c_2,c_3,+--++-,drdddrrdd} $=(-1)^{2(a_2+b_3+c_1)}$
+\ninejdgen{a_1,a_2,a_3,b_1,b_2,b_3,c_1,c_2,c_3,+--++-,rdrrrddrr}
 \end{center}
-
-\subsubsection{Reversal of Line Direction}
-\begin{center}
-\textbf{Table~\ref{chap11:tab:2} (continued)}
-  	ricenter{A}{B}{C}{a}{b}{c}{+}
-\end{center}
-
-\subsubsection{Argument Permutation}
-	ricenter{B}{A}{C}{a}{b}{c}{-}
-	ricenter{A}{C}{B}{a}{c}{b}{+}
-	ricenter{C}{B}{A}{c}{b}{a}{-}
-	ricenter{A}{B}{C}{b}{a}{c}{+}
-	ricenter{B}{C}{A}{c}{a}{b}{-}
-	ricenter{C}{A}{B}{a}{b}{c}{+}
 
 \begin{center}
-\textbf{Table~\ref{chap11:tab:2} (continued)}
-  	ricenter{A}{B}{C}{c}{b}{a}{-}
-\end{center}
-
-	ricenter{B}{A}{C}{b}{c}{a}{+}
-	ricenter{C}{B}{A}{a}{c}{b}{-}
+\textbf{Table~\ref{chap11:tab:2} (continued)}\\[6pt]
+Argument Permutation\\[4pt]
+\ninejdgen{a_1,a_2,a_3,b_1,b_2,b_3,c_1,c_2,c_3,+--++-,ddddddddd} $=$
+\ninejdgen{a_3,a_2,a_1,c_3,c_2,c_1,b_3,b_2,b_1,+--++-,ddddddddd} $=(-1)^{J_0}$
+\ninejdgen{a_1,a_2,a_3,c_1,c_2,c_3,b_1,b_2,b_3,+--++-,ddddddddd} $=(-1)^{J_0}$
+\ninejdgen{a_3,a_2,a_1,b_3,b_2,b_1,c_3,c_2,c_1,+--++-,ddddddddd}\\[1.5em]
+\ninejdgen{a_3,a_1,a_2,b_3,b_1,b_2,c_3,c_1,c_2,+--++-,ddddddddd} $=$
+\ninejdgen{a_2,a_1,a_3,c_2,c_1,c_3,b_2,b_1,b_3,+--++-,ddddddddd} $=(-1)^{J_0}$
+\ninejdgen{a_3,a_1,a_2,c_3,c_1,c_2,b_3,b_1,b_2,+--++-,ddddddddd} $=(-1)^{J_0}$
+\ninejdgen{a_2,a_1,a_3,b_2,b_1,b_3,c_2,c_1,c_3,+--++-,ddddddddd}\\[1.5em]
+\ninejdgen{a_2,a_3,a_1,b_2,b_3,b_1,c_2,c_3,c_1,+--++-,ddddddddd} $=$
+\ninejdgen{a_1,a_3,a_2,c_1,c_3,c_2,b_1,b_3,b_2,+--++-,ddddddddd} $=(-1)^{J_0}$
+\ninejdgen{a_2,a_3,a_1,c_2,c_3,c_1,b_2,b_3,b_1,+--++-,ddddddddd} $=(-1)^{J_0}$
+\ninejdgen{a_1,a_3,a_2,b_1,b_3,b_2,c_1,c_3,c_2,+--++-,ddddddddd}\\[6pt]
 where $J_{0} \equiv a_{1}+a_{2}+a_{3}+b_{1}+b_{2}+b_{3}+c_{1}+c_{2}+c_{3}$
+\end{center}
 
 \subsection{Change of Node Sign}
 The reversal of the sign in a node joining $\left(j_{1} j_{2} j_{3}\right)$-lines corresponds to the change of the momentumcoupling order. This transformation is equivalent to introducing the additional phase factor $(-1)^{j_{1}+j_{2}+j_{3}}$. For example,\\
