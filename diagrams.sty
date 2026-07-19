@@ -92,21 +92,20 @@
   (\p1) -- (\p2) node[pos=#4,shift={(\n1+90:#5)}] {#6};
 }
 
-%\sixjloop{a}{b}{c}{top sign}{bottom sign}: the closed-loop "circle with a
+%\threejs{a}{b}{c}{top sign}{bottom sign}: the closed-loop "circle with a
 %vertical diameter" diagram for a 6j symbol {a b c \\ A B C}, only the
 %three visible lines a,b,c and the two node signs are drawn (A,B,C read
 %off the arcs are omitted from the picture and given in surrounding text)
-\newcommand{\sixjloop}[5]{%
-\begin{tikzpicture}[baseline=-2pt]
-\node[circle,draw,minimum size=16mm] (C) at (0,0) {};
-\draw[jmline] (C.north) -- (C.south) node[midway,right]{$#2$};
-\draw[jmline] (C.west) to[bend right=20] (C.south) node[midway,left]{$#1$};
-\draw[jmline] (C.north) to[bend right=20] (C.west);
-\draw[jmline] (C.east) to[bend left=20] (C.south);
-\draw[jmline] (C.north) to[bend left=20] (C.east) node[midway,right]{$#3$};
-\node[dotnode,label={above:$#4$}] at (C.north) {};
-\node[dotnode,label={below:$#5$}] at (C.south) {};
-\end{tikzpicture}%
+\newcommand{\threejs}[5]{%
+\begin{tikzpicture}[baseline=0pt, inner sep=0.2em,font=\scriptsize]
+  \coordinate (T) at ($0.5*(0,1.)$);
+  \coordinate (B) at ($0.5*(0,-1.)$);
+  \draw[jmlinem] (T) to node[midway,right]{$#2$} (B);
+  \draw[jmlinem] (T) to [bend left=90,distance=0.7cm] node[midway,right]{$#1$} (B);
+  \draw[jmlinem] (T) to [bend right=90,distance=0.7cm] node[midway,right]{$#3$} (B);
+  \node[dotnode,label={above:$#4$}] at (T) {};
+  \node[dotnode,label={below:$#5$}] at (B) {};
+  \end{tikzpicture}%
 }
 
 %\threenode{a}{b}{c}{sign}: a single node with three jm-lines radiating

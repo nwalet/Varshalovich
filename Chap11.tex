@@ -53,11 +53,16 @@ $$
 \end{tikzpicture}
 $$
 
-The symbols $j m, \Omega$ and $R$ are usually indicated near the corresponding lines. Therefore, length, curvature, orientation, and position of the line are inessential. For example,
-
-$$
-\text { ← is equivalent to } \text { ⟶ and } \text {. }
-$$
+The symbols $j m, \Omega$ and $R$ are usually indicated near the corresponding lines. Therefore, length, curvature, orientation, and position of the line are inessential. For example, 
+\begin{center}
+\begin{tikzpicture}[baseline=0pt]
+\draw[jmarrow] (0,0.0) -- (1,0.0) ;
+\end{tikzpicture} is equivalent to \begin{tikzpicture}[baseline=0pt]
+\draw[jmarrow] (1,0.0) -- (0,0.0) ;
+\end{tikzpicture} and \begin{tikzpicture}[baseline=0pt]
+\draw[jmarrow] (0,-0.2) to [out=0,in=0,distance=2cm] (0,0.2) ;
+\end{tikzpicture} .
+\end{center}
 
 However, the arrow direction with respect to the node is of importance.\\
 The normalization of state vectors may be different. In diagrams it is indicated by the type of node. A state vector $|j m\rangle$ normalized according to
@@ -208,7 +213,7 @@ $ \left(lm \mid \Omega \right)=C_{lm}^*(\Omega)$ &
 \end{tikzpicture}$=$
  \\
 \multicolumn{2}{c}{Clebsch-Gordan Coefficients}\\
-$ \clebsch{j_1}{n_1}{j_2}{m_2}{J}{M}=\left\langle j_1 m_1 j_2 m_2 \mid j_1 j_2 J M \right\rangle=\left\langle j_1j_2JM \mid j_1 m_1 j_2 m_2 \right\rangle$ &
+$ \clebsch{j_1}{m_1}{j_2}{m_2}{J}{M}=\left\langle j_1 m_1 j_2 m_2 \mid j_1 j_2 J M \right\rangle=\left\langle j_1j_2JM \mid j_1 m_1 j_2 m_2 \right\rangle$ &
 \begin{tikzpicture}[baseline=0pt]
 \draw[bjmarrow] (-0.5,0.71) -- ($0.06*(-0.5,0.71)$) node[at start,left]{$j_1 m_1$};
 \draw[bjmarrow] (-0.5,-0.71) -- ($0.06*(-0.5,-0.71)$) node[at start,left]{$j_2 m_2$};
@@ -245,7 +250,7 @@ $ \clebsch{j_1}{n_1}{j_2}{m_2}{J}{M}=\left\langle j_1 m_1 j_2 m_2 \mid j_1 j_2 J
 \hline
 {Analytical Expression} & Graphical Representation \\
 \hline
-\multicolumn{2}{c}Wigner $3jm$ Symbols\\
+\multicolumn{2}{c}{Wigner $3jm$ Symbols}\\
 $ \threej{j_1}{n_1}{j_2}{m_2}{j_3}{m_3}=\left( j_1 m_1 j_2 m_2 j_3 m_3 \mid 00 \right)=\left( 00 \mid j_1 m_1 j_2 m_2 j_3 m_3 \right)$ &
 \begin{tikzpicture}[baseline=0pt]
 \draw[dbjmarrow] (-0.5,0.71) -- ($-0.009*(-0.5,0.71)$) node[at start,left]{$j_1 m_1$};
@@ -449,7 +454,7 @@ $ &
 
 
 
-\begin{table}[h]
+\begin{table}[tbh!]
 \begin{center}
 \captionsetup{labelformat=empty}
 \renewcommand{\arraystretch}{1.5}
@@ -535,9 +540,11 @@ $=$
 \end{table}
 
 \section{GRAPHICAL REPRESENTATION OF THE MAIN OPERATIONS OF THE THEORY}
-Expressions which occur in calculations based on the quantum theory of angular momentum have a specific character. They contain spin angular variables of two kinds, i.e., external and internal ones.\\
-(i) External variables are actual arguments of the expression under consideration. The evaluation of an expression does not involve any integration or summation over external variables, i.e., they appear as fixed (but, in principle, changeable) parameters.\\
-(ii) Internal variables are those over which integration or summation is assumed. It is essential that each internal variable which enters an expression inherent in the theory corresponds to some scalar product $|\Psi\rangle\langle\Psi|$. This is why one does not need to take into account any transformation of internal variables under rotation of the coordinate system. This specific feature is important for practical calculations.\\
+Expressions which occur in calculations based on the quantum theory of angular momentum have a specific character. They contain spin angular variables of two kinds, i.e., external and internal ones.
+\begin{enumerate}
+\item External variables are actual arguments of the expression under consideration. The evaluation of an expression does not involve any integration or summation over external variables, i.e., they appear as fixed (but, in principle, changeable) parameters.
+\item Internal variables are those over which integration or summation is assumed. It is essential that each internal variable which enters an expression inherent in the theory corresponds to some scalar product $|\Psi\rangle\langle\Psi|$. This is why one does not need to take into account any transformation of internal variables under rotation of the coordinate system. This specific feature is important for practical calculations.
+\end{enumerate}
 In other words, quantum mechanical problems are mainly concerned with invariant integration and/or summation of bilinear forms over total ranges of all internal variables. Accordingly, the graphical method under consideration may be applied only to the expressions of such a type.
 
 This section describes the graphical representation of those analytic operations which are specific to angular momentum theory, while the rules of calculations by the graphical method will be formulated in the next section.
@@ -555,9 +562,9 @@ may be represented by\\
 \end{center}
 
 \subsection{Invariant Summation over Projections}
-The scalar product of two irreducible tensors of rank $j, \mathfrak{N}_{j m}$ and $\mathfrak{N}_{j m}$, i.e., the sum of bilinear combinations over all possible values of the projection $m$
+The scalar product of two irreducible tensors of rank $j$, $\mathfrak{M}_{j m}$ and $\mathfrak{N}_{j m}$, i.e., the sum of bilinear combinations over all possible values of the projection $m$
 \[
-\sum_{m=-j}^{j}\braOket{}{\mathfrak{M}}{j m}\braOket{j m}{\Re}{},
+\sum_{m=-j}^{j}\braOket{}{\mathfrak{M}}{j m}\braOket{j m}{\mathfrak{N}},
 \]
 is represented by the conjunction (closure) of $|j m\rangle$ - and ( $j m \mid$-lines of subdiagrams corresponding to $\langle | \mathfrak{W} \mid j m)$ and $\braket{j m}{\Re}$\\
 \begin{center}
@@ -572,12 +579,12 @@ is represented by the conjunction (closure) of $|j m\rangle$ - and ( $j m \mid$-
 \node at (3.2,0) {$=$};
 \node[opbox] (M2) at (4.4,0) {$\mathfrak{M}$};
 \node[opbox] (N2) at (6.6,0) {$\mathfrak{N}$};
-\draw[jmline] (M2) -- (N2) node[midway,above]{$j$};
+\draw[jmlinem] (M2) -- (N2) node[midway,above]{$j$};
 \end{tikzpicture}
 \end{center}
 
-The resultant linking $j$-line has the same direction as the original $\mid j m)$ - and $\langle j m|$-lines.\\
-For example, the sum of product of two 3jm symbols over two projections, $\alpha$ and $\beta$
+The resultant linking $j$-line has the same direction as the original $\mid j m\rangle$ - and $\langle j m|$-lines.\\
+For example, the sum of product of two $3jm$ symbols over two projections, $\alpha$ and $\beta$
 \[
 \sum_{\alpha, \beta}\threej{a}{b}{c}{\alpha}{\beta}{\gamma}\threej{a}{b}{c^{\prime}}{\alpha}{\beta}{\gamma^{\prime}}=\sum_{\alpha, \beta}(-1)^{a-\alpha+b-\beta+c-\gamma}\threej{a}{b}{c}{-\alpha}{-\beta}{-\gamma}\threej{a}{b}{c^{\prime}}{\alpha}{\beta}{\gamma^{\prime}}
 \]
@@ -607,7 +614,7 @@ may be displayed as
     \draw[jmarrown] (M) -- (TR) node[below]{$b\beta$};
 \end{tikzpicture}}}
 =
-\vcenter{\hbox{\begin{tikzpicture}[baseline=0pt, inner sep=0.15em,font=\scriptsize]
+\vcenter{\hbox{\begin{tikzpicture}[baseline=0pt, inner sep=0.2em,font=\scriptsize]
     \coordinate (R) at ($0.6*(1,0)$);
     \coordinate (Rr) at ($1.2*(1,0)$);
     \coordinate (L) at ($0.6*(-1,0)$);
@@ -622,7 +629,7 @@ may be displayed as
 \end{tikzpicture}}}
 \]
 
-Thus, each internal $j$-line of a diagram represents a scalar product (contraction over $m$ ) of two irreducible tensors of rank $j$. To construct such a scalar product one of these tensors should be written in a covariant form $\langle | \mathfrak{M}|j m\rangle \equiv \mathfrak{M}_{j m}$ while the other should be written in the form $\langle j m| \Re\left\rangle=(-1)^{j-m} \mathfrak{N}_{j-m}\right.$ (Sec. 3.1.8). Graphically, this means that one of the corresponding subdiagrams has the external $\mid j m)$-line (with single outward arrow) and the other has the ( $j m /$-line ( $w i t h$ double inward arrow).
+Thus, each internal $j$-line of a diagram represents a scalar product (contraction over $m$ ) of two irreducible tensors of rank $j$. To construct such a scalar product one of these tensors should be written in a covariant form $\langle | \mathfrak{M}|j m\rangle \equiv \mathfrak{M}_{j m}$ while the other should be written in the form $\langle j m| \mathfrak{N}\left\rangle=(-1)^{j-m} \mathfrak{N}_{j-m}\right.$ (Sec. 3.1.8). Graphically, this means that one of the corresponding subdiagrams has the external $\mid j m)$-line (with single outward arrow) and the other has the  $\langle j m \mid$-line (\emph{with}  double inward arrow).
 
 Two diagrams which differ only by the direction of an internal $j$-line, correspond to analytic expressions which differ only by the phase factor $(-1)^{2 j}$, because
 \[
@@ -630,12 +637,12 @@ Two diagrams which differ only by the direction of an internal $j$-line, corresp
 \]
 One should especially mention the entirely invariant sums of products of two, four, six, or more $3 j m$ symbols over all projections. Corresponding diagrams are closed with respect to all $j$-lines. These sums represent the Wigner $3 n j$ symbols (Table~\ref{chap11:tab:1}).
 
-\begin{table}
+\begin{table}[tbh!]
 \begin{center}
 \captionsetup{labelformat=empty}
 \renewcommand{\arraystretch}{1.5}
 \caption{Table 11.4. Sums of $3 j m$ Symbol Products.}
-\begin{tabular}{lc}
+\small \begin{tabular}{lc}
 \hline
 {Analytical Expression} & Graphical Representation \\
 \hline
@@ -643,7 +650,7 @@ One should especially mention the entirely invariant sums of products of two, fo
 \(
 \sum_{\mu_{i}}\threej{j_{1}}{j_{2}}{j_{3}}{\mu_{1}}{\mu_{2}}{\mu_{3}}\threej{j_{1}}{j_{2}}{j_{3}}{\mu_{1}}{\mu_{2}}{\mu_{3}}=\sum_{\mu_{i}}(-1)^{j_{1}-\mu_{1}+j_{2}-\mu_{2}+j_{3}-\mu_{3}}\threej{j_{1}}{j_{2}}{j_{3}}{-\mu_{1}}{-\mu_{2}}{-\mu_{3}}\threej{j_{1}}{j_{2}}{j_{3}}{\mu_{1}}{\mu_{2}}{\mu_{3}}=\left\{j_{1} j_{2} j_{3}\right\}
 \) &
-\sixjloop{j_1}{j_2}{j_3}{+}{-}
+\threejs{j_1}{j_2}{j_3}{+}{-}
 \\
 \multicolumn{2}{c}{6j Symbol}\\
 \(
@@ -655,7 +662,7 @@ One should especially mention the entirely invariant sums of products of two, fo
 \)&
 \begin{minipage}{3cm}
 \sixjdsq{j_1,j_2,j_3,k_1,k_2,k_3}\\
-\sixjdiagramd{j_1,j_2,j_3,j_4,j_5,j_6}
+\sixjdiagramd{j_1,j_2,j_3,k_1,k_2,k_3}
 \end{minipage}\\
 \multicolumn{2}{c}{9j Symbol}\\
 \(
@@ -666,7 +673,7 @@ One should especially mention the entirely invariant sums of products of two, fo
 \end{gathered}
 \)
 &
-\ninejd{j_1,j_2,j_3,k_1,k_2,k_3,l_1,l_2l_3}
+\ninejd{j_1,j_2,j_3,k_1,k_2,k_3,l_1,l_2,l_3}
 \\
 \hline
 \end{tabular}
@@ -674,12 +681,12 @@ One should especially mention the entirely invariant sums of products of two, fo
 \end{table}
 
 \subsection{Summation over Angular Momentum}
-A thick $j$-line linking two subdiagrams\\
+A thick $j$-line linking two subdiagrams, as in
 \begin{center}
 \begin{tikzpicture}[baseline=0pt]
 \node[opbox] (M) at (0,0) {$\mathfrak{M}$};
 \node[opbox] (N) at (2.2,0) {$\mathfrak{N}$};
-\draw[jmline,line width=1.4pt] (M) -- (N) node[midway,above]{$j$};
+\draw[jmlinem,line width=2pt] (M) -- (N) node[midway,above]{$j$};
 \end{tikzpicture}
 \end{center}
 represents the complete sum over $j$ and $m$ of scalar products of irreducible tensors of rank $j$
@@ -689,57 +696,69 @@ represents the complete sum over $j$ and $m$ of scalar products of irreducible t
 where $N_{j}$ is the weight factor; $N_{j}=2 j+1$ for a summation involving the $3 j m$ symbols, $3 n j$ symbols and the\\
 functions of the type $D_{m m^{\prime}}^{j}(R), C_{j m}(\Omega) \equiv[4 \pi /(2 j+1)]^{1 / 2} Y_{j m}(\Omega)$, or $P_{j}(\cos \omega)$. On the other hand, $N_{j}=1$ for summations involving $\clebsch{j_{1}}{m_{1}}{j_{2}}{m_{2}}{j}{m}, U\left(j_{1} j_{2} j_{3} j_{4} ; j j^{\prime}\right)$, or $Y_{j m}(\Omega)$. For example,
 \[
-\begin{gathered}
-\sum_{e e}(2 e+1)(-1)^{e-}\threej{a}{b}{e}{\alpha}{\beta}{-\varepsilon}\threej{a^{\prime}}{b^{\prime}}{e}{\alpha^{\prime}}{\beta^{\prime}}{e} \\
-\sum_{l m} Y_{l m}(\Omega) Y_{l m}^{*}(\Omega)=\braket{\Omega}{l m}\braket{l m}{\Omega^{\prime}} \\
-\sum_{C}(2 C+1)\sixj{A}{B}{C}{a}{b}{c}\sixj{A}{B}{C}{a}{b}{c^{\prime}}
-\end{gathered}
+\begin{aligned}
+\sum_{e e}(2 e+1)(-1)^{e-}\threej{a}{b}{e}{\alpha}{\beta}{-\varepsilon}\threej{a^{\prime}}{b^{\prime}}{e}{\alpha^{\prime}}{\beta^{\prime}}{e} 
+& &\vcenter{\hbox{
+    \begin{tikzpicture}[baseline=0pt, inner sep=0.2em,font=\scriptsize]
+    \coordinate (MR) at ($0.8*(0.5,0)$);
+    \coordinate (TR) at ($0.8*(0.5,0.866)+(MR)$);
+    \coordinate (BR) at ($0.8*(0.5,-0.866)+(MR)$);
+    \coordinate (ML) at ($0.8*(-0.5,0)$);
+    \coordinate (TL) at ($0.8*(-0.5,0.866)+(ML)$);
+    \coordinate (BL) at ($0.8*(-0.5,-0.866)+(ML)$);
+    
+    \node[label={0:\minusmark}] at (ML) {};
+    \node[label={0:\plusmark}] at (MR) {};
+    \draw[jmarrown] (MR) -- (BR) node[below]{$b'\beta'$};
+    \draw[jmarrown] (MR) -- (TR) node[above]{$a'\alpha'$};
+    \draw[jmarrown] (ML) -- (BL) node[below]{$b\beta$};
+    \draw[jmarrown] (ML) -- (TL) node[above]{$a\alpha$};
+    \draw[jmlinem] (MR) -- (ML) node[midway,above]{$e$};
+    \end{tikzpicture}
+    }
+}
+\\
+\sum_{l m} Y_{l m}(\Omega) Y_{l m}^{*}(\Omega)=\braket{\Omega}{l m}\braket{l m}{\Omega^{\prime}} & &
+\vcenter{\hbox{\begin{tikzpicture}[baseline=0pt, inner sep=0.2em,font=\scriptsize] 
+    \draw[bomarrow] (-1.5,0) -- (-0.5,0) node[near start,above]{$\Omega$};
+    \draw[jmlinem] (-0.5,0) -- (0.5,0) node[midway,above]{$l$};
+    \draw[omarrow] (0.5,0) -- (1.5,0) node[above]{$\Omega'$};
+\end{tikzpicture}}}
+\\
+\sum_{C}(2 C+1)\sixj{A}{B}{C}{a}{b}{c}\sixj{A}{B}{C}{a}{b}{c^{\prime}} & &
+\vcenter{\hbox{\begin{tikzpicture}[baseline=0pt, inner sep=0.1em,font=\scriptsize]
+    \coordinate (MR) at (1.1,0);
+    \coordinate (TR) at ($0.8*(0.5, 0.866)+(MR)$);
+    \coordinate (BR) at ($0.8*(0.5,-0.866)+(MR)$);
+    \coordinate (LR) at ($0.8*(-1,0)+(MR)$);
+    \coordinate (ML) at (-1.2,0);
+    \coordinate (TL) at ($0.8*(-0.5, 0.866)+(ML)$);
+    \coordinate (BL) at ($0.8*(-0.5,-0.866)+(ML)$);
+    \coordinate (RL) at ($0.8*(1,0)+(ML)$);
+%
+    \node[label={135:\plusmark}] at (TL) {};
+    \node[label={225:\plusmark}] at (BL) {};
+    \node[label={0:\plusmark}] at (RL) {};
+    \node[label={45:\minusmark}] at (TR) {};
+    \node[label={315:\minusmark}] at (BR) {};
+    \node[label={180:\minusmark}] at (LR) {};
+%
+    \normedge{BL}{RL}{0.5}{-0.15}{$a$}
+    \normedge{RL}{TL}{0.5}{-0.15}{$b$}
+    \normedge{TL}{BL}{0.5}{-0.15}{$c$}
+    \normedge{ML}{RL}{0.4}{-0.15}{$C$}
+    \normedge{ML}{TL}{0.4}{-0.15}{$A$}
+    \normedge{ML}{BL}{0.4}{-0.15}{$B$}
+%
+    \normedge{BR}{LR}{0.5}{0.15}{$a$}
+    \normedge{LR}{TR}{0.5}{0.15}{$b$}
+    \normedge{TR}{BR}{0.5}{0.15}{$c'$}
+    \normedge{LR}{MR}{0.6}{-0.15}{$C$}
+    \normedge{TR}{MR}{0.6}{-0.15}{$A$}
+    \normedge{BR}{MR}{0.6}{-0.15}{$B$}
+\end{tikzpicture}}}
+\end{aligned}
 \]
-\begin{center}
-\begin{tikzpicture}[baseline=0pt]
-\coordinate (N1) at (0,0);
-\draw[jmline] (-1,0.9) node[left]{$a\alpha$} -- (N1);
-\draw[jmline] (-1,-0.9) node[left]{$b\beta$} -- (N1);
-\node[dotnode] at (N1) {};
-\coordinate (N2) at (1.4,0);
-\draw (N1) to[bend left=45] node[above]{$e$} (N2);
-\draw (N1) to[bend right=45] (N2);
-\node[dotnode] at (N2) {};
-\draw[jmline] (N2) -- (2.4,0.9) node[right]{$a^{\prime}\alpha^{\prime}$};
-\draw[jmline] (N2) -- (2.4,-0.9) node[right]{$b^{\prime}\beta^{\prime}$};
-\end{tikzpicture}
-\qquad
-\begin{tikzpicture}[baseline=0pt]
-\draw[bjmarrow] (0,0) node[left]{$\Omega$} -- (1,0);
-\node[deltanode] at (1,0) {};
-\draw[jmline] (1,0) -- (2,0) node[midway,above]{$l$};
-\node[deltanode] at (2,0) {};
-\draw[omarrow] (2,0) -- (3,0) node[right]{$\Omega^{\prime}$};
-\end{tikzpicture}
-\qquad
-\begin{tikzpicture}[baseline=0pt]
-\coordinate (T1) at (-0.6,0.9);
-\coordinate (L1) at (-1.6,-0.6);
-\coordinate (R1) at (0,-0.6);
-\node[plusnode] at (T1) {};
-\node[plusnode] at (L1) {};
-\coordinate (M) at (0.9,0);
-\draw[jmline] (T1) -- (L1) node[midway,left]{$c$};
-\draw[jmline] (T1) -- (M) node[midway,above right]{$b$};
-\draw[jmline] (L1) -- (M) node[midway,below]{$a$};
-\node at (0.3,0) {$C$};
-\node[dotnode] at (M) {};
-\coordinate (T2) at (2.4,0.9);
-\coordinate (L2) at (1.8,-0.6);
-\coordinate (R2) at (3.4,-0.6);
-\draw[jmline] (M) -- (T2) node[midway,above]{$b$};
-\draw[jmline] (M) -- (L2) node[midway,below]{$a$};
-\draw[jmline] (T2) -- (L2) node[midway,right]{$c^{\prime}$};
-\node[minusnode] at (T2) {};
-\node[minusnode] at (L2) {};
-\node at (2.1,0) {$C$};
-\end{tikzpicture}
-\end{center}
 
 A Clebsch-Gordan coefficient may be represented as a sum over $c^{\prime} \gamma^{\prime}$ of products of two $3 j m$ symbols (Table~\ref{chap11:tab:7})
 \[
@@ -747,6 +766,23 @@ A Clebsch-Gordan coefficient may be represented as a sum over $c^{\prime} \gamma
 \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} & \equiv\braket{a \alpha b \beta}{c \gamma}=(-1)^{a-b-c} \sum_{c^{\prime} \gamma^{\prime}}\left(2 c^{\prime}+1\right)\threej{a}{b}{c^{\prime}}{\alpha}{\beta}{\gamma^{\prime}}\threej{c^{\prime}}{c}{0}{\gamma^{\prime}}{\gamma}{0} \\
 & =(-1)^{2 a} \sum_{c^{\prime} \gamma^{\prime}}\left(2 c^{\prime}+1\right)(-1)^{a-\alpha+b-\beta+c^{\prime}-\gamma^{\prime}}\threej{b}{a}{c^{\prime}}{-\beta}{-\alpha}{-\gamma^{\prime}}\threej{c^{\prime}}{c}{0}{\gamma^{\prime}}{\gamma}{0},
 \end{aligned}
+\]
+\[{\scriptsize (-1)^{2a}}
+\vcenter{\hbox{
+    \begin{tikzpicture}[baseline=0pt, inner sep=0.2em,font=\scriptsize]
+    \coordinate (M) at ($0.8*(0.0,0.0)$);
+    \coordinate (T) at ($0.8*(-0.5,0.866)+(M)$);
+    \coordinate (B) at ($0.8*(-0.5,-0.866)+(M)$);
+    \coordinate (R) at ($0.8*(1,0)+(M)$);
+    \coordinate (Rr) at ($(R)+0.8*(1,0)$);
+    \node[label={180:\minusmark}] at (M) {};
+    \draw[jmlinem] (R) -- (M) node[midway,above]{$c'$};
+    \draw[bjmarrown] (T) -- (M) node[at start,above]{$a'\alpha'$};
+    \draw[bjmarrown] (B) -- (M) node[at start,below]{$b\beta$};
+    \draw[djmarrow] (R) -- (Rr) node[above]{$c\gamma$};
+    \end{tikzpicture}
+    }
+}
 \]
 \subsection{Invariant Integration over Directions}
 A double integral of a bilinear form
@@ -759,17 +795,14 @@ over the total solid angle $4 \pi(0 \leq \vartheta \leq \pi, 0 \leq \varphi<2 \p
 \]
 The resultant $\Omega$-line has the same direction as the original $|\Omega\rangle$ - and ( $\Omega \mid$-lines. In this case $\Omega_{0}$ is the normalization constant; for integration of the standard spherical harmonics $\Omega_{0}=1$,
 \[
-\int Y_{l m}^{*}(\Omega) Y_{l^{\prime} m^{\prime}}(\Omega) d \Omega=\braket{l m}{\Omega}\left(\Omega\left|l^{\prime} m^{\prime}\right\rangle\right.
-\]
-\begin{center}
-\begin{tikzpicture}[baseline=0pt]
+\int Y_{l m}^{*}(\Omega) Y_{l^{\prime} m^{\prime}}(\Omega) d \Omega=\braket{l m}{\Omega}\left(\Omega\left|l^{\prime} m^{\prime}\right\rangle\right. ,
+\vcenter{\hbox{\begin{tikzpicture}[baseline=0pt]
 \draw[jmline] (0,0) node[left]{$lm$} -- (1,0);
 \node[deltanode] at (1,0) {};
 \draw[omarrow] (1,0) -- (2,0) node[midway,above]{$\Omega$};
 \node[deltanode] at (2,0) {};
 \draw[jmline] (2,0) -- (3,0) node[right]{$l^{\prime}m^{\prime}$};
-\end{tikzpicture}
-\end{center}
+\end{tikzpicture}}}\]
 whereas $\Omega_{0}=4 \pi$ for integration of the functions $C_{l m}(\Omega)=|4 \pi /(2 l+1)|^{1 / 2} Y_{l m}(\Omega)$.
 
 \subsection{Integration over Rotation Parameters}
@@ -777,48 +810,49 @@ The integration of a bilinear form with respect to parameters which specify the 
 \[
 \left.\int\langle | \mathfrak{M}(R)\left\rangle\langle | \mathfrak{N}\left(R^{-1}\right)\right|\right\rangle \frac{d R}{R_{0}}
 \]
-Table 11.5.\\
-Basic Operations of the Theory.
 
-\subsubsection{Analytical Expression}
-Multiplication\\
-$\braket{}{\mathfrak{M}}\braOket{}{\mathfrak{N}}{}$
+\begin{table}[tbh!]
+\begin{center}
+\captionsetup{labelformat=empty}
+\renewcommand{\arraystretch}{1.5}
+\caption{Table 11.5.
+Basic Operations of the Theory.}
 
-Graphical Representation
-
-Invariant Summation over Momentum Projection
-\[
+\small \begin{tabular}{l|c}
+\hline
+{Analytical Expression} & Graphical Representation \\
+\hline
+\multicolumn{2}{c}{Multiplication}\\
+$\braket{}{\mathfrak{M}}\braOket{}{\mathfrak{N}}{}$ &
+\\
+\multicolumn{2}{c}{Invariant Summation over Momentum Projection}\\
+\multicolumn{2}{c}{Scalar Product of irreducible tensors}\\
+\(
 \sum_{m}\braOket{}{\mathfrak{N}}{j m}\braOket{j m}{\mathfrak{N}}{} \equiv\left(\mathfrak{N}_{j} \cdot \mathfrak{N}_{j}\right) \quad \mid \sum_{m} \mathfrak{M} \xrightarrow{j m}{ }^{j m} \mathfrak{N}=\mathfrak{M} \rightarrow \mathfrak{N}
-\]
-Complete Summation over Angular Momentum and Projection
-\[
+\)
+&\begin{tikzpicture}[baseline=0pt]
+\node[opbox] (M) at (0,0) {$\mathfrak{M}$};
+\node[opbox] (N) at (2.2,0) {$\mathfrak{N}$};
+\draw[jmline] (M) -- (N) node[midway,above]{$j$};
+\end{tikzpicture}
+\\
+\multicolumn{2}{c}{Complete Summation over Angular Momentum and Projection}\\
+\(
 \begin{gathered}
 \sum_{j m}\braOket{}{\mathfrak{M}}{j m} N_{j}\braOket{j m}{\mathfrak{N}}{} \\
 \text { Completeness Condition } \\
 \sum_{j m}|j m\rangle N_{j}\langle j m|=1
 \end{gathered}
-\]
-\begin{figure}[h]
-\begin{center}
-\caption{Scalar Product of Irreducible Tensors}
-\label{chap11:fig:1}
-\begin{tikzpicture}[baseline=0pt]
-\node[opbox] (M) at (0,0) {$\mathfrak{M}$};
-\node[opbox] (N) at (2.2,0) {$\mathfrak{N}$};
-\draw[jmline] (M) -- (N) node[midway,above]{$j$};
-\end{tikzpicture}
-\end{center}
-\end{figure}
-\[
+\)
+&
+\\
+\multicolumn{2}{c}{Irreducible Tensor Product of Irreducible Tensors}\\
+\(
 \begin{aligned}
 \sum_{m_{1} m_{2}}\braOket{}{\mathfrak{M}}{i_{1} m_{1}} & \braOket{}{\mathfrak{N}}{j_{2} m_{2}} \times\braket{j_{1} m_{1} j_{2} m_{2}}{j_{1} j_{2} / M} \equiv \\
 & \equiv\left\{\mathfrak{M}_{j_{1}} \otimes \mathfrak{N}_{j_{2}}\right\}_{J M}
 \end{aligned}
-\]
-\begin{figure}[h]
-\begin{center}
-\caption{Irreducible Tensor Product of Irreducible Tensors}
-\label{chap11:fig:2}
+\)&
 \begin{tikzpicture}[baseline=0pt]
 \node[opbox] (M) at (0,0) {$\mathfrak{M}$};
 \node[opbox] (N) at (2.2,0) {$\mathfrak{N}$};
@@ -828,25 +862,29 @@ Complete Summation over Angular Momentum and Projection
 \draw[jmline] (N) -- (T) node[midway,above right]{$j_2$};
 \draw[jmline] (T) -- (1.1,2) node[above]{$JM$};
 \end{tikzpicture}
-\end{center}
-\end{figure}
-
-Complete Invariant Integration over Direction Angles
-\[
+\\
+\multicolumn{2}{c}{Complete Invariant Integration over Direction Angles}\\
+\(
 \begin{array}{l|l}
 \int\braOket{}{\mathfrak{M}}{\Omega} d \Omega\braket{\Omega}{\mathfrak{N}} & \\
 & \text { Completeness Condition } \\
 \int|\Omega\rangle d \Omega\langle\Omega|=1 & \int[\mathfrak{M}-d \Omega \sim \mathfrak{N}=\{\mathfrak{M}-\Omega\}
 \end{array}
-\]
-Complete Integration over Rotation Parameters
-\[
+\)
+&
+\\
+\multicolumn{2}{c}{Complete Integration over Rotation Parameters}\\
+\(
 \left.\int\langle | \mathfrak{M}\left(R^{-1}\right)\left\rangle \frac{d R}{R_{0}}\langle | \mathfrak{N}(R)\right|\right\rangle
-\]
-Completeness Condition
-\[
+\)\\
+Completeness Condition \\
+\(
 \int \hat{R}^{-1} \hat{R} \frac{d R}{R_{0}}=1
-\]
+\)
+\end{tabular}
+\end{center}
+\end{table}
+
 \[
 \left.\int \mathfrak{M}=\frac{d R}{R_{0}}=\mathfrak{N}\right\}=\mathfrak{M}=x=\mathfrak{N}
 \]
@@ -910,13 +948,13 @@ The expressions corresponding to two topologically similar diagrams are equal in
 3j Symbol $\{a b c\}$\\
 Reversal of Node Sign and Line Direction, and Argument Permutation
 
-\begin{table}[h]
+\begin{table}[tbh!]
 \begin{center}
 \caption{Symmetry of 3nj Symbol Diagrams.}
 \label{chap11:tab:2}
 \begin{tabular}{ccc}
-\sixjloop{a}{b}{c}{+}{-} & $=(-1)^{a+b+c}$ & \sixjloop{a}{b}{c}{+}{+} \; $=(-1)^{a+b+c}$ \\[2em]
-\sixjloop{a}{b}{c}{+}{-} & $=$ & \sixjloop{a}{b}{c}{-}{+} \; $=(-1)^{2a}$
+\threejs{a}{b}{c}{+}{-} & $=(-1)^{a+b+c}$ & \threejs{a}{b}{c}{+}{+} \; $=(-1)^{a+b+c}$ \\[2em]
+\threejs{a}{b}{c}{+}{-} & $=$ & \threejs{a}{b}{c}{-}{+} \; $=(-1)^{2a}$
 \end{tabular}
 
 $6j$ Symbol $\sixj{a}{b}{c}{A}{B}{C}$
@@ -1688,7 +1726,7 @@ depend on variables of the first and the second subsystems, respectively.
 \times \sum_{\gamma^{\prime \prime}}\left(\tau j_{1}\left\|\mathfrak{M}_{k}\right\| \gamma^{\prime \prime} j_{1}^{\prime}\right)\left(\gamma^{\prime \prime} j_{2}\left\|\mathfrak{N}_{k}\right\| \gamma^{\prime} j_{2}^{\prime}\right)
 \end{gathered}
 \]
-\sixjloop{j_1}{j_2}{J}{+}{-}
+\threejs{j_1}{j_2}{J}{+}{-}
 
 
 Reduced matrix element of an irreducible tensor operator which depends only on variables of the first subsystem.
@@ -1699,7 +1737,7 @@ Reduced matrix element of an irreducible tensor operator which depends only on v
 \times\sixj{J}{k}{J^{\prime}}{j_{1}^{\prime}}{j_{2}}{j_{1}}\left(\gamma j_{1}\left\|\mathfrak{M}_{k}\right\| \gamma^{\prime} j_{1}^{\prime}\right) .
 \end{gathered}
 \]
-\sixjloop{J}{k}{J^{\prime}}{+}{-}
+\threejs{J}{k}{J^{\prime}}{+}{-}
 
 
 
@@ -1711,7 +1749,7 @@ Reduced matrix element of the irreducible tensor operator which depends only on 
 \times\sixj{J}{k}{J^{\prime}}{j_{2}^{\prime}}{j_{1}}{j_{2}}\left(\gamma j_{2}\left\|\Re_{k}\right\| \gamma^{\prime} j_{2}^{\prime}\right) .
 \end{gathered}
 \]
-\sixjloop{J}{k}{J^{\prime}}{+}{-}
+\threejs{J}{k}{J^{\prime}}{+}{-}
 
 
 
@@ -1783,7 +1821,7 @@ Analytical Expression
 \section*{where \\
  where}
 \begin{center}
-\sixjloop{j}{k}{j'}{+}{-}
+\threejs{j}{k}{j'}{+}{-}
 \end{center}
 \[
 \begin{gathered}
