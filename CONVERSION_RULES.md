@@ -1331,3 +1331,85 @@ embedded figures:
   with what the nearby paragraph is talking about, draw what the image
   shows, not what the paragraph implies; fixing the deeper
   image/paragraph pairing bug is out of scope for a per-image swap.
+
+## 14. Chap11 correction pass against the original book scan (orig/)
+
+Started 2026-07-19, using the full original scan at
+`orig/Khersonskii et al. - 1988 - Quantum Theory Of Angular Momentum.pdf`
+(added to the repo; its PDF page numbers are the same numbers baked into
+the `images/*-NNN_...jpg` crop filenames — Chap11 spans PDF pages
+428-463). Everything up to and including Table 11.5 was declared
+corrected by the user beforehand and is left alone. The fidelity bar, set
+explicitly by the user: diagrams must be **topologically equivalent** to
+the originals — same nodes, edges, labels, node signs, and arrow
+directions — while exact element positions are free.
+
+Completed so far:
+
+- **Table 11.6 ("Symmetry of 3nj Symbol Diagrams", label `chap11:tab:2`,
+  orig pp. 438-439) fully rebuilt** from a fresh transcription of the
+  scan. The previous content had corrupted `ricenter{...}` placeholder
+  lines, duplicated blocks, and reused `\sixjdiagramu` in places whose
+  printed diagrams have different node signs and line directions than
+  that macro draws. The transcribed structure:
+  - 3j section: one six-diagram chain over two printed rows —
+    `{+,-} = (-1)^{a+b+c} {+,+} = (-1)^{a+b+c} {-,-} = {+,-;all lines up}
+    = {-,+} = (-1)^{2a} {+,-;line a up}`. Chained equalities in this
+    table always refer back to the *first* diagram of the chain.
+  - 6j section (up-triangle with center node; standard directions
+    left L→T, right T→R, bottom L→R, lower-left L→M, lower-right M→R,
+    vertical M→T): Reversal of Node Sign row (`++++` / all-minus /
+    corners-plus-center-minus), Reversal of Line Direction row
+    (standard / outer three reversed / inner three reversed / all six
+    reversed), and two Argument Permutation rows (8 diagrams, all-plus
+    signs, standard directions, labels permuted only).
+  - 9j section (hexagon; standard signs `+--++-` for T,UL,UR,LL,LR,B;
+    standard directions UL→T, T→B, T→UR, UL→LL, LL→B, UL→LR, LL→UR,
+    B→LR, LR→UR): Reversal of Node Sign row (standard / all-inverted /
+    all-plus / all-minus with `(-1)^{J_0}` on the last two), Reversal of
+    Line Direction row (standard / all nine reversed / three diameters
+    reversed / six perimeter edges reversed, factor
+    `(-1)^{2(a_2+b_3+c_1)}`), and three Argument Permutation rows (each
+    `H1 = H2 = (-1)^{J_0} H3 = (-1)^{J_0} H4`, standard signs and
+    directions, labels permuted: H2 mirrors H1's labels, H3 swaps the
+    b/c families, H4 mirrors H3).
+- **New drawing macros in diagrams.sty** (the older `\sixjdiagramu` /
+  `\ninejd` are deliberately untouched — their conventions match the
+  user-validated pre-Table-11.5 call sites): `\threejs` gained an
+  optional 3-letter direction argument (`d`/`u` per line a,b,c);
+  `\sixjdgen{l,r,b,ll,lr,v,SIGNS,DIRS}` and
+  `\ninejdgen{s1..s9,SIGNS,DIRS}` take explicit node-sign strings and
+  per-edge direction strings (`d` = the book's standard direction, `r` =
+  reversed in place), parsed by fixed-length `\def`-delimited splitters
+  and compared with `\if` (character-code comparison, so `\edef`-produced
+  catcode-12 characters match normal input).
+- Table 11.6's caption follows the file's existing convention for
+  matching the book's own numbers: `\captionsetup{labelformat=empty}` +
+  literal "Table 11.6." text (the automatic counter is inflated by the
+  "(Cont'd)" captions and would render 11.9); prose references were made
+  literal to match.
+
+Transcription methodology notes (these mistakes cost real time):
+
+- **View scan crops at 1:1 pixel scale or better.** Downsampled or
+  aspect-stretched previews systematically flip arrowhead readings — a
+  whole first round of direction transcriptions had to be redone.
+- The printed arrowheads are darts: the barbs flare **backward** from the
+  tip, so the wide flared end is the rear of the arrow, not the point.
+- Use the printed phase factors as physics constraints to pin down which
+  lines a diagram reverses: node-sign flip contributes
+  `(-1)^{sum of the three momenta at that node}`, line reversal
+  `(-1)^{2j}`, and every row/column triad of a 3nj symbol has an integer
+  sum. In practice the factor plus one or two unambiguous edges (vertical
+  or horizontal ones) determines the whole diagram.
+
+Still to do in this pass, in file order: the two garbled R-integration
+displays just after Table 11.5 (no image crops exist — reconstruct from
+`opbox`/`rline` semantics and the surrounding prose); the Sec. 11.3.1
+identical-diagrams example (book p. 437 prints FOUR deformed diagrams,
+the file currently has two); the Sec. 11.3.2-11.3.10 example diagrams
+(orig pp. 439-446); Tables 11.7-11.15 (orig pp. 446-463) — note the
+current file's literal captions in that range ("Table 11.10. Zero
+Angular Momentum", etc.) do not match the book's own numbering (the
+j=0 table is the book's Table 11.7), so a numbering audit is part of
+that work.
