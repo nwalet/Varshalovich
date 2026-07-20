@@ -2,7 +2,7 @@
 \ProvidesPackage{diagrams}[2026/07/17 Chap11 TikZ graphical-method diagrams]
 \RequirePackage{newlist}
 \RequirePackage{tikz}
-\usetikzlibrary{arrows.meta,decorations.markings,positioning,calc,decorations.pathreplacing,decorations.markings,math}
+\usetikzlibrary{arrows.meta,decorations.markings,positioning,calc,decorations.pathreplacing,decorations.markings,math,shapes.geometric}
 
 %\plusmark/\minusmark: the "+"/"-" node-sign markers, drawn as short thin
 %lines (a cross / a dash) rather than typeset as math-mode "$+$"/"$-$"
@@ -60,6 +60,8 @@
     mark=at position {#1-0.05} with {\pgftransformxshift{1.1mm}\arrow{Stealth[length=2.2mm]}},
     mark=at position {#1+0.1} with {\pgftransformxshift{1.1mm}\arrow{Stealth[length=2.2mm]}}}}},
   bjmlinem/.default=0.5,
+  omlinem/.style={postaction={decorate,decoration={markings,mark=at position #1 with {\pgftransformxshift{1.1mm}\arrow{Stealth[length=2.2mm]}}}},dashed},
+  omlinem/.default=0.5,
   %other styles: nodes, boxes, etc.
   plusnode/.style={circle, fill, inner sep=1pt, label={above:\plusmark}},
   minusnode/.style={circle, fill, inner sep=1pt, label={below:\minusmark}},
