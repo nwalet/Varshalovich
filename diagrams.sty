@@ -631,3 +631,17 @@
 \node[inner sep=1pt] at (0.44,-0.4){$R$};
 \node[below,inner sep=1pt] at (0,-0.82){$R^{-1}R{=}1$};
 \end{tikzpicture}}
+
+%---- Table 11.11 helpers (Metric Tensor) ----
+%\mline{L}{lt}{rt}{R}: metric-tensor line -- a central node with a left
+%segment to label L and right segment to label R. lt/rt pick the type:
+%'k' = ket (single arrowhead pointing outward, away from the node),
+%'b' = bra (double arrowhead pointing inward, toward the node).
+\newcommand{\mline}[4]{%
+\begin{tikzpicture}[baseline=-0.4ex,inner sep=0.13em,font=\scriptsize]
+\node[dotnode] at (0,0){};
+\if k#2\draw[-{Stealth[length=2mm]},thick] (0,0) -- (-1.05,0) node[left]{$#1$};
+\else\draw[-{Stealth[length=1.7mm] Stealth[length=1.7mm]},thick] (-1.05,0) node[left]{$#1$} -- (0,0);\fi
+\if k#3\draw[-{Stealth[length=2mm]},thick] (0,0) -- (1.05,0) node[right]{$#4$};
+\else\draw[-{Stealth[length=1.7mm] Stealth[length=1.7mm]},thick] (1.05,0) node[right]{$#4$} -- (0,0);\fi
+\end{tikzpicture}}

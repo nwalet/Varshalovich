@@ -1665,13 +1665,86 @@ Orthonormality
 \threenode{J}{j_1}{j_2}{above:$+$}\quad$=(-1)^{2j_1}\sqrt{2J+1}\times$
 \begin{tikzpicture}[baseline=0pt]\draw[jmline] (0,0) node[left]{$J$} -- (1,0) node[right]{$M$};\end{tikzpicture}
 
-\begin{table}[h]
 \begin{center}
-\captionsetup{labelformat=empty}
-\caption{Table 11.11. Metric Tensor for $(2 j+1)$-Dimensional Space of Functions $|j m\rangle$.}
-  \begin{tikzpicture}[baseline=0pt]\draw[jmline] (0,0) node[left]{$jm$} to[bend left=40] node[midway,above]{$j$} (1.6,0); \draw[jmline] (0,0) to[bend right=40] (1.6,0); \node[right] at (1.6,0) {$jm^{\prime}$};\end{tikzpicture}
+{\bfseries Table 11.11.\\ Metric Tensor for $(2j+1)$-Dimensional Space of Functions $|jm\rangle$.}\\[6pt]
+\small
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.6}
+\begin{tabular}{@{}p{0.44\textwidth}|c@{}}
+\hline
+\multicolumn{1}{c|}{Analytical Expression} & Graphical Representation \\
+\hline
+\multicolumn{2}{c}{Definition and Properties}\\
+$|jm\,jm^{\prime}\rangle=\langle jm\,jm^{\prime}|=\dbinom{j}{m\ m^{\prime}}=(-1)^{j+m}\delta_{m,-m^{\prime}}$
+& \mline{jm}{k}{k}{jm^{\prime}}$\,=\,$\mline{jm}{b}{b}{jm^{\prime}} \\
+$\langle jm^{\prime}\,jm|=|jm^{\prime}\,jm\rangle=\dbinom{j}{m^{\prime}\ m}=(-1)^{j-m}\delta_{m^{\prime},-m}$
+& \mline{jm^{\prime}}{b}{b}{jm}$\,=\,$\mline{jm^{\prime}}{k}{k}{jm} \\
+$|jm^{\prime}\,jm\rangle=(-1)^{2j}|jm\,jm^{\prime}\rangle=\langle jm^{\prime}\,jm|=(-1)^{2j}\langle jm\,jm^{\prime}|$
+& \mline{jm^{\prime}}{k}{k}{jm}$\,=(-1)^{2j}\,$\mline{jm}{k}{k}{jm^{\prime}}\newline
+$=\,$\mline{jm^{\prime}}{b}{b}{jm}$\,=(-1)^{2j}\,$\mline{jm}{b}{b}{jm^{\prime}} \\
+$\displaystyle\sum_{m^{\prime}}|jm\,jm^{\prime}\rangle\langle jm^{\prime\prime}\,jm^{\prime}|=\langle jm^{\prime\prime}|jm\rangle$
+& \begin{tikzpicture}[baseline=-0.4ex,inner sep=0.13em,font=\scriptsize]
+\node[dotnode] at (-0.75,0){};\node[dotnode] at (0.75,0){};
+\draw[-{Stealth[length=2mm]},thick] (-0.75,0) -- (-1.65,0) node[left]{$jm$};
+\draw[thick] (-0.75,0) -- (0.75,0) node[midway,above]{$jm^{\prime}$};
+\draw[-{Stealth[length=1.7mm] Stealth[length=1.7mm]},thick] (1.65,0) node[right]{$jm^{\prime\prime}$} -- (0.75,0);
+\end{tikzpicture}$=$\mline{jm}{k}{b}{jm^{\prime\prime}} \\
+\hline
+\multicolumn{2}{c}{Covariant $\rightleftarrows$ Contravariant. Transformation of the Irreducible Tensor}\\
+$\displaystyle\sum_{m^{\prime}}|jm\,jm^{\prime}\rangle\langle jm^{\prime}|\mathfrak{M}|\rangle=\langle|\mathfrak{M}|jm\rangle$
+& \begin{tikzpicture}[baseline=-0.4ex,inner sep=0.13em,font=\scriptsize]
+\node[opbox](M) at (0,0){$\mathfrak{M}$};\node[dotnode](n) at (1.6,0){};
+\draw[-{Stealth[length=1.7mm] Stealth[length=1.7mm]},thick] (n) -- (M.east) node[midway,above]{$jm^{\prime}$};
+\draw[-{Stealth[length=2mm]},thick] (n) -- (2.8,0) node[right]{$jm$};
+\end{tikzpicture}$=$%
+\begin{tikzpicture}[baseline=-0.4ex,inner sep=0.13em,font=\scriptsize]
+\node[opbox](M) at (0,0){$\mathfrak{M}$};
+\draw[-{Stealth[length=2mm]},thick] (M.east) -- (1.3,0) node[right]{$jm$};
+\end{tikzpicture} \\
+$\displaystyle\sum_{m^{\prime}}\langle|\mathfrak{M}|jm^{\prime}\rangle\langle jm^{\prime}\,jm|=\langle jm|\mathfrak{M}|\rangle$
+& \begin{tikzpicture}[baseline=-0.4ex,inner sep=0.13em,font=\scriptsize]
+\node[opbox](M) at (0,0){$\mathfrak{M}$};\node[dotnode](n) at (1.6,0){};
+\draw[-{Stealth[length=2mm]},thick] (M.east) -- (n) node[midway,above]{$jm^{\prime}$};
+\draw[-{Stealth[length=1.7mm] Stealth[length=1.7mm]},thick] (2.8,0) node[right]{$jm$} -- (n);
+\end{tikzpicture}$=$%
+\begin{tikzpicture}[baseline=-0.4ex,inner sep=0.13em,font=\scriptsize]
+\node[opbox](M) at (0,0){$\mathfrak{M}$};
+\draw[-{Stealth[length=1.7mm] Stealth[length=1.7mm]},thick] (1.3,0) node[right]{$jm$} -- (M.east);
+\end{tikzpicture} \\
+\hline
+\multicolumn{2}{c}{Scalar Product of Irreducible Tensors}\\
+$\displaystyle\sum_{m}\langle|\mathfrak{M}|jm\rangle\langle jm|\mathfrak{N}|\rangle=(\mathfrak{M}_j\cdot\mathfrak{N}_j)$
+& \begin{tikzpicture}[baseline=-0.4ex,inner sep=0.13em,font=\scriptsize]
+\node[opbox](M) at (0,0){$\mathfrak{M}$};\node[opbox](N) at (2,0){$\mathfrak{N}$};
+\draw[-{Stealth[length=2mm]},thick,line width=1pt] (M.east) -- (N.west) node[midway,above]{$j$};
+\end{tikzpicture}$=$%
+\begin{tikzpicture}[baseline=-0.4ex,inner sep=0.13em,font=\scriptsize]
+\node[opbox](M) at (0,0){$\mathfrak{M}$};\node[opbox](N) at (3.1,0){$\mathfrak{N}$};\node[dotnode](n) at (1.55,0){};
+\draw[-{Stealth[length=2mm]},thick] (M.east) -- (n) node[midway,above]{$jm$};
+\draw[-{Stealth[length=1.7mm] Stealth[length=1.7mm]},thick] (N.west) -- (n) node[midway,above]{$jm$};
+\end{tikzpicture} \\
+$\displaystyle\sum_{m}\langle jm|\mathfrak{M}|\rangle\langle|\mathfrak{N}|jm\rangle=(\mathfrak{M}_j\cdot\mathfrak{N}_j)$
+& \begin{tikzpicture}[baseline=-0.4ex,inner sep=0.13em,font=\scriptsize]
+\node[opbox](M) at (0,0){$\mathfrak{M}$};\node[opbox](N) at (2,0){$\mathfrak{N}$};
+\draw[-{Stealth[length=2mm]},thick,line width=1pt] (N.west) -- (M.east) node[midway,above]{$j$};
+\end{tikzpicture}$=$%
+\begin{tikzpicture}[baseline=-0.4ex,inner sep=0.13em,font=\scriptsize]
+\node[opbox](M) at (0,0){$\mathfrak{M}$};\node[opbox](N) at (3.1,0){$\mathfrak{N}$};\node[dotnode](n) at (1.55,0){};
+\draw[-{Stealth[length=1.7mm] Stealth[length=1.7mm]},thick] (M.east) -- (n) node[midway,above]{$jm$};
+\draw[-{Stealth[length=2mm]},thick] (N.west) -- (n) node[midway,above]{$jm$};
+\end{tikzpicture} \\
+$\displaystyle\sum_{m}\langle|\mathfrak{M}|jm\rangle\langle jm|\mathfrak{N}|\rangle=(-1)^{2j}\sum_{m}\langle jm|\mathfrak{M}|\rangle\langle|\mathfrak{N}|jm\rangle$
+& \begin{tikzpicture}[baseline=-0.4ex,inner sep=0.13em,font=\scriptsize]
+\node[opbox](M) at (0,0){$\mathfrak{M}$};\node[opbox](N) at (2,0){$\mathfrak{N}$};
+\draw[-{Stealth[length=2mm]},thick,line width=1pt] (M.east) -- (N.west) node[midway,above]{$j$};
+\end{tikzpicture}$=(-1)^{2j}$%
+\begin{tikzpicture}[baseline=-0.4ex,inner sep=0.13em,font=\scriptsize]
+\node[opbox](M) at (0,0){$\mathfrak{M}$};\node[opbox](N) at (2,0){$\mathfrak{N}$};
+\draw[-{Stealth[length=2mm]},thick,line width=1pt] (N.west) -- (M.east) node[midway,above]{$j$};
+\end{tikzpicture} \\
+\hline
+\end{tabular}
 \end{center}
-\end{table}
 
 \begin{center}
 {\bfseries Table 11.12.\\ Spherical Harmonics.}\\[6pt]
