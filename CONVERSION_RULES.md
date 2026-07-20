@@ -1413,3 +1413,53 @@ current file's literal captions in that range ("Table 11.10. Zero
 Angular Momentum", etc.) do not match the book's own numbering (the
 j=0 table is the book's Table 11.7), so a numbering audit is part of
 that work.
+
+### Chap11 table-numbering audit (established from orig text layer)
+
+The original scan HAS a text layer (`pdftotext -f <pg> -l <pg>` works),
+so the book's own table numbers/titles are authoritative. Chapter 11's
+full table list (orig PDF pp. 447-463):
+
+| Book # | Title | orig PDF pg |
+|--------|-------|-------------|
+| 11.7   | Zero Angular Momentum (J=0) | 447 |
+| 11.8   | Zero Rotation (R=0) | 448 |
+| 11.9   | Rules for the Transformation of Diagrams | 448-451 |
+| 11.10  | 3jm Symbols | 451 |
+| 11.10a | Relation of Clebsch-Gordan Coefficients to 3jm Symbols | 452 |
+| 11.11  | Metric Tensor for (2j+1)-Dim Space of Functions \|jm> | 453 |
+| 11.12  | Spherical Harmonics | 454 |
+| 11.13  | Wigner D-Functions | 455-457 |
+| 11.14  | Matrix Elements of Irreducible Tensor Operators | 458-459 |
+| 11.15  | Generalised Wigner-Eckart Theorem | 462-463 |
+
+(Tables 11.1-11.6 precede these and are already correctly numbered in the
+file: Basic Elements, Invariant Functions, Matrix Elements, Sums of 3jm
+Products, Basic Operations, Symmetry of 3nj Symbol Diagrams.)
+
+**The file's numbering is broken** and needs a careful pass (NOT yet done):
+the tables 11.7+ are a mix of two mechanisms that conflict —
+1. Correct literal headers typed as `Table 11.N.\\ Title` (e.g. the Rules
+   table has a literal "Table 11.9" header at its start; Spherical
+   Harmonics has a literal "Table 11.12").
+2. Stray `\begin{table}\caption{Title}\label{chap11:tab:N}\end{table}`
+   fragments (labels tab:3..tab:10) that AUTO-number off the chapter table
+   counter. Because tables 11.1-11.6's `\caption` calls already advanced
+   that counter, these auto-captions render inflated and wrong:
+   - tab:3 "Zero Angular Momentum" renders **11.10** (should be 11.7)
+   - tab:4 "Zero Rotation" renders **11.11** (should be 11.8)
+   - tab:5 "Rules for Transformation" renders **11.12** (should be 11.9;
+     also a DUPLICATE of the literal-header 11.9 table)
+   - tab:6 "3jm Symbols" renders **11.13** (should be 11.10)
+   - tab:7 "Relation of CG Coeffs to 3jm" renders **11.14** (should be 11.10a)
+   - tab:8 "Metric Tensor" renders **11.15** (should be 11.11)
+   - tab:9 "Wigner D-Functions" renders **11.16** (should be 11.13)
+   - tab:10 "Matrix Elements of Irred. Tensor Ops" renders **11.17** (should be 11.14)
+
+The clean fix is to convert every table to the labelformat=empty + literal
+"Table 11.N. Title" convention already used by 11.1-11.6, delete the
+duplicate stray-caption fragments, and replace every `\ref{chap11:tab:N}`
+in prose with the correct literal number. Prose cross-refs currently
+pointing through the broken labels: `\ref{chap11:tab:3}` (should be 11.7),
+`{tab:4}`->11.8, `{tab:5}`->11.9, `{tab:7}`->11.10a, `{tab:9}`->11.13, plus
+`{tab:1}` (Table 11.4, Sums of 3jm — the "3nj symbols" summary ref).
