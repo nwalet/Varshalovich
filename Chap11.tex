@@ -939,22 +939,41 @@ Thus, any deformation of a diagram performed under the proper check for the node
 \draw[jmline] (T) -- (B) node[midway,right]{$b$};
 \draw[jmline] (L) -- (R) node[midway,above]{$B$};
 \end{tikzpicture}
-\qquad$=$\qquad
+\quad$=$\quad
+\sixjdiagramd{b,c,a,B,C,A,+}
+\quad$=$\quad
 \begin{tikzpicture}[baseline=0pt]
-\coordinate (T) at (0,1);
-\coordinate (L) at (-1.1,-0.6);
-\coordinate (R) at (1.1,-0.6);
-\coordinate (M) at (0,-0.15);
-\node[plusnode] at (T) {};
-\node[plusnode] at (L) {};
-\node[plusnode] at (R) {};
-\node[plusnode] at (M) {};
-\draw[jmline] (T) -- (L) node[midway,above left]{$A$};
-\draw[jmline] (T) -- (R) node[midway,above right]{$C$};
-\draw[jmline] (L) -- (R) node[midway,below]{$B$};
-\draw[jmline] (M) -- (T) node[midway,left]{$b$};
-\draw[jmline] (M) -- (L) node[midway,below]{$c$};
-\draw[jmline] (M) -- (R) node[midway,below]{$a$};
+\coordinate (TL) at (-0.9,0.8);
+\coordinate (TR) at (0.5,0.8);
+\coordinate (BL) at (-1.4,-0.8);
+\coordinate (BR) at (1.4,-0.8);
+\node[dotnode,label={above:\minusmark}] at (TL) {};
+\node[dotnode,label={above:\plusmark}] at (TR) {};
+\node[dotnode,label={below:\plusmark}] at (BL) {};
+\node[dotnode,label={below:\minusmark}] at (BR) {};
+\draw[jmline] (TL) -- (TR) node[midway,above]{$C$};
+\draw[jmline] (TL) -- (BL) node[pos=0.4,left]{$B$};
+\draw[jmline] (BR) -- (BL) node[midway,below]{$c$};
+\draw[jmline] (TR) -- (BR) node[pos=0.4,right]{$b$};
+\draw[jmline] (BL) -- (TR) node[pos=0.28,below right]{$A$};
+\draw[jmline] (TL) -- (BR) node[pos=0.28,below]{$a$};
+\end{tikzpicture}
+\quad$=$\quad
+\begin{tikzpicture}[baseline=0pt]
+\coordinate (LT) at (-1.3,0.8);
+\coordinate (LB) at (-1.3,-0.8);
+\coordinate (Rt) at (1.7,0);
+\coordinate (Ce) at (-0.6,0);
+\node[dotnode,label={above:\minusmark}] at (LT) {};
+\node[dotnode,label={below:\minusmark}] at (LB) {};
+\node[dotnode,label={right:\minusmark}] at (Rt) {};
+\node[dotnode,label={below left:\minusmark}] at (Ce) {};
+\draw[jmline] (LT) -- (Rt) node[pos=0.62,above]{$A$};
+\draw[jmline] (LB) -- (Rt) node[pos=0.62,below]{$b$};
+\draw[jmline] (LT) -- (LB) node[midway,left]{$c$};
+\draw[jmline] (Ce) -- (LT) node[pos=0.55,above right]{$B$};
+\draw[jmline] (Ce) -- (Rt) node[pos=0.45,above]{$C$};
+\draw[jmline] (Ce) -- (LB) node[pos=0.55,below right]{$a$};
 \end{tikzpicture}
 \end{center}
 
