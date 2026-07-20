@@ -1341,7 +1341,24 @@ A summary of the rules of graphical operations is presented in Table~11.9.
 \begin{center}
 \captionsetup{labelformat=empty}
 \caption{Table 11.7. Zero Angular Momentum ($J=0$).}
-  \begin{tikzpicture}[baseline=0pt]\draw[omarrow] (0,0) node[left]{$\Omega$} -- (1.4,0) node[right]{$\Omega^{\prime}$}; \node[above=2pt] at (0.7,0) {$j=0$};\end{tikzpicture}\quad$=$\quad\begin{tikzpicture}[baseline=0pt]\draw[bjmarrow] (0,0) node[left]{$\Omega$} -- (1.4,0) node[right]{$\Omega^{\prime}$};\end{tikzpicture}
+\small
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{@{}p{0.42\textwidth}|c@{}}
+\hline
+\multicolumn{1}{c|}{Analytical Expression} & Graphical Representation \\
+\hline
+\multicolumn{2}{c}{$jm$ Symbols}\\
+$\threej{a}{0}{b}{\alpha}{0}{\beta}=\dfrac{\delta_{ab}}{\sqrt{2a+1}}\dbinom{a}{\alpha\beta}=(-1)^{a+\alpha}\dfrac{\delta_{ab}\delta_{\alpha,-\beta}}{\sqrt{2a+1}}$
+& \jzTnode{+}{a\alpha}{o}{b\beta}{o}{d}$\;=\;$\jzTnode{-}{b\beta}{o}{a\alpha}{o}{u}$\;=\;$\jzld{o}{a}{b}{+} \\
+$\threej{a}{b}{0}{\alpha}{\beta}{0}=\dfrac{\delta_{ab}}{\sqrt{2a+1}}\dbinom{a}{\beta\alpha}=(-1)^{a-\alpha}\dfrac{\delta_{ab}\delta_{\alpha,-\beta}}{\sqrt{2a+1}}$
+& \jzTnode{-}{a\alpha}{o}{b\beta}{o}{d}$\;=\;$\jzTnode{+}{b\beta}{o}{a\alpha}{o}{u}$\;=\;$\jzld{o}{a}{b}{+} \\
+$(-1)^{a-\alpha}\threej{a}{0}{b}{-\alpha}{0}{\beta}=\dfrac{\delta_{ab}\delta_{\alpha\beta}}{\sqrt{2a+1}}$
+& \jzTnode{+}{a\alpha}{i}{b\beta}{o}{d}$\;=\;$\jzTnode{-}{b\beta}{o}{a\alpha}{i}{u}$\;=\;$\jzld{i}{a}{b}{+} \\
+$(-1)^{a-\alpha}\threej{a}{b}{0}{-\alpha}{\beta}{0}=(-1)^{2a}\dfrac{\delta_{ab}\delta_{\alpha\beta}}{\sqrt{2a+1}}$
+& \jzTnode{-}{a\alpha}{i}{b\beta}{o}{d}$\;=\;$\jzTnode{+}{b\beta}{o}{a\alpha}{i}{u}$\;=\;$\jzld{i}{a}{b}{+} \\
+\hline
+\end{tabular}
 \end{center}
 \end{table}
 

@@ -453,3 +453,61 @@
   \normedge[jmlinem=0.5]{tid7}{tid4}{0.5}{-0.2}{$\argx{12}$} %c4
 \end{tikzpicture}}
 }
+
+%======== Helpers for Table 11.7 (Zero Angular Momentum, j=0 cases) ========
+%\jzTnode{sign}{leftlab}{ldir}{rightlab}{rdir}{cdir}: a horizontal jm-line
+%through a central node (sign +/-) that carries a vertical "$c=0$" stub.
+%ldir/rdir: 'i' = arrow points into the node, 'o' = out of the node.
+%cdir: 'd' = stub points down, 'u' = up. Used for the 3jm-with-a-zero
+%"tee" diagrams of Table 11.7's jm-Symbols rows.
+\newcommand{\jzTnode}[6]{%
+\begin{tikzpicture}[baseline=0pt,inner sep=0.13em,font=\scriptsize]
+\coordinate (N) at (0,0);
+\node[dotnode,label={90:\vmk@sign{#1}}] at (N) {};
+\if i#3\draw[jmarrown] (-1.05,0) node[left]{$#2$} -- (N);\else\draw[jmarrown] (N) -- (-1.05,0) node[left]{$#2$};\fi
+\if i#5\draw[jmarrown] (1.05,0) node[right]{$#4$} -- (N);\else\draw[jmarrown] (N) -- (1.05,0) node[right]{$#4$};\fi
+\if d#6\draw[jmarrown] (N) -- (0,-0.95) node[below]{$c=0$};\else\draw[jmarrown] (0,-0.95) node[below]{$c=0$} -- (N);\fi
+\end{tikzpicture}%
+}
+%\jzotri{leftlab}{rightlab}{botsign}: a small "downward triangle" open
+%diagram -- two top nodes (both +) joined by an unlabelled top edge, each
+%running down to a bottom apex node (sign botsign) via edges leftlab
+%(left) and rightlab (right). The recurring reduced form paired with a
+%detached a-alpha--b-beta line in Table 11.7's jm rows.
+\newcommand{\jzotri}[3]{%
+\begin{tikzpicture}[baseline=0pt,inner sep=0.13em,font=\scriptsize]
+\coordinate (L) at (-0.7,0.5);
+\coordinate (R) at (0.7,0.5);
+\coordinate (B) at (0,-0.6);
+\node[dotnode,label={180:\plusmark}] at (L) {};
+\node[dotnode,label={0:\plusmark}] at (R) {};
+\node[dotnode,label={-90:\vmk@sign{#3}}] at (B) {};
+\draw[jmlinem] (L) -- (R);
+\draw[jmlinem] (L) -- (B) node[midway,left]{$#1$};
+\draw[jmlinem] (R) -- (B) node[midway,right]{$#2$};
+\end{tikzpicture}%
+}
+%\jzld{extdir}{leftlab}{rightlab}{botsign}: the reduced form used on the
+%right of Table 11.7's jm rows -- a detached horizontal a-alpha--b-beta
+%line (extdir 'o' = arrows out to the labels, 'i' = arrows in) drawn above
+%a closed \jzotri{leftlab}{rightlab}{botsign} normalization triangle.
+\newcommand{\jzld}[4]{%
+\begin{tikzpicture}[baseline=0pt,inner sep=0.13em,font=\scriptsize]
+\if o#1
+  \draw[jmarrown] (0,0.95) -- (-1.05,0.95) node[left]{$a\alpha$};
+  \draw[jmarrown] (0,0.95) -- (1.05,0.95) node[right]{$b\beta$};
+\else
+  \draw[jmarrown] (-1.05,0.95) node[left]{$a\alpha$} -- (0,0.95);
+  \draw[jmarrown] (1.05,0.95) node[right]{$b\beta$} -- (0,0.95);
+\fi
+\coordinate (L) at (-0.7,0.3);
+\coordinate (R) at (0.7,0.3);
+\coordinate (B) at (0,-0.7);
+\node[dotnode,label={180:\plusmark}] at (L) {};
+\node[dotnode,label={0:\plusmark}] at (R) {};
+\node[dotnode,label={-90:\vmk@sign{#4}}] at (B) {};
+\draw[jmlinem] (L) -- (R);
+\draw[jmlinem] (L) -- (B) node[midway,left]{$#2$};
+\draw[jmlinem] (R) -- (B) node[midway,right]{$#3$};
+\end{tikzpicture}%
+}
