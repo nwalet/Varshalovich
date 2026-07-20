@@ -1239,13 +1239,49 @@ For example,
 \sum_{c \gamma}(2 c+1)(-1)^{a-\alpha+b-\beta+c-\gamma}\threej{a}{b}{c}{-\alpha}{-\beta}{-\gamma}\threej{a}{b}{c}{\alpha^{\prime}}{\beta^{\prime}}{\gamma^{\prime}}=\sum_{c \gamma}(2 c+1)\threej{a}{b}{c}{\alpha}{\beta}{\gamma}\threej{a}{b}{c}{\alpha^{\prime}}{\beta^{\prime}}{\gamma^{\prime}}=\delta_{\alpha \alpha^{\prime}} \delta_{\beta \beta^{\prime}},
 \]
 \begin{center}
-\threenode{a}{c}{b}{above:$+$}\ \threenode{a}{c}{b}{above:$+$}
+\begin{tikzpicture}[baseline=0pt,inner sep=0.15em,font=\scriptsize]
+\coordinate (ML) at (-0.55,0);
+\coordinate (MR) at (0.55,0);
+\node[dotnode,label={180:\plusmark}] at (ML) {};
+\node[dotnode,label={0:\minusmark}] at (MR) {};
+\draw[jmarrown] (MR) -- (ML) node[midway,above]{$c$};
+\draw[jmarrown] (-1.35,0.8) node[left]{$a\alpha$} -- (ML);
+\draw[jmarrown] (-1.35,-0.8) node[left]{$b\beta$} -- (ML);
+\draw[jmarrown] (MR) -- (1.35,0.8) node[right]{$a\alpha'$};
+\draw[jmarrown] (MR) -- (1.35,-0.8) node[right]{$b\beta'$};
+\end{tikzpicture}
+\qquad$=$\qquad
+\begin{tikzpicture}[baseline=0pt,inner sep=0.15em,font=\scriptsize]
+\draw[thick,postaction={decorate,decoration={markings,
+  mark=at position 0.14 with {\arrow{Stealth[length=1.8mm] Stealth[length=1.8mm]}},
+  mark=at position 1 with {\arrow{Stealth[length=1.8mm]}}}}]
+  (0,0.6) node[left]{$a\alpha$} -- (2.8,0.6) node[right]{$a\alpha'$};
+\draw[thick,postaction={decorate,decoration={markings,
+  mark=at position 0.14 with {\arrow{Stealth[length=1.8mm] Stealth[length=1.8mm]}},
+  mark=at position 1 with {\arrow{Stealth[length=1.8mm]}}}}]
+  (0,-0.6) node[left]{$b\beta$} -- (2.8,-0.6) node[right]{$b\beta'$};
+\end{tikzpicture}
 \end{center}
 \[
 \sum_{X}(2 X+1)\ninej{a}{b}{c}{b^{\prime}}{d}{e}{c}{e}{X}=\{a b c\}\{b d e\} \frac{\delta_{b b^{\prime}}}{(2 b+1)}
 \]
 \begin{center}
-\sixjdiagramu{c,X,e,a,b,d,+}
+\ninejdgen{a,b,c,c,e,X,b',d,e,+--++-,ddddddddd}
+\quad$=$\quad
+\threejs{a}{b}{c}{-}{+}
+\begin{tikzpicture}[baseline=0pt,inner sep=0.15em,font=\scriptsize]
+\coordinate (tl) at (-0.4,0.5); \coordinate (tr) at (0.4,0.5);
+\coordinate (bl) at (-0.4,-0.5); \coordinate (br) at (0.4,-0.5);
+\node[dotnode,label={above:\plusmark}] at (tl){};
+\node[dotnode,label={above:\plusmark}] at (tr){};
+\node[dotnode,label={below:\plusmark}] at (bl){};
+\node[dotnode,label={below:\plusmark}] at (br){};
+\draw[jmlinem] (tl)--(bl) node[midway,left]{$b$};
+\draw[jmlinem] (tr)--(br) node[midway,right]{$b^{\prime}$};
+\draw[jmlinem] (bl)--(tl);
+\draw[jmlinem] (br)--(tr);
+\end{tikzpicture}
+\threejs{e}{b^{\prime}}{d}{-}{+}
 \end{center}
 
 When a common thick $j$-line is included into two or more unlinked subdiagrams, one should preliminarily link these subdiagrams with the aid of the rules of subdiagram multiplication (Sec. 11.3.5) in order to arrive at one thick $j$-line. Only after this operation can one perform graphical summation over $j$ and $m$ according to Rule $\sum$. These combined graphical operations are displayed in Table~\ref{chap11:tab:5}.
