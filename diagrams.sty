@@ -594,3 +594,40 @@
 \draw[jmlinem](h1)--(h4)node[pos=0.28,above]{$#3$};
 \draw[jmlinem](h2)--(h5)node[pos=0.28,below]{$#4$};
 \end{tikzpicture}}
+
+%---- Table 11.8 helpers (Zero Rotation, R=1 / R^{-1}R=1 cases) ----
+%A "bra line": double arrowhead near the start + single at the end.
+\tikzset{vmkbra/.style={postaction={decorate,decoration={markings,
+  mark=at position 0.12 with {\arrow{Stealth[length=1.6mm] Stealth[length=1.6mm]}},
+  mark=at position 0.995 with {\arrow{Stealth[length=1.9mm]}}}}}}
+%\rstubline{type}{left}{right}{sign}: bra-line left--node(sign)--right with a
+%vertical double-dashed "$R=1$" stub down to a delta node. type 'o'=dashed
+%Omega-line, else solid j-line.
+\newcommand{\rstubline}[4]{%
+\begin{tikzpicture}[baseline=0pt,inner sep=0.13em,font=\scriptsize]
+\if o#1\tikzset{vmkln/.style={thick,dashed}}\else\tikzset{vmkln/.style={thick}}\fi
+\draw[vmkln,vmkbra] (-1.25,0) node[left]{$#2$} -- (1.25,0) node[right]{$#3$};
+\node[dotnode,label={90:\vmk@sign{#4}}]at(0,0){};
+\draw[rline] (0,0) -- (0,-0.75);\node[deltanode] at (0,-0.75){};
+\node[below,inner sep=1pt] at (0,-0.86){$R{=}1$};
+\end{tikzpicture}}
+%\rredline{type}{left}{right}: the reduced plain bra-line.
+\newcommand{\rredline}[3]{%
+\begin{tikzpicture}[baseline=0pt,inner sep=0.13em,font=\scriptsize]
+\if o#1\tikzset{vmkln/.style={thick,dashed}}\else\tikzset{vmkln/.style={thick}}\fi
+\draw[vmkln,vmkbra] (-1.25,0) node[left]{$#2$} -- (1.25,0) node[right]{$#3$};
+\end{tikzpicture}}
+%\rarcline{type}{left}{right}{sign}: bra-line with an inverted-V double-dashed
+%"$R^{-1}$/$R$" arc between two nodes (the R^{-1}R=1 case).
+\newcommand{\rarcline}[4]{%
+\begin{tikzpicture}[baseline=0pt,inner sep=0.13em,font=\scriptsize]
+\if o#1\tikzset{vmkln/.style={thick,dashed}}\else\tikzset{vmkln/.style={thick}}\fi
+\draw[vmkln,vmkbra] (-1.55,0) node[left]{$#2$} -- (1.55,0) node[right]{$#3$};
+\node[dotnode,label={90:\vmk@sign{#4}}]at(-0.6,0){};
+\node[dotnode,label={90:\vmk@sign{#4}}]at(0.6,0){};
+\coordinate (D) at (0,-0.72);\node[deltanode] at (D){};
+\draw[rline] (-0.6,0) -- (D);\draw[rline] (D) -- (0.6,0);
+\node[inner sep=1pt] at (-0.52,-0.4){$R^{-1}$};
+\node[inner sep=1pt] at (0.44,-0.4){$R$};
+\node[below,inner sep=1pt] at (0,-0.82){$R^{-1}R{=}1$};
+\end{tikzpicture}}

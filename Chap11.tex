@@ -1371,50 +1371,29 @@ $\ninej{a}{b}{c}{e}{0}{e^{\prime}}{f}{b^{\prime}}{d}=(-1)^{b+c+e+f}\dfrac{\delta
 \end{tabular}
 \end{center}
 
-\begin{table}[h]
 \begin{center}
-\captionsetup{labelformat=empty}
-\caption{Table 11.8. Zero Rotation ($R=0$).}
-Analytical Expression Graphical Representation
-\end{center}
-\end{table}
-
-(a) For $R=1$
-\[
-\delta\left(Q^{\prime}-\hat{R} Q\right)=\delta\left(Q^{\prime}-Q\right)
-\]
-i.e.,
-\[
-\braOket{Q^{\prime}}{R}{Q}=\braket{Q^{\prime}}{Q} .
-\]
-\begin{tikzpicture}[baseline=0pt]\draw[bjmarrow] (0,0) node[left]{$Q^{\prime}$} -- (1,0); \node[deltanode] at (1,0){}; \draw[bjmarrow,dashed] (1,0)--(2,0) node[midway,above]{$R{=}1$}; \node[deltanode] at (2,0){}; \draw[bjmarrow] (2,0)--(3,0) node[right]{$Q$};\end{tikzpicture}
-(b) For $R=1$
-\[
-\delta_{j j^{\prime}} D_{m m^{\prime}}^{j}(000)=\delta_{j j^{\prime}} \delta_{m m^{\prime}}
-\]
-i.e.,
-\[
-\braOket{j m}{D(1)}{j^{\prime} m^{\prime}}=\braket{j m}{j^{\prime} m^{\prime}} .
-\]
-\begin{tikzpicture}[baseline=0pt]\draw[jmline] (0,0) node[left]{$jm$} -- (1,0); \node[deltanode] at (1,0){}; \draw[bjmarrow,dashed] (1,0)--(2,0) node[midway,above]{$R{=}1$}; \node[deltanode] at (2,0){}; \draw[jmline] (2,0)--(3,0) node[right]{$j^{\prime}m^{\prime}$};\end{tikzpicture}
-(c) For $R^{-1} R=1$
-\[
-\int \delta\left(Q^{\prime \prime}-R^{-1} Q^{\prime}\right) d Q^{\prime} \delta\left(Q^{\prime}-R \Omega\right)=\delta\left(Q^{\prime \prime}-\Omega\right)
-\]
-i.e.,
-\[
-\braOket{\Omega^{\prime \prime}}{R^{-1}}{Q^{\prime}}\braOket{Q^{\prime}}{R}{\Omega}=\braket{Q^{\prime \prime}}{\Omega} .
-\]
-\begin{tikzpicture}[baseline=0pt]\draw[bjmarrow] (0,0) node[left]{$\Omega^{\prime\prime}$} -- (1,0) node[midway,above]{$R^{-1}$}; \node[deltanode] at (1,0){}; \draw[bjmarrow] (1,0)--(2,0) node[midway,above]{$R$}; \node[deltanode] at (2,0){}; \draw[bjmarrow] (2,0)--(3,0) node[right]{$\Omega$};\end{tikzpicture}
-i.e,
-\[
-\braOket{j m^{\prime \prime}}{D\left(R^{-1}\right)}{j^{\prime} m^{\prime}}\braOket{j^{\prime} m^{\prime}}{D(R)}{j m}=\braket{j m^{\prime \prime}}{j m}
-\]
-\[
-R^{-1} R=1
-\]
-\begin{center}
-\begin{tikzpicture}[baseline=0pt]\draw[jmline] (0,0) node[left]{$jm^{\prime\prime}$} -- (1,0) node[midway,above]{$R^{-1}$}; \node[deltanode] at (1,0){}; \draw[jmline] (1,0)--(2,0) node[midway,above]{$R$}; \node[deltanode] at (2,0){}; \draw[jmline] (2,0)--(3,0) node[right]{$jm$};\end{tikzpicture}
+{\bfseries Table 11.8.\\ Zero Rotation ($R=0$).}\\[6pt]
+\small
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{@{}p{0.46\textwidth}|c@{}}
+\hline
+\multicolumn{1}{c|}{Analytical Expression} & Graphical Representation \\
+\hline
+(a) For $R=1$: $\;\delta\!\left(\Omega^{\prime}-\hat{R}\Omega\right)=\delta\!\left(\Omega^{\prime}-\Omega\right)$, i.e.,\newline
+$\braOket{\Omega^{\prime}}{R}{\Omega}=\braket{\Omega^{\prime}}{\Omega}$.
+& \rstubline{o}{\Omega^{\prime}}{\Omega}{-}$\;=\;$\rredline{o}{\Omega^{\prime}}{\Omega} \\
+(b) For $R=1$: $\;\delta_{jj^{\prime}}D_{mm^{\prime}}^{j}(000)=\delta_{jj^{\prime}}\delta_{mm^{\prime}}$, i.e.,\newline
+$\braOket{jm}{D(1)}{j^{\prime}m^{\prime}}=\braket{jm}{j^{\prime}m^{\prime}}$.
+& \rstubline{s}{jm}{j^{\prime}m^{\prime}}{+}$\;=\;$\rredline{s}{jm}{j^{\prime}m^{\prime}} \\
+(c) For $R^{-1}R=1$: $\;\displaystyle\int\delta\!\left(\Omega^{\prime\prime}-R^{-1}\Omega^{\prime}\right)d\Omega^{\prime}\,\delta\!\left(\Omega^{\prime}-R\Omega\right)=\delta\!\left(\Omega^{\prime\prime}-\Omega\right)$,\newline
+i.e., $\braOket{\Omega^{\prime\prime}}{R^{-1}}{\Omega^{\prime}}\braOket{\Omega^{\prime}}{R}{\Omega}=\braket{\Omega^{\prime\prime}}{\Omega}$.
+& \rarcline{o}{\Omega^{\prime\prime}}{\Omega}{-}$\;=\;$\rredline{o}{\Omega^{\prime\prime}}{\Omega} \\
+(d) For $R^{-1}R=1$: $\;\displaystyle\sum_{m^{\prime}}D_{m^{\prime\prime}m^{\prime}}^{j}(R^{-1})D_{m^{\prime}m}^{j}(R)=\delta_{m^{\prime\prime}m}$,\newline
+i.e., $\braOket{jm^{\prime\prime}}{D(R^{-1})}{j^{\prime}m^{\prime}}\braOket{j^{\prime}m^{\prime}}{D(R)}{jm}=\braket{jm^{\prime\prime}}{jm}$.
+& \rarcline{s}{jm^{\prime\prime}}{jm}{+}$\;=\;$\rredline{s}{jm^{\prime\prime}}{jm} \\
+\hline
+\end{tabular}
 \end{center}
 
 Table 11.9.\\
