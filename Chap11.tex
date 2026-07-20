@@ -1673,71 +1673,75 @@ Orthonormality
 \end{center}
 \end{table}
 
-Table 11.12.\\
-Spherical Harmonics.
-
-\subsubsection{Analytical Expression}
-\subsubsection{Graphical Representation}
-\subsubsection{Definition}
-\[
-\begin{gathered}
-C_{l m}(\Omega) \equiv \sqrt{\frac{4 \pi}{2 l+1}} Y_{l m}(\Omega)=(\Omega \mid l m), \\
-C_{l m}^{*}(\Omega)=(-1)^{m} C_{l-m}(\Omega)=(l m \mid \Omega) .
-\end{gathered}
-\]
 \begin{center}
-\begin{tikzpicture}[baseline=0pt]\draw[omarrow] (0,0) node[left]{$\Omega$} -- (1,0); \node[deltanode] at (1,0){}; \draw[jmline] (1,0) -- (2,0) node[right]{$lm$};\end{tikzpicture}
+{\bfseries Table 11.12.\\ Spherical Harmonics.}\\[6pt]
+\small
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{@{}p{0.46\textwidth}|c@{}}
+\hline
+\multicolumn{1}{c|}{Analytical Expression} & Graphical Representation \\
+\hline
+\multicolumn{2}{c}{Definition}\\
+$C_{lm}(\Omega)\equiv\sqrt{\dfrac{4\pi}{2l+1}}\,Y_{lm}(\Omega)=(\Omega\mid lm)$,\newline
+$C_{lm}^{*}(\Omega)=(-1)^{m}C_{l-m}(\Omega)=(lm\mid\Omega)$.
+& \begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
+\draw[omarrown] (-1.1,0) node[left]{$\Omega$} -- (0,0);\node[deltanode] at (0,0){};
+\draw[jmline] (0,0) -- (1.1,0) node[right]{$lm$};\end{tikzpicture}\newline
+\begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
+\draw[jmline] (-1.1,0) node[left]{$lm$} -- (0,0);\node[deltanode] at (0,0){};
+\draw[omarrown] (0,0) -- (1.1,0) node[right]{$\Omega$};\end{tikzpicture} \\
+\multicolumn{2}{c}{Addition Theorem}\\
+$\displaystyle\sum_{m}C_{lm}(\Omega_1)C_{lm}^{*}(\Omega_2)=P_l(\cos\omega_{12})$,\newline
+where $\omega_{12}$ is the angle between $\Omega_1$ and $\Omega_2$.
+& \begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
+\draw[omarrown] (-1.3,0) node[left]{$\Omega_1$} -- (-0.4,0);\node[deltanode] at (-0.4,0){};
+\draw[jmline] (-0.4,0) -- (0.4,0) node[midway,above]{$l$};\node[deltanode] at (0.4,0){};
+\draw[omarrown] (0.4,0) -- (1.3,0) node[right]{$\Omega_2$};\end{tikzpicture} \\
+\multicolumn{2}{c}{Completeness}\\
+$\displaystyle\sum_{lm}(2l+1)C_{lm}(\Omega_1)C_{lm}^{*}(\Omega_2)=4\pi\,\delta(\Omega_1-\Omega_2)$.
+& \begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
+\draw[omarrown] (-1.3,0) node[left]{$\Omega_1$} -- (-0.4,0);\node[deltanode] at (-0.4,0){};
+\draw[jmline,line width=1.1pt] (-0.4,0) -- (0.4,0) node[midway,above]{$l$};\node[deltanode] at (0.4,0){};
+\draw[omarrown] (0.4,0) -- (1.3,0) node[right]{$\Omega_2$};\end{tikzpicture}$\;=\;$%
+\begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
+\draw[omarrown] (-1.1,0) node[left]{$\Omega_1$} -- (1.1,0) node[right]{$\Omega_2$};\end{tikzpicture} \\
+\multicolumn{2}{c}{Orthonormality}\\
+$\displaystyle\int C_{l_1m_1}^{*}(\Omega)C_{l_2m_2}(\Omega)\,\dfrac{d\Omega}{4\pi}=\dfrac{\delta_{l_1l_2}\delta_{m_1m_2}}{(2l_1+1)}$.
+& \begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
+\draw[jmline] (-1.4,0) node[left]{$l_1m_1$} -- (-0.4,0);\node[deltanode] at (-0.4,0){};
+\draw[omarrown] (-0.4,0) -- (0.4,0);\node[deltanode] at (0.4,0){};
+\draw[jmline] (0.4,0) -- (1.4,0) node[right]{$l_2m_2$};\end{tikzpicture}$\;=\;$%
+\begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
+\draw[jmline] (-1.3,0) node[left]{$l_1m_1$} -- (0,0);\node[deltanode] at (0,0){};
+\draw[jmline] (0,0) -- (1.3,0) node[right]{$l_2m_2$};\end{tikzpicture} \\
+\multicolumn{2}{c}{Integral of a Product of Three Harmonics}\\
+$\displaystyle\int C_{l_1m_1}(\Omega)C_{l_2m_2}(\Omega)C_{l_3m_3}(\Omega)\,\dfrac{d\Omega}{4\pi}=\threej{l_1}{l_2}{l_3}{0}{0}{0}\threej{l_1}{l_2}{l_3}{m_1}{m_2}{m_3}$.
+& \begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
+\coordinate (O) at (0,0);\node[dotnode,label={0:\plusmark}] at (O) {};
+\draw[jmline] (O) -- (-0.85,0.75) node[left]{$l_1m_1$};
+\draw[jmline] (O) -- (0.85,0.75) node[right]{$l_3m_3$};
+\draw[jmline] (O) -- (0,-0.95) node[below]{$l_2m_2$};\end{tikzpicture} \\
+\multicolumn{2}{c}{Clebsch-Gordan Expansion}\\
+$\displaystyle C_{l_1m_1}(\Omega)C_{l_2m_2}(\Omega)=\sum_{l_3m_3}\threej{l_1}{l_2}{l_3}{0}{0}{0}\threej{l_1}{l_2}{l_3}{m_1}{m_2}{m_3}C_{l_3m_3}^{*}(\Omega)$.
+& \begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
+\coordinate (O) at (0,0);\node[dotnode,label={-90:\minusmark}] at (O) {};
+\draw[omarrown] (-1.1,0) node[left]{$\Omega$} -- (O);
+\draw[jmline] (O) -- (0.95,0.7) node[right]{$l_2m_2$};
+\draw[jmline] (O) -- (0.95,-0.7) node[right]{$l_1m_1$};\end{tikzpicture} \\
+\multicolumn{2}{c}{Sum of Scalar Products of Three Harmonics}\\
+$\displaystyle\sum_{\substack{m_1m_2m_3\\ l_1}}(2l_1+1)\threej{l_1}{l_2}{l_3}{0}{0}{0}\threej{l_1}{l_2}{l_3}{m_1}{m_2}{m_3}C_{l_1m_1}(\Omega_1)C_{l_2m_2}(\Omega_2)C_{l_3m_3}(\Omega_3)$\newline
+$\qquad=P_{l_2}(\cos\omega_{21})\,P_{l_3}(\cos\omega_{31})$.
+& \begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
+\coordinate (O) at (0,0);\node[dotnode,label={0:\plusmark}] at (O) {};
+\draw[omarrown] (O) -- (-0.9,0.8) node[left]{$\Omega_2$};
+\draw[omarrown] (O) -- (-0.9,-0.8) node[left]{$\Omega_3$};
+\draw[jmline] (O) -- (0.5,0.55) node[right]{$l_2$};
+\draw[jmline] (O) -- (0.6,0) node[right]{$l_1$};
+\draw[jmline] (O) -- (0.5,-0.55) node[right]{$l_3$};\end{tikzpicture} \\
+\hline
+\end{tabular}
 \end{center}
-\[
-\sum_{m} C_{l m}\left(\Theta_{1}\right) C_{l m}^{*}\left(\Theta_{2}\right)=P_{l}\left(\cos \omega_{12}\right),
-\]
-where $\omega_{12}$ is the angle between $\Omega_{1}$ and $\Omega_{2}$
-
-\begin{figure}[h]
-\begin{center}
-\caption{Addition Theorem}
-\label{chap11:fig:3}
-  \begin{tikzpicture}[baseline=0pt]\draw[omarrow] (0,0) node[left]{$\Omega_1$} to[bend left=40] node[midway,above]{$l$} (2,0); \draw[omarrow] (0,0) to[bend right=40] (2,0); \node[right] at (2,0) {$\Omega_2$};\end{tikzpicture}
-\end{center}
-\end{figure}
-
-\subsubsection{Completeness}
-\[
-\sum_{l m}(2 l+1) C_{l m}\left(Q_{1}\right) C_{l m}^{*}\left(Q_{2}\right)=4 \pi \delta\left(Q_{1}-Q_{2}\right) .
-\]
-\begin{center}
-\begin{tikzpicture}[baseline=0pt]\draw[omarrow] (0,0) node[left]{$\Omega_1$} to[bend left=40] node[midway,above]{$l$} (2,0); \draw[omarrow] (0,0) to[bend right=40] (2,0); \node[right] at (2,0) {$\Omega_2$};\end{tikzpicture}
-\end{center}
-
-\subsubsection{Orthonormality}
-\[
-\int C_{l_{1} m_{1}}^{*}(Q) C_{l_{2} m_{2}}(Q) \frac{d Q}{4 \pi}=\frac{\delta_{l_{1} l_{2}} \delta_{m_{1}, m_{2}}}{\left(2 l_{1}+1\right)} .
-\]
-\begin{center}
-\begin{tikzpicture}[baseline=0pt]\draw[omarrow] (0,0) node[left]{$l_1m_1$} -- (1,0); \node[deltanode] at (1,0){}; \draw[omarrow] (1,0) -- (2,0) node[right]{$l_2m_2$};\end{tikzpicture}
-\end{center}
-\[
-\int C_{l_{1} m_{1}}(\Omega) C_{l_{2} m_{2}}(\Omega) C_{l_{3} m_{3}}(\Omega) \frac{d Q}{4 \pi}=\threej{l_{1}}{l_{2}}{l_{3}}{0}{0}{0}\threej{l_{1}}{l_{2}}{l_{3}}{m_{1}}{m_{2}}{m_{3}} .
-\]
-\begin{figure}[h]
-\begin{center}
-\caption{Integral of a Product of Three Harmonics}
-\label{chap11:fig:4}
-  \threenode{l_1}{l_3}{l_2}{above:$+$}
-\end{center}
-\end{figure}
-
-Clebsch-Gordan Expansion
-\[
-C_{l_{1} m_{1}}(\Omega) C_{l_{2} m_{2}}(\Omega)=\sum_{l_{3} m_{3}}\threej{l_{1}}{l_{2}}{l_{3}}{0}{0}{0}\threej{l_{1}}{l_{2}}{l_{3}}{m_{1}}{m_{2}}{m_{3}} C_{l_{3} m_{2}}^{*}(\Omega) . \Omega_{l_{1} m_{1}}^{\Omega}=-\Omega_{l_{1} m_{1}}^{l_{2} m_{2}}
-\]
-Sum of Scalar Products of Three Harmonics
-\[
-\begin{aligned}
-& \sum_{m_{1} m_{2} m_{3}}\left(2 l_{1}+1\right)\threej{l_{1}}{l_{2}}{l_{3}}{0}{0}{0}\threej{l_{1}}{l_{2}}{l_{3}}{m_{1}}{m_{2}}{m_{3}} C_{l_{1} m_{1}}\left(Q_{1}\right) C_{l_{2} m_{2}}\left(Q_{2}\right) C_{l_{3} m_{3}}\left(Q_{3}\right) \\
-& =P_{l_{2}}\left(\cos \omega_{21}\right) P_{l_{3}}\left(\cos \omega_{31}\right) .
-\end{aligned}
-\]
 \begin{table}[h]
 \begin{center}
 \caption{Wigner D-Functions.}
