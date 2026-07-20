@@ -511,3 +511,86 @@
 \draw[jmlinem] (R) -- (B) node[midway,right]{$#3$};
 \end{tikzpicture}%
 }
+
+%---- Table 11.7 nj-Symbols helpers (closed j=0 nj-diagrams + reduced products) ----
+%\njloop{a}{b}{botsign}: two-arc closed loop (left arc a, right arc b),
+%top node plain, bottom node = botsign. The {a b 0}=delta_ab diagram.
+\newcommand{\njloop}[3]{%
+\begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
+\coordinate(T)at(0,0.5);\coordinate(B)at(0,-0.5);
+\node[dotnode]at(T){};\node[dotnode,label={-90:\vmk@sign{#3}}]at(B){};
+\draw[jmlinem](T)to[bend right=60]node[left]{$#1$}(B);
+\draw[jmlinem](T)to[bend left=60]node[right]{$#2$}(B);
+\end{tikzpicture}}
+%\njloopc{a}{c}{b}: same loop with an added vertical c diameter.
+\newcommand{\njloopc}[3]{%
+\begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
+\coordinate(T)at(0,0.5);\coordinate(B)at(0,-0.5);
+\node[dotnode,label={90:\minusmark}]at(T){};\node[dotnode,label={-90:\plusmark}]at(B){};
+\draw[jmlinem](T)to[bend right=60]node[left]{$#1$}(B);
+\draw[jmlinem](T)to[bend left=60]node[right]{$#3$}(B);
+\draw[jmlinem](T)--(B)node[midway,right]{$#2$};
+\end{tikzpicture}}
+%\njdtri{a}{b}{c}{botsign}: closed downward triangle, top edge c, left a,
+%right b, top nodes both +, bottom node = botsign. The {0 0 0; a b c} form.
+\newcommand{\njdtri}[4]{%
+\begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
+\coordinate(L)at(-0.6,0.45);\coordinate(R)at(0.6,0.45);\coordinate(B)at(0,-0.55);
+\node[dotnode,label={135:\plusmark}]at(L){};\node[dotnode,label={45:\plusmark}]at(R){};\node[dotnode,label={-90:\vmk@sign{#4}}]at(B){};
+\draw[jmlinem](L)--(R)node[midway,above]{$#3$};
+\draw[jmlinem](L)--(B)node[midway,left]{$#1$};
+\draw[jmlinem](R)--(B)node[midway,right]{$#2$};
+\end{tikzpicture}}
+%\njdiam{tl}{tr}{bl}{br}{cdiam}: closed diamond, edges tl,tr (upper) and
+%bl,br (lower); nodes T-,L+,R+,B-. If cdiam is nonempty a vertical
+%diameter labelled cdiam is added (the {a a' 0; b b' c} case).
+\newcommand{\njdiam}[5]{%
+\begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
+\coordinate(T)at(0,0.65);\coordinate(Le)at(-0.62,0);\coordinate(Re)at(0.62,0);\coordinate(Bo)at(0,-0.65);
+\node[dotnode,label={90:\minusmark}]at(T){};\node[dotnode,label={180:\plusmark}]at(Le){};\node[dotnode,label={0:\plusmark}]at(Re){};\node[dotnode,label={-90:\minusmark}]at(Bo){};
+\draw[jmlinem](Le)--(T)node[midway,above left]{$#1$};
+\draw[jmlinem](T)--(Re)node[midway,above right]{$#2$};
+\draw[jmlinem](Le)--(Bo)node[midway,below left]{$#3$};
+\draw[jmlinem](Bo)--(Re)node[midway,below right]{$#4$};
+\def\njdc{#5}\ifx\njdc\empty\else\draw[jmlinem](T)--(Bo)node[midway,right]{$#5$};\fi
+\end{tikzpicture}}
+%\njvtri{top}{bot} / \njvtrir{top}{bot}: small triangles (apex right / left)
+%used as the outer factors of the reduced products; all nodes +.
+\newcommand{\njvtri}[2]{%
+\begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
+\coordinate(TL)at(-0.45,0.42);\coordinate(BL)at(-0.45,-0.42);\coordinate(Ap)at(0.5,0);
+\node[dotnode,label={135:\plusmark}]at(TL){};\node[dotnode,label={-135:\plusmark}]at(BL){};\node[dotnode,label={0:\plusmark}]at(Ap){};
+\draw[jmlinem](TL)--(BL);\draw[jmlinem](TL)--(Ap)node[midway,above right]{$#1$};\draw[jmlinem](BL)--(Ap)node[midway,below right]{$#2$};
+\end{tikzpicture}}
+\newcommand{\njvtrir}[2]{%
+\begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
+\coordinate(TR)at(0.45,0.42);\coordinate(BR)at(0.45,-0.42);\coordinate(Ap)at(-0.5,0);
+\node[dotnode,label={45:\plusmark}]at(TR){};\node[dotnode,label={-45:\plusmark}]at(BR){};\node[dotnode,label={180:\plusmark}]at(Ap){};
+\draw[jmlinem](TR)--(BR);\draw[jmlinem](TR)--(Ap)node[midway,above left]{$#1$};\draw[jmlinem](BR)--(Ap)node[midway,below left]{$#2$};
+\end{tikzpicture}}
+%\njsqx{c}{f}: square with the two crossing diagonals c,f (the middle
+%factor of the {a b c; e 0 e'; f b' d} reduction).
+\newcommand{\njsqx}[2]{%
+\begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
+\coordinate(tl)at(-0.5,0.5);\coordinate(tr)at(0.5,0.5);\coordinate(bl)at(-0.5,-0.5);\coordinate(br)at(0.5,-0.5);
+\node[dotnode,label={135:\minusmark}]at(tl){};\node[dotnode,label={45:\plusmark}]at(tr){};\node[dotnode,label={-135:\plusmark}]at(bl){};\node[dotnode,label={-45:\plusmark}]at(br){};
+\draw[jmlinem](tl)--(tr);\draw[jmlinem](tl)--(bl);\draw[jmlinem](tr)--(br);\draw[jmlinem](bl)--(br);
+\draw[jmlinem](tl)--(br)node[pos=0.32,above right]{$#1$};\draw[jmlinem](bl)--(tr)node[pos=0.32,below right]{$#2$};
+\end{tikzpicture}}
+%\njhexx{a}{b}{c}{f}{e}{d}{bp}{ep}: hexagon with two crossing diagonals
+%(c,f) -- the closed {a b c; e 0 e'; f b' d} diagram (the third, 0-valued
+%diameter omitted). Perimeter: T-UR a, UL-T b, UR-LR e, LR-B ep, B-LL d,
+%LL-UL bp; diagonals UL-LR c, LL-UR f.
+\newcommand{\njhexx}[8]{%
+\begin{tikzpicture}[baseline=0pt,inner sep=0.1em,font=\scriptsize]
+\foreach \i in {0,...,5}{\coordinate(h\i)at(90+60*\i:0.78);}
+\foreach \i in {0,...,5}{\node[dotnode]at(h\i){};}
+\draw[jmlinem](h1)--(h0)node[midway,above left]{$#2$};
+\draw[jmlinem](h0)--(h5)node[midway,above right]{$#1$};
+\draw[jmlinem](h5)--(h4)node[midway,right]{$#5$};
+\draw[jmlinem](h4)--(h3)node[midway,below right]{$#8$};
+\draw[jmlinem](h3)--(h2)node[midway,below left]{$#6$};
+\draw[jmlinem](h2)--(h1)node[midway,left]{$#7$};
+\draw[jmlinem](h1)--(h4)node[pos=0.28,above]{$#3$};
+\draw[jmlinem](h2)--(h5)node[pos=0.28,below]{$#4$};
+\end{tikzpicture}}
