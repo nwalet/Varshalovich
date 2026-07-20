@@ -635,7 +635,7 @@ Two diagrams which differ only by the direction of an internal $j$-line, corresp
 \[
 \sum_{m}(-1)^{j-m} \mathfrak{M}_{j m} \mathfrak{N}_{j-m}=(-1)^{2 j} \sum_{m}(-1)^{j-m} \mathfrak{M}_{j-m} \mathfrak{N}_{j m} .
 \]
-One should especially mention the entirely invariant sums of products of two, four, six, or more $3 j m$ symbols over all projections. Corresponding diagrams are closed with respect to all $j$-lines. These sums represent the Wigner $3 n j$ symbols (Table~\ref{chap11:tab:1}).
+One should especially mention the entirely invariant sums of products of two, four, six, or more $3 j m$ symbols over all projections. Corresponding diagrams are closed with respect to all $j$-lines. These sums represent the Wigner $3 n j$ symbols (Table~11.4).
 
 \begin{table}[tbh!]
 \begin{center}
@@ -760,7 +760,7 @@ functions of the type $D_{m m^{\prime}}^{j}(R), C_{j m}(\Omega) \equiv[4 \pi /(2
 \end{aligned}
 \]
 
-A Clebsch-Gordan coefficient may be represented as a sum over $c^{\prime} \gamma^{\prime}$ of products of two $3 j m$ symbols (Table~\ref{chap11:tab:7})
+A Clebsch-Gordan coefficient may be represented as a sum over $c^{\prime} \gamma^{\prime}$ of products of two $3 j m$ symbols (Table~11.10a)
 \[
 \begin{aligned}
 \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} & \equiv\braket{a \alpha b \beta}{c \gamma}=(-1)^{a-b-c} \sum_{c^{\prime} \gamma^{\prime}}\left(2 c^{\prime}+1\right)\threej{a}{b}{c^{\prime}}{\alpha}{\beta}{\gamma^{\prime}}\threej{c^{\prime}}{c}{0}{\gamma^{\prime}}{\gamma}{0} \\
@@ -1212,7 +1212,7 @@ The analytic transformations under study correspond to cutting the associated di
 
 
 
-The most important cases of cutting of one, two, three, as well as four, five, and six $j$-lines are presented in Table~\ref{chap11:tab:5}.
+The most important cases of cutting of one, two, three, as well as four, five, and six $j$-lines are presented in Table~11.9.
 
 In many cases, the successive use of these rules allows one to divide a diagram into several (three or more) subdiagrams representing invariant factors. For example,\\
 \opline{\mathfrak{M}_1}{\mathfrak{M}_2}{j_1}\ \opline{\mathfrak{M}_2}{\mathfrak{M}_3}{j_2}\ \opline{\mathfrak{M}_3}{\mathfrak{M}_4}{j_3}
@@ -1284,7 +1284,7 @@ For example,
 \threejs{e}{b^{\prime}}{d}{-}{+}
 \end{center}
 
-When a common thick $j$-line is included into two or more unlinked subdiagrams, one should preliminarily link these subdiagrams with the aid of the rules of subdiagram multiplication (Sec. 11.3.5) in order to arrive at one thick $j$-line. Only after this operation can one perform graphical summation over $j$ and $m$ according to Rule $\sum$. These combined graphical operations are displayed in Table~\ref{chap11:tab:5}.
+When a common thick $j$-line is included into two or more unlinked subdiagrams, one should preliminarily link these subdiagrams with the aid of the rules of subdiagram multiplication (Sec. 11.3.5) in order to arrive at one thick $j$-line. Only after this operation can one perform graphical summation over $j$ and $m$ according to Rule $\sum$. These combined graphical operations are displayed in Table~11.9.
 
 The complete invariant summation over $j$ and $m$ may also be performed graphically in the cases when the lines adjacent to the thick $j$-line are dashed $\Omega$-lines. For instance,
 \[
@@ -1327,28 +1327,28 @@ Thus elimination of the $j=0$ line may be illustrated by\\
 \begin{tikzpicture}[baseline=0pt]\draw[jmline] (0,0) node[left]{$j_1$} -- (1.4,0) node[right]{$j_2$};\end{tikzpicture}
 
 
-Some special cases of the $3 j m$ and $3 n j$ symbols with $j=0$ are presented in Table~\ref{chap11:tab:3}.
+Some special cases of the $3 j m$ and $3 n j$ symbols with $j=0$ are presented in Table~11.7.
 
 \subsection{Elimination of the $R=1$ Line}
 In the particular case $R=1$, a double dashed $R$-line corresponds to no rotation, i.e., it represents a fictitious lependence. Hence, an $R=1$ line may be removed and the lines adjacent to the $R$-line have to be closed. This operation does not change the meaning of the diagram.\\
 \begin{tikzpicture}[baseline=0pt]\draw[bjmarrow,dashed] (0,0) node[left]{$\Omega_1$} -- (1.4,0) node[right]{$\Omega_2$}; \node at (0.7,0.3){$R=1$};\end{tikzpicture}\quad$=K\times$
 \begin{tikzpicture}[baseline=0pt]\draw[omarrow] (0,0) node[left]{$\Omega_1$} -- (1.4,0) node[right]{$\Omega_2$};\end{tikzpicture}
 
-Some examples of the expressions and diagrams containing $R=1$ are given in Table~\ref{chap11:tab:4}.\\
-A summary of the rules of graphical operations is presented in Table~\ref{chap11:tab:5}.
+Some examples of the expressions and diagrams containing $R=1$ are given in Table~11.8.\\
+A summary of the rules of graphical operations is presented in Table~11.9.
 
 \begin{table}[h]
 \begin{center}
-\caption{Zero Angular Momentum ( $J=0$ ).}
-\label{chap11:tab:3}
+\captionsetup{labelformat=empty}
+\caption{Table 11.7. Zero Angular Momentum ($J=0$).}
   \begin{tikzpicture}[baseline=0pt]\draw[omarrow] (0,0) node[left]{$\Omega$} -- (1.4,0) node[right]{$\Omega^{\prime}$}; \node[above=2pt] at (0.7,0) {$j=0$};\end{tikzpicture}\quad$=$\quad\begin{tikzpicture}[baseline=0pt]\draw[bjmarrow] (0,0) node[left]{$\Omega$} -- (1.4,0) node[right]{$\Omega^{\prime}$};\end{tikzpicture}
 \end{center}
 \end{table}
 
 \begin{table}[h]
 \begin{center}
-\caption{Zero Rotation ( $R=0$ ).}
-\label{chap11:tab:4}
+\captionsetup{labelformat=empty}
+\caption{Table 11.8. Zero Rotation ($R=0$).}
 Analytical Expression Graphical Representation
 \end{center}
 \end{table}
@@ -1643,8 +1643,8 @@ Orthonormality
 
 \begin{table}[h]
 \begin{center}
-\caption{Relation of Clebsch-Gordan Coefficients to 3jm Symbols.}
-\label{chap11:tab:7}
+\captionsetup{labelformat=empty}
+\caption{Table 11.10a. Relation of Clebsch-Gordan Coefficients to 3jm Symbols.}
   \threenode{a}{c}{b}{above:$+$}\quad$\;=\;\clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}$
 \end{center}
 \end{table}
@@ -1662,8 +1662,8 @@ Orthonormality
 
 \begin{table}[h]
 \begin{center}
-\caption{Metric Tensor for $(2 j+1)$-Dimensional Space of Functions $|j m\rangle$.}
-\label{chap11:tab:8}
+\captionsetup{labelformat=empty}
+\caption{Table 11.11. Metric Tensor for $(2 j+1)$-Dimensional Space of Functions $|j m\rangle$.}
   \begin{tikzpicture}[baseline=0pt]\draw[jmline] (0,0) node[left]{$jm$} to[bend left=40] node[midway,above]{$j$} (1.6,0); \draw[jmline] (0,0) to[bend right=40] (1.6,0); \node[right] at (1.6,0) {$jm^{\prime}$};\end{tikzpicture}
 \end{center}
 \end{table}
