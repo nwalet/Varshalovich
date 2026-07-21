@@ -12,9 +12,9 @@ A principle of any graphical method is in establishing a one-to-one corresponden
 
 Moreover, a transformation of the expression under some analytic operation corresponds to a certain transformation of the associated diagram. That is why all calculations of spin angular quantities may be performed by the graphical method instead of the analytic one.
 
-\footnotetext{${ }^{1}$ A somewhat different graphical method was suggested by Shelepin [105], but it is not very widespread now.
-}\subsection{Basic Elements of Diagrams}
-The Dirac representation of quantum mechanical quantities seems to be most adequate to the graphical method. This representation operates with state vectors: the "kets," $|\Psi\rangle$ and the Hermitian conjugate "bras," $\langle\psi|$. Graphically, these vectors are represented by directed lines connected with nodes (dot or cross bar).
+\footnotetext{${ }^{1}$ A somewhat different graphical method was suggested by Shelepin [105], but it is not very widespread now.}
+\subsection{Basic Elements of Diagrams}
+The Dirac representation of quantum mechanical quantities seems to be most adequate to the graphical method. This representation operates with state vectors: the "kets", $|\Psi\rangle$ and the Hermitian conjugate "bras", $\langle\psi|$. Graphically, these vectors are represented by directed lines connected with nodes (dot or cross bar).
 
 A line with an arrow coming out of a node represents the "ket" $|\Psi\rangle$, i.e., a covariant (standard) state vector, whereas, a line with double arrow coming into the node represents the "bra" $\langle\Psi|$, i.e. a contravariant (Hermitian conjugate) state vector.
 
@@ -57,10 +57,12 @@ The symbols $j m, \Omega$ and $R$ are usually indicated near the corresponding l
 \begin{center}
 \begin{tikzpicture}[baseline=0pt]
 \draw[jmarrow] (0,0.0) -- (1,0.0) ;
-\end{tikzpicture} is equivalent to \begin{tikzpicture}[baseline=0pt]
+\end{tikzpicture} 
+is equivalent to 
+\begin{tikzpicture}[baseline=0pt]
 \draw[jmarrow] (1,0.0) -- (0,0.0) ;
 \end{tikzpicture} and \begin{tikzpicture}[baseline=0pt]
-\draw[jmarrow] (0,-0.2) to [out=0,in=0,distance=2cm] (0,0.2) ;
+\draw[jmarrow] (0,-0.1) to [out=180,in=180,distance=2cm] (0,0.1) ;
 \end{tikzpicture} .
 \end{center}
 
@@ -118,7 +120,7 @@ Matrix elements of the rotation operator in the $\Omega$-representation, $\langl
 
 Matrix elements of any irreducible tensor operator $\langle\Psi| T_{\lambda \mu}\left|\Psi^{\prime}\right\rangle$ are represented by a block with three external lines corresponding to $\langle\Psi|,\left|\Psi^{\prime}\right\rangle$ and $|\lambda \mu\rangle$; the operator symbol (and other possible quantum numbers) are indicated inside the block.
 
-\begin{table}[tbh!]
+\begin{table}[ptbh!]
 \begin{center}
 \captionsetup{justification=centering,labelformat=empty}
 \caption{Table 11.1. Basic Elements of Diagrams.}
@@ -278,6 +280,7 @@ $ \threej{j_1}{n_1}{j_2}{m_2}{j_3}{m_3}=\left( j_1 m_1 j_2 m_2 j_3 m_3 \mid 00 \
 \multicolumn{2}{c}{Metric tensor}\\
 $\binom{j}{m m^{\prime}}=(-1)^{j+m} \delta_{m,-m^{\prime}}$& \\
 $\binom{j}{m^{\prime} m}=(-1)^{j-m} \delta_{-m, m^{\prime}}$& \\
+\hline
 \end{tabular}
 \end{center}
 \end{table}
@@ -291,7 +294,8 @@ $\binom{j}{m^{\prime} m}=(-1)^{j-m} \delta_{-m, m^{\prime}}$& \\
 \captionsetup{justification=centering,labelformat=empty}
 \caption{Table 11.2. Invariant Functions.}
 \renewcommand{\arraystretch}{1.5}
-\begin{tabular}{lc}
+\begin{tabular}{p{0.65\linewidth-2\tabcolsep}m{0.35\linewidth-2\tabcolsep}}
+%\begin{tabular}{lc}
 \hline
 {Analytical Expression} & Graphical Representation \\
 \hline
@@ -300,7 +304,7 @@ $(2 a+1)$ & \begin{tikzpicture}[baseline=0pt, inner sep=0.1em, font=\scriptsize]
         decoration={markings, mark=at position 0.01 with  {\arrow{Stealth[reversed,length=2.2mm]}}},
         postaction={decorate},thick] (0,0.) circle (0.4);
 \draw[thick] (0,0.) node{$a$};  
-\end{tikzpicture}\\
+\end{tikzpicture}\\[1em]
 $\sqrt{2 a+1}$&
 \begin{tikzpicture}[baseline=0pt, inner sep=0.1em,font=\scriptsize] 
   \draw[
@@ -308,7 +312,7 @@ $\sqrt{2 a+1}$&
         postaction={decorate},thick] (0,0.) circle (0.4);
   \node[label={right:$a$}] at (0.4,0.) {};
   \node[dotnode, label={right:{$+$}}] at (-0.4,0.) {};
-\end{tikzpicture}\\
+\end{tikzpicture}\\[1em]
 $\delta_{a b} $&
 \begin{tikzpicture}[baseline=0pt, inner sep=0.1em,font=\scriptsize] 
   \draw[
@@ -318,7 +322,7 @@ $\delta_{a b} $&
   \node[label={right:$b$}] at (0.4,0.) {};
   \node[dotnode, label={below:{\small$+$}}] at (0,0.4) {};
   \node[dotnode, label={above:{\small$+$}}] at (0,-0.4) {};
-`'\end{tikzpicture}\\
+ \end{tikzpicture}\\[1em]
 $\frac{\delta_{a b} \delta_{bc}}{\sqrt{2 a+1}}$&
 \begin{tikzpicture}[baseline=0pt, inner sep=0.2em,font=\scriptsize]
   \coordinate (T) at ($0.6*(0,1)$);
@@ -330,7 +334,7 @@ $\frac{\delta_{a b} \delta_{bc}}{\sqrt{2 a+1}}$&
   \node[dotnode, label={above right:{$+$}}] at (L) {};
   \node[dotnode, label={below:{$+$}}] at (T) {};
   \node[dotnode, label={above left:{$+$}}] at (R) {};
-\end{tikzpicture}\\
+\end{tikzpicture}\\[1em]
 $\frac{\delta_{a} \delta_{b a} \delta_{c d}}{(2 a+1)}$&
 \begin{tikzpicture}[baseline=0pt, inner sep=0.2em,font=\scriptsize] 
   \coordinate (Tl) at ($0.4*(-1,1)$);
@@ -372,7 +376,7 @@ $\{a b c\}$&
 \captionsetup{justification=centering,labelformat=empty,}
 \caption*{Table 11.2. Cnt'd.}
 \renewcommand{\arraystretch}{1.5}
-\begin{tabular}{lc}
+\begin{tabular}{p{0.65\linewidth-2\tabcolsep}m{0.35\linewidth-2\tabcolsep}}
 \hline
 {Analytical Expression} & Graphical Representation \\
 \hline
@@ -391,7 +395,7 @@ $\twelvejII{a_1,a_2,a_3,a_4,b_1,b_2,b_3,b_4,c_1,c_2,c_3,c_4}$& \twIIdiaga{a_1,a_
 \end{tabular}
 \end{center}
 \end{table}
-\begin{table}[tbh!]
+\begin{table}[ptbh!]
 \begin{center}
 \captionsetup{justification=centering,labelformat=empty}
 \caption{Table 11.3. Matrix Elements.}
@@ -557,7 +561,6 @@ The product (direct product) of factors $\mathfrak{M}$ and $\mathfrak{N}$ is rep
 may be represented by\\
 \begin{center}
   \threejdiag{A,\alpha,B,\beta,C,\gamma}
-\qquad
 \sixjdiagramd{A,B,C,a,b,c,+}
 \end{center}
 
@@ -642,36 +645,37 @@ One should especially mention the entirely invariant sums of products of two, fo
 \captionsetup{justification=centering,labelformat=empty}
 \renewcommand{\arraystretch}{1.5}
 \caption{Table 11.4. Sums of $3 j m$ Symbol Products.}
-\small \begin{tabular}{lc}
+\small 
+\begin{tabular}{p{0.87\linewidth-2\tabcolsep}m{0.13\linewidth-2\tabcolsep}}
 \hline
 {Analytical Expression} & Graphical Representation \\
 \hline
 \multicolumn{2}{c}{$3j$ Symbol}\\
-\(
+\[
 \sum_{\mu_{i}}\threej{j_{1}}{j_{2}}{j_{3}}{\mu_{1}}{\mu_{2}}{\mu_{3}}\threej{j_{1}}{j_{2}}{j_{3}}{\mu_{1}}{\mu_{2}}{\mu_{3}}=\sum_{\mu_{i}}(-1)^{j_{1}-\mu_{1}+j_{2}-\mu_{2}+j_{3}-\mu_{3}}\threej{j_{1}}{j_{2}}{j_{3}}{-\mu_{1}}{-\mu_{2}}{-\mu_{3}}\threej{j_{1}}{j_{2}}{j_{3}}{\mu_{1}}{\mu_{2}}{\mu_{3}}=\left\{j_{1} j_{2} j_{3}\right\}
-\) &
-\threejs{j_1}{j_2}{j_3}{+}{-}
+\] &
+\vspace*{2em}\threejs{j_1}{j_2}{j_3}{+}{-}
 \\
 \multicolumn{2}{c}{6j Symbol}\\
-\(
+\[
 \begin{gathered}
 \sum_{\mu_{i} x_{i}}(-1)^{k_{1}-x_{1}+k_{2}-x_{2}+k_{3}-x_{3}}\threej{j_{1}}{j_{2}}{j_{3}}{\mu_{1}}{\mu_{2}}{\mu_{3}}\threej{j_{1}}{k_{2}}{k_{3}}{\mu_{1}}{-x_{2}}{x_{3}}\threej{k_{1}}{j_{2}}{k_{3}}{x_{1}}{\mu_{2}}{-x_{3}}\threej{k_{1}}{k_{2}}{j_{3}}{-x_{1}}{x_{2}}{\mu_{3}} \\
 =\sum_{\mu_{i} x_{i}}(-1)^{j_{1}-\mu_{1}+j_{2}-\mu_{2}+j_{3}-\mu_{3}+k_{1}-x_{1}+k_{2}-x_{2}+k_{3}-x_{3}}\threej{j_{1}}{j_{2}}{j_{3}}{\mu_{1}}{\mu_{2}}{\mu_{3}}\threej{j_{1}}{k_{2}}{k_{3}}{-\mu_{1}}{-x_{2}}{x_{3}}\threej{k_{1}}{j_{2}}{k_{3}}{x_{1}}{-\mu_{2}}{-x_{3}} \\
 \times\threej{k_{1}}{k_{2}}{j_{3}}{-x_{1}}{x_{2}}{-\mu_{3}}=\sixj{j_{1}}{j_{2}}{j_{3}}{k_{1}}{k_{2}}{k_{3}}
 \end{gathered}
-\)&
+\]&
 \begin{minipage}{3cm}
 \sixjdsq{j_1,j_2,j_3,k_1,k_2,k_3}\\
-\sixjdiagramd{j_1,j_2,j_3,k_1,k_2,k_3.+}
+\sixjdiagramd{j_1,j_2,j_3,k_1,k_2,k_3,+}
 \end{minipage}\\
 \multicolumn{2}{c}{9j Symbol}\\
-\(
+\[
 \begin{gathered}
 \sum_{\mu_{i} x_{i} \lambda_{i}}\threej{l_{1}}{j_{2}}{l_{3}}{\mu_{1}}{\mu_{2}}{\mu_{3}}\threej{k_{1}}{k_{2}}{k_{3}}{x_{1}}{x_{2}}{x_{3}}\threej{l_{1}}{l_{2}}{l_{3}}{\lambda_{1}}{\lambda_{2}}{\lambda_{3}}\threej{j_{1}}{k_{1}}{l_{1}}{\mu_{1}}{x_{1}}{\lambda_{1}}\threej{j_{2}}{k_{2}}{l_{2}}{\mu_{2}}{x_{2}}{\lambda_{2}}\threej{j_{3}}{k_{3}}{l_{3}}{\mu_{3}}{x_{3}}{\lambda_{3}} \\
 =\sum_{\mu_{3} x_{i} \lambda_{i}}(-1)^{j_{1}-\mu_{1}+j_{2}-\mu_{2}+j_{3}-\mu_{2}+h_{1}-x_{1}+k_{2}-x_{3}+\mu_{3}-x_{3}+l_{1}-\lambda_{1}+l_{2}-\lambda_{2}+l_{3}-\lambda_{3}}\threej{j_{1}}{j_{2}}{j_{3}}{\mu_{1}}{\mu_{2}}{\mu_{3}}\threej{k_{1}}{k_{2}}{k_{3}}{x_{1}}{x_{2}}{x_{3}} \\
 \times\threej{l_{1}}{l_{2}}{l_{3}}{\lambda_{1}}{\lambda_{2}}{\lambda_{3}}\threej{j_{1}}{k_{1}}{l_{1}}{-\mu_{1}}{-x_{1}}{-\lambda_{1}}\threej{j_{2}}{k_{2}}{l_{2}}{-\mu_{2}}{-x_{2}}{-\lambda_{2}}\threej{j_{3}}{k_{3}}{l_{3}}{-\mu_{3}}{-x_{3}}{-\lambda_{3}}=\ninej{j_{1}}{j_{2}}{j_{3}}{k_{1}}{k_{2}}{k_{3}}{l_{1}}{l_{2}}{l_{3}}
 \end{gathered}
-\)
+\]
 &
 \ninejd{j_1,j_2,j_3,k_1,k_2,k_3,l_1,l_2,l_3}
 \\
@@ -853,7 +857,7 @@ $\braket{}{\mathfrak{M}}\braOket{}{\mathfrak{N}}{}$ &
 \node[opbox] (N) at (2,0) {$\mathfrak{N}$};
 \draw[jmarrow] (M) -- (0.8,0) node[above]{$jm$};
 \draw[bjmarrow] (1.2,0) -- (N) node[at start,above]{$j'm'$};
-\end{tikzpicture}$=$\begin{tikzpicture}[baseline=0pt]
+\end{tikzpicture}\ $=$\ \begin{tikzpicture}[baseline=0pt]
 \node[opbox] (M) at (0,0) {$\mathfrak{M}$};
 \node[opbox] (N) at (1.4,0) {$\mathfrak{N}$};
 \draw[jmlinem] (M) -- (N) node[midway,above]{$j$};
@@ -871,7 +875,7 @@ $\braket{}{\mathfrak{M}}\braOket{}{\mathfrak{N}}{}$ &
 \node[opbox] (M) at (0,0) {$\mathfrak{M}$};
 \node[opbox] (N) at (1.4,0) {$\mathfrak{N}$};
 \draw[jmlinem] (M) -- (N) node[midway,above]{$j$};
-\end{tikzpicture}$=$\begin{tikzpicture}[baseline=0pt]
+\end{tikzpicture}\ $=$\ \begin{tikzpicture}[baseline=0pt]
 \node[opbox] (M) at (0,0) {$\mathfrak{M}$};
 \node[opbox] (N) at (1.4,0) {$\mathfrak{N}$};
 \draw[jmlinem,thick=2pt] (M) -- (N) node[midway,above]{$j$};
@@ -884,18 +888,18 @@ $\braket{}{\mathfrak{M}}\braOket{}{\mathfrak{N}}{}$ &
 & \equiv\left\{\mathfrak{M}_{j_{1}} \otimes \mathfrak{N}_{j_{2}}\right\}_{J M}
 \end{aligned}
 \)&
-\begin{tikzpicture}[baseline=-20pt]
+\begin{tikzpicture}[baseline=20pt]
 \node[opbox] (M) at (0,0) {$\mathfrak{M}$};
 \node[opbox] (N) at (2,0) {$\mathfrak{N}$};
 \coordinate (T) at (1,0.5);
-\node[plusnode] at (0.5,0.5) {};
-\node[regular polygon, regular polygon sides=3,fill=white, minimum size=0.4mm, draw] (t) at (T) {};
+\node[label={below:\plusmark}] at (T) {};
+\node[regular polygon, regular polygon sides=3, minimum size=0.02,inner sep=1pt, fill=white, draw,rotate=180] (t) at (T) {};
 \draw[jmlinem] (M) -- (t) node[midway,above left]{$j_1$};
 \draw[jmlinem] (N) -- (t) node[midway,above right]{$j_2$};
 \draw[jmarrown] (t) -- (1,1.4) node[above]{$JM$};
 \end{tikzpicture}
 $=$
-\begin{tikzpicture}[baseline=-20pt]
+\begin{tikzpicture}[baseline=20pt]
 \node[opbox] (M) at (0,0) {$\mathfrak{M}$};
 \node[opbox] (N) at (2,0) {$\mathfrak{N}$};
 \coordinate (T) at (1,0.5);
@@ -903,10 +907,10 @@ $=$
 \draw[jmlinem] (T) -- (M) node[midway,above left]{$j_1$};
 \draw[jmlinem] (T) -- (N) node[midway,above right]{$j_2$};
 \draw[jmarrown] (T) -- (1,1.4) node[above]{$JM$};
+node
 \draw[
         decoration={markings, mark=at position 0.25 with  {\arrow{Stealth[length=2.2mm]}}},
-        postaction={decorate},thick] (1,2.1) circle (0.3);
-\node (1,2.1) {J};
+        postaction={decorate},thick] (1,2.1) circle (0.3) node {$J$};
 \end{tikzpicture}
 \\
 \multicolumn{2}{c}{Complete Invariant Integration over Direction Angles}\\
@@ -917,18 +921,38 @@ $=$
 Completeness Condition  \\
 \(\int|\Omega\rangle d \Omega\langle\Omega|=1\)
 }
-&
-\\
+&$\int$\begin{tikzpicture}[baseline=0pt]
+\node[opbox] (M) at (0,0) {$\mathfrak{M}$};
+\node[opbox] (N) at (2,0) {$\mathfrak{N}$};
+\draw[omarrow] (M) -- (0.8,0);
+\draw[bomarrow] (1.2,0) -- (N);
+\node at (1,0.2) {$d\Omega$};
+\end{tikzpicture}\ $=$\ \begin{tikzpicture}[baseline=0pt]
+\node[opbox] (M) at (0,0) {$\mathfrak{M}$};
+\node[opbox] (N) at (1.4,0) {$\mathfrak{N}$};
+\draw[omlinem] (M) -- (N) node[midway,above]{$\Omega$};
+\end{tikzpicture}\\
 \multicolumn{2}{c}{Complete Integration over Rotation Parameters}\\
 \parbox[t]{0.45\textwidth}{
 \(
 \left.\int\langle | \mathfrak{M}\left(R^{-1}\right)\left\rangle \frac{d R}{R_{0}}\langle | \mathfrak{N}(R)\right|\right\rangle
 \)\\
-Completeness Condition \\
+PermutCompleteness Condition \\
 \(
 \int \hat{R}^{-1} \hat{R} \frac{d R}{R_{0}}=1
 \)
 }
+&$\int$\begin{tikzpicture}[baseline=0pt]
+\node[opbox] (M) at (0,0) {$\mathfrak{M}$};
+\node[opbox] (N) at (2,0) {$\mathfrak{N}$};
+\draw[rline] (M) -- (0.8,0);
+\draw[rline] (1.2,0) -- (N);
+\node at (1,0.2) {$\frac{d R}{R_0}$};
+\end{tikzpicture}\ $=$\ \begin{tikzpicture}[baseline=0pt]
+\node[opbox] (M) at (0,0) {$\mathfrak{M}$};
+\node[opbox] (N) at (1.4,0) {$\mathfrak{N}$};
+\draw[rline] (M) -- (N) node[midway,above]{$R$};
+\end{tikzpicture}
 \end{tabular}
 \end{center}
 \end{table}
@@ -1029,11 +1053,12 @@ Two diagrams will be called topologically similar, if it is possible to make the
 
 The expressions corresponding to two topologically similar diagrams are equal in absolute value, but may differ by a phase factor. One may find this factor by means of successive reductions of one diagram to the other, i.e., by reversals of node signs and line directions (where necessary) in accordance with the rules formulated in Secs. 11.3.2 and 11.3.3. In this way one may reduce any diagram to the topologically similar diagram of some basis function of the theory, and determine the additional phase factor. Several examples of such transformation for the $3 j, 6 j$, and $9 j$ symbols are displayed in Table~11.6.
 
-\begin{table}[tbh!]
+\begin{table}[ptbh!]
 \begin{center}
 \captionsetup{justification=centering,labelformat=empty}
 \caption{Table 11.6.\\ Symmetry of 3nj Symbol Diagrams.}
 \label{chap11:tab:2}
+\renewcommand{\arraystretch}{1.5}
 \begin{tabular}{c}
   \hline
 $3j$ Symbol $\{a b c\}$\\[2pt]
@@ -1055,7 +1080,7 @@ $6j$ Symbol $\sixj{a}{b}{c}{A}{B}{C}$\\[6pt]
 \sixjdgen{B,A,C,a,b,c,++++,dddrrr} $=(-1)^{2(A+B+C)}$
 \sixjdgen{B,A,C,a,b,c,++++,rrrrrr}\\
 \begin{tabular}{cccc}
-\multicolumn{4}{c}{Argument Permutatio}\\[4pt]
+\multicolumn{4}{c}{Argument Permutation}\\[4pt]
 \sixjdgen{B,A,C,a,b,c,++++,dddddd} &$=$
 \sixjdgen{A,B,C,b,a,c,++++,dddddd} &$=$
 \sixjdgen{a,b,C,B,A,c,++++,dddddd} &$=$
@@ -1069,33 +1094,26 @@ $6j$ Symbol $\sixj{a}{b}{c}{A}{B}{C}$\\[6pt]
 \end{center}
 \end{table}
 
-\begin{table}[tbh!]
+\begin{table}[ptbh!]
 \begin{center}
 \captionsetup{justification=centering,labelformat=empty}
 \caption*{Table 11.6. (Cont'd)}
+\renewcommand{\arraystretch}{1.5}
 \begin{tabular}{cccc}
+  \hline
   \multicolumn{4}{c}{
 $9j$ Symbol $\ninej{a_{1}}{a_{2}}{a_{3}}{c_{1}}{c_{2}}{c_{3}}{b_{1}}{b_{2}}{b_{3}}$}\\[6pt]
-\multicolumn{4}{c}{Reversal of Node Sign}\\[4pt]
+\multicolumn{4}{l}{Reversal of Node Sign}\\[4pt]
 \ninejdgen{a_1,a_2,a_3,b_1,b_2,b_3,c_1,c_2,c_3,+--++-,ddddddddd} &$=$
 \ninejdgen{a_1,a_2,a_3,b_1,b_2,b_3,c_1,c_2,c_3,-++--+,ddddddddd} &$=(-1)^{J_0}$
 \ninejdgen{a_1,a_2,a_3,b_1,b_2,b_3,c_1,c_2,c_3,++++++,ddddddddd} &$=(-1)^{J_0}$
 \ninejdgen{a_1,a_2,a_3,b_1,b_2,b_3,c_1,c_2,c_3,------,ddddddddd}\\[10pt]
-\multicolumn{4}{c}{Reversal of Line Direction}\\[4pt]
+\multicolumn{4}{l}{Reversal of Line Direction}\\[4pt]
 \ninejdgen{a_1,a_2,a_3,b_1,b_2,b_3,c_1,c_2,c_3,+--++-,ddddddddd} &$=$
 \ninejdgen{a_1,a_2,a_3,b_1,b_2,b_3,c_1,c_2,c_3,+--++-,rrrrrrrrr} &$=(-1)^{2(a_2+b_3+c_1)}$
 \ninejdgen{a_1,a_2,a_3,b_1,b_2,b_3,c_1,c_2,c_3,+--++-,drdddrrdd} &$=(-1)^{2(a_2+b_3+c_1)}$
-\ninejdgen{a_1,a_2,a_3,b_1,b_2,b_3,c_1,c_2,c_3,+--++-,rdrrrddrr}
-\end{tabular}
-\end{center}
-\end{table}
-
-\begin{table}[tbh!]
-\begin{center}
-\captionsetup{justification=centering,labelformat=empty}
-\caption*{Table 11.6. (Cont'd)}
-\begin{tabular}{cccc}
-  \multicolumn{4}{c}{Argument Permutation}\\[4pt]
+\ninejdgen{a_1,a_2,a_3,b_1,b_2,b_3,c_1,c_2,c_3,+--++-,rdrrrddrr}\\
+  \multicolumn{4}{l}{Argument Permutation}\\[4pt]
 \ninejdgen{a_1,a_2,a_3,b_1,b_2,b_3,c_1,c_2,c_3,+--++-,ddddddddd} &$=$
 \ninejdgen{a_3,a_2,a_1,c_3,c_2,c_1,b_3,b_2,b_1,+--++-,ddddddddd} &$=(-1)^{J_0}$
 \ninejdgen{a_1,a_2,a_3,c_1,c_2,c_3,b_1,b_2,b_3,+--++-,ddddddddd} &$=(-1)^{J_0}$
@@ -1108,7 +1126,8 @@ $9j$ Symbol $\ninej{a_{1}}{a_{2}}{a_{3}}{c_{1}}{c_{2}}{c_{3}}{b_{1}}{b_{2}}{b_{3
 \ninejdgen{a_1,a_3,a_2,c_1,c_3,c_2,b_1,b_3,b_2,+--++-,ddddddddd} &$=(-1)^{J_0}$
 \ninejdgen{a_2,a_3,a_1,c_2,c_3,c_1,b_2,b_3,b_1,+--++-,ddddddddd} &$=(-1)^{J_0}$
 \ninejdgen{a_1,a_3,a_2,b_1,b_3,b_2,c_1,c_3,c_2,+--++-,ddddddddd}\\[6pt]
-\multicolumn{4}{c}{where $J_{0} \equiv a_{1}+a_{2}+a_{3}+b_{1}+b_{2}+b_{3}+c_{1}+c_{2}+c_{3}$}
+\multicolumn{4}{l}{where $J_{0} \equiv a_{1}+a_{2}+a_{3}+b_{1}+b_{2}+b_{3}+c_{1}+c_{2}+c_{3}$}\\
+\hline
 \end{tabular}
 \end{center}
 \end{table}
@@ -1419,38 +1438,37 @@ In the particular case $R=1$, a double dashed $R$-line corresponds to no rotatio
 
 Some examples of the expressions and diagrams containing $R=1$ are given in Table~11.8.\\
 A summary of the rules of graphical operations is presented in Table~11.9.
-\begin{table}[tbh!]
+\begin{table}[ptbh!]
 \begin{center}
 \captionsetup{justification=centering,labelformat=empty}
 \caption{Table 11.7.\\ Zero Angular Momentum ($J=0$).}
 \small
 \setlength{\tabcolsep}{4pt}
 \renewcommand{\arraystretch}{1.4}
-\begin{tabular}{@{}p{0.42\textwidth}|c@{}}
+\begin{tabular}{@{}p{0.42\textwidth}c@{}}
 \hline
-\multicolumn{1}{c|}{Analytical Expression} & Graphical Representation \\
+{Analytical Expression} & Graphical Representation \\
 \hline
 \multicolumn{2}{c}{$jm$ Symbols}\\
 $\threej{a}{0}{b}{\alpha}{0}{\beta}=\dfrac{\delta_{ab}}{\sqrt{2a+1}}\dbinom{a}{\alpha\beta}=(-1)^{a+\alpha}\dfrac{\delta_{ab}\delta_{\alpha,-\beta}}{\sqrt{2a+1}}$
-& \jzTnode{+}{a\alpha}{o}{b\beta}{o}{d}$\;=\;$\jzTnode{-}{b\beta}{o}{a\alpha}{o}{u}$\;=\;$\jzld{o}{a}{b}{+} \\
+& \jzTnode{+}{a\alpha}{o}{b\beta}{o}{d}$\;=\;$\jzTnode{-}{b\beta}{i}{a\alpha}{i}{u}$\;=\;$\jzld{o}{l}{}{}{+}$\;=\;$\jzld{i}{l}{}{}{+} \\
 $\threej{a}{b}{0}{\alpha}{\beta}{0}=\dfrac{\delta_{ab}}{\sqrt{2a+1}}\dbinom{a}{\beta\alpha}=(-1)^{a-\alpha}\dfrac{\delta_{ab}\delta_{\alpha,-\beta}}{\sqrt{2a+1}}$
-& \jzTnode{-}{a\alpha}{o}{b\beta}{o}{d}$\;=\;$\jzTnode{+}{b\beta}{o}{a\alpha}{o}{u}$\;=\;$\jzld{o}{a}{b}{+} \\
+& \jzTnode{-}{a\alpha}{i}{b\beta}{i}{d}$\;=\;$\jzTnode{+}{b\beta}{o}{a\alpha}{o}{u}$\;=\;$\jzld{i}{r}{}{}{+}$\;=\;$\jzld{o}{r}{}{}{+} \\
 $(-1)^{a-\alpha}\threej{a}{0}{b}{-\alpha}{0}{\beta}=\dfrac{\delta_{ab}\delta_{\alpha\beta}}{\sqrt{2a+1}}$
-& \jzTnode{+}{a\alpha}{i}{b\beta}{o}{d}$\;=\;$\jzTnode{-}{b\beta}{o}{a\alpha}{i}{u}$\;=\;$\jzld{i}{a}{b}{+} \\
+& \jzTnode{+}{a\alpha}{i}{b\beta}{o}{n}$\;=\;$\jzTnode{-}{b\beta}{o}{a\alpha}{i}{n}$\;=\;$\jzld{o}{n}{a}{b}{+} \\
 $(-1)^{a-\alpha}\threej{a}{b}{0}{-\alpha}{\beta}{0}=(-1)^{2a}\dfrac{\delta_{ab}\delta_{\alpha\beta}}{\sqrt{2a+1}}$
-& \jzTnode{-}{a\alpha}{i}{b\beta}{o}{d}$\;=\;$\jzTnode{+}{b\beta}{o}{a\alpha}{i}{u}$\;=\;$\jzld{i}{a}{b}{+} \\
-\hline
+& \jzTnode{-}{a\alpha}{i}{b\beta}{o}{d}$\;=\;$\jzTnode{+}{b\beta}{o}{a\alpha}{i}{u}$\;=\;$\jzld{o}{n}{a}{b}{-} \\
 \multicolumn{2}{c}{$nj$ Symbols}\\
 $\{a\,b\,0\}=\delta_{ab}$
-& \njloop{a}{b}{-}$\;=\;$\njloop{a}{b}{+} \\
+& \njloop{a}{b}{-}{+}{c}$\;=\;$\njloop{a}{b}{+}{-}{a} \\
 $\sixj{0}{0}{0}{a}{b}{c}=(-1)^{2a}\dfrac{\delta_{ab}\delta_{bc}}{\sqrt{2a+1}}$
-& \njdtri{a}{b}{c}{+}$\;=\;$\njdtri{a}{b}{c}{-} \\
+& \njdtri{a}{b}{c}{+}{c}$\;=\;$\njdtri{a}{b}{c}{-}{a} \\
 $\sixj{a}{a^{\prime}}{0}{b}{b^{\prime}}{0}=(-1)^{2a}\dfrac{\delta_{aa^{\prime}}\delta_{bb^{\prime}}\delta_{ab}}{2a+1}$
-& \njdiam{a}{b^{\prime}}{a^{\prime}}{b}{}$\;=\;$\njvtri{a}{a^{\prime}}\,\njloop{a}{b}{+}\,\njvtrir{b^{\prime}}{b} \\
+& \njdiam{a}{b^{\prime}}{a^{\prime}}{b}{}$\;=\;$\njvtrir{a}{a^{\prime}}\,\njloop{a}{b}{+}{-}{a}\,\njvtri{b^{\prime}}{b} \\
 $\sixj{a}{a^{\prime}}{0}{b}{b^{\prime}}{c}=(-1)^{a+b+c}\dfrac{\delta_{aa^{\prime}}\delta_{bb^{\prime}}}{\sqrt{(2a+1)(2b+1)}}\{a\,b\,c\}$
-& \njdiam{a}{b^{\prime}}{a^{\prime}}{b}{c}$\;=\;$\njvtri{a}{a^{\prime}}\,\njloopc{a}{c}{b}\,\njvtrir{b^{\prime}}{b} \\
+& \njdiam{a}{b^{\prime}}{a^{\prime}}{b}{c}$\;=\;$\njvtrir{a}{a^{\prime}}\,\njloopc{a}{c}{b}{-}{-},\njvtri{b^{\prime}}{b} \\
 $\ninej{a}{b}{c}{e}{0}{e^{\prime}}{f}{b^{\prime}}{d}=(-1)^{b+c+e+f}\dfrac{\delta_{bb^{\prime}}\delta_{ee^{\prime}}}{\sqrt{(2b+1)(2e+1)}}\sixj{a}{b}{c}{d}{e}{f}$
-& \njhexx{a}{b}{c}{f}{e}{d}{b^{\prime}}{e^{\prime}}$\;=\;$\njvtri{b}{b^{\prime}}\,\njsqx{c}{f}\,\njvtrir{e}{e^{\prime}} \\
+& \njhexx{a}{b}{c}{f}{e}{d}{b^{\prime}}{e^{\prime}}$\;=\;$\njvtrir{b}{b^{\prime}}\,\njsqx{a}{b}{d}{e}{c}{f}\,\njvtri{e}{e^{\prime}} \\
 \hline
 \end{tabular}
 \end{center}
@@ -1463,7 +1481,7 @@ $\ninej{a}{b}{c}{e}{0}{e^{\prime}}{f}{b^{\prime}}{d}=(-1)^{b+c+e+f}\dfrac{\delta
 \small
 \setlength{\tabcolsep}{4pt}
 \renewcommand{\arraystretch}{1.5}
-\begin{tabular}{@{}p{0.46\textwidth}|c@{}}
+\begin{tabular}{@{}p{0.46\textwidth}c@{}}
 \hline
 \multicolumn{1}{c|}{Analytical Expression} & Graphical Representation \\
 \hline
@@ -1475,10 +1493,14 @@ $\braOket{jm}{D(1)}{j^{\prime}m^{\prime}}=\braket{jm}{j^{\prime}m^{\prime}}$.
 & \rstubline{s}{jm}{j^{\prime}m^{\prime}}{+}$\;=\;$\rredline{s}{jm}{j^{\prime}m^{\prime}} \\
 (c) For $R^{-1}R=1$: $\;\displaystyle\int\delta\!\left(\Omega^{\prime\prime}-R^{-1}\Omega^{\prime}\right)d\Omega^{\prime}\,\delta\!\left(\Omega^{\prime}-R\Omega\right)=\delta\!\left(\Omega^{\prime\prime}-\Omega\right)$,\newline
 i.e., $\braOket{\Omega^{\prime\prime}}{R^{-1}}{\Omega^{\prime}}\braOket{\Omega^{\prime}}{R}{\Omega}=\braket{\Omega^{\prime\prime}}{\Omega}$.
-& \rarcline{o}{\Omega^{\prime\prime}}{\Omega}{-}$\;=\;$\rredline{o}{\Omega^{\prime\prime}}{\Omega} \\
+& \rarcline{o}{\Omega^{\prime\prime}}{\Omega}{-}
+\rarcloop{o}{\Omega^{\prime\prime}}{\Omega}{-}{+} \\
+&$\;=\;$\rredline{o}{\Omega^{\prime\prime}}{\Omega} \\
 (d) For $R^{-1}R=1$: $\;\displaystyle\sum_{m^{\prime}}D_{m^{\prime\prime}m^{\prime}}^{j}(R^{-1})D_{m^{\prime}m}^{j}(R)=\delta_{m^{\prime\prime}m}$,\newline
 i.e., $\braOket{jm^{\prime\prime}}{D(R^{-1})}{j^{\prime}m^{\prime}}\braOket{j^{\prime}m^{\prime}}{D(R)}{jm}=\braket{jm^{\prime\prime}}{jm}$.
-& \rarcline{s}{jm^{\prime\prime}}{jm}{+}$\;=\;$\rredline{s}{jm^{\prime\prime}}{jm} \\
+& \rarcline{s}{jm^{\prime\prime}}{jm}{+}$\;=\;$
+\rarcloop{s}{jm^{\prime\prime}}{jm}{-}{+} \\
+&$\;=\;$\rredline{s}{jm^{\prime\prime}}{jm} \\
 \hline
 \end{tabular}
 \end{center}
@@ -1496,23 +1518,23 @@ Rules for the Transformation of Diagrams}
 \hline
 \multicolumn{1}{c|}{Analytical Expression} & Graphical Representation \\
 \hline
-\multicolumn{2}{c}{Invariant integration over directions}\\
+Invariant integration over directions\par
 \(
 \int d \Omega\braOket{\Omega}{\mathfrak{M}}{\Omega}=\sum_{J M}\braOket{J M}{\mathfrak{M}}{J M}
-\)\\
-where\\
-$\braOket{J M}{\mathfrak{M}}{J^{\prime} M^{\prime}} \equiv \iint\braket{J M}{\mathbb{Q}} d Q\braOket{Q}{\mathfrak{M}}{Q^{\prime}} d Q^{\prime}\braket{Q}{J^{\prime} M^{\prime}}$.\\
-\multicolumn{2}{c}{Completeness Condition}
+\)par
+where\par
+$\braOket{J M}{\mathfrak{M}}{J^{\prime} M^{\prime}} \equiv \iint\braket{J M}{\mathbb{Q}} d Q\braOket{Q}{\mathfrak{M}}{Q^{\prime}} d Q^{\prime}\braket{Q}{J^{\prime} M^{\prime}}$.\par
+Completeness Condition\par
 \(
 \int|\Omega\rangle d \Omega\braOket{\Omega}{=\sum_{J M}}{J M}\langle J M|=1
-\)\\
-Replacing dashed $\Omega$-line by thick solid $j$-line&
-\opline{\mathfrak{M}}{\mathfrak{M}}{JM}
+\) &
+\\
+Replacing dashed $\Omega$-line by thick solid $j$-line\\
 \end{tabular}
 \end{center}
 \end{table}
 
-\begin{table}[tbh!]
+\begin{table}[ptbh!]
 \begin{center}
 \captionsetup{justification=centering,labelformat=empty}
 \caption*{Table 11.9. Cont'd}
@@ -1523,7 +1545,7 @@ Replacing dashed $\Omega$-line by thick solid $j$-line&
 \hline
 \multicolumn{1}{c|}{Analytical Expression} & Graphical Representation \\
 \hline
-\multicolumn{2}{c}{Complete summation over $J$ and $M$}\\
+Complete summation over $J$ and $M$\\
 \(
 \begin{aligned}
 & \sum_{J I}(2 J+1)\braOket{j_{1} j_{2} ; J M}{\mathscr{M}}{j_{1} j_{2} ; J M} \\
@@ -1546,8 +1568,10 @@ where\\
 \braOket{j_{1} f_{2} ; J M}{\mathfrak{M}}{j_{2} j_{6} ; J M} \\
 \equiv \sum_{m_{4}}\threej{j_{1}}{j_{2}}{J}{m_{1}}{m_{2}}{M}\braOket{j_{1} m_{1} j_{2} m_{2}}{\mathfrak{M}}{j_{2} m_{2} j_{4} m_{4}}
 \end{gathered}\threej{j_{2}}{j_{4}}{J}{m_{3}}{m_{4}}{M} .
-\)\\
-Transformation of product of invariant sums into invariant sum of products (at least one of two factors must be a perfect invariant).\\
+\)&Elimination of thick solid/-line\par
+\begin{tikzpicture}[baseline=0pt]\node[opbox](M) at (0,0){$\mathfrak{M}$}; \node[opbox](N) at (2.4,0){$\mathfrak{N}$}; \draw[jmline,line width=1.4pt] (M)--(N) node[midway,above]{$j$};\end{tikzpicture}
+\\
+Transformation of product of invariant sums into invariant sum of products (at least one of two factors must be a perfect invariant).\par
 \(
 \begin{aligned}
 &\left(\sum_{m}\braOket{j m}{\mathfrak{M}}{j m}\right)\left(\sum_{m^{\prime}}\braOket{j m^{\prime}}{\Re}{j m^{\prime}}\right) \\
@@ -1556,20 +1580,19 @@ Transformation of product of invariant sums into invariant sum of products (at l
 & \times {\left[\sum_{m_{1} m_{2} m_{3}}\threej{f_{1}}{f_{2}}{f_{3}}{m_{1}}{m_{2}}{m_{3}}\braOket{j_{1} m_{1} j_{2} m_{2} f_{2} m_{3}}{\Re}{}\right] } \\
 &= \sum_{m_{2} m_{2} m_{3}}\braOket{}{\mathfrak{R}}{f_{1} m_{1} f_{2} m_{2} f_{3} m_{3}}\braOket{j_{1} m_{1} j_{2} m_{2} j_{2} m_{3}}{\Re}{} .
 \end{aligned}
-\)\\
-Expression reduction for $J=0$\\
+\)\par
+Expression reduction for $J=0$\par
 \(
 \begin{gathered}
 \sum_{m^{\prime}}\braOket{j m}{\mathfrak{M}}{j^{\prime} m^{\prime}}(-1)^{j^{\prime}-m^{\prime}}\threej{j^{\prime}}{0}{j}{-m^{\prime}}{0}{m} \\
 =\frac{8, j^{\prime}}{\sqrt{2 j+1}} \sum_{m}\braOket{j m}{\mathfrak{R}}{i m}
 \end{gathered}
-\)\\
-Elimination of thick solid/-line&
-\begin{tikzpicture}[baseline=0pt]\node[opbox](M) at (0,0){$\mathfrak{M}$}; \node[opbox](N) at (2.4,0){$\mathfrak{N}$}; \draw[jmline,line width=1.4pt] (M)--(N) node[midway,above]{$j$};\end{tikzpicture}\\
+\)\par
+\
 $=\displaystyle\sum_{jm}$& \opline{\mathfrak{M}}{\mathfrak{N}}{jm}\\
 Linking subdiagrams containing identical $j$-line (at least one of subdiagrams should have no other external lines)&
 \opline{\mathfrak{M}}{\mathfrak{N}}{j}\\
-Elimination of a $J=0$ line in a diagram&
+Elimination of a $J=0$ line in a diagram\par
 \threenode{j_1}{0}{j_2}{above:$+$}\quad$\to$\quad\begin{tikzpicture}[baseline=0pt]\draw[jmline] (0,0) node[left]{$j_1$} -- (1.4,0) node[right]{$j_2$};\end{tikzpicture}
 \end{tabular}
 \end{center}
