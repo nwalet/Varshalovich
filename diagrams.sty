@@ -2,6 +2,7 @@
 \ProvidesPackage{diagrams}[2026/07/17 Chap11 TikZ graphical-method diagrams]
 \RequirePackage{newlist}
 \RequirePackage{tikz}
+\RequirePackage{splitletter}
 \usetikzlibrary{arrows.meta,decorations.markings,positioning,calc,decorations.pathreplacing,decorations.markings,math,shapes.geometric}
 
 %\plusmark/\minusmark: the "+"/"-" node-sign markers, drawn as short thin
@@ -67,7 +68,9 @@
   minusnode/.style={circle, fill, inner sep=1pt, label={below:\minusmark}},
   dotnode/.style={circle, fill, inner sep=1pt},
   deltanode/.style={circle, draw, fill=white, inner sep=1.2pt},
-  opbox/.style={draw, minimum width=8mm, minimum height=8mm, inner sep=2pt}
+  opbox/.style={draw, minimum width=8mm, minimum height=8mm, inner sep=2pt},
+  opboxh/.style={draw,shape=rectangle, minimum width=8mm, minimum height=20mm, inner sep=2pt},
+  opboxw/.style={draw,shape=rectangle, minimum width=20mm, minimum height=8mm, inner sep=2pt}
   }
 
 %\normedge[style]{A}{B}{pos}{offset}{label text}: draws an edge from
@@ -301,50 +304,65 @@
 \if d\vmk@dF\normedge{M}{T}{0.4}{0.13}{$\argx{6}$}\else\normedge{T}{M}{0.6}{-0.13}{$\argx{6}$}\fi
 \end{tikzpicture}}
 }
-
 %\ninejdgen{s1,...,s9,SIGNS,DIRS}: fully general form of the Table 11.6
 %9j hexagon. Items 1-9 are the labels by structural slot (named after
 %where the standard basis diagram of {a1 a2 a3; c1 c2 c3; b1 b2 b3} puts
-%its own labels): 1 = upper-left edge (UL-T, "a1"), 2 = vertical diameter
-%(T-B, "a2"), 3 = upper-right edge (T-UR, "a3"), 4 = left side (UL-LL,
-%"b1"), 5 = lower-left edge (LL-B, "b2"), 6 = oblique diameter UL-LR
-%("b3"), 7 = oblique diameter LL-UR ("c1"), 8 = lower-right edge (B-LR,
-%"c2"), 9 = right side (LR-UR, "c3"). Item 10 = six sign characters for
-%the T,UL,UR,LL,LR,B nodes (standard pattern "+--++-"). Item 11 = nine
-%direction characters (slot order): "d" = the book's standard direction
-%(1: UL->T, 2: T->B, 3: T->UR, 4: UL->LL, 5: LL->B, 6: UL->LR,
-%7: LL->UR, 8: B->LR, 9: LR->UR), "r" = reversed in place. The basis is
-%\ninejdgen{a_1,a_2,a_3,b_1,b_2,b_3,c_1,c_2,c_3,+--++-,ddddddddd}.
+%its own labels):
+% 1 = upper-left edge (n1-n0), "a1", 
+% 2 = vertical diameter (n0-n3), "a2",
+% 3 = top right edge (n1-n5), "a3"
+% 4 = left side (n2-n1), "b1"
+% 5 = lower left edge (n2-n3), "b2"
+% 6 = oblique diameter (n2-n5), "b3"
+% 7 = oblique diameter (n4-n1), "c1"
+% 8 = lower right (n4-n3), "c2"
+% 9 = right (n4-n5), "c3"
+% 10 six sign characters for the nodes n0-n5 (standard pattern "+-+-+-"). 
+% Item 11 = nine direction characters for the (see 1-9)(slot order): 
+% "d" = the book's standard direction as specified above
+% "r" = reversed in place. 
+% The basis is \ninejdgen{a_1,a_2,a_3,b_1,b_2,b_3,c_1,c_2,c_3,+-+-+-,ddddddddd}.
 %(\ninejd, kept unchanged, draws the differently-labelled Table 11.2
-%hexagon of {a1 b1 c1; a2 b2 c2; a3 b3 c3}.)
+% hexagon of {a1 b1 c1; a2 b2 c2; a3 b3 c3}.) Needs reconciling
+% -- helpers (no @ so they work in this standalone document) --
+% sign glyph for a '+'/'-' character
+\def\vmksign#1{\if+#1\plusmark\else\minusmark\fi}
+% \esplit{<target cs>}{<expandable text>}: expand the text, then split it
+% into a comma list with \makeclist.  Needed because \makeclist tokenises
+% its argument literally, so \argx{n} has to be expanded first.
+\newcommand{\esplit}[2]{%
+  \edef\sl@e{#2}%
+  \expandafter\makeclist\expandafter[\expandafter#1\expandafter]\expandafter{\sl@e}}
+% \ifdir{<k>}{<forward>}{<reverse>}: run <forward> if direction char k is 'd'
+\newcommand{\ifdir}[3]{\if\csname dir#1\endcsname d#2\else#3\fi}
+
 \newlistcommand{\ninejdgen}{%
 {\begin{tikzpicture}[baseline=0pt, inner sep=0.1em,font=\scriptsize]
-\coordinate (T)  at (90:0.8);
-\coordinate (UL) at (150:0.8);
-\coordinate (LL) at (210:0.8);
-\coordinate (B)  at (270:0.8);
-\coordinate (LR) at (330:0.8);
-\coordinate (UR) at (30:0.8);
-\edef\vmk@tmp{\argx{10}}\expandafter\vmk@splitninesigns\vmk@tmp\relax
-\edef\vmk@tmp{\argx{11}}\expandafter\vmk@splitnine\vmk@tmp\relax
-\node[dotnode,label={90:\vmk@sign\vmk@nsA}] at (T) {};
-\node[dotnode,label={150:\vmk@sign\vmk@nsB}] at (UL) {};
-\node[dotnode,label={30:\vmk@sign\vmk@nsC}] at (UR) {};
-\node[dotnode,label={210:\vmk@sign\vmk@nsD}] at (LL) {};
-\node[dotnode,label={330:\vmk@sign\vmk@nsE}] at (LR) {};
-\node[dotnode,label={270:\vmk@sign\vmk@nsF}] at (B) {};
-\if d\vmk@nA\normedge{UL}{T}{0.5}{0.2}{$\argx{1}$}\else\normedge{T}{UL}{0.5}{-0.2}{$\argx{1}$}\fi
-\if d\vmk@nB\normedge[jmlinem=0.3]{T}{B}{0.22}{0.16}{$\argx{2}$}\else\normedge[jmlinem=0.7]{B}{T}{0.78}{-0.16}{$\argx{2}$}\fi
-\if d\vmk@nC\normedge{T}{UR}{0.5}{0.2}{$\argx{3}$}\else\normedge{UR}{T}{0.5}{-0.2}{$\argx{3}$}\fi
-\if d\vmk@nD\normedge{UL}{LL}{0.5}{-0.15}{$\argx{4}$}\else\normedge{LL}{UL}{0.5}{0.15}{$\argx{4}$}\fi
-\if d\vmk@nE\normedge{LL}{B}{0.5}{-0.2}{$\argx{5}$}\else\normedge{B}{LL}{0.5}{0.2}{$\argx{5}$}\fi
-\if d\vmk@nF\normedge[jmlinem=0.65]{UL}{LR}{0.3}{0.2}{$\argx{6}$}\else\normedge[jmlinem=0.35]{LR}{UL}{0.7}{-0.2}{$\argx{6}$}\fi
-\if d\vmk@nG\normedge[jmlinem=0.35]{LL}{UR}{0.7}{-0.24}{$\argx{7}$}\else\normedge[jmlinem=0.65]{UR}{LL}{0.3}{0.24}{$\argx{7}$}\fi
-\if d\vmk@nH\normedge{B}{LR}{0.5}{-0.2}{$\argx{8}$}\else\normedge{LR}{B}{0.5}{0.2}{$\argx{8}$}\fi
-\if d\vmk@nI\normedge{LR}{UR}{0.5}{-0.15}{$\argx{9}$}\else\normedge{UR}{LR}{0.5}{0.15}{$\argx{9}$}\fi
-\end{tikzpicture}}
+  % split the sign string (arg 10) and direction string (arg 11)
+  \esplit{\signlst}{\argx{10}}%
+  \esplit{\direcs}{\argx{11}}%
+  % six hexagon vertices n0..n5 (n0 at the top, going counter-clockwise)
+  \foreach \i in {0,...,5}{\coordinate (n\i) at (90+60*\i:0.8);}%
+  % a signed dot at each vertex -- count from 0 so the index matches n\i
+  \foreach \s [count=\i from 0] in \signlst {%
+    \node[dotnode,label={90+60*\i:\vmksign{\s}}] at (n\i) {};%
+  }%
+  % stash each direction character in \dir0..\dir8 for per-slot testing.
+  % \global because \foreach runs its body in a group.
+  \foreach \d [count=\k from 0] in \direcs {%
+    \global\expandafter\let\csname dir\k\endcsname\d}%
+  % edges: fixed geometry per slot; \ifdir chooses forward vs reverse
+  \ifdir{0}{\normedge{n1}{n0}{0.5}{0.2}{$\argx{1}$}}{\normedge{n0}{n1}{0.5}{-0.2}{$\argx{1}$}}%
+  \ifdir{1}{\normedge[jmlinem=0.25]{n0}{n3}{0.25}{0.2}{$\argx{2}$}}{\normedge[jmlinem=0.75]{n3}{n0}{0.75}{-0.2}{$\argx{2}$}}%
+  \ifdir{2}{\normedge{n0}{n5}{0.5}{0.2}{$\argx{3}$}}{\normedge{n5}{n0}{0.5}{-0.2}{$\argx{3}$}}%
+  \ifdir{3}{\normedge{n2}{n1}{0.5}{0.2}{$\argx{4}$}}{\normedge{n1}{n2}{0.5}{-0.2}{$\argx{4}$}}%
+  \ifdir{4}{\normedge{n2}{n3}{0.5}{-0.2}{$\argx{5}$}}{\normedge{n3}{n2}{0.5}{0.2}{$\argx{5}$}}%
+  \ifdir{5}{\normedge[jmlinem=0.25]{n2}{n5}{0.25}{0.2}{$\argx{6}$}}{\normedge[jmlinem=0.75]{n5}{n2}{0.75}{-0.2}{$\argx{6}$}}%
+  \ifdir{6}{\normedge[jmlinem=0.25]{n4}{n1}{0.25}{0.2}{$\argx{7}$}}{\normedge[jmlinem=0.75]{n1}{n4}{0.75}{-0.2}{$\argx{7}$}}%
+  \ifdir{7}{\normedge{n4}{n3}{0.5}{0.2}{$\argx{8}$}}{\normedge{n3}{n4}{0.5}{-0.2}{$\argx{8}$}}%
+  \ifdir{8}{\normedge{n4}{n5}{0.5}{-0.2}{$\argx{9}$}}{\normedge{n5}{n4}{0.5}{0.2}{$\argx{9}$}}%
+\end{tikzpicture}}%
 }
-
 
 \newlistcommand{\twIdiaga}{%
 {\begin{tikzpicture}[baseline=0pt, inner sep=0.1em,font=\scriptsize]
@@ -550,6 +568,21 @@
 \draw[jmlinem] (L) -- (B) node[midway,left]{$#3$};
 \draw[jmlinem] (R) -- (B) node[midway,right]{$#4$};
 \end{tikzpicture}%
+}
+
+\newcommand{\jloop}[2]{%
+\begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
+\if a#2
+  \draw[
+        decoration={markings, mark=at position 0.25 with  {\arrow{Stealth[reversed,length=2.2mm]}}},
+        postaction={decorate},thick] (0,0.) circle (0.4);
+\else
+  \draw[
+        decoration={markings, mark=at position 0.25 with  {\arrow{Stealth[length=2.2mm]}}},
+        postaction={decorate},thick] (0,0.) circle (0.4);
+\fi
+\node (0.0.5) {$#1$};
+\end{tikzpicture}
 }
 
 %---- Table 11.7 nj-Symbols helpers (closed j=0 nj-diagrams + reduced products) ----
