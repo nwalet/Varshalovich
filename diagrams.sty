@@ -3,7 +3,7 @@
 \RequirePackage{newlist}
 \RequirePackage{tikz}
 \RequirePackage{splitletter}
-\usetikzlibrary{arrows.meta,decorations.markings,positioning,calc,decorations.pathreplacing,decorations.markings,math,shapes.geometric}
+\usetikzlibrary{arrows.meta,decorations.markings,positioning,calc,decorations.pathreplacing,math,shapes.geometric,bending}
 
 %\plusmark/\minusmark: the "+"/"-" node-sign markers, drawn as short thin
 %lines (a cross / a dash) rather than typeset as math-mode "$+$"/"$-$"
@@ -23,6 +23,7 @@
 %node whose sign fixes the cyclic order of the lines meeting there; a
 %small open circle is a Kronecker-delta-style contraction node.
 \tikzset{
+  %every node/.style={fill=yellow},
   %arrows: open
   %ket jm-line: single arrowhead
   jmarrow/.style={Bar[]-{Stealth[length=2.2mm]}, thick},
@@ -64,9 +65,9 @@
   omlinem/.style={postaction={decorate,decoration={markings,mark=at position #1 with {\pgftransformxshift{1.1mm}\arrow{Stealth[length=2.2mm]}}}},dashed,thick},
   omlinem/.default=0.5,
   %other styles: nodes, boxes, etc.
-  plusnode/.style={circle, fill, inner sep=1pt, label={above:\plusmark}},
-  minusnode/.style={circle, fill, inner sep=1pt, label={below:\minusmark}},
-  dotnode/.style={circle, fill, inner sep=1pt},
+  plusnode/.style={circle, fill=black, inner sep=1pt, label={above:\plusmark}},
+  minusnode/.style={circle, fill=black, inner sep=1pt, label={below:\minusmark}},
+  dotnode/.style={circle, fill=black, inner sep=1pt},
   deltanode/.style={circle, draw, fill=white, inner sep=1.2pt},
   opbox/.style={draw, minimum width=8mm, minimum height=8mm, inner sep=2pt},
   opboxh/.style={draw,shape=rectangle, minimum width=8mm, minimum height=20mm, inner sep=2pt},
@@ -111,15 +112,12 @@
   \coordinate (T) at (0,0.5);
   \coordinate (B) at (0,-0.5);
   \threejs@split#1\relax
-  \if d\threejs@da\draw[jmlinem] (T) arc[start angle=90, end angle=270, radius=0.5];
-  \else\draw[jmlinem] (B) arc[start angle=270, end angle=90, radius=0.5];\fi
-  \if d\threejs@db\draw[jmlinem] (T) -- (B);
-  \else\draw[jmlinem] (B) -- (T);\fi
-  \if d\threejs@dc\draw[jmlinem] (T) arc[start angle=90, end angle=-90, radius=0.5];
-  \else\draw[jmlinem] (B) arc[start angle=-90, end angle=90, radius=0.5];\fi
-  \node at (-0.3,0) {$#2$};
-  \node at (0.17,0) {$#3$};
-  \node at (0.67,0) {$#4$};
+  \if d\threejs@da\draw[jmlinem] (T) arc[start angle=90,end angle=270,radius=0.5] node[midway,left=0.1] {$#2$}  (B);
+  \else\draw[jmlinem] (B) arc[start angle=270,end angle=90,radius=0.5] node[midway,left=0.1] {$#2$} (T);\fi
+  \if d\threejs@db\draw[jmlinem] (T) -- (B)  node[midway,right=0.06] {$#3$}  ;
+  \else\draw[jmlinem] (B) -- (T)  node[midway,right=0.06] {$#3$}  ;\fi
+  \if d\threejs@dc\draw[jmlinem] (T) arc[start angle=90, end angle=-90, radius=0.5]  node[midway,right=0.1] {$#4$};
+  \else\draw[jmlinem] (B) arc[start angle=-90, end angle=90, radius=0.5]  node[midway,right=0.1] {$#4$}  ;\fi
   \node[dotnode,label={above:$#5$}] at (T) {};
   \node[dotnode,label={below:$#6$}] at (B) {};
   \end{tikzpicture}%
@@ -128,25 +126,24 @@
 
 %\threenode{a}{b}{c}{sign}: a single node with three jm-lines radiating
 %out (top-left a, top-right c, bottom b), labelled with the node sign
-\newcommand{\threenode}[4]{%
-\begin{tikzpicture}[baseline=-2pt]
-\coordinate (O) at (0,0);
-\node[dotnode,label={#4}] at (O) {};
-\draw[jmline] (O) -- (-0.9,0.9) node[left]{$#1$};
-\draw[jmline] (O) -- (0.9,0.9) node[right]{$#3$};
-\draw[jmline] (O) -- (0,-1.1) node[below]{$#2$};
-\end{tikzpicture}%
-}
-\newlistcommand{\threejdiag}{%
-{\begin{tikzpicture}[baseline=0pt,inner sep=0.1em,font=\scriptsize]
-\coordinate (B) at ($0.8*(0,-1)$);
-\coordinate (L) at ($0.8*(-0.866,0.5)$);
-\coordinate (R) at ($0.8*(0.866,0.5)$);
+% \newcommand{\threenode}[4]{%
+% \begin{tikzpicture}[baseline=-2pt,inner sep=0.1em,font=\scriptsize]
+%   \foreach \i in {0,...,2}{\coordinate (n\i) at (60+120*\i:0.8);}%
+% \coordinate (M) at (0,0);
+% \node[dotnode,label={above:\vmk@sign{#4}}] at (M) {};
+%  \foreach \i in {0,...,2}{\draw[jmarrown] (M) -- (n\i) node[60+120*\i]{$#\i$};}
+% \end{tikzpicture}%
+% }
+%\threenode{a,ma,b,mb,c,mc,sign}: a single node with three jm-lines radiating
+%out (top-left a, top-right c, bottom b), labelled with the node sign
+\newlistcommand{\threejdiag}{
+  {
+  \begin{tikzpicture}[baseline=-2pt,inner sep=0.1em,font=\scriptsize]
+  \foreach \i in {0,...,2}{\coordinate (n\i) at (30+120*\i:0.8);}%
 \coordinate (M) at (0,0);
-\node[dotnode,label={above:\plusmark}] at (M) {};
-\draw[jmarrown] (M) -- (L) node[left]{$\argx{1}\argx{2}$};
-\draw[jmarrown] (M) -- (B) node[below]{$\argx{3}{\argx{4}}$};
-\draw[jmarrown] (M) -- (R) node[right]{$\argx{5}\argx{6}$};
+% 90=360 - angle[2]
+\node[dotnode,label={90:\vmk@sign{\argx{7}}}] at (M) {};
+ \foreach \i in {0,...,2}{\draw[jmarrown] (M) -- (n\i) node[label={30+120*\i:$\argx{2*\i+1}$$\argx{2*\i+2}$}]{};}%\argx{2*\i+2}}]{};}
 \end{tikzpicture}}
 }
 
@@ -235,27 +232,27 @@
 %\ninejd{1,2,3,4,5,6,7,8,9}: the 9j-symbol hexagon diagram (fixed
 %alternating +/- node signs, no sign argument). Comma-separated calling
 %convention, like \twIdiaga.
-\newlistcommand{\ninejd}{%
-{\begin{tikzpicture}[baseline=0pt, inner sep=0.1em,font=\scriptsize]
-  \foreach \i in {0,...,5} {
-    \coordinate (tid\i) at (90+60*\i:0.8);
-    \ifodd\i
-      \node[dotnode,label={90+60*\i:\plusmark}] at (tid\i) {};
-    \else
-      \node[dotnode,label={90+60*\i:\minusmark}] at (tid\i) {};
-    \fi
-  }
-\normedge{tid0}{tid1}{0.5}{-0.2}{$\argx{1}$} %a1
-\normedge[jmlinem=0.25]{tid4}{tid1}{0.25}{0.2}{$\argx{2}$} %a2
-\normedge{tid2}{tid1}{0.5}{0.28}{$\argx{3}$} %a3
-\normedge[jmlinem=0.25]{tid0}{tid3}{0.25}{-0.15}{$\argx{4}$} %b1
-\normedge{tid4}{tid3}{0.5}{0.2}{$\argx{5}$} %b2
-\normedge{tid2}{tid3}{0.5}{-0.2}{$\argx{6}$} %b3
-\normedge{tid0}{tid5}{0.5}{0.2}{$\argx{7}$} %c1
-\normedge{tid4}{tid5}{0.5}{-0.28}{$\argx{8}$} %c2
-\normedge[jmlinem=0.25]{tid2}{tid5}{0.25}{0.2}{$\argx{9}$} %c3
-\end{tikzpicture}}
-}
+% \newlistcommand{\ninejd}{%
+% {\begin{tikzpicture}[baseline=0pt, inner sep=0.1em,font=\scriptsize]
+%   \foreach \i in {0,...,5} {
+%     \coordinate (tid\i) at (90+60*\i:0.8);
+%     \ifodd\i
+%       \node[dotnode,label={90+60*\i:\plusmark}] at (tid\i) {};
+%     \else
+%       \node[dotnode,label={90+60*\i:\minusmark}] at (tid\i) {};
+%     \fi
+%   }
+% \normedge{tid0}{tid1}{0.5}{-0.2}{$\argx{1}$} %a1
+% \normedge[jmlinem=0.25]{tid4}{tid1}{0.25}{0.2}{$\argx{2}$} %a2
+% \normedge{tid2}{tid1}{0.5}{0.28}{$\argx{3}$} %a3
+% \normedge[jmlinem=0.25]{tid0}{tid3}{0.25}{-0.15}{$\argx{4}$} %b1
+% \normedge{tid4}{tid3}{0.5}{0.2}{$\argx{5}$} %b2
+% \normedge{tid2}{tid3}{0.5}{-0.2}{$\argx{6}$} %b3
+% \normedge{tid0}{tid5}{0.5}{0.2}{$\argx{7}$} %c1
+% \normedge{tid4}{tid5}{0.5}{-0.28}{$\argx{8}$} %c2
+% \normedge[jmlinem=0.25]{tid2}{tid5}{0.25}{0.2}{$\argx{9}$} %c3
+% \end{tikzpicture}}
+% }
 
 %Character-splitting helpers for the sign/direction string arguments of
 %\sixjdgen and \ninejdgen below: each takes a fixed-length string of
@@ -269,7 +266,17 @@
 \def\vmk@splitnine#1#2#3#4#5#6#7#8#9\relax{\def\vmk@nA{#1}\def\vmk@nB{#2}\def\vmk@nC{#3}\def\vmk@nD{#4}\def\vmk@nE{#5}\def\vmk@nF{#6}\def\vmk@nG{#7}\def\vmk@nH{#8}\def\vmk@nI{#9}}
 %\vmk@sign{<char macro>}: renders + as \plusmark, anything else as \minusmark
 \def\vmk@sign#1{\if+#1\plusmark\else\minusmark\fi}
-
+% -- helpers (no @ so they work in this standalone document) --
+% sign glyph for a '+'/'-' character
+\def\vmksign#1{\if+#1\plusmark\else\minusmark\fi}
+% \esplit{<target cs>}{<expandable text>}: expand the text, then split it
+% into a comma list with \makeclist.  Needed because \makeclist tokenises
+% its argument literally, so \argx{n} has to be expanded first.
+\newcommand{\esplit}[2]{%
+  \edef\sl@e{#2}%
+  \expandafter\makeclist\expandafter[\expandafter#1\expandafter]\expandafter{\sl@e}}
+% \ifdir{<k>}{<forward>}{<reverse>}: run <forward> if direction char k is 'd'
+\newcommand{\ifdir}[3]{\if\csname dir#1\endcsname d#2\else#3\fi}
 %\sixjdgen{l,r,b,ll,lr,v,SIGNS,DIRS}: fully general form of the Table 11.6
 %"upward triangle with center node" 6j diagram. Items 1-6 are the edge
 %labels by slot: 1 = left side (T-L), 2 = right side (T-R), 3 = bottom
@@ -286,31 +293,37 @@
 %Table 11.6 originals (orig pp. 438).
 \newlistcommand{\sixjdgen}{%
 {\begin{tikzpicture}[baseline=0pt, inner sep=0.2em,font=\scriptsize]
-\coordinate (T) at ($0.8*(0,1)$);
-\coordinate (L) at ($0.8*(-0.866,-0.5)$);
-\coordinate (R) at ($0.8*(0.866,-0.5)$);
-\coordinate (M) at (0,0);
-\edef\vmk@tmp{\argx{7}}\expandafter\vmk@splitfour\vmk@tmp\relax
-\edef\vmk@tmp{\argx{8}}\expandafter\vmk@splitsix\vmk@tmp\relax
-\node[dotnode,label={above:\vmk@sign\vmk@sA}] at (T) {};
-\node[dotnode,label={below left:\vmk@sign\vmk@sB}] at (L) {};
-\node[dotnode,label={below right:\vmk@sign\vmk@sC}] at (R) {};
-\node[dotnode,label={below:\vmk@sign\vmk@sD}] at (M) {};
-\if d\vmk@dA\normedge{L}{T}{0.5}{0.18}{$\argx{1}$}\else\normedge{T}{L}{0.5}{-0.18}{$\argx{1}$}\fi
-\if d\vmk@dB\normedge{T}{R}{0.5}{0.18}{$\argx{2}$}\else\normedge{R}{T}{0.5}{-0.18}{$\argx{2}$}\fi
-\if d\vmk@dC\normedge{L}{R}{0.5}{-0.18}{$\argx{3}$}\else\normedge{R}{L}{0.5}{0.18}{$\argx{3}$}\fi
-\if d\vmk@dD\normedge{L}{M}{0.45}{0.14}{$\argx{4}$}\else\normedge{M}{L}{0.55}{-0.14}{$\argx{4}$}\fi
-\if d\vmk@dE\normedge{M}{R}{0.45}{0.14}{$\argx{5}$}\else\normedge{R}{M}{0.55}{-0.14}{$\argx{5}$}\fi
-\if d\vmk@dF\normedge{M}{T}{0.4}{0.13}{$\argx{6}$}\else\normedge{T}{M}{0.6}{-0.13}{$\argx{6}$}\fi
+   \foreach \i in {0,...,2}{\coordinate (n\i) at (90+120*\i:0.8);}%
+\coordinate (n3) at (0,0);
+  % split the sign string (arg 10) and direction string (arg 11)
+  \esplit{\signlst}{\argx{7}}%
+  \esplit{\direcs}{\argx{8}}%
+    \foreach \s [count=\i from 0] in \signlst {%
+    \if3\i
+    \node[dotnode,label={270:\vmksign{\s}}] at (n\i) {};
+    \else
+    \node[dotnode,label={90+120*\i:\vmksign{\s}}] at (n\i) {};
+    \fi
+  }%
+   % stash each direction character in \dir0..\dir8 for per-slot testing.
+  % \global because \foreach runs its body in a group.
+  \foreach \d [count=\k from 0] in \direcs {%
+    \global\expandafter\let\csname dir\k\endcsname\d}%
+\ifdir0{\normedge{n1}{n0}{0.5}{0.22}{$\argx{1}$}}{\normedge{n0}{n1}{0.5}{-0.22}{$\argx{1}$}}
+\ifdir1{\normedge{n0}{n2}{0.5}{0.22}{$\argx{2}$}}{\normedge{n2}{n0}{0.5}{-0.22}{$\argx{2}$}}
+\ifdir2{\normedge{n1}{n2}{0.5}{-0.22}{$\argx{3}$}}{\normedge{n2}{n1}{0.5}{0.22}{$\argx{3}$}}
+\ifdir3{\normedge{n1}{n3}{0.6}{0.14}{$\argx{4}$}}{\normedge{n3}{n1}{0.4}{-0.14}{$\argx{4}$}}
+\ifdir4{\normedge{n3}{n2}{0.3}{0.14}{$\argx{5}$}}{\normedge{n2}{n3}{0.7}{-0.14}{$\argx{5}$}}
+\ifdir5{\normedge{n3}{n0}{0.3}{0.13}{$\argx{6}$}}{\normedge{n0}{n3}{0.7}{-0.13}{$\argx{6}$}}
 \end{tikzpicture}}
 }
-%\ninejdgen{s1,...,s9,SIGNS,DIRS}: fully general form of the Table 11.6
+%\ninejdgen{s1,...,s9,SIGNS,DIRS}: fully general form of the 
 %9j hexagon. Items 1-9 are the labels by structural slot (named after
 %where the standard basis diagram of {a1 a2 a3; c1 c2 c3; b1 b2 b3} puts
 %its own labels):
-% 1 = upper-left edge (n1-n0), "a1", 
+% 1 = upper-left edge (n0-n1), "a1", 
 % 2 = vertical diameter (n0-n3), "a2",
-% 3 = top right edge (n1-n5), "a3"
+% 3 = top right edge (n0-n5), "a3"
 % 4 = left side (n2-n1), "b1"
 % 5 = lower left edge (n2-n3), "b2"
 % 6 = oblique diameter (n2-n5), "b3"
@@ -324,17 +337,7 @@
 % The basis is \ninejdgen{a_1,a_2,a_3,b_1,b_2,b_3,c_1,c_2,c_3,+-+-+-,ddddddddd}.
 %(\ninejd, kept unchanged, draws the differently-labelled Table 11.2
 % hexagon of {a1 b1 c1; a2 b2 c2; a3 b3 c3}.) Needs reconciling
-% -- helpers (no @ so they work in this standalone document) --
-% sign glyph for a '+'/'-' character
-\def\vmksign#1{\if+#1\plusmark\else\minusmark\fi}
-% \esplit{<target cs>}{<expandable text>}: expand the text, then split it
-% into a comma list with \makeclist.  Needed because \makeclist tokenises
-% its argument literally, so \argx{n} has to be expanded first.
-\newcommand{\esplit}[2]{%
-  \edef\sl@e{#2}%
-  \expandafter\makeclist\expandafter[\expandafter#1\expandafter]\expandafter{\sl@e}}
-% \ifdir{<k>}{<forward>}{<reverse>}: run <forward> if direction char k is 'd'
-\newcommand{\ifdir}[3]{\if\csname dir#1\endcsname d#2\else#3\fi}
+
 
 \newlistcommand{\ninejdgen}{%
 {\begin{tikzpicture}[baseline=0pt, inner sep=0.1em,font=\scriptsize]
@@ -352,7 +355,7 @@
   \foreach \d [count=\k from 0] in \direcs {%
     \global\expandafter\let\csname dir\k\endcsname\d}%
   % edges: fixed geometry per slot; \ifdir chooses forward vs reverse
-  \ifdir{0}{\normedge{n1}{n0}{0.5}{0.2}{$\argx{1}$}}{\normedge{n0}{n1}{0.5}{-0.2}{$\argx{1}$}}%
+  \ifdir{0}{\normedge{n0}{n1}{0.5}{-0.2}{$\argx{1}$}}{\normedge{n1}{n0}{0.5}{0.2}{$\argx{1}$}}%
   \ifdir{1}{\normedge[jmlinem=0.25]{n0}{n3}{0.25}{0.2}{$\argx{2}$}}{\normedge[jmlinem=0.75]{n3}{n0}{0.75}{-0.2}{$\argx{2}$}}%
   \ifdir{2}{\normedge{n0}{n5}{0.5}{0.2}{$\argx{3}$}}{\normedge{n5}{n0}{0.5}{-0.2}{$\argx{3}$}}%
   \ifdir{3}{\normedge{n2}{n1}{0.5}{0.2}{$\argx{4}$}}{\normedge{n1}{n2}{0.5}{-0.2}{$\argx{4}$}}%
@@ -533,7 +536,6 @@
 \pgfmathsetmacro{\HEO}{0}
 \pgfmathsetmacro{\HET}{-0.6}
 \pgfmathsetmacro{\Sz}{0.7}
-
 \begin{tikzpicture}[baseline=0pt,inner sep=0.13em,font=\scriptsize]
 \if n#2 % not a metric tensor
 \if o#1
