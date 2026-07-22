@@ -1,0 +1,17 @@
+\documentclass{article}
+\usepackage{splitletter}   % provides \makeclist, \lettersclist, \foreachletter
+
+\begin{document}
+
+\makeclist{dummy}%
+\verb|\lettersclist| now expands to: \texttt{\lettersclist}
+
+\medskip
+\noindent Iterating it with \verb|\foreach|:\quad
+\foreach \x in \lettersclist {(\x)}
+
+\medskip
+\noindent Or in one shot with \verb|\foreachletter|:\quad
+\foreachletter{\x}{dummy}{(\x)}
+
+\end{document}

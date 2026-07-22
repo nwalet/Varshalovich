@@ -1,0 +1,61 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{splitletter}[2026/07/20 v1.0 Split a word into a comma list for \string\foreach]
+
+% Turn the characters of a word into a comma-separated list, so \foreach
+% can iterate over them.  \makeclist{dummy} defines \lettersclist as
+%     d,u,m,m,y
+% with separators *between* items only (no leading/trailing comma -- a
+% trailing comma would make \foreach run one extra, empty pass).
+%
+% The point of the list is to drive \foreach, so pull it in (pgffor is the
+% lightweight piece -- no need for all of TikZ).
+\RequirePackage{pgffor}
+
+%% --------------------------------------------------------------------
+%% Internals (namespaced with @ so they cannot clash with user macros).
+%% --------------------------------------------------------------------
+
+% First-item flag: true until the first character has been emitted, so the
+% comma is inserted only *between* items.
+\newif\if@sl@first
+
+% \sl@build reads one token at a time up to the \relax sentinel, appending
+% each character to \sl@result.  \expandafter drops the \fi so the next
+% character is read rather than \fi.  \edef appends by expansion, which is
+% fine for plain letters; if the input may contain macros or active
+% characters you do not want expanded, build a token list instead.
+\def\sl@build#1{%
+  \ifx\relax#1%
+  \else
+    \if@sl@first
+      \edef\sl@result{#1}\@sl@firstfalse
+    \else
+      \edef\sl@result{\sl@result,#1}%
+    \fi
+    \expandafter\sl@build
+  \fi}
+
+%% --------------------------------------------------------------------
+%% Public interface.
+%% --------------------------------------------------------------------
+
+% \makeclist[<target cs>]{<chars>}
+%   Split <chars> into a comma-separated list and store it in <target cs>
+%   (default \lettersclist).  Example:
+%       \makeclist{dummy}      -> \lettersclist  expands to  d,u,m,m,y
+%       \makeclist[\word]{abc} -> \word          expands to  a,b,c
+\newcommand{\makeclist}[2][\lettersclist]{%
+  \@sl@firsttrue
+  \def\sl@result{}%
+  \sl@build#2\relax
+  \let#1\sl@result}
+
+% \foreachletter{<loop cs>}{<chars>}{<body>}
+%   Convenience one-shot: split <chars> and iterate them with \foreach,
+%   binding each character to <loop cs> inside <body>.  Example:
+%       \foreachletter{\x}{dummy}{(\x)}   ->   (d)(u)(m)(m)(y)
+\newcommand{\foreachletter}[3]{%
+  \makeclist[\sl@iterlist]{#2}%
+  \foreach #1 in \sl@iterlist {#3}}
+
+\endinput
