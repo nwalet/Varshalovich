@@ -1866,22 +1866,44 @@ Rules for the Transformation of Diagrams}
 \small
 \setlength{\tabcolsep}{4pt}
 \renewcommand{\arraystretch}{1.5}
-\begin{tabular}{@{}p{0.46\textwidth}|c@{}}
+\begin{tabular}{@{}p{0.46\textwidth}|p{0.5\textwidth}@{}}
 \hline
-\multicolumn{1}{c|}{Analytical Expression} & Graphical Representation \\
+\multicolumn{1}{c|}{Analytical Expression} & \multicolumn{1}{c}{Graphical Representation} \\
 \hline
 Invariant integration over directions\par
 \(
-\int d \Omega\braOket{\Omega}{\mathfrak{M}}{\Omega}=\sum_{J M}\braOket{J M}{\mathfrak{M}}{J M}
-\)par
+\int d\Omega\braOket{\Omega}{\mathfrak{M}}{\Omega}=\sum_{JM}\braOket{JM}{\mathfrak{M}}{JM}
+\)\par
 where\par
-$\braOket{J M}{\mathfrak{M}}{J^{\prime} M^{\prime}} \equiv \iint\braket{J M}{\mathbb{Q}} d Q\braOket{Q}{\mathfrak{M}}{Q^{\prime}} d Q^{\prime}\braket{Q}{J^{\prime} M^{\prime}}$.\par
+\(\braOket{JM}{\mathfrak{M}}{J^{\prime}M^{\prime}}\equiv\iint\braket{JM}{\Omega}\,d\Omega\braOket{\Omega}{\mathfrak{M}}{\Omega^{\prime}}\,d\Omega^{\prime}\braket{\Omega^{\prime}}{J^{\prime}M^{\prime}}\).\par
 Completeness Condition\par
 \(
-\int|\Omega\rangle d \Omega\braOket{\Omega}{=\sum_{J M}}{J M}\langle J M|=1
-\) &
-\\
-Replacing dashed $\Omega$-line by thick solid $j$-line\\
+\int|\Omega\rangle\,d\Omega\,\langle\Omega|=\sum_{JM}|JM\rangle\langle JM|=1
+\)
+&
+\centering Replacing dashed $\Omega$-line by thick solid $j$-line\par\medskip
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
+\node[opbox,minimum width=2cm,minimum height=0.6cm](M){$\mathfrak{M}$};
+\coordinate(la)at([xshift=-8mm]M.north);\coordinate(lb)at([xshift=-2.5mm]M.north);
+\coordinate(lp)at([xshift=-5.25mm,yshift=6.5mm]M.north);
+\coordinate(ra)at([xshift=2.5mm]M.north);\coordinate(rb)at([xshift=8mm]M.north);
+\coordinate(rp)at([xshift=5.25mm,yshift=6.5mm]M.north);
+\draw(la)--(lp)--(lb);\draw(ra)--(rp)--(rb);
+\node[dotnode]at(lp){};\node[dotnode]at(rp){};
+\draw[omlinem](rp)--(lp)node[midway,above]{$\Omega$};
+\end{tikzpicture}\;$=$\;%
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
+\node[opbox,minimum width=2cm,minimum height=0.6cm](M){$\mathfrak{M}$};
+\coordinate(la)at([xshift=-8mm]M.north);\coordinate(lb)at([xshift=-2.5mm]M.north);
+\coordinate(lp)at([xshift=-5.25mm,yshift=6.5mm]M.north);
+\coordinate(ra)at([xshift=2.5mm]M.north);\coordinate(rb)at([xshift=8mm]M.north);
+\coordinate(rp)at([xshift=5.25mm,yshift=6.5mm]M.north);
+\draw(la)--(lp)--(lb);\draw(ra)--(rp)--(rb);
+\node[dotnode]at(lp){};\node[dotnode]at(rp){};
+\draw[jmlinem](rp)--(lp)node[midway,above]{$J$};
+\end{tikzpicture}
+\tabularnewline
+\hline
 \end{tabular}
 \end{center}
 \end{table}
