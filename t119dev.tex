@@ -2,92 +2,108 @@
 \usepackage{diagrams}
 \usepackage{amsfonts,amsmath}
 \begin{document}
-% Table 11.9, cutting with n=5 lines: (J12, J45) chain tree.
+% Table 11.10 (3jm Symbols) diagrams.
+
+% 1. Reversal of cyclic order: [+ tree j1,j3,j2] = [- tree j3,j1,j2]
 \[
-\begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
-  \node[opbox,minimum width=0.55cm,minimum height=2.6cm](M) at (0,0){\normalsize$\mathfrak{M}$};
-  \node[opbox,minimum width=0.55cm,minimum height=2.6cm](N) at (2.2,0){\normalsize$\mathfrak{N}$};
-  \foreach \y/\lab in {10/j_1,5/j_2,0/j_3,-5/j_4,-10/j_5}{
-    \draw[jmlinem]([yshift=\y mm]M.east)--([yshift=\y mm]N.west)node[midway,above]{$\lab$};}
+\begin{tikzpicture}[baseline=-2pt,inner sep=1.5pt,font=\scriptsize]
+  \node[dotnode,label={90:\plusmark}](O)at(0,0){};
+  \draw[jmarrown](O)--(135:1.0);\node at(135:1.0)[above left=-2pt]{$j_1m_1$};
+  \draw[jmarrown](O)--(45:1.0);\node at(45:1.0)[above right=-2pt]{$j_3m_3$};
+  \draw[jmarrown](O)--(0,-0.9);\node at(0,-0.9)[below]{$j_2m_2$};
 \end{tikzpicture}
 \;=\;
-\begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
-  \node[opbox,minimum width=0.55cm,minimum height=2.6cm](M) at (0,0){\normalsize$\mathfrak{M}$};
-  \coordinate(T)at(1.05,0.75);\coordinate(C)at(1.05,0);\coordinate(B)at(1.05,-0.75);
-  \draw[jmlinem]([yshift=10mm]M.east)--(T)node[pos=0.4,above]{$j_1$};
-  \draw[jmlinem]([yshift=5mm]M.east)--(T)node[pos=0.4,below]{$j_2$};
-  \draw[jmlinem](M.east)--(C)node[pos=0.4,above]{$j_3$};
-  \draw[jmlinem]([yshift=-5mm]M.east)--(B)node[pos=0.4,above]{$j_4$};
-  \draw[jmlinem]([yshift=-10mm]M.east)--(B)node[pos=0.4,below]{$j_5$};
-  \draw[jmlinemu](T)--(C)node[midway,right]{$J_{12}$};
-  \draw[jmlinemu](C)--(B)node[midway,right]{$J_{45}$};
-  \node[dotnode,label={right:\plusmark}]at(T){};
-  \node[dotnode,label={right:\plusmark}]at(C){};
-  \node[dotnode,label={right:\plusmark}]at(B){};
-\end{tikzpicture}
-\;
-\begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
-  \node[opbox,minimum width=0.55cm,minimum height=2.6cm](N) at (0,0){\normalsize$\mathfrak{N}$};
-  \coordinate(T)at(-1.05,0.75);\coordinate(C)at(-1.05,0);\coordinate(B)at(-1.05,-0.75);
-  \draw[jmlinem](T)--([yshift=10mm]N.west)node[pos=0.6,above]{$j_1$};
-  \draw[jmlinem](T)--([yshift=5mm]N.west)node[pos=0.6,below]{$j_2$};
-  \draw[jmlinem](C)--(N.west)node[pos=0.6,above]{$j_3$};
-  \draw[jmlinem](B)--([yshift=-5mm]N.west)node[pos=0.6,above]{$j_4$};
-  \draw[jmlinem](B)--([yshift=-10mm]N.west)node[pos=0.6,below]{$j_5$};
-  \draw[jmlinemu](B)--(C)node[midway,left]{$J_{45}$};
-  \draw[jmlinemu](C)--(T)node[midway,left]{$J_{12}$};
-  \node[dotnode,label={left:\minusmark}]at(T){};
-  \node[dotnode,label={left:\minusmark}]at(C){};
-  \node[dotnode,label={left:\minusmark}]at(B){};
+\begin{tikzpicture}[baseline=-2pt,inner sep=1.5pt,font=\scriptsize]
+  \node[dotnode,label={90:\minusmark}](O)at(0,0){};
+  \draw[jmarrown](O)--(135:1.0);\node at(135:1.0)[above left=-2pt]{$j_3m_3$};
+  \draw[jmarrown](O)--(45:1.0);\node at(45:1.0)[above right=-2pt]{$j_1m_1$};
+  \draw[jmarrown](O)--(0,-0.9);\node at(0,-0.9)[below]{$j_2m_2$};
 \end{tikzpicture}
 \]
 
-% Table 11.9, cutting with n=6 lines: (J12, J34, J56) star tree.
-% NB: the j3/j4 fan nodes carry NO sign in the book scan.
+% 2. Hermitian conjugation, row A: bra on j1 = (-1)^{2j1} bras on j3 and j2
 \[
-\begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
-  \node[opbox,minimum width=0.55cm,minimum height=3.0cm](M) at (0,0){\normalsize$\mathfrak{M}$};
-  \node[opbox,minimum width=0.55cm,minimum height=3.0cm](N) at (2.2,0){\normalsize$\mathfrak{N}$};
-  \foreach \y/\lab in {12.5/j_1,7.5/j_2,2.5/j_3,-2.5/j_4,-7.5/j_5,-12.5/j_6}{
-    \draw[jmlinem]([yshift=\y mm]M.east)--([yshift=\y mm]N.west)node[midway,above]{$\lab$};}
+\begin{tikzpicture}[baseline=-2pt,inner sep=1.5pt,font=\scriptsize]
+  \node[dotnode,label={90:\plusmark}](O)at(0,0){};
+  \draw[bjmarrown](135:1.0)--(O);\node at(135:1.0)[above left=-2pt]{$j_1m_1$};
+  \draw[jmarrown](O)--(45:1.0);\node at(45:1.0)[above right=-2pt]{$j_3m_3$};
+  \draw[jmarrown](O)--(0,-0.9);\node at(0,-0.9)[below]{$j_2m_2$};
+\end{tikzpicture}
+\;=(-1)^{2j_1}\;
+\begin{tikzpicture}[baseline=-2pt,inner sep=1.5pt,font=\scriptsize]
+  \node[dotnode,label={90:\plusmark}](O)at(0,0){};
+  \draw[jmarrown](O)--(135:1.0);\node at(135:1.0)[above left=-2pt]{$j_1m_1$};
+  \draw[bjmarrown](45:1.0)--(O);\node at(45:1.0)[above right=-2pt]{$j_3m_3$};
+  \draw[bjmarrown](0,-0.9)--(O);\node at(0,-0.9)[below]{$j_2m_2$};
+\end{tikzpicture}
+\]
+
+% 3. Hermitian conjugation, row B: all-bra tree = all-ket tree
+\[
+\begin{tikzpicture}[baseline=-2pt,inner sep=1.5pt,font=\scriptsize]
+  \node[dotnode,label={90:\plusmark}](O)at(0,0){};
+  \draw[bjmarrown](135:1.0)--(O);\node at(135:1.0)[above left=-2pt]{$j_1m_1$};
+  \draw[bjmarrown](45:1.0)--(O);\node at(45:1.0)[above right=-2pt]{$j_3m_3$};
+  \draw[bjmarrown](0,-0.9)--(O);\node at(0,-0.9)[below]{$j_2m_2$};
 \end{tikzpicture}
 \;=\;
-\begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
-  \node[opbox,minimum width=0.55cm,minimum height=3.0cm](M) at (0,0){\normalsize$\mathfrak{M}$};
-  \coordinate(T)at(1.0,1.0);\coordinate(C)at(1.0,0);\coordinate(B)at(1.0,-1.0);
-  \coordinate(X)at(1.95,0);
-  \draw[jmlinem]([yshift=12.5mm]M.east)--(T)node[pos=0.4,above]{$j_1$};
-  \draw[jmlinem]([yshift=7.5mm]M.east)--(T)node[pos=0.4,below]{$j_2$};
-  \draw[jmlinem]([yshift=2.5mm]M.east)--(C)node[pos=0.4,above]{$j_3$};
-  \draw[jmlinem]([yshift=-2.5mm]M.east)--(C)node[pos=0.4,below]{$j_4$};
-  \draw[jmlinem]([yshift=-7.5mm]M.east)--(B)node[pos=0.4,above]{$j_5$};
-  \draw[jmlinem]([yshift=-12.5mm]M.east)--(B)node[pos=0.4,below]{$j_6$};
-  \draw[jmlinemu](T)--(X)node[pos=0.45,above right]{$J_{12}$};
-  \draw[jmlinemu](C)--(X)node[pos=0.45,above]{$J_{34}$};
-  \draw[jmlinemu](B)--(X)node[pos=0.45,below right]{$J_{56}$};
-  \node[dotnode,label={right:\plusmark}]at(T){};
-  \node[dotnode]at(C){};
-  \node[dotnode,label={right:\plusmark}]at(B){};
-  \node[dotnode,label={45:\plusmark}]at(X){};
+\begin{tikzpicture}[baseline=-2pt,inner sep=1.5pt,font=\scriptsize]
+  \node[dotnode,label={90:\plusmark}](O)at(0,0){};
+  \draw[jmarrown](O)--(135:1.0);\node at(135:1.0)[above left=-2pt]{$j_1m_1$};
+  \draw[jmarrown](O)--(45:1.0);\node at(45:1.0)[above right=-2pt]{$j_3m_3$};
+  \draw[jmarrown](O)--(0,-0.9);\node at(0,-0.9)[below]{$j_2m_2$};
+\end{tikzpicture}
+\]
+
+% 4. Orthonormality: [circle j2/j1 with external j3 bra-in, j3' ket-out]
+%    = [bra-line -o- ket-line] . [circle with diameter j2: {j1 j2 j3} delta]
+\[
+\begin{tikzpicture}[baseline=-2pt,inner sep=1.5pt,font=\scriptsize]
+  \node[dotnode,label={0:\plusmark}](L)at(0,0){};
+  \node[dotnode,label={180:\minusmark}](R)at(1.2,0){};
+  \draw[jmlinem](R)to[bend right=60]node[above]{$j_2$}(L);
+  \draw[jmlinem](R)to[bend left=60]node[below]{$j_1$}(L);
+  \draw[bjmarrown](-1.2,0)--(L);\node at(-1.1,0.18){$j_3m_3$};
+  \draw[jmarrown](R)--(2.4,0);\node at(2.3,0.18){$j'_3m'_3$};
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=-2pt,inner sep=1.5pt,font=\scriptsize]
+  \draw[bjmarrown](0,0)--(0.85,0);\node at(0.15,0.18){$j_3m_3$};
+  \node[circle,draw,thick,inner sep=2.2pt](c)at(1.0,0){};
+  \draw[jmarrown](c)--(2.0,0);\node at(1.85,0.18){$j'_3m'_3$};
 \end{tikzpicture}
 \;
-\begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
-  \node[opbox,minimum width=0.55cm,minimum height=3.0cm](N) at (0,0){\normalsize$\mathfrak{N}$};
-  \coordinate(T)at(-1.0,1.0);\coordinate(C)at(-1.0,0);\coordinate(B)at(-1.0,-1.0);
-  \coordinate(X)at(-1.95,0);
-  \draw[jmlinem](T)--([yshift=12.5mm]N.west)node[pos=0.6,above]{$j_1$};
-  \draw[jmlinem](T)--([yshift=7.5mm]N.west)node[pos=0.6,below]{$j_2$};
-  \draw[jmlinem](C)--([yshift=2.5mm]N.west)node[pos=0.6,above]{$j_3$};
-  \draw[jmlinem](C)--([yshift=-2.5mm]N.west)node[pos=0.6,below]{$j_4$};
-  \draw[jmlinem](B)--([yshift=-7.5mm]N.west)node[pos=0.6,above]{$j_5$};
-  \draw[jmlinem](B)--([yshift=-12.5mm]N.west)node[pos=0.6,below]{$j_6$};
-  \draw[jmlinemu](X)--(T)node[pos=0.55,above left]{$J_{12}$};
-  \draw[jmlinemu](X)--(C)node[pos=0.55,above]{$J_{34}$};
-  \draw[jmlinemu](X)--(B)node[pos=0.55,below left]{$J_{56}$};
-  \node[dotnode,label={left:\minusmark}]at(T){};
-  \node[dotnode]at(C){};
-  \node[dotnode,label={left:\minusmark}]at(B){};
-  \node[dotnode,label={135:\minusmark}]at(X){};
+\begin{tikzpicture}[baseline=-2pt,inner sep=1.5pt,font=\scriptsize]
+  \node[dotnode,label={180:\plusmark}](L)at(0,0){};
+  \node[dotnode,label={0:\minusmark}](R)at(1.3,0){};
+  \draw[jmlinem](R)to[bend right=60]node[above]{$j_3$}(L);
+  \draw[jmlinem](R)--(L)node[midway,above]{$j_2$};
+  \draw[jmlinem](R)to[bend left=60]node[below]{$j_1$}(L);
+\end{tikzpicture}
+\]
+
+% 5. Completeness: [+ .. j3 .. - with bra-ins left, ket-outs right]
+%    = two parallel delta lines (bra->ket)
+\[
+\begin{tikzpicture}[baseline=-2pt,inner sep=1.5pt,font=\scriptsize]
+  \node[dotnode,label={180:\plusmark}](P)at(0,0){};
+  \node[dotnode,label={0:\minusmark}](Q)at(1.6,0){};
+  \draw[jmlinem](Q)--(P)node[midway,above]{$j_3$};
+  \draw[bjmarrown](-0.8,0.6)--(P);\node at(-0.85,0.75){$j_1m_1$};
+  \draw[bjmarrown](-0.8,-0.6)--(P);\node at(-0.85,-0.75){$j_2m_2$};
+  \draw[jmarrown](Q)--(2.4,0.6);\node at(2.45,0.75){$j_1m'_1$};
+  \draw[jmarrown](Q)--(2.4,-0.6);\node at(2.45,-0.75){$j_2m'_2$};
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=-2pt,inner sep=1.5pt,font=\scriptsize]
+  \draw[postaction={decorate,decoration={markings,mark=at position 0.25 with
+      {\arrow{Stealth[length=2.2mm] Stealth[length=2.2mm]}}}},
+      -{Stealth[length=2.2mm]},thick](0,0.45)--(1.8,0.45);
+  \node at(0.15,0.63){$j_1m_1$};\node at(1.65,0.63){$j_1m'_1$};
+  \draw[postaction={decorate,decoration={markings,mark=at position 0.25 with
+      {\arrow{Stealth[length=2.2mm] Stealth[length=2.2mm]}}}},
+      -{Stealth[length=2.2mm]},thick](0,-0.45)--(1.8,-0.45);
+  \node at(0.15,-0.27){$j_2m_2$};\node at(1.65,-0.27){$j_2m'_2$};
 \end{tikzpicture}
 \]
 \end{document}

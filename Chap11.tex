@@ -2507,7 +2507,7 @@ $=$\;%
 \begin{table}[ptbh!]
 \begin{center}
 \captionsetup{justification=centering,labelformat=empty}
-\caption*{Table 11.19. \\$3jm $ symbols}
+\caption*{Table 11.10. \\$3jm $ symbols}
 \small
 \setlength{\tabcolsep}{4pt}
 \renewcommand{\arraystretch}{1.5}
@@ -2520,7 +2520,19 @@ $=$\;%
 \threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{m_{2}}{m_{3}}=(-1)^{j_{1}+j_{1}+j_{3}}\threej{j_{3}}{j_{2}}{j_{1}}{m_{3}}{m_{2}}{m_{1}}
 \)
 &
-\threejdiag{j_1,,j_3,,j_2,,+}\\
+\begin{tikzpicture}[baseline=-2pt,inner sep=1.5pt,font=\scriptsize]
+  \node[dotnode,label={90:\plusmark}](O)at(0,0){};
+  \draw[jmarrown](O)--(135:1.0);\node at(135:1.0)[above left=-2pt]{$j_1m_1$};
+  \draw[jmarrown](O)--(45:1.0);\node at(45:1.0)[above right=-2pt]{$j_3m_3$};
+  \draw[jmarrown](O)--(0,-0.9);\node at(0,-0.9)[below]{$j_2m_2$};
+\end{tikzpicture}
+\;$=$\;%
+\begin{tikzpicture}[baseline=-2pt,inner sep=1.5pt,font=\scriptsize]
+  \node[dotnode,label={90:\minusmark}](O)at(0,0){};
+  \draw[jmarrown](O)--(135:1.0);\node at(135:1.0)[above left=-2pt]{$j_3m_3$};
+  \draw[jmarrown](O)--(45:1.0);\node at(45:1.0)[above right=-2pt]{$j_1m_1$};
+  \draw[jmarrown](O)--(0,-0.9);\node at(0,-0.9)[below]{$j_2m_2$};
+\end{tikzpicture}\\
 \multicolumn{2}{c}{Hermitian Conjugation}\\
 \(
 \left.\begin{array}{c}
@@ -2533,6 +2545,19 @@ j_{3} \\
 m_{3}
 \end{array} m_{3}^{\prime}\right.
 \end{array}\right)=(-1)^{j_{2}+m_{2}+j_{3}+m_{3}}\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{-m_{2}}{-m_{3}}\) &
+\begin{tikzpicture}[baseline=-2pt,inner sep=1.5pt,font=\scriptsize]
+  \node[dotnode,label={90:\plusmark}](O)at(0,0){};
+  \draw[bjmarrown](135:1.0)--(O);\node at(135:1.0)[above left=-2pt]{$j_1m_1$};
+  \draw[jmarrown](O)--(45:1.0);\node at(45:1.0)[above right=-2pt]{$j_3m_3$};
+  \draw[jmarrown](O)--(0,-0.9);\node at(0,-0.9)[below]{$j_2m_2$};
+\end{tikzpicture}
+\;$=(-1)^{2j_1}$\;%
+\begin{tikzpicture}[baseline=-2pt,inner sep=1.5pt,font=\scriptsize]
+  \node[dotnode,label={90:\plusmark}](O)at(0,0){};
+  \draw[jmarrown](O)--(135:1.0);\node at(135:1.0)[above left=-2pt]{$j_1m_1$};
+  \draw[bjmarrown](45:1.0)--(O);\node at(45:1.0)[above right=-2pt]{$j_3m_3$};
+  \draw[bjmarrown](0,-0.9)--(O);\node at(0,-0.9)[below]{$j_2m_2$};
+\end{tikzpicture}
 \\
 \(\sum_{m_{1}^{\prime} m_{2}^{\prime} m_{3}^{\prime}}
 \left(\begin{array}{c}
@@ -2547,7 +2572,19 @@ m_{2}
 j_{1} & &
 \end{array}\right)
 \) &
-\threejdiag{j_1,,j_3,,j_2,,+}\quad$=$\quad\threejdiag{j_1,,j_3,,j_2,,-}
+\begin{tikzpicture}[baseline=-2pt,inner sep=1.5pt,font=\scriptsize]
+  \node[dotnode,label={90:\plusmark}](O)at(0,0){};
+  \draw[bjmarrown](135:1.0)--(O);\node at(135:1.0)[above left=-2pt]{$j_1m_1$};
+  \draw[bjmarrown](45:1.0)--(O);\node at(45:1.0)[above right=-2pt]{$j_3m_3$};
+  \draw[bjmarrown](0,-0.9)--(O);\node at(0,-0.9)[below]{$j_2m_2$};
+\end{tikzpicture}
+\;$=$\;%
+\begin{tikzpicture}[baseline=-2pt,inner sep=1.5pt,font=\scriptsize]
+  \node[dotnode,label={90:\plusmark}](O)at(0,0){};
+  \draw[jmarrown](O)--(135:1.0);\node at(135:1.0)[above left=-2pt]{$j_1m_1$};
+  \draw[jmarrown](O)--(45:1.0);\node at(45:1.0)[above right=-2pt]{$j_3m_3$};
+  \draw[jmarrown](O)--(0,-0.9);\node at(0,-0.9)[below]{$j_2m_2$};
+\end{tikzpicture}
 \end{tabular}\end{center}\end{table}
 
 \begin{table}[ptbh!]
@@ -2557,7 +2594,7 @@ j_{1} & &
 \small
 \setlength{\tabcolsep}{4pt}
 \renewcommand{\arraystretch}{1.5}
-\begin{tabular}{@{}p{0.46\textwidth}|c@{}}
+\begin{tabular}{@{}p{0.6\textwidth}|c@{}}
 \hline
 \multicolumn{1}{c|}{Analytical Expression} & Graphical Representation \\
 \hline
@@ -2569,7 +2606,28 @@ j_{1} & &
 \end{gathered}
 \)
 &
-\begin{tikzpicture}[baseline=0pt]\coordinate (L) at (0,0.9); \coordinate (R) at (0,-0.9); \node[dotnode,label={left:$+$}] at (L) {}; \node[dotnode,label={left:$-$}] at (R) {}; \draw[jmline] (L) to[bend left=50] node[midway,right]{$j_1$} (R); \draw[jmline] (L) to[bend right=50] node[midway,left]{$j_2$} (R); \draw[jmline] (L) -- (1.6,0.9) node[right]{$j_3$}; \draw[jmline] (R) -- (1.6,-0.9) node[right]{$j_3^{\prime}$};\end{tikzpicture}
+\begin{tikzpicture}[baseline=-2pt,inner sep=1.5pt,font=\scriptsize]
+  \node[dotnode,label={0:\plusmark}](L)at(0,0){};
+  \node[dotnode,label={180:\minusmark}](R)at(1.2,0){};
+  \draw[jmlinem](R)to[bend right=60]node[above]{$j_2$}(L);
+  \draw[jmlinem](R)to[bend left=60]node[below]{$j_1$}(L);
+  \draw[bjmarrown](-1.2,0)--(L);\node at(-1.1,0.18){$j_3m_3$};
+  \draw[jmarrown](R)--(2.4,0);\node at(2.3,0.18){$j'_3m'_3$};
+\end{tikzpicture}
+\;$=$\;%
+\begin{tikzpicture}[baseline=-2pt,inner sep=1.5pt,font=\scriptsize]
+  \draw[bjmarrown](0,0)--(0.85,0);\node at(0.15,0.18){$j_3m_3$};
+  \node[circle,draw,thick,inner sep=2.2pt](c)at(1.0,0){};
+  \draw[jmarrown](c)--(2.0,0);\node at(1.85,0.18){$j'_3m'_3$};
+\end{tikzpicture}
+\;%
+\begin{tikzpicture}[baseline=-2pt,inner sep=1.5pt,font=\scriptsize]
+  \node[dotnode,label={180:\plusmark}](L)at(0,0){};
+  \node[dotnode,label={0:\minusmark}](R)at(1.3,0){};
+  \draw[jmlinem](R)to[bend right=60]node[above]{$j_3$}(L);
+  \draw[jmlinem](R)--(L)node[midway,above]{$j_2$};
+  \draw[jmlinem](R)to[bend left=60]node[below]{$j_1$}(L);
+\end{tikzpicture}
 \\
 \multicolumn{2}{c}{Completeness}\\
 \(
@@ -2580,7 +2638,26 @@ j_{1} & &
 \end{gathered}
 \)
 &
-\begin{tikzpicture}[baseline=0pt]\coordinate (L) at (0,0.9); \coordinate (R) at (0,-0.9); \node[dotnode,label={left:$+$}] at (L) {}; \node[dotnode,label={left:$-$}] at (R) {}; \draw[jmline] (L) to[bend left=50] node[midway,right]{$j_3$} (R); \draw[jmline] (L) -- (1.6,0.9) node[right]{$j_1$}; \draw[jmline] (L) -- (1.6,0.2) node[right]{$j_2$}; \draw[jmline] (R) -- (1.6,-0.2) node[right]{$j_1^{\prime}$}; \draw[jmline] (R) -- (1.6,-0.9) node[right]{$j_2^{\prime}$};\end{tikzpicture}
+\begin{tikzpicture}[baseline=-2pt,inner sep=1.5pt,font=\scriptsize]
+  \node[dotnode,label={180:\plusmark}](P)at(0,0){};
+  \node[dotnode,label={0:\minusmark}](Q)at(1.6,0){};
+  \draw[jmlinem](Q)--(P)node[midway,above]{$j_3$};
+  \draw[bjmarrown](-0.8,0.6)--(P);\node at(-0.85,0.75){$j_1m_1$};
+  \draw[bjmarrown](-0.8,-0.6)--(P);\node at(-0.85,-0.75){$j_2m_2$};
+  \draw[jmarrown](Q)--(2.4,0.6);\node at(2.45,0.75){$j_1m'_1$};
+  \draw[jmarrown](Q)--(2.4,-0.6);\node at(2.45,-0.75){$j_2m'_2$};
+\end{tikzpicture}
+\;$=$\;%
+\begin{tikzpicture}[baseline=-2pt,inner sep=1.5pt,font=\scriptsize]
+  \draw[postaction={decorate,decoration={markings,mark=at position 0.25 with
+      {\arrow{Stealth[length=2.2mm] Stealth[length=2.2mm]}}}},
+      -{Stealth[length=2.2mm]},thick](0,0.45)--(1.8,0.45);
+  \node at(0.15,0.63){$j_1m_1$};\node at(1.65,0.63){$j_1m'_1$};
+  \draw[postaction={decorate,decoration={markings,mark=at position 0.25 with
+      {\arrow{Stealth[length=2.2mm] Stealth[length=2.2mm]}}}},
+      -{Stealth[length=2.2mm]},thick](0,-0.45)--(1.8,-0.45);
+  \node at(0.15,-0.27){$j_2m_2$};\node at(1.65,-0.27){$j_2m'_2$};
+\end{tikzpicture}
 \end{tabular}
 \end{center}
 \end{table}
@@ -2592,7 +2669,7 @@ j_{1} & &
 \small
 \setlength{\tabcolsep}{5pt}
 \renewcommand{\arraystretch}{1.3}
-\begin{tabular}{@{}p{0.52\textwidth}|c@{}}
+\begin{tabular}{@{}p{0.56\textwidth}|c@{}}
 \hline
 \multicolumn{1}{c|}{Analytical Expression} & Graphical Representation \\
 \hline
