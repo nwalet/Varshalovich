@@ -2070,22 +2070,104 @@ Transformation of product of invariant sums into invariant sum of products (at l
 \(
 \begin{aligned}
 &\left(\sum_{m}\braOket{j m}{\mathfrak{M}}{j m}\right)\left(\sum_{m^{\prime}}\braOket{j m^{\prime}}{\Re}{j m^{\prime}}\right) \\
-&=(2 j+1) \sum_{m m^{\prime}}\braOket{j m}{\Re}{j m^{\prime}}\braOket{j m^{\prime}}{\Re}{j m} \end{aligned} \)&\\
+&=(2 j+1) \sum_{m m^{\prime}}\braOket{j m}{\Re}{j m^{\prime}}\braOket{j m^{\prime}}{\Re}{j m} \end{aligned} \)&
+\begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
+  \node[opbox,minimum width=0.7cm,minimum height=0.8cm](M) at (0,0){$\mathfrak{M}$};
+  \node[opbox,minimum width=0.7cm,minimum height=0.8cm](N) at (2.4,0){$\mathfrak{N}$};
+  \coordinate(ma)at($(M.south east)!0.75!(M.north east)$);
+  \coordinate(mb)at($(M.south east)!0.25!(M.north east)$);
+  \draw[jmlinem](ma)to[out=0,in=0,looseness=2.5](mb);
+  \node at($(M.east)+(0.55,0)$){$j$};
+  \coordinate(na)at($(N.south west)!0.75!(N.north west)$);
+  \coordinate(nb)at($(N.south west)!0.25!(N.north west)$);
+  \draw[jmlinem](nb)to[out=180,in=180,looseness=2.5](na);
+  \node at($(N.west)+(-0.55,0)$){$j$};
+\end{tikzpicture}
+\;$=$\;%
+\begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
+  \node[opbox,minimum width=0.7cm,minimum height=0.8cm](M) at (0,0){$\mathfrak{M}$};
+  \node[opbox,minimum width=0.7cm,minimum height=0.8cm](N) at (2.2,0){$\mathfrak{N}$};
+  \draw[jmlinem]([yshift=2.5mm]M.east)--([yshift=2.5mm]N.west)node[midway,above]{$j$};
+  \draw[jmlinem]([yshift=-2.5mm]N.west)--([yshift=-2.5mm]M.east)node[midway,below]{$j$};
+  % free (2j+1) loop below (unlabeled \jloop-style circle)
+  \draw[decoration={markings,mark=at position 0.25 with {\arrow{Stealth[length=2.2mm]}}},
+        postaction={decorate},thick]
+       ($0.5*(M.east)+0.5*(N.west)+(0,-1.1)$)circle(0.25);
+\end{tikzpicture}\\
 \(\begin{aligned}
 & {\left[\sum_{m_{1} m_{2} m_{3}}\braOket{}{\mathfrak{R}}{f_{1} m_{1} f_{2} m_{3} f_{3} m_{3}}\threej{f_{1}}{f_{2}}{f_{3}}{m_{1}}{m_{2}}{m_{3}}\right] } \\
 & \times {\left[\sum_{m_{1} m_{2} m_{3}}\threej{f_{1}}{f_{2}}{f_{3}}{m_{1}}{m_{2}}{m_{3}}\braOket{j_{1} m_{1} j_{2} m_{2} f_{2} m_{3}}{\Re}{}\right] } \\
 &= \sum_{m_{2} m_{2} m_{3}}\braOket{}{\mathfrak{R}}{f_{1} m_{1} f_{2} m_{2} f_{3} m_{3}}\braOket{j_{1} m_{1} j_{2} m_{2} j_{2} m_{3}}{\Re}{} .
 \end{aligned}
 \)&
-\opline{\mathfrak{M}}{\mathfrak{N}}{j}\\
+\begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
+  \node[opbox,minimum width=0.55cm,minimum height=1.8cm](M) at (0,0){$\mathfrak{M}$};
+  \node[opbox,minimum width=0.55cm,minimum height=1.8cm](N) at (3.4,0){$\mathfrak{N}$};
+  \coordinate(mA)at($(M.south east)!0.83!(M.north east)$);
+  \coordinate(mB)at($(M.south east)!0.5!(M.north east)$);
+  \coordinate(mC)at($(M.south east)!0.17!(M.north east)$);
+  \coordinate(nA)at($(N.south west)!0.83!(N.north west)$);
+  \coordinate(nB)at($(N.south west)!0.5!(N.north west)$);
+  \coordinate(nC)at($(N.south west)!0.17!(N.north west)$);
+  \node[dotnode,label={above:\plusmark}](pM)at($(M.east)+(1.0,0)$){};
+  \node[dotnode,label={above:\minusmark}](pN)at($(N.west)+(-1.0,0)$){};
+  \draw[jmlinem](mA)--(pM)node[pos=0.4,above]{$j_1$};
+  \draw[jmlinem](mB)--(pM)node[pos=0.4,above]{$j_2$};
+  \draw[jmlinem](mC)--(pM)node[pos=0.4,below]{$j_3$};
+  \draw[jmlinem](pN)--(nA)node[pos=0.6,above]{$j_1$};
+  \draw[jmlinem](pN)--(nB)node[pos=0.6,above]{$j_2$};
+  \draw[jmlinem](pN)--(nC)node[pos=0.6,below]{$j_3$};
+  % stubs: N keeps other external lines
+  \foreach \i in {-1,...,1}{\draw([yshift=\i*5mm]N.east)--([yshift=\i*5mm,xshift=1.5mm]N.east);}
+\end{tikzpicture}
+\newline
+$=$\;%
+\begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
+  \node[opbox,minimum width=0.55cm,minimum height=1.8cm](M) at (0,0){$\mathfrak{M}$};
+  \node[opbox,minimum width=0.55cm,minimum height=1.8cm](N) at (2.2,0){$\mathfrak{N}$};
+  \coordinate(mA)at($(M.south east)!0.83!(M.north east)$);
+  \coordinate(mB)at($(M.south east)!0.5!(M.north east)$);
+  \coordinate(mC)at($(M.south east)!0.17!(M.north east)$);
+  \coordinate(nA)at($(N.south west)!0.83!(N.north west)$);
+  \coordinate(nB)at($(N.south west)!0.5!(N.north west)$);
+  \coordinate(nC)at($(N.south west)!0.17!(N.north west)$);
+  \draw[jmlinem](mA)--(nA)node[midway,above]{$j_1$};
+  \draw[jmlinem](mB)--(nB)node[midway,above]{$j_2$};
+  \draw[jmlinem](mC)--(nC)node[midway,above]{$j_3$};
+  % stubs: N keeps other external lines
+  \foreach \i in {-1,...,1}{\draw([yshift=\i*5mm]N.east)--([yshift=\i*5mm,xshift=1.5mm]N.east);}
+\end{tikzpicture}\\
 Expression reduction for $J=0$&Elimination of a $J=0$ line in a diagram\\
 \(
 \begin{gathered}
 \sum_{m^{\prime}}\braOket{j m}{\mathfrak{M}}{j^{\prime} m^{\prime}}(-1)^{j^{\prime}-m^{\prime}}\threej{j^{\prime}}{0}{j}{-m^{\prime}}{0}{m} \\
-=\frac{8, j^{\prime}}{\sqrt{2 j+1}} \sum_{m}\braOket{j m}{\mathfrak{R}}{i m}
+=\frac{\delta_{j j^{\prime}}}{\sqrt{2 j+1}} \sum_{m}\braOket{j m}{\mathfrak{M}}{j m}
 \end{gathered}
 \)&
-\threejdiag{j_1,,0,,j_2,,+}\quad$\to$\quad\begin{tikzpicture}[baseline=0pt]\draw[jmline] (0,0) node[left]{$j_1$} -- (1.4,0) node[right]{$j_2$};\end{tikzpicture}
+\begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
+  \node[opbox,minimum width=0.8cm,minimum height=0.8cm](M) at (0,0){$\mathfrak{M}$};
+  \coordinate(ma)at($(M.south east)!0.75!(M.north east)$);
+  \coordinate(mb)at($(M.south east)!0.25!(M.north east)$);
+  \node[dotnode,label={above:\plusmark}](p)at($(M.east)+(0.8,0)$){};
+  \draw[jmlinem](ma)--(p)node[pos=0.4,above]{$j$};
+  \draw[jmlinem](mb)--(p)node[pos=0.4,below]{$j'$};
+  \draw[jmline](p)--+(1.2,0)node[midway,above]{$J=0$};
+\end{tikzpicture}
+\;$=$\;%
+\begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
+  \node[opbox,minimum width=0.8cm,minimum height=0.8cm](M) at (0,0){$\mathfrak{M}$};
+  \coordinate(ma)at($(M.south east)!0.75!(M.north east)$);
+  \coordinate(mb)at($(M.south east)!0.25!(M.north east)$);
+  \draw[jmlinem](ma)to[out=0,in=0,looseness=2.5](mb);
+  \node at($(M.east)+(0.55,0)$){$j$};
+  % triangle
+  \node[dotnode,label={above:\plusmark}](ta)at(1.35,0.45){};
+  \node[dotnode,label={below:\plusmark}](tb)at(1.35,-0.45){};
+  \node[dotnode,label={right:\minusmark}](tr)at(2.2,0){};
+  \draw[jmlinem](ta)--(tb);
+  \draw[jmlinem](ta)--(tr)node[midway,above right]{$J$};
+  \draw[jmlinem](tr)--(tb)node[midway,below right]{$j'$};
+\end{tikzpicture}
 \end{tabular}
 \end{center}
 \end{table}

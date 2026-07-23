@@ -2,88 +2,35 @@
 \usepackage{diagrams}
 \usepackage{amsfonts,amsmath}
 \begin{document}
-% Table 11.9, "Elimination of thick solid j-line" -- third diagram, LEFT part.
-% Three boxes M (upper-left), L (upper-right), N (bottom), each rotated so its
-% inner long edge faces the centre.  Three bowties (one per box pair) couple
-% the shared j-lines through +/- nodes and an ultra-thick J-line.
+% Table 11.9, "Elimination of a J=0 line in a diagram".
+% LHS: M-box with j (top) and j' (bottom) converging on a + node, from which
+% an arrowed line labelled J=0 leaves to the right.
+% RHS: M-box with a closed j-loop, times a triangle with +,+ vertices on the
+% left, - vertex on the right, top edge J, bottom edge j'.
 \[
 \begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
-  
-  \node[opbox,minimum width=0.5cm,minimum height=2.4cm,rotate=-30](M) at (150:1.7)
-       {\rotatebox{30}{\normalsize$\mathfrak{M}$}};
-  \node[opbox,minimum width=0.5cm,minimum height=2.4cm,rotate=30](L) at (30:1.7)
-       {\rotatebox{-30}{\normalsize$\mathfrak{L}$}};
-  \node[opbox,minimum width=2.4cm,minimum height=0.5cm](N) at (270:1.7){\normalsize$\mathfrak{N}$};
-  % ---- connection points along each box's inner edge (reused for RHS too) ----
-  \coordinate(mA)at($(M.south east)!0.89!(M.north east)$); % j1 
-  \coordinate(mB)at($(M.south east)!0.63!(M.north east)$); % j2
-  \coordinate(mC)at($(M.south east)!0.37!(M.north east)$); % j3 
-  \coordinate(mD)at($(M.south east)!0.11!(M.north east)$); % j4
-  \coordinate(lA)at($(L.south west)!0.89!(L.north west)$); % j1
-  \coordinate(lB)at($(L.south west)!0.63!(L.north west)$); % j2
-  \coordinate(lC)at($(L.south west)!0.37!(L.north west)$); % j6
-  \coordinate(lD)at($(L.south west)!0.11!(L.north west)$); % j5
-  \coordinate(nA)at($(N.north east)!0.89!(N.north west)$);   % j3
-  \coordinate(nB)at($(N.north east)!0.63!(N.north west)$);   % j4
-  \coordinate(nC)at($(N.north east)!0.37!(N.north west)$);   % j6
-  \coordinate(nD)at($(N.north east)!0.11!(N.north west)$);   % j5
-  % ---- bowtie nodes ----
-  \node[dotnode, label={60:\plusmark}](pMl)at($0.5*(mA)+0.5*(mB)+(-30:0.8)$) {};
-  \node[dotnode,label={0:\minusmark}] (pMr)at($0.5*(mC)+0.5*(mD)+(-30:0.8)$) {};
-  \node[dotnode,label={180:\minusmark}] (pLl)at($0.5*(lA)+0.5*(lB)+(-150:0.8)$) {};
-  \node[dotnode,label={-60:\plusmark}] (pLr)at($0.5*(lC)+0.5*(lD)+(-150:0.8)$){};
-  \node[dotnode,label={180:\plusmark}] (pNl)at($0.5*(nA)+0.5*(nB)+(90:0.8)$){};
-  \node[dotnode,label={0:\minusmark}](pNr)at($0.5*(nC)+0.5*(nD)+(90:0.8)$){};
-  % ---- j-lines into the nodes ----
-  \draw[jmlinem](pMl)--(mA)node[pos=0.5, right]{$j_1$};
-  \draw[jmlinem](pMl)--(mB)node[pos=0.5,below]{$j_2$};
-  \draw[jmlinem](mC)--(pMr)node[pos=0.5,right]{$j_4$};
-  \draw[jmlinem](mD)--(pMr)node[pos=0.5,below]{$j_3$};
-%
-  \draw[jmlinem](lA)--(pLl)node[pos=0.5,left]{$j_1$};
-  \draw[jmlinem](lB)--(pLl)node[pos=0.5,below]{$j_2$};
-  \draw[jmlinem](pLr)--(lC)node[pos=0.5,left]{$j_6$};
-  \draw[jmlinem](pLr)--(lD)node[pos=0.5,below]{$j_5$};
-%
-  \draw[jmlinem](nA)--(pNl)node[pos=0.5,left]{$j_3$};
-  \draw[jmlinem](nB)--(pNl)node[pos=0.5,right]{$j_4$};
-  \draw[jmlinem](nC)--(pNr)node[pos=0.5,left]{$j_6$};
-  \draw[jmlinem](nD)--(pNr)node[pos=0.5,right]{$j_5$};
-  % ---- ultra-thick J-lines of the three bowties ----
-  \draw[jmlinemu](pNl)--(pNr)node[midway,above]{$J$};
-  \draw[jmlinemu](pMl)--(pMr)node[midway,left]{$J$};
-  \draw[jmlinemu](pLr)--(pLl)node[midway,right]{$J$};
+  \node[opbox,minimum width=0.8cm,minimum height=0.8cm](M) at (0,0){\normalsize$\mathfrak{M}$};
+  \coordinate(ma)at($(M.south east)!0.75!(M.north east)$);
+  \coordinate(mb)at($(M.south east)!0.25!(M.north east)$);
+  \node[dotnode,label={above:\plusmark}](p)at($(M.east)+(0.8,0)$){};
+  \draw[jmlinem](ma)--(p)node[pos=0.4,above]{$j$};
+  \draw[jmlinem](mb)--(p)node[pos=0.4,below]{$j'$};
+  \draw[jmline](p)--+(1.2,0)node[midway,above]{$J=0$};
 \end{tikzpicture}
-=
+\;=\;
 \begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
-   \node[opbox,minimum width=0.5cm,minimum height=2.4cm,rotate=-30](M) at (150:1.7)
-       {\rotatebox{30}{\normalsize$\mathfrak{M}$}};
-  \node[opbox,minimum width=0.5cm,minimum height=2.4cm,rotate=30](L) at (30:1.7)
-       {\rotatebox{-30}{\normalsize$\mathfrak{L}$}};
-  \node[opbox,minimum width=2.4cm,minimum height=0.5cm](N) at (270:1.7){\normalsize$\mathfrak{N}$};
-  % ---- connection points along each box's inner edge (reused for RHS too) ----
-  \coordinate(mA)at($(M.south east)!0.89!(M.north east)$); % j1 
-  \coordinate(mB)at($(M.south east)!0.63!(M.north east)$); % j2
-  \coordinate(mC)at($(M.south east)!0.37!(M.north east)$); % j3 
-  \coordinate(mD)at($(M.south east)!0.11!(M.north east)$); % j4
-  \coordinate(lA)at($(L.south west)!0.89!(L.north west)$); % j1
-  \coordinate(lB)at($(L.south west)!0.63!(L.north west)$); % j2
-  \coordinate(lC)at($(L.south west)!0.37!(L.north west)$); % j6
-  \coordinate(lD)at($(L.south west)!0.11!(L.north west)$); % j5
-  \coordinate(nA)at($(N.north east)!0.89!(N.north west)$);   % j3
-  \coordinate(nB)at($(N.north east)!0.63!(N.north west)$);   % j4
-  \coordinate(nC)at($(N.north east)!0.37!(N.north west)$);   % j6
-  \coordinate(nD)at($(N.north east)!0.11!(N.north west)$);   % j5
-  % ---- j-lines into the nodes ----
-  \draw[jmlinem](lA)--(mA)node[pos=0.5, above]{$j_1$};
-  \draw[jmlinem](lB)--(mB)node[pos=0.5,below]{$j_2$};
-  %
-  \draw[jmlinem](mC)--(nB)node[pos=0.5,above right]{$j_4$};
-  \draw[jmlinem](mD)--(nA)node[pos=0.5,below left]{$j_3$};
-  %
-  \draw[jmlinem](nC)--(lC)node[pos=0.5,above left]{$j_6$};
-  \draw[jmlinem](nD)--(lD)node[pos=0.5,below right]{$j_5$};
-%
+  \node[opbox,minimum width=0.8cm,minimum height=0.8cm](M) at (0,0){\normalsize$\mathfrak{M}$};
+  \coordinate(ma)at($(M.south east)!0.75!(M.north east)$);
+  \coordinate(mb)at($(M.south east)!0.25!(M.north east)$);
+  \draw[jmlinem](ma)to[out=0,in=0,looseness=2.5](mb);
+  \node at($(M.east)+(0.55,0)$){$j$};
+  % triangle
+  \node[dotnode,label={above:\plusmark}](ta)at(1.35,0.45){};
+  \node[dotnode,label={below:\plusmark}](tb)at(1.35,-0.45){};
+  \node[dotnode,label={right:\minusmark}](tr)at(2.2,0){};
+  \draw[jmlinem](ta)--(tb);
+  \draw[jmlinem](ta)--(tr)node[midway,above right]{$J$};
+  \draw[jmlinem](tr)--(tb)node[midway,below right]{$j'$};
 \end{tikzpicture}
 \]
 \end{document}
