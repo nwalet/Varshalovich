@@ -1920,11 +1920,11 @@ Completeness Condition\par
 \hline
 \multicolumn{1}{c|}{Analytical Expression} & Graphical Representation \\
 \hline
-Complete summation over $J$ and $M$&Elimination of thick solid line\\
+Complete summation over $J$ and $M$&Elimination of thick solid $j$-line\\
 \(
 \begin{aligned}
-& \sum_{J I}(2 J+1)\braOket{j_{1} j_{2} ; J M}{\mathscr{M}}{j_{1} j_{2} ; J M} \\
-& =\sum_{m_{1} m_{2}}\braOket{j_{1} m_{1} j_{2} m_{3}}{\mathfrak{M}}{j_{1} m_{1} j_{2} m_{2}}, 
+& \sum_{J M}(2 J+1)\braOket{j_{1} j_{2} ; J M}{\mathfrak{M}}{j_{1} j_{2} ; J M} \\
+& =\sum_{m_{1} m_{2}}\braOket{j_{1} m_{1} j_{2} m_{2}}{\mathfrak{M}}{j_{1} m_{1} j_{2} m_{2}},
 \end{aligned} \)&
 \begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
   \node[opbox,minimum width=2.4cm,minimum height=0.6cm](M){$\mathfrak{M}$};
@@ -1948,10 +1948,10 @@ Complete summation over $J$ and $M$&Elimination of thick solid line\\
   \draw[jmlinem](b)to[bend left=88]node[pos=0.88,above]{$j_2$}(d);
 \end{tikzpicture}\\
 \(\begin{aligned}
-& \sum_{J M M}(2 J+1)\braOket{j_{1} j_{2} ; J M}{\mathfrak{M}}{j_{2} j_{6} ; J M} \\
-& \times\braOket{/ 2 / 4 ; J M^{\prime}}{\Re}{f_{1} j_{2} ; J M^{\prime}} \\
-& =\sum_{\substack{m_{1}, m_{2} \\
-m_{3} m_{4}}}\braOket{i_{1} m_{1} j_{2} m_{2}}{\mathfrak{M}}{i_{3} m_{3} j_{4} m_{4}}\braOket{j_{2} m_{3} j_{4} m_{4}}{\Re}{j_{1} m_{1} j_{2} m_{2}} .
+& \sum_{J M M^{\prime}}(2 J+1)\braOket{j_{1} j_{2} ; J M}{\mathfrak{M}}{j_{3} j_{4} ; J M} \\
+& \times\braOket{j_{3} j_{4} ; J M^{\prime}}{\mathfrak{N}}{j_{1} j_{2} ; J M^{\prime}} \\
+& =\sum_{\substack{m_{1} m_{2} \\
+m_{3} m_{4}}}\braOket{j_{1} m_{1} j_{2} m_{2}}{\mathfrak{M}}{j_{3} m_{3} j_{4} m_{4}}\braOket{j_{3} m_{3} j_{4} m_{4}}{\mathfrak{N}}{j_{1} m_{1} j_{2} m_{2}} .
 \end{aligned} \)&
 \begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
   \node[opbox,minimum width=0.55cm,minimum height=2.2cm](M) at (0,0){$\mathfrak{M}$};
@@ -1978,12 +1978,12 @@ m_{3} m_{4}}}\braOket{i_{1} m_{1} j_{2} m_{2}}{\mathfrak{M}}{i_{3} m_{3} j_{4} m
     \draw[jmlinem]([yshift=\y mm]M.east)--([yshift=\y mm]N.west)node[midway,above]{$\lab$};}
 \end{tikzpicture}\\
 \(\begin{aligned}
-& \sum_{J M M^{\prime} M^{\prime}}(2 J+1)\braOket{j_{1} j_{2} ; J M}{\mathfrak{M}}{j_{2} j_{4} ; J M} \\
-& \times\braOket{j_{3} j_{4} ; J M^{\prime}}{\Re}{j_{4} j_{6} ; J M^{\prime}}\braOket{j_{5} j_{6} ; J M^{\prime \prime}}{\mathfrak{L}}{j_{1} j_{2} ; J M^{\prime \prime}} \\
+& \sum_{J M M^{\prime} M^{\prime\prime}}(2 J+1)\braOket{j_{1} j_{2} ; J M}{\mathfrak{M}}{j_{3} j_{4} ; J M} \\
+& \times\braOket{j_{3} j_{4} ; J M^{\prime}}{\mathfrak{N}}{j_{5} j_{6} ; J M^{\prime}}\braOket{j_{5} j_{6} ; J M^{\prime \prime}}{\mathfrak{L}}{j_{1} j_{2} ; J M^{\prime \prime}} \\
 & =\sum_{\substack{m_{1} m_{2} \\
-m_{2} m_{4} \\
-m_{3} m_{4}}}\braOket{j_{1} m_{1} j_{2} m_{2}}{\mathfrak{M}}{j_{3} m_{3} j_{4} m_{5}} \times \\
-& \times\braOket{j_{3} m_{3} j_{4} m_{4}}{\Re}{j_{5} m_{5} j_{6} m_{6}}\braOket{j_{5} m_{5} j_{6} m_{6}}{\mathfrak{L}}{j_{1} m_{1} j_{2} m_{2}} .
+m_{3} m_{4} \\
+m_{5} m_{6}}}\braOket{j_{1} m_{1} j_{2} m_{2}}{\mathfrak{M}}{j_{3} m_{3} j_{4} m_{4}} \times \\
+& \times\braOket{j_{3} m_{3} j_{4} m_{4}}{\mathfrak{N}}{j_{5} m_{5} j_{6} m_{6}}\braOket{j_{5} m_{5} j_{6} m_{6}}{\mathfrak{L}}{j_{1} m_{1} j_{2} m_{2}} .
 \end{aligned}
 \)&
 \begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
@@ -2061,16 +2061,16 @@ $=$\;%
 where\\
 \(
 \begin{gathered}
-\braOket{j_{1} f_{2} ; J M}{\mathfrak{M}}{j_{2} j_{6} ; J M} \\
-\equiv \sum_{m_{4}}\threej{j_{1}}{j_{2}}{J}{m_{1}}{m_{2}}{M}\braOket{j_{1} m_{1} j_{2} m_{2}}{\mathfrak{M}}{j_{2} m_{2} j_{4} m_{4}}
-\end{gathered}\threej{j_{2}}{j_{4}}{J}{m_{3}}{m_{4}}{M} .
+\braOket{j_{1} j_{2} ; J M}{\mathfrak{M}}{j_{3} j_{4} ; J M} \\
+\equiv \sum_{m_{i}}\threej{j_{1}}{j_{2}}{J}{m_{1}}{m_{2}}{M}\braOket{j_{1} m_{1} j_{2} m_{2}}{\mathfrak{M}}{j_{3} m_{3} j_{4} m_{4}}\threej{j_{3}}{j_{4}}{J}{m_{3}}{m_{4}}{M} .
+\end{gathered}
 \)
 \\
 Transformation of product of invariant sums into invariant sum of products (at least one of two factors must be a perfect invariant).&Linking subdiagrams containing identical $j$-line (at least one of subdiagrams should have no other external lines)\\
 \(
 \begin{aligned}
-&\left(\sum_{m}\braOket{j m}{\mathfrak{M}}{j m}\right)\left(\sum_{m^{\prime}}\braOket{j m^{\prime}}{\Re}{j m^{\prime}}\right) \\
-&=(2 j+1) \sum_{m m^{\prime}}\braOket{j m}{\Re}{j m^{\prime}}\braOket{j m^{\prime}}{\Re}{j m} \end{aligned} \)&
+&\left(\sum_{m}\braOket{j m}{\mathfrak{M}}{j m}\right)\left(\sum_{m^{\prime}}\braOket{j m^{\prime}}{\mathfrak{N}}{j m^{\prime}}\right) \\
+&=(2 j+1) \sum_{m m^{\prime}}\braOket{j m}{\mathfrak{M}}{j m^{\prime}}\braOket{j m^{\prime}}{\mathfrak{N}}{j m} \end{aligned} \)&
 \begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
   \node[opbox,minimum width=0.7cm,minimum height=0.8cm](M) at (0,0){$\mathfrak{M}$};
   \node[opbox,minimum width=0.7cm,minimum height=0.8cm](N) at (2.4,0){$\mathfrak{N}$};
@@ -2095,9 +2095,9 @@ Transformation of product of invariant sums into invariant sum of products (at l
        ($0.5*(M.east)+0.5*(N.west)+(0,-1.1)$)circle(0.25);
 \end{tikzpicture}\\
 \(\begin{aligned}
-& {\left[\sum_{m_{1} m_{2} m_{3}}\braOket{}{\mathfrak{R}}{f_{1} m_{1} f_{2} m_{3} f_{3} m_{3}}\threej{f_{1}}{f_{2}}{f_{3}}{m_{1}}{m_{2}}{m_{3}}\right] } \\
-& \times {\left[\sum_{m_{1} m_{2} m_{3}}\threej{f_{1}}{f_{2}}{f_{3}}{m_{1}}{m_{2}}{m_{3}}\braOket{j_{1} m_{1} j_{2} m_{2} f_{2} m_{3}}{\Re}{}\right] } \\
-&= \sum_{m_{2} m_{2} m_{3}}\braOket{}{\mathfrak{R}}{f_{1} m_{1} f_{2} m_{2} f_{3} m_{3}}\braOket{j_{1} m_{1} j_{2} m_{2} j_{2} m_{3}}{\Re}{} .
+& {\left[\sum_{m_{1} m_{2} m_{3}}\braOket{}{\mathfrak{M}}{j_{1} m_{1} j_{2} m_{2} j_{3} m_{3}}\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{m_{2}}{m_{3}}\right] } \\
+& \times {\left[\sum_{m_{1} m_{2} m_{3}}\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{m_{2}}{m_{3}}\braOket{j_{1} m_{1} j_{2} m_{2} j_{3} m_{3}}{\mathfrak{N}}{}\right] } \\
+&= \sum_{m_{1} m_{2} m_{3}}\braOket{}{\mathfrak{M}}{j_{1} m_{1} j_{2} m_{2} j_{3} m_{3}}\braOket{j_{1} m_{1} j_{2} m_{2} j_{3} m_{3}}{\mathfrak{N}}{} .
 \end{aligned}
 \)&
 \begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
@@ -2186,8 +2186,8 @@ Expression reduction for $J=0$&Elimination of a $J=0$ line in a diagram\\
 Expression reduction for $R=1$ &Elimination of the $R=1$ line\\
 \(
 \begin{gathered}
-\sum_{m m^{\prime}}\braOket{j m}{\mathfrak{M}}{f^{\prime} m^{\prime}}\braOket{f^{\prime} m^{\prime}}{D(000)}{j m} \\
-=\delta_{f f^{\prime}} \sum_{m}\braOket{j m}{\mathfrak{M}}{j m}
+\sum_{m m^{\prime}}\braOket{j m}{\mathfrak{M}}{j^{\prime} m^{\prime}}\braOket{j^{\prime} m^{\prime}}{D(000)}{j m} \\
+=\delta_{j j^{\prime}} \sum_{m}\braOket{j m}{\mathfrak{M}}{j m}
 \end{gathered}
 \) &
 \begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
@@ -2216,7 +2216,7 @@ Expression reduction for $R=1$ &Elimination of the $R=1$ line\\
 Transformation of single, double, or triple invariant sum into direct product of two factors (at least one of the factors must be perfect invariant)&Cutting of a diagram into subdiagrams linked by one, two, or three $j$-lines (at least one of subdiagrams should have no additional external lines)\\
 \(
 \begin{gathered}
-\sum_{m}\braOket{00}{\mathfrak{R}}{j m}\braOket{j m q}{\mathfrak{N}}{p}=\delta_{j 0^{8} \delta_{m 0}}\braOket{00}{\mathfrak{M}}{00} \\
+\sum_{m}\braOket{00}{\mathfrak{M}}{j m}\braOket{j m q}{\mathfrak{N}}{p}=\delta_{j 0} \delta_{m 0}\braOket{00}{\mathfrak{M}}{00} \\
 \times\braOket{00 q}{\mathfrak{N}}{p} .
 \end{gathered}
 \) &
@@ -2235,7 +2235,7 @@ Transformation of single, double, or triple invariant sum into direct product of
 \\
 \(
 \begin{gathered}
-\sum_{m_{1} m_{2}}\braOket{j_{1} m_{1}}{\mathfrak{M}}{j_{2} m_{2}}\braOket{j_{2} m_{2} q}{\Re}{j_{1} m_{1} p} \\
+\sum_{m_{1} m_{2}}\braOket{j_{1} m_{1}}{\mathfrak{M}}{j_{2} m_{2}}\braOket{j_{2} m_{2} q}{\mathfrak{N}}{j_{1} m_{1} p} \\
 =\frac{\delta_{j_{1} j_{2}}}{\left(2 j_{1}+1\right)}\left(\sum_{m_{1}}\braOket{j_{1} m_{1}}{\mathfrak{M}}{j_{1} m_{1}}\right) \\
 \times\left(\sum_{m_{2}}\braOket{j_{2} m_{2} q}{\mathfrak{N}}{j_{2} m_{2} p}\right)
 \end{gathered}
@@ -2276,16 +2276,16 @@ $=$\;%
 \\
 \(
 \begin{gathered}
-\sum_{m_{1} m_{2} m_{2}}\braOket{00}{\mathfrak{M}}{j_{1} m_{1} j_{2} m_{2} j_{3} m_{2}}\braOket{j_{1} m_{1} j_{2} m_{2} j_{3} m_{3} q}{\Re}{p} \\
-=\braOketred{0}{\mathfrak{M}}{j_{1} j_{2} j_{3}}\braOketred{j_{1} j_{2} j_{3} q}{\Re}{p}
+\sum_{m_{1} m_{2} m_{3}}\braOket{00}{\mathfrak{M}}{j_{1} m_{1} j_{2} m_{2} j_{3} m_{3}}\braOket{j_{1} m_{1} j_{2} m_{2} j_{3} m_{3} q}{\mathfrak{N}}{p} \\
+=\braOketred{0}{\mathfrak{M}}{j_{1} j_{2} j_{3}}\braOketred{j_{1} j_{2} j_{3} q}{\mathfrak{N}}{p}
 \end{gathered}
 \)
 Here the reduced matrix elements are
 \(
 \begin{gathered}
-\braOketred{0}{\mathfrak{R}}{j_{1} j_{2} j_{3}} \equiv \sum_{m_{1} m_{2} m_{3}}\braOket{00}{\mathfrak{R}}{j_{1} m_{1} j_{2} m_{2} j_{3} m_{3}} \\
-\times\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{m_{2}}{m_{3}},\braOket{j_{1} j_{2} j_{3} q}{\Re}{p} \equiv \sum_{m_{1} m_{2} m_{3}}\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{m_{2}}{m_{3}} \\
-\times\braOket{j_{1} m_{1} j_{2} m_{2} j_{3} m_{3} q}{\Re}{p} .
+\braOketred{0}{\mathfrak{M}}{j_{1} j_{2} j_{3}} \equiv \sum_{m_{1} m_{2} m_{3}}\braOket{00}{\mathfrak{M}}{j_{1} m_{1} j_{2} m_{2} j_{3} m_{3}} \\
+\times\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{m_{2}}{m_{3}},\quad\braOketred{j_{1} j_{2} j_{3} q}{\mathfrak{N}}{p} \equiv \sum_{m_{1} m_{2} m_{3}}\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{m_{2}}{m_{3}} \\
+\times\braOket{j_{1} m_{1} j_{2} m_{2} j_{3} m_{3} q}{\mathfrak{N}}{p} .
 \end{gathered}
 \) &
 \begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
@@ -2328,16 +2328,16 @@ Transformation of $n$-fold invariant sum ( $n>4$ ) over projections into a $k$-f
 \(
 \begin{aligned}
 & \sum_{\substack{m_{1} m_{2} \\
-m_{3} m_{4}}}\braOket{j_{1} m_{1} j_{2} m_{2}}{\cdots}{j_{3} m_{3} j_{4} m_{4}}\braOket{j_{3} m_{3} j_{4} m_{4} q}{\mathcal{M}}{j_{1} m_{1} j_{2} m_{2} p} \\
-& \quad=\sum_{J}(2 J+1)\braOketred{j_{1} j_{2} J}{\mathfrak{M}}{j_{3} j_{4} J}\braOketred{j_{3} j_{4} J q}{\mathfrak{M}}{j_{1} j_{2} J p}
+m_{3} m_{4}}}\braOket{j_{1} m_{1} j_{2} m_{2}}{\mathfrak{M}}{j_{3} m_{3} j_{4} m_{4}}\braOket{j_{3} m_{3} j_{4} m_{4} q}{\mathfrak{N}}{j_{1} m_{1} j_{2} m_{2} p} \\
+& \quad=\sum_{J}(2 J+1)\braOketred{j_{1} j_{2} J}{\mathfrak{M}}{j_{3} j_{4} J}\braOketred{j_{3} j_{4} J q}{\mathfrak{N}}{j_{1} j_{2} J p}
 \end{aligned}
 \)
 where
 \(
-\equiv \sum_{\substack{m_{1} m_{2} M \\
-m_{3} m_{4}}}\threej{j_{1}}{j_{2}}{J}{m_{1}}{m_{2}}{M}\braOketred{j_{1} j_{2} J}{M}{j_{3} j_{4} J}
+\braOketred{j_{1} j_{2} J}{\mathfrak{M}}{j_{3} j_{4} J} \equiv \sum_{\substack{m_{1} m_{2} M \\
+m_{3} m_{4}}}\threej{j_{1}}{j_{2}}{J}{m_{1}}{m_{2}}{M}\braOket{j_{1} m_{1} j_{2} m_{2}}{\mathfrak{M}}{j_{3} m_{3} j_{4} m_{4}}\threej{j_{3}}{j_{4}}{J}{m_{3}}{m_{4}}{M}
 \)
-and similarly for $\braOketred{j_{3} j_{4} J q}{\mathscr{P}}{j_{1} j_{2} J p}$.&
+and similarly for $\braOketred{j_{3} j_{4} J q}{\mathfrak{N}}{j_{1} j_{2} J p}$.&
 \begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
   \node[opbox,minimum width=0.55cm,minimum height=2.2cm](M) at (0,0){$\mathfrak{M}$};
   \node[opbox,minimum width=0.55cm,minimum height=2.2cm](N) at (2.2,0){$\mathfrak{N}$};
@@ -2389,18 +2389,18 @@ $=$\;%
 \hline
 \(
 \begin{gathered}
-\sum_{m_{1} \ldots m_{5}}\braOket{00}{\mathfrak{M}}{j_{1} m_{1} \ldots j_{5} m_{5}}\braOket{j_{1} m_{1} \ldots j_{5} m_{5} q}{\Re}{p} \\
-=\sum_{J_{12} J_{45}}\left(2 J_{18}+1\right)\left(2 J_{45}+1\right)\braOketred{0}{\mathfrak{M}}{J_{12} j_{3} J_{46}} \\
+\sum_{m_{1} \ldots m_{5}}\braOket{00}{\mathfrak{M}}{j_{1} m_{1} \ldots j_{5} m_{5}}\braOket{j_{1} m_{1} \ldots j_{5} m_{5} q}{\mathfrak{N}}{p} \\
+=\sum_{J_{12} J_{45}}\left(2 J_{12}+1\right)\left(2 J_{45}+1\right)\braOketred{0}{\mathfrak{M}}{J_{12} j_{3} J_{45}} \\
 \times\braOketred{J_{12} j_{3} J_{45} q}{\mathfrak{N}}{p}
 \end{gathered}
 \)
 where
 \(
 \begin{gathered}
-\braOketred{0}{\mathfrak{M}}{J_{12} J_{3} J_{45}}=\sum_{m_{i} M_{i k}}\braOket{00}{\mathfrak{M}}{j_{1} m_{1} \ldots j_{5} m_{5}} \\
-\times\threej{j_{1}}{j_{2}}{J_{12}}{m_{1}}{m_{2}}{M_{12}}(-1)^{j_{3}-m},\threej{J_{12}}{j_{3}}{J_{45}}{M_{12}}{-m_{3}}{M_{45}}\threej{j_{4}}{j_{5}}{J_{45}}{m_{4}}{m_{3}}{M_{45}},
+\braOketred{0}{\mathfrak{M}}{J_{12} j_{3} J_{45}}=\sum_{m_{i} M_{i k}}\braOket{00}{\mathfrak{M}}{j_{1} m_{1} \ldots j_{5} m_{5}} \\
+\times\threej{j_{1}}{j_{2}}{J_{12}}{m_{1}}{m_{2}}{M_{12}}(-1)^{j_{3}-m_{3}}\threej{J_{12}}{j_{3}}{J_{45}}{M_{12}}{-m_{3}}{M_{45}}\threej{j_{4}}{j_{5}}{J_{45}}{m_{4}}{m_{5}}{M_{45}},
 \end{gathered}
-\)and similarly for $\braOketred{J_{12} J_{3} J_{45} q}{\Re}{p}$.
+\)and similarly for $\braOketred{J_{12} j_{3} J_{45} q}{\mathfrak{N}}{p}$.
 &
 \begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
   \node[opbox,minimum width=0.55cm,minimum height=2.6cm](M) at (0,0){$\mathfrak{M}$};
@@ -2441,11 +2441,11 @@ $=$\;%
 \end{tikzpicture}\\
 
 
-$\sum_{m_{1} \ldots m_{6}}\braOket{00}{\mathfrak{M}}{j_{1} m_{1} \ldots j_{6} m_{6}}\braOket{j_{1} m_{1} \ldots j_{6} m_{6} q}{\Re}{p}$
+$\sum_{m_{1} \ldots m_{6}}\braOket{00}{\mathfrak{M}}{j_{1} m_{1} \ldots j_{6} m_{6}}\braOket{j_{1} m_{1} \ldots j_{6} m_{6} q}{\mathfrak{N}}{p}$
 \(
 \begin{gathered}
-=\sum_{J_{4 k}}\left(2 J_{12}+1\right)\left(2 J_{34}+1\right)\left(2 J_{56}+1\right)\braOketred{0}{\mathfrak{M}}{J_{12} J_{34} J_{56}} \\
-\times\braOketred{J_{12} J_{34} J_{66} q}{\mathfrak{N}}{p}
+=\sum_{J_{i k}}\left(2 J_{12}+1\right)\left(2 J_{34}+1\right)\left(2 J_{56}+1\right)\braOketred{0}{\mathfrak{M}}{J_{12} J_{34} J_{56}} \\
+\times\braOketred{J_{12} J_{34} J_{56} q}{\mathfrak{N}}{p}
 \end{gathered}
 \)
 where
@@ -2455,7 +2455,7 @@ where
 \times\threej{j_{1}}{j_{2}}{J_{12}}{m_{1}}{m_{2}}{M_{12}}\threej{j_{3}}{j_{4}}{J_{34}}{m_{3}}{m_{4}}{M_{34}}\threej{j_{5}}{j_{6}}{J_{56}}{m_{5}}{m_{6}}{M_{56}}\threej{J_{12}}{J_{34}}{J_{56}}{M_{12}}{M_{34}}{M_{56}},
 \end{gathered}
 \)
-and similarly for $\braOketred{J_{18} J_{34} J_{56} q}{92}{p}$. &
+and similarly for $\braOketred{J_{12} J_{34} J_{56} q}{\mathfrak{N}}{p}$. &
 \begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
   \node[opbox,minimum width=0.55cm,minimum height=3.0cm](M) at (0,0){$\mathfrak{M}$};
   \node[opbox,minimum width=0.55cm,minimum height=3.0cm](N) at (2.2,0){$\mathfrak{N}$};
@@ -2535,16 +2535,11 @@ $=$\;%
 \end{tikzpicture}\\
 \multicolumn{2}{c}{Hermitian Conjugation}\\
 \(
-\left.\begin{array}{c}
+\begin{gathered}
 \sum_{m_{1}^{\prime}}\binom{j_{1}}{m_{1}^{\prime} m_{1}}\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}^{\prime}}{m_{2}}{m_{3}}=(-1)^{j_{1}-m_{1}}\threej{j_{1}}{j_{2}}{j_{3}}{-m_{1}}{m_{2}}{m_{3}} \\
-=\sum_{m_{2}^{\prime} m_{3}^{\prime}}\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{m_{2}^{\prime}}{m_{3}^{\prime}}\left(\begin{array}{c}
-j_{2} \\
-m_{2}
-\end{array} m_{2}^{\prime}\right)\left(\begin{array}{c}
-j_{3} \\
-m_{3}
-\end{array} m_{3}^{\prime}\right.
-\end{array}\right)=(-1)^{j_{2}+m_{2}+j_{3}+m_{3}}\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{-m_{2}}{-m_{3}}\) &
+=\sum_{m_{2}^{\prime} m_{3}^{\prime}}\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{m_{2}^{\prime}}{m_{3}^{\prime}}\binom{j_{2}}{m_{2} m_{2}^{\prime}}\binom{j_{3}}{m_{3} m_{3}^{\prime}}=(-1)^{j_{2}+m_{2}+j_{3}+m_{3}}\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{-m_{2}}{-m_{3}}
+\end{gathered}
+\) &
 \begin{tikzpicture}[baseline=-2pt,inner sep=1.5pt,font=\scriptsize]
   \node[dotnode,label={90:\plusmark}](O)at(0,0){};
   \draw[bjmarrown](135:1.0)--(O);\node at(135:1.0)[above left=-2pt]{$j_1m_1$};
@@ -2559,18 +2554,11 @@ m_{3}
   \draw[bjmarrown](0,-0.9)--(O);\node at(0,-0.9)[below]{$j_2m_2$};
 \end{tikzpicture}
 \\
-\(\sum_{m_{1}^{\prime} m_{2}^{\prime} m_{3}^{\prime}}
-\left(\begin{array}{c}
-j_{1} \\
-m_{1}^{\prime} \\
-m_{1}
-\end{array}\right)\left(\begin{array}{c}
-j_{2} \\
-m_{2}^{\prime} \\
-m_{2}
-\end{array}\right)\binom{j_{3}}{m_{3}^{\prime} m_{3}}\threej{j_{1}}{j_{3}}{j_{3}}{m_{1}^{\prime}}{m_{2}^{\prime}}{m_{3}^{\prime}} ~\threej{j_{1}}{j_{2}}{j_{3}}{-m_{1}}{-m_{2}}{-m_{3}}=\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{m_{2}}{m_{3}} ~ c_{1}^{j_{1}-m_{1}+j_{2}-m_{2}+j_{3}-m_{3}}\left(\begin{array}{ccc}
-j_{1} & &
-\end{array}\right)
+\(
+\begin{gathered}
+\sum_{m_{1}^{\prime} m_{2}^{\prime} m_{3}^{\prime}}\binom{j_{1}}{m_{1}^{\prime} m_{1}}\binom{j_{2}}{m_{2}^{\prime} m_{2}}\binom{j_{3}}{m_{3}^{\prime} m_{3}}\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}^{\prime}}{m_{2}^{\prime}}{m_{3}^{\prime}} \\
+=(-1)^{j_{1}-m_{1}+j_{2}-m_{2}+j_{3}-m_{3}}\threej{j_{1}}{j_{2}}{j_{3}}{-m_{1}}{-m_{2}}{-m_{3}}=\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{m_{2}}{m_{3}}
+\end{gathered}
 \) &
 \begin{tikzpicture}[baseline=-2pt,inner sep=1.5pt,font=\scriptsize]
   \node[dotnode,label={90:\plusmark}](O)at(0,0){};
