@@ -2,35 +2,96 @@
 \usepackage{diagrams}
 \usepackage{amsfonts,amsmath}
 \begin{document}
-% Table 11.9, "Elimination of a J=0 line in a diagram".
-% LHS: M-box with j (top) and j' (bottom) converging on a + node, from which
-% an arrowed line labelled J=0 leaves to the right.
-% RHS: M-box with a closed j-loop, times a triangle with +,+ vertices on the
-% left, - vertex on the right, top edge J, bottom edge j'.
+% Table 11.9, "Cutting of a diagram into subdiagrams linked by one, two, or
+% three j-lines" -- the three sub-rows.
+
+% ---- sub-row 1: single j-line ----
 \[
 \begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
   \node[opbox,minimum width=0.8cm,minimum height=0.8cm](M) at (0,0){\normalsize$\mathfrak{M}$};
-  \coordinate(ma)at($(M.south east)!0.75!(M.north east)$);
-  \coordinate(mb)at($(M.south east)!0.25!(M.north east)$);
-  \node[dotnode,label={above:\plusmark}](p)at($(M.east)+(0.8,0)$){};
-  \draw[jmlinem](ma)--(p)node[pos=0.4,above]{$j$};
-  \draw[jmlinem](mb)--(p)node[pos=0.4,below]{$j'$};
-  \draw[jmline](p)--+(1.2,0)node[midway,above]{$J=0$};
+  \node[opbox,minimum width=0.8cm,minimum height=0.8cm](N) at (2.1,0){\normalsize$\mathfrak{N}$};
+  \draw[jmlinem](M.east)--(N.west)node[midway,above]{$j$};
+  \foreach \i in {-1,1}{\draw([yshift=\i*2.5mm]N.east)--([yshift=\i*2.5mm,xshift=1.5mm]N.east);}
 \end{tikzpicture}
 \;=\;
 \begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
   \node[opbox,minimum width=0.8cm,minimum height=0.8cm](M) at (0,0){\normalsize$\mathfrak{M}$};
-  \coordinate(ma)at($(M.south east)!0.75!(M.north east)$);
-  \coordinate(mb)at($(M.south east)!0.25!(M.north east)$);
-  \draw[jmlinem](ma)to[out=0,in=0,looseness=2.5](mb);
-  \node at($(M.east)+(0.55,0)$){$j$};
-  % triangle
-  \node[dotnode,label={above:\plusmark}](ta)at(1.35,0.45){};
-  \node[dotnode,label={below:\plusmark}](tb)at(1.35,-0.45){};
-  \node[dotnode,label={right:\minusmark}](tr)at(2.2,0){};
-  \draw[jmlinem](ta)--(tb);
-  \draw[jmlinem](ta)--(tr)node[midway,above right]{$J$};
-  \draw[jmlinem](tr)--(tb)node[midway,below right]{$j'$};
+  \node[opbox,minimum width=0.8cm,minimum height=0.8cm](N) at (2.1,0){\normalsize$\mathfrak{N}$};
+  \foreach \i in {-1,1}{\draw([yshift=\i*2.5mm]N.east)--([yshift=\i*2.5mm,xshift=1.5mm]N.east);}
+\end{tikzpicture}
+\]
+
+% ---- sub-row 2: two j-lines ----
+\[
+\begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
+  \node[opbox,minimum width=0.55cm,minimum height=1.6cm](M) at (0,0){\normalsize$\mathfrak{M}$};
+  \node[opbox,minimum width=0.55cm,minimum height=1.6cm](N) at (1.9,0){\normalsize$\mathfrak{N}$};
+  \draw[jmlinem]([yshift=5mm]N.west)--([yshift=5mm]M.east)node[midway,above]{$j_1$};
+  \draw[jmlinem]([yshift=-5mm]M.east)--([yshift=-5mm]N.west)node[midway,below]{$j_2$};
+  \foreach \i in {-1,1}{\draw([yshift=\i*5mm]N.east)--([yshift=\i*5mm,xshift=1.5mm]N.east);}
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
+  \node[opbox,minimum width=0.55cm,minimum height=1.6cm](M) at (0,0){\normalsize$\mathfrak{M}$};
+  % closed j1-loop on M's right edge
+  \coordinate(ma)at($(M.south east)!0.8!(M.north east)$);
+  \coordinate(mb)at($(M.south east)!0.2!(M.north east)$);
+  \draw[jmlinem](mb)to[out=0,in=0,looseness=1.6](ma);
+  \node at($(M.east)+(0.62,0)$){$j_1$};
+  % rectangle with four + corner nodes; verticals arrowed upward
+  \node[dotnode,label={135:\plusmark}](tl)at(1.3,0.45){};
+  \node[dotnode,label={45:\plusmark}](tr)at(2.0,0.45){};
+  \node[dotnode,label={-135:\plusmark}](bl)at(1.3,-0.45){};
+  \node[dotnode,label={-45:\plusmark}](br)at(2.0,-0.45){};
+  \draw[thick](tl)--(tr)node[midway,above]{$j_2$};
+  \draw[thick](bl)--(br)node[midway,below]{$j_1$};
+  \draw[jmlinem](bl)--(tl);
+  \draw[jmlinem](br)--(tr);
+  % N with closed j2-loop on its left edge
+  \node[opbox,minimum width=0.55cm,minimum height=1.6cm](N) at (3.5,0){\normalsize$\mathfrak{N}$};
+  \coordinate(na)at($(N.south west)!0.8!(N.north west)$);
+  \coordinate(nb)at($(N.south west)!0.2!(N.north west)$);
+  \draw[jmlinem](na)to[out=180,in=180,looseness=1.6](nb);
+  \node at($(N.west)+(-0.62,0)$){$j_2$};
+  \foreach \i in {-1,1}{\draw([yshift=\i*5mm]N.east)--([yshift=\i*5mm,xshift=1.5mm]N.east);}
+\end{tikzpicture}
+\]
+
+% ---- sub-row 3: three j-lines ----
+\[
+\begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
+  \node[opbox,minimum width=0.55cm,minimum height=1.8cm](M) at (0,0){\normalsize$\mathfrak{M}$};
+  \node[opbox,minimum width=0.55cm,minimum height=1.8cm](N) at (2.2,0){\normalsize$\mathfrak{N}$};
+  \coordinate(mA)at($(M.south east)!0.83!(M.north east)$);
+  \coordinate(mB)at($(M.south east)!0.5!(M.north east)$);
+  \coordinate(mC)at($(M.south east)!0.17!(M.north east)$);
+  \coordinate(nA)at($(N.south west)!0.83!(N.north west)$);
+  \coordinate(nB)at($(N.south west)!0.5!(N.north west)$);
+  \coordinate(nC)at($(N.south west)!0.17!(N.north west)$);
+  \draw[jmlinem](mA)--(nA)node[midway,above]{$j_1$};
+  \draw[jmlinem](mB)--(nB)node[midway,above]{$j_2$};
+  \draw[jmlinem](mC)--(nC)node[midway,above]{$j_3$};
+  \foreach \i in {-1,1}{\draw([yshift=\i*5mm]N.east)--([yshift=\i*5mm,xshift=1.5mm]N.east);}
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
+  \node[opbox,minimum width=0.55cm,minimum height=1.8cm](M) at (0,0){\normalsize$\mathfrak{M}$};
+  \node[opbox,minimum width=0.55cm,minimum height=1.8cm](N) at (3.4,0){\normalsize$\mathfrak{N}$};
+  \coordinate(mA)at($(M.south east)!0.83!(M.north east)$);
+  \coordinate(mB)at($(M.south east)!0.5!(M.north east)$);
+  \coordinate(mC)at($(M.south east)!0.17!(M.north east)$);
+  \coordinate(nA)at($(N.south west)!0.83!(N.north west)$);
+  \coordinate(nB)at($(N.south west)!0.5!(N.north west)$);
+  \coordinate(nC)at($(N.south west)!0.17!(N.north west)$);
+  \node[dotnode,label={above:\plusmark}](pM)at($(M.east)+(1.0,0)$){};
+  \node[dotnode,label={above:\minusmark}](pN)at($(N.west)+(-1.0,0)$){};
+  \draw[jmlinem](mA)--(pM)node[pos=0.4,above]{$j_1$};
+  \draw[jmlinem](mB)--(pM)node[pos=0.4,above]{$j_2$};
+  \draw[jmlinem](mC)--(pM)node[pos=0.4,below]{$j_3$};
+  \draw[jmlinem](pN)--(nA)node[pos=0.6,above]{$j_1$};
+  \draw[jmlinem](pN)--(nB)node[pos=0.6,above]{$j_2$};
+  \draw[jmlinem](pN)--(nC)node[pos=0.6,below]{$j_3$};
+  \foreach \i in {-1,1}{\draw([yshift=\i*5mm]N.east)--([yshift=\i*5mm,xshift=1.5mm]N.east);}
 \end{tikzpicture}
 \]
 \end{document}

@@ -2190,7 +2190,28 @@ Expression reduction for $R=1$ &Elimination of the $R=1$ line\\
 =\delta_{f f^{\prime}} \sum_{m}\braOket{j m}{\mathfrak{M}}{j m}
 \end{gathered}
 \) &
-\begin{tikzpicture}[baseline=0pt]\draw[jmline,dashed] (0,0) node[left]{$\Omega_1$} -- (1.4,0) node[right]{$\Omega_2$}; \node[above=2pt] at (0.7,0){$R{=}1$};\end{tikzpicture}\quad$\to$\quad\begin{tikzpicture}[baseline=0pt]\draw[omarrow] (0,0) node[left]{$\Omega_1$} -- (1.4,0) node[right]{$\Omega_2$};\end{tikzpicture}
+\begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
+  \node[opbox,minimum width=0.8cm,minimum height=0.8cm](M) at (0,0){$\mathfrak{M}$};
+  \coordinate(ma)at($(M.south east)!0.75!(M.north east)$);
+  \coordinate(mb)at($(M.south east)!0.25!(M.north east)$);
+  \coordinate(p)at($(M.east)+(0.8,0)$);
+  \draw[jmlinem](ma)--(p)node[pos=0.4,above]{$j$};
+  \draw[jmlinem](mb)--(p)node[pos=0.4,below]{$j'$};
+  \draw[rline](p)--+(1.0,0)node[midway,above=2.5pt]{$R=1$};
+\end{tikzpicture}
+\;$=$\;%
+\begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
+  \node[opbox,minimum width=0.8cm,minimum height=0.8cm](M) at (0,0){$\mathfrak{M}$};
+  \coordinate(ma)at($(M.south east)!0.75!(M.north east)$);
+  \coordinate(mb)at($(M.south east)!0.25!(M.north east)$);
+  \draw[jmlinem](mb)to[out=0,in=0,looseness=2.5](ma);
+  \node at($(M.east)+(0.55,0)$){$J$};
+  % circle with + nodes left/right, arcs j (top) and j' (bottom)
+  \node[dotnode,label={180:\plusmark}](cl)at(1.5,0){};
+  \node[dotnode,label={0:\plusmark}](cr)at(2.4,0){};
+  \draw[jmlinem](cl)to[bend left=60]node[above]{$j$}(cr);
+  \draw[jmlinem](cr)to[bend left=60]node[below]{$j'$}(cl);
+\end{tikzpicture}
 \\
 Transformation of single, double, or triple invariant sum into direct product of two factors (at least one of the factors must be perfect invariant)&Cutting of a diagram into subdiagrams linked by one, two, or three $j$-lines (at least one of subdiagrams should have no additional external lines)\\
 \(
@@ -2198,7 +2219,19 @@ Transformation of single, double, or triple invariant sum into direct product of
 \sum_{m}\braOket{00}{\mathfrak{R}}{j m}\braOket{j m q}{\mathfrak{N}}{p}=\delta_{j 0^{8} \delta_{m 0}}\braOket{00}{\mathfrak{M}}{00} \\
 \times\braOket{00 q}{\mathfrak{N}}{p} .
 \end{gathered}
-\) &\opline{\mathfrak{M}_1}{\mathfrak{M}_2}{j_1}
+\) &
+\begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
+  \node[opbox,minimum width=0.8cm,minimum height=0.8cm](M) at (0,0){$\mathfrak{M}$};
+  \node[opbox,minimum width=0.8cm,minimum height=0.8cm](N) at (2.1,0){$\mathfrak{N}$};
+  \draw[jmlinem](M.east)--(N.west)node[midway,above]{$j$};
+  \foreach \i in {-1,1}{\draw([yshift=\i*2.5mm]N.east)--([yshift=\i*2.5mm,xshift=1.5mm]N.east);}
+\end{tikzpicture}
+\;$=$\;%
+\begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
+  \node[opbox,minimum width=0.8cm,minimum height=0.8cm](M) at (0,0){$\mathfrak{M}$};
+  \node[opbox,minimum width=0.8cm,minimum height=0.8cm](N) at (1.7,0){$\mathfrak{N}$};
+  \foreach \i in {-1,1}{\draw([yshift=\i*2.5mm]N.east)--([yshift=\i*2.5mm,xshift=1.5mm]N.east);}
+\end{tikzpicture}
 \\
 \(
 \begin{gathered}
@@ -2206,7 +2239,41 @@ Transformation of single, double, or triple invariant sum into direct product of
 =\frac{\delta_{j_{1} j_{2}}}{\left(2 j_{1}+1\right)}\left(\sum_{m_{1}}\braOket{j_{1} m_{1}}{\mathfrak{M}}{j_{1} m_{1}}\right) \\
 \times\left(\sum_{m_{2}}\braOket{j_{2} m_{2} q}{\mathfrak{N}}{j_{2} m_{2} p}\right)
 \end{gathered}
-\) & \\
+\) &
+\begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
+  \node[opbox,minimum width=0.55cm,minimum height=1.6cm](M) at (0,0){$\mathfrak{M}$};
+  \node[opbox,minimum width=0.55cm,minimum height=1.6cm](N) at (1.9,0){$\mathfrak{N}$};
+  \draw[jmlinem]([yshift=5mm]N.west)--([yshift=5mm]M.east)node[midway,above]{$j_1$};
+  \draw[jmlinem]([yshift=-5mm]M.east)--([yshift=-5mm]N.west)node[midway,below]{$j_2$};
+  \foreach \i in {-1,1}{\draw([yshift=\i*5mm]N.east)--([yshift=\i*5mm,xshift=1.5mm]N.east);}
+\end{tikzpicture}
+\newline
+$=$\;%
+\begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
+  \node[opbox,minimum width=0.55cm,minimum height=1.6cm](M) at (0,0){$\mathfrak{M}$};
+  % closed j1-loop on M's right edge
+  \coordinate(ma)at($(M.south east)!0.8!(M.north east)$);
+  \coordinate(mb)at($(M.south east)!0.2!(M.north east)$);
+  \draw[jmlinem](mb)to[out=0,in=0,looseness=1.6](ma);
+  \node at($(M.east)+(0.62,0)$){$j_1$};
+  % rectangle with four + corner nodes; verticals arrowed upward
+  \node[dotnode,label={135:\plusmark}](tl)at(1.3,0.45){};
+  \node[dotnode,label={45:\plusmark}](tr)at(2.0,0.45){};
+  \node[dotnode,label={-135:\plusmark}](bl)at(1.3,-0.45){};
+  \node[dotnode,label={-45:\plusmark}](br)at(2.0,-0.45){};
+  \draw[thick](tl)--(tr)node[midway,above]{$j_2$};
+  \draw[thick](bl)--(br)node[midway,below]{$j_1$};
+  \draw[jmlinem](bl)--(tl);
+  \draw[jmlinem](br)--(tr);
+  % N with closed j2-loop on its left edge
+  \node[opbox,minimum width=0.55cm,minimum height=1.6cm](N) at (3.5,0){$\mathfrak{N}$};
+  \coordinate(na)at($(N.south west)!0.8!(N.north west)$);
+  \coordinate(nb)at($(N.south west)!0.2!(N.north west)$);
+  \draw[jmlinem](na)to[out=180,in=180,looseness=1.6](nb);
+  \node at($(N.west)+(-0.62,0)$){$j_2$};
+  \foreach \i in {-1,1}{\draw([yshift=\i*5mm]N.east)--([yshift=\i*5mm,xshift=1.5mm]N.east);}
+\end{tikzpicture}
+\\
 \(
 \begin{gathered}
 \sum_{m_{1} m_{2} m_{2}}\braOket{00}{\mathfrak{M}}{j_{1} m_{1} j_{2} m_{2} j_{3} m_{2}}\braOket{j_{1} m_{1} j_{2} m_{2} j_{3} m_{3} q}{\Re}{p} \\
@@ -2220,7 +2287,43 @@ Here the reduced matrix elements are
 \times\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{m_{2}}{m_{3}},\braOket{j_{1} j_{2} j_{3} q}{\Re}{p} \equiv \sum_{m_{1} m_{2} m_{3}}\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{m_{2}}{m_{3}} \\
 \times\braOket{j_{1} m_{1} j_{2} m_{2} j_{3} m_{3} q}{\Re}{p} .
 \end{gathered}
-\) & \\
+\) &
+\begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
+  \node[opbox,minimum width=0.55cm,minimum height=1.8cm](M) at (0,0){$\mathfrak{M}$};
+  \node[opbox,minimum width=0.55cm,minimum height=1.8cm](N) at (2.2,0){$\mathfrak{N}$};
+  \coordinate(mA)at($(M.south east)!0.83!(M.north east)$);
+  \coordinate(mB)at($(M.south east)!0.5!(M.north east)$);
+  \coordinate(mC)at($(M.south east)!0.17!(M.north east)$);
+  \coordinate(nA)at($(N.south west)!0.83!(N.north west)$);
+  \coordinate(nB)at($(N.south west)!0.5!(N.north west)$);
+  \coordinate(nC)at($(N.south west)!0.17!(N.north west)$);
+  \draw[jmlinem](mA)--(nA)node[midway,above]{$j_1$};
+  \draw[jmlinem](mB)--(nB)node[midway,above]{$j_2$};
+  \draw[jmlinem](mC)--(nC)node[midway,above]{$j_3$};
+  \foreach \i in {-1,1}{\draw([yshift=\i*5mm]N.east)--([yshift=\i*5mm,xshift=1.5mm]N.east);}
+\end{tikzpicture}
+\newline
+$=$\;%
+\begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
+  \node[opbox,minimum width=0.55cm,minimum height=1.8cm](M) at (0,0){$\mathfrak{M}$};
+  \node[opbox,minimum width=0.55cm,minimum height=1.8cm](N) at (3.4,0){$\mathfrak{N}$};
+  \coordinate(mA)at($(M.south east)!0.83!(M.north east)$);
+  \coordinate(mB)at($(M.south east)!0.5!(M.north east)$);
+  \coordinate(mC)at($(M.south east)!0.17!(M.north east)$);
+  \coordinate(nA)at($(N.south west)!0.83!(N.north west)$);
+  \coordinate(nB)at($(N.south west)!0.5!(N.north west)$);
+  \coordinate(nC)at($(N.south west)!0.17!(N.north west)$);
+  \node[dotnode,label={above:\plusmark}](pM)at($(M.east)+(1.0,0)$){};
+  \node[dotnode,label={above:\minusmark}](pN)at($(N.west)+(-1.0,0)$){};
+  \draw[jmlinem](mA)--(pM)node[pos=0.4,above]{$j_1$};
+  \draw[jmlinem](mB)--(pM)node[pos=0.4,above]{$j_2$};
+  \draw[jmlinem](mC)--(pM)node[pos=0.4,below]{$j_3$};
+  \draw[jmlinem](pN)--(nA)node[pos=0.6,above]{$j_1$};
+  \draw[jmlinem](pN)--(nB)node[pos=0.6,above]{$j_2$};
+  \draw[jmlinem](pN)--(nC)node[pos=0.6,below]{$j_3$};
+  \foreach \i in {-1,1}{\draw([yshift=\i*5mm]N.east)--([yshift=\i*5mm,xshift=1.5mm]N.east);}
+\end{tikzpicture}
+\\
 Transformation of $n$-fold invariant sum ( $n>4$ ) over projections into a $k$-fold sum over momenta ( $k=n-3$ ) (at least one of factors under summation must be perfect invariant)&Cutting of a diagram into two subdiagrams linked by $n j$-lines $(n>4)$ (at least one of subdiagrams should have no additional external lines)\\
 \(
 \begin{aligned}
