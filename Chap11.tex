@@ -2732,7 +2732,7 @@ $(-1)^{2j_2}$\,\begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsiz
 \small
 \setlength{\tabcolsep}{5pt}
 \renewcommand{\arraystretch}{1.3}
-\begin{tabular}{@{}p{0.52\textwidth}|c@{}}
+\begin{tabular}{@{}p{0.44\textwidth}|c@{}}
 \hline
 \multicolumn{1}{c|}{Analytical Expression} & Graphical Representation \\
 \hline
@@ -2742,59 +2742,112 @@ $|jm\,jm^{\prime}\rangle=\langle jm\,jm^{\prime}|=\dbinom{j}{m\ m^{\prime}}=(-1)
 $\langle jm^{\prime}\,jm|=|jm^{\prime}\,jm\rangle=\dbinom{j}{m^{\prime}\ m}=(-1)^{j-m}\delta_{m^{\prime},-m}$
 & \mline{jm^{\prime}}{b}{b}{jm}$\,=\,$\mline{jm^{\prime}}{k}{k}{jm} \\
 $|jm^{\prime}\,jm\rangle=(-1)^{2j}|jm\,jm^{\prime}\rangle=\langle jm^{\prime}\,jm|=(-1)^{2j}\langle jm\,jm^{\prime}|$
-& \mline{jm^{\prime}}{k}{k}{jm}$\,=(-1)^{2j}\,$\mline{jm}{k}{k}{jm^{\prime}}\newline
-$=\,$\mline{jm^{\prime}}{b}{b}{jm}$\,=(-1)^{2j}\,$\mline{jm}{b}{b}{jm^{\prime}} \\
+& \begin{tabular}{@{}c@{}}
+\mline{jm^{\prime}}{k}{k}{jm}$\,=(-1)^{2j}\,$\mline{jm}{k}{k}{jm^{\prime}}$\,=$ \\
+$=\,$\mline{jm^{\prime}}{b}{b}{jm}$\,=(-1)^{2j}\,$\mline{jm}{b}{b}{jm^{\prime}}
+\end{tabular} \\
 $\displaystyle\sum_{m^{\prime}}|jm\,jm^{\prime}\rangle\langle jm^{\prime\prime}\,jm^{\prime}|=\langle jm^{\prime\prime}|jm\rangle$
-& \begin{tikzpicture}[baseline=-0.4ex,inner sep=0.13em,font=\scriptsize]
-\node[dotnode] at (-0.75,0){};\node[dotnode] at (0.75,0){};
-\draw[-{Stealth[length=2mm]},thick] (-0.75,0) -- (-1.65,0) node[left]{$jm$};
-\draw[thick] (-0.75,0) -- (0.75,0) node[midway,above]{$jm^{\prime}$};
-\draw[-{Stealth[length=1.7mm] Stealth[length=1.7mm]},thick] (1.65,0) node[right]{$jm^{\prime\prime}$} -- (0.75,0);
-\end{tikzpicture}$=$\mline{jm}{k}{b}{jm^{\prime\prime}} \\
+& \scalebox{0.82}{$\displaystyle\sum_{m^{\prime}}$\,\mline{jm}{k}{k}{jm^{\prime}}\,\mline{jm^{\prime}}{b}{b}{jm^{\prime\prime}}$\,=\,$\mline{jm}{k}{b}{jm^{\prime\prime}}} \\
 \hline
 \multicolumn{2}{c}{Covariant $\rightleftarrows$ Contravariant. Transformation of the Irreducible Tensor}\\
 $\displaystyle\sum_{m^{\prime}}|jm\,jm^{\prime}\rangle\langle jm^{\prime}|\mathfrak{M}|\rangle=\langle|\mathfrak{M}|jm\rangle$
-& \begin{tikzpicture}[baseline=-0.4ex,inner sep=0.13em,font=\scriptsize]
-\node[opbox](M) at (0,0){$\mathfrak{M}$};\node[dotnode](n) at (1.6,0){};
-\draw[-{Stealth[length=1.7mm] Stealth[length=1.7mm]},thick] (n) -- (M.east) node[midway,above]{$jm^{\prime}$};
-\draw[-{Stealth[length=2mm]},thick] (n) -- (2.8,0) node[right]{$jm$};
-\end{tikzpicture}$=$%
+& \scalebox{0.82}{$\displaystyle\sum_{m^{\prime}}$
 \begin{tikzpicture}[baseline=-0.4ex,inner sep=0.13em,font=\scriptsize]
-\node[opbox](M) at (0,0){$\mathfrak{M}$};
-\draw[-{Stealth[length=2mm]},thick] (M.east) -- (1.3,0) node[right]{$jm$};
-\end{tikzpicture} \\
+  \node[opbox](M) at (0,0){$\mathfrak{M}$};
+  \draw[bjmarrown](1.2,0)--(M.east);\node at(1.2,0)[right]{$jm^{\prime}$};
+\end{tikzpicture}\,
+\mline{jm^{\prime}}{k}{k}{jm}$\,=\,$%
+\begin{tikzpicture}[baseline=-0.4ex,inner sep=0.13em,font=\scriptsize]
+  \node[opbox](M) at (0,0){$\mathfrak{M}$};
+  \draw[jmarrown](M.east)--(1.2,0);\node at(1.2,0)[right]{$jm$};
+\end{tikzpicture}} \\
 $\displaystyle\sum_{m^{\prime}}\langle|\mathfrak{M}|jm^{\prime}\rangle\langle jm^{\prime}\,jm|=\langle jm|\mathfrak{M}|\rangle$
-& \begin{tikzpicture}[baseline=-0.4ex,inner sep=0.13em,font=\scriptsize]
-\node[opbox](M) at (0,0){$\mathfrak{M}$};\node[dotnode](n) at (1.6,0){};
-\draw[-{Stealth[length=2mm]},thick] (M.east) -- (n) node[midway,above]{$jm^{\prime}$};
-\draw[-{Stealth[length=1.7mm] Stealth[length=1.7mm]},thick] (2.8,0) node[right]{$jm$} -- (n);
-\end{tikzpicture}$=$%
+& \scalebox{0.82}{$\displaystyle\sum_{m^{\prime}}$
 \begin{tikzpicture}[baseline=-0.4ex,inner sep=0.13em,font=\scriptsize]
-\node[opbox](M) at (0,0){$\mathfrak{M}$};
-\draw[-{Stealth[length=1.7mm] Stealth[length=1.7mm]},thick] (1.3,0) node[right]{$jm$} -- (M.east);
-\end{tikzpicture} \\
+  \node[opbox](M) at (0,0){$\mathfrak{M}$};
+  \draw[jmarrown](M.east)--(1.2,0);\node at(1.2,0)[right]{$jm^{\prime}$};
+\end{tikzpicture}\,
+\mline{jm^{\prime}}{b}{b}{jm}$\,=\,$%
+\begin{tikzpicture}[baseline=-0.4ex,inner sep=0.13em,font=\scriptsize]
+  \node[opbox](M) at (0,0){$\mathfrak{M}$};
+  \draw[bjmarrown](1.2,0)--(M.east);\node at(1.2,0)[right]{$jm$};
+\end{tikzpicture}} \\
 \hline
 \multicolumn{2}{c}{Scalar Product of Irreducible Tensors}\\
-$\displaystyle\sum_{m}\langle|\mathfrak{M}|jm\rangle\langle jm|\mathfrak{N}|\rangle=(\mathfrak{M}_j\cdot\mathfrak{N}_j)$
-& \begin{tikzpicture}[baseline=-0.4ex,inner sep=0.13em,font=\scriptsize]
-\node[opbox](M) at (0,0){$\mathfrak{M}$};\node[opbox](N) at (2,0){$\mathfrak{N}$};
-\draw[-{Stealth[length=2mm]},thick,line width=1pt] (M.east) -- (N.west) node[midway,above]{$j$};
-\end{tikzpicture}$=$%
+\(\begin{aligned}
+&\sum_{m}\langle|\mathfrak{M}|jm\rangle\langle jm|\mathfrak{N}|\rangle\\
+&=\sum_{mm^{\prime}}\langle|\mathfrak{M}|jm\rangle\langle|\mathfrak{N}|jm^{\prime}\rangle\langle jm^{\prime}\,jm|\\
+&=\sum_{mm^{\prime}}|jm\,jm^{\prime}\rangle\langle jm^{\prime}|\mathfrak{M}|\rangle\langle jm|\mathfrak{N}|\rangle.
+\end{aligned}\)
+& \scalebox{0.82}{\begin{tabular}{@{}c@{}}
 \begin{tikzpicture}[baseline=-0.4ex,inner sep=0.13em,font=\scriptsize]
-\node[opbox](M) at (0,0){$\mathfrak{M}$};\node[opbox](N) at (3.1,0){$\mathfrak{N}$};\node[dotnode](n) at (1.55,0){};
-\draw[-{Stealth[length=2mm]},thick] (M.east) -- (n) node[midway,above]{$jm$};
-\draw[-{Stealth[length=1.7mm] Stealth[length=1.7mm]},thick] (N.west) -- (n) node[midway,above]{$jm$};
-\end{tikzpicture} \\
-$\displaystyle\sum_{m}\langle jm|\mathfrak{M}|\rangle\langle|\mathfrak{N}|jm\rangle=(\mathfrak{M}_j\cdot\mathfrak{N}_j)$
-& \begin{tikzpicture}[baseline=-0.4ex,inner sep=0.13em,font=\scriptsize]
-\node[opbox](M) at (0,0){$\mathfrak{M}$};\node[opbox](N) at (2,0){$\mathfrak{N}$};
-\draw[-{Stealth[length=2mm]},thick,line width=1pt] (N.west) -- (M.east) node[midway,above]{$j$};
-\end{tikzpicture}$=$%
+  \node[opbox](M) at (0,0){$\mathfrak{M}$};\node[opbox](N) at (1.9,0){$\mathfrak{N}$};
+  \draw[jmlinem](M.east)--(N.west)node[midway,above]{$j$};
+\end{tikzpicture}$\;=\displaystyle\sum_{m}$
 \begin{tikzpicture}[baseline=-0.4ex,inner sep=0.13em,font=\scriptsize]
-\node[opbox](M) at (0,0){$\mathfrak{M}$};\node[opbox](N) at (3.1,0){$\mathfrak{N}$};\node[dotnode](n) at (1.55,0){};
-\draw[-{Stealth[length=1.7mm] Stealth[length=1.7mm]},thick] (M.east) -- (n) node[midway,above]{$jm$};
-\draw[-{Stealth[length=2mm]},thick] (N.west) -- (n) node[midway,above]{$jm$};
-\end{tikzpicture} \\
+  \node[opbox](M) at (0,0){$\mathfrak{M}$};
+  \draw[jmarrown](M.east)--(1.1,0);\node at(0.7,0.28){$jm$};
+  \node[opbox](N) at (3.4,0){$\mathfrak{N}$};
+  \draw[bjmarrown](1.7,0)--(N.west);\node at(2.4,0.28){$jm$};
+\end{tikzpicture} \\[0.4em]
+$\displaystyle=\sum_{mm^{\prime}}$
+\begin{tikzpicture}[baseline=-0.4ex,inner sep=0.13em,font=\scriptsize]
+  \node[opbox](M) at (0,0){$\mathfrak{M}$};
+  \draw[jmarrown](M.east)--(1.05,0);\node at(1.05,0.2)[right]{$jm$};
+\end{tikzpicture}\,
+\mline{jm}{b}{b}{jm^{\prime}}\,
+\begin{tikzpicture}[baseline=-0.4ex,inner sep=0.13em,font=\scriptsize]
+  \node[opbox](N) at (0,0){$\mathfrak{N}$};
+  \draw[jmarrown](N.west)--(-1.05,0);\node at(-1.05,0.2)[left]{$jm^{\prime}$};
+\end{tikzpicture} \\[0.4em]
+$\displaystyle=\sum_{mm^{\prime}}$
+\begin{tikzpicture}[baseline=-0.4ex,inner sep=0.13em,font=\scriptsize]
+  \node[opbox](M) at (0,0){$\mathfrak{M}$};
+  \draw[bjmarrown](1.05,0)--(M.east);\node at(1.05,0.2)[right]{$jm^{\prime}$};
+\end{tikzpicture}\,
+\mline{jm^{\prime}}{k}{k}{jm}\,
+\begin{tikzpicture}[baseline=-0.4ex,inner sep=0.13em,font=\scriptsize]
+  \node[opbox](N) at (0,0){$\mathfrak{N}$};
+  \draw[bjmarrown](-1.05,0)--(N.west);\node at(-1.05,0.2)[left]{$jm$};
+\end{tikzpicture}
+\end{tabular}} \\
+\(\begin{aligned}
+&\sum_{m}\langle jm|\mathfrak{M}|\rangle\langle|\mathfrak{N}|jm\rangle\\
+&=\sum_{mm^{\prime}}\langle|\mathfrak{M}|jm^{\prime}\rangle\langle|\mathfrak{N}|jm\rangle\langle jm^{\prime}\,jm|\\
+&=\sum_{mm^{\prime}}|jm\,jm^{\prime}\rangle\langle jm|\mathfrak{M}|\rangle\langle jm^{\prime}|\mathfrak{N}|\rangle.
+\end{aligned}\)
+& \scalebox{0.82}{\begin{tabular}{@{}c@{}}
+\begin{tikzpicture}[baseline=-0.4ex,inner sep=0.13em,font=\scriptsize]
+  \node[opbox](M) at (0,0){$\mathfrak{M}$};\node[opbox](N) at (1.9,0){$\mathfrak{N}$};
+  \draw[jmlinem](N.west)--(M.east)node[midway,above]{$j$};
+\end{tikzpicture}$\;=\displaystyle\sum_{m}$
+\begin{tikzpicture}[baseline=-0.4ex,inner sep=0.13em,font=\scriptsize]
+  \node[opbox](M) at (0,0){$\mathfrak{M}$};
+  \draw[bjmarrown](1.1,0)--(M.east);\node at(0.7,0.28){$jm$};
+  \node[opbox](N) at (3.4,0){$\mathfrak{N}$};
+  \draw[jmarrown](N.west)--(1.7,0);\node at(2.4,0.28){$jm$};
+\end{tikzpicture} \\[0.4em]
+$\displaystyle=\sum_{mm^{\prime}}$
+\begin{tikzpicture}[baseline=-0.4ex,inner sep=0.13em,font=\scriptsize]
+  \node[opbox](M) at (0,0){$\mathfrak{M}$};
+  \draw[jmarrown](M.east)--(1.05,0);\node at(1.05,0.2)[right]{$jm^{\prime}$};
+\end{tikzpicture}\,
+\mline{jm^{\prime}}{b}{b}{jm}\,
+\begin{tikzpicture}[baseline=-0.4ex,inner sep=0.13em,font=\scriptsize]
+  \node[opbox](N) at (0,0){$\mathfrak{N}$};
+  \draw[jmarrown](N.west)--(-1.05,0);\node at(-1.05,0.2)[left]{$jm$};
+\end{tikzpicture} \\[0.4em]
+$\displaystyle=\sum_{mm^{\prime}}$
+\begin{tikzpicture}[baseline=-0.4ex,inner sep=0.13em,font=\scriptsize]
+  \node[opbox](M) at (0,0){$\mathfrak{M}$};
+  \draw[bjmarrown](1.05,0)--(M.east);\node at(1.05,0.2)[right]{$jm$};
+\end{tikzpicture}\,
+\mline{jm}{k}{k}{jm^{\prime}}\,
+\begin{tikzpicture}[baseline=-0.4ex,inner sep=0.13em,font=\scriptsize]
+  \node[opbox](N) at (0,0){$\mathfrak{N}$};
+  \draw[bjmarrown](-1.05,0)--(N.west);\node at(-1.05,0.2)[left]{$jm^{\prime}$};
+\end{tikzpicture}
+\end{tabular}} \\
 $\displaystyle\sum_{m}\langle|\mathfrak{M}|jm\rangle\langle jm|\mathfrak{N}|\rangle=(-1)^{2j}\sum_{m}\langle jm|\mathfrak{M}|\rangle\langle|\mathfrak{N}|jm\rangle$
 & \begin{tikzpicture}[baseline=-0.4ex,inner sep=0.13em,font=\scriptsize]
 \node[opbox](M) at (0,0){$\mathfrak{M}$};\node[opbox](N) at (2,0){$\mathfrak{N}$};
