@@ -1866,6 +1866,7 @@ Rules for the Transformation of Diagrams}
 \small
 \setlength{\tabcolsep}{4pt}
 \renewcommand{\arraystretch}{1.5}
+\setlength{\parskip}{16pt}
 \begin{tabular}{@{}p{0.46\textwidth}|p{0.5\textwidth}@{}}
 \hline
 \multicolumn{1}{c|}{Analytical Expression} & \multicolumn{1}{c}{Graphical Representation} \\
@@ -1900,7 +1901,7 @@ Completeness Condition\par
 \coordinate(rp)at([xshift=5.25mm,yshift=6.5mm]M.north);
 \draw(la)--(lp)--(lb);\draw(ra)--(rp)--(rb);
 \node[dotnode]at(lp){};\node[dotnode]at(rp){};
-\draw[jmlinem](rp)--(lp)node[midway,above]{$J$};
+\draw[jmlinem,ultra thick](rp)--(lp)node[midway,above]{$J$};
 \end{tikzpicture}
 \tabularnewline
 \hline
@@ -1924,13 +1925,58 @@ Complete summation over $J$ and $M$&Elimination of thick solid line\\
 \begin{aligned}
 & \sum_{J I}(2 J+1)\braOket{j_{1} j_{2} ; J M}{\mathscr{M}}{j_{1} j_{2} ; J M} \\
 & =\sum_{m_{1} m_{2}}\braOket{j_{1} m_{1} j_{2} m_{3}}{\mathfrak{M}}{j_{1} m_{1} j_{2} m_{2}}, 
-\end{aligned} \)&\begin{tikzpicture}[baseline=0pt]\node[opbox](M) at (0,0){$\mathfrak{M}$}; \node[opbox](N) at (2.4,0){$\mathfrak{N}$}; \draw[jmline,line width=1.4pt] (M)--(N) node[midway,above]{$j$};\end{tikzpicture}\\
+\end{aligned} \)&
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
+  \node[opbox,minimum width=2.4cm,minimum height=0.6cm](M){$\mathfrak{M}$};
+  \coordinate(l1)at([xshift=-10mm]M.north);\coordinate(l2)at([xshift=-3mm]M.north);
+  \coordinate(lp)at([xshift=-6.5mm,yshift=8mm]M.north);
+  \draw[jmline](l1)--(lp);\draw[jmline](lp)--(l2);
+  \node[dotnode,label={above:\plusmark}]at(lp){};
+  \node at([xshift=-2mm]$(l1)!0.5!(lp)$){$j_1$};\node at([xshift=2mm]$(l2)!0.5!(lp)$){$j_2$};
+  \coordinate(r1)at([xshift=3mm]M.north);\coordinate(r2)at([xshift=10mm]M.north);
+  \coordinate(rp)at([xshift=6.5mm,yshift=8mm]M.north);
+  \draw[jmline](r1)--(rp);\draw[jmline](rp)--(r2);
+  \node[dotnode,label={above:\plusmark}]at(rp){};
+  \node at([xshift=-2mm]$(r1)!0.5!(rp)$){$j_1$};\node at([xshift=2mm]$(r2)!0.5!(rp)$){$j_2$};
+  \draw[jmlinemu](rp)--(lp)node[midway,above]{$J$};
+\end{tikzpicture}\;$=$\;%
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
+  \node[opbox,minimum width=2.4cm,minimum height=0.6cm](M){$\mathfrak{M}$};
+  \coordinate(a)at([xshift=-9mm]M.north);\coordinate(b)at([xshift=-3mm]M.north);
+  \coordinate(c)at([xshift=3mm]M.north);\coordinate(d)at([xshift=9mm]M.north);
+  \draw[jmlinem](a)to[bend left=88]node[pos=0.12,above]{$j_1$}(c);
+  \draw[jmlinem](b)to[bend left=88]node[pos=0.88,above]{$j_2$}(d);
+\end{tikzpicture}\\
 \(\begin{aligned}
 & \sum_{J M M}(2 J+1)\braOket{j_{1} j_{2} ; J M}{\mathfrak{M}}{j_{2} j_{6} ; J M} \\
 & \times\braOket{/ 2 / 4 ; J M^{\prime}}{\Re}{f_{1} j_{2} ; J M^{\prime}} \\
 & =\sum_{\substack{m_{1}, m_{2} \\
-m_{3} m_{4}}}\braOket{i_{1} m_{1} j_{2} m_{2}}{\mathfrak{M}}{i_{3} m_{3} j_{4} m_{4}}\braOket{j_{2} m_{3} j_{4} m_{4}}{\Re}{j_{1} m_{1} j_{2} m_{2}} . 
-\end{aligned} \)&\\
+m_{3} m_{4}}}\braOket{i_{1} m_{1} j_{2} m_{2}}{\mathfrak{M}}{i_{3} m_{3} j_{4} m_{4}}\braOket{j_{2} m_{3} j_{4} m_{4}}{\Re}{j_{1} m_{1} j_{2} m_{2}} .
+\end{aligned} \)&
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
+  \node[opbox,minimum width=0.55cm,minimum height=2.2cm](M) at (0,0){$\mathfrak{M}$};
+  \node[opbox,minimum width=0.55cm,minimum height=2.2cm](N) at (2.7,0){$\mathfrak{N}$};
+  \coordinate(up)at(1,0.5);\coordinate(lo)at(1,-0.5);
+  \coordinate(un)at(1.7,0.5);\coordinate(ln)at(1.7,-0.5);
+  \draw[jmlinem]([yshift=8mm]M.east)--(up)node[pos=0.4,above]{$j_1$};
+  \draw[jmlinem]([yshift=2.7mm]M.east)--(up)node[pos=0.4,below]{$j_2$};
+  \draw[jmlinem]([yshift=-2.7mm]M.east)--(lo)node[pos=0.4,above]{$j_3$};
+  \draw[jmlinem]([yshift=-8mm]M.east)--(lo)node[pos=0.4,below]{$j_4$};
+  \draw[jmlinem](un)--([yshift=8mm]N.west)node[pos=0.6,above]{$j_1$};
+  \draw[jmlinem](un)--([yshift=2.7mm]N.west)node[pos=0.6,below]{$j_2$};
+  \draw[jmlinem](ln)--([yshift=-2.7mm]N.west)node[pos=0.6,above]{$j_3$};
+  \draw[jmlinem](ln)--([yshift=-8mm]N.west)node[pos=0.6,below]{$j_4$};
+  \draw[jmlinemu](up)--(lo)node[midway,left]{$J$};
+  \draw[jmlinemu](un)--(ln)node[midway,right]{$J$};
+  \node[dotnode,label={right:\plusmark}]at(up){};\node[dotnode,label={right:\plusmark}]at(lo){};
+  \node[dotnode,label={left:\minusmark}]at(un){};\node[dotnode,label={left:\minusmark}]at(ln){};
+\end{tikzpicture}\;$=$\;%
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
+  \node[opbox,minimum width=0.55cm,minimum height=2.2cm](M) at (0,0){$\mathfrak{M}$};
+  \node[opbox,minimum width=0.55cm,minimum height=2.2cm](N) at (1.9,0){$\mathfrak{N}$};
+  \foreach \y/\lab in {8/j_1,2.7/j_2,-2.7/j_3,-8/j_4}{
+    \draw[jmlinem]([yshift=\y mm]M.east)--([yshift=\y mm]N.west)node[midway,above]{$\lab$};}
+\end{tikzpicture}\\
 \(\begin{aligned}
 & \sum_{J M M^{\prime} M^{\prime}}(2 J+1)\braOket{j_{1} j_{2} ; J M}{\mathfrak{M}}{j_{2} j_{4} ; J M} \\
 & \times\braOket{j_{3} j_{4} ; J M^{\prime}}{\Re}{j_{4} j_{6} ; J M^{\prime}}\braOket{j_{5} j_{6} ; J M^{\prime \prime}}{\mathfrak{L}}{j_{1} j_{2} ; J M^{\prime \prime}} \\
@@ -1939,7 +1985,79 @@ m_{2} m_{4} \\
 m_{3} m_{4}}}\braOket{j_{1} m_{1} j_{2} m_{2}}{\mathfrak{M}}{j_{3} m_{3} j_{4} m_{5}} \times \\
 & \times\braOket{j_{3} m_{3} j_{4} m_{4}}{\Re}{j_{5} m_{5} j_{6} m_{6}}\braOket{j_{5} m_{5} j_{6} m_{6}}{\mathfrak{L}}{j_{1} m_{1} j_{2} m_{2}} .
 \end{aligned}
-\)
+\)&
+\begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
+  \node[opbox,minimum width=0.5cm,minimum height=2.4cm,rotate=-30](M) at (150:1.7)
+       {\rotatebox{30}{\normalsize$\mathfrak{M}$}};
+  \node[opbox,minimum width=0.5cm,minimum height=2.4cm,rotate=30](L) at (30:1.7)
+       {\rotatebox{-30}{\normalsize$\mathfrak{L}$}};
+  \node[opbox,minimum width=2.4cm,minimum height=0.5cm](N) at (270:1.7){\normalsize$\mathfrak{N}$};
+  % connection points along each box's inner edge
+  \coordinate(mA)at($(M.south east)!0.89!(M.north east)$);
+  \coordinate(mB)at($(M.south east)!0.63!(M.north east)$);
+  \coordinate(mC)at($(M.south east)!0.37!(M.north east)$);
+  \coordinate(mD)at($(M.south east)!0.11!(M.north east)$);
+  \coordinate(lA)at($(L.south west)!0.89!(L.north west)$);
+  \coordinate(lB)at($(L.south west)!0.63!(L.north west)$);
+  \coordinate(lC)at($(L.south west)!0.37!(L.north west)$);
+  \coordinate(lD)at($(L.south west)!0.11!(L.north west)$);
+  \coordinate(nA)at($(N.north east)!0.89!(N.north west)$);
+  \coordinate(nB)at($(N.north east)!0.63!(N.north west)$);
+  \coordinate(nC)at($(N.north east)!0.37!(N.north west)$);
+  \coordinate(nD)at($(N.north east)!0.11!(N.north west)$);
+  % bowtie nodes
+  \node[dotnode,label={60:\plusmark}](pMl)at($0.5*(mA)+0.5*(mB)+(-30:0.8)$){};
+  \node[dotnode,label={0:\minusmark}](pMr)at($0.5*(mC)+0.5*(mD)+(-30:0.8)$){};
+  \node[dotnode,label={180:\minusmark}](pLl)at($0.5*(lA)+0.5*(lB)+(-150:0.8)$){};
+  \node[dotnode,label={-60:\plusmark}](pLr)at($0.5*(lC)+0.5*(lD)+(-150:0.8)$){};
+  \node[dotnode,label={180:\plusmark}](pNl)at($0.5*(nA)+0.5*(nB)+(90:0.8)$){};
+  \node[dotnode,label={0:\minusmark}](pNr)at($0.5*(nC)+0.5*(nD)+(90:0.8)$){};
+  % j-lines into the nodes
+  \draw[jmlinem](pMl)--(mA)node[pos=0.5,right]{$j_1$};
+  \draw[jmlinem](pMl)--(mB)node[pos=0.5,below]{$j_2$};
+  \draw[jmlinem](mC)--(pMr)node[pos=0.5,right]{$j_4$};
+  \draw[jmlinem](mD)--(pMr)node[pos=0.5,below]{$j_3$};
+  \draw[jmlinem](lA)--(pLl)node[pos=0.5,left]{$j_1$};
+  \draw[jmlinem](lB)--(pLl)node[pos=0.5,below]{$j_2$};
+  \draw[jmlinem](pLr)--(lC)node[pos=0.5,left]{$j_6$};
+  \draw[jmlinem](pLr)--(lD)node[pos=0.5,below]{$j_5$};
+  \draw[jmlinem](nA)--(pNl)node[pos=0.5,left]{$j_3$};
+  \draw[jmlinem](nB)--(pNl)node[pos=0.5,right]{$j_4$};
+  \draw[jmlinem](nC)--(pNr)node[pos=0.5,left]{$j_6$};
+  \draw[jmlinem](nD)--(pNr)node[pos=0.5,right]{$j_5$};
+  % ultra-thick J-lines of the three bowties
+  \draw[jmlinemu](pNl)--(pNr)node[midway,above]{$J$};
+  \draw[jmlinemu](pMl)--(pMr)node[midway,left]{$J$};
+  \draw[jmlinemu](pLr)--(pLl)node[midway,right]{$J$};
+\end{tikzpicture}
+\newline
+$=$\;%
+\begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
+  \node[opbox,minimum width=0.5cm,minimum height=2.4cm,rotate=-30](M) at (150:1.7)
+       {\rotatebox{30}{\normalsize$\mathfrak{M}$}};
+  \node[opbox,minimum width=0.5cm,minimum height=2.4cm,rotate=30](L) at (30:1.7)
+       {\rotatebox{-30}{\normalsize$\mathfrak{L}$}};
+  \node[opbox,minimum width=2.4cm,minimum height=0.5cm](N) at (270:1.7){\normalsize$\mathfrak{N}$};
+  \coordinate(mA)at($(M.south east)!0.89!(M.north east)$);
+  \coordinate(mB)at($(M.south east)!0.63!(M.north east)$);
+  \coordinate(mC)at($(M.south east)!0.37!(M.north east)$);
+  \coordinate(mD)at($(M.south east)!0.11!(M.north east)$);
+  \coordinate(lA)at($(L.south west)!0.89!(L.north west)$);
+  \coordinate(lB)at($(L.south west)!0.63!(L.north west)$);
+  \coordinate(lC)at($(L.south west)!0.37!(L.north west)$);
+  \coordinate(lD)at($(L.south west)!0.11!(L.north west)$);
+  \coordinate(nA)at($(N.north east)!0.89!(N.north west)$);
+  \coordinate(nB)at($(N.north east)!0.63!(N.north west)$);
+  \coordinate(nC)at($(N.north east)!0.37!(N.north west)$);
+  \coordinate(nD)at($(N.north east)!0.11!(N.north west)$);
+  % box-to-box j-lines (hexagon)
+  \draw[jmlinem](lA)--(mA)node[pos=0.5,above]{$j_1$};
+  \draw[jmlinem](lB)--(mB)node[pos=0.5,below]{$j_2$};
+  \draw[jmlinem](mC)--(nB)node[pos=0.5,above right]{$j_4$};
+  \draw[jmlinem](mD)--(nA)node[pos=0.5,below left]{$j_3$};
+  \draw[jmlinem](nC)--(lC)node[pos=0.5,above left]{$j_6$};
+  \draw[jmlinem](nD)--(lD)node[pos=0.5,below right]{$j_5$};
+\end{tikzpicture}\\
 where\\
 \(
 \begin{gathered}

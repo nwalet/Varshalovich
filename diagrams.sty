@@ -58,6 +58,12 @@
   %tip overshoots P and the whole arrowhead shape straddles it instead.
   jmlinem/.style={postaction={decorate,decoration={markings,mark=at position #1 with {\pgftransformxshift{1.1mm}\arrow{Stealth[length=2.2mm]}}}},thick},
   jmlinem/.default=0.5,
+  %summed-over-J "thick line": drawn ULTRA thick so it reads clearly (the
+  %scans show it merely "thick", easily confused with an ordinary j-line).
+  %jmlineu = plain, jmlinemu = mid-arrowhead variant (like jmlinem).
+  jmlineu/.style={-{Stealth[length=2.2mm]}, ultra thick},
+  jmlinemu/.style={postaction={decorate,decoration={markings,mark=at position #1 with {\pgftransformxshift{1.1mm}\arrow{Stealth[length=2.2mm]}}}},ultra thick},
+  jmlinemu/.default=0.5,
   bjmlinem/.style={postaction={decorate,decoration={markings,
     mark=at position {#1-0.05} with {\pgftransformxshift{1.1mm}\arrow{Stealth[length=2.2mm]},thick},
     mark=at position {#1+0.1} with {\pgftransformxshift{1.1mm}\arrow{Stealth[length=2.2mm]}}}}},
