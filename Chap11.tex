@@ -3193,18 +3193,126 @@ $\begin{aligned}
 \small
 \setlength{\tabcolsep}{5pt}
 \renewcommand{\arraystretch}{1.3}
-\begin{tabular}{@{}p{0.52\textwidth}|c@{}}
+\begin{tabular}{@{}p{0.42\textwidth}|c@{}}
 \hline
 \multicolumn{1}{c|}{Analytical Expression} & Graphical Representation \\
 \hline
 \multicolumn{2}{c}{Clebsch-Gordan Expansion and Associated Relations}\\
+% ---- CG row 1 ----
+$\displaystyle D^{j_1}_{m_1m'_1}(R)\,D^{j_2}_{m_2m'_2}(R)=\sum_{j_3m_3m'_3}(2j_3+1)\threej{j_1}{j_2}{j_3}{m_1}{m_2}{m_3}D^{j_3*}_{m_3m'_3}(R)\threej{j_1}{j_2}{j_3}{m'_1}{m'_2}{m'_3}$
+&
+\scalebox{0.72}{\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
+  \node[dotnode](C)at(0,0){};
+  \draw[rline](-1.5,0)--(C);\node at(-0.95,0.28){$R$};
+  \node[dotnode,label={45:\plusmark}](T)at(0.8,0.75){};
+  \node[dotnode,label={-45:\plusmark}](B)at(0.8,-0.75){};
+  \draw[rline](C)--(T);\draw[rline](C)--(B);
+  \draw[bjmarrown](0.8,1.65)--(T);\node at(0.8,1.65)[above]{$j_1m_1$};
+  \draw[jmarrown](T)--(1.9,0.75);\node at(1.9,0.75)[right]{$j_1m'_1$};
+  \draw[bjmarrown](1.9,-0.75)--(B);\node at(1.9,-0.75)[right]{$j_2m_2$};
+  \draw[jmarrown](B)--(0.8,-1.65);\node at(0.8,-1.65)[below]{$j_2m'_2$};
+\end{tikzpicture}$=$%
+\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
+  \node[dotnode,label={0:\plusmark}](P)at(0,0){};
+  \draw[rline](-1.4,0)--(P);\node at(-0.9,0.28){$R$};
+  \node[dotnode,label={45:\minusmark}](T)at(0.6,1.0){};
+  \node[dotnode,label={-45:\minusmark}](B)at(0.6,-1.0){};
+  \draw[jmlinemu](P)--(T)node[midway,left]{$j_3$};
+  \draw[jmlinemu](B)--(P)node[midway,left]{$j_3$};
+  \draw[bjmarrown](0.6,1.9)--(T);\node at(0.6,1.9)[above]{$j_1m_1$};
+  \draw[bjmarrown](1.7,1.0)--(T);\node at(1.7,1.0)[right]{$j_2m_2$};
+  \draw[jmarrown](B)--(1.7,-1.0);\node at(1.7,-1.0)[right]{$j_1m'_1$};
+  \draw[jmarrown](B)--(0.6,-1.9);\node at(0.6,-1.9)[below]{$j_2m'_2$};
+\end{tikzpicture}}
+\\
+% ---- CG row 2 (bubble) ----
+$\displaystyle\sum_{\substack{m_1m_2\\ m'_1m'_2}}\threej{j_1}{j_2}{j_3}{m_1}{m_2}{m_3}D^{j_1}_{m_1m'_1}(R)D^{j_2}_{m_2m'_2}(R)\threej{j_1}{j_2}{j'_3}{m'_1}{m'_2}{m'_3}=\frac{\delta_{j_3j'_3}}{(2j_3+1)}\{j_1j_2j_3\}D^{j_3*}_{m_3m'_3}(R)$
+&
+\scalebox{0.72}{\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
+  \coordinate(L)at(0.05,0);\coordinate(R)at(1.35,0);
+  \draw[jmlinem](L)to[bend left=90](R);
+  \draw[jmlinem](R)to[bend left=90](L);
+  \node at(-0.05,0.18){$-$};\node at(1.45,0.18){$+$};
+  \node at(0.7,0.5){$+$};\node at(0.7,0.9){$j_1$};
+  \node at(0.7,-0.5){$+$};\node at(0.7,-0.9){$j_2$};
+  \draw[jmarrown](L)--(-0.85,0);\node at(-0.85,0)[left]{$j_3m_3$};
+  \draw[bjmarrown](2.25,0)--(R);\node at(2.25,0)[right]{$j'_3m'_3$};
+  \coordinate(Rp)at(0.55,-1.85);
+  \draw[rline](0.55,0.5)--(Rp);\draw[rline](0.85,-0.5)--(Rp);
+  \node at(0.55,-2.05){$R$};
+\end{tikzpicture}$=$%
+\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
+  \coordinate(P)at(0,0);\node at(0,0.22){$+$};
+  \draw[jmarrown](P)--(-1.0,0);\node at(-0.65,0.26){$j_3m_3$};
+  \draw[bjmarrown](1.0,0)--(P);\node at(0.65,0.26){$j'_3m'_3$};
+  \draw[rline](P)--(0,-0.85);\node at(0.13,-0.5)[right]{$R$};
+\end{tikzpicture}%
+\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
+  \node[dotnode,label={180:\plusmark}](A)at(0,0){};
+  \node[dotnode,label={0:\minusmark}](B)at(1.1,0){};
+  \draw[jmlinem](A)to[bend left=70]node[pos=0.5,above]{$j_1$}(B);
+  \draw[jmlinem](A)--(B)node[pos=0.5,above]{$j_2$};
+  \draw[jmlinem](A)to[bend right=70]node[pos=0.5,below]{$j_3$}(B);
+\end{tikzpicture}%
+\begin{tikzpicture}[baseline=0pt,inner sep=1.5pt,font=\scriptsize]
+  \node[dotnode,label={135:\plusmark}](tl)at(0,0.5){};
+  \node[dotnode,label={45:\plusmark}](tr)at(0.9,0.5){};
+  \node[dotnode,label={-135:\plusmark}](bl)at(0,-0.5){};
+  \node[dotnode,label={-45:\plusmark}](br)at(0.9,-0.5){};
+  \draw[jmlinem](tl)--(tr);\draw[jmlinem](br)--(bl);
+  \draw[jmlinem](bl)--(tl)node[pos=0.5,left]{$j_3$};
+  \draw[jmlinem](tr)--(br)node[pos=0.5,right]{$j'_3$};
+\end{tikzpicture}}
+\\
+% ---- CG row 3 ----
+$\displaystyle\sum_{m_1m_2m_3}\threej{j_1}{j_2}{j_3}{m_1}{m_2}{m_3}D^{j_1}_{m_1m'_1}(R)D^{j_2}_{m_2m'_2}(R)D^{j_3}_{m_3m'_3}(R)=\threej{j_1}{j_2}{j_3}{m'_1}{m'_2}{m'_3}$
+&
+\scalebox{0.8}{\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
+  \node[label={180:\minusmark}](C)at(0,0){};
+  \node[label={135:\plusmark}](pA)at(0.8,0.5){};
+  \node[label={90:\plusmark}](pB)at(1.0,0){};
+  \node[label={60:\plusmark}](pC)at(1.2,-0.3){};
+  \draw[jmlinem](C)--(pA);\draw[jmlinem](C)--(pB);\draw[jmlinem](C)--(pC);
+  \draw[jmarrown](pA)--($2*(pA)$) node[right]{$j_1m'_1$};
+  \draw[jmarrown](pB)--($2*(pB)$) node[right]{$j_2m'_2$};
+  \draw[jmarrown](pC)--($2*(pC)$) node[right]{$j_3m'_3$};
+  \coordinate(Rp)at(0.8,-0.7);
+  \draw[rline](pA)--(Rp);\draw[rline](pB)--(Rp);\draw[rline](pC)--(Rp);
+\end{tikzpicture}$=$%
+\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
+  \node[dotnode,label={180:\minusmark}](C)at(0,0){};
+  \draw[jmarrown](C)--(1.6,1.0) node[right]{$j_1m'_1$};
+  \draw[jmarrown](C)--(2,0) node[right]{$j_2m'_2$};
+  \draw[jmarrown](C)--(2.4,-0.6) node[right]{$j_3m'_3$};
+\end{tikzpicture}}
+\\
 \multicolumn{2}{c}{Integral of Three D-Functions}\\
-\[
-\begin{gathered}
-\int D_{m_{1} m_{1}}^{j_{1}}(R) D_{m_{2} m_{2}}^{j_{2}}(R) D_{m_{3} m_{3}^{\prime}}^{j_{3}}(R) \frac{d R}{16 \pi^{2}} \\
-=\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{m_{2}}{m_{3}}\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}^{\prime}}{m_{2}^{\prime}}{m_{3}^{\prime}} .
-\end{gathered}
-\]
+$\displaystyle\int D^{j_1}_{m_1m'_1}(R)\,D^{j_2}_{m_2m'_2}(R)\,D^{j_3}_{m_3m'_3}(R)\,\frac{dR}{16\pi^2}=\threej{j_1}{j_2}{j_3}{m_1}{m_2}{m_3}\threej{j_1}{j_2}{j_3}{m'_1}{m'_2}{m'_3}$
+&
+\scalebox{0.78}{\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
+  \coordinate(Cp)at(0,0.1);
+  \node[label={135:\plusmark}](TL)at(-0.6,0.75){};
+  \node[label={45:\plusmark}](TR)at(0.6,0.75){};
+  \node[label={-90:\plusmark}](Bo)at(0,-0.8){};
+  \draw[rline](Cp)--(TL);\draw[rline](Cp)--(TR);\draw[rline](Cp)--(Bo);
+  \draw[bjmarrown](-1.5,0.35)--(TL);\node at(-1.5,0.35)[left]{$j_1m_1$};
+  \draw[jmarrown](TL)--(-0.6,1.65);\node at(-0.6,1.65)[above left]{$j_1m'_1$};
+  \draw[bjmarrown](0.6,1.65)--(TR);\node at(0.6,1.65)[above left]{$j_3m_3$};
+  \draw[jmarrown](TR)--(1.5,0.35);\node at(1.5,0.35)[right]{$j_3m'_3$};
+  \draw[bjmarrown](0.95,-1.15)--(Bo);\node at(0.95,-1.15)[right]{$j_2m_2$};
+  \draw[jmarrown](Bo)--(-0.95,-1.15);\node at(-0.95,-1.15)[left]{$j_2m'_2$};
+\end{tikzpicture}$=$%
+\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
+  \node[dotnode,label={90:\plusmark}](LN)at(0,0){};
+  \draw[bjmarrown](-0.9,0.85)--(LN);\node at(-0.9,0.85)[left]{$j_1m_1$};
+  \draw[bjmarrown](0.9,0.85)--(LN);\node at(0.9,0.9)[above]{$j_3m_3$};
+  \draw[bjmarrown](0,-0.95)--(LN);\node at(0,-0.95)[below]{$j_2m_2$};
+  \node[dotnode,label={90:\plusmark}](RN)at(3.2,0){};
+  \draw[jmarrown](RN)--(2.3,0.85);\node at(2.3,0.9)[above]{$j_1m'_1$};
+  \draw[jmarrown](RN)--(4.1,0.85);\node at(4.1,0.85)[right]{$j_3m'_3$};
+  \draw[jmarrown](RN)--(3.2,-0.95);\node at(3.2,-0.95)[below]{$j_2m'_2$};
+\end{tikzpicture}}
+\\
 \end{tabular}
 \end{center}
 \end{table}
