@@ -2862,7 +2862,7 @@ $\displaystyle\sum_{m}\langle|\mathfrak{M}|jm\rangle\langle jm|\mathfrak{N}|\ran
 \end{center}
 \end{table}
 
-\begin{table}[tbh!]
+\begin{table}[ptbh!]
 \begin{center}
 \captionsetup{justification=centering,labelformat=empty}
 \caption{Table 11.12.\\ Spherical Harmonics.}
@@ -3015,50 +3015,225 @@ $\begin{aligned}
 \end{center}
 \end{table}
 
-\begin{table}[tbh!]
+\begin{table}[ptbh!]
 \begin{center}
-\caption{Wigner D-Functions.}
+\captionsetup{justification=centering,labelformat=empty}
+\caption{Table 11.13\\Wigner D-Functions.}
 \label{chap11:tab:9}
-  \begin{tikzpicture}[baseline=0pt]\draw[bjmarrow] (0,0) node[left]{$jm$} -- (1.6,0) node[right]{$jm^{\prime}$}; \node[above=2pt] at (0.8,0){$R$};\end{tikzpicture}
+\small
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{@{}p{0.46\textwidth}|c@{}}
+\hline
+\multicolumn{1}{c|}{Analytical Expression} & Graphical Representation \\
+\hline
+\multicolumn{2}{c}{Adjoint Matrix}\\
+$\begin{aligned}
+\left(D^{j}_{mm'}(R)\right)^{*}&=\sum_{\mu\mu'}\binom{j}{m\ \mu}D^{j}_{\mu\mu'}(R)\binom{j}{\mu'\ m'}\\
+&=(-1)^{m-m'}D^{j}_{-m,-m'}(R).
+\end{aligned}$
+&
+\scalebox{0.8}{\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
+  \coordinate(P)at(0,0);
+  \draw[ketout](P)--(-1.2,0);\node at(-0.85,0.28){$jm$};
+  \draw[brain](1.2,0)--(P);\node at(0.85,0.28){$jm'$};
+  \node at(0,0.24){$+$};\Rdown{R}
+\end{tikzpicture}$=\displaystyle\sum_{\mu\mu'}$%
+\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
+  \draw[ketout](0,0)--(-0.9,0);\node at(-0.6,0.28){$jm$};
+  \draw[ketout](0,0)--(0.9,0);\node at(0.6,0.28){$j\mu$};
+\end{tikzpicture}%
+\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
+  \coordinate(P)at(0,0);
+  \draw[brain](-0.9,0)--(P);\node at(-0.6,0.28){$j\mu$};
+  \draw[ketout](P)--(0.9,0);\node at(0.6,0.28){$j\mu'$};
+  \node at(0,0.24){$+$};\Rdown{R}
+\end{tikzpicture}%
+\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
+  \draw[brain](-0.9,0)--(-0.06,0);\node at(-0.6,0.28){$j\mu'$};
+  \draw[brain](0.9,0)--(0.06,0);\node at(0.6,0.28){$jm'$};
+\end{tikzpicture}}
+\\
+\multicolumn{2}{c}{Inverse Matrix}\\
+$D^{j}_{mm'}(R^{-1})=\left(D^{j}_{m'm}(R)\right)^{*}.$
+&
+\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
+  \node[dotnode,label={0:\plusmark}](P)at(0,0){};
+  \draw[bjmarrown](-1.0,0.85)--(P);\node at(-1.0,0.85)[left]{$jm$};
+  \draw[jmarrown](P)--(1.0,0.85);\node at(1.0,0.85)[right]{$jm'$};
+  \Rdown{R^{-1}}
+\end{tikzpicture}$\;=\;$%
+\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
+  \node[dotnode,label={0:\minusmark}](P)at(0,0){};
+  \draw[bjmarrown](-1.0,0.85)--(P);\node at(-1.0,0.85)[left]{$jm$};
+  \draw[jmarrown](P)--(1.0,0.85);\node at(1.0,0.85)[right]{$jm'$};
+  \Rdown{R}
+\end{tikzpicture}
+\\
+\multicolumn{2}{c}{Unitarity}\\
+$\displaystyle\sum_{m}\left(D^{j}_{mm'}(R)\right)^{*}D^{j}_{m\bar m'}(R)=\sum_{m}D^{j}_{m'm}(R^{-1})D^{j}_{m\bar m'}(R)=\delta_{m'\bar m'}$
+&
+\scalebox{0.86}{\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
+  \draw[bjmarrown](-2.1,0)--(-0.75,0);\node at(-1.6,0.28){$jm'$};
+  \node[dotnode,label={90:\minusmark}](A)at(-0.75,0){};
+  \draw[jmlinem](A)--(0.75,0);
+  \node[dotnode,label={90:\plusmark}](B)at(0.75,0){};
+  \draw[jmarrown](B)--(2.1,0);\node at(1.6,0.28){$j\bar m'$};
+  \draw[rline](A)to[bend right=70]node[below]{$R$}(B);
+\end{tikzpicture}$=$%
+\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
+  \draw[thick,postaction={decorate,decoration={markings,
+      mark=at position 0.22 with {\arrow{Stealth[length=2.2mm] Stealth[length=2.2mm]}}}},
+      -{Stealth[length=2.2mm]}](-1.3,0)--(1.3,0);
+  \node at(-0.8,0.28){$jm'$};\node at(0.8,0.28){$j\bar m'$};
+\end{tikzpicture}}
+\\
+$\displaystyle\sum_{m'}D^{j}_{mm'}(R)\left(D^{j}_{\bar m m'}(R)\right)^{*}=\sum_{m'}D^{j}_{mm'}(R)D^{j}_{m'\bar m}(R^{-1})=\delta_{m\bar m}$
+&
+\scalebox{0.86}{\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
+  \draw[bjmarrown](-2.1,0)--(-0.75,0);\node at(-1.6,0.28){$jm$};
+  \node[dotnode,label={-90:\plusmark}](A)at(-0.75,0){};
+  \draw[jmlinem](A)--(0.75,0);
+  \node[dotnode,label={-90:\minusmark}](B)at(0.75,0){};
+  \draw[jmarrown](B)--(2.1,0);\node at(1.6,0.28){$j\bar m$};
+  \draw[rline](A)to[bend left=70]node[above]{$R$}(B);
+\end{tikzpicture}$=$%
+\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
+  \draw[thick,postaction={decorate,decoration={markings,
+      mark=at position 0.22 with {\arrow{Stealth[length=2.2mm] Stealth[length=2.2mm]}}}},
+      -{Stealth[length=2.2mm]}](-1.3,0)--(1.3,0);
+  \node at(-0.8,0.28){$jm$};\node at(0.8,0.28){$j\bar m$};
+\end{tikzpicture}}
+\\
+\multicolumn{2}{c}{Orthonormality}\\
+$\displaystyle\int D^{j_1}_{m_1m'_1}(R)\,D^{j_2\,*}_{m_2m'_2}(R)\,\frac{dR}{16\pi^2}=\frac{\delta_{j_1j_2}\delta_{m_1m_2}\delta_{m'_1m'_2}}{(2j_1+1)}$
+&
+\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
+  \node[dotnode,label={0:\plusmark}](T)at(0,0.5){};
+  \draw[bjmarrown](-1.0,1.35)--(T);\node at(-1.0,1.35)[left]{$j_1m_1$};
+  \draw[jmarrown](T)--(1.0,1.35);\node at(1.0,1.35)[right]{$j_1m'_1$};
+  \node[dotnode,label={0:\minusmark}](B)at(0,-0.5){};
+  \draw[jmarrown](B)--(-1.0,-1.35);\node at(-1.0,-1.35)[left]{$j_2m_2$};
+  \draw[bjmarrown](1.0,-1.35)--(B);\node at(1.0,-1.35)[right]{$j_2m'_2$};
+  \draw[rline](T)--(B)node[midway,right]{$R$};
+\end{tikzpicture}$\;=\;$%
+\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
+  \node[dotnode](L)at(-0.15,0){};\node[dotnode](R)at(0.15,0){};
+  \draw[bjmarrown](-1.1,0.85)--(L);\node at(-1.1,0.85)[left]{$j_1m_1$};
+  \draw[jmarrown](R)--(1.1,0.85);\node at(1.1,0.85)[right]{$j_1m'_1$};
+  \draw[jmarrown](L)--(-1.1,-0.85);\node at(-1.1,-0.85)[left]{$j_2m_2$};
+  \draw[bjmarrown](1.1,-0.85)--(R);\node at(1.1,-0.85)[right]{$j_2m'_2$};
+\end{tikzpicture}
+\\
+\multicolumn{2}{c}{Completeness}\\
+$\displaystyle\sum_{j=0,1/2,1}^{\infty}(2j+1)\sum_{mm'}D^{j}_{mm'}(R_1)\,D^{j\,*}_{mm'}(R_2)=16\pi^2\,\delta(R_1-R_2)$
+&
+\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
+  \draw[rline](-2.0,0)--(-0.4,0);\node at(-1.3,0.28){$R_1$};
+  \draw[thick](0,0)circle(0.42);
+  \node at(-0.22,0){$+$};\node at(0.03,0){$j$};\node at(0.26,0){$-$};
+  \draw[rline](0.4,0)--(2.0,0);\node at(1.3,0.28){$R_2$};
+\end{tikzpicture}$\;=\;$%
+\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
+  \draw[rline](-1.5,0)--(-0.28,0);\node at(-0.9,0.28){$R_1$};
+  \node[deltanode]at(0,0){};
+  \draw[rline](0.28,0)--(1.5,0);\node at(0.9,0.28){$R_2$};
+\end{tikzpicture}
+\\
+\multicolumn{2}{c}{Rotation Matrix in $\Omega$-Representation}\\
+$\begin{aligned}
+\delta_{ll'}D^{l}_{mm'}(R)&=\frac{2l+1}{4\pi}\iint d\Omega\,d\Omega'\,C^{*}_{lm}(\Omega)\,\delta(\Omega-R^{-1}\Omega')\,C_{l'm'}(\Omega'),\\
+\langle lm|R|l'm'\rangle&=\langle lm|\Omega\rangle\langle\Omega|R^{-1}|\Omega'\rangle\langle\Omega'|l'm'\rangle.
+\end{aligned}$
+&
+\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
+  \node[dotnode,label={90:\minusmark}](P)at(0,0){};
+  \draw[bomarrown](-1.0,0.85)--(P);\node at(-1.0,0.85)[left]{$\Omega'$};
+  \draw[omarrown](P)--(1.0,0.85);\node at(1.0,0.85)[right]{$\Omega$};
+  \Rdown{R}
+\end{tikzpicture}$\;=\;$%
+\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
+  \node[dotnode,label={90:\minusmark}](P)at(0,0){};
+  \coordinate(a)at(-0.55,0.5);\draw[jmlinem](a)--(P)node[midway,below left]{$l'$};
+  \draw[bomarrown](-1.3,1.1)--(a);\node at(-1.3,1.1)[left]{$\Omega'$};
+  \coordinate(b)at(0.55,0.5);\draw[jmlinem](P)--(b)node[midway,below right]{$l$};
+  \draw[omarrown](b)--(1.3,1.1);\node at(1.3,1.1)[right]{$\Omega$};
+  \Rdown{R}
+\end{tikzpicture}
+\\
+$\begin{aligned}
+\delta(\Omega'-R\Omega)&=\sum_{lmm'}\frac{2l+1}{4\pi}\,C_{lm'}(\Omega')\,D^{l}_{m'm}(R^{-1})\,C^{*}_{lm}(\Omega),\\
+\langle\Omega'|R|\Omega\rangle&=\langle\Omega'|l'm'\rangle\langle l'm'|R^{-1}|lm\rangle\langle lm|\Omega\rangle.
+\end{aligned}$
+&
+\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
+  \node[dotnode,label={90:\plusmark}](P)at(0,0){};
+  \draw[bjmarrown](-1.0,0.85)--(P);\node at(-1.0,0.85)[left]{$lm$};
+  \draw[jmarrown](P)--(1.0,0.85);\node at(1.0,0.85)[right]{$l'm'$};
+  \Rdown{R}
+\end{tikzpicture}$\;=\;$%
+\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
+  \node[dotnode,label={90:\plusmark}](P)at(0,0){};
+  \coordinate(a)at(-0.55,0.5);\draw[omlinem](a)--(P)node[midway,below left]{$\Omega$};
+  \draw[bjmarrown](-1.3,1.1)--(a);\node at(-1.3,1.1)[left]{$lm$};
+  \coordinate(b)at(0.55,0.5);\draw[omlinem](P)--(b)node[midway,below right]{$\Omega'$};
+  \draw[jmarrown](b)--(1.3,1.1);\node at(1.3,1.1)[right]{$l'm'$};
+  \Rdown{R}
+\end{tikzpicture}
+\\
+\hline
+\end{tabular}
 \end{center}
 \end{table}
 
-\subsubsection{Clebsch-Gordan Expansion and Associated Relations}
+\begin{table}[ptbh!]
 \begin{center}
-\textbf{Table~\ref{chap11:tab:9} (continued)}
-  \threejdiag{j_1,,j_3,,j_2,,+}\ (\text{with } R\text{-lines})
-\end{center}
+\captionsetup{justification=centering,labelformat=empty}
+\caption*{Table 11.13\\Cnt'ed.}
+\small
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{@{}p{0.52\textwidth}|c@{}}
+\hline
+\multicolumn{1}{c|}{Analytical Expression} & Graphical Representation \\
+\hline
+\multicolumn{2}{c}{Clebsch-Gordan Expansion and Associated Relations}\\
+\multicolumn{2}{c}{Integral of Three D-Functions}\\
 \[
 \begin{gathered}
 \int D_{m_{1} m_{1}}^{j_{1}}(R) D_{m_{2} m_{2}}^{j_{2}}(R) D_{m_{3} m_{3}^{\prime}}^{j_{3}}(R) \frac{d R}{16 \pi^{2}} \\
 =\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{m_{2}}{m_{3}}\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}^{\prime}}{m_{2}^{\prime}}{m_{3}^{\prime}} .
 \end{gathered}
 \]
-\begin{figure}[h]
-\begin{center}
-\caption{Integral of Three D-Functions}
-\label{chap11:fig:5}
-  \threejdiag{j_1,,j_3,,j_2,,+}\ (\text{via } R)
+\end{tabular}
 \end{center}
-\end{figure}
+\end{table}
 
-\subsubsection{Addition Theorems}
-\begin{center}
-\textbf{Table~\ref{chap11:tab:9} (continued)}
-  \begin{tikzpicture}[baseline=0pt]\draw[bjmarrow] (0,0) node[left]{$J M$} to[bend left=40] node[midway,above]{$R_1$} (2,0); \draw[bjmarrow] (0,0) to[bend right=40] node[midway,below]{$R_2$} (2,0); \node[right] at (2,0) {$J M^{\prime}$};\end{tikzpicture}
-\end{center}
 
+\begin{table}[ptbh!]
 \begin{center}
-\begin{tikzpicture}[baseline=0pt]\draw[bjmarrow] (0,0) node[left]{$JM$} to[bend left=40] node[midway,above]{$R_1$} (2,0); \draw[bjmarrow] (0,0) to[bend right=40] node[midway,below]{$R_2$} (2,0); \node[right] at (2,0) {$JM^{\prime}$};\end{tikzpicture}
-\end{center}
+\captionsetup{justification=centering,labelformat=empty}
+\caption*{Table 11.13\\Cnt'ed.}
+\small
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{@{}p{0.52\textwidth}|c@{}}
+\hline
+\multicolumn{1}{c|}{Analytical Expression} & Graphical Representation \\
+\hline
+\multicolumn{2}{c}{Addition Theorems}\\
+&  \begin{tikzpicture}[baseline=0pt]\draw[bjmarrow] (0,0) node[left]{$J M$} to[bend left=40] node[midway,above]{$R_1$} (2,0); \draw[bjmarrow] (0,0) to[bend right=40] node[midway,below]{$R_2$} (2,0); \node[right] at (2,0) {$J M^{\prime}$};\end{tikzpicture}\\
+&
+\begin{tikzpicture}[baseline=0pt]\draw[bjmarrow] (0,0) node[left]{$JM$} to[bend left=40] node[midway,above]{$R_1$} (2,0); \draw[bjmarrow] (0,0) to[bend right=40] node[midway,below]{$R_2$} (2,0); \node[right] at (2,0) {$JM^{\prime}$};\end{tikzpicture}\\
 \[
 \begin{aligned}
-& m_{j} \\
 & \sixj{j_{1}}{j_{2}}{j_{3}}{j_{23}}{j_{31}}{j_{13}} \sum_{m_{1} m_{3} m_{3}}\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{m_{2}}{m_{3}} D_{m_{1} m_{1}^{\prime}}^{j_{1}}\left(R_{1}\right) D_{m_{2} m_{3}^{\prime}}^{j_{3}}\left(R_{2}\right) D_{m_{3} m_{3}^{\prime}}^{j_{3}}\left(R_{3}\right) \\
 & =\sum_{\substack{M_{1}, M_{22} M_{23} \\
 M_{12} M_{22}^{\prime} M_{31}^{\prime}}}(-1)^{J_{12}-M_{12}+J_{22}-M_{22}+J_{m-} M_{21}} \\
 & \times\threej{J_{12}}{J_{1}}{J_{22}}{M_{12}}{m_{1}^{\prime}}{-M_{31}^{\prime}}\threej{J_{23}}{J_{2}}{J_{12}}{M_{23}}{m_{2}^{\prime}}{-M_{12}^{\prime}}\threej{J_{31}}{J_{2}}{J_{23}}{M_{31}}{m_{3}^{\prime}}{-M_{23}^{\prime}} \\
-& \times D_{M_{11} M_{11}^{\prime}}^{J_{31}}\left(R_{3}^{-1} R_{1}\right) D_{M_{12} M_{12}^{\prime}}^{J_{12}}\left(R_{1}^{-1} R_{2}\right) D_{M_{22} M_{12}^{\prime}}^{J_{22}}\left(R_{2}^{-1} R_{3}\right) . \\
+& \times D_{M_{11} M_{11}^{\prime}}^{J_{31}}\left(R_{3}^{-1} R_{1}\right) D_{M_{12} M_{12}^{\prime}}^{J_{12}}\left(R_{1}^{-1} R_{2}\right) D_{M_{22} M_{12}^{\prime}}^{J_{22}}\left(R_{2}^{-1} R_{3}\right) .
+\end{aligned}\] &\\
+\[\begin{aligned}
 & \sum_{j_{1} j_{2} j_{2}}\left(2 j_{1}+1\right)\left(2 j_{2}+1\right)\left(2 j_{3}+1\right)\sixj{j_{2}}{j_{2}}{j_{2}}{j_{22}}{j_{21}}{j_{12}} \\
 & \times \sum_{\substack{m, m_{2}, m_{2} \\
 m, m_{1}^{\prime}, m_{2}, m_{3}}}(-1)^{J_{1}-M_{12}+J_{2 n}-M_{22}+J_{21}-M_{21}} \\
@@ -3067,86 +3242,104 @@ m, m_{1}^{\prime}, m_{2}, m_{3}}}(-1)^{J_{1}-M_{12}+J_{2 n}-M_{22}+J_{21}-M_{21}
 & =D_{M_{11} M_{12}^{\prime}}^{J_{12}}\left(R_{1} R_{2}^{-1}\right) D_{M_{23} M_{22}^{\prime}}^{J_{2}}\left(R_{2} R_{3}^{-1}\right) D_{M_{31} M_{11}^{\prime}}^{J_{3}}\left(R_{3} R_{1}^{-1}\right) .
 \end{aligned}
 \]
-\sixjdiagramu{J_{12},J_{23},J_{31},j_1,j_2,j_3,+}
-
-
-
-Matrix element of an irreducible tensor operator of rank $k$ in the JM-representation\\
-(Wigner-Eckart theorem)
-\[
-\braOket{\gamma J M}{\mathfrak{M}_{k,}}{\gamma^{\prime} J^{\prime} M^{\prime}}=(-1)^{J-M}\threej{J}{k}{J^{\prime}}{-M}{q}{M^{\prime}}\left(\gamma^{J}\left\|\mathfrak{M}_{k}\right\| \gamma^{\prime} J^{\prime}\right) .
-\]
-where $\left(\gamma J\left\|\mathfrak{M}_{k}\right\| \gamma^{\prime} J^{\prime}\right)$ is the reduced matrix element
-
-\begin{table}[tbh!]
-\begin{center}
-\caption{Matrix Elements of Irreducible Tensor Operators.}
-\label{chap11:tab:10}
-  \begin{tikzpicture}[baseline=0pt]\node[opbox](M) at (0,0){$\mathfrak{M}_k$}; \draw[jmline](M) -- (-1.2,0.7) node[left]{$\gamma JM$}; \draw[jmline](M) -- (-1.2,-0.7) node[left]{$\gamma^{\prime}J^{\prime}M^{\prime}$}; \draw[jmline](M) -- (1.4,0) node[right]{$kq$};\end{tikzpicture}
+&\\
+\hline
+\end{tabular}
 \end{center}
 \end{table}
 
-Reduced matrix element of irreducible tensor product of irreducible tensor operators
+
+
+
+
+
+
+
+
+
+\begin{table}[ptbh!]
+\begin{center}
+\captionsetup{justification=centering,labelformat=empty}
+\caption{Table 11.14\\Matrix Elements of Irreducible Tensor Operators.}
+\small
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{@{}p{0.52\textwidth}|c@{}}
+\hline
+\multicolumn{1}{c|}{Analytical Expression} & Graphical Representation \\
+\hline
+\multicolumn{2}{c}{Matrix element of an irreducible tensor operator of rank $k$ in the JM-representation
+(Wigner-Eckart theorem)}\\
+\[
+\braOket{\gamma J M}{\mathfrak{M}_{k,}}{\gamma^{\prime} J^{\prime} M^{\prime}}=(-1)^{J-M}\threej{J}{k}{J^{\prime}}{-M}{q}{M^{\prime}}\left(\gamma^{J}\left\|\mathfrak{M}_{k}\right\| \gamma^{\prime} J^{\prime}\right) .
+\]
+where $\left(\gamma J\left\|\mathfrak{M}_{k}\right\| \gamma^{\prime} J^{\prime}\right)$ is the reduced matrix element &\\
+\multicolumn{2}{c}{Reduced Matrix elements of irreducible tensor product of irreducible tensor operators.}\\
 \[
 \begin{gathered}
 \left(\gamma^{J}\left\|\left\{\mathfrak{M}_{k_{1}} \otimes \mathfrak{N}_{k_{2}}\right\}_{k}\right\| \gamma^{\prime} J^{\prime}\right) \\
 =(-1)^{J+k+J^{\prime}} \sqrt{2 k+1} \sum_{\tau^{\prime J} J^{\prime \prime}}\sixj{J}{k}{J^{\prime}}{k_{2}}{J^{\prime \prime}}{k_{1}} \\
 \times\left(\gamma^{J}\left\|\mathfrak{M}_{k_{1}}\right\| \gamma^{\prime \prime} J^{\prime \prime}\right)\left(\gamma^{J^{\prime}} J^{\prime \prime}\left\|\Re_{k_{2}}\right\| \gamma^{\prime} J^{\prime}\right) .
 \end{gathered}
-\]
-\begin{center}
+\] &
 \sixjdiagramu{J,J^{\prime},J^{\prime\prime},k_1,k_2,k,+}
-\end{center}
-
-Two coupled subsystems in the $j_{1} j_{2}$;JM-representation. Reduced matrix element of the irreducible tensor product of two irreducible tensor operators, one of which depends only on variables of the first subsystem and the other depends only on variables of the second subsystem.
+\\
+\multicolumn{2}{c}{Two coupled subsystems in the $j_{1} j_{2};JM$-representation. Reduced matrix element of the irreducible tensor product of two irreducible tensor operators, one of which depends only on variables of the first subsystem and the other depends only on variables of the second subsystem.}\\
 \[
 \begin{aligned}
 & \left(\gamma f_{1} j_{2} J\left\|\left\{\mathfrak{M}_{k_{1}}(1) \otimes \Re_{k_{2}}(2)\right\}_{k}\right\| \gamma^{\prime} f_{1}^{\prime} j_{2}^{\prime} J^{\prime}\right) \\
 = & \sqrt{(2 J+1)(2 k+1)\left(2 J^{\prime}+1\right)}\ninej{j_{1}}{j_{1}^{\prime}}{k_{1}}{j_{2}}{j_{2}^{\prime}}{k_{2}}{J}{J^{\prime}}{k} \\
 & \times \sum_{\gamma^{\prime \prime}}\left(\gamma j_{1}\left\|\mathfrak{M}_{k_{1}}\right\| \gamma^{\prime \prime} j_{1}^{\prime}\right)\left(\gamma^{\prime \prime} j_{2}\left\|\Re_{k_{2}}\right\| \gamma^{\prime} j_{2}^{\prime}\right)
 \end{aligned}
-\]
+\]&
 \sixjdiagramu{j_1,j_1^{\prime},k_1,j_2,j_2^{\prime},k_2,+}
+\end{tabular}
+\end{center}
+\end{table}
 
-
-Table 11.14. (Cont'd)
-
-\subsubsection{Analytical Expression}
-\subsubsection{Graphical Representation}
-\subsubsection{Matrix element of the scalar product of two irreducible tensor operators which}
-depend on variables of the first and the second subsystems, respectively.
+\begin{table}[ptbh!]
+\begin{center}
+\captionsetup{justification=centering,labelformat=empty}
+\caption*{Table 11.14\\Cnt'ed.}
+\small
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{@{}p{0.52\textwidth}|c@{}}
+\hline
+\multicolumn{1}{c|}{Analytical Expression} & Graphical Representation \\
+\hline
+\multicolumn{2}{c}{Matrix element of the scalar product of two irreducible tensor operators which
+depend on variables of the first and the second subsystems, respectively.}\\
 \[
 \begin{gathered}
 \braOket{\gamma j_{1} j_{2} J M}{\left(\mathfrak{M}_{k}(1) \cdot \mathfrak{N}_{k}(2)\right)}{\gamma^{\prime} j_{1}^{\prime} j_{2}^{\prime} J^{\prime} M^{\prime}} \\
 =(-1)^{j_{1}^{\prime}+j_{2}+J_{\delta J J^{\prime}} \delta_{M M^{\prime}}}\sixj{j_{1}}{j_{2}}{J}{j_{2}^{\prime}}{j_{1}^{\prime}}{k} \\
 \times \sum_{\gamma^{\prime \prime}}\left(\tau j_{1}\left\|\mathfrak{M}_{k}\right\| \gamma^{\prime \prime} j_{1}^{\prime}\right)\left(\gamma^{\prime \prime} j_{2}\left\|\mathfrak{N}_{k}\right\| \gamma^{\prime} j_{2}^{\prime}\right)
 \end{gathered}
-\]
-\threejs{j_1}{j_2}{J}{+}{-}
-
-
-Reduced matrix element of an irreducible tensor operator which depends only on variables of the first subsystem.
+\] &
+\threejs{j_1}{j_2}{J}{+}{-}\\
+\multicolumn{2}{c}{Reduced matrix element of an irreducible tensor operator which depends only on variables of the first subsystem.}\\
 \[
 \begin{gathered}
 \left(\gamma j_{1} j_{2} J\left\|\mathfrak{M}_{k}(1)\right\| \gamma^{\prime} j_{1}^{\prime} j_{2}^{\prime} J^{\prime}\right) \\
 =(-1)^{j_{1}+j_{2}+J^{\prime}+k} \delta_{j_{2} j_{2}^{\prime}} \sqrt{(2 J+1)\left(2 J^{\prime}+1\right)} \\
 \times\sixj{J}{k}{J^{\prime}}{j_{1}^{\prime}}{j_{2}}{j_{1}}\left(\gamma j_{1}\left\|\mathfrak{M}_{k}\right\| \gamma^{\prime} j_{1}^{\prime}\right) .
 \end{gathered}
-\]
-\threejs{J}{k}{J^{\prime}}{+}{-}
-
-
-
-Reduced matrix element of the irreducible tensor operator which depends only on variables of the second subsystem.
+\] &
+\threejs{J}{k}{J^{\prime}}{+}{-}\\
+\multicolumn{2}{c}{Reduced matrix element of the irreducible tensor operator which depends only on variables of the second subsystem.}\\
 \[
 \begin{gathered}
 \left(\gamma j_{1} j_{2} J\left\|\Re_{k}(2)\right\| \gamma^{\prime} j_{1}^{\prime} j_{2}^{\prime} J^{\prime}\right) \\
 =(-1)^{j_{1}^{\prime}+j_{2}^{\prime}+J+k_{8}} \delta_{j_{1} j^{\prime}} \sqrt{(2 J+1)\left(2 J^{\prime}+1\right)} \\
 \times\sixj{J}{k}{J^{\prime}}{j_{2}^{\prime}}{j_{1}}{j_{2}}\left(\gamma j_{2}\left\|\Re_{k}\right\| \gamma^{\prime} j_{2}^{\prime}\right) .
 \end{gathered}
-\]
-\threejs{J}{k}{J^{\prime}}{+}{-}
-
+\] &
+\threejs{J}{k}{J^{\prime}}{+}{-}\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
 
 
 
