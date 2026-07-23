@@ -2670,46 +2670,54 @@ $\begin{aligned}[t]
 \end{aligned}$
 & \begin{tabular}{@{}c@{}}
 \begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
-\node[dotnode,label={-90:\plusmark}](O) at (0,0){};
-\draw[-{Stealth[length=2mm]},thick] (-0.85,0.6) node[left]{$j_1m_1$} -- (O);
-\draw[-{Stealth[length=2mm]},thick] (-0.85,-0.6) node[left]{$j_2m_2$} -- (O);
-\draw[-{Stealth[length=2mm]},thick] (O) -- (1.0,0) node[right]{$JM$};
+  \node[regular polygon,regular polygon sides=3,shape border rotate=-90,draw,thick,
+        inner sep=1.1pt,label={180:\plusmark}](O) at (0,0){};
+  \draw[bjmarrown](-0.85,0.6)--(O);\node at(-0.85,0.6)[left]{$j_1m_1$};
+  \draw[bjmarrown](-0.85,-0.6)--(O);\node at(-0.85,-0.6)[left]{$j_2m_2$};
+  \draw[jmarrown](O)--(1.0,0);\node at(1.0,0)[right]{$JM$};
 \end{tikzpicture}$\;=\;$%
 \begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
-\node[dotnode,label={-90:\plusmark}](O) at (0,0){};
-\draw[-{Stealth[length=2mm]},thick] (-0.85,0.6) node[left]{$j_1m_1$} -- (O);
-\draw[-{Stealth[length=2mm]},thick] (-0.85,-0.6) node[left]{$j_2m_2$} -- (O);
-\draw[-{Stealth[length=1.7mm] Stealth[length=1.7mm]},thick] (1.0,0) node[right]{$JM$} -- (O);
+  \node[regular polygon,regular polygon sides=3,shape border rotate=-90,draw,thick,
+        inner sep=1.1pt,label={180:\plusmark}](O) at (0,0){};
+  \draw[jmarrown](O)--(-0.85,0.6);\node at(-0.85,0.6)[left]{$j_1m_1$};
+  \draw[jmarrown](O)--(-0.85,-0.6);\node at(-0.85,-0.6)[left]{$j_2m_2$};
+  \draw[bjmarrown](1.0,0)--(O);\node at(1.0,0)[right]{$JM$};
 \end{tikzpicture}\\[1.4em]
 $(-1)^{2j_1}$\,\begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
-\node[dotnode,label={-90:\minusmark}](A) at (0,0){};\node[dotnode,label={-90:\plusmark}](B) at (1.15,0){};
-\draw[-{Stealth[length=1.8mm]},thick] (-0.8,0.6) node[left]{$j_1m_1$} -- (A);
-\draw[-{Stealth[length=1.8mm]},thick] (-0.8,-0.6) node[left]{$j_2m_2$} -- (A);
-\draw[-{Stealth[length=1.8mm]},thick] (A) -- (B) node[midway,above]{$j_3$};
-\draw[-{Stealth[length=1.8mm]},thick] (B) -- (2.05,0) node[right]{$JM$};
+  \node[dotnode,label={180:\minusmark}](A) at (0,0){};
+  \node[dotnode,label={-90:\plusmark}](B) at (1.15,0){};
+  \draw[bjmarrown](-0.8,0.6)--(A);\node at(-0.8,0.6)[left]{$j_1m_1$};
+  \draw[bjmarrown](-0.8,-0.6)--(A);\node at(-0.8,-0.6)[left]{$j_2m_2$};
+  \draw[jmlinem](B)--(A)node[pos=0.75,above]{$j_3$};
+  \draw[jmarrown](B)--(2.05,0);\node at(2.05,0)[right]{$JM$};
 \end{tikzpicture}$\;=(-1)^{2j_1}\;$%
 \begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
-\node[dotnode,label={90:\plusmark}](t) at (0,0.45){};\node[dotnode,label={-90:\plusmark}](b) at (0,-0.45){};
-\draw[jmlinem] (t) to[bend right=60] (b);\draw[jmlinem] (t) to[bend left=60] (b);\node at (0,0){$J$};
-\node[dotnode,label={-90:\plusmark}](O) at (1.7,0){};
-\draw[-{Stealth[length=1.8mm]},thick] (0.95,0.55) node[above]{$j_2m_2$} -- (O);
-\draw[-{Stealth[length=1.8mm]},thick] (0.95,-0.55) node[below]{$j_1m_1$} -- (O);
-\draw[-{Stealth[length=1.8mm]},thick] (O) -- (2.7,0) node[right]{$JM$};
+  \node[dotnode,label={90:\plusmark}] at (0,0.45){};
+  \draw[thick,postaction={decorate,decoration={markings,
+      mark=at position 0.5 with {\arrow{Stealth[length=2mm]}}}}](0,0.45) arc(90:-270:0.45);
+  \node at (0,0){$J$};
+  \node[dotnode,label={180:\plusmark}](O) at (1.7,0){};
+  \draw[bjmarrown](0.95,0.55)--(O);\node at(0.95,0.55)[above]{$j_2m_2$};
+  \draw[bjmarrown](0.95,-0.55)--(O);\node at(0.95,-0.55)[below]{$j_1m_1$};
+  \draw[jmarrown](O)--(2.7,0);\node at(2.7,0)[right]{$JM$};
 \end{tikzpicture}\\[1.4em]
 $(-1)^{2j_2}$\,\begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
-\node[dotnode,label={-90:\minusmark}](A) at (0,0){};\node[dotnode,label={-90:\plusmark}](B) at (1.15,0){};
-\draw[-{Stealth[length=1.8mm]},thick] (-0.8,0.6) node[left]{$j_1m_1$} -- (A);
-\draw[-{Stealth[length=1.8mm]},thick] (-0.8,-0.6) node[left]{$j_2m_2$} -- (A);
-\draw[-{Stealth[length=1.8mm]},thick] (A) -- (B) node[midway,above]{$j_3$};
-\draw[-{Stealth[length=1.7mm] Stealth[length=1.7mm]},thick] (2.05,0) node[right]{$JM$} -- (B);
+  \node[dotnode,label={180:\minusmark}](A) at (0,0){};
+  \node[dotnode,label={-90:\plusmark}](B) at (1.15,0){};
+  \draw[jmarrown](A)--(-0.8,0.6);\node at(-0.8,0.6)[left]{$j_1m_1$};
+  \draw[jmarrown](A)--(-0.8,-0.6);\node at(-0.8,-0.6)[left]{$j_2m_2$};
+  \draw[jmlinem](A)--(B)node[pos=0.25,above]{$j_3$};
+  \draw[bjmarrown](2.05,0)--(B);\node at(2.05,0)[right]{$JM$};
 \end{tikzpicture}$\;=(-1)^{2j_2}\;$%
 \begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
-\node[dotnode,label={90:\plusmark}](t) at (0,0.45){};\node[dotnode,label={-90:\plusmark}](b) at (0,-0.45){};
-\draw[jmlinem] (t) to[bend right=60] (b);\draw[jmlinem] (t) to[bend left=60] (b);\node at (0,0){$J$};
-\node[dotnode,label={-90:\plusmark}](O) at (1.7,0){};
-\draw[-{Stealth[length=1.8mm]},thick] (0.95,0.55) node[above]{$j_2m_2$} -- (O);
-\draw[-{Stealth[length=1.8mm]},thick] (0.95,-0.55) node[below]{$j_1m_1$} -- (O);
-\draw[-{Stealth[length=1.7mm] Stealth[length=1.7mm]},thick] (2.7,0) node[right]{$JM$} -- (O);
+  \node[dotnode,label={90:\plusmark}] at (0,0.45){};
+  \draw[thick,postaction={decorate,decoration={markings,
+      mark=at position 0.5 with {\arrow{Stealth[length=2mm]}}}}](0,0.45) arc(90:-270:0.45);
+  \node at (0,0){$J$};
+  \node[dotnode,label={180:\plusmark}](O) at (1.7,0){};
+  \draw[jmarrown](O)--(0.95,0.55);\node at(0.95,0.55)[above]{$j_2m_2$};
+  \draw[jmarrown](O)--(0.95,-0.55);\node at(0.95,-0.55)[below]{$j_1m_1$};
+  \draw[bjmarrown](2.7,0)--(O);\node at(2.7,0)[right]{$JM$};
 \end{tikzpicture}
 \end{tabular} \\
 \hline
