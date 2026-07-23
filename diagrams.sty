@@ -794,3 +794,7 @@
 \if k#3\draw[-{Stealth[length=2mm]},thick] (0,0) -- (1.05,0) node[right]{$#4$};
 \else\draw[-{Stealth[length=1.7mm] Stealth[length=1.7mm]},thick] (1.05,0) node[right]{$#4$} -- (0,0);\fi
 \end{tikzpicture}}
+
+%\rednode{name}: a "reduced" vertex -- a filled dot enclosed by a circle
+%(used for reduced 3jm/harmonic nodes). Draw at the current origin (0,0).
+\newcommand{\rednode}[1]{\node[dotnode](#1){};\draw[thick](#1)circle(0.24);}

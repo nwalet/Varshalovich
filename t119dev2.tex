@@ -1,0 +1,84 @@
+\documentclass[crop,math]{standalone}
+\usepackage{diagrams}
+\usepackage{amsfonts,amsmath}
+\newcommand{\rednode}[1]{\node[dotnode](#1){};\draw[thick](#1)circle(0.24);}
+\begin{document}
+% Table 11.12 batch 2: tree rows.
+
+% ---- Integral of Three Harmonics ----
+\[
+\begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
+  \node[dotnode](O)at(0,0){};
+  \node[deltanode](u)at(0,0.6){};\draw[jmline](O)--(u);\draw[jmarrown](u)--(0,1.35);\node at(0,1.35)[above]{$l_3m_3$};
+  \node[deltanode](a)at(-0.55,-0.55){};\draw[jmline](O)--(a);\draw[jmarrown](a)--(-1.15,-1.15);\node at(-1.15,-1.15)[left]{$l_1m_1$};
+  \node[deltanode](b)at(0.55,-0.55){};\draw[jmline](O)--(b);\draw[jmarrown](b)--(1.15,-1.15);\node at(1.15,-1.15)[right]{$l_2m_2$};
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
+  \node[dotnode](L)at(-0.16,0){};\node[dotnode](R)at(0.16,0){};
+  % up pair
+  \draw[jmarrown](L)--(-0.32,1.2);\node at(-0.32,1.2)[above]{$l_3O$};
+  \draw[jmarrown](R)--(0.32,1.2);\node at(0.32,1.2)[above]{$l_3m_3$};
+  % down-left pair
+  \draw[jmarrown](L)--(-1.15,-0.7);\node at(-1.1,-0.35)[left]{$l_1O$};
+  \draw[jmarrown](R)--(-0.85,-0.9);\node at(-0.85,-0.9)[below]{$l_1m_1$};
+  % down-right pair
+  \draw[jmarrown](L)--(0.85,-0.9);\node at(0.85,-0.9)[below]{$l_2O$};
+  \draw[jmarrown](R)--(1.15,-0.7);\node at(1.1,-0.35)[right]{$l_2m_2$};
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
+  \rednode{X}
+  \draw[jmarrown](X)--(0,1.15);\node at(0,1.15)[above]{$l_3m_3$};
+  \draw[jmarrown](X)--(-1.05,-0.95);\node at(-1.05,-0.95)[left]{$l_1m_1$};
+  \draw[jmarrown](X)--(1.05,-0.95);\node at(1.05,-0.95)[right]{$l_2m_2$};
+\end{tikzpicture}
+\]
+
+% ---- Clebsch-Gordan Expansion ----
+\[
+\begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
+  \node[dotnode](O)at(0,0){};
+  \draw[omarrown](-1.2,0)--(O);\node at(-0.7,0.28){$\Omega$};
+  \node[deltanode](a)at(0.55,0.5){};\draw[jmline](O)--(a);\draw[jmarrown](a)--(1.2,1.0);\node at(1.2,1.0)[right]{$l_2m_2$};
+  \node[deltanode](b)at(0.55,-0.5){};\draw[jmline](O)--(b);\draw[jmarrown](b)--(1.2,-1.0);\node at(1.2,-1.0)[right]{$l_1m_1$};
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
+  \draw[omarrown](-1.5,0)--(-0.7,0);\node at(-1.1,0.28){$\Omega$};
+  \node[deltanode](c)at(-0.7,0){};
+  \rednode{X}
+  \draw[jmlinem](c)--(X)node[midway,above]{$l_3$};
+  \draw[jmarrown](X)--(1.1,0.85);\node at(1.1,0.85)[right]{$l_2m_2$};
+  \draw[jmarrown](X)--(1.1,-0.85);\node at(1.1,-0.85)[right]{$l_1m_1$};
+\end{tikzpicture}
+\]
+
+% ---- Sum of Scalar Products of Three Harmonics ----
+\[
+\begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
+  \rednode{X}
+  \node[deltanode](a)at(-0.7,0.6){};\draw[jmlinem](a)--(X)node[midway,below right]{$l_2$};
+  \draw[bomarrown](-1.4,1.1)--(a);\node at(-1.4,1.1)[left]{$\Omega_2$};
+  \node[deltanode](b)at(-0.7,-0.6){};\draw[jmlinem](b)--(X)node[midway,above right]{$l_3$};
+  \draw[bomarrown](-1.4,-1.1)--(b);\node at(-1.4,-1.1)[left]{$\Omega_3$};
+  \node[deltanode](c)at(0.95,0){};\draw[jmlinem](X)--(c)node[midway,above]{$l_1$};
+  \draw[bomarrown](1.85,0)--(c);\node at(1.7,0.28){$\Omega_1$};
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
+  % top chain
+  \draw[bomarrown](-1.9,0.45)--(-0.9,0.45);\node at(-1.45,0.72){$\Omega_2$};
+  \node[deltanode](p1)at(-0.9,0.45){};
+  \draw[jmlinem](p1)--(0.1,0.45)node[midway,above]{$l_2$};
+  \node[deltanode](p2)at(0.1,0.45){};
+  \draw[omarrown](p2)--(1.1,0.45);\node at(0.65,0.72){$\Omega_1$};
+  % bottom chain
+  \draw[bomarrown](-1.9,-0.55)--(-0.9,-0.55);\node at(-1.45,-0.28){$\Omega_3$};
+  \node[deltanode](q1)at(-0.9,-0.55){};
+  \draw[jmlinem](q1)--(0.1,-0.55)node[midway,above]{$l_3$};
+  \node[deltanode](q2)at(0.1,-0.55){};
+  \draw[omarrown](q2)--(1.1,-0.55);\node at(0.65,-0.28){$\Omega_1$};
+\end{tikzpicture}
+\]
+\end{document}
