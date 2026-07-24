@@ -3493,15 +3493,69 @@ $\displaystyle\sum_{m'_1m'_2m'_3}D^{j_1}_{m_1m'_1}(R_1)D^{j_2}_{m_2m'_2}(R_2)D^{
   \draw[rline](o2)--($(o2)+(55:0.8)$) node[right]{$R_2$};
 \end{tikzpicture}}
 \\
-% ---- rows 4-5 (TODO: 6j-triangle recouplings; equations still garbled OCR) ----
-\[
-\begin{aligned}
-& \sixj{j_{1}}{j_{2}}{j_{3}}{j_{23}}{j_{31}}{j_{13}} \sum_{m_{1} m_{3} m_{3}}\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{m_{2}}{m_{3}} D_{m_{1} m_{1}^{\prime}}^{j_{1}}\left(R_{1}\right) D_{m_{2} m_{3}^{\prime}}^{j_{3}}\left(R_{2}\right) D_{m_{3} m_{3}^{\prime}}^{j_{3}}\left(R_{3}\right) \\
-& =\sum_{\substack{M_{1}, M_{22} M_{23} \\
-M_{12} M_{22}^{\prime} M_{31}^{\prime}}}(-1)^{J_{12}-M_{12}+J_{22}-M_{22}+J_{m-} M_{21}} \\
-& \times\threej{J_{12}}{J_{1}}{J_{22}}{M_{12}}{m_{1}^{\prime}}{-M_{31}^{\prime}}\threej{J_{23}}{J_{2}}{J_{12}}{M_{23}}{m_{2}^{\prime}}{-M_{12}^{\prime}}\threej{J_{31}}{J_{2}}{J_{23}}{M_{31}}{m_{3}^{\prime}}{-M_{23}^{\prime}} \\
-& \times D_{M_{11} M_{11}^{\prime}}^{J_{31}}\left(R_{3}^{-1} R_{1}\right) D_{M_{12} M_{12}^{\prime}}^{J_{12}}\left(R_{1}^{-1} R_{2}\right) D_{M_{22} M_{12}^{\prime}}^{J_{22}}\left(R_{2}^{-1} R_{3}\right) .
-\end{aligned}\] &\\
+% ---- row 4: 6j-triangle recoupling ----
+$\begin{aligned}
+&\sixj{j_1}{j_2}{j_3}{J_{23}}{J_{31}}{J_{12}}\sum_{m_1m_2m_3}\threej{j_1}{j_2}{j_3}{m_1}{m_2}{m_3}\\
+&\quad\times D^{j_1}_{m_1m'_1}(R_1)D^{j_2}_{m_2m'_2}(R_2)D^{j_3}_{m_3m'_3}(R_3)\\
+&=\sum_{\substack{M_{12}M_{23}M_{31}\\ M'_{12}M'_{23}M'_{31}}}(-1)^{J_{12}-M_{12}+J_{23}-M_{23}+J_{31}-M_{31}}\\
+&\quad\times\threej{J_{12}}{j_1}{J_{31}}{M_{12}}{m'_1}{-M'_{31}}\threej{J_{23}}{j_2}{J_{12}}{M_{23}}{m'_2}{-M'_{12}}\\
+&\qquad\times\threej{J_{31}}{j_3}{J_{23}}{M_{31}}{m'_3}{-M'_{23}}\\
+&\quad\times D^{J_{31}}_{M_{31}M'_{31}}(R_3^{-1}R_1)D^{J_{12}}_{M_{12}M'_{12}}(R_1^{-1}R_2)\\
+&\qquad\times D^{J_{23}}_{M_{23}M'_{23}}(R_2^{-1}R_3)
+\end{aligned}$
+&
+\scalebox{0.68}{\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
+  \coordinate(T)at(90:0.75);\coordinate(BL)at(210:0.75);\coordinate(BR)at(330:0.75);
+  \draw[jmlinem](T)--(BL) node[midway,above left]{$J_{31}$};
+  \draw[jmlinem](BR)--(T) node[midway,above right]{$J_{23}$};
+  \draw[jmlinem](BL)--(BR) node[midway,below]{$J_{12}$};
+  \node[inner sep=5pt,label={-90:\minusmark}]at(T){};
+  \node[label={30:\minusmark},inner sep=3pt]at(BL){};
+  \node[label={150:\minusmark},inner sep=3pt]at(BR){};
+  \coordinate(v3)at($(T)+(90:0.6)$);\coordinate(e3)at($(T)+(90:1.25)$);
+  \draw[jmlinem](v3)--(T);
+  \draw[jmarrown](v3)--(e3) node[pos=1,right]{$j_3m'_3$};
+  \node[label={180:\plusmark}]at(v3){};
+  \draw[rline](v3)--($(v3)+(0:0.8)$) node[right]{$R_3$};
+  \coordinate(v1)at($(BL)+(210:0.6)$);\coordinate(e1)at($(BL)+(210:1.25)$);
+  \draw[jmlinem](v1)--(BL);
+  \draw[jmarrown](v1)--(e1) node[pos=1,below]{$j_1m'_1$};
+  \node[label={-60:\plusmark}]at(v1){};
+  \draw[rline](v1)--($(v1)+(120:0.8)$) node[above]{$R_1$};
+  \coordinate(v2)at($(BR)+(330:0.6)$);\coordinate(e2)at($(BR)+(330:1.25)$);
+  \draw[jmlinem](v2)--(BR);
+  \draw[jmarrown](v2)--(e2) node[pos=1,below]{$j_2m'_2$};
+  \node[label={60:\plusmark}]at(v2){};
+  \draw[rline](v2)--($(v2)+(-120:0.8)$) node[below]{$R_2$};
+\end{tikzpicture}$=$%
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize,label distance=1pt]
+  \coordinate(T)at(0,1.35);\coordinate(BL)at(-1.35,-0.7);\coordinate(BR)at(1.35,-0.7);
+  \draw(BL)--(T) coordinate[pos=0.4](b31) coordinate[pos=0.6](a31);
+  \draw(BR)--(T) coordinate[pos=0.4](a23) coordinate[pos=0.6](b23);
+  \draw(BL)--(BR) coordinate[pos=0.4](a12) coordinate[pos=0.6](b12);
+  \draw[jmlinem] (BL) --(a12) node[midway,below] {$J_{12}$};
+  \draw[jmlinem] (a12) --(b12);
+  \draw[jmlinem] (b12) --(BR) node[midway,below] {$J_{12}$};
+  \draw[jmlinem] (BR) --(a23) node[midway,right] {$J_{23}$};
+  \draw[jmlinem] (a23) --(b23);
+  \draw[jmlinem] (b23) --(T) node[midway,right] {$J_{23}$};
+  \draw[jmlinem] (T) --(a31) node[midway,left] {$J_{31}$};
+  \draw[jmlinem] (a31) --(b31);
+  \draw[jmlinem] (b31) --(BL) node[midway,left] {$J_{31}$};
+  \node[label={[label distance=2pt]-90:\minusmark}]at(T){};
+  \node[label={30:\minusmark}]at(BL){};
+  \node[label={150:\minusmark}]at(BR){};
+  \node[label={[label distance=-2pt]270:\plusmark}]at(a12){};\draw[rline](a12)--($(a12)+(90:0.7)$) node[midway,left]{$R_1$};
+  \node[label={[label distance=-2pt]90:\plusmark}]at(b12){};\draw[rline](b12)--($(b12)+(270:0.7)$) node[near end,right]{$R_2$};
+  \node[label={[label distance=-4pt]30:\plusmark}]at(a23){};\draw[rline](a23)--($(a23)+(-150:0.7)$) node[midway,below]{$R_2$};
+  \node[label={[label distance=-4pt]210:\plusmark}]at(b23){};\draw[rline](b23)--($(b23)+(30:0.7)$) node[right]{$R_3$};
+  \node[label={[label distance=-4pt]150:\plusmark}]at(a31){};\draw[rline](a31)--($(a31)+(-30:0.7)$) node[midway,above]{$R_3$};
+  \node[label={[label distance=-4pt]-30:\plusmark}]at(b31){};\draw[rline](b31)--($(b31)+(150:0.7)$) node[left]{$R_1$};
+  \draw[jmarrown](T)--($(T)+(90:0.9)$) node[above]{$j_3m'_3$};
+  \draw[jmarrown](BL)--($(BL)+(210:0.9)$) node[below left]{$j_1m'_1$};
+  \draw[jmarrown](BR)--($(BR)+(330:0.9)$) node[below right]{$j_2m'_2$};
+\end{tikzpicture}}
+\\
 \[\begin{aligned}
 & \sum_{j_{1} j_{2} j_{2}}\left(2 j_{1}+1\right)\left(2 j_{2}+1\right)\left(2 j_{3}+1\right)\sixj{j_{2}}{j_{2}}{j_{2}}{j_{22}}{j_{21}}{j_{12}} \\
 & \times \sum_{\substack{m, m_{2}, m_{2} \\

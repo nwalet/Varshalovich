@@ -2,53 +2,71 @@
 \usepackage{diagrams}
 \usepackage{amsfonts,amsmath}
 \begin{document}
-% ===== Addition Theorems row 2: 6j H-tree = 2x2 D-grid =====
+% ===== Addition Theorems row 4 -- LHS triangle {J12 J23 J31} =====
+% Three - vertices; sides J31 (T-BL), J23 (T-BR), J12 (BL-BR).
+% Each vertex sends out an external j-leg (bra->ket at a + vertex) with a
+% perpendicular R-line: j3m'3/R3 (top), j1m'1/R1 (BL), j2m'2/R2 (BR).
 \[
-% LHS: two 3jm nodes joined by ultra-thick j3 (with mid + node, R3 down).
 \begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
-  \node[dotnode,label={180:\plusmark}](LN)at(0,0){};
-  \node[dotnode,label={0:\minusmark}](RN)at(1.9,0){};
-  \coordinate(M)at(0.95,0);
-  \draw[jmlinemu](LN)--(M);\draw[jmlinemu](M)--(RN);
-  \node[above] at (M){\plusmark};
-  \node at(0.5,0.22){$j_3$};\node at(1.45,0.22){$j_3$};
-  \draw[rline](M)--($(M)-(0,0.85)$) node[below]{$R_3$};
-  % left bra legs
-  \draw[jmarrown](LN)--($(LN)+(140:1.35)$) node[above]{$j_1\tilde m_1$};
-  \draw[jmarrown](LN)--($(LN)+(220:1.35)$) node[below]{$j_2\tilde m_2$};
-  % right legs: ket out with a + vertex and perpendicular R
-  \coordinate(u1)at($(RN)+(45:0.75)$);
-  \draw[bjmarrown]($(RN)+(45:1.6)$)--(u1) node[pos=0,right]{$j_1m_1$};
-  \draw[jmlinem](u1)--(RN) node[midway,below right]{$j_1$};
-  \node[label={-45:\plusmark}]at(u1){};
-  \draw[rline](u1)--($(u1)+(135:0.85)$) node[above]{$R_1$};
-  \coordinate(u2)at($(RN)+(315:0.75)$);
-  \draw[bjmarrown]($(RN)+(315:1.6)$)--(u2) node[pos=0,right]{$j_2m_2$};
-  \draw[jmlinem](u2)--(RN) node[midway,below left]{$j_2$};
-  \node[label={-135:\plusmark}]at(u2){};
-  \draw[rline](u2)--($(u2)+(45:0.85)$) node[right]{$R_2$};
+  \coordinate(T)at(90:0.75);\coordinate(BL)at(210:0.75);\coordinate(BR)at(330:0.75);
+  % triangle sides
+  \draw[jmlinem](T)--(BL) node[midway,above left]{$J_{31}$};
+  \draw[jmlinem](BR)--(T) node[midway,above right]{$J_{23}$};
+  \draw[jmlinem](BL)--(BR) node[midway,below]{$J_{12}$};
+  \node[inner sep=5pt,label={-90:\minusmark}]at(T){};
+  \node[label={30:\minusmark},inner sep=3pt]at(BL){};
+  \node[label={150:\minusmark},inner sep=3pt]at(BR){};
+  % top external leg: j3 m'3 up, R3 perpendicular (horizontal)
+  \coordinate(v3)at($(T)+(90:0.6)$);\coordinate(e3)at($(T)+(90:1.25)$);
+  \draw[jmlinem](v3)--(T);
+  \draw[jmarrown](v3)--(e3) node[pos=1,right]{$j_3m'_3$};
+  \node[label={180:\plusmark}]at(v3){};
+  \draw[rline](v3)--($(v3)+(0:0.8)$) node[right]{$R_3$};
+  % BL external leg: j1 m'1 down-left (210), R1 perpendicular
+  \coordinate(v1)at($(BL)+(210:0.6)$);\coordinate(e1)at($(BL)+(210:1.25)$);
+  \draw[jmlinem](v1)--(BL);
+  \draw[jmarrown](v1)--(e1) node[pos=1,below]{$j_1m'_1$};
+  \node[label={-60:\plusmark}]at(v1){};
+  \draw[rline](v1)--($(v1)+(120:0.8)$) node[above]{$R_1$};
+  % BR external leg: j2 m'2 down-right (330), R2 perpendicular
+  \coordinate(v2)at($(BR)+(330:0.6)$);\coordinate(e2)at($(BR)+(330:1.25)$);
+  \draw[jmlinem](v2)--(BR);
+  \draw[jmarrown](v2)--(e2) node[pos=1,below]{$j_2m'_2$};
+  \node[label={60:\plusmark}]at(v2){};
+  \draw[rline](v2)--($(v2)+(-120:0.8)$) node[below]{$R_2$};
 \end{tikzpicture}
 \;=\;
-% RHS: 2x2 grid; top line D^{j1}(R1 R3^{-1}), bottom line D^{j2}(R2 R3^{-1}).
-\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
-  \coordinate(TL)at(0,0.75);\coordinate(TR)at(1.3,0.75);
-  \coordinate(BL)at(0,-0.75);\coordinate(BR)at(1.3,-0.75);
-  % top line j1
-  \draw[jmarrown](TL)--($(TL)-(0.85,0)$) node[above]{$j_1\tilde m_1$};
-  \draw[jmlinem](TL)--(TR);
-  \draw[bjmarrown]($(TR)+(0.85,0)$)--(TR) node[pos=0.2,above]{$j_1m_1$};
-  % bottom line j2
-  \draw[jmarrown](BL)--($(BL)-(0.85,0)$) node[below]{$j_2\tilde m_2$};
-  \draw[jmlinem](BL)--(BR);
-  \draw[bjmarrown]($(BR)+(0.85,0)$)--(BR) node[pos=0.2,below]{$j_2m_2$};
-  % vertical rotation lines
-  \draw[rline](TL)--($0.3*(TL)+0.7*(BL)$) node[pos=0.5,left]{$R_3$};
-  \draw[rline]($0.7*(TR)+0.3*(BR)$)--(BR) node[pos=0.5,right]{$R_2$};
-  \draw[rline](TR)--($(TR)+(0,0.75)$) node[above]{$R_1$};
-  \draw[rline](BL)--($(BL)-(0,0.75)$) node[below]{$R_3$};
-  % + vertices
-  \node[label={90:\plusmark}]at(TL){};\node[label={-90:\plusmark}]at(TR){};
-  \node[label={90:\plusmark}]at(BL){};\node[label={-90:\plusmark}]at(BR){};
+% ----- RHS: triangle with compound rotations (two R-lines per side) -----
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize,label distance=1pt]
+  \coordinate(T)at(0,1.35);\coordinate(BL)at(-1.35,-0.7);\coordinate(BR)at(1.35,-0.7);
+  % sides, each split by two + vertices (near-T and near-other-end)
+  \draw(BL)--(T) coordinate[pos=0.4](b31) coordinate[pos=0.6](a31);
+  \draw(BR)--(T) coordinate[pos=0.4](a23) coordinate[pos=0.6](b23);
+  \draw(BL)--(BR) coordinate[pos=0.4](a12) coordinate[pos=0.6](b12);
+  \draw[jmlinem] (BL) --(a12) node[midway,below] {$J_{12}$};
+  \draw[jmlinem] (a12) --(b12);
+  \draw[jmlinem] (b12) --(BR) node[midway,below] {$J_{12}$};
+  \draw[jmlinem] (BR) --(a23) node[midway,right] {$J_{23}$};
+  \draw[jmlinem] (a23) --(b23);
+  \draw[jmlinem] (b23) --(T) node[midway,right] {$J_{23}$};
+  \draw[jmlinem] (T) --(a31) node[midway,left] {$J_{31}$};
+  \draw[jmlinem] (a31) --(b31);
+  \draw[jmlinem] (b31) --(BL) node[midway,left] {$J_{31}$};
+  % vertex - signs
+  \node[label={[label distance=2pt]-90:\minusmark}]at(T){};
+  \node[label={30:\minusmark}]at(BL){};
+  \node[label={150:\minusmark}]at(BR){};
+  % + vertices + perpendicular R-lines (outward): near-T=R3, near-BL=R1, near-BR=R2
+  \node[label={[label distance=-2pt]270:\plusmark}]at(a12){};\draw[rline](a12)--($(a12)+(90:0.7)$) node[midway,left]{$R_1$};
+  \node[label={[label distance=-2pt]90:\plusmark}]at(b12){};\draw[rline](b12)--($(b12)+(270:0.7)$) node[near end,right]{$R_2$};
+  \node[label={[label distance=-4pt]30:\plusmark}]at(a23){};\draw[rline](a23)--($(a23)+(-150:0.7)$) node[midway,below]{$R_2$};
+  \node[label={[label distance=-4pt]210:\plusmark}]at(b23){};\draw[rline](b23)--($(b23)+(30:0.7)$) node[right]{$R_3$};
+  \node[label={[label distance=-4pt]150:\plusmark}]at(a31){};\draw[rline](a31)--($(a31)+(-30:0.7)$) node[midway,above]{$R_3$};
+  \node[label={[label distance=-4pt]-30:\plusmark}]at(b31){};\draw[rline](b31)--($(b31)+(150:0.7)$) node[left]{$R_1$};
+  % external legs (plain ket out)
+  \draw[jmarrown](T)--($(T)+(90:0.9)$) node[above]{$j_3m'_3$};
+  \draw[jmarrown](BL)--($(BL)+(210:0.9)$) node[below left]{$j_1m'_1$};
+  \draw[jmarrown](BR)--($(BR)+(330:0.9)$) node[below right]{$j_2m'_2$};
 \end{tikzpicture}
 \]
 \end{document}
