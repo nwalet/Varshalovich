@@ -3556,16 +3556,73 @@ $\begin{aligned}
   \draw[jmarrown](BR)--($(BR)+(330:0.9)$) node[below right]{$j_2m'_2$};
 \end{tikzpicture}}
 \\
-\[\begin{aligned}
-& \sum_{j_{1} j_{2} j_{2}}\left(2 j_{1}+1\right)\left(2 j_{2}+1\right)\left(2 j_{3}+1\right)\sixj{j_{2}}{j_{2}}{j_{2}}{j_{22}}{j_{21}}{j_{12}} \\
-& \times \sum_{\substack{m, m_{2}, m_{2} \\
-m, m_{1}^{\prime}, m_{2}, m_{3}}}(-1)^{J_{1}-M_{12}+J_{2 n}-M_{22}+J_{21}-M_{21}} \\
-& \times\threej{J_{31}}{J_{1}}{J_{12}}{M_{31}^{\prime}}{m_{1}}{-M_{12}}\threej{J_{12}}{J_{2}}{J_{23}}{M_{12}^{\prime}}{m_{2}}{-M_{23}}\threej{J_{23}}{J_{3}}{J_{31}}{M_{23}^{\prime}}{m_{3}}{-M_{31}} \\
-& \times D_{m_{1} m_{1}^{\prime}}^{f_{1}^{\prime}}\left(R_{1}\right) D_{m_{2} m_{2}^{\prime}}^{f_{2}^{\prime}}\left(R_{2}\right) D_{m_{2} m_{3}^{\prime}}^{j_{3}^{\prime}}\left(R_{3}\right)\threej{f_{3}}{f_{2}}{f_{1}}{m_{3}^{\prime}}{m_{2}^{\prime}}{m_{1}^{\prime}} \\
-& =D_{M_{11} M_{12}^{\prime}}^{J_{12}}\left(R_{1} R_{2}^{-1}\right) D_{M_{23} M_{22}^{\prime}}^{J_{2}}\left(R_{2} R_{3}^{-1}\right) D_{M_{31} M_{11}^{\prime}}^{J_{3}}\left(R_{3} R_{1}^{-1}\right) .
-\end{aligned}
-\]
-&\\
+% ---- row 5: full double-triangle recoupling ----
+$\begin{aligned}
+&\sum_{j_1j_2j_3}(2j_1+1)(2j_2+1)(2j_3+1)\sixj{j_1}{j_2}{j_3}{J_{23}}{J_{31}}{J_{12}}\\
+&\times\sum_{\substack{m_1m_2m_3\\ m'_1m'_2m'_3}}(-1)^{J_{12}-M_{12}+J_{23}-M_{23}+J_{31}-M_{31}}\\
+&\times\threej{J_{31}}{j_1}{J_{12}}{M'_{31}}{m_1}{-M_{12}}\threej{J_{12}}{j_2}{J_{23}}{M'_{12}}{m_2}{-M_{23}}\\
+&\qquad\times\threej{J_{23}}{j_3}{J_{31}}{M'_{23}}{m_3}{-M_{31}}\\
+&\times D^{j_1}_{m_1m'_1}(R_1)D^{j_2}_{m_2m'_2}(R_2)D^{j_3}_{m_3m'_3}(R_3)\threej{j_1}{j_2}{j_3}{m'_1}{m'_2}{m'_3}\\
+&=D^{J_{12}}_{M_{12}M'_{12}}(R_1R_2^{-1})D^{J_{23}}_{M_{23}M'_{23}}(R_2R_3^{-1})\\
+&\qquad\times D^{J_{31}}_{M_{31}M'_{31}}(R_3R_1^{-1})
+\end{aligned}$
+&
+\scalebox{0.6}{\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
+  \coordinate(iT)at(90:0.6);\coordinate(iBL)at(210:0.6);\coordinate(iBR)at(330:0.6);
+  \draw[jmlinem](iT)--(iBL) node[midway,left]{$J_{31}$};
+  \draw[jmlinem](iBR)--(iT) node[midway,right]{$J_{23}$};
+  \draw[jmlinem](iBL)--(iBR) node[midway,below]{$J_{12}$};
+  \node[label={-90:\minusmark},inner sep=3pt]at(iT){};
+  \node[label={-90:\minusmark},inner sep=2pt]at(iBL){};
+  \node[label={-90:\minusmark},inner sep=2pt]at(iBR){};
+  \coordinate(OT)at(90:1.8);\coordinate(OL)at(210:1.8);\coordinate(OR)at(330:1.8);
+  \coordinate(v3)at($(iT)!0.5!(OT)$);
+  \draw[jmlinem](iT)--(v3);\draw[jmlinem](v3)--(OT);
+  \node[label={0:\plusmark}]at(v3){};
+  \draw[rline](v3)--($(v3)+(180:0.75)$) node[left]{$R_3$};
+  \coordinate(v1)at($(iBL)!0.5!(OL)$);
+  \draw[jmlinem](iBL)--(v1);\draw[jmlinem](v1)--(OL);
+  \node[label={90:\plusmark}]at(v1){};
+  \draw[rline](v1)--($(v1)+(-60:0.75)$) node[below]{$R_1$};
+  \coordinate(v2)at($(iBR)!0.5!(OR)$);
+  \draw[jmlinem](iBR)--(v2);\draw[jmlinem](v2)--(OR);
+  \node[label={-120:\plusmark}]at(v2){};
+  \draw[rline](v2)--($(v2)+(60:0.75)$) node[above]{$R_2$};
+  \node[label={-90:\minusmark},inner sep=2pt]at(OT){};
+  \node[label={0:\minusmark},inner sep=2pt]at(OL){};
+  \node[label={180:\minusmark},inner sep=2pt]at(OR){};
+  \draw[bjmarrown]($(OT)+(160:0.9)$)--(OT) node[pos=0,above left]{$J_{31}M_{31}$};
+  \draw[jmarrown](OT)--($(OT)+(20:0.9)$) node[above right]{$J_{23}M'_{23}$};
+  \draw[bjmarrown]($(OL)+(280:0.9)$)--(OL) node[pos=0,left]{$J_{12}M_{12}$};
+  \draw[jmarrown](OL)--($(OL)+(140:0.9)$) node[above]{$J_{31}M'_{31}$};
+  \draw[bjmarrown]($(OR)+(40:0.9)$)--(OR) node[pos=0,right]{$J_{23}M_{23}$};
+  \draw[jmarrown](OR)--($(OR)+(240:0.9)$) node[below]{$J_{12}M'_{12}$};
+\end{tikzpicture}$=$%
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize,label distance=1pt]
+  \coordinate(T)at(90:1.8);\coordinate(BL)at(210:1.8);\coordinate(BR)at(330:1.8);
+  \coordinate (s12) at ($(BL)!0.1!(BR)$);\coordinate (a12) at ($(BL)!0.4!(BR)$);
+  \coordinate (b12) at ($(BL)!0.6!(BR)$);\coordinate (e12) at ($(BL)!0.9!(BR)$);
+  \coordinate (s23) at ($(BR)!0.1!(T)$);\coordinate (a23) at ($(BR)!0.4!(T)$);
+  \coordinate (b23) at ($(BR)!0.6!(T)$);\coordinate (e23) at ($(BR)!0.9!(T)$);
+  \coordinate (s31) at ($(T)!0.1!(BL)$);\coordinate (a31) at ($(T)!0.4!(BL)$);
+  \coordinate (b31) at ($(T)!0.6!(BL)$);\coordinate (e31) at ($(T)!0.9!(BL)$);
+  \draw[bjmarrown] (s12) --(a12) node[at start,below] {$J_{12}M_{12}$};
+  \draw[jmlinem] (a12) --(b12);
+  \draw[jmarrown] (b12) --(e12) node[below] {$J_{12}M'_{12}$};
+  \draw[bjmarrown] (s23) --(a23) node[at start,right] {$J_{23}M_{23}$};
+  \draw[jmlinem] (a23) --(b23);
+  \draw[jmarrown] (b23) --(e23) node[right] {$J_{23}M_{23}'$};
+  \draw[bjmarrown] (s31) --(a31) node[at start,left] {$J_{31}M_{31}$};
+  \draw[jmlinem] (a31) --(b31);
+  \draw[jmarrown] (b31) --(e31) node[left] {$J_{31}M'_{31}$};
+  \node[label={[label distance=-2pt]90:\plusmark}]at(a12){};\draw[rline](a12)--($(a12)+(-90:0.7)$) node[near end,right]{$R_1$};
+  \node[label={[label distance=-2pt]270:\plusmark}]at(b12){};\draw[rline](b12)--($(b12)+(90:0.7)$) node[near end,right]{$R_2$};
+  \node[label={[label distance=-4pt]210:\plusmark}]at(a23){};\draw[rline](a23)--($(a23)+(30:0.7)$) node[right]{$R_2$};
+  \node[label={[label distance=-4pt]30:\plusmark}]at(b23){};\draw[rline](b23)--($(b23)+(-150:0.7)$) node[near end,above]{$R_3$};
+  \node[label={[label distance=-4pt]-30:\plusmark}]at(a31){};\draw[rline](a31)--($(a31)+(150:0.7)$) node[left]{$R_3$};
+  \node[label={[label distance=-4pt]150:\plusmark}]at(b31){};\draw[rline](b31)--($(b31)+(-30:0.7)$) node[midway,below]{$R_1$};
+\end{tikzpicture}}
+\\
 \hline
 \end{tabular}
 \end{center}
