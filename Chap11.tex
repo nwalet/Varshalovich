@@ -3286,6 +3286,63 @@ $\displaystyle\sum_{m_1m_2m_3}\threej{j_1}{j_2}{j_3}{m_1}{m_2}{m_3}D^{j_1}_{m_1m
   \draw[jmarrown](C)--(2.4,-0.6) node[right]{$j_3m'_3$};
 \end{tikzpicture}}
 \\
+% ---- CG row 4 ----
+$\displaystyle\sum_{\substack{m_1m_2\\ m'_1m'_2\\ m''_3}}\threej{j_1}{j_2}{j'_3}{m_1}{m_2}{m'_3}D^{j_1}_{m_1m'_1}(R)D^{j_2}_{m_2m'_2}(R)D^{j_3}_{m_3m''_3}(R)\threej{j_1}{j_2}{j_3}{m'_1}{m'_2}{m''_3}=\frac{\delta_{j_3j'_3}\delta_{m_3m'_3}}{(2j_3+1)}\{j_1j_2j_3\}$
+&
+\scalebox{0.75}{\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
+  \coordinate(L)at(0.05,0);\coordinate(R)at(1.35,0);
+  \coordinate(Ll) at ($(L)-(0.9,0)$); \coordinate (Rr) at ($(R)+(0.9,0)$);
+  \draw[bjmarrown](Ll)--(L) node[pos=0.2,above] {$j_3m_3$};
+  \draw[jmarrown](R)--(Rr) node[pos=0.8,above]{$j'_3m'_3$};
+  \draw[jmlinem=0.3](R)to[bend right=90] node[pos=0.1,above] {$j_1$} node[pos=0.5] (n1) {} (L);
+  \draw[jmlinem=0.3](R)to[bend left=90] node[pos=0.3,below] {$j_2$} node[pos=0.5] (n2) {} (L);
+  \coordinate (n3) at (-0.2,0);
+  \coordinate(Fp)at(-0.2,-1.15);
+  \draw[rline](n3)--(Fp);\draw[rline](n1)--(Fp);\draw[rline](n2)--(Fp);
+  \node[dotnode,label={0:\minusmark}] at (L) {};
+  \node[dotnode,label={180:\plusmark}] at (R) {};
+  \node[label={90:\minusmark}] at (n1) {};
+  \node[label={90:\minusmark}] at (n2) {};
+  \node[label={90:\plusmark}] at (n3) {};
+\end{tikzpicture}$=$%
+\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
+  \pgfmathsetmacro{\Rad}{0.1}
+  \pgfmathsetmacro{\Len}{1.1}
+  \draw[bjmarrown](-\Len-\Rad,0)--(-\Rad,0) node[pos=0.2,above]{$j_3m_3$};
+  \draw[thick](0,0)circle(\Rad);
+  \draw[jmarrown](\Rad,0)--(\Len+\Rad,0) node[pos=0.8,above]{$j'_3m'_3$};
+\end{tikzpicture}%
+\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
+  \node[dotnode,label={180:\plusmark}](A)at(0,0){};
+  \node[dotnode,label={0:\minusmark}](B)at(1.1,0){};
+  \draw[jmlinem](A)to[bend left=70]node[pos=0.5,above]{$j_1$}(B);
+  \draw[jmlinem](A)--(B)node[pos=0.5,above]{$j_2$};
+  \draw[jmlinem](A)to[bend right=70]node[pos=0.5,below]{$j_3$}(B);
+\end{tikzpicture}}
+\\
+% ---- CG row 5 ----
+$\displaystyle D^{j_3*}_{m_3m'_3}(R)\threej{j_1}{j_2}{j_3}{m'_1}{m'_2}{m'_3}=\sum_{m_1m_2}\threej{j_1}{j_2}{j_3}{m_1}{m_2}{m_3}D^{j_1}_{m_1m'_1}(R)D^{j_2}_{m_2m'_2}(R)$
+&
+\scalebox{0.78}{\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
+  \node[dotnode,label={0:\plusmark}](P)at(0,0){};
+  \draw[jmarrown](P)--($(P)-(0.95,0)$) node[left]{$j_3m_3$};
+  \draw[rline](P)--($(P)-(0,0.85)$) node[pos=0.6,right]{$R$};
+  \node[dotnode,label={0:\plusmark}](Q)at(1.5,0){};
+  \draw[jmlinem](P)--(Q)node[pos=0.5,above]{$j_3m'_3$};
+  \draw[jmarrown](Q)--($(Q)+(0.85,0.75)$) node[right]{$j_2m'_2$};
+  \draw[jmarrown](Q)--($(Q)+(0.85,-0.75)$) node[right]{$j_1m'_1$};
+\end{tikzpicture}$=$%
+\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
+  \node[dotnode,label={0:\plusmark}](LN)at(0,0){};
+  \draw[jmarrown](LN)--($(LN)-(0.9,0)$) node[left]{$j_3m_3$};
+  \draw[jmarrown](LN)--++(35:2.15) coordinate[pos=0.5](Tv) node[right]{$j_2m'_2$};
+  \draw[jmarrown](LN)--++(-35:2.15) coordinate[pos=0.5](Bv) node[right]{$j_1m'_1$};
+  \node[label={135:\plusmark}]at(Tv){};\node[label={-135:\minusmark}]at(Bv){};
+  \coordinate(Rv)at($(Tv)!0.5!(Bv)+(0.55,0)$);
+  \draw[rline](Tv)--(Rv);\draw[rline](Bv)--(Rv);
+  \draw[rline](Rv)--($(Rv)+(0.8,0)$) node[right]{$R$};
+\end{tikzpicture}}
+\\
 \multicolumn{2}{c}{Integral of Three D-Functions}\\
 $\displaystyle\int D^{j_1}_{m_1m'_1}(R)\,D^{j_2}_{m_2m'_2}(R)\,D^{j_3}_{m_3m'_3}(R)\,\frac{dR}{16\pi^2}=\threej{j_1}{j_2}{j_3}{m_1}{m_2}{m_3}\threej{j_1}{j_2}{j_3}{m'_1}{m'_2}{m'_3}$
 &

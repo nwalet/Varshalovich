@@ -2,35 +2,39 @@
 \usepackage{diagrams}
 \usepackage{amsfonts,amsmath}
 \begin{document}
-% ===== CG row 2 (bubble): =====
-% Sum (3jm) D^{j1}D^{j2} (3jm) = delta/(2j3+1) {j1j2j3} D^{j3*}
+
+% ===== CG row 4 (3-line bubble) =====
 \[
-% ---- LHS: bubble ----
+% LHS: circle loop; internal j1(top arc), j3(middle straight), j2(bottom arc);
+% arrows reversed (R->L); external terminate at the two + vertices.
 \begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
-  \coordinate(C)at(0.7,0);
   \coordinate(L)at(0.05,0);\coordinate(R)at(1.35,0);
-  % loop drawn as a circle (top arc j1, bottom arc j2)
-  \draw[jmlinem](L)to[bend left=90](R);
-  \draw[jmlinem](R)to[bend left=90](L);
-  \node at(-0.05,0.18){$-$};\node at(1.45,0.18){$+$};
-  \node at(0.7,0.5){$+$};\node at(0.7,0.9){$j_1$};
-  \node at(0.7,-0.5){$+$};\node at(0.7,-0.9){$j_2$};
-  \draw[jmarrown](L)--(-0.85,0);\node at(-0.85,0)[left]{$j_3m_3$};
-  \draw[bjmarrown](2.25,0)--(R);\node at(2.25,0)[right]{$j'_3m'_3$};
-  % R-lines converging downward (lengthened)
-  \coordinate(Rp)at(0.55,-1.85);
-  \draw[rline](0.55,0.5)--(Rp);\draw[rline](0.85,-0.5)--(Rp);
-  \node at(0.55,-2.05){$R$};
+  \coordinate(Ll) at ($(L)-(0.9,0)$); \coordinate (Rr) at ($(R)+(0.9,0)$); 
+  \draw[bjmarrown](Ll)--(L) node[pos=0.2,above] {$j_3m_3$};
+  \draw[jmarrown](R)--(Rr) node[pos=0.8,above]{$j'_3m'_3$};
+  \draw[jmlinem=0.3](R)to[bend right=90] node[pos=0.1,above]  {$j_1$}  node[pos=0.5] (n1) {} (L);
+  \draw[jmlinem=0.3](R)to[bend left=90]   node[pos=0.3,below] {$j_2$} node[pos=0.5] (n2) {} (L);
+  % converging r lines 
+  \coordinate (n3) at (-0.2,0);
+  \coordinate(Fp)at(-0.2,-1.15);
+  \draw[rline](n3)--(Fp);\draw[rline](n1)--(Fp);\draw[rline](n2)--(Fp);
+  % +/-
+  \node[dotnode,label={0:\minusmark}] at (L) {};
+  \node[dotnode,label={180:\plusmark}] at (R) {};
+  \node[label={90:\minusmark}] at (n1) {};
+  \node[label={90:\minusmark}] at (n2) {};
+  \node[label={90:\plusmark}] at (n3) {};
 \end{tikzpicture}
 \;=\;
-% ---- RHS piece 1: D^{j3} line ----
+% RHS piece 1: delta line, j3 & j3' both meet a (larger) open circle
 \begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
-  \coordinate(P)at(0,0);\node at(0,0.22){$+$};
-  \draw[jmarrown](P)--(-1.0,0);\node at(-0.65,0.26){$j_3m_3$};
-  \draw[bjmarrown](1.0,0)--(P);\node at(0.65,0.26){$j'_3m'_3$};
-  \draw[rline](P)--(0,-0.85);\node at(0.13,-0.5)[right]{$R$};
+  \pgfmathsetmacro{\Rad}{0.1}
+  \pgfmathsetmacro{\Len}{1.1}
+  \draw[bjmarrown](-\Len-\Rad,0)--(-\Rad,0) node[pos=0.2,above]{$j_3m_3$};
+  \draw[thick](0,0)circle(\Rad);
+  \draw[jmarrown](\Rad,0)--(\Len+\Rad,0) node[pos=0.8,above]{$j'_3m'_3$};
 \end{tikzpicture}
-% ---- RHS piece 2: theta graph {j1 j2 j3} ----
+% RHS piece 2: theta graph {j1 j2 j3}
 \begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
   \node[dotnode,label={180:\plusmark}](A)at(0,0){};
   \node[dotnode,label={0:\minusmark}](B)at(1.1,0){};
@@ -38,15 +42,34 @@
   \draw[jmlinem](A)--(B)node[pos=0.5,above]{$j_2$};
   \draw[jmlinem](A)to[bend right=70]node[pos=0.5,below]{$j_3$}(B);
 \end{tikzpicture}
-% ---- RHS piece 3: delta-square ----
-\begin{tikzpicture}[baseline=0pt,inner sep=1.5pt,font=\scriptsize]
-  \node[dotnode,label={135:\plusmark}](tl)at(0,0.5){};
-  \node[dotnode,label={45:\plusmark}](tr)at(0.9,0.5){};
-  \node[dotnode,label={-135:\plusmark}](bl)at(0,-0.5){};
-  \node[dotnode,label={-45:\plusmark}](br)at(0.9,-0.5){};
-  \draw[jmlinem](tl)--(tr);\draw[jmlinem](br)--(bl);
-  \draw[jmlinem](bl)--(tl)node[pos=0.5,left]{$j_3$};
-  \draw[jmlinem](tr)--(br)node[pos=0.5,right]{$j'_3$};
+\]
+
+% ===== CG row 5 (D-3jm = two-D R-diamond) =====
+\[
+% LHS: D^{j3} node (+ at 0deg, R down) --- j3' line --- 3jm node (+ at 0deg)
+\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
+  \node[dotnode,label={0:\plusmark}](P)at(0,0){};
+  \draw[jmarrown](P)--(-0.95,0);\node at(-0.95,0)[left]{$j_3m_3$};
+  \draw[rline](P)--(0,-0.85);\node at(0.13,-0.5)[right]{$R$};
+  \node[dotnode,label={0:\plusmark}](Q)at(1.5,0){};
+  \draw[jmlinem](P)--(Q)node[pos=0.5,above]{$j_3m'_3$};
+  \draw[jmarrown](Q)--(2.35,0.75);\node at(2.35,0.75)[right]{$j_2m'_2$};
+  \draw[jmarrown](Q)--(2.35,-0.75);\node at(2.35,-0.75)[right]{$j_1m'_1$};
+\end{tikzpicture}
+\;=\;
+% RHS: 3jm node; two straight outgoing lines (j2 up, j1 down) with + / - vertices
+% part-way along; R-lines branch from those vertices and fuse to === R.
+\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
+  \node[dotnode,label={0:\plusmark}](LN)at(0,0){};
+  \draw[jmarrown](LN)--(-0.9,0);\node at(-0.9,0)[left]{$j_3m_3$};
+  \coordinate(Tend)at(1.75,1.2);\coordinate(Bend)at(1.75,-1.2);
+  \coordinate(Tv)at(0.85,0.583);\coordinate(Bv)at(0.85,-0.583);
+  \coordinate(Rv)at(1.75,0);
+  \draw[jmarrown](LN)--(Tend);\node at(Tend)[right]{$j_2m'_2$};
+  \draw[jmarrown](LN)--(Bend);\node at(Bend)[right]{$j_1m'_1$};
+  \node at(0.72,0.72){\plusmark};\node at(0.72,-0.72){\plusmark};
+  \draw[rline](Tv)--(Rv);\draw[rline](Bv)--(Rv);
+  \draw[rline](Rv)--(2.6,0);\node at(2.6,0)[right]{$R$};
 \end{tikzpicture}
 \]
 \end{document}
