@@ -805,3 +805,28 @@
 \tikzset{ketout/.style={-{Stealth[length=2.2mm]},thick},
          brain/.style={-{Stealth[length=2.2mm] Stealth[length=2.2mm]},thick}}
 \newcommand{\Rdown}[1]{\draw[rline](0,0)--(0,-0.85);\node at(0.13,-0.5)[right]{$#1$};}
+
+%\loopbox[style]{operator}{loop label}: an operator box with a momentum
+%line looping over its top -- the reduced matrix element (j||M||j). The
+%optional [style] sets the loop-line style (default jmlinem); pass
+%[jmlinemu] for a summed (ultra-thick) reduced line. Draw inside a
+%tikzpicture; creates node (B) = the box.
+\newcommand{\loopbox}[3][jmlinem]{%
+\node[draw,minimum width=0.85cm,minimum height=0.85cm](B){\normalsize$#2$};
+%\draw[#1](B.east)to[in=150,out=30,looseness=4] node[midway,above]{$#3$} (B.west);
+\draw[rounded corners=4pt,#1](B.east) -| ($(B.north east)+(0.2,0)$) |- ($(B.north)+(0,0.3)$) -|  ($(B.north west)-(0.2,0)$) |- (B.west);
+\node[above] at ($(B.north)+(0,0.3)$) {$#3$} ;
+}
+
+%\tribox{operator}{l}{m}{r}{lstyle}{mstyle}{rstyle}: triangle-roof box =
+%reduced matrix element (l || M_m || r). Box #1 with a + apex and three
+%lines l/m/r (left roof edge, middle, right roof edge), each drawn in its
+%own style (#5/#6/#7) -- pass jmlinemu for a summed (ultra-thick) leg.
+\newcommand{\tribox}[7]{%
+\node[draw,minimum width=1.0cm,minimum height=0.9cm](B){\normalsize$#1$};
+\coordinate(A)at($(B.north)+(0,0.75)$);
+\draw[#5](B.north west)--(A)node[midway,left]{$#2$};
+\draw[#6]($(B.north)$)--(A)node[pos=0.2,right]{$#3$};
+\draw[#7](B.north east)--(A)node[midway,right]{$#4$};
+\node[dotnode,label={90:\plusmark}]at(A){};}
+

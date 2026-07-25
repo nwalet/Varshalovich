@@ -1,34 +1,155 @@
 \documentclass[crop,math]{standalone}
 \usepackage{diagrams}
 \usepackage{amsfonts,amsmath}
+% triangle-roof box = reduced matrix element (l || M_m || r): box #1 with a
+% + apex and three lines l (left roof edge), m (middle), r (right roof edge).
+\newcommand{\tribox}[7]{%
+\node[draw,minimum width=1.0cm,minimum height=0.9cm](B){\normalsize$#1$};
+\coordinate(A)at($(B.north)+(0,0.75)$);
+\draw[#5](B.north west)--(A)node[midway,left]{$#2$};
+\draw[#6]($(B.north)$)--(A)node[pos=0.2,right]{$#3$};
+\draw[#7](B.north east)--(A)node[midway,right]{$#4$};
+\node[dotnode,label={90:\plusmark}]at(A){};}
 \begin{document}
-% ===== Table 11.14 row 1: Wigner-Eckart theorem =====
-% LHS: box M_{gg'} with 3 lines up (JM bra, kq ket, J'M' ket).
-% RHS: 3jm (- node) atop a + node atop the box (reduced matrix element).
+
+% ===== Table 11.15 rows 1-4 =====
+% Row 1: <00|M|lm> = <00|M|00> d_l0 d_m0
 \[
 \begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
-  \node[draw,minimum width=1.7cm,minimum height=0.7cm](M)at(0,0){\normalsize$\mathfrak{M}_{\gamma\gamma'}$};
-  \draw[bjmarrown]($(M.north)+(-0.55,1.2)$)--($(M.north)+(-0.55,0)$);
-  \node at($(M.north)+(-0.55,1.35)$){$JM$};
-  \draw[jmarrown]($(M.north)+(0,0)$)--($(M.north)+(0,1.2)$);
-  \node at($(M.north)+(0,1.35)$){$kq$};
-  \draw[jmarrown]($(M.north)+(0.55,0)$)--($(M.north)+(0.55,1.2)$);
-  \node at($(M.north)+(0.55,1.35)$){$J'M'$};
+  \node[draw,minimum width=0.8cm,minimum height=0.8cm](B){\normalsize$\mathfrak{M}$};
+  \coordinate(tip)at($(B.east)+(0.45,0)$);
+  \draw(B.north east)--(tip)--(B.south east);
+  \node[dotnode,label={-90:\minusmark}]at(tip){};
+  \draw[jmarrown](tip)--($(tip)+(0.95,0)$)node[pos=0.7,above]{$lm$};
 \end{tikzpicture}
 \;=\;
 \begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
-  \node[draw,minimum width=1.7cm,minimum height=0.7cm](M)at(0,0){\normalsize$\mathfrak{M}_{\gamma\gamma'}$};
-  \coordinate(P)at($(M.north)+(0,0.7)$);
-  \node[dotnode,label={90:\plusmark}]at(P){};
-  \draw[jmlinem](M.north)++(-0.5,0)--(P)node[midway,left]{$J$};
-  \draw[jmlinem]($(M.north)$)--(P)node[pos=0.25,right]{$k$};
-  \draw[jmlinem](M.north)++(0.5,0)--(P)node[midway,right]{$J'$};
-  \coordinate(Q)at($(P)+(0,0.55)$);
-  \node[dotnode,label={-90:\minusmark}]at(Q){};
-  %\draw[jmlinem](P)--(Q);
-  \draw[bjmarrown]($(Q)+(150:1.05)$)--(Q) node[at start,above]{$JM$};
-  \draw[jmarrown](Q)--($(Q)+(90:1.05)$) node[above]{$kq$};
-  \draw[jmarrown](Q)--($(Q)+(30:1.05)$) node[above]{$J'M'$};
+  \node[draw,minimum width=0.8cm,minimum height=0.8cm](B){\normalsize$\mathfrak{M}$};
+  \coordinate(tip)at($(B.east)+(0.45,0)$);
+  \draw(B.north east)--(tip)--(B.south east);
+  \node[dotnode,label={45:\plusmark}]at(tip){};
+\end{tikzpicture}
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
+  \node[dotnode]at(0,0){};
+  \draw[jmarrown](0,0)--(1.0,0)node[pos=0.5,above]{$l=0$};
+\end{tikzpicture}
+\]
+
+% Row 2: <jm|M|j'm'> = d_jj' d_mm'/(2j+1) (j||M||j)
+\[
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
+  \node[draw,minimum width=0.85cm,minimum height=0.85cm](B){\normalsize$\mathfrak{M}$};
+  \draw[bjmarrown]($(B.west)+(-0.95,0)$)--(B.west)node[pos=0.1,above]{$jm$};
+  \draw[jmarrown](B.east)--($(B.east)+(0.95,0)$)node[pos=0.9,above]{$j'm'$};
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
+  \draw[bjmarrown](-0.95,0)--(-0.05,0)node[pos=0.1,above]{$jm$};
+  \node[deltanode]at(0,0){};
+  \draw[jmarrown](0.05,0)--(0.95,0)node[pos=0.9,above]{$j'm'$};
+\end{tikzpicture}
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
+  \loopbox{\mathfrak{M}}{j}
+\end{tikzpicture}
+\]
+
+% Row 3: <Omega|M|jm> = <Omega|jm> (j||M||j)/(2j+1)
+\[
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
+  \node[draw,minimum width=0.85cm,minimum height=0.85cm](B){\normalsize$\mathfrak{M}$};
+  \draw[bomarrown]($(B.west)+(-0.95,0)$)--(B.west)node[pos=0.1,above]{$\Omega$};
+  \draw[jmarrown](B.east)--($(B.east)+(0.95,0)$)node[pos=0.9,above]{$jm$};
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
+  \draw[bomarrown](-1.3,0)--(-0.7,0)node[pos=0.1,above]{$\Omega$};
+  \draw[jmlinem](-0.7,0)--(0,0)node[midway,above]{$j$};
+  \node[deltanode]at(0,0){};
+  \draw[jmarrown](0,0)--(0.95,0)node[pos=0.9,above]{$jm$};
+\end{tikzpicture}
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
+  \loopbox{\mathfrak{M}}{j}
+\end{tikzpicture}
+\]
+
+% Row 4: <Omega1|M|Omega2> = 1/4pi sum_l P_l(cos w12)(l||M||l)
+\[
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
+  \node[draw,minimum width=0.85cm,minimum height=0.85cm](B){\normalsize$\mathfrak{M}$};
+  \draw[bomarrown]($(B.west)+(-0.95,0)$)--(B.west)node[pos=0.1,above]{$\Omega_1$};
+  \draw[omarrown](B.east)--($(B.east)+(0.95,0)$)node[pos=0.9,above]{$\Omega_2$};
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
+  \draw[bomarrown](-1.3,0)--(-0.4,0)node[pos=0.1,above]{$\Omega_1$};
+  \draw[jmlinem, ultra thick](-0.4,0)--(0.4,0)node[midway,above]{$l$};
+  \draw[omarrown](0.4,0)--(1.3,0)node[pos=0.9,above]{$\Omega_2$};
+\end{tikzpicture}
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
+  \loopbox[jmlinemu]{\mathfrak{M}}{l}
+\end{tikzpicture}
+\]
+
+% Row 5: <j1m1|M|j2m2 j3m3> = (-1)^{j1-m1}(3jm)(j1||M_j2||j3)
+\[
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
+  \node[draw,minimum width=0.9cm,minimum height=0.9cm](B){\normalsize$\mathfrak{M}$};
+  \draw[bjmarrown]($(B.west)+(-0.95,0)$)--(B.west)node[pos=0.1,above]{$j_1m_1$};
+  \draw[jmarrown](B.north)--($(B.north)+(0,0.9)$)node[above]{$j_2m_2$};
+  \draw[jmarrown](B.east)--($(B.east)+(0.95,0)$)node[pos=0.9,above]{$j_3m_3$};
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
+  \node[dotnode,label={-90:\minusmark}](O)at(0,0){};
+  \draw[jmarrown](O)--(90:0.95)node[above]{$j_2m_2$};
+  \draw[bjmarrown](210:0.95)--(O)node[at start,below left]{$j_1m_1$};
+  \draw[jmarrown](O)--(330:0.95)node[below right]{$j_3m_3$};
+\end{tikzpicture}
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
+  \tribox{\mathfrak{M}}{j_1}{j_2}{j_3}{jmlinem}{jmlinem}{jmlinem}
+\end{tikzpicture}
+\]
+
+% Row 6: <Omega|M|j2m2 j3m3> = sum_{j1m1} <Omega|j1m1>(-1)^{..}(3jm)(j1||M_j2||j3)
+\[
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
+  \node[draw,minimum width=0.9cm,minimum height=0.9cm](B){\normalsize$\mathfrak{M}$};
+  \draw[bomarrown]($(B.west)+(-0.95,0)$)--(B.west)node[pos=0.1,above]{$\Omega$};
+  \draw[jmarrown]($(B.north east)+(-0.15,0)$)--($(B.north east)+(0.75,0.55)$)node[right]{$j_2m_2$};
+  \draw[jmarrown]($(B.south east)+(-0.15,0)$)--($(B.south east)+(0.75,-0.55)$)node[right]{$j_3m_3$};
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
+  \draw[bomarrown](-1.6,0)--(-0.65,0)node[pos=0.1,above]{$\Omega$};
+  \node[dotnode,label={-90:\minusmark}](O)at(0,0){};
+  \draw[jmlinemu](-0.65,0)--(O)node[midway,above]{$j_1$};
+  \draw[jmarrown](O)--($(O)+(35:0.95)$)node[right]{$j_2m_2$};
+  \draw[jmarrown](O)--($(O)+(-35:0.95)$)node[right]{$j_3m_3$};
+\end{tikzpicture}
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
+  \tribox{\mathfrak{M}}{j_1}{j_2}{j_3}{jmlinemu}{jmlinem}{jmlinem}
+\end{tikzpicture}
+\]
+
+% Row 7: <Omega1|M|j2m2 Omega3> = sum ...
+\[
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
+  \node[draw,minimum width=0.9cm,minimum height=0.9cm](B){\normalsize$\mathfrak{M}$};
+  \draw[bomarrown]($(B.west)+(-0.95,0)$)--(B.west)node[pos=0.1,above]{$\Omega_1$};
+  \draw[jmarrown](B.north)--($(B.north)+(0,0.9)$)node[above]{$j_2m_2$};
+  \draw[omarrown](B.east)--($(B.east)+(0.95,0)$)node[pos=0.9,above]{$\Omega_3$};
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
+  \node[dotnode,label={-90:\minusmark}](O)at(0,0){};
+  \draw[jmarrown](O)--(90:0.95)node[above]{$j_2m_2$};
+  \draw[bomarrown](210:1.4)--(210:0.6)node[at start,below left]{$\Omega_1$};
+  \draw[jmlinemu](210:0.6)--(O)node[at start,above]{$j_1$};
+  \draw[omarrown](330:0.6)--(330:1.4)node[below right]{$\Omega_3$};
+  \draw[jmlinemu](O)--(330:0.6)node[above]{$j_3$};
+\end{tikzpicture}
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
+  \tribox{\mathfrak{M}}{j_1}{j_2}{j_3}{jmlinemu}{jmlinem}{jmlinemu}
 \end{tikzpicture}
 \]
 \end{document}

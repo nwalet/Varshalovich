@@ -3812,49 +3812,156 @@ Generalized Wigner-Eckart Theorem.}
 \hline
 \multicolumn{1}{c|}{Analytical Expression} & Graphical Representation \\
 \hline
-\[
-\braOket{00}{\mathfrak{M}}{l m}=\braOket{00}{\mathfrak{M}}{00} \delta_{l 0} \delta_{m 0} .
-\] 
-& 
+% ---- row 1 ----
+$\braOket{00}{\mathfrak{M}}{lm}=\braOket{00}{\mathfrak{M}}{00}\,\delta_{l0}\delta_{m0}$
+&
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
+  \node[draw,minimum width=0.8cm,minimum height=0.8cm](B){\normalsize$\mathfrak{M}$};
+  \coordinate(tip)at($(B.east)+(0.45,0)$);
+  \draw(B.north east)--(tip)--(B.south east);
+  \node[dotnode,label={-90:\minusmark}]at(tip){};
+  \draw[jmarrown](tip)--($(tip)+(0.95,0)$)node[pos=0.7,above]{$lm$};
+\end{tikzpicture}$=$%
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
+  \node[draw,minimum width=0.8cm,minimum height=0.8cm](B){\normalsize$\mathfrak{M}$};
+  \coordinate(tip)at($(B.east)+(0.45,0)$);
+  \draw(B.north east)--(tip)--(B.south east);
+  \node[dotnode,label={45:\plusmark}]at(tip){};
+\end{tikzpicture}%
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
+  \node[dotnode]at(0,0){};
+  \draw[jmarrown](0,0)--(1.0,0)node[pos=0.5,above]{$l=0$};
+\end{tikzpicture}
 \\
-\[
-\braOket{j m}{\mathfrak{M}}{j^{\prime} m^{\prime}}=\frac{\delta_{j j^{\prime}} \delta_{m m^{\prime}}}{(2 j+1)}\braOketred{j}{\mathfrak{M}}{j},
-\]
- where
-\[
-\braOketred{j}{\mathfrak{M}}{j} \equiv \sum_{m}\braOket{j m}{\mathfrak{M}}{j m} \]
-& \\
-\[\braOket{\Omega}{\mathfrak{M}}{j m}=\braket{\Omega}{j m} \frac{\braOketred{j}{\mathfrak{M}}{j}}{(2 j+1)}
-\]
-where $\omega_{12}$ is the angle $\widehat{\Omega_{1} \Omega_{2}}$
-\[
-P_{l}\left(\cos \omega_{12}\right)=\sum_{m}\braket{\Omega_{1}}{l m}\braket{l m}{\Omega_{2}} . \]
-& \\
-\[
-\begin{gathered}\braOket{j_{1} m_{1}}{\mathfrak{M}}{j_{2} m_{2} j_{3} m_{3}} \\
-=(-1)^{j_{1}-m_{2}}\threej{j_{1}}{j_{2}}{j_{3}}{-m_{1}}{m_{2}}{m_{3}}\braOketred{j_{1}}{\mathfrak{M}_{j_{2}}}{j_{3}},
-\end{gathered}
-\]
-where
-\[
-\begin{aligned}
-&\braOketred{j_{1}}{\mathfrak{M}_{j_{2}}}{j_{3}} \equiv \sum_{m_{1} m_{2} m_{3}}(-1)^{j_{1}-m_{1}}\threej{i_{1}}{j_{2}}{j_{3}}{-m_{1}}{m_{2}}{m_{3}} \\
-& \times\braOket{j_{1} m_{1}}{\mathfrak{M}_{2}}{j_{2} m_{2} j_{3} m_{\Omega}}
-\end{aligned}
-\]
-\[\begin{gathered}
-\braOket{\Omega}{\mathfrak{M}}{j_2m_2j_3m_3}
-=\sum_{j_{1} m_{1}}\braket{\Omega}{j_{1} m_{1}}(-1)^{j_{1}-m_{1}}\threej{j_{1}}{j_{2}}{j_{3}}{-m_{1}}{m_{2}}{m_{3}}\braOketred{j_{1}}{\mathfrak{M}_{j_{3}}}{j_{3}} \cdot-\Omega_{1}-\sqrt[\Omega_{1}]{\frac{j_{2} m_{2}}{j_{3} m_{3}}}=-\Omega_{1}-\overbrace{j_{3} m_{3}}^{j_{2} m_{2}} \cdots \sum_{1}
-\end{gathered}
-\]
-&\\
-\[
-\begin{gathered}
-\braOket{\Omega_{1}}{\mathfrak{M}}{j_{2} m_{2} \Omega_{3}}=\sum_{j_{1} m_{1} j_{0} m_{3}}\braket{\Omega_{1}}{j_{1} m_{1}} \\
-\times(-1)^{j_{1}-m_{1}}\threej{j_{1}}{j_{2}}{j_{3}}{-m_{1}}{m_{2}}{m_{3}}\braket{j_{3} m_{3}}{\Omega_{3}}\braOketred{j_{1}}{\mathfrak{M}_{j_{2}}}{j_{3}} .
-\end{gathered}
-\] & \\
-\begin{tikzpicture}[baseline=0pt]\node[opbox](M) at (0,0){$\mathfrak{M}_{j_2}$}; \draw[omarrow] (M) -- (-1.3,0.6) node[left]{$\Omega_1$}; \draw[jmline] (M) -- (1.3,0.6) node[right]{$j_2m_2$}; \draw[omarrow] (M) -- (0,-1.2) node[below]{$\Omega_3$};\end{tikzpicture}
+% ---- row 2 ----
+$\braOket{jm}{\mathfrak{M}}{j'm'}=\dfrac{\delta_{jj'}\delta_{mm'}}{(2j+1)}\braOketred{j}{\mathfrak{M}}{j}$,\newline
+where $\braOketred{j}{\mathfrak{M}}{j}\equiv\sum_{m}\braOket{jm}{\mathfrak{M}}{jm}$
+&
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
+  \node[draw,minimum width=0.85cm,minimum height=0.85cm](B){\normalsize$\mathfrak{M}$};
+  \draw[bjmarrown]($(B.west)+(-0.95,0)$)--(B.west)node[pos=0.1,above]{$jm$};
+  \draw[jmarrown](B.east)--($(B.east)+(0.95,0)$)node[pos=0.9,above]{$j'm'$};
+\end{tikzpicture}$=$%
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
+  \draw[bjmarrown](-0.95,0)--(-0.05,0)node[pos=0.1,above]{$jm$};
+  \node[deltanode]at(0,0){};
+  \draw[jmarrown](0.05,0)--(0.95,0)node[pos=0.9,above]{$j'm'$};
+\end{tikzpicture}%
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
+  \loopbox{\mathfrak{M}}{j}
+\end{tikzpicture}
+\\
+% ---- row 3 ----
+$\braOket{\Omega}{\mathfrak{M}}{jm}=\braket{\Omega}{jm}\dfrac{\braOketred{j}{\mathfrak{M}}{j}}{(2j+1)}$
+&
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
+  \node[draw,minimum width=0.85cm,minimum height=0.85cm](B){\normalsize$\mathfrak{M}$};
+  \draw[bomarrown]($(B.west)+(-0.95,0)$)--(B.west)node[pos=0.1,above]{$\Omega$};
+  \draw[jmarrown](B.east)--($(B.east)+(0.95,0)$)node[pos=0.9,above]{$jm$};
+\end{tikzpicture}$=$%
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
+  \draw[bomarrown](-1.3,0)--(-0.7,0)node[pos=0.1,above]{$\Omega$};
+  \draw[jmlinem](-0.7,0)--(0,0)node[midway,above]{$j$};
+  \node[deltanode]at(0,0){};
+  \draw[jmarrown](0,0)--(0.95,0)node[pos=0.9,above]{$jm$};
+\end{tikzpicture}%
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
+  \loopbox{\mathfrak{M}}{j}
+\end{tikzpicture}
+\\
+% ---- row 4 ----
+$\braOket{\Omega_1}{\mathfrak{M}}{\Omega_2}=\dfrac{1}{4\pi}\sum_l P_l(\cos\omega_{12})\braOketred{l}{\mathfrak{M}}{l}$,\newline
+where $\omega_{12}$ is the angle $\widehat{\Omega_1\Omega_2}$ and\newline
+$P_l(\cos\omega_{12})=\sum_m\braket{\Omega_1}{lm}\braket{lm}{\Omega_2}$
+&
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
+  \node[draw,minimum width=0.85cm,minimum height=0.85cm](B){\normalsize$\mathfrak{M}$};
+  \draw[bomarrown]($(B.west)+(-0.95,0)$)--(B.west)node[pos=0.1,above]{$\Omega_1$};
+  \draw[omarrown](B.east)--($(B.east)+(0.95,0)$)node[pos=0.9,above]{$\Omega_2$};
+\end{tikzpicture}$=$%
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
+  \draw[bomarrown](-1.3,0)--(-0.4,0)node[pos=0.1,above]{$\Omega_1$};
+  \draw[jmlinem,ultra thick](-0.4,0)--(0.4,0)node[midway,above]{$l$};
+  \draw[omarrown](0.4,0)--(1.3,0)node[pos=0.9,above]{$\Omega_2$};
+\end{tikzpicture}%
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
+  \loopbox[jmlinemu]{\mathfrak{M}}{l}
+\end{tikzpicture}
+\\
+% ---- row 5 ----
+$\begin{aligned}[t]
+&\braOket{j_1m_1}{\mathfrak{M}}{j_2m_2 j_3m_3}\\
+&=(-1)^{j_1-m_1}\threej{j_1}{j_2}{j_3}{-m_1}{m_2}{m_3}\braOketred{j_1}{\mathfrak{M}_{j_2}}{j_3},
+\end{aligned}$\newline
+where\newline
+$\begin{aligned}[t]
+&\braOketred{j_1}{\mathfrak{M}_{j_2}}{j_3}\equiv\sum_{m_1m_2m_3}(-1)^{j_1-m_1}\\
+&\quad\times\threej{j_1}{j_2}{j_3}{-m_1}{m_2}{m_3}\braOket{j_1m_1}{\mathfrak{M}}{j_2m_2 j_3m_3}
+\end{aligned}$
+&
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
+  \node[draw,minimum width=0.9cm,minimum height=0.9cm](B){\normalsize$\mathfrak{M}$};
+  \draw[bjmarrown]($(B.west)+(-0.95,0)$)--(B.west)node[pos=0.1,above]{$j_1m_1$};
+  \draw[jmarrown](B.north)--($(B.north)+(0,0.9)$)node[above]{$j_2m_2$};
+  \draw[jmarrown](B.east)--($(B.east)+(0.95,0)$)node[pos=0.9,above]{$j_3m_3$};
+\end{tikzpicture}$=$%
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
+  \node[dotnode,label={-90:\minusmark}](O)at(0,0){};
+  \draw[jmarrown](O)--(90:0.95)node[above]{$j_2m_2$};
+  \draw[bjmarrown](210:0.95)--(O)node[at start,below left]{$j_1m_1$};
+  \draw[jmarrown](O)--(330:0.95)node[below right]{$j_3m_3$};
+\end{tikzpicture}%
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
+  \tribox{\mathfrak{M}}{j_1}{j_2}{j_3}{jmlinem}{jmlinem}{jmlinem}
+\end{tikzpicture}
+\\
+% ---- row 6 ----
+$\begin{aligned}[t]
+&\braOket{\Omega}{\mathfrak{M}}{j_2m_2 j_3m_3}=\sum_{j_1m_1}\braket{\Omega}{j_1m_1}\\
+&\quad\times(-1)^{j_1-m_1}\threej{j_1}{j_2}{j_3}{-m_1}{m_2}{m_3}\braOketred{j_1}{\mathfrak{M}_{j_2}}{j_3}
+\end{aligned}$
+&
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
+  \node[draw,minimum width=0.9cm,minimum height=0.9cm](B){\normalsize$\mathfrak{M}$};
+  \draw[bomarrown]($(B.west)+(-0.95,0)$)--(B.west)node[pos=0.1,above]{$\Omega$};
+  \draw[jmarrown]($(B.north east)+(-0.15,0)$)--($(B.north east)+(0.75,0.55)$)node[right]{$j_2m_2$};
+  \draw[jmarrown]($(B.south east)+(-0.15,0)$)--($(B.south east)+(0.75,-0.55)$)node[right]{$j_3m_3$};
+\end{tikzpicture}$=$%
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
+  \draw[bomarrown](-1.6,0)--(-0.65,0)node[pos=0.1,above]{$\Omega$};
+  \node[dotnode,label={-90:\minusmark}](O)at(0,0){};
+  \draw[jmlinemu](-0.65,0)--(O)node[midway,above]{$j_1$};
+  \draw[jmarrown](O)--($(O)+(35:0.95)$)node[right]{$j_2m_2$};
+  \draw[jmarrown](O)--($(O)+(-35:0.95)$)node[right]{$j_3m_3$};
+\end{tikzpicture}%
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
+  \tribox{\mathfrak{M}}{j_1}{j_2}{j_3}{jmlinemu}{jmlinem}{jmlinem}
+\end{tikzpicture}
+\\
+% ---- row 7 ----
+$\begin{aligned}[t]
+&\braOket{\Omega_1}{\mathfrak{M}}{j_2m_2 \Omega_3}=\sum_{j_1m_1 j_3m_3}\braket{\Omega_1}{j_1m_1}(-1)^{j_1-m_1}\\
+&\quad\times\threej{j_1}{j_2}{j_3}{-m_1}{m_2}{m_3}\braket{j_3m_3}{\Omega_3}\braOketred{j_1}{\mathfrak{M}_{j_2}}{j_3}
+\end{aligned}$
+&
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
+  \node[draw,minimum width=0.9cm,minimum height=0.9cm](B){\normalsize$\mathfrak{M}$};
+  \draw[bomarrown]($(B.west)+(-0.95,0)$)--(B.west)node[pos=0.1,above]{$\Omega_1$};
+  \draw[jmarrown](B.north)--($(B.north)+(0,0.9)$)node[above]{$j_2m_2$};
+  \draw[omarrown](B.east)--($(B.east)+(0.95,0)$)node[pos=0.9,above]{$\Omega_3$};
+\end{tikzpicture}$=$%
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
+  \node[dotnode,label={-90:\minusmark}](O)at(0,0){};
+  \draw[jmarrown](O)--(90:0.95)node[above]{$j_2m_2$};
+  \draw[bomarrown](210:1.4)--(210:0.6)node[at start,below left]{$\Omega_1$};
+  \draw[jmlinemu](210:0.6)--(O)node[at start,above]{$j_1$};
+  \draw[omarrown](330:0.6)--(330:1.4)node[below right]{$\Omega_3$};
+  \draw[jmlinemu](O)--(330:0.6)node[above]{$j_3$};
+\end{tikzpicture}%
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
+  \tribox{\mathfrak{M}}{j_1}{j_2}{j_3}{jmlinemu}{jmlinem}{jmlinemu}
+\end{tikzpicture}
+\\
 \end{tabular}
 \end{center}
 \end{table}
