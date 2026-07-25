@@ -3644,35 +3644,59 @@ $\begin{aligned}
 \small
 \setlength{\tabcolsep}{5pt}
 \renewcommand{\arraystretch}{1.3}
-\begin{tabular}{@{}p{0.52\textwidth}|c@{}}
+\begin{tabular}{@{}p{0.4\textwidth}|c@{}}
 \hline
 \multicolumn{1}{c|}{Analytical Expression} & Graphical Representation \\
 \hline
-\multicolumn{2}{c}{Matrix element of an irreducible tensor operator of rank $k$ in the JM-representation
-(Wigner-Eckart theorem)}\\
+\multicolumn{2}{c}{\parbox{0.93\textwidth}{\centering Matrix element of an irreducible tensor operator of rank $k$ in the JM-representation
+(Wigner-Eckart theorem)}}\\
 \[
-\braOket{\gamma J M}{\mathfrak{M}_{k,}}{\gamma^{\prime} J^{\prime} M^{\prime}}=(-1)^{J-M}\threej{J}{k}{J^{\prime}}{-M}{q}{M^{\prime}}\left(\gamma^{J}\left\|\mathfrak{M}_{k}\right\| \gamma^{\prime} J^{\prime}\right) .
+\braOket{\gamma J M}{\mathfrak{M}_{kq}}{\gamma^{\prime} J^{\prime} M^{\prime}}=(-1)^{J-M}\threej{J}{k}{J^{\prime}}{-M}{q}{M^{\prime}}\left(\gamma J\left\|\mathfrak{M}_{k}\right\| \gamma^{\prime} J^{\prime}\right) .
 \]
-where $\left(\gamma J\left\|\mathfrak{M}_{k}\right\| \gamma^{\prime} J^{\prime}\right)$ is the reduced matrix element &\\
-\multicolumn{2}{c}{Reduced Matrix elements of irreducible tensor product of irreducible tensor operators.}\\
+where $\left(\gamma J\left\|\mathfrak{M}_{k}\right\| \gamma^{\prime} J^{\prime}\right)$ is the reduced matrix element
+&
+\scalebox{0.72}{\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
+  \node[draw,minimum width=1.7cm,minimum height=0.7cm](M)at(0,0){\normalsize$\mathfrak{M}_{\gamma\gamma'}$};
+  \draw[bjmarrown]($(M.north)+(-0.55,1.2)$)--($(M.north)+(-0.55,0)$);
+  \node at($(M.north)+(-0.55,1.35)$){$JM$};
+  \draw[jmarrown]($(M.north)+(0,0)$)--($(M.north)+(0,1.2)$);
+  \node at($(M.north)+(0,1.35)$){$kq$};
+  \draw[jmarrown]($(M.north)+(0.55,0)$)--($(M.north)+(0.55,1.2)$);
+  \node at($(M.north)+(0.55,1.35)$){$J'M'$};
+\end{tikzpicture}$=$%
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
+  \node[draw,minimum width=1.7cm,minimum height=0.7cm](M)at(0,0){\normalsize$\mathfrak{M}_{\gamma\gamma'}$};
+  \coordinate(P)at($(M.north)+(0,0.7)$);
+  \node[dotnode,label={90:\plusmark}]at(P){};
+  \draw[jmlinem](M.north)++(-0.5,0)--(P)node[midway,left]{$J$};
+  \draw[jmlinem]($(M.north)$)--(P)node[pos=0.25,right]{$k$};
+  \draw[jmlinem](M.north)++(0.5,0)--(P)node[midway,right]{$J'$};
+  \coordinate(Q)at($(P)+(0,0.55)$);
+  \node[dotnode,label={-90:\minusmark}]at(Q){};
+  \draw[bjmarrown]($(Q)+(150:1.05)$)--(Q) node[at start,above]{$JM$};
+  \draw[jmarrown](Q)--($(Q)+(90:1.05)$) node[above]{$kq$};
+  \draw[jmarrown](Q)--($(Q)+(30:1.05)$) node[above]{$J'M'$};
+\end{tikzpicture}}
+\\
+\multicolumn{2}{c}{\parbox{0.93\textwidth}{\centering Reduced Matrix elements of irreducible tensor product of irreducible tensor operators.}}\\
 \[
 \begin{gathered}
-\left(\gamma^{J}\left\|\left\{\mathfrak{M}_{k_{1}} \otimes \mathfrak{N}_{k_{2}}\right\}_{k}\right\| \gamma^{\prime} J^{\prime}\right) \\
-=(-1)^{J+k+J^{\prime}} \sqrt{2 k+1} \sum_{\tau^{\prime J} J^{\prime \prime}}\sixj{J}{k}{J^{\prime}}{k_{2}}{J^{\prime \prime}}{k_{1}} \\
-\times\left(\gamma^{J}\left\|\mathfrak{M}_{k_{1}}\right\| \gamma^{\prime \prime} J^{\prime \prime}\right)\left(\gamma^{J^{\prime}} J^{\prime \prime}\left\|\Re_{k_{2}}\right\| \gamma^{\prime} J^{\prime}\right) .
+\left(\gamma J\left\|\left\{\mathfrak{M}_{k_{1}} \otimes \mathfrak{N}_{k_{2}}\right\}_{k}\right\| \gamma^{\prime} J^{\prime}\right) \\
+=(-1)^{J+k+J^{\prime}} \sqrt{2 k+1} \sum_{\gamma^{\prime\prime} J^{\prime \prime}}\sixj{J}{k}{J^{\prime}}{k_{2}}{J^{\prime \prime}}{k_{1}} \\
+\times\left(\gamma J\left\|\mathfrak{M}_{k_{1}}\right\| \gamma^{\prime \prime} J^{\prime \prime}\right)\left(\gamma^{\prime\prime} J^{\prime \prime}\left\|\mathfrak{N}_{k_{2}}\right\| \gamma^{\prime} J^{\prime}\right) .
 \end{gathered}
 \] &
 \sixjdiagramu{J,J^{\prime},J^{\prime\prime},k_1,k_2,k,+}
 \\
-\multicolumn{2}{c}{Two coupled subsystems in the $j_{1} j_{2};JM$-representation. Reduced matrix element of the irreducible tensor product of two irreducible tensor operators, one of which depends only on variables of the first subsystem and the other depends only on variables of the second subsystem.}\\
+\multicolumn{2}{c}{\parbox{0.93\textwidth}{\centering Two coupled subsystems in the $j_{1} j_{2};JM$-representation. Reduced matrix element of the irreducible tensor product of two irreducible tensor operators, one of which depends only on variables of the first subsystem and the other depends only on variables of the second subsystem.}}\\
 \[
 \begin{aligned}
-& \left(\gamma f_{1} j_{2} J\left\|\left\{\mathfrak{M}_{k_{1}}(1) \otimes \Re_{k_{2}}(2)\right\}_{k}\right\| \gamma^{\prime} f_{1}^{\prime} j_{2}^{\prime} J^{\prime}\right) \\
+& \left(\gamma j_{1} j_{2} J\left\|\left\{\mathfrak{M}_{k_{1}}(1) \otimes \mathfrak{N}_{k_{2}}(2)\right\}_{k}\right\| \gamma^{\prime} j_{1}^{\prime} j_{2}^{\prime} J^{\prime}\right) \\
 = & \sqrt{(2 J+1)(2 k+1)\left(2 J^{\prime}+1\right)}\ninej{j_{1}}{j_{1}^{\prime}}{k_{1}}{j_{2}}{j_{2}^{\prime}}{k_{2}}{J}{J^{\prime}}{k} \\
-& \times \sum_{\gamma^{\prime \prime}}\left(\gamma j_{1}\left\|\mathfrak{M}_{k_{1}}\right\| \gamma^{\prime \prime} j_{1}^{\prime}\right)\left(\gamma^{\prime \prime} j_{2}\left\|\Re_{k_{2}}\right\| \gamma^{\prime} j_{2}^{\prime}\right)
+& \times \sum_{\gamma^{\prime \prime}}\left(\gamma j_{1}\left\|\mathfrak{M}_{k_{1}}\right\| \gamma^{\prime \prime} j_{1}^{\prime}\right)\left(\gamma^{\prime \prime} j_{2}\left\|\mathfrak{N}_{k_{2}}\right\| \gamma^{\prime} j_{2}^{\prime}\right)
 \end{aligned}
 \]&
-\sixjdiagramu{j_1,j_1^{\prime},k_1,j_2,j_2^{\prime},k_2,+}
+\ninejdgen{j_1,j_1^{\prime},k_1,j_2,j_2^{\prime},k_2,J,J^{\prime},k,+-+-+-,ddddddddd}
 \end{tabular}
 \end{center}
 \end{table}
@@ -3684,21 +3708,21 @@ where $\left(\gamma J\left\|\mathfrak{M}_{k}\right\| \gamma^{\prime} J^{\prime}\
 \small
 \setlength{\tabcolsep}{5pt}
 \renewcommand{\arraystretch}{1.3}
-\begin{tabular}{@{}p{0.52\textwidth}|c@{}}
+\begin{tabular}{@{}p{0.4\textwidth}|c@{}}
 \hline
 \multicolumn{1}{c|}{Analytical Expression} & Graphical Representation \\
 \hline
-\multicolumn{2}{c}{Matrix element of the scalar product of two irreducible tensor operators which
-depend on variables of the first and the second subsystems, respectively.}\\
+\multicolumn{2}{c}{\parbox{0.93\textwidth}{\centering Matrix element of the scalar product of two irreducible tensor operators which
+depend on variables of the first and the second subsystems, respectively.}}\\
 \[
 \begin{gathered}
 \braOket{\gamma j_{1} j_{2} J M}{\left(\mathfrak{M}_{k}(1) \cdot \mathfrak{N}_{k}(2)\right)}{\gamma^{\prime} j_{1}^{\prime} j_{2}^{\prime} J^{\prime} M^{\prime}} \\
-=(-1)^{j_{1}^{\prime}+j_{2}+J_{\delta J J^{\prime}} \delta_{M M^{\prime}}}\sixj{j_{1}}{j_{2}}{J}{j_{2}^{\prime}}{j_{1}^{\prime}}{k} \\
-\times \sum_{\gamma^{\prime \prime}}\left(\tau j_{1}\left\|\mathfrak{M}_{k}\right\| \gamma^{\prime \prime} j_{1}^{\prime}\right)\left(\gamma^{\prime \prime} j_{2}\left\|\mathfrak{N}_{k}\right\| \gamma^{\prime} j_{2}^{\prime}\right)
+=(-1)^{j_{1}^{\prime}+j_{2}+J}\delta_{J J^{\prime}} \delta_{M M^{\prime}}\sixj{j_{1}}{j_{2}}{J}{j_{2}^{\prime}}{j_{1}^{\prime}}{k} \\
+\times \sum_{\gamma^{\prime \prime}}\left(\gamma j_{1}\left\|\mathfrak{M}_{k}\right\| \gamma^{\prime \prime} j_{1}^{\prime}\right)\left(\gamma^{\prime \prime} j_{2}\left\|\mathfrak{N}_{k}\right\| \gamma^{\prime} j_{2}^{\prime}\right)
 \end{gathered}
 \] &
 \threejs{j_1}{j_2}{J}{+}{-}\\
-\multicolumn{2}{c}{Reduced matrix element of an irreducible tensor operator which depends only on variables of the first subsystem.}\\
+\multicolumn{2}{c}{\parbox{0.93\textwidth}{\centering Reduced matrix element of an irreducible tensor operator which depends only on variables of the first subsystem.}}\\
 \[
 \begin{gathered}
 \left(\gamma j_{1} j_{2} J\left\|\mathfrak{M}_{k}(1)\right\| \gamma^{\prime} j_{1}^{\prime} j_{2}^{\prime} J^{\prime}\right) \\
@@ -3707,12 +3731,12 @@ depend on variables of the first and the second subsystems, respectively.}\\
 \end{gathered}
 \] &
 \threejs{J}{k}{J^{\prime}}{+}{-}\\
-\multicolumn{2}{c}{Reduced matrix element of the irreducible tensor operator which depends only on variables of the second subsystem.}\\
+\multicolumn{2}{c}{\parbox{0.93\textwidth}{\centering Reduced matrix element of the irreducible tensor operator which depends only on variables of the second subsystem.}}\\
 \[
 \begin{gathered}
-\left(\gamma j_{1} j_{2} J\left\|\Re_{k}(2)\right\| \gamma^{\prime} j_{1}^{\prime} j_{2}^{\prime} J^{\prime}\right) \\
-=(-1)^{j_{1}^{\prime}+j_{2}^{\prime}+J+k_{8}} \delta_{j_{1} j^{\prime}} \sqrt{(2 J+1)\left(2 J^{\prime}+1\right)} \\
-\times\sixj{J}{k}{J^{\prime}}{j_{2}^{\prime}}{j_{1}}{j_{2}}\left(\gamma j_{2}\left\|\Re_{k}\right\| \gamma^{\prime} j_{2}^{\prime}\right) .
+\left(\gamma j_{1} j_{2} J\left\|\mathfrak{N}_{k}(2)\right\| \gamma^{\prime} j_{1}^{\prime} j_{2}^{\prime} J^{\prime}\right) \\
+=(-1)^{j_{1}^{\prime}+j_{2}^{\prime}+J+k} \delta_{j_{1} j_{1}^{\prime}} \sqrt{(2 J+1)\left(2 J^{\prime}+1\right)} \\
+\times\sixj{J}{k}{J^{\prime}}{j_{2}^{\prime}}{j_{1}}{j_{2}}\left(\gamma j_{2}\left\|\mathfrak{N}_{k}\right\| \gamma^{\prime} j_{2}^{\prime}\right) .
 \end{gathered}
 \] &
 \threejs{J}{k}{J^{\prime}}{+}{-}\\
@@ -3776,33 +3800,38 @@ where
 \begin{center}
 \begin{tikzpicture}[baseline=0pt]\node[opbox](M) at (0,0){$\mathfrak{N}$}; \draw[jmline] (M) -- (-1.3,0.8) node[left]{$j_1m_1$}; \draw[jmline] (M) -- (-1.3,-0.8) node[left]{$j_2m_2$}; \draw[jmline] (M) -- (1.3,0.8) node[right]{$j_3m_3$}; \draw[jmline] (M) -- (1.3,-0.8) node[right]{$j_4m_4$};\end{tikzpicture}
 \end{center}
-
-Table 11.15.\\
-Generalized Wigner-Eckart Theorem.
-
-Analytical Expression
+\begin{table}[ptbh!]
+\begin{center}
+\captionsetup{justification=centering,labelformat=empty}
+\caption{Table 11.15.\\
+Generalized Wigner-Eckart Theorem.}
+\small
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{@{}p{0.42\textwidth}|c@{}}
+\hline
+\multicolumn{1}{c|}{Analytical Expression} & Graphical Representation \\
+\hline
 \[
 \braOket{00}{\mathfrak{M}}{l m}=\braOket{00}{\mathfrak{M}}{00} \delta_{l 0} \delta_{m 0} .
-\]
+\] 
+& 
+\\
 \[
 \braOket{j m}{\mathfrak{M}}{j^{\prime} m^{\prime}}=\frac{\delta_{j j^{\prime}} \delta_{m m^{\prime}}}{(2 j+1)}\braOketred{j}{\mathfrak{M}}{j},
 \]
-\section*{where \\
- where}
-\begin{center}
-\threejs{j}{k}{j'}{+}{-}
-\end{center}
+ where
 \[
-\begin{gathered}
-\braOketred{j}{\mathfrak{M}}{j} \equiv \sum_{m}\braOket{j m}{\mathfrak{M}}{j m} \\
-\braOket{\Omega}{\mathfrak{M}}{j m}=\braket{Q}{j m} \frac{\braOketred{j}{\mathfrak{M}}{j}}{(2 j+1)}
-\end{gathered}
+\braOketred{j}{\mathfrak{M}}{j} \equiv \sum_{m}\braOket{j m}{\mathfrak{M}}{j m} \]
+& \\
+\[\braOket{\Omega}{\mathfrak{M}}{j m}=\braket{\Omega}{j m} \frac{\braOketred{j}{\mathfrak{M}}{j}}{(2 j+1)}
 \]
 where $\omega_{12}$ is the angle $\widehat{\Omega_{1} \Omega_{2}}$
 \[
-\begin{gathered}
-P_{1}\left(\cos \omega_{12}\right)=\sum_{m}\braket{Q_{1}}{l m}\braket{l m}{Q_{2}} . \\
-\braOket{j_{1} m_{1}}{\mathfrak{M}}{j_{2} m_{2} j_{3} m_{3}} \\
+P_{l}\left(\cos \omega_{12}\right)=\sum_{m}\braket{\Omega_{1}}{l m}\braket{l m}{\Omega_{2}} . \]
+& \\
+\[
+\begin{gathered}\braOket{j_{1} m_{1}}{\mathfrak{M}}{j_{2} m_{2} j_{3} m_{3}} \\
 =(-1)^{j_{1}-m_{2}}\threej{j_{1}}{j_{2}}{j_{3}}{-m_{1}}{m_{2}}{m_{3}}\braOketred{j_{1}}{\mathfrak{M}_{j_{2}}}{j_{3}},
 \end{gathered}
 \]
@@ -3813,42 +3842,52 @@ where
 & \times\braOket{j_{1} m_{1}}{\mathfrak{M}_{2}}{j_{2} m_{2} j_{3} m_{\Omega}}
 \end{aligned}
 \]
-\subsubsection{Graphical Representation}
-\begin{center}
-\begin{tikzpicture}[baseline=0pt]\node[opbox](M) at (0,0){$\mathfrak{M}_{j_2}$}; \draw[jmline] (M) -- (-1.3,0.6) node[left]{$j_1$}; \draw[jmline] (M) -- (1.3,0.6) node[right]{$j_3$}; \draw[omarrow] (M) -- (0,-1.2) node[below]{$Q$};\end{tikzpicture}
-\end{center}
-\[
-=\sum_{j_{1} m_{1}}\braket{Q}{j_{1} m_{1}}(-1)^{j_{1}-m_{1}}\threej{j_{1}}{j_{2}}{j_{3}}{-m_{1}}{m_{2}}{m_{3}}\braOketred{j_{1}}{\mathfrak{M}_{j_{3}}}{j_{3}} \cdot-\Omega_{1}-\sqrt[\Omega_{1}]{\frac{j_{2} m_{2}}{j_{3} m_{3}}}=-\Omega_{1}-\overbrace{j_{3} m_{3}}^{j_{2} m_{2}} \cdots \sum_{1}
-\]
-\threejdiag{j_1,,j_3,,j_2,,+}
-
-\[
-\begin{gathered}
-\braOket{Q_{1}}{\mathfrak{M}}{j_{2} m_{2} Q_{3}}=\sum_{j_{1} m_{1} j_{0} m_{3}}\braket{Q_{1}}{j_{1} m_{1}} \\
-\times(-1)^{j_{1}-m_{1}}\threej{j_{1}}{j_{2}}{j_{3}}{-m_{1}}{m_{2}}{m_{3}}\braket{j_{3} m_{3}}{Q_{3}}\braOketred{j_{1}}{\mathfrak{M}_{j_{2}}}{j_{3}} .
+\[\begin{gathered}
+\braOket{\Omega}{\mathfrak{M}}{j_2m_2j_3m_3}
+=\sum_{j_{1} m_{1}}\braket{\Omega}{j_{1} m_{1}}(-1)^{j_{1}-m_{1}}\threej{j_{1}}{j_{2}}{j_{3}}{-m_{1}}{m_{2}}{m_{3}}\braOketred{j_{1}}{\mathfrak{M}_{j_{3}}}{j_{3}} \cdot-\Omega_{1}-\sqrt[\Omega_{1}]{\frac{j_{2} m_{2}}{j_{3} m_{3}}}=-\Omega_{1}-\overbrace{j_{3} m_{3}}^{j_{2} m_{2}} \cdots \sum_{1}
 \end{gathered}
 \]
-\begin{tikzpicture}[baseline=0pt]\node[opbox](M) at (0,0){$\mathfrak{M}_{j_2}$}; \draw[omarrow] (M) -- (-1.3,0.6) node[left]{$Q_1$}; \draw[jmline] (M) -- (1.3,0.6) node[right]{$j_2m_2$}; \draw[omarrow] (M) -- (0,-1.2) node[below]{$Q_3$};\end{tikzpicture}
+&\\
+\[
+\begin{gathered}
+\braOket{\Omega_{1}}{\mathfrak{M}}{j_{2} m_{2} \Omega_{3}}=\sum_{j_{1} m_{1} j_{0} m_{3}}\braket{\Omega_{1}}{j_{1} m_{1}} \\
+\times(-1)^{j_{1}-m_{1}}\threej{j_{1}}{j_{2}}{j_{3}}{-m_{1}}{m_{2}}{m_{3}}\braket{j_{3} m_{3}}{\Omega_{3}}\braOketred{j_{1}}{\mathfrak{M}_{j_{2}}}{j_{3}} .
+\end{gathered}
+\] & \\
+\begin{tikzpicture}[baseline=0pt]\node[opbox](M) at (0,0){$\mathfrak{M}_{j_2}$}; \draw[omarrow] (M) -- (-1.3,0.6) node[left]{$\Omega_1$}; \draw[jmline] (M) -- (1.3,0.6) node[right]{$j_2m_2$}; \draw[omarrow] (M) -- (0,-1.2) node[below]{$\Omega_3$};\end{tikzpicture}
+\end{tabular}
+\end{center}
+\end{table}
 
-
-Analytical Expression
+\begin{table}[ptbh!]
+\begin{center}
+\captionsetup{justification=centering,labelformat=empty}
+\caption*{Table 11.15. (Cont'd)}
+\small
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{@{}p{0.42\textwidth}|c@{}}
+\hline
+\multicolumn{1}{c|}{Analytical Expression} & Graphical Representation \\
+\hline
 \[
 \begin{gathered}
 \braOket{j_{1} m_{1} j_{2} m_{2}}{\mathfrak{M}}{j_{3} m_{3} j_{4} m_{4}} \\
 =\sum_{J M}(2 J+1)\threej{j_{1}}{j_{2}}{J}{m_{1}}{m_{2}}{M}\braOket{j_{1} j_{2} ; J M}{\mathfrak{M}}{j_{3} j_{4} ; J M} \\
 \times\threej{j_{3}}{j_{4}}{J}{m_{3}}{m_{4}}{M}
 \end{gathered}
-\]
-\subsubsection{Graphical Representation}
+\] & \\
 \[
 \begin{gathered}
-\braOket{Q_{1}}{\mathfrak{M}}{Q_{2} Q_{3}}=\sum_{j_{1} j_{2} j_{3}}\braOketred{j_{1}}{\mathfrak{M}_{j_{2}}}{j_{3}} \\
-\times \sum_{m_{1} m_{2} m_{3}}\braket{Q_{1}}{j_{1} m_{1}}(-1)^{j_{1}-m_{1}}\threej{j_{1}}{j_{2}}{j_{3}}{-m_{1}}{m_{2}}{m_{3}} \\
-\times\braket{j_{2} m_{2}}{Q_{2}}\braket{j_{3} m_{3}}{Q_{3}}
+\braOket{\Omega_{1}}{\mathfrak{M}}{\Omega_{2} \Omega_{3}}=\sum_{j_{1} j_{2} j_{3}}\braOketred{j_{1}}{\mathfrak{M}_{j_{2}}}{j_{3}} \\
+\times \sum_{m_{1} m_{2} m_{3}}\braket{\Omega_{1}}{j_{1} m_{1}}(-1)^{j_{1}-m_{1}}\threej{j_{1}}{j_{2}}{j_{3}}{-m_{1}}{m_{2}}{m_{3}} \\
+\times\braket{j_{2} m_{2}}{\Omega_{2}}\braket{j_{3} m_{3}}{\Omega_{3}}
 \end{gathered}
 \]
-\begin{tikzpicture}[baseline=0pt]\node[opbox](M) at (0,0){$\mathfrak{M}_{j_2}$}; \draw[omarrow] (M) -- (-1.3,0.6) node[left]{$Q_1$}; \draw[omarrow] (M) -- (1.3,0.6) node[right]{$Q_2$}; \draw[omarrow] (M) -- (0,-1.2) node[below]{$Q_3$};\end{tikzpicture}
-
+\begin{tikzpicture}[baseline=0pt]\node[opbox](M) at (0,0){$\mathfrak{M}_{j_2}$}; \draw[omarrow] (M) -- (-1.3,0.6) node[left]{$\Omega_1$}; \draw[omarrow] (M) -- (1.3,0.6) node[right]{$\Omega_2$}; \draw[omarrow] (M) -- (0,-1.2) node[below]{$\Omega_3$};\end{tikzpicture}
+\end{tabular}
+\end{center}
+\end{table}
 
 
 

@@ -2,78 +2,33 @@
 \usepackage{diagrams}
 \usepackage{amsfonts,amsmath}
 \begin{document}
-% ===== Addition Theorems row 5 -- LHS "double triangle" =====
-% Inner 6j triangle {J31 J23 J12}; each vertex sends a j-line (+ D-vertex,
-% perpendicular R) out to an outer 3jm (-) node carrying two J_{ik}M pairs.
+% ===== Table 11.14 row 1: Wigner-Eckart theorem =====
+% LHS: box M_{gg'} with 3 lines up (JM bra, kq ket, J'M' ket).
+% RHS: 3jm (- node) atop a + node atop the box (reduced matrix element).
 \[
-\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
-  % inner triangle
-  \coordinate(iT)at(90:0.6);\coordinate(iBL)at(210:0.6);\coordinate(iBR)at(330:0.6);
-  \draw[jmlinem](iT)--(iBL) node[midway,left]{$J_{31}$};
-  \draw[jmlinem](iBR)--(iT) node[midway,right]{$J_{23}$};
-  \draw[jmlinem](iBL)--(iBR) node[midway,below]{$J_{12}$};
-  \node[label={-90:\minusmark},inner sep=3pt]at(iT){};
-  \node[label={-90:\minusmark},inner sep=2pt]at(iBL){};
-  \node[label={-90:\minusmark},inner sep=2pt]at(iBR){};
-  % outer 3jm nodes
-  \coordinate(OT)at(90:1.8);\coordinate(OL)at(210:1.8);\coordinate(OR)at(330:1.8);
-  % j3 line iT->OT with + D-vertex and R3
-  \coordinate(v3)at($(iT)!0.5!(OT)$);
-  \draw[jmlinem](iT)--(v3);\draw[jmlinem](v3)--(OT);
-  \node[label={0:\plusmark}]at(v3){};
-  \draw[rline](v3)--($(v3)+(180:0.75)$) node[left]{$R_3$};
-  % j1 line iBL->OL with + and R1
-  \coordinate(v1)at($(iBL)!0.5!(OL)$);
-  \draw[jmlinem](iBL)--(v1);\draw[jmlinem](v1)--(OL);
-  \node[label={90:\plusmark}]at(v1){};
-  \draw[rline](v1)--($(v1)+(-60:0.75)$) node[below]{$R_1$};
-  % j2 line iBR->OR with + and R2
-  \coordinate(v2)at($(iBR)!0.5!(OR)$);
-  \draw[jmlinem](iBR)--(v2);\draw[jmlinem](v2)--(OR);
-  \node[label={-120:\plusmark}]at(v2){};
-  \draw[rline](v2)--($(v2)+(60:0.75)$) node[above]{$R_2$};
-  % outer nodes -, each with two J_{ik}M legs (ket out)
-  \node[label={-90:\minusmark},inner sep=2pt]at(OT){};
-  \node[label={0:\minusmark},inner sep=2pt]at(OL){};
-  \node[label={180:\minusmark},inner sep=2pt]at(OR){};
-  \draw[bjmarrown]($(OT)+(160:0.9)$)--(OT) node[pos=0,above left]{$J_{31}M_{31}$};
-  \draw[jmarrown](OT)--($(OT)+(20:0.9)$) node[above right]{$J_{23}M'_{23}$};
-  \draw[bjmarrown]($(OL)+(280:0.9)$)--(OL) node[pos=0,left]{$J_{12}M_{12}$};
-  \draw[jmarrown](OL)--($(OL)+(140:0.9)$) node[above]{$J_{31}M'_{31}$};
-  \draw[bjmarrown]($(OR)+(40:0.9)$)--(OR) node[pos=0,right]{$J_{23}M_{23}$};
-  \draw[jmarrown](OR)--($(OR)+(240:0.9)$) node[below]{$J_{12}M'_{12}$};
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
+  \node[draw,minimum width=1.7cm,minimum height=0.7cm](M)at(0,0){\normalsize$\mathfrak{M}_{\gamma\gamma'}$};
+  \draw[bjmarrown]($(M.north)+(-0.55,1.2)$)--($(M.north)+(-0.55,0)$);
+  \node at($(M.north)+(-0.55,1.35)$){$JM$};
+  \draw[jmarrown]($(M.north)+(0,0)$)--($(M.north)+(0,1.2)$);
+  \node at($(M.north)+(0,1.35)$){$kq$};
+  \draw[jmarrown]($(M.north)+(0.55,0)$)--($(M.north)+(0.55,1.2)$);
+  \node at($(M.north)+(0.55,1.35)$){$J'M'$};
 \end{tikzpicture}
 \;=\;
-% ----- RHS: compound-rotation triangle with two J-legs per vertex -----
-\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize,label distance=1pt]
-  \coordinate(T)at(90:1.8);\coordinate(BL)at(210:1.8);\coordinate(BR)at(330:1.8);
-  \coordinate (s12) at ($(BL)!0.1!(BR)$);
-  \coordinate (a12) at ($(BL)!0.4!(BR)$);
-  \coordinate (b12) at ($(BL)!0.6!(BR)$);
-  \coordinate (e12) at ($(BL)!0.9!(BR)$);
-  \coordinate (s23) at ($(BR)!0.1!(T)$);
-  \coordinate (a23) at ($(BR)!0.4!(T)$);
-  \coordinate (b23) at ($(BR)!0.6!(T)$);
-  \coordinate (e23) at ($(BR)!0.9!(T)$);
-  \coordinate (s31) at ($(T)!0.1!(BL)$);
-  \coordinate (a31) at ($(T)!0.4!(BL)$);
-  \coordinate (b31) at ($(T)!0.6!(BL)$);
-  \coordinate (e31) at ($(T)!0.9!(BL)$);
-  \draw[bjmarrown] (s12) --(a12) node[at start,below] {$J_{12}M_{12}$};
-  \draw[jmlinem] (a12) --(b12);
-  \draw[jmarrown] (b12) --(e12) node[below] {$J_{12}M'_{12}$};
-  \draw[bjmarrow] (s23) --(a23) node[at start,right] {$J_{23}M_{23}$};
-  \draw[jmlinem] (a23) --(b23);
-  \draw[jmarrown] (b23) --(e23) node[right] {$J_{23}M_{23}'$};
-  \draw[bjmarrown] (s31) --(a31) node[at start,left] {$J_{31}M_{31}$};
-  \draw[jmlinem] (a31) --(b31);
-  \draw[jmarrown] (b31) --(e31) node[left] {$J_{31}M'_{31}$};
-  \node[label={[label distance=-2pt]90:\plusmark}]at(a12){};\draw[rline](a12)--($(a12)+(-90:0.7)$) node[near end,right]{$R_1$};
-  \node[label={[label distance=-2pt]270:\plusmark}]at(b12){};\draw[rline](b12)--($(b12)+(90:0.7)$) node[near end,right]{$R_2$};
-  \node[label={[label distance=-4pt]210:\plusmark}]at(a23){};\draw[rline](a23)--($(a23)+(30:0.7)$) node[right]{$R_2$};
-  \node[label={[label distance=-4pt]30:\plusmark}]at(b23){};\draw[rline](b23)--($(b23)+(-150:0.7)$) node[near end,above]{$R_3$};
-  \node[label={[label distance=-4pt]-30:\plusmark}]at(a31){};\draw[rline](a31)--($(a31)+(150:0.7)$) node[left]{$R_3$};
-  \node[label={[label distance=-4pt]150:\plusmark}]at(b31){};\draw[rline](b31)--($(b31)+(-30:0.7)$) node[midway,below]{$R_1$};
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
+  \node[draw,minimum width=1.7cm,minimum height=0.7cm](M)at(0,0){\normalsize$\mathfrak{M}_{\gamma\gamma'}$};
+  \coordinate(P)at($(M.north)+(0,0.7)$);
+  \node[dotnode,label={90:\plusmark}]at(P){};
+  \draw[jmlinem](M.north)++(-0.5,0)--(P)node[midway,left]{$J$};
+  \draw[jmlinem]($(M.north)$)--(P)node[pos=0.25,right]{$k$};
+  \draw[jmlinem](M.north)++(0.5,0)--(P)node[midway,right]{$J'$};
+  \coordinate(Q)at($(P)+(0,0.55)$);
+  \node[dotnode,label={-90:\minusmark}]at(Q){};
+  %\draw[jmlinem](P)--(Q);
+  \draw[bjmarrown]($(Q)+(150:1.05)$)--(Q) node[at start,above]{$JM$};
+  \draw[jmarrown](Q)--($(Q)+(90:1.05)$) node[above]{$kq$};
+  \draw[jmarrown](Q)--($(Q)+(30:1.05)$) node[above]{$J'M'$};
 \end{tikzpicture}
 \]
 \end{document}
