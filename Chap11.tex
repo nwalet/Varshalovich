@@ -39,7 +39,7 @@ $$
 \draw[omketarrow] (0,0.0) -- (1,0.0) ;
 \end{tikzpicture}  \qquad \ket{\Omega}, \\
 & \begin{tikzpicture}[baseline=0pt]
-\draw[bomarrow] (0,0.0) -- (1,0.0) ;
+\draw[ombraarrow] (0,0.0) -- (1,0.0) ;
 \end{tikzpicture}  \qquad \bra{\Omega}, 
 \end{aligned}
 $$
@@ -164,12 +164,12 @@ $ &
 "bra"  \( \begin{aligned} & \bra{\Omega} \\ & \rbra{\Omega} \end{aligned} \) & 
 \begin{tikzpicture}[baseline=0pt]
 \draw[dbomarrow] (0,0.3) -- (1,0.3) node[midway,above]{$\Omega$};
-\draw[bomarrow] (0,-0.3) -- (1,-0.3) node[midway,above]{$\Omega$};
+\draw[ombraarrow] (0,-0.3) -- (1,-0.3) node[midway,above]{$\Omega$};
 \end{tikzpicture}  \\
 \multicolumn{2}{c}{Dirac $\delta$-function}\\
 $ \left\langle\Omega  \mid\Omega^{\prime}\right\rangle=\delta(\Omega-\Omega')$ &
 \begin{tikzpicture}
-\draw[bomarrow] (0,0.) -- (1,0.) node[midway,above]{$\Omega$};
+\draw[ombraarrow] (0,0.) -- (1,0.) node[midway,above]{$\Omega$};
 \draw[dbomarrow]  (1,0.) -- (2,0.) node[midway,above]{$\Omega'$};
 \end{tikzpicture}
  \\
@@ -182,15 +182,15 @@ $ &
 \end{tikzpicture}
  \\$ \left\langle\Omega _1\Omega_2 \mid\Omega\right\rangle=\delta(\Omega_1-\Omega)\delta(\Omega_2-\Omega)$ &
 \begin{tikzpicture}[baseline=0pt]
-\draw[bomarrow] (0,0.5) -- (1,0.) node[midway,above]{$\Omega_1$};
-\draw[bomarrow] (0,-0.5) -- (1,0.) node[midway,below]{$\Omega_2$};
+\draw[ombraarrow] (0,0.5) -- (1,0.) node[midway,above]{$\Omega_1$};
+\draw[ombraarrow] (0,-0.5) -- (1,0.) node[midway,below]{$\Omega_2$};
 \draw[omketarrow]  (1,0.) -- (2,0.) node[midway,above]{$\Omega$};
 \end{tikzpicture}
  \\
  \multicolumn{2}{c}{Spherical Harmonics}\\
 $ \left\langle\Omega\mid lm \right\rangle=Y_{lm}(\Omega)$ &
 \begin{tikzpicture}
-\draw[bomarrow] (0,0.) -- (1,0.) node[midway,above]{$\Omega$};
+\draw[ombraarrow] (0,0.) -- (1,0.) node[midway,above]{$\Omega$};
 \draw[jmketarrow]  (1,0.) -- (2,0.) node[midway,above]{$lm$};
 \end{tikzpicture}
  \\
@@ -408,7 +408,7 @@ $\twelvejII{a_1,a_2,a_3,a_4,b_1,b_2,b_3,b_4,c_1,c_2,c_3,c_4}$& \twIIdiaga{a_1,a_
 $\Omega$-Representation  $\braOket{\gamma \Omega}{\mathfrak{M}_{\lambda \mu}}{\gamma^{\prime} \Omega^{\prime}}$ & 
 \begin{tikzpicture}[baseline=0pt]
 \node[opbox] (M) at (0,0) {$\mathfrak{M}_{\gamma\gamma'}$};
-\draw[bomarrow] (2,0.5)--(M) node[at start,right]{$\Omega$};
+\draw[ombraarrow] (2,0.5)--(M) node[at start,right]{$\Omega$};
 \draw[jmketarrow] (M) --(2,0.) node[right]{$\lambda\mu$};
 \draw[omketarrow] (M) --(2,-0.5) node[right]{$\Omega'$};
 \end{tikzpicture}\\
@@ -418,7 +418,7 @@ Adjoint Matrix $\braOket{\gamma \Omega}{\mathfrak{M}_{\lambda \mu}^{+}}{\gamma^{
 \node[opbox] (M) at (0,0) {$\mathfrak{M}^*_{\gamma'\gamma}$};
 \draw[omketarrow] (M) --(2,0.5) node[right]{$\Omega'$};
 \draw[bjmarrow] (2,0.)--(M) node[at start,right]{$\lambda\mu$};
-\draw[bomarrow] (2,-0.5)--(M) node[at start,right]{$\Omega$};
+\draw[ombraarrow] (2,-0.5)--(M) node[at start,right]{$\Omega$};
 \end{tikzpicture}\\
 $jm$-Representation $\braOket{\gamma j m}{\mathfrak{M}_{\lambda \mu}}{\gamma^{\prime} j^{\prime} m^{\prime}}$ & 
 \begin{tikzpicture}[baseline=0pt]
@@ -477,7 +477,7 @@ $\braOket{\gamma'\Omega'}{D(R)}{\gamma\Omega}=\delta_{\gamma\gamma'}(\Omega'-R\O
     \coordinate (M) at (0,0);
     \node[label={270:\plusmark}] {};
     \draw[rline] (M) to node[at end,right]{$R$} (T);
-    \draw[omarrown] (M) to  node[at end,right]{$\Omega$} (R);
+    \draw[omarrow] (M) to  node[at end,right]{$\Omega$} (R);
     \draw[bomarrown] (L) to  node [at start,left]{$\Omega'$} (M);
 \end{tikzpicture}
 $=$
@@ -488,7 +488,7 @@ $=$
     \coordinate (M) at (0,0);
     \node[label={90:\minusmark}] {};
     \draw[rline] (M) to node[at end,right]{$R$} (B);
-    \draw[omarrown] (M) to  node[at end,right]{$\Omega$} (R);
+    \draw[omarrow] (M) to  node[at end,right]{$\Omega$} (R);
     \draw[bomarrown] (L) to  node [at start,left]{$\Omega'$} (M);
 \end{tikzpicture}
 \\
@@ -501,7 +501,7 @@ $\langle\gamma j m| D(R)\left|\gamma^{\prime} j^{\prime} m^{\prime}\right\rangle
     \node[label={270:\minusmark}] {};
     \draw[rline] (M) to node[at end,right]{$R$} (T);
     \draw[jmarrow] (M) to  node[at end,right]{$j'm'$} (R);
-    \draw[bjmarrown] (L) to  node [at start,left]{$jm$} (M);
+    \draw[bjmarrow] (L) to  node [at start,left]{$jm$} (M);
 \end{tikzpicture}
 $=$
 \begin{tikzpicture}[baseline=0pt, inner sep=0.1em,font=\scriptsize]
@@ -512,7 +512,7 @@ $=$
     \node[label={90:\plusmark}] {};
     \draw[rline] (M) to node[at end,right]{$R$} (B);
     \draw[jmarrow] (M) to  node[at end,right]{$j'm'$} (R);
-    \draw[bjmarrown] (L) to  node [at start,left]{$jm$} (M);
+    \draw[bjmarrow] (L) to  node [at start,left]{$jm$} (M);
 \end{tikzpicture}
  \\
 Inverse Rotation Matrix   \\
@@ -523,7 +523,7 @@ Inverse Rotation Matrix   \\
     \coordinate (M) at (0,0);
     \node[label={270:\plusmark}] {};
     \draw[rline] (M) to node[at end,right]{$R$} (T);
-    \draw[bjmarrown] (R) to  node[at start,right]{$j'm'$} (M);
+    \draw[bjmarrow] (R) to  node[at start,right]{$j'm'$} (M);
     \draw[jmarrow] (M) to  node [at end,left]{$jm$} (L);
 \end{tikzpicture}
 $=$
@@ -534,7 +534,7 @@ $=$
     \coordinate (M) at (0,0);
     \node[label={90:\minusmark}] {};
     \draw[rline] (M) to node[at end,right]{$R$} (B);
-    \draw[bjmarrown] (R) to  node[at start,right]{$j'm'$} (M);
+    \draw[bjmarrow] (R) to  node[at start,right]{$j'm'$} (M);
     \draw[jmarrow] (M) to  node [at end,left]{$jm$} (L);
 \end{tikzpicture}
  \\
@@ -577,7 +577,7 @@ is represented by the conjunction (closure) of $|j m\rangle$ - and ( $j m \mid$-
 \coordinate (ml) at ($(M1.east)!0.45!(N1.west)$);
 \coordinate (mr) at ($(M1.east)!0.55!(N1.west)$);
 \draw[jmarrow] ($(M1.east)$) -- (ml) node[midway,above]{$jm$};
-\draw[bjmarrown] (mr) -- ($(N1.west)$) node[midway,below]{$jm$};
+\draw[bjmarrow] (mr) -- ($(N1.west)$) node[midway,below]{$jm$};
 \node[left=2pt of M1] {$\displaystyle\sum_m$};
 \node at (3.2,0) {$=$};
 \node[opbox] (M2) at (4.4,0) {$\mathfrak{M}$};
@@ -600,9 +600,9 @@ may be displayed as
     \coordinate (BR) at ($0.8*(0.5,-0.866)$);
     \coordinate (M) at (0,0);
     \node[label={0:\minusmark}] {};
-    \draw[bjmarrown] (L) -- (M) node[near start,above]{$c\gamma$};
-    \draw[bjmarrown] (TR) -- (M) node[at start,above]{$a\alpha$};
-    \draw[bjmarrown] (BR) -- (M) node[at start,below]{$b\beta$};
+    \draw[bjmarrow] (L) -- (M) node[near start,above]{$c\gamma$};
+    \draw[bjmarrow] (TR) -- (M) node[at start,above]{$a\alpha$};
+    \draw[bjmarrow] (BR) -- (M) node[at start,below]{$b\beta$};
     \end{tikzpicture}
     }
 }
@@ -626,7 +626,7 @@ may be displayed as
     \node[label={180:\plusmark}] at (R) {};
     \node[label={0:\minusmark}] at (L) {};
     \draw[jmarrow] (R) -- (Rr) node[near end,above]{$c'\gamma'$};
-    \draw[bjmarrown] (Ll) -- (L) node[near start,above]{$c\gamma$};
+    \draw[bjmarrow] (Ll) -- (L) node[near start,above]{$c\gamma$};
     \draw[jmlinem] (R) to[bend left=90]  node[midway,below]{$b$} (L);
     \draw[jmlinem] (R) to[bend right=90] node[midway,above]{$a$} (L);
 \end{tikzpicture}}}
@@ -724,7 +724,7 @@ functions of the type $D_{m m^{\prime}}^{j}(R), C_{j m}(\Omega) \equiv[4 \pi /(2
 \\
 \sum_{l m} Y_{l m}(\Omega) Y_{l m}^{*}(\Omega)=\braket{\Omega}{l m}\braket{l m}{\Omega^{\prime}} & &
 \vcenter{\hbox{\begin{tikzpicture}[baseline=0pt, inner sep=0.2em,font=\scriptsize] 
-    \draw[bomarrow] (-1.5,0) -- (-0.5,0) node[near start,above=0.05]{$\Omega$};
+    \draw[ombraarrow] (-1.5,0) -- (-0.5,0) node[near start,above=0.05]{$\Omega$};
     \draw[jmlinem] (-0.5,0) -- (0.5,0) node[midway,above=0.05]{$l$};
     \draw[omketarrow] (0.5,0) -- (1.5,0) node[above=0.05]{$\Omega'$};
 \end{tikzpicture}}}
@@ -783,8 +783,8 @@ A Clebsch-Gordan coefficient may be represented as a sum over $c^{\prime} \gamma
     \coordinate (Rr) at ($(R)+0.8*(1,0)$);
     \node[label={180:\minusmark}] at (M) {};
     \draw[jmlinem] (R) -- (M) node[midway,above]{$c'$};
-    \draw[bjmarrown] (T) -- (M) node[at start,above]{$a'\alpha'$};
-    \draw[bjmarrown] (B) -- (M) node[at start,below]{$b\beta$};
+    \draw[bjmarrow] (T) -- (M) node[at start,above]{$a'\alpha'$};
+    \draw[bjmarrow] (B) -- (M) node[at start,below]{$b\beta$};
     \draw[jmrndarrow] (R) -- (Rr) node[above]{$c\gamma$};
     \end{tikzpicture}
     }
@@ -803,7 +803,7 @@ over the total solid angle $4 \pi(0 \leq \vartheta \leq \pi, 0 \leq \varphi<2 \p
         \node[opbox] (N) at (1.2,0) {$\mathfrak{N}$};
     \draw[omketarrow] (M) -- (-0.3,0) ;
     \node (m) at (0,0) {$d\Omega$};
-    \draw[bomarrow]  (0.3,0) -- (N);
+    \draw[ombraarrow]  (0.3,0) -- (N);
     \end{tikzpicture}
     }
 }
@@ -925,7 +925,7 @@ Completeness Condition  \\
 \node[opbox] (M) at (0,0) {$\mathfrak{M}$};
 \node[opbox] (N) at (2,0) {$\mathfrak{N}$};
 \draw[omketarrow] (M) -- (0.8,0);
-\draw[bomarrow] (1.2,0) -- (N);
+\draw[ombraarrow] (1.2,0) -- (N);
 \node at (1,0.2) {$d\Omega$};
 \end{tikzpicture}\ $=$\ \begin{tikzpicture}[baseline=0pt]
 \node[opbox] (M) at (0,0) {$\mathfrak{M}$};
@@ -1221,9 +1221,9 @@ The direction of an external $j$-line specifies the form (covariant or contravar
 \begin{tikzpicture}[baseline=0pt,inner sep=0.5em,font=\scriptsize]
     \node[opbox](M) at (0,0){\normalsize$\mathfrak{M}$};
     \draw[jmarrow] (M) -- (1,0) node[above] {$jm'$};
-    \draw[bjmarrown] (1.5,0) --(2.0,0) node[at start, above] {$jm'$};
+    \draw[bjmarrow] (1.5,0) --(2.0,0) node[at start, above] {$jm'$};
     \draw[jmlinem] (2.3,0) --( 2.0,0);
-    \draw[bjmarrown] (2.8,0) -- (2.3,0) node[at start,above] {$jm$};
+    \draw[bjmarrow] (2.8,0) -- (2.3,0) node[at start,above] {$jm$};
     \node at (3.2,0) {$=$};
     \node[opbox](M) at (4,0){\normalsize$\mathfrak{M}$};
     \draw[jmarrow] (M) -- (5,0) node[above] {$jm$};
@@ -1238,7 +1238,7 @@ and the inverse transformation is
 \sum_{m'}
 \begin{tikzpicture}[baseline=0pt,inner sep=0.5em,font=\scriptsize]
     \node[opbox](M) at (0,0){\normalsize$\mathfrak{M}$};
-    \draw[bjmarrown] (1,0) -- (M) node[at start,above] {$jm'$};
+    \draw[bjmarrow] (1,0) -- (M) node[at start,above] {$jm'$};
     \draw[jmarrow] (2,0) --(1.5,0) node[ above] {$jm'$};
     \draw[jmlinem] (2.3,0) --( 2.0,0);
     \draw[jmarrow] (2.3,0) -- (2.8,0) node[above] {$jm$};
@@ -1508,7 +1508,7 @@ For example,
 As in Scheme (a), at least one of these subdiagrams should have no external lines. However, in the other subdiagrams the joined $j$-lines may be external. For instance,\\
 \[
 \vcenter{\hbox{\begin{tikzpicture}[baseline=0pt, inner sep=0.3em,font=\scriptsize]
-    \draw[bjmarrown] (-1,0.5) -- (0,0.5) node[at start, above]{$c\gamma$} ;
+    \draw[bjmarrow] (-1,0.5) -- (0,0.5) node[at start, above]{$c\gamma$} ;
     \draw[jmarrow] (0,0.5) -- (1,0.5) node[at end, above]{$c'\gamma'$} ;
 
     \coordinate (L) at (-0.7,-0.5); \coordinate (R) at (0.7,-0.5);
@@ -1524,7 +1524,7 @@ As in Scheme (a), at least one of these subdiagrams should have no external line
 \jloop{C}{a}
 \vcenter{\hbox{\begin{tikzpicture}[baseline=0pt, inner sep=0.1em,font=\scriptsize]
     \coordinate (L) at (-0.7,0); \coordinate (R) at (0.7,0);
-    \draw[bjmarrown] (-1.5,0) -- (L) node[at start, above]{$c\gamma$} ;
+    \draw[bjmarrow] (-1.5,0) -- (L) node[at start, above]{$c\gamma$} ;
     \draw[jmarrow] (R) -- (1.5,0) node[at end, above]{$c'\gamma'$} ;
 %
     \node[dotnode,label={0:\plusmark}] at (L) {};
@@ -1699,8 +1699,8 @@ For example,
 \node[dotnode,label={180:\plusmark}] at (ML) {};
 \node[dotnode,label={0:\minusmark}] at (MR) {};
 \draw[jmlinem] (MR) -- (ML) node[midway,above]{$c$};
-\draw[bjmarrown] (-1.35,0.8) node[left]{$a\alpha$} -- (ML);
-\draw[bjmarrown] (-1.35,-0.8) node[left]{$b\beta$} -- (ML);
+\draw[bjmarrow] (-1.35,0.8) node[left]{$a\alpha$} -- (ML);
+\draw[bjmarrow] (-1.35,-0.8) node[left]{$b\beta$} -- (ML);
 \draw[jmarrow] (MR) -- (1.35,0.8) node[right]{$a\alpha'$};
 \draw[jmarrow] (MR) -- (1.35,-0.8) node[right]{$b\beta'$};
 \end{tikzpicture}
@@ -2542,7 +2542,7 @@ $=$\;%
 \) &
 \begin{tikzpicture}[baseline=-2pt,inner sep=1.5pt,font=\scriptsize]
   \node[dotnode,label={90:\plusmark}](O)at(0,0){};
-  \draw[bjmarrown](135:1.0)--(O);\node at(135:1.0)[above left=-2pt]{$j_1m_1$};
+  \draw[bjmarrow](135:1.0)--(O);\node at(135:1.0)[above left=-2pt]{$j_1m_1$};
   \draw[jmarrow](O)--(45:1.0);\node at(45:1.0)[above right=-2pt]{$j_3m_3$};
   \draw[jmarrow](O)--(0,-0.9);\node at(0,-0.9)[below]{$j_2m_2$};
 \end{tikzpicture}
@@ -2550,8 +2550,8 @@ $=$\;%
 \begin{tikzpicture}[baseline=-2pt,inner sep=1.5pt,font=\scriptsize]
   \node[dotnode,label={90:\plusmark}](O)at(0,0){};
   \draw[jmarrow](O)--(135:1.0);\node at(135:1.0)[above left=-2pt]{$j_1m_1$};
-  \draw[bjmarrown](45:1.0)--(O);\node at(45:1.0)[above right=-2pt]{$j_3m_3$};
-  \draw[bjmarrown](0,-0.9)--(O);\node at(0,-0.9)[below]{$j_2m_2$};
+  \draw[bjmarrow](45:1.0)--(O);\node at(45:1.0)[above right=-2pt]{$j_3m_3$};
+  \draw[bjmarrow](0,-0.9)--(O);\node at(0,-0.9)[below]{$j_2m_2$};
 \end{tikzpicture}
 \\
 \(
@@ -2562,9 +2562,9 @@ $=$\;%
 \) &
 \begin{tikzpicture}[baseline=-2pt,inner sep=1.5pt,font=\scriptsize]
   \node[dotnode,label={90:\plusmark}](O)at(0,0){};
-  \draw[bjmarrown](135:1.0)--(O);\node at(135:1.0)[above left=-2pt]{$j_1m_1$};
-  \draw[bjmarrown](45:1.0)--(O);\node at(45:1.0)[above right=-2pt]{$j_3m_3$};
-  \draw[bjmarrown](0,-0.9)--(O);\node at(0,-0.9)[below]{$j_2m_2$};
+  \draw[bjmarrow](135:1.0)--(O);\node at(135:1.0)[above left=-2pt]{$j_1m_1$};
+  \draw[bjmarrow](45:1.0)--(O);\node at(45:1.0)[above right=-2pt]{$j_3m_3$};
+  \draw[bjmarrow](0,-0.9)--(O);\node at(0,-0.9)[below]{$j_2m_2$};
 \end{tikzpicture}
 \;$=$\;%
 \begin{tikzpicture}[baseline=-2pt,inner sep=1.5pt,font=\scriptsize]
@@ -2599,12 +2599,12 @@ $=$\;%
   \node[dotnode,label={180:\minusmark}](R)at(1.2,0){};
   \draw[jmlinem](R)to[bend right=60]node[above]{$j_2$}(L);
   \draw[jmlinem](R)to[bend left=60]node[below]{$j_1$}(L);
-  \draw[bjmarrown](-1.2,0)--(L);\node at(-1.1,0.18){$j_3m_3$};
+  \draw[bjmarrow](-1.2,0)--(L);\node at(-1.1,0.18){$j_3m_3$};
   \draw[jmarrow](R)--(2.4,0);\node at(2.3,0.18){$j'_3m'_3$};
 \end{tikzpicture}
 \;$=$\;%
 \begin{tikzpicture}[baseline=-2pt,inner sep=1.5pt,font=\scriptsize]
-  \draw[bjmarrown](0,0)--(0.85,0);\node at(0.15,0.18){$j_3m_3$};
+  \draw[bjmarrow](0,0)--(0.85,0);\node at(0.15,0.18){$j_3m_3$};
   \node[circle,draw,thick,inner sep=2.2pt](c)at(1.0,0){};
   \draw[jmarrow](c)--(2.0,0);\node at(1.85,0.18){$j'_3m'_3$};
 \end{tikzpicture}
@@ -2630,8 +2630,8 @@ $=$\;%
   \node[dotnode,label={180:\plusmark}](P)at(0,0){};
   \node[dotnode,label={0:\minusmark}](Q)at(1.6,0){};
   \draw[jmlinem](Q)--(P)node[midway,above]{$j_3$};
-  \draw[bjmarrown](-0.8,0.6)--(P);\node at(-0.85,0.75){$j_1m_1$};
-  \draw[bjmarrown](-0.8,-0.6)--(P);\node at(-0.85,-0.75){$j_2m_2$};
+  \draw[bjmarrow](-0.8,0.6)--(P);\node at(-0.85,0.75){$j_1m_1$};
+  \draw[bjmarrow](-0.8,-0.6)--(P);\node at(-0.85,-0.75){$j_2m_2$};
   \draw[jmarrow](Q)--(2.4,0.6);\node at(2.45,0.75){$j_1m'_1$};
   \draw[jmarrow](Q)--(2.4,-0.6);\node at(2.45,-0.75){$j_2m'_2$};
 \end{tikzpicture}
@@ -2672,8 +2672,8 @@ $\begin{aligned}[t]
 \begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
   \node[regular polygon,regular polygon sides=3,shape border rotate=-90,draw,thick,
         inner sep=1.1pt,label={180:\plusmark}](O) at (0,0){};
-  \draw[bjmarrown](-0.85,0.6)--(O);\node at(-0.85,0.6)[left]{$j_1m_1$};
-  \draw[bjmarrown](-0.85,-0.6)--(O);\node at(-0.85,-0.6)[left]{$j_2m_2$};
+  \draw[bjmarrow](-0.85,0.6)--(O);\node at(-0.85,0.6)[left]{$j_1m_1$};
+  \draw[bjmarrow](-0.85,-0.6)--(O);\node at(-0.85,-0.6)[left]{$j_2m_2$};
   \draw[jmarrow](O)--(1.0,0);\node at(1.0,0)[right]{$JM$};
 \end{tikzpicture}$\;=\;$%
 \begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
@@ -2681,13 +2681,13 @@ $\begin{aligned}[t]
         inner sep=1.1pt,label={180:\plusmark}](O) at (0,0){};
   \draw[jmarrow](O)--(-0.85,0.6);\node at(-0.85,0.6)[left]{$j_1m_1$};
   \draw[jmarrow](O)--(-0.85,-0.6);\node at(-0.85,-0.6)[left]{$j_2m_2$};
-  \draw[bjmarrown](1.0,0)--(O);\node at(1.0,0)[right]{$JM$};
+  \draw[bjmarrow](1.0,0)--(O);\node at(1.0,0)[right]{$JM$};
 \end{tikzpicture}\\[1.4em]
 $(-1)^{2j_1}$\,\begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
   \node[dotnode,label={180:\minusmark}](A) at (0,0){};
   \node[dotnode,label={-90:\plusmark}](B) at (1.15,0){};
-  \draw[bjmarrown](-0.8,0.6)--(A);\node at(-0.8,0.6)[left]{$j_1m_1$};
-  \draw[bjmarrown](-0.8,-0.6)--(A);\node at(-0.8,-0.6)[left]{$j_2m_2$};
+  \draw[bjmarrow](-0.8,0.6)--(A);\node at(-0.8,0.6)[left]{$j_1m_1$};
+  \draw[bjmarrow](-0.8,-0.6)--(A);\node at(-0.8,-0.6)[left]{$j_2m_2$};
   \draw[jmlinem](B)--(A)node[pos=0.75,above]{$j_3$};
   \draw[jmarrow](B)--(2.05,0);\node at(2.05,0)[right]{$JM$};
 \end{tikzpicture}$\;=(-1)^{2j_1}\;$%
@@ -2697,8 +2697,8 @@ $(-1)^{2j_1}$\,\begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsiz
       mark=at position 0.5 with {\arrow{Stealth[length=2mm]}}}}](0,0.45) arc(90:-270:0.45);
   \node at (0,0){$J$};
   \node[dotnode,label={180:\plusmark}](O) at (1.7,0){};
-  \draw[bjmarrown](0.95,0.55)--(O);\node at(0.95,0.55)[above]{$j_2m_2$};
-  \draw[bjmarrown](0.95,-0.55)--(O);\node at(0.95,-0.55)[below]{$j_1m_1$};
+  \draw[bjmarrow](0.95,0.55)--(O);\node at(0.95,0.55)[above]{$j_2m_2$};
+  \draw[bjmarrow](0.95,-0.55)--(O);\node at(0.95,-0.55)[below]{$j_1m_1$};
   \draw[jmarrow](O)--(2.7,0);\node at(2.7,0)[right]{$JM$};
 \end{tikzpicture}\\[1.4em]
 $(-1)^{2j_2}$\,\begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
@@ -2707,7 +2707,7 @@ $(-1)^{2j_2}$\,\begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsiz
   \draw[jmarrow](A)--(-0.8,0.6);\node at(-0.8,0.6)[left]{$j_1m_1$};
   \draw[jmarrow](A)--(-0.8,-0.6);\node at(-0.8,-0.6)[left]{$j_2m_2$};
   \draw[jmlinem](A)--(B)node[pos=0.25,above]{$j_3$};
-  \draw[bjmarrown](2.05,0)--(B);\node at(2.05,0)[right]{$JM$};
+  \draw[bjmarrow](2.05,0)--(B);\node at(2.05,0)[right]{$JM$};
 \end{tikzpicture}$\;=(-1)^{2j_2}\;$%
 \begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
   \node[dotnode,label={90:\plusmark}] at (0,0.45){};
@@ -2717,7 +2717,7 @@ $(-1)^{2j_2}$\,\begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsiz
   \node[dotnode,label={180:\plusmark}](O) at (1.7,0){};
   \draw[jmarrow](O)--(0.95,0.55);\node at(0.95,0.55)[above]{$j_2m_2$};
   \draw[jmarrow](O)--(0.95,-0.55);\node at(0.95,-0.55)[below]{$j_1m_1$};
-  \draw[bjmarrown](2.7,0)--(O);\node at(2.7,0)[right]{$JM$};
+  \draw[bjmarrow](2.7,0)--(O);\node at(2.7,0)[right]{$JM$};
 \end{tikzpicture}
 \end{tabular} \\
 \hline
@@ -2754,7 +2754,7 @@ $\displaystyle\sum_{m^{\prime}}|jm\,jm^{\prime}\rangle\langle jm^{\prime}|\mathf
 & \scalebox{0.82}{$\displaystyle\sum_{m^{\prime}}$
 \begin{tikzpicture}[baseline=-0.4ex,inner sep=0.13em,font=\scriptsize]
   \node[opbox](M) at (0,0){$\mathfrak{M}$};
-  \draw[bjmarrown](1.2,0)--(M.east);\node at(1.2,0)[right]{$jm^{\prime}$};
+  \draw[bjmarrow](1.2,0)--(M.east);\node at(1.2,0)[right]{$jm^{\prime}$};
 \end{tikzpicture}\,
 \mline{jm^{\prime}}{k}{k}{jm}$\,=\,$%
 \begin{tikzpicture}[baseline=-0.4ex,inner sep=0.13em,font=\scriptsize]
@@ -2770,7 +2770,7 @@ $\displaystyle\sum_{m^{\prime}}\langle|\mathfrak{M}|jm^{\prime}\rangle\langle jm
 \mline{jm^{\prime}}{b}{b}{jm}$\,=\,$%
 \begin{tikzpicture}[baseline=-0.4ex,inner sep=0.13em,font=\scriptsize]
   \node[opbox](M) at (0,0){$\mathfrak{M}$};
-  \draw[bjmarrown](1.2,0)--(M.east);\node at(1.2,0)[right]{$jm$};
+  \draw[bjmarrow](1.2,0)--(M.east);\node at(1.2,0)[right]{$jm$};
 \end{tikzpicture}} \\
 \hline
 \multicolumn{2}{c}{Scalar Product of Irreducible Tensors}\\
@@ -2788,7 +2788,7 @@ $\displaystyle\sum_{m^{\prime}}\langle|\mathfrak{M}|jm^{\prime}\rangle\langle jm
   \node[opbox](M) at (0,0){$\mathfrak{M}$};
   \draw[jmarrow](M.east)--(1.1,0);\node at(0.7,0.28){$jm$};
   \node[opbox](N) at (3.4,0){$\mathfrak{N}$};
-  \draw[bjmarrown](1.7,0)--(N.west);\node at(2.4,0.28){$jm$};
+  \draw[bjmarrow](1.7,0)--(N.west);\node at(2.4,0.28){$jm$};
 \end{tikzpicture} \\[0.4em]
 $\displaystyle=\sum_{mm^{\prime}}$
 \begin{tikzpicture}[baseline=-0.4ex,inner sep=0.13em,font=\scriptsize]
@@ -2803,12 +2803,12 @@ $\displaystyle=\sum_{mm^{\prime}}$
 $\displaystyle=\sum_{mm^{\prime}}$
 \begin{tikzpicture}[baseline=-0.4ex,inner sep=0.13em,font=\scriptsize]
   \node[opbox](M) at (0,0){$\mathfrak{M}$};
-  \draw[bjmarrown](1.05,0)--(M.east);\node at(1.05,0.2)[right]{$jm^{\prime}$};
+  \draw[bjmarrow](1.05,0)--(M.east);\node at(1.05,0.2)[right]{$jm^{\prime}$};
 \end{tikzpicture}\,
 \mline{jm^{\prime}}{k}{k}{jm}\,
 \begin{tikzpicture}[baseline=-0.4ex,inner sep=0.13em,font=\scriptsize]
   \node[opbox](N) at (0,0){$\mathfrak{N}$};
-  \draw[bjmarrown](-1.05,0)--(N.west);\node at(-1.05,0.2)[left]{$jm$};
+  \draw[bjmarrow](-1.05,0)--(N.west);\node at(-1.05,0.2)[left]{$jm$};
 \end{tikzpicture}
 \end{tabular}} \\
 \(\begin{aligned}
@@ -2823,7 +2823,7 @@ $\displaystyle=\sum_{mm^{\prime}}$
 \end{tikzpicture}$\;=\displaystyle\sum_{m}$
 \begin{tikzpicture}[baseline=-0.4ex,inner sep=0.13em,font=\scriptsize]
   \node[opbox](M) at (0,0){$\mathfrak{M}$};
-  \draw[bjmarrown](1.1,0)--(M.east);\node at(0.7,0.28){$jm$};
+  \draw[bjmarrow](1.1,0)--(M.east);\node at(0.7,0.28){$jm$};
   \node[opbox](N) at (3.4,0){$\mathfrak{N}$};
   \draw[jmarrow](N.west)--(1.7,0);\node at(2.4,0.28){$jm$};
 \end{tikzpicture} \\[0.4em]
@@ -2840,12 +2840,12 @@ $\displaystyle=\sum_{mm^{\prime}}$
 $\displaystyle=\sum_{mm^{\prime}}$
 \begin{tikzpicture}[baseline=-0.4ex,inner sep=0.13em,font=\scriptsize]
   \node[opbox](M) at (0,0){$\mathfrak{M}$};
-  \draw[bjmarrown](1.05,0)--(M.east);\node at(1.05,0.2)[right]{$jm$};
+  \draw[bjmarrow](1.05,0)--(M.east);\node at(1.05,0.2)[right]{$jm$};
 \end{tikzpicture}\,
 \mline{jm}{k}{k}{jm^{\prime}}\,
 \begin{tikzpicture}[baseline=-0.4ex,inner sep=0.13em,font=\scriptsize]
   \node[opbox](N) at (0,0){$\mathfrak{N}$};
-  \draw[bjmarrown](-1.05,0)--(N.west);\node at(-1.05,0.2)[left]{$jm^{\prime}$};
+  \draw[bjmarrow](-1.05,0)--(N.west);\node at(-1.05,0.2)[left]{$jm^{\prime}$};
 \end{tikzpicture}
 \end{tabular}} \\
 $\displaystyle\sum_{m}\langle|\mathfrak{M}|jm\rangle\langle jm|\mathfrak{N}|\rangle=(-1)^{2j}\sum_{m}\langle jm|\mathfrak{M}|\rangle\langle|\mathfrak{N}|jm\rangle$
@@ -2882,9 +2882,9 @@ $C_{lm}^{*}(\Omega)=(-1)^{m}C_{l-m}(\Omega)=(lm\mid\Omega)$.
   \draw[jmarrow](0,0)--(1.3,0);\node at(0.75,0.28){$lm$};
 \end{tikzpicture}\newline
 \begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
-  \draw[bjmarrown](-1.3,0)--(0,0);\node at(-0.75,0.28){$lm$};
+  \draw[bjmarrow](-1.3,0)--(0,0);\node at(-0.75,0.28){$lm$};
   \node[deltanode]at(0,0){};
-  \draw[omarrown](0,0)--(1.3,0);\node at(0.75,0.28){$\Omega$};
+  \draw[omarrow](0,0)--(1.3,0);\node at(0.75,0.28){$\Omega$};
 \end{tikzpicture} \\
 \multicolumn{2}{c}{Addition Theorem}\\
 $\displaystyle\sum_{m}C_{lm}(\Omega_1)C_{lm}^{*}(\Omega_2)=P_l(\cos\omega_{12})$,\newline
@@ -2894,10 +2894,10 @@ where $\omega_{12}$ is the angle between $\Omega_1$ and $\Omega_2$.
   \node[deltanode](c1)at(-1.0,0){};
   \draw[jmlinem](c1)--(0,0)node[midway,above]{$l$};
   \node[deltanode](c2)at(0,0){};
-  \draw[omarrown](c2)--(1.0,0);\node at(0.55,0.28){$\Omega_2$};
+  \draw[omarrow](c2)--(1.0,0);\node at(0.55,0.28){$\Omega_2$};
 \end{tikzpicture}$\;=\;$%
 \begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
-  \draw[bjmarrown](-1.1,0)--(0,0);\node at(-0.55,0.28){$l0$};
+  \draw[bjmarrow](-1.1,0)--(0,0);\node at(-0.55,0.28){$l0$};
   \draw[jmarrow](0,0)--(1.1,0);\node at(0.55,0.28){$l0$};
   \draw[rline](0,0)--(0,-0.85);\node at(0.15,-0.5)[right]{$R=\Omega_1\Omega_2^{-1}$};
 \end{tikzpicture} \\
@@ -2908,30 +2908,30 @@ $\displaystyle\sum_{lm}(2l+1)C_{lm}(\Omega_1)C_{lm}^{*}(\Omega_2)=4\pi\,\delta(\
   \node[deltanode](c1)at(-1.0,0){};
   \draw[jmlinem](c1)--(0,0)node[midway,above]{$l$};
   \node[deltanode](c2)at(0,0){};
-  \draw[omarrown](c2)--(1.0,0);\node at(0.55,0.28){$\Omega_2$};
+  \draw[omarrow](c2)--(1.0,0);\node at(0.55,0.28){$\Omega_2$};
 \end{tikzpicture}$\;=\;$%
 \begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
   \draw[bomarrown](-1.3,0)--(0,0);\node at(-0.8,0.28){$\Omega_1$};
   \node[deltanode]at(0,0){};
-  \draw[omarrown](0,0)--(1.3,0);\node at(0.8,0.28){$\Omega_2$};
+  \draw[omarrow](0,0)--(1.3,0);\node at(0.8,0.28){$\Omega_2$};
 \end{tikzpicture} \\
 \multicolumn{2}{c}{Orthonormality}\\
 $\displaystyle\int C_{l_1m_1}^{*}(\Omega)C_{l_2m_2}(\Omega)\,\dfrac{d\Omega}{4\pi}=\dfrac{\delta_{l_1l_2}\delta_{m_1m_2}}{(2l_1+1)}$.
 & \begin{tabular}{@{}c@{}}
 \begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
-  \draw[bjmarrown](-2.0,0)--(-1.0,0);\node at(-1.55,0.28){$l_1m_1$};
+  \draw[bjmarrow](-2.0,0)--(-1.0,0);\node at(-1.55,0.28){$l_1m_1$};
   \node[deltanode](c1)at(-1.0,0){};
   \draw[omlinem](c1)--(0,0)node[midway,above]{$\Omega$};
   \node[deltanode](c2)at(0,0){};
   \draw[jmarrow](c2)--(1.0,0);\node at(0.55,0.28){$l_2m_2$};
 \end{tikzpicture}$\;=\;$%
 \begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
-  \draw[bjmarrown](-1.3,0)--(0,0);\node at(-0.8,0.28){$l_1m_1$};
+  \draw[bjmarrow](-1.3,0)--(0,0);\node at(-0.8,0.28){$l_1m_1$};
   \node[deltanode]at(0,0){};
   \draw[jmarrow](0,0)--(1.3,0);\node at(0.8,0.28){$l_2m_2$};
 \end{tikzpicture}$\;=$ \\[0.4em]
 $=\;$\begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
-  \draw[bjmarrown](-1.3,0)--(1.3,0);\node at(-0.8,0.28){$l_1m_1$};\node at(0.8,0.28){$l_2m_2$};
+  \draw[bjmarrow](-1.3,0)--(1.3,0);\node at(-0.8,0.28){$l_1m_1$};\node at(0.8,0.28){$l_2m_2$};
 \end{tikzpicture}\qquad
 \begin{tikzpicture}[baseline=0pt,inner sep=1.5pt,font=\scriptsize]
   \node[dotnode,label={135:\plusmark}](tl)at(0,0.55){};
@@ -2971,12 +2971,12 @@ $\displaystyle\int C_{l_1m_1}(\Omega)C_{l_2m_2}(\Omega)C_{l_3m_3}(\Omega)\,\dfra
 $\displaystyle C_{l_1m_1}(\Omega)C_{l_2m_2}(\Omega)=\sum_{l_3m_3}\threej{l_1}{l_2}{l_3}{0}{0}{0}\threej{l_1}{l_2}{l_3}{m_1}{m_2}{m_3}C_{l_3m_3}^{*}(\Omega)$.
 & \begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
   \node[dotnode](O)at(0,0){};
-  \draw[omarrown](-1.2,0)--(O);\node at(-0.7,0.28){$\Omega$};
+  \draw[omarrow](-1.2,0)--(O);\node at(-0.7,0.28){$\Omega$};
   \node[deltanode](a)at(0.55,0.5){};\draw[jmline](O)--(a);\draw[jmarrow](a)--(1.2,1.0);\node at(1.2,1.0)[right]{$l_2m_2$};
   \node[deltanode](b)at(0.55,-0.5){};\draw[jmline](O)--(b);\draw[jmarrow](b)--(1.2,-1.0);\node at(1.2,-1.0)[right]{$l_1m_1$};
 \end{tikzpicture}$\;=\;$%
 \begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
-  \draw[omarrown](-1.5,0)--(-0.7,0);\node at(-1.1,0.28){$\Omega$};
+  \draw[omarrow](-1.5,0)--(-0.7,0);\node at(-1.1,0.28){$\Omega$};
   \node[deltanode](c)at(-0.7,0){};
   \rednode{X}
   \draw[jmlinem](c)--(X)node[midway,above]{$l_3$};
@@ -3003,12 +3003,12 @@ $\begin{aligned}
   \node[deltanode](p1)at(-0.9,0.45){};
   \draw[jmlinem](p1)--(0.1,0.45)node[midway,above]{$l_2$};
   \node[deltanode](p2)at(0.1,0.45){};
-  \draw[omarrown](p2)--(1.1,0.45);\node at(0.65,0.72){$\Omega_1$};
+  \draw[omarrow](p2)--(1.1,0.45);\node at(0.65,0.72){$\Omega_1$};
   \draw[bomarrown](-1.9,-0.55)--(-0.9,-0.55);\node at(-1.45,-0.28){$\Omega_3$};
   \node[deltanode](q1)at(-0.9,-0.55){};
   \draw[jmlinem](q1)--(0.1,-0.55)node[midway,above]{$l_3$};
   \node[deltanode](q2)at(0.1,-0.55){};
-  \draw[omarrown](q2)--(1.1,-0.55);\node at(0.65,-0.28){$\Omega_1$};
+  \draw[omarrow](q2)--(1.1,-0.55);\node at(0.65,-0.28){$\Omega_1$};
 \end{tikzpicture} \\
 \hline
 \end{tabular}
@@ -3059,13 +3059,13 @@ $D^{j}_{mm'}(R^{-1})=\left(D^{j}_{m'm}(R)\right)^{*}.$
 &
 \begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
   \node[dotnode,label={0:\plusmark}](P)at(0,0){};
-  \draw[bjmarrown](-1.0,0.85)--(P);\node at(-1.0,0.85)[left]{$jm$};
+  \draw[bjmarrow](-1.0,0.85)--(P);\node at(-1.0,0.85)[left]{$jm$};
   \draw[jmarrow](P)--(1.0,0.85);\node at(1.0,0.85)[right]{$jm'$};
   \Rdown{R^{-1}}
 \end{tikzpicture}$\;=\;$%
 \begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
   \node[dotnode,label={0:\minusmark}](P)at(0,0){};
-  \draw[bjmarrown](-1.0,0.85)--(P);\node at(-1.0,0.85)[left]{$jm$};
+  \draw[bjmarrow](-1.0,0.85)--(P);\node at(-1.0,0.85)[left]{$jm$};
   \draw[jmarrow](P)--(1.0,0.85);\node at(1.0,0.85)[right]{$jm'$};
   \Rdown{R}
 \end{tikzpicture}
@@ -3074,7 +3074,7 @@ $D^{j}_{mm'}(R^{-1})=\left(D^{j}_{m'm}(R)\right)^{*}.$
 $\displaystyle\sum_{m}\left(D^{j}_{mm'}(R)\right)^{*}D^{j}_{m\bar m'}(R)=\sum_{m}D^{j}_{m'm}(R^{-1})D^{j}_{m\bar m'}(R)=\delta_{m'\bar m'}$
 &
 \scalebox{0.86}{\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
-  \draw[bjmarrown](-2.1,0)--(-0.75,0);\node at(-1.6,0.28){$jm'$};
+  \draw[bjmarrow](-2.1,0)--(-0.75,0);\node at(-1.6,0.28){$jm'$};
   \node[dotnode,label={90:\minusmark}](A)at(-0.75,0){};
   \draw[jmlinem](A)--(0.75,0);
   \node[dotnode,label={90:\plusmark}](B)at(0.75,0){};
@@ -3091,7 +3091,7 @@ $\displaystyle\sum_{m}\left(D^{j}_{mm'}(R)\right)^{*}D^{j}_{m\bar m'}(R)=\sum_{m
 $\displaystyle\sum_{m'}D^{j}_{mm'}(R)\left(D^{j}_{\bar m m'}(R)\right)^{*}=\sum_{m'}D^{j}_{mm'}(R)D^{j}_{m'\bar m}(R^{-1})=\delta_{m\bar m}$
 &
 \scalebox{0.86}{\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
-  \draw[bjmarrown](-2.1,0)--(-0.75,0);\node at(-1.6,0.28){$jm$};
+  \draw[bjmarrow](-2.1,0)--(-0.75,0);\node at(-1.6,0.28){$jm$};
   \node[dotnode,label={-90:\plusmark}](A)at(-0.75,0){};
   \draw[jmlinem](A)--(0.75,0);
   \node[dotnode,label={-90:\minusmark}](B)at(0.75,0){};
@@ -3110,19 +3110,19 @@ $\displaystyle\int D^{j_1}_{m_1m'_1}(R)\,D^{j_2\,*}_{m_2m'_2}(R)\,\frac{dR}{16\p
 &
 \begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
   \node[dotnode,label={0:\plusmark}](T)at(0,0.5){};
-  \draw[bjmarrown](-1.0,1.35)--(T);\node at(-1.0,1.35)[left]{$j_1m_1$};
+  \draw[bjmarrow](-1.0,1.35)--(T);\node at(-1.0,1.35)[left]{$j_1m_1$};
   \draw[jmarrow](T)--(1.0,1.35);\node at(1.0,1.35)[right]{$j_1m'_1$};
   \node[dotnode,label={0:\minusmark}](B)at(0,-0.5){};
   \draw[jmarrow](B)--(-1.0,-1.35);\node at(-1.0,-1.35)[left]{$j_2m_2$};
-  \draw[bjmarrown](1.0,-1.35)--(B);\node at(1.0,-1.35)[right]{$j_2m'_2$};
+  \draw[bjmarrow](1.0,-1.35)--(B);\node at(1.0,-1.35)[right]{$j_2m'_2$};
   \draw[rline](T)--(B)node[midway,right]{$R$};
 \end{tikzpicture}$\;=\;$%
 \begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
   \node[dotnode](L)at(-0.15,0){};\node[dotnode](R)at(0.15,0){};
-  \draw[bjmarrown](-1.1,0.85)--(L);\node at(-1.1,0.85)[left]{$j_1m_1$};
+  \draw[bjmarrow](-1.1,0.85)--(L);\node at(-1.1,0.85)[left]{$j_1m_1$};
   \draw[jmarrow](R)--(1.1,0.85);\node at(1.1,0.85)[right]{$j_1m'_1$};
   \draw[jmarrow](L)--(-1.1,-0.85);\node at(-1.1,-0.85)[left]{$j_2m_2$};
-  \draw[bjmarrown](1.1,-0.85)--(R);\node at(1.1,-0.85)[right]{$j_2m'_2$};
+  \draw[bjmarrow](1.1,-0.85)--(R);\node at(1.1,-0.85)[right]{$j_2m'_2$};
 \end{tikzpicture}
 \\
 \multicolumn{2}{c}{Completeness}\\
@@ -3149,7 +3149,7 @@ $\begin{aligned}
 \begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
   \node[dotnode,label={90:\minusmark}](P)at(0,0){};
   \draw[bomarrown](-1.0,0.85)--(P);\node at(-1.0,0.85)[left]{$\Omega'$};
-  \draw[omarrown](P)--(1.0,0.85);\node at(1.0,0.85)[right]{$\Omega$};
+  \draw[omarrow](P)--(1.0,0.85);\node at(1.0,0.85)[right]{$\Omega$};
   \Rdown{R}
 \end{tikzpicture}$\;=\;$%
 \begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
@@ -3157,7 +3157,7 @@ $\begin{aligned}
   \coordinate(a)at(-0.55,0.5);\draw[jmlinem](a)--(P)node[midway,below left]{$l'$};
   \draw[bomarrown](-1.3,1.1)--(a);\node at(-1.3,1.1)[left]{$\Omega'$};
   \coordinate(b)at(0.55,0.5);\draw[jmlinem](P)--(b)node[midway,below right]{$l$};
-  \draw[omarrown](b)--(1.3,1.1);\node at(1.3,1.1)[right]{$\Omega$};
+  \draw[omarrow](b)--(1.3,1.1);\node at(1.3,1.1)[right]{$\Omega$};
   \Rdown{R}
 \end{tikzpicture}
 \\
@@ -3168,14 +3168,14 @@ $\begin{aligned}
 &
 \begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
   \node[dotnode,label={90:\plusmark}](P)at(0,0){};
-  \draw[bjmarrown](-1.0,0.85)--(P);\node at(-1.0,0.85)[left]{$lm$};
+  \draw[bjmarrow](-1.0,0.85)--(P);\node at(-1.0,0.85)[left]{$lm$};
   \draw[jmarrow](P)--(1.0,0.85);\node at(1.0,0.85)[right]{$l'm'$};
   \Rdown{R}
 \end{tikzpicture}$\;=\;$%
 \begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
   \node[dotnode,label={90:\plusmark}](P)at(0,0){};
   \coordinate(a)at(-0.55,0.5);\draw[omlinem](a)--(P)node[midway,below left]{$\Omega$};
-  \draw[bjmarrown](-1.3,1.1)--(a);\node at(-1.3,1.1)[left]{$lm$};
+  \draw[bjmarrow](-1.3,1.1)--(a);\node at(-1.3,1.1)[left]{$lm$};
   \coordinate(b)at(0.55,0.5);\draw[omlinem](P)--(b)node[midway,below right]{$\Omega'$};
   \draw[jmarrow](b)--(1.3,1.1);\node at(1.3,1.1)[right]{$l'm'$};
   \Rdown{R}
@@ -3207,9 +3207,9 @@ $\displaystyle D^{j_1}_{m_1m'_1}(R)\,D^{j_2}_{m_2m'_2}(R)=\sum_{j_3m_3m'_3}(2j_3
   \node[dotnode,label={45:\plusmark}](T)at(0.8,0.75){};
   \node[dotnode,label={-45:\plusmark}](B)at(0.8,-0.75){};
   \draw[rline](C)--(T);\draw[rline](C)--(B);
-  \draw[bjmarrown](0.8,1.65)--(T);\node at(0.8,1.65)[above]{$j_1m_1$};
+  \draw[bjmarrow](0.8,1.65)--(T);\node at(0.8,1.65)[above]{$j_1m_1$};
   \draw[jmarrow](T)--(1.9,0.75);\node at(1.9,0.75)[right]{$j_1m'_1$};
-  \draw[bjmarrown](1.9,-0.75)--(B);\node at(1.9,-0.75)[right]{$j_2m_2$};
+  \draw[bjmarrow](1.9,-0.75)--(B);\node at(1.9,-0.75)[right]{$j_2m_2$};
   \draw[jmarrow](B)--(0.8,-1.65);\node at(0.8,-1.65)[below]{$j_2m'_2$};
 \end{tikzpicture}$=$%
 \begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
@@ -3219,8 +3219,8 @@ $\displaystyle D^{j_1}_{m_1m'_1}(R)\,D^{j_2}_{m_2m'_2}(R)=\sum_{j_3m_3m'_3}(2j_3
   \node[dotnode,label={-45:\minusmark}](B)at(0.6,-1.0){};
   \draw[jmlinemu](P)--(T)node[midway,left]{$j_3$};
   \draw[jmlinemu](B)--(P)node[midway,left]{$j_3$};
-  \draw[bjmarrown](0.6,1.9)--(T);\node at(0.6,1.9)[above]{$j_1m_1$};
-  \draw[bjmarrown](1.7,1.0)--(T);\node at(1.7,1.0)[right]{$j_2m_2$};
+  \draw[bjmarrow](0.6,1.9)--(T);\node at(0.6,1.9)[above]{$j_1m_1$};
+  \draw[bjmarrow](1.7,1.0)--(T);\node at(1.7,1.0)[right]{$j_2m_2$};
   \draw[jmarrow](B)--(1.7,-1.0);\node at(1.7,-1.0)[right]{$j_1m'_1$};
   \draw[jmarrow](B)--(0.6,-1.9);\node at(0.6,-1.9)[below]{$j_2m'_2$};
 \end{tikzpicture}}
@@ -3236,7 +3236,7 @@ $\displaystyle\sum_{\substack{m_1m_2\\ m'_1m'_2}}\threej{j_1}{j_2}{j_3}{m_1}{m_2
   \node at(0.7,0.5){$+$};\node at(0.7,0.9){$j_1$};
   \node at(0.7,-0.5){$+$};\node at(0.7,-0.9){$j_2$};
   \draw[jmarrow](L)--(-0.85,0);\node at(-0.85,0)[left]{$j_3m_3$};
-  \draw[bjmarrown](2.25,0)--(R);\node at(2.25,0)[right]{$j'_3m'_3$};
+  \draw[bjmarrow](2.25,0)--(R);\node at(2.25,0)[right]{$j'_3m'_3$};
   \coordinate(Rp)at(0.55,-1.85);
   \draw[rline](0.55,0.5)--(Rp);\draw[rline](0.85,-0.5)--(Rp);
   \node at(0.55,-2.05){$R$};
@@ -3244,7 +3244,7 @@ $\displaystyle\sum_{\substack{m_1m_2\\ m'_1m'_2}}\threej{j_1}{j_2}{j_3}{m_1}{m_2
 \begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
   \coordinate(P)at(0,0);\node at(0,0.22){$+$};
   \draw[jmarrow](P)--(-1.0,0);\node at(-0.65,0.26){$j_3m_3$};
-  \draw[bjmarrown](1.0,0)--(P);\node at(0.65,0.26){$j'_3m'_3$};
+  \draw[bjmarrow](1.0,0)--(P);\node at(0.65,0.26){$j'_3m'_3$};
   \draw[rline](P)--(0,-0.85);\node at(0.13,-0.5)[right]{$R$};
 \end{tikzpicture}%
 \begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
@@ -3292,7 +3292,7 @@ $\displaystyle\sum_{\substack{m_1m_2\\ m'_1m'_2\\ m''_3}}\threej{j_1}{j_2}{j'_3}
 \scalebox{0.75}{\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
   \coordinate(L)at(0.05,0);\coordinate(R)at(1.35,0);
   \coordinate(Ll) at ($(L)-(0.9,0)$); \coordinate (Rr) at ($(R)+(0.9,0)$);
-  \draw[bjmarrown](Ll)--(L) node[pos=0.2,above] {$j_3m_3$};
+  \draw[bjmarrow](Ll)--(L) node[pos=0.2,above] {$j_3m_3$};
   \draw[jmarrow](R)--(Rr) node[pos=0.8,above]{$j'_3m'_3$};
   \draw[jmlinem=0.3](R)to[bend right=90] node[pos=0.1,above] {$j_1$} node[pos=0.5] (n1) {} (L);
   \draw[jmlinem=0.3](R)to[bend left=90] node[pos=0.3,below] {$j_2$} node[pos=0.5] (n2) {} (L);
@@ -3308,7 +3308,7 @@ $\displaystyle\sum_{\substack{m_1m_2\\ m'_1m'_2\\ m''_3}}\threej{j_1}{j_2}{j'_3}
 \begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
   \pgfmathsetmacro{\Rad}{0.1}
   \pgfmathsetmacro{\Len}{1.1}
-  \draw[bjmarrown](-\Len-\Rad,0)--(-\Rad,0) node[pos=0.2,above]{$j_3m_3$};
+  \draw[bjmarrow](-\Len-\Rad,0)--(-\Rad,0) node[pos=0.2,above]{$j_3m_3$};
   \draw[thick](0,0)circle(\Rad);
   \draw[jmarrow](\Rad,0)--(\Len+\Rad,0) node[pos=0.8,above]{$j'_3m'_3$};
 \end{tikzpicture}%
@@ -3352,18 +3352,18 @@ $\displaystyle\int D^{j_1}_{m_1m'_1}(R)\,D^{j_2}_{m_2m'_2}(R)\,D^{j_3}_{m_3m'_3}
   \node[label={45:\plusmark}](TR)at(0.6,0.75){};
   \node[label={-90:\plusmark}](Bo)at(0,-0.8){};
   \draw[rline](Cp)--(TL);\draw[rline](Cp)--(TR);\draw[rline](Cp)--(Bo);
-  \draw[bjmarrown](-1.5,0.35)--(TL);\node at(-1.5,0.35)[left]{$j_1m_1$};
+  \draw[bjmarrow](-1.5,0.35)--(TL);\node at(-1.5,0.35)[left]{$j_1m_1$};
   \draw[jmarrow](TL)--(-0.6,1.65);\node at(-0.6,1.65)[above left]{$j_1m'_1$};
-  \draw[bjmarrown](0.6,1.65)--(TR);\node at(0.6,1.65)[above left]{$j_3m_3$};
+  \draw[bjmarrow](0.6,1.65)--(TR);\node at(0.6,1.65)[above left]{$j_3m_3$};
   \draw[jmarrow](TR)--(1.5,0.35);\node at(1.5,0.35)[right]{$j_3m'_3$};
-  \draw[bjmarrown](0.95,-1.15)--(Bo);\node at(0.95,-1.15)[right]{$j_2m_2$};
+  \draw[bjmarrow](0.95,-1.15)--(Bo);\node at(0.95,-1.15)[right]{$j_2m_2$};
   \draw[jmarrow](Bo)--(-0.95,-1.15);\node at(-0.95,-1.15)[left]{$j_2m'_2$};
 \end{tikzpicture}$=$%
 \begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
   \node[dotnode,label={90:\plusmark}](LN)at(0,0){};
-  \draw[bjmarrown](-0.9,0.85)--(LN);\node at(-0.9,0.85)[left]{$j_1m_1$};
-  \draw[bjmarrown](0.9,0.85)--(LN);\node at(0.9,0.9)[above]{$j_3m_3$};
-  \draw[bjmarrown](0,-0.95)--(LN);\node at(0,-0.95)[below]{$j_2m_2$};
+  \draw[bjmarrow](-0.9,0.85)--(LN);\node at(-0.9,0.85)[left]{$j_1m_1$};
+  \draw[bjmarrow](0.9,0.85)--(LN);\node at(0.9,0.9)[above]{$j_3m_3$};
+  \draw[bjmarrow](0,-0.95)--(LN);\node at(0,-0.95)[below]{$j_2m_2$};
   \node[dotnode,label={90:\plusmark}](RN)at(3.2,0){};
   \draw[jmarrow](RN)--(2.3,0.85);\node at(2.3,0.9)[above]{$j_1m'_1$};
   \draw[jmarrow](RN)--(4.1,0.85);\node at(4.1,0.85)[right]{$j_3m'_3$};
@@ -3392,7 +3392,7 @@ $\displaystyle\sum_{m'}D^{j}_{mm'}(R_2)\,D^{j}_{m'm''}(R_1)=D^{j}_{mm''}(R_2R_1)
 &
 \begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
   \coordinate(A)at(-0.4,0);\coordinate(B)at(0.4,0);
-  \draw[bjmarrown]($(A)-(0.9,0)$)--(A) node[pos=0.2,above]{$jm$};
+  \draw[bjmarrow]($(A)-(0.9,0)$)--(A) node[pos=0.2,above]{$jm$};
   \draw[jmlinem](A)--(B);
   \draw[jmarrow](B)--($(B)+(0.9,0)$) node[pos=0.8,above]{$jm''$};
   \node at($(A)+(0,0.22)$){$+$};\node at($(B)+(0,0.22)$){$+$};
@@ -3403,7 +3403,7 @@ $\displaystyle\sum_{m'}D^{j}_{mm'}(R_2)\,D^{j}_{m'm''}(R_1)=D^{j}_{mm''}(R_2R_1)
 \end{tikzpicture}$\;=\;$%
 \begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
   \coordinate(P)at(0,0);
-  \draw[bjmarrown]($(P)-(0.9,0)$)--(P) node[pos=0.2,above]{$jm$};
+  \draw[bjmarrow]($(P)-(0.9,0)$)--(P) node[pos=0.2,above]{$jm$};
   \draw[jmarrow](P)--($(P)+(0.9,0)$) node[pos=0.8,above]{$jm''$};
   \node at($(P)+(0,0.22)$){$+$};
   \draw[rline](P)--($(P)-(0,0.9)$) node[pos=0.9,right]{$R_2R_1$};
@@ -3428,12 +3428,12 @@ $\begin{aligned}
   \draw[jmarrow](LN)--($(LN)+(140:1.35)$) node[above]{$j_1\tilde m_1$};
   \draw[jmarrow](LN)--($(LN)+(220:1.35)$) node[below]{$j_2\tilde m_2$};
   \coordinate(u1)at($(RN)+(45:0.75)$);
-  \draw[bjmarrown]($(RN)+(45:1.6)$)--(u1) node[pos=0,right]{$j_1m_1$};
+  \draw[bjmarrow]($(RN)+(45:1.6)$)--(u1) node[pos=0,right]{$j_1m_1$};
   \draw[jmlinem](u1)--(RN) node[midway,below right]{$j_1$};
   \node[label={-45:\plusmark}]at(u1){};
   \draw[rline](u1)--($(u1)+(135:0.85)$) node[above]{$R_1$};
   \coordinate(u2)at($(RN)+(315:0.75)$);
-  \draw[bjmarrown]($(RN)+(315:1.6)$)--(u2) node[pos=0,right]{$j_2m_2$};
+  \draw[bjmarrow]($(RN)+(315:1.6)$)--(u2) node[pos=0,right]{$j_2m_2$};
   \draw[jmlinem](u2)--(RN) node[midway,below left]{$j_2$};
   \node[label={-135:\plusmark}]at(u2){};
   \draw[rline](u2)--($(u2)+(45:0.85)$) node[right]{$R_2$};
@@ -3443,10 +3443,10 @@ $\begin{aligned}
   \coordinate(BL)at(0,-0.75);\coordinate(BR)at(1.3,-0.75);
   \draw[jmarrow](TL)--($(TL)-(0.85,0)$) node[above]{$j_1\tilde m_1$};
   \draw[jmlinem](TL)--(TR);
-  \draw[bjmarrown]($(TR)+(0.85,0)$)--(TR) node[pos=0.2,above]{$j_1m_1$};
+  \draw[bjmarrow]($(TR)+(0.85,0)$)--(TR) node[pos=0.2,above]{$j_1m_1$};
   \draw[jmarrow](BL)--($(BL)-(0.85,0)$) node[below]{$j_2\tilde m_2$};
   \draw[jmlinem](BL)--(BR);
-  \draw[bjmarrown]($(BR)+(0.85,0)$)--(BR) node[pos=0.2,below]{$j_2m_2$};
+  \draw[bjmarrow]($(BR)+(0.85,0)$)--(BR) node[pos=0.2,below]{$j_2m_2$};
   \draw[rline](TL)--($0.3*(TL)+0.7*(BL)$) node[pos=0.5,left]{$R_3$};
   \draw[rline]($0.7*(TR)+0.3*(BR)$)--(BR) node[pos=0.5,right]{$R_2$};
   \draw[rline](TR)--($(TR)+(0,0.75)$) node[above]{$R_1$};
@@ -3461,32 +3461,32 @@ $\displaystyle\sum_{m'_1m'_2m'_3}D^{j_1}_{m_1m'_1}(R_1)D^{j_2}_{m_2m'_2}(R_2)D^{
 \scalebox{0.72}{\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
   \node[dotnode,label={0:\plusmark}](O)at(0,0){};
   \coordinate(e3)at(90:1.7);\coordinate(t3)at(90:0.7);
-  \draw[bjmarrown](e3)--(t3) node[pos=0,above]{$j_3m_3$};
+  \draw[bjmarrow](e3)--(t3) node[pos=0,above]{$j_3m_3$};
   \draw[jmarrow](t3)--(O);
   \node[label={0:\plusmark}]at(t3){};
   \draw[rline](t3)--($(t3)+(180:0.8)$) node[left]{$R_3$};
   \coordinate(e1)at(215:1.7);\coordinate(t1)at(215:0.7);
-  \draw[bjmarrown](e1)--(t1) node[pos=0,below left]{$j_1m_1$};
+  \draw[bjmarrow](e1)--(t1) node[pos=0,below left]{$j_1m_1$};
   \draw[jmarrow](t1)--(O);
   \node[label={90:\plusmark}]at(t1){};
   \draw[rline](t1)--($(t1)+(305:0.8)$) node[below]{$R_1$};
   \coordinate(e2)at(325:1.7);\coordinate(t2)at(325:0.7);
-  \draw[bjmarrown](e2)--(t2) node[pos=0,below right]{$j_2m_2$};
+  \draw[bjmarrow](e2)--(t2) node[pos=0,below right]{$j_2m_2$};
   \draw[jmarrow](t2)--(O);
   \node[label={90:\plusmark}]at(t2){};
   \draw[rline](t2)--($(t2)+(55:0.8)$) node[right]{$R_2$};
 \end{tikzpicture}$=$%
 \begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
   \node[dotnode,label={0:\plusmark}](O)at(0,0){};
-  \draw[bjmarrown](90:1.7)--(O) node[pos=0,above]{$j_3m_3$};
+  \draw[bjmarrow](90:1.7)--(O) node[pos=0,above]{$j_3m_3$};
   \coordinate(e1)at(215:2.0);\coordinate(o1)at(215:1.15);\coordinate(i1)at(215:0.6);
-  \draw[bjmarrown](e1)--(o1) node[pos=0,below left]{$j_1m_1$};
+  \draw[bjmarrow](e1)--(o1) node[pos=0,below left]{$j_1m_1$};
   \draw[jmarrow](o1)--(O);
   \node[label={90:\plusmark}]at(o1){};\node[label={90:\plusmark}]at(i1){};
   \draw[rline](o1)--($(o1)+(305:0.8)$) node[below]{$R_1$};
   \draw[rline](i1)--($(i1)+(125:0.8)$) node[above]{$R_3$};
   \coordinate(e2)at(325:2.0);\coordinate(o2)at(325:1.15);\coordinate(i2)at(325:0.6);
-  \draw[bjmarrown](e2)--(o2) node[pos=0,below right]{$j_2m_2$};
+  \draw[bjmarrow](e2)--(o2) node[pos=0,below right]{$j_2m_2$};
   \draw[jmarrow](o2)--(O);
   \node[label={90:\plusmark}]at(o2){};\node[label={90:\plusmark}]at(i2){};
   \draw[rline](i2)--($(i2)+(235:0.8)$) node[below]{$R_3$};
@@ -3591,11 +3591,11 @@ $\begin{aligned}
   \node[label={-90:\minusmark},inner sep=2pt]at(OT){};
   \node[label={0:\minusmark},inner sep=2pt]at(OL){};
   \node[label={180:\minusmark},inner sep=2pt]at(OR){};
-  \draw[bjmarrown]($(OT)+(160:0.9)$)--(OT) node[pos=0,above left]{$J_{31}M_{31}$};
+  \draw[bjmarrow]($(OT)+(160:0.9)$)--(OT) node[pos=0,above left]{$J_{31}M_{31}$};
   \draw[jmarrow](OT)--($(OT)+(20:0.9)$) node[above right]{$J_{23}M'_{23}$};
-  \draw[bjmarrown]($(OL)+(280:0.9)$)--(OL) node[pos=0,left]{$J_{12}M_{12}$};
+  \draw[bjmarrow]($(OL)+(280:0.9)$)--(OL) node[pos=0,left]{$J_{12}M_{12}$};
   \draw[jmarrow](OL)--($(OL)+(140:0.9)$) node[above]{$J_{31}M'_{31}$};
-  \draw[bjmarrown]($(OR)+(40:0.9)$)--(OR) node[pos=0,right]{$J_{23}M_{23}$};
+  \draw[bjmarrow]($(OR)+(40:0.9)$)--(OR) node[pos=0,right]{$J_{23}M_{23}$};
   \draw[jmarrow](OR)--($(OR)+(240:0.9)$) node[below]{$J_{12}M'_{12}$};
 \end{tikzpicture}$=$%
 \begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize,label distance=1pt]
@@ -3606,13 +3606,13 @@ $\begin{aligned}
   \coordinate (b23) at ($(BR)!0.6!(T)$);\coordinate (e23) at ($(BR)!0.9!(T)$);
   \coordinate (s31) at ($(T)!0.1!(BL)$);\coordinate (a31) at ($(T)!0.4!(BL)$);
   \coordinate (b31) at ($(T)!0.6!(BL)$);\coordinate (e31) at ($(T)!0.9!(BL)$);
-  \draw[bjmarrown] (s12) --(a12) node[at start,below] {$J_{12}M_{12}$};
+  \draw[bjmarrow] (s12) --(a12) node[at start,below] {$J_{12}M_{12}$};
   \draw[jmlinem] (a12) --(b12);
   \draw[jmarrow] (b12) --(e12) node[below] {$J_{12}M'_{12}$};
-  \draw[bjmarrown] (s23) --(a23) node[at start,right] {$J_{23}M_{23}$};
+  \draw[bjmarrow] (s23) --(a23) node[at start,right] {$J_{23}M_{23}$};
   \draw[jmlinem] (a23) --(b23);
   \draw[jmarrow] (b23) --(e23) node[right] {$J_{23}M_{23}'$};
-  \draw[bjmarrown] (s31) --(a31) node[at start,left] {$J_{31}M_{31}$};
+  \draw[bjmarrow] (s31) --(a31) node[at start,left] {$J_{31}M_{31}$};
   \draw[jmlinem] (a31) --(b31);
   \draw[jmarrow] (b31) --(e31) node[left] {$J_{31}M'_{31}$};
   \node[label={[label distance=-2pt]90:\plusmark}]at(a12){};\draw[rline](a12)--($(a12)+(-90:0.7)$) node[near end,right]{$R_1$};
@@ -3657,7 +3657,7 @@ where $\left(\gamma J\left\|\mathfrak{M}_{k}\right\| \gamma^{\prime} J^{\prime}\
 &
 \scalebox{0.72}{\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
   \node[draw,minimum width=1.7cm,minimum height=0.7cm](M)at(0,0){\normalsize$\mathfrak{M}_{\gamma\gamma'}$};
-  \draw[bjmarrown]($(M.north)+(-0.55,1.2)$)--($(M.north)+(-0.55,0)$);
+  \draw[bjmarrow]($(M.north)+(-0.55,1.2)$)--($(M.north)+(-0.55,0)$);
   \node at($(M.north)+(-0.55,1.35)$){$JM$};
   \draw[jmarrow]($(M.north)+(0,0)$)--($(M.north)+(0,1.2)$);
   \node at($(M.north)+(0,1.35)$){$kq$};
@@ -3673,7 +3673,7 @@ where $\left(\gamma J\left\|\mathfrak{M}_{k}\right\| \gamma^{\prime} J^{\prime}\
   \draw[jmlinem](M.north)++(0.5,0)--(P)node[midway,right]{$J'$};
   \coordinate(Q)at($(P)+(0,0.55)$);
   \node[dotnode,label={-90:\minusmark}]at(Q){};
-  \draw[bjmarrown]($(Q)+(150:1.05)$)--(Q) node[at start,above]{$JM$};
+  \draw[bjmarrow]($(Q)+(150:1.05)$)--(Q) node[at start,above]{$JM$};
   \draw[jmarrow](Q)--($(Q)+(90:1.05)$) node[above]{$kq$};
   \draw[jmarrow](Q)--($(Q)+(30:1.05)$) node[above]{$J'M'$};
 \end{tikzpicture}}
@@ -3808,7 +3808,7 @@ depend on variables of the first and the second subsystems, respectively.}}\\
   \wtri at(bt){};\node at([yshift=2mm]bt){\tiny\minusmark};
   \draw[jmlinem]($(B.south)+(-0.55,0)$)--(bt)node[midway,left]{$j_1$};
   \draw[jmlinem]($(B.south)+(0.55,0)$)--(bt)node[midway,right]{$j_2$};
-  \draw[bjmarrown]($(bt)-(0,0.95)$)--(bt)node[at start,below]{$JM$};
+  \draw[bjmarrow]($(bt)-(0,0.95)$)--(bt)node[at start,below]{$JM$};
 \end{tikzpicture}%
 $=(-1)^{-k}\displaystyle\sum_{\gamma''}$%
 \begin{tikzpicture}[baseline=-4pt,inner sep=2pt,font=\scriptsize]
@@ -3828,7 +3828,7 @@ $=(-1)^{-k}\displaystyle\sum_{\gamma''}$%
   \node[dotnode,label={-90:\plusmark}]at(BA){};
   \draw[jmarrow]($(BA)-(0,1.0)$)--(BA);
   \node at($(BA)-(0,0.55)$)[right]{$J'M'$};
-  \draw[bjmarrown]($(BA)-(0,2.1)$)--($(BA)-(0,1.15)$)node[at start,below]{$JM$};
+  \draw[bjmarrow]($(BA)-(0,2.1)$)--($(BA)-(0,1.15)$)node[at start,below]{$JM$};
 \end{tikzpicture}%
 \begin{tikzpicture}[baseline=-4pt,inner sep=2pt,font=\scriptsize]
   \tribox{\mathfrak{N}_{\gamma''\gamma'}}{j_2}{k}{j'_2}{jmlinem}{jmlinem}{jmlinem}
@@ -3952,11 +3952,11 @@ where $\braOketred{j}{\mathfrak{M}}{j}\equiv\sum_{m}\braOket{jm}{\mathfrak{M}}{j
 &
 \begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
   \node[draw,minimum width=0.85cm,minimum height=0.85cm](B){\normalsize$\mathfrak{M}$};
-  \draw[bjmarrown]($(B.west)+(-0.95,0)$)--(B.west)node[pos=0.1,above]{$jm$};
+  \draw[bjmarrow]($(B.west)+(-0.95,0)$)--(B.west)node[pos=0.1,above]{$jm$};
   \draw[jmarrow](B.east)--($(B.east)+(0.95,0)$)node[pos=0.9,above]{$j'm'$};
 \end{tikzpicture}$=$%
 \begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
-  \draw[bjmarrown](-0.95,0)--(-0.05,0)node[pos=0.1,above]{$jm$};
+  \draw[bjmarrow](-0.95,0)--(-0.05,0)node[pos=0.1,above]{$jm$};
   \node[deltanode]at(0,0){};
   \draw[jmarrow](0.05,0)--(0.95,0)node[pos=0.9,above]{$j'm'$};
 \end{tikzpicture}%
@@ -3990,12 +3990,12 @@ $P_l(\cos\omega_{12})=\sum_m\braket{\Omega_1}{lm}\braket{lm}{\Omega_2}$
 \begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
   \node[draw,minimum width=0.85cm,minimum height=0.85cm](B){\normalsize$\mathfrak{M}$};
   \draw[bomarrown]($(B.west)+(-0.95,0)$)--(B.west)node[pos=0.1,above]{$\Omega_1$};
-  \draw[omarrown](B.east)--($(B.east)+(0.95,0)$)node[pos=0.9,above]{$\Omega_2$};
+  \draw[omarrow](B.east)--($(B.east)+(0.95,0)$)node[pos=0.9,above]{$\Omega_2$};
 \end{tikzpicture}$=$%
 \begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
   \draw[bomarrown](-1.3,0)--(-0.4,0)node[pos=0.1,above]{$\Omega_1$};
   \draw[jmlinem,ultra thick](-0.4,0)--(0.4,0)node[midway,above]{$l$};
-  \draw[omarrown](0.4,0)--(1.3,0)node[pos=0.9,above]{$\Omega_2$};
+  \draw[omarrow](0.4,0)--(1.3,0)node[pos=0.9,above]{$\Omega_2$};
 \end{tikzpicture}%
 \begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
   \loopbox[jmlinemu]{\mathfrak{M}}{l}
@@ -4014,14 +4014,14 @@ $\begin{aligned}[t]
 &
 \begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
   \node[draw,minimum width=0.9cm,minimum height=0.9cm](B){\normalsize$\mathfrak{M}$};
-  \draw[bjmarrown]($(B.west)+(-0.95,0)$)--(B.west)node[pos=0.1,above]{$j_1m_1$};
+  \draw[bjmarrow]($(B.west)+(-0.95,0)$)--(B.west)node[pos=0.1,above]{$j_1m_1$};
   \draw[jmarrow](B.north)--($(B.north)+(0,0.9)$)node[above]{$j_2m_2$};
   \draw[jmarrow](B.east)--($(B.east)+(0.95,0)$)node[pos=0.9,above]{$j_3m_3$};
 \end{tikzpicture}$=$%
 \begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
   \node[dotnode,label={-90:\minusmark}](O)at(0,0){};
   \draw[jmarrow](O)--(90:0.95)node[above]{$j_2m_2$};
-  \draw[bjmarrown](210:0.95)--(O)node[at start,below left]{$j_1m_1$};
+  \draw[bjmarrow](210:0.95)--(O)node[at start,below left]{$j_1m_1$};
   \draw[jmarrow](O)--(330:0.95)node[below right]{$j_3m_3$};
 \end{tikzpicture}%
 \begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
@@ -4061,14 +4061,14 @@ $\begin{aligned}[t]
   \node[draw,minimum width=0.9cm,minimum height=0.9cm](B){\normalsize$\mathfrak{M}$};
   \draw[bomarrown]($(B.west)+(-0.95,0)$)--(B.west)node[pos=0.1,above]{$\Omega_1$};
   \draw[jmarrow](B.north)--($(B.north)+(0,0.9)$)node[above]{$j_2m_2$};
-  \draw[omarrown](B.east)--($(B.east)+(0.95,0)$)node[pos=0.9,above]{$\Omega_3$};
+  \draw[omarrow](B.east)--($(B.east)+(0.95,0)$)node[pos=0.9,above]{$\Omega_3$};
 \end{tikzpicture}$=$%
 \begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
   \node[dotnode,label={-90:\minusmark}](O)at(0,0){};
   \draw[jmarrow](O)--(90:0.95)node[above]{$j_2m_2$};
   \draw[bomarrown](210:1.4)--(210:0.6)node[at start,below left]{$\Omega_1$};
   \draw[jmlinemu](210:0.6)--(O)node[at start,above]{$j_1$};
-  \draw[omarrown](330:0.6)--(330:1.4)node[below right]{$\Omega_3$};
+  \draw[omarrow](330:0.6)--(330:1.4)node[below right]{$\Omega_3$};
   \draw[jmlinemu](O)--(330:0.6)node[above]{$j_3$};
 \end{tikzpicture}%
 \begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
@@ -4101,8 +4101,8 @@ $\begin{aligned}[t]
   \node[draw,minimum width=1.0cm,minimum height=1.15cm](B){\normalsize$\mathfrak{M}$};
   \coordinate(nw)at($(B.west)+(0,0.32)$);\coordinate(sw)at($(B.west)+(0,-0.32)$);
   \coordinate(ne)at($(B.east)+(0,0.32)$);\coordinate(se)at($(B.east)+(0,-0.32)$);
-  \draw[bjmarrown]($(nw)+(-0.95,0)$)--(nw)node[pos=0.1,above]{$j_1m_1$};
-  \draw[bjmarrown]($(sw)+(-0.95,0)$)--(sw)node[pos=0.1,below]{$j_2m_2$};
+  \draw[bjmarrow]($(nw)+(-0.95,0)$)--(nw)node[pos=0.1,above]{$j_1m_1$};
+  \draw[bjmarrow]($(sw)+(-0.95,0)$)--(sw)node[pos=0.1,below]{$j_2m_2$};
   \draw[jmarrow](ne)--($(ne)+(0.95,0)$)node[pos=0.9,above]{$j_3m_3$};
   \draw[jmarrow](se)--($(se)+(0.95,0)$)node[pos=0.9,below]{$j_4m_4$};
 \end{tikzpicture}$=$%
@@ -4110,8 +4110,8 @@ $\begin{aligned}[t]
   \node[dotnode,label={-90:\plusmark}](P)at(0,0){};
   \node[dotnode,label={-90:\minusmark}](Q)at(1.5,0){};
   \draw[jmlinemu](Q)--(P)node[midway,above]{$J$};
-  \draw[bjmarrown]($(P)+(150:0.95)$)--(P)node[at start,above left]{$j_1m_1$};
-  \draw[bjmarrown]($(P)+(210:0.95)$)--(P)node[at start,below left]{$j_2m_2$};
+  \draw[bjmarrow]($(P)+(150:0.95)$)--(P)node[at start,above left]{$j_1m_1$};
+  \draw[bjmarrow]($(P)+(210:0.95)$)--(P)node[at start,below left]{$j_2m_2$};
   \draw[jmarrow](Q)--($(Q)+(30:0.95)$)node[right]{$j_3m_3$};
   \draw[jmarrow](Q)--($(Q)+(-30:0.95)$)node[right]{$j_4m_4$};
 \end{tikzpicture}%
@@ -4136,16 +4136,16 @@ $\begin{aligned}[t]
 \scalebox{0.82}{\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
   \node[draw,minimum width=0.9cm,minimum height=0.9cm](B){\normalsize$\mathfrak{M}$};
   \draw[bomarrown]($(B.west)+(-0.95,0)$)--(B.west)node[pos=0.1,above]{$\Omega_1$};
-  \draw[omarrown](B.north)--($(B.north)+(0,0.9)$)node[above]{$\Omega_2$};
-  \draw[omarrown](B.east)--($(B.east)+(0.95,0)$)node[pos=0.9,above]{$\Omega_3$};
+  \draw[omarrow](B.north)--($(B.north)+(0,0.9)$)node[above]{$\Omega_2$};
+  \draw[omarrow](B.east)--($(B.east)+(0.95,0)$)node[pos=0.9,above]{$\Omega_3$};
 \end{tikzpicture}$=$%
 \begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
   \node[dotnode,label={-90:\minusmark}](O)at(0,0){};
   \draw[jmlinemu](O)--(90:0.6)node[pos=0.6,right]{$j_2$};
-  \draw[omarrown](90:0.6)--(90:1.4)node[above]{$\Omega_2$};
+  \draw[omarrow](90:0.6)--(90:1.4)node[above]{$\Omega_2$};
   \draw[bomarrown](210:1.4)--(210:0.6)node[at start,below left]{$\Omega_1$};
   \draw[jmlinemu](210:0.6)--(O)node[at start,above]{$j_1$};
-  \draw[omarrown](330:0.6)--(330:1.4)node[below right]{$\Omega_3$};
+  \draw[omarrow](330:0.6)--(330:1.4)node[below right]{$\Omega_3$};
   \draw[jmlinemu](O)--(330:0.6)node[above]{$j_3$};
 \end{tikzpicture}%
 \begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
