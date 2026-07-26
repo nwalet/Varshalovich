@@ -26,15 +26,15 @@
   %every node/.style={fill=yellow},
   %arrows: open
   %ket jm-line: single arrowhead
-  jmarrow/.style={Bar[]-{Stealth[length=2.2mm]}, thick},
-  jmarrown/.style={-{Stealth[length=2.2mm]}, thick},
-  djmarrow/.style={{Circle[length=3pt]}-{Stealth[length=2.2mm]}, thick},
+  jmketarrow/.style={Bar[]-{Stealth[length=2.2mm]}, thick},
+  jmarrow/.style={-{Stealth[length=2.2mm]}, thick},
+  jmrndarrow/.style={{Circle[length=3pt]}-{Stealth[length=2.2mm]}, thick},
   %bra jm-line: double arrowhead in the middle of the line
-  bjmarrow/.style={postaction={decorate,decoration={markings,mark=at position 0.65 with {\arrow{Stealth[length=2.2mm] Stealth[length=2.2mm]}},mark=at position 1.0 with {\arrow{Bar[]}}}},thick},
-  bjmarrown/.style={postaction={decorate,decoration={markings,mark=at position 0.65 with {\arrow{Stealth[length=2.2mm] Stealth[length=2.2mm]}}}},thick},
-  dbjmarrow/.style={postaction={decorate,decoration={markings,mark=at position 0.65 with {\arrow{Stealth[length=2.2mm] Stealth[length=2.2mm]}},mark=at position 1.0 with {\arrow{Circle[length=3pt]}}}},thick},
+  jmbraarrow/.style={postaction={decorate,decoration={markings,mark=at position 0.65 with {\arrow{Stealth[length=2.2mm] Stealth[length=2.2mm]}},mark=at position 1.0 with {\arrow{Bar[]}}}},thick},
+  bjmarrow/.style={postaction={decorate,decoration={markings,mark=at position 0.65 with {\arrow{Stealth[length=2.2mm] Stealth[length=2.2mm]}}}},thick},
+  djmbraarrow/.style={postaction={decorate,decoration={markings,mark=at position 0.65 with {\arrow{Stealth[length=2.2mm] Stealth[length=2.2mm]}},mark=at position 1.0 with {\arrow{Circle[length=3pt]}}}},thick},
   %Omega-line: dashed arrow
-  omarrow/.style={Bar[]-{Stealth[length=2.2mm]}, thick, dashed},
+  omketarrow/.style={Bar[]-{Stealth[length=2.2mm]}, thick, dashed},
   omarrown/.style={-{Stealth[length=2.2mm]}, thick, dashed},
   bomarrow/.style={postaction={decorate,decoration={markings,mark=at position 0.65 with {\arrow{Stealth[length=2.2mm] Stealth[length=2.2mm]}},mark=at position 1.0 with {\arrow{Bar[]}}}},thick,dashed},
   bomarrown/.style={postaction={decorate,decoration={markings,mark=at position 0.65 with {\arrow{Stealth[length=2.2mm] Stealth[length=2.2mm]}}}},thick,dashed},
@@ -137,7 +137,7 @@
 %   \foreach \i in {0,...,2}{\coordinate (n\i) at (60+120*\i:0.8);}%
 % \coordinate (M) at (0,0);
 % \node[dotnode,label={above:\vmk@sign{#4}}] at (M) {};
-%  \foreach \i in {0,...,2}{\draw[jmarrown] (M) -- (n\i) node[60+120*\i]{$#\i$};}
+%  \foreach \i in {0,...,2}{\draw[jmarrow] (M) -- (n\i) node[60+120*\i]{$#\i$};}
 % \end{tikzpicture}%
 % }
 %\threenode{a,ma,b,mb,c,mc,sign}: a single node with three jm-lines radiating
@@ -149,7 +149,7 @@
 \coordinate (M) at (0,0);
 % 90=360 - angle[2]
 \node[dotnode,label={90:\vmk@sign{\argx{7}}}] at (M) {};
- \foreach \i in {0,...,2}{\draw[jmarrown] (M) -- (n\i) node[label={30+120*\i:$\argx{2*\i+1}$$\argx{2*\i+2}$}]{};}%\argx{2*\i+2}}]{};}
+ \foreach \i in {0,...,2}{\draw[jmarrow] (M) -- (n\i) node[label={30+120*\i:$\argx{2*\i+1}$$\argx{2*\i+2}$}]{};}%\argx{2*\i+2}}]{};}
 \end{tikzpicture}}
 }
 
@@ -494,20 +494,20 @@
 \coordinate (N) at (0,0);
 \node[dotnode,label={90:\vmk@sign{#1}}] at (N) {};
 \if i#3
-  \draw[bjmarrown] (-0.75,0) node[left]{$#2$} -- (N);
+  \draw[bjmarrow] (-0.75,0) node[left]{$#2$} -- (N);
 \else
-  \draw[jmarrown] (N) -- (-0.75,0) node[left]{$#2$};
+  \draw[jmarrow] (N) -- (-0.75,0) node[left]{$#2$};
 \fi
 \if i#5
-  \draw[bjmarrown] (0.75,0) node[right]{$#4$} -- (N);
+  \draw[bjmarrow] (0.75,0) node[right]{$#4$} -- (N);
 \else
-  \draw[jmarrown] (N) -- (0.75,0) node[right]{$#4$};
+  \draw[jmarrow] (N) -- (0.75,0) node[right]{$#4$};
 \fi
 \if d#6
-  \draw[bjmarrown] (N) -- (0,-0.9) node[below]{$c=0$};
+  \draw[bjmarrow] (N) -- (0,-0.9) node[below]{$c=0$};
 \else 
   \if u#6 
-    \draw[jmarrown] (0,-0.9) node[below]{$c=0$} -- (N);
+    \draw[jmarrow] (0,-0.9) node[below]{$c=0$} -- (N);
   \else
     \draw (0,-0.9) node[below]{$c=0$} -- (N);
   \fi
@@ -545,19 +545,19 @@
 \begin{tikzpicture}[baseline=0pt,inner sep=0.13em,font=\scriptsize]
 \if n#2 % not a metric tensor
 \if o#1
-  \draw[bjmarrown] (-\Len,\HEO) -- (0,\HEO)  node[above]{$a\alpha$};
-  \draw[jmarrown] (0,\HEO) node[above]{$b\beta$} -- (\Len,\HEO) ;
+  \draw[bjmarrow] (-\Len,\HEO) -- (0,\HEO)  node[above]{$a\alpha$};
+  \draw[jmarrow] (0,\HEO) node[above]{$b\beta$} -- (\Len,\HEO) ;
 \else
-  \draw[jmarrown] (0,\HEO) --(-\Len,\HEO)   node[above]{$a\alpha$};
-  \draw[bjmarrown] (\Len,\HEO) node[above]{$b\beta$}--(0,\HEO) ; 
+  \draw[jmarrow] (0,\HEO) --(-\Len,\HEO)   node[above]{$a\alpha$};
+  \draw[bjmarrow] (\Len,\HEO) node[above]{$b\beta$}--(0,\HEO) ; 
 \fi
 \else
 \if o#1
-  \draw[jmarrown] (0,\HEO) -- (-\Len,\HEO) node[above]{$a\alpha$};
-  \draw[jmarrown] (0,\HEO) -- (\Len,\HEO) node[above]{$b\beta$};
+  \draw[jmarrow] (0,\HEO) -- (-\Len,\HEO) node[above]{$a\alpha$};
+  \draw[jmarrow] (0,\HEO) -- (\Len,\HEO) node[above]{$b\beta$};
 \else
-  \draw[bjmarrown] (-\Len,\HEO) node[above]{$a\alpha$} -- (0,\HEO);
-  \draw[bjmarrown] (\Len,\HEO) node[above]{$b\beta$} -- (0,\HEO);
+  \draw[bjmarrow] (-\Len,\HEO) node[above]{$a\alpha$} -- (0,\HEO);
+  \draw[bjmarrow] (\Len,\HEO) node[above]{$b\beta$} -- (0,\HEO);
 \fi
 \if l#2
   \draw[jmlinem] (\Len,\HEO) -- (-\Len,\HEO);
