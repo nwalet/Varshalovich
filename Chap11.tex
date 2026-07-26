@@ -3796,7 +3796,43 @@ depend on variables of the first and the second subsystems, respectively.}}\\
 \times \sum_{\gamma^{\prime \prime}}\left(\gamma j_{1}\left\|\mathfrak{M}_{k}\right\| \gamma^{\prime \prime} j_{1}^{\prime}\right)\left(\gamma^{\prime \prime} j_{2}\left\|\mathfrak{N}_{k}\right\| \gamma^{\prime} j_{2}^{\prime}\right)
 \end{gathered}
 \] &
-\threejs{j_1}{j_2}{J}{+}{-}\\
+\scalebox{0.5}{%
+\begin{tikzpicture}[baseline=-4pt,inner sep=2pt,font=\scriptsize]
+  \node[draw,minimum width=2.2cm,minimum height=0.85cm](B){\normalsize$(\mathfrak{M}^{(1)}\!\cdot\mathfrak{N}^{(2)})_{\gamma\gamma'}$};
+  \coordinate(tp)at($(B.north)+(0,0.7)$);
+  \utri at(tp){};\node at([yshift=-2mm]tp){\tiny\plusmark};
+  \draw[jmlinem]($(B.north)+(-0.55,0)$)--(tp)node[midway,left]{$j'_1$};
+  \draw[jmlinem]($(B.north)+(0.55,0)$)--(tp)node[midway,right]{$j'_2$};
+  \draw[jmarrown](tp)--($(tp)+(0,0.95)$)node[above]{$J'M'$};
+  \coordinate(bt)at($(B.south)-(0,0.7)$);
+  \wtri at(bt){};\node at([yshift=2mm]bt){\tiny\minusmark};
+  \draw[jmlinem]($(B.south)+(-0.55,0)$)--(bt)node[midway,left]{$j_1$};
+  \draw[jmlinem]($(B.south)+(0.55,0)$)--(bt)node[midway,right]{$j_2$};
+  \draw[bjmarrown]($(bt)-(0,0.95)$)--(bt)node[at start,below]{$JM$};
+\end{tikzpicture}%
+$=(-1)^{-k}\displaystyle\sum_{\gamma''}$%
+\begin{tikzpicture}[baseline=-4pt,inner sep=2pt,font=\scriptsize]
+  \tribox{\mathfrak{M}_{\gamma\gamma''}}{j_1}{k}{j'_1}{jmlinem}{jmlinem}{jmlinem}
+\end{tikzpicture}%
+\begin{tikzpicture}[baseline=-24pt,inner sep=2pt,font=\scriptsize]
+  \coordinate(TL)at(-0.85,0.55);\coordinate(TR)at(0.85,0.55);\coordinate(BA)at(0,-0.65);
+  \coordinate(C)at(0,0.05);
+  \draw[jmlinem](TL)--(TR)node[midway,above]{$k$};
+  \draw[jmlinem](TL)--(BA)node[pos=0.5,left]{$j'_1$};
+  \draw[jmlinem](TR)--(BA)node[pos=0.5,right]{$j'_2$};
+  \draw[jmlinem](C)--(TL)node[pos=0.55,above]{$j_1$};
+  \draw[jmlinem](C)--(TR)node[pos=0.55,above]{$j_2$};
+  \draw[jmlinem](C)--(BA)node[pos=0.5,right]{$J$};
+  \node[dotnode,label={180:\minusmark}]at(TL){};
+  \node[dotnode,label={0:\plusmark}]at(TR){};
+  \node[dotnode,label={-90:\plusmark}]at(BA){};
+  \draw[jmarrown]($(BA)-(0,1.0)$)--(BA);
+  \node at($(BA)-(0,0.55)$)[right]{$J'M'$};
+  \draw[bjmarrown]($(BA)-(0,2.1)$)--($(BA)-(0,1.15)$)node[at start,below]{$JM$};
+\end{tikzpicture}%
+\begin{tikzpicture}[baseline=-4pt,inner sep=2pt,font=\scriptsize]
+  \tribox{\mathfrak{N}_{\gamma''\gamma'}}{j_2}{k}{j'_2}{jmlinem}{jmlinem}{jmlinem}
+\end{tikzpicture}}\\
 \multicolumn{2}{c}{\parbox{0.93\textwidth}{\centering Reduced matrix element of an irreducible tensor operator which depends only on variables of the first subsystem.}}\\
 \[
 \begin{gathered}
@@ -3805,7 +3841,8 @@ depend on variables of the first and the second subsystems, respectively.}}\\
 \times\sixj{J}{k}{J^{\prime}}{j_{1}^{\prime}}{j_{2}}{j_{1}}\left(\gamma j_{1}\left\|\mathfrak{M}_{k}\right\| \gamma^{\prime} j_{1}^{\prime}\right) .
 \end{gathered}
 \] &
-\threejs{J}{k}{J^{\prime}}{+}{-}\\
+\scalebox{0.5}{\redlhs{\mathfrak{M}^{(1)}_{\gamma\gamma'}}{j_1}{j_2}{j'_1}{j'_2}$=$%
+\redrhs{\mathfrak{M}_{\gamma\gamma'}}{j_1}{j'_1}{j_1}{j'_1}{j_2}{j'_2}}\\
 \multicolumn{2}{c}{\parbox{0.93\textwidth}{\centering Reduced matrix element of the irreducible tensor operator which depends only on variables of the second subsystem.}}\\
 \[
 \begin{gathered}
@@ -3814,7 +3851,8 @@ depend on variables of the first and the second subsystems, respectively.}}\\
 \times\sixj{J}{k}{J^{\prime}}{j_{2}^{\prime}}{j_{1}}{j_{2}}\left(\gamma j_{2}\left\|\mathfrak{N}_{k}\right\| \gamma^{\prime} j_{2}^{\prime}\right) .
 \end{gathered}
 \] &
-\threejs{J}{k}{J^{\prime}}{+}{-}\\
+\scalebox{0.5}{\redlhs{\mathfrak{N}^{(2)}_{\gamma\gamma'}}{j_1}{j_2}{j'_1}{j'_2}$=$%
+\redrhs{\mathfrak{N}_{\gamma\gamma'}}{j_2}{j'_2}{j_2}{j'_2}{j_1}{j'_1}}\\
 \hline
 \end{tabular}
 \end{center}

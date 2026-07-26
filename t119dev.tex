@@ -1,49 +1,65 @@
 \documentclass[crop,math]{standalone}
 \usepackage{diagrams}
 \usepackage{amsfonts,amsmath}
-\newcommand{\wtri}{\node[regular polygon,regular polygon sides=3,minimum size=0.02,inner sep=1.4pt,fill=white,draw,rotate=180]}
-\begin{document}
-% ===== Table 11.14 row 3: two coupled subsystems (9j) =====
-% LHS: box -> 6 lines (j1 j2 | k1 k2 | j'1 j'2) -> 3 white triangles (J,k,J') -> apex dot.
-% RHS: sum_{g''} triboxM(j1,k1,j'1) . [9j macro + J/k/J' loops] . triboxN(j2,k2,j'2).
-% Sum over gamma'' only -> no ultra-thick line.
-\[
-\begin{tikzpicture}[baseline=-14pt,inner sep=2pt,font=\scriptsize]
-  \node[draw,minimum width=3.1cm,minimum height=0.85cm](B){\normalsize$\{\mathfrak{M}^{(1)}\!\otimes\!\mathfrak{N}^{(2)}\}_{\gamma\gamma'}$};
-  \coordinate(n1)at([xshift=-18mm]B.north);\coordinate(n2)at([xshift=-10mm]B.north);
-  \coordinate(n3)at([xshift=-4.5mm]B.north);\coordinate(n4)at([xshift=4.5mm]B.north);
-  \coordinate(n5)at([xshift=10mm]B.north);\coordinate(n6)at([xshift=18mm]B.north);
-  \coordinate(TL)at([xshift=-14mm,yshift=8mm]B.north);
-  \coordinate(TM)at([xshift=0mm,yshift=8mm]B.north);
-  \coordinate(TR)at([xshift=14mm,yshift=8mm]B.north);
+% perimeter-arrow loop: \ploop{center-coord}{radius}{label}
+\newcommand{\ploop}[3]{%
+  \draw[thick,decoration={markings,mark=at position 0.6 with {\arrow{Stealth[length=1.6mm]}}},postaction={decorate}](#1)circle(#2);
+  \node at(#1){$#3$};
+  \node[dotnode,label={90:\plusmark}]at($(#1)+(0,#2)$){};}
+% LHS coupled box M^(i): six legs -> two white triangles (J,J') + straight k -> apex
+\newcommand{\redlhs}[5]{% #1=box label #2..#5 = leg labels j_a j_b j_c j_d
+\begin{tikzpicture}[baseline=-6pt,inner sep=2pt,font=\scriptsize]
+  \node[draw,minimum width=2.2cm,minimum height=0.85cm](B){\normalsize$#1$};
+  \coordinate(TL)at([xshift=-8mm,yshift=8mm]B.north);
+  \coordinate(TR)at([xshift=8mm,yshift=8mm]B.north);
   \node[dotnode,label={90:\plusmark}](ap)at([yshift=18mm]B.north){};
-  \draw[jmlinem](n1)--(TL)node[pos=0.4,left]{$j_1$};
-  \draw[jmlinem](n2)--(TL)node[pos=0.4,right]{$j_2$};
-  \draw[jmlinem](n3)--(TM)node[pos=0.4,left]{$k_1$};
-  \draw[jmlinem](n4)--(TM)node[pos=0.4,right]{$k_2$};
-  \draw[jmlinem](n5)--(TR)node[pos=0.4,left]{$j'_1$};
-  \draw[jmlinem](n6)--(TR)node[pos=0.4,right]{$j'_2$};
+  \draw[jmlinem]([xshift=-13mm]B.north)--(TL)node[pos=0.4,left]{$#2$};
+  \draw[jmlinem]([xshift=-5mm]B.north)--(TL)node[pos=0.4,right]{$#3$};
+  \draw[jmlinem]([xshift=5mm]B.north)--(TR)node[pos=0.4,left]{$#4$};
+  \draw[jmlinem]([xshift=13mm]B.north)--(TR)node[pos=0.4,right]{$#5$};
   \draw[jmlinem](TL)--(ap)node[midway,left]{$J$};
-  \draw[jmlinem](TM)--(ap)node[pos=0.4,right]{$k$};
+  \draw[jmlinem](B.north)--(ap)node[pos=0.45,right]{$k$};
   \draw[jmlinem](TR)--(ap)node[midway,right]{$J'$};
   \wtri at(TL){};\node at([xshift=2mm]TL){\tiny\plusmark};
-  \wtri at(TM){};\node at([xshift=2mm]TM){\tiny\plusmark};
   \wtri at(TR){};\node at([xshift=2mm]TR){\tiny\plusmark};
-\end{tikzpicture}
-\;=\;\sum_{\gamma''}\;
-\begin{tikzpicture}[baseline=-14pt,inner sep=2pt,font=\scriptsize]
-  \tribox{\mathfrak{M}_{\gamma\gamma''}}{j_1}{k_1}{j'_1}{jmlinem}{jmlinem}{jmlinem}
-\end{tikzpicture}
-\begin{tikzpicture}[baseline=-20pt,inner sep=1pt,font=\scriptsize]
-  \node(hex){\ninejdgen{J,k,J',j_1,k_1,j'_1,j_2,k_2,j'_2,+-+-+-,ddddddddd}};
-  \foreach \x/\lab in {-0.42/J,0/k,0.42/J'}{
-    \coordinate(lc)at($(hex.north)+(\x,0.58)$);
-    \draw[thick,decoration={markings,mark=at position 0.6 with {\arrow{Stealth[length=1.6mm]}}},postaction={decorate}](lc)circle(0.16);
-    \node at(lc){$\lab$};
-    \node[dotnode,label={90:\plusmark}]at($(lc)+(0,0.16)$){};}
-\end{tikzpicture}
-\begin{tikzpicture}[baseline=-14pt,inner sep=2pt,font=\scriptsize]
-  \tribox{\mathfrak{N}_{\gamma''\gamma'}}{j_2}{k_2}{j'_2}{jmlinem}{jmlinem}{jmlinem}
-\end{tikzpicture}
-\]
+\end{tikzpicture}}
+% RHS vertical stack for reduced m.e. : #1 box label, #2/#3 tribox roof (ja,ja'),
+% #4/#5 inner-6j pair, #6/#7 spectator-loop labels (jb, jb')
+\newcommand{\redrhs}[7]{%
+\begin{tikzpicture}[baseline=-30pt,inner sep=2pt,font=\scriptsize]
+  \node[draw,minimum width=1.5cm,minimum height=0.8cm](M){\normalsize$#1$};
+  \coordinate(ap)at($(M.north)+(0,0.75)$);
+  \node[dotnode,label={0:\plusmark}]at(ap){};
+  \draw[jmlinem](M.north west)--(ap)node[midway,left]{$#2$};
+  \draw[jmlinem](M.north)--(ap)node[pos=0.35,right]{$k$};
+  \draw[jmlinem](M.north east)--(ap)node[midway,right]{$#3$};
+  \coordinate(BA)at($(ap)+(0,0.4)$);
+  \draw[jmlinem](ap)--(BA);
+  \coordinate(TL)at($(BA)+(-0.85,1.2)$);\coordinate(TR)at($(BA)+(0.85,1.2)$);
+  \coordinate(Cc)at($(BA)+(0,0.72)$);
+  \draw[jmlinem](TL)--(TR)node[midway,above]{$k$};
+  \draw[jmlinem](TL)--(BA)node[pos=0.5,left]{$#4$};
+  \draw[jmlinem](TR)--(BA)node[pos=0.5,right]{$#5$};
+  \draw[jmlinem](Cc)--(TL);\draw[jmlinem](Cc)--(TR);
+  \draw[jmlinem](Cc)--(BA)node[pos=0.45,right]{$#6$};
+  \node[dotnode,label={-90:\minusmark}]at(BA){};
+  \node[dotnode,label={90:\minusmark}]at(TL){};\node[dotnode,label={90:\plusmark}]at(TR){};
+  \draw[jmlinem](TL)--($(TL)+(-0.32,0)$);\draw[jmlinem](TR)--($(TR)+(0.32,0)$);
+  \ploop{$(TL)+(-0.55,0)$}{0.22}{J}
+  \ploop{$(TR)+(0.55,0)$}{0.22}{J'}
+  % spectator loop below box
+  \coordinate(sl)at($(M.south)+(0,-0.55)$);
+  \draw[jmlinem](M.south)--($(sl)+(0,0.26)$);
+  \draw[thick,decoration={markings,mark=at position 0.6 with {\arrow{Stealth[length=1.6mm]}}},postaction={decorate}](sl)circle(0.26);
+  \node at($(sl)+(-0.42,0)$){$#6$};\node at($(sl)+(0.42,0)$){$#7$};
+  \node[dotnode,label={90:\plusmark}]at($(sl)+(0,0.26)$){};
+  \node[dotnode,label={-90:\plusmark}]at($(sl)+(0,-0.26)$){};
+\end{tikzpicture}}
+\begin{document}
+% ---- Reduced-1 : operator on first subsystem ----
+\[ \redlhs{\mathfrak{M}^{(1)}_{\gamma\gamma'}}{j_1}{j_2}{j'_1}{j'_2}\;=\;
+   \redrhs{\mathfrak{M}_{\gamma\gamma'}}{j_1}{j'_1}{j_1}{j'_1}{j_2}{j'_2} \]
+% ---- Reduced-2 : operator on second subsystem ----
+\[ \redlhs{\mathfrak{M}^{(2)}_{\gamma\gamma'}}{j_1}{j_2}{j'_1}{j'_2}\;=\;
+   \redrhs{\mathfrak{M}_{\gamma\gamma'}}{j_2}{j'_2}{j_2}{j'_2}{j_1}{j'_1} \]
 \end{document}

@@ -834,4 +834,70 @@
 %used at the merge points of coupled-operator boxes. Follow with the
 %coordinate, e.g. \wtri at (TL){};
 \newcommand{\wtri}{\node[regular polygon,regular polygon sides=3,minimum size=0.02,inner sep=1.4pt,fill=white,draw,rotate=180]}
+%\utri: the same recoupling node pointing up (apex at top).
+\newcommand{\utri}{\node[regular polygon,regular polygon sides=3,minimum size=0.02,inner sep=1.4pt,fill=white,draw]}
+
+%\ploop{center-coord}{radius}{label}: a closed j-loop drawn as a circle
+%with a single arrowhead on its perimeter and a signed (+) dot on top;
+%the label sits inside. Used for the free external ranks of a reduced
+%matrix element (they close into loops).
+\newcommand{\ploop}[3]{%
+  \draw[thick,decoration={markings,mark=at position 0.6 with {\arrow{Stealth[length=1.6mm]}}},postaction={decorate}](#1)circle(#2);
+  \node at(#1){$#3$};
+  \node[dotnode,label={90:\plusmark}]at($(#1)+(0,#2)$){};}
+
+%\redlhs{box}{a}{b}{c}{d}: coupled-operator box with four legs a,b (->left
+%white triangle ->J) and c,d (->right white triangle ->J'), plus a straight
+%middle k, all meeting at a + apex. (Two-subsystem reduced-m.e. LHS.)
+\newcommand{\redlhs}[5]{%
+\begin{tikzpicture}[baseline=-6pt,inner sep=2pt,font=\scriptsize]
+  \node[draw,minimum width=2.2cm,minimum height=0.85cm](B){\normalsize$#1$};
+  \coordinate(TL)at([xshift=-8mm,yshift=8mm]B.north);
+  \coordinate(TR)at([xshift=8mm,yshift=8mm]B.north);
+  \node[dotnode,label={90:\plusmark}](ap)at([yshift=18mm]B.north){};
+  \draw[jmlinem]([xshift=-13mm]B.north)--(TL)node[pos=0.4,left]{$#2$};
+  \draw[jmlinem]([xshift=-5mm]B.north)--(TL)node[pos=0.4,right]{$#3$};
+  \draw[jmlinem]([xshift=5mm]B.north)--(TR)node[pos=0.4,left]{$#4$};
+  \draw[jmlinem]([xshift=13mm]B.north)--(TR)node[pos=0.4,right]{$#5$};
+  \draw[jmlinem](TL)--(ap)node[midway,left]{$J$};
+  \draw[jmlinem](B.north)--(ap)node[pos=0.45,right]{$k$};
+  \draw[jmlinem](TR)--(ap)node[midway,right]{$J'$};
+  \wtri at(TL){};\node at([xshift=2mm]TL){\tiny\plusmark};
+  \wtri at(TR){};\node at([xshift=2mm]TR){\tiny\plusmark};
+\end{tikzpicture}}
+
+%\redrhs{box}{ra}{rb}{ia}{ib}{sa}{sb}: RHS vertical stack of a reduced m.e.
+%- inverted 6j triangle (top edge k; inner spokes ia,ib; vertical sb) with
+%  the free ranks J,J' closed into flanking \ploop circles;
+%- a triangle-roof box (reduced m.e.) with roof ra,k,rb;
+%- a spectator j-loop sa(o)sb below the box.
+\newcommand{\redrhs}[7]{%
+\begin{tikzpicture}[baseline=-30pt,inner sep=2pt,font=\scriptsize]
+  \node[draw,minimum width=1.5cm,minimum height=0.8cm](M){\normalsize$#1$};
+  \coordinate(ap)at($(M.north)+(0,0.75)$);
+  \node[dotnode,label={0:\plusmark}]at(ap){};
+  \draw[jmlinem](M.north west)--(ap)node[midway,left]{$#2$};
+  \draw[jmlinem](M.north)--(ap)node[pos=0.35,right]{$k$};
+  \draw[jmlinem](M.north east)--(ap)node[midway,right]{$#3$};
+  \coordinate(BA)at($(ap)+(0,0.4)$);
+  \draw[jmlinem](ap)--(BA);
+  \coordinate(TL)at($(BA)+(-0.85,1.2)$);\coordinate(TR)at($(BA)+(0.85,1.2)$);
+  \coordinate(Cc)at($(BA)+(0,0.72)$);
+  \draw[jmlinem](TL)--(TR)node[midway,above]{$k$};
+  \draw[jmlinem](TL)--(BA)node[pos=0.5,left]{$#4$};
+  \draw[jmlinem](TR)--(BA)node[pos=0.5,right]{$#5$};
+  \draw[jmlinem](Cc)--(TL);\draw[jmlinem](Cc)--(TR);
+  \draw[jmlinem](Cc)--(BA)node[pos=0.45,right]{$#6$};
+  \node[dotnode,label={-90:\minusmark}]at(BA){};
+  \node[dotnode,label={90:\minusmark}]at(TL){};\node[dotnode,label={90:\plusmark}]at(TR){};
+  \draw[jmlinem](TL)--($(TL)+(-0.32,0)$);\draw[jmlinem](TR)--($(TR)+(0.32,0)$);
+  \ploop{$(TL)+(-0.55,0)$}{0.22}{J}
+  \ploop{$(TR)+(0.55,0)$}{0.22}{J'}
+  \coordinate(sl)at($(M.south)+(0,-0.55)$);
+  \draw[jmlinem](M.south)--($(sl)+(0,0.26)$);
+  \draw[thick,decoration={markings,mark=at position 0.6 with {\arrow{Stealth[length=1.6mm]}}},postaction={decorate}](sl)circle(0.26);
+  \node at($(sl)+(-0.42,0)$){$#6$};\node at($(sl)+(0.42,0)$){$#7$};
+  \node[dotnode,label={90:\plusmark}]at($(sl)+(0,0.26)$){};
+  \node[dotnode,label={-90:\plusmark}]at($(sl)+(0,-0.26)$){};
+\end{tikzpicture}}
 
