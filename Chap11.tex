@@ -3696,7 +3696,44 @@ where $\left(\gamma J\left\|\mathfrak{M}_{k}\right\| \gamma^{\prime} J^{\prime}\
 & \times \sum_{\gamma^{\prime \prime}}\left(\gamma j_{1}\left\|\mathfrak{M}_{k_{1}}\right\| \gamma^{\prime \prime} j_{1}^{\prime}\right)\left(\gamma^{\prime \prime} j_{2}\left\|\mathfrak{N}_{k_{2}}\right\| \gamma^{\prime} j_{2}^{\prime}\right)
 \end{aligned}
 \]&
-\ninejdgen{j_1,j_1^{\prime},k_1,j_2,j_2^{\prime},k_2,J,J^{\prime},k,+-+-+-,ddddddddd}
+\scalebox{0.55}{%
+\begin{tikzpicture}[baseline=-14pt,inner sep=2pt,font=\scriptsize]
+  \node[draw,minimum width=3.1cm,minimum height=0.85cm](B){\normalsize$\{\mathfrak{M}^{(1)}\!\otimes\!\mathfrak{N}^{(2)}\}_{\gamma\gamma'}$};
+  \coordinate(n1)at([xshift=-18mm]B.north);\coordinate(n2)at([xshift=-10mm]B.north);
+  \coordinate(n3)at([xshift=-4.5mm]B.north);\coordinate(n4)at([xshift=4.5mm]B.north);
+  \coordinate(n5)at([xshift=10mm]B.north);\coordinate(n6)at([xshift=18mm]B.north);
+  \coordinate(TL)at([xshift=-14mm,yshift=8mm]B.north);
+  \coordinate(TM)at([xshift=0mm,yshift=8mm]B.north);
+  \coordinate(TR)at([xshift=14mm,yshift=8mm]B.north);
+  \node[dotnode,label={90:\plusmark}](ap)at([yshift=18mm]B.north){};
+  \draw[jmlinem](n1)--(TL)node[pos=0.4,left]{$j_1$};
+  \draw[jmlinem](n2)--(TL)node[pos=0.4,right]{$j_2$};
+  \draw[jmlinem](n3)--(TM)node[pos=0.4,left]{$k_1$};
+  \draw[jmlinem](n4)--(TM)node[pos=0.4,right]{$k_2$};
+  \draw[jmlinem](n5)--(TR)node[pos=0.4,left]{$j'_1$};
+  \draw[jmlinem](n6)--(TR)node[pos=0.4,right]{$j'_2$};
+  \draw[jmlinem](TL)--(ap)node[midway,left]{$J$};
+  \draw[jmlinem](TM)--(ap)node[pos=0.4,right]{$k$};
+  \draw[jmlinem](TR)--(ap)node[midway,right]{$J'$};
+  \wtri at(TL){};\node at([xshift=2mm]TL){\tiny\plusmark};
+  \wtri at(TM){};\node at([xshift=2mm]TM){\tiny\plusmark};
+  \wtri at(TR){};\node at([xshift=2mm]TR){\tiny\plusmark};
+\end{tikzpicture}%
+$=\displaystyle\sum_{\gamma''}$%
+\begin{tikzpicture}[baseline=-14pt,inner sep=2pt,font=\scriptsize]
+  \tribox{\mathfrak{M}_{\gamma\gamma''}}{j_1}{k_1}{j'_1}{jmlinem}{jmlinem}{jmlinem}
+\end{tikzpicture}%
+\begin{tikzpicture}[baseline=-20pt,inner sep=1pt,font=\scriptsize]
+  \node(hex){\ninejdgen{J,k,J',j_1,k_1,j'_1,j_2,k_2,j'_2,+-+-+-,ddddddddd}};
+  \foreach \x/\lab in {-0.42/J,0/k,0.42/J'}{
+    \coordinate(lc)at($(hex.north)+(\x,0.58)$);
+    \draw[thick,decoration={markings,mark=at position 0.6 with {\arrow{Stealth[length=1.6mm]}}},postaction={decorate}](lc)circle(0.16);
+    \node at(lc){$\lab$};
+    \node[dotnode,label={90:\plusmark}]at($(lc)+(0,0.16)$){};}
+\end{tikzpicture}%
+\begin{tikzpicture}[baseline=-14pt,inner sep=2pt,font=\scriptsize]
+  \tribox{\mathfrak{N}_{\gamma''\gamma'}}{j_2}{k_2}{j'_2}{jmlinem}{jmlinem}{jmlinem}
+\end{tikzpicture}}
 \end{tabular}
 \end{center}
 \end{table}
