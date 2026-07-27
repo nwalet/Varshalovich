@@ -19,7 +19,7 @@ The Dirac representation of quantum mechanical quantities seems to be most adequ
 A line with an arrow coming out of a node represents the "ket" $|\Psi\rangle$, i.e., a covariant (standard) state vector, whereas, a line with double arrow coming into the node represents the "bra" $\langle\Psi|$, i.e. a contravariant (Hermitian conjugate) state vector.
 
 A thin solid line corresponds to a state with some definite angular momentum $j$ and projection $m$ : 
-$$
+\[
 \begin{aligned}
 & \begin{tikzpicture}[baseline=0pt]
 \draw[jmketarrow] (0,0.0) -- (1,0.0) ;
@@ -28,12 +28,10 @@ $$
 \draw[bjmarrow] (0,0.0) -- (1,0.0) ;
 \end{tikzpicture}  \qquad \bra{j m}, 
 \end{aligned}
-$$
-
+\]
 Such lines are referred to as the $j$-lines.\\
 A dashed line corresponds to a state with some definite direction of the position vector (or linear momentum) $\Omega\{\vartheta, \varphi\}$
-
-$$
+\[
 \begin{aligned}
 & \begin{tikzpicture}[baseline=0pt]
 \draw[omketarrow] (0,0.0) -- (1,0.0) ;
@@ -42,17 +40,14 @@ $$
 \draw[ombraarrow] (0,0.0) -- (1,0.0) ;
 \end{tikzpicture}  \qquad \bra{\Omega}, 
 \end{aligned}
-$$
-
+\]
 Such lines are referred to as the $\Omega$-lines.\\
 A double dashed line corresponds to a set of the Euler angles $\alpha, \beta, \gamma$ (or the angles $\omega, \Theta, \Phi$ ) which specify a rotation of the coordinate system, $R$. Such lines are called the $R$-lines
-
-$$
+\[
 \begin{tikzpicture}[baseline=0pt]
 \draw[rline] (0,0.0) -- (1,0.0) node[right]{$R$};
 \end{tikzpicture}
-$$
-
+\]
 The symbols $j m, \Omega$ and $R$ are usually indicated near the corresponding lines. Therefore, length, curvature, orientation, and position of the line are inessential. For example, 
 \begin{center}
 \begin{tikzpicture}[baseline=0pt]
@@ -68,41 +63,29 @@ is equivalent to
 
 However, the arrow direction with respect to the node is of importance.\\
 The normalization of state vectors may be different. In diagrams it is indicated by the type of node. A state vector $|j m\rangle$ normalized according to
-
-$$
-\left\langle j m \mid j^{\prime} m^{\prime}\right\rangle=\delta_{j j^{\prime}} \delta_{m m^{\prime}}
-$$
-
-is represented by the $j$-line with a bar node, whereas, a state vector $\mid j m)$, which obeys the normalization condition
-
-$$
-\left(j m \mid j^{\prime} m^{\prime}\right)=(2 j+1)^{-1} \delta_{j j^{\prime}} \delta_{m m^{\prime}}
-$$
-
-is represented by the $j$-line with a dot node. The completeness condition for wave functions $|j m\rangle$ or $\mid j m)$  reads
-
-$$
-\sum_{j m}|j m\rangle\langle j m|=\sum_{j m} \mid j m)(2 j+1)(j m \mid=1
-$$
-
+\[
+\braket{j m}{j^{\prime} m^{\prime}}=\delta_{j j^{\prime}} \delta_{m m^{\prime}}
+\]
+is represented by the $j$-line with a bar node, whereas, a state vector $\rket{j m}$, which obeys the normalization condition
+\[
+\rbraket{j m}{j^{\prime} m^{\prime}}=(2 j+1)^{-1} \delta_{j j^{\prime}} \delta_{m m^{\prime}}
+\]
+is represented by the $j$-line with a dot node. The completeness condition for wave functions $\ket{j m}$ or $\rket{j m}$  reads
+\[
+\sum_{j m}\ket{j m}\bra{j m}=\sum_{j m}\rket{j m}(2 j+1)\rbra{j m}=1
+\]
 Similarly, a state vector $|\Omega\rangle$ normalized by the Dirac $\delta$-function
-
-$$
-\left\langle\Omega \mid \Omega^{\prime}\right\rangle=\delta\left(\Omega-\Omega^{\prime}\right)
-$$
-
-corresponds to the $\Omega$-line with the bar node, whereas, a state vector $\mid \Omega)$ normalized by
-
-$$
-\left(\Omega \mid \Omega^{\prime}\right)=4 \pi \delta\left(\Omega-\Omega^{\prime}\right)
-$$
-
-corresponds to the $\Omega$-line with a dot node. The completeness condition for the functions $|\Omega\rangle$ or $\mid \Omega)$ reads
-
-$$
-\int|\Omega\rangle d \Omega\langle\Omega|=1 \quad \text { and } \quad \int \mid \Omega) \frac{d \Omega}{4 \pi}(\Omega \mid=1\,,
-$$
-
+\[
+\braket{\Omega}{\Omega^{\prime}}=\delta\left(\Omega-\Omega^{\prime}\right)
+\]
+corresponds to the $\Omega$-line with the bar node, whereas, a state vector $\rket{\Omega}$ normalized by
+\[
+\rbraket{\Omega}{\Omega^{\prime}}=4 \pi \delta\left(\Omega-\Omega^{\prime}\right)
+\]
+corresponds to the $\Omega$-line with a dot node. The completeness condition for the functions $\ket{\Omega}$ or $\rket{\Omega}$ reads
+\[
+\int\ket{\Omega} d \Omega\bra{\Omega}=1 \quad \text { and } \quad \int \rket{\Omega} \frac{d \Omega}{4 \pi}\rbra{\Omega}=1\,,
+\]
 respectively.
 
 \subsection{Diagrams of the Basic Functions of the Theory}
@@ -110,176 +93,183 @@ Quantum mechanical quantities, i.e., state vectors and operators, may depend on 
 
 Diagrams of some spin and angular functions are listed in Tables 11.1-11.3; graphical displays of their properties and relations is given in Tables 11.4-11.14.
 
-A spherical harmonic $Y_{l m}(\vartheta, \varphi) \equiv\langle\Omega \mid l m\rangle$ is represented by a junction of a thin solid and dashed lines which correspond to $|l m\rangle$ and $\langle\Omega|$.
+A spherical harmonic $Y_{l m}(\vartheta, \varphi) \equiv\braket{\Omega}{l m}$ is represented by a junction of a thin solid and dashed lines which correspond to $\ket{l m}$ and $\bra{\Omega}$.
 
-A Wigner $3 j m$ symbol $\threej{a}{b}{c}{\alpha}{\beta}{\gamma} \equiv(00 \mid a \alpha b \beta c \gamma)$ is represented by a dot-node junction of three thin solid lines which correspond to $|a \alpha|, \mid b \beta)$ and $\mid c \gamma)$. The sign of the node determines the cyclic order of arguments, i.e., the sequence of coupling of momenta: plus corresponds to the anticlockwise one.
+A Wigner $3 j m$ symbol $\threej{a}{b}{c}{\alpha}{\beta}{\gamma} \equiv\rbraket{00}{a \alpha b \beta c \gamma}$ is represented by a dot-node junction of three thin solid lines which correspond to $\rket{a \alpha}, \rket{b \beta}$ and $\rket{c \gamma}$. The sign of the node determines the cyclic order of arguments, i.e., the sequence of coupling of momenta: plus corresponds to the anticlockwise one.
 
 The $3 j, 6 j$, and $9 j$ symbols, or, more generally speaking, the $3 n j$ symbols, may be represented graphically by closed diagrams without external lines because they are invariant under coordinate rotation. Such closed diagrams consist of $3 n j$-lines connected in $2 n$ dot nodes by three's, because the $3 n j$ symbols are actually the sums of $2 n$ various $3 j m$ symbols (Sec. 10.13). Any $3 n j$ symbol may be represented by several equivalent diagrams which differ in the arrow directions of internal the $j$ lines and in the node signs since each $3 n j$ symbol may be expressed through different sums of products of the 3 jm symbols; such sums turn into one another by replacing summation indices.
 
-Matrix elements of the rotation operator in the $\Omega$-representation, $\langle\Omega| \hat{R}\left|\Omega^{\prime}\right\rangle=\delta\left(\Omega-\hat{R} \Omega^{\prime}\right)$, and in the $j m$ representation, $\langle j m| \widehat{R}\left|j^{\prime} m^{\prime}\right\rangle=\delta_{j j^{\prime}} D_{m m^{\prime}}^{j}(R)$, are displayed as junctions of three lines. One of them is a double dashed $R$-line and the two others are either dashed lines corresponding to $\left|\Omega^{\prime}\right\rangle$ and $\langle\Omega|$ states, or thin solid lines corresponding to $\left|j^{\prime} m^{\prime}\right\rangle$ and $\langle j m|$ states. The sign of the junction node determines the order of arguments; strictly speaking, it shows which of two states is initial and which is final. Plus corresponds to the anticlockwise reading of arguments, and minus to the clockwise one. Therefore, a sign reversal means conversion from the rotation $R$ to the inverse rotation $R^{-1}$.
+Matrix elements of the rotation operator in the $\Omega$-representation, $\braOket{\Omega}{\hat{R}}{\Omega^{\prime}}=\delta\left(\Omega-\hat{R} \Omega^{\prime}\right)$, and in the $j m$ representation, $\braOket{j m}{\widehat{R}}{j^{\prime} m^{\prime}}=\delta_{j j^{\prime}} D_{m m^{\prime}}^{j}(R)$, are displayed as junctions of three lines. One of them is a double dashed $R$-line and the two others are either dashed lines corresponding to $\left|\Omega^{\prime}\right\rangle$ and $\langle\Omega|$ states, or thin solid lines corresponding to $\left|j^{\prime} m^{\prime}\right\rangle$ and $\langle j m|$ states. The sign of the junction node determines the order of arguments; strictly speaking, it shows which of two states is initial and which is final. Plus corresponds to the anticlockwise reading of arguments, and minus to the clockwise one. Therefore, a sign reversal means conversion from the rotation $R$ to the inverse rotation $R^{-1}$.
 
-Matrix elements of any irreducible tensor operator $\langle\Psi| T_{\lambda \mu}\left|\Psi^{\prime}\right\rangle$ are represented by a block with three external lines corresponding to $\langle\Psi|,\left|\Psi^{\prime}\right\rangle$ and $|\lambda \mu\rangle$; the operator symbol (and other possible quantum numbers) are indicated inside the block.
+Matrix elements of any irreducible tensor operator $\braOket{\Psi}{T_{\lambda \mu}}{\Psi^{\prime}}$ are represented by a block with three external lines corresponding to $\langle\Psi|,\left|\Psi^{\prime}\right\rangle$ and $|\lambda \mu\rangle$; the operator symbol (and other possible quantum numbers) are indicated inside the block.
 
 \begin{table}[ptbh!]
 \begin{center}
 \captionsetup{justification=centering,labelformat=empty}
 \caption{Table 11.1. Basic Elements of Diagrams.}
 \renewcommand{\arraystretch}{1.5}
-\begin{tabular}{lc}
+\begin{tabular}{@{}p{0.65\textwidth}c@{}}
 \hline
 {Analytical Expression} & Graphical Representation \\
 \hline
 \multicolumn{2}{c}{$jm$-State Vector}\\
 "ket"  \( \begin{aligned} & \ket{j m} \\ & \rket{j m} \end{aligned} \) & \begin{tikzpicture}[baseline=0pt]
-\draw[jmketarrow] (0,0.3) -- (1,0.3) node[midway,above]{$jm$};
-\draw[jmrndarrow] (0,-0.3) -- (1,-0.3) node[midway,above]{$jm$};
+\draw[jmketarrow] (0,0.3) -- (2,0.3) node[midway,above]{$jm$};
+\draw[jmrndarrow] (0,-0.3) -- (2,-0.3) node[midway,above]{$jm$};
 \end{tikzpicture}
 \\
 "bra"  \( \begin{aligned} & \bra{j m} \\ & \rbra{j m} \end{aligned} \) & 
 \begin{tikzpicture}[baseline=0pt]
-\draw[bjmarrow] (0,0.3) -- (1,0.3) node[midway,above]{$jm$};
-\draw[djmbraarrow] (0,-0.3) -- (1,-0.3) node[midway,above]{$jm$};
+\draw[jmbraarrow] (0,0.3) -- (2,0.3) node[midway,above]{$jm$};
+\draw[djmbraarrow] (0,-0.3) -- (2,-0.3) node[midway,above]{$jm$};
 \end{tikzpicture}  \\
 \multicolumn{2}{c}{Kronecker $\delta$-Symbol}\\
-$ \left\langle j m \mid j^{\prime} m^{\prime}\right\rangle=\delta_{j j^{\prime}} \delta_{m m^{\prime}}$ &
+$ \braket{j m}{j^{\prime} m^{\prime}}=\delta_{j j^{\prime}} \delta_{m m^{\prime}}$ &
 \begin{tikzpicture}
-\draw[bjmarrow] (0,0.) -- (1,0.) node[midway,above]{$jm$};
-\draw[jmketarrow]  (1,0.) -- (2,0.) node[midway,above]{$j'm'$};
+\draw[bjmarrow] (0,0.) -- (1.5,0.) node[midway,above]{$jm$};
+\draw[jmketarrow]  (1.5,0.) -- (3,0.) node[midway,above]{$j'm'$};
 \end{tikzpicture}
  \\
-$ \left(j m \mid j^{\prime} m^{\prime}\right)=\frac{\delta_{j j^{\prime}} \delta_{m m^{\prime}}}{2 j+1}
+$ \rbraket{j m}{j^{\prime} m^{\prime}}=\frac{\delta_{j j^{\prime}} \delta_{m m^{\prime}}}{2 j+1}
 $ &
 \begin{tikzpicture}
-\draw[djmbraarrow] (0,0.) -- (0.9,0.) node[midway,above]{$jm$};
-\draw[jmrndarrow]  (1.1,0.) -- (2,0.) node[midway,above]{$j'm'$};
-\draw[thick] (1,0.) circle (0.15);
+\draw[djmbraarrow] (0,0.) -- (1.4,0.) node[midway,above]{$jm$};
+\draw[jmrndarrow]  (1.6,0.) -- (3,0.) node[midway,above]{$j'm'$};
+\draw[thick] (1.5,0.) circle (0.15);
 \end{tikzpicture}
  \\
 \multicolumn{2}{c}{$\Omega$-State Vector}\\
 "ket"  \( \begin{aligned} & \ket{\Omega} \\ & \rket{\Omega} \end{aligned} \) & \begin{tikzpicture}[baseline=0pt]
-\draw[omketarrow] (0,0.3) -- (1,0.3) node[midway,above]{$\Omega$};
-\draw[domarrow] (0,-0.3) -- (1,-0.3) node[midway,above]{$\Omega$};
+\draw[omketarrow] (0,0.3) -- (2,0.3) node[midway,above]{$\Omega$};
+\draw[domarrow] (0,-0.3) -- (2,-0.3) node[midway,above]{$\Omega$};
 \end{tikzpicture}
 \\
 "bra"  \( \begin{aligned} & \bra{\Omega} \\ & \rbra{\Omega} \end{aligned} \) & 
 \begin{tikzpicture}[baseline=0pt]
-\draw[dbomarrow] (0,0.3) -- (1,0.3) node[midway,above]{$\Omega$};
-\draw[ombraarrow] (0,-0.3) -- (1,-0.3) node[midway,above]{$\Omega$};
+\draw[ombraarrow] (0,0.3) -- (2,0.3) node[midway,above]{$\Omega$};
+\draw[dbomarrow] (0,-0.3) -- (2,-0.3) node[midway,above]{$\Omega$};
 \end{tikzpicture}  \\
 \multicolumn{2}{c}{Dirac $\delta$-function}\\
-$ \left\langle\Omega  \mid\Omega^{\prime}\right\rangle=\delta(\Omega-\Omega')$ &
+$ \braket{\Omega}{\Omega^{\prime}}=\delta(\Omega-\Omega')$ &
 \begin{tikzpicture}
-\draw[ombraarrow] (0,0.) -- (1,0.) node[midway,above]{$\Omega$};
-\draw[dbomarrow]  (1,0.) -- (2,0.) node[midway,above]{$\Omega'$};
+\draw[ombraarrow] (0,0.) -- (1.5,0.) node[midway,above]{$\Omega$};
+\draw[omarrow]  (1.5,0) -- (3,0.) node[midway,above]{$\Omega'$};
 \end{tikzpicture}
  \\
-$ \left(\Omega \mid \Omega^{\prime}\right)={\delta(\Omega-\Omega')}{4 \pi}
+$ \rbraket{\Omega}{\Omega^{\prime}}={\delta(\Omega-\Omega')}{4 \pi}
 $ &
 \begin{tikzpicture}
-\draw[dbomarrow] (0,0.) -- (0.9,0.) node[midway,above]{$\Omega$};
-\draw[domarrow]  (1.1,0.) -- (2,0.) node[midway,above]{$\Omega'$};
-\draw[thick] (1,0.) circle (0.15);
+\draw[dbomarrow] (0,0.) -- (1.4,0.) node[midway,above]{$\Omega$};
+\draw[domarrow]  (1.6,0.) -- (3,0.) node[midway,above]{$\Omega'$};
+\draw[thick] (1.5,0.) circle (0.15);
 \end{tikzpicture}
- \\$ \left\langle\Omega _1\Omega_2 \mid\Omega\right\rangle=\delta(\Omega_1-\Omega)\delta(\Omega_2-\Omega)$ &
+ \\$ \braket{\Omega _1\Omega_2}{\Omega}=\delta(\Omega_1-\Omega)\delta(\Omega_2-\Omega)$ &
 \begin{tikzpicture}[baseline=0pt]
-\draw[ombraarrow] (0,0.5) -- (1,0.) node[midway,above]{$\Omega_1$};
-\draw[ombraarrow] (0,-0.5) -- (1,0.) node[midway,below]{$\Omega_2$};
-\draw[omketarrow]  (1,0.) -- (2,0.) node[midway,above]{$\Omega$};
+\draw[bomarrown] (0,0.7) -- (1.5,0.) node[midway,above]{$\Omega_1$};
+\draw[bomarrown] (0,-0.7) -- (1.5,0.) node[midway,below]{$\Omega_2$};
+\draw[omarrow]  (1.5,0.) -- (3,0.) node[midway,above]{$\Omega$};
+\node[dotnode] at (1.5,0) {} ;
 \end{tikzpicture}
  \\
  \multicolumn{2}{c}{Spherical Harmonics}\\
-$ \left\langle\Omega\mid lm \right\rangle=Y_{lm}(\Omega)$ &
+$ \braket{\Omega}{lm}=Y_{lm}(\Omega)$ &
 \begin{tikzpicture}
-\draw[ombraarrow] (0,0.) -- (1,0.) node[midway,above]{$\Omega$};
-\draw[jmketarrow]  (1,0.) -- (2,0.) node[midway,above]{$lm$};
+\draw[ombraarrow] (0,0.) -- (1.5,0.) node[midway,above]{$\Omega$};
+\draw[jmarrow]  (1.5,0.) -- (3,0.) node[midway,above]{$lm$};
 \end{tikzpicture}
  \\
- $ \left\langle lm\mid \Omega \right\rangle=Y^*_{lm}(\Omega)$ &
+ $ \braket{lm}{\Omega}=Y^*_{lm}(\Omega)$ &
 \begin{tikzpicture}
-\draw[bjmarrow] (0,0.) -- (1,0.) node[midway,above]{$lm$};
-\draw[omketarrow]  (1,0.) -- (2,0.) node[midway,above]{$\Omega$};
+\draw[bjmarrow] (0,0.) -- (1.5,0.) node[midway,above]{$lm$};
+\draw[omketarrow]  (1.5,0.) -- (3,0.) node[midway,above]{$\Omega$};
 \end{tikzpicture}
  \\
-$ \left(\Omega\mid lm \right)=C_{lm}(\Omega)$ &
+$ \rbraket{\Omega}{lm}=C_{lm}(\Omega)$ &
 \begin{tikzpicture}
-\draw[dbomarrow] (0,0.) -- (0.9,0.) node[midway,above]{$\Omega$};
-\draw[jmrndarrow]  (1.1,0.) -- (2,0.) node[midway,above]{$lm$};
-\draw[thick] (1,0.) circle (0.15);
+\draw[dbomarrow] (0,0.) -- (01.4,0.) node[midway,above]{$\Omega$};
+\draw[jmrndarrow]  (1.6,0.) -- (3,0.) node[midway,above]{$lm$};
+\draw[thick] (1.5,0.) circle (0.15);
 \end{tikzpicture}
  \\
-$ \left(lm \mid \Omega \right)=C_{lm}^*(\Omega)$ & 
+$ \rbraket{lm}{\Omega}=C_{lm}^*(\Omega)$ & 
 \begin{tikzpicture}[baseline=0pt]
-\draw[djmbraarrow] (0,0.) -- (0.9,0.) node[midway,above]{$lm$};
-\draw[domarrow]  (1.1,0.) -- (2,0.) node[midway,above]{$\Omega$};
-\draw[thick] (1,0.) circle (0.15);
-\end{tikzpicture}$=$
+\draw[djmbraarrow] (0,0.) -- (1.4,0.) node[midway,above]{$lm$};
+\draw[domarrow]  (1.6,0.) -- (3,0.) node[midway,above]{$\Omega$};
+\draw[thick] (1.5,0.) circle (0.15);
+\end{tikzpicture}
  \\
 \multicolumn{2}{c}{Clebsch-Gordan Coefficients}\\
-$ \clebsch{j_1}{m_1}{j_2}{m_2}{J}{M}=\left\langle j_1 m_1 j_2 m_2 \mid j_1 j_2 J M \right\rangle=\left\langle j_1j_2JM \mid j_1 m_1 j_2 m_2 \right\rangle$ &
+$ \clebsch{j_1}{m_1}{j_2}{m_2}{J}{M}=\braket{j_1 m_1 j_2 m_2}{j_1 j_2 J M}=\braket{j_1j_2JM}{j_1 m_1 j_2 m_2}$ &
 \begin{tikzpicture}[baseline=0pt]
-\draw[bjmarrow] (-0.5,0.71) -- ($0.06*(-0.5,0.71)$) node[at start,left]{$j_1 m_1$};
-\draw[bjmarrow] (-0.5,-0.71) -- ($0.06*(-0.5,-0.71)$) node[at start,left]{$j_2 m_2$};
-\draw[jmketarrow]  ($0.06*(1,0.)$) -- (1,0.) node[near end,above]{$JM$};
-\node[label={left:$+$}] at (0,0) {};
+\draw[bjmarrow] (-0.5,0.71) -- (0,0) node[at start,left]{$j_1 m_1$};
+\draw[bjmarrow] (-0.5,-0.71) -- (0,0) node[at start,left]{$j_2 m_2$};
+\draw[jmarrow]  (0,0) -- (1,0.) node[near end,above]{$JM$};
+\node[smalltri,rotate=90,label={left:\plusmark}] at (0,0) {};
 \end{tikzpicture}$=$\begin{tikzpicture}[baseline=0pt]
-\draw[bjmarrow] (-0.5,0.71) -- ($0.06*(-0.5,0.71)$) node[at start,left]{$j_2 m_2$};
-\draw[bjmarrow] (-0.5,-0.71) -- ($0.06*(-0.5,-0.71)$) node[at start,left]{$j_1 m_1$};
-\draw[jmketarrow]  ($0.06*(1,0.)$) -- (1,0.) node[near end,above]{$JM$};
-\node[label={left:$-$}] at (0,0) {};
+\draw[bjmarrow] (-0.5,0.71) -- (0,0) node[at start,left]{$j_2 m_2$};
+\draw[bjmarrow] (-0.5,-0.71) -- (0,0) node[at start,left]{$j_1 m_1$};
+\draw[jmarrow]  (0,0) -- (1,0.) node[near end,above]{$JM$};
+\node[smalltri,rotate=90,label={left:\minusmark}] at (0,0) {};
 \end{tikzpicture}\\
 &$=$\begin{tikzpicture}[baseline=0pt]
-\draw[bjmarrow]  (-1,0.) -- ($0.06*(-1,0.)$) node[near start,above]{$JM$};
-\draw[jmketarrow]  ($0.06*(0.5,0.71)$) -- (0.5,0.71) node[at end,right]{$j_1 m_1$};
-\draw[jmketarrow]  ($0.06*(0.5,-0.71)$) -- (0.5,-0.71) node[at end,right]{$j_2 m_2$};
-\node[label={right:$+$}] at (0,0) {};
+\draw[bjmarrow]  (-1,0.) -- (0,0) node[near start,above]{$JM$};
+\draw[jmarrow]  (0,0) -- (0.5,0.71) node[at end,right]{$j_1 m_1$};
+\draw[jmarrow]  (0,0) -- (0.5,-0.71) node[at end,right]{$j_2 m_2$};
+\node[smalltri,rotate=-90,label={right:\plusmark}] at (0,0) {};
 \end{tikzpicture}$=$
 \begin{tikzpicture}[baseline=0pt]
-\draw[bjmarrow]  (-1,0.) -- ($0.06*(-1,0.)$) node[near start,above]{$JM$};
-\draw[jmketarrow]  ($0.06*(0.5,0.71)$) -- (0.5,0.71) node[at end,right]{$j_2 m_2$};
-\draw[jmketarrow]  ($0.06*(0.5,-0.71)$) -- (0.5,-0.71) node[at end,right]{$j_1 m_2$};
-\node[label={right:$-$}] at (0,0) {};
+\draw[bjmarrow]  (-1,0.) -- (0,0) node[near start,above]{$JM$};
+\draw[jmarrow]  (0,0) -- (0.5,0.71) node[at end,right]{$j_2 m_2$};
+\draw[jmarrow]  (0,0) -- (0.5,-0.71) node[at end,right]{$j_1 m_2$};
+\node[smalltri,rotate=-90,label={right:\minusmark}] at (0,0) {};
 \end{tikzpicture}
 \end{tabular}
 \end{center}
 \end{table}
 
-\begin{table}[tbh!]
+\begin{table}[ptbh!]
 \begin{center}
 \captionsetup{justification=centering,labelformat=empty}
 \caption*{Table 11.1. (Cont'd).}
 \renewcommand{\arraystretch}{1.5}
-\begin{tabular}{lc}
+\begin{tabular}{@{}p{0.65\textwidth}c@{}}
 \hline
 {Analytical Expression} & Graphical Representation \\
 \hline
 \multicolumn{2}{c}{Wigner $3jm$ Symbols}\\
-$ \threej{j_1}{n_1}{j_2}{m_2}{j_3}{m_3}=\left( j_1 m_1 j_2 m_2 j_3 m_3 \mid 00 \right)=\left( 00 \mid j_1 m_1 j_2 m_2 j_3 m_3 \right)$ &
+$ \threej{j_1}{n_1}{j_2}{m_2}{j_3}{m_3}=\rbraket{j_1 m_1 j_2 m_2 j_3 m_3}{00}=\rbraket{00}{j_1 m_1 j_2 m_2 j_3 m_3}$ &
 \begin{tikzpicture}[baseline=0pt]
-\draw[djmbraarrow] (-0.5,0.71) -- ($-0.009*(-0.5,0.71)$) node[at start,left]{$j_1 m_1$};
-\draw[djmbraarrow] (-0.5,-0.71) -- ($-0.009*(-0.5,-0.71)$) node[at start,left]{$j_2 m_2$};
-\draw[jmrndarrow]  ($-0.009*(1,0.)$) -- (1,0.) node[near end,above]{$j_3m_3$};
-\node[label={left:$+$}] at (0,0) {};
+\draw[djmbraarrow] (-0.5,0.71) -- (0,0) node[at start,left]{$j_1 m_1$};
+\draw[djmbraarrow] (-0.5,-0.71) -- (0,0) node[at start,left]{$j_2 m_2$};
+\draw[jmrndarrow]  (0,0) -- (1,0.) node[near end,above]{$j_3m_3$};
+\node[dotnode,label={left:\plusmark}] at (0,0) {};
 \end{tikzpicture}$=$\begin{tikzpicture}[baseline=0pt]
-\draw[djmbraarrow] (-0.5,0.71) -- ($-0.009*(-0.5,0.71)$) node[at start,left]{$j_2 m_2$};
-\draw[djmbraarrow] (-0.5,-0.71) -- ($-0.009*(-0.5,-0.71)$) node[at start,left]{$j_1 m_1$};
-\draw[jmrndarrow]  ($-0.009*(1,0.)$) -- (1,0.) node[near end,above]{$j_3m_3$};
-\node[label={left:$-$}] at (0,0) {};
+\draw[djmbraarrow] (-0.5,0.71) -- (0,0) node[at start,left]{$j_2 m_2$};
+\draw[djmbraarrow] (-0.5,-0.71) -- (0,0) node[at start,left]{$j_1 m_1$};
+\draw[jmrndarrow]  (0,0) -- (1,0.) node[near end,above]{$j_3m_3$};
+\node[dotnode,label={left:\minusmark}] at (0,0) {};
 \end{tikzpicture}\\
 &$=$\begin{tikzpicture}[baseline=0pt]
-\draw[djmbraarrow]  (-1,0.) -- ($-0.009*(-1,0.)$) node[near start,above]{$j_3m_3$};
-\draw[jmrndarrow]  ($-0.009*(0.5,0.71)$) -- (0.5,0.71) node[at end,right]{$j_1 m_1$};
-\draw[jmrndarrow]  ($-0.009*(0.5,-0.71)$) -- (0.5,-0.71) node[at end,right]{$j_2 m_2$};
-\node[label={right:$+$}] at (0,0) {};
+\draw[djmbraarrow]  (-1,0.) -- (0,0) node[near start,above]{$j_3m_3$};
+\draw[jmrndarrow]  (0,0) -- (0.5,0.71) node[at end,right]{$j_1 m_1$};
+\draw[jmrndarrow]  (0,0) -- (0.5,-0.71) node[at end,right]{$j_2 m_2$};
+\node[dotnode,label={right:\plusmark}] at (0,0) {};
 \end{tikzpicture}$=$
 \begin{tikzpicture}[baseline=0pt]
-\draw[djmbraarrow]  (-1,0.) -- ($-0.009*(-1,0.)$) node[near start,above]{$j_3m)_3$};
-\draw[jmrndarrow]  ($-0.009*(0.5,0.71)$) -- (0.5,0.71) node[at end,right]{$j_2 m_2$};
-\draw[jmrndarrow]  ($-0.009*(0.5,-0.71)$) -- (0.5,-0.71) node[at end,right]{$j_1 m_2$};
-\node[label={right:$-$}] at (0,0) {};
+\draw[djmbraarrow]  (-1,0.) -- (0,0) node[near start,above]{$j_3m_3$};
+\draw[jmrndarrow]  (0,0) -- (0.5,0.71) node[at end,right]{$j_2 m_2$};
+\draw[jmrndarrow]  (0,0) -- (0.5,-0.71) node[at end,right]{$j_1 m_2$};
+\node[dotnode,label={right:\minusmark}] at (0,0) {};
 \end{tikzpicture}\\
 \multicolumn{2}{c}{Metric tensor}\\
-$\binom{j}{m m^{\prime}}=(-1)^{j+m} \delta_{m,-m^{\prime}}$& \\
-$\binom{j}{m^{\prime} m}=(-1)^{j-m} \delta_{-m, m^{\prime}}$& \\
+$\binom{j}{m m^{\prime}}=(-1)^{j+m} \delta_{m,-m^{\prime}}$&
+\metric{jm}{j'm'}{k}$=$
+\metric{jm}{j'm'}{b}
+ \\
+$\binom{j}{m^{\prime} m}=(-1)^{j-m} \delta_{-m, m^{\prime}}$&
+\metric{jm}{j'm'}{b}
+$=$
+\metric{jm}{j'm'}{k}\\
 \hline
 \end{tabular}
 \end{center}
@@ -294,7 +284,7 @@ $\binom{j}{m^{\prime} m}=(-1)^{j-m} \delta_{-m, m^{\prime}}$& \\
 \captionsetup{justification=centering,labelformat=empty}
 \caption{Table 11.2. Invariant Functions.}
 \renewcommand{\arraystretch}{1.5}
-\begin{tabular}{p{0.65\linewidth-2\tabcolsep}m{0.35\linewidth-2\tabcolsep}}
+\begin{tabular}{@{}p{0.65\textwidth}c@{}}
 %\begin{tabular}{lc}
 \hline
 {Analytical Expression} & Graphical Representation \\
@@ -389,7 +379,7 @@ $\ninej{a_1}{a_2}{a_3}{b_1}{b_2}{b_3}{c_1}{c_2}{c_3}$ & \ninejdgen{a_1,a_2,a_3,b
  $\twelvejI{a_1,a_2,a_3,a_4,b_1,b_2,b_3,b_4,c_1,c_2,c_3,c_4}$& \twIdiaga{a_1,a_2,a_3,a_4,b_1,b_2,b_3,b_4,c_1,c_2,c_3,c_4}$=$\twIdiagb{a_1,a_2,a_3,a_4,b_1,b_2,b_3,b_4,c_1,c_2,c_3,c_4}
  \\
  \multicolumn{2}{c}{$12 j$(II) Symbol} \\
-$\twelvejII{a_1,a_2,a_3,a_4,b_1,b_2,b_3,b_4,c_1,c_2,c_3,c_4}$& \twIIdiaga{a_1,a_2,a_3,a_4,b_1,b_2,b_3,b_4,c_1,c_2,c_3,c_4}$=$\twIIdiagb{a_1,a_2,a_3,a_4,b_1,b_2,b_3,b_4,c_1,c_2,c_3,c_4}
+$\twelvejII{c2,b_3,a_4,c_3,a_2,b_4,b_2,a_3,c_4,a_1,b_1,c_1}$& \twIIdiaga{a_1,a_2,a_3,a_4,b_1,b_2,b_3,b_4,c_1,c_2,c_3,c_4}$=$\twIIdiagb{a_1,a_2,a_3,a_4,b_1,b_2,b_3,b_4,c_1,c_2,c_3,c_4}
  \\
  \hline
 \end{tabular}
@@ -400,50 +390,52 @@ $\twelvejII{a_1,a_2,a_3,a_4,b_1,b_2,b_3,b_4,c_1,c_2,c_3,c_4}$& \twIIdiaga{a_1,a_
 \captionsetup{justification=centering,labelformat=empty}
 \caption{Table 11.3. Matrix Elements.}
 \renewcommand{\arraystretch}{1.5}
-\begin{tabular}{lc}
+\begin{tabular}{@{}p{0.65\textwidth}c@{}}
 \hline
 {Analytical Expression} & Graphical Representation \\
 \hline
 \multicolumn{2}{c}{Irreducible Tensor Operator}\\
-$\Omega$-Representation  $\braOket{\gamma \Omega}{\mathfrak{M}_{\lambda \mu}}{\gamma^{\prime} \Omega^{\prime}}$ & 
+$\Omega$-Representation  
+\[\braOket{\gamma \Omega}{\mathfrak{M}_{\lambda \mu}}{\gamma^{\prime} \Omega^{\prime}}\] & 
 \begin{tikzpicture}[baseline=0pt]
-\node[opbox] (M) at (0,0) {$\mathfrak{M}_{\gamma\gamma'}$};
-\draw[ombraarrow] (2,0.5)--(M) node[at start,right]{$\Omega$};
-\draw[jmketarrow] (M) --(2,0.) node[right]{$\lambda\mu$};
-\draw[omketarrow] (M) --(2,-0.5) node[right]{$\Omega'$};
+\node[opbox] (M) at (0,0) {\normalsize$\mathfrak{M}_{\gamma\gamma'}$};
+\draw[omarrow] (2,0.5)--(M) node[at start,right]{$\Omega$};
+\draw[jmarrow] (M) --(2,0.) node[right]{$\lambda\mu$};
+\draw[omarrow] (M) --(2,-0.5) node[right]{$\Omega'$};
 \end{tikzpicture}\\
-$\gamma$ denotes all quantum numbers except $\omega$\\
-Adjoint Matrix $\braOket{\gamma \Omega}{\mathfrak{M}_{\lambda \mu}^{+}}{\gamma^{\prime} \Omega^{\prime}}=(-1)^{\lambda-\mu}\braOket{\gamma'\Omega'}{\mathfrak{M}_{\lambda-\mu}}{\gamma\Omega}^*$ & 
+$\gamma$ denotes all quantum numbers except $\Omega$\\
+Adjoint Matrix \[\braOket{\gamma \Omega}{\mathfrak{M}_{\lambda \mu}^{+}}{\gamma^{\prime} \Omega^{\prime}}=(-1)^{\lambda-\mu}\braOket{\gamma'\Omega'}{\mathfrak{M}_{\lambda-\mu}}{\gamma\Omega}^*\] & 
 \begin{tikzpicture}[baseline=0pt]
-\node[opbox] (M) at (0,0) {$\mathfrak{M}^*_{\gamma'\gamma}$};
-\draw[omketarrow] (M) --(2,0.5) node[right]{$\Omega'$};
+\node[opbox] (M) at (0,0) {\normalsize$\mathfrak{M}^*_{\gamma'\gamma}$};
+\draw[omarrow] (M) --(2,0.5) node[right]{$\Omega'$};
 \draw[bjmarrow] (2,0.)--(M) node[at start,right]{$\lambda\mu$};
-\draw[ombraarrow] (2,-0.5)--(M) node[at start,right]{$\Omega$};
+\draw[omarrow] (2,-0.5)--(M) node[at start,right]{$\Omega$};
 \end{tikzpicture}\\
-$jm$-Representation $\braOket{\gamma j m}{\mathfrak{M}_{\lambda \mu}}{\gamma^{\prime} j^{\prime} m^{\prime}}$ & 
+$jm$-Representation \[\braOket{\gamma j m}{\mathfrak{M}_{\lambda \mu}}{\gamma^{\prime} j^{\prime} m^{\prime}}\] & 
 \begin{tikzpicture}[baseline=0pt]
-\node[opbox] (M) at (0,0) {$\mathfrak{M}_{\gamma\gamma'}$};
+\node[opbox] (M) at (0,0) {\normalsize$\mathfrak{M}_{\gamma\gamma'}$};
 \draw[bjmarrow] (2,0.5)--(M) node[at start,right]{$jm$};
-\draw[jmketarrow] (M) --(2,0.) node[right]{$\lambda\mu$};
-\draw[jmketarrow] (M) --(2,-0.5) node[right]{$j'm'$};
+\draw[jmarrow] (M) --(2,0.) node[right]{$\lambda\mu$};
+\draw[jmarrow] (M) --(2,-0.5) node[right]{$j'm'$};
 \end{tikzpicture}\\
-$\gamma$ denotes all quantum numbers except $\omega$\\
-Adjoint Matrix \\$\braOket{\gamma j m}{\mathfrak{M}_{\lambda \mu}^{+}}{\gamma^{\prime} j^{\prime} m^{\prime}}=(-1)^{\lambda-\mu}\braOket{\gamma'j'm'}{\mathfrak{M}_{\lambda-\mu}}{\gamma jm}^*$ & 
+$\gamma$ denotes all quantum numbers except $jm$\\
+Adjoint Matrix \[\braOket{\gamma j m}{\mathfrak{M}_{\lambda \mu}^{+}}{\gamma^{\prime} j^{\prime} m^{\prime}}=(-1)^{\lambda-\mu}\braOket{\gamma'j'm'}{\mathfrak{M}_{\lambda-\mu}}{\gamma jm}^*\] & 
 \begin{tikzpicture}[baseline=0pt]
-\node[opbox] (M) at (0,0) {$\mathfrak{M}^*_{\gamma'\gamma}$};
-\draw[jmketarrow] (M) --(2,0.5) node[right]{$j'm'$};
+\node[opbox] (M) at (0,0) {\normalsize$\mathfrak{M}^*_{\gamma'\gamma}$};
+\draw[jmarrow] (M) --(2,0.5) node[right]{$j'm'$};
 \draw[bjmarrow] (2,0.)--(M) node[at start,right]{$\lambda\mu$};
 \draw[bjmarrow] (2,-0.5)--(M) node[at start,right]{$jm$};
 \end{tikzpicture}\\ 
-Reduced Matrix Element\\
-$
+Reduced Matrix Element
+\[
 \begin{aligned}
-\left\langle\gamma j\left\|\mathfrak{M}_{\lambda}\right\| \gamma^{\prime} j^{\prime}\right\rangle= & \sum_{m \mu m^{\prime}}\langle\gamma j m| \mathfrak{M}_{\lambda \mu}\left|\gamma^{\prime} j^{\prime} m^{\prime}\right\rangle(-1)^{j-m} \\
+% PROOFREAD: reduced m.e. bracket convention -- book prints round parens (a||O||b); \braOketred renders angle. Kept angle here per instruction; revisit vs the round \rbraOketred used in Tables 11.14/11.15.
+\braOketred{\gamma j}{\mathfrak{M}_{\lambda}}{\gamma^{\prime} j^{\prime}}= & \sum_{m \mu m^{\prime}}\braOket{\gamma j m}{\mathfrak{M}_{\lambda \mu}}{\gamma^{\prime} j^{\prime} m^{\prime}}(-1)^{j-m} \\
 & \times\threej{j}{\lambda}{j^{\prime}}{-m}{\mu}{m^{\prime}}
 \end{aligned}
-$ &
+\] &
 \begin{tikzpicture}[baseline=0pt]
-\node[opbox] (M) at (0,0) {$\mathfrak{M}_{\gamma\gamma'}$};
+\node[opbox] (M) at (0,0) {\normalsize$\mathfrak{M}_{\gamma\gamma'}$};
 \node[dotnode,label={0:\plusmark}] (E) at (2,0) {}; 
 \draw[jmlinem] (M) to [bend left] node[pos=0.4,above]{$j$} (E);
 \draw[jmlinem] (M) --(E) node[midway,above]{$\lambda$};
@@ -458,22 +450,22 @@ $ &
 
 
 
-\begin{table}[tbh!]
+\begin{table}[ptbh!]
 \begin{center}
 \captionsetup{justification=centering,labelformat=empty}
 \renewcommand{\arraystretch}{1.5}
 \caption*{Table 11.3. Cnt'd}
-\begin{tabular}{lc}
+\begin{tabular}{@{}p{0.65\textwidth}c@{}}
 \hline
 {Analytical Expression} & Graphical Representation \\
 \hline
 \multicolumn{2}{c}{Rotation Operator} \\
 $\Omega$ representation\\
 $\braOket{\gamma'\Omega'}{D(R)}{\gamma\Omega}=\delta_{\gamma\gamma'}(\Omega'-R\Omega)$&
-\begin{tikzpicture}[baseline=0pt, inner sep=0.1em,font=\scriptsize]
-    \coordinate (T) at ($0.8*(0,1)$);
-    \coordinate (L) at ($0.8*(-0.866,-0.5)$);
-    \coordinate (R) at ($0.8*(0.866,-0.5)$);
+\begin{tikzpicture}[baseline=0pt, inner sep=0.2em,font=\scriptsize]
+    \coordinate (T) at (90:0.8); 
+    \coordinate (L) at (210:0.8);
+    \coordinate (R) at (330:0.8);
     \coordinate (M) at (0,0);
     \node[label={270:\plusmark}] {};
     \draw[rline] (M) to node[at end,right]{$R$} (T);
@@ -481,10 +473,10 @@ $\braOket{\gamma'\Omega'}{D(R)}{\gamma\Omega}=\delta_{\gamma\gamma'}(\Omega'-R\O
     \draw[bomarrown] (L) to  node [at start,left]{$\Omega'$} (M);
 \end{tikzpicture}
 $=$
-\begin{tikzpicture}[baseline=0pt, inner sep=0.1em,font=\scriptsize]
-    \coordinate (B) at ($0.8*(0,-1)$);
-    \coordinate (L) at ($0.8*(-0.866,0.5)$);
-    \coordinate (R) at ($0.8*(0.866,0.5)$);
+\begin{tikzpicture}[baseline=0pt, inner sep=0.2em,font=\scriptsize]
+    \coordinate (B) at (-90:0.8);
+    \coordinate (L) at (-210:0.8);
+    \coordinate (R) at (-330:0.8);
     \coordinate (M) at (0,0);
     \node[label={90:\minusmark}] {};
     \draw[rline] (M) to node[at end,right]{$R$} (B);
@@ -493,10 +485,10 @@ $=$
 \end{tikzpicture}
 \\
 $jm$-Representation\\
-$\langle\gamma j m| D(R)\left|\gamma^{\prime} j^{\prime} m^{\prime}\right\rangle=\delta_{\gamma \gamma^{\prime}} \delta_{j j^{\prime}} D_{m m^{\prime}}^{j}(R)$ & \begin{tikzpicture}[baseline=0pt, inner sep=0.1em,font=\scriptsize]
-    \coordinate (T) at ($0.8*(0,1)$);
-    \coordinate (L) at ($0.8*(-0.866,-0.5)$);
-    \coordinate (R) at ($0.8*(0.866,-0.5)$); 
+$\braOket{\gamma j m}{D(R)}{\gamma^{\prime} j^{\prime} m^{\prime}}=\delta_{\gamma \gamma^{\prime}} \delta_{j j^{\prime}} D_{m m^{\prime}}^{j}(R)$ & \begin{tikzpicture}[baseline=0pt, inner sep=0.2em,font=\scriptsize]
+    \coordinate (T) at (90:0.8); 
+    \coordinate (L) at (210:0.8);
+    \coordinate (R) at (330:0.8);
     \coordinate (M) at (0,0);
     \node[label={270:\minusmark}] {};
     \draw[rline] (M) to node[at end,right]{$R$} (T);
@@ -504,10 +496,10 @@ $\langle\gamma j m| D(R)\left|\gamma^{\prime} j^{\prime} m^{\prime}\right\rangle
     \draw[bjmarrow] (L) to  node [at start,left]{$jm$} (M);
 \end{tikzpicture}
 $=$
-\begin{tikzpicture}[baseline=0pt, inner sep=0.1em,font=\scriptsize]
-    \coordinate (B) at ($0.8*(0,-1)$);
-    \coordinate (L) at ($0.8*(-0.866,0.5)$);
-    \coordinate (R) at ($0.8*(0.866,0.5)$);
+\begin{tikzpicture}[baseline=0pt, inner sep=0.2em,font=\scriptsize]
+    \coordinate (B) at (-90:0.8);
+    \coordinate (L) at (-210:0.8);
+    \coordinate (R) at (-330:0.8);
     \coordinate (M) at (0,0);
     \node[label={90:\plusmark}] {};
     \draw[rline] (M) to node[at end,right]{$R$} (B);
@@ -516,10 +508,10 @@ $=$
 \end{tikzpicture}
  \\
 Inverse Rotation Matrix   \\
-\( \begin{gathered} \langle\gamma j m| D^{+}(R)\left|\gamma^{\prime} j^{\prime} m^{\prime}\right\rangle=\delta_{\gamma \gamma^{\prime}} \delta_{j j^{\prime}} D_{m^{\prime} m}^{j *}(R) \\ =\langle\gamma j m| D^{-1}(R)\left|\gamma^{\prime} j^{\prime} m^{\prime}\right\rangle=\delta_{\gamma \gamma^{\prime}} \delta_{j j^{\prime}} D_{m m^{\prime}}^{j}\left(R^{-1}\right) \end{gathered} \) & \begin{tikzpicture}[baseline=0pt, inner sep=0.1em,font=\scriptsize]
-    \coordinate (T) at ($0.8*(0,1)$);
-    \coordinate (L) at ($0.8*(-0.866,-0.5)$);
-    \coordinate (R) at ($0.8*(0.866,-0.5)$); 
+\( \begin{gathered} \braOket{\gamma j m}{D^{+}(R)}{\gamma^{\prime} j^{\prime} m^{\prime}}=\delta_{\gamma \gamma^{\prime}} \delta_{j j^{\prime}} D_{m^{\prime} m}^{j *}(R) \\ =\braOket{\gamma j m}{D^{-1}(R)}{\gamma^{\prime} j^{\prime} m^{\prime}}=\delta_{\gamma \gamma^{\prime}} \delta_{j j^{\prime}} D_{m m^{\prime}}^{j}\left(R^{-1}\right)\end{gathered} \) & \begin{tikzpicture}[baseline=0pt, inner sep=0.2em,font=\scriptsize]
+    \coordinate (T) at (90:0.8); 
+    \coordinate (L) at (210:0.8);
+    \coordinate (R) at (330:0.8);
     \coordinate (M) at (0,0);
     \node[label={270:\plusmark}] {};
     \draw[rline] (M) to node[at end,right]{$R$} (T);
@@ -527,10 +519,10 @@ Inverse Rotation Matrix   \\
     \draw[jmarrow] (M) to  node [at end,left]{$jm$} (L);
 \end{tikzpicture}
 $=$
-\begin{tikzpicture}[baseline=0pt, inner sep=0.1em,font=\scriptsize]
-    \coordinate (B) at ($0.8*(0,-1)$);
-    \coordinate (L) at ($0.8*(-0.866,0.5)$);
-    \coordinate (R) at ($0.8*(0.866,0.5)$);
+\begin{tikzpicture}[baseline=0pt, inner sep=0.2em,font=\scriptsize]
+    \coordinate (B) at (-90:0.8);
+    \coordinate (L) at (-210:0.8);
+    \coordinate (R) at (-330:0.8);
     \coordinate (M) at (0,0);
     \node[label={90:\minusmark}] {};
     \draw[rline] (M) to node[at end,right]{$R$} (B);
@@ -554,7 +546,7 @@ In other words, quantum mechanical problems are mainly concerned with invariant 
 This section describes the graphical representation of those analytic operations which are specific to angular momentum theory, while the rules of calculations by the graphical method will be formulated in the next section.
 
 \subsection{Multiplication}
-The product (direct product) of factors $\mathfrak{M}$ and $\mathfrak{N}$ is represented graphically by unlinked subdiagrams (blocks) which correspond to factors $\mathfrak{M}$ and $\mathfrak{N}$. The mutual disposition and orientation of these subdiagrams are inessential. For example, the product
+The product (direct product) of factors \normalsize$\mathfrak{M}$ and \normalsize$\mathfrak{N}$ is represented graphically by unlinked subdiagrams (blocks) which correspond to factors \normalsize$\mathfrak{M}$ and \normalsize$\mathfrak{N}$. The mutual disposition and orientation of these subdiagrams are inessential. For example, the product
 \[
 \threej{A}{B}{C}{\alpha}{\beta}{\gamma}\sixj{A}{B}{C}{a}{b}{c}
 \]
@@ -565,28 +557,29 @@ may be represented by\\
 \end{center}
 
 \subsection{Invariant Summation over Projections}
-The scalar product of two irreducible tensors of rank $j$, $\mathfrak{M}_{j m}$ and $\mathfrak{N}_{j m}$, i.e., the sum of bilinear combinations over all possible values of the projection $m$
+The scalar product of two irreducible tensors of rank $j$, \normalsize$\mathfrak{M}_{j m}$ and \normalsize$\mathfrak{N}_{j m}$, i.e., the sum of bilinear combinations over all possible values of the projection $m$
 \[
 \sum_{m=-j}^{j}\braOket{}{\mathfrak{M}}{j m}\braOket{j m}{\mathfrak{N}},
 \]
-is represented by the conjunction (closure) of $|j m\rangle$ - and ( $j m \mid$-lines of subdiagrams corresponding to $\langle | \mathfrak{W} \mid j m)$ and $\braket{j m}{\Re}$\\
+% PROOFREAD: OCR-garbled -- \mathfrak{W} is likely \mathfrak{M}; empty-bra \langle| covariant form; \Re likely \mathfrak{N}.
+is represented by the conjunction (closure) of $\ket{j m}$ - and $\rbra{j m}$-lines of subdiagrams corresponding to $\langle | \mathfrak{W} \rket{j m}$ and $\braket{j m}{\Re}$\\
 \begin{center}
 \begin{tikzpicture}[baseline=0pt]
-\node[opbox] (M1) at (0,0) {$\mathfrak{M}$};
-\node[opbox] (N1) at (2.2,0) {$\mathfrak{N}$};
+\node[opbox] (M1) at (0,0) {\normalsize$\mathfrak{M}$};
+\node[opbox] (N1) at (2.2,0) {\normalsize$\mathfrak{N}$};
 \coordinate (ml) at ($(M1.east)!0.45!(N1.west)$);
 \coordinate (mr) at ($(M1.east)!0.55!(N1.west)$);
 \draw[jmarrow] ($(M1.east)$) -- (ml) node[midway,above]{$jm$};
 \draw[bjmarrow] (mr) -- ($(N1.west)$) node[midway,below]{$jm$};
 \node[left=2pt of M1] {$\displaystyle\sum_m$};
 \node at (3.2,0) {$=$};
-\node[opbox] (M2) at (4.4,0) {$\mathfrak{M}$};
-\node[opbox] (N2) at (6.6,0) {$\mathfrak{N}$};
+\node[opbox] (M2) at (4.4,0) {\normalsize$\mathfrak{M}$};
+\node[opbox] (N2) at (6.6,0) {\normalsize$\mathfrak{N}$};
 \draw[jmlinem] (M2) -- (N2) node[midway,above]{$j$};
 \end{tikzpicture}
 \end{center}
 
-The resultant linking $j$-line has the same direction as the original $\mid j m\rangle$ - and $\langle j m|$-lines.\\
+The resultant linking $j$-line has the same direction as the original $\ket{j m}$ - and $\bra{j m}$-lines.\\
 For example, the sum of product of two $3jm$ symbols over two projections, $\alpha$ and $\beta$
 \[
 \sum_{\alpha, \beta}\threej{a}{b}{c}{\alpha}{\beta}{\gamma}\threej{a}{b}{c^{\prime}}{\alpha}{\beta}{\gamma^{\prime}}=\sum_{\alpha, \beta}(-1)^{a-\alpha+b-\beta+c-\gamma}\threej{a}{b}{c}{-\alpha}{-\beta}{-\gamma}\threej{a}{b}{c^{\prime}}{\alpha}{\beta}{\gamma^{\prime}}
@@ -631,8 +624,8 @@ may be displayed as
     \draw[jmlinem] (R) to[bend right=90] node[midway,above]{$a$} (L);
 \end{tikzpicture}}}
 \]
-
-Thus, each internal $j$-line of a diagram represents a scalar product (contraction over $m$ ) of two irreducible tensors of rank $j$. To construct such a scalar product one of these tensors should be written in a covariant form $\langle | \mathfrak{M}|j m\rangle \equiv \mathfrak{M}_{j m}$ while the other should be written in the form $\langle j m| \mathfrak{N}\left\rangle=(-1)^{j-m} \mathfrak{N}_{j-m}\right.$ (Sec. 3.1.8). Graphically, this means that one of the corresponding subdiagrams has the external $\mid j m)$-line (with single outward arrow) and the other has the  $\langle j m \mid$-line (\emph{with}  double inward arrow).
+% PROOFREAD: OCR-garbled covariant/contravariant forms -- empty-bra \langle| notation and delimiter fixes reconstructed; verify against Sec. 3.1.8.
+Thus, each internal $j$-line of a diagram represents a scalar product (contraction over $m$ ) of two irreducible tensors of rank $j$. To construct such a scalar product one of these tensors should be written in a covariant form $\langle | \mathfrak{M}\rket{j m} \equiv \mathfrak{M}_{j m}$ while the other should be written in the form $\bra{j m} \mathfrak{N}\rangle=(-1)^{j-m} \mathfrak{N}_{j-m}$ (Sec. 3.1.8). Graphically, this means that one of the corresponding subdiagrams has the external $\rket{j m}$-line (with single outward arrow) and the other has the  $\bra{j m}$-line (\emph{with}  double inward arrow).
 
 Two diagrams which differ only by the direction of an internal $j$-line, correspond to analytic expressions which differ only by the phase factor $(-1)^{2 j}$, because
 \[
@@ -640,13 +633,13 @@ Two diagrams which differ only by the direction of an internal $j$-line, corresp
 \]
 One should especially mention the entirely invariant sums of products of two, four, six, or more $3 j m$ symbols over all projections. Corresponding diagrams are closed with respect to all $j$-lines. These sums represent the Wigner $3 n j$ symbols (Table~11.4).
 
-\begin{table}[tbh!]
+\begin{table}[ptbh!]
 \begin{center}
 \captionsetup{justification=centering,labelformat=empty}
 \renewcommand{\arraystretch}{1.5}
 \caption{Table 11.4. Sums of $3 j m$ Symbol Products.}
 \small 
-\begin{tabular}{p{0.87\linewidth-2\tabcolsep}m{0.13\linewidth-2\tabcolsep}}
+\begin{tabular}{@{}p{0.8\textwidth}c@{}}
 \hline
 {Analytical Expression} & Graphical Representation \\
 \hline
@@ -688,8 +681,8 @@ One should especially mention the entirely invariant sums of products of two, fo
 A thick $j$-line linking two subdiagrams, as in
 \begin{center}
 \begin{tikzpicture}[baseline=0pt]
-\node[opbox] (M) at (0,0) {$\mathfrak{M}$};
-\node[opbox] (N) at (2.2,0) {$\mathfrak{N}$};
+\node[opbox] (M) at (0,0) {\normalsize$\mathfrak{M}$};
+\node[opbox] (N) at (2.2,0) {\normalsize$\mathfrak{N}$};
 \draw[jmlinem,line width=2pt] (M) -- (N) node[midway,above]{$j$};
 \end{tikzpicture}
 \end{center}
@@ -765,7 +758,6 @@ functions of the type $D_{m m^{\prime}}^{j}(R), C_{j m}(\Omega) \equiv[4 \pi /(2
 \end{tikzpicture}}}
 \end{aligned}
 \]
-
 A Clebsch-Gordan coefficient may be represented as a sum over $c^{\prime} \gamma^{\prime}$ of products of two $3 j m$ symbols (Table~11.10a)
 \[
 \begin{aligned}
@@ -799,29 +791,29 @@ over the total solid angle $4 \pi(0 \leq \vartheta \leq \pi, 0 \leq \varphi<2 \p
 \[ \int
 \vcenter{\hbox{
     \begin{tikzpicture}[baseline=0pt, inner sep=0.2em,font=\small]
-        \node[opbox] (M) at (-1.2,0) {$\mathfrak{M}$};
-        \node[opbox] (N) at (1.2,0) {$\mathfrak{N}$};
+        \node[opbox] (M) at (-2,0) {\normalsize$\mathfrak{M}$};
+        \node[opbox] (N) at (2,0) {\normalsize$\mathfrak{N}$};
     \draw[omketarrow] (M) -- (-0.3,0) ;
     \node (m) at (0,0) {$d\Omega$};
-    \draw[ombraarrow]  (0.3,0) -- (N);
+    \draw[bomarrown]  (0.3,0) -- (N);
     \end{tikzpicture}
     }
 }
 =
 \vcenter{\hbox{
     \begin{tikzpicture}[baseline=0pt, inner sep=0.2em,font=\small]
-        \node[opbox] (M) at (-0.6,0) {$\mathfrak{M}$};
-        \node[opbox] (N) at (0.6,0) {$\mathfrak{N}$};
+        \node[opbox] (M) at (-1,0) {\normalsize$\mathfrak{M}$};
+        \node[opbox] (N) at (1,0) {\normalsize$\mathfrak{N}$};
     \draw[omlinem] (M) -- (N) node[midway,above] {$\Omega$};
     \end{tikzpicture}
     }
 }
 \]
-The resultant $\Omega$-line has the same direction as the original $|\Omega\rangle$ - and ( $\Omega \mid$-lines. In this case $\Omega_{0}$ is the normalization constant; for integration of the standard spherical harmonics $\Omega_{0}=1$,
+The resultant $\Omega$-line has the same direction as the original $\ket{\Omega}$ - and $\rbra{\Omega}$-lines. In this case $\Omega_{0}$ is the normalization constant; for integration of the standard spherical harmonics $\Omega_{0}=1$,
 \[
 \int Y_{l m}^{*}(\Omega) Y_{l^{\prime} m^{\prime}}(\Omega) d \Omega=\braket{l m}{\Omega}\left(\Omega\left|l^{\prime} m^{\prime}\right\rangle\right. ,
-\vcenter{\hbox{\begin{tikzpicture}[baseline=-2pt]
-\draw[bjmarrow] (0,0) node[left]{$lm$} -- (1,0);
+\vcenter{\hbox{\begin{tikzpicture}[baseline=-5pt]
+\draw[jmbraarrow] (0,0) node[left]{$lm$} -- (1,0);
 \draw[omlinem] (1,0) -- (2,0) node[midway,above]{$\Omega$};
 \draw[jmketarrow] (2,0) -- (3,0) node[right]{$l^{\prime}m^{\prime}$};
 \end{tikzpicture}}}\]
@@ -830,36 +822,36 @@ whereas $\Omega_{0}=4 \pi$ for integration of the functions $C_{l m}(\Omega)=|4 
 \subsection{Integration over Rotation Parameters}
 
 
-\begin{table}[tbh!]
+\begin{table}[ptbh!]
 \begin{center}
 \captionsetup{justification=centering,labelformat=empty}
 \renewcommand{\arraystretch}{1.5}
 \caption{Table 11.5.\\
 Basic Operations of the Theory.}
-\small \begin{tabular}{l|c}
+\small 
+\begin{tabular}{@{}p{0.5\textwidth}|c@{}}
 \hline
 {Analytical Expression} & Graphical Representation \\
 \hline
 \multicolumn{2}{c}{Multiplication}\\
 $\braket{}{\mathfrak{M}}\braOket{}{\mathfrak{N}}{}$ &
   \begin{tikzpicture}[baseline=0pt, inner sep=0.2em,font=\small]
-        \node[opbox] (M) at (-0.6,0) {$\mathfrak{M}$};
-        \node[opbox] (N) at (0.6,0) {$\mathfrak{N}$};
+        \node[opbox] (M) at (-0.6,0) {\normalsize$\mathfrak{M}$};
+        \node[opbox] (N) at (0.6,0) {\normalsize$\mathfrak{N}$};
   \end{tikzpicture}
 \\
 \multicolumn{2}{c}{Invariant Summation over Momentum Projection}\\
-\multicolumn{2}{c}{Scalar Product of irreducible tensors}\\
-\(
-\sum_{m}\braOket{}{\mathfrak{N}}{j m}\braOket{j m}{\mathfrak{N}}{} \equiv\left(\mathfrak{N}_{j} \cdot \mathfrak{N}_{j}\right) \quad \mid \sum_{m} \mathfrak{M} \xrightarrow{j m}{ }^{j m} \mathfrak{N}=\mathfrak{M} \rightarrow \mathfrak{N}
-\)
+\multicolumn{2}{c}{(Scalar Product of irreducible tensors)}\\
+\[
+\sum_{m}\braOket{}{\mathfrak{N}}{j m}\braOket{j m}{\mathfrak{N}}{} \equiv\left(\mathfrak{N}_{j} \cdot \mathfrak{N}_{j}\right)\]
 &$\sum_{m}$\begin{tikzpicture}[baseline=0pt]
-\node[opbox] (M) at (0,0) {$\mathfrak{M}$};
-\node[opbox] (N) at (2,0) {$\mathfrak{N}$};
+\node[opbox] (M) at (0,0) {\normalsize$\mathfrak{M}$};
+\node[opbox] (N) at (2,0) {\normalsize$\mathfrak{N}$};
 \draw[jmketarrow] (M) -- (0.8,0) node[above]{$jm$};
-\draw[bjmarrow] (1.2,0) -- (N) node[at start,above]{$j'm'$};
+\draw[bjmarrow] (1.2,0) -- (N) node[at start,above]{$jm$};
 \end{tikzpicture}\ $=$\ \begin{tikzpicture}[baseline=0pt]
-\node[opbox] (M) at (0,0) {$\mathfrak{M}$};
-\node[opbox] (N) at (1.4,0) {$\mathfrak{N}$};
+\node[opbox] (M) at (0,0) {\normalsize$\mathfrak{M}$};
+\node[opbox] (N) at (1.4,0) {\normalsize$\mathfrak{N}$};
 \draw[jmlinem] (M) -- (N) node[midway,above]{$j$};
 \end{tikzpicture}
 \\
@@ -871,14 +863,14 @@ $\braket{}{\mathfrak{M}}\braOket{}{\mathfrak{N}}{}$ &
 \sum_{j m}|j m\rangle N_{j}\langle j m|=1
 \end{gathered}
 \)
-&$\sum_{j}$\begin{tikzpicture}[baseline=0pt]
-\node[opbox] (M) at (0,0) {$\mathfrak{M}$};
-\node[opbox] (N) at (1.4,0) {$\mathfrak{N}$};
+&$\displaystyle\sum_{j}$\begin{tikzpicture}[baseline=0pt]
+\node[opbox] (M) at (0,0) {\normalsize$\mathfrak{M}$};
+\node[opbox] (N) at (1.4,0) {\normalsize$\mathfrak{N}$};
 \draw[jmlinem] (M) -- (N) node[midway,above]{$j$};
 \end{tikzpicture}\ $=$\ \begin{tikzpicture}[baseline=0pt]
-\node[opbox] (M) at (0,0) {$\mathfrak{M}$};
-\node[opbox] (N) at (1.4,0) {$\mathfrak{N}$};
-\draw[jmlinem,thick=2pt] (M) -- (N) node[midway,above]{$j$};
+\node[opbox] (M) at (0,0) {\normalsize$\mathfrak{M}$};
+\node[opbox] (N) at (1.4,0) {\normalsize$\mathfrak{N}$};
+\draw[jmlinemu] (M) -- (N) node[midway,above]{$j$};
 \end{tikzpicture}
 \\
 \multicolumn{2}{c}{Irreducible Tensor Product of Irreducible Tensors}\\
@@ -889,68 +881,64 @@ $\braket{}{\mathfrak{M}}\braOket{}{\mathfrak{N}}{}$ &
 \end{aligned}
 \)&
 \begin{tikzpicture}[baseline=20pt]
-\node[opbox] (M) at (0,0) {$\mathfrak{M}$};
-\node[opbox] (N) at (2,0) {$\mathfrak{N}$};
+\node[opbox] (M) at (0,0) {\normalsize$\mathfrak{M}$};
+\node[opbox] (N) at (2,0) {\normalsize$\mathfrak{N}$};
 \coordinate (T) at (1,0.5);
 \node[label={below:\plusmark}] at (T) {};
-\node[regular polygon, regular polygon sides=3, minimum size=0.02,inner sep=1pt, fill=white, draw,rotate=180] (t) at (T) {};
+\node[smalltri,rotate=180] (t) at (T) {};
 \draw[jmlinem] (M) -- (t) node[midway,above left]{$j_1$};
 \draw[jmlinem] (N) -- (t) node[midway,above right]{$j_2$};
 \draw[jmarrow] (t) -- (1,1.4) node[above]{$JM$};
 \end{tikzpicture}
 $=$
 \begin{tikzpicture}[baseline=20pt]
-\node[opbox] (M) at (0,0) {$\mathfrak{M}$};
-\node[opbox] (N) at (2,0) {$\mathfrak{N}$};
+\node[opbox] (M) at (0,0) {\normalsize$\mathfrak{M}$};
+\node[opbox] (N) at (2,0) {\normalsize$\mathfrak{N}$};
 \coordinate (T) at (1,0.5);
 \node[minusnode] at (T) {};
 \draw[jmlinem] (T) -- (M) node[midway,above left]{$j_1$};
 \draw[jmlinem] (T) -- (N) node[midway,above right]{$j_2$};
 \draw[jmarrow] (T) -- (1,1.4) node[above]{$JM$};
-node
 \draw[
         decoration={markings, mark=at position 0.25 with  {\arrow{Stealth[length=2.2mm]}}},
         postaction={decorate},thick] (1,2.1) circle (0.3) node {$J$};
 \end{tikzpicture}
 \\
 \multicolumn{2}{c}{Complete Invariant Integration over Direction Angles}\\
-\parbox[t]{0.45\textwidth}{
-\(
+\[
 \int\braOket{}{\mathfrak{M}}{\Omega} d \Omega\braOket{\Omega}{\mathfrak{N}}{} 
-\)\\ 
-Completeness Condition  \\
-\(\int|\Omega\rangle d \Omega\langle\Omega|=1\)
-}
+\]
+Completeness Condition  
+\[\int|\Omega\rangle d \Omega\langle\Omega|=1\]
 &$\int$\begin{tikzpicture}[baseline=0pt]
-\node[opbox] (M) at (0,0) {$\mathfrak{M}$};
-\node[opbox] (N) at (2,0) {$\mathfrak{N}$};
+\node[opbox] (M) at (0,0) {\normalsize$\mathfrak{M}$};
+\node[opbox] (N) at (2,0) {\normalsize$\mathfrak{N}$};
 \draw[omketarrow] (M) -- (0.8,0);
 \draw[ombraarrow] (1.2,0) -- (N);
 \node at (1,0.2) {$d\Omega$};
 \end{tikzpicture}\ $=$\ \begin{tikzpicture}[baseline=0pt]
-\node[opbox] (M) at (0,0) {$\mathfrak{M}$};
-\node[opbox] (N) at (1.4,0) {$\mathfrak{N}$};
+\node[opbox] (M) at (0,0) {\normalsize$\mathfrak{M}$};
+\node[opbox] (N) at (1.4,0) {\normalsize$\mathfrak{N}$};
 \draw[omlinem] (M) -- (N) node[midway,above]{$\Omega$};
 \end{tikzpicture}\\
 \multicolumn{2}{c}{Complete Integration over Rotation Parameters}\\
-\parbox[t]{0.45\textwidth}{
-\(
-\left.\int\langle | \mathfrak{M}\left(R^{-1}\right)\left\rangle \frac{d R}{R_{0}}\langle | \mathfrak{N}(R)\right|\right\rangle
-\)\\
-PermutCompleteness Condition \\
-\(
+\[
+\int\braOket{}{\mathfrak{M}(R^{-1})}{} \frac{d R}{R_{0}}
+\braOket{}{\mathfrak{N}(R)}{}
+\]\\
+Completeness Condition \\
+\[
 \int \hat{R}^{-1} \hat{R} \frac{d R}{R_{0}}=1
-\)
-}
+\]
 &$\int$\begin{tikzpicture}[baseline=0pt]
-\node[opbox] (M) at (0,0) {$\mathfrak{M}$};
-\node[opbox] (N) at (2,0) {$\mathfrak{N}$};
+\node[opbox] (M) at (0,0) {\normalsize$\mathfrak{M}$};
+\node[opbox] (N) at (2.4,0) {\normalsize$\mathfrak{N}$};
 \draw[rline] (M) -- (0.8,0);
-\draw[rline] (1.2,0) -- (N);
-\node at (1,0.2) {$\frac{d R}{R_0}$};
+\draw[rline] (1.8,0) -- (N);
+\node at (1.3,0) {$\displaystyle\frac{d R}{R_0}$};
 \end{tikzpicture}\ $=$\ \begin{tikzpicture}[baseline=0pt]
-\node[opbox] (M) at (0,0) {$\mathfrak{M}$};
-\node[opbox] (N) at (1.4,0) {$\mathfrak{N}$};
+\node[opbox] (M) at (0,0) {\normalsize$\mathfrak{M}$};
+\node[opbox] (N) at (1.4,0) {\normalsize$\mathfrak{N}$};
 \draw[rline] (M) -- (N) node[midway,above]{$R$};
 \end{tikzpicture}
 \end{tabular}
@@ -960,14 +948,15 @@ PermutCompleteness Condition \\
 
 The integration of a bilinear form with respect to parameters which specify the rotation $R$ (the Euler angles $\{\alpha, \beta, \gamma\}$ or the angles $\{\omega, \theta, \Phi\})$ over the entire domain of their definition $\left(R_{0} \equiv \int d R\right.$, see Sec. 4.10)
 \[
+% PROOFREAD: OCR-garbled operator integral -- empty-bra \langle| forms and mismatched \left/\right; reconstruct against orig.
 \left.\int\langle | \mathfrak{M}(R)\left\rangle\langle | \mathfrak{N}\left(R^{-1}\right)\right|\right\rangle \frac{d R}{R_{0}}
 \]
 may be represented by a conjunction of corresponding $R$ - and $R^{-1}$-lines of subdiagrams which display the integrand factors.
 \[ \int
 \vcenter{\hbox{
     \begin{tikzpicture}[baseline=0pt, inner sep=0.2em,font=\scriptsize]
-        \node[opbox] (M) at (-1.2,0) {$\mathfrak{M}$};
-        \node[opbox] (N) at (1.2,0) {$\mathfrak{N}$};
+        \node[opbox] (M) at (-1.2,0) {\normalsize$\mathfrak{M}$};
+        \node[opbox] (N) at (1.2,0) {\normalsize$\mathfrak{N}$};
     \draw[rline] (M) -- (-0.3,0) ;
     \node (m) at (0,0) {$\frac{dR}{R_0}$};
     \draw[rline]  (0.3,0) -- (N);
@@ -977,8 +966,8 @@ may be represented by a conjunction of corresponding $R$ - and $R^{-1}$-lines of
 =
 \vcenter{\hbox{
     \begin{tikzpicture}[baseline=0pt, inner sep=0.2em,font=\scriptsize]
-        \node[opbox] (M) at (-0.6,0) {$\mathfrak{M}$};
-        \node[opbox] (N) at (0.6,0) {$\mathfrak{N}$};
+        \node[opbox] (M) at (-0.6,0) {\normalsize$\mathfrak{M}$};
+        \node[opbox] (N) at (0.6,0) {\normalsize$\mathfrak{N}$};
     \draw[rline] (M) -- (N) node[midway,above] {$R$};
     \end{tikzpicture}
     }
@@ -1048,7 +1037,6 @@ Thus, any deformation of a diagram performed under the proper check for the node
     }
 }
 \]
-
 Two diagrams will be called topologically similar, if it is possible to make them coincident by means of rotations, deformations and/or reflections. Topologically similar diagrams have the same numbers of nodes and of lines, solid and dashed, but they may differ by directions of lines and by node signs.
 
 The expressions corresponding to two topologically similar diagrams are equal in absolute value, but may differ by a phase factor. One may find this factor by means of successive reductions of one diagram to the other, i.e., by reversals of node signs and line directions (where necessary) in accordance with the rules formulated in Secs. 11.3.2 and 11.3.3. In this way one may reduce any diagram to the topologically similar diagram of some basis function of the theory, and determine the additional phase factor. Several examples of such transformation for the $3 j, 6 j$, and $9 j$ symbols are displayed in Table~11.6.
@@ -1153,7 +1141,6 @@ The reversal of the sign in a node joining $\left(j_{1} j_{2} j_{3}\right)$-line
 \draw[jmlinem] (0.3,-0.35) -- (N) node[pos=0.35,below]{$j_3$};
 \end{tikzpicture}
 \]
-
 The reversal of signs of all the nodes in a diagram produces an additional phase factor of $(-1)^{2 J_{0}+J_{1}}$, where $J_{0}$ and $J_{1}$ are the algebraic sums of all the momenta for the internal and external lines, respectively. For example,
 \begin{align*}
   &\begin{tikzpicture}[baseline=0pt,inner sep=0.2em,font=\scriptsize]
@@ -1208,7 +1195,6 @@ The reversal of signs of all the nodes in a diagram produces an additional phase
 \end{tikzpicture}
 \end{align*}
 
-
 \subsection{Change of Direction of External Lines}
 The direction of an external $j$-line specifies the form (covariant or contravariant, i.e. $|j m\rangle$ or $\langle j m|)$ of an irreducible tensor of rank $j$ (Sec. 11.1.1). The conversion of covariant components of a tensor into contravariant ones, as well as the inverse transformation, is carried out by contraction (over $m$ ) of the tensor in question with the tensor $\binom{j}{m m^{\prime}}=(-1)^{j+m} \delta_{m-m^{\prime}}$, which may be considered as the metric tensor for the $(2 j+1)$ dimensional space of the functions $|j m\rangle$. Such a transformation reads
 \[
@@ -1219,13 +1205,13 @@ The direction of an external $j$-line specifies the form (covariant or contravar
 \[
 \sum_{m'}
 \begin{tikzpicture}[baseline=0pt,inner sep=0.5em,font=\scriptsize]
-    \node[opbox](M) at (0,0){\normalsize$\mathfrak{M}$};
+    \node[opbox](M) at (0,0){\normalsize\normalsize$\mathfrak{M}$};
     \draw[jmarrow] (M) -- (1,0) node[above] {$jm'$};
     \draw[bjmarrow] (1.5,0) --(2.0,0) node[at start, above] {$jm'$};
     \draw[jmlinem] (2.3,0) --( 2.0,0);
     \draw[bjmarrow] (2.8,0) -- (2.3,0) node[at start,above] {$jm$};
     \node at (3.2,0) {$=$};
-    \node[opbox](M) at (4,0){\normalsize$\mathfrak{M}$};
+    \node[opbox](M) at (4,0){\normalsize\normalsize$\mathfrak{M}$};
     \draw[jmarrow] (M) -- (5,0) node[above] {$jm$};
 \end{tikzpicture}
 \]
@@ -1237,13 +1223,13 @@ and the inverse transformation is
 \]\[
 \sum_{m'}
 \begin{tikzpicture}[baseline=0pt,inner sep=0.5em,font=\scriptsize]
-    \node[opbox](M) at (0,0){\normalsize$\mathfrak{M}$};
+    \node[opbox](M) at (0,0){\normalsize\normalsize$\mathfrak{M}$};
     \draw[bjmarrow] (1,0) -- (M) node[at start,above] {$jm'$};
     \draw[jmarrow] (2,0) --(1.5,0) node[ above] {$jm'$};
     \draw[jmlinem] (2.3,0) --( 2.0,0);
     \draw[jmarrow] (2.3,0) -- (2.8,0) node[above] {$jm$};
     \node at (3.2,0) {$=$};
-    \node[opbox](M) at (4,0){\normalsize$\mathfrak{M}$};
+    \node[opbox](M) at (4,0){\normalsize\normalsize$\mathfrak{M}$};
     \draw[jmarrow] (M) -- (5,0) node[above] {$jm$};
 \end{tikzpicture}
 \]
@@ -1271,16 +1257,15 @@ For a closed diagram which represents a $3 n j$ symbol, reversal of the directio
 The reversal of the directions of three internal $j$-lines ( $j_{1} j_{2} j_{3}$ ) coupled together in a node does not produce any additional phase factor, since $(-1)^{2\left(j_{1}+j_{2}+j_{3}\right)}=1$. For example,
 \[\sixjdiagramd{a,b,c,A,B,C,+}\quad=\quad\sixjdiagramd{a,b,c,A,B,C,+}\]
 
-
 For a closed diagram associated with a $3 n j$ symbol the reversal of directions of all the $j$-lines and simultaneous reversal of signs of all the nodes do not change the meaning of the expression.
 
 \subsection{Linking Subdiagrams}
 In this Section the graphical rules for the multiplication of subdiagrams are formulated. These are the rules for linking the subdiagrams (blocks) into one united diagram.\\
-(a) Two subdiagrams representing factors $\mathfrak{M}$ and $\mathfrak{N}$, which have at least one identical (for both subdiagrams) $j$-line, may be linked together into the combined diagram which displays the product of these factors:
+(a) Two subdiagrams representing factors \normalsize$\mathfrak{M}$ and \normalsize$\mathfrak{N}$, which have at least one identical (for both subdiagrams) $j$-line, may be linked together into the combined diagram which displays the product of these factors:
 \[
 \begin{tikzpicture}[baseline=0pt,inner sep=0.2em,font=\scriptsize]
-    \node[opbox](M) at (0,0){\normalsize$\mathfrak{M}$};
-    \node[opbox](N) at (2.6,0){\normalsize$\mathfrak{N}$};
+    \node[opbox](M) at (0,0){\normalsize\normalsize$\mathfrak{M}$};
+    \node[opbox](N) at (2.6,0){\normalsize\normalsize$\mathfrak{N}$};
     \draw (N.30) -- ($(N.30)+(0.1,0)$);
     \draw (N.0) -- ($(N.0)+(0.1,0)$);
     \draw (N.330) -- ($(N.330)+(0.1,0)$);
@@ -1289,8 +1274,8 @@ In this Section the graphical rules for the multiplication of subdiagrams are fo
 \end{tikzpicture}
 =\jloop{j}{a}\quad
 \begin{tikzpicture}[baseline=0pt,inner sep=0.2em,font=\scriptsize]
-    \node[opbox](M) at (0,0){\normalsize$\mathfrak{M}$};
-    \node[opbox](N) at (1.8,0){\normalsize$\mathfrak{N}$};
+    \node[opbox](M) at (0,0){\normalsize\normalsize$\mathfrak{M}$};
+    \node[opbox](N) at (1.8,0){\normalsize\normalsize$\mathfrak{N}$};
     \draw (N.30) -- ($(N.30)+(0.1,0)$);
     \draw (N.0) -- ($(N.0)+(0.1,0)$);
     \draw (N.330) -- ($(N.330)+(0.1,0)$);
@@ -1298,16 +1283,15 @@ In this Section the graphical rules for the multiplication of subdiagrams are fo
     \draw[jmlinem] (N.210) -- (M.330) node[midway,above] {$j$};
 \end{tikzpicture}
 \]
-
 The necessary condition for such a linking is that at least one of these subdiagrams should have no external line. The graphical rule is equivalent to the relation
 \[
 \left(\sum_{m}\braOket{j m}{\mathfrak{M}}{j m}\right) \times\left(\sum_{m^{\prime}}\braOket{j m^{\prime}}{\Re}{j m^{\prime}}\right)=(2 j+1) \sum_{m m^{\prime}}\braOket{j m}{\mathfrak{M}}{j m^{\prime}}\braOket{j m^{\prime}}{\Re}{j m} .
 \]
-(b) Two subdiagrams representing the factors $\mathfrak{N}$ and $\mathfrak{N}$ which have at least one identical (for both subdiagrams) node, i.e., three coupled $j$-lines ( $j_{1} j_{2} j_{3}$ ) may be linked together into the combined diagram which corresponds to the product of these factors:\\
+(b) Two subdiagrams representing the factors \normalsize$\mathfrak{N}$ and \normalsize$\mathfrak{N}$ which have at least one identical (for both subdiagrams) node, i.e., three coupled $j$-lines ( $j_{1} j_{2} j_{3}$ ) may be linked together into the combined diagram which corresponds to the product of these factors:\\
 \[
 \begin{tikzpicture}[baseline=0pt,inner sep=0.4em,font=\scriptsize]
-    \node[opbox,minimum height=20mm](M) at (0,0){\normalsize$\mathfrak{M}$};
-    \node[opbox,minimum height=20mm](N) at (3.8,0){\normalsize$\mathfrak{N}$};
+    \node[opbox,minimum height=20mm](M) at (0,0){\normalsize\normalsize$\mathfrak{M}$};
+    \node[opbox,minimum height=20mm](N) at (3.8,0){\normalsize\normalsize$\mathfrak{N}$};
     \draw (N.50) -- ($(N.50)+(0.1,0)$);
     \draw (N.0) -- ($(N.0)+(0.1,0)$);
     \draw (N.310) -- ($(N.310)+(0.1,0)$);
@@ -1321,8 +1305,8 @@ The necessary condition for such a linking is that at least one of these subdiag
     \draw[jmlinem] (N.130) -- node[midway,above left] {$j_1$} (nc);
 \end{tikzpicture}\quad=\quad
 \begin{tikzpicture}[baseline=0pt,inner sep=0.2em,font=\scriptsize]
-    \node[opbox,minimum height=20mm](M) at (0,0){\normalsize$\mathfrak{M}$};
-    \node[opbox,minimum height=20mm](N) at (2.8,0){\normalsize$\mathfrak{N}$};
+    \node[opbox,minimum height=20mm](M) at (0,0){\normalsize\normalsize$\mathfrak{M}$};
+    \node[opbox,minimum height=20mm](N) at (2.8,0){\normalsize\normalsize$\mathfrak{N}$};
     \draw (N.50) -- ($(N.50)+(0.1,0)$);
     \draw (N.0) -- ($(N.0)+(0.1,0)$);
     \draw (N.310) -- ($(N.310)+(0.1,0)$);
@@ -1331,7 +1315,6 @@ The necessary condition for such a linking is that at least one of these subdiag
     \draw[jmlinem] (M.310) -- node[midway,above left] {$j_3$} (N.230);
 \end{tikzpicture}
 \]
-
 This is equivalent to the relation
 \[
 \begin{gathered}
@@ -1504,7 +1487,6 @@ For example,
 \end{tikzpicture}
 \]
 
-
 As in Scheme (a), at least one of these subdiagrams should have no external lines. However, in the other subdiagrams the joined $j$-lines may be external. For instance,\\
 \[
 \vcenter{\hbox{\begin{tikzpicture}[baseline=0pt, inner sep=0.3em,font=\scriptsize]
@@ -1561,7 +1543,6 @@ As in Scheme (a), at least one of these subdiagrams should have no external line
 \draw[jmline] (R) -- (330:1.6) node[below]{$b\beta$};
 \end{tikzpicture}
 \]
-
 Note that Scheme (a) is a special case of Scheme (b) when one of the momenta $j_{1}, j_{2}, j_{3}$ equals zero.
 
 \subsection{Cutting Diagram into Subdiagrams}
@@ -1593,8 +1574,8 @@ This means that the original sum becomes factorized. Therefore, the cases $n \le
 The analytic transformations under study correspond to cutting the associated diagram into two subdiagrams which represent two factors. The necessary condition is that at least one of these subdiagrams should have no more external lines (apart from those $j$-lines which link the subdiagram together)\\
 \[
 \begin{tikzpicture}[baseline=0pt,inner sep=0.4em,font=\scriptsize]
-    \node[opbox,minimum height=2.5cm,minimum width=0.7cm](M) at (0,0){\normalsize$\mathfrak{M}$};
-    \node[opbox,minimum height=2.5cm,minimum width=0.7cm](N) at (2,0){\normalsize$\mathfrak{N}$};
+    \node[opbox,minimum height=2.5cm,minimum width=0.7cm](M) at (0,0){\normalsize\normalsize$\mathfrak{M}$};
+    \node[opbox,minimum height=2.5cm,minimum width=0.7cm](N) at (2,0){\normalsize\normalsize$\mathfrak{N}$};
     \foreach \i in {-1,...,1} {
         \draw ([yshift=\i*5mm]N.east) -- ([yshift=\i*5mm,xshift=1mm]N.east);}
     % Equally spaced horizontal connectors: take the fixed edge anchors
@@ -1607,8 +1588,8 @@ The analytic transformations under study correspond to cutting the associated di
       \draw[jmlinem] ([yshift=(-1.7)*4mm]M.east) -- ([yshift=(-1.7)*4mm]N.west) node[midway,above] {$j_{n-1}$};
 \end{tikzpicture}=
 \begin{tikzpicture}[baseline=0pt,inner sep=0.3 em,font=\scriptsize]
-    \node[opbox,minimum height=2.5cm,minimum width=0.7cm](M) at (0,0){\normalsize$\mathfrak{M}$};
-    \node[opbox,minimum height=2.5cm,minimum width=0.7cm](N) at (4,0){\normalsize$\mathfrak{N}$};
+    \node[opbox,minimum height=2.5cm,minimum width=0.7cm](M) at (0,0){\normalsize\normalsize$\mathfrak{M}$};
+    \node[opbox,minimum height=2.5cm,minimum width=0.7cm](N) at (4,0){\normalsize\normalsize$\mathfrak{N}$};
     \foreach \i in {-1,...,1} {
         \draw ([yshift=\i*5mm]N.east) -- ([yshift=\i*5mm,xshift=1mm]N.east);}
     % Equally spaced horizontal connectors: take the fixed edge anchors
@@ -1645,7 +1626,6 @@ The analytic transformations under study correspond to cutting the associated di
 \]
 
 
-
 The most important cases of cutting of one, two, three, as well as four, five, and six $j$-lines are presented in Table~11.9.
 
 In many cases, the successive use of these rules allows one to divide a diagram into several (three or more) subdiagrams representing invariant factors. For example,\\
@@ -1659,7 +1639,7 @@ According to Sec. 11.2.3, a complete invariant sum over angular momentum $j$ and
 Rule $\sum$ : Any thick $j$-line which connects identical pairs of thin $j$-lines, may be removed provided the ends of the thin lines with equal momenta are linked together. This is displayed below:
 \[
 \begin{tikzpicture}[baseline=0pt,inner sep=0.2em,font=\scriptsize]
-    \node[opboxw](M) at (0,0){\normalsize$\mathfrak{M}$};
+    \node[opboxw](M) at (0,0){\normalsize\normalsize$\mathfrak{M}$};
     \coordinate (L) at (-0.5,1.2);
     \coordinate (R) at (0.5,1.2);
     \node[dotnode,label={above:\plusmark}] at (R) {};
@@ -1672,14 +1652,13 @@ Rule $\sum$ : Any thick $j$-line which connects identical pairs of thin $j$-line
 \end{tikzpicture}
 =
 \begin{tikzpicture}[baseline=0pt,inner sep=0.2em,font=\scriptsize]
-    \node[opboxw](M) at (0,0){\normalsize$\mathfrak{M}$};
+    \node[opboxw](M) at (0,0){\normalsize\normalsize$\mathfrak{M}$};
     \coordinate (L) at (-0.5,1.2);
     \coordinate (R) at (0.5,1.2);
     \draw[jmlinem] (M.150) to[bend left,in=90,out=90, distance=0.5cm]  node[midway,above] {$j_1$} (M.70); 
     \draw[jmlinem] (M.110) to[bend left,in=90,out=90, distance=0.5cm]   node[midway,above] {$j_2$} (M.30);
 \end{tikzpicture}
 \]
-
 Such a graphical operation does not change the meaning of a diagram and corresponds to the equation
 \[
 \sum_{j m}(2 j+1)\braOket{j_{1} j_{2} j m}{\mathfrak{M}}{j_{1} j_{2} j m}=\sum_{m_{1} m_{2}}\braOket{j_{1} m_{1} j_{2} m_{2}}{\mathfrak{M}}{j_{1} m_{1} j_{2} m_{2}}
@@ -1756,7 +1735,7 @@ The complete invariant summation over $j$ and $m$ may also be performed graphica
 
 In fact, all the rules for complete invariant summation formulated in this section follow from the completeness of $|j m\rangle$-functions.
 \[
-\left.\sum_{j m}|j m\rangle\langle j m|=\sum_{j m} \mid j m\right)(2 j+1)(j m \mid=1,
+\sum_{j m}\ket{j m}\bra{j m}=\sum_{j m}\rket{j m}(2 j+1)\rbra{j m}=1,
 \]
 \subsection{Replacing An Internal $\Omega$-Line by a Thick $j$-Line}
 Each internal $\Omega$-line which represents invariant integration over direction angles $\Omega\{\vartheta, \varphi\}$ may be replaced by a thick $j$-line representing the complete invariant sum over $j$ and $m$, according to
@@ -1884,7 +1863,7 @@ Completeness Condition\par
 &
 \centering Replacing dashed $\Omega$-line by thick solid $j$-line\par\medskip
 \begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
-\node[opbox,minimum width=2cm,minimum height=0.6cm](M){$\mathfrak{M}$};
+\node[opbox,minimum width=2cm,minimum height=0.6cm](M){\normalsize$\mathfrak{M}$};
 \coordinate(la)at([xshift=-8mm]M.north);\coordinate(lb)at([xshift=-2.5mm]M.north);
 \coordinate(lp)at([xshift=-5.25mm,yshift=6.5mm]M.north);
 \coordinate(ra)at([xshift=2.5mm]M.north);\coordinate(rb)at([xshift=8mm]M.north);
@@ -1894,7 +1873,7 @@ Completeness Condition\par
 \draw[omlinem](rp)--(lp)node[midway,above]{$\Omega$};
 \end{tikzpicture}\;$=$\;%
 \begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
-\node[opbox,minimum width=2cm,minimum height=0.6cm](M){$\mathfrak{M}$};
+\node[opbox,minimum width=2cm,minimum height=0.6cm](M){\normalsize$\mathfrak{M}$};
 \coordinate(la)at([xshift=-8mm]M.north);\coordinate(lb)at([xshift=-2.5mm]M.north);
 \coordinate(lp)at([xshift=-5.25mm,yshift=6.5mm]M.north);
 \coordinate(ra)at([xshift=2.5mm]M.north);\coordinate(rb)at([xshift=8mm]M.north);
@@ -1927,7 +1906,7 @@ Complete summation over $J$ and $M$&Elimination of thick solid $j$-line\\
 & =\sum_{m_{1} m_{2}}\braOket{j_{1} m_{1} j_{2} m_{2}}{\mathfrak{M}}{j_{1} m_{1} j_{2} m_{2}},
 \end{aligned} \)&
 \begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
-  \node[opbox,minimum width=2.4cm,minimum height=0.6cm](M){$\mathfrak{M}$};
+  \node[opbox,minimum width=2.4cm,minimum height=0.6cm](M){\normalsize$\mathfrak{M}$};
   \coordinate(l1)at([xshift=-10mm]M.north);\coordinate(l2)at([xshift=-3mm]M.north);
   \coordinate(lp)at([xshift=-6.5mm,yshift=8mm]M.north);
   \draw[jmline](l1)--(lp);\draw[jmline](lp)--(l2);
@@ -1941,7 +1920,7 @@ Complete summation over $J$ and $M$&Elimination of thick solid $j$-line\\
   \draw[jmlinemu](rp)--(lp)node[midway,above]{$J$};
 \end{tikzpicture}\;$=$\;%
 \begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
-  \node[opbox,minimum width=2.4cm,minimum height=0.6cm](M){$\mathfrak{M}$};
+  \node[opbox,minimum width=2.4cm,minimum height=0.6cm](M){\normalsize$\mathfrak{M}$};
   \coordinate(a)at([xshift=-9mm]M.north);\coordinate(b)at([xshift=-3mm]M.north);
   \coordinate(c)at([xshift=3mm]M.north);\coordinate(d)at([xshift=9mm]M.north);
   \draw[jmlinem](a)to[bend left=88]node[pos=0.12,above]{$j_1$}(c);
@@ -1954,8 +1933,8 @@ Complete summation over $J$ and $M$&Elimination of thick solid $j$-line\\
 m_{3} m_{4}}}\braOket{j_{1} m_{1} j_{2} m_{2}}{\mathfrak{M}}{j_{3} m_{3} j_{4} m_{4}}\braOket{j_{3} m_{3} j_{4} m_{4}}{\mathfrak{N}}{j_{1} m_{1} j_{2} m_{2}} .
 \end{aligned} \)&
 \begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
-  \node[opbox,minimum width=0.55cm,minimum height=2.2cm](M) at (0,0){$\mathfrak{M}$};
-  \node[opbox,minimum width=0.55cm,minimum height=2.2cm](N) at (2.7,0){$\mathfrak{N}$};
+  \node[opbox,minimum width=0.55cm,minimum height=2.2cm](M) at (0,0){\normalsize$\mathfrak{M}$};
+  \node[opbox,minimum width=0.55cm,minimum height=2.2cm](N) at (2.7,0){\normalsize$\mathfrak{N}$};
   \coordinate(up)at(1,0.5);\coordinate(lo)at(1,-0.5);
   \coordinate(un)at(1.7,0.5);\coordinate(ln)at(1.7,-0.5);
   \draw[jmlinem]([yshift=8mm]M.east)--(up)node[pos=0.4,above]{$j_1$};
@@ -1972,8 +1951,8 @@ m_{3} m_{4}}}\braOket{j_{1} m_{1} j_{2} m_{2}}{\mathfrak{M}}{j_{3} m_{3} j_{4} m
   \node[dotnode,label={left:\minusmark}]at(un){};\node[dotnode,label={left:\minusmark}]at(ln){};
 \end{tikzpicture}\;$=$\;%
 \begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
-  \node[opbox,minimum width=0.55cm,minimum height=2.2cm](M) at (0,0){$\mathfrak{M}$};
-  \node[opbox,minimum width=0.55cm,minimum height=2.2cm](N) at (1.9,0){$\mathfrak{N}$};
+  \node[opbox,minimum width=0.55cm,minimum height=2.2cm](M) at (0,0){\normalsize$\mathfrak{M}$};
+  \node[opbox,minimum width=0.55cm,minimum height=2.2cm](N) at (1.9,0){\normalsize$\mathfrak{N}$};
   \foreach \y/\lab in {8/j_1,2.7/j_2,-2.7/j_3,-8/j_4}{
     \draw[jmlinem]([yshift=\y mm]M.east)--([yshift=\y mm]N.west)node[midway,above]{$\lab$};}
 \end{tikzpicture}\\
@@ -1988,10 +1967,10 @@ m_{5} m_{6}}}\braOket{j_{1} m_{1} j_{2} m_{2}}{\mathfrak{M}}{j_{3} m_{3} j_{4} m
 \)&
 \begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
   \node[opbox,minimum width=0.5cm,minimum height=2.4cm,rotate=-30](M) at (150:1.7)
-       {\rotatebox{30}{\normalsize$\mathfrak{M}$}};
+       {\rotatebox{30}{\normalsize\normalsize$\mathfrak{M}$}};
   \node[opbox,minimum width=0.5cm,minimum height=2.4cm,rotate=30](L) at (30:1.7)
-       {\rotatebox{-30}{\normalsize$\mathfrak{L}$}};
-  \node[opbox,minimum width=2.4cm,minimum height=0.5cm](N) at (270:1.7){\normalsize$\mathfrak{N}$};
+       {\rotatebox{-30}{\normalsize\normalsize$\mathfrak{L}$}};
+  \node[opbox,minimum width=2.4cm,minimum height=0.5cm](N) at (270:1.7){\normalsize\normalsize$\mathfrak{N}$};
   % connection points along each box's inner edge
   \coordinate(mA)at($(M.south east)!0.89!(M.north east)$);
   \coordinate(mB)at($(M.south east)!0.63!(M.north east)$);
@@ -2034,10 +2013,10 @@ m_{5} m_{6}}}\braOket{j_{1} m_{1} j_{2} m_{2}}{\mathfrak{M}}{j_{3} m_{3} j_{4} m
 $=$\;%
 \begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
   \node[opbox,minimum width=0.5cm,minimum height=2.4cm,rotate=-30](M) at (150:1.7)
-       {\rotatebox{30}{\normalsize$\mathfrak{M}$}};
+       {\rotatebox{30}{\normalsize\normalsize$\mathfrak{M}$}};
   \node[opbox,minimum width=0.5cm,minimum height=2.4cm,rotate=30](L) at (30:1.7)
-       {\rotatebox{-30}{\normalsize$\mathfrak{L}$}};
-  \node[opbox,minimum width=2.4cm,minimum height=0.5cm](N) at (270:1.7){\normalsize$\mathfrak{N}$};
+       {\rotatebox{-30}{\normalsize\normalsize$\mathfrak{L}$}};
+  \node[opbox,minimum width=2.4cm,minimum height=0.5cm](N) at (270:1.7){\normalsize\normalsize$\mathfrak{N}$};
   \coordinate(mA)at($(M.south east)!0.89!(M.north east)$);
   \coordinate(mB)at($(M.south east)!0.63!(M.north east)$);
   \coordinate(mC)at($(M.south east)!0.37!(M.north east)$);
@@ -2072,8 +2051,8 @@ Transformation of product of invariant sums into invariant sum of products (at l
 &\left(\sum_{m}\braOket{j m}{\mathfrak{M}}{j m}\right)\left(\sum_{m^{\prime}}\braOket{j m^{\prime}}{\mathfrak{N}}{j m^{\prime}}\right) \\
 &=(2 j+1) \sum_{m m^{\prime}}\braOket{j m}{\mathfrak{M}}{j m^{\prime}}\braOket{j m^{\prime}}{\mathfrak{N}}{j m} \end{aligned} \)&
 \begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
-  \node[opbox,minimum width=0.7cm,minimum height=0.8cm](M) at (0,0){$\mathfrak{M}$};
-  \node[opbox,minimum width=0.7cm,minimum height=0.8cm](N) at (2.4,0){$\mathfrak{N}$};
+  \node[opbox,minimum width=0.7cm,minimum height=0.8cm](M) at (0,0){\normalsize$\mathfrak{M}$};
+  \node[opbox,minimum width=0.7cm,minimum height=0.8cm](N) at (2.4,0){\normalsize$\mathfrak{N}$};
   \coordinate(ma)at($(M.south east)!0.75!(M.north east)$);
   \coordinate(mb)at($(M.south east)!0.25!(M.north east)$);
   \draw[jmlinem](ma)to[out=0,in=0,looseness=2.5](mb);
@@ -2085,8 +2064,8 @@ Transformation of product of invariant sums into invariant sum of products (at l
 \end{tikzpicture}
 \;$=$\;%
 \begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
-  \node[opbox,minimum width=0.7cm,minimum height=0.8cm](M) at (0,0){$\mathfrak{M}$};
-  \node[opbox,minimum width=0.7cm,minimum height=0.8cm](N) at (2.2,0){$\mathfrak{N}$};
+  \node[opbox,minimum width=0.7cm,minimum height=0.8cm](M) at (0,0){\normalsize$\mathfrak{M}$};
+  \node[opbox,minimum width=0.7cm,minimum height=0.8cm](N) at (2.2,0){\normalsize$\mathfrak{N}$};
   \draw[jmlinem]([yshift=2.5mm]M.east)--([yshift=2.5mm]N.west)node[midway,above]{$j$};
   \draw[jmlinem]([yshift=-2.5mm]N.west)--([yshift=-2.5mm]M.east)node[midway,below]{$j$};
   % free (2j+1) loop below (unlabeled \jloop-style circle)
@@ -2101,8 +2080,8 @@ Transformation of product of invariant sums into invariant sum of products (at l
 \end{aligned}
 \)&
 \begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
-  \node[opbox,minimum width=0.55cm,minimum height=1.8cm](M) at (0,0){$\mathfrak{M}$};
-  \node[opbox,minimum width=0.55cm,minimum height=1.8cm](N) at (3.4,0){$\mathfrak{N}$};
+  \node[opbox,minimum width=0.55cm,minimum height=1.8cm](M) at (0,0){\normalsize$\mathfrak{M}$};
+  \node[opbox,minimum width=0.55cm,minimum height=1.8cm](N) at (3.4,0){\normalsize$\mathfrak{N}$};
   \coordinate(mA)at($(M.south east)!0.83!(M.north east)$);
   \coordinate(mB)at($(M.south east)!0.5!(M.north east)$);
   \coordinate(mC)at($(M.south east)!0.17!(M.north east)$);
@@ -2123,8 +2102,8 @@ Transformation of product of invariant sums into invariant sum of products (at l
 \newline
 $=$\;%
 \begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
-  \node[opbox,minimum width=0.55cm,minimum height=1.8cm](M) at (0,0){$\mathfrak{M}$};
-  \node[opbox,minimum width=0.55cm,minimum height=1.8cm](N) at (2.2,0){$\mathfrak{N}$};
+  \node[opbox,minimum width=0.55cm,minimum height=1.8cm](M) at (0,0){\normalsize$\mathfrak{M}$};
+  \node[opbox,minimum width=0.55cm,minimum height=1.8cm](N) at (2.2,0){\normalsize$\mathfrak{N}$};
   \coordinate(mA)at($(M.south east)!0.83!(M.north east)$);
   \coordinate(mB)at($(M.south east)!0.5!(M.north east)$);
   \coordinate(mC)at($(M.south east)!0.17!(M.north east)$);
@@ -2145,7 +2124,7 @@ Expression reduction for $J=0$&Elimination of a $J=0$ line in a diagram\\
 \end{gathered}
 \)&
 \begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
-  \node[opbox,minimum width=0.8cm,minimum height=0.8cm](M) at (0,0){$\mathfrak{M}$};
+  \node[opbox,minimum width=0.8cm,minimum height=0.8cm](M) at (0,0){\normalsize$\mathfrak{M}$};
   \coordinate(ma)at($(M.south east)!0.75!(M.north east)$);
   \coordinate(mb)at($(M.south east)!0.25!(M.north east)$);
   \node[dotnode,label={above:\plusmark}](p)at($(M.east)+(0.8,0)$){};
@@ -2155,7 +2134,7 @@ Expression reduction for $J=0$&Elimination of a $J=0$ line in a diagram\\
 \end{tikzpicture}
 \;$=$\;%
 \begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
-  \node[opbox,minimum width=0.8cm,minimum height=0.8cm](M) at (0,0){$\mathfrak{M}$};
+  \node[opbox,minimum width=0.8cm,minimum height=0.8cm](M) at (0,0){\normalsize$\mathfrak{M}$};
   \coordinate(ma)at($(M.south east)!0.75!(M.north east)$);
   \coordinate(mb)at($(M.south east)!0.25!(M.north east)$);
   \draw[jmlinem](ma)to[out=0,in=0,looseness=2.5](mb);
@@ -2191,7 +2170,7 @@ Expression reduction for $R=1$ &Elimination of the $R=1$ line\\
 \end{gathered}
 \) &
 \begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
-  \node[opbox,minimum width=0.8cm,minimum height=0.8cm](M) at (0,0){$\mathfrak{M}$};
+  \node[opbox,minimum width=0.8cm,minimum height=0.8cm](M) at (0,0){\normalsize$\mathfrak{M}$};
   \coordinate(ma)at($(M.south east)!0.75!(M.north east)$);
   \coordinate(mb)at($(M.south east)!0.25!(M.north east)$);
   \coordinate(p)at($(M.east)+(0.8,0)$);
@@ -2201,7 +2180,7 @@ Expression reduction for $R=1$ &Elimination of the $R=1$ line\\
 \end{tikzpicture}
 \;$=$\;%
 \begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
-  \node[opbox,minimum width=0.8cm,minimum height=0.8cm](M) at (0,0){$\mathfrak{M}$};
+  \node[opbox,minimum width=0.8cm,minimum height=0.8cm](M) at (0,0){\normalsize$\mathfrak{M}$};
   \coordinate(ma)at($(M.south east)!0.75!(M.north east)$);
   \coordinate(mb)at($(M.south east)!0.25!(M.north east)$);
   \draw[jmlinem](mb)to[out=0,in=0,looseness=2.5](ma);
@@ -2221,15 +2200,15 @@ Transformation of single, double, or triple invariant sum into direct product of
 \end{gathered}
 \) &
 \begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
-  \node[opbox,minimum width=0.8cm,minimum height=0.8cm](M) at (0,0){$\mathfrak{M}$};
-  \node[opbox,minimum width=0.8cm,minimum height=0.8cm](N) at (2.1,0){$\mathfrak{N}$};
+  \node[opbox,minimum width=0.8cm,minimum height=0.8cm](M) at (0,0){\normalsize$\mathfrak{M}$};
+  \node[opbox,minimum width=0.8cm,minimum height=0.8cm](N) at (2.1,0){\normalsize$\mathfrak{N}$};
   \draw[jmlinem](M.east)--(N.west)node[midway,above]{$j$};
   \foreach \i in {-1,1}{\draw([yshift=\i*2.5mm]N.east)--([yshift=\i*2.5mm,xshift=1.5mm]N.east);}
 \end{tikzpicture}
 \;$=$\;%
 \begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
-  \node[opbox,minimum width=0.8cm,minimum height=0.8cm](M) at (0,0){$\mathfrak{M}$};
-  \node[opbox,minimum width=0.8cm,minimum height=0.8cm](N) at (1.7,0){$\mathfrak{N}$};
+  \node[opbox,minimum width=0.8cm,minimum height=0.8cm](M) at (0,0){\normalsize$\mathfrak{M}$};
+  \node[opbox,minimum width=0.8cm,minimum height=0.8cm](N) at (1.7,0){\normalsize$\mathfrak{N}$};
   \foreach \i in {-1,1}{\draw([yshift=\i*2.5mm]N.east)--([yshift=\i*2.5mm,xshift=1.5mm]N.east);}
 \end{tikzpicture}
 \\
@@ -2241,8 +2220,8 @@ Transformation of single, double, or triple invariant sum into direct product of
 \end{gathered}
 \) &
 \begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
-  \node[opbox,minimum width=0.55cm,minimum height=1.6cm](M) at (0,0){$\mathfrak{M}$};
-  \node[opbox,minimum width=0.55cm,minimum height=1.6cm](N) at (1.9,0){$\mathfrak{N}$};
+  \node[opbox,minimum width=0.55cm,minimum height=1.6cm](M) at (0,0){\normalsize$\mathfrak{M}$};
+  \node[opbox,minimum width=0.55cm,minimum height=1.6cm](N) at (1.9,0){\normalsize$\mathfrak{N}$};
   \draw[jmlinem]([yshift=5mm]N.west)--([yshift=5mm]M.east)node[midway,above]{$j_1$};
   \draw[jmlinem]([yshift=-5mm]M.east)--([yshift=-5mm]N.west)node[midway,below]{$j_2$};
   \foreach \i in {-1,1}{\draw([yshift=\i*5mm]N.east)--([yshift=\i*5mm,xshift=1.5mm]N.east);}
@@ -2250,7 +2229,7 @@ Transformation of single, double, or triple invariant sum into direct product of
 \newline
 $=$\;%
 \begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
-  \node[opbox,minimum width=0.55cm,minimum height=1.6cm](M) at (0,0){$\mathfrak{M}$};
+  \node[opbox,minimum width=0.55cm,minimum height=1.6cm](M) at (0,0){\normalsize$\mathfrak{M}$};
   % closed j1-loop on M's right edge
   \coordinate(ma)at($(M.south east)!0.8!(M.north east)$);
   \coordinate(mb)at($(M.south east)!0.2!(M.north east)$);
@@ -2266,7 +2245,7 @@ $=$\;%
   \draw[jmlinem](bl)--(tl);
   \draw[jmlinem](br)--(tr);
   % N with closed j2-loop on its left edge
-  \node[opbox,minimum width=0.55cm,minimum height=1.6cm](N) at (3.5,0){$\mathfrak{N}$};
+  \node[opbox,minimum width=0.55cm,minimum height=1.6cm](N) at (3.5,0){\normalsize$\mathfrak{N}$};
   \coordinate(na)at($(N.south west)!0.8!(N.north west)$);
   \coordinate(nb)at($(N.south west)!0.2!(N.north west)$);
   \draw[jmlinem](na)to[out=180,in=180,looseness=1.6](nb);
@@ -2289,8 +2268,8 @@ Here the reduced matrix elements are
 \end{gathered}
 \) &
 \begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
-  \node[opbox,minimum width=0.55cm,minimum height=1.8cm](M) at (0,0){$\mathfrak{M}$};
-  \node[opbox,minimum width=0.55cm,minimum height=1.8cm](N) at (2.2,0){$\mathfrak{N}$};
+  \node[opbox,minimum width=0.55cm,minimum height=1.8cm](M) at (0,0){\normalsize$\mathfrak{M}$};
+  \node[opbox,minimum width=0.55cm,minimum height=1.8cm](N) at (2.2,0){\normalsize$\mathfrak{N}$};
   \coordinate(mA)at($(M.south east)!0.83!(M.north east)$);
   \coordinate(mB)at($(M.south east)!0.5!(M.north east)$);
   \coordinate(mC)at($(M.south east)!0.17!(M.north east)$);
@@ -2305,8 +2284,8 @@ Here the reduced matrix elements are
 \newline
 $=$\;%
 \begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
-  \node[opbox,minimum width=0.55cm,minimum height=1.8cm](M) at (0,0){$\mathfrak{M}$};
-  \node[opbox,minimum width=0.55cm,minimum height=1.8cm](N) at (3.4,0){$\mathfrak{N}$};
+  \node[opbox,minimum width=0.55cm,minimum height=1.8cm](M) at (0,0){\normalsize$\mathfrak{M}$};
+  \node[opbox,minimum width=0.55cm,minimum height=1.8cm](N) at (3.4,0){\normalsize$\mathfrak{N}$};
   \coordinate(mA)at($(M.south east)!0.83!(M.north east)$);
   \coordinate(mB)at($(M.south east)!0.5!(M.north east)$);
   \coordinate(mC)at($(M.south east)!0.17!(M.north east)$);
@@ -2339,15 +2318,15 @@ m_{3} m_{4}}}\threej{j_{1}}{j_{2}}{J}{m_{1}}{m_{2}}{M}\braOket{j_{1} m_{1} j_{2}
 \)
 and similarly for $\braOketred{j_{3} j_{4} J q}{\mathfrak{N}}{j_{1} j_{2} J p}$.&
 \begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
-  \node[opbox,minimum width=0.55cm,minimum height=2.2cm](M) at (0,0){$\mathfrak{M}$};
-  \node[opbox,minimum width=0.55cm,minimum height=2.2cm](N) at (2.2,0){$\mathfrak{N}$};
+  \node[opbox,minimum width=0.55cm,minimum height=2.2cm](M) at (0,0){\normalsize$\mathfrak{M}$};
+  \node[opbox,minimum width=0.55cm,minimum height=2.2cm](N) at (2.2,0){\normalsize$\mathfrak{N}$};
   \foreach \y/\lab in {8/j_1,2.7/j_2,-2.7/j_3,-8/j_4}{
     \draw[jmlinem]([yshift=\y mm]M.east)--([yshift=\y mm]N.west)node[midway,above]{$\lab$};}
 \end{tikzpicture}
 \newline
 $=$\;%
 \begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
-  \node[opbox,minimum width=0.55cm,minimum height=2.2cm](M) at (0,0){$\mathfrak{M}$};
+  \node[opbox,minimum width=0.55cm,minimum height=2.2cm](M) at (0,0){\normalsize$\mathfrak{M}$};
   \coordinate(up)at(1.05,0.5);\coordinate(lo)at(1.05,-0.5);
   \draw[jmlinem]([yshift=8mm]M.east)--(up)node[pos=0.4,above]{$j_1$};
   \draw[jmlinem]([yshift=2.7mm]M.east)--(up)node[pos=0.4,below]{$j_2$};
@@ -2359,7 +2338,7 @@ $=$\;%
 \end{tikzpicture}
 \;%
 \begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
-  \node[opbox,minimum width=0.55cm,minimum height=2.2cm](N) at (0,0){$\mathfrak{N}$};
+  \node[opbox,minimum width=0.55cm,minimum height=2.2cm](N) at (0,0){\normalsize$\mathfrak{N}$};
   \coordinate(un)at(-1.05,0.5);\coordinate(ln)at(-1.05,-0.5);
   \draw[jmlinem](un)--([yshift=8mm]N.west)node[pos=0.6,above]{$j_1$};
   \draw[jmlinem](un)--([yshift=2.7mm]N.west)node[pos=0.6,below]{$j_2$};
@@ -2403,15 +2382,15 @@ where
 \)and similarly for $\braOketred{J_{12} j_{3} J_{45} q}{\mathfrak{N}}{p}$.
 &
 \begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
-  \node[opbox,minimum width=0.55cm,minimum height=2.6cm](M) at (0,0){$\mathfrak{M}$};
-  \node[opbox,minimum width=0.55cm,minimum height=2.6cm](N) at (2.2,0){$\mathfrak{N}$};
+  \node[opbox,minimum width=0.55cm,minimum height=2.6cm](M) at (0,0){\normalsize$\mathfrak{M}$};
+  \node[opbox,minimum width=0.55cm,minimum height=2.6cm](N) at (2.2,0){\normalsize$\mathfrak{N}$};
   \foreach \y/\lab in {10/j_1,5/j_2,0/j_3,-5/j_4,-10/j_5}{
     \draw[jmlinem]([yshift=\y mm]M.east)--([yshift=\y mm]N.west)node[midway,above]{$\lab$};}
 \end{tikzpicture}
 \newline
 $=$\;%
 \begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
-  \node[opbox,minimum width=0.55cm,minimum height=2.6cm](M) at (0,0){$\mathfrak{M}$};
+  \node[opbox,minimum width=0.55cm,minimum height=2.6cm](M) at (0,0){\normalsize$\mathfrak{M}$};
   \coordinate(T)at(1.05,0.75);\coordinate(C)at(1.05,0);\coordinate(B)at(1.05,-0.75);
   \draw[jmlinem]([yshift=10mm]M.east)--(T)node[pos=0.4,above]{$j_1$};
   \draw[jmlinem]([yshift=5mm]M.east)--(T)node[pos=0.4,below]{$j_2$};
@@ -2426,7 +2405,7 @@ $=$\;%
 \end{tikzpicture}
 \;%
 \begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
-  \node[opbox,minimum width=0.55cm,minimum height=2.6cm](N) at (0,0){$\mathfrak{N}$};
+  \node[opbox,minimum width=0.55cm,minimum height=2.6cm](N) at (0,0){\normalsize$\mathfrak{N}$};
   \coordinate(T)at(-1.05,0.75);\coordinate(C)at(-1.05,0);\coordinate(B)at(-1.05,-0.75);
   \draw[jmlinem](T)--([yshift=10mm]N.west)node[pos=0.6,above]{$j_1$};
   \draw[jmlinem](T)--([yshift=5mm]N.west)node[pos=0.6,below]{$j_2$};
@@ -2457,15 +2436,15 @@ where
 \)
 and similarly for $\braOketred{J_{12} J_{34} J_{56} q}{\mathfrak{N}}{p}$. &
 \begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
-  \node[opbox,minimum width=0.55cm,minimum height=3.0cm](M) at (0,0){$\mathfrak{M}$};
-  \node[opbox,minimum width=0.55cm,minimum height=3.0cm](N) at (2.2,0){$\mathfrak{N}$};
+  \node[opbox,minimum width=0.55cm,minimum height=3.0cm](M) at (0,0){\normalsize$\mathfrak{M}$};
+  \node[opbox,minimum width=0.55cm,minimum height=3.0cm](N) at (2.2,0){\normalsize$\mathfrak{N}$};
   \foreach \y/\lab in {12.5/j_1,7.5/j_2,2.5/j_3,-2.5/j_4,-7.5/j_5,-12.5/j_6}{
     \draw[jmlinem]([yshift=\y mm]M.east)--([yshift=\y mm]N.west)node[midway,above]{$\lab$};}
 \end{tikzpicture}
 \newline
 $=$\;%
 \begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
-  \node[opbox,minimum width=0.55cm,minimum height=3.0cm](M) at (0,0){$\mathfrak{M}$};
+  \node[opbox,minimum width=0.55cm,minimum height=3.0cm](M) at (0,0){\normalsize$\mathfrak{M}$};
   \coordinate(T)at(1.0,1.0);\coordinate(C)at(1.0,0);\coordinate(B)at(1.0,-1.0);
   \coordinate(X)at(1.95,0);
   \draw[jmlinem]([yshift=12.5mm]M.east)--(T)node[pos=0.4,above]{$j_1$};
@@ -2484,7 +2463,7 @@ $=$\;%
 \end{tikzpicture}
 \;%
 \begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
-  \node[opbox,minimum width=0.55cm,minimum height=3.0cm](N) at (0,0){$\mathfrak{N}$};
+  \node[opbox,minimum width=0.55cm,minimum height=3.0cm](N) at (0,0){\normalsize$\mathfrak{N}$};
   \coordinate(T)at(-1.0,1.0);\coordinate(C)at(-1.0,0);\coordinate(B)at(-1.0,-1.0);
   \coordinate(X)at(-1.95,0);
   \draw[jmlinem](T)--([yshift=12.5mm]N.west)node[pos=0.6,above]{$j_1$};
@@ -2738,123 +2717,123 @@ $(-1)^{2j_2}$\,\begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsiz
 \hline
 \multicolumn{2}{c}{Definition and Properties}\\
 $|jm\,jm^{\prime}\rangle=\langle jm\,jm^{\prime}|=\dbinom{j}{m\ m^{\prime}}=(-1)^{j+m}\delta_{m,-m^{\prime}}$
-& \mline{jm}{k}{k}{jm^{\prime}}$\,=\,$\mline{jm}{b}{b}{jm^{\prime}} \\
+& \metric{jm}{jm^{\prime}}{k}$\,=\,$\metric{jm}{jm^{\prime}}{b} \\
 $\langle jm^{\prime}\,jm|=|jm^{\prime}\,jm\rangle=\dbinom{j}{m^{\prime}\ m}=(-1)^{j-m}\delta_{m^{\prime},-m}$
-& \mline{jm^{\prime}}{b}{b}{jm}$\,=\,$\mline{jm^{\prime}}{k}{k}{jm} \\
+& \metric{jm^{\prime}}{jm}{b}$\,=\,$\metric{jm^{\prime}}{jm}{k} \\
 $|jm^{\prime}\,jm\rangle=(-1)^{2j}|jm\,jm^{\prime}\rangle=\langle jm^{\prime}\,jm|=(-1)^{2j}\langle jm\,jm^{\prime}|$
 & \begin{tabular}{@{}c@{}}
-\mline{jm^{\prime}}{k}{k}{jm}$\,=(-1)^{2j}\,$\mline{jm}{k}{k}{jm^{\prime}}$\,=$ \\
-$=\,$\mline{jm^{\prime}}{b}{b}{jm}$\,=(-1)^{2j}\,$\mline{jm}{b}{b}{jm^{\prime}}
+\metric{jm^{\prime}}{jm}{k}$\,=(-1)^{2j}\,$\metric{jm}{jm^{\prime}}{k}$\,=$ \\
+$=\,$\metric{jm^{\prime}}{jm}{b}$\,=(-1)^{2j}\,$\metric{jm}{jm^{\prime}}{b}
 \end{tabular} \\
 $\displaystyle\sum_{m^{\prime}}|jm\,jm^{\prime}\rangle\langle jm^{\prime\prime}\,jm^{\prime}|=\langle jm^{\prime\prime}|jm\rangle$
-& \scalebox{0.82}{$\displaystyle\sum_{m^{\prime}}$\,\mline{jm}{k}{k}{jm^{\prime}}\,\mline{jm^{\prime}}{b}{b}{jm^{\prime\prime}}$\,=\,$\mline{jm}{k}{b}{jm^{\prime\prime}}} \\
+& \scalebox{0.82}{$\displaystyle\sum_{m^{\prime}}$\,\metric{jm}{jm^{\prime}}{k}\,\metric{jm^{\prime}}{jm^{\prime\prime}}{b}$\,=\,$\metric{jm}{jm^{\prime\prime}}{b}} \\
 \hline
 \multicolumn{2}{c}{Covariant $\rightleftarrows$ Contravariant. Transformation of the Irreducible Tensor}\\
-$\displaystyle\sum_{m^{\prime}}|jm\,jm^{\prime}\rangle\langle jm^{\prime}|\mathfrak{M}|\rangle=\langle|\mathfrak{M}|jm\rangle$
+$\displaystyle\sum_{m^{\prime}}|jm\,jm^{\prime}\rangle\braOket{jm^{\prime}}{\mathfrak{M}}{}=\braOket{}{\mathfrak{M}}{jm}$
 & \scalebox{0.82}{$\displaystyle\sum_{m^{\prime}}$
 \begin{tikzpicture}[baseline=-0.4ex,inner sep=0.13em,font=\scriptsize]
-  \node[opbox](M) at (0,0){$\mathfrak{M}$};
+  \node[opbox](M) at (0,0){\normalsize$\mathfrak{M}$};
   \draw[bjmarrow](1.2,0)--(M.east);\node at(1.2,0)[right]{$jm^{\prime}$};
 \end{tikzpicture}\,
-\mline{jm^{\prime}}{k}{k}{jm}$\,=\,$%
+\metric{jm^{\prime}}{jm}{k}$\,=\,$%
 \begin{tikzpicture}[baseline=-0.4ex,inner sep=0.13em,font=\scriptsize]
-  \node[opbox](M) at (0,0){$\mathfrak{M}$};
+  \node[opbox](M) at (0,0){\normalsize$\mathfrak{M}$};
   \draw[jmarrow](M.east)--(1.2,0);\node at(1.2,0)[right]{$jm$};
 \end{tikzpicture}} \\
-$\displaystyle\sum_{m^{\prime}}\langle|\mathfrak{M}|jm^{\prime}\rangle\langle jm^{\prime}\,jm|=\langle jm|\mathfrak{M}|\rangle$
+$\displaystyle\sum_{m^{\prime}}\braOket{}{\mathfrak{M}}{jm^{\prime}}\langle jm^{\prime}\,jm|=\braOket{jm}{\mathfrak{M}}{}$
 & \scalebox{0.82}{$\displaystyle\sum_{m^{\prime}}$
 \begin{tikzpicture}[baseline=-0.4ex,inner sep=0.13em,font=\scriptsize]
-  \node[opbox](M) at (0,0){$\mathfrak{M}$};
+  \node[opbox](M) at (0,0){\normalsize$\mathfrak{M}$};
   \draw[jmarrow](M.east)--(1.2,0);\node at(1.2,0)[right]{$jm^{\prime}$};
 \end{tikzpicture}\,
-\mline{jm^{\prime}}{b}{b}{jm}$\,=\,$%
+\metric{jm^{\prime}}{jm}{b}$\,=\,$%
 \begin{tikzpicture}[baseline=-0.4ex,inner sep=0.13em,font=\scriptsize]
-  \node[opbox](M) at (0,0){$\mathfrak{M}$};
+  \node[opbox](M) at (0,0){\normalsize$\mathfrak{M}$};
   \draw[bjmarrow](1.2,0)--(M.east);\node at(1.2,0)[right]{$jm$};
 \end{tikzpicture}} \\
 \hline
 \multicolumn{2}{c}{Scalar Product of Irreducible Tensors}\\
 \(\begin{aligned}
-&\sum_{m}\langle|\mathfrak{M}|jm\rangle\langle jm|\mathfrak{N}|\rangle\\
-&=\sum_{mm^{\prime}}\langle|\mathfrak{M}|jm\rangle\langle|\mathfrak{N}|jm^{\prime}\rangle\langle jm^{\prime}\,jm|\\
-&=\sum_{mm^{\prime}}|jm\,jm^{\prime}\rangle\langle jm^{\prime}|\mathfrak{M}|\rangle\langle jm|\mathfrak{N}|\rangle.
+&\sum_{m}\braOket{}{\mathfrak{M}}{jm}\braOket{jm}{\mathfrak{N}}{}\\
+&=\sum_{mm^{\prime}}\braOket{}{\mathfrak{M}}{jm}\braOket{}{\mathfrak{N}}{jm^{\prime}}\langle jm^{\prime}\,jm|\\
+&=\sum_{mm^{\prime}}|jm\,jm^{\prime}\rangle\braOket{jm^{\prime}}{\mathfrak{M}}{}\braOket{jm}{\mathfrak{N}}{}.
 \end{aligned}\)
 & \scalebox{0.82}{\begin{tabular}{@{}c@{}}
 \begin{tikzpicture}[baseline=-0.4ex,inner sep=0.13em,font=\scriptsize]
-  \node[opbox](M) at (0,0){$\mathfrak{M}$};\node[opbox](N) at (1.9,0){$\mathfrak{N}$};
+  \node[opbox](M) at (0,0){\normalsize$\mathfrak{M}$};\node[opbox](N) at (1.9,0){\normalsize$\mathfrak{N}$};
   \draw[jmlinem](M.east)--(N.west)node[midway,above]{$j$};
 \end{tikzpicture}$\;=\displaystyle\sum_{m}$
 \begin{tikzpicture}[baseline=-0.4ex,inner sep=0.13em,font=\scriptsize]
-  \node[opbox](M) at (0,0){$\mathfrak{M}$};
+  \node[opbox](M) at (0,0){\normalsize$\mathfrak{M}$};
   \draw[jmarrow](M.east)--(1.1,0);\node at(0.7,0.28){$jm$};
-  \node[opbox](N) at (3.4,0){$\mathfrak{N}$};
+  \node[opbox](N) at (3.4,0){\normalsize$\mathfrak{N}$};
   \draw[bjmarrow](1.7,0)--(N.west);\node at(2.4,0.28){$jm$};
 \end{tikzpicture} \\[0.4em]
 $\displaystyle=\sum_{mm^{\prime}}$
 \begin{tikzpicture}[baseline=-0.4ex,inner sep=0.13em,font=\scriptsize]
-  \node[opbox](M) at (0,0){$\mathfrak{M}$};
+  \node[opbox](M) at (0,0){\normalsize$\mathfrak{M}$};
   \draw[jmarrow](M.east)--(1.05,0);\node at(1.05,0.2)[right]{$jm$};
 \end{tikzpicture}\,
-\mline{jm}{b}{b}{jm^{\prime}}\,
+\metric{jm}{jm^{\prime}}{b}\,
 \begin{tikzpicture}[baseline=-0.4ex,inner sep=0.13em,font=\scriptsize]
-  \node[opbox](N) at (0,0){$\mathfrak{N}$};
+  \node[opbox](N) at (0,0){\normalsize$\mathfrak{N}$};
   \draw[jmarrow](N.west)--(-1.05,0);\node at(-1.05,0.2)[left]{$jm^{\prime}$};
 \end{tikzpicture} \\[0.4em]
 $\displaystyle=\sum_{mm^{\prime}}$
 \begin{tikzpicture}[baseline=-0.4ex,inner sep=0.13em,font=\scriptsize]
-  \node[opbox](M) at (0,0){$\mathfrak{M}$};
+  \node[opbox](M) at (0,0){\normalsize$\mathfrak{M}$};
   \draw[bjmarrow](1.05,0)--(M.east);\node at(1.05,0.2)[right]{$jm^{\prime}$};
 \end{tikzpicture}\,
-\mline{jm^{\prime}}{k}{k}{jm}\,
+\metric{jm^{\prime}}{jm}{k}\,
 \begin{tikzpicture}[baseline=-0.4ex,inner sep=0.13em,font=\scriptsize]
-  \node[opbox](N) at (0,0){$\mathfrak{N}$};
+  \node[opbox](N) at (0,0){\normalsize$\mathfrak{N}$};
   \draw[bjmarrow](-1.05,0)--(N.west);\node at(-1.05,0.2)[left]{$jm$};
 \end{tikzpicture}
 \end{tabular}} \\
 \(\begin{aligned}
-&\sum_{m}\langle jm|\mathfrak{M}|\rangle\langle|\mathfrak{N}|jm\rangle\\
-&=\sum_{mm^{\prime}}\langle|\mathfrak{M}|jm^{\prime}\rangle\langle|\mathfrak{N}|jm\rangle\langle jm^{\prime}\,jm|\\
-&=\sum_{mm^{\prime}}|jm\,jm^{\prime}\rangle\langle jm|\mathfrak{M}|\rangle\langle jm^{\prime}|\mathfrak{N}|\rangle.
+&\sum_{m}\braOket{jm}{\mathfrak{M}}{}\braOket{}{\mathfrak{N}}{jm}\\
+&=\sum_{mm^{\prime}}\braOket{}{\mathfrak{M}}{jm^{\prime}}\braOket{}{\mathfrak{N}}{jm}\langle jm^{\prime}\,jm|\\
+&=\sum_{mm^{\prime}}|jm\,jm^{\prime}\rangle\braOket{jm}{\mathfrak{M}}{}\braOket{jm^{\prime}}{\mathfrak{N}}{}.
 \end{aligned}\)
 & \scalebox{0.82}{\begin{tabular}{@{}c@{}}
 \begin{tikzpicture}[baseline=-0.4ex,inner sep=0.13em,font=\scriptsize]
-  \node[opbox](M) at (0,0){$\mathfrak{M}$};\node[opbox](N) at (1.9,0){$\mathfrak{N}$};
+  \node[opbox](M) at (0,0){\normalsize$\mathfrak{M}$};\node[opbox](N) at (1.9,0){\normalsize$\mathfrak{N}$};
   \draw[jmlinem](N.west)--(M.east)node[midway,above]{$j$};
 \end{tikzpicture}$\;=\displaystyle\sum_{m}$
 \begin{tikzpicture}[baseline=-0.4ex,inner sep=0.13em,font=\scriptsize]
-  \node[opbox](M) at (0,0){$\mathfrak{M}$};
+  \node[opbox](M) at (0,0){\normalsize$\mathfrak{M}$};
   \draw[bjmarrow](1.1,0)--(M.east);\node at(0.7,0.28){$jm$};
-  \node[opbox](N) at (3.4,0){$\mathfrak{N}$};
+  \node[opbox](N) at (3.4,0){\normalsize$\mathfrak{N}$};
   \draw[jmarrow](N.west)--(1.7,0);\node at(2.4,0.28){$jm$};
 \end{tikzpicture} \\[0.4em]
 $\displaystyle=\sum_{mm^{\prime}}$
 \begin{tikzpicture}[baseline=-0.4ex,inner sep=0.13em,font=\scriptsize]
-  \node[opbox](M) at (0,0){$\mathfrak{M}$};
+  \node[opbox](M) at (0,0){\normalsize$\mathfrak{M}$};
   \draw[jmarrow](M.east)--(1.05,0);\node at(1.05,0.2)[right]{$jm^{\prime}$};
 \end{tikzpicture}\,
-\mline{jm^{\prime}}{b}{b}{jm}\,
+\metric{jm^{\prime}}{jm}{b}\,
 \begin{tikzpicture}[baseline=-0.4ex,inner sep=0.13em,font=\scriptsize]
-  \node[opbox](N) at (0,0){$\mathfrak{N}$};
+  \node[opbox](N) at (0,0){\normalsize$\mathfrak{N}$};
   \draw[jmarrow](N.west)--(-1.05,0);\node at(-1.05,0.2)[left]{$jm$};
 \end{tikzpicture} \\[0.4em]
 $\displaystyle=\sum_{mm^{\prime}}$
 \begin{tikzpicture}[baseline=-0.4ex,inner sep=0.13em,font=\scriptsize]
-  \node[opbox](M) at (0,0){$\mathfrak{M}$};
+  \node[opbox](M) at (0,0){\normalsize$\mathfrak{M}$};
   \draw[bjmarrow](1.05,0)--(M.east);\node at(1.05,0.2)[right]{$jm$};
 \end{tikzpicture}\,
-\mline{jm}{k}{k}{jm^{\prime}}\,
+\metric{jm}{jm^{\prime}}{k}\,
 \begin{tikzpicture}[baseline=-0.4ex,inner sep=0.13em,font=\scriptsize]
-  \node[opbox](N) at (0,0){$\mathfrak{N}$};
+  \node[opbox](N) at (0,0){\normalsize$\mathfrak{N}$};
   \draw[bjmarrow](-1.05,0)--(N.west);\node at(-1.05,0.2)[left]{$jm^{\prime}$};
 \end{tikzpicture}
 \end{tabular}} \\
-$\displaystyle\sum_{m}\langle|\mathfrak{M}|jm\rangle\langle jm|\mathfrak{N}|\rangle=(-1)^{2j}\sum_{m}\langle jm|\mathfrak{M}|\rangle\langle|\mathfrak{N}|jm\rangle$
+$\displaystyle\sum_{m}\braOket{}{\mathfrak{M}}{jm}\braOket{jm}{\mathfrak{N}}{}=(-1)^{2j}\sum_{m}\braOket{jm}{\mathfrak{M}}{}\braOket{}{\mathfrak{N}}{jm}$
 & \begin{tikzpicture}[baseline=-0.4ex,inner sep=0.13em,font=\scriptsize]
-\node[opbox](M) at (0,0){$\mathfrak{M}$};\node[opbox](N) at (2,0){$\mathfrak{N}$};
+\node[opbox](M) at (0,0){\normalsize$\mathfrak{M}$};\node[opbox](N) at (2,0){\normalsize$\mathfrak{N}$};
 \draw[-{Stealth[length=2mm]},thick,line width=1pt] (M.east) -- (N.west) node[midway,above]{$j$};
 \end{tikzpicture}$=(-1)^{2j}$%
 \begin{tikzpicture}[baseline=-0.4ex,inner sep=0.13em,font=\scriptsize]
-\node[opbox](M) at (0,0){$\mathfrak{M}$};\node[opbox](N) at (2,0){$\mathfrak{N}$};
+\node[opbox](M) at (0,0){\normalsize$\mathfrak{M}$};\node[opbox](N) at (2,0){\normalsize$\mathfrak{N}$};
 \draw[-{Stealth[length=2mm]},thick,line width=1pt] (N.west) -- (M.east) node[midway,above]{$j$};
 \end{tikzpicture} \\
 \hline
@@ -2874,8 +2853,8 @@ $\displaystyle\sum_{m}\langle|\mathfrak{M}|jm\rangle\langle jm|\mathfrak{N}|\ran
 \multicolumn{1}{c|}{Analytical Expression} & Graphical Representation \\
 \hline
 \multicolumn{2}{c}{Definition}\\
-$C_{lm}(\Omega)\equiv\sqrt{\dfrac{4\pi}{2l+1}}\,Y_{lm}(\Omega)=(\Omega\mid lm)$,\newline
-$C_{lm}^{*}(\Omega)=(-1)^{m}C_{l-m}(\Omega)=(lm\mid\Omega)$.
+$C_{lm}(\Omega)\equiv\sqrt{\dfrac{4\pi}{2l+1}}\,Y_{lm}(\Omega)=\rbraket{\Omega}{lm}$,\newline
+$C_{lm}^{*}(\Omega)=(-1)^{m}C_{l-m}(\Omega)=\rbraket{lm}{\Omega}$.
 & \begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
   \draw[bomarrown](-1.3,0)--(0,0);\node at(-0.75,0.28){$\Omega$};
   \node[deltanode]at(0,0){};
@@ -3651,12 +3630,12 @@ $\begin{aligned}
 \multicolumn{2}{c}{\parbox{0.93\textwidth}{\centering Matrix element of an irreducible tensor operator of rank $k$ in the JM-representation
 (Wigner-Eckart theorem)}}\\
 \[
-\braOket{\gamma J M}{\mathfrak{M}_{kq}}{\gamma^{\prime} J^{\prime} M^{\prime}}=(-1)^{J-M}\threej{J}{k}{J^{\prime}}{-M}{q}{M^{\prime}}\left(\gamma J\left\|\mathfrak{M}_{k}\right\| \gamma^{\prime} J^{\prime}\right) .
+\braOket{\gamma J M}{\mathfrak{M}_{kq}}{\gamma^{\prime} J^{\prime} M^{\prime}}=(-1)^{J-M}\threej{J}{k}{J^{\prime}}{-M}{q}{M^{\prime}}\rbraOketred{\gamma J}{\mathfrak{M}_{k}}{\gamma^{\prime} J^{\prime}} .
 \]
-where $\left(\gamma J\left\|\mathfrak{M}_{k}\right\| \gamma^{\prime} J^{\prime}\right)$ is the reduced matrix element
+where $\rbraOketred{\gamma J}{\mathfrak{M}_{k}}{\gamma^{\prime} J^{\prime}}$ is the reduced matrix element
 &
 \scalebox{0.72}{\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
-  \node[draw,minimum width=1.7cm,minimum height=0.7cm](M)at(0,0){\normalsize$\mathfrak{M}_{\gamma\gamma'}$};
+  \node[draw,minimum width=1.7cm,minimum height=0.7cm](M)at(0,0){\normalsize\normalsize$\mathfrak{M}_{\gamma\gamma'}$};
   \draw[bjmarrow]($(M.north)+(-0.55,1.2)$)--($(M.north)+(-0.55,0)$);
   \node at($(M.north)+(-0.55,1.35)$){$JM$};
   \draw[jmarrow]($(M.north)+(0,0)$)--($(M.north)+(0,1.2)$);
@@ -3665,7 +3644,7 @@ where $\left(\gamma J\left\|\mathfrak{M}_{k}\right\| \gamma^{\prime} J^{\prime}\
   \node at($(M.north)+(0.55,1.35)$){$J'M'$};
 \end{tikzpicture}$=$%
 \begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
-  \node[draw,minimum width=1.7cm,minimum height=0.7cm](M)at(0,0){\normalsize$\mathfrak{M}_{\gamma\gamma'}$};
+  \node[draw,minimum width=1.7cm,minimum height=0.7cm](M)at(0,0){\normalsize\normalsize$\mathfrak{M}_{\gamma\gamma'}$};
   \coordinate(P)at($(M.north)+(0,0.7)$);
   \node[dotnode,label={90:\plusmark}]at(P){};
   \draw[jmlinem](M.north)++(-0.5,0)--(P)node[midway,left]{$J$};
@@ -3681,9 +3660,9 @@ where $\left(\gamma J\left\|\mathfrak{M}_{k}\right\| \gamma^{\prime} J^{\prime}\
 \multicolumn{2}{c}{\parbox{0.93\textwidth}{\centering Reduced Matrix elements of irreducible tensor product of irreducible tensor operators.}}\\
 \[
 \begin{gathered}
-\left(\gamma J\left\|\left\{\mathfrak{M}_{k_{1}} \otimes \mathfrak{N}_{k_{2}}\right\}_{k}\right\| \gamma^{\prime} J^{\prime}\right) \\
+\rbraOketred{\gamma J}{\left\{\mathfrak{M}_{k_{1}} \otimes \mathfrak{N}_{k_{2}}\right\}_{k}}{\gamma^{\prime} J^{\prime}} \\
 =(-1)^{J+k+J^{\prime}} \sqrt{2 k+1} \sum_{\gamma^{\prime\prime} J^{\prime \prime}}\sixj{J}{k}{J^{\prime}}{k_{2}}{J^{\prime \prime}}{k_{1}} \\
-\times\left(\gamma J\left\|\mathfrak{M}_{k_{1}}\right\| \gamma^{\prime \prime} J^{\prime \prime}\right)\left(\gamma^{\prime\prime} J^{\prime \prime}\left\|\mathfrak{N}_{k_{2}}\right\| \gamma^{\prime} J^{\prime}\right) .
+\times\rbraOketred{\gamma J}{\mathfrak{M}_{k_{1}}}{\gamma^{\prime \prime} J^{\prime \prime}}\rbraOketred{\gamma^{\prime\prime} J^{\prime \prime}}{\mathfrak{N}_{k_{2}}}{\gamma^{\prime} J^{\prime}} .
 \end{gathered}
 \] &
 \scalebox{0.62}{%
@@ -3729,9 +3708,9 @@ $=\displaystyle\sum_{\gamma''}$%
 \multicolumn{2}{c}{\parbox{0.93\textwidth}{\centering Two coupled subsystems in the $j_{1} j_{2};JM$-representation. Reduced matrix element of the irreducible tensor product of two irreducible tensor operators, one of which depends only on variables of the first subsystem and the other depends only on variables of the second subsystem.}}\\
 \[
 \begin{aligned}
-& \left(\gamma j_{1} j_{2} J\left\|\left\{\mathfrak{M}_{k_{1}}(1) \otimes \mathfrak{N}_{k_{2}}(2)\right\}_{k}\right\| \gamma^{\prime} j_{1}^{\prime} j_{2}^{\prime} J^{\prime}\right) \\
+& \rbraOketred{\gamma j_{1} j_{2} J}{\left\{\mathfrak{M}_{k_{1}}(1) \otimes \mathfrak{N}_{k_{2}}(2)\right\}_{k}}{\gamma^{\prime} j_{1}^{\prime} j_{2}^{\prime} J^{\prime}} \\
 = & \sqrt{(2 J+1)(2 k+1)\left(2 J^{\prime}+1\right)}\ninej{j_{1}}{j_{1}^{\prime}}{k_{1}}{j_{2}}{j_{2}^{\prime}}{k_{2}}{J}{J^{\prime}}{k} \\
-& \times \sum_{\gamma^{\prime \prime}}\left(\gamma j_{1}\left\|\mathfrak{M}_{k_{1}}\right\| \gamma^{\prime \prime} j_{1}^{\prime}\right)\left(\gamma^{\prime \prime} j_{2}\left\|\mathfrak{N}_{k_{2}}\right\| \gamma^{\prime} j_{2}^{\prime}\right)
+& \times \sum_{\gamma^{\prime \prime}}\rbraOketred{\gamma j_{1}}{\mathfrak{M}_{k_{1}}}{\gamma^{\prime \prime} j_{1}^{\prime}}\rbraOketred{\gamma^{\prime \prime} j_{2}}{\mathfrak{N}_{k_{2}}}{\gamma^{\prime} j_{2}^{\prime}}
 \end{aligned}
 \]&
 \scalebox{0.55}{%
@@ -3793,7 +3772,7 @@ depend on variables of the first and the second subsystems, respectively.}}\\
 \begin{gathered}
 \braOket{\gamma j_{1} j_{2} J M}{\left(\mathfrak{M}_{k}(1) \cdot \mathfrak{N}_{k}(2)\right)}{\gamma^{\prime} j_{1}^{\prime} j_{2}^{\prime} J^{\prime} M^{\prime}} \\
 =(-1)^{j_{1}^{\prime}+j_{2}+J}\delta_{J J^{\prime}} \delta_{M M^{\prime}}\sixj{j_{1}}{j_{2}}{J}{j_{2}^{\prime}}{j_{1}^{\prime}}{k} \\
-\times \sum_{\gamma^{\prime \prime}}\left(\gamma j_{1}\left\|\mathfrak{M}_{k}\right\| \gamma^{\prime \prime} j_{1}^{\prime}\right)\left(\gamma^{\prime \prime} j_{2}\left\|\mathfrak{N}_{k}\right\| \gamma^{\prime} j_{2}^{\prime}\right)
+\times \sum_{\gamma^{\prime \prime}}\rbraOketred{\gamma j_{1}}{\mathfrak{M}_{k}}{\gamma^{\prime \prime} j_{1}^{\prime}}\rbraOketred{\gamma^{\prime \prime} j_{2}}{\mathfrak{N}_{k}}{\gamma^{\prime} j_{2}^{\prime}}
 \end{gathered}
 \] &
 \scalebox{0.5}{%
@@ -3836,9 +3815,9 @@ $=(-1)^{-k}\displaystyle\sum_{\gamma''}$%
 \multicolumn{2}{c}{\parbox{0.93\textwidth}{\centering Reduced matrix element of an irreducible tensor operator which depends only on variables of the first subsystem.}}\\
 \[
 \begin{gathered}
-\left(\gamma j_{1} j_{2} J\left\|\mathfrak{M}_{k}(1)\right\| \gamma^{\prime} j_{1}^{\prime} j_{2}^{\prime} J^{\prime}\right) \\
+\rbraOketred{\gamma j_{1} j_{2} J}{\mathfrak{M}_{k}(1)}{\gamma^{\prime} j_{1}^{\prime} j_{2}^{\prime} J^{\prime}} \\
 =(-1)^{j_{1}+j_{2}+J^{\prime}+k} \delta_{j_{2} j_{2}^{\prime}} \sqrt{(2 J+1)\left(2 J^{\prime}+1\right)} \\
-\times\sixj{J}{k}{J^{\prime}}{j_{1}^{\prime}}{j_{2}}{j_{1}}\left(\gamma j_{1}\left\|\mathfrak{M}_{k}\right\| \gamma^{\prime} j_{1}^{\prime}\right) .
+\times\sixj{J}{k}{J^{\prime}}{j_{1}^{\prime}}{j_{2}}{j_{1}}\rbraOketred{\gamma j_{1}}{\mathfrak{M}_{k}}{\gamma^{\prime} j_{1}^{\prime}} .
 \end{gathered}
 \] &
 \scalebox{0.5}{\redlhs{\mathfrak{M}^{(1)}_{\gamma\gamma'}}{j_1}{j_2}{j'_1}{j'_2}$=$%
@@ -3846,9 +3825,9 @@ $=(-1)^{-k}\displaystyle\sum_{\gamma''}$%
 \multicolumn{2}{c}{\parbox{0.93\textwidth}{\centering Reduced matrix element of the irreducible tensor operator which depends only on variables of the second subsystem.}}\\
 \[
 \begin{gathered}
-\left(\gamma j_{1} j_{2} J\left\|\mathfrak{N}_{k}(2)\right\| \gamma^{\prime} j_{1}^{\prime} j_{2}^{\prime} J^{\prime}\right) \\
+\rbraOketred{\gamma j_{1} j_{2} J}{\mathfrak{N}_{k}(2)}{\gamma^{\prime} j_{1}^{\prime} j_{2}^{\prime} J^{\prime}} \\
 =(-1)^{j_{1}^{\prime}+j_{2}^{\prime}+J+k} \delta_{j_{1} j_{1}^{\prime}} \sqrt{(2 J+1)\left(2 J^{\prime}+1\right)} \\
-\times\sixj{J}{k}{J^{\prime}}{j_{2}^{\prime}}{j_{1}}{j_{2}}\left(\gamma j_{2}\left\|\mathfrak{N}_{k}\right\| \gamma^{\prime} j_{2}^{\prime}\right) .
+\times\sixj{J}{k}{J^{\prime}}{j_{2}^{\prime}}{j_{1}}{j_{2}}\rbraOketred{\gamma j_{2}}{\mathfrak{N}_{k}}{\gamma^{\prime} j_{2}^{\prime}} .
 \end{gathered}
 \] &
 \scalebox{0.5}{\redlhs{\mathfrak{N}^{(2)}_{\gamma\gamma'}}{j_1}{j_2}{j'_1}{j'_2}$=$%
@@ -3884,21 +3863,22 @@ Standard functions of angular momentum theory may be used as a basis for the exp
 \braOket{00}{\mathfrak{M}}{j m}=\delta_{j 0} \delta_{m 0}\braOket{00}{\mathfrak{N}}{00}
 \]
 \opline{\mathfrak{M}}{\mathfrak{N}}{j{=}0}
-(c) A diagram with two external lines corresponding to $\left\langle j_{1} m_{1}\right|$ and $\left|j_{2} m_{2}\right\rangle$ is non-zero only if $j_{1}=j_{2}$ and $m_{1}=m_{2}$
+(c) A diagram with two external lines corresponding to $\bra{j_{1} m_{1}}$ and $\ket{j_{2} m_{2}}$ is non-zero only if $j_{1}=j_{2}$ and $m_{1}=m_{2}$
 \[
 \braOket{j_{1} m_{1}}{\mathfrak{M}}{j_{2} m_{2}}=\frac{\delta_{j_{1} j_{2}} \delta_{m_{1} m_{2}}}{2 j_{1}+1} \sum_{m}\braOket{j_{1} m}{\mathfrak{M}}{j_{1} m}
 \]
 \begin{center}
-\begin{tikzpicture}[baseline=0pt]\node[opbox](M) at (0,0){$\mathfrak{M}$}; \draw[jmline] (M) to[bend left=45] node[midway,above]{$j_1$} (2,0); \draw[bjmarrow] (M) to[bend right=45] node[midway,below]{$j_2$} (2,0);\end{tikzpicture}
+\begin{tikzpicture}[baseline=0pt]\node[opbox](M) at (0,0){\normalsize$\mathfrak{M}$}; \draw[jmline] (M) to[bend left=45] node[midway,above]{$j_1$} (2,0); \draw[bjmarrow] (M) to[bend right=45] node[midway,below]{$j_2$} (2,0);\end{tikzpicture}
 \end{center}
 
 This follows from the fact that any dependence on two directions is, actually, the dependence on the angle between these directions, i.e. it may be represented by the scalar product of two functions $|j m\rangle$ and $\langle j m|$.\\
-(d) A diagram with three external $j$-lines which represent $\left.\left|j_{1} m_{1}\right|, \mid j_{2} m_{2}\right)$ and $\left.\mid j_{3} m_{3}\right)$ is proportional to the $3 j m$ symbol $\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{m_{2}}{m_{3}}$
+(d) A diagram with three external $j$-lines which represent $\rket{j_{1} m_{1}}, \rket{j_{2} m_{2}}$ and $\rket{j_{3} m_{3}}$ is proportional to the $3 j m$ symbol $\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{m_{2}}{m_{3}}$
 \[
 \braOket{00}{\mathfrak{M}}{j_{1} m_{1} j_{2} m_{2} j_{3} m_{3}}=\braOketred{0}{\mathfrak{M}}{j_{1} j_{2} j_{3}}\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{m_{2}}{m_{3}},
 \]
 where $\braOketred{0}{{ } \Re}{j_{1} j_{2} j_{3}}$ is the reduced matrix element defined by
 \[
+% PROOFREAD: OCR-garbled reduced m.e. -- \langle00\|IR\|...\rangle and RHS (stray "9", mismatched \left/\right); reconstruct against orig.
 \left.\left\langle 00\|I R\| j_{1} j_{2} j_{3}\right\rangle=\left.\sum_{m_{1} m_{2} m_{3}}\langle 00| 9\right|_{j 1} m_{1} j_{2} m_{2} j_{3} m_{3}\right\rangle\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{m_{2}}{m_{3}},
 \]
 \sixjdiagramu{j_1,j_2,j_3,m_1,m_2,m_3,+}
@@ -3911,7 +3891,7 @@ where
 \braOket{j_{1} j_{2} j m}{\Re}{j_{3} j_{4} j m} \equiv \sum_{m_{1} m_{2} m_{3} m_{6}}\threej{j_{1}}{j_{2}}{j}{m_{1}}{m_{2}}{m}\left(j_{1} m_{1} j_{2} m_{2}|\Re| j_{3} m_{3} j_{4} m_{4}\right)\threej{j_{3}}{j_{4}}{j^{\prime}}{m_{3}}{m_{4}}{m^{\prime}}
 \]
 \begin{center}
-\begin{tikzpicture}[baseline=0pt]\node[opbox](M) at (0,0){$\mathfrak{N}$}; \draw[jmline] (M) -- (-1.3,0.8) node[left]{$j_1m_1$}; \draw[jmline] (M) -- (-1.3,-0.8) node[left]{$j_2m_2$}; \draw[jmline] (M) -- (1.3,0.8) node[right]{$j_3m_3$}; \draw[jmline] (M) -- (1.3,-0.8) node[right]{$j_4m_4$};\end{tikzpicture}
+\begin{tikzpicture}[baseline=0pt]\node[opbox](M) at (0,0){\normalsize$\mathfrak{N}$}; \draw[jmline] (M) -- (-1.3,0.8) node[left]{$j_1m_1$}; \draw[jmline] (M) -- (-1.3,-0.8) node[left]{$j_2m_2$}; \draw[jmline] (M) -- (1.3,0.8) node[right]{$j_3m_3$}; \draw[jmline] (M) -- (1.3,-0.8) node[right]{$j_4m_4$};\end{tikzpicture}
 \end{center}
 \begin{table}[ptbh!]
 \begin{center}
@@ -3929,14 +3909,14 @@ Generalized Wigner-Eckart Theorem.}
 $\braOket{00}{\mathfrak{M}}{lm}=\braOket{00}{\mathfrak{M}}{00}\,\delta_{l0}\delta_{m0}$
 &
 \begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
-  \node[draw,minimum width=0.8cm,minimum height=0.8cm](B){\normalsize$\mathfrak{M}$};
+  \node[draw,minimum width=0.8cm,minimum height=0.8cm](B){\normalsize\normalsize$\mathfrak{M}$};
   \coordinate(tip)at($(B.east)+(0.45,0)$);
   \draw(B.north east)--(tip)--(B.south east);
   \node[dotnode,label={-90:\minusmark}]at(tip){};
   \draw[jmarrow](tip)--($(tip)+(0.95,0)$)node[pos=0.7,above]{$lm$};
 \end{tikzpicture}$=$%
 \begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
-  \node[draw,minimum width=0.8cm,minimum height=0.8cm](B){\normalsize$\mathfrak{M}$};
+  \node[draw,minimum width=0.8cm,minimum height=0.8cm](B){\normalsize\normalsize$\mathfrak{M}$};
   \coordinate(tip)at($(B.east)+(0.45,0)$);
   \draw(B.north east)--(tip)--(B.south east);
   \node[dotnode,label={45:\plusmark}]at(tip){};
@@ -3951,7 +3931,7 @@ $\braOket{jm}{\mathfrak{M}}{j'm'}=\dfrac{\delta_{jj'}\delta_{mm'}}{(2j+1)}\braOk
 where $\braOketred{j}{\mathfrak{M}}{j}\equiv\sum_{m}\braOket{jm}{\mathfrak{M}}{jm}$
 &
 \begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
-  \node[draw,minimum width=0.85cm,minimum height=0.85cm](B){\normalsize$\mathfrak{M}$};
+  \node[draw,minimum width=0.85cm,minimum height=0.85cm](B){\normalsize\normalsize$\mathfrak{M}$};
   \draw[bjmarrow]($(B.west)+(-0.95,0)$)--(B.west)node[pos=0.1,above]{$jm$};
   \draw[jmarrow](B.east)--($(B.east)+(0.95,0)$)node[pos=0.9,above]{$j'm'$};
 \end{tikzpicture}$=$%
@@ -3968,7 +3948,7 @@ where $\braOketred{j}{\mathfrak{M}}{j}\equiv\sum_{m}\braOket{jm}{\mathfrak{M}}{j
 $\braOket{\Omega}{\mathfrak{M}}{jm}=\braket{\Omega}{jm}\dfrac{\braOketred{j}{\mathfrak{M}}{j}}{(2j+1)}$
 &
 \begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
-  \node[draw,minimum width=0.85cm,minimum height=0.85cm](B){\normalsize$\mathfrak{M}$};
+  \node[draw,minimum width=0.85cm,minimum height=0.85cm](B){\normalsize\normalsize$\mathfrak{M}$};
   \draw[bomarrown]($(B.west)+(-0.95,0)$)--(B.west)node[pos=0.1,above]{$\Omega$};
   \draw[jmarrow](B.east)--($(B.east)+(0.95,0)$)node[pos=0.9,above]{$jm$};
 \end{tikzpicture}$=$%
@@ -3988,7 +3968,7 @@ where $\omega_{12}$ is the angle $\widehat{\Omega_1\Omega_2}$ and\newline
 $P_l(\cos\omega_{12})=\sum_m\braket{\Omega_1}{lm}\braket{lm}{\Omega_2}$
 &
 \begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
-  \node[draw,minimum width=0.85cm,minimum height=0.85cm](B){\normalsize$\mathfrak{M}$};
+  \node[draw,minimum width=0.85cm,minimum height=0.85cm](B){\normalsize\normalsize$\mathfrak{M}$};
   \draw[bomarrown]($(B.west)+(-0.95,0)$)--(B.west)node[pos=0.1,above]{$\Omega_1$};
   \draw[omarrow](B.east)--($(B.east)+(0.95,0)$)node[pos=0.9,above]{$\Omega_2$};
 \end{tikzpicture}$=$%
@@ -4013,7 +3993,7 @@ $\begin{aligned}[t]
 \end{aligned}$
 &
 \begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
-  \node[draw,minimum width=0.9cm,minimum height=0.9cm](B){\normalsize$\mathfrak{M}$};
+  \node[draw,minimum width=0.9cm,minimum height=0.9cm](B){\normalsize\normalsize$\mathfrak{M}$};
   \draw[bjmarrow]($(B.west)+(-0.95,0)$)--(B.west)node[pos=0.1,above]{$j_1m_1$};
   \draw[jmarrow](B.north)--($(B.north)+(0,0.9)$)node[above]{$j_2m_2$};
   \draw[jmarrow](B.east)--($(B.east)+(0.95,0)$)node[pos=0.9,above]{$j_3m_3$};
@@ -4035,7 +4015,7 @@ $\begin{aligned}[t]
 \end{aligned}$
 &
 \begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
-  \node[draw,minimum width=0.9cm,minimum height=0.9cm](B){\normalsize$\mathfrak{M}$};
+  \node[draw,minimum width=0.9cm,minimum height=0.9cm](B){\normalsize\normalsize$\mathfrak{M}$};
   \draw[bomarrown]($(B.west)+(-0.95,0)$)--(B.west)node[pos=0.1,above]{$\Omega$};
   \draw[jmarrow]($(B.north east)+(-0.15,0)$)--($(B.north east)+(0.75,0.55)$)node[right]{$j_2m_2$};
   \draw[jmarrow]($(B.south east)+(-0.15,0)$)--($(B.south east)+(0.75,-0.55)$)node[right]{$j_3m_3$};
@@ -4058,7 +4038,7 @@ $\begin{aligned}[t]
 \end{aligned}$
 &
 \begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
-  \node[draw,minimum width=0.9cm,minimum height=0.9cm](B){\normalsize$\mathfrak{M}$};
+  \node[draw,minimum width=0.9cm,minimum height=0.9cm](B){\normalsize\normalsize$\mathfrak{M}$};
   \draw[bomarrown]($(B.west)+(-0.95,0)$)--(B.west)node[pos=0.1,above]{$\Omega_1$};
   \draw[jmarrow](B.north)--($(B.north)+(0,0.9)$)node[above]{$j_2m_2$};
   \draw[omarrow](B.east)--($(B.east)+(0.95,0)$)node[pos=0.9,above]{$\Omega_3$};
@@ -4098,7 +4078,7 @@ $\begin{aligned}[t]
 \end{gathered}
 \] &
 \scalebox{0.82}{\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
-  \node[draw,minimum width=1.0cm,minimum height=1.15cm](B){\normalsize$\mathfrak{M}$};
+  \node[draw,minimum width=1.0cm,minimum height=1.15cm](B){\normalsize\normalsize$\mathfrak{M}$};
   \coordinate(nw)at($(B.west)+(0,0.32)$);\coordinate(sw)at($(B.west)+(0,-0.32)$);
   \coordinate(ne)at($(B.east)+(0,0.32)$);\coordinate(se)at($(B.east)+(0,-0.32)$);
   \draw[bjmarrow]($(nw)+(-0.95,0)$)--(nw)node[pos=0.1,above]{$j_1m_1$};
@@ -4116,7 +4096,7 @@ $\begin{aligned}[t]
   \draw[jmarrow](Q)--($(Q)+(-30:0.95)$)node[right]{$j_4m_4$};
 \end{tikzpicture}%
 \begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
-  \node[draw,minimum width=1.0cm,minimum height=0.9cm](B){\normalsize$\mathfrak{M}$};
+  \node[draw,minimum width=1.0cm,minimum height=0.9cm](B){\normalsize\normalsize$\mathfrak{M}$};
   \node[dotnode,label={180:\minusmark}](L)at($(B.west)+(-0.6,0)$){};
   \node[dotnode,label={0:\plusmark}](R)at($(B.east)+(0.6,0)$){};
   \draw[jmlinem](L)--(B.north west)node[pos=0.4,above]{$j_1$};
@@ -4134,7 +4114,7 @@ $\begin{aligned}[t]
 \end{gathered}
 \] &
 \scalebox{0.82}{\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
-  \node[draw,minimum width=0.9cm,minimum height=0.9cm](B){\normalsize$\mathfrak{M}$};
+  \node[draw,minimum width=0.9cm,minimum height=0.9cm](B){\normalsize\normalsize$\mathfrak{M}$};
   \draw[bomarrown]($(B.west)+(-0.95,0)$)--(B.west)node[pos=0.1,above]{$\Omega_1$};
   \draw[omarrow](B.north)--($(B.north)+(0,0.9)$)node[above]{$\Omega_2$};
   \draw[omarrow](B.east)--($(B.east)+(0.95,0)$)node[pos=0.9,above]{$\Omega_3$};
