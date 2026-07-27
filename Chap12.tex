@@ -22,40 +22,148 @@ Hereafter, we use the notation
 \begin{equation}
 \sum_{\psi \kappa}(-1)^{p-\psi+q-\kappa}\threej{a}{p}{q}{-\alpha}{\psi}{\kappa} \label{chap12:eq:3}\threej{p}{q}{a^{\prime}}{-\psi}{-\kappa}{\alpha^{\prime}}=\frac{(-1)^{a+\alpha}}{\prod_{a}^{2}}\{a p q\} \delta_{a a^{\prime}} \delta_{\alpha \alpha^{\prime}}
 \end{equation}
-\begin{center}
-\includegraphics[max width=\textwidth, alt={}]{39a53bec-58f6-4733-a518-53d974314721-02_148_827_946_539}
-\end{center}
+\[
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \coordinate(L)at(0,0){};\coordinate(R)at(1.5,0){};
+  \draw[dl](-0.95,0)--(L)node[at start,above]{$a\alpha$};
+  \draw[dl](R)--(2.45,0)node[at end,above]{$a'\alpha'$};
+  \dlens{L}{R}{p}{q}
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \draw[dl](0,0)--(1.9,0)node[pos=0.1,above]{$a\alpha$}node[pos=0.9,above]{$a'\alpha'$};
+  \dtheta{3.1}{0}{p}{a}{q}
+\end{tikzpicture}
+\]
 \begin{equation}
 \sum_{q \kappa}(-1)^{q-\kappa} \prod_{q}^{2}\threej{a}{b}{q}{-\alpha}{-\beta}{\kappa} \label{chap12:eq:4}\threej{q}{a}{b}{-\kappa}{\alpha^{\prime}}{\beta^{\prime}}=(-1)^{a+\alpha+b+\beta} \delta_{\alpha \alpha^{\prime}} \delta_{\beta \beta^{\prime}},
 \end{equation}
-\begin{center}
-\includegraphics[max width=\textwidth, alt={}]{39a53bec-58f6-4733-a518-53d974314721-02_215_692_1316_603}
-\end{center}
+\[
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \coordinate(L)at(0,0){};\coordinate(R)at(1.6,0){};
+  \draw[dlu](L)--(R);
+  \draw[dl](-0.85,0.75)--(L)node[at start,left]{$a\alpha$};
+  \draw[dl](-0.85,-0.75)--(L)node[at start,left]{$b\beta$};
+  \draw[dl](R)--(2.45,0.75)node[at end,right]{$a\alpha'$};
+  \draw[dl](R)--(2.45,-0.75)node[at end,right]{$b\beta'$};
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \draw[dl](0,0.5)--(1.9,0.5)node[pos=0.08,above]{$a\alpha$}node[pos=0.92,above]{$a\alpha'$};
+  \draw[dl](0,-0.5)--(1.9,-0.5)node[pos=0.08,above]{$b\beta$}node[pos=0.92,above]{$b\beta'$};
+\end{tikzpicture}
+\]
 \begin{equation}
 \sum_{\kappa}(-1)^{q-\kappa}\threej{a}{b}{q}{\alpha}{\beta}{-\kappa} \label{chap12:eq:5}\threej{q}{d}{c}{\kappa}{\delta}{\gamma}=(-1)^{2 a} \sum_{x \xi}(-1)^{x-\xi} \prod_{x}^{2}\threej{a}{c}{x}{\alpha}{\gamma}{-\xi}\threej{x}{d}{b}{\xi}{\delta}{\beta}\sixj{b}{d}{x}{c}{a}{q},
 \end{equation}
-\includegraphics[max width=\textwidth, alt={}, center]{39a53bec-58f6-4733-a518-53d974314721-02_345_806_1796_541}\\
+\[
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \coordinate(L)at(0,0){};\coordinate(R)at(1.6,0){};
+  \draw[dl](L)--(R)node[midway,above]{$q$};
+  \draw[dl](-0.85,0.75)--(L)node[at start,left]{$a\alpha$};
+  \draw[dl](-0.85,-0.75)--(L)node[at start,left]{$b\beta$};
+  \draw[dl](R)--(2.45,0.75)node[at end,right]{$c\gamma$};
+  \draw[dl](R)--(2.45,-0.75)node[at end,right]{$d\delta$};
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  % vertical bowtie, X ultra-thick
+  \coordinate(T)at(0,0.8){};\coordinate(B)at(0,-0.8){};
+  \draw[dlu](T)--(B)node[midway,right]{$X$};
+  \draw[dl](T)--(-0.8,1.55)node[at end,left]{$a\alpha$};
+  \draw[dl](T)--(0.8,1.55)node[at end,right]{$c\gamma$};
+  \draw[dl](B)--(-0.8,-1.55)node[at end,left]{$b\beta$};
+  \draw[dl](B)--(0.8,-1.55)node[at end,right]{$d\delta$};
+\end{tikzpicture}
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \dsixjsq[dlu]{0}{0}{a}{c}{b}{d}{q}{X}
+\end{tikzpicture}
+\]
 \subsection{Sums Involving Products of Three $3 j m$ Symbols}
 \begin{equation}
 \sum_{\kappa \psi \rho}(-1)^{p-\psi+q-\kappa+r-\rho}\threej{p}{a}{q}{\psi}{\alpha}{-\kappa} \label{chap12:eq:6}\threej{q}{b}{r}{\kappa}{\beta}{-\rho}\threej{r}{c}{p}{\rho}{\gamma}{-\psi}=\threej{a}{b}{c}{-\alpha}{-\beta}{-\gamma}\sixj{a}{b}{c}{r}{p}{q},
 \end{equation}
-\begin{center}
-\includegraphics[max width=\textwidth, alt={}]{39a53bec-58f6-4733-a518-53d974314721-03_350_863_667_614}
-\end{center}
+\[
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \coordinate(L) at (180:0.9);
+  \coordinate(T) at (60:0.9);
+  \coordinate(B) at (300:0.9);
+  \draw[dl](L)--($(L)+(180:0.6)$)node[left]{$a\alpha$};
+  \draw[dl](T)--($(T)+(60:0.6)$)node[at end,right]{$b\beta$};
+  \draw[dl](B)--($(B)+(300:0.6)$)node[at end,right]{$c\gamma$};
+  \draw[dl](L)--(T)node[midway,above left]{$q$};
+  \draw[dl](T)--(B)node[midway,right]{$r$};
+  \draw[dl](L)--(B)node[midway,below left]{$p$};
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \coordinate(N)at(0,0);
+  \draw[dl](-0.95,0)--(N)node[at start,left]{$a\alpha$};
+  \draw[dl](N)--(0.8,0.75)node[at end,right]{$b\beta$};
+  \draw[dl](N)--(0.8,-0.75)node[at end,right]{$c\gamma$};
+\end{tikzpicture}
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \dsixjtri{0}{0}{q}{r}{p}{a}{b}{c}
+\end{tikzpicture}
+\]
 
 \begin{gather}
 \sum_{\psi \kappa}\threej{a}{b}{p}{\alpha}{\beta}{\psi}\threej{p}{c}{q}{-\psi}{-\gamma}{-\kappa}\threej{q}{d}{e}{\kappa}{\delta}{\varepsilon}  \notag\\
 =\sum_{\substack{x y \\
 \varepsilon \eta}} \Pi_{x y}^{2}\threej{a}{d}{x}{\alpha}{\delta}{\xi}\threej{x}{c}{y}{-\xi}{-\gamma}{-\eta}\threej{y}{b}{e}{\eta}{\beta}{\varepsilon}\ninej{a}{b}{p}{d}{e}{q}{x}{y}{c}, \label{chap12:eq:7}
 \end{gather}
+\[
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  % LHS zigzag tree of three 3jm nodes joined by p,q
+  \coordinate(C) at (0,0);
+  \coordinate (Ht) at (90:1.2);  
+  \coordinate (Hl) at (150:1.2); \coordinate (Hr) at (30:1.2); 
+  \coordinate (Hll) at (210:1.2); \coordinate(Hrr) at (-30:1.2);
+  \coordinate (Hlu) at ($(Hl)+(150:1.2)$);
+  \coordinate (Hru) at ($(Hr)+(30:1.2)$);
+  \coordinate (Htu) at ($(Ht)+(90:1.2)$);
+  \draw[dl](Ht)--(Hr)node[midway,above right,inner sep=1pt]{$q$};
+  \draw[dl](Ht)--(Hl)node[midway,above left,inner sep=1pt]{$p$};
+  \draw[dl](Hl)--(Hlu)node[at end,left]{$b\beta$};
+  \draw[dl](Hl)--(Hll)node[at end,below]{$a\alpha$};
+  \draw[dl](Ht)--(Htu)node[at end,above]{$c\gamma$};
+  \draw[dl](Hr)--(Hru)node[at end,right]{$d\delta$};
+  \draw[dl](Hr)--(Hrr)node[at end,below]{$e\epsilon$};
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \coordinate(C) at (0,0);
+  \coordinate (Ht) at (90:1.2);  
+  \coordinate (Hl) at (150:1.2); \coordinate (Hr) at (30:1.2); 
+  \coordinate (Hll) at (210:1.2); \coordinate(Hrr) at (-30:1.2);
+  \coordinate (Hlu) at ($(Hl)+(150:1.2)$);
+  \coordinate (Hru) at ($(Hr)+(30:1.2)$);
+  \coordinate (Htu) at ($(Ht)+(90:1.2)$);
+  \draw[dlu](Ht)--(Hr)node[midway,above right,inner sep=1pt]{$y$};
+  \draw[dlu](Ht)--(Hl)node[midway,above left,inner sep=1pt]{$x$};
+  \draw[dl](Hl)--(Hlu)node[at end,left]{$d\delta$};
+  \draw[dl](Hl)--(Hll)node[at end,below]{$a\alpha$};
+  \draw[dl](Ht)--(Htu)node[at end,above]{$c\gamma$};
+  \draw[dl](Hr)--(Hru)node[at end,right]{$b\beta$};
+  \draw[dl](Hr)--(Hrr)node[at end,below]{$e\epsilon$};
+  % 9j-hexagon {a b p; d e q; x y c}; outer x,y (summed) ultra-thick; 5 ext legs
+  \coordinate(hc)at(0,0);
+  \coordinate(hT)at($(hc)+(90:0.8)$);\coordinate(hUL)at($(hc)+(150:0.8)$);
+  \coordinate(hLL)at($(hc)+(210:0.8)$);\coordinate(hB)at($(hc)+(270:0.8)$);
+  \coordinate(hLR)at($(hc)+(330:0.8)$);\coordinate(hUR)at($(hc)+(30:0.8)$);
+  \draw[dlu](hT)--(hUL)node[midway,below right,inner sep=1pt]{$x$};
+  \draw[dlu](hUR)--(hT)node[midway,below left,inner sep=1pt]{$y$};
+  \draw[dl](hUL)--(hLL)node[midway,left,inner sep=1pt]{$a$};
+  \draw[dl](hLR)--(hUR)node[midway,right,inner sep=1pt]{$e$};
+  \draw[dl](hLL)--(hB)node[midway,below left,inner sep=1pt]{$p$};
+  \draw[dl](hB)--(hLR)node[midway,below right,inner sep=1pt]{$q$};
+  \draw[dl](hT)--(hB)node[pos=0.7,right,inner sep=1pt]{$c$};
+  \draw[dl](hUL)--(hLR)node[pos=0.28,below,inner sep=1pt]{$b$};
+  \draw[dl](hUR)--(hLL)node[pos=0.28,below,inner sep=1pt]{$d$};
+\end{tikzpicture}
+\]
 
 \subsection{Sums Involving Products of Four $3 j m$ Symbols}
-\begin{figure}[h]
-\begin{center}
-  \includegraphics[alt={},max width=\textwidth]{39a53bec-58f6-4733-a518-53d974314721-03_331_870_1327_603}
-\end{center}
-\end{figure}
-
 % PROOFREAD: contains OCR-garbled or 12j Wigner array(s) not auto-converted -- verify/reconstruct against orig.
 \begin{gather}
 \sum_{\kappa \psi \rho \sigma \tau}(-1)^{p-\psi+q-\kappa+r-\rho+s-\sigma+t-\tau}\left(\begin{array}{lr}
@@ -66,33 +174,154 @@ p & a \\
 =\frac{(-1)^{a-\alpha}}{\prod_{a}^{2}}\sixj{q}{p}{a}{s}{r}{t} \delta_{a a^{\prime}} \delta_{\alpha \alpha^{\prime}}, \label{chap12:eq:8}
 \end{gather}
 
-\begin{center}
-\includegraphics[max width=\textwidth, alt={}]{39a53bec-58f6-4733-a518-53d974314721-03_174_1019_2074_530}
-\end{center}
+\[
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \coordinate(M)at (1,0);
+  \coordinate(T)at($(M)+(90:0.85)$);
+  \coordinate(B)at($(M)+(-90:0.85)$);
+  \coordinate(L)at($(M)+(180:0.85)$);
+  \coordinate(R)at($(M)+(0:0.85)$);
+  \draw[dl]($(L)-(0.7,0)$)--(L)node[at start,left]{$a\alpha$};
+  \draw[dl](R)--($(R)+(0.7,0)$)node[at end,right]{$a'\alpha'$};
+  \draw[dl](L)--(T)node[midway,above left]{$q$};
+  \draw[dl](T)--(R)node[midway,above right]{$r$};
+  \draw[dl](L)--(B)node[midway,below left]{$p$};
+  \draw[dl](B)--(R)node[midway,below right]{$s$};
+  \draw[dl](T)--(B)node[pos=0.35,right]{$t$};
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \draw[dl](0,0)--(1.9,0)node[pos=0.08,above]{$a\alpha$}node[pos=0.92,above]{$a'\alpha'$};
+\end{tikzpicture}
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \dsixjsq{0}{0}{q}{r}{p}{s}{a}{t}
+\end{tikzpicture}
+\]
 
 \begin{gather}
 \sum_{\rho \psi \kappa \sigma}(-1)^{p-\psi+q-\kappa+r-\rho+s-\sigma}\threej{p}{a}{q}{\psi}{\alpha}{-\kappa}\threej{q}{b}{r}{\kappa}{\beta}{-\rho}\threej{r}{s}{p}{\rho}{\sigma}{-\psi}\threej{s}{c}{d}{-\sigma}{\gamma}{\delta}  \notag\\
 =\sixj{a}{b}{s}{r}{p}{q} \sum_{\sigma}(-1)^{s-\sigma}\threej{a}{s}{b}{\alpha}{\sigma}{\beta}\threej{d}{s}{c}{\delta}{-\sigma}{\gamma}, \label{chap12:eq:9}
 \end{gather}
 
-\begin{center}
-\includegraphics[max width=\textwidth, alt={}]{39a53bec-58f6-4733-a518-53d974314721-04_413_982_720_416}
-\end{center}
+\[
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  % apex-right triangle: base q on the left (vertical), apex VR on the right
+  \coordinate(c)at(0,0);
+  \coordinate(TL)at($(c)+(120:0.95)$);\coordinate(BL)at($(c)+(240:0.95)$);\coordinate(VR)at($(c)+(0:0.95)$);
+  \draw[dl](TL)--(BL)node[midway,left,inner sep=1pt]{$q$};
+  \draw[dl](TL)--(VR)node[midway,above right,inner sep=1pt]{$r$};
+  \draw[dl](BL)--(VR)node[midway,below right,inner sep=1pt]{$p$};
+  \draw[dl](TL)--($(TL)+(120:0.7)$)node[at end,above left]{$b\beta$};
+  \draw[dl](BL)--($(BL)+(240:0.7)$)node[at end,below left]{$a\alpha$};
+  \coordinate(N)at($(VR)+(1.1,0)$);
+  \draw[dl](VR)--(N)node[midway,above,inner sep=1pt]{$s$};
+  \draw[dl](N)--($(N)+(45:0.7)$)node[at end,right]{$c\gamma$};
+  \draw[dl](N)--($(N)+(-45:0.7)$)node[at end,right]{$d\delta$};
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  % 6j-triangle apex-right (q left edge, r top, p bottom; inner b,a,s)
+  \coordinate(c)at(0,0);
+  \coordinate(TL)at($(c)+(120:0.95)$);\coordinate(BL)at($(c)+(240:0.95)$);\coordinate(VR)at($(c)+(0:0.95)$);
+  \draw[dl](TL)--(BL)node[midway,left,inner sep=1pt]{$q$};
+  \draw[dl](TL)--(VR)node[midway,above right,inner sep=1pt]{$r$};
+  \draw[dl](BL)--(VR)node[midway,below right,inner sep=1pt]{$p$};
+  \draw[dl](c)--(TL)node[pos=0.5,right,inner sep=1pt]{$b$};
+  \draw[dl](c)--(BL)node[pos=0.5,right,inner sep=1pt]{$a$};
+  \draw[dl](c)--(VR)node[pos=0.4,above,inner sep=1pt]{$s$};
+\end{tikzpicture}
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  % bowtie with s middle
+  \coordinate(L)at(0,0);\coordinate(R)at(1.5,0);
+  \draw[dl](L)--(R)node[midway,above,inner sep=1pt]{$s$};
+  \draw[dl](L)--($(L)+(120:0.8)$)node[at end,left]{$b\beta$};
+  \draw[dl](L)--($(L)+(240:0.8)$)node[at end,left]{$a\alpha$};
+  \draw[dl](R)--($(R)+(60:0.8)$)node[at end,right]{$c\gamma$};
+  \draw[dl](R)--($(R)+(-60:0.8)$)node[at end,right]{$d\delta$};
+\end{tikzpicture}
+\]
 
 \begin{align}
 & \sum_{\psi \kappa \rho \sigma}(-1)^{p-\psi+q-\kappa+r-\rho+s-\sigma}\threej{p}{a}{q}{\psi}{\alpha}{-\kappa}\threej{q}{b}{r}{\kappa}{\beta}{-\rho}\threej{r}{c}{s}{\rho}{\gamma}{-\sigma}\threej{s}{d}{p}{\sigma}{\delta}{-\psi}  \notag\\
 & =(-1)^{s-a-d-q} \sum_{x \xi}(-1)^{x-\xi} \prod_{x}^{2}\threej{a}{x}{d}{\alpha}{-\xi}{\delta}\threej{b}{x}{c}{\beta}{\xi}{\gamma}\sixj{a}{x}{d}{s}{p}{q}\sixj{b}{x}{c}{s}{r}{q} \label{chap12:eq:10}
 \end{align}
 
-\begin{center}
-\includegraphics[max width=\textwidth, alt={}]{39a53bec-58f6-4733-a518-53d974314721-04_336_955_1398_439}
-\end{center}
+\[
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \dsq{0}{0}{p}{q}{r}{s}
+  \draw[dl](sqTL)--($(sqTL)+(135:0.7)$)node[at end,above]{$c\gamma$};
+  \draw[dl](sqTR)--($(sqTR)+(45:0.7)$)node[at end,above]{$d\delta$};
+  \draw[dl](sqBL)--($(sqBL)+(225:0.7)$)node[at end,below]{$b\beta$};
+  \draw[dl](sqBR)--($(sqBR)+(-45:0.7)$)node[at end,below]{$a\alpha$};
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  % left 6j-triangle apex-right, legs cgamma(up)/bbeta(down), X exits right
+  \coordinate(c)at(0,0);
+  \coordinate(TL)at($(c)+(120:0.9)$);
+  \coordinate(BL)at($(c)+(240:0.9)$);
+  \coordinate(VL)at($(c)+(0:0.9)$);
+  \draw[dl](TL)--(BL)node[midway,left,inner sep=1pt]{$r$};
+  \draw[dl](TL)--(VL)node[midway,above right,inner sep=1pt]{$p$};
+  \draw[dl](BL)--(VL)node[midway,below right,inner sep=1pt]{$q$};
+  \draw[dl](c)--(TL)node[pos=0.5,right,inner sep=1pt]{$c$};
+  \draw[dl](c)--(BL)node[pos=0.5,right,inner sep=1pt]{$b$};
+  \draw[dlu](c)--(VL)node[pos=0.4,above,inner sep=1pt]{$x$};
+  \coordinate(c2)at($(VL)+(2.4,0)$);
+  \coordinate(TR)at($(c2)+(60:0.9)$);
+  \coordinate(BR)at($(c2)+(-60:0.9)$);
+  \coordinate(VR)at($(c2)+(180:0.9)$);
+  \draw[dl](TR)--(BR)node[midway,right,inner sep=1pt]{$s$};
+  \draw[dl](VR)--(TR)node[midway,above left,inner sep=1pt]{$p$};
+  \draw[dl](VR)--(BR)node[midway,below left,inner sep=1pt]{$q$};
+  \draw[dl](c2)--(TR)node[pos=0.5,left,inner sep=1pt]{$d$};
+  \draw[dl](c2)--(BR)node[pos=0.5,left,inner sep=1pt]{$a$};
+  \draw[dlu](c2)--(VR)node[pos=0.4,above,inner sep=1pt]{$x$};
+  % external legs attach near the apex, angling away from the centre
+   \coordinate(VRs) at ([xshift=-2mm]VR);
+   \coordinate(VLs) at ([xshift=2mm]VL);
+  \draw[dl](VRs)--($(VRs)+(55:0.95)$)node[at end,above]{$c\gamma$};
+  \draw[dl](VRs)--($(VRs)+(-55:0.95)$)node[at end,below]{$a\alpha$};
+  \draw[dl](VLs)--($(VLs)+(125:0.95)$)node[at end,above]{$d\delta$};
+  \draw[dl](VLs)--($(VLs)+(-125:0.95)$)node[at end,below]{$b\beta$};
+% ultra-thick summed X joining the two apexes
+  \draw[dlu](VRs)--(VLs)node[midway,above,inner sep=1pt]{$x$};
+  \end{tikzpicture}
+\]
 \begin{equation}
 =(-1)^{2 r-s-d-a-q} \sum_{x \xi}(-1)^{x-\xi} \prod_{x}^{2}\threej{a}{x}{c}{\alpha}{-\xi}{\gamma} \label{chap12:eq:11}\threej{b}{x}{d}{\beta}{\xi}{\delta}\ninej{a}{p}{q}{x}{d}{b}{c}{s}{r},
 \end{equation}
-\begin{center}
-\includegraphics[max width=\textwidth, alt={}]{39a53bec-58f6-4733-a518-53d974314721-04_315_868_1919_471}
-\end{center}
+\[
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  % LHS: two short verticals q,s with crossing diagonals p,r and 4 corner legs
+  \coordinate(nw)at(135:2);\coordinate(sw)at(-135:2);
+  \coordinate(ne)at(45:2);\coordinate(se)at(-45:2);
+  \coordinate(NW)at($(nw)!0.25!(se)$);\coordinate(SE)at($(nw)!0.75!(se)$);
+  \coordinate(NE)at($(ne)!0.25!(sw)$);\coordinate(SW)at($(ne)!0.75!(sw)$);
+  \draw[dl](nw)--(se) node[at start,above] {$c\gamma$} node[at end,below]{$a\alpha$};
+  \draw[dl](ne)--(sw) node[at start,above] {$d\delta$} node[at end,below]{$b\beta$};
+  \draw[dl](NW)--(SW)node[midway,left,inner sep=1pt]{$q$};
+  \draw[dl](NE)--(SE)node[midway,right,inner sep=1pt]{$s$};
+  \draw[dl](SW)--(NE)node[pos=0.15,below,inner sep=1pt]{$p$};
+  \draw[dl](SE)--(NW)node[pos=0.15,below,inner sep=1pt]{$r$};
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  % vertical bowtie, X ultra-thick
+  \coordinate(T)at(0,0.8);\coordinate(B)at(0,-0.8);
+  \draw[dlu](T)--(B)node[midway,right,inner sep=1pt]{$X$};
+  \draw[dl](T)--($(T)+(135:0.8)$)node[at end,left]{$b\beta$};
+  \draw[dl](T)--($(T)+(45:0.8)$)node[at end,right]{$d\delta$};
+  \draw[dl](B)--($(B)+(225:0.8)$)node[at end,left]{$a\alpha$};
+  \draw[dl](B)--($(B)+(-45:0.8)$)node[at end,right]{$c\gamma$};
+\end{tikzpicture}
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \dninehex{0}{0}{b}{q}{a}{c}{s}{d}
+  \draw[dlu](hT)--(hB)node[pos=0.28,right,inner sep=1pt]{$x$};
+  \draw[dl](hUR)--(hLL)node[pos=0.72,below,inner sep=1pt]{$p$};
+  \draw[dl](hUL)--(hLR)node[pos=0.72,below,inner sep=1pt]{$r$};
+\end{tikzpicture}
+\]
 
 \subsection{Sums Involving Products of Five 3jm Symbols}
 \begin{align}
