@@ -30,16 +30,16 @@
   jmarrow/.style={-{Stealth[length=2.2mm]}, thick},
   jmrndarrow/.style={{Circle[length=3pt]}-{Stealth[length=2.2mm]}, thick},
   %bra jm-line: double arrowhead in the middle of the line
-  jmbraarrow/.style={postaction={decorate,decoration={markings,mark=at position 0.65 with {\arrow{Stealth[length=2.2mm] Stealth[length=2.2mm]}},mark=at position 1.0 with {\arrow{Bar[]}}}},thick},
-  bjmarrow/.style={postaction={decorate,decoration={markings,mark=at position 0.65 with {\arrow{Stealth[length=2.2mm] Stealth[length=2.2mm]}}}},thick},
-  djmbraarrow/.style={postaction={decorate,decoration={markings,mark=at position 0.65 with {\arrow{Stealth[length=2.2mm] Stealth[length=2.2mm]}},mark=at position 1.0 with {\arrow{Circle[length=3pt]}}}},thick},
+  jmbraarrow/.style={postaction={decorate,decoration={markings,mark=at position 5mm with {\arrow{Stealth[length=2.2mm] Stealth[length=2.2mm]}},mark=at position 1.0 with {\arrow{Bar[]}}}},thick},
+  bjmarrow/.style={postaction={decorate,decoration={markings,mark=at position 5mm with {\arrow{Stealth[length=2.2mm] Stealth[length=2.2mm]}}}},thick},
+  djmbraarrow/.style={postaction={decorate,decoration={markings,mark=at position 5mm with {\arrow{Stealth[length=2.2mm] Stealth[length=2.2mm]}},mark=at position 1.0 with {\arrow{Circle[length=3pt]}}}},thick},
   %Omega-line: dashed arrow
   omketarrow/.style={Bar[]-{Stealth[length=2.2mm]}, thick, dashed},
   omarrow/.style={-{Stealth[length=2.2mm]}, thick, dashed},
-  ombraarrow/.style={postaction={decorate,decoration={markings,mark=at position 0.65 with {\arrow{Stealth[length=2.2mm] Stealth[length=2.2mm]}},mark=at position 1.0 with {\arrow{Bar[]}}}},thick,dashed},
-  bomarrown/.style={postaction={decorate,decoration={markings,mark=at position 0.65 with {\arrow{Stealth[length=2.2mm] Stealth[length=2.2mm]}}}},thick,dashed},
+  ombraarrow/.style={postaction={decorate,decoration={markings,mark=at position 5mm with {\arrow{Stealth[length=2.2mm] Stealth[length=2.2mm]}},mark=at position 1.0 with {\arrow{Bar[]}}}},thick,dashed},
+  bomarrown/.style={postaction={decorate,decoration={markings,mark=at position 5mm with {\arrow{Stealth[length=2.2mm] Stealth[length=2.2mm]}}}},thick,dashed},
   domarrow/.style={{Circle[length=3pt]}-{Stealth[length=2.2mm]}, thick, dashed},
-  dbomarrow/.style={postaction={decorate,decoration={markings,mark=at position 0.65 with {\arrow{Stealth[length=2.2mm] Stealth[length=2.2mm]}},mark=at position 1.0 with {\arrow{Circle[length=3pt]}}}},thick,dashed},%rotations
+  dbomarrow/.style={postaction={decorate,decoration={markings,mark=at position 5mm  with {\arrow{Stealth[length=2.2mm] Stealth[length=2.2mm]}},mark=at position 1.0 with {\arrow{Circle[length=3pt]}}}},thick,dashed},%rotations
   rline/.style={double,double distance=1.5pt, thick, densely dashed},
   %lines: connected to nodes
   jmline/.style={-{Stealth[length=2.2mm]}, thick},
@@ -77,7 +77,9 @@
   deltanode/.style={circle, draw, fill=white, inner sep=1.2pt},
   opbox/.style={draw, minimum width=8mm, minimum height=8mm, inner sep=2pt},
   opboxh/.style={draw,shape=rectangle, minimum width=8mm, minimum height=20mm, inner sep=2pt},
-  opboxw/.style={draw,shape=rectangle, minimum width=20mm, minimum height=8mm, inner sep=2pt}
+  opboxw/.style={draw,shape=rectangle, minimum width=20mm, minimum height=8mm, inner sep=2pt},
+  tinytri/.style={regular polygon, regular polygon sides=3, minimum size=0.02,inner sep=1pt, fill=white, draw},
+  smalltri/.style={regular polygon, regular polygon sides=3, minimum size=0.04,inner sep=1pt, fill=white, draw}
   }
 
 %\normedge[style]{A}{B}{pos}{offset}{label text}: draws an edge from
@@ -782,17 +784,17 @@
 \node[inner sep=1pt] at (0.44,-0.4){$R$};
 \end{tikzpicture}}
 %---- Table 11.11 helpers (Metric Tensor) ----
-%\mline{L}{lt}{rt}{R}: metric-tensor line -- a central node with a left
+%\metric{L}{R}{bk}: metric-tensor line -- a central node with a left
 %segment to label L and right segment to label R. lt/rt pick the type:
 %'k' = ket (single arrowhead pointing outward, away from the node),
 %'b' = bra (double arrowhead pointing inward, toward the node).
-\newcommand{\mline}[4]{%
+\newcommand{\metric}[3]{%
 \begin{tikzpicture}[baseline=-0.4ex,inner sep=0.13em,font=\scriptsize]
-\node[dotnode] at (0,0){};
-\if k#2\draw[-{Stealth[length=2mm]},thick] (0,0) -- (-1.05,0) node[left]{$#1$};
-\else\draw[-{Stealth[length=1.7mm] Stealth[length=1.7mm]},thick] (-1.05,0) node[left]{$#1$} -- (0,0);\fi
-\if k#3\draw[-{Stealth[length=2mm]},thick] (0,0) -- (1.05,0) node[right]{$#4$};
-\else\draw[-{Stealth[length=1.7mm] Stealth[length=1.7mm]},thick] (1.05,0) node[right]{$#4$} -- (0,0);\fi
+\draw[jmlinem] (0.5,0)-- (-0.5,0);
+\if k#3\draw[jmarrow] (-0.5,0) -- (-1.05,0) node[above]{$#1$};
+\draw[jmarrow](0.5,0) -- (1.05,0) node[above]{$#2$};
+\else\draw[bjmarrow] (-0.5,0) -- (-1.05,0) node[above]{$#1$};
+\draw[bjmarrow](0.5,0) -- (1.05,0) node[above]{$#2$};\fi
 \end{tikzpicture}}
 
 %\rednode{name}: a "reduced" vertex -- a filled dot enclosed by a circle
