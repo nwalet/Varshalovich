@@ -614,94 +614,439 @@ p & a \\
 \]
 
 \subsection{Sums Involving Products of Six 3jm Symbols}
-% PROOFREAD: contains OCR-garbled or 12j Wigner array(s) not auto-converted -- verify/reconstruct against orig.
-\begin{equation}
-\left.\begin{array}{c}
-\sum_{\substack{\psi \kappa \rho \sigma \\
-\tau \nu \mu \lambda}}(-1)^{p-\psi+q-\kappa+r-\rho+\vartheta-\sigma+t-\tau+u-\nu+v-\mu+t^{\prime}-\lambda}\left(\begin{array}{cc}
-p & a \\
-\psi & -\alpha \\
-\psi
-\end{array}\right)\left(\begin{array}{rr}
-q & r \\
--\kappa & \rho
-\end{array} t^{\prime}\right.
-\end{array}\right)\threej{t^{\prime}}{u}{v}{-\lambda}{\nu}{\mu}\left(\begin{array}{rr}
-u & v  \label{chap12:eq:18}\\
--\nu & -\mu
-\end{array}\right),
-\end{equation}
-\begin{center}
-\includegraphics[max width=\textwidth, alt={}]{39a53bec-58f6-4733-a518-53d974314721-07_283_1227_850_432}
-\end{center}
+\begin{gather}
+\sum_{\substack{\psi \kappa \rho \sigma \\ \tau \nu \mu \lambda}}
+(-1)^{p-\psi+q-\kappa+r-\rho+\vartheta-\sigma+t-\tau+u-\nu+v-\mu+t^{\prime}-\lambda}
+\threej{p}{a}{q}{\psi}{-\alpha}{\kappa}  
+\threej{q}{r}{t'}{-\kappa}{\rho}{\lambda}
+\threej{t^{\prime}}{u}{v}{-\lambda}{\nu}{\mu}
+\threej{u}{v}{t}{-\nu}{-\mu}{\tau}\notag\\
+\times
+\threej{r}{a'}{s}{-\rho}{\alpha'}{\sigma}
+\threej{s}{p}{t}{-\sigma}{-\psi}{-r}
+= \frac{(-1)^{2t+a-\alpha}}{\prod_{at}^2}
+\sixj{a}{p}{q}{t}{r}{s} {tuv} \delta+_{t't}\delta_{aa'}\delta_{\alpha\alpha'}
+\label{chap12:eq:18}
+\end{gather}
+\[
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \coordinate(VL)at(-1.15,0);\coordinate(VR)at(1.15,0);
+  \coordinate(VT)at(0,1.15);\coordinate(VB)at(0,-1.15);
+  \draw[dl](-2,0)--(VL)node[at start,above]{$a\alpha$};
+  \draw[dl](VR)--(2,0)node[at end,above]{$a'\alpha'$};
+  \draw[dl](VL)--(VT)node[midway,above left,inner sep=1pt]{$q$};
+  \draw[dl](VT)--(VR)node[midway,above right,inner sep=1pt]{$r$};
+  \draw[dl](VL)--(VB)node[midway,below left,inner sep=1pt]{$p$};
+  \draw[dl](VB)--(VR)node[midway,below right,inner sep=1pt]{$s$};
+  \coordinate(lt)at(0,0.5);\coordinate(lb)at(0,-0.5);
+  \draw[dl](VT)--(lt)node[midway,right,inner sep=1pt]{$t$};
+  \draw[dl](lb)--(VB)node[pos=0.3,right,inner sep=1pt]{$t'$};
+  \draw[dl](lt)to[bend right=90]node[midway,left,inner sep=1pt]{$v$}(lb);
+  \draw[dl](lt)to[bend left=90]node[midway,right,inner sep=1pt]{$u$}(lb);
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \draw[dl](0,0)--(1.7,0)node[pos=0.1,above]{$a\alpha$}node[pos=0.9,above]{$a'\alpha'$};
+\end{tikzpicture}
+\quad
+\begin{tikzpicture}[baseline=0pt,font=\small]\dsixjsq{0}{0}{q}{r}{p}{s}{a}{t}\end{tikzpicture}
+\quad
+\begin{tikzpicture}[baseline=0pt,font=\small]\dthetav{0}{0}{v}{t}{u}\end{tikzpicture}
+\quad
+\begin{tikzpicture}[baseline=0pt,font=\small]\dlensv{0}{0}{t}{t'}\end{tikzpicture}
+\]
 
-% PROOFREAD: contains OCR-garbled or 12j Wigner array(s) not auto-converted -- verify/reconstruct against orig.
 \begin{gather}
 \sum_{\substack{\psi \kappa p \sigma \\
-\nu \mu \tau \lambda}}(-1)^{p-\psi+q-\kappa+q^{\prime}-\rho+p^{\prime}-\sigma+u-\nu+v-\mu+t-\tau+\rho-\lambda}\left(\begin{array}{ll}
-u & v \\
-\nu & \mu \\
-\mu & \kappa
-\end{array}\right)\threej{u}{v}{q^{\prime}}{-\nu}{-\mu}{-\rho}\threej{t}{s}{p}{\tau}{\lambda}{\psi}\threej{t}{s}{p^{\prime}}{-\tau}{-\lambda}{-\sigma}  \notag\\
+\nu \mu \tau \lambda}}(-1)^{p-\psi+q-\kappa+q^{\prime}-\rho+p^{\prime}-\sigma+u-\nu+v-\mu+t-\tau+\rho-\lambda}
+\threej{u}{v}{q}{\nu}{\mu}{\kappa}
+\threej{u}{v}{q^{\prime}}{-\nu}{-\mu}{-\rho}\threej{t}{s}{p}{\tau}{\lambda}{\psi}\threej{t}{s}{p^{\prime}}{-\tau}{-\lambda}{-\sigma}  \notag\\
 \times\threej{q}{p}{a}{\kappa}{\psi}{\alpha}\threej{q^{\prime}}{p^{\prime}}{a^{\prime}}{-\rho}{-\sigma}{-\alpha^{\prime}}=\frac{(-1)^{\alpha-a}}{\prod_{a p q}^{2}} \delta_{q q^{\prime}} \delta_{p p^{\prime}} \delta_{a a^{\prime}} \delta_{\alpha \alpha^{\prime}}\{u v q\}\{p t s\}\{a p q\}, \label{chap12:eq:19}
 \end{gather}
 
-\begin{center}
-\includegraphics[max width=\textwidth, alt={}]{39a53bec-58f6-4733-a518-53d974314721-07_370_1165_1444_466}
-\end{center}
+\[
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \coordinate(VL)at(-1.7,0);\coordinate(VR)at(1.7,0);
+  \draw[dl](-2.6,0)--(VL)node[at start,left]{$a\alpha$};
+  \draw[dl](VR)--(2.6,0)node[at end,right]{$a'\alpha'$};
+  \coordinate(qa)at(-0.7,0.6);\coordinate(qb)at(0.7,0.6);
+  \draw[dl](VL)--(qa)node[midway,above left,inner sep=1pt]{$q$};
+  \draw[dl](qb)--(VR)node[midway,above right,inner sep=1pt]{$q'$};
+  \draw[dl](qa)to[bend left=50]node[midway,above,inner sep=1pt]{$u$}(qb);
+  \draw[dl](qa)to[bend right=50]node[midway,below,inner sep=1pt]{$v$}(qb);
+  \coordinate(pa)at(-0.7,-0.6);\coordinate(pb)at(0.7,-0.6);
+  \draw[dl](VL)--(pa)node[midway,below left,inner sep=1pt]{$p$};
+  \draw[dl](pb)--(VR)node[midway,below right,inner sep=1pt]{$p'$};
+  \draw[dl](pa)to[bend left=50]node[midway,above,inner sep=1pt]{$t$}(pb);
+  \draw[dl](pa)to[bend right=50]node[midway,below,inner sep=1pt]{$s$}(pb);
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \draw[dl](0,0)--(1.7,0)node[pos=0.1,above]{$a\alpha$}node[pos=0.9,above]{$a'\alpha'$};
+\end{tikzpicture}
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \begin{scope}[yshift=1.2cm]
+    \dtheta{0}{0}{u}{v}{q}
+  \end{scope}
+\begin{scope}
+  \dtheta{0}{0}{q}{a}{p}
+\end{scope}
+\begin{scope}[yshift=-1.2cm]
+  \dtheta{0}{0}{p}{t}{s}\end{scope}
+\begin{scope}[xshift=1cm,yshift=0.5cm]
+  \coordinate(L)at(0,0);\coordinate(R)at(1.1,0);\dlens{L}{R}{q'}{q}
+\end{scope}
+\begin{scope}[xshift=1cm,yshift=-0.5cm]
+  \coordinate(L)at(0,0);\coordinate(R)at(1.1,0);\dlens{L}{R}{p}{p'}
+\end{scope}
+\end{tikzpicture}
+\]
 
-% PROOFREAD: contains OCR-garbled or 12j Wigner array(s) not auto-converted -- verify/reconstruct against orig.
 \begin{gather}
-\sum_{\psi \kappa \rho \sigma}(-1)^{p-\psi+q-\kappa+r-\rho+s-\sigma+t-\tau+v-\mu+u-\nu+g-\lambda}\threej{a}{q}{p}{-\alpha}{\kappa}{\psi}\left(\begin{array}{rr}
-p & t \\
--\psi & r
-\end{array}\right)\left(\begin{array}{rr}
-g & u \\
-\lambda & v \\
-\lambda-\nu & \mu
-\end{array}\right)\left(\begin{array}{rr}
-v & r \\
--\mu & \rho-\kappa
+\sum_{\psi \kappa \rho \sigma}(-1)^{p-\psi+q-\kappa+r-\rho+s-\sigma+t-\tau+v-\mu+u-\nu+g-\lambda}\threej{a}{q}{p}{-\alpha}{\kappa}{\psi}\left(\begin{array}{rrr}
+p & t &g\\
+-\psi & r &-\lambda
+\end{array}\right)\left(\begin{array}{rrr}
+g & u  & v\\
+\lambda&-\nu & \mu
+\end{array}\right)\left(\begin{array}{rrr}
+v & r &q\\
+-\mu & \rho&-\kappa
 \end{array}\right)  \notag\\
-\times\threej{r}{u}{s}{-\rho}{\nu}{-\sigma}\left(\begin{array}{rr}
-s & t a^{\prime} \\
-\sigma & -\tau \alpha^{\prime}
+\times\threej{r}{u}{s}{-\rho}{\nu}{-\sigma}\left(\begin{array}{rrr}
+s & t &a^{\prime} \\
+\sigma & -\tau &\alpha^{\prime}
 \end{array}\right)=\frac{(-1)^{s-p-\alpha-g}}{\prod_{a}^{2}}\sixj{q}{g}{s}{u}{r}{v}\sixj{a}{p}{q}{g}{s}{t} \delta_{a a^{\prime}} \delta_{\alpha \alpha^{\prime}} \label{chap12:eq:20}
 \end{gather}
-% PROOFREAD: contains OCR-garbled or 12j Wigner array(s) not auto-converted -- verify/reconstruct against orig.
-\begin{equation}
-\left.\begin{array}{c}
+\[
+\begin{tikzpicture}[baseline=-20pt,font=\small]
+  \foreach \i in {1,...,5} {\coordinate (n\i) at (72*\i-18:1);}
+  \coordinate (O) at (0,0);
+  \draw[dl](n1)--(n2) node[midway,above] {$r$};
+  \draw[dl](n2)--(n3) node[midway,left] {$q$};
+  \draw[dl](n3)--(n4) node[midway,below] {$p$};
+  \draw[dl](n4)--(n5) node[midway,below] {$t$};
+  \draw[dl](n5)--(n1) node[midway,right] {$s$};
+  \draw[dl] (n1)--(O) node[wb,midway] {$u$};
+  \draw[dl] (n2)--(O) node[wb,midway] {$v$};
+  \draw[dl] (n4)--(O) node[wb,midway] {$g$};
+  \draw[dl] (n3) -- ($(n3)-(0.7,0)$) node[at end, above] {$a\alpha$};
+  \draw[dl] (n5) -- ($(n5)+(0.7,0)$) node[at end, above] {$a'\alpha'$};
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \draw[dl](0,0)--(1.7,0)node[pos=0.1,above]{$a\alpha$}node[pos=0.9,above]{$a'\alpha'$};
+\begin{scope}[shift={(3,0)}]\dsixjsq{0}{0}{q}{g}{u}{r}{s}{v}
+\end{scope}
+  \begin{scope}[shift={(3,2)}]
+    \coordinate(c)at(0,0);\coordinate(B)at(-90:1);\coordinate(L)at(30:1);\coordinate(R)at(150:1);
+    \draw[dl](B)--(R)node[midway,left,inner sep=2pt]{$s$};
+    \draw[dl](R)--(L)node[midway,above,inner sep=2pt]{$r$};
+    \draw[dl](L)--(B)node[midway,right,inner sep=2pt]{$q$};
+    \draw[dl](c)--(B)node[wb,pos=0.5]{$g$};
+    \draw[dl](c)--(L)node[wb,pos=0.5]{$v$};
+    \draw[dl](c)--(R)node[wb,pos=0.5]{$u$};
+  \end{scope}
+\end{tikzpicture}
+\]
+\begin{gather}
 \sum_{\substack{\psi \kappa \rho \sigma \\
-\nu \tau \mu \lambda}}(-1)^{p-\psi+q-\kappa+r-\rho+s-\sigma+u-\nu+t-r+v-\mu+g-\lambda}\threej{p}{a}{q}{\psi}{\alpha}{-\kappa}\threej{q}{r}{v}{\kappa}{\rho}{-\mu}\threej{v}{s}{p}{\mu}{-\sigma}{-\psi}\threej{u}{r}{g}{\nu}{-\rho}{-\lambda} \\
-\times\threej{g}{s}{t}{\lambda}{\sigma}{\tau}\left(\begin{array}{rr}
-t & a^{\prime} \\
--\tau & -\alpha^{\prime}
-\end{array}\right)=\nu
-\end{array}\right)=\frac{(-1)^{2 g+a-\alpha}}{\prod_{a}^{2}}\left\{\begin{array}{lr}
-a & r  \label{chap12:eq:21}\\
-g & t \\
-u
-\end{array}\right\}\sixj{a}{r}{s}{v}{p}{q} \delta_{a a^{\prime}} \delta_{\alpha \alpha^{\prime}}, .
-\end{equation}
-\begin{center}
-\includegraphics[max width=\textwidth, alt={}]{39a53bec-58f6-4733-a518-53d974314721-08_265_1172_1718_409}
-\end{center}
+\nu \tau \mu \lambda}}
+(-1)^{p-\psi+q-\kappa+r-\rho+s-\sigma+u-\nu+t-r+v-\mu+g-\lambda}\threej{p}{a}{q}{\psi}{\alpha}{-\kappa}\threej{q}{r}{v}{\kappa}{\rho}{-\mu}\threej{v}{s}{p}{\mu}{-\sigma}{-\psi}\threej{u}{r}{g}{\nu}{-\rho}{-\lambda} \notag\\
+\times\threej{g}{s}{t}{\lambda}{\sigma}{\tau}\left(\begin{array}{rrr}
+s&t & a^{\prime} \\
+\sigma & -\tau & -\alpha^{\prime}
+\end{array}\right)=
+\frac{(-1)^{2 g+a-\alpha}}{\prod_{a}^{2}}
+\sixj{q}{g}{s}{u}{r}{v}
+\sixj{a}{r}{s}{v}{p}{q} \delta_{a a^{\prime}} \delta_{\alpha \alpha^{\prime}}, .\label{chap12:eq:21}
+\end{gather}
+
+\[
+\begin{tikzpicture}[baseline=0pt,font=\small]
+\coordinate (L) at (-1.2,0);
+\coordinate (R) at (1.2,0);
+\coordinate (lT) at (-0.4,0.7);
+\coordinate (lB) at (-0.4,-0.7);
+\coordinate (rT) at (0.4,0.7);
+\coordinate (rB) at (0.4,-0.7);
+\draw[dl](L)--(lT) node[midway,above] {$q$};
+\draw[dl](lT)--(rT) node[midway,above] {$r$};
+\draw[dl](rT)--(R) node[midway,above] {$u$};
+\draw[dl](L)--(lB) node[midway,below] {$p$};
+\draw[dl](lB)--(rB) node[midway,below] {$s$};
+\draw[dl](rB)--(R) node[midway,below] {$t$};
+\draw[dl](rB)--(rT) node[midway,left] {$g$};
+\draw[dl](lB)--(lT) node[midway,right] {$v$};
+\draw[dl](R)--($(R)+(1,0)$) node[near end, above] {$a'\alpha'$};
+\draw[dl](L)--($(L)-(1,0)$) node[near end, above] {$a\alpha$};
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \draw[dl](0,0)--(1.7,0)node[pos=0.1,above]{$a\alpha$}node[pos=0.9,above]{$a'\alpha'$};
+\end{tikzpicture}
+\quad
+\begin{tikzpicture}[baseline=0pt,font=\small]\dsixjsq{0}{0}{q}{r}{p}{s}{a}{v}\end{tikzpicture}
+\quad
+\begin{tikzpicture}[baseline=0pt,font=\small]\dsixjsq{0}{0}{r}{u}{s}{t}{a}{g}\end{tikzpicture}
+\]
+\begin{gather}
+\sum_{\substack{\psi \kappa \rho \sigma \\
+\nu \tau \mu \lambda}}
+(-1)^{p-\psi+q-\kappa+r-\rho+s-\sigma+u-\nu+t-r+v-\mu+g-\lambda}
+\threej{a}{p}{q}{\alpha}{\psi}{\kappa}
+\threej{q}{g}{s}{-\kappa}{-\lambda}{-\sigma}
+\threej{s}{t}{v}{\sigma}{\tau}{\mu}
+\threej{v}{p}{r}{-\mu}{-\psi}{-\rho} \notag\\
+\times
+\threej{r}{g}{u}{\rho}{\lambda}{\nu}
+\threej{u}{t}{a'}{-\nu}{-\tau}{-\alpha'}=
+\frac{(-1)^{a-\alpha}}{\prod_{a}^{2}}
+\ninej{a}{p}{q}{u}{r}{g}{t}{v}{s}
+ \delta_{a a^{\prime}} \delta_{\alpha \alpha^{\prime}}, .\label{chap12:eq:21a}
+\end{gather}
+\[
+\begin{tikzpicture}[baseline=0pt,font=\small]  \coordinate(c)at(0,0);
+  \foreach \i in {1,...,6} {\coordinate(h\i) at ($(c)+(60*\i:1)$);}
+  \draw[dl](h1)--(h2)node[midway,above,inner sep=2pt]{$r$};
+  \draw[dl](h2)--(h3)node[midway,left,inner sep=2pt]{$p$};
+  \draw[dl](h3)--(h4)node[midway,left,inner sep=2pt]{$q$};
+  \draw[dl](h4)--(h5)node[midway,below,inner sep=2pt]{$s$};
+  \draw[dl](h5)--(h6)node[midway,right,inner sep=2pt]{$t$};
+  \draw[dl](h6)--(h1)node[midway,right,inner sep=2pt]{$u$};
+  \draw[dl](h4)--(h1)node[wb,pos=0.25]{$g$};
+  \draw[dl](h2)--(h5)node[wb,pos=0.75]{$v$};
+  \draw[dl](h3)--($(h3)-(1,0)$)node[wb,pos=0.75]{$a\alpha$};
+  \draw[dl](h6)--($(h6)+(1,0)$)node[wb,pos=0.75]{$a'\alpha'$};
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+    \draw[dl](-1,0)--(1,0)node[wb,pos=0.2,above]{$a\alpha$}node[wb,pos=0.8,above]{$a'\alpha'$};
+  \coordinate(c)at(2.5,0);
+  \foreach \i in {1,...,6} {\coordinate(h\i) at ($(c)+(60*\i:1)$);}
+  \draw[dl](h1)--(h2)node[midway,above,inner sep=2pt]{$r$};
+  \draw[dl](h2)--(h3)node[midway,left,inner sep=2pt]{$p$};
+  \draw[dl](h3)--(h4)node[midway,left,inner sep=2pt]{$q$};
+  \draw[dl](h4)--(h5)node[midway,below,inner sep=2pt]{$s$};
+  \draw[dl](h5)--(h6)node[midway,right,inner sep=2pt]{$t$};
+  \draw[dl](h6)--(h1)node[midway,right,inner sep=2pt]{$u$};
+  \draw[dl](h4)--(h1)node[wb,pos=0.25]{$g$};
+  \draw[dl](h3)--(h6)node[wb,pos=0.75]{$a$};
+  \draw[dl](h2)--(h5)node[wb,pos=0.75]{$v$};
+\end{tikzpicture}
+\]
+\begin{gather}
+\sum_{\substack{\psi \kappa \nu \rho  \\
+\mu \sigma \lambda}}
+(-1)^{p-\psi+q-\kappa+u-\nu+r-\rho+v-\mu+s-\sigma+g-\lambda}
+\threej{p}{a}{q}{\psi}{\alpha}{-\kappa}
+\threej{q}{u}{g}{-\kappa}{\nu}{-\lambda}
+\threej{g}{v}{s}{\lambda}{\mu}{-\sigma}
+\threej{s}{d}{p}{\sigma}{\delta}{-\psi} \notag\\
+\times
+\threej{u}{b}{r}{-\nu}{\beta}{\rho}
+\threej{r}{c}{v}{-\rho}{\gamma}{-\mu}\notag\\
+=
+(-1)^{s+b+u+v-q-a-d-c}\sum_{x\xi}{\prod_{x}^{2}}
+\threej{a}{x}{d}{\alpha }{-\xi}{\beta}
+\threej{c}{x}{b}{\gamma}{\xi}{\beta}
+\sixj{a}{x}{d}{s}{p}{q}
+\sixj{x}{x}{b}{u}{r}{v}
+\sixj{u}{x}{v}{s}{g}{q}
+.\label{chap12:eq:22a}
+\end{gather}
+
+\[
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  % LHS: two squares sharing middle edge g
+  \coordinate(TL)at(-1,0.7);\coordinate(TM)at(0,0.7);\coordinate(TR)at(1,0.7);
+  \coordinate(BL)at(-1,-0.7);\coordinate(BM)at(0,-0.7);\coordinate(BR)at(1,-0.7);
+  \draw[dl](TL)--(TM)node[midway,above,inner sep=1pt]{$q$};
+  \draw[dl](TM)--(TR)node[midway,above,inner sep=1pt]{$u$};
+  \draw[dl](BL)--(BM)node[midway,below,inner sep=1pt]{$s$};
+  \draw[dl](BM)--(BR)node[midway,below,inner sep=1pt]{$v$};
+  \draw[dl](TL)--(BL)node[midway,left,inner sep=1pt]{$p$};
+  \draw[dl](TR)--(BR)node[midway,right,inner sep=1pt]{$r$};
+  \draw[dl](TM)--(BM)node[midway,right,inner sep=1pt]{$g$};
+  \draw[dl](TL)--($(TL)+(120:0.8)$)node[at end,left]{$a\alpha$};
+  \draw[dl](TR)--($(TR)+(60:0.8)$)node[at end,right]{$b\beta$};
+  \draw[dl](BL)--($(BL)+(240:0.8)$)node[at end,left]{$d\delta$};
+  \draw[dl](BR)--($(BR)+(-60:0.8)$)node[at end,right]{$c\gamma$};
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  % bowtie (top), x bold
+  \begin{scope}[shift={(0,1.9)}]
+    \coordinate(L)at(-0.8,0);\coordinate(R)at(0.8,0);
+    \draw[dlu](L)--(R)node[midway,above,inner sep=1pt]{$x$};
+    \draw[dl](L)--($(L)+(130:0.8)$)node[at end,left]{$a\alpha$};
+    \draw[dl](L)--($(L)+(230:0.8)$)node[at end,left]{$d\delta$};
+    \draw[dl](R)--($(R)+(50:0.8)$)node[at end,right]{$b\beta$};
+    \draw[dl](R)--($(R)+(-50:0.8)$)node[at end,right]{$c\gamma$};
+  \end{scope}
+  % left 6j-triangle (apex-right): p left, q top, s bottom; inner a,d,x
+  \begin{scope}[shift={(-2.7,0)}]
+    \coordinate(c)at(0,0);\coordinate(T)at(120:0.9);\coordinate(B)at(240:0.9);\coordinate(V)at(0:0.9);
+    \draw[dl](T)--(B)node[midway,left,inner sep=1pt]{$p$};
+    \draw[dl](T)--(V)node[midway,above right,inner sep=1pt]{$q$};
+    \draw[dl](B)--(V)node[midway,below right,inner sep=1pt]{$s$};
+    \draw[dl](c)--(T)node[wb,pos=0.5,inner sep=1pt]{$a$};
+    \draw[dl](c)--(B)node[wb,pos=0.5]{$d$};
+    \draw[dlu](c)--(V)node[wb,pos=0.45,inner sep=1pt] {$x$};
+  \end{scope}
+  % middle 6j-diamond: q,u,s,v edges; x horizontal (bold), g vertical
+  \begin{scope}[shift={(0,0)}]
+    \draw[dlu](180:0.9)--(0:0.9);
+    \dsixjsq{0}{0}{q}{u}{s}{v}{x}{g}
+  \end{scope}
+  % right 6j-triangle (apex-left): u top, r right, v bottom; inner b,c,x
+  \begin{scope}[shift={(2.7,0)}]
+    \coordinate(c)at(0,0);\coordinate(T)at(60:0.9);\coordinate(B)at(300:0.9);\coordinate(V)at(180:0.9);
+    \draw[dl](T)--(V)node[midway,above left,inner sep=1pt]{$u$};
+    \draw[dl](T)--(B)node[midway,right,inner sep=1pt]{$r$};
+    \draw[dl](V)--(B)node[midway,below left,inner sep=1pt]{$v$};
+    \draw[dl](c)--(T)node[wb,pos=0.5]{$b$};
+    \draw[dl](c)--(B)node[wb,pos=0.5]{$c$};
+    \draw[dlu](c)--(V)node[wb,pos=0.5]{$x$};
+  \end{scope}
+\end{tikzpicture}
+\]
+
 \begin{equation}
-=(-1)^{v+u+r+p-g-a-c} \sum_{x y \eta}(-1)^{y-\eta} \prod_{x y}^{2}\threej{a}{y}{b}{\alpha}{-\eta}{\beta} \label{chap12:eq:22}\threej{d}{y}{c}{\delta}{\eta}{\gamma}\sixj{a}{y}{b}{r}{u}{x}\sixj{d}{y}{c}{r}{v}{x}\sixj{a}{p}{q}{g}{u}{x}\sixj{v}{g}{s}{p}{d}{x},
+=(-1)^{v+u+r+p-g-a-c} \sum_{x y \eta}(-1)^{y-\eta} \prod_{x y}^{2}
+\threej{a}{y}{b}{\alpha}{-\eta}{\beta} 
+\threej{d}{y}{c}{\delta}{\eta}{\gamma}
+\sixj{a}{y}{b}{r}{u}{x}
+\sixj{d}{y}{c}{r}{v}{x}
+\sixj{a}{p}{q}{g}{u}{x}
+\sixj{v}{g}{s}{p}{d}{x},
+\label{chap12:eq:22}
 \end{equation}
-\begin{center}
-\includegraphics[max width=\textwidth, alt={}]{39a53bec-58f6-4733-a518-53d974314721-08_366_934_2186_528}
-\end{center}
+
+
+\[
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \coordinate(TL)at(-1,0.7);\coordinate(TM)at(0,0.7);\coordinate(TR)at(1,0.7);
+  \coordinate(BL)at(-1,-0.7);\coordinate(BM)at(0,-0.7);\coordinate(BR)at(1,-0.7);
+  \draw[dl](TL)--(TM)node[midway,above,inner sep=1pt]{$q$};
+  \draw[dl](TM)--(TR)node[midway,above,inner sep=1pt]{$u$};
+  \draw[dl](BL)--(BM)node[midway,below,inner sep=1pt]{$s$};
+  \draw[dl](BM)--(BR)node[midway,below,inner sep=1pt]{$v$};
+  \draw[dl](TL)--(BL)node[midway,left,inner sep=1pt]{$p$};
+  \draw[dl](TR)--(BR)node[midway,right,inner sep=1pt]{$r$};
+  \draw[dl](TM)--(BM)node[midway,right,inner sep=1pt]{$g$};
+  \draw[dl](TL)--($(TL)+(120:0.8)$)node[at end,left]{$a\alpha$};
+  \draw[dl](TR)--($(TR)+(60:0.8)$)node[at end,right]{$b\beta$};
+  \draw[dl](BL)--($(BL)+(240:0.8)$)node[at end,left]{$d\delta$};
+  \draw[dl](BR)--($(BR)+(-60:0.8)$)node[at end,right]{$c\gamma$};
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  % TL apex-right {a p q; g u x}: outer a(top) p(left) x(bottom,bold); inner q,g,u
+  \begin{scope}[shift={(-2,1)}]
+    \coordinate(c)at(0,0);\coordinate(T)at(120:1);\coordinate(B)at(240:1);\coordinate(V)at(0:1);
+    \draw[dl](T)--(V)node[midway,above,inner sep=1pt]{$a$};
+    \draw[dl](T)--(B)node[midway,left,inner sep=1pt]{$p$};
+    \draw[dlu](B)--(V)node[midway,below,inner sep=1pt]{$x$};
+    \draw[dl](c)--(T)node[wb,pos=0.5,inner sep=1pt]{$q$};
+    \draw[dl](c)--(B)node[wb,pos=0.5,inner sep=1pt]{$g$};
+    \draw[dl](c)--(V)node[wb,pos=0.5,inner sep=1pt]{$u$};
+  \end{scope}
+  % TR apex-left {a y b; r u x}
+  \begin{scope}[shift={(0.3,1)}]
+    \coordinate(c)at(0,0);\coordinate(T)at(60:1);\coordinate(B)at(300:1);\coordinate(V)at(180:1);
+    \draw[dl](T)--(V)node[midway,above,inner sep=1pt]{$a$};
+    \draw[dlu](T)--(B)node[midway,right,inner sep=1pt]{$y$};
+    \draw[dlu](V)--(B)node[midway,below,inner sep=1pt]{$x$};
+    \draw[dl](c)--(T)node[wb,pos=0.5]{$b$};
+    \draw[dl](c)--(B)node[wb,pos=0.5]{$r$};
+    \draw[dl](c)--(V)node[wb,pos=0.5]{$u$};
+  \end{scope}
+  % BL apex-right {v g s; p d x}
+  \begin{scope}[shift={(-2,-1)}]
+    \coordinate(c)at(0,0);\coordinate(T)at(120:1);\coordinate(B)at(240:1);\coordinate(V)at(0:1);
+    \draw[dlu](T)--(V)node[midway,above,inner sep=1pt]{$x$};
+    \draw[dl](T)--(B)node[midway,left,inner sep=1pt]{$p$};
+    \draw[dl](B)--(V)node[midway,below,inner sep=1pt]{$d$};
+    \draw[dl](c)--(T)node[wb,pos=0.5]{$g$};
+    \draw[dl](c)--(B)node[wb,pos=0.5]{$s$};
+    \draw[dl](c)--(V)node[wb,pos=0.5]{$v$};
+  \end{scope}
+  % BR apex-left {d y c; r v x}
+  \begin{scope}[shift={(0.3,-1)}]
+    \coordinate(c)at(0,0);\coordinate(T)at(60:1);\coordinate(B)at(300:1);\coordinate(V)at(180:1);
+    \draw[dlu](T)--(V)node[midway,above,inner sep=1pt]{$x$};
+    \draw[dlu](T)--(B)node[midway,right,inner sep=1pt]{$y$};
+    \draw[dl](B)--(V)node[midway,below,inner sep=1pt]{$d$};
+    \draw[dl](c)--(T)node[wb,pos=0.5]{$r$};
+    \draw[dl](c)--(B)node[wb,pos=0.5]{$c$};
+    \draw[dl](c)--(V)node[wb,pos=0.5]{$v$};
+  \end{scope}
+  % y (bold) down the right side to a Y for dd,cc
+  \coordinate(YL)at(2.0,-1.8);
+  \coordinate(YH)at(2.0,1.8);
+  \draw[dlu](YH)--(YL)node[pos=0.6,right,inner sep=1pt]{$y$};
+  \draw[dl](YL)--($(YL)+(-150:0.8)$)node[at end,below]{$d\delta$};
+  \draw[dl](YL)--($(YL)+(-30:0.8)$)node[at end,below]{$c\gamma$};
+  \draw[dl](YH)--($(YH)+(150:0.8)$)node[at end,above]{$a\alpha$};
+  \draw[dl](YH)--($(YH)+(30:0.8)$)node[at end,above]{$b\beta$};
+\end{tikzpicture}
+\]
 % PROOFREAD: contains OCR-garbled or 12j Wigner array(s) not auto-converted -- verify/reconstruct against orig.
 \begin{equation}
-=(-1)^{r+s+d-q-c} \sum_{x y \eta}(-1)^{y-\eta+x} \prod_{x y}^{2}\left(\begin{array}{rr}
-d & y  \label{chap12:eq:23}\\
-\delta & -\eta
-\end{array}\right)\threej{a}{y}{c}{\alpha}{\eta}{\gamma}\sixj{d}{y}{b}{r}{u}{x}\sixj{a}{y}{c}{r}{v}{x}\ninej{a}{p}{q}{x}{d}{u}{v}{s}{g},
+=(-1)^{r+s+d-q-c} \sum_{x y \eta}(-1)^{y-\eta+x} \prod_{x y}^{2}
+\threej{d}{y}{b}{\delta}{-\eta}{\beta}
+\threej{a}{y}{c}{\alpha}{\eta}{\gamma}
+\sixj{d}{y}{b}{r}{u}{x}
+\sixj{a}{y}{c}{r}{v}{x}
+\ninej{a}{p}{q}{x}{d}{u}{v}{s}{g},
+\label{chap12:eq:23}
 \end{equation}
-\begin{center}
-\includegraphics[max width=\textwidth, alt={}]{39a53bec-58f6-4733-a518-53d974314721-09_352_1096_621_484}
-\end{center}
+\[
+\begin{tikzpicture}[baseline=0pt,font=\small]\coordinate(TL)at(-1,0.7);\coordinate(TM)at(0,0.7);\coordinate(TR)at(1,0.7);
+  \coordinate(BL)at(-1,-0.7);\coordinate(BM)at(0,-0.7);\coordinate(BR)at(1,-0.7);
+  \draw[dl](TL)--(TM)node[midway,above,inner sep=1pt]{$q$};
+  \draw[dl](TM)--(TR)node[midway,above,inner sep=1pt]{$u$};
+  \draw[dl](BL)--(BM)node[midway,below,inner sep=1pt]{$s$};
+  \draw[dl](BM)--(BR)node[midway,below,inner sep=1pt]{$v$};
+  \draw[dl](TL)--(BL)node[midway,left,inner sep=1pt]{$p$};
+  \draw[dl](TR)--(BR)node[midway,right,inner sep=1pt]{$r$};
+  \draw[dl](TM)--(BM)node[midway,right,inner sep=1pt]{$g$};
+  \draw[dl](TL)--($(TL)+(120:0.8)$)node[at end,left]{$a\alpha$};
+  \draw[dl](TR)--($(TR)+(60:0.8)$)node[at end,right]{$b\beta$};
+  \draw[dl](BL)--($(BL)+(240:0.8)$)node[at end,left]{$d\delta$};
+  \draw[dl](BR)--($(BR)+(-60:0.8)$)node[at end,right]{$c\gamma$};
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  % 9j hexagon (pointy-top): outer q,p,s,v,x,u ; central diameters g,d,a
+  \dninehex{0}{0}{q}{p}{s}{v}{x}{u}
+  \coordinate(hc)at(0,0);
+  \draw[dl](hB)--(hT)node[wb,pos=0.3]{$g$};
+  \draw[dl](hUR)--(hLL)node[wb,pos=0.3]{$d$};
+  \draw[dl](hUL)--(hLR)node[wb,pos=0.3]{$a$};
+  \draw[dlu] (hUR)--(hLR);
+  % top diamond {u b / x y}, hd=d, vd=r
+  \begin{scope}[shift={(2.1,1.1)}]
+    \dsixjsq{0}{0}{u}{b}{x}{y}{d}{r}
+    \draw[dlu](ql)--(qb);
+    \draw[dlu](qb)--(qr);
+  \end{scope}
+  % bottom diamond {x y / v c}, hd=a, vd=r
+  \begin{scope}[shift={(2.1,-1.1)}]
+    \dsixjsq{0}{0}{x}{y}{v}{c}{a}{r}
+    \draw[dlu](ql)--(qt);
+    \draw[dlu](qt)--(qr);
+  \end{scope}
+  % Y (right): y vertical; top->bb,dd ; bottom->cc,aa
+  \coordinate(YH)at(4.0,1.4);\coordinate(YL)at(4.0,-1.4);
+  \draw[dlu](YH)--(YL)node[midway,right,inner sep=1pt]{$y$};
+  \draw[dl](YH)--($(YH)+(150:0.8)$)node[at end,above]{$b\beta$};
+  \draw[dl](YH)--($(YH)+(30:0.8)$)node[at end,above]{$d\delta$};
+  \draw[dl](YL)--($(YL)+(210:0.8)$)node[at end,below]{$c\gamma$};
+  \draw[dl](YL)--($(YL)+(-30:0.8)$)node[at end,below]{$a\alpha$};
+\end{tikzpicture}
+\]
 % PROOFREAD: contains OCR-garbled or 12j Wigner array(s) not auto-converted -- verify/reconstruct against orig.
 \[
 \begin{aligned}
@@ -722,9 +1067,64 @@ r & c & s \\
 \begin{equation}
 =(-1)^{a+b+c+u+s}\sixj{a}{p}{q}{g}{v}{u} \label{chap12:eq:24} \sum_{x \xi}(-1)^{x-\xi} \prod_{x}^{2}\threej{a}{d}{x}{\alpha}{\delta}{\xi}\threej{x}{b}{c}{-\xi}{\beta}{\gamma}\sixj{a}{d}{x}{s}{v}{u}\sixj{x}{b}{c}{r}{s}{v},
 \end{equation}
-\begin{center}
-\includegraphics[max width=\textwidth, alt={}]{39a53bec-58f6-4733-a518-53d974314721-09_434_982_1355_532}
-\end{center}
+\[
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \coordinate(TL)at(0,1.5);\coordinate(TR)at(1.5,1.5);\coordinate(BR)at(1.5,0);
+  \coordinate(BL)at(0,0);
+  \coordinate(BM)at(0.7,0);\coordinate(ML)at(0,0.7);
+  \draw[dl](TL)--(TR)node[midway,above,inner sep=1pt]{$r$};
+  \draw[dl](TR)--(BR)node[midway,right,inner sep=1pt]{$s$};
+  \draw[dl](BR)--(BM)node[midway,below,inner sep=1pt]{$u$};
+  \draw[dl](BM)--(BL)node[midway,below,inner sep=1pt]{$p$};
+  \draw[dl](BL)--(ML)node[midway,left,inner sep=1pt]{$q$};
+  \draw[dl](ML)--(TL)node[midway,left,inner sep=1pt]{$v$};
+  \draw[dl](ML)--(BM)node[midway,above right,inner sep=1pt]{$g$};
+  \draw[dl](TL)--($(TL)+(135:0.8)$)node[at end,left]{$b\beta$};
+  \draw[dl](TR)--($(TR)+(45:0.8)$)node[at end,right]{$c\gamma$};
+  \draw[dl](BR)--($(BR)+(-45:0.8)$)node[at end,right]{$d\delta$};
+  \draw[dl](BL)--($(BL)+(225:0.8)$)node[at end,left]{$a\alpha$};
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  % left 6j-tri (apex-up) {a p q / g v u}: outer g,v,u ; spokes q,p,a
+  \begin{scope}[shift={(0,0)}]
+    \coordinate(c)at(0,0);\coordinate(T)at(90:1);\coordinate(L)at(210:1);\coordinate(R)at(330:1);
+    \draw[dl](T)--(L)node[midway,above left,inner sep=1pt]{$g$};
+    \draw[dl](T)--(R)node[midway,above right,inner sep=1pt]{$v$};
+    \draw[dl](L)--(R)node[midway,below,inner sep=1pt]{$u$};
+    \draw[dl](c)--(T)node[wb,pos=0.5]{$q$};
+    \draw[dl](c)--(L)node[wb,pos=0.5]{$p$};
+    \draw[dl](c)--(R)node[wb,pos=0.5]{$a$};
+  \end{scope}
+  % middle 6j-tri (apex-up) {a d x / s v u}: outer v,s,u ; spokes x,a,d
+  \begin{scope}[shift={(2.4,0)}]
+    \coordinate(c)at(0,0);\coordinate(T)at(90:1);\coordinate(L)at(210:1);\coordinate(R)at(330:1);
+    \draw[dl](T)--(L)node[midway,above left,inner sep=1pt]{$v$};
+    \draw[dl](T)--(R)node[midway,above right,inner sep=1pt]{$s$};
+    \draw[dl](L)--(R)node[midway,below,inner sep=1pt]{$u$};
+    \draw[dlu](c)--(T)node[wb,pos=0.5]{$x$};
+    \draw[dl](c)--(L)node[wb,pos=0.5]{$a$};
+    \draw[dl](c)--(R)node[wb,pos=0.5]{$d$};
+  \end{scope}
+  % top 6j-tri (apex-DOWN) {x b c / r s v}: outer r,v,s ; spokes b,c,x
+  \begin{scope}[shift={(2.4,2.15)}]
+    \coordinate(c)at(0,0);\coordinate(B)at(270:1);\coordinate(TLv)at(150:1);\coordinate(TRv)at(30:1);
+    \draw[dl](TLv)--(TRv)node[midway,above,inner sep=1pt]{$r$};
+    \draw[dl](TLv)--(B)node[midway,below left,inner sep=1pt]{$v$};
+    \draw[dl](TRv)--(B)node[midway,below right,inner sep=1pt]{$s$};
+    \draw[dl](c)--(TLv)node[wb,pos=0.5]{$b$};
+    \draw[dl](c)--(TRv)node[wb,pos=0.5]{$c$};
+    \draw[dlu](c)--(B)node[wb,pos=0.5]{$x$};
+  \end{scope}
+  % Y (right): x vertical; top->bb,cc ; bottom->aa,dd
+  \coordinate(YH)at(5.0,2.0);\coordinate(YL)at(5.0,-1.0);
+  \draw[dlu](YH)--(YL)node[midway,right,inner sep=1pt]{$x$};
+  \draw[dl](YH)--($(YH)+(150:0.8)$)node[at end,above]{$b\beta$};
+  \draw[dl](YH)--($(YH)+(30:0.8)$)node[at end,above]{$c\gamma$};
+  \draw[dl](YL)--($(YL)+(210:0.8)$)node[at end,below]{$a\alpha$};
+  \draw[dl](YL)--($(YL)+(-30:0.8)$)node[at end,below]{$d\delta$};
+\end{tikzpicture}
+\]
 \[
 \begin{gathered}
 \sum_{\substack{\psi \kappa \rho \sigma \\
@@ -735,15 +1135,122 @@ r \nu \mu}}(-1)^{p-\psi+q-\kappa+r-\rho+s-\sigma+t-r+u-\nu+v-\mu}\threej{p}{a}{q
 \begin{equation}
 =(-1)^{q+v+t-o-d+2 u} \sum_{x y \eta}(-1)^{x+y-\eta} \prod_{x y}^{2}\threej{a}{b}{y}{\alpha}{\beta}{-\eta} \label{chap12:eq:25}\threej{y}{c}{d}{\eta}{\gamma}{\delta}\sixj{p}{r}{x}{c}{v}{s}\sixj{p}{r}{x}{u}{a}{q}\sixj{a}{b}{y}{t}{x}{u}\sixj{y}{c}{d}{v}{t}{x}=
 \end{equation}
-\begin{center}
-\includegraphics[max width=\textwidth, alt={}]{39a53bec-58f6-4733-a518-53d974314721-09_350_1122_2202_471}
-\end{center}
+\[
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \coordinate(A)at(0,0.9);\coordinate(B)at(1.6,0.9);\coordinate(E)at(1.6,-0.9);\coordinate(D)at(0,-0.9);
+  \coordinate(L)at(-0.8,0);\coordinate(C)at(0.8,0);
+  \draw[dl](L)--(A)node[midway,above left,inner sep=1pt]{$q$};
+  \draw[dl](L)--(D)node[midway,below left,inner sep=1pt]{$p$};
+  \draw[dl](A)--(B)node[midway,above,inner sep=1pt]{$u$};
+  \draw[dl](B)--(E)node[midway,right,inner sep=1pt]{$t$};
+  \draw[dl](D)--(E)node[midway,below,inner sep=1pt]{$v$};
+  \draw[dl](A)--(C)node[midway,above right,inner sep=1pt]{$r$};
+  \draw[dl](D)--(C)node[midway,below right,inner sep=1pt]{$s$};
+  \draw[dl](C)--($(C)+(0:0.55)$)node[at end,above,inner sep=1pt]{$c\gamma$};
+  \draw[dl](L)--($(L)+(180:0.7)$)node[at end,above]{$a\alpha$};
+  \draw[dl](B)--($(B)+(60:0.8)$)node[at end,right]{$b\beta$};
+  \draw[dl](E)--($(E)+(-60:0.8)$)node[at end,right]{$d\delta$};
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  % TL apex-down: outer u(top) r(left) x(right); spokes q,a,p
+  \begin{scope}[shift={(0,1.3)}]
+    \coordinate(c)at(0,0);\coordinate(B)at(270:1);\coordinate(TLv)at(150:1);\coordinate(TRv)at(30:1);
+    \draw[dl](TLv)--(TRv)node[midway,above,inner sep=1pt]{$u$};
+    \draw[dl](TLv)--(B)node[midway,below left,inner sep=1pt]{$r$};
+    \draw[dlu](TRv)--(B)node[midway,below right,inner sep=1pt]{$x$};
+    \draw[dl](c)--(TLv)node[wb,pos=0.5]{$q$};
+    \draw[dl](c)--(TRv)node[wb,pos=0.5]{$a$};
+    \draw[dl](c)--(B)node[wb,pos=0.5]{$p$};
+  \end{scope}
+  % TR apex-down: outer u(top) x(left,bold) t(right); spokes a,b,y
+  \begin{scope}[shift={(2.4,1.3)}]
+    \coordinate(c)at(0,0);\coordinate(B)at(270:1);\coordinate(TLv)at(150:1);\coordinate(TRv)at(30:1);
+    \draw[dl](TLv)--(TRv)node[midway,above,inner sep=1pt]{$u$};
+    \draw[dlu](TLv)--(B)node[midway,below left,inner sep=1pt]{$x$};
+    \draw[dl](TRv)--(B)node[midway,below right,inner sep=1pt]{$t$};
+    \draw[dl](c)--(TLv)node[wb,pos=0.5]{$a$};
+    \draw[dl](c)--(TRv)node[wb,pos=0.5]{$b$};
+    \draw[dlu](c)--(B)node[wb,pos=0.5]{$y$};
+  \end{scope}
+  % BL apex-up: outer c(bottom) r(left) x(right); spokes p,s,v
+  \begin{scope}[shift={(0,-1.3)}]
+    \coordinate(c)at(0,0);\coordinate(T)at(90:1);\coordinate(Lv)at(210:1);\coordinate(Rv)at(330:1);
+    \draw[dl](T)--(Lv)node[midway,above left,inner sep=1pt]{$r$};
+    \draw[dlu](T)--(Rv)node[midway,above right,inner sep=1pt]{$x$};
+    \draw[dl](Lv)--(Rv)node[midway,below,inner sep=1pt]{$c$};
+    \draw[dl](c)--(T)node[wb,pos=0.5]{$p$};
+    \draw[dl](c)--(Lv)node[wb,pos=0.5]{$s$};
+    \draw[dl](c)--(Rv)node[wb,pos=0.5]{$v$};
+  \end{scope}
+  % BR apex-up: outer v(bottom) x(left,bold) t(right); spokes y,c,d
+  \begin{scope}[shift={(2.4,-1.3)}]
+    \coordinate(c)at(0,0);\coordinate(T)at(90:1);\coordinate(Lv)at(210:1);\coordinate(Rv)at(330:1);
+    \draw[dlu](T)--(Lv)node[midway,above left,inner sep=1pt]{$x$};
+    \draw[dl](T)--(Rv)node[midway,above right,inner sep=1pt]{$t$};
+    \draw[dl](Lv)--(Rv)node[midway,below,inner sep=1pt]{$v$};
+    \draw[dlu](c)--(T)node[wb,pos=0.5]{$y$};
+    \draw[dl](c)--(Lv)node[wb,pos=0.5]{$c$};
+    \draw[dl](c)--(Rv)node[wb,pos=0.5]{$d$};
+  \end{scope}
+  % Y (right): y vertical; top->aa,bb ; bottom->cc,dd
+  \coordinate(YH)at(5.0,1.3);\coordinate(YL)at(5.0,-1.3);
+  \draw[dlu](YH)--(YL)node[midway,right,inner sep=1pt]{$y$};
+  \draw[dl](YH)--($(YH)+(150:0.8)$)node[at end,above]{$a\alpha$};
+  \draw[dl](YH)--($(YH)+(30:0.8)$)node[at end,above]{$b\beta$};
+  \draw[dl](YL)--($(YL)+(210:0.8)$)node[at end,below]{$c\gamma$};
+  \draw[dl](YL)--($(YL)+(-30:0.8)$)node[at end,below]{$d\delta$};
+\end{tikzpicture}
+\]
 \begin{equation}
 =(-1)^{q+u-a-s-b-d} \sum_{x \xi}(-1)^{x-\xi} \prod_{x}^{2}\threej{a}{x}{c}{\alpha}{-\xi}{\gamma} \label{chap12:eq:26}\threej{d}{x}{b}{\delta}{\xi}{\beta}\sixj{d}{x}{b}{u}{t}{v}\ninej{a}{x}{c}{p}{v}{s}{q}{u}{r},
 \end{equation}
-\begin{center}
-\includegraphics[max width=\textwidth, alt={}]{39a53bec-58f6-4733-a518-53d974314721-10_354_1115_605_466}
-\end{center}
+\[
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \coordinate(A)at(0,0.9);\coordinate(B)at(1.6,0.9);\coordinate(E)at(1.6,-0.9);\coordinate(D)at(0,-0.9);
+  \coordinate(L)at(-1.1,0);\coordinate(C)at(0.7,0);
+  \draw[dl](L)--(A)node[midway,above left,inner sep=1pt]{$q$};
+  \draw[dl](L)--(D)node[midway,below left,inner sep=1pt]{$p$};
+  \draw[dl](A)--(B)node[midway,above,inner sep=1pt]{$u$};
+  \draw[dl](B)--(E)node[midway,right,inner sep=1pt]{$t$};
+  \draw[dl](D)--(E)node[midway,below,inner sep=1pt]{$v$};
+  \draw[dl](A)--(C)node[midway,above right,inner sep=1pt]{$r$};
+  \draw[dl](D)--(C)node[midway,below right,inner sep=1pt]{$s$};
+  \draw[dl](C)--($(C)+(0:0.55)$)node[at end,above,inner sep=1pt]{$c\gamma$};
+  \draw[dl](L)--($(L)+(180:0.7)$)node[at end,above]{$a\alpha$};
+  \draw[dl](B)--($(B)+(60:0.8)$)node[at end,right]{$b\beta$};
+  \draw[dl](E)--($(E)+(-60:0.8)$)node[at end,right]{$d\delta$};
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  % H (left): x horizontal; left->cc(up),aa(down) ; right->bb(up),dd(down)
+  \coordinate(XL)at(-0.8,0);\coordinate(XR)at(0.8,0);
+  \draw[dlu](XL)--(XR)node[midway,above,inner sep=1pt]{$x$};
+  \draw[dl](XL)--($(XL)+(130:0.8)$)node[at end,left]{$c\gamma$};
+  \draw[dl](XL)--($(XL)+(230:0.8)$)node[at end,left]{$a\alpha$};
+  \draw[dl](XR)--($(XR)+(50:0.8)$)node[at end,right]{$b\beta$};
+  \draw[dl](XR)--($(XR)+(-50:0.8)$)node[at end,right]{$d\delta$};
+  % flat-top 9j-hexagon: vertices at 0,60,120,180,240,300
+  \begin{scope}[shift={(3.0,0)}]
+    \coordinate(hc)at(0,0);
+    \foreach \i in {0,...,5}{\coordinate(v\i) at (60*\i:1);}
+    \draw[dl](v2)--(v1)node[midway,above,inner sep=1pt]{$r$};
+    \draw[dl](v1)--(v0)node[midway,above right,inner sep=1pt]{$u$};
+    \draw[dl](v0)--(v5)node[midway,below right,inner sep=1pt]{$v$};
+    \draw[dl](v5)--(v4)node[midway,below,inner sep=1pt]{$p$};
+    \draw[dl](v4)--(v3)node[midway,below left,inner sep=1pt]{$a$};
+    \draw[dl](v3)--(v2)node[midway,above left,inner sep=1pt]{$c$};
+    \draw[dlu](v3)--(v0)node[wb,pos=0.28]{$x$};
+    \draw[dl](v1)--(v4)node[wb,pos=0.30]{$q$};
+    \draw[dl](v2)--(v5)node[wb,pos=0.70]{$s$};
+  \end{scope}
+  % 6j-diamond {u b / v d}, hd=x (bold), vd=t
+  \begin{scope}[shift={(5.7,0)}]
+    \draw[dlu](180:0.9)--(0:0.9);
+    \dsixjsq{0}{0}{u}{b}{v}{d}{x}{t}
+  \end{scope}
+\end{tikzpicture}
+\]
 
 \begin{align}
 & \sum_{\substack{\psi \kappa \rho \\
@@ -752,18 +1259,147 @@ r \nu \mu}}(-1)^{p-\psi+q-\kappa+r-\rho+s-\sigma+t-r+u-\nu+v-\mu}\threej{p}{a}{q
 \xi \eta s}}(-1)^{x-\xi+y-\eta+x-s} \prod_{x y z}^{2}\threej{a}{x}{b}{\alpha}{\xi}{\beta}\threej{c}{y}{d}{\gamma}{\eta}{\delta}\threej{e}{z}{f}{\varepsilon}{\zeta}{\varphi}\threej{x}{y}{z}{-\xi}{-\eta}{-s}\sixj{a}{x}{b}{r}{q}{p}\sixj{c}{y}{d}{t}{s}{r} \label{chap12:eq:27}
 \end{align}
 
-\begin{center}
-\includegraphics[max width=\textwidth, alt={}]{39a53bec-58f6-4733-a518-53d974314721-10_461_1197_1332_425}
-\end{center}
+\[
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  % hexagon loop (pointy-top): edges r,q,p,u,t,s ; legs c,b,a,f,e,d
+  \dninehex{0}{0}{r}{q}{p}{u}{t}{s}
+  \draw[dl](hT)--($(hT)+(90:0.8)$)node[at end,above]{$c\gamma$};
+  \draw[dl](hUL)--($(hUL)+(150:0.8)$)node[at end,left]{$b\beta$};
+  \draw[dl](hLL)--($(hLL)+(210:0.8)$)node[at end,left]{$a\alpha$};
+  \draw[dl](hB)--($(hB)+(270:0.8)$)node[at end,below]{$f\varphi$};
+  \draw[dl](hLR)--($(hLR)+(330:0.8)$)node[at end,right]{$e\varepsilon$};
+  \draw[dl](hUR)--($(hUR)+(30:0.8)$)node[at end,right]{$d\delta$};
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  % --- 3jm-tree: centre J, three bold legs x,y,z each ending in a pair ---
+  \coordinate(J)at(1.4,0);
+  \coordinate(Px)at($(J)-(1.1,0)$);\coordinate(Py)at($(J)+(60:1.4)$);\coordinate(Pz)at($(J)+(-60:1.4)$);
+  \draw[dlu](J)--(Px)node[midway,above,inner sep=1pt]{$x$};
+  \draw[dlu](J)--(Py)node[midway,above left,inner sep=1pt]{$y$};
+  \draw[dlu](J)--(Pz)node[midway,below left,inner sep=1pt]{$z$};
+  \draw[dl](Px)--($(Px)+(120:0.8)$)node[at end,left]{$b\beta$};
+  \draw[dl](Px)--($(Px)+(240:0.8)$)node[at end,left]{$a\alpha$};
+  \draw[dl](Py)--($(Py)+(120:0.8)$)node[at end,above]{$c\gamma$};
+  \draw[dl](Py)--($(Py)+(0:0.8)$)node[at end,right]{$d\delta$};
+  \draw[dl](Pz)--($(Pz)+(240:0.8)$)node[at end,below]{$f\varphi$};
+  \draw[dl](Pz)--($(Pz)+(0:0.8)$)node[at end,right]{$e\varepsilon$};
+  % --- four 6j-triangles ---
+  % mid-left (apex-right) {a x b / r q p}: edges q(left) r(UR) p(LR); spokes b,a,x
+  \begin{scope}[shift={(3,0)}]
+    \coordinate(c)at(0,0);\coordinate(T)at(120:1);\coordinate(B)at(240:1);\coordinate(V)at(0:1);
+    \draw[dl](T)--(B)node[midway,left,inner sep=1pt]{$q$};
+    \draw[dl](T)--(V)node[midway,above right,inner sep=1pt]{$r$};
+    \draw[dl](B)--(V)node[midway,below right,inner sep=1pt]{$p$};
+    \draw[dl](c)--(T)node[wb,pos=0.5]{$b$};
+    \draw[dl](c)--(B)node[wb,pos=0.5]{$a$};
+    \draw[dlu](c)--(V)node[wb,pos=0.45]{$x$};
+  \end{scope}
+  % mid-right (apex-left) {x y z / r t p}: edges r(UL) t(right) p(LL); spokes y,z,x
+  \begin{scope}[shift={(5.3,0)}]
+    \coordinate(c)at(0,0);\coordinate(T)at(60:1);\coordinate(B)at(300:1);\coordinate(V)at(180:1);
+    \draw[dl](T)--(V)node[midway,above left,inner sep=1pt]{$r$};
+    \draw[dl](T)--(B)node[midway,right,inner sep=1pt]{$t$};
+    \draw[dl](V)--(B)node[midway,below left,inner sep=1pt]{$p$};
+    \draw[dlu](c)--(T)node[wb,pos=0.5]{$y$};
+    \draw[dlu](c)--(B)node[wb,pos=0.5]{$z$};
+    \draw[dlu](c)--(V)node[wb,pos=0.45]{$x$};
+  \end{scope}
+  % top-right (apex-right) {c y d / t s r}: edges s(top) r(left) t(right); spokes c,d,y
+  \begin{scope}[shift={(6.4,2)}]
+    \coordinate(c)at(0,0);\coordinate(T)at(120:1);\coordinate(B)at(240:1);\coordinate(V)at(0:1);
+    \draw[dl](T)--(B)node[midway,left,inner sep=1pt]{$r$};
+    \draw[dl](T)--(V)node[midway,above right,inner sep=1pt]{$s$};
+    \draw[dl](B)--(V)node[midway,below right,inner sep=1pt]{$t$};
+    \draw[dl](c)--(T)node[wb,pos=0.5]{$c$};
+    \draw[dlu](c)--(B)node[wb,pos=0.5]{$y$};
+    \draw[dl](c)--(V)node[wb,pos=0.45]{$d$};
+  \end{scope}
+  % bottom-right (apex-right) {e z f / t u p}: edges t(right) u(bottom) p(left); spokes z,e,f
+  \begin{scope}[shift={(6.4,-2)}]
+    \coordinate(c)at(0,0);\coordinate(T)at(120:1);\coordinate(B)at(240:1);\coordinate(V)at(0:1);
+    \draw[dl](T)--(B)node[midway,left,inner sep=1pt]{$p$};
+    \draw[dl](T)--(V)node[midway,above right,inner sep=1pt]{$t$};
+    \draw[dl](B)--(V)node[midway,below right,inner sep=1pt]{$u$};
+    \draw[dlu](c)--(T)node[wb,pos=0.5]{$z$};
+    \draw[dl](c)--(B)node[wb,pos=0.5]{$f$};
+    \draw[dl](c)--(V)node[wb,pos=0.45]{$e$};
+  \end{scope}
+\end{tikzpicture}
+\]
 \[
 =(-1)^{2 p-u-r+a+b+d+e-c} \sum_{\substack{x y z \\ \xi \eta \xi}}(-1)^{x} \prod_{x y z}^{2}(-1)^{x-\xi+y-\eta+x-\xi}
 \]
 \begin{equation}
 \times\threej{a}{b}{x}{\alpha}{\beta}{-\xi} \label{chap12:eq:28}\threej{x}{c}{y}{\xi}{\gamma}{-\eta}\threej{y}{f}{z}{\eta}{\varphi}{-\zeta}\threej{z}{d}{e}{\zeta}{\delta}{e}\sixj{a}{b}{x}{r}{p}{q}\sixj{x}{c}{y}{s}{p}{r}\sixj{y}{f}{z}{u}{s}{p}\sixj{z}{d}{e}{t}{u}{s}=
 \end{equation}
-\begin{center}
-\includegraphics[max width=\textwidth, alt={}]{39a53bec-58f6-4733-a518-53d974314721-10_505_1167_2029_439}
-\end{center}
+\[
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  % hexagon loop (pointy-top): edges r,q,p,u,t,s ; legs c,b,a,f,e,d
+  \dninehex{0}{0}{r}{q}{p}{u}{t}{s}
+  \draw[dl](hT)--($(hT)+(90:0.8)$)node[at end,above]{$c\gamma$};
+  \draw[dl](hUL)--($(hUL)+(150:0.8)$)node[at end,left]{$b\beta$};
+  \draw[dl](hLL)--($(hLL)+(210:0.8)$)node[at end,left]{$a\alpha$};
+  \draw[dl](hB)--($(hB)+(270:0.8)$)node[at end,below]{$f\varphi$};
+  \draw[dl](hLR)--($(hLR)+(330:0.8)$)node[at end,right]{$e\varepsilon$};
+  \draw[dl](hUR)--($(hUR)+(30:0.8)$)node[at end,right]{$d\delta$};
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  % --- top: four 6j-triangles, alternating apex-down / apex-up ---
+  % T1 apex-down {a b x / r p q}: top r, left q, right p ; spokes b,x,a
+  \begin{scope}[shift={(0,-0.5)}]
+    \coordinate(c)at(0,0);\coordinate(TLv)at(150:1);\coordinate(TRv)at(30:1);\coordinate(B)at(270:1);
+    \draw[dl](TLv)--(TRv)node[midway,above,inner sep=1pt]{$r$};
+    \draw[dl](TLv)--(B)node[midway,below left,inner sep=1pt]{$q$};
+    \draw[dl](TRv)--(B)node[midway,below right,inner sep=1pt]{$p$};
+    \draw[dl](c)--(TLv)node[wb,pos=0.5]{$b$};
+    \draw[dlu](c)--(TRv)node[wb,pos=0.5]{$x$};
+    \draw[dl](c)--(B)node[wb,pos=0.5]{$a$};
+  \end{scope}
+  % T2 apex-up {x c y / s p r}: left r, right s, bottom p ; spokes c,x,y
+  \begin{scope}[shift={(1.8,0.5)}]
+    \coordinate(c)at(0,0);\coordinate(T)at(90:1);\coordinate(Lv)at(210:1);\coordinate(Rv)at(330:1);
+    \draw[dl](T)--(Lv)node[midway,above left,inner sep=1pt]{$r$};
+    \draw[dl](T)--(Rv)node[midway,above right,inner sep=1pt]{$s$};
+    \draw[dl](Lv)--(Rv)node[pos=0.3,below,inner sep=1pt]{$p$};
+    \draw[dl](c)--(T)node[wb,pos=0.5]{$c$};
+    \draw[dlu](c)--(Lv)node[wb,pos=0.5]{$x$};
+    \draw[dlu](c)--(Rv)node[wb,pos=0.5]{$y$};
+  \end{scope}
+  % T3 apex-down {y f z / u s p}: top s, left p, right u ; spokes y,z,f
+  \begin{scope}[shift={(3.6,-0.5)}]
+    \coordinate(c)at(0,0);\coordinate(TLv)at(150:1);\coordinate(TRv)at(30:1);\coordinate(B)at(270:1);
+    \draw[dl](TLv)--(TRv)node[midway,above,inner sep=1pt]{$s$};
+    \draw[dl](TLv)--(B)node[midway,below left,inner sep=1pt]{$p$};
+    \draw[dl](TRv)--(B)node[midway,below right,inner sep=1pt]{$u$};
+    \draw[dlu](c)--(TLv)node[wb,pos=0.5]{$y$};
+    \draw[dlu](c)--(TRv)node[wb,pos=0.5]{$z$};
+    \draw[dl](c)--(B)node[wb,pos=0.5]{$f$};
+  \end{scope}
+  % T4 apex-up {z d e / t u s}: left s, right t, bottom u ; spokes d,z,e
+  \begin{scope}[shift={(5.4,0.5)}]
+    \coordinate(c)at(0,0);\coordinate(T)at(90:1);\coordinate(Lv)at(210:1);\coordinate(Rv)at(330:1);
+    \draw[dl](T)--(Lv)node[midway,above left,inner sep=1pt]{$s$};
+    \draw[dl](T)--(Rv)node[midway,above right,inner sep=1pt]{$t$};
+    \draw[dl](Lv)--(Rv)node[pos=0.3,below,inner sep=1pt]{$u$};
+    \draw[dl](c)--(T)node[wb,pos=0.5]{$d$};
+    \draw[dlu](c)--(Lv)node[wb,pos=0.5]{$z$};
+    \draw[dl](c)--(Rv)node[wb,pos=0.5]{$e$};
+  \end{scope}
+  % --- bottom: x-y-z caterpillar tree ---
+  \coordinate(A)at(0,-2);\coordinate(Bv)at(1.8,-1.4);\coordinate(Cv)at(3.6,-2);\coordinate(Dv)at(5.4,-1.4);
+  \draw[dlu](A)--(Bv)node[midway,above,inner sep=1pt]{$x$};
+  \draw[dlu](Bv)--(Cv)node[midway,above,inner sep=1pt]{$y$};
+  \draw[dlu](Cv)--(Dv)node[midway,above,inner sep=1pt]{$z$};
+  \draw[dl](A)--($(A)+(150:0.8)$)node[at end,left]{$b\beta$};
+  \draw[dl](A)--($(A)+(270:0.8)$)node[at end,below]{$a\alpha$};
+  \draw[dl](Bv)--($(Bv)+(90:0.8)$)node[at end,above]{$c\gamma$};
+  \draw[dl](Cv)--($(Cv)+(270:0.8)$)node[at end,below]{$f\varphi$};
+  \draw[dl](Dv)--($(Dv)+(90:0.8)$)node[at end,above]{$d\delta$};
+  \draw[dl](Dv)--($(Dv)+(-20:0.9)$)node[at end,right]{$e\varepsilon$};
+\end{tikzpicture}
+\]
 
 \begin{gather}
 =(-1)^{u-d-c-c-r} \sum_{\substack{x y z \\
@@ -771,9 +1407,62 @@ r \nu \mu}}(-1)^{p-\psi+q-\kappa+r-\rho+s-\sigma+t-r+u-\nu+v-\mu}\threej{p}{a}{q
 \times\sixj{a}{x}{b}{r}{q}{p}\sixj{e}{y}{d}{s}{t}{u}\ninej{x}{y}{z}{p}{u}{f}{r}{s}{c} \label{chap12:eq:29}
 \end{gather}
 
-\begin{center}
-\includegraphics[max width=\textwidth, alt={}]{39a53bec-58f6-4733-a518-53d974314721-11_429_1286_731_420}
-\end{center}
+\[
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  % hexagon loop (pointy-top): edges r,q,p,u,t,s ; legs c,b,a,f,e,d
+  \dninehex{0}{0}{r}{q}{p}{u}{t}{s}
+  \draw[dl](hT)--($(hT)+(90:0.8)$)node[at end,above]{$c\gamma$};
+  \draw[dl](hUL)--($(hUL)+(150:0.8)$)node[at end,left]{$b\beta$};
+  \draw[dl](hLL)--($(hLL)+(210:0.8)$)node[at end,left]{$a\alpha$};
+  \draw[dl](hB)--($(hB)+(270:0.8)$)node[at end,below]{$f\varphi$};
+  \draw[dl](hLR)--($(hLR)+(330:0.8)$)node[at end,right]{$e\varepsilon$};
+  \draw[dl](hUR)--($(hUR)+(30:0.8)$)node[at end,right]{$d\delta$};
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  % --- 3jm-tree: centre J; x(up-left)->a,b ; y(up-right)->d,e ; z(down)->c,f ---
+  \coordinate(J)at(1.2,-0.2);
+  \coordinate(Lv)at($(J)+(150:1.2)$);\coordinate(Rv)at($(J)+(30:1.2)$);\coordinate(Bv)at($(J)+(270:1.2)$);
+  \draw[dlu](J)--(Lv)node[midway,above right,inner sep=1pt]{$x$};
+  \draw[dlu](J)--(Rv)node[midway,above left,inner sep=1pt]{$y$};
+  \draw[dlu](J)--(Bv)node[midway,right,inner sep=1pt]{$z$};
+  \draw[dl](Lv)--($(Lv)+(90:0.8)$)node[at end,above]{$b\beta$};
+  \draw[dl](Lv)--($(Lv)+(210:0.8)$)node[at end,left]{$a\alpha$};
+  \draw[dl](Rv)--($(Rv)+(90:0.8)$)node[at end,above]{$d\delta$};
+  \draw[dl](Rv)--($(Rv)+(-30:0.8)$)node[at end,right]{$e\varepsilon$};
+  \draw[dl](Bv)--($(Bv)+(210:0.8)$)node[at end,below]{$c\gamma$};
+  \draw[dl](Bv)--($(Bv)+(-30:0.8)$)node[at end,below]{$f\varphi$};
+  % --- left 6j-triangle (apex-up) {a x b / r q p}: edges b(UL) x(UR) r(bot); spokes a,q,p
+  \begin{scope}[shift={(4.5,0.5)}]
+    \coordinate(c)at(0,0);\coordinate(T)at(90:1);\coordinate(L)at(210:1);\coordinate(R)at(330:1);
+    \draw[dl](T)--(L)node[midway,above left,inner sep=1pt]{$b$};
+    \draw[dlu](T)--(R)node[midway,above right,inner sep=1pt]{$x$};
+    \draw[dl](L)--(R)node[midway,below,inner sep=1pt]{$r$};
+    \draw[dl](c)--(T)node[wb,pos=0.5]{$a$};
+    \draw[dl](c)--(L)node[wb,pos=0.5]{$q$};
+    \draw[dl](c)--(R)node[wb,pos=0.5]{$p$};
+  \end{scope}
+  % --- flat 9j-hexagon (pointy-top): edges x,r,c,f,s,y ; diameters z(vert,bold),p,q
+  \begin{scope}[shift={(6.3,-0.5)}]
+    \dninehex{0}{0}{x}{r}{c}{f}{s}{y}
+    \draw[dlu](hT) --(hUR);
+    \draw[dlu](hT) --(hUL);
+    \draw[dlu](hT)--(hB)node[wb,pos=0.3]{$z$};
+    \draw[dl](hUL)--(hLR)node[wb,pos=0.3]{$p$};
+    \draw[dl](hUR)--(hLL)node[wb,pos=0.3]{$q$};
+  \end{scope}
+  % --- right 6j-triangle (apex-up) {e y d / s t u}: edges y(UL) e(UR) u(bot); spokes d,s,t
+  \begin{scope}[shift={(9.1,0.5)}]
+    \coordinate(c)at(0,0);\coordinate(T)at(90:1);\coordinate(L)at(210:1);\coordinate(R)at(330:1);
+    \draw[dlu](T)--(L)node[midway,above left,inner sep=1pt]{$y$};
+    \draw[dl](T)--(R)node[midway,above right,inner sep=1pt]{$e$};
+    \draw[dl](L)--(R)node[midway,below,inner sep=1pt]{$u$};
+    \draw[dl](c)--(T)node[wb,pos=0.5]{$d$};
+    \draw[dl](c)--(L)node[wb,pos=0.5]{$s$};
+    \draw[dl](c)--(R)node[wb,pos=0.5]{$t$};
+  \end{scope}
+\end{tikzpicture}
+\]
 
 \section{SUMMATION OF PRODUCTS OF $6 j$ AND $9 j$ SYMBOLS}
 This section presents a collection of sums involving $6 j$ and, $9 j$ symbols. All the sums are illustrated by diagrams which display the coupling scheme for angular moments involved in the equation. The sums are grouped in accordance with the number of $3 n j$ symbols in the products. Within each group the sums are arranged according to the number of summation indices. The summation indices are printed by capital letters in equations and marked by thick $j$-lines. In Sec. 12.2, just as in Sec. 12.1, we use the notation

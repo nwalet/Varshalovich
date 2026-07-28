@@ -910,6 +910,7 @@
   dl/.style={thick},              % j-line: thick, no arrow
   dlu/.style={ultra thick},       % j-summed line: ultra-thick
   ddot/.style={inner sep=0pt},    % invisible named point
+  wb/.style={fill=white,inner sep=1.5pt}
 }
 % \dtheta[midstyle]{x}{y}{top}{mid}{bot} -- closed 2-arc theta + middle line, centred at (x,y)
 \newcommand{\dtheta}[6][dl]{%
@@ -932,8 +933,8 @@
   \draw[dl](qt)--(qr)node[midway,above right,inner sep=1pt]{$#5$};
   \draw[dl](ql)--(qb)node[midway,below left,inner sep=1pt]{$#6$};
   \draw[dl](qb)--(qr)node[midway,below right,inner sep=1pt]{$#7$};
-  \draw[dl](ql)--(qr)node[pos=0.28,below,inner sep=1pt]{$#8$};
-  \draw[#1](qt)--(qb)node[pos=0.32,right,inner sep=1pt]{$#9$};}
+  \draw[dl](ql)--(qr)node[wb,pos=0.32]{$#8$};
+  \draw[#1](qt)--(qb)node[wb,pos=0.32]{$#9$};}
 % \dsixjtri[spkstyle]{x}{y}{eL}{eR}{eB}{sT}{sBL}{sBR} -- 6j triangle-with-centre, apex-up
 \newcommand{\dsixjtri}[9][dl]{%
   \coordinate(ct)at(#2,#3);
@@ -968,3 +969,16 @@
   \draw[dl](hB)--(hLR)node[midway,below right,inner sep=1pt]{$#6$};
   \draw[dl](hLR)--(hUR)node[midway,right,inner sep=1pt]{$#7$};
   \draw[dl](hUR)--(hT)node[midway,above right,inner sep=1pt]{$#8$};}
+
+% Vertical lens / theta (bubble oriented top-to-bottom), for Chap12 §12.1.6.
+% \dlensv{x}{y}{leftlab}{rightlab} -- two arcs between a top and bottom point.
+\newcommand{\dlensv}[4]{%
+  \coordinate(lvt)at($(#1,#2)+(0,0.62)$);\coordinate(lvb)at($(#1,#2)+(0,-0.62)$);
+  \draw[dl](lvt)to[bend right=60]node[midway,left,inner sep=1pt]{$#3$}(lvb);
+  \draw[dl](lvt)to[bend left=60]node[midway,right,inner sep=1pt]{$#4$}(lvb);}
+% \dthetav[midstyle]{x}{y}{leftlab}{midlab}{rightlab} -- vertical theta + middle line.
+\newcommand{\dthetav}[6][dl]{%
+  \coordinate(tvt)at($(#2,#3)+(0,0.62)$);\coordinate(tvb)at($(#2,#3)+(0,-0.62)$);
+  \draw[dl](tvt)to[bend right=60]node[midway,left,inner sep=1pt]{$#4$}(tvb);
+  \draw[dl](tvt)to[bend left=60]node[midway,right,inner sep=1pt]{$#6$}(tvb);
+  \draw[#1](tvt)--node[midway,right,inner sep=1pt]{$#5$}(tvb);}
