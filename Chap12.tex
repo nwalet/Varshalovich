@@ -330,9 +330,41 @@ p & a \\
 &=(-1)^{2 u} \frac{1}{\Pi_{u}} \delta_{u v} \delta_{a 0} \delta_{\alpha 0}\sixj{q}{p}{u}{s}{r}{t}, \label{chap12:eq:12}
 \end{align}
 
-\begin{center}
-\includegraphics[max width=\textwidth, alt={}]{39a53bec-58f6-4733-a518-53d974314721-05_190_982_850_548}
-\end{center}
+\[
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \coordinate(Ln)at(0,0);
+  \coordinate(TL)at(1.1,0.75);\coordinate(TR)at(2.5,0.75);
+  \coordinate(BL)at(1.1,-0.75);\coordinate(BR)at(2.5,-0.75);
+  \draw[dl](-0.9,0)--(Ln)node[at start,left]{$a\alpha$};
+  \draw[dl](Ln)--(TL)node[midway,above left,inner sep=1pt]{$u$};
+  \draw[dl](Ln)--(BL)node[midway,below left,inner sep=1pt]{$v$};
+  \draw[dl](TL)--(TR)node[midway,above,inner sep=1pt]{$p$};
+  \draw[dl](BL)--(BR)node[midway,below,inner sep=1pt]{$r$};
+  \draw[dl](TR)--(BR)node[midway,right,inner sep=1pt]{$t$};
+  \draw[dl](TL)--(BR)node[pos=0.32,above right,inner sep=1pt]{$q$};
+  \draw[dl](BL)--(TR)node[pos=0.32,below right,inner sep=1pt]{$s$};
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \draw[dl](-0.9,0)--(0,0)node[at start,left]{$a\alpha$};
+  \fill(0,0)circle(1.6pt);
+\end{tikzpicture}
+\quad
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \coordinate(L)at(0,0);\coordinate(R)at(1.1,0);\dlens{L}{R}{u}{v}
+\end{tikzpicture}
+\quad
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \coordinate(TL)at(0,0.8);\coordinate(TR)at(1.6,0.8);
+  \coordinate(BL)at(0,-0.8);\coordinate(BR)at(1.6,-0.8);
+  \draw[dl](TL)--(TR)node[midway,above,inner sep=1pt]{$p$};
+  \draw[dl](BL)--(BR)node[midway,below,inner sep=1pt]{$r$};
+  \draw[dl](TL)--(BL)node[midway,left,inner sep=1pt]{$u$};
+  \draw[dl](TR)--(BR)node[midway,right,inner sep=1pt]{$t$};
+  \draw[dl](TL)--(BR)node[pos=0.3,above,inner sep=1pt]{$q$};
+  \draw[dl](BL)--(TR)node[pos=0.3,below,inner sep=1pt]{$s$};
+\end{tikzpicture}
+\]
 
 \begin{align}
 \sum_{\substack{\psi \kappa p \sigma \\
@@ -340,42 +372,246 @@ p & a \\
 = & \threej{a}{b}{c}{\alpha}{\beta}{\gamma}\sixj{a}{b}{c}{u}{s}{r}\sixj{a}{p}{q}{t}{r}{s}, \label{chap12:eq:13}
 \end{align}
 
-\begin{center}
-\includegraphics[max width=\textwidth, alt={}]{39a53bec-58f6-4733-a518-53d974314721-05_299_1158_1361_464}
-\end{center}
+\[
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  % LHS: aa -> triangle (q,p) then r,s / t,u inner to legs bb, cc
+  \coordinate(Ln)at(0,0);\coordinate(A)at(30:2.5);\coordinate(B)at(-30:2.5);
+  \coordinate(A1) at ($(Ln)!0.3!(A)$);\coordinate(A2) at ($(Ln)!0.6!(A)$);
+  \coordinate(B1) at ($(Ln)!0.3!(B)$);\coordinate(B2) at ($(Ln)!0.6!(B)$);
+  \draw[dl](-0.9,0)--(Ln)node[at start,left]{$a\alpha$};
+  \draw[dl](Ln)--(A1)node[midway,above,inner sep=1pt]{$q$};
+  \draw[dl](A1)--(A2)node[midway,above,inner sep=1pt]{$r$};
+  \draw[dl](A2)--(A)node[at end,right]{$b\beta$};
+  \draw[dl](Ln)--(B1)node[midway,below,inner sep=1pt]{$p$};
+  \draw[dl](B1)--(B2)node[midway,below,inner sep=1pt]{$s$};
+  \draw[dl](B2)--(B)node[at end,right]{$c\gamma$};
+  \draw[dl](A1)--(B1)node[midway,right,inner sep=1pt]{$t$};
+  \draw[dl](A2)--(B2)node[midway,right,inner sep=1pt]{$u$};
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \dsixjsq{0}{0}{q}{r}{p}{s}{a}{t}
+\end{tikzpicture}
+\quad
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \dsixjsq{0}{0}{r}{b}{s}{c}{a}{u}
+\end{tikzpicture}
+\quad
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \coordinate(N)at(0,0);
+  \draw[dl](-0.9,0)--(N)node[at start,left]{$a\alpha$};
+  \draw[dl](N)--(0.8,0.75)node[at end,right]{$b\beta$};
+  \draw[dl](N)--(0.8,-0.75)node[at end,right]{$c\gamma$};
+\end{tikzpicture}
+\]
 
 \begin{gather}
 \sum_{\psi \kappa \rho r}(-1)^{p-\psi+q-\kappa+r-\rho+\rho-\sigma+t-r+u-\nu}\threej{p}{a}{q}{\psi}{\alpha}{\kappa}\threej{q}{t}{r}{-\kappa}{-\tau}{-\rho}\threej{r}{b}{s}{\rho}{\beta}{\sigma}\threej{s}{p}{u}{-\sigma}{-\psi}{-\nu}\threej{u}{c}{t}{\nu}{\gamma}{r}  \notag\\
 =(-1)^{r+b+\theta}\threej{a}{b}{c}{-\alpha}{-\beta}{-\gamma}\ninej{a}{b}{c}{p}{s}{u}{q}{r}{t}, \label{chap12:eq:14}
 \end{gather}
 
-\begin{center}
-\includegraphics[max width=\textwidth, alt={}]{39a53bec-58f6-4733-a518-53d974314721-05_286_1014_2015_530}
-\end{center}
+\[
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \coordinate(Ln)at(0,0);\coordinate(A)at(30:2.5);\coordinate(B)at(-30:2.5);
+  \coordinate(A1)at($(Ln)!0.35!(A)$);\coordinate(A2)at($(Ln)!0.62!(A)$);
+  \coordinate(B1)at($(Ln)!0.35!(B)$);\coordinate(B2)at($(Ln)!0.62!(B)$);
+  \draw[dl](-0.9,0)--(Ln)node[at start,left]{$a\alpha$};
+  \draw[dl](Ln)--(A1)node[midway,above,inner sep=1pt]{$q$};
+  \draw[dl](A1)--(A2)node[midway,above,inner sep=1pt]{$r$};
+  \draw[dl](A2)--(A)node[at end,right]{$b\beta$};
+  \draw[dl](Ln)--(B1)node[midway,below,inner sep=1pt]{$p$};
+  \draw[dl](B1)--(B2)node[midway,below,inner sep=1pt]{$u$};
+  \draw[dl](B2)--(B)node[at end,right]{$c\gamma$};
+  \draw[dl](A1)--(B2)node[pos=0.7,right,inner sep=1pt]{$s$};
+  \draw[dl](B1)--(A2)node[pos=0.7,right,inner sep=1pt]{$t$};
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  % flat-top hexagon: vertices at 0,60,...,300
+  \foreach \a in {0,60,120,180,240,300}{\coordinate(v\a)at(\a:1);}
+  \draw[dl](v60)--(v120)node[midway,above,inner sep=1pt]{$r$};
+  \draw[dl](v120)--(v180)node[midway,above left,inner sep=1pt]{$q$};
+  \draw[dl](v0)--(v60)node[midway,above right,inner sep=1pt]{$b$};
+  \draw[dl](v180)--(v240)node[midway,below left,inner sep=1pt]{$p$};
+  \draw[dl](v300)--(v0)node[midway,below right,inner sep=1pt]{$c$};
+  \draw[dl](v240)--(v300)node[midway,below,inner sep=1pt]{$u$};
+  \draw[dl](v180)--(v0)node[pos=0.28,below,inner sep=1pt]{$a$};
+  \draw[dl](v60)--(v240)node[pos=0.28,right,inner sep=1pt]{$s$};
+  \draw[dl](v120)--(v300)node[pos=0.28,left,inner sep=1pt]{$t$};
+\end{tikzpicture}
+\quad
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \coordinate(N)at(0,0);
+  \draw[dl](-0.9,0)--(N)node[at start,left]{$a\alpha$};
+  \draw[dl](N)--(0.8,0.75)node[at end,right]{$b\beta$};
+  \draw[dl](N)--(0.8,-0.75)node[at end,right]{$c\gamma$};
+\end{tikzpicture}
+\]
 
 \begin{align}
 & \sum_{\psi \kappa \rho}(-1)^{p-\psi+q-\kappa+r-\rho+s-\sigma+t-\tau}\threej{p}{a}{q}{\psi}{\alpha}{-\kappa}\threej{q}{b}{r}{\kappa}{\beta}{-\rho}\threej{r}{c}{s}{\rho}{\gamma}{-\sigma}\threej{s}{d}{t}{\sigma}{\delta}{-\tau}\threej{t}{e}{p}{\tau}{\varepsilon}{-\psi}  \notag\\
 &=(-1)^{t-p-b-a-d-c} \sum_{x \xi y \eta}(-1)^{x-\xi+y-\eta} \prod_{x y}^{2}\threej{a}{b}{x}{\alpha}{\beta}{\xi}\threej{x}{e}{y}{-\xi}{\varepsilon}{-\eta}\threej{y}{c}{d}{\eta}{\gamma}{\delta}\sixj{a}{b}{x}{r}{p}{q}\sixj{x}{e}{y}{t}{r}{p}\sixj{y}{c}{d}{s}{t}{r} \label{chap12:eq:15}
 \end{align}
 
-\begin{center}
-\includegraphics[max width=\textwidth, alt={}]{39a53bec-58f6-4733-a518-53d974314721-06_429_969_797_553}
-\end{center}
+\[
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  % regular pentagon, vertex at the bottom (ee); legs radiate out
+  \foreach \a in  {270,342,54,126,198}{\coordinate(v\a)at(\a:1.2);}
+  \draw[dl](v126)--(v54)node[midway,above,inner sep=1pt]{$r$};
+  \draw[dl](v198)--(v126)node[midway,left,inner sep=1pt]{$q$};
+  \draw[dl](v54)--(v342)node[midway,right,inner sep=1pt]{$s$};
+  \draw[dl](v198)--(v270)node[midway,below left,inner sep=1pt]{$p$};
+  \draw[dl](v342)--(v270)node[midway,below right,inner sep=1pt]{$t$};
+  \draw[dl](v126)--($(v126)+(126:0.8)$)node[at end,above]{$b\beta$};
+  \draw[dl](v54)--($(v54)+(54:0.8)$)node[at end,above]{$c\gamma$};
+  \draw[dl](v198)--($(v198)+(198:0.8)$)node[at end,left]{$a\alpha$};
+  \draw[dl](v342)--($(v342)+(342:0.8)$)node[at end,right]{$d\delta$};
+  \draw[dl](v270)--($(v270)+(270:0.8)$)node[at end,below]{$e\epsilon$};
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  % central node; x,y (ultra-thick) up-left/up-right to the two upper triangles;
+  % e straight down to the lower (apex-down) triangle.
+  \coordinate(C)at(0,0);
+  \coordinate(NL)at(-1.8,0.7);\coordinate(NR)at(1.8,0.7);
+  \draw[dlu](C)--(NL)node[midway,above,inner sep=1pt]{$x$};
+  \draw[dlu](C)--(NR)node[midway,above,inner sep=1pt]{$y$};
+  \draw[dl](C)--(0,-0.8)node[right,inner sep=1pt]{$e\epsilon$};
+  \draw[dl](NL)--($(NL)+(90:0.7)$)node[at end,above]{$b\beta$};
+  \draw[dl](NL)--($(NL)+(220:0.7)$)node[at end,left]{$a\alpha$};
+  \draw[dl](NR)--($(NR)+(90:0.8)$)node[at end,above]{$c\gamma$};
+  \draw[dl](NR)--($(NR)+(320:0.8)$)node[at end,right]{$d\delta$};
+  % upper-left 6j-triangle (apex-up): q left, r right, p base; inner b,a,x
+  \dsixjtri{-1.8}{-0.7}{q}{r}{p}{b}{a}{x}
+  \draw[dlu](-1.8,-0.7)--($(-1.8,-0.7)+(330:1)$); % x spoke (sBR) bold
+  % upper-right 6j-triangle
+  \dsixjtri{1.8}{-0.7}{r}{s}{t}{c}{y}{d}
+  \draw[dlu](1.8,-0.7)--($(1.8,-0.7)+(210:1)$); % y spoke (sBL) bold
+  % lower (apex-down) 6j-triangle: p left, t right; inner x,y,e ; leg ee down
+  \coordinate(bc)at(0,-1.75);
+  \coordinate(bT)at($(bc)+(270:0.85)$);\coordinate(bL)at($(bc)+(150:0.85)$);\coordinate(bR)at($(bc)+(30:0.85)$);
+  \draw[dl](bL)--(bT)node[midway,below left,inner sep=1pt]{$p$};
+  \draw[dl](bT)--(bR)node[midway,below right,inner sep=1pt]{$t$};
+  \draw[dl](bL)--(bR)node[midway,above,inner sep=1pt]{$r$};
+  \draw[dlu](bc)--(bL)node[pos=0.5,below,inner sep=1pt]{$x$};
+  \draw[dlu](bc)--(bR)node[pos=0.5,below,inner sep=1pt]{$y$};
+  \draw[dl](bc)--(bT)node[pos=0.5,right,inner sep=1pt]{$e$};
+\end{tikzpicture}
+\]
 \begin{equation}
 =(-1)^{p-t-b-a-d-c} \sum_{x \xi y \eta}(-1)^{x-\xi+y-\eta} \Pi_{x y}^{2}\threej{a}{b}{x}{\alpha}{\beta}{\xi} \label{chap12:eq:16}\threej{x}{d}{y}{-\xi}{\delta}{-\eta}\threej{y}{c}{e}{\eta}{\gamma}{\varepsilon}\sixj{a}{b}{x}{r}{p}{q}\ninej{c}{e}{y}{r}{p}{x}{s}{t}{d},
 \end{equation}
-\begin{center}
-\includegraphics[max width=\textwidth, alt={}]{39a53bec-58f6-4733-a518-53d974314721-06_356_882_1396_599}
-\end{center}
+\[
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  % LHS: bb,aa (left) cross to p; middle box; ce,cg,dd (right) -- approximate
+  \foreach \i in {0,...,4}{\coordinate(v\i) at (180-36+\i*72:1.2);}
+  \draw[dl](v0)--(v1)node[midway,left,inner sep=1pt]{$q$};
+  \draw[dl](v0)--(v2)node[pos=0.7,left,inner sep=1pt]{$r$};
+  \draw[dl](v1)--(v4)node[pos=0.7,left,inner sep=1pt]{$p$};
+  \draw[dl](v2)--(v3)node[midway,right,inner sep=1pt]{$s$};
+  \draw[dl](v3)--(v4)node[midway,right,inner sep=1pt]{$t$};
+  \draw[dl](v0)--($(v0)+(144:0.8)$)node[at end,above]{$b\beta$};
+  \draw[dl](v1)--($(v1)+(216:0.8)$)node[at end,below]{$a\alpha$};
+  \draw[dl](v2)--($(v2)+(288:0.8)$)node[at end,below]{$c\gamma$};
+  \draw[dl](v3)--($(v3)+(0:0.8)$)node[at end,above]{$d\delta$};
+  \draw[dl](v4)--($(v4)+(72:0.8)$)node[at end,above]{$e\epsilon$};
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  % top tree: aa - x(bold) - C - y(bold) - ee ; dd down from C
+  \coordinate(C)at(0,1.);
+  \draw[dlu](-1.5,1)--(C)node[midway,above,inner sep=1pt]{$x$};
+  \draw[dlu](C)--(1.5,1)node[midway,above,inner sep=1pt]{$y$};
+  \draw[dl](-1.5,1)--($(-1.5,1)+(130:0.8)$)node[at end,left]{$a\alpha$};
+  \draw[dl](1.5,1)--($(1.5,1)+(50:0.8)$)node[at end,right]{$e\epsilon$};
+  \draw[dl](C)--($(C)+(90:0.8)$)node[at end,above]{$d\delta$};
+  \draw[dl](-1.5,1)--($(-1.5,1)+(220:0.9)$)node[at end,left]{$b\beta$}; 
+  \draw[dl](1.5,1)--($(1.5,1)+(-50:0.8)$)node[at end,right]{$c\gamma$};
+  % 6j-diamond (left) with x bold; hexagon (right) with x,y bold
+  \dsixjsq{-1.5}{-0.2}{b}{x}{q}{p}{r}{a}
+  \draw[dlu]($(-1.5,-0.2)+(90:0.9)$)--($(-1.5,-0.2)+(0:0.9)$);% x edge bold (approx)
+  % flat-top hexagon (right)
+  \begin{scope}[shift={(1,-0.2)}]
+    \foreach \a in {0,60,120,180,240,300}{\coordinate(v\a)at(\a:0.95);}
+    \draw[dlu](v180)--(v120)node[midway,above left,inner sep=1pt]{$x$};
+    \draw[dlu](v60)--(v120)node[midway,above,inner sep=1pt]{$y$};
+    \draw[dl](v0)--(v60)node[midway,right,inner sep=1pt]{$c$};
+    \draw[dl](v300)--(v0)node[midway,right,inner sep=1pt]{$s$};
+    \draw[dl](v240)--(v300)node[midway,below,inner sep=1pt]{$t$};
+    \draw[dl](v180)--(v240)node[midway,left,inner sep=1pt]{$p$};
+    \draw[dl](v180)--(v0)node[pos=0.3,below,inner sep=1pt]{$r$};
+    \draw[dl](v60)--(v240)node[pos=0.3,right,inner sep=1pt]{$e$};
+    \draw[dl](v120)--(v300)node[pos=0.7,left,inner sep=1pt]{$d$};
+  \end{scope}
+\end{tikzpicture}
+\]
 
 \begin{gather}
 =(-1)^{r-t+p+a+d} \sum_{x \xi y \eta z}(-1)^{x-\xi+y-\eta+x} \prod_{x y z}^{2}\threej{a}{c}{x}{\alpha}{\gamma}{\xi}\threej{x}{e}{y}{-\xi}{\varepsilon}{-\eta}\threej{y}{b}{d}{\eta}{\beta}{\delta}  \notag\\
 \sixj{c}{q}{z}{b}{s}{r}\sixj{a}{c}{x}{z}{p}{q}\sixj{x}{e}{y}{t}{z}{p}\sixj{y}{b}{d}{s}{t}{z}, \label{chap12:eq:17}
 \end{gather}
 
-\begin{center}
-\includegraphics[max width=\textwidth, alt={}]{39a53bec-58f6-4733-a518-53d974314721-06_459_1030_2074_519}
-\end{center}
+\[
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  % LHS: eq16 pentagon rotated -90 (base 144 -> 54), relabelled
+  \foreach \i in {0,...,4}{\coordinate(v\i) at (54+\i*72:1.2);}
+  \draw[dl](v0)--(v1)node[midway,above,inner sep=1pt]{$r$};
+  \draw[dl](v0)--(v2)node[pos=0.6,above,inner sep=1pt]{$q$};
+  \draw[dl](v1)--(v4)node[pos=0.6,above,inner sep=1pt]{$s$};
+  \draw[dl](v2)--(v3)node[midway,below left,inner sep=1pt]{$p$};
+  \draw[dl](v3)--(v4)node[midway,below right,inner sep=1pt]{$t$};
+  \draw[dl](v0)--($(v0)+(54:0.8)$)node[at end,above]{$b\beta$};
+  \draw[dl](v1)--($(v1)+(126:0.8)$)node[at end,above]{$c\gamma$};
+  \draw[dl](v2)--($(v2)+(198:0.8)$)node[at end,left]{$a\alpha$};
+  \draw[dl](v3)--($(v3)+(270:0.8)$)node[at end,below]{$e\epsilon$};
+  \draw[dl](v4)--($(v4)+(342:0.8)$)node[at end,right]{$d\delta$};
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  % --- top: square with crossed diagonals (z) ---
+  \coordinate(sc)at(0,2.5);
+  \coordinate(sTL)at($(sc)+(135:1)$);\coordinate(sTR)at($(sc)+(45:1)$);
+  \coordinate(sBL)at($(sc)+(225:1)$);\coordinate(sBR)at($(sc)+(-45:1)$);
+  \draw[dl](sTL)--(sTR) node[midway,above]{$r$};
+  \draw[dlu](sBL)--(sBR) node[midway,below]{$z$};
+  \draw[dl](sTL)--(sBL) node[midway,left]{$c$};
+  \draw[dl](sTR)--(sBR) node[midway,right]{$b$};
+  \draw[dl](sTL)--(sBR) node[pos=0.3,above]{$s$};
+  \draw[dl](sTR)--(sBL) node[pos=0.35,above]{$q$};
+  % --- left 6j-triangle (apex-left), NO outward legs; edges c(to NL), z(to sq), x ---
+  \coordinate(lc)at(-1.4,0.8);
+  \coordinate(lA)at($(lc)+(180:1)$);\coordinate(lT)at($(lc)+(60:1)$);\coordinate(lB)at($(lc)+(-60:1)$);
+  \draw[dl](lA)--(lT)node[midway,above left,inner sep=1pt]{$c$};
+  \draw[dlu](lT)--(lB)node[midway,right,inner sep=1pt]{$z$};
+  \draw[dlu](lA)--(lB)node[midway,below left,inner sep=1pt]{$x$};
+  \draw[dl](lc)--(lA)node[pos=0.5,above,inner sep=1pt]{$a$};\draw[dl](lc)--(lT)node[pos=0.5,left,inner sep=1pt]{$q$};\draw[dl](lc)--(lB)node[pos=0.3,below left,inner sep=1pt]{$p$};
+  % --- right 6j-triangle (apex-right) ---
+  \coordinate(rc)at(1.4,0.8);
+  \coordinate(rA)at($(rc)+(0:1)$);\coordinate(rT)at($(rc)+(120:1)$);\coordinate(rB)at($(rc)+(240:1)$);
+  \draw[dl](rT)--(rA)node[midway,above right,inner sep=1pt]{$b$};
+  \draw[dlu](rT)--(rB)node[midway,left,inner sep=1pt]{$z$};
+  \draw[dlu](rB)--(rA)node[midway,below right,inner sep=1pt]{$y$};
+  \draw[dl](rc)--(rA)node[pos=0.5,above,inner sep=1pt]{$d$};\draw[dl](rc)--(rT)node[pos=0.5,right,inner sep=1pt]{$s$};\draw[dl](rc)--(rB)node[pos=0.3,below right,inner sep=1pt]{$t$};
+  % --- centre downward 6j-triangle ---
+  \coordinate(bc)at(0,-0.7);
+  \coordinate(bA)at($(bc)+(270:1)$);\coordinate(bL)at($(bc)+(150:1)$);\coordinate(bR)at($(bc)+(30:1)$);
+  \draw[dlu](bL)--(bR)node[midway,above,inner sep=1pt]{$z$};
+  \draw[dlu](bL)--(bA)node[midway,below left,inner sep=1pt]{$x$};
+  \draw[dlu](bR)--(bA)node[midway,below right,inner sep=1pt]{$y$};
+  \draw[dl](bc)--(bA)node[pos=0.5,right,inner sep=1pt]{$e$};\draw[dl](bc)--(bL)node[pos=0.3,above,inner sep=1pt]{$p$};\draw[dl](bc)--(bR)node[pos=0.3,above,inner sep=1pt]{$t$};
+  % big outer triangle NL,NR,NB: its edges are the long x,y (and top) summed lines;
+  % the external 3jm legs attach at its corners.
+  \coordinate(NL)at($(lA)-(0.3,0)$);\coordinate(NR)at($(rA)+(0.3,0)$);\coordinate(NB)at($(bA)-(0,0.3)$);
+  \draw[dlu](NL)--(NB)node[pos=0.62,below left,inner sep=1pt]{$x$};
+  \draw[dlu](NR)--(NB)node[pos=0.62,below right,inner sep=1pt]{$y$};
+  \draw[dl](NL)--($(NL)+(100:0.9)$)node[at end,above]{$c\gamma$};
+  \draw[dl](NL)--($(NL)+(225:0.9)$)node[at end,below]{$a\alpha$};
+  \draw[dl](NR)--($(NR)+(80:0.9)$)node[at end,above]{$b\beta$};
+  \draw[dl](NR)--($(NR)+(-45:0.9)$)node[at end,below]{$d\delta$};
+  \draw[dl](NB)--($(NB)+(270:0.9)$)node[at end,below]{$e\epsilon$};
+ 
+\end{tikzpicture}
+\]
 
 \subsection{Sums Involving Products of Six 3jm Symbols}
 % PROOFREAD: contains OCR-garbled or 12j Wigner array(s) not auto-converted -- verify/reconstruct against orig.
