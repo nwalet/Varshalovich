@@ -2666,13 +2666,92 @@ where $R=a+b+c+d+e+f+g+h+p+q+r+s$.\\
 \times\sixj{a_{2}}{b_{3}}{b_{1}}{c}{X_{1}}{X_{3}}\sixj{a_{3}}{b_{1}}{b_{2}}{c}{X_{2}}{X_{1}}=\Pi_{c}^{2}\sixj{a_{1}}{a_{2}}{a_{3}}{b_{1}}{b_{2}}{b_{3}}, \label{chap12:eq:57}
 \end{gather}
 
-\includegraphics[max width=\textwidth, alt={}, center]{p38}
+\[
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \begin{scope}[shift={(1.2,2.2)}] % diamond {a3 b1 b2;c X2 X1}: b2(UL) b1(UR) X2(BL) X1(BR); a3(v) c(h)
+    \dsixjsq{0}{0}{b_2}{b_1}{X_2}{X_1}{c}{a_3}
+    \draw[dlu](ql)--(qb);\draw[dlu](qb)--(qr);
+  \end{scope}
+  \begin{scope}[shift={(1.2,0.1)}] % triangle {a1 a2 a3;X1 X2 X3}: outer X2,X1,X3 bold ; spokes a1,a3,a2
+    \coordinate(c)at(0,0);\coordinate(T)at(90:1);\coordinate(L)at(210:1);\coordinate(R)at(330:1);
+    \draw[dlu](T)--(L)node[midway,above left,inner sep=1pt]{$X_2$};
+    \draw[dlu](T)--(R)node[midway,above right,inner sep=1pt]{$X_1$};
+    \draw[dlu](L)--(R)node[midway,below,inner sep=1pt]{$X_3$};
+    \draw[dl](c)--(L)node[wb,pos=0.5]{$a_1$};
+    \draw[dl](c)--(R)node[wb,pos=0.5]{$a_3$};
+    \draw[dl](c)--(T)node[wb,pos=0.5]{$a_2$};
+  \end{scope}
+  \begin{scope}[shift={(0,-2.2)}] % square-left {a1 b2 b3;c X3 X2}: top X2, left b2, right X3, bot b3 ; diag c,a1
+    \dsq{0}{0}{X_2}{b_3}{b_2}{X_3}
+    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$c$};
+    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$a_1$};
+    \draw[dlu](sqTL)--(sqTR);\draw[dlu](sqTR)--(sqBR); % X2 top, X3 right bold
+  \end{scope}
+  \begin{scope}[shift={(2.6,-2.2)}] % square-right {a2 b3 b1;c X1 X3}: top X1, left X3, right b1, bot b3 ; diag a2,c
+    \dsq{0}{0}{X_1}{b_3}{X_3}{b_1}
+    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$a_2$};
+    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$c$};
+    \draw[dlu](sqTL)--(sqTR);\draw[dlu](sqTL)--(sqBL); % X1 top, X3 left bold
+  \end{scope}
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \dloop{0}{0}{c}
+  \begin{scope}[shift={(2.2,0)}] % 6j-tri {a1 a2 a3;b1 b2 b3}: outer b2,b1,b3 ; spokes a1,a3,a2
+    \coordinate(c)at(0,0);\coordinate(T)at(90:1);\coordinate(L)at(210:1);\coordinate(R)at(330:1);
+    \draw[dl](T)--(L)node[midway,above left,inner sep=1pt]{$b_2$};
+    \draw[dl](T)--(R)node[midway,above right,inner sep=1pt]{$b_1$};
+    \draw[dl](L)--(R)node[midway,below,inner sep=1pt]{$b_3$};
+    \draw[dl](c)--(L)node[wb,pos=0.5]{$a_1$};
+    \draw[dl](c)--(R)node[wb,pos=0.5]{$a_3$};
+    \draw[dl](c)--(T)node[wb,pos=0.5]{$a_2$};
+  \end{scope}
+\end{tikzpicture}
+\]
 \begin{equation}
 \sum_{X Y Z} \Pi_{X Y Z}^{2}\ninej{X}{Y}{Z}{d}{e}{f}{a}{b}{c} \label{chap12:eq:58}\sixj{X}{Y}{Z}{f}{c}{g}\sixj{X}{a}{d}{b^{\prime}}{g}{c}\sixj{Y}{b}{e}{d^{\prime}}{f}{g}=(-1)^{2(b+d)} \frac{\delta_{b b^{\prime}} \delta_{d d^{\prime}}}{\Pi_{b d}^{2}}\{a b c\}\{d e f\}\{b d g\},
 \end{equation}
-\begin{center}
-\includegraphics[max width=\textwidth, alt={}]{39a53bec-58f6-4733-a518-53d974314721-21_480_1345_1832_368}
-\end{center}
+\[
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \begin{scope}[shift={(1.6,2.0)}] % diamond {X Y Z;f c g}: c(UL) f(UR) X(BL) Y(BR); g(h) Z(v,bold)
+    \dsixjsq[1]{0}{0}{c}{f}{X}{Y}{g}{Z}
+    \draw[dlu](ql)--(qb);\draw[dlu](qb)--(qr); % X BL, Y BR edges bold
+  \end{scope}
+  \begin{scope}[shift={(0,0)}] % triangle-left (apex-left) {X a d;b' g c}: c(UL) a(BL) X(right,bold); spokes b',g,d
+    \coordinate(c)at(0,0);\coordinate(T)at(60:1);\coordinate(B)at(300:1);\coordinate(V)at(180:1);
+    \draw[dl](T)--(V)node[midway,above left,inner sep=1pt]{$c$};
+    \draw[dl](B)--(V)node[midway,below left,inner sep=1pt]{$a$};
+    \draw[dlu](T)--(B)node[midway,right,inner sep=1pt]{$X$};
+    \draw[dl](c)--(T)node[wb,pos=0.5]{$b'$};
+    \draw[dl](c)--(V)node[wb,pos=0.5]{$d$};
+    \draw[dl](c)--(B)node[wb,pos=0.5]{$g$};
+  \end{scope}
+  \begin{scope}[shift={(3.2,0)}] % triangle-right (apex-right) {Y b e;d' f g}: f(UR) e(BR) Y(left,bold); spokes g,d',b
+    \coordinate(c)at(0,0);\coordinate(T)at(120:1);\coordinate(B)at(240:1);\coordinate(V)at(0:1);
+    \draw[dl](T)--(V)node[midway,above right,inner sep=1pt]{$f$};
+    \draw[dl](B)--(V)node[midway,below right,inner sep=1pt]{$e$};
+    \draw[dlu](T)--(B)node[midway,left,inner sep=1pt]{$Y$};
+    \draw[dl](c)--(T)node[wb,pos=0.5]{$g$};
+    \draw[dl](c)--(V)node[wb,pos=0.5]{$d'$};
+    \draw[dl](c)--(B)node[wb,pos=0.5]{$b$};
+  \end{scope}
+  \begin{scope}[shift={(1.6,-2.0)}] % hexagon {X Y Z;d e f;a b c} (pointy): outer X,a,c,f,e,Y ; diam Z,b,d
+    \dninehex{0}{0}{X}{a}{c}{f}{e}{Y}
+    \draw[dlu](hT)--(hUL);\draw[dlu](hUR)--(hT); % X (UL), Y (UR) edges bold
+    \draw[dlu](hT)--(hB)node[wb,pos=0.27]{$Z$};
+    \draw[dl](hUR)--(hLL)node[wb,pos=0.30]{$b$};
+    \draw[dl](hUL)--(hLR)node[wb,pos=0.70]{$d$};
+  \end{scope}
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \cthetav{0}{0}{a}{c}{b}
+  \drect{1.4}{0}{b}{b'}
+  \cthetav{2.8}{0}{b}{g}{d}
+  \drect{4.2}{0}{d}{d'}
+  \cthetav{5.6}{0}{d}{e}{f}
+\end{tikzpicture}
+\]
 % PROOFREAD: contains OCR-garbled or 12j Wigner array(s) not auto-converted -- verify/reconstruct against orig.
 \begin{equation}
 \sum_{X Y Z}(-1)^{2 Z} \Pi_{X Y Z}^{2}\ninej{a}{b}{X}{c}{d}{Y}{e^{\prime}}{f^{\prime}}{g} \sixj{a}{b}{X}{f}{Z}{d}
