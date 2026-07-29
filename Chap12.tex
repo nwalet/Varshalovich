@@ -2760,7 +2760,41 @@ where $R=a+b+c+d+e+f+g+h+p+q+r+s$.\\
 \label{chap12:eq:59}
 \end{equation}
 \begin{center}
-\includegraphics[max width=\textwidth, alt={}]{p40}
+\[
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \begin{scope} % square-left: top f, left d, right X, bot a ; diag b,Z ; X right + Z diag bold
+    \dsq{0}{0}{f}{a}{d}{X}
+    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$b$};
+    \draw[dlu](sqTR)--(sqBL)node[wb,pos=0.68]{$Z$};
+    \draw[dlu](sqTR)--(sqBR);
+  \end{scope}
+  \begin{scope}[shift={(1.6,1.5)}] % diamond-top {X Y Z;f e g}: f(UL) e(UR) X(BL) Y(BR); g(h) Z(v,bold)
+    \dsixjsq[1]{0}{0}{f}{e}{X}{Y}{g}{Z}
+    \draw[dlu](ql)--(qb);\draw[dlu](qb)--(qr);
+  \end{scope}
+  \begin{scope}[shift={(3.2,0)}] % square-right: top e, left Y, right a, bot d ; diag Z,c ; Y left + Z diag bold
+    \dsq{0}{0}{e}{d}{Y}{a}
+    \draw[dlu](sqTL)--(sqBR)node[wb,pos=0.32]{$Z$};
+    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$c$};
+    \draw[dlu](sqTL)--(sqBL);
+  \end{scope}
+  \begin{scope}[shift={(1.6,-1.7)}] % hexagon (pointy): outer X,a,e',f',d,Y ; diam g,b,c ; X,Y bold
+    \dninehex{0}{0}{X}{a}{e'}{f'}{d}{Y}
+    \draw[dlu](hT)--(hUL);\draw[dlu](hUR)--(hT); % X (UL), Y (UR) edges bold
+    \draw[dl](hT)--(hB)node[wb,pos=0.27]{$g$};
+    \draw[dl](hUR)--(hLL)node[wb,pos=0.30]{$b$};
+    \draw[dl](hUL)--(hLR)node[wb,pos=0.70]{$c$};
+  \end{scope}
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \cthetav{0}{0}{a}{c}{e}
+  \drect{1.4}{0}{e}{e'}
+  \cthetav{2.8}{0}{b}{d}{f}
+  \drect{4.2}{0}{f}{f'}
+  \cthetav{5.6}{0}{e}{f}{g}
+\end{tikzpicture}
+\]
 \end{center}
 \begin{gather}
 \sum_{X Y Z}(-1)^{Z} \Pi_{X Y Z}^{2}\ninej{a}{b}{c^{\prime}}{d}{e}{f}{X}{Y}{g}\ninej{l}{e}{j}{a}{b}{c}{Z}{Y}{h}\sixj{a}{d}{X}{k}{Z}{l}\sixj{X}{Y}{g}{h}{k}{Z}  \notag\\
@@ -2768,7 +2802,44 @@ where $R=a+b+c+d+e+f+g+h+p+q+r+s$.\\
 \end{gather}
 
 \begin{center}
-\includegraphics[max width=\textwidth, alt={}]{p41}
+\[
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \begin{scope}[shift={(0,1.5)}] % hex-TL (pointy) outer c',a,j,Z,e,Y ; diam h,l,b ; Z,Y bold
+    \dninehex{0}{0}{c'}{j}{e}{Y}{Z}{a}
+    \draw[dlu](hLR)--(hUR);\draw[dlu](hB)--(hLR); % Z (eR), Y (eBR) edges bold
+    \draw[dl](hT)--(hB)node[wb,pos=0.27]{$h$};
+    \draw[dl](hUR)--(hLL)node[wb,pos=0.30]{$l$};
+    \draw[dl](hUL)--(hLR)node[wb,pos=0.70]{$b$};
+  \end{scope}
+  \begin{scope}[shift={(0,-1.5)}] % hex-BL (pointy) outer e,f,c,a,X,Y ; diam b,d,g ; X,Y bold
+    \dninehex{0}{0}{e}{f}{c}{a}{X}{Y}
+    \draw[dlu](hLR)--(hUR);\draw[dlu](hUR)--(hT); % X (eR), Y (eTR) edges bold
+    \draw[dl](hT)--(hB)node[wb,pos=0.27]{$b$};
+    \draw[dl](hUR)--(hLL)node[wb,pos=0.30]{$d$};
+    \draw[dl](hUL)--(hLR)node[wb,pos=0.70]{$g$};
+  \end{scope}
+  \begin{scope}[shift={(2.0,0.2)}] % triangle (apex-right): Z(UR) X(BR) Y(left,bold); spokes h,k,g
+    \coordinate(c)at(0,0);\coordinate(T)at(120:1);\coordinate(B)at(240:1);\coordinate(V)at(0:1);
+    \draw[dl](T)--(V)node[midway,above right,inner sep=1pt]{$Z$};
+    \draw[dl](B)--(V)node[midway,below right,inner sep=1pt]{$X$};
+    \draw[dlu](T)--(B)node[midway,left,inner sep=1pt]{$Y$};
+    \draw[dl](c)--(T)node[wb,pos=0.5]{$h$};
+    \draw[dl](c)--(V)node[wb,pos=0.5]{$k$};
+    \draw[dl](c)--(B)node[wb,pos=0.5]{$g$};
+  \end{scope}
+  \begin{scope}[shift={(4.0,0.2)}] % diamond: Z(UL) l(UR) X(BL) d(BR); k(h) a(v) ; Z,X bold
+    \dsixjsq{0}{0}{Z}{l}{X}{d}{k}{a}
+    \draw[dlu](ql)--(qt);\draw[dlu](ql)--(qb); % Z UL, X BL edges bold
+  \end{scope}
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \cthetav{0}{0}{a}{b}{c}
+  \begin{scope}[shift={(1.9,0)}]\dsixjsq{0}{0}{h}{j}{g}{f}{c}{k}\end{scope}
+  \begin{scope}[shift={(4.2,0)}]\dsixjsq{0}{0}{j}{l}{f}{d}{e}{k}\end{scope}
+  \drect{5.8}{0}{c'}{c}
+\end{tikzpicture}
+\]
 \end{center}
 
 % PROOFREAD: contains OCR-garbled or 12j Wigner array(s) not auto-converted -- verify/reconstruct against orig.

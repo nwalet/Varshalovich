@@ -5,46 +5,43 @@
 % §12.2 helpers live in diagrams.sty.
 \begin{document}
 
-% ---------- eq 58 (21_480): 6j-diamond + two 6j-tri + 9j-hex (X,Y,Z bold) = theta.rect.theta.rect.theta ----------
+% ---------- eq 60 (p41): two 9j-hex + 6j-tri + 6j-diamond (X,Y,Z bold) = theta + two 6j-diamonds + rect ----------
 \[
 \begin{tikzpicture}[baseline=0pt,font=\small]
-  \begin{scope}[shift={(1.6,2.0)}] % diamond {X Y Z;f c g}: c(UL) f(UR) X(BL) Y(BR); g(h) Z(v,bold)
-    \dsixjsq[1]{0}{0}{c}{f}{X}{Y}{g}{Z}
-    \draw[dlu](ql)--(qb);\draw[dlu](qb)--(qr); % X BL, Y BR edges bold
+  \begin{scope}[shift={(0,1.5)}] % hex-TL (pointy) outer c',a,j,Z,e,Y ; diam h,l,b ; Z,Y bold
+    \dninehex{0}{0}{c'}{j}{e}{Y}{Z}{a}
+    \draw[dlu](hLR)--(hUR);\draw[dlu](hB)--(hLR); % Z (eR), Y (eBR) edges bold
+    \draw[dl](hT)--(hB)node[wb,pos=0.27]{$h$};
+    \draw[dl](hUR)--(hLL)node[wb,pos=0.30]{$l$};
+    \draw[dl](hUL)--(hLR)node[wb,pos=0.70]{$b$};
   \end{scope}
-  \begin{scope}[shift={(0,0)}] % triangle-left (apex-left) {X a d;b' g c}: c(UL) a(BL) X(right,bold); spokes b',g,d
-    \coordinate(c)at(0,0);\coordinate(T)at(60:1);\coordinate(B)at(300:1);\coordinate(V)at(180:1);
-    \draw[dl](T)--(V)node[midway,above left,inner sep=1pt]{$c$};
-    \draw[dl](B)--(V)node[midway,below left,inner sep=1pt]{$a$};
-    \draw[dlu](T)--(B)node[midway,right,inner sep=1pt]{$X$};
-    \draw[dl](c)--(T)node[wb,pos=0.5]{$b'$};
-    \draw[dl](c)--(V)node[wb,pos=0.5]{$d$};
+  \begin{scope}[shift={(0,-1.5)}] % hex-BL (pointy) outer e,f,c,a,X,Y ; diam b,d,g ; X,Y bold
+    \dninehex{0}{0}{e}{f}{c}{a}{X}{Y}
+    \draw[dlu](hLR)--(hUR);\draw[dlu](hUR)--(hT); % X (eR), Y (eTR) edges bold
+    \draw[dl](hT)--(hB)node[wb,pos=0.27]{$b$};
+    \draw[dl](hUR)--(hLL)node[wb,pos=0.30]{$d$};
+    \draw[dl](hUL)--(hLR)node[wb,pos=0.70]{$g$};
+  \end{scope}
+  \begin{scope}[shift={(2.0,0.2)}] % triangle (apex-right) {..}: Z(UR) X(BR) Y(left,bold); spokes h,k,g
+    \coordinate(c)at(0,0);\coordinate(T)at(120:1);\coordinate(B)at(240:1);\coordinate(V)at(0:1);
+    \draw[dl](T)--(V)node[midway,above right,inner sep=1pt]{$Z$};
+    \draw[dl](B)--(V)node[midway,below right,inner sep=1pt]{$X$};
+    \draw[dlu](T)--(B)node[midway,left,inner sep=1pt]{$Y$};
+    \draw[dl](c)--(T)node[wb,pos=0.5]{$h$};
+    \draw[dl](c)--(V)node[wb,pos=0.5]{$k$};
     \draw[dl](c)--(B)node[wb,pos=0.5]{$g$};
   \end{scope}
-  \begin{scope}[shift={(3.2,0)}] % triangle-right (apex-right) {Y b e;d' f g}: f(UR) e(BR) Y(left,bold); spokes g,d',b
-    \coordinate(c)at(0,0);\coordinate(T)at(120:1);\coordinate(B)at(240:1);\coordinate(V)at(0:1);
-    \draw[dl](T)--(V)node[midway,above right,inner sep=1pt]{$f$};
-    \draw[dl](B)--(V)node[midway,below right,inner sep=1pt]{$e$};
-    \draw[dlu](T)--(B)node[midway,left,inner sep=1pt]{$Y$};
-    \draw[dl](c)--(T)node[wb,pos=0.5]{$g$};
-    \draw[dl](c)--(V)node[wb,pos=0.5]{$d'$};
-    \draw[dl](c)--(B)node[wb,pos=0.5]{$b$};
-  \end{scope}
-  \begin{scope}[shift={(1.6,-2.0)}] % hexagon {X Y Z;d e f;a b c} (pointy): outer X,a,c,f,e,Y ; diam Z,b,d
-    \dninehex{0}{0}{X}{a}{c}{f}{e}{Y}
-    \draw[dlu](hT)--(hUL);\draw[dlu](hUR)--(hT); % X (UL), Y (UR) edges bold
-    \draw[dlu](hT)--(hB)node[wb,pos=0.27]{$Z$};
-    \draw[dl](hUR)--(hLL)node[wb,pos=0.30]{$b$};
-    \draw[dl](hUL)--(hLR)node[wb,pos=0.70]{$d$};
+  \begin{scope}[shift={(4.0,0.2)}] % diamond {..}: Z(UL) l(UR) X(BL) d(BR); k(h) a(v) ; Z,X bold
+    \dsixjsq{0}{0}{Z}{l}{X}{d}{k}{a}
+    \draw[dlu](ql)--(qt);\draw[dlu](ql)--(qb); % Z UL, X BL edges bold
   \end{scope}
 \end{tikzpicture}
 \;=\;
 \begin{tikzpicture}[baseline=0pt,font=\small]
-  \cthetav{0}{0}{a}{c}{b}
-  \drect{1.4}{0}{b}{b'}
-  \cthetav{2.8}{0}{b}{g}{d}
-  \drect{4.2}{0}{d}{d'}
-  \cthetav{5.6}{0}{d}{e}{f}
+  \cthetav{0}{0}{a}{b}{c}
+  \begin{scope}[shift={(1.9,0)}]\dsixjsq{0}{0}{h}{j}{g}{f}{c}{k}\end{scope}
+  \begin{scope}[shift={(4.2,0)}]\dsixjsq{0}{0}{j}{l}{f}{d}{e}{k}\end{scope}
+  \drect{5.8}{0}{c'}{c}
 \end{tikzpicture}
 \]
 \end{document}
