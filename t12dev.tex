@@ -5,45 +5,43 @@
 % §12.2 helpers live in diagrams.sty.
 \begin{document}
 
-% ---------- eq 52 (18_302): four 6j-diamonds (X bold) = 9j-hex . 6j-diamond . 12j octagon-WHEEL (first kind) ----------
+% ---------- eq 54 (19_375): 6j-tri + 6j-diamond + 6j-diamond + 6j-tri (X,Y bold) = 6j-diamond . theta . rect ----------
 \[
 \begin{tikzpicture}[baseline=0pt,font=\small]
-  \begin{scope}\dsixjsq[2]{0}{0}{b}{c}{a}{d}{X}{p}\end{scope}
-  \begin{scope}[xshift=2.3cm]\dsixjsq[2]{0}{0}{c}{f}{d}{e}{X}{q}\end{scope}
-  \begin{scope}[xshift=4.6cm]\dsixjsq[2]{0}{0}{f}{g}{e}{h}{X}{r}\end{scope}
-  \begin{scope}[xshift=6.9cm]\dsixjsq[2]{0}{0}{g}{a}{h}{b}{X}{s}\end{scope}
+  % triangle-left (apex-left) {d p g / c f X}: edges c(UL) f(BL) X(right,bold) ; spokes d,p,g
+  \begin{scope}[shift={(0,0)}]
+    \coordinate(c)at(0,0);\coordinate(T)at(60:1);\coordinate(B)at(300:1);\coordinate(V)at(180:1);
+    \draw[dl](T)--(V)node[midway,above left,inner sep=1pt]{$c$};
+    \draw[dl](B)--(V)node[midway,below left,inner sep=1pt]{$f$};
+    \draw[dlu](T)--(B)node[midway,right,inner sep=1pt]{$X$};
+    \draw[dl](c)--(T)node[wb,pos=0.5]{$d$};
+    \draw[dl](c)--(V)node[wb,pos=0.5]{$p$};
+    \draw[dl](c)--(B)node[wb,pos=0.5]{$g$};
+  \end{scope}
+  \begin{scope}[shift={(1.7,1.3)}] % diamond-top {c b X Y ; a,d}: X BL, Y BR edges bold
+    \dsixjsq{0}{0}{c}{b}{X}{Y}{a}{d}
+    \draw[dlu](ql)--(qb);\draw[dlu](qb)--(qr);
+  \end{scope}
+  \begin{scope}[shift={(1.7,-1.3)}] % diamond-bottom {X Y f e ; a,g}: X UL, Y UR edges bold
+    \dsixjsq{0}{0}{X}{Y}{f}{e}{a}{g}
+    \draw[dlu](ql)--(qt);\draw[dlu](qt)--(qr);
+  \end{scope}
+  % triangle-right (apex-right) {d q g / b e Y}: edges b(UR) e(BR) Y(left,bold) ; spokes d,q,g
+  \begin{scope}[shift={(3.4,0)}]
+    \coordinate(c)at(0,0);\coordinate(T)at(120:1);\coordinate(B)at(240:1);\coordinate(V)at(0:1);
+    \draw[dl](T)--(V)node[midway,above right,inner sep=1pt]{$b$};
+    \draw[dl](B)--(V)node[midway,below right,inner sep=1pt]{$e$};
+    \draw[dlu](T)--(B)node[midway,left,inner sep=1pt]{$Y$};
+    \draw[dl](c)--(T)node[wb,pos=0.5]{$d$};
+    \draw[dl](c)--(V)node[wb,pos=0.5]{$q$};
+    \draw[dl](c)--(B)node[wb,pos=0.5]{$g$};
+  \end{scope}
 \end{tikzpicture}
-\]
-\[
+\;=\;
 \begin{tikzpicture}[baseline=0pt,font=\small]
-  % 9j-hex {s h b; g r f; a e Y}: outer s,g,r,e,Y,b ; diam h,f,a (Y bold)
-  \begin{scope}
-    \dhexflat{0}{0}{s}{g}{r}{e}{Y}{b}
-    \draw[dlu](v4)--(v3); % Y edge bold (LL)
-    \draw[dl](v0)--(v3)node[wb,pos=0.30]{$h$};
-    \draw[dl](v2)--(v5)node[wb,pos=0.30]{$f$};
-    \draw[dl](v1)--(v4)node[wb,pos=0.70]{$a$};
-  \end{scope}
-  % 6j-diamond {b f Y; q p c}: edges b,f,q,p ; diag c(h), Y(v, bold)
-  \begin{scope}[xshift=2.6cm]
-    \dsixjsq[1]{0}{0}{b}{f}{q}{p}{c}{Y}
-  \end{scope}
-  % 12j octagon-WHEEL (twelvejI): 8 outer edges + 4 diameters through centre
-  \begin{scope}[shift={(6.0,0)}]
-    \foreach[count=\i] \ang in {90,45,0,-45,-90,-135,180,135}{\coordinate(w\i)at(\ang:1.6);}
-    \draw[dl](w8)--(w1)node[midway,above left,inner sep=1pt]{$d$};
-    \draw[dl](w1)--(w2)node[midway,above right,inner sep=1pt]{$e$};
-    \draw[dl](w2)--(w3)node[midway,right,inner sep=1pt]{$h$};
-    \draw[dl](w3)--(w4)node[midway,right,inner sep=1pt]{$b$};
-    \draw[dl](w4)--(w5)node[midway,below right,inner sep=1pt]{$c$};
-    \draw[dl](w5)--(w6)node[midway,below left,inner sep=1pt]{$f$};
-    \draw[dl](w6)--(w7)node[midway,left,inner sep=1pt]{$g$};
-    \draw[dl](w7)--(w8)node[midway,left,inner sep=1pt]{$a$};
-    \draw[dl](w1)--(w5)node[wb,pos=0.72]{$q$};
-    \draw[dl](w2)--(w6)node[wb,pos=0.25]{$r$};
-    \draw[dl](w3)--(w7)node[wb,pos=0.72]{$s$};
-    \draw[dl](w4)--(w8)node[wb,pos=0.72]{$p$};
-  \end{scope}
+  \begin{scope}\dsixjsq{0}{0}{c}{b}{f}{e}{a}{p}\end{scope}
+  \begin{scope}[shift={(2.2,0)}]\ctheta{0}{0}{d}{p}{g}\end{scope}
+  \drect{3.8}{0}{p}{q}
 \end{tikzpicture}
 \]
 \end{document}

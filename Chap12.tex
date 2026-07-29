@@ -2478,7 +2478,35 @@ where $R=a+b+c+d+e+f+g+h+p+q+r+s$.\\
 \sixj{a}{e}{f}{d}{p}{q},
 \end{equation}
 
-\includegraphics[max width=\textwidth, alt={}, center]{39a53bec-58f6-4733-a518-53d974314721-19_400_969_1441_553}
+\[
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \begin{scope} % square-left: top c, left p, right X, bot f ; diag g,d ; X right bold
+    \dsq{0}{0}{c}{f}{p}{X}
+    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$g$};
+    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$d$};
+    \draw[dlu](sqTR)--(sqBR);
+  \end{scope}
+  \begin{scope}[shift={(1.6,1.3)}] % diamond1 (top) {c b X Y ; a,d}: X BL, Y BR edges bold
+    \dsixjsq{0}{0}{c}{b}{X}{Y}{a}{d}
+    \draw[dlu](ql)--(qb);\draw[dlu](qb)--(qr);
+  \end{scope}
+  \begin{scope}[shift={(1.6,-1.3)}] % diamond2 (bottom) {X Y f e ; g,a}: X UL, Y UR edges bold
+    \dsixjsq{0}{0}{X}{Y}{f}{e}{g}{a}
+    \draw[dlu](ql)--(qt);\draw[dlu](qt)--(qr);
+  \end{scope}
+  \begin{scope}[shift={(3.2,0)}] % square-right: top b, left Y, right q, bot e ; diag d,g ; Y left bold
+    \dsq{0}{0}{b}{e}{Y}{q}
+    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$d$};
+    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$g$};
+    \draw[dlu](sqTL)--(sqBL);
+  \end{scope}
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \begin{scope}[shift={(0,1.3)}]\dsixjsq{0}{0}{c}{b}{p}{q}{a}{g}\end{scope}
+  \begin{scope}[shift={(0,-1.3)}]\dsixjsq{0}{0}{p}{q}{f}{e}{d}{a}\end{scope}
+\end{tikzpicture}
+\]
 
 \begin{align}
 & \sum_{X Y}(-1)^{X+Y} \Pi_{X Y}^{2}\sixj{a}{b}{c}{d}{X}{Y}\sixj{a}{e}{f}{g}{X}{Y}\sixj{c}{f}{p}{g}{d}{X}\sixj{b}{e}{q}{g}{d}{Y}  \notag\\
@@ -2486,7 +2514,44 @@ where $R=a+b+c+d+e+f+g+h+p+q+r+s$.\\
 \end{align}
 
 \begin{center}
-\includegraphics[max width=\textwidth, alt={}]{39a53bec-58f6-4733-a518-53d974314721-19_375_1245_2124_407}
+\[
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  % triangle-left (apex-left) {d p g / c f X}: edges c(UL) f(BL) X(right,bold) ; spokes d,p,g
+  \begin{scope}[shift={(0,0)}]
+    \coordinate(c)at(0,0);\coordinate(T)at(60:1);\coordinate(B)at(300:1);\coordinate(V)at(180:1);
+    \draw[dl](T)--(V)node[midway,above left,inner sep=1pt]{$c$};
+    \draw[dl](B)--(V)node[midway,below left,inner sep=1pt]{$f$};
+    \draw[dlu](T)--(B)node[midway,right,inner sep=1pt]{$X$};
+    \draw[dl](c)--(T)node[wb,pos=0.5]{$d$};
+    \draw[dl](c)--(V)node[wb,pos=0.5]{$p$};
+    \draw[dl](c)--(B)node[wb,pos=0.5]{$g$};
+  \end{scope}
+  \begin{scope}[shift={(1.7,1.3)}] % diamond-top {c b X Y ; a,d}: X BL, Y BR edges bold
+    \dsixjsq{0}{0}{c}{b}{X}{Y}{a}{d}
+    \draw[dlu](ql)--(qb);\draw[dlu](qb)--(qr);
+  \end{scope}
+  \begin{scope}[shift={(1.7,-1.3)}] % diamond-bottom {X Y f e ; a,g}: X UL, Y UR edges bold
+    \dsixjsq{0}{0}{X}{Y}{f}{e}{a}{g}
+    \draw[dlu](ql)--(qt);\draw[dlu](qt)--(qr);
+  \end{scope}
+  % triangle-right (apex-right) {d q g / b e Y}: edges b(UR) e(BR) Y(left,bold) ; spokes d,q,g
+  \begin{scope}[shift={(3.4,0)}]
+    \coordinate(c)at(0,0);\coordinate(T)at(120:1);\coordinate(B)at(240:1);\coordinate(V)at(0:1);
+    \draw[dl](T)--(V)node[midway,above right,inner sep=1pt]{$b$};
+    \draw[dl](B)--(V)node[midway,below right,inner sep=1pt]{$e$};
+    \draw[dlu](T)--(B)node[midway,left,inner sep=1pt]{$Y$};
+    \draw[dl](c)--(T)node[wb,pos=0.5]{$d$};
+    \draw[dl](c)--(V)node[wb,pos=0.5]{$q$};
+    \draw[dl](c)--(B)node[wb,pos=0.5]{$g$};
+  \end{scope}
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \begin{scope}\dsixjsq{0}{0}{c}{b}{f}{e}{a}{p}\end{scope}
+  \begin{scope}[shift={(2.2,0)}]\ctheta{0}{0}{d}{p}{g}\end{scope}
+  \drect{3.8}{0}{p}{q}
+\end{tikzpicture}
+\]
 \end{center}
 % PROOFREAD: contains OCR-garbled or 12j Wigner array(s) not auto-converted -- verify/reconstruct against orig.
 \begin{equation}
