@@ -2558,9 +2558,46 @@ where $R=a+b+c+d+e+f+g+h+p+q+r+s$.\\
 \sum_{X Y}(-1)^{Y} \Pi_{X Y}^{2}\ninej{a}{b}{X}{c}{d}{Y}{p}{q}{r} \label{chap12:eq:55}\sixj{X}{Y}{r}{j}{h}{g}\sixj{a}{b}{X}{h}{g}{e}
 \sixj{c}{d}{Y}{j}{g}{f}=(-1)^{a-b+d+e-j-p+r}\ninej{e}{b}{h}{f}{d}{j}{p}{q}{r}\sixj{a}{c}{p}{f}{e}{g},
 \end{equation}
-\begin{center}
-\includegraphics[max width=\textwidth, alt={}]{39a53bec-58f6-4733-a518-53d974314721-20_475_1176_754_413}
-\end{center}
+\[
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \begin{scope} % square {a b X;h g e}: top h, left e, right X, bot a ; diag b,g ; X right bold
+    \dsq{0}{0}{h}{a}{e}{X}
+    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$b$};
+    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$g$};
+    \draw[dlu](sqTR)--(sqBR);
+  \end{scope}
+  \begin{scope}[shift={(1.6,1.4)}] % diamond {X Y r;j h g}: h(UL) j(UR) X(BL) Y(BR) ; r(h) g(v) ; X,Y bold
+    \dsixjsq{0}{0}{h}{j}{X}{Y}{r}{g}
+    \draw[dlu](ql)--(qb);\draw[dlu](qb)--(qr);
+  \end{scope}
+  \begin{scope}[shift={(3.3,-0.2)}] % triangle-right (apex-right) {c d Y;j g f}: j(UR) d(BR) Y(left,bold); spokes g,f,c
+    \coordinate(c)at(0,0);\coordinate(T)at(120:1);\coordinate(B)at(240:1);\coordinate(V)at(0:1);
+    \draw[dl](T)--(V)node[midway,above right,inner sep=1pt]{$j$};
+    \draw[dl](B)--(V)node[midway,below right,inner sep=1pt]{$d$};
+    \draw[dlu](T)--(B)node[midway,left,inner sep=1pt]{$Y$};
+    \draw[dl](c)--(T)node[wb,pos=0.5]{$g$};
+    \draw[dl](c)--(V)node[wb,pos=0.5]{$f$};
+    \draw[dl](c)--(B)node[wb,pos=0.5]{$c$};
+  \end{scope}
+  \begin{scope}[shift={(1.6,-1.6)}] % hexagon {a b X;c d Y;p q r} (pointy): outer X,a,p,q,d,Y ; diam b,c,r
+    \dninehex{0}{0}{X}{a}{p}{q}{d}{Y}
+    \draw[dlu](hT)--(hUL);\draw[dlu](hUR)--(hT); % X (UL), Y (UR) edges bold
+    \draw[dl](hT)--(hB)node[wb,pos=0.27]{$b$};
+    \draw[dl](hUR)--(hLL)node[wb,pos=0.30]{$c$};
+    \draw[dl](hUL)--(hLR)node[wb,pos=0.70]{$r$};
+  \end{scope}
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \begin{scope}\dsixjsq{0}{0}{g}{e}{c}{p}{a}{f}\end{scope}
+  \begin{scope}[shift={(2.6,0)}] % 9j-hex {e b h;f d j;p q r}: outer h,j,d,q,p,e ; diam b,f,r
+    \dhexflat{0}{0}{h}{j}{d}{q}{p}{e}
+    \draw[dl](v2)--(v5)node[wb,pos=0.30]{$b$};
+    \draw[dl](v1)--(v4)node[wb,pos=0.30]{$f$};
+    \draw[dl](v0)--(v3)node[wb,pos=0.70]{$r$};
+  \end{scope}
+\end{tikzpicture}
+\]
 
 % PROOFREAD: contains OCR-garbled or 12j Wigner array(s) not auto-converted -- verify/reconstruct against orig.
 \begin{gather}
@@ -2569,7 +2606,59 @@ where $R=a+b+c+d+e+f+g+h+p+q+r+s$.\\
 \sixj{p}{r}{Z}{t}{q}{s}, \label{chap12:eq:56}
 \end{gather}
 
-\includegraphics[max width=\textwidth, alt={}, center]{39a53bec-58f6-4733-a518-53d974314721-20_548_1192_1741_404}\\
+\[
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \begin{scope}[shift={(1.4,2.0)}] % square-top {a b X;f e k}: top k, left a, right f, bot X ; diag e,b ; X bot bold
+    \dsq{0}{0}{k}{X}{a}{f}
+    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$e$};
+    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$b$};
+    \draw[dlu](sqBL)--(sqBR);
+  \end{scope}
+  \begin{scope} % hexagon-left {a b X;c d Y;p q s}: outer a,X,Y,d,q,p ; diam c,s,b
+    \dhexflat{0}{0}{a}{X}{Y}{d}{q}{p}
+    \draw[dlu](v1)--(v0);\draw[dlu](v0)--(v5); % X UR, Y LR edges bold
+    \draw[dl](v2)--(v5)node[wb,pos=0.30]{$c$};
+    \draw[dl](v0)--(v3)node[wb,pos=0.30]{$s$};
+    \draw[dl](v1)--(v4)node[wb,pos=0.70]{$b$};
+  \end{scope}
+  \begin{scope}[shift={(2.8,0)}] % hexagon-right {e f X;g h Y;r t s}: outer f,t,r,g,Y,X ; diam e,s,h
+    \dhexflat{0}{0}{f}{t}{r}{g}{Y}{X}
+    \draw[dlu](v3)--(v2);\draw[dlu](v4)--(v3); % X UL, Y LL edges bold
+    \draw[dl](v2)--(v5)node[wb,pos=0.30]{$e$};
+    \draw[dl](v0)--(v3)node[wb,pos=0.30]{$s$};
+    \draw[dl](v1)--(v4)node[wb,pos=0.70]{$h$};
+  \end{scope}
+  \begin{scope}[shift={(1.4,-2.0)}] % square-bottom {c d Y;h g l}: top Y, left d, right g, bot l ; diag c,h ; Y top bold
+    \dsq{0}{0}{Y}{l}{d}{g}
+    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$c$};
+    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$h$};
+    \draw[dlu](sqTL)--(sqTR);
+  \end{scope}
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \begin{scope}[shift={(1.4,2.0)}] % square-top {p r Z;t q s}: top s, left p, right t, bot Z ; diag q,r ; Z bot bold
+    \dsq{0}{0}{s}{Z}{p}{t}
+    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$q$};
+    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$r$};
+    \draw[dlu](sqBL)--(sqBR);
+  \end{scope}
+  \begin{scope} % hexagon-left {c g l;a e k;p r Z}: outer p,Z,l,g,e,a ; diam k,r,c
+    \dhexflat{0}{0}{p}{Z}{l}{g}{e}{a}
+    \draw[dlu](v1)--(v0); % Z UR edge bold
+    \draw[dl](v2)--(v5)node[wb,pos=0.30]{$k$};
+    \draw[dl](v0)--(v3)node[wb,pos=0.30]{$r$};
+    \draw[dl](v1)--(v4)node[wb,pos=0.70]{$c$};
+  \end{scope}
+  \begin{scope}[shift={(2.8,0)}] % hexagon-right {f b k;h d l;t q Z}: outer t,f,b,d,l,Z ; diam q,k,h
+    \dhexflat{0}{0}{t}{f}{b}{d}{l}{Z}
+    \draw[dlu](v3)--(v2); % Z UL edge bold
+    \draw[dl](v2)--(v5)node[wb,pos=0.30]{$q$};
+    \draw[dl](v0)--(v3)node[wb,pos=0.30]{$k$};
+    \draw[dl](v1)--(v4)node[wb,pos=0.70]{$h$};
+  \end{scope}
+\end{tikzpicture}
+\]
 \subsubsection{(iii) Triple summation}
 
 \begin{gather}
