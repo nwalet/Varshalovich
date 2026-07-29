@@ -2219,7 +2219,34 @@ where $R=a+b+c+d+e+f+p+q+r$,\\
 (-1)^{2e}{\Pi_{d}^{2}}
 \sixj{a}{b}{p}{e}{c}{q},
 \end{equation}
-\includegraphics[max width=\textwidth, alt={}, center]{p28}
+\[
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \begin{scope}[shift={(0,1.9)}] % diamond1 {c e ; X Z ; d,p}: X BL, Z BR edges bold
+    \dsixjsq{0}{0}{c}{e}{X}{Z}{d}{p}
+    \draw[dlu](ql)--(qb);\draw[dlu](qb)--(qr);
+  \end{scope}
+  \begin{scope}[shift={(2.4,1.9)}] % diamond2 {e b ; Z Y ; d,q}: Z BL, Y BR edges bold
+    \dsixjsq{0}{0}{e}{b}{Z}{Y}{d}{q}
+    \draw[dlu](ql)--(qb);\draw[dlu](qb)--(qr);
+  \end{scope}
+  \begin{scope}[shift={(1.2,0)}] % hexagon: Z Y b a c X ; diam p,q,d ; Z top, Y UR, X UL bold
+    \dhexflat{0}{0}{Z}{Y}{b}{a}{c}{X}
+    \draw[dlu](v2)--(v1);\draw[dlu](v1)--(v0);\draw[dlu](v3)--(v2);
+    \draw[dl](v2)--(v5)node[wb,pos=0.30]{$p$};
+    \draw[dl](v1)--(v4)node[wb,pos=0.30]{$q$};
+    \draw[dl](v0)--(v3)node[wb,pos=0.70]{$d$};
+  \end{scope}
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \dloop{0}{0}{d}
+  \begin{scope}[shift={(2,0)}] % 6j-square {a e c b ; q,p}: top c, left a, right e, bot b ; diag q,p
+    \dsq{0}{0}{c}{b}{a}{e}
+    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$q$};
+    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$p$};
+  \end{scope}
+\end{tikzpicture}
+\]
 \begin{equation}
 \sum_{X Y Z}(-1)^{X+Y-e-h} \Pi_{X Y Z}^{2}
 \ninej{a}{b}{X}{c}{d}{Z}{e}{f}{g} 
@@ -2230,19 +2257,119 @@ where $R=a+b+c+d+e+f+p+q+r$,\\
 \{bdf\}
 \sixj{e}{f}{g}{h}{c}{a},
 \end{equation}
-\includegraphics[max width=\textwidth, alt={}, center]{p29}
+\[
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \begin{scope} % hex1 (pointy) 9j{a b X; c d Z; e f g}-> outer a,b,j,g,Z,c ; diam c,d,X
+    \dninehex{0}{0}{a}{b}{j}{g}{Z}{c}
+    \draw[dlu](hLR)--(hUR); % Z edge bold
+    \draw[dl](hT)--(hB)node[wb,pos=0.27]{$c$};
+    \draw[dl](hUR)--(hLL)node[wb,pos=0.30]{$d$};
+    \draw[dlu](hUL)--(hLR)node[wb,pos=0.70]{$X$};
+  \end{scope}
+  \begin{scope}[shift={(2,-1.6)}] % 6j-square {a b X; g Z Y}: top Z, left g, right a, bot b ; diag X,Y
+    \dsq{0}{0}{Z}{b}{g}{a}
+    \draw[dlu](sqTL)--(sqBR)node[wb,pos=0.32]{$X$};
+    \draw[dlu](sqTR)--(sqBL)node[wb,pos=0.68]{$Y$};
+    \draw[dlu](sqTL)--(sqTR); % Z top edge bold
+  \end{scope}
+  \begin{scope}[shift={(4,0)}] % hex2 (pointy) 9j{g b Y; c d Z; h j a}-> outer c,Z,a,j,b,g ; diam h,Y,d
+    \dninehex{0}{0}{c}{Z}{a}{j}{b}{g}
+    \draw[dlu](hUL)--(hLL); % Z edge bold
+    \draw[dl](hT)--(hB)node[wb,pos=0.27]{$h$};
+    \draw[dlu](hUR)--(hLL)node[wb,pos=0.30]{$Y$};
+    \draw[dl](hUL)--(hLR)node[wb,pos=0.70]{$d$};
+  \end{scope}
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \begin{scope}[shift={(0,1.5)}] % 6j-square {e f g; h c a}: top c, left a, right g, bot f ; diag e,h
+    \dsq{0}{0}{c}{f}{a}{g}
+    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$e$};
+    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$h$};
+  \end{scope}
+  \drects{0}{-0.2}{}{}{f}{j}
+  \begin{scope}[shift={(0,-1.5)}]\ctheta{0}{0}{f}{d}{b}\end{scope}
+\end{tikzpicture}
+\]
 \begin{equation}
 \sum_{X Y Z}(-1)^{X+f-a-l} \Pi_{X Y Z}^{2}\ninej{a}{b}{p}{c}{d}{X}{q}{Y}{Z} \label{chap12:eq:50}\ninej{b}{d}{Y}{c}{f}{Z}{l}{k}{q}\sixj{p}{X}{Z}{c}{f}{d}=\frac{\delta_{p k}}{\Pi_{k}^{2}}\{d f p\}\sixj{a}{b}{p}{l}{q}{c},
 \end{equation}
-\begin{center}
-  \includegraphics[max width=\textwidth, alt={}, center]{p30}
-\end{center}
+\[
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \begin{scope}[shift={(1.1,1)}] % sq {p X Z; d e c}: top d, left X, right f, bot Z ; diag c,p
+    \dsq{0}{0}{d}{Z}{X}{f}
+    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$c$};
+    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$p$};
+    \draw[dlu](sqTL)--(sqBL);\draw[dlu](sqBL)--(sqBR); % X left, Z bottom bold
+  \end{scope}
+  \begin{scope}[shift={(0,-0.9)}] % hex1 (flat) 9j{a b p; c d X; q Y Z}-> outer X,Z,Y,b,a,c ; diam d,p,q
+    \dhexflat{0}{0}{X}{Z}{Y}{b}{a}{c}
+    \draw[dlu](v2)--(v1);\draw[dlu](v1)--(v0);\draw[dlu](v0)--(v5); % X top,Z UR,Y LR bold
+    \draw[dl](v2)--(v5)node[wb,pos=0.30]{$d$};
+    \draw[dl](v1)--(v4)node[wb,pos=0.70]{$p$};
+    \draw[dl](v0)--(v3)node[wb,pos=0.70]{$q$};
+  \end{scope}
+  \begin{scope}[shift={(2.6,-0.9)}] % hex2 (flat) 9j{b d Y; c f Z; l k q}-> outer f,k,l,b,Y,Z ; diam c,d,q
+    \dhexflat{0}{0}{f}{k}{l}{b}{Y}{Z}
+    \draw[dlu](v3)--(v2);\draw[dlu](v4)--(v3); % Z UL, Y LL bold
+    \draw[dl](v2)--(v5)node[wb,pos=0.30]{$c$};
+    \draw[dl](v1)--(v4)node[wb,pos=0.70]{$d$};
+    \draw[dl](v0)--(v3)node[wb,pos=0.70]{$q$};
+  \end{scope}
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \cthetav{0}{0}{d}{f}{k}
+  \drect{1.5}{0}{p}{k}
+  \begin{scope}[shift={(3.2,0)}] % 6j-square {a b p; l q c}: top b, left p, right c, bot a ; diag a,l
+    \dsq{0}{0}{b}{a}{p}{c}
+    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$a$};
+    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$l$};
+  \end{scope}
+\end{tikzpicture}
+\]
 \begin{equation}
 \sum_{X Y Z} \Pi_{X Y Z}^{2}\ninej{a}{b}{p}{c}{d}{X}{q}{Y}{Z} \label{chap12:eq:51}\ninej{c}{d}{X}{e}{f}{Z}{g}{h}{p}\ninej{b}{d}{Y}{e}{f}{Z}{j}{k}{q}=\frac{\delta_{h k}}{\Pi_{h}^{2}}\{d f h\}\ninej{a}{b}{p}{c}{e}{g}{q}{j}{h},
 \end{equation}
-\begin{center}
-  \includegraphics[alt={},max width=\textwidth]{39a53bec-58f6-4733-a518-53d974314721-18_343_1286_1222_388}
-\end{center}
+% eq 51: three flat 9j-hex (X,Y,Z bold) = theta(d f h) . rect(h,k) . 9j-hex
+% LHS 9j's: hex1 {b d Y;e f Z;j k q}, hex2 {a b p;c d X;q Y Z}, hex3 {c d X;e f Z;g h p}
+\[
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \begin{scope}[shift={(0,0.3)}] % hex1 {b d Y;e f Z;j k q}: outer f,d,Y,q,j,e ; diam b,Z,k
+    \dhexflat{0}{0}{f}{d}{}{q}{j}{e}
+    \draw[dlu](v0)--(v5); % Y edge bold
+    \draw[dl](v0)--(v3)node[wb,pos=0.30]{$b$};
+    \draw[dlu](v2)--(v5)node[wb,pos=0.30]{$Z$};
+    \draw[dl](v1)--(v4)node[wb,pos=0.70]{$k$};
+  \end{scope}
+  \begin{scope}[shift={(2,-0.6)}] % hex2 {a b p;c d X;q Y Z}: outer d,Z,p,a,q,b ; diam c,X,Y
+    \dhexflat{0}{0}{d}{X}{p}{a}{q}{Y}
+    \draw[dlu](v1)--(v0); % X edge bold
+    \draw[dlu](v2)--(v3); % Y edge bold
+    \draw[dlu](v0)--(v3)node[wb,pos=0.30]{$Z$};
+    \draw[dl](v2)--(v5)node[wb,pos=0.30]{$b$};
+    \draw[dl](v1)--(v4)node[wb,pos=0.70]{$c$};
+  \end{scope}
+  \begin{scope}[shift={(4,0.3)}] % hex3 {c d X;e f Z;g h p}: outer f,e,g,p,X,d ; diam c,Z,h
+    \dhexflat{0}{0}{f}{e}{g}{p}{}{d}
+    \draw[dlu](v4)--(v3); % X edge bold
+    \draw[dl](v0)--(v3)node[wb,pos=0.30]{$c$};
+    \draw[dl](v2)--(v5)node[wb,pos=0.30]{$h$};
+    \draw[dlu](v1)--(v4)node[wb,pos=0.70]{$Z$};
+  \end{scope}
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \cthetav{0}{0}{d}{f}{h}
+  \drect{1.5}{0}{h}{k}
+  \begin{scope}[shift={(3.4,0)}] % 9j-hex {a b p;c e g;q j h}: outer g,c,a,b,j,k ; diam p,q,e
+    \dninehex{0}{0}{g}{k}{j}{b}{a}{c}
+    \draw[dl](hT)--(hB)node[wb,pos=0.27]{$p$};
+    \draw[dl](hUR)--(hLL)node[wb,pos=0.30]{$q$};
+    \draw[dl](hUL)--(hLR)node[wb,pos=0.70]{$e$};
+  \end{scope}
+\end{tikzpicture}
+\]
 
 \subsection{Sums Involving Products of Four $3 n j$ Symbols}
 \subsubsection{(i) Single summation}

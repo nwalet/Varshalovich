@@ -5,70 +5,43 @@
 % §12.2 helpers live in diagrams.sty.
 \begin{document}
 
-% ---------- eq 49a (p26): two 6j-squares + 9j-hex (X,Y bold) = theta.rect.square ----------
+% ---------- eq 51 (18_343): three flat 9j-hex (X,Y,Z bold) = theta(d f h) . rect(h,k) . 9j-hex ----------
+% LHS 9j's: hex1 {b d Y;e f Z;j k q}, hex2 {a b p;c d X;q Y Z}, hex3 {c d X;e f Z;g h p}
 \[
 \begin{tikzpicture}[baseline=0pt,font=\small]
-  \begin{scope}[shift={(0,1.9)}] % sq1: h a Y X ; diag g,b ; Y right + X bottom edges bold
-    \dsq{0}{0}{h}{X}{a}{Y}
-    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$g$};
-    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$b$};
-    \draw[dlu](sqTR)--(sqBR);\draw[dlu](sqBL)--(sqBR);
+  \begin{scope}[shift={(0,0.3)}] % hex1 {b d Y;e f Z;j k q}: outer f,d,Y,q,j,e ; diam b,Z,k
+    \dhexflat{0}{0}{f}{d}{}{q}{j}{e}
+    \draw[dlu](v0)--(v5); % Y edge bold
+    \draw[dl](v0)--(v3)node[wb,pos=0.30]{$b$};
+    \draw[dlu](v2)--(v5)node[wb,pos=0.30]{$Z$};
+    \draw[dl](v1)--(v4)node[wb,pos=0.70]{$k$};
   \end{scope}
-  \begin{scope}[shift={(2.4,1.9)}] % sq2: b Y j c ; diag h,d ; Y left edge bold
-    \dsq{0}{0}{b}{c}{Y}{j}
-    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$h$};
-    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$d$};
-    \draw[dlu](sqTL)--(sqBL);
+  \begin{scope}[shift={(2,-0.6)}] % hex2 {a b p;c d X;q Y Z}: outer d,Z,p,a,q,b ; diam c,X,Y
+    \dhexflat{0}{0}{d}{X}{p}{a}{q}{Y}
+    \draw[dlu](v1)--(v0); % X edge bold
+    \draw[dlu](v2)--(v3); % Y edge bold
+    \draw[dlu](v0)--(v3)node[wb,pos=0.30]{$Z$};
+    \draw[dl](v2)--(v5)node[wb,pos=0.30]{$b$};
+    \draw[dl](v1)--(v4)node[wb,pos=0.70]{$c$};
   \end{scope}
-  \begin{scope}[shift={(1.2,0)}] % hexagon: Y c e f b X ; diam g,a,d ; Y top + X UL bold
-    \dhexflat{0}{0}{Y}{c}{e}{f}{b}{X}
-    \draw[dlu](v2)--(v1);\draw[dlu](v3)--(v2);
-    \draw[dl](v2)--(v5)node[wb,pos=0.30]{$g$};
-    \draw[dl](v1)--(v4)node[wb,pos=0.30]{$a$};
-    \draw[dl](v0)--(v3)node[wb,pos=0.70]{$d$};
+  \begin{scope}[shift={(4,0.3)}] % hex3 {c d X;e f Z;g h p}: outer f,e,g,p,X,d ; diam c,Z,h
+    \dhexflat{0}{0}{f}{e}{g}{p}{}{d}
+    \draw[dlu](v4)--(v3); % X edge bold
+    \draw[dl](v0)--(v3)node[wb,pos=0.30]{$c$};
+    \draw[dl](v2)--(v5)node[wb,pos=0.30]{$h$};
+    \draw[dlu](v1)--(v4)node[wb,pos=0.70]{$Z$};
   \end{scope}
 \end{tikzpicture}
 \;=\;
 \begin{tikzpicture}[baseline=0pt,font=\small]
-  \cthetav{0}{0}{b}{d}{f}
-  \drect{1.5}{0}{f}{j}
-  \begin{scope}[shift={(3.2,0)}] % 6j-square {..}: top h, left j, right a, bot e ; diag c,g
-    \dsq{0}{0}{h}{e}{j}{a}
-    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$c$};
-    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$g$};
+  \cthetav{0}{0}{d}{f}{h}
+  \drect{1.5}{0}{h}{k}
+  \begin{scope}[shift={(3.4,0)}] % 9j-hex {a b p;c e g;q j h}: outer g,c,a,b,j,k ; diam p,q,e
+    \dninehex{0}{0}{g}{k}{j}{b}{a}{c}
+    \draw[dl](hT)--(hB)node[wb,pos=0.27]{$p$};
+    \draw[dl](hUR)--(hLL)node[wb,pos=0.30]{$q$};
+    \draw[dl](hUL)--(hLR)node[wb,pos=0.70]{$e$};
   \end{scope}
-\end{tikzpicture}
-\]
-
-% ---------- eq 49b (p27): two 9j-hex + 6j-square (X,Y bold) = three 6j-diamonds ----------
-\[
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \begin{scope} % hex1 (pointy): c p d e X f ; X eR bold ; diam q,b,a
-    \dninehex{0}{0}{c}{p}{d}{e}{X}{f}
-    \draw[dlu](hLR)--(hUR);
-    \draw[dl](hT)--(hB)node[wb,pos=0.27]{$q$};
-    \draw[dl](hUR)--(hLL)node[wb,pos=0.30]{$b$};
-    \draw[dl](hUL)--(hLR)node[wb,pos=0.70]{$a$};
-  \end{scope}
-  \begin{scope}[xshift=3cm] % hex2 (pointy): f X e h Y g ; X eL + Y eR bold ; diam a,b,r
-    \dninehex{0}{0}{f}{X}{e}{h}{Y}{g}
-    \draw[dlu](hUL)--(hLL);\draw[dlu](hLR)--(hUR);
-    \draw[dl](hT)--(hB)node[wb,pos=0.27]{$a$};
-    \draw[dl](hUR)--(hLL)node[wb,pos=0.30]{$b$};
-    \draw[dl](hUL)--(hLR)node[wb,pos=0.70]{$r$};
-  \end{scope}
-  \begin{scope}[shift={(5.4,0)}] % square: b Y s h ; diag g,a ; Y left edge bold
-    \dsq{0}{0}{b}{h}{Y}{s}
-    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$g$};
-    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$a$};
-    \draw[dlu](sqTL)--(sqBL);
-  \end{scope}
-\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \begin{scope}\dsixjsq{0}{0}{a}{d}{b}{c}{s}{p}\end{scope}
-  \begin{scope}[xshift=2.4cm]\dsixjsq{0}{0}{d}{e}{c}{f}{s}{q}\end{scope}
-  \begin{scope}[xshift=4.8cm]\dsixjsq{0}{0}{e}{h}{f}{g}{s}{r}\end{scope}
 \end{tikzpicture}
 \]
 \end{document}
