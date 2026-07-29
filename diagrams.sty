@@ -982,3 +982,25 @@
   \draw[dl](tvt)to[bend right=60]node[midway,left,inner sep=1pt]{$#4$}(tvb);
   \draw[dl](tvt)to[bend left=60]node[midway,right,inner sep=1pt]{$#6$}(tvb);
   \draw[#1](tvt)--node[midway,right,inner sep=1pt]{$#5$}(tvb);}
+
+% ===== §12.2 (6j/9j sums) building blocks: loops, circle-thetas, delta-rect =====
+% \dloop{x}{y}{lab} -- closed j-line (circle) with a centred label = \Pi_{lab} factor.
+\newcommand{\dloop}[3]{\draw[dl](#1,#2)circle(0.42);\node at(#1,#2){$#3$};}
+% \cthetav[midstyle]{x}{y}{left}{mid}{right} -- theta as CIRCLE + vertical diameter.
+\newcommand{\cthetav}[6][dl]{%
+  \draw[dl](#2,#3)circle(0.5);
+  \draw[#1]($(#2,#3)+(0,0.5)$)--($(#2,#3)+(0,-0.5)$);
+  \node at($(#2,#3)+(-0.3,0)$){$#4$};
+  \node[wb,inner sep=1pt] at(#2,#3){$#5$};
+  \node at($(#2,#3)+(0.3,0)$){$#6$};}
+% \ctheta[midstyle]{x}{y}{top}{mid}{bot} -- theta as CIRCLE + horizontal diameter.
+\newcommand{\ctheta}[6][dl]{%
+  \draw[dl](#2,#3)circle(0.5);
+  \draw[#1]($(#2,#3)+(-0.5,0)$)--($(#2,#3)+(0.5,0)$);
+  \node at($(#2,#3)+(0,0.27)$){$#4$};
+  \node[wb,inner sep=1pt] at(#2,#3){$#5$};
+  \node at($(#2,#3)+(0,-0.27)$){$#6$};}
+% \drect{x}{y}{toplab}{botlab} -- small rectangle (a \delta between two j-lines).
+\newcommand{\drect}[4]{%
+  \draw[dl]($(#1,#2)+(-0.3,0.55)$)rectangle($(#1,#2)+(0.3,-0.55)$);
+  \node at($(#1,#2)+(0,0.8)$){$#3$};\node at($(#1,#2)+(0,-0.8)$){$#4$};}

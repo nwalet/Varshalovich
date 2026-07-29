@@ -2,9 +2,97 @@
 \usepackage{diagrams}
 \usepackage{amsfonts,amsmath}
 \usetikzlibrary{arrows.meta,decorations.markings,calc}
-% Chap12 diagram dev scratchpad. Build recoupling diagrams here, render, review,
-% then insert into Chap12.tex. Macros (dl/dlu, dtheta, dlens, dsixjsq, dsixjtri,
-% dsq, dninehex, dlensv, dthetav) live in diagrams.sty.
+% §12.2 helpers (dloop, cthetav, ctheta, drect) live in diagrams.sty.
 \begin{document}
 
+% ---------- eq 36 (p7): 6j-diamond . 6j-diamond = theta(a d p) rect(p,q) theta(p c b) ----------
+\[
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \begin{scope}
+    \dsixjsq[dlu]{0}{0}{b}{c}{a}{d}{p}{X}
+ \end{scope}\begin{scope}[xshift=2cm]
+  \dsixjsq[dlu]{0}{0}{c}{b}{d}{a}{q}{X}
+ \end{scope}
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \cthetav{0}{0}{a}{d}{p}
+  \drect{1.6}{0}{p}{q}
+  \cthetav{3.1}{0}{p}{c}{b}
+\end{tikzpicture}
+\]
+
+% ---------- eq 37 (p8): 6j-diamond . 6j-diamond = square+diagonals {c a q / d b p} ----------
+\[
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \begin{scope}
+  \dsixjsq[dlu]{0}{0}{b}{c}{a}{d}{p}{X}
+  \end{scope}\begin{scope}[xshift=2cm]
+\dsixjsq[dlu]{0}{0}{c}{a}{d}{b}{q}{X}  
+  \end{scope}
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \dsq{0}{0}{c}{d}{p}{q}
+  \draw[dl](sqTL)--(sqBR)node[wb,pos=0.28]{$b$};
+  \draw[dl](sqTR)--(sqBL)node[wb,pos=0.28]{$a$};
+\end{tikzpicture}
+\]
+
+% flat-top 9j-hexagon helper (edges from top, clockwise: top,UR,LR,bot,LL,UL);
+% draws 3 full diameters, caller passes labels. dhexflat{x}{y}{top}{ur}{lr}{bot}{ll}{ul}
+\newcommand{\dhexflat}[8]{%
+  \foreach \i in {0,...,5}{\coordinate(v\i) at ($(#1,#2)+(60*\i:1)$);}
+  \draw[dl](v2)--(v1)node[midway,above,inner sep=1pt]{$#3$};
+  \draw[dl](v1)--(v0)node[midway,above right,inner sep=1pt]{$#4$};
+  \draw[dl](v0)--(v5)node[midway,below right,inner sep=1pt]{$#5$};
+  \draw[dl](v5)--(v4)node[midway,below,inner sep=1pt]{$#6$};
+  \draw[dl](v4)--(v3)node[midway,below left,inner sep=1pt]{$#7$};
+  \draw[dl](v3)--(v2)node[midway,above left,inner sep=1pt]{$#8$};}
+
+% ---------- eq 38 (p9): 9j-hex . 6j-diamond = 6j-diamond . 6j-diamond  [labels TO CHECK] ----------
+\[
+\begin{tikzpicture}[baseline=0pt,font=\small]
+\begin{scope}
+  \dhexflat{0}{0}{c}{f}{a}{d}{e}{b}
+  \draw[dl](v2)--(v5)node[wb,pos=0.28]{$p$};
+  \draw[dlu](v1)--(v4)node[wb,pos=0.28]{$X$};
+  \draw[dl](v3)--(v0)node[wb,pos=0.72]{$q$};
+\end{scope}\begin{scope}[xshift=2.2cm]
+    \dsixjsq[dlu]{0}{0}{f}{e}{a}{b}{s}{X}
+  \end{scope}
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \begin{scope}
+  \dsixjsq{0}{0}{b}{c}{a}{d}{s}{p}
+\end{scope}
+\begin{scope}[xshift=2cm]
+  \dsixjsq{0}{0}{c}{f}{d}{e}{s}{q}
+\end{scope}
+\end{tikzpicture}
+\]
+
+% ---------- eq (p10): 9j-hex . 6j-diamond = 6j-diamond . 6j-diamond  [labels TO CHECK] ----------
+\[
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \begin{scope}
+  \dhexflat{0}{0}{c}{f}{a}{d}{e}{b}
+  \draw[dl](v2)--(v5)node[wb,pos=0.28]{$p$};
+  \draw[dlu](v1)--(v4)node[wb,pos=0.28]{$X$};
+  \draw[dl](v3)--(v0)node[wb,pos=0.72]{$q$};
+\end{scope}\begin{scope}[xshift=2.2cm]
+  \dsixjsq[dlu]{0}{0}{f}{b}{a}{e}{s}{X}
+\end{scope}
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \begin{scope}
+  \dsixjsq{0}{0}{a}{p}{e}{q}{s}{d}
+\end{scope}
+\begin{scope}[xshift=2cm]
+  \dsixjsq{0}{0}{p}{b}{q}{f}{s}{c}
+\end{scope}
+\end{tikzpicture}
+\]
 \end{document}
