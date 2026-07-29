@@ -2,68 +2,46 @@
 \usepackage{diagrams}
 \usepackage{amsfonts,amsmath}
 \usetikzlibrary{arrows.meta,decorations.markings,calc}
-% §12.2 helpers (dloop, cthetav, ctheta, drect, drects, dhexflat) live in diagrams.sty.
+% §12.2 helpers live in diagrams.sty.
 \begin{document}
 
-% ---------- p15 (triple sum): two 6j-diamonds (X,Y,Z bold) = three loops ----------
+% ---------- eq 44 (p20): 6j-diamond . 9j-hex . 6j-diamond = 12j octagon-wheel ----------
 \[
 \begin{tikzpicture}[baseline=0pt,font=\small]
+  % diamond1 {l p ; k q ; g,X}: X vertical bold
   \begin{scope}
-    \dsixjsq[2]{0}{0}{b}{X}{a}{Y}{Z}{c}
-    \draw[dlu](qt)--(qr);\draw[dlu](qr)--(qb); % X (UR), Y (LR) edges bold
+    \dsixjsq[1]{0}{0}{l}{p}{k}{q}{g}{X}
   \end{scope}
+  % 9j-hex (flat-top) {a b ..; ..X..; ..c}: top a, UR e, LR f, bot d, LL q, UL p
   \begin{scope}[xshift=2.6cm]
-    \dsixjsq[2]{0}{0}{X}{b}{Y}{a}{Z}{c}
-    \draw[dlu](ql)--(qt);\draw[dlu](ql)--(qb); % X (UL), Y (LL) edges bold
-  \end{scope}
-\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \dloop{0}{0}{a}\dloop{1.3}{0}{b}\dloop{2.6}{0}{c}
-\end{tikzpicture}
-\]
-
-% ---------- 14_231_838 (triple sum): 9j-hex . 6j-diamond (X,Y,Z bold) = theta(a b c) ----------
-\[
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \begin{scope}
-    \dhexflat{0}{0}{a}{X}{Y}{c}{a}{c}
-    \draw[dlu](v1)--(v0);\draw[dlu](v0)--(v5); % X (UR), Y (LR) edges bold
+    \dhexflat{0}{0}{a}{e}{f}{d}{q}{p}
     \draw[dl](v2)--(v5)node[wb,pos=0.30]{$b$};
-    \draw[dl](v1)--(v4)node[wb,pos=0.30]{$b$};
-    \draw[dlu](v0)--(v3)node[wb,pos=0.70]{$Z$};
+    \draw[dlu](v0)--(v3)node[wb,pos=0.30]{$X$};
+    \draw[dl](v1)--(v4)node[wb,pos=0.70]{$c$};
   \end{scope}
-  \begin{scope}[xshift=3cm]
-    \dsixjsq[2]{0}{0}{X}{a}{Y}{c}{Z}{b}
-    \draw[dlu](ql)--(qt);\draw[dlu](ql)--(qb); % X (UL), Y (LL) edges bold
-  \end{scope}
-\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]\cthetav{0}{0}{a}{b}{c}\end{tikzpicture}
-\]
-
-% ---------- p17 / eq 41 (triple sum): 9j-hex . 9j-hex (X,Y,Z bold) = theta(a b c) theta(d e f) ----------
-\[
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \begin{scope}
-    \dhexflat{0}{0}{a}{X}{Y}{e}{f}{c}
-    \draw[dlu](v1)--(v0);\draw[dlu](v0)--(v5); % X (UR), Y (LR) edges bold
-    \draw[dl](v2)--(v5)node[wb,pos=0.30]{$b$};
-    \draw[dl](v1)--(v4)node[wb,pos=0.70]{$d$};
-    \draw[dlu](v0)--(v3)node[wb,pos=0.70]{$Z$};
-  \end{scope}
-  \begin{scope}[xshift=3cm]
-    \dhexflat{0}{0}{a}{c}{f}{e}{Y}{X}
-    \draw[dlu](v3)--(v2);\draw[dlu](v4)--(v3); % X (UL), Y (LL) edges bold
-    \draw[dl](v2)--(v5)node[wb,pos=0.30]{$d$};
-    \draw[dl](v1)--(v4)node[wb,pos=0.70]{$b$};
-    \draw[dlu](v0)--(v3)node[wb,pos=0.70]{$Z$};
+  % diamond2 {e l ; f k ; X,h}: X horizontal bold
+  \begin{scope}[xshift=5.2cm]
+    \dsixjsq[2]{0}{0}{e}{l}{f}{k}{X}{h}
   \end{scope}
 \end{tikzpicture}
 \;=\;
 \begin{tikzpicture}[baseline=0pt,font=\small]
-  \cthetav{0}{0}{a}{b}{c}
-  \cthetav{1.6}{0}{d}{e}{f}
+  \coordinate(O)at(0,0);
+  \foreach[count=\i] \ang in {90,45,0,-45,-90,-135,180,135}{\coordinate(w\i)at(\ang:1.6);}
+  % 8 outer edges (clockwise from top)
+  \draw[dl](w1)--(w2)node[midway,above right,inner sep=1pt]{$f$};
+  \draw[dl](w2)--(w3)node[midway,right,inner sep=1pt]{$h$};
+  \draw[dl](w3)--(w4)node[midway,right,inner sep=1pt]{$e$};
+  \draw[dl](w4)--(w5)node[midway,below right,inner sep=1pt]{$c$};
+  \draw[dl](w5)--(w6)node[midway,below left,inner sep=1pt]{$q$};
+  \draw[dl](w6)--(w7)node[midway,left,inner sep=1pt]{$g$};
+  \draw[dl](w7)--(w8)node[midway,left,inner sep=1pt]{$p$};
+  \draw[dl](w8)--(w1)node[midway,above left,inner sep=1pt]{$b$};
+  % 4 diameters through centre
+  \draw[dl](w1)--(w5)node[wb,pos=0.72]{$d$};
+  \draw[dl](w2)--(w6)node[wb,pos=0.25]{$k$};
+  \draw[dl](w3)--(w7)node[wb,pos=0.72]{$l$};
+  \draw[dl](w4)--(w8)node[wb,pos=0.75]{$a$};
 \end{tikzpicture}
 \]
 \end{document}
