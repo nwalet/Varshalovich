@@ -925,7 +925,7 @@
   \draw[dl](#1)to[bend left=60] node[midway,above,inner sep=1pt]{$#3$}(#2);
   \draw[dl](#1)to[bend right=60]node[midway,above,inner sep=1pt]{$#4$}(#2);}
 % \dsixjsq[vdstyle]{x}{y}{tl}{tr}{bl}{br}{hd}{vd} -- 6j square/diamond, both diagonals
-\newcommand{\dsixjsq}[9][dl]{%
+\newcommand{\dsixjsq}[9][0]{%
   \coordinate(qc)at(#2,#3);
   \coordinate(qt)at($(qc)+(90:0.9)$);\coordinate(qb)at($(qc)+(-90:0.9)$);
   \coordinate(ql)at($(qc)+(180:0.9)$);\coordinate(qr)at($(qc)+(0:0.9)$);
@@ -933,8 +933,20 @@
   \draw[dl](qt)--(qr)node[midway,above right,inner sep=1pt]{$#5$};
   \draw[dl](ql)--(qb)node[midway,below left,inner sep=1pt]{$#6$};
   \draw[dl](qb)--(qr)node[midway,below right,inner sep=1pt]{$#7$};
-  \draw[dl](ql)--(qr)node[wb,pos=0.32]{$#8$};
-  \draw[#1](qt)--(qb)node[wb,pos=0.32]{$#9$};}
+  \ifcase #1
+    \draw[dl](ql)--(qr)node[wb,pos=0.32]{$#8$};
+    \draw[dl](qt)--(qb)node[wb,pos=0.32]{$#9$};
+  \or %1
+    \draw[dl](ql)--(qr)node[wb,pos=0.32]{$#8$};
+    \draw[dlu](qt)--(qb)node[wb,pos=0.32]{$#9$};
+  \or %2
+    \draw[dlu](ql)--(qr)node[wb,pos=0.32]{$#8$};
+    \draw[dl](qt)--(qb)node[wb,pos=0.32]{$#9$};
+  \else
+    \draw[dlu](ql)--(qr)node[wb,pos=0.32]{$#8$};
+    \draw[dlu](qt)--(qb)node[wb,pos=0.32]{$#9$};
+  \fi
+}
 % \dsixjtri[spkstyle]{x}{y}{eL}{eR}{eB}{sT}{sBL}{sBR} -- 6j triangle-with-centre, apex-up
 \newcommand{\dsixjtri}[9][dl]{%
   \coordinate(ct)at(#2,#3);
@@ -964,7 +976,7 @@
   \coordinate(hLL)at($(hc)+(210:1)$);\coordinate(hB)at($(hc)+(270:1)$);
   \coordinate(hLR)at($(hc)+(330:1)$);\coordinate(hUR)at($(hc)+(30:1)$);
   \draw[dl](hT)--(hUL)node[midway,above left,inner sep=1pt]{$#3$};
-  \draw[dl](hUL)--(hLL)node[midway,below left,inner sep=1pt]{$#4$};
+  \draw[dl](hUL)--(hLL)node[midway,left,inner sep=1pt]{$#4$};
   \draw[dl](hLL)--(hB)node[midway,below left,inner sep=1pt]{$#5$};
   \draw[dl](hB)--(hLR)node[midway,below right,inner sep=1pt]{$#6$};
   \draw[dl](hLR)--(hUR)node[midway,right,inner sep=1pt]{$#7$};
@@ -1004,3 +1016,19 @@
 \newcommand{\drect}[4]{%
   \draw[dl]($(#1,#2)+(-0.3,0.55)$)rectangle($(#1,#2)+(0.3,-0.55)$);
   \node at($(#1,#2)+(0,0.8)$){$#3$};\node at($(#1,#2)+(0,-0.8)$){$#4$};}
+% \drects{x}{y}{top}{bot}{left}{right} -- rectangle \delta with all four side labels.
+\newcommand{\drects}[6]{%
+  \draw[dl]($(#1,#2)+(-0.3,0.55)$)rectangle($(#1,#2)+(0.3,-0.55)$);
+  \node at($(#1,#2)+(0,0.8)$){$#3$};\node at($(#1,#2)+(0,-0.8)$){$#4$};
+  \node[left] at($(#1,#2)+(-0.3,0)$){$#5$};\node[right] at($(#1,#2)+(0.3,0)$){$#6$};}
+% \dhexflat{x}{y}{top}{ur}{lr}{bot}{ll}{ul} -- flat-top 9j-hexagon ring (6 outer
+% edges); exposes vertex coords v0..v5 (v0=right, ccw) so the caller draws the
+% three centre diameters (e.g. \draw[dlu](v1)--(v4)... for the summed one).
+\newcommand{\dhexflat}[8]{%
+  \foreach \i in {0,...,5}{\coordinate(v\i) at ($(#1,#2)+(60*\i:1)$);}
+  \draw[dl](v2)--(v1)node[midway,above,inner sep=1pt]{$#3$};
+  \draw[dl](v1)--(v0)node[midway,above right,inner sep=1pt]{$#4$};
+  \draw[dl](v0)--(v5)node[midway,below right,inner sep=1pt]{$#5$};
+  \draw[dl](v5)--(v4)node[midway,below,inner sep=1pt]{$#6$};
+  \draw[dl](v4)--(v3)node[midway,below left,inner sep=1pt]{$#7$};
+  \draw[dl](v3)--(v2)node[midway,above left,inner sep=1pt]{$#8$};}

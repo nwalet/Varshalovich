@@ -76,7 +76,7 @@ Hereafter, we use the notation
   \draw[dl](B)--(0.8,-1.55)node[at end,right]{$d\delta$};
 \end{tikzpicture}
 \begin{tikzpicture}[baseline=0pt,font=\small]
-  \dsixjsq[dlu]{0}{0}{a}{c}{b}{d}{q}{X}
+  \dsixjsq[1]{0}{0}{a}{c}{b}{d}{q}{X}
 \end{tikzpicture}
 \]
 \subsection{Sums Involving Products of Three $3 j m$ Symbols}
@@ -1495,7 +1495,7 @@ Some of the sums presented are taken from Refs. [24] and [44].\\
 \sum_{x} \Pi_{x}^{2}\sixj{a}{b}{X}{a}{b}{c} \label{chap12:eq:32}=(-1)^{2 c}\{a b c\},
 \end{equation}
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]\dsixjsq[dlu]{0}{0}{a}{b}{b}{a}{c}{X}\end{tikzpicture}
+\begin{tikzpicture}[baseline=0pt,font=\small]\dsixjsq[1]{0}{0}{a}{b}{b}{a}{c}{X}\end{tikzpicture}
 \;=\;
 \begin{tikzpicture}[baseline=0pt,font=\small]\ctheta{0}{0}{a}{c}{b}\end{tikzpicture}
 \]
@@ -1503,7 +1503,7 @@ Some of the sums presented are taken from Refs. [24] and [44].\\
 \sum_{X}(-1)^{a+b+X} \Pi_{X}^{2}\sixj{a}{b}{x}{b}{a}{c} \label{chap12:eq:33}=\Pi_{a b} \delta_{c 0}
 \end{equation}
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]\dsixjsq[dlu]{0}{0}{a}{b}{a}{b}{c}{X}\end{tikzpicture}
+\begin{tikzpicture}[baseline=0pt,font=\small]\dsixjsq[1]{0}{0}{a}{b}{a}{b}{c}{X}\end{tikzpicture}
 \;=\;
 \begin{tikzpicture}[baseline=0pt,font=\small]
   \dloop{0}{0}{a}\dloop{1.9}{0}{b}
@@ -1551,8 +1551,8 @@ Some of the sums presented are taken from Refs. [24] and [44].\\
 \label{chap12:eq:36}
 \end{equation}
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]\dsixjsq[dlu]{0}{0}{b}{c}{a}{d}{p}{X}\end{tikzpicture}
-\begin{tikzpicture}[baseline=0pt,font=\small]\dsixjsq[dlu]{0}{0}{c}{b}{d}{a}{q}{X}\end{tikzpicture}
+\begin{tikzpicture}[baseline=0pt,font=\small]\dsixjsq[1]{0}{0}{b}{c}{a}{d}{p}{X}\end{tikzpicture}
+\begin{tikzpicture}[baseline=0pt,font=\small]\dsixjsq[1]{0}{0}{c}{b}{d}{a}{q}{X}\end{tikzpicture}
 \;=\;
 \begin{tikzpicture}[baseline=0pt,font=\small]
   \cthetav{0}{0}{a}{d}{p}
@@ -1565,8 +1565,8 @@ Some of the sums presented are taken from Refs. [24] and [44].\\
 \label{chap12:eq:37}
 \end{equation}
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]\dsixjsq[dlu]{0}{0}{b}{c}{a}{d}{p}{X}\end{tikzpicture}
-\begin{tikzpicture}[baseline=0pt,font=\small]\dsixjsq[dlu]{0}{0}{c}{a}{d}{b}{q}{X}\end{tikzpicture}
+\begin{tikzpicture}[baseline=0pt,font=\small]\dsixjsq[1]{0}{0}{b}{c}{a}{d}{p}{X}\end{tikzpicture}
+\begin{tikzpicture}[baseline=0pt,font=\small]\dsixjsq[1]{0}{0}{c}{a}{d}{b}{q}{X}\end{tikzpicture}
 \;=\;
 \begin{tikzpicture}[baseline=0pt,font=\small]
   \dsq{0}{0}{c}{d}{p}{q}
@@ -1580,7 +1580,27 @@ Some of the sums presented are taken from Refs. [24] and [44].\\
 \sixj{a}{f}{X}{e}{b}{s}=(-1)^{2 s}\sixj{a}{b}{s}{c}{d}{p}\sixj{c}{d}{s}{e}{f}{q},
  \label{chap12:eq:38}
 \end{equation}
-\includegraphics[max width=\textwidth, alt={}, center]{p9}\\
+\[
+\begin{tikzpicture}[baseline=0pt,font=\small]
+\begin{scope}
+  \dhexflat{0}{0}{c}{f}{a}{d}{e}{b}
+  \draw[dl](v2)--(v5)node[wb,pos=0.28]{$p$};
+  \draw[dlu](v1)--(v4)node[wb,pos=0.28]{$X$};
+  \draw[dl](v3)--(v0)node[wb,pos=0.72]{$q$};
+\end{scope}\begin{scope}[xshift=2.2cm]
+    \dsixjsq[1]{0}{0}{f}{e}{a}{b}{s}{X}
+  \end{scope}
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \begin{scope}
+  \dsixjsq{0}{0}{b}{c}{a}{d}{s}{p}
+\end{scope}
+\begin{scope}[xshift=2cm]
+  \dsixjsq{0}{0}{c}{f}{d}{e}{s}{q}
+\end{scope}
+\end{tikzpicture}
+\]
 \begin{equation}
 \sum_X (-1)^{R+X}\Pi_X^2 
 \ninej{a}{f}{X}{d}{q}{e}{p}{c}{b}
@@ -1591,56 +1611,217 @@ Some of the sums presented are taken from Refs. [24] and [44].\\
 \sixj{p}{q}{s}{f}{b}{c}\,,
 \end{equation}
 where $R=a+b+c+d+e+f+p+q$\\
-\includegraphics[max width=\textwidth, alt={}, center]{p10}\\
+\[
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \begin{scope}
+  \dhexflat{0}{0}{c}{f}{a}{d}{e}{b}
+  \draw[dl](v2)--(v5)node[wb,pos=0.28]{$p$};
+  \draw[dlu](v1)--(v4)node[wb,pos=0.28]{$X$};
+  \draw[dl](v3)--(v0)node[wb,pos=0.72]{$q$};
+\end{scope}\begin{scope}[xshift=2.2cm]
+  \dsixjsq[1]{0}{0}{f}{b}{a}{e}{s}{X}
+\end{scope}
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \begin{scope}
+  \dsixjsq{0}{0}{a}{p}{e}{q}{s}{d}
+\end{scope}
+\begin{scope}[xshift=2cm]
+  \dsixjsq{0}{0}{p}{b}{q}{f}{s}{c}
+\end{scope}
+\end{tikzpicture}
+\]
 \begin{equation}
 \sum_X\Pi_X^2\ninej{a}{b}{p}{c}{d}{q}{r}{s}{X}
 \ninej{e}{f}{p}{g}{h}{q}{r}{s}{X}
 =
 (-1)^{b-c-f+g}\twelvejII{r,a,c,s,b,d,h,g,q,f,e,p}
 \end{equation}
-\includegraphics[max width=\textwidth, alt={}, center]{p11}\\
+% shared LHS of p11 & p12: two pointy-top 9j-hexagons
+\newcommand{\pElevenLHS}{%
+  \begin{scope}
+    \dninehex{0}{0}{a}{b}{d}{q}{X}{r}
+    \draw[dlu](hLR)--(hUR); % X edge bold
+    \draw[dl](hT)--(hB)node[wb,pos=0.27]{$c$};
+    \draw[dl](hUR)--(hLL)node[wb,pos=0.30]{$s$};
+    \draw[dl](hUL)--(hLR)node[wb,pos=0.70]{$p$};
+  \end{scope}
+  \begin{scope}[xshift=3cm]
+    \dninehex{0}{0}{r}{X}{q}{h}{f}{e}
+    \draw[dlu](hUL)--(hLL); % X edge bold
+    \draw[dl](hT)--(hB)node[wb,pos=0.27]{$g$};
+    \draw[dl](hUR)--(hLL)node[wb,pos=0.30]{$p$};
+    \draw[dl](hUL)--(hLR)node[wb,pos=0.70]{$s$};
+  \end{scope}}
+\[
+\begin{tikzpicture}[baseline=0pt,font=\small]\pElevenLHS\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  % octagon vertices
+  \coordinate(Ta)at(-0.6,1.4);\coordinate(Tb)at(0.6,1.4);
+  \coordinate(Ra)at(1.4,0.6);\coordinate(Rb)at(1.4,-0.6);
+  \coordinate(Qa)at(0.6,-1.4);\coordinate(Qb)at(-0.6,-1.4);
+  \coordinate(La)at(-1.4,-0.6);\coordinate(Lb)at(-1.4,0.6);
+  % octagon edges
+  \draw[dl](Ta)--(Tb)node[midway,above,inner sep=1pt]{$r$};
+  \draw[dl](Tb)--(Ra)node[midway,above right,inner sep=1pt]{$e$};
+  \draw[dl](Ra)--(Rb)node[midway,right,inner sep=1pt]{$f$};
+  \draw[dl](Rb)--(Qa)node[midway,below right,inner sep=1pt]{$h$};
+  \draw[dl](Qa)--(Qb)node[midway,below,inner sep=1pt]{$q$};
+  \draw[dl](Qb)--(La)node[midway,below left,inner sep=1pt]{$d$};
+  \draw[dl](La)--(Lb)node[midway,left,inner sep=1pt]{$b$};
+  \draw[dl](Lb)--(Ta)node[midway,above left,inner sep=1pt]{$a$};
+  % internal # lattice (2 verticals + 2 horizontals) -> central square
+  \draw[dl](Ta)--(Qb);
+  \draw[dl](Tb)--(Qa);
+  \draw[dl](Lb)--(Ra);
+  \draw[dl](La)--(Rb);
+  % central-square edge labels
+  \node[wb,inner sep=1.5pt] at(0,0.6){$p$};
+  \node[wb,inner sep=1.5pt] at(0.6,0){$g$};
+  \node[wb,inner sep=1.5pt] at(0,-0.6){$s$};
+  \node[wb,inner sep=1.5pt] at(-0.6,0){$c$};
+\end{tikzpicture}
+\]
 \begin{equation}
 (-1)^{p+q-r-s} \sum_{X} \Pi_{X}^{2}
 \ninej{a}{b}{p}{c}{d}{q}{r}{s}{X} 
 \ninej{e}{f}{p}{g}{h}{q}{r}{s}{X}=(-1)^{b+g-c-f} \sum_{Y} \Pi_{Y}^{2}\ninej{a}{p}{b}{r}{e}{g}{c}{f}{Y}\ninej{d}{s}{b}{q}{h}{g}{c}{f}{Y},
 \label{chap12:eq:39}
 \end{equation}
-\includegraphics[max width=\textwidth, alt={}, center]{p12}\\
+\[
+\begin{tikzpicture}[baseline=0pt,font=\small]\pElevenLHS\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  % RHS-top {a p b; r e g; c f Y}
+  \begin{scope}[yshift=1.5cm]
+    \dhexflat{0}{0}{r}{e}{f}{Y}{b}{a}
+    \draw[dlu](v5)--(v4); % Y edge bold
+    \draw[dl](v1)--(v4)node[wb,pos=0.30]{$g$};
+    \draw[dl](v2)--(v5)node[wb,pos=0.30]{$c$};
+    \draw[dl](v0)--(v3)node[wb,pos=0.30]{$p$};
+  \end{scope}
+  % RHS-bottom {d s b; q h g; c f Y}
+  \begin{scope}[yshift=-1.5cm]
+    \dhexflat{0}{0}{Y}{f}{h}{q}{d}{b}
+    \draw[dlu](v2)--(v1); % Y edge bold (top)
+    \draw[dl](v1)--(v4)node[wb,pos=0.30]{$c$};
+    \draw[dl](v2)--(v5)node[wb,pos=0.70]{$g$};
+    \draw[dl](v0)--(v3)node[wb,pos=0.70]{$s$};
+  \end{scope}
+\end{tikzpicture}
+\]
 \subsubsection{(ii) Double summation}
 \begin{equation}
 \sum_{X Y} \Pi_{X Y}^{2}\ninej{a}{b}{X}{c}{d}{Y}{e}{f}{j} \label{chap12:eq:40}\ninej{a}{b}{X}{c}{d}{Y}{g}{h}{j}=\frac{\delta_{e g} \delta_{f h}}{\Pi_{e f}^{2}}\{a c e\}\{b d h\}\{g f j\},
 \end{equation}
-\begin{center}
-  \includegraphics[alt={},max width=\textwidth]{39a53bec-58f6-4733-a518-53d974314721-14_231_1332_665_315}
-\end{center}
+\[
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  % hex1 {a b X; c d Y; e f j}
+  \begin{scope}
+    \dhexflat{0}{0}{a}{X}{Y}{d}{f}{e}
+    \draw[dlu](v1)--(v0); % X edge bold (UR)
+    \draw[dlu](v0)--(v5); % Y edge bold (LR)
+    \draw[dl](v3)--(v0)node[wb,pos=0.30]{$j$};
+    \draw[dl](v2)--(v5)node[wb,pos=0.30]{$c$};
+    \draw[dl](v1)--(v4)node[wb,pos=0.70]{$b$};
+  \end{scope}
+  % hex2 {a b X; c d Y; g h j}
+  \begin{scope}[xshift=3cm]
+    \dhexflat{0}{0}{a}{g}{h}{d}{Y}{X}
+    \draw[dlu](v3)--(v2); % X edge bold (UL)
+    \draw[dlu](v4)--(v3); % Y edge bold (LL)
+    \draw[dl](v3)--(v0)node[wb,pos=0.70]{$j$};
+    \draw[dl](v2)--(v5)node[wb,pos=0.70]{$b$};
+    \draw[dl](v1)--(v4)node[wb,pos=0.30]{$c$};
+  \end{scope}
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \cthetav{0}{0}{a}{c}{e}
+  \drects{1.5}{0}{e}{g}{e}{g}
+  \cthetav{2.9}{0}{g}{j}{f}
+  \drects{4.4}{0}{f}{h}{f}{h}
+  \cthetav{5.8}{0}{h}{d}{b}
+\end{tikzpicture}
+\]
 
 \begin{equation}
- \sum_{XY} \Pi_{XY}^2 \ninej{a}{b}{X}{x}{d}{Y}{e}{f}{j}
+ \sum_{XY} (-1)^{Y} \Pi_{XY}^2 \ninej{a}{b}{X}{c}{d}{Y}{e}{f}{j}
  \ninej{a}{b}{X}{d}{c}{Y}{g}{h}{j}
  =
  (-1)^{2b+f+h} \ninej{a}{d}{g}{c}{b}{h}{e}{f}{j}\,,
 \end{equation}
-\begin{center}
-\includegraphics[max width=\textwidth, alt={}]{39a53bec-58f6-4733-a518-53d974314721-14_132_927_891_516}
-\end{center}
 
 \subsubsection{(iii) Triple summation}
 \begin{equation}
   \sum_{XYZ} \Pi_{XYZ}^2 \sixj{X}{Y}{Z}{a}{b}{c}^2=\Pi_{abc}^2
 \end{equation}
-\includegraphics[max width=\textwidth, alt={}, center]{p15}\\
+\[
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \begin{scope}
+    \dsixjsq[2]{0}{0}{b}{X}{a}{Y}{Z}{c}
+    \draw[dlu](qt)--(qr);\draw[dlu](qr)--(qb); % X (UR), Y (LR) edges bold
+  \end{scope}
+  \begin{scope}[xshift=2.6cm]
+    \dsixjsq[2]{0}{0}{X}{b}{Y}{a}{Z}{c}
+    \draw[dlu](ql)--(qt);\draw[dlu](ql)--(qb); % X (UL), Y (LL) edges bold
+  \end{scope}
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \dloop{0}{0}{a}\dloop{1.3}{0}{b}\dloop{2.6}{0}{c}
+\end{tikzpicture}
+\]
 \begin{equation}
   \sum_{XYZ} \Pi_{XYZ}^2 \ninej{X}{Y}{Z}{a}{b}{c}{d}{e}{f}
   \sixj{X}{Y}{Z}{c}{a}{b}= \{abc\}
 \end{equation}
-\includegraphics[max width=\textwidth, alt={}, center]{39a53bec-58f6-4733-a518-53d974314721-14_231_838_1782_557}
+\[
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \begin{scope}
+    \dhexflat{0}{0}{a}{X}{Y}{c}{a}{c}
+    \draw[dlu](v1)--(v0);\draw[dlu](v0)--(v5); % X (UR), Y (LR) edges bold
+    \draw[dl](v2)--(v5)node[wb,pos=0.30]{$b$};
+    \draw[dl](v1)--(v4)node[wb,pos=0.30]{$b$};
+    \draw[dlu](v0)--(v3)node[wb,pos=0.70]{$Z$};
+  \end{scope}
+  \begin{scope}[xshift=3cm]
+    \dsixjsq[2]{0}{0}{X}{a}{Y}{c}{Z}{b}
+    \draw[dlu](ql)--(qt);\draw[dlu](ql)--(qb); % X (UL), Y (LL) edges bold
+  \end{scope}
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]\cthetav{0}{0}{a}{b}{c}\end{tikzpicture}
+\]
 \begin{equation}
 \sum_{X Y Z} \Pi_{X Y Z}^{2}\ninej{X}{Y}{Z}{a}{b}{c}{d}{e}{f}^2=\{a b c\}\{d e f\}
 \label{chap12:eq:41}
 \end{equation}
-\begin{center}
-\includegraphics[max width=\textwidth, alt={}]{p17.png}
-\end{center}
+\[
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \begin{scope}
+    \dhexflat{0}{0}{a}{X}{Y}{e}{f}{c}
+    \draw[dlu](v1)--(v0);\draw[dlu](v0)--(v5); % X (UR), Y (LR) edges bold
+    \draw[dl](v2)--(v5)node[wb,pos=0.30]{$b$};
+    \draw[dl](v1)--(v4)node[wb,pos=0.70]{$d$};
+    \draw[dlu](v0)--(v3)node[wb,pos=0.70]{$Z$};
+  \end{scope}
+  \begin{scope}[xshift=3cm]
+    \dhexflat{0}{0}{a}{c}{f}{e}{Y}{X}
+    \draw[dlu](v3)--(v2);\draw[dlu](v4)--(v3); % X (UL), Y (LL) edges bold
+    \draw[dl](v2)--(v5)node[wb,pos=0.30]{$d$};
+    \draw[dl](v1)--(v4)node[wb,pos=0.70]{$b$};
+    \draw[dlu](v0)--(v3)node[wb,pos=0.70]{$Z$};
+  \end{scope}
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \cthetav{0}{0}{a}{b}{c}
+  \cthetav{1.6}{0}{d}{e}{f}
+\end{tikzpicture}
+\]
 
 \subsection{Sums Involving Products of Three $3 n j$ Symbols}
 \subsubsection{(i) Single summation}
