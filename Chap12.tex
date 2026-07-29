@@ -2132,7 +2132,39 @@ where $R=a+b+c+d+e+f+p+q+r$,\\
 =(-1)^{2 h} \frac{\delta_{fj}}{\Pi_{f}^{2}}\{b d f\}\sixj{e}{j}{g}{h}{a}{c},
 \label{chap12:eq:49a}
 \end{equation}
-\includegraphics[max width=\textwidth, alt={}, center]{p26}
+\[
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \begin{scope}[shift={(0,1.9)}] % sq1: h a Y X ; diag g,b ; Y right + X bottom edges bold
+    \dsq{0}{0}{h}{X}{a}{Y}
+    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$g$};
+    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$b$};
+    \draw[dlu](sqTR)--(sqBR);\draw[dlu](sqBL)--(sqBR);
+  \end{scope}
+  \begin{scope}[shift={(2.4,1.9)}] % sq2: b Y j c ; diag h,d ; Y left edge bold
+    \dsq{0}{0}{b}{c}{Y}{j}
+    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$h$};
+    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$d$};
+    \draw[dlu](sqTL)--(sqBL);
+  \end{scope}
+  \begin{scope}[shift={(1.2,0)}] % hexagon: Y c e f b X ; diam g,a,d ; Y top + X UL bold
+    \dhexflat{0}{0}{Y}{c}{e}{f}{b}{X}
+    \draw[dlu](v2)--(v1);\draw[dlu](v3)--(v2);
+    \draw[dl](v2)--(v5)node[wb,pos=0.30]{$g$};
+    \draw[dl](v1)--(v4)node[wb,pos=0.30]{$a$};
+    \draw[dl](v0)--(v3)node[wb,pos=0.70]{$d$};
+  \end{scope}
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \cthetav{0}{0}{b}{d}{f}
+  \drect{1.5}{0}{f}{j}
+  \begin{scope}[shift={(3.2,0)}] % 6j-square: top h, left j, right a, bot e ; diag c,g
+    \dsq{0}{0}{h}{e}{j}{a}
+    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$c$};
+    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$g$};
+  \end{scope}
+\end{tikzpicture}
+\]
 \begin{equation}
 \sum_{X Y} \Pi_{X Y}^{2}
 \ninej{a}{f}{X}{d}{q}{e}{p}{c}{b}
@@ -2146,7 +2178,36 @@ where $R=a+b+c+d+e+f+p+q+r$,\\
 \label{chap12:eq:49b}
 \end{equation}
 
-\includegraphics[max width=\textwidth, alt={}, center]{p27}
+\[
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \begin{scope} % hex1 (pointy): c p d e X f ; X eR bold ; diam q,b,a
+    \dninehex{0}{0}{c}{p}{d}{e}{X}{f}
+    \draw[dlu](hLR)--(hUR);
+    \draw[dl](hT)--(hB)node[wb,pos=0.27]{$q$};
+    \draw[dl](hUR)--(hLL)node[wb,pos=0.30]{$b$};
+    \draw[dl](hUL)--(hLR)node[wb,pos=0.70]{$a$};
+  \end{scope}
+  \begin{scope}[xshift=3cm] % hex2 (pointy): f X e h Y g ; X eL + Y eR bold ; diam a,b,r
+    \dninehex{0}{0}{f}{X}{e}{h}{Y}{g}
+    \draw[dlu](hUL)--(hLL);\draw[dlu](hLR)--(hUR);
+    \draw[dl](hT)--(hB)node[wb,pos=0.27]{$a$};
+    \draw[dl](hUR)--(hLL)node[wb,pos=0.30]{$b$};
+    \draw[dl](hUL)--(hLR)node[wb,pos=0.70]{$r$};
+  \end{scope}
+  \begin{scope}[shift={(5.4,0)}] % square: b Y s h ; diag g,a ; Y left edge bold
+    \dsq{0}{0}{b}{h}{Y}{s}
+    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$g$};
+    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$a$};
+    \draw[dlu](sqTL)--(sqBL);
+  \end{scope}
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \begin{scope}\dsixjsq{0}{0}{a}{d}{b}{c}{s}{p}\end{scope}
+  \begin{scope}[xshift=2.4cm]\dsixjsq{0}{0}{d}{e}{c}{f}{s}{q}\end{scope}
+  \begin{scope}[xshift=4.8cm]\dsixjsq{0}{0}{e}{h}{f}{g}{s}{r}\end{scope}
+\end{tikzpicture}
+\]
 
 \subsection{(iii) Triple summation}
 \begin{equation}
