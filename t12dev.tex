@@ -5,43 +5,36 @@
 % §12.2 helpers live in diagrams.sty.
 \begin{document}
 
-% ---------- eq 44 (p20): 6j-diamond . 9j-hex . 6j-diamond = 12j octagon-wheel ----------
+% ---------- eq 49 (16_425): two 6j-squares + 9j-hex (X,Y bold) = theta.rect.square (stacked) ----------
 \[
 \begin{tikzpicture}[baseline=0pt,font=\small]
-  % diamond1 {l p ; k q ; g,X}: X vertical bold
-  \begin{scope}
-    \dsixjsq[1]{0}{0}{l}{p}{k}{q}{g}{X}
+  \begin{scope}[shift={(0,1.9)}] % sq1: d c g p ; diag X(bold) s
+    \dsq{0}{0}{d}{p}{c}{g}
+    \draw[dlu](sqTL)--(sqBR)node[wb,pos=0.32]{$X$};
+    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$s$};
   \end{scope}
-  % 9j-hex (flat-top) {a b ..; ..X..; ..c}: top a, UR e, LR f, bot d, LL q, UL p
-  \begin{scope}[xshift=2.6cm]
-    \dhexflat{0}{0}{a}{e}{f}{d}{q}{p}
-    \draw[dl](v2)--(v5)node[wb,pos=0.30]{$b$};
-    \draw[dlu](v0)--(v3)node[wb,pos=0.30]{$X$};
-    \draw[dl](v1)--(v4)node[wb,pos=0.70]{$c$};
+  \begin{scope}[shift={(2.4,1.9)}] % sq2: d g b q ; diag Y(bold) t
+    \dsq{0}{0}{d}{q}{g}{b}
+    \draw[dlu](sqTL)--(sqBR)node[wb,pos=0.32]{$Y$};
+    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$t$};
   \end{scope}
-  % diamond2 {e l ; f k ; X,h}: X horizontal bold
-  \begin{scope}[xshift=5.2cm]
-    \dsixjsq[2]{0}{0}{e}{l}{f}{k}{X}{h}
+  \begin{scope}[shift={(1.2,0)}] % hexagon (bottom): g q c d b p ; diam Y,a,X
+    \dhexflat{0}{0}{g}{q}{c}{d}{b}{p}
+    \draw[dlu](v2)--(v5)node[wb,pos=0.30]{$Y$};
+    \draw[dl](v0)--(v3)node[wb,pos=0.70]{$a$};
+    \draw[dlu](v1)--(v4)node[wb,pos=0.70]{$X$};
   \end{scope}
 \end{tikzpicture}
 \;=\;
 \begin{tikzpicture}[baseline=0pt,font=\small]
-  \coordinate(O)at(0,0);
-  \foreach[count=\i] \ang in {90,45,0,-45,-90,-135,180,135}{\coordinate(w\i)at(\ang:1.6);}
-  % 8 outer edges (clockwise from top)
-  \draw[dl](w1)--(w2)node[midway,above right,inner sep=1pt]{$f$};
-  \draw[dl](w2)--(w3)node[midway,right,inner sep=1pt]{$h$};
-  \draw[dl](w3)--(w4)node[midway,right,inner sep=1pt]{$e$};
-  \draw[dl](w4)--(w5)node[midway,below right,inner sep=1pt]{$c$};
-  \draw[dl](w5)--(w6)node[midway,below left,inner sep=1pt]{$q$};
-  \draw[dl](w6)--(w7)node[midway,left,inner sep=1pt]{$g$};
-  \draw[dl](w7)--(w8)node[midway,left,inner sep=1pt]{$p$};
-  \draw[dl](w8)--(w1)node[midway,above left,inner sep=1pt]{$b$};
-  % 4 diameters through centre
-  \draw[dl](w1)--(w5)node[wb,pos=0.72]{$d$};
-  \draw[dl](w2)--(w6)node[wb,pos=0.25]{$k$};
-  \draw[dl](w3)--(w7)node[wb,pos=0.72]{$l$};
-  \draw[dl](w4)--(w8)node[wb,pos=0.75]{$a$};
+  \ctheta{0}{2.0}{d}{g}{s}
+  \drects{0}{0.55}{s}{s}{}{t}
+  % 6j-square (bottom) {a b p; s c q}: bot a, left b, right c ; diag q,p
+  \begin{scope}[shift={(0,-1.5)}]
+    \dsq{0}{0}{s}{a}{b}{c}
+    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$q$};
+    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$p$};
+  \end{scope}
 \end{tikzpicture}
 \]
 \end{document}

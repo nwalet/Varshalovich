@@ -1954,34 +1954,177 @@ where $R=a+b+c+d+e+f+p+q+r$,\\
 .
  \label{chap12:eq:45}
 \end{align}
-\includegraphics[max width=\textwidth, alt={}, center]{p21}\\
+\[
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  % hexagon (top): top d, UR c, LR e, bot X(bold), LL p, UL b ; diam f,a,q
+  \begin{scope}[shift={(0,1.3)}]
+    \dhexflat{0}{0}{d}{c}{e}{X}{p}{b}
+    \draw[dlu](v5)--(v4); % X bottom edge bold
+    \draw[dl](v2)--(v5)node[wb,pos=0.30]{$f$};
+    \draw[dl](v0)--(v3)node[wb,pos=0.70]{$a$};
+    \draw[dl](v1)--(v4)node[wb,pos=0.30]{$q$};
+  \end{scope}
+  % diamond1 (BL) {p X ; g k ; l,q}: X UR edge bold
+  \begin{scope}[shift={(-1.2,-1.0)}]
+    \dsixjsq{0}{0}{p}{X}{g}{k}{l}{q}
+    \draw[dlu](qt)--(qr);
+  \end{scope}
+  % diamond2 (BR) {X e ; k h ; l,f}: X UL edge bold
+  \begin{scope}[shift={(1.2,-1.0)}]
+    \dsixjsq{0}{0}{X}{e}{k}{h}{l}{f}
+    \draw[dlu](ql)--(qt);
+  \end{scope}
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  % diamond1 (TL) {p l ; b Y ; a,g}: Y BR edge bold
+  \begin{scope}[shift={(0,1.4)}]
+    \dsixjsq{0}{0}{p}{l}{b}{Y}{a}{g}
+    \draw[dlu](qr)--(qb);
+  \end{scope}
+  % diamond2 (TR) {l e ; Y c ; a,h}: Y BL edge bold
+  \begin{scope}[shift={(2.4,1.4)}]
+    \dsixjsq{0}{0}{l}{e}{Y}{c}{a}{h}
+    \draw[dlu](ql)--(qb);
+  \end{scope}
+  % hexagon (bottom): top Y(bold), UR c, LR q, bot k, LL f, UL b ; diam d,g,h
+  \begin{scope}[shift={(1.2,-1.0)}]
+    \dhexflat{0}{0}{Y}{c}{q}{k}{f}{b}
+    \draw[dlu](v2)--(v1); % Y top edge bold
+    \draw[dl](v0)--(v3)node[wb,pos=0.70]{$d$};
+    \draw[dl](v2)--(v5)node[wb,pos=0.30]{$g$};
+    \draw[dl](v1)--(v4)node[wb,pos=0.70]{$h$};
+  \end{scope}
+\end{tikzpicture}
+\]
 
 \subsubsection{(ii) Double summation}
 \begin{equation}
 \sum_{X Y} \Pi_{X Y}^{2}\sixj{a}{b}{X}{c}{d}{p} \label{chap12:eq:46}\sixj{c}{d}{X}{a}{b}{Y}\sixj{a}{b}{q}{c}{d}{Y}=\sixj{a}{b}{q}{c}{d}{p},
 \end{equation}
-\begin{center}
-\includegraphics[max width=\textwidth, alt={}]{39a53bec-58f6-4733-a518-53d974314721-16_192_1081_662_384}
-\end{center}
+\[
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \begin{scope} % sq1: a c p X ; diag d,b ; X right edge bold
+    \dsq{0}{0}{a}{c}{p}{X}
+    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$d$};
+    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$b$};
+    \draw[dlu](sqTR)--(sqBR);
+  \end{scope}
+  \begin{scope}[xshift=2.4cm] % sq2: a c X Y ; diag b,d ; X left, Y right bold
+    \dsq{0}{0}{a}{c}{X}{Y}
+    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$b$};
+    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$d$};
+    \draw[dlu](sqTL)--(sqBL);\draw[dlu](sqTR)--(sqBR);
+  \end{scope}
+  \begin{scope}[xshift=4.8cm] % sq3: a c Y q ; diag d,b ; Y left bold
+    \dsq{0}{0}{a}{c}{Y}{q}
+    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$d$};
+    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$b$};
+    \draw[dlu](sqTL)--(sqBL);
+  \end{scope}
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \dsq{0}{0}{a}{c}{p}{q}
+  \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$d$};
+  \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$b$};
+\end{tikzpicture}
+\]
 \begin{equation}
 \sum_{X Y}(-1)^{X+Y+p} \Pi_{X Y}^{2}\sixj{a}{b}{X}{c}{d}{p} \label{chap12:eq:47}\sixj{a}{c}{Y}{d}{b}{X}\sixj{a}{d}{q}{b}{c}{Y}=\frac{\delta_{p q}}{\Pi_{p}^{2}}\{a d p\}\{b c p\}
 \end{equation}
-\begin{center}
-\includegraphics[max width=\textwidth, alt={}]{39a53bec-58f6-4733-a518-53d974314721-16_324_1186_1005_334}
-\end{center}
+\[
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \begin{scope} % sq1 (BL): a d b c ; diag X(bold) p
+    \dsq{0}{0}{a}{c}{d}{b}
+    \draw[dlu](sqTL)--(sqBR)node[wb,pos=0.32]{$X$};
+    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$p$};
+  \end{scope}
+  \begin{scope}[shift={(1.4,1.9)}] % sq2 (top): c a d b ; diag Y(bold) X(bold)
+    \dsq{0}{0}{c}{b}{a}{d}
+    \draw[dlu](sqTL)--(sqBR)node[wb,pos=0.32]{$Y$};
+    \draw[dlu](sqTR)--(sqBL)node[wb,pos=0.68]{$X$};
+  \end{scope}
+  \begin{scope}[shift={(2.8,0)}] % sq3 (BR): d b a c ; diag Y(bold) q
+    \dsq{0}{0}{d}{c}{b}{a}
+    \draw[dlu](sqTL)--(sqBR)node[wb,pos=0.32]{$Y$};
+    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$q$};
+  \end{scope}
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \cthetav{0}{0}{a}{d}{p}
+  \drect{1.5}{0}{p}{q}
+  \cthetav{2.9}{0}{b}{c}{p}
+\end{tikzpicture}
+\]
 \begin{equation}
 \sum_{X Y}(-1)^{X+Y+2 a-s-t} \Pi_{X Y}^{2}\ninej{a}{b}{p}{c}{d}{X}{q}{Y}{g} \label{chap12:eq:48}\sixj{c}{d}{X}{p}{g}{s}\sixj{b}{d}{Y}{q}{g}{t}=\ninej{a}{b}{p}{c}{g}{s}{q}{t}{d},
 \end{equation}
-\begin{center}
-\includegraphics[max width=\textwidth, alt={}]{39a53bec-58f6-4733-a518-53d974314721-16_397_911_1517_466}
-\end{center}
+\[
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \begin{scope}[shift={(0,1.9)}] % sq1: c d g p ; diag X(bold) s
+    \dsq{0}{0}{c}{p}{d}{g}
+    \draw[dlu](sqTL)--(sqBR)node[wb,pos=0.32]{$X$};
+    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$s$};
+  \end{scope}
+  \begin{scope}[shift={(2.4,1.9)}] % sq2: b g d q ; diag Y(bold) t
+    \dsq{0}{0}{b}{q}{g}{d}
+    \draw[dlu](sqTL)--(sqBR)node[wb,pos=0.32]{$Y$};
+    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$t$};
+  \end{scope}
+  \begin{scope}[shift={(1.2,0)}] % hexagon (bottom): g q c d b p ; diam Y,a,X
+    \dhexflat{0}{0}{g}{q}{c}{d}{b}{p}
+    \draw[dlu](v2)--(v5)node[wb,pos=0.30]{$Y$};
+    \draw[dl](v0)--(v3)node[wb,pos=0.70]{$a$};
+    \draw[dlu](v1)--(v4)node[wb,pos=0.70]{$X$};
+  \end{scope}
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \dhexflat{0}{0}{g}{t}{q}{a}{p}{s}
+  \draw[dl](v2)--(v5)node[wb,pos=0.30]{$d$};
+  \draw[dl](v1)--(v4)node[wb,pos=0.30]{$b$};
+  \draw[dl](v0)--(v3)node[wb,pos=0.70]{$c$};
+\end{tikzpicture}
+\]
 \begin{equation}
 \sum_{X Y} \Pi_{X Y}^{2}\ninej{a}{b}{p}{c}{d}{X}{q}{Y}{g} \sixj{c}{d}{X}{g}{p}{s}
 \sixj{b}{d}{Y}{g}{q}{t}
 =(-1)^{2 s} \frac{\delta_{s t}}{\Pi_{s}^{2}}\{d g s\}\sixj{a}{b}{p}{s}{c}{q},
 \label{chap12:eq:49}
 \end{equation}
-\includegraphics[max width=\textwidth, alt={}, center]{39a53bec-58f6-4733-a518-53d974314721-16_425_957_2088_427}\\
+\[
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \begin{scope}[shift={(0,1.9)}] % sq1: d c g p ; diag X(bold) s
+    \dsq{0}{0}{d}{p}{c}{g}
+    \draw[dlu](sqTL)--(sqBR)node[wb,pos=0.32]{$X$};
+    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$s$};
+  \end{scope}
+  \begin{scope}[shift={(2.4,1.9)}] % sq2: d g b q ; diag Y(bold) t
+    \dsq{0}{0}{d}{q}{g}{b}
+    \draw[dlu](sqTL)--(sqBR)node[wb,pos=0.32]{$Y$};
+    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$t$};
+  \end{scope}
+  \begin{scope}[shift={(1.2,0)}] % hexagon (bottom): g q c d b p ; diam Y,a,X
+    \dhexflat{0}{0}{g}{q}{c}{d}{b}{p}
+    \draw[dlu](v2)--(v5)node[wb,pos=0.30]{$Y$};
+    \draw[dl](v0)--(v3)node[wb,pos=0.70]{$a$};
+    \draw[dlu](v1)--(v4)node[wb,pos=0.70]{$X$};
+  \end{scope}
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \ctheta{0}{2.0}{d}{g}{s}
+  \drects{0}{0.55}{s}{s}{}{t}
+  % 6j-square (bottom) {a b p; s c q}: top s, bot a, left b, right c ; diag q,p
+  \begin{scope}[shift={(0,-1.5)}]
+    \dsq{0}{0}{s}{a}{b}{c}
+    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$q$};
+    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$p$};
+  \end{scope}
+\end{tikzpicture}
+\]
 \begin{equation}
 \sum_{X Y} \Pi_{X Y}^{2}\ninej{a}{b}{X}{c}{d}{Y}{e}{f}{g} 
 \sixj{a}{b}{X}{Y}{g}{h}
