@@ -2380,7 +2380,47 @@ where $R=a+b+c+d+e+f+p+q+r$,\\
 \label{chap12:eq:52}
 \end{gather}
 where $R=a+b+c+d+e+f+g+h+p+q+r+s$.\\
-\includegraphics[max width=\textwidth, alt={}, center]{39a53bec-58f6-4733-a518-53d974314721-18_302_1503_2175_281}
+\[
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \begin{scope}\dsixjsq[2]{0}{0}{b}{c}{a}{d}{X}{p}\end{scope}
+  \begin{scope}[xshift=2.3cm]\dsixjsq[2]{0}{0}{c}{f}{d}{e}{X}{q}\end{scope}
+  \begin{scope}[xshift=4.6cm]\dsixjsq[2]{0}{0}{f}{g}{e}{h}{X}{r}\end{scope}
+  \begin{scope}[xshift=6.9cm]\dsixjsq[2]{0}{0}{g}{a}{h}{b}{X}{s}\end{scope}
+\end{tikzpicture}
+\]
+\[
+=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  % 9j-hex {s h b; g r f; a e Y}: outer s,g,r,e,Y,b ; diam h,f,a (Y bold)
+  \begin{scope}
+    \dhexflat{0}{0}{s}{g}{r}{e}{Y}{b}
+    \draw[dlu](v4)--(v3); % Y edge bold (LL)
+    \draw[dl](v0)--(v3)node[wb,pos=0.30]{$h$};
+    \draw[dl](v2)--(v5)node[wb,pos=0.30]{$f$};
+    \draw[dl](v1)--(v4)node[wb,pos=0.70]{$a$};
+  \end{scope}
+  % 6j-diamond {b f Y; q p c}: edges b,f,q,p ; diag c(h), Y(v, bold)
+  \begin{scope}[xshift=2.6cm]
+    \dsixjsq[1]{0}{0}{b}{f}{q}{p}{c}{Y}
+  \end{scope}
+  % 12j octagon-WHEEL (twelvejI): 8 outer edges + 4 diameters through centre
+  \begin{scope}[shift={(6.0,0)}]
+    \foreach[count=\i] \ang in {90,45,0,-45,-90,-135,180,135}{\coordinate(w\i)at(\ang:1.6);}
+    \draw[dl](w8)--(w1)node[midway,above left,inner sep=1pt]{$d$};
+    \draw[dl](w1)--(w2)node[midway,above right,inner sep=1pt]{$e$};
+    \draw[dl](w2)--(w3)node[midway,right,inner sep=1pt]{$h$};
+    \draw[dl](w3)--(w4)node[midway,right,inner sep=1pt]{$b$};
+    \draw[dl](w4)--(w5)node[midway,below right,inner sep=1pt]{$c$};
+    \draw[dl](w5)--(w6)node[midway,below left,inner sep=1pt]{$f$};
+    \draw[dl](w6)--(w7)node[midway,left,inner sep=1pt]{$g$};
+    \draw[dl](w7)--(w8)node[midway,left,inner sep=1pt]{$a$};
+    \draw[dl](w1)--(w5)node[wb,pos=0.72]{$q$};
+    \draw[dl](w2)--(w6)node[wb,pos=0.25]{$r$};
+    \draw[dl](w3)--(w7)node[wb,pos=0.72]{$s$};
+    \draw[dl](w4)--(w8)node[wb,pos=0.72]{$p$};
+  \end{scope}
+\end{tikzpicture}
+\]
 
 % PROOFREAD: contains OCR-garbled or 12j Wigner array(s) not auto-converted -- verify/reconstruct against orig.
 \begin{align}
@@ -2395,9 +2435,37 @@ where $R=a+b+c+d+e+f+g+h+p+q+r+s$.\\
 \twelvejII{a,d,p,f,q,a,g,s,b,r,h,e}, \label{chap12:eq:53}
 \end{align}
 
-\begin{center}
-  \includegraphics[alt={},max width=\textwidth]{p33}
-\end{center}
+\[
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \begin{scope}\dsixjsq[2]{0}{0}{b}{c}{a}{d}{X}{p}\end{scope}
+  \begin{scope}[xshift=2.3cm]\dsixjsq[2]{0}{0}{c}{f}{d}{e}{X}{q}\end{scope}
+  \begin{scope}[xshift=4.6cm]\dsixjsq[2]{0}{0}{f}{g}{e}{h}{X}{r}\end{scope}
+  \begin{scope}[xshift=6.9cm]\dsixjsq[2]{0}{0}{g}{b}{h}{a}{X}{s}\end{scope}
+\end{tikzpicture}
+\]
+\[
+=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  % 12j octagon-LATTICE (twelvejII, second kind): 8 outer edges + central # square
+  \coordinate(Ta)at(-0.6,1.4);\coordinate(Tb)at(0.6,1.4);
+  \coordinate(Ra)at(1.4,0.6);\coordinate(Rb)at(1.4,-0.6);
+  \coordinate(Qa)at(0.6,-1.4);\coordinate(Qb)at(-0.6,-1.4);
+  \coordinate(La)at(-1.4,-0.6);\coordinate(Lb)at(-1.4,0.6);
+  \draw[dl](Ta)--(Tb)node[midway,above,inner sep=1pt]{$b$};
+  \draw[dl](Tb)--(Ra)node[midway,above right,inner sep=1pt]{$g$};
+  \draw[dl](Ra)--(Rb)node[midway,right,inner sep=1pt]{$r$};
+  \draw[dl](Rb)--(Qa)node[midway,below right,inner sep=1pt]{$h$};
+  \draw[dl](Qa)--(Qb)node[midway,below,inner sep=1pt]{$a$};
+  \draw[dl](Qb)--(La)node[midway,below left,inner sep=1pt]{$d$};
+  \draw[dl](La)--(Lb)node[midway,left,inner sep=1pt]{$q$};
+  \draw[dl](Lb)--(Ta)node[midway,above left,inner sep=1pt]{$c$};
+  \draw[dl](Ta)--(Qb);\draw[dl](Tb)--(Qa);\draw[dl](Lb)--(Ra);\draw[dl](La)--(Rb);
+  \node[wb,inner sep=1.5pt] at(0,0.6){$f$};
+  \node[wb,inner sep=1.5pt] at(0.6,0){$s$};
+  \node[wb,inner sep=1.5pt] at(0,-0.6){$e$};
+  \node[wb,inner sep=1.5pt] at(-0.6,0){$p$};
+\end{tikzpicture}
+\]
 \subsubsection{(ii) Double summation}
 \begin{equation}
 \sum_{XY}\Pi_{XY}^2
