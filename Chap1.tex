@@ -1,4 +1,4 @@
-\chapter{Elements of Vector and Tensor Theory}
+\chapter{Elements of Vector and Tensor Theory}\label{Chap:1}
 The theory of angular momenta and irreducible tensors represents, in principle, a development of the classical theory of vectors and tensors. In this chapter only the basic definitions and relations of the vector and tensor theory are represented which will be used throughout. For more detailed analysis see corresponding monographs (e.g., Refs. [11, 34, 35]).
 
 \section{Coordinate Systems. Basis Vectors}
@@ -7,7 +7,7 @@ In the quantum theory of angular momentum cartesian, polar and spherical coordin
 \subsection{Cartesian Coordinate System}
 In a rectangular cartesian coordinate system the position of a point is specified by three real numbers \(x\), \(y, z\) which represent the distances between the point and coordinate planes (Fig.~\ref{chap1:fig:1}). The position vector (radius vector) of a point \(\vect{r}\) may be written as
 \begin{equation}
-\vect{r}=x \vect{e}_{x}+y \vect{e}_{y}+z \vect{e}_{z} \label{chap1:eq:1}
+\vect{r}=x \vect{e}_{x}+y \vect{e}_{y}+z \vect{e}_{z} .\label{chap1:eq:1}
 \end{equation}
 \begin{figure}[tbh]
 \begin{center}
@@ -61,8 +61,8 @@ The position vector \(r\) may be written as
 \footnotetext{\({ }^{1}\) Note that this coordinate system is often called ``spherical''. To avoid misunderstanding we prefer to call it the ``polar'' system reserving the name ``spherical'' only for the coordinate system considered in the next section.
 }The covariant polar basis vectors \(\vect{e}_{r}, \vect{e}_{\vartheta}, \vect{e}_{\varphi}\) are shown in Fig.~\ref{chap1:fig:2}. They form a real orthonormal basis
 \begin{align}
-\vect{e}_{\alpha} \vect{e}_{\beta} & =\delta_{\alpha \beta}, \quad(\alpha, \beta=r, \vartheta, \varphi)  \label{chap1:eq:10}\\
-\vect{e}_{\alpha}^{*} & =\vect{e}_{\alpha}, \quad(\alpha=r, \vartheta, \varphi) \label{chap1:eq:11}
+\vect{e}_{\alpha} \vect{e}_{\beta} & =\delta_{\alpha \beta}, \quad(\alpha, \beta=r, \vartheta, \varphi) , \label{chap1:eq:10}\\
+\vect{e}_{\alpha}^{*} & =\vect{e}_{\alpha}, \quad(\alpha=r, \vartheta, \varphi) .\label{chap1:eq:11}
 \end{align}
 The contravariant polar basis vectors \(\vect{e}^{r}, \vect{e}^{\vartheta}, \vect{e}^{\varphi}\) coincide with the covariant ones
 \begin{equation}
@@ -74,37 +74,37 @@ The unit vectors \(\vect{e}_{r}, \vect{e}_{\vartheta}, \vect{e}_{\varphi}\) form
 \end{equation}
 The polar basis vectors \(\vect{e}_{r}, \vect{e}_{\vartheta}, \vect{e}_{\varphi}\), contrary to the cartesian ones, depend on the angles \(\vartheta, \varphi\). This should be taken into account when evaluating the derivatives
 \begin{equation}
-\begin{array}{lll}
-\frac{\partial}{\partial r} \vect{e}_{r}=0, & \frac{\partial}{\partial r} \vect{e}_{\vartheta}=0, & \frac{\partial}{\partial r} \vect{e}_{\varphi}=0, \\
-\frac{\partial}{\partial \vartheta} \vect{e}_{r}=\vect{e}_{\vartheta}, & \frac{\partial}{\partial \vartheta} \vect{e}_{\vartheta}=-\vect{e}_{r}, & \frac{\partial}{\partial \vartheta} \vect{e}_{\varphi}=0, \\
-\frac{\partial}{\partial \varphi} \vect{e}_{r}=\vect{e}_{\varphi} \sin \vartheta, & \frac{\partial}{\partial \varphi} \vect{e}_{\vartheta}=\vect{e}_{\varphi} \cos \vartheta, & \frac{\partial}{\partial \varphi} \vect{e}_{\varphi}=-\vect{e}_{r} \sin \vartheta-\vect{e}_{\vartheta} \cos \vartheta . \label{chap1:eq:14}
-\end{array}
+\begin{aligned}
+&\frac{\partial}{\partial r} \vect{e}_{r}=0, && \frac{\partial}{\partial r} \vect{e}_{\vartheta}=0, && \frac{\partial}{\partial r} \vect{e}_{\varphi}=0, \\
+&\frac{\partial}{\partial \vartheta} \vect{e}_{r}=\vect{e}_{\vartheta}, && \frac{\partial}{\partial \vartheta} \vect{e}_{\vartheta}=-\vect{e}_{r}, && \frac{\partial}{\partial \vartheta} \vect{e}_{\varphi}=0, \\
+&\frac{\partial}{\partial \varphi} \vect{e}_{r}=\vect{e}_{\varphi} \sin \vartheta, && \frac{\partial}{\partial \varphi} \vect{e}_{\vartheta}=\vect{e}_{\varphi} \cos \vartheta, && \frac{\partial}{\partial \varphi} \vect{e}_{\varphi}=-\vect{e}_{r} \sin \vartheta-\vect{e}_{\vartheta} \cos \vartheta . \label{chap1:eq:14}
+\end{aligned}
 \end{equation}
-The results of applying the \(\nabla\) operator (see Sec. 1.3) to the polar basis vectors are presented in the form
+The results of applying the \(\boldsymbol{\nabla}\) operator (see Sec. 1.3) to the polar basis vectors are presented in the form
 \begin{gather}
-\left(\nabla \cdot \vect{e}_{r}\right)=\frac{2}{r}, \quad\left(\nabla \cdot \vect{e}_{\vartheta}\right)=\frac{1}{r} \cot \vartheta, \quad\left(\nabla \cdot \vect{e}_{\varphi}\right)=0,  \label{chap1:eq:15}\\
-{\left[\nabla \times \vect{e}_{r}\right]=0, \quad\left[\nabla \times \vect{e}_{\vartheta}\right]=\frac{1}{r} \vect{e}_{\varphi}, \quad\left[\nabla \times \vect{e}_{\varphi}\right]=\frac{1}{r} \cot \vartheta \vect{e}_{r}-\frac{1}{r} \vect{e}_{\vartheta}} \label{chap1:eq:16}
+\left(\boldsymbol{\nabla} \cdot \vect{e}_{r}\right)=\frac{2}{r}, \quad\left(\boldsymbol{\nabla} \cdot \vect{e}_{\vartheta}\right)=\frac{1}{r} \cot \vartheta, \quad\left(\boldsymbol{\nabla} \cdot \vect{e}_{\varphi}\right)=0,  \label{chap1:eq:15}\\
+{\left[\boldsymbol{\nabla} \times \vect{e}_{r}\right]=0, \quad\left[\boldsymbol{\nabla} \times \vect{e}_{\vartheta}\right]=\frac{1}{r} \vect{e}_{\varphi}, \quad\left[\boldsymbol{\nabla} \times \vect{e}_{\varphi}\right]=\frac{1}{r} \cot \vartheta \vect{e}_{r}-\frac{1}{r} \vect{e}_{\vartheta}} .\label{chap1:eq:16}
 \end{gather}
 \subsection{Spherical Coordinate System}
 Spherical coordinates are widely used in the angular momentum theory.\\
 The covariant spherical coordinates \(x_{\mu}\) (with \(\mu= \pm 1,0\) ) are defined by the relations
 \begin{align}
-x_{+1} & =-\frac{1}{\sqrt{2}}(x+i y)=-\frac{1}{\sqrt{2}} r \sin \vartheta e^{i \varphi}  \notag\\
-x_{0} & =z=r \cos \vartheta  \label{chap1:eq:17}\\
-x_{-1} & =\frac{1}{\sqrt{2}}(x-i y)=\frac{1}{\sqrt{2}} r \sin \vartheta e^{-i \varphi} \notag
+x_{+1} & =-\frac{1}{\sqrt{2}}(x+i y)=-\frac{1}{\sqrt{2}} r \sin \vartheta e^{i \varphi},  \notag\\
+x_{0} & =z=r \cos \vartheta , \label{chap1:eq:17}\\
+x_{-1} & =\frac{1}{\sqrt{2}}(x-i y)=\frac{1}{\sqrt{2}} r \sin \vartheta e^{-i \varphi}. \notag
 \end{align}
 The contravariant spherical coordinates \(x^{\mu}\) (where \(\mu= \pm 1,0\) ) are given by
 \begin{align}
-x^{+1} & =-\frac{1}{\sqrt{2}}(x-i y)=-\frac{1}{\sqrt{2}} r \sin \vartheta e^{-i \varphi}  \notag\\
-x^{0} & =z=r \cos \vartheta  \label{chap1:eq:18}\\
-x^{-1} & =\frac{1}{\sqrt{2}}(x+i y)=\frac{1}{\sqrt{2}} r \sin \vartheta e^{i \varphi} \notag
+x^{+1} & =-\frac{1}{\sqrt{2}}(x-i y)=-\frac{1}{\sqrt{2}} r \sin \vartheta e^{-i \varphi} , \notag\\
+x^{0} & =z=r \cos \vartheta , \label{chap1:eq:18}\\
+x^{-1} & =\frac{1}{\sqrt{2}}(x+i y)=\frac{1}{\sqrt{2}} r \sin \vartheta e^{i \varphi} .\notag
 \end{align}
 The relations between covariant and contravariant spherical coordinates are as follows
 \begin{equation}
-\begin{array}{lll}
-x^{\mu}=(-1)^{\mu} x_{-\mu}, & & x_{\mu}=(-1)^{\mu} x^{-\mu}, \\
-x^{\mu}=x_{\mu}^{*}, & & x_{\mu}=x^{\mu *}, \label{chap1:eq:19}
-\end{array} \quad(\mu= \pm 1,0) .
+\begin{aligned}
+&x^{\mu}=(-1)^{\mu} x_{-\mu}, & & x_{\mu}=(-1)^{\mu} x^{-\mu}, \\
+&x^{\mu}=x_{\mu}^{*}, & & x_{\mu}=x^{\mu *}, 
+\end{aligned} \quad(\mu= \pm 1,0) .\label{chap1:eq:19}
 \end{equation}
 The covariant spherical basis vectors \(\vect{e}_{\mu}(\mu= \pm 1,0)\) are defined by
 \begin{align}
@@ -114,47 +114,55 @@ The covariant spherical basis vectors \(\vect{e}_{\mu}(\mu= \pm 1,0)\) are defin
 \end{align}
 The contravariant spherical basis vectors \(\vect{e}^{\mu}(\mu= \pm 1,0)\) are given by
 \begin{align}
-\vect{e}^{+1} & =-\frac{1}{\sqrt{2}}\left(\vect{e}_{x}-i \vect{e}_{y}\right)  \notag\\
-\vect{e}^{0} & =\vect{e}_{z}  \label{chap1:eq:21}\\
-\vect{e}^{-1} & =\frac{1}{\sqrt{2}}\left(\vect{e}_{x}+i \vect{e}_{y}\right) \notag
+\vect{e}^{+1} & =-\frac{1}{\sqrt{2}}\left(\vect{e}_{x}-i \vect{e}_{y}\right) , \notag\\
+\vect{e}^{0} & =\vect{e}_{z},  \label{chap1:eq:21}\\
+\vect{e}^{-1} & =\frac{1}{\sqrt{2}}\left(\vect{e}_{x}+i \vect{e}_{y}\right) .\notag
 \end{align}
 Relations between the covariant and contravariant spherical basis vectors read
 \begin{equation}
 \begin{array}{lll}
 \vect{e}^{\mu}=(-1)^{\mu} \vect{e}_{-\mu}, & \vect{e}_{\mu}=(-1)^{\mu} \vect{e}^{-\mu}, \\
-\vect{e}^{\mu}=\vect{e}_{\mu}^{*}, & \vect{e}_{\mu}=\vect{e}^{\mu *}, & (\mu= \pm 1,0) \label{chap1:eq:22}
+\vect{e}^{\mu}=\vect{e}_{\mu}^{*}, & \vect{e}_{\mu}=\vect{e}^{\mu *}, & (\mu= \pm 1,0). \label{chap1:eq:22}
 \end{array}
 \end{equation}
 The spherical basis vectors form a complex orthonormal basis
 \begin{equation}
-\vect{e}_{\mu} \vect{e}^{\nu}=\vect{e}_{\mu} \vect{e}_{\nu}^{*}=\delta_{\mu \nu}, \quad(\mu, \nu= \pm 1,0) \label{chap1:eq:23}
+\vect{e}_{\mu} \vect{e}^{\nu}=\vect{e}_{\mu} \vect{e}_{\nu}^{*}=\delta_{\mu \nu}, \quad(\mu, \nu= \pm 1,0) .\label{chap1:eq:23}
 \end{equation}
 Vector products of spherical basis vectors may be written with the use of the Clebsch-Gordan coefficients (see Chap. 8) in the form
-\begin{align*}
+\begin{equation}
+  \begin{aligned}
 & \vect{e}_{\mu} \times \vect{e}_{\nu}=i \sqrt{2} \clebsch{1}{\mu}{1}{\nu}{1}{\lambda} \vect{e}_{\lambda}, \\
-& \vect{e}^{\mu} \times \vect{e}^{\nu}=-i \sqrt{2} \clebsch{1}{\mu}{1}{\nu}{1}{\lambda} \vect{e}^{\lambda}, \quad(\mu, \nu, \lambda= \pm 1,0) .
-\end{align*}
+& \vect{e}^{\mu} \times \vect{e}^{\nu}=-i \sqrt{2} \clebsch{1}{\mu}{1}{\nu}{1}{\lambda} \vect{e}^{\lambda},
+\end{aligned}
+ \quad(\mu, \nu, \lambda= \pm 1,0).
+\end{equation}
 One may also rewrite these formulas in a form similar to \eqref{chap1:eq:5}
-\begin{align*}
+\begin{equation}
+\begin{aligned}
 & \vect{e}_{\mu} \times \vect{e}_{\nu}=-i \varepsilon_{\mu \nu \lambda} \vect{e}^{\lambda}, \quad(\mu, \nu, \lambda= \pm 1,0) \\
-& \vect{e}^{\mu} \times \vect{e}^{\nu}=i \varepsilon_{\mu \nu \lambda} \vect{e}_{\lambda}, \quad
-\end{align*}
+& \vect{e}^{\mu} \times \vect{e}^{\nu}=i \varepsilon_{\mu \nu \lambda} \vect{e}_{\lambda}, 
+\end{aligned}
+ \quad(\mu, \nu, \lambda= \pm 1,0),
+\label{chap1:eq:1.25}
+\end{equation}
 where \(\varepsilon_{\mu \nu \lambda}=+1\) if the combination of indices \(\mu, \nu, \lambda\) is obtained by an even permutation of \(+1,0,-1, \varepsilon_{\mu \nu \lambda}=-1\) for an odd permutation, and \(\varepsilon_{\mu \nu \lambda}=0\) if at least two indices among \(\mu, \nu, \lambda\) are equal.
 
-A detailed form of (25) is as follows:
+A detailed form of \eqref{chap1:eq:1.25} is as follows:
 \begin{equation}
-\begin{array}{ll}
-\vect{e}_{+1} \times \vect{e}_{0}=i \vect{e}_{+1}, & \vect{e}_{0} \times \vect{e}_{-1}=i \vect{e}_{-1}, \\
-\vect{e}^{0} \times \vect{e}_{+1}^{+1}=i \vect{e}_{-1}^{+1}=i \vect{e}_{0}^{+} & \vect{e}^{-1} \times \vect{e}^{0}=i \vect{e}^{-1},  \label{chap1:eq:24}\\
-\vect{e}^{-1} \times \vect{e}^{+1}=i \vect{e}^{0}
-\end{array}
+\begin{aligned}
+&\vect{e}_{+1} \times \vect{e}_{0}=i \vect{e}_{+1}, && \vect{e}_{0} \times \vect{e}_{-1}=i \vect{e}_{-1}, \\
+&\vect{e}^{0} \times \vect{e}_{+1}^{+1}=i \vect{e}_{-1}^{+1}=i \vect{e}_{0}^{+} && \vect{e}^{-1} \times \vect{e}^{0}=i \vect{e}^{-1},\\
+&\vect{e}^{-1} \times \vect{e}^{+1}=i \vect{e}^{0}.
+\end{aligned}
+  \label{chap1:eq:24}
 \end{equation}
 Covariant and contravariant spherical components (see Sec. 1.2) of the basis vectors \(\vect{e}_{\mu}\) and \(\vect{e}^{\mu}\) are given by
 \begin{equation}
-\begin{array}{ll}
-{\left[\vect{e}_{\mu}\right]_{\sigma}=(-1)^{\sigma} \delta_{\sigma-\mu},} & {\left[\vect{e}_{\mu}\right]^{\sigma}=\delta_{\sigma \mu}} \\
-{\left[\vect{e}^{\mu}\right]_{\sigma}=\delta_{\sigma \mu},} & {\left[\vect{e}^{\mu}\right]^{\sigma}=(-1)^{\sigma} \delta_{\sigma-\mu}} \label{chap1:eq:25}
-\end{array}
+\begin{aligned}
+&{\left[\vect{e}_{\mu}\right]_{\sigma}=(-1)^{\sigma} \delta_{\sigma-\mu},} && {\left[\vect{e}_{\mu}\right]^{\sigma}=\delta_{\sigma \mu}} \\
+&{\left[\vect{e}^{\mu}\right]_{\sigma}=\delta_{\sigma \mu},} && {\left[\vect{e}^{\mu}\right]^{\sigma}=(-1)^{\sigma} \delta_{\sigma-\mu}}. \label{chap1:eq:25}
+\end{aligned}
 \end{equation}
 \subsection{Helicity Basis Vectors}
 By analogy with Eqs. \eqref{chap1:eq:20}, \eqref{chap1:eq:21} one may construct the following combinations of the polar basis vectors \(\vect{e}_{r}, \vect{e}_{\vartheta}, \vect{e}_{\varphi}\)
@@ -220,7 +228,7 @@ Polar and Helicity Basis Vectors
 \begin{align}
 \vect{e}_{+1} & =-\frac{1}{\sqrt{2}}\left(\vect{e}_{x}+i \vect{e}_{y}\right), & \vect{e}^{+1} & =-\frac{1}{\sqrt{2}}\left(\vect{e}_{x}-i \vect{e}_{y}\right)  \notag\\
 \vect{e}_{0} & =\vect{e}_{z}, & \vect{e}^{0} & =\vect{e}_{z},  \label{chap1:eq:35}\\
-\vect{e}_{-1} & =\frac{1}{\sqrt{2}}\left(\vect{e}_{x}-i \vect{e}_{y}\right), & \vect{e}^{-1} & =\frac{1}{\sqrt{2}}\left(\vect{e}_{x}+i \vect{e}_{y}\right) \notag
+\vect{e}_{-1} & =\frac{1}{\sqrt{2}}\left(\vect{e}_{x}-i \vect{e}_{y}\right), & \vect{e}^{-1} & =\frac{1}{\sqrt{2}}\left(\vect{e}_{x}+i \vect{e}_{y}\right). \notag
 \end{align}
 Spherical Covariant and Polar Basis Vectors
 \begin{align}
@@ -230,15 +238,15 @@ Spherical Covariant and Polar Basis Vectors
 \end{align}
 Spherical Contravariant and Polar Basis Vectors
 \begin{align}
-\vect{e}^{+1} & =-\vect{e}_{\vect{r}} \frac{1}{\sqrt{2}} \sin \vartheta e^{-i \varphi}-\vect{e}_{\vartheta} \frac{1}{\sqrt{2}} \cos \vartheta e^{-i \varphi}+\vect{e}_{\varphi} \frac{i}{\sqrt{2}} e^{-i \varphi}  \notag\\
-\vect{e}^{0} & =\vect{e}_{r} \cos \vartheta-\vect{e}_{\vartheta} \sin \vartheta  \label{chap1:eq:37}\\
-\vect{e}^{-1} & =\vect{e}_{r} \frac{1}{\sqrt{2}} \sin \vartheta e^{i \varphi}+\vect{e}_{\vartheta} \frac{1}{\sqrt{2}} \cos \vartheta e^{i \varphi}+\vect{e}_{\varphi} \frac{i}{\sqrt{2}} e^{i \varphi} \notag
+\vect{e}^{+1} & =-\vect{e}_{\vect{r}} \frac{1}{\sqrt{2}} \sin \vartheta e^{-i \varphi}-\vect{e}_{\vartheta} \frac{1}{\sqrt{2}} \cos \vartheta e^{-i \varphi}+\vect{e}_{\varphi} \frac{i}{\sqrt{2}} e^{-i \varphi},  \notag\\
+\vect{e}^{0} & =\vect{e}_{r} \cos \vartheta-\vect{e}_{\vartheta} \sin \vartheta,  \label{chap1:eq:37}\\
+\vect{e}^{-1} & =\vect{e}_{r} \frac{1}{\sqrt{2}} \sin \vartheta e^{i \varphi}+\vect{e}_{\vartheta} \frac{1}{\sqrt{2}} \cos \vartheta e^{i \varphi}+\vect{e}_{\varphi} \frac{i}{\sqrt{2}} e^{i \varphi} .\notag
 \end{align}
 Spherical Covariant and Spherical Contravariant Basis Vectors
 \begin{align}
-\vect{e}_{+1} & =-\vect{e}^{-1}, & \vect{e}^{+1} & =-\vect{e}_{-1}  \notag\\
-\vect{e}_{0} & =\vect{e}^{0}, & \vect{e}^{0} & =\vect{e}_{0}  \label{chap1:eq:38}\\
-\vect{e}_{-1} & =-\vect{e}^{+1}, & \vect{e}^{-1} & =-\vect{e}_{+1} \notag
+\vect{e}_{+1} & =-\vect{e}^{-1}, & \vect{e}^{+1} & =-\vect{e}_{-1},  \notag\\
+\vect{e}_{0} & =\vect{e}^{0}, & \vect{e}^{0} & =\vect{e}_{0} , \label{chap1:eq:38}\\
+\vect{e}_{-1} & =-\vect{e}^{+1}, & \vect{e}^{-1} & =-\vect{e}_{+1}. \notag
 \end{align}
 Spherical Covariant and Helicity Covariant Basis Vectors
 \begin{align}
@@ -248,9 +256,9 @@ Spherical Covariant and Helicity Covariant Basis Vectors
 \end{align}
 Spherical Contravariant and Helicity Covariant Basis Vectors
 \begin{align}
-\vect{e}^{+1} & =-\vect{e}_{+1}^{\prime} \frac{1-\cos \vartheta}{2} e^{-i \varphi}-\vect{e}_{0}^{\prime} \frac{\sin \vartheta}{\sqrt{2}} \vect{e}^{-i \varphi}-\vect{e}_{-1}^{\prime} \frac{1+\cos \vartheta}{2} e^{-i \varphi}  \notag\\
-\vect{e}^{0} & =\vect{e}_{+1}^{\prime} \frac{\sin \vartheta}{\sqrt{2}}+\vect{e}_{0}^{\prime} \cos \vartheta-\vect{e}_{-1}^{\prime} \frac{\sin \vartheta}{\sqrt{2}}  \label{chap1:eq:40}\\
-\vect{e}^{-1} & =-\vect{e}_{+1}^{\prime} \frac{1+\cos \vartheta}{2} e^{i \varphi}+\vect{e}_{0}^{\prime} \frac{\sin \vartheta}{\sqrt{2}} e^{i \varphi}-\vect{e}_{-1}^{\prime} \frac{1-\cos \vartheta}{2} e^{i \varphi} \notag
+\vect{e}^{+1} & =-\vect{e}_{+1}^{\prime} \frac{1-\cos \vartheta}{2} e^{-i \varphi}-\vect{e}_{0}^{\prime} \frac{\sin \vartheta}{\sqrt{2}} \vect{e}^{-i \varphi}-\vect{e}_{-1}^{\prime} \frac{1+\cos \vartheta}{2} e^{-i \varphi} , \notag\\
+\vect{e}^{0} & =\vect{e}_{+1}^{\prime} \frac{\sin \vartheta}{\sqrt{2}}+\vect{e}_{0}^{\prime} \cos \vartheta-\vect{e}_{-1}^{\prime} \frac{\sin \vartheta}{\sqrt{2}}  ,\label{chap1:eq:40}\\
+\vect{e}^{-1} & =-\vect{e}_{+1}^{\prime} \frac{1+\cos \vartheta}{2} e^{i \varphi}+\vect{e}_{0}^{\prime} \frac{\sin \vartheta}{\sqrt{2}} e^{i \varphi}-\vect{e}_{-1}^{\prime} \frac{1-\cos \vartheta}{2} e^{i \varphi} \notag.
 \end{align}
 Spherical Covariant and Helicity Contravariant Basis Vectors
 \begin{align}
@@ -266,21 +274,21 @@ Spherical Contravariant and Helicity Contravariant Basis Vectors
 \end{align}
 Equations \eqref{chap1:eq:39}-\eqref{chap1:eq:42} may be written in a more compact form using the Wigner \(D\)-functions (see Chap. 4).
 \begin{gather}
-\vect{e}_{\mu}=\sum_{\nu} D_{-\nu-\mu}^{1}(0, \vartheta, \varphi) \vect{e}_{\nu}^{\prime}=\sum_{\nu}(-1)^{\nu} D_{\nu-\mu}^{1}(0, \vartheta, \varphi) \vect{e}^{\prime \nu}  \notag\\
-\vect{e}^{\mu}=(-1)^{\mu} \sum_{\nu} D_{-\nu \mu}^{1}(0, \vartheta, \varphi) \vect{e}_{\nu}^{\prime}=\sum_{\nu}(-1)^{\mu+\nu} D_{\nu \mu}^{1}(0, \vartheta, \varphi) \vect{e}^{\prime \nu}  \label{chap1:eq:43}\\
-(\mu, \nu= \pm 1,0) \notag
+\vect{e}_{\mu}=\sum_{\nu} D_{-\nu-\mu}^{1}(0, \vartheta, \varphi) \vect{e}_{\nu}^{\prime}=\sum_{\nu}(-1)^{\nu} D_{\nu-\mu}^{1}(0, \vartheta, \varphi) \vect{e}^{\prime \nu},  \notag\\
+\vect{e}^{\mu}=(-1)^{\mu} \sum_{\nu} D_{-\nu \mu}^{1}(0, \vartheta, \varphi) \vect{e}_{\nu}^{\prime}=\sum_{\nu}(-1)^{\mu+\nu} D_{\nu \mu}^{1}(0, \vartheta, \varphi) \vect{e}^{\prime \nu} , \label{chap1:eq:43}\\
+(\mu, \nu= \pm 1,0) .\notag
 \end{gather}
 (d) Helicity Covariant and Cartesian Basis Vectors
 \begin{align}
-\vect{e}_{+1}^{\prime} & =-\vect{e}_{x} \frac{1}{\sqrt{2}}(\cos \vartheta \cos \varphi-i \sin \varphi)-\vect{e}_{y} \frac{1}{\sqrt{2}}(\cos \vartheta \sin \varphi+i \cos \varphi)+\vect{e}_{z} \frac{1}{\sqrt{2}} \sin \vartheta  \notag\\
-\vect{e}_{0}^{\prime} & =\vect{e}_{x} \sin \vartheta \cos \varphi+\vect{e}_{y} \sin \vartheta \sin \varphi+\vect{e}_{z} \cos \vartheta  \label{chap1:eq:44}\\
-\vect{e}_{-1}^{\prime} & =\vect{e}_{x} \frac{1}{\sqrt{2}}(\cos \vartheta \cos \varphi+i \sin \varphi)+\vect{e}_{y} \frac{1}{\sqrt{2}}(\cos \vartheta \sin \varphi-i \cos \varphi)-\vect{e}_{z} \frac{1}{\sqrt{2}} \sin \vartheta \notag
+\vect{e}_{+1}^{\prime} & =-\vect{e}_{x} \frac{1}{\sqrt{2}}(\cos \vartheta \cos \varphi-i \sin \varphi)-\vect{e}_{y} \frac{1}{\sqrt{2}}(\cos \vartheta \sin \varphi+i \cos \varphi)+\vect{e}_{z} \frac{1}{\sqrt{2}} \sin \vartheta , \notag\\
+\vect{e}_{0}^{\prime} & =\vect{e}_{x} \sin \vartheta \cos \varphi+\vect{e}_{y} \sin \vartheta \sin \varphi+\vect{e}_{z} \cos \vartheta , \label{chap1:eq:44}\\
+\vect{e}_{-1}^{\prime} & =\vect{e}_{x} \frac{1}{\sqrt{2}}(\cos \vartheta \cos \varphi+i \sin \varphi)+\vect{e}_{y} \frac{1}{\sqrt{2}}(\cos \vartheta \sin \varphi-i \cos \varphi)-\vect{e}_{z} \frac{1}{\sqrt{2}} \sin \vartheta. \notag
 \end{align}
 Helicity Contravariant and Cartesian Basis Vectors
 \begin{align}
-\vect{e}^{\prime+1} & =-\vect{e}_{x} \frac{1}{\sqrt{2}}(\cos \vartheta \cos \varphi+i \sin \varphi)-\vect{e}_{y} \frac{1}{\sqrt{2}}(\cos \vartheta \sin \varphi-i \cos \varphi)+\vect{e}_{z} \frac{1}{\sqrt{2}} \sin \vartheta  \notag\\
-\vect{e}^{\prime 0} & =\vect{e}_{x} \sin \vartheta \cos \varphi+\vect{e}_{y} \sin \vartheta \sin \varphi+\vect{e}_{z} \cos \vartheta  \label{chap1:eq:45}\\
-\vect{e}^{\prime-1} & =\vect{e}_{x} \frac{1}{\sqrt{2}}(\cos \vartheta \cos \varphi-i \sin \varphi)+\vect{e}_{y} \frac{1}{\sqrt{2}}(\cos \vartheta \sin \varphi+i \cos \varphi)-\vect{e}_{z} \frac{1}{\sqrt{2}} \sin \vartheta \notag
+\vect{e}^{\prime+1} & =-\vect{e}_{x} \frac{1}{\sqrt{2}}(\cos \vartheta \cos \varphi+i \sin \varphi)-\vect{e}_{y} \frac{1}{\sqrt{2}}(\cos \vartheta \sin \varphi-i \cos \varphi)+\vect{e}_{z} \frac{1}{\sqrt{2}} \sin \vartheta  ,\notag\\
+\vect{e}^{\prime 0} & =\vect{e}_{x} \sin \vartheta \cos \varphi+\vect{e}_{y} \sin \vartheta \sin \varphi+\vect{e}_{z} \cos \vartheta  ,\label{chap1:eq:45}\\
+\vect{e}^{\prime-1} & =\vect{e}_{x} \frac{1}{\sqrt{2}}(\cos \vartheta \cos \varphi-i \sin \varphi)+\vect{e}_{y} \frac{1}{\sqrt{2}}(\cos \vartheta \sin \varphi+i \cos \varphi)-\vect{e}_{z} \frac{1}{\sqrt{2}} \sin \vartheta .\notag
 \end{align}
 Helicity and Polar Basis Vectors
 \begin{align}
@@ -320,9 +328,9 @@ Equations \eqref{chap1:eq:47}-\eqref{chap1:eq:50} may be written in a more compa
 \end{gather}
 Helicity Covariant and Helicity Contravariant Basis Vectors
 \begin{align}
-\vect{e}_{+1}^{\prime} & =-\vect{e}^{\prime-1}, & \vect{e}^{\prime+1} & =-\vect{e}_{-1}^{\prime}  \notag\\
-\vect{e}_{0}^{\prime} & =\vect{e}^{\prime 0}, & \vect{e}^{\prime 0} & =\vect{e}_{0}^{\prime}  \label{chap1:eq:52}\\
-\vect{e}_{-1}^{\prime} & =-\vect{e}^{\prime+1}, & \vect{e}^{\prime-1} & =-\vect{e}_{-1}^{\prime} \notag
+\vect{e}_{+1}^{\prime} & =-\vect{e}^{\prime-1}, & \vect{e}^{\prime+1} & =-\vect{e}_{-1}^{\prime}  ,\notag\\
+\vect{e}_{0}^{\prime} & =\vect{e}^{\prime 0}, & \vect{e}^{\prime 0} & =\vect{e}_{0}^{\prime}  ,\label{chap1:eq:52}\\
+\vect{e}_{-1}^{\prime} & =-\vect{e}^{\prime+1}, & \vect{e}^{\prime-1} & =-\vect{e}_{-1}^{\prime}. \notag
 \end{align}
 \section{Vectors. Tensors}
 Vectors and tensors are usually defined by transformation properties of their components under rotations of coordinate systems. The transformation rule for cartesian components of vectors and tensors is given below in Sec. 1.4 (Eqs. \eqref{chap1:eq:170}-\eqref{chap1:eq:175}). The transformation properties of spherical components of vectors and irreducible tensors are discussed in Chap. 3.
@@ -330,7 +338,7 @@ Vectors and tensors are usually defined by transformation properties of their co
 \subsection{Vector Components}
 Any vector can be expanded in terms of basis vectors, i.e., written as
 \begin{equation}
-\vect{A}=\sum_{\alpha} A^{\alpha} \vect{e}_{\alpha}=\sum_{\alpha} A_{\alpha} \vect{e}^{\alpha} \label{chap1:eq:53}
+\vect{A}=\sum_{\alpha} A^{\alpha} \vect{e}_{\alpha}=\sum_{\alpha} A_{\alpha} \vect{e}^{\alpha} .\label{chap1:eq:53}
 \end{equation}
 The expansion coefficients \(A_{\alpha}\) are called the covariant components of the vector, and \(A^{\alpha}\) are the contravariant vector components
 \begin{equation}
@@ -338,7 +346,7 @@ A_{\alpha}=\vect{A} \cdot \vect{e}_{\alpha}, \quad A^{\alpha}=\vect{A} \cdot \ve
 \end{equation}
 In a cartesian coordinate system one has
 \begin{equation}
-\vect{A}=A_{x} \vect{e}_{x}+A_{y} \vect{e}_{y}+A_{z} \vect{e}_{z}=A^{x} \vect{e}_{x}+A^{y} \vect{e}_{y}+A^{z} \vect{e}_{z} \label{chap1:eq:55}
+\vect{A}=A_{x} \vect{e}_{x}+A_{y} \vect{e}_{y}+A_{z} \vect{e}_{z}=A^{x} \vect{e}_{x}+A^{y} \vect{e}_{y}+A^{z} \vect{e}_{z} .\label{chap1:eq:55}
 \end{equation}
 The covariant cartesian components of a vector coincide with the contravariant ones.\\
 In a polar coordinate system
@@ -396,7 +404,7 @@ The expressions for cartesian components of \(\vect{A}\) in terms of spherical h
 \begin{align}
 A_{x} & =\sqrt{\frac{2 \pi}{3}}|\vect{A}|\left\{Y_{1-1}(\vartheta, \varphi)-Y_{1+1}(\vartheta, \varphi)\right\},  \notag\\
 A_{y} & =i \sqrt{\frac{2 \pi}{3}}|\vect{A}|\left\{Y_{1-1}(\vartheta, \varphi)+Y_{1+1}(\vartheta, \varphi)\right\},  \label{chap1:eq:66}\\
-A_{z} & =\sqrt{\frac{4 \pi}{3}}|\vect{A}| Y_{10}(\vartheta, \varphi) \notag
+A_{z} & =\sqrt{\frac{4 \pi}{3}}|\vect{A}| Y_{10}(\vartheta, \varphi) .\notag
 \end{align}
 \begin{table}[tbh]
   \scriptsize
@@ -473,7 +481,7 @@ r & -\frac{\sin \vartheta}{\sqrt{2}} e^{i \varphi} & \cos \vartheta & \frac{\sin
 x & y & z \\
 -\frac{1}{\sqrt{2}} & \frac{i}{\sqrt{2}} & 0 \\
 0 & 0 & 1 \\
-\frac{1}{\sqrt{2}} & \cdot \frac{i}{\sqrt{2}} & 0
+\frac{1}{\sqrt{2}} &   \frac{i}{\sqrt{2}} & 0
 \end{pmatrix} \\
 & \left.\begin{array}{c}
 r \\
@@ -511,7 +519,7 @@ z \\
 \end{array}\begin{pmatrix}
 -\frac{1}{\sqrt{2}} & \frac{i}{\sqrt{2}} & 0 \\
 0 & 0 & 1 \\
-\frac{1}{\sqrt{2}} & \cdot \frac{i}{\sqrt{2}} & 0
+\frac{1}{\sqrt{2}} & \, \frac{i}{\sqrt{2}} & 0
 \end{pmatrix} \\
 & \left.\left.\begin{array}{c}
 M(r, \vartheta, \varphi \longleftarrow x, y, z) \\
@@ -546,11 +554,11 @@ r \\
 \subsection{Scalar Product of Vectors}
 The scalar product of vectors \(\vect{A}\) and \(\vect{B}\) in an arbitrary orthonormal basis is defined by
 \begin{equation}
-\vect{A} \cdot \vect{B}=\sum_{\alpha} A_{\alpha} B^{\alpha}=\sum_{\alpha} A^{\alpha} B_{\alpha} \label{chap1:eq:67}
+\vect{A} \cdot \vect{B}=\sum_{\alpha} A_{\alpha} B^{\alpha}=\sum_{\alpha} A^{\alpha} B_{\alpha}. \label{chap1:eq:67}
 \end{equation}
 In a cartesian coordinate system we have
 \begin{equation}
-\vect{A} \cdot \vect{B}=A_{x} B_{x}+A_{y} B_{y}+A_{z} B_{z} \label{chap1:eq:68}
+\vect{A} \cdot \vect{B}=A_{x} B_{x}+A_{y} B_{y}+A_{z} B_{z}. \label{chap1:eq:68}
 \end{equation}
 For polar coordinates the scalar product is given by
 \begin{equation}
@@ -558,11 +566,11 @@ For polar coordinates the scalar product is given by
 \end{equation}
 Equation \eqref{chap1:eq:69} is valid only if \(\vect{A}\) and \(\vect{B}\) do not contain derivatives because the polar basis vectors depend on the polar angles \(\vartheta, \varphi\) (see Section 1.1). In spherical coordinates we have
 \begin{equation}
-\vect{A} \cdot \vect{B}=\sum_{\mu} A^{\mu} B_{\mu}=\sum_{\mu} A_{\mu} B^{\mu}=\sum_{\mu}(-1)^{\mu} A_{\mu} B_{-\mu}=\sum_{\mu}(-1)^{\mu} A^{\mu} B^{-\mu}, \quad(\mu= \pm 1,0) \label{chap1:eq:70}
+\vect{A} \cdot \vect{B}=\sum_{\mu} A^{\mu} B_{\mu}=\sum_{\mu} A_{\mu} B^{\mu}=\sum_{\mu}(-1)^{\mu} A_{\mu} B_{-\mu}=\sum_{\mu}(-1)^{\mu} A^{\mu} B^{-\mu}, \quad(\mu= \pm 1,0) ,\label{chap1:eq:70}
 \end{equation}
 or, in a more detailed form,
 \begin{equation}
-\vect{A} \cdot \vect{B}=-A_{+1} B_{-1}+A_{0} B_{0}-A_{-1} B_{+1} \label{chap1:eq:71}
+\vect{A} \cdot \vect{B}=-A_{+1} B_{-1}+A_{0} B_{0}-A_{-1} B_{+1} ,\label{chap1:eq:71}
 \end{equation}
 The scalar product in terms of helicity components of vectors is similar to \eqref{chap1:eq:70}-\eqref{chap1:eq:71}. The scalar product of vectors is invariant with respect to rotations of the coordinate system.
 
@@ -573,7 +581,7 @@ In a cartesian coordinate system the vector product of vectors \(\vect{A}\) and 
 \vect{e}_{x} & \vect{e}_{y} & \vect{e}_{z}  \label{chap1:eq:72}\\
 A_{x} & A_{y} & A_{z} \\
 B_{x} & B_{y} & B_{z}
-\end{array}\right|=\sum_{i=x, y, z}\left[\vect{A} \times \vect{B}\right]_{i} \vect{e}_{i}
+\end{array}\right|=\sum_{i=x, y, z}\left[\vect{A} \times \vect{B}\right]_{i} \vect{e}_{i},
 \end{equation}
 where
 \begin{align}
@@ -591,13 +599,13 @@ In the polar coordinate system
 \vect{e}_{\vect{r}} & \vect{e}_{\vartheta} & \vect{e}_{\varphi}  \label{chap1:eq:75}\\
 A_{r} & A_{\vartheta} & A_{\varphi} \\
 B_{r} & B_{\vartheta} & B_{\varphi}
-\end{array}\right|=\sum_{\alpha=r, \vartheta, \varphi}[\vect{A} \times \vect{B}]_{\alpha} \vect{e}_{\alpha}
+\end{array}\right|=\sum_{\alpha=r, \vartheta, \varphi}[\vect{A} \times \vect{B}]_{\alpha} \vect{e}_{\alpha},
 \end{equation}
 where
 \begin{align}
-{[\vect{A} \times \vect{B}]_{r} } & =A_{\vartheta} B_{\varphi}-A_{\varphi} B_{\vartheta}  \notag\\
-{[\vect{A} \times \vect{B}]_{\vartheta} } & =A_{\varphi} B_{r}-A_{r} B_{\varphi}  \label{chap1:eq:76}\\
-{[\vect{A} \times \vect{B}]_{\varphi} } & =A_{r} B_{\vartheta}-A_{\vartheta} B_{r} \notag
+{[\vect{A} \times \vect{B}]_{r} } & =A_{\vartheta} B_{\varphi}-A_{\varphi} B_{\vartheta} , \notag\\
+{[\vect{A} \times \vect{B}]_{\vartheta} } & =A_{\varphi} B_{r}-A_{r} B_{\varphi} , \label{chap1:eq:76}\\
+{[\vect{A} \times \vect{B}]_{\varphi} } & =A_{r} B_{\vartheta}-A_{\vartheta} B_{r} \notag .
 \end{align}
 Equation \eqref{chap1:eq:76} is valid only if \(\vect{A}\) and \(\vect{B}\) are not differential operators.\\
 In the spherical coordinate system
@@ -610,23 +618,24 @@ B_{+1} & B_{0} & B_{-1}
 \vect{e}^{+1} & \vect{e}^{0} & \vect{e}^{-1} \\
 A^{+1} & A^{0} & A^{-1} \\
 B^{+1} & B^{0} & B^{-1}
-\end{array}\right|=\sum_{\mu= \pm 1,0}[\vect{A} \times \vect{B}]_{\mu} \vect{e}^{\mu}=\sum_{\mu= \pm 1,0}[\vect{A} \times \vect{B}]^{\mu} \vect{e}_{\mu}
+\end{array}\right|=\sum_{\mu= \pm 1,0}[\vect{A} \times \vect{B}]_{\mu} \vect{e}^{\mu}=\sum_{\mu= \pm 1,0}[\vect{A} \times \vect{B}]^{\mu} \vect{e}_{\mu},
 \end{equation}
 where
 \begin{align}
-{[\vect{A} \times \vect{B}]_{+1} } & =i\left(A_{0} B_{+1}-A_{+1} B_{0}\right)=i\left(A^{-1} B^{0}-A^{0} B^{-1}\right)  \notag\\
-{[\vect{A} \times \vect{B}]_{0} } & =i\left(A_{-1} B_{+1}-A_{+1} B_{-1}\right)=i\left(A^{+1} B^{-1}-A^{-1} B^{+1}\right)  \label{chap1:eq:78}\\
-{[\vect{A} \times \vect{B}]_{-1} } & =i\left(A_{-1} B_{0}-A_{0} B_{-1}\right)=i\left(A^{0} B^{+1}-A^{+1} B^{0}\right)  \notag\\
-&  \notag\\
-{[\vect{A} \times \vect{B}]^{+1} } & =i\left(A_{0} B_{-1}-A_{-1} B_{0}\right)=i\left(A^{+1} B^{0}-A^{0} B^{+1}\right)  \label{chap1:eq:79}\\
-{[\vect{A} \times \vect{B}]^{0} } & =i\left(A_{-1} B_{+1}-A_{+1} B_{-1}\right)=i\left(A^{+1} B^{-1}-A^{-1} B^{+1}\right)  \notag\\
-{[\vect{A} \times \vect{B}]^{-1} } & =i\left(A_{+1} B_{0}-A_{0} B_{+1}\right)=i\left(A^{0} B^{-1}-A^{-1} B_{0}\right) \notag
+{[\vect{A} \times \vect{B}]_{+1} } & =i\left(A_{0} B_{+1}-A_{+1} B_{0}\right)=i\left(A^{-1} B^{0}-A^{0} B^{-1}\right),  \notag\\
+{[\vect{A} \times \vect{B}]_{0} } & =i\left(A_{-1} B_{+1}-A_{+1} B_{-1}\right)=i\left(A^{+1} B^{-1}-A^{-1} B^{+1}\right) , \label{chap1:eq:78}\\
+{[\vect{A} \times \vect{B}]_{-1} } & =i\left(A_{-1} B_{0}-A_{0} B_{-1}\right)=i\left(A^{0} B^{+1}-A^{+1} B^{0}\right) .
+\end{align}
+\begin{align}
+{[\vect{A} \times \vect{B}]^{+1} } & =i\left(A_{0} B_{-1}-A_{-1} B_{0}\right)=i\left(A^{+1} B^{0}-A^{0} B^{+1}\right)  ,\label{chap1:eq:79}\\
+{[\vect{A} \times \vect{B}]^{0} } & =i\left(A_{-1} B_{+1}-A_{+1} B_{-1}\right)=i\left(A^{+1} B^{-1}-A^{-1} B^{+1}\right) , \notag\\
+{[\vect{A} \times \vect{B}]^{-1} } & =i\left(A_{+1} B_{0}-A_{0} B_{+1}\right)=i\left(A^{0} B^{-1}-A^{-1} B_{0}\right) .\notag
 \end{align}
 Equations \eqref{chap1:eq:78}-\eqref{chap1:eq:79} may be written in a more compact form using the Clebsch-Gordan coefficients (see Chap. 8)
 \begin{equation}
 \begin{aligned}
-& {[\vect{A} \times \vect{B}]_{\mu}=-i \sqrt{2} \sum_{\nu \lambda} \clebsch{1}{\nu}{1}{\lambda}{1}{\mu} A_{\nu} B_{\lambda}} \\
-& {[\vect{A} \times \vect{B}]^{\mu}=i \sqrt{2} \sum_{\nu \lambda} \clebsch{1}{\nu}{1}{\lambda}{1}{\mu} A^{\nu} B^{\lambda},}
+& {[\vect{A} \times \vect{B}]_{\mu}=-i \sqrt{2} \sum_{\nu \lambda} \clebsch{1}{\nu}{1}{\lambda}{1}{\mu} A_{\nu} B_{\lambda}} ,\\
+& {[\vect{A} \times \vect{B}]^{\mu}=i \sqrt{2} \sum_{\nu \lambda} \clebsch{1}{\nu}{1}{\lambda}{1}{\mu} A^{\nu} B^{\lambda}},
 \end{aligned}
  \quad(\mu, \nu, \lambda= \pm 1,0) .
 \end{equation}
@@ -675,14 +684,14 @@ The tensor \(\varepsilon_{i k l}\) has the following properties: The product of 
 \delta_{i r} & \delta_{i s} & \delta_{i t}  \label{chap1:eq:87}\\
 \delta_{k r} & \delta_{k s} & \delta_{k t} \\
 \delta_{l r} & \delta_{l s} & \delta_{l t}
-\end{array}\right|=\delta_{i r} \delta_{k s} \delta_{l t}+\delta_{i s} \delta_{k t} \delta_{l r}+\delta_{i t} \delta_{k r} \delta_{l s}-\delta_{i r} \delta_{k t} \delta_{l s}-\delta_{i s} \delta_{k r} \delta_{l t}-\delta_{i t} \delta_{k s} \delta_{l r}
+\end{array}\right|=\delta_{i r} \delta_{k s} \delta_{l t}+\delta_{i s} \delta_{k t} \delta_{l r}+\delta_{i t} \delta_{k r} \delta_{l s}-\delta_{i r} \delta_{k t} \delta_{l s}-\delta_{i s} \delta_{k r} \delta_{l t}-\delta_{i t} \delta_{k s} \delta_{l r}.
 \end{equation}
 By summing over a pair of indices, one obtains
 \begin{equation}
 \sum_{i} \varepsilon_{i k l} \varepsilon_{i s t}=\left|\begin{array}{ll}
 \delta_{k s} & \delta_{k t}  \label{chap1:eq:88}\\
 \delta_{l s} & \delta_{l t}
-\end{array}\right|=\delta_{k s} \delta_{l t}-\delta_{k t} \delta_{l s}
+\end{array}\right|=\delta_{k s} \delta_{l t}-\delta_{k t} \delta_{l s}.
 \end{equation}
 Summation over two pairs of indices yields
 \begin{equation}
@@ -702,77 +711,77 @@ A_{z x} & A_{z y} & A_{z z}
 \end{equation}
 \section{Differential Operations}
 \subsection{Operator ∇}
-The operator \(\nabla\) (nabla) is the basic vector differential operator.\\
-Cartesian components of \(\nabla\) are given by
+The operator \(\boldsymbol{\nabla}\) (nabla) is the basic vector differential operator.\\
+Cartesian components of \(\boldsymbol{\nabla}\) are given by
 \begin{equation}
 \nabla_{x}=\frac{\partial}{\partial x}, \quad \nabla_{y}=\frac{\partial}{\partial y}, \quad \nabla_{z}=\frac{\partial}{\partial z} . \label{chap1:eq:92}
 \end{equation}
 These components may be expressed in terms of polar coordinates as
 \begin{align}
-& \nabla_{x}=\sin \vartheta \cos \varphi \frac{\partial}{\partial r}+\frac{\cos \vartheta \cos \varphi}{r} \cdot \frac{\partial}{\partial \vartheta}-\frac{\sin \varphi}{r \sin \vartheta} \cdot \frac{\partial}{\partial \varphi},  \notag\\
-& \nabla_{y}=\sin \vartheta \sin \varphi \frac{\partial}{\partial r}+\frac{\cos \vartheta \sin \varphi}{r} \cdot \frac{\partial}{\partial \vartheta}+\frac{\cos \varphi}{r \sin \vartheta} \cdot \frac{\partial}{\partial \varphi},  \label{chap1:eq:93}\\
-& \nabla_{z}=\cos \vartheta \frac{\partial}{\partial r}-\frac{\sin \vartheta}{r} \cdot \frac{\partial}{\partial \vartheta} . \notag
+& \nabla_{x}=\sin \vartheta \cos \varphi \frac{\partial}{\partial r}+\frac{\cos \vartheta \cos \varphi}{r} \, \frac{\partial}{\partial \vartheta}-\frac{\sin \varphi}{r \sin \vartheta} \, \frac{\partial}{\partial \varphi},  \notag\\
+& \nabla_{y}=\sin \vartheta \sin \varphi \frac{\partial}{\partial r}+\frac{\cos \vartheta \sin \varphi}{r} \, \frac{\partial}{\partial \vartheta}+\frac{\cos \varphi}{r \sin \vartheta} \, \frac{\partial}{\partial \varphi},  \label{chap1:eq:93}\\
+& \nabla_{z}=\cos \vartheta \frac{\partial}{\partial r}-\frac{\sin \vartheta}{r} \, \frac{\partial}{\partial \vartheta} . \notag
 \end{align}
 An expansion of the operator ∇ in terms of spherical basis vectors reads
 \begin{equation}
-\nabla=\sum_{\mu}(-1)^{\mu} \vect{e}_{\mu} \nabla_{-\mu}=-\vect{e}_{+1} \nabla_{-1}+\vect{e}_{0} \nabla_{0}-\vect{e}_{-1} \nabla_{+1}, \label{chap1:eq:94}
+\boldsymbol{\nabla}=\sum_{\mu}(-1)^{\mu} \vect{e}_{\mu} \nabla_{-\mu}=-\vect{e}_{+1} \nabla_{-1}+\vect{e}_{0} \nabla_{0}-\vect{e}_{-1} \nabla_{+1}, \label{chap1:eq:94}
 \end{equation}
-where spherical components of \(\nabla\) are given by
+where spherical components of \(\boldsymbol{\nabla}\) are given by
 \begin{align}
-\nabla_{+1} & =-\frac{1}{\sqrt{2}}\left(\frac{\partial}{\partial x}+i \frac{\partial}{\partial y}\right)  \notag\\
-\nabla_{0} & =\frac{\partial}{\partial z}  \label{chap1:eq:95}\\
-\nabla_{-1} & =\frac{1}{\sqrt{2}}\left(\frac{\partial}{\partial x}-i \frac{\partial}{\partial y}\right) \notag
+\nabla_{+1} & =-\frac{1}{\sqrt{2}}\left(\frac{\partial}{\partial x}+i \frac{\partial}{\partial y}\right) , \notag\\
+\nabla_{0} & =\frac{\partial}{\partial z} , \label{chap1:eq:95}\\
+\nabla_{-1} & =\frac{1}{\sqrt{2}}\left(\frac{\partial}{\partial x}-i \frac{\partial}{\partial y}\right) .\notag
 \end{align}
-Spherical components of \(\nabla\) in a polar coordinate system have the form
+Spherical components of \(\boldsymbol{\nabla}\) in a polar coordinate system have the form
 \begin{align}
-\nabla_{+1} & =-\frac{e^{i \varphi}}{\sqrt{2}}\left\{\sin \vartheta \frac{\partial}{\partial r}+\frac{\cos \vartheta}{r} \cdot \frac{\partial}{\partial \vartheta}+\frac{i}{r \sin \vartheta} \cdot \frac{\partial}{\partial \varphi}\right\},  \notag\\
-\nabla_{0} & =\cos \vartheta \frac{\partial}{\partial r}-\frac{\sin \vartheta}{r} \cdot \frac{\partial}{\partial \vartheta},  \label{chap1:eq:96}\\
-\nabla_{-1} & =\frac{e^{-i \varphi}}{\sqrt{2}}\left\{\sin \vartheta \frac{\partial}{\partial r}+\frac{\cos \vartheta}{r} \cdot \frac{\partial}{\partial \vartheta}-\frac{i}{r \sin \vartheta} \cdot \frac{\partial}{\partial \varphi}\right\} . \notag
+\nabla_{+1} & =-\frac{e^{i \varphi}}{\sqrt{2}}\left\{\sin \vartheta \frac{\partial}{\partial r}+\frac{\cos \vartheta}{r} \, \frac{\partial}{\partial \vartheta}+\frac{i}{r \sin \vartheta} \, \frac{\partial}{\partial \varphi}\right\},  \notag\\
+\nabla_{0} & =\cos \vartheta \frac{\partial}{\partial r}-\frac{\sin \vartheta}{r} \, \frac{\partial}{\partial \vartheta},  \label{chap1:eq:96}\\
+\nabla_{-1} & =\frac{e^{-i \varphi}}{\sqrt{2}}\left\{\sin \vartheta \frac{\partial}{\partial r}+\frac{\cos \vartheta}{r} \, \frac{\partial}{\partial \vartheta}-\frac{i}{r \sin \vartheta} \, \frac{\partial}{\partial \varphi}\right\} . \notag
 \end{align}
-An expansion of \(\nabla\) in terms of polar basis vectors may be written as
+An expansion of \(\boldsymbol{\nabla}\) in terms of polar basis vectors may be written as
 \begin{equation}
-\nabla=\vect{e}_{r} \nabla_{r}+\vect{e}_{\vartheta} \nabla_{\vartheta}+\vect{e}_{\varphi} \nabla_{\varphi}, \label{chap1:eq:97}
+\boldsymbol{\nabla}=\vect{e}_{r} \nabla_{r}+\vect{e}_{\vartheta} \nabla_{\vartheta}+\vect{e}_{\varphi} \nabla_{\varphi}, \label{chap1:eq:97}
 \end{equation}
 where
 \begin{equation}
-\nabla_{r}=\frac{\partial}{\partial r}, \quad \nabla_{\vartheta}=\frac{1}{r} \cdot \frac{\partial}{\partial \vartheta}, \quad \nabla_{\varphi}=\frac{1}{r \sin \vartheta} \cdot \frac{\partial}{\partial \varphi} . \label{chap1:eq:98}
+\nabla_{r}=\frac{\partial}{\partial r}, \quad \nabla_{\vartheta}=\frac{1}{r} \, \frac{\partial}{\partial \vartheta}, \quad \nabla_{\varphi}=\frac{1}{r \sin \vartheta} \, \frac{\partial}{\partial \varphi} . \label{chap1:eq:98}
 \end{equation}
 The order of operator components relative to the basis vectors in Eq. \eqref{chap1:eq:97} is essential because \(\vect{e}_{r}, \vect{e}_{\vartheta}, \vect{e}_{\varphi}\) depend on \(\vartheta, \varphi\).
 
 The operator ∇ may be written in the form
 \begin{equation}
-\nabla=\vect{n} \frac{\partial}{\partial r}+\frac{1}{r} \nabla_{\Omega}, \label{chap1:eq:99}
+\boldsymbol{\nabla}=\vect{n} \frac{\partial}{\partial r}+\frac{1}{r} \boldsymbol\nabla_{\Omega}, \label{chap1:eq:99}
 \end{equation}
-where \(\nabla_{\Omega}\) is the angular part of \(\nabla\), and \(\vect{n}=\vect{r} / r\) is the unit vector determined by angles \(\vartheta\) and \(\varphi\). The operator \(\nabla_{\Omega}\) acts only on variables \(\vartheta\) and \(\varphi\). In the polar coordinate system it has only two components
+where \(\boldsymbol{\nabla}_{\Omega}\) is the angular part of \(\boldsymbol{\nabla}\), and \(\vect{n}=\vect{r} / r\) is the unit vector determined by angles \(\vartheta\) and \(\varphi\). The operator \(\boldsymbol{\nabla}_{\Omega}\) acts only on variables \(\vartheta\) and \(\varphi\). In the polar coordinate system it has only two components
 \begin{equation}
-\left(\nabla_{\Omega}\right)_{\vartheta}=\frac{\partial}{\partial \vartheta}, \quad\left(\nabla_{\Omega}\right)_{\varphi}=\frac{1}{\sin \vartheta} \cdot \frac{\partial}{\partial \varphi} . \label{chap1:eq:100}
+\left(\nabla_{\Omega}\right)_{\vartheta}=\frac{\partial}{\partial \vartheta}, \quad\left(\nabla_{\Omega}\right)_{\varphi}=\frac{1}{\sin \vartheta} \, \frac{\partial}{\partial \varphi} . \label{chap1:eq:100}
 \end{equation}
-The operator \(\nabla_{\Omega}\) may be written as
+The operator \(\boldsymbol{\nabla}_{\Omega}\) may be written as
 \begin{equation}
-\nabla_{\Omega}=-i \vect{n} \times \hat{\vect{L}}, \label{chap1:eq:101}
+\boldsymbol{\nabla}_{\Omega}=-i \vect{n} \times \hat{\vect{L}}, \label{chap1:eq:101}
 \end{equation}
-where \(\widehat{\vect{L}}\) is the orbital angular momentum operator (see Sec. 2.2).
+where \(\hat{\vect{L}}\) is the orbital angular momentum operator (see Sec. 2.2).
 
 \subsection{Laplace Operator}
 The Laplace operator (Laplacian) \(\Delta\) is a scalar differential operator
 \begin{equation}
-\Delta=\nabla^{2} . \label{chap1:eq:102}
+\Delta=\boldsymbol{\nabla}^{2} . \label{chap1:eq:102}
 \end{equation}
 In the cartesian coordinate system \(\Delta\) has the form
 \begin{equation}
-\Delta=\frac{\partial^{2}}{\partial x^{2}}+\frac{\partial^{2}}{\partial y^{2}}+\frac{\partial^{2}}{\partial z^{2}} \label{chap1:eq:103}
+\Delta=\frac{\partial^{2}}{\partial x^{2}}+\frac{\partial^{2}}{\partial y^{2}}+\frac{\partial^{2}}{\partial z^{2}} .\label{chap1:eq:103}
 \end{equation}
 In the polar coordinate system it is given by
 \begin{equation}
-\Delta=\frac{1}{r^{2}} \cdot \frac{\partial}{\partial r}\left\{r^{2} \frac{\partial}{\partial r}\right\}+\frac{1}{r^{2} \sin \vartheta} \cdot \frac{\partial}{\partial \vartheta}\left\{\sin \vartheta \frac{\partial}{\partial \vartheta}\right\}+\frac{1}{r^{2} \sin ^{2} \vartheta} \cdot \frac{\partial^{2}}{\partial \varphi^{2}} . \label{chap1:eq:104}
+\Delta=\frac{1}{r^{2}} \, \frac{\partial}{\partial r}\left\{r^{2} \frac{\partial}{\partial r}\right\}+\frac{1}{r^{2} \sin \vartheta} \, \frac{\partial}{\partial \vartheta}\left\{\sin \vartheta \frac{\partial}{\partial \vartheta}\right\}+\frac{1}{r^{2} \sin ^{2} \vartheta} \, \frac{\partial^{2}}{\partial \varphi^{2}} . \label{chap1:eq:104}
 \end{equation}
 The operator \(\Delta\) may also be written as
 \begin{equation}
-\Delta=\frac{1}{r^{2}} \cdot \frac{\partial}{\partial r}\left\{r^{2} \frac{\partial}{\partial r}\right\}+\frac{1}{r^{2}} \Delta_{\Omega} \label{chap1:eq:105}
+\Delta=\frac{1}{r^{2}} \, \frac{\partial}{\partial r}\left\{r^{2} \frac{\partial}{\partial r}\right\}+\frac{1}{r^{2}} \Delta_{\Omega}, \label{chap1:eq:105}
 \end{equation}
 where \(\Delta_{\Omega}\) is the angular part of \(\Delta\)
 \begin{equation}
-\Delta_{\Omega}=\nabla_{\Omega}^{2}=\frac{1}{\sin \vartheta} \cdot \frac{\partial}{\partial \vartheta}\left\{\sin \vartheta \frac{\partial}{\partial \vartheta}\right\}+\frac{1}{\sin ^{2} \vartheta} \cdot \frac{\partial^{2}}{\partial \varphi^{2}} \label{chap1:eq:106}
+\Delta_{\Omega}=\boldsymbol{\nabla}_{\Omega}^{2}=\frac{1}{\sin \vartheta} \, \frac{\partial}{\partial \vartheta}\left\{\sin \vartheta \frac{\partial}{\partial \vartheta}\right\}+\frac{1}{\sin ^{2} \vartheta} \, \frac{\partial^{2}}{\partial \varphi^{2}} \label{chap1:eq:106}
 \end{equation}
 expressed in terms of the orbital angular momentum operator \(\widehat{\vect{L}}\) as
 \begin{equation}
@@ -781,20 +790,20 @@ expressed in terms of the orbital angular momentum operator \(\widehat{\vect{L}}
 \subsection{Differential Operations on Scalars and Vectors}
 The gradient of a scalar function \(\Phi(\vect{r})\) is the vector defined in terms of the operator ∇ as
 \begin{equation}
-\operatorname{grad} \Phi(\vect{r})=\nabla \Phi(\vect{r}) \label{chap1:eq:108}
+\operatorname{grad} \Phi(\vect{r})=\boldsymbol{\nabla} \Phi(\vect{r}) \label{chap1:eq:108}
 \end{equation}
-The components of grad \(\Phi\) may be obtained by use of Eqs. \eqref{chap1:eq:92}-\eqref{chap1:eq:98} for the components of \(\nabla\). If \(\Phi\) depends only on \(r=|\vect{r}|\) (spherically-symmetric field), then
+The components of grad \(\Phi\) may be obtained by use of Eqs. \eqref{chap1:eq:92}-\eqref{chap1:eq:98} for the components of \(\boldsymbol{\nabla}\). If \(\Phi\) depends only on \(r=|\vect{r}|\) (spherically-symmetric field), then
 \begin{equation}
-\nabla \Phi(r)=\vect{n} \frac{d \Phi(r)}{d r} \label{chap1:eq:109}
+\boldsymbol{\nabla} \Phi(r)=\vect{n} \frac{d \Phi(r)}{d r} \label{chap1:eq:109}
 \end{equation}
 where \(\vect{n}=\vect{r} / \vect{r}\).\\
 The directional derivative of a scalar function \(\Phi(\vect{r})\) in the direction specified by a unit vector \(\vect{u}\) is the scalar defined by
 \begin{equation}
-\frac{d}{d s} \Phi(\vect{r})=(\vect{u} \cdot \nabla) \Phi(\vect{r}) \label{chap1:eq:110}
+\frac{d}{d s} \Phi(\vect{r})=(\vect{u} \cdot \boldsymbol{\nabla}) \Phi(\vect{r}) .\label{chap1:eq:110}
 \end{equation}
 The divergence of a vector field \(\vect{A}(\vect{r})\) is the scalar product of ∇ and \(\vect{A}\)
 \begin{equation}
-\operatorname{div} \vect{A}=\nabla \cdot \vect{A} . \label{chap1:eq:111}
+\operatorname{div} \vect{A}=\boldsymbol{\nabla} \cdot \vect{A} . \label{chap1:eq:111}
 \end{equation}
 The expression for \(\operatorname{div} \vect{A}\) in a cartesian coordinate system is
 \begin{equation}
@@ -802,25 +811,25 @@ The expression for \(\operatorname{div} \vect{A}\) in a cartesian coordinate sys
 \end{equation}
 and in a spherical coordinate system it has the form
 \begin{equation}
-\operatorname{div} \vect{A}=-\nabla_{+1} A_{-1}+\nabla_{0} A_{0}-\nabla_{-1} A_{+1}=\sum_{\mu= \pm 1,0}(-1)^{\mu} \nabla_{\mu} A_{-\mu} \label{chap1:eq:113}
+\operatorname{div} \vect{A}=-\nabla_{+1} A_{-1}+\nabla_{0} A_{0}-\nabla_{-1} A_{+1}=\sum_{\mu= \pm 1,0}(-1)^{\mu} \nabla_{\mu} A_{-\mu} .\label{chap1:eq:113}
 \end{equation}
 where the spherical components \(\nabla_{\mu}\) are given by Eqs. \eqref{chap1:eq:95}-\eqref{chap1:eq:96}. In the polar coordinate system we have
 \begin{equation}
-\operatorname{div} \vect{A}=\frac{1}{r^{2}} \cdot \frac{\partial}{\partial r}\left(r^{2} A_{r}\right)+\frac{1}{r \sin \vartheta} \cdot \frac{\partial}{\partial \vartheta}\left(\sin \vartheta A_{\vartheta}\right)+\frac{1}{r \sin \vartheta} \cdot \frac{\partial A_{\varphi}}{\partial \varphi} . \label{chap1:eq:114}
+\operatorname{div} \vect{A}=\frac{1}{r^{2}} \, \frac{\partial}{\partial r}\left(r^{2} A_{r}\right)+\frac{1}{r \sin \vartheta} \, \frac{\partial}{\partial \vartheta}\left(\sin \vartheta A_{\vartheta}\right)+\frac{1}{r \sin \vartheta} \, \frac{\partial A_{\varphi}}{\partial \varphi} . \label{chap1:eq:114}
 \end{equation}
-The curl of a vector field \(\vect{A}(\vect{r})\) is the vector product of \(\nabla\) and \(\vect{A}\)
+The curl of a vector field \(\vect{A}(\vect{r})\) is the vector product of \(\boldsymbol{\nabla}\) and \(\vect{A}\)
 \begin{equation}
-\operatorname{curl} \vect{A}=\nabla \times \vect{A} \label{chap1:eq:115}
+\operatorname{curl} \vect{A}=\nabla \times \vect{A} .\label{chap1:eq:115}
 \end{equation}
 The cartesian components of curl \(\vect{A}\) are given by
 \begin{align}
-& {[\operatorname{curl} \vect{A}]_{x}=\frac{\partial A_{z}}{\partial y}-\frac{\partial A_{y}}{\partial z}}  \notag\\
-& {[\operatorname{curl} \vect{A}]_{y}=\frac{\partial A_{x}}{\partial z}-\frac{\partial A_{z}}{\partial x}}  \label{chap1:eq:116}\\
-& {[\operatorname{curl} \vect{A}]_{z}=\frac{\partial A_{y}}{\partial x}-\frac{\partial A_{x}}{\partial y}} \notag
+& {[\operatorname{curl} \vect{A}]_{x}=\frac{\partial A_{z}}{\partial y}-\frac{\partial A_{y}}{\partial z}}  ,\notag\\
+& {[\operatorname{curl} \vect{A}]_{y}=\frac{\partial A_{x}}{\partial z}-\frac{\partial A_{z}}{\partial x}} , \label{chap1:eq:116}\\
+& {[\operatorname{curl} \vect{A}]_{z}=\frac{\partial A_{y}}{\partial x}-\frac{\partial A_{x}}{\partial y}} ,\notag
 \end{align}
 or, in a more compact form,
 \begin{equation}
-[\operatorname{curl} \vect{A}]_{i}=\sum_{k l} \varepsilon_{i k l} \frac{\partial A_{l}}{\partial x_{k}} \label{chap1:eq:117}
+[\operatorname{curl} \vect{A}]_{i}=\sum_{k l} \varepsilon_{i k l} \frac{\partial A_{l}}{\partial x_{k}}. \label{chap1:eq:117}
 \end{equation}
 Moreover, curl A may also be written in the form
 \begin{equation}
@@ -828,7 +837,7 @@ Moreover, curl A may also be written in the form
 \vect{e}_{x} & \vect{e}_{y} & \vect{e}_{z}  \label{chap1:eq:118}\\
 \frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\
 A_{x} & A_{y} & A_{z}
-\end{array}\right|
+\end{array}\right|.
 \end{equation}
 The spherical components of curl \(\vect{A}\) are given by
 \begin{align}
@@ -846,18 +855,18 @@ The spherical components of curl \(\vect{A}\) may also be written as
 \vect{e}_{+1} & \vect{e}_{0} & \vect{e}_{-1}  \label{chap1:eq:121}\\
 \nabla_{+1} & \nabla_{0} & \nabla_{-1} \\
 A_{+1} & A_{0} & A_{-1}
-\end{array}\right|
+\end{array}\right|.
 \end{equation}
 The polar components of curl \(\vect{A}\) read
 \begin{align}
-& {[\operatorname{curl} \vect{A}]_{r}=\frac{1}{r \sin \vartheta} \frac{\partial}{\partial \vartheta}\left(\sin \vartheta A_{\varphi}\right)-\frac{1}{r \sin \vartheta} \frac{\partial A_{\vartheta}}{\partial \varphi}}  \notag\\
-& {[\operatorname{curl} \vect{A}]_{\vartheta}=\frac{1}{r \sin \vartheta} \frac{\partial A_{r}}{\partial \varphi}-\frac{1}{r} \frac{\partial}{\partial r}\left(r A_{\varphi}\right)}  \label{chap1:eq:122}\\
-& {[\operatorname{curl} \vect{A}]_{\varphi}=\frac{1}{r} \frac{\partial}{\partial r}\left(r A_{\vartheta}\right)-\frac{1}{r} \frac{\partial A_{r}}{\partial \vartheta}} \notag
+& {[\operatorname{curl} \vect{A}]_{r}=\frac{1}{r \sin \vartheta} \frac{\partial}{\partial \vartheta}\left(\sin \vartheta A_{\varphi}\right)-\frac{1}{r \sin \vartheta} \frac{\partial A_{\vartheta}}{\partial \varphi}} , \notag\\
+& {[\operatorname{curl} \vect{A}]_{\vartheta}=\frac{1}{r \sin \vartheta} \frac{\partial A_{r}}{\partial \varphi}-\frac{1}{r} \frac{\partial}{\partial r}\left(r A_{\varphi}\right)} , \label{chap1:eq:122}\\
+& {[\operatorname{curl} \vect{A}]_{\varphi}=\frac{1}{r} \frac{\partial}{\partial r}\left(r A_{\vartheta}\right)-\frac{1}{r} \frac{\partial A_{r}}{\partial \vartheta}} .\notag
 \end{align}
 The above equations are summarized in Table~\ref{chap1:tab:3}.\\
 Note also the following differential operations of the second order
 \begin{equation}
-\operatorname{div} \operatorname{grad} \Phi=\nabla \cdot(\nabla \Phi)=\Delta \Phi \label{chap1:eq:123}
+\operatorname{div} \operatorname{grad} \Phi=\boldsymbol{\nabla} \cdot(\boldsymbol{\nabla} \Phi)=\Delta \Phi \label{chap1:eq:123}.
 \end{equation}
 \begin{table}[tbh]
 \begin{center}
@@ -874,16 +883,16 @@ Note also the following differential operations of the second order
 \(d \vect{r}\) & \(\vect{e}_{x} d x+\vect{e}_{y} d y+\vect{e}_{z} d z\) & \(-\vect{e}_{+1} d x_{-1}+\vect{e}_{0} d x_{0}-\vect{e}_{-1} d x_{+1}\) & \(\vect{e}_{r} d r+\vect{e}_{\vartheta} r d \vartheta+\vect{e}_{\varphi} r \sin \varphi d \varphi\) \\
 \(d s^{2}\) & \(d x^{2}+d y^{2}+d z^{2}\) & \(-2 d x_{+1} d x_{-1}+d x_{0} d x_{0}\) & \(d r^{2}+r^{2} d \vartheta^{2}+r^{2} \sin ^{2} \vartheta d \varphi^{2}\) \\
 \(d V\) & \(dx dy dz\) & \(i d x_{+1} d x_{0} d x_{-1}\) & \(r^{2} \sin \vartheta d r d \vartheta d \varphi\) \\
-\(\vect{\nabla} {\Phi}\) 
+\(\vect{\boldsymbol{\nabla}} {\Phi}\) 
   & \(\vect{e}_{x} \frac{\partial \Phi}{\partial x}+\vect{e}_{y} \frac{\partial \Phi}{\partial y}+\vect{e}_{x} \frac{\partial \Phi}{\partial z}\) 
   & \(-\vect e_{+1} \nabla_{-1} \Phi+\vect e_{0} \nabla_{0} \Phi-\) 
-  & \(\vect{e}_{r} \frac{\partial \Phi}{\partial r}+\vect{e}_{\vartheta} \frac{1}{r} \frac{\partial \Phi}{\partial \vartheta}+\vect{e}_{\varphi} \frac{1}{r \sin \delta} \cdot \frac{\partial \Phi}{\partial \varphi}\) \\
+  & \(\vect{e}_{r} \frac{\partial \Phi}{\partial r}+\vect{e}_{\vartheta} \frac{1}{r} \frac{\partial \Phi}{\partial \vartheta}+\vect{e}_{\varphi} \frac{1}{r \sin \delta} \, \frac{\partial \Phi}{\partial \varphi}\) \\
   &&\( -\vect e_{-1} \nabla_{+1} \Phi\)&\\
-\((\vect{\nabla} \cdot \vect{A})\)  
+\((\vect{\boldsymbol{\nabla}} \cdot \vect{A})\)  
   & \(\frac{\partial A_{x}}{\partial x}+\frac{\partial A_{y}}{\partial y}+\frac{\partial A_{z}}{\partial z}\) 
   & \(-\nabla_{+1} A_{-1}+\nabla_{0} A_{0}-\nabla_{-1} A_{+1}\) 
   & \( \frac{1}{r^{2}}   \frac{\partial}{\partial r}\left(r^{2} A_{r}\right)+\frac{1}{r \sin \vartheta}   \frac{\partial}{\partial \vartheta}\left(A_{\vartheta} \sin \vartheta\right)+\frac{1}{r \sin \vartheta}   \frac{\partial A_{\varphi}}{\partial \varphi} \)  \\
-\([\vect{\nabla} \times \vect{A}]\)  
+\([\vect{\boldsymbol{\nabla}} \times \vect{A}]\)  
   & \(\left|\begin{array}{ccc}\vect{e}_{x} & \vect{e}_{y} & \vect{e}_{z} \\ 
     \frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\ 
     A_{x} & A_{y} & A_{z}
@@ -899,11 +908,11 @@ Note also the following differential operations of the second order
 \end{center}
 \end{table}
 \begin{align}
-& \operatorname{curl} \operatorname{grad} \Phi=\nabla \times(\nabla \Phi)=0,  \label{chap1:eq:124}\\
-& \operatorname{div} \operatorname{curl} \vect{A}=\nabla \cdot[\nabla \times \vect{A}]=0, \label{chap1:eq:125}
+& \operatorname{curl} \operatorname{grad} \Phi=\boldsymbol{\nabla} \times(\boldsymbol{\nabla} \Phi)=0,  \label{chap1:eq:124}\\
+& \operatorname{div} \operatorname{curl} \vect{A}=\boldsymbol{\nabla} \cdot[\boldsymbol{\nabla} \times \vect{A}]=0, \label{chap1:eq:125}
 \end{align}
 \begin{align}
-\operatorname{curl} \operatorname{curl} \vect{A} & =\nabla \times[\nabla \times \vect{A}]=\nabla(\nabla \cdot \vect{A})-\Delta \vect{A}  \notag\\
+\operatorname{curl} \operatorname{curl} \vect{A} & =\boldsymbol{\nabla} \times[\boldsymbol{\nabla} \times \vect{A}]=\boldsymbol{\nabla}(\boldsymbol{\nabla} \cdot \vect{A})-\Delta \vect{A}  \notag\\
 & =\operatorname{grad} \operatorname{div} \vect{A}-\Delta \vect{A} . \label{chap1:eq:126}
 \end{align}
 \section{Rotations of Coordinate System}
@@ -913,7 +922,10 @@ An arbitrary rotation of a coordinate system about the origin is completely spec
 
 \subsection{Description of Rotations in Terms of the Euler Angles}
 Any rotation of the coordinate system \(S\{x, y, z\} \rightarrow S^{\prime}\left\{x^{\prime}, y^{\prime}, z^{\prime}\right\}\) may be performed by three successive rotations about the coordinate axes (Fig.~\ref{chap1:fig:3})\\
-\(\vect{A}\left\{\begin{array}{l}\text {(a) rotation about the \(z\)-axis through an angle \(\alpha(0 \leq \alpha<2 \pi\),}\\ \text { (b) rotation about the new \(y_{1}\)-axis through an angle \(\beta(0 \leq \beta \leq \pi)\),} \\ \text { (c) rotation about the new axis \(z_{2}=z^{\prime}\) through an angle \(\gamma(0 \leq \gamma<2 \pi)\).}\end{array}\right.\)
+\(\vect{A}\left\{\begin{array}{l}
+  \text {(a) rotation about the \(z\)-axis through an angle \(\alpha(0 \leq \alpha<2 \pi\)),}\\ 
+  \text {(b) rotation about the new \(y_{1}\)-axis through an angle \(\beta(0 \leq \beta \leq \pi)\),} \\ 
+  \text {(c) rotation about the new axis \(z_{2}=z^{\prime}\) through an angle \(\gamma(0 \leq \gamma<2 \pi)\).}\end{array}\right.\)
 
 
 The same rotation \(S\{x, y, z\} \rightarrow S^{\prime}\left\{x^{\prime}, y^{\prime}, z^{\prime}\right\}\) may also be performed by another succession of rotations Fig.~\ref{chap1:fig:4}),
@@ -934,7 +946,10 @@ The same rotation \(S\{x, y, z\} \rightarrow S^{\prime}\left\{x^{\prime}, y^{\pr
 \end{center}
 \end{figure}
 
-\(\vect{B}\left\{\begin{array}{l}\text { (a) rotation about the } z \text {-axis through an angle } \gamma(0 \leq \gamma<2 \pi), \\ \text { (b) rotation about the initial } y \text {-axis through an angle } \beta(0 \leq \beta \leq \pi), \\ \text { (c) rotation about the initial } z \text {-axis through an angle } \alpha(0 \leq \alpha<2 \pi) .\end{array}\right.\)\\
+\(\vect{B}\left\{\begin{array}{l}
+  \text {(a) rotation about the } z \text {-axis through an angle } \gamma(0 \leq \gamma<2 \pi), \\ 
+  \text {(b) rotation about the initial } y \text {-axis through an angle } \beta(0 \leq \beta \leq \pi), \\ 
+  \text {(c) rotation about the initial } z \text {-axis through an angle } \alpha(0 \leq \alpha<2 \pi) .\end{array}\right.\)\\
 Here the angles \(\alpha, \beta, \gamma\) are the same as those in the first case.\\
 The relative orientations of initial and final coordinate axes \(S\{x, y, z\}\) and \(S^{\prime}\left\{x^{\prime}, y^{\prime}, z^{\prime}\right\}\), obtained in both cases, \(\vect{A}\) and \(\vect{B}\), are shown in Fig.~\ref{chap1:fig:5}.
 
@@ -959,13 +974,13 @@ The angles \(\alpha^{\prime}, \beta^{\prime}, \gamma^{\prime}\) describe the sam
 \end{equation}
 The absolute value of a vector is invariant with respect to rotations, but the polar angles \(\vartheta, \varphi\), which determine the vector direction, change. The relations between angles \(\vartheta, \varphi\) and \(\vartheta^{\prime}, \varphi^{\prime}\) which specify vector directions in the initial and final coordinate systems, \(S\{x, y, z\}\) and \(S^{\prime}\left\{x^{\prime}, y^{\prime}, z^{\prime}\right\}\), are given by
 \begin{gather}
-\cos \vartheta^{\prime}=\cos \vartheta \cos \beta+\sin \vartheta \sin \beta \cos (\varphi-\alpha)  \notag\\
-\cot \left(\varphi^{\prime}+\gamma\right)=\cot (\varphi-\alpha) \cos \beta-\frac{\cot \vartheta \sin \beta}{\sin (\varphi-\alpha)} \label{chap1:eq:128}
+\cos \vartheta^{\prime}=\cos \vartheta \cos \beta+\sin \vartheta \sin \beta \cos (\varphi-\alpha) , \notag\\
+\cot \left(\varphi^{\prime}+\gamma\right)=\cot (\varphi-\alpha) \cos \beta-\frac{\cot \vartheta \sin \beta}{\sin (\varphi-\alpha)}. \label{chap1:eq:128}
 \end{gather}
 The inverse relations are
 \begin{gather}
-\cos \vartheta=\cos \vartheta^{\prime} \cos \beta-\sin \vartheta^{\prime} \sin \beta \cos \left(\varphi^{\prime}+\gamma\right)  \notag\\
-\cot (\varphi-\alpha)=\cot \left(\varphi^{\prime}+\gamma\right) \cos \beta+\frac{\cot \vartheta^{\prime} \sin \beta}{\sin \left(\varphi^{\prime}+\gamma\right)} \label{chap1:eq:129}
+\cos \vartheta=\cos \vartheta^{\prime} \cos \beta-\sin \vartheta^{\prime} \sin \beta \cos \left(\varphi^{\prime}+\gamma\right) , \notag\\
+\cot (\varphi-\alpha)=\cot \left(\varphi^{\prime}+\gamma\right) \cos \beta+\frac{\cot \vartheta^{\prime} \sin \beta}{\sin \left(\varphi^{\prime}+\gamma\right)} . \label{chap1:eq:129}
 \end{gather}
 \subsection{Description of Rotations in Terms of Rotation Axis and Rotation Angle}
 Any rotation of a coordinate system \(S\{x, y, z\} \rightarrow S^{\prime}\left\{x^{\prime}, y^{\prime}, z^{\prime}\right\}\) may be treated as one rotation through an angle \(\omega(0 \leq \omega \leq \pi)\) about some axis \(\vect{n}(\Theta, \Phi)\). The direction of this rotation axis \(\vect{n}\) is defined by the polar angles \(\Theta, \Phi(0 \leq \theta \leq \pi, 0 \leq \Phi<2 \pi)\) which are the same in the initial coordinate system \(S\{x, y, z\}\) and in the inal one \(S^{\prime}\left\{x^{\prime}, y^{\prime}, z^{\prime}\right\}\) (Fig.~\ref{chap1:fig:6}).
@@ -982,24 +997,24 @@ The angles \(\omega, \Theta, \Phi\) completely determine the relative orientatio
 
 The direction cosines of the unit vector \(\vect{n}(\Theta, \Phi)\) in the initial coordinate system \(S\{x, y, z\}\) coincide with those in the final coordinate system \(S^{\prime}\left\{x^{\prime}, y^{\prime}, z^{\prime}\right\}\).
 \begin{align}
-& \vect{n} \cdot \vect{e}_{x}=\vect{n} \cdot \vect{e}_{x}^{\prime}=\sin \Theta \cos \Phi  \notag\\
-& \vect{n} \cdot \vect{e}_{y}=\vect{n} \cdot \vect{e}_{y}^{\prime}=\sin \Theta \sin \Phi  \label{chap1:eq:130}\\
-& \vect{n} \cdot \vect{e}_{x}=\vect{n} \cdot \vect{e}_{z}^{\prime}=\cos \Theta \notag
+& \vect{n} \cdot \vect{e}_{x}=\vect{n} \cdot \vect{e}_{x}^{\prime}=\sin \Theta \cos \Phi , \notag\\
+& \vect{n} \cdot \vect{e}_{y}=\vect{n} \cdot \vect{e}_{y}^{\prime}=\sin \Theta \sin \Phi , \label{chap1:eq:130}\\
+& \vect{n} \cdot \vect{e}_{x}=\vect{n} \cdot \vect{e}_{z}^{\prime}=\cos \Theta \notag .
 \end{align}
 The polar angles \(\vartheta, \varphi\) of vectors nonparallel to the n -axis vary under coordinate rotations. The relations between the polar angles \(\vartheta, \varphi\) and \(\vartheta^{\prime}, \varphi^{\prime}\) which specify the direction of a vector with respect to \(S\{x, y, z\}\) and \(S^{\prime}\left\{x^{\prime}, y^{\prime}, z^{\prime}\right\}\), respectively, are given by
 \begin{gather}
-\cos \vartheta^{\prime}=\cos \vartheta\left(\cos \omega \sin ^{2} \Theta+\cos ^{2} \Theta\right)+\sin \vartheta \sin \Theta[(1-\cos \omega) \cos \Theta \cos (\varphi-\Phi)-\sin \omega \sin (\varphi-\Phi)]  \notag\\
-\cot \left(\varphi^{\prime}-\Phi\right)=\frac{\cos (\varphi-\Phi)\left[\cos \omega \cos ^{2} \Theta+\sin ^{2} \Theta\right]+\sin (\varphi-\Phi) \sin \omega \cos \Theta-\cot \vartheta(\cos \omega-1) \sin \Theta \cos \Theta}{-\cos (\varphi-\Phi) \sin \omega \cos \Theta+\sin (\varphi-\Phi) \cos \omega+\cot \vartheta \sin \omega \sin \Theta} \label{chap1:eq:131}
+\cos \vartheta^{\prime}=\cos \vartheta\left(\cos \omega \sin ^{2} \Theta+\cos ^{2} \Theta\right)+\sin \vartheta \sin \Theta[(1-\cos \omega) \cos \Theta \cos (\varphi-\Phi)-\sin \omega \sin (\varphi-\Phi)]  ,\notag\\
+\cot \left(\varphi^{\prime}-\Phi\right)=\frac{\cos (\varphi-\Phi)\left[\cos \omega \cos ^{2} \Theta+\sin ^{2} \Theta\right]+\sin (\varphi-\Phi) \sin \omega \cos \Theta-\cot \vartheta(\cos \omega-1) \sin \Theta \cos \Theta}{-\cos (\varphi-\Phi) \sin \omega \cos \Theta+\sin (\varphi-\Phi) \cos \omega+\cot \vartheta \sin \omega \sin \Theta} .\label{chap1:eq:131}
 \end{gather}
 The inverse relations are
 \begin{gather}
-\cos \vartheta=\cos \vartheta^{\prime}\left(\cos \omega \sin ^{2} \Theta+\cos ^{2} \Theta\right)+\sin \vartheta^{\prime} \sin \Theta\left[(1-\cos \omega) \cos \Theta \cos \left(\varphi^{\prime}-\Phi\right)+\sin \omega \sin \left(\varphi^{\prime}-\Phi\right)\right]  \notag\\
-\cot (\varphi-\Phi)=\frac{\cos \left(\varphi^{\prime}-\Phi\right)\left[\cos \omega \cos ^{2} \Theta+\sin ^{2} \Theta\right]-\sin \left(\varphi^{\prime}-\Phi\right) \sin \omega \cos \Theta-\cot \vartheta^{\prime}(\cos \omega-1) \sin \Theta \cos \Theta}{\cos \left(\varphi^{\prime}-\Phi\right) \sin \omega \cos \Theta+\sin \left(\varphi^{\prime}-\Phi\right) \cos \omega-\cot \vartheta^{\prime} \sin \omega \sin \Theta} \label{chap1:eq:132}
+\cos \vartheta=\cos \vartheta^{\prime}\left(\cos \omega \sin ^{2} \Theta+\cos ^{2} \Theta\right)+\sin \vartheta^{\prime} \sin \Theta\left[(1-\cos \omega) \cos \Theta \cos \left(\varphi^{\prime}-\Phi\right)+\sin \omega \sin \left(\varphi^{\prime}-\Phi\right)\right] , \notag\\
+\cot (\varphi-\Phi)=\frac{\cos \left(\varphi^{\prime}-\Phi\right)\left[\cos \omega \cos ^{2} \Theta+\sin ^{2} \Theta\right]-\sin \left(\varphi^{\prime}-\Phi\right) \sin \omega \cos \Theta-\cot \vartheta^{\prime}(\cos \omega-1) \sin \Theta \cos \Theta}{\cos \left(\varphi^{\prime}-\Phi\right) \sin \omega \cos \Theta+\sin \left(\varphi^{\prime}-\Phi\right) \cos \omega-\cot \vartheta^{\prime} \sin \omega \sin \Theta} .\label{chap1:eq:132}
 \end{gather}
 Introducing parameters \(\omega, \vect{n}(\theta, \Phi)\) to describe rotations, we are able to write the transformation properties of components of the position vector \(r\) in compact vector form:
 \begin{align}
-& \vect{r}^{\prime}=\vect{r} \cos \omega+\vect{n}(\vect{n} \vect{r})(1-\cos \omega)+[\vect{n} \times \vect{r}] \sin \omega  \notag\\
-& \vect{r}=\vect{r}^{\prime} \cos \omega+\vect{n}\left(\vect{n} \vect{r}^{\prime}\right)(1-\cos \omega)-\left[\vect{n} \times \vect{r}^{\prime}\right] \sin \omega \label{chap1:eq:133}
+& \vect{r}^{\prime}=\vect{r} \cos \omega+\vect{n}(\vect{n} \vect{r})(1-\cos \omega)+[\vect{n} \times \vect{r}] \sin \omega,  \notag\\
+& \vect{r}=\vect{r}^{\prime} \cos \omega+\vect{n}\left(\vect{n} \vect{r}^{\prime}\right)(1-\cos \omega)-\left[\vect{n} \times \vect{r}^{\prime}\right] \sin \omega \label{chap1:eq:133} .
 \end{align}
 Equations \eqref{chap1:eq:131}-\eqref{chap1:eq:132} may be derived by projecting Eq. \eqref{chap1:eq:133} onto the coordinate axes.
 
@@ -1017,11 +1032,11 @@ where \(\tilde{\sigma}_{i}(i=x, y, z)\) are the transposed Pauli matrices (Eq. 2
 \]
 Each rotation \(S\{x, y, z\} \rightarrow S^{\prime}\left\{x^{\prime}, y^{\prime}, z^{\prime}\right\}\) may be represented by a unitary transformation \(U\) of matrix \(X\) into \(\mat{X}^{\prime}\)
 \begin{equation}
-X^{\prime}=U X U^{-1} \label{chap1:eq:135}
+X^{\prime}=U X U^{-1} .\label{chap1:eq:135}
 \end{equation}
 Here \(U\) is the unitary unimodular \(2 \times 2\) matrix
 \begin{equation}
-U^{+}=U^{-1}, \quad \det U=1 \label{chap1:eq:136}
+U^{+}=U^{-1}, \quad \det U=1 .\label{chap1:eq:136}
 \end{equation}
 \begin{figure}[tbh]
 \begin{center}
@@ -1051,7 +1066,7 @@ The inverse rotation \(S^{\prime}\left\{x^{\prime}, y^{\prime}, z^{\prime}\right
 U^{-1}=U^{+}=\begin{pmatrix}
 a^{*} & -b  \label{chap1:eq:139}\\
 b^{*} & a
-\end{pmatrix}
+\end{pmatrix}.
 \end{equation}
 The Cayley-Klein parameters permit us to propose an alternative interpretation of coordinate rotations. Let us consider a sphere (of unit diameter) about the origin. Each point of the sphere with coordinates \(x, y, z\left(x^{2}+y^{2}+z^{2}=1 / 4\right)\) corresponds to the point \(\varsigma=\xi+i \eta\) on the complex plane which is called the stereographic projection of the point \(x, y, z\) (Fig.~\ref{chap1:fig:7}). The complex number \(\varsigma\) is related to \(x, y, z\) by
 \begin{equation}
@@ -1059,7 +1074,7 @@ The Cayley-Klein parameters permit us to propose an alternative interpretation o
 \end{equation}
 The rotation of the coordinate system which transforms the coordinates \(x, y, z\) of the point on the sphere into \(x^{\prime}, y^{\prime}, z^{\prime}\) generates the following complex-plane bilinear transformation
 \begin{equation}
-\varsigma^{\prime}=\frac{a \varsigma+b}{-b^{*} \varsigma+a^{*}} \label{chap1:eq:141}
+\varsigma^{\prime}=\frac{a \varsigma+b}{-b^{*} \varsigma+a^{*}} .\label{chap1:eq:141}
 \end{equation}
 The coefficients of this bilinear transformation are just the Cayley-Klein parameters \(a\) and \(b\).
 
@@ -1074,24 +1089,28 @@ The angles \(\omega, \Theta, \Phi\) are expressed in terms of the Euler angles \
 \end{gather}
 The inverse relations are written as
 \begin{gather}
-\sin \frac{\beta}{2}=\sin \Theta \sin \frac{\omega}{2}  \notag\\
-\tan \frac{\alpha+\gamma}{2}=\cos \Theta \tan \frac{\omega}{2}  \label{chap1:eq:143}\\
-\frac{\alpha-\gamma}{2}=\Phi-\frac{\pi}{2} \notag
+\sin \frac{\beta}{2}=\sin \Theta \sin \frac{\omega}{2},  \notag\\
+\tan \frac{\alpha+\gamma}{2}=\cos \Theta \tan \frac{\omega}{2} , \label{chap1:eq:143}\\
+\frac{\alpha-\gamma}{2}=\Phi-\frac{\pi}{2}. \notag
 \end{gather}
 Note also the following useful relations between the angles \(\alpha, \beta, \gamma\) and \(\omega, \Theta, \Phi\).
-\[
-\begin{array}{ll}
-\frac{\partial \alpha}{\partial \omega}=\frac{\partial \gamma}{\partial \omega}=\frac{\cos \Theta}{2 \cos ^{2} \frac{\beta}{2}}, & \frac{\partial \beta}{\partial \omega}=\frac{\sin ^{2} \Theta \sin \omega}{\sin \beta}, \\
-\frac{\partial \alpha}{\partial \Theta}=\frac{\partial \gamma}{\partial \Theta}=-\frac{1}{2} \tan \Theta \sin (\alpha+\gamma), & \frac{\partial \beta}{\partial \Theta}=\frac{2 \sin 2 \Theta \sin ^{2} \frac{\omega}{2}}{\sin \beta}, \\
-\frac{\partial \alpha}{\partial \Phi}=-\frac{\partial \gamma}{\partial \Phi}=1, & \frac{\partial \beta}{\partial \Phi}=0, \\
-\frac{\partial \omega}{\partial \alpha}=\frac{\partial \omega}{\partial \gamma}=\cos \Theta, & \frac{\partial \omega}{\partial \beta}=\frac{\tan \frac{\beta}{2}}{\tan \frac{\omega}{2}}, \\
-\frac{\partial \Theta}{\partial \alpha}=\frac{\partial \Theta}{\partial \gamma}=-\frac{\sin \Theta}{2 \tan \frac{\omega}{2}}, & \frac{\partial \Theta}{\partial \beta}=\frac{\cos \Theta \sin \Theta}{\sin \beta}, \\
-\frac{\partial \Phi}{\partial \alpha}=-\frac{\partial \Phi}{\partial \gamma}=\frac{1}{2}, & \frac{\partial \Phi}{\partial \beta}=0 .
-\end{array}
-\]
+\begin{equation}
+\begin{aligned}
+&\frac{\partial \alpha}{\partial \omega}=\frac{\partial \gamma}{\partial \omega}=\frac{\cos \Theta}{2 \cos ^{2} \frac{\beta}{2}}, && \frac{\partial \beta}{\partial \omega}=\frac{\sin ^{2} \Theta \sin \omega}{\sin \beta}, \\
+&\frac{\partial \alpha}{\partial \Theta}=\frac{\partial \gamma}{\partial \Theta}=-\frac{1}{2} \tan \Theta \sin (\alpha+\gamma), && \frac{\partial \beta}{\partial \Theta}=\frac{2 \sin 2 \Theta \sin ^{2} \frac{\omega}{2}}{\sin \beta}, \\
+&\frac{\partial \alpha}{\partial \Phi}=-\frac{\partial \gamma}{\partial \Phi}=1, && \frac{\partial \beta}{\partial \Phi}=0, 
+\end{aligned}
+\end{equation}
+\begin{equation}
+\begin{aligned}
+&\frac{\partial \omega}{\partial \alpha}=\frac{\partial \omega}{\partial \gamma}=\cos \Theta, & &\frac{\partial \omega}{\partial \beta}=\frac{\tan \frac{\beta}{2}}{\tan \frac{\omega}{2}}, \\
+&\frac{\partial \Theta}{\partial \alpha}=\frac{\partial \Theta}{\partial \gamma}=-\frac{\sin \Theta}{2 \tan \frac{\omega}{2}}, && \frac{\partial \Theta}{\partial \beta}=\frac{\cos \Theta \sin \Theta}{\sin \beta}, \\
+&\frac{\partial \Phi}{\partial \alpha}=-\frac{\partial \Phi}{\partial \gamma}=\frac{1}{2}, && \frac{\partial \Phi}{\partial \beta}=0 .
+\end{aligned}
+\end{equation}
 The Jacobian of the transformation is equal to
 \begin{equation}
-\left\|\frac{\partial(\alpha, \beta, \gamma)}{\partial(\omega, \Theta, \Phi)}\right\|=\left\|\frac{\partial(\omega, \Theta, \Phi)}{\partial(\alpha, \beta, \gamma)}\right\|^{-1}=\frac{4 \sin \Theta}{\sin \beta} \sin ^{2} \frac{\omega}{2} \label{chap1:eq:144}
+\left\|\frac{\partial(\alpha, \beta, \gamma)}{\partial(\omega, \Theta, \Phi)}\right\|=\left\|\frac{\partial(\omega, \Theta, \Phi)}{\partial(\alpha, \beta, \gamma)}\right\|^{-1}=\frac{4 \sin \Theta}{\sin \beta} \sin ^{2} \frac{\omega}{2} .\label{chap1:eq:144}
 \end{equation}
 A volume element of the three-dimensional rotation group is given by
 \begin{equation}
@@ -1099,14 +1118,14 @@ d R \equiv \sin \beta d \alpha d \beta d \gamma=4 \sin ^{2} \frac{\omega}{2} d \
 \end{equation}
 The total volume of the three-dimensional rotation group is equal to
 \begin{equation}
-\int d R=\int_{0}^{2 \pi} d \alpha \int_{0}^{\pi} \sin \beta d \beta \int_{0}^{2 \pi} d \gamma=4 \int_{0}^{\pi} \sin ^{2} \frac{\omega}{2} d \omega \int_{0}^{\pi} \sin \Theta d \Theta \int_{0}^{2 \pi} d \Phi=8 \pi^{2} \label{chap1:eq:146}
+\int d R=\int_{0}^{2 \pi} d \alpha \int_{0}^{\pi} \sin \beta d \beta \int_{0}^{2 \pi} d \gamma=4 \int_{0}^{\pi} \sin ^{2} \frac{\omega}{2} d \omega \int_{0}^{\pi} \sin \Theta d \Theta \int_{0}^{2 \pi} d \Phi=8 \pi^{2}. \label{chap1:eq:146}
 \end{equation}
 (b) Relations Between Cayley-Klein Parameters \(a, b\) and Euler Angles \(\alpha, \beta, \gamma\)
 
 The parameters \(a\) and \(b\) are expressed in terms of the Euler angles \(\alpha, \beta, \gamma\) as
 \begin{align}
-& a=\cos \frac{\beta}{2} e^{-i \frac{\alpha+\alpha}{2}}  \notag\\
-& b=\sin \frac{\beta}{2} e^{i \frac{\alpha-\alpha}{2}} \label{chap1:eq:147}
+& a=\cos \frac{\beta}{2} e^{-i \frac{\alpha+\alpha}{2}} , \notag\\
+& b=\sin \frac{\beta}{2} e^{i \frac{\alpha-\alpha}{2}} .\label{chap1:eq:147}
 \end{align}
 while the inverse relations are
 \begin{gather}
@@ -1122,14 +1141,14 @@ The unitary matrix \(U\), according to Eq. \eqref{chap1:eq:137}, coincides with 
 
 The parameters \(a, b\) are expressed in terms of the angles \(\omega, \Theta, \Phi\) as
 \begin{align}
-& a=\cos \frac{\omega}{2}-i \sin \frac{\omega}{2} \cos \Theta  \label{chap1:eq:150}\\
-& b=-i \sin \frac{\omega}{2} \sin \Theta e^{i \Phi} \notag
+& a=\cos \frac{\omega}{2}-i \sin \frac{\omega}{2} \cos \Theta , \label{chap1:eq:150}\\
+& b=-i \sin \frac{\omega}{2} \sin \Theta e^{i \Phi} \notag.
 \end{align}
 and the inverse relations have the form
 \begin{align}
 \cos \omega & =2(\operatorname{Re} a)^{2}-1, \quad \cos \frac{\omega}{2}=\operatorname{Re} a  \notag\\
-\cos \Theta & =-\frac{\operatorname{Im} a}{\sqrt{1-(\operatorname{Re} a)^{2}}}  \label{chap1:eq:151}\\
-\cot \Phi & =-\frac{\operatorname{Im} b}{\operatorname{Re} b} \notag
+\cos \Theta & =-\frac{\operatorname{Im} a}{\sqrt{1-(\operatorname{Re} a)^{2}}}  ,\label{chap1:eq:151}\\
+\cot \Phi & =-\frac{\operatorname{Im} b}{\operatorname{Re} b} \notag .
 \end{align}
 The unitary matrix \(U\), according to Eq. \eqref{chap1:eq:137}, coincides with the transposed rotation matrix \(\widehat{U}^{\frac{1}{2}}(\omega ; \Theta, \Phi)\) which transforms spin functions of spin \(\frac{1}{2}\) (see Eq. 2.5(36)).
 
@@ -1138,8 +1157,8 @@ Under rotations of coordinate systems quantum-mechanical quantities are transfor
 
 Wave functions (state vectors) \(\Psi^{\prime}\) and operators \(\widehat{O}^{\prime}\) in a rotated coordinate system are related to wave functions \(\Psi\) and operators \(\hat{O}\) in an initial coordinate system by
 \begin{align}
-\Psi^{\prime}=\widehat{D}(\alpha, \beta, \gamma) \Psi, & \widehat{O}=\widehat{D}(\alpha, \beta, \gamma) \widehat{O}[\widehat{D}(\alpha, \beta, \gamma)]^{-1}  \label{chap1:eq:152}\\
-\Psi^{\prime}=\widehat{U}(\omega ; \Theta, \Phi) \Psi, & \widehat{O}=\widehat{U}(\omega ; \Theta, \Phi) \widehat{O}[\widehat{U}(\omega ; \Theta, \Phi)]^{-1} \label{chap1:eq:153}
+\Psi^{\prime}=\widehat{D}(\alpha, \beta, \gamma) \Psi, & \widehat{O}=\widehat{D}(\alpha, \beta, \gamma) \widehat{O}[\widehat{D}(\alpha, \beta, \gamma)]^{-1}  ,\label{chap1:eq:152}\\
+\Psi^{\prime}=\widehat{U}(\omega ; \Theta, \Phi) \Psi, & \widehat{O}=\widehat{U}(\omega ; \Theta, \Phi) \widehat{O}[\widehat{U}(\omega ; \Theta, \Phi)]^{-1} . \label{chap1:eq:153}
 \end{align}
 If the Euler angles \(\alpha, \beta, \gamma\) are chosen to describe the rotation, then the rotation operator \(\widehat{D}(\alpha, \beta, \gamma)\) may be written as
 \begin{equation}
@@ -1147,12 +1166,12 @@ If the Euler angles \(\alpha, \beta, \gamma\) are chosen to describe the rotatio
 \end{equation}
 or, equivalently,
 \begin{equation}
-\hat{D}(\alpha, \beta, \gamma)=e^{-i \alpha \hat{J}_{z}} e^{-i \beta \hat{J}_{y}} e^{-i \gamma \hat{J}_{z}} \label{chap1:eq:155}
+\hat{D}(\alpha, \beta, \gamma)=e^{-i \alpha \hat{J}_{z}} e^{-i \beta \hat{J}_{y}} e^{-i \gamma \hat{J}_{z}} .\label{chap1:eq:155}
 \end{equation}
 Here \(\widehat{J}_{i}\) is the projection of the total angular momentum operator (see Chap. 2) on an \(i\)-axis. The equivalence of Eqs. \eqref{chap1:eq:154} and \eqref{chap1:eq:155} follows from the fact that, according to \eqref{chap1:eq:152},
 \begin{align}
-& e^{-i \beta \hat{J}_{y_{1}}}=\hat{D}(\alpha, 0,0) e^{-i \beta \hat{J}_{y}}[\hat{D}(\alpha, 0,0)]^{-1}=e^{-i \alpha \hat{J}_{z}} e^{-i \beta \hat{J}_{y}} e^{i \alpha \hat{J}_{z}}  \label{chap1:eq:156}\\
-& e^{-i \gamma \hat{J}_{z^{\prime}}}=\hat{D}(\alpha, \beta, 0) e^{-i \gamma \hat{J}_{*}}[\hat{D}(\alpha, \beta, 0)]^{-1}=e^{-i \alpha \hat{J}_{z}} e^{-i \beta \hat{J}_{y}} e^{-i \gamma \hat{J}_{z}} e^{i \beta \hat{J}_{y}} e^{i \alpha \hat{J}_{z}} \notag
+& e^{-i \beta \hat{J}_{y_{1}}}=\hat{D}(\alpha, 0,0) e^{-i \beta \hat{J}_{y}}[\hat{D}(\alpha, 0,0)]^{-1}=e^{-i \alpha \hat{J}_{z}} e^{-i \beta \hat{J}_{y}} e^{i \alpha \hat{J}_{z}} , \label{chap1:eq:156}\\
+& e^{-i \gamma \hat{J}_{z^{\prime}}}=\hat{D}(\alpha, \beta, 0) e^{-i \gamma \hat{J}_{*}}[\hat{D}(\alpha, \beta, 0)]^{-1}=e^{-i \alpha \hat{J}_{z}} e^{-i \beta \hat{J}_{y}} e^{-i \gamma \hat{J}_{z}} e^{i \beta \hat{J}_{y}} e^{i \alpha \hat{J}_{z}} .\notag
 \end{align}
 If the direction of the rotation axis \(n(\Theta, \Phi)\) and the rotation angle \(\omega\) are chosen to describe the coordinate rotation, the rotation operator \(\hat{U}\) may be written in the form
 \begin{equation}
@@ -1161,12 +1180,12 @@ If the direction of the rotation axis \(n(\Theta, \Phi)\) and the rotation angle
 where \(\widehat{\vect{J}}\) is the total angular momentum operator (Chap. 2). Note that \(\widehat{D}(\alpha, \beta, \gamma) \equiv \widehat{U}(\omega ; \theta, \Phi)\).\\
 The rotation operator written in the forms \eqref{chap1:eq:154}, \eqref{chap1:eq:155} or \eqref{chap1:eq:157} is an unitary operator.
 \begin{align}
-\hat{D}^{+}(\alpha, \beta, \gamma) & =[\hat{D}(\alpha, \beta, \gamma)]^{-1}=\hat{D}(\pi-\gamma, \beta,-\pi-\alpha)=\hat{D}(-\gamma,-\beta,-\alpha)  \notag\\
-\hat{U}^{+}(\omega ; \Theta, \Phi) & =[\hat{U}(\omega ; \Theta, \Phi)]^{-1}=\hat{U}(\omega ; \pi-\Theta, \pi+\Phi)=\hat{U}(-\omega ; \Theta, \Phi) \label{chap1:eq:158}
+\hat{D}^{+}(\alpha, \beta, \gamma) & =[\hat{D}(\alpha, \beta, \gamma)]^{-1}=\hat{D}(\pi-\gamma, \beta,-\pi-\alpha)=\hat{D}(-\gamma,-\beta,-\alpha) , \notag\\
+\hat{U}^{+}(\omega ; \Theta, \Phi) & =[\hat{U}(\omega ; \Theta, \Phi)]^{-1}=\hat{U}(\omega ; \pi-\Theta, \pi+\Phi)=\hat{U}(-\omega ; \Theta, \Phi) . \label{chap1:eq:158}
 \end{align}
 Matrix elements of \(\widehat{D}\) between eigenstates of the operators \(\widehat{J}^{2}, \widehat{J}_{z}\) are the Wigner \(D\)-functions (see Chap. 4)
 \begin{equation}
-\braOket{J^{\prime} M^{\prime}}{\hat{D}(\alpha, \beta, \gamma)}{J M}=\delta_{J J^{\prime}} D_{M^{\prime} M}^{J}(\alpha, \beta, \gamma) \label{chap1:eq:159}
+\braOket{J^{\prime} M^{\prime}}{\hat{D}(\alpha, \beta, \gamma)}{J M}=\delta_{J J^{\prime}} D_{M^{\prime} M}^{J}(\alpha, \beta, \gamma) .\label{chap1:eq:159}
 \end{equation}
 Matrix elements of \(\widehat{D}\) between states corresponding to the cartesian basis vectors \(e_{i}(i=x, y, z)\) coincide with elements of the rotation matrix \(a_{i k}\) (see Sec. 1.4.6)
 \begin{equation}
@@ -1181,7 +1200,7 @@ An arbitrary vector \(\vect{A}\) may be written as a column
 A_{x}  \label{chap1:eq:161}\\
 A_{y} \\
 A_{z}
-\end{pmatrix}
+\end{pmatrix},
 \end{equation}
 where \(A_{x}, A_{y}, A_{z}\) are cartesian components of A . In this representation the Cartesian basis vectors \(\vect{e}_{x}, \vect{e}_{y}, \vect{e}_{z}\) have the form
 \begin{equation}
@@ -1197,7 +1216,7 @@ where \(A_{x}, A_{y}, A_{z}\) are cartesian components of A . In this representa
 0 \\
 0 \\
 1
-\end{pmatrix}
+\end{pmatrix}.
 \end{equation}
 The effect of the rotation operator on the basis vectors written in such a form is equivalent to an action of some \(3 \times 3\) matrix \(a\) which may be regarded as one of the representations of the rotation operator
 \begin{equation}
@@ -1213,7 +1232,7 @@ a^{*}=a, \quad a_{i k}^{*}=a_{i k}, \quad(i, k=x, y, z) . \label{chap1:eq:164}
 \end{equation}
 and unitary
 \begin{equation}
-a^{+} a=a a^{+}=1 \label{chap1:eq:165}
+a^{+} a=a a^{+}=1. \label{chap1:eq:165}
 \end{equation}
 Equations \eqref{chap1:eq:164} and \eqref{chap1:eq:165} result in the orthogonality condition
 \begin{equation}
@@ -1221,7 +1240,7 @@ Equations \eqref{chap1:eq:164} and \eqref{chap1:eq:165} result in the orthogonal
 \end{equation}
 where \(\tilde{a}\) is the transpose of \(a\). Equation \eqref{chap1:eq:166} written in a component form gives six independent relations for the elements \(a_{i k}\)
 \begin{equation}
-\sum_{i} a_{i k} a_{i l}=\delta_{k l}, \quad(i, k, l=x, y, z) \label{chap1:eq:167}
+\sum_{i} a_{i k} a_{i l}=\delta_{k l}, \quad(i, k, l=x, y, z), \label{chap1:eq:167}
 \end{equation}
 or the equivalent relations
 \begin{equation}
@@ -1239,7 +1258,7 @@ a_{x x} & a_{z y} & a_{x z}
 \end{equation}
 The relations between cartesian basis vectors \(e_{i}^{\prime}\) in a rotated coordinate system \(S^{\prime}\) and basis vectors \(e_{i}\) in an initial coordinate system \(S\) are given by
 \begin{equation}
-\vect{e}_{i}^{\prime}=a \vect{e}_{i}=\sum_{k} a_{k i} \vect{e}_{k} . \quad(i, k=x, y, z) \label{chap1:eq:170}
+\vect{e}_{i}^{\prime}=a \vect{e}_{i}=\sum_{k} a_{k i} \vect{e}_{k} , \quad(i, k=x, y, z) .\label{chap1:eq:170}
 \end{equation}
 The transformation properties of cartesian vector components are given by
 \begin{equation}
@@ -1253,13 +1272,13 @@ A_{i_{1} i_{2} \ldots i_{n}}^{\prime}=\sum_{k_{1} k_{2} \ldots k_{n}} a_{k_{1} i
 \end{equation}
 The inverse transformation which corresponds to the rotation \(S^{\prime} \rightarrow S\) is performed by the transposed matrix \(\tilde{a}=a^{-1}\). The inverse relations are
 \begin{gather}
-\vect{e}_{k}=\sum_{i} a_{k i} \vect{e}_{i}^{\prime}, \quad(i, k=x, y, z)  \label{chap1:eq:173}\\
-A_{k}=\sum_{i} a_{k i} A_{i}^{\prime}, \quad(i, k=x, y, z)  \label{chap1:eq:174}\\
-A_{k_{1} k_{2} \ldots k_{n}}=\sum_{i_{1} i_{2} \ldots i_{n}} a_{k_{1} i_{1}} a_{k_{2} i_{2} \ldots a_{k_{n} i_{n}}} A_{i_{1} i_{2} \ldots i_{n}}^{\prime}, \quad\left(i_{1}, k_{1}, i_{2}, k_{2}, \ldots, i_{n}, k_{n}=x, y, z\right) \label{chap1:eq:175}
+\vect{e}_{k}=\sum_{i} a_{k i} \vect{e}_{i}^{\prime}, \quad(i, k=x, y, z) , \label{chap1:eq:173}\\
+A_{k}=\sum_{i} a_{k i} A_{i}^{\prime}, \quad(i, k=x, y, z) , \label{chap1:eq:174}\\
+A_{k_{1} k_{2} \ldots k_{n}}=\sum_{i_{1} i_{2} \ldots i_{n}} a_{k_{1} i_{1}} a_{k_{2} i_{2} \ldots a_{k_{n} i_{n}}} A_{i_{1} i_{2} \ldots i_{n}}^{\prime}, \quad\left(i_{1}, k_{1}, i_{2}, k_{2}, \ldots, i_{n}, k_{n}=x, y, z\right). \label{chap1:eq:175}
 \end{gather}
 The elements of the rotation matrix \(a_{i k}\) may be evaluated from
 \begin{equation}
-a_{i k}=\vect{e}_{i} \vect{e}_{k}^{\prime}, \quad(i, k=x, y, z) \label{chap1:eq:176}
+a_{i k}=\vect{e}_{i} \vect{e}_{k}^{\prime}, \quad(i, k=x, y, z), \label{chap1:eq:176}
 \end{equation}
 Thus, the elements \(a_{i k}\) are cosines of angles between the basis vectors in the initial ( \(S\) ) and rotated ( \(S^{\prime}\) ) coordinate systems. An equivalent definition of \(a_{i k}\) in terms of coordinates in \(S\) and \(S^{\prime}\) has the form
 \begin{equation}
@@ -1271,7 +1290,7 @@ a=\begin{pmatrix}
 \cos \alpha \cos \beta \cos \gamma-\sin \alpha \sin \gamma & -\cos \alpha \cos \beta \sin \gamma-\sin \alpha \cos \gamma & \cos \alpha \sin \beta  \label{chap1:eq:178}\\
 \sin \alpha \cos \beta \cos \gamma+\cos \alpha \sin \gamma & -\sin \alpha \cos \beta \sin \gamma+\cos \alpha \cos \gamma & \sin \alpha \sin \beta \\
 -\sin \beta \cos \gamma & \sin \beta \sin \gamma & \cos \beta
-\end{pmatrix}
+\end{pmatrix}.
 \end{equation}
 The inverse matrix \(a^{-1}\) may be obtained from Eq. \eqref{chap1:eq:178} by transposing or, equivalently, by replacing the Euler angles \(\alpha, \beta, \gamma \rightarrow-\gamma,-\beta,-\alpha\).
 
@@ -1306,17 +1325,17 @@ n_{z} & 0 & -n_{x} \\
 \end{equation}
 where \(n_{x}, n_{y}, n_{z}\) are components of the unit vector \(n\) which determines direction of the rotation axis. Using \eqref{chap1:eq:180} one can easily derive the following expressions for the matrix elements \(a_{i k}\)
 \begin{equation}
-a_{i k}=\cos \omega \delta_{i k}+(1-\cos \omega) n_{i} n_{k}-\sin \omega \varepsilon_{i k l} n_{l}, \quad(i, k, l=x, y, z) \label{chap1:eq:181}
+a_{i k}=\cos \omega \delta_{i k}+(1-\cos \omega) n_{i} n_{k}-\sin \omega \varepsilon_{i k l} n_{l}, \quad(i, k, l=x, y, z) .\label{chap1:eq:181}
 \end{equation}
 The inverse matrix \(a^{-1}\) may be obtained from \eqref{chap1:eq:179} and \eqref{chap1:eq:180} by transposing or, equivalently, by replacing \(\omega, \Theta, \Phi \rightarrow-\omega, \Theta, \Phi\) or \(\omega, \Theta, \Phi \rightarrow \omega, \pi-\Theta, \pi+\Phi\).
 
 The expressions for \(\omega, \Theta, \Phi\) in terms of the matrix elements \(a_{i k}\) read
 \begin{align}
-& \cos \omega=\frac{1}{2}[\mathrm{Sp} a-1]= \frac{1}{2}\left(a_{x x}+a_{y y}+a_{z z}-1\right)  \notag\\
-& n_{x} \sin \omega \equiv \sin \omega \sin \Theta \cos \Phi= \frac{1}{2}\left(a_{z y}-a_{y z}\right)  \notag\\
-& n_{y} \sin \omega \equiv \sin \omega \sin \Theta \sin \Phi= \frac{1}{2}\left(a_{x x}-a_{z x}\right)  \label{chap1:eq:182}\\
-& n_{z} \sin \omega \equiv \sin \omega \cos \Theta= \frac{1}{2}\left(a_{y x}-a_{x y}\right)  \notag\\
-& n_{i} \sin \omega=-\frac{1}{2} \sum_{k l} \varepsilon_{i k l} a_{k l}, \quad(i, k, l=x, y, z) \notag
+& \cos \omega=\frac{1}{2}[\mathrm{Sp} a-1]= \frac{1}{2}\left(a_{x x}+a_{y y}+a_{z z}-1\right) , \notag\\
+& n_{x} \sin \omega \equiv \sin \omega \sin \Theta \cos \Phi= \frac{1}{2}\left(a_{z y}-a_{y z}\right) , \notag\\
+& n_{y} \sin \omega \equiv \sin \omega \sin \Theta \sin \Phi= \frac{1}{2}\left(a_{x x}-a_{z x}\right) , \label{chap1:eq:182}\\
+& n_{z} \sin \omega \equiv \sin \omega \cos \Theta= \frac{1}{2}\left(a_{y x}-a_{x y}\right)  ,\notag\\
+& n_{i} \sin \omega=-\frac{1}{2} \sum_{k l} \varepsilon_{i k l} a_{k l}, \quad(i, k, l=x, y, z) .\notag
 \end{align}
 The rotation matrix \(a\) may be rewritten in terms of the Cayley-Klein parameters as
 \begin{equation}
@@ -1351,11 +1370,11 @@ a_{z}(\Psi)=\begin{pmatrix}
 \cos \Psi & -\sin \Psi & 0  \label{chap1:eq:186}\\
 \sin \Psi & \cos \Psi & 0 \\
 0 & 0 & 1
-\end{pmatrix}
+\end{pmatrix}.
 \end{equation}
 For an arbitrary rotation determined by the Euler angles \(\alpha, \beta, \gamma\) the rotation matrix, in accordance with Eq. \eqref{chap1:eq:155}, may be written in the form
 \begin{equation}
-a=a_{n}(\omega)=a_{z}(\alpha) a_{y}(\beta) a_{z}(\gamma) \label{chap1:eq:187}
+a=a_{n}(\omega)=a_{z}(\alpha) a_{y}(\beta) a_{z}(\gamma). \label{chap1:eq:187}
 \end{equation}
 Equation \eqref{chap1:eq:187} represents a particular case of addition of coordinate rotations (see Sec. 1.4.7).
 
@@ -1369,7 +1388,7 @@ Let both rotations be performed according to the scheme \(\vect{B}(\vect{p} .22)
 
 The operator of resultant rotation has the form
 \begin{equation}
-\widehat{D}(\alpha, \beta, \gamma)=\widehat{D}\left(\alpha_{2}, \beta_{2}, \gamma_{2}\right) \widehat{D}\left(\alpha_{1}, \beta_{1}, \gamma_{1}\right) \label{chap1:eq:188}
+\widehat{D}(\alpha, \beta, \gamma)=\widehat{D}\left(\alpha_{2}, \beta_{2}, \gamma_{2}\right) \widehat{D}\left(\alpha_{1}, \beta_{1}, \gamma_{1}\right) ,\label{chap1:eq:188}
 \end{equation}
 or in more detail
 \begin{equation}
@@ -1377,9 +1396,9 @@ e^{-i \alpha \hat{J}_{z}} e^{-i \beta \hat{J}_{y}} e^{-i \gamma \hat{J}_{z}}=e^{
 \end{equation}
 In Eq. \eqref{chap1:eq:189} \(\widehat{J}_{i}\) is the projection of the total angular momentum operator on an \(i\)-axis of the coordinate system \(S\{x, y, z\}\). The angles of the resultant rotation \(\alpha, \beta, \gamma\) are expressed in terms of \(\alpha_{1}, \beta_{1}, \gamma_{1}\) and \(\alpha_{2}, \beta_{2}, \gamma_{2}\) as
 \begin{align}
-\cot \left(\alpha-\alpha_{2}\right) & =\cos \beta_{2} \cot \left(\alpha_{1}+\gamma_{2}\right)+\cot \beta_{1} \frac{\sin \beta_{2}}{\sin \left(\alpha_{1}+\gamma_{2}\right)}  \notag\\
-\cos \beta & =\cos \beta_{1} \cos \beta_{2}-\sin \beta_{1} \sin \beta_{2} \cos \left(\alpha_{1}+\gamma_{2}\right)  \label{chap1:eq:190}\\
-\cot \left(\gamma-\gamma_{1}\right) & =\cos \beta_{1} \cot \left(\alpha_{1}+\gamma_{2}\right)+\cot \beta_{2} \frac{\sin \beta_{1}}{\sin \left(\alpha_{1}+\gamma_{2}\right)} \notag
+\cot \left(\alpha-\alpha_{2}\right) & =\cos \beta_{2} \cot \left(\alpha_{1}+\gamma_{2}\right)+\cot \beta_{1} \frac{\sin \beta_{2}}{\sin \left(\alpha_{1}+\gamma_{2}\right)} , \notag\\
+\cos \beta & =\cos \beta_{1} \cos \beta_{2}-\sin \beta_{1} \sin \beta_{2} \cos \left(\alpha_{1}+\gamma_{2}\right) , \label{chap1:eq:190}\\
+\cot \left(\gamma-\gamma_{1}\right) & =\cos \beta_{1} \cot \left(\alpha_{1}+\gamma_{2}\right)+\cot \beta_{2} \frac{\sin \beta_{1}}{\sin \left(\alpha_{1}+\gamma_{2}\right)} .\notag
 \end{align}
 The following relations are useful for evaluation of \(\alpha, \beta, \gamma\).
 \begin{gather}
@@ -1430,7 +1449,7 @@ e^{-i \omega n \cdot \hat{J}}=e^{-i \omega_{2} n_{2} \cdot \hat{\vect{J}}} e^{-i
 The angle of the resultant rotation \(\omega\) and the axis of this rotation \(n\) are determined by
 \begin{gather}
 \cos \frac{\omega}{2}=\cos \frac{\omega_{1}}{2} \cos \frac{\omega_{2}}{2}-\left(n_{1} \cdot n_{2}\right) \sin \frac{\omega_{1}}{2} \sin \frac{\omega_{2}}{2},  \label{chap1:eq:199}\\
-n \sin \frac{\omega}{2}=n_{1} \sin \frac{\omega_{1}}{2} \cos \frac{\omega_{2}}{2}+n_{2} \sin \frac{\omega_{2}}{2} \cos \frac{\omega_{1}}{2}-\left[n_{1} \times n_{2}\right] \sin \frac{\omega_{1}}{2} \sin \frac{\omega_{2}}{2} \notag
+n \sin \frac{\omega}{2}=n_{1} \sin \frac{\omega_{1}}{2} \cos \frac{\omega_{2}}{2}+n_{2} \sin \frac{\omega_{2}}{2} \cos \frac{\omega_{1}}{2}-\left[n_{1} \times n_{2}\right] \sin \frac{\omega_{1}}{2} \sin \frac{\omega_{2}}{2} .\notag
 \end{gather}
 It follows from Eq. \eqref{chap1:eq:199} that the resultant rotation is independent of the order of successive rotations (i.e., the rotation operators commute) if and only if \(n_{1} \times n_{2}=0\), i.e., the axes of both rotations are parallel or antiparallel. In this case
 \[
@@ -1448,33 +1467,33 @@ If directions of the rotation axes \(n_{1}, n\) are defined by the polar angles 
 \subsubsection{(c) Description of Rotation in Terms of Cayley-Klein Parameters}
 Let the first rotation, \(S\{x, y, z\} \rightarrow S^{\prime}\left\{x^{\prime}, y^{\prime}, z^{\prime}\right\}\) be determined by the Cayley-Klein parameters \(a_{1}, b_{1}\) (1.4.3) and the second one, \(S^{\prime}\left\{x^{\prime}, y^{\prime}, z^{\prime}\right\} \rightarrow S^{\prime \prime}\left\{x^{\prime \prime}, y^{\prime \prime}, z^{\prime \prime}\right\}\), by the parameters \(a_{2}, b_{2}\). Then the resultant rotation \(S\{x, y, z\} \rightarrow S^{\prime \prime}\left\{x^{\prime \prime}, y^{\prime \prime}, z^{\prime \prime}\right\}\) will be determined by the parameters \(a, b\) such as
 \begin{align}
-& a=a_{1} a_{2}-b_{1}^{*} b_{2}  \notag\\
-& b=a_{1}^{*} b_{2}+b_{1} a_{2} \label{chap1:eq:201}
+& a=a_{1} a_{2}-b_{1}^{*} b_{2},  \notag\\
+& b=a_{1}^{*} b_{2}+b_{1} a_{2} .\label{chap1:eq:201}
 \end{align}
 The matrix \(U\) (see Eq. \eqref{chap1:eq:137}) which describes the resultant rotation is a product of matrices corresponding to the first and second rotations
 \begin{equation}
-U(a, b)=U\left(a_{2}, b_{2}\right) U\left(a_{1}, b_{1}\right) \label{chap1:eq:202}
+U(a, b)=U\left(a_{2}, b_{2}\right) U\left(a_{1}, b_{1}\right). \label{chap1:eq:202}
 \end{equation}
 In this case all the matrices are supposed to be given in an initial coordinate system.
 
 \subsubsection{(d) Addition Theorem for Rotation Matrices a}
 Let us carry out two successive rotations \(S\{x, y, z\} \rightarrow S^{\prime}\left\{x^{\prime}, y^{\prime}, z^{\prime}\right\}\) and \(S^{\prime}\left\{x^{\prime}, y^{\prime}, z^{\prime}\right\} \rightarrow S^{\prime \prime}\left\{x^{\prime \prime}, y^{\prime \prime}, z^{\prime \prime}\right\}\). The matrix which transforms cartesian components of vectors and tensors under the resultant rotation \(S\{x, y, z\} \rightarrow S^{\prime \prime}\left\{x^{\prime \prime}, y^{\prime \prime}, z^{\prime \prime}\right\}\) represents a product of the matrices \(a(1)\) and \(a(2)\) corresponding to the first and second rotations. The order of these matrices in the product depends on the convention used for the rotation angles. If all angles which describe rotations are referred to the initial coordinate system, i.e., the operator of the resultant rotation is given by Eq. (64), then
 \begin{equation}
-a=a(2) a(1) \label{chap1:eq:203}
+a=a(2) a(1), \label{chap1:eq:203}
 \end{equation}
 or, in terms of matrix elements,
 \begin{equation}
-a_{i k}=\sum_{l} a_{i l}(2) a_{l k}(1), \quad(i, k, l=x, y, z) \label{chap1:eq:204}
+a_{i k}=\sum_{l} a_{i l}(2) a_{l k}(1), \quad(i, k, l=x, y, z). \label{chap1:eq:204}
 \end{equation}
 The rotation matrices in terms of the rotation angles are given by Eqs. \eqref{chap1:eq:178} and \eqref{chap1:eq:180}. The angles which determine the resultant rotation are related to the angles of the first and second rotations via Eqs. \eqref{chap1:eq:190} and \eqref{chap1:eq:200}.
 
 If the angles which determine the first and resultant rotations, \(S \rightarrow S^{\prime}\) and \(S \rightarrow S^{\prime \prime}\), are defined with respect to the initial system \(S\{x, y, z\}\) but the angles of the second rotation \(S^{\prime} \rightarrow S^{\prime \prime}\) are defined with respect to the intermediate system \(S^{\prime}\left\{x^{\prime}, y^{\prime}, z^{\prime}\right\}\) (i.e., the operator of the resultant rotation is given by Eq. \eqref{chap1:eq:197}), then
 \begin{equation}
-a=a(1) a(2) \label{chap1:eq:205}
+a=a(1) a(2), \label{chap1:eq:205}
 \end{equation}
 or, equivalently,
 \begin{equation}
-a_{i k}=\sum_{l} a_{i l}(1) a_{l k}(2), \quad(i, k, l=x, y, z) \label{chap1:eq:206}
+a_{i k}=\sum_{l} a_{i l}(1) a_{l k}(2), \quad(i, k, l=x, y, z) .\label{chap1:eq:206}
 \end{equation}
 In this case the relationships between the angles of the resultant rotation and the angles of the first and second rotations may be derived from \eqref{chap1:eq:190} and \eqref{chap1:eq:200} by an interchange of indices \(1 \rightleftharpoons 2\).
 
