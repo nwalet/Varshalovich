@@ -2848,7 +2848,50 @@ where $R=a+b+c+d+e+f+g+h+p+q+r+s$.\\
 \sixj{c}{d}{Y}{k}{l}{j'}
 =(-1)^{-b+c-h+k} \frac{\delta_{j j^{\prime}}}{\Pi_{j}^{2}}\sixj{a}{c}{e}{l}{h}{j}\sixj{b}{d}{f}{k}{g}{j}, \label{chap12:eq:61}
 \end{gather}
-\includegraphics[max width=\textwidth, alt={}, center]{p42}
+\[
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \begin{scope}[shift={(1.4,2.0)}] % hex-top {a b X;c d Y;e f Z}: outer e,a,X,Y,d,f ; diam b,c,Z
+    \dninehex{0}{0}{e}{a}{X}{Y}{d}{f}
+    \draw[dlu](hLL)--(hB);\draw[dlu](hB)--(hLR); % X (eBL), Y (eBR) edges bold
+    \draw[dlu](hT)--(hB)node[wb,pos=0.72]{$Z$};
+    \draw[dl](hUR)--(hLL)node[wb,pos=0.28]{$b$};
+    \draw[dl](hUL)--(hLR)node[wb,pos=0.28]{$c$};
+  \end{scope}
+  \begin{scope} % square-left {a b X;g h j}: top a, left j, right X, bot g ; diag h,b ; X right bold
+    \dsq{0}{0}{a}{g}{j}{X}
+    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$h$};
+    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$b$};
+    \draw[dlu](sqTR)--(sqBR);
+  \end{scope}
+  \begin{scope}[shift={(2.8,0)}] % square-right {c d Y;k l j'}: top d, left Y, right j', bot l ; diag c,k ; Y left bold
+    \dsq{0}{0}{d}{l}{Y}{j'}
+    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$c$};
+    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$k$};
+    \draw[dlu](sqTL)--(sqBL);
+  \end{scope}
+  \begin{scope}[shift={(1.4,-2.0)}] % hex-bottom {g h X;k l Y;f e Z}: outer X,g,f,e,l,Y ; diam k,h,Z
+    \dninehex{0}{0}{X}{g}{f}{e}{l}{Y}
+    \draw[dlu](hT)--(hUL);\draw[dlu](hUR)--(hT); % X (eTL), Y (eTR) edges bold
+    \draw[dlu](hT)--(hB)node[wb,pos=0.72]{$Z$};
+    \draw[dl](hUR)--(hLL)node[wb,pos=0.28]{$k$};
+    \draw[dl](hUL)--(hLR)node[wb,pos=0.28]{$h$};
+  \end{scope}
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \begin{scope} % square {a c e;l h j}: top a, left e, right j, bot l ; diag c,h
+    \dsq{0}{0}{a}{l}{e}{j}
+    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$c$};
+    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$h$};
+  \end{scope}
+  \drect{2.0}{0}{j}{j'}
+  \begin{scope}[shift={(4.0,0)}] % square {b d f;k g j}: top b, left j, right f, bot k ; diag g,d
+    \dsq{0}{0}{b}{k}{j}{f}
+    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$g$};
+    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$d$};
+  \end{scope}
+\end{tikzpicture}
+\]
 
 \begin{gather}
 \sum_{X Y Z}(-1)^{Y-a-b-c-f-h-p+q} \Pi_{X Y Z}^{2}\ninej{a}{b}{X}{g}{c}{q}{p}{Z}{Y}\ninej{b}{d}{f^{\prime}}{a}{h}{j}{Z}{Y}{p}\sixj{a}{b}{X}{d}{e}{f}\sixj{d}{h}{Y}{q}{X}{e}  \notag\\
@@ -2856,7 +2899,41 @@ where $R=a+b+c+d+e+f+g+h+p+q+r+s$.\\
 \end{gather}
 
 \begin{center}
-  \includegraphics[alt={},max width=\textwidth]{39a53bec-58f6-4733-a518-53d974314721-23_386_1416_781_338}
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \begin{scope}[shift={(0,2.0)}] % square-left {a b X;d e f}: top e, left f, right X, bot b ; diag a,d ; X right bold
+    \dsq{0}{0}{e}{b}{f}{X}
+    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$a$};
+    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$d$};
+    \draw[dlu](sqTR)--(sqBR);
+  \end{scope}
+  \begin{scope}[shift={(2.4,2.0)}] % square-right {d h Y;q X e}: top e, left X, right h, bot Y ; diag d,q ; X left + Y bot bold
+    \dsq{0}{0}{e}{Y}{X}{h}
+    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$d$};
+    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$q$};
+    \draw[dlu](sqTL)--(sqBL);\draw[dlu](sqBL)--(sqBR);
+  \end{scope}
+  \begin{scope}[shift={(0.6,0)}] % hex-left {a b X;g c q;p Z Y}: outer X,b,c,g,p,Y ; diam a,Z,q ; X,Y,Z bold
+    \dninehex{0}{0}{X}{b}{c}{g}{p}{Y}
+    \draw[dlu](hT)--(hUL);\draw[dlu](hUR)--(hT); % X (eTL), Y (eTR) edges bold
+    \draw[dl](hT)--(hB)node[wb,pos=0.27]{$a$};
+    \draw[dlu](hUR)--(hLL)node[wb,pos=0.30]{$Z$};
+    \draw[dl](hUL)--(hLR)node[wb,pos=0.70]{$q$};
+  \end{scope}
+  \begin{scope}[shift={(3.0,0)}] % hex-right {b d f';a h j;Z Y p}: outer Y,p,f',b,c,h ; diam d,Z,j ; Y,Z bold
+    \dninehex{0}{0}{Y}{p}{f'}{b}{c}{h}
+    \draw[dlu](hT)--(hUL); % Y (eTL) edge bold
+    \draw[dl](hT)--(hB)node[wb,pos=0.27]{$d$};
+    \draw[dlu](hUR)--(hLL)node[wb,pos=0.30]{$Z$};
+    \draw[dl](hUL)--(hLR)node[wb,pos=0.70]{$j$};
+  \end{scope}
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \cthetav{0}{0}{b}{f}{d}
+  \drect{1.5}{0}{f}{f'}
+  \begin{scope}[shift={(3.1,0)}]\dsixjsq{0}{0}{f}{e}{p}{g}{j}{a}\end{scope}
+  \begin{scope}[shift={(5.4,0)}]\dsixjsq{0}{0}{e}{h}{g}{c}{j}{q}\end{scope}
+\end{tikzpicture}
 \end{center}
 
 \begin{gather}
@@ -2872,8 +2949,53 @@ where $R=a+b+c+d+e+f+g+h+p+q+r+s$.\\
 \end{gather}
 
 
-\begin{center}
-\includegraphics[max width=\textwidth, alt={}]{39a53bec-58f6-4733-a518-53d974314721-23_388_1263_1407_418}
-\end{center}
+\[
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \begin{scope}[shift={(0,0.3)}] % hex-left {a b X;c d Y;t s r}: outer c,d,s,r,X,a ; diam t,b,Y ; X,Y bold
+    \dninehex{0}{0}{c}{d}{s}{r}{X}{a}
+    \draw[dlu](hLR)--(hUR); % X (eR) edge bold
+    \draw[dl](hT)--(hB)node[wb,pos=0.27]{$t$};
+    \draw[dlu](hUR)--(hLL)node[wb,pos=0.70]{$Y$};
+    \draw[dl](hUL)--(hLR)node[wb,pos=0.30]{$b$};
+  \end{scope}
+  \begin{scope}[shift={(2.0,2.0)}] % hex-top {a b X;h j q;s f Z}: outer h,a,X,Z,f,j ; diam q,b,s ; X,Z bold
+    \dninehex{0}{0}{h}{a}{X}{Z}{f}{j}
+    \draw[dlu](hLL)--(hB);\draw[dlu](hB)--(hLR); % X (eBL), Z (eBR) edges bold
+    \draw[dl](hT)--(hB)node[wb,pos=0.27]{$q$};
+    \draw[dl](hUR)--(hLL)node[wb,pos=0.30]{$b$};
+    \draw[dl](hUL)--(hLR)node[wb,pos=0.70]{$s$};
+  \end{scope}
+  \begin{scope}[shift={(2.0,-1.5)}] % diamond {p q r;X Y Z}: q(UL) Z(UR) r(BL) p(BR); X(h) Y(v) ; X,Y,Z bold
+    \dsixjsq[3]{0}{0}{q}{Z}{r}{p}{X}{Y}
+    \draw[dlu](qt)--(qr); % Z (UR) edge bold
+  \end{scope}
+  \begin{scope}[shift={(4.0,0.3)}] % hex-right {k l p;c d Y;e f Z}: outer f,Z,p,k,c,d ; diam e,l,Y ; Y,Z bold
+    \dninehex{0}{0}{f}{Z}{p}{k}{c}{d}
+    \draw[dlu](hUL)--(hLL); % Z (eL) edge bold
+    \draw[dl](hT)--(hB)node[wb,pos=0.27]{$e$};
+    \draw[dlu](hUR)--(hLL)node[wb,pos=0.70]{$Y$};
+    \draw[dl](hUL)--(hLR)node[wb,pos=0.30]{$l$};
+  \end{scope}
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \begin{scope}[shift={(0,1.6)}] % square {k h t;a c e}: top e, left c, right h, bot t ; diag k,a
+    \dsq{0}{0}{e}{t}{c}{h}
+    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$k$};
+    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$a$};
+  \end{scope}
+  \begin{scope}[shift={(3.6,1.6)}] % square {l j s;b d f}: top b, left j, right d, bot l ; diag f,s
+    \dsq{0}{0}{b}{l}{j}{d}
+    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$f$};
+    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$s$};
+  \end{scope}
+  \begin{scope}[shift={(1.8,-0.7)}] % hex {k l p;h j q;t s r}: outer h,t,r,p,l,j ; diam k,s,q
+    \dninehex{0}{0}{h}{t}{r}{p}{l}{j}
+    \draw[dl](hT)--(hB)node[wb,pos=0.27]{$k$};
+    \draw[dl](hUR)--(hLL)node[wb,pos=0.30]{$s$};
+    \draw[dl](hUL)--(hLR)node[wb,pos=0.70]{$q$};
+  \end{scope}
+\end{tikzpicture}
+\]
 
 

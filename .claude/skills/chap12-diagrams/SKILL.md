@@ -90,6 +90,8 @@ exposed corner/vertex coords AFTER the macro, e.g. for a diamond BL edge
 `\draw[dlu](ql)--(qb);`; for a flat-hex top edge `\draw[dlu](v2)--(v1);`.
 
 ## Status / handoff
-Sec 12.1 fully TikZ. Sec 12.2 done through eq60 (p41). Remaining crops:
-`p42` (eq61), `39a53bec-*-23_386` (eq62), `39a53bec-*-23_388` (eq63) — all
-composite 6j/9j chains; build with the same pattern. Update this line when done.
+DONE — Chapter 12 is fully converted: `grep -c includegraphics Chap12.tex` == 0,
+`xelatex VMK.tex` clean. Sec 12.1 (eq 12.1.2–29) and Sec 12.2 (eq 30–63) are all
+line-only TikZ. If reopening: the diagrams may still get cosmetic label/geometry
+tweaks on review — same dev loop applies. This skill + the two memory files are
+the reference for any future nj-diagram work.
