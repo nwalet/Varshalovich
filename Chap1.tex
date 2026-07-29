@@ -410,17 +410,18 @@ Cartesian coordinates & Spherical coordinates & Polar coordinates \\
 \hline
 \(\vect{A}=A_{x} \vect{e}_{x}+A_{y} \vect{e}_{y}+A_{z} \vect{e}_{z}\) & \(\vect{A}=A^{+1} \vect{e}_{+1}+A^{0} \vect{e}_{0}+A^{-1} \vect{e}_{-1}\) & \(\vect{A}=A_{\varphi} \vect{e}_{\varphi}+A_{g} \vect{e}_{\vartheta}+A_{\varphi} \vect{e}_{\varphi}\) \\
 In terms of spherical components & In terms of cartesian components & In terms of cartesian components \\
-\(\left(\begin{array}{l}A_{x} \\ A_{y} \\ A_{z}\end{array}\right)=M(x, y, z \leftarrow+1,0,-1)\left(\begin{array}{c}A^{+1} \\ A^{0} \\ A^{-1}\end{array}\right)\) & \(\left(\begin{array}{c}A^{+1} \\ A^{0} \\ A^{-1}\end{array}\right)=M(+1,0,-1 \leftarrow x, y, z)\left(\begin{array}{l}A_{x} \\ A_{y} \\ A_{z}\end{array}\right)\) & \(\left(\begin{array}{l}A_{r} \\ A_{\vartheta} \\ A_{\varphi}\end{array}\right)=M(r, \vartheta, \varphi \leftarrow x, y, z)\left(\begin{array}{l}A_{x} \\ A_{y} \\ A_{z}\end{array}\right)\) \\
+\(\begin{pmatrix}A_{x} \\ A_{y} \\ A_{z}\end{pmatrix}=M(x, y, z \leftarrow+1,0,-1)\begin{pmatrix}A^{+1} \\ A^{0} \\ A^{-1}\end{pmatrix}\) & \(\begin{pmatrix}A^{+1} \\ A^{0} \\ A^{-1}\end{pmatrix}=M(+1,0,-1 \leftarrow x, y, z)\begin{pmatrix}A_{x} \\ A_{y} \\ A_{z}\end{pmatrix}\) & \(\begin{pmatrix}A_{r} \\ A_{\vartheta} \\ A_{\varphi}\end{pmatrix}=M(r, \vartheta, \varphi \leftarrow x, y, z)\begin{pmatrix}A_{x} \\ A_{y} \\ A_{z}\end{pmatrix}\) \\
 In terms of polar components & In terms of polar components & In terms of spherical components \\
-\(\left(\begin{array}{l}A_{x} \\ A_{y} \\ A_{z}\end{array}\right)=M(x, y, z \leftarrow r, \vartheta, \varphi)\left(\begin{array}{c}A_{\varphi} \\ A_{\vartheta} \\ A_{\varphi}\end{array}\right)\) & \(\left(\begin{array}{c}A^{+1} \\ A^{0} \\ A^{-1}\end{array}\right)=M(+1,0,-1 \leftarrow r, \vartheta, \varphi)\left(\begin{array}{c}A_{r} \\ A_{\vartheta} \\ A_{\varphi}\end{array}\right)\) & \(\left(\begin{array}{l}A_{r} \\ A_{\vartheta} \\ A_{\varphi}\end{array}\right)=M(r, \vartheta, \varphi \leftarrow+1,0,-1)\left(\begin{array}{c}A^{+1} \\ A^{0} \\ A^{-1}\end{array}\right)\) \\
+\(\begin{pmatrix}A_{x} \\ A_{y} \\ A_{z}\end{pmatrix}=M(x, y, z \leftarrow r, \vartheta, \varphi)\begin{pmatrix}A_{\varphi} \\ A_{\vartheta} \\ A_{\varphi}\end{pmatrix}\) & \(\begin{pmatrix}A^{+1} \\ A^{0} \\ A^{-1}\end{pmatrix}=M(+1,0,-1 \leftarrow r, \vartheta, \varphi)\begin{pmatrix}A_{r} \\ A_{\vartheta} \\ A_{\varphi}\end{pmatrix}\) & \(\begin{pmatrix}A_{r} \\ A_{\vartheta} \\ A_{\varphi}\end{pmatrix}=M(r, \vartheta, \varphi \leftarrow+1,0,-1)\begin{pmatrix}A^{+1} \\ A^{0} \\ A^{-1}\end{pmatrix}\) \\
 \hline
 \hline
 \end{tabular}
 \end{center}
 \end{table}
 
-\begin{table}[tbh]
+\begin{table}[ptbh]
 \begin{center}
+  \renewcommand{\arraystretch}{1.5}
 \caption{Matrices of transformations between cartesian, spherical contravariant and polar components of vectors.}
 \label{chap1:tab:2}
 %\scriptsize
@@ -438,8 +439,7 @@ z & 0                   & 1 & 0}
 -1 &-\frac{1}{\sqrt{2}} & -\frac{i}{\sqrt{2}} & 0 \cr
  0 & 0                  & 0                   & 1 \cr
  1 & \frac{1}{\sqrt{2}} & -\frac{i}{\sqrt{2}} & 0}
-\)\\
-\vspace*{5mm}
+\)\\[10mm]
 \(M(x, y, z \leftarrow r, \vartheta, \varphi)\) &  \(M(r, \vartheta, \varphi \leftarrow x, y, z)\) \\
 \(
 \kbordermatrix{~& r &\vartheta & \varphi \cr
@@ -453,7 +453,7 @@ z & \cos \vartheta              & -\sin\vartheta & 0}
 r         & \sin \vartheta \cos \varphi & \sin \vartheta \sin \varphi & \cos \vartheta \cr
 \vartheta & \cos \vartheta \cos \varphi & \cos \vartheta \sin \varphi & -\sin\vartheta\cr
  \varphi  & -\sin\varphi & \cos\varphi & 0 }
-\)\\[5mm]
+\)\\[10mm]
 \( M(+1,0,-1 \longleftarrow r, \vartheta, \varphi)\) 
 & \(M(r, \vartheta, \varphi \leftarrow+1,0,-1)\) \\
 \(\kbordermatrix{ & r &\vartheta &\varphi \cr
@@ -469,12 +469,12 @@ r & -\frac{\sin \vartheta}{\sqrt{2}} e^{i \varphi} & \cos \vartheta & \frac{\sin
 \end{center}
 \end{table}
 \begin{comment}
-\left(\begin{array}{ccc}
+\begin{pmatrix}
 x & y & z \\
 -\frac{1}{\sqrt{2}} & \frac{i}{\sqrt{2}} & 0 \\
 0 & 0 & 1 \\
 \frac{1}{\sqrt{2}} & \cdot \frac{i}{\sqrt{2}} & 0
-\end{array}\right) \\
+\end{pmatrix} \\
 & \left.\begin{array}{c}
 r \\
 x \\
@@ -508,11 +508,11 @@ z \\
 +1 \\
 0 \\
 -1
-\end{array}\left(\begin{array}{ccc}
+\end{array}\begin{pmatrix}
 -\frac{1}{\sqrt{2}} & \frac{i}{\sqrt{2}} & 0 \\
 0 & 0 & 1 \\
 \frac{1}{\sqrt{2}} & \cdot \frac{i}{\sqrt{2}} & 0
-\end{array}\right) \\
+\end{pmatrix} \\
 & \left.\left.\begin{array}{c}
 M(r, \vartheta, \varphi \longleftarrow x, y, z) \\
 \dot{r} \\
@@ -526,19 +526,19 @@ M(r, \vartheta, \varphi \longleftarrow x, y, z) \\
 & M(+1,0,-1 \longleftarrow r, \vartheta, \varphi) \\
 & M(r, \vartheta, \varphi \leftarrow+1,0,-1) \\
 & r \vartheta \varphi \\
-& +1\left(\begin{array}{ccc}
+& +1\begin{pmatrix}
 -\frac{\sin \vartheta}{\sqrt{2}} e^{-i \varphi} & -\frac{\cos \vartheta}{\sqrt{2}} e^{-i \varphi} & \frac{i}{\sqrt{2}} e^{-i \varphi} \\
 \cos \vartheta & -\sin \vartheta & 0 \\
 \frac{\sin \vartheta}{\sqrt{2}} e^{i \varphi} & \frac{\cos \vartheta}{\sqrt{2}} e^{i \varphi} & \frac{i}{\sqrt{2}} e^{i \varphi}
-\end{array}\right) \\
+\end{pmatrix} \\
 & \begin{array}{l}
 r \\
 \varphi
-\end{array}\left(\begin{array}{ccc}
+\end{array}\begin{pmatrix}
 -\frac{\sin \vartheta}{\sqrt{2}} e^{i \varphi} & \cos \vartheta & \frac{\sin \vartheta}{\sqrt{2}} e^{-i \varphi} \\
 -\frac{\cos \vartheta}{\sqrt{2}} e^{i \varphi} & -\sin \vartheta & \frac{\cos \vartheta}{\sqrt{2}} e^{-i \varphi} \\
 -\frac{i}{\sqrt{2}} e^{i \varphi} & 0 & -\frac{i}{\sqrt{2}} e^{-i \varphi}
-\end{array}\right)
+\end{pmatrix}
 \end{aligned}
 \]
 \end{comment}
@@ -573,17 +573,17 @@ In a cartesian coordinate system the vector product of vectors \(\vect{A}\) and 
 \vect{e}_{x} & \vect{e}_{y} & \vect{e}_{z}  \label{chap1:eq:72}\\
 A_{x} & A_{y} & A_{z} \\
 B_{x} & B_{y} & B_{z}
-\end{array}\right|=\sum_{i=x, y, z}\left[\vect{A} \times \vect{B}_{i} \vect{e}_{i}\right.
+\end{array}\right|=\sum_{i=x, y, z}\left[\vect{A} \times \vect{B}\right]_{i} \vect{e}_{i}
 \end{equation}
 where
 \begin{align}
-& {[\vect{A} \times \vect{B}]_{x}=A_{y} B_{z}-A_{z} B_{y}}  \notag\\
-& {[\vect{A} \times \vect{B}]_{y}=A_{z} B_{x}-A_{x} B_{z}}  \label{chap1:eq:73}\\
-& {[\vect{A} \times \vect{B}]_{z}=A_{x} B_{y}-A_{y} B_{x}} \notag
+& {[\vect{A} \times \vect{B}]_{x}=A_{y} B_{z}-A_{z} B_{y}} , \notag\\
+& {[\vect{A} \times \vect{B}]_{y}=A_{z} B_{x}-A_{x} B_{z}} , \label{chap1:eq:73}\\
+& {[\vect{A} \times \vect{B}]_{z}=A_{x} B_{y}-A_{y} B_{x}} .\notag
 \end{align}
 Equation \eqref{chap1:eq:73} may be written in a more compact form as
 \begin{equation}
-[\vect{A} \times \vect{B}]_{i}=\sum_{k l} \varepsilon_{i k l} A_{k} B_{l}, \quad(i, k, l=x, y, z) \label{chap1:eq:74}
+[\vect{A} \times \vect{B}]_{i}=\sum_{k l} \varepsilon_{i k l} A_{k} B_{l}, \quad(i, k, l=x, y, z). \label{chap1:eq:74}
 \end{equation}
 In the polar coordinate system
 \begin{equation}
@@ -623,18 +623,25 @@ where
 {[\vect{A} \times \vect{B}]^{-1} } & =i\left(A_{+1} B_{0}-A_{0} B_{+1}\right)=i\left(A^{0} B^{-1}-A^{-1} B_{0}\right) \notag
 \end{align}
 Equations \eqref{chap1:eq:78}-\eqref{chap1:eq:79} may be written in a more compact form using the Clebsch-Gordan coefficients (see Chap. 8)
-\begin{align*}
+\begin{equation}
+\begin{aligned}
 & {[\vect{A} \times \vect{B}]_{\mu}=-i \sqrt{2} \sum_{\nu \lambda} \clebsch{1}{\nu}{1}{\lambda}{1}{\mu} A_{\nu} B_{\lambda}} \\
-& {[\vect{A} \times \vect{B}]^{\mu}=i \sqrt{2} \sum_{\nu \lambda} \clebsch{1}{\nu}{1}{\lambda}{1}{\mu} A^{\nu} B^{\lambda}, \quad(\mu, \nu, \lambda= \pm 1,0) .}
-\end{align*}
+& {[\vect{A} \times \vect{B}]^{\mu}=i \sqrt{2} \sum_{\nu \lambda} \clebsch{1}{\nu}{1}{\lambda}{1}{\mu} A^{\nu} B^{\lambda},}
+\end{aligned}
+ \quad(\mu, \nu, \lambda= \pm 1,0) .
+\end{equation}
 Helicity components of the vector product are given by equations analogous to (25)-(28).
 
 \subsection{Products Involving Three or More Vectors}
 \begin{gather}
-\vect{A} \cdot[\vect{B} \times \vect{C}]=\vect{B} \cdot[\vect{C} \times \vect{A}]=\vect{C} \cdot[\vect{A} \times \vect{B}]=-\vect{A} \cdot[\vect{C} \times \vect{B}]=-\vect{B} \cdot[\vect{A} \times \vect{C}]=-\vect{C} \cdot[\vect{B} \times \vect{A}],  \label{chap1:eq:80}\\
-\vect{A} \times[\vect{B} \times \vect{C}]=\vect{B}(\vect{A} \cdot \vect{C})-\vect{C}(\vect{A} \cdot \vect{B}),  \label{chap1:eq:81}\\
-{[\vect{A} \times \vect{B}] \cdot[\vect{C} \times \vect{D}]=(\vect{A} \cdot \vect{C})(\vect{B} \cdot \vect{D})-(\vect{A} \cdot \vect{D})(\vect{B} \cdot \vect{C}),}  \label{chap1:eq:82}\\
-{[\vect{A} \times \vect{B}] \times[\vect{C} \times \vect{D}]=\vect{B}(\vect{A} \cdot[\vect{C} \times \vect{D}])-\vect{A}(\vect{B} \cdot[\vect{C} \times \vect{D}])=\vect{C}(\vect{A} \cdot[\vect{B} \times \vect{D}])-\vect{D}(\vect{A} \cdot[\vect{B} \times \vect{C}]) .}  \label{chap1:eq:83}\\
+\vect{A} \cdot[\vect{B} \times \vect{C}]=\vect{B} \cdot[\vect{C} \times \vect{A}]=\vect{C} \cdot[\vect{A} \times \vect{B}]=-\vect{A} \cdot[\vect{C} \times \vect{B}]=-\vect{B} \cdot[\vect{A} \times \vect{C}]=-\vect{C} \cdot[\vect{B} \times \vect{A}],  \label{chap1:eq:80}\end{gather}
+\begin{gather}
+\vect{A} \times[\vect{B} \times \vect{C}]=\vect{B}(\vect{A} \cdot \vect{C})-\vect{C}(\vect{A} \cdot \vect{B}),  \label{chap1:eq:81}\end{gather}
+\begin{gather}
+{[\vect{A} \times \vect{B}] \cdot[\vect{C} \times \vect{D}]=(\vect{A} \cdot \vect{C})(\vect{B} \cdot \vect{D})-(\vect{A} \cdot \vect{D})(\vect{B} \cdot \vect{C}),}  \label{chap1:eq:82}\end{gather}
+\begin{gather}
+{[\vect{A} \times \vect{B}] \times[\vect{C} \times \vect{D}]=\vect{B}(\vect{A} \cdot[\vect{C} \times \vect{D}])-\vect{A}(\vect{B} \cdot[\vect{C} \times \vect{D}])=\vect{C}(\vect{A} \cdot[\vect{B} \times \vect{D}])-\vect{D}(\vect{A} \cdot[\vect{B} \times \vect{C}]) .}  \label{chap1:eq:83}\end{gather}
+\begin{gather}
 (\vect{A} \cdot[\vect{B} \times \vect{C}])(\vect{a} \cdot[\vect{b} \times \vect{c}])=\left|\begin{array}{lll}
 \vect{A} \cdot \vect{a} & \vect{A} \cdot \vect{b} & \vect{A} \cdot \vect{c} \\
 \vect{B} \cdot \vect{a} & \vect{B} \cdot \vect{b} & \vect{B} \cdot \vect{c} \\
@@ -905,8 +912,8 @@ An arbitrary rotation of a coordinate system about the origin is completely spec
 - the Cayley-Klein parameters.
 
 \subsection{Description of Rotations in Terms of the Euler Angles}
-Any rotation of the coordinate system \(S\{x, y, z\} \rightarrow S^{\prime}\left\{x^{\prime}, y^{\prime}, z^{\prime}\right\}\) may be performed by three successive otations about the coordinate axes (Fig.~\ref{chap1:fig:3})\\
-\(\vect{A}\left\{\begin{array}{l}\text { a) rotation about the \(z\)-axis through an angle \(\alpha(0 \leq \alpha<2 \pi\),}\\ \text { (b) rotation about the new \(y_{1}\)-axis through an angle \(\beta(0 \leq \beta \leq \pi)\),} \\ \text { (c) rotation about the new axis \(z_{2}=z^{\prime}\) through an angle \(\gamma(0 \leq \gamma<2 \pi)\).}\end{array}\right.\)
+Any rotation of the coordinate system \(S\{x, y, z\} \rightarrow S^{\prime}\left\{x^{\prime}, y^{\prime}, z^{\prime}\right\}\) may be performed by three successive rotations about the coordinate axes (Fig.~\ref{chap1:fig:3})\\
+\(\vect{A}\left\{\begin{array}{l}\text {(a) rotation about the \(z\)-axis through an angle \(\alpha(0 \leq \alpha<2 \pi\),}\\ \text { (b) rotation about the new \(y_{1}\)-axis through an angle \(\beta(0 \leq \beta \leq \pi)\),} \\ \text { (c) rotation about the new axis \(z_{2}=z^{\prime}\) through an angle \(\gamma(0 \leq \gamma<2 \pi)\).}\end{array}\right.\)
 
 
 The same rotation \(S\{x, y, z\} \rightarrow S^{\prime}\left\{x^{\prime}, y^{\prime}, z^{\prime}\right\}\) may also be performed by another succession of rotations Fig.~\ref{chap1:fig:4}),
@@ -999,10 +1006,10 @@ Equations \eqref{chap1:eq:131}-\eqref{chap1:eq:132} may be derived by projecting
 \subsection{Description of Rotations in Terms of Unitary \(2 \times 2\) Matrices. Cayley-Klein Parameters.}
 The position vector of an arbitrary point \(\vect{r}=x \vect{e}_{x}+y \vect{e}_{y}+z \vect{e}_{z}\) may be represented by the following Hermitian \(2 \times 2\) matrix \(X\) :
 \begin{equation}
-X=X^{+}=\left(\begin{array}{cc}
+X=X^{+}=\begin{pmatrix}
 z & x+i y  \label{chap1:eq:134}\\
 x-i y & -z
-\end{array}\right)=\sum_{i=x, y, z}^{i} x_{i} \tilde{\sigma}_{i},
+\end{pmatrix}=\sum_{i=x, y, z}^{i} x_{i} \tilde{\sigma}_{i},
 \end{equation}
 where \(\tilde{\sigma}_{i}(i=x, y, z)\) are the transposed Pauli matrices (Eq. 2.5(4)). Note that
 \[
@@ -1028,10 +1035,10 @@ Bearing in mind that \(\vect{r}\) is real, one can easily prove that \(U\), inde
 
 Equations \eqref{chap1:eq:136} imply the following form of \(U\)
 \begin{equation}
-U=\left(\begin{array}{cc}
+U=\begin{pmatrix}
 a & b  \label{chap1:eq:137}\\
 -b^{*} & a^{*}
-\end{array}\right)
+\end{pmatrix}
 \end{equation}
 where \(a\) and \(b\) are complex numbers which satisfy the condition
 \begin{equation}
@@ -1041,10 +1048,10 @@ Thus, the matrix \(U\) depends on three real independent parameters. The numbers
 
 The inverse rotation \(S^{\prime}\left\{x^{\prime}, y^{\prime}, z^{\prime}\right\} \rightarrow S\{x, y, z\}\) corresponds to the matrix
 \begin{equation}
-U^{-1}=U^{+}=\left(\begin{array}{cc}
+U^{-1}=U^{+}=\begin{pmatrix}
 a^{*} & -b  \label{chap1:eq:139}\\
 b^{*} & a
-\end{array}\right)
+\end{pmatrix}
 \end{equation}
 The Cayley-Klein parameters permit us to propose an alternative interpretation of coordinate rotations. Let us consider a sphere (of unit diameter) about the origin. Each point of the sphere with coordinates \(x, y, z\left(x^{2}+y^{2}+z^{2}=1 / 4\right)\) corresponds to the point \(\varsigma=\xi+i \eta\) on the complex plane which is called the stereographic projection of the point \(x, y, z\) (Fig.~\ref{chap1:fig:7}). The complex number \(\varsigma\) is related to \(x, y, z\) by
 \begin{equation}
@@ -1170,35 +1177,35 @@ Effects of the rotation operator on various wave functions and quantum-mechanica
 \subsection{Transformation of Cartesian Vectors and Tensors Under Rotations of Coordinate Systems. Rotation Matrix a}
 An arbitrary vector \(\vect{A}\) may be written as a column
 \begin{equation}
-\vect{A}=\left(\begin{array}{c}
+\vect{A}=\begin{pmatrix}
 A_{x}  \label{chap1:eq:161}\\
 A_{y} \\
 A_{z}
-\end{array}\right)
+\end{pmatrix}
 \end{equation}
 where \(A_{x}, A_{y}, A_{z}\) are cartesian components of A . In this representation the Cartesian basis vectors \(\vect{e}_{x}, \vect{e}_{y}, \vect{e}_{z}\) have the form
 \begin{equation}
-\vect{e}_{x}=\left(\begin{array}{l}
+\vect{e}_{x}=\begin{pmatrix}
 1  \label{chap1:eq:162}\\
 0 \\
 0
-\end{array}\right), \quad \vect{e}_{y}=\left(\begin{array}{l}
+\end{pmatrix}, \quad \vect{e}_{y}=\begin{pmatrix}
 0 \\
 1 \\
 0
-\end{array}\right), \quad \vect{e}_{z}=\left(\begin{array}{l}
+\end{pmatrix}, \quad \vect{e}_{z}=\begin{pmatrix}
 0 \\
 0 \\
 1
-\end{array}\right)
+\end{pmatrix}
 \end{equation}
 The effect of the rotation operator on the basis vectors written in such a form is equivalent to an action of some \(3 \times 3\) matrix \(a\) which may be regarded as one of the representations of the rotation operator
 \begin{equation}
-a=\left(\begin{array}{lll}
+a=\begin{pmatrix}
 a_{x x} & a_{x y} & a_{x z}  \label{chap1:eq:163}\\
 a_{y x} & a_{y y} & a_{y x} \\
 a_{z x} & a_{z y} & a_{z z}
-\end{array}\right) .
+\end{pmatrix} .
 \end{equation}
 The matrix \(a\) is real
 \begin{equation}
@@ -1260,17 +1267,17 @@ a_{i k}=\frac{\partial x_{i}^{\prime}}{\partial x_{k}}=\frac{\partial x_{k}}{\pa
 \end{equation}
 The rotation matrix \(a\) is given in terms of the Euler angles by
 \begin{equation}
-a=\left(\begin{array}{ccc}
+a=\begin{pmatrix}
 \cos \alpha \cos \beta \cos \gamma-\sin \alpha \sin \gamma & -\cos \alpha \cos \beta \sin \gamma-\sin \alpha \cos \gamma & \cos \alpha \sin \beta  \label{chap1:eq:178}\\
 \sin \alpha \cos \beta \cos \gamma+\cos \alpha \sin \gamma & -\sin \alpha \cos \beta \sin \gamma+\cos \alpha \cos \gamma & \sin \alpha \sin \beta \\
 -\sin \beta \cos \gamma & \sin \beta \sin \gamma & \cos \beta
-\end{array}\right)
+\end{pmatrix}
 \end{equation}
 The inverse matrix \(a^{-1}\) may be obtained from Eq. \eqref{chap1:eq:178} by transposing or, equivalently, by replacing the Euler angles \(\alpha, \beta, \gamma \rightarrow-\gamma,-\beta,-\alpha\).
 
 The expression for the rotation matrix \(a\) in terms of the angles \(\Theta, \Phi\) which describe the direction of the rotation axis, and the rotation angle \(\omega\) has the form
 \begin{align}
-& a=\left(\begin{array}{l}
+& a=\left(\begin{array}{cc}
 (1-\cos \omega) \sin ^{2} \Theta \cos ^{2} \Phi+\cos \omega \\
 (1-\cos \omega) \sin ^{2} \Theta \cos \Phi \sin \Phi+\sin \omega \cos \Theta \\
 (1-\cos \omega) \sin \Theta \cos \Theta \cos \Phi-\sin \omega \sin \Theta \sin \Phi
@@ -1283,19 +1290,19 @@ The expression for the rotation matrix \(a\) in terms of the angles \(\Theta, \P
 \end{align}
 Equation \eqref{chap1:eq:179} may be expanded into
 \begin{equation}
-a=\cos \omega\left(\begin{array}{lll}
+a=\cos \omega\begin{pmatrix}
 1 & 0 & 0  \label{chap1:eq:180}\\
 0 & 1 & 0 \\
 0 & 0 & 1
-\end{array}\right)+(1-\cos \omega)\left(\begin{array}{ccc}
+\end{pmatrix}+(1-\cos \omega)\begin{pmatrix}
 n_{x}^{2} & n_{x} n_{y} & n_{x} n_{z} \\
 n_{y} n_{x} & n_{y}^{2} & n_{y} n_{z} \\
 n_{x} n_{x} & n_{z} n_{y} & n_{z}^{2}
-\end{array}\right)+\sin \omega\left(\begin{array}{ccc}
+\end{pmatrix}+\sin \omega\begin{pmatrix}
 0 & -n_{z} & n_{y} \\
 n_{z} & 0 & -n_{x} \\
 -n_{y} & n_{x} & 0
-\end{array}\right)
+\end{pmatrix}
 \end{equation}
 where \(n_{x}, n_{y}, n_{z}\) are components of the unit vector \(n\) which determines direction of the rotation axis. Using \eqref{chap1:eq:180} one can easily derive the following expressions for the matrix elements \(a_{i k}\)
 \begin{equation}
@@ -1313,38 +1320,38 @@ The expressions for \(\omega, \Theta, \Phi\) in terms of the matrix elements \(a
 \end{align}
 The rotation matrix \(a\) may be rewritten in terms of the Cayley-Klein parameters as
 \begin{equation}
-a=\left(\begin{array}{ccc}
+a=\begin{pmatrix}
 \frac{1}{2}\left(a^{2}-b^{2}+a^{* 2}-b^{* 2}\right) & \frac{i}{2}\left(-a^{2}+b^{2}+a^{* 2}-b^{* 2}\right) & a b^{*}+a^{*} b  \label{chap1:eq:183}\\
 \frac{i}{2}\left(a^{2}+b^{2}-a^{* 2}-b^{* 2}\right) & \frac{1}{2}\left(a^{2}+b^{2}+a^{* 2}+b^{* 2}\right) & i\left(a b^{*}-a^{*} b\right) \\
 -\left(a b+a^{*} b^{*}\right) & i\left(a b-a^{*} b^{*}\right) & a a^{*}-b b^{*}
-\end{array}\right) .
+\end{pmatrix} .
 \end{equation}
 One can see that the parameters \(a, b\) and \(-a,-b\) correspond to the same rotation matrix.
 
 \subsubsection{Particular Forms of Rotation Matrix}
 (a) Rotation through an angle \(\Psi\) about the \(x\)-axis:
 \begin{equation}
-a_{x}(\Psi)=\left(\begin{array}{ccc}
+a_{x}(\Psi)=\begin{pmatrix}
 1 & 0 & 0  \label{chap1:eq:184}\\
 0 & \cos \Psi & -\sin \Psi \\
 0 & \sin \Psi & \cos \Psi
-\end{array}\right) .
+\end{pmatrix} .
 \end{equation}
 (b) Rotation through an angle \(\Psi\) about the \(y\)-axis:
 \begin{equation}
-a_{y}(\Psi)=\left(\begin{array}{ccc}
+a_{y}(\Psi)=\begin{pmatrix}
 \cos \Psi & 0 & \sin \Psi  \label{chap1:eq:185}\\
 0 & 1 & 0 \\
 -\sin \Psi & 0 & \cos \Psi
-\end{array}\right) .
+\end{pmatrix} .
 \end{equation}
 (c) Rotation through an angle \(\Psi\) about the \(z\)-axis:
 \begin{equation}
-a_{z}(\Psi)=\left(\begin{array}{ccc}
+a_{z}(\Psi)=\begin{pmatrix}
 \cos \Psi & -\sin \Psi & 0  \label{chap1:eq:186}\\
 \sin \Psi & \cos \Psi & 0 \\
 0 & 0 & 1
-\end{array}\right)
+\end{pmatrix}
 \end{equation}
 For an arbitrary rotation determined by the Euler angles \(\alpha, \beta, \gamma\) the rotation matrix, in accordance with Eq. \eqref{chap1:eq:155}, may be written in the form
 \begin{equation}
