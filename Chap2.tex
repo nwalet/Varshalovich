@@ -1,4 +1,4 @@
-\chapter{Angular momentum operators} \label{chapter:2}
+\chapter{Angular momentum operators} \label{chap:2}
 \section{Total angular momentum operator} \label{sec:2.1}
 \subsection{Definition}
 In quantum mechanics the total angular momentum operator $\widehat{\vect{J}}$ is defined as an operator which generates transformations of wave functions (state vectors) and quantum operators under infinitesimal rotations of the coordinate system (see Eqs. \eqref{eq:2:1:1} and \eqref{eq:2:1:2}).
@@ -12,7 +12,7 @@ A transformation of an arbitrary quantum operator $\widehat{O}$ under an infinit
 \begin{equation}
 \widehat{O} \rightarrow \widehat{O}^{\prime}=\widehat{O}-i \delta \omega n \cdot[\widehat{\vect{J}}, \widehat{O}] . \label{eq:2:1:2}
 \end{equation}
-The finite rotation operator can also be written in terms of the total angular momentum operator (see Eqs. 1.4(29), 1.4(30), 1.4(32)). The total angular momentum operator is Hermitian,
+The finite rotation operator can also be written in terms of the total angular momentum operator (see Eqs. \ref{eq:1:4:29}, \ref{eq:1:4:30}, \ref{eq:1:4:32}). The total angular momentum operator is Hermitian,
 \begin{equation}
 \widehat{\vect{J}}^{+}=\widehat{\vect{J}} . \label{eq:2:1:3}
 \end{equation}
@@ -168,7 +168,7 @@ The orbital angular momentum operator $\hat{\vect{L}}$ generates transformations
 \begin{equation}
 \Psi(\vect{r}) \rightarrow \Psi(\vect{r}+\delta \vect{r})=(1+\delta \vect{r} \cdot \nabla) \Psi(\vect{r})=(1-i \delta \omega \vect{n} \cdot \hat{\vect{L}}) \Psi(\vect{r}) . \label{eq:2:2:7}
 \end{equation}
-In the case of a finite rotation through an angle $\omega$ about the axis $n$, scalar functions are transformed by the operator $e^{-i \omega n \cdot \widehat{\vect{L}}}$ which is the particular form of the rotation operator $1.5(32)$. The eigenfunctions of the ɔperators $\widehat{\vect{L}}^{2}$ and $\widehat{L}_{z}$ represent spherical harmonics $Y_{l m}(\vartheta, \varphi)$ (Chap. 5) which depend on the polar angles $\vartheta, \varphi$.
+In the case of a finite rotation through an angle $\omega$ about the axis $n$, scalar functions are transformed by the operator $e^{-i \omega n \cdot \widehat{\vect{L}}}$ which is the particular form of the rotation operator \ref{eq:1:4:32}. The eigenfunctions of the operators $\widehat{\vect{L}}^{2}$ and $\widehat{L}_{z}$ represent spherical harmonics $Y_{l m}(\vartheta, \varphi)$ (Chap. 5) which depend on the polar angles $\vartheta, \varphi$.
 
 \subsection{Commutation Relations}
 The orbital angular momentum operator $\hat{\vect{L}}$ satisfies the same commutation relations as the total angular momentum operator $\widehat{\vect{J}}$. Appropriate expressions for the commutators are readily obtained from Eqs. \eqref{eq:2:1:5}-\eqref{eq:2:1:14} by substituting $\widehat{\vect{J}} \rightarrow \hat{\vect{L}}$.
@@ -176,10 +176,12 @@ The orbital angular momentum operator $\hat{\vect{L}}$ satisfies the same commut
 The commutation rules for the operator $\hat{\vect{L}}$ with the position operator $\hat{\vect{r}}$ and the momentum operator $\hat{\vect{p}}$ are the following.
 
 For cartesian components
-\begin{align}
-& {\left[\hat{L}_{i}, \hat{x}_{k}\right]=i \varepsilon_{i k l} x_{l},}  \label{eq:2:2:8}\\
-& {\left[\widehat{L}_{i}, \hat{p}_{k}\right]=i \varepsilon_{i k l} p_{l}, \quad(i, k, l=x, y, z)} \notag
-\end{align}
+\begin{equation}
+\begin{aligned}
+& {\left[\hat{L}_{i}, \hat{x}_{k}\right]=i \varepsilon_{i k l} x_{l},}\\
+& {\left[\widehat{L}_{i}, \hat{p}_{k}\right]=i \varepsilon_{i k l} p_{l}, } 
+\end{aligned} \quad(i, k, l=x, y, z). \label{eq:2:2:8}
+\end{equation}
 Note also that $\widehat{\vect{r}}$ and $\widehat{\vect{p}}$ obey the commutation relations
 \begin{equation}
 \left[\widehat{x}_{i}, \widehat{x}_{k}\right]=0, \quad\left[\widehat{p}_{i}, \widehat{p}_{k}\right]=0, \quad\left[\widehat{x}_{i}, \widehat{p}_{k}\right]=i \delta_{i k}, \quad(i, k=x, y, z) .\label{eq:2:2:9}
@@ -187,15 +189,15 @@ Note also that $\widehat{\vect{r}}$ and $\widehat{\vect{p}}$ obey the commutatio
 For spherical components
 \begin{equation}
 \begin{aligned}
-& {\left[\widehat{L}_{\mu}, \widehat{x}_{\nu}\right]=-\sqrt{2} \clebsch{1}{\mu}{1}{\nu}{1}{\lambda} \widehat{x}_{\lambda}, \quad(\mu, \nu, \lambda= \pm 1,0) .} \\
-& {\left[\widehat{L}_{\mu}, \widehat{p}_{\nu}\right]=-\sqrt{2} \clebsch{1}{\mu}{1}{\nu}{1}{\lambda} \widehat{p}_{\lambda}, \quad(0)}
-\end{aligned}
+& {\left[\widehat{L}_{\mu}, \widehat{x}_{\nu}\right]=-\sqrt{2} \clebsch{1}{\mu}{1}{\nu}{1}{\lambda} \widehat{x}_{\lambda},} \\
+& {\left[\widehat{L}_{\mu}, \widehat{p}_{\nu}\right]=-\sqrt{2} \clebsch{1}{\mu}{1}{\nu}{1}{\lambda} \widehat{p}_{\lambda},} 
+\end{aligned}  \quad(\mu, \nu, \lambda= \pm 1,0) .\label{eq:2:2:10}
 \end{equation}
 The commutation relations for the spherical components of $\hat{\vect{r}}$ and $\hat{\vect{p}}$ are given by
 \begin{equation}
 \left[\widehat{x}_{\mu}, \widehat{x}_{\nu}\right]=0, \quad\left[\widehat{p}_{\mu}, \widehat{p}_{\nu}\right]=0, \quad\left[\widehat{x}_{\mu}, \widehat{p}_{\nu}\right]=i \delta_{\mu-\nu}(-1)^{\mu}, \quad(\mu, \nu= \pm 1,0) .\label{eq:2:2:11}
 \end{equation}
-Equation \eqref{eq:2:2:8} and (10) show that the operators $\hat{\vect{r}}$ and $\hat{\vect{p}}$ are vectors.\\
+Equation \eqref{eq:2:2:8} and \eqref{eq:2:2:10} show that the operators $\hat{\vect{r}}$ and $\hat{\vect{p}}$ are vectors.\\
 The commutation relations for square of angular momentum operator $\widehat{\vect{L}}^{2}$ are
 \begin{align}
 {\left[\widehat{\vect{L}}^{2}, \widehat{\vect{r}}\right] } & =i[\widehat{\vect{r}} \times \widehat{\vect{L}}]-i[\widehat{\vect{L}} \times \widehat{\vect{r}}]  ,\notag\\
@@ -251,7 +253,7 @@ We may also write $\widehat{\vect{L}}^{2}$ in the form
 \begin{equation}
 \widehat{\vect{L}}^{2}=-\left[\frac{1}{\sin \vartheta} \cdot \frac{\partial}{\partial \vartheta}\left(\sin \vartheta \frac{\partial}{\partial \vartheta}\right)+\frac{1}{\sin ^{2} \vartheta} \cdot \frac{\partial^{2}}{\partial \varphi^{2}}\right] . \label{eq:2:2:21}
 \end{equation}
-This operator differs only in sign from the angular part of the Laplacian operator (Eq. 1.3(15))
+This operator differs only in sign from the angular part of the Laplacian operator (Eq. \eqref{eq:1:3:15})
 \begin{equation}
 \widehat{\vect{L}}^{2}=-\Delta_{\Omega} . \label{eq:2:2:22}
 \end{equation}
@@ -411,13 +413,11 @@ Some examples of such expansions are given below.\\
 
 Products of two polarization operators $\widehat{T}_{L_{1} M_{1}}(S)$ and $\widehat{T}_{L_{2} M_{2}}(S)$ may be written in the form of a ClebschGordan series
 \begin{equation}
-\widehat{T}_{L_{1} M_{1}}(S) \widehat{T}_{L_{2} M_{2}}(S)=\sum_{L}(-1)^{2 S+L} \sqrt{\left(2 L_{1}+1\right)\left(2 L_{2}+1\right)}\left\{\begin{array}{ccc}
-L_{1} & L_{2} & L  \label{eq:2:4:16}\\
-S & S & S
-\end{array}\right\} \clebsch{L_{1}}{M_{1}}{L_{2}}{M_{2}}{L}{M} \widehat{T}_{L M}(S).
+\widehat{T}_{L_{1} M_{1}}(S) \widehat{T}_{L_{2} M_{2}}(S)=\sum_{L}(-1)^{2 S+L} \sqrt{\left(2 L_{1}+1\right)\left(2 L_{2}+1\right)}\sixj{L_{1} }{ L_{2} }{ L }{S }{ S }{ S} \clebsch{L_{1}}{M_{1}}{L_{2}}{M_{2}}{L}{M} \widehat{T}_{L M}(S).
+\label{eq:2:4:16}
 \end{equation}
-\subsubsection{(b) Expansion of rotation operator}
-If one is interested only in transformation properties of spin functions and spin operators under rotations of the coordinate system, one may replace the total angular momentum operator $\widehat{\vect{J}}$ by the spin operator $\widehat{\vect{S}}$ in the general expressions for the rotation operator 1.4(31) and 1.4(33). Such a modified operator will be labelled by a superscript $S$. If a rotation is defined by the Euler angles $\alpha, \beta, \gamma$, the rotation operator $\hat{D}^{S}(\alpha, \beta, \gamma)$ may be expressed as follows
+\subsubsection{Expansion of rotation operator}
+If one is interested only in transformation properties of spin functions and spin operators under rotations of the coordinate system, one may replace the total angular momentum operator $\widehat{\vect{J}}$ by the spin operator $\widehat{\vect{S}}$ in the general expressions for the rotation operator \eqref{eq:1:4:31} and \eqref{eq:1:4:33}. Such a modified operator will be labelled by a superscript $S$. If a rotation is defined by the Euler angles $\alpha, \beta, \gamma$, the rotation operator $\hat{D}^{S}(\alpha, \beta, \gamma)$ may be expressed as follows
 \begin{equation}
 \hat{D}^{S}(\alpha, \beta, \gamma) \equiv e^{-i \alpha \widehat{S}_{z}} e^{-i \beta \widehat{S}_{y}} e^{-i \gamma \widehat{S}_{z}}=\sum_{L, M, m, m^{\prime}} \frac{2 L+1}{2 S+1} \clebsch{S}{m^{\prime}}{L}{M}{S}{m} D_{m m^{\prime}}^{S}(\alpha, \beta, \gamma) \hat{T}_{L M}(S) .\label{eq:2:4:17}
 \end{equation}
@@ -571,7 +571,7 @@ e^{\alpha \widehat{S}_{+1}}=\widehat{I}+\alpha \widehat{S}_{+1}, \quad e^{\alpha
 \sinh \left(\alpha \widehat{S}_{+1}\right)=\alpha \widehat{S}_{+1}, \quad \sinh \left(\alpha \widehat{S}_{0}\right)=2 \widehat{S}_{0} \sinh \frac{\alpha}{2}, \quad \sinh \left(\alpha \widehat{S}_{-1}\right)=\alpha \widehat{S}_{-1} .\label{eq:2:5:31}
 \end{gather}
 \subsection{Rotation Operators}
-(a) Under rotations described by the Euler angles $\alpha, \beta, \gamma$ spin functions and spin matrices for $S=\frac{1}{2}$ are transformed by a rotation operator $\widehat{D}^{\frac{1}{2}}(\alpha, \beta, \gamma)$ which is a special case of the operator given by Eq. 1.4(31)
+(a) Under rotations described by the Euler angles $\alpha, \beta, \gamma$ spin functions and spin matrices for $S=\frac{1}{2}$ are transformed by a rotation operator $\widehat{D}^{\frac{1}{2}}(\alpha, \beta, \gamma)$ which is a special case of the operator given by Eq. \eqref{eq:1:4:31}
 \begin{equation}
 \hat{D}^{\frac{1}{2}}(\alpha, \beta, \gamma)=e^{-i \alpha \hat{S}_{z}} \cdot e^{-i \beta \hat{S}_{y}} \cdot e^{-i \gamma \hat{S}_{z}}=\begin{pmatrix}
 \cos \frac{\beta}{2} e^{-i \frac{\alpha+\gamma}{2}} & -\sin \frac{\beta}{2} e^{-i \frac{\alpha-\gamma}{2}}  \label{eq:2:5:32}\\
@@ -591,7 +591,7 @@ Matrix elements of the operator $\hat{D}^{\frac{1}{2}}(\alpha, \beta, \gamma)$ a
 \widehat{D}^{\frac{1}{2}}(\alpha, \beta, \gamma) & =\cos \frac{\beta}{2} \cos \frac{\alpha+\gamma}{2} \widehat{I}+2 i \sin \frac{\beta}{2} \sin \frac{\alpha-\gamma}{2} \widehat{S}_{x}-2 i \sin \frac{\beta}{2} \cos \frac{\alpha-\gamma}{2} \widehat{S}_{y}-2 i \cos \frac{\beta}{2} \sin \frac{\alpha+\gamma}{2} \widehat{S}_{z},  \label{eq:2:5:34}\\
 \widehat{D}^{\frac{1}{2}}(\alpha, \beta, \gamma) & =\cos \frac{\beta}{2} \cos \frac{\alpha+\gamma}{2} \widehat{I}+\sqrt{2} \sin \frac{\beta}{2} e^{-i \frac{\alpha-\alpha}{2}} \widehat{S}_{+1}-2 i \cos \frac{\beta}{2} \sin \frac{\alpha+\gamma}{2} \widehat{S}_{0}+\sqrt{2} \sin \frac{\beta}{2} e^{i \frac{\alpha-\alpha}{2}} \widehat{S}_{-1} . \label{eq:2:5:35}
 \end{align}
-(b) Under rotations of the coordinate system through an angle $\omega$ about an axis $\vect{n}(\boldsymbol{\Theta}, \Phi)$ spin functions and spin matrices for $S=\frac{1}{2}$ are transformed by the rotation operator $\hat{U}^{\frac{1}{2}}(\omega ; \Theta, \Phi)$ which is special case of the operator given by Eq. 1.4(33).
+(b) Under rotations of the coordinate system through an angle $\omega$ about an axis $\vect{n}(\boldsymbol{\Theta}, \Phi)$ spin functions and spin matrices for $S=\frac{1}{2}$ are transformed by the rotation operator $\hat{U}^{\frac{1}{2}}(\omega ; \Theta, \Phi)$ which is special case of the operator given by Eq. \eqref{eq:1:4:33}.
 \begin{equation}
 \hat{U}^{\frac{1}{2}}(\omega ; \Theta, \Phi)=e^{-i \omega \vect{n} \cdot \hat{\vect{s}}}=\begin{pmatrix}
 \cos \frac{\omega}{2}-i \sin \frac{\omega}{2} \cos \Theta & -i \sin \frac{\omega}{2} \sin \Theta e^{-i \Phi}  \label{eq:2:5:36}\\
@@ -610,7 +610,7 @@ The expansion of the operator $\hat{U}^{\frac{1}{2}}(\omega ; \theta, \Phi)$ in 
 \begin{equation}
 \widehat{U}^{\frac{1}{2}}(\omega ; \theta, \Phi)=e^{-i \omega n \cdot \widehat{\vect{S}}}=\widehat{I} \cos \frac{\omega}{2}-2 i(\mathrm{n} \cdot \widehat{\vect{S}}) \sin \frac{\omega}{2}. \label{eq:2:5:38}
 \end{equation}
-The relations between the angles $\omega, \Theta, \Phi$ and the Euler angles $\alpha, \beta, \gamma$ are given by Eqs. 1.4(16), 1.4(17). Note that
+The relations between the angles $\omega, \Theta, \Phi$ and the Euler angles $\alpha, \beta, \gamma$ are given by Eqs. \eqref{eq:1:4:16}, \eqref{eq:1:4:17}. Note that
 \begin{equation}
 \hat{D}^{\frac{1}{2}}(\alpha, \beta, \gamma)=\hat{U}^{\frac{1}{2}}(\omega ; \Theta, \Phi) . \label{eq:2:5:39}
 \end{equation}
@@ -711,7 +711,7 @@ The inverse relations are
 \subsection{Explicit Form}
 Explicit forms of the spin matrices and the polarization operators depend on the representation used for basis spin functions (Chap. 6). We shall consider the spherical basis representation and the cartesian one. These representations are used very frequently.
 
-\subsubsection{(a) Spherical basis representation}
+\subsubsection{Spherical basis representation}
 Cartesian components of the spin operator $\widehat{\vect{S}}$ are given by
 \begin{equation}
 \widehat{S}_{x}=\frac{1}{\sqrt{2}}\begin{pmatrix}
@@ -1066,10 +1066,7 @@ In particular
 \end{gather}
 (iii)
 \begin{equation}
-\hat{T}_{L_{1} M_{1}} \hat{T}_{L_{2} M_{2}}=\sqrt{\left(2 L_{1}+1\right)\left(2 L_{2}+1\right)} \sum_{L}(-1)^{L}\left\{\begin{array}{ccc}
-L_{1} & L_{2} & L  \label{eq:2:6:62}\\
-1 & 1 & 1
-\end{array}\right\} \clebsch{L_{1}}{M_{1}}{L_{2}}{M_{2}}{L}{M} \hat{T}_{L M}.
+\hat{T}_{L_{1} M_{1}} \hat{T}_{L_{2} M_{2}}=\sqrt{\left(2 L_{1}+1\right)\left(2 L_{2}+1\right)} \sum_{L}(-1)^{L}\sixj{L_{1} }{ L_{2} }{ L  \label{eq:2:6:62}}{1 }{ 1 }{ 1} \clebsch{L_{1}}{M_{1}}{L_{2}}{M_{2}}{L}{M} \hat{T}_{L M}.
 \end{equation}
 Particularly,
 \begin{gather}
@@ -1097,7 +1094,7 @@ e^{\alpha \widehat{S}_{-1}}=\widehat{I}+\alpha \widehat{S}_{-1}+\frac{\alpha^{2}
 \cosh \left(\alpha \widehat{S}_{-1}\right)=\widehat{I}+\frac{\alpha^{2}}{2} \widehat{T}_{2-2}. \notag
 \end{gather}
 \subsection{Operators of Coordinate Rotations}
-(a) Under rotations of coordinate systems defined by the Euler angles $\alpha, \beta, \gamma$ spin functions and spin matrices for $S=1$ are transformed by the rotation operator $\hat{D}^{1}(\alpha, \beta, \gamma)$ which is a special case of the operator given by Eq. 1.4(31)
+(a) Under rotations of coordinate systems defined by the Euler angles $\alpha, \beta, \gamma$ spin functions and spin matrices for $S=1$ are transformed by the rotation operator $\hat{D}^{1}(\alpha, \beta, \gamma)$ which is a special case of the operator given by Eq. \eqref{eq:1:4:31}
 \begin{equation}
 \widehat{D}^{1}(\alpha, \beta, \gamma)=e^{-i \alpha \widehat{S}_{x}} e^{-i \beta \widehat{S}_{y}} e^{-i \gamma \widehat{S}_{z}} \label{eq:2:6:75}.
 \end{equation}
@@ -1125,7 +1122,7 @@ The inverse rotation of the coordinate system is performed by the matrix
 \begin{equation}
 \left[\widehat{D}^{1}(\alpha, \beta, \gamma)\right]^{-1}=\left[\widehat{D}^{1}(\alpha, \beta, \gamma)\right]^{+}=\widehat{D}^{1}(-\gamma,-\beta,-\alpha)=\widehat{D}^{1}(\pi-\gamma ; \beta,-\pi-\alpha) . \label{eq:2:6:78}
 \end{equation}
-(b) Under rotation of the coordinate system through an angle $\omega$ about an axis $\vect{n}(\Theta, \Phi)$ the spin functions and spin matrices for $S=1$ are transformed by the rotation operator $\hat{U}^{1}(\omega ; \Theta, \Phi)$ which is a special case of the operator given by Eq. 1.4(33)
+(b) Under rotation of the coordinate system through an angle $\omega$ about an axis $\vect{n}(\Theta, \Phi)$ the spin functions and spin matrices for $S=1$ are transformed by the rotation operator $\hat{U}^{1}(\omega ; \Theta, \Phi)$ which is a special case of the operator given by Eq. \eqref{eq:1:4:33}
 \begin{equation}
 \widehat{U}^{1}(\omega ; \Theta, \Phi)=e^{-i \omega \vect{n} \cdot \widehat{\vect{s}}} . \label{eq:2:6:79}
 \end{equation}
@@ -1166,7 +1163,7 @@ The expansion of the rotation operator $\hat{U}^{1}(\omega ; \Theta, \Phi)$ in t
 \hat{U}^{1}(\omega ; \Theta, \Phi)=\frac{1}{3}(2 \cos \omega+1) \hat{I}-i \sin \omega(\mathrm{n} \cdot \widehat{\mathrm{~S}})+(\cos \omega-1) \sum_{i, k} n_{i} n_{k} \hat{Q}_{i k} .\label{eq:2:6:83}
 \end{equation}
 (See also Eqs. \eqref{eq:2:4:17} and \eqref{eq:2:4:18}.)\\
-The relations between the angles $\omega, \Theta, \Phi$ and the Euler angles $\alpha, \beta, \gamma$ are given by Eqs. 1.4(16), 1.4(17). Note that
+The relations between the angles $\omega, \Theta, \Phi$ and the Euler angles $\alpha, \beta, \gamma$ are given by Eqs. \eqref{eq:1:4:16}, \eqref{eq:1:4:17}. Note that
 \begin{equation}
 \widehat{D}^{1}(\alpha, \beta, \gamma)=\widehat{U}^{1}(\omega ; \Theta, \Phi) .\label{eq:2:6:84}
 \end{equation}

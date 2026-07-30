@@ -1,4 +1,4 @@
-\chapter{CLEBSCH-GORDAN COEFFICIENTS AND $3 j m$ SYMBOLS}
+\chapter{CLEBSCH-GORDAN COEFFICIENTS AND $3 j m$ SYMBOLS}\label{chap:8}
 \section{DEFINITION}
 The Clebsch-Gordan coefficients are vector addition coefficients. They play an important role in the decomposition of reducible representations of rotation group into irreducible representations. All recoupling coefficients or $3 n j$ symbols can be determined as the sums of products of the Clebsch-Gordan coefficients. The aforesaid explains the extensive application of these coefficients in the quantum theory of angular momentum.
 
@@ -53,7 +53,7 @@ The direct product of two irreducible tensors $\mathfrak{M}_{j_{1} m_{1}}$ and $
 \end{equation}
 The inverse relation is
 \begin{equation}
-\left\{\mathfrak{M}_{j_{1}} \otimes \mathfrak{N}_{j_{2}}\right\}_{j m}=\sum_{m_{1} m_{2}} \clebsch{j_{1}}{m_{1}}{j_{2}}{m_{2}}{j}{m_{1}} \mathfrak{M}_{j_{1} m_{1}} \Re_{j_{2} m_{2}} . \label{chap8:eq:9}
+\left\{\mathfrak{M}_{j_{1}} \otimes \mathfrak{N}_{j_{2}}\right\}_{j m}=\sum_{m_{1} m_{2}} \clebsch{j_{1}}{m_{1}}{j_{2}}{m_{2}}{j}{m_{1}} \mathfrak{M}_{j_{1} m_{1}} \mathfrak{R}_{j_{2} m_{2}} . \label{chap8:eq:9}
 \end{equation}
 \subsection{The Wigner 3jm Symbols}
 Not infrequently the Wigner $3 j \mathrm{~m}$ symbols [110] are used instead of the Clebsch-Gordan coefficients. These symbols possess simpler symmetry properties. The $3 j \mathrm{~m}$ symbols are related to the Clebsch-Gordan coefficients by
@@ -116,7 +116,7 @@ where
 J=a+b+c \label{chap8:eq:17}
 \end{equation}
 \section{EXPLICIT FORMS OF THE CLEBSCH-GORDAN COEFFICIENTS AND THEIR RELATIONS TO OTHER FUNCTIONS}
-Below we shall assume that the arguments of the Clebsch-Gordan coefficients and $3 j m$ symbols satisfy Eqs. 8.1(1)-8.1(3). In addition we introduce the $\Delta$-symbol defined by
+Below we shall assume that the arguments of the Clebsch-Gordan coefficients and $3 j m$ symbols satisfy Eqs. \ref{eq:8:1:1}-\ref{eq:8.1:3}. In addition we introduce the $\Delta$-symbol defined by
 \begin{equation}
 \Delta(a b c)=\left[\frac{(a+b-c)!(a-b+c)!(-a+b+c)!}{(a+b+c+1)!}\right]^{\frac{1}{2}} \label{chap8:eq:18}
 \end{equation}
@@ -985,10 +985,10 @@ Sums of products of the vector-addition coefficients are more conveniently repre
 \subsection{Sums Involving Products of Two Clebsch-Gordan Coefficients}
 \begin{gather}
 \sum_{\alpha \beta} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} \clebsch{a}{\alpha}{b}{\beta}{c^{\prime}}{\gamma^{\prime}}=\delta_{c c^{\prime}} \delta_{\gamma \gamma^{\prime}}  \label{chap8:eq:165}\\
-\sum_{\alpha \gamma} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} \clebsch{a}{\alpha}{b^{\prime}}{\beta^{\prime}}{c}{\gamma}=\frac{\Pi_{c}^{2}}{\Pi_{b}^{2}} \delta_{b b^{\prime}} \delta_{\beta \beta^{\prime}}  \label{chap8:eq:166}\\
-\sum_{\alpha \beta}(-1)^{b+\beta} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} \clebsch{c^{\prime}}{-\gamma^{\prime}}{a}{\alpha}{b}{-\beta}=(-1)^{c+\gamma} \frac{\Pi_{b}}{\Pi_{c}} \delta_{c c^{\prime}} \delta_{\gamma \gamma^{\prime}}  \label{chap8:eq:167}\\
-\sum_{\alpha \beta}(-1)^{a+\alpha} \clebsch{b}{\beta}{a}{\alpha}{c}{\gamma} \clebsch{a}{-\alpha}{c^{\prime}}{\gamma^{\prime}}{b}{\beta}=\frac{\Pi_{b}}{\Pi_{c}} \delta_{c c^{\prime}} \delta_{\gamma \gamma^{\prime}}  \label{chap8:eq:168}\\
-\sum_{\alpha \beta} \clebsch{c}{\gamma}{b}{\beta}{a}{\alpha} \clebsch{c^{\prime}}{-\gamma^{\prime}}{a}{\alpha}{b}{\beta}=(-1)^{b-a-\gamma} \frac{\Pi_{a b}}{\Pi_{c}^{2}} \delta_{c c^{\prime}} \delta_{\gamma \gamma^{\prime}}  \label{chap8:eq:169}\\
+\sum_{\alpha \gamma} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} \clebsch{a}{\alpha}{b^{\prime}}{\beta^{\prime}}{c}{\gamma}=\frac{\Fact{c}^{2}}{\Fact{b}^{2}} \delta_{b b^{\prime}} \delta_{\beta \beta^{\prime}}  \label{chap8:eq:166}\\
+\sum_{\alpha \beta}(-1)^{b+\beta} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} \clebsch{c^{\prime}}{-\gamma^{\prime}}{a}{\alpha}{b}{-\beta}=(-1)^{c+\gamma} \frac{\Fact{b}}{\Fact{c}} \delta_{c c^{\prime}} \delta_{\gamma \gamma^{\prime}}  \label{chap8:eq:167}\\
+\sum_{\alpha \beta}(-1)^{a+\alpha} \clebsch{b}{\beta}{a}{\alpha}{c}{\gamma} \clebsch{a}{-\alpha}{c^{\prime}}{\gamma^{\prime}}{b}{\beta}=\frac{\Fact{b}}{\Fact{c}} \delta_{c c^{\prime}} \delta_{\gamma \gamma^{\prime}}  \label{chap8:eq:168}\\
+\sum_{\alpha \beta} \clebsch{c}{\gamma}{b}{\beta}{a}{\alpha} \clebsch{c^{\prime}}{-\gamma^{\prime}}{a}{\alpha}{b}{\beta}=(-1)^{b-a-\gamma} \frac{\Fact{a b}}{\Fact{c}^{2}} \delta_{c c^{\prime}} \delta_{\gamma \gamma^{\prime}}  \label{chap8:eq:169}\\
 \sum_{c \gamma} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} \clebsch{a}{\alpha^{\prime}}{b}{\beta^{\prime}}{c}{\gamma}=\delta_{\alpha \alpha^{\prime}} \delta_{\beta \beta^{\prime}}  \label{chap8:eq:170}\\
 \sum_{c \gamma} \prod_{c}^{2} \clebsch{a}{\alpha}{c}{\gamma}{b}{\beta} \clebsch{a}{\alpha^{\prime}}{c}{\gamma}{b}{\beta^{\prime}}=\prod_{b}^{2} \delta_{\alpha \alpha^{\prime}} \delta_{\beta \beta^{\prime}}  \label{chap8:eq:171}\\
 \sum_{a \alpha}(-1)^{a-\alpha} \prod_{a}^{2} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} \clebsch{a}{\alpha}{c}{\gamma^{\prime}}{b}{\beta^{\prime}}=\prod_{b c} \delta_{\gamma,-\gamma^{\prime}} \delta_{\beta,-\beta^{\prime}} \label{chap8:eq:172}
@@ -1124,7 +1124,7 @@ e & f & d
 a & b & e \\
 d & c & f
 \end{array}\right\}=\clebsch{b}{\beta}{a}{\alpha}{e}{c} \clebsch{d}{b}{e}{c}{c}{\gamma},  \label{chap8:eq:197}\\
-& \sum_{c \gamma}(-1)^{e+d-\beta} \frac{\Pi_{c d d}}{\Pi_{e}} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} C_{f \varphi c \gamma}^{e<}\left\{\begin{array}{lll}
+& \sum_{c \gamma}(-1)^{e+d-\beta} \frac{\Fact{c d d}}{\Fact{e}} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} C_{f \varphi c \gamma}^{e<}\left\{\begin{array}{lll}
 a & b & c \\
 e & f & d
 \end{array}\right\}=\clebsch{b}{-\beta}{e}{c}{d}{\delta} \clebsch{a}{\alpha}{f}{\varphi}{d}{\delta},  \label{chap8:eq:198}\\
@@ -1155,7 +1155,7 @@ c & b & a_{i} \\
 f & e & d \\
 j & g & k
 \end{array}\right\}=\clebsch{g}{\eta}{j}{-\mu}{k}{\kappa} \clebsch{e}{-\epsilon}{g}{\eta}{b}{\beta} C_{f \varphi j_{j}}^{c \gamma},  \label{chap8:eq:203}\\
-& \sum_{a j}(-1)^{a-b-f+\varphi+d} \frac{\Pi_{d d j j_{0 q}}}{\Pi_{b c}} C_{b \eta j-\mu}^{k c c} \clebsch{e}{-s}{g}{\eta}{b}{\beta} \clebsch{f}{\varphi}{j}{\mu}{c}{\gamma}\left\{\begin{array}{lll}
+& \sum_{a j}(-1)^{a-b-f+\varphi+d} \frac{\Fact{d d j j_{0 q}}}{\Fact{b c}} C_{b \eta j-\mu}^{k c c} \clebsch{e}{-s}{g}{\eta}{b}{\beta} \clebsch{f}{\varphi}{j}{\mu}{c}{\gamma}\left\{\begin{array}{lll}
 c & b & a \\
 f & e & d \\
 j & g & k

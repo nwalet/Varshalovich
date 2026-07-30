@@ -113,7 +113,16 @@
  \argx{10} & \argx{11}     & \argx{12}     & - \end{array}\right\}}
 }
 
+\usepackage{enumitem}
 
+
+
+\setcounter{secnumdepth}{3}
+\usepackage{titlesec}
+\renewcommand{\thesubsubsection}{\alph{subsubsection}}
+\titleformat{\subsubsection}
+{\normalfont\itshape}
+{(\thesubsubsection)}{0.5em}{}
 
 
 \newunicodechar{∇}{\ifmmode\nabla\else{$\nabla$}\fi}

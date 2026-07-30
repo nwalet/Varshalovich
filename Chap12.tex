@@ -11,16 +11,16 @@ The sums are written in such a form that each summation index $m_{j}$ is include
 Hereafter, we use the notation
 
 \begin{equation}
-\Pi_{a b \ldots f}=\sqrt{(2 a+1)(2 b+1) \ldots(2 f+1)} . \label{chap12:eq:1}
+\Fact{a b \ldots f}=\sqrt{(2 a+1)(2 b+1) \ldots(2 f+1)} . \label{chap12:eq:1}
 \end{equation}
 
 \subsection{Sum Involving One $3 j m$ Symbol}
 \begin{equation}
-\sum_{\alpha}(-1)^{a-\alpha}\threej{a}{a}{c}{\alpha}{-\alpha}{\gamma} \label{chap12:eq:2}=\Pi_{a} \delta_{c 0} \delta_{\gamma 0},
+\sum_{\alpha}(-1)^{a-\alpha}\threej{a}{a}{c}{\alpha}{-\alpha}{\gamma} \label{chap12:eq:2}=\Fact{a} \delta_{c 0} \delta_{\gamma 0},
 \end{equation}
 \subsection{Sums Involving Products of Two $3 j m$ Symbols}
 \begin{equation}
-\sum_{\psi \kappa}(-1)^{p-\psi+q-\kappa}\threej{a}{p}{q}{-\alpha}{\psi}{\kappa} \label{chap12:eq:3}\threej{p}{q}{a^{\prime}}{-\psi}{-\kappa}{\alpha^{\prime}}=\frac{(-1)^{a+\alpha}}{\Pi_{a}^{2}}\{a p q\} \delta_{a a^{\prime}} \delta_{\alpha \alpha^{\prime}}
+\sum_{\psi \kappa}(-1)^{p-\psi+q-\kappa}\threej{a}{p}{q}{-\alpha}{\psi}{\kappa} \label{chap12:eq:3}\threej{p}{q}{a^{\prime}}{-\psi}{-\kappa}{\alpha^{\prime}}=\frac{(-1)^{a+\alpha}}{\Fact{a}^{2}}\{a p q\} \delta_{a a^{\prime}} \delta_{\alpha \alpha^{\prime}}
 \end{equation}
 \[
 \begin{tikzpicture}[baseline=0pt,font=\small]
@@ -36,7 +36,7 @@ Hereafter, we use the notation
 \end{tikzpicture}
 \]
 \begin{equation}
-\sum_{q \kappa}(-1)^{q-\kappa} \Pi_{q}^{2}\threej{a}{b}{q}{-\alpha}{-\beta}{\kappa} \label{chap12:eq:4}\threej{q}{a}{b}{-\kappa}{\alpha^{\prime}}{\beta^{\prime}}=(-1)^{a+\alpha+b+\beta} \delta_{\alpha \alpha^{\prime}} \delta_{\beta \beta^{\prime}},
+\sum_{q \kappa}(-1)^{q-\kappa} \Fact{q}^{2}\threej{a}{b}{q}{-\alpha}{-\beta}{\kappa} \label{chap12:eq:4}\threej{q}{a}{b}{-\kappa}{\alpha^{\prime}}{\beta^{\prime}}=(-1)^{a+\alpha+b+\beta} \delta_{\alpha \alpha^{\prime}} \delta_{\beta \beta^{\prime}},
 \end{equation}
 \[
 \begin{tikzpicture}[baseline=0pt,font=\small]
@@ -54,7 +54,7 @@ Hereafter, we use the notation
 \end{tikzpicture}
 \]
 \begin{equation}
-\sum_{\kappa}(-1)^{q-\kappa}\threej{a}{b}{q}{\alpha}{\beta}{-\kappa} \label{chap12:eq:5}\threej{q}{d}{c}{\kappa}{\delta}{\gamma}=(-1)^{2 a} \sum_{x \xi}(-1)^{x-\xi} \Pi_{x}^{2}\threej{a}{c}{x}{\alpha}{\gamma}{-\xi}\threej{x}{d}{b}{\xi}{\delta}{\beta}\sixj{b}{d}{x}{c}{a}{q},
+\sum_{\kappa}(-1)^{q-\kappa}\threej{a}{b}{q}{\alpha}{\beta}{-\kappa} \label{chap12:eq:5}\threej{q}{d}{c}{\kappa}{\delta}{\gamma}=(-1)^{2 a} \sum_{x \xi}(-1)^{x-\xi} \Fact{x}^{2}\threej{a}{c}{x}{\alpha}{\gamma}{-\xi}\threej{x}{d}{b}{\xi}{\delta}{\beta}\sixj{b}{d}{x}{c}{a}{q},
 \end{equation}
 \[
 \begin{tikzpicture}[baseline=0pt,font=\small]
@@ -110,7 +110,7 @@ Hereafter, we use the notation
 \begin{gather}
 \sum_{\psi \kappa}\threej{a}{b}{p}{\alpha}{\beta}{\psi}\threej{p}{c}{q}{-\psi}{-\gamma}{-\kappa}\threej{q}{d}{e}{\kappa}{\delta}{\varepsilon}  \notag\\
 =\sum_{\substack{x y \\
-\varepsilon \eta}} \Pi_{x y}^{2}\threej{a}{d}{x}{\alpha}{\delta}{\xi}\threej{x}{c}{y}{-\xi}{-\gamma}{-\eta}\threej{y}{b}{e}{\eta}{\beta}{\varepsilon}\ninej{a}{b}{p}{d}{e}{q}{x}{y}{c}, \label{chap12:eq:7}
+\varepsilon \eta}} \Fact{x y}^{2}\threej{a}{d}{x}{\alpha}{\delta}{\xi}\threej{x}{c}{y}{-\xi}{-\gamma}{-\eta}\threej{y}{b}{e}{\eta}{\beta}{\varepsilon}\ninej{a}{b}{p}{d}{e}{q}{x}{y}{c}, \label{chap12:eq:7}
 \end{gather}
 \[
 \begin{tikzpicture}[baseline=0pt,font=\small]
@@ -171,7 +171,7 @@ p & a \\
 \psi & -\alpha \\
 \kappa
 \end{array}\right)\threej{q}{r}{t}{-\kappa}{\rho}{\tau}\threej{r}{a^{\prime}}{s}{-\rho}{\alpha^{\prime}}{\sigma}\threej{s}{p}{t}{-\sigma}{-\psi}{-\tau}  \notag\\
-=\frac{(-1)^{a-\alpha}}{\Pi_{a}^{2}}\sixj{q}{p}{a}{s}{r}{t} \delta_{a a^{\prime}} \delta_{\alpha \alpha^{\prime}}, \label{chap12:eq:8}
+=\frac{(-1)^{a-\alpha}}{\Fact{a}^{2}}\sixj{q}{p}{a}{s}{r}{t} \delta_{a a^{\prime}} \delta_{\alpha \alpha^{\prime}}, \label{chap12:eq:8}
 \end{gather}
 
 \[
@@ -243,7 +243,7 @@ p & a \\
 
 \begin{align}
 & \sum_{\psi \kappa \rho \sigma}(-1)^{p-\psi+q-\kappa+r-\rho+s-\sigma}\threej{p}{a}{q}{\psi}{\alpha}{-\kappa}\threej{q}{b}{r}{\kappa}{\beta}{-\rho}\threej{r}{c}{s}{\rho}{\gamma}{-\sigma}\threej{s}{d}{p}{\sigma}{\delta}{-\psi}  \notag\\
-& =(-1)^{s-a-d-q} \sum_{x \xi}(-1)^{x-\xi} \Pi_{x}^{2}\threej{a}{x}{d}{\alpha}{-\xi}{\delta}\threej{b}{x}{c}{\beta}{\xi}{\gamma}\sixj{a}{x}{d}{s}{p}{q}\sixj{b}{x}{c}{s}{r}{q} \label{chap12:eq:10}
+& =(-1)^{s-a-d-q} \sum_{x \xi}(-1)^{x-\xi} \Fact{x}^{2}\threej{a}{x}{d}{\alpha}{-\xi}{\delta}\threej{b}{x}{c}{\beta}{\xi}{\gamma}\sixj{a}{x}{d}{s}{p}{q}\sixj{b}{x}{c}{s}{r}{q} \label{chap12:eq:10}
 \end{align}
 
 \[
@@ -289,7 +289,7 @@ p & a \\
   \end{tikzpicture}
 \]
 \begin{equation}
-=(-1)^{2 r-s-d-a-q} \sum_{x \xi}(-1)^{x-\xi} \Pi_{x}^{2}\threej{a}{x}{c}{\alpha}{-\xi}{\gamma} \label{chap12:eq:11}\threej{b}{x}{d}{\beta}{\xi}{\delta}\ninej{a}{p}{q}{x}{d}{b}{c}{s}{r},
+=(-1)^{2 r-s-d-a-q} \sum_{x \xi}(-1)^{x-\xi} \Fact{x}^{2}\threej{a}{x}{c}{\alpha}{-\xi}{\gamma} \label{chap12:eq:11}\threej{b}{x}{d}{\beta}{\xi}{\delta}\ninej{a}{p}{q}{x}{d}{b}{c}{s}{r},
 \end{equation}
 \[
 \begin{tikzpicture}[baseline=0pt,font=\small]
@@ -327,7 +327,7 @@ p & a \\
 \begin{align}
 & \sum_{\substack{\psi \kappa \rho \sigma \\
 \tau \nu \mu}}(-1)^{p-\psi+q-\kappa+r-\rho+s-\sigma+t-\tau+u-\nu+v-\mu}\threej{r}{t}{q}{\rho}{\tau}{-\kappa}\threej{q}{p}{u}{\kappa}{\psi}{-\nu}\threej{u}{a}{v}{\nu}{\alpha}{-\mu}\threej{v}{s}{r}{\mu}{\sigma}{-\rho}\threej{s}{p}{t}{-\sigma}{-\psi}{-\tau}  \notag\\
-&=(-1)^{2 u} \frac{1}{\Pi_{u}} \delta_{u v} \delta_{a 0} \delta_{\alpha 0}\sixj{q}{p}{u}{s}{r}{t}, \label{chap12:eq:12}
+&=(-1)^{2 u} \frac{1}{\Fact{u}} \delta_{u v} \delta_{a 0} \delta_{\alpha 0}\sixj{q}{p}{u}{s}{r}{t}, \label{chap12:eq:12}
 \end{align}
 
 \[
@@ -450,7 +450,7 @@ p & a \\
 
 \begin{align}
 & \sum_{\psi \kappa \rho}(-1)^{p-\psi+q-\kappa+r-\rho+s-\sigma+t-\tau}\threej{p}{a}{q}{\psi}{\alpha}{-\kappa}\threej{q}{b}{r}{\kappa}{\beta}{-\rho}\threej{r}{c}{s}{\rho}{\gamma}{-\sigma}\threej{s}{d}{t}{\sigma}{\delta}{-\tau}\threej{t}{e}{p}{\tau}{\varepsilon}{-\psi}  \notag\\
-&=(-1)^{t-p-b-a-d-c} \sum_{x \xi y \eta}(-1)^{x-\xi+y-\eta} \Pi_{x y}^{2}\threej{a}{b}{x}{\alpha}{\beta}{\xi}\threej{x}{e}{y}{-\xi}{\varepsilon}{-\eta}\threej{y}{c}{d}{\eta}{\gamma}{\delta}\sixj{a}{b}{x}{r}{p}{q}\sixj{x}{e}{y}{t}{r}{p}\sixj{y}{c}{d}{s}{t}{r} \label{chap12:eq:15}
+&=(-1)^{t-p-b-a-d-c} \sum_{x \xi y \eta}(-1)^{x-\xi+y-\eta} \Fact{x y}^{2}\threej{a}{b}{x}{\alpha}{\beta}{\xi}\threej{x}{e}{y}{-\xi}{\varepsilon}{-\eta}\threej{y}{c}{d}{\eta}{\gamma}{\delta}\sixj{a}{b}{x}{r}{p}{q}\sixj{x}{e}{y}{t}{r}{p}\sixj{y}{c}{d}{s}{t}{r} \label{chap12:eq:15}
 \end{align}
 
 \[
@@ -499,7 +499,7 @@ p & a \\
 \end{tikzpicture}
 \]
 \begin{equation}
-=(-1)^{p-t-b-a-d-c} \sum_{x \xi y \eta}(-1)^{x-\xi+y-\eta} \Pi_{x y}^{2}\threej{a}{b}{x}{\alpha}{\beta}{\xi} \label{chap12:eq:16}\threej{x}{d}{y}{-\xi}{\delta}{-\eta}\threej{y}{c}{e}{\eta}{\gamma}{\varepsilon}\sixj{a}{b}{x}{r}{p}{q}\ninej{c}{e}{y}{r}{p}{x}{s}{t}{d},
+=(-1)^{p-t-b-a-d-c} \sum_{x \xi y \eta}(-1)^{x-\xi+y-\eta} \Fact{x y}^{2}\threej{a}{b}{x}{\alpha}{\beta}{\xi} \label{chap12:eq:16}\threej{x}{d}{y}{-\xi}{\delta}{-\eta}\threej{y}{c}{e}{\eta}{\gamma}{\varepsilon}\sixj{a}{b}{x}{r}{p}{q}\ninej{c}{e}{y}{r}{p}{x}{s}{t}{d},
 \end{equation}
 \[
 \begin{tikzpicture}[baseline=0pt,font=\small]
@@ -547,7 +547,7 @@ p & a \\
 \]
 
 \begin{gather}
-=(-1)^{r-t+p+a+d} \sum_{x \xi y \eta z}(-1)^{x-\xi+y-\eta+x} \Pi_{x y z}^{2}\threej{a}{c}{x}{\alpha}{\gamma}{\xi}\threej{x}{e}{y}{-\xi}{\varepsilon}{-\eta}\threej{y}{b}{d}{\eta}{\beta}{\delta}  \notag\\
+=(-1)^{r-t+p+a+d} \sum_{x \xi y \eta z}(-1)^{x-\xi+y-\eta+x} \Fact{x y z}^{2}\threej{a}{c}{x}{\alpha}{\gamma}{\xi}\threej{x}{e}{y}{-\xi}{\varepsilon}{-\eta}\threej{y}{b}{d}{\eta}{\beta}{\delta}  \notag\\
 \sixj{c}{q}{z}{b}{s}{r}\sixj{a}{c}{x}{z}{p}{q}\sixj{x}{e}{y}{t}{z}{p}\sixj{y}{b}{d}{s}{t}{z}, \label{chap12:eq:17}
 \end{gather}
 
@@ -624,7 +624,7 @@ p & a \\
 \times
 \threej{r}{a'}{s}{-\rho}{\alpha'}{\sigma}
 \threej{s}{p}{t}{-\sigma}{-\psi}{-r}
-= \frac{(-1)^{2t+a-\alpha}}{\Pi_{at}^2}
+= \frac{(-1)^{2t+a-\alpha}}{\Fact{at}^2}
 \sixj{a}{p}{q}{t}{r}{s} {tuv} \delta+_{t't}\delta_{aa'}\delta_{\alpha\alpha'}
 \label{chap12:eq:18}
 \end{gather}
@@ -661,7 +661,7 @@ p & a \\
 \nu \mu \tau \lambda}}(-1)^{p-\psi+q-\kappa+q^{\prime}-\rho+p^{\prime}-\sigma+u-\nu+v-\mu+t-\tau+\rho-\lambda}
 \threej{u}{v}{q}{\nu}{\mu}{\kappa}
 \threej{u}{v}{q^{\prime}}{-\nu}{-\mu}{-\rho}\threej{t}{s}{p}{\tau}{\lambda}{\psi}\threej{t}{s}{p^{\prime}}{-\tau}{-\lambda}{-\sigma}  \notag\\
-\times\threej{q}{p}{a}{\kappa}{\psi}{\alpha}\threej{q^{\prime}}{p^{\prime}}{a^{\prime}}{-\rho}{-\sigma}{-\alpha^{\prime}}=\frac{(-1)^{\alpha-a}}{\Pi_{a p q}^{2}} \delta_{q q^{\prime}} \delta_{p p^{\prime}} \delta_{a a^{\prime}} \delta_{\alpha \alpha^{\prime}}\{u v q\}\{p t s\}\{a p q\}, \label{chap12:eq:19}
+\times\threej{q}{p}{a}{\kappa}{\psi}{\alpha}\threej{q^{\prime}}{p^{\prime}}{a^{\prime}}{-\rho}{-\sigma}{-\alpha^{\prime}}=\frac{(-1)^{\alpha-a}}{\Fact{a p q}^{2}} \delta_{q q^{\prime}} \delta_{p p^{\prime}} \delta_{a a^{\prime}} \delta_{\alpha \alpha^{\prime}}\{u v q\}\{p t s\}\{a p q\}, \label{chap12:eq:19}
 \end{gather}
 
 \[
@@ -716,7 +716,7 @@ v & r &q\\
 \times\threej{r}{u}{s}{-\rho}{\nu}{-\sigma}\left(\begin{array}{rrr}
 s & t &a^{\prime} \\
 \sigma & -\tau &\alpha^{\prime}
-\end{array}\right)=\frac{(-1)^{s-p-\alpha-g}}{\Pi_{a}^{2}}\sixj{q}{g}{s}{u}{r}{v}\sixj{a}{p}{q}{g}{s}{t} \delta_{a a^{\prime}} \delta_{\alpha \alpha^{\prime}} \label{chap12:eq:20}
+\end{array}\right)=\frac{(-1)^{s-p-\alpha-g}}{\Fact{a}^{2}}\sixj{q}{g}{s}{u}{r}{v}\sixj{a}{p}{q}{g}{s}{t} \delta_{a a^{\prime}} \delta_{\alpha \alpha^{\prime}} \label{chap12:eq:20}
 \end{gather}
 \[
 \begin{tikzpicture}[baseline=-20pt,font=\small]
@@ -757,7 +757,7 @@ s & t &a^{\prime} \\
 s&t & a^{\prime} \\
 \sigma & -\tau & -\alpha^{\prime}
 \end{array}\right)=
-\frac{(-1)^{2 g+a-\alpha}}{\Pi_{a}^{2}}
+\frac{(-1)^{2 g+a-\alpha}}{\Fact{a}^{2}}
 \sixj{q}{g}{s}{u}{r}{v}
 \sixj{a}{r}{s}{v}{p}{q} \delta_{a a^{\prime}} \delta_{\alpha \alpha^{\prime}}, .\label{chap12:eq:21}
 \end{gather}
@@ -801,7 +801,7 @@ s&t & a^{\prime} \\
 \times
 \threej{r}{g}{u}{\rho}{\lambda}{\nu}
 \threej{u}{t}{a'}{-\nu}{-\tau}{-\alpha'}=
-\frac{(-1)^{a-\alpha}}{\Pi_{a}^{2}}
+\frac{(-1)^{a-\alpha}}{\Fact{a}^{2}}
 \ninej{a}{p}{q}{u}{r}{g}{t}{v}{s}
  \delta_{a a^{\prime}} \delta_{\alpha \alpha^{\prime}}, .\label{chap12:eq:21a}
 \end{gather}
@@ -847,7 +847,7 @@ s&t & a^{\prime} \\
 \threej{u}{b}{r}{-\nu}{\beta}{\rho}
 \threej{r}{c}{v}{-\rho}{\gamma}{-\mu}\notag\\
 =
-(-1)^{s+b+u+v-q-a-d-c}\sum_{x\xi}{\Pi_{x}^{2}}
+(-1)^{s+b+u+v-q-a-d-c}\sum_{x\xi}{\Fact{x}^{2}}
 \threej{a}{x}{d}{\alpha }{-\xi}{\beta}
 \threej{c}{x}{b}{\gamma}{\xi}{\beta}
 \sixj{a}{x}{d}{s}{p}{q}
@@ -913,7 +913,7 @@ s&t & a^{\prime} \\
 \]
 
 \begin{equation}
-=(-1)^{v+u+r+p-g-a-c} \sum_{x y \eta}(-1)^{y-\eta} \Pi_{x y}^{2}
+=(-1)^{v+u+r+p-g-a-c} \sum_{x y \eta}(-1)^{y-\eta} \Fact{x y}^{2}
 \threej{a}{y}{b}{\alpha}{-\eta}{\beta} 
 \threej{d}{y}{c}{\delta}{\eta}{\gamma}
 \sixj{a}{y}{b}{r}{u}{x}
@@ -994,7 +994,7 @@ s&t & a^{\prime} \\
 \]
 % PROOFREAD: contains OCR-garbled or 12j Wigner array(s) not auto-converted -- verify/reconstruct against orig.
 \begin{equation}
-=(-1)^{r+s+d-q-c} \sum_{x y \eta}(-1)^{y-\eta+x} \Pi_{x y}^{2}
+=(-1)^{r+s+d-q-c} \sum_{x y \eta}(-1)^{y-\eta+x} \Fact{x y}^{2}
 \threej{d}{y}{b}{\delta}{-\eta}{\beta}
 \threej{a}{y}{c}{\alpha}{\eta}{\gamma}
 \sixj{d}{y}{b}{r}{u}{x}
@@ -1065,7 +1065,7 @@ r & c & s \\
 \end{aligned}
 \]
 \begin{equation}
-=(-1)^{a+b+c+u+s}\sixj{a}{p}{q}{g}{v}{u} \label{chap12:eq:24} \sum_{x \xi}(-1)^{x-\xi} \Pi_{x}^{2}\threej{a}{d}{x}{\alpha}{\delta}{\xi}\threej{x}{b}{c}{-\xi}{\beta}{\gamma}\sixj{a}{d}{x}{s}{v}{u}\sixj{x}{b}{c}{r}{s}{v},
+=(-1)^{a+b+c+u+s}\sixj{a}{p}{q}{g}{v}{u} \label{chap12:eq:24} \sum_{x \xi}(-1)^{x-\xi} \Fact{x}^{2}\threej{a}{d}{x}{\alpha}{\delta}{\xi}\threej{x}{b}{c}{-\xi}{\beta}{\gamma}\sixj{a}{d}{x}{s}{v}{u}\sixj{x}{b}{c}{r}{s}{v},
 \end{equation}
 \[
 \begin{tikzpicture}[baseline=0pt,font=\small]
@@ -1133,7 +1133,7 @@ r \nu \mu}}(-1)^{p-\psi+q-\kappa+r-\rho+s-\sigma+t-r+u-\nu+v-\mu}\threej{p}{a}{q
 \end{gathered}
 \]
 \begin{equation}
-=(-1)^{q+v+t-o-d+2 u} \sum_{x y \eta}(-1)^{x+y-\eta} \Pi_{x y}^{2}\threej{a}{b}{y}{\alpha}{\beta}{-\eta} \label{chap12:eq:25}\threej{y}{c}{d}{\eta}{\gamma}{\delta}\sixj{p}{r}{x}{c}{v}{s}\sixj{p}{r}{x}{u}{a}{q}\sixj{a}{b}{y}{t}{x}{u}\sixj{y}{c}{d}{v}{t}{x}=
+=(-1)^{q+v+t-o-d+2 u} \sum_{x y \eta}(-1)^{x+y-\eta} \Fact{x y}^{2}\threej{a}{b}{y}{\alpha}{\beta}{-\eta} \label{chap12:eq:25}\threej{y}{c}{d}{\eta}{\gamma}{\delta}\sixj{p}{r}{x}{c}{v}{s}\sixj{p}{r}{x}{u}{a}{q}\sixj{a}{b}{y}{t}{x}{u}\sixj{y}{c}{d}{v}{t}{x}=
 \end{equation}
 \[
 \begin{tikzpicture}[baseline=0pt,font=\small]
@@ -1203,7 +1203,7 @@ r \nu \mu}}(-1)^{p-\psi+q-\kappa+r-\rho+s-\sigma+t-r+u-\nu+v-\mu}\threej{p}{a}{q
 \end{tikzpicture}
 \]
 \begin{equation}
-=(-1)^{q+u-a-s-b-d} \sum_{x \xi}(-1)^{x-\xi} \Pi_{x}^{2}\threej{a}{x}{c}{\alpha}{-\xi}{\gamma} \label{chap12:eq:26}\threej{d}{x}{b}{\delta}{\xi}{\beta}\sixj{d}{x}{b}{u}{t}{v}\ninej{a}{x}{c}{p}{v}{s}{q}{u}{r},
+=(-1)^{q+u-a-s-b-d} \sum_{x \xi}(-1)^{x-\xi} \Fact{x}^{2}\threej{a}{x}{c}{\alpha}{-\xi}{\gamma} \label{chap12:eq:26}\threej{d}{x}{b}{\delta}{\xi}{\beta}\sixj{d}{x}{b}{u}{t}{v}\ninej{a}{x}{c}{p}{v}{s}{q}{u}{r},
 \end{equation}
 \[
 \begin{tikzpicture}[baseline=0pt,font=\small]
@@ -1256,7 +1256,7 @@ r \nu \mu}}(-1)^{p-\psi+q-\kappa+r-\rho+s-\sigma+t-r+u-\nu+v-\mu}\threej{p}{a}{q
 & \sum_{\substack{\psi \kappa \rho \\
 \sigma \tau \nu}}(-1)^{p-\psi+q-\kappa+r-\rho+\rho-\sigma+t-\tau+u-\nu}\threej{p}{a}{q}{\psi}{\alpha}{-\kappa}\threej{q}{b}{r}{\kappa}{\beta}{-\rho}\threej{r}{c}{s}{\rho}{\gamma}{-\sigma}\threej{s}{d}{t}{\sigma}{\delta}{-\tau}\threej{t}{e}{u}{\tau}{\varepsilon}{-\nu}\threej{u}{f}{p}{\nu}{\varphi}{-\psi}  \notag\\
 & \quad=\sum_{\substack{x y s \\
-\xi \eta s}}(-1)^{x-\xi+y-\eta+x-s} \Pi_{x y z}^{2}\threej{a}{x}{b}{\alpha}{\xi}{\beta}\threej{c}{y}{d}{\gamma}{\eta}{\delta}\threej{e}{z}{f}{\varepsilon}{\zeta}{\varphi}\threej{x}{y}{z}{-\xi}{-\eta}{-s}\sixj{a}{x}{b}{r}{q}{p}\sixj{c}{y}{d}{t}{s}{r} \label{chap12:eq:27}
+\xi \eta s}}(-1)^{x-\xi+y-\eta+x-s} \Fact{x y z}^{2}\threej{a}{x}{b}{\alpha}{\xi}{\beta}\threej{c}{y}{d}{\gamma}{\eta}{\delta}\threej{e}{z}{f}{\varepsilon}{\zeta}{\varphi}\threej{x}{y}{z}{-\xi}{-\eta}{-s}\sixj{a}{x}{b}{r}{q}{p}\sixj{c}{y}{d}{t}{s}{r} \label{chap12:eq:27}
 \end{align}
 
 \[
@@ -1328,7 +1328,7 @@ r \nu \mu}}(-1)^{p-\psi+q-\kappa+r-\rho+s-\sigma+t-r+u-\nu+v-\mu}\threej{p}{a}{q
 \end{tikzpicture}
 \]
 \[
-=(-1)^{2 p-u-r+a+b+d+e-c} \sum_{\substack{x y z \\ \xi \eta \xi}}(-1)^{x} \Pi_{x y z}^{2}(-1)^{x-\xi+y-\eta+x-\xi}
+=(-1)^{2 p-u-r+a+b+d+e-c} \sum_{\substack{x y z \\ \xi \eta \xi}}(-1)^{x} \Fact{x y z}^{2}(-1)^{x-\xi+y-\eta+x-\xi}
 \]
 \begin{equation}
 \times\threej{a}{b}{x}{\alpha}{\beta}{-\xi} \label{chap12:eq:28}\threej{x}{c}{y}{\xi}{\gamma}{-\eta}\threej{y}{f}{z}{\eta}{\varphi}{-\zeta}\threej{z}{d}{e}{\zeta}{\delta}{e}\sixj{a}{b}{x}{r}{p}{q}\sixj{x}{c}{y}{s}{p}{r}\sixj{y}{f}{z}{u}{s}{p}\sixj{z}{d}{e}{t}{u}{s}=
@@ -1403,7 +1403,7 @@ r \nu \mu}}(-1)^{p-\psi+q-\kappa+r-\rho+s-\sigma+t-r+u-\nu+v-\mu}\threej{p}{a}{q
 
 \begin{gather}
 =(-1)^{u-d-c-c-r} \sum_{\substack{x y z \\
-\xi \eta s}}(-1)^{x-\xi+y-\eta+x-\varsigma} \Pi_{x y s}^{2}:\threej{a}{x}{b}{\alpha}{\xi}{\beta}\threej{e}{y}{d}{e}{\eta}{s}\threej{c}{z}{f}{\gamma}{\varsigma}{\varphi}\threej{x}{y}{z}{-\xi}{-\eta}{-\varsigma}  \notag\\
+\xi \eta s}}(-1)^{x-\xi+y-\eta+x-\varsigma} \Fact{x y s}^{2}:\threej{a}{x}{b}{\alpha}{\xi}{\beta}\threej{e}{y}{d}{e}{\eta}{s}\threej{c}{z}{f}{\gamma}{\varsigma}{\varphi}\threej{x}{y}{z}{-\xi}{-\eta}{-\varsigma}  \notag\\
 \times\sixj{a}{x}{b}{r}{q}{p}\sixj{e}{y}{d}{s}{t}{u}\ninej{x}{y}{z}{p}{u}{f}{r}{s}{c} \label{chap12:eq:29}
 \end{gather}
 
@@ -1467,13 +1467,13 @@ r \nu \mu}}(-1)^{p-\psi+q-\kappa+r-\rho+s-\sigma+t-r+u-\nu+v-\mu}\threej{p}{a}{q
 \section{SUMMATION OF PRODUCTS OF $6 j$ AND $9 j$ SYMBOLS}
 This section presents a collection of sums involving $6 j$ and, $9 j$ symbols. All the sums are illustrated by diagrams which display the coupling scheme for angular moments involved in the equation. The sums are grouped in accordance with the number of $3 n j$ symbols in the products. Within each group the sums are arranged according to the number of summation indices. The summation indices are printed by capital letters in equations and marked by thick $j$-lines. In Sec. 12.2, just as in Sec. 12.1, we use the notation
 \[
-\Pi_{a b \ldots f}=[(2 a+1)(2 b+1) \ldots(2 f+1)]^{\frac{1}{2}} .
+\Fact{a b \ldots f}=[(2 a+1)(2 b+1) \ldots(2 f+1)]^{\frac{1}{2}} .
 \]
 Some of the sums presented are taken from Refs. [24] and [44].\\
 \subsection{Sums Involving One $3 n j$ Symbol}
 
 \begin{equation}
-\sum_{X} \Pi_{X}^{2}\{a b X\}=\Pi_{a b}^{2} \label{chap12:eq:30}
+\sum_{X} \Fact{X}^{2}\{a b X\}=\Fact{a b}^{2} \label{chap12:eq:30}
 \end{equation}
 
 \[
@@ -1483,7 +1483,7 @@ Some of the sums presented are taken from Refs. [24] and [44].\\
 \]
 
 \begin{equation}
-\sum_{x}(-1)^{2 a+\dot{x}} \Pi_{x}^{2}\{a a X\}=\Pi_{a}^{2} \label{chap12:eq:31}
+\sum_{x}(-1)^{2 a+\dot{x}} \Fact{x}^{2}\{a a X\}=\Fact{a}^{2} \label{chap12:eq:31}
 \end{equation}
 
 \[
@@ -1492,7 +1492,7 @@ Some of the sums presented are taken from Refs. [24] and [44].\\
 \begin{tikzpicture}[baseline=0pt,font=\small]\dloop{0}{0}{a}\end{tikzpicture}
 \]
 \begin{equation}
-\sum_{x} \Pi_{x}^{2}\sixj{a}{b}{X}{a}{b}{c} \label{chap12:eq:32}=(-1)^{2 c}\{a b c\},
+\sum_{x} \Fact{x}^{2}\sixj{a}{b}{X}{a}{b}{c} \label{chap12:eq:32}=(-1)^{2 c}\{a b c\},
 \end{equation}
 \[
 \begin{tikzpicture}[baseline=0pt,font=\small]\dsixjsq[1]{0}{0}{a}{b}{b}{a}{c}{X}\end{tikzpicture}
@@ -1500,7 +1500,7 @@ Some of the sums presented are taken from Refs. [24] and [44].\\
 \begin{tikzpicture}[baseline=0pt,font=\small]\ctheta{0}{0}{a}{c}{b}\end{tikzpicture}
 \]
 \begin{equation}
-\sum_{X}(-1)^{a+b+X} \Pi_{X}^{2}\sixj{a}{b}{x}{b}{a}{c} \label{chap12:eq:33}=\Pi_{a b} \delta_{c 0}
+\sum_{X}(-1)^{a+b+X} \Fact{X}^{2}\sixj{a}{b}{x}{b}{a}{c} \label{chap12:eq:33}=\Fact{a b} \delta_{c 0}
 \end{equation}
 \[
 \begin{tikzpicture}[baseline=0pt,font=\small]\dsixjsq[1]{0}{0}{a}{b}{a}{b}{c}{X}\end{tikzpicture}
@@ -1511,7 +1511,7 @@ Some of the sums presented are taken from Refs. [24] and [44].\\
 \end{tikzpicture}
 \]
 \begin{equation}
-\sum_{X} \Pi_{X}^{2}\ninej{a}{b}{e}{c}{d}{f}{e}{f}{X} \label{chap12:eq:34}=\frac{\delta_{b c}}{\Pi_{b}^{2}}\{a b e\}\{b d f\}
+\sum_{X} \Fact{X}^{2}\ninej{a}{b}{e}{c}{d}{f}{e}{f}{X} \label{chap12:eq:34}=\frac{\delta_{b c}}{\Fact{b}^{2}}\{a b e\}\{b d f\}
 \end{equation}
 \[
 \begin{tikzpicture}[baseline=0pt,font=\small]
@@ -1528,7 +1528,7 @@ Some of the sums presented are taken from Refs. [24] and [44].\\
 \end{tikzpicture}
 \]
 \begin{equation}
-\sum_{X}(-1)^{a+b+c+d-X} \Pi_{X}^{2}\ninej{a}{b}{e}{c}{d}{f}{f}{e}{X} \label{chap12:eq:35}=\frac{\delta_{a d}}{\Pi_{a}^{2}}\{d b e\}\{a c f\}
+\sum_{X}(-1)^{a+b+c+d-X} \Fact{X}^{2}\ninej{a}{b}{e}{c}{d}{f}{f}{e}{X} \label{chap12:eq:35}=\frac{\delta_{a d}}{\Fact{a}^{2}}\{d b e\}\{a c f\}
 \end{equation}
 \[
 \begin{tikzpicture}[baseline=0pt,font=\small]
@@ -1547,7 +1547,7 @@ Some of the sums presented are taken from Refs. [24] and [44].\\
 \subsection{Sums Involving Products of Two $3 n j$ Symbols}
 \subsubsection{(i) Single summation}
 \begin{equation}
-\sum_{X} \Pi_{X}^{2}\sixj{a}{b}{X}{c}{d}{p} \sixj{c}{d}{X}{a}{b}{q}=\frac{\delta_{p q}}{\Pi_{p}^{2}}\{a d p\}\{b c p\}
+\sum_{X} \Fact{X}^{2}\sixj{a}{b}{X}{c}{d}{p} \sixj{c}{d}{X}{a}{b}{q}=\frac{\delta_{p q}}{\Fact{p}^{2}}\{a d p\}\{b c p\}
 \label{chap12:eq:36}
 \end{equation}
 \[
@@ -1561,7 +1561,7 @@ Some of the sums presented are taken from Refs. [24] and [44].\\
 \end{tikzpicture}
 \]
 \begin{equation}
-\sum_{X}(-1)^{p+q+X} \Pi_{X}^{2}\sixj{a}{b}{X}{c}{d}{p} \sixj{c}{d}{X}{b}{a}{q}=\sixj{c}{a}{q}{d}{b}{p}
+\sum_{X}(-1)^{p+q+X} \Fact{X}^{2}\sixj{a}{b}{X}{c}{d}{p} \sixj{c}{d}{X}{b}{a}{q}=\sixj{c}{a}{q}{d}{b}{p}
 \label{chap12:eq:37}
 \end{equation}
 \[
@@ -1575,7 +1575,7 @@ Some of the sums presented are taken from Refs. [24] and [44].\\
 \end{tikzpicture}
 \]
 \begin{equation}
-\sum_{X} \Pi_{X}^{2}
+\sum_{X} \Fact{X}^{2}
 \ninej{a}{f}{X}{d}{q}{e}{p}{c}{b}
 \sixj{a}{f}{X}{e}{b}{s}=(-1)^{2 s}\sixj{a}{b}{s}{c}{d}{p}\sixj{c}{d}{s}{e}{f}{q},
  \label{chap12:eq:38}
@@ -1602,7 +1602,7 @@ Some of the sums presented are taken from Refs. [24] and [44].\\
 \end{tikzpicture}
 \]
 \begin{equation}
-\sum_X (-1)^{R+X}\Pi_X^2 
+\sum_X (-1)^{R+X}\Fact{X}^2 
 \ninej{a}{f}{X}{d}{q}{e}{p}{c}{b}
 \sixj{a}{f}{X}{b}{e}{s}
 =
@@ -1633,7 +1633,7 @@ where $R=a+b+c+d+e+f+p+q$\\
 \end{tikzpicture}
 \]
 \begin{equation}
-\sum_X\Pi_X^2\ninej{a}{b}{p}{c}{d}{q}{r}{s}{X}
+\sum_X\Fact{X}^2\ninej{a}{b}{p}{c}{d}{q}{r}{s}{X}
 \ninej{e}{f}{p}{g}{h}{q}{r}{s}{X}
 =
 (-1)^{b-c-f+g}\twelvejII{r,a,c,s,b,d,h,g,q,f,e,p}
@@ -1685,9 +1685,9 @@ where $R=a+b+c+d+e+f+p+q$\\
 \end{tikzpicture}
 \]
 \begin{equation}
-(-1)^{p+q-r-s} \sum_{X} \Pi_{X}^{2}
+(-1)^{p+q-r-s} \sum_{X} \Fact{X}^{2}
 \ninej{a}{b}{p}{c}{d}{q}{r}{s}{X} 
-\ninej{e}{f}{p}{g}{h}{q}{r}{s}{X}=(-1)^{b+g-c-f} \sum_{Y} \Pi_{Y}^{2}\ninej{a}{p}{b}{r}{e}{g}{c}{f}{Y}\ninej{d}{s}{b}{q}{h}{g}{c}{f}{Y},
+\ninej{e}{f}{p}{g}{h}{q}{r}{s}{X}=(-1)^{b+g-c-f} \sum_{Y} \Fact{Y}^{2}\ninej{a}{p}{b}{r}{e}{g}{c}{f}{Y}\ninej{d}{s}{b}{q}{h}{g}{c}{f}{Y},
 \label{chap12:eq:39}
 \end{equation}
 \[
@@ -1714,7 +1714,7 @@ where $R=a+b+c+d+e+f+p+q$\\
 \]
 \subsubsection{(ii) Double summation}
 \begin{equation}
-\sum_{X Y} \Pi_{X Y}^{2}\ninej{a}{b}{X}{c}{d}{Y}{e}{f}{j} \label{chap12:eq:40}\ninej{a}{b}{X}{c}{d}{Y}{g}{h}{j}=\frac{\delta_{e g} \delta_{f h}}{\Pi_{e f}^{2}}\{a c e\}\{b d h\}\{g f j\},
+\sum_{X Y} \Fact{X Y}^{2}\ninej{a}{b}{X}{c}{d}{Y}{e}{f}{j} \label{chap12:eq:40}\ninej{a}{b}{X}{c}{d}{Y}{g}{h}{j}=\frac{\delta_{e g} \delta_{f h}}{\Fact{e f}^{2}}\{a c e\}\{b d h\}\{g f j\},
 \end{equation}
 \[
 \begin{tikzpicture}[baseline=0pt,font=\small]
@@ -1748,7 +1748,7 @@ where $R=a+b+c+d+e+f+p+q$\\
 \]
 
 \begin{equation}
- \sum_{XY} (-1)^{Y} \Pi_{XY}^2 \ninej{a}{b}{X}{c}{d}{Y}{e}{f}{j}
+ \sum_{XY} (-1)^{Y} \Fact{XY}^2 \ninej{a}{b}{X}{c}{d}{Y}{e}{f}{j}
  \ninej{a}{b}{X}{d}{c}{Y}{g}{h}{j}
  =
  (-1)^{2b+f+h} \ninej{a}{d}{g}{c}{b}{h}{e}{f}{j}\,,
@@ -1756,7 +1756,7 @@ where $R=a+b+c+d+e+f+p+q$\\
 
 \subsubsection{(iii) Triple summation}
 \begin{equation}
-  \sum_{XYZ} \Pi_{XYZ}^2 \sixj{X}{Y}{Z}{a}{b}{c}^2=\Pi_{abc}^2
+  \sum_{XYZ} \Fact{XYZ}^2 \sixj{X}{Y}{Z}{a}{b}{c}^2=\Fact{abc}^2
 \end{equation}
 \[
 \begin{tikzpicture}[baseline=0pt,font=\small]
@@ -1775,7 +1775,7 @@ where $R=a+b+c+d+e+f+p+q$\\
 \end{tikzpicture}
 \]
 \begin{equation}
-  \sum_{XYZ} \Pi_{XYZ}^2 \ninej{X}{Y}{Z}{a}{b}{c}{d}{e}{f}
+  \sum_{XYZ} \Fact{XYZ}^2 \ninej{X}{Y}{Z}{a}{b}{c}{d}{e}{f}
   \sixj{X}{Y}{Z}{c}{a}{b}= \{abc\}
 \end{equation}
 \[
@@ -1796,7 +1796,7 @@ where $R=a+b+c+d+e+f+p+q$\\
 \begin{tikzpicture}[baseline=0pt,font=\small]\cthetav{0}{0}{a}{b}{c}\end{tikzpicture}
 \]
 \begin{equation}
-\sum_{X Y Z} \Pi_{X Y Z}^{2}\ninej{X}{Y}{Z}{a}{b}{c}{d}{e}{f}^2=\{a b c\}\{d e f\}
+\sum_{X Y Z} \Fact{X Y Z}^{2}\ninej{X}{Y}{Z}{a}{b}{c}{d}{e}{f}^2=\{a b c\}\{d e f\}
 \label{chap12:eq:41}
 \end{equation}
 \[
@@ -1826,7 +1826,7 @@ where $R=a+b+c+d+e+f+p+q$\\
 \subsection{Sums Involving Products of Three $3 n j$ Symbols}
 \subsubsection{(i) Single summation}
 \begin{equation}\label{chap12:eq:42}\\
-\sum_{X}(-1)^{R+X} \Pi_{X}^{2}\sixj{a}{b}{X}{c}{d}{p}
+\sum_{X}(-1)^{R+X} \Fact{X}^{2}\sixj{a}{b}{X}{c}{d}{p}
 \sixj{c}{d}{X}{e}{f}{q}
 \sixj{e}{f}{X}{b}{a}{r}
 =
@@ -1866,7 +1866,7 @@ where $R=a+b+c+d+e+f+p+q+r$,\\
 \end{tikzpicture}
 \]
 \begin{equation}
-\sum_{X}(-1)^{2 X} \Pi_{X}^{2}\sixj{a}{b}{X}{c}{d}{p} \label{chap12:eq:43}\sixj{c}{d}{X}{e}{f}{q}\sixj{e}{f}{X}{a}{b}{r}=\ninej{a}{f}{r}{d}{q}{e}{p}{c}{b},
+\sum_{X}(-1)^{2 X} \Fact{X}^{2}\sixj{a}{b}{X}{c}{d}{p} \label{chap12:eq:43}\sixj{c}{d}{X}{e}{f}{q}\sixj{e}{f}{X}{a}{b}{r}=\ninej{a}{f}{r}{d}{q}{e}{p}{c}{b},
 \end{equation}
 \[
 \begin{tikzpicture}[baseline=0pt,font=\small]
@@ -1902,7 +1902,7 @@ where $R=a+b+c+d+e+f+p+q+r$,\\
 \end{tikzpicture}
 \]
 \begin{equation}
-(-1)^{p+q-e-f} \sum_{X} \Pi_{X}^{2}\ninej{a}{b}{p}{c}{d}{q}{e}{f}{X} \sixj{p}{q}{X}{k}{l}{g}\sixj{e}{f}{X}{k}{l}{h}=
+(-1)^{p+q-e-f} \sum_{X} \Fact{X}^{2}\ninej{a}{b}{p}{c}{d}{q}{e}{f}{X} \sixj{p}{q}{X}{k}{l}{g}\sixj{e}{f}{X}{k}{l}{h}=
 \twelvejI{f,b,p,g,d,a,l,k,q,c,e,h}
 \label{chap12:eq:44}
 \end{equation}
@@ -1945,10 +1945,10 @@ where $R=a+b+c+d+e+f+p+q+r$,\\
 \end{tikzpicture}
 \]
 \begin{align}
-&(-1)^{p+q-e-f} \sum_{X} \Pi_{X}^{2}\ninej{a}{b}{p}{c}{d}{q}{e}{f}{X}
+&(-1)^{p+q-e-f} \sum_{X} \Fact{X}^{2}\ninej{a}{b}{p}{c}{d}{q}{e}{f}{X}
 \sixj{p}{q}{X}{k}{l}{g}
 \sixj{e}{f}{X}{k}{l}{h}\notag\\
-&=(-1)^{b+g-c-h} \sum_{Y} \Pi_{Y}^{2}\ninej{d}{f}{b}{q}{k}{g}{c}{h}{Y}
+&=(-1)^{b+g-c-h} \sum_{Y} \Fact{Y}^{2}\ninej{d}{f}{b}{q}{k}{g}{c}{h}{Y}
 \sixj{b}{g}{Y}{l}{a}{p}
 \sixj{c}{h}{Y}{l}{a}{e}
 .
@@ -2000,7 +2000,7 @@ where $R=a+b+c+d+e+f+p+q+r$,\\
 
 \subsubsection{(ii) Double summation}
 \begin{equation}
-\sum_{X Y} \Pi_{X Y}^{2}\sixj{a}{b}{X}{c}{d}{p} \label{chap12:eq:46}\sixj{c}{d}{X}{a}{b}{Y}\sixj{a}{b}{q}{c}{d}{Y}=\sixj{a}{b}{q}{c}{d}{p},
+\sum_{X Y} \Fact{X Y}^{2}\sixj{a}{b}{X}{c}{d}{p} \label{chap12:eq:46}\sixj{c}{d}{X}{a}{b}{Y}\sixj{a}{b}{q}{c}{d}{Y}=\sixj{a}{b}{q}{c}{d}{p},
 \end{equation}
 \[
 \begin{tikzpicture}[baseline=0pt,font=\small]
@@ -2031,7 +2031,7 @@ where $R=a+b+c+d+e+f+p+q+r$,\\
 \end{tikzpicture}
 \]
 \begin{equation}
-\sum_{X Y}(-1)^{X+Y+p} \Pi_{X Y}^{2}\sixj{a}{b}{X}{c}{d}{p} \label{chap12:eq:47}\sixj{a}{c}{Y}{d}{b}{X}\sixj{a}{d}{q}{b}{c}{Y}=\frac{\delta_{p q}}{\Pi_{p}^{2}}\{a d p\}\{b c p\}
+\sum_{X Y}(-1)^{X+Y+p} \Fact{X Y}^{2}\sixj{a}{b}{X}{c}{d}{p} \label{chap12:eq:47}\sixj{a}{c}{Y}{d}{b}{X}\sixj{a}{d}{q}{b}{c}{Y}=\frac{\delta_{p q}}{\Fact{p}^{2}}\{a d p\}\{b c p\}
 \end{equation}
 \[
 \begin{tikzpicture}[baseline=0pt,font=\small]
@@ -2059,7 +2059,7 @@ where $R=a+b+c+d+e+f+p+q+r$,\\
 \end{tikzpicture}
 \]
 \begin{equation}
-\sum_{X Y}(-1)^{X+Y+2 a-s-t} \Pi_{X Y}^{2}\ninej{a}{b}{p}{c}{d}{X}{q}{Y}{g} \label{chap12:eq:48}\sixj{c}{d}{X}{p}{g}{s}\sixj{b}{d}{Y}{q}{g}{t}=\ninej{a}{b}{p}{c}{g}{s}{q}{t}{d},
+\sum_{X Y}(-1)^{X+Y+2 a-s-t} \Fact{X Y}^{2}\ninej{a}{b}{p}{c}{d}{X}{q}{Y}{g} \label{chap12:eq:48}\sixj{c}{d}{X}{p}{g}{s}\sixj{b}{d}{Y}{q}{g}{t}=\ninej{a}{b}{p}{c}{g}{s}{q}{t}{d},
 \end{equation}
 \[
 \begin{tikzpicture}[baseline=0pt,font=\small]
@@ -2089,9 +2089,9 @@ where $R=a+b+c+d+e+f+p+q+r$,\\
 \end{tikzpicture}
 \]
 \begin{equation}
-\sum_{X Y} \Pi_{X Y}^{2}\ninej{a}{b}{p}{c}{d}{X}{q}{Y}{g} \sixj{c}{d}{X}{g}{p}{s}
+\sum_{X Y} \Fact{X Y}^{2}\ninej{a}{b}{p}{c}{d}{X}{q}{Y}{g} \sixj{c}{d}{X}{g}{p}{s}
 \sixj{b}{d}{Y}{g}{q}{t}
-=(-1)^{2 s} \frac{\delta_{s t}}{\Pi_{s}^{2}}\{d g s\}\sixj{a}{b}{p}{s}{c}{q},
+=(-1)^{2 s} \frac{\delta_{s t}}{\Fact{s}^{2}}\{d g s\}\sixj{a}{b}{p}{s}{c}{q},
 \label{chap12:eq:49}
 \end{equation}
 \[
@@ -2126,10 +2126,10 @@ where $R=a+b+c+d+e+f+p+q+r$,\\
 \end{tikzpicture}
 \]
 \begin{equation}
-\sum_{X Y} \Pi_{X Y}^{2}\ninej{a}{b}{X}{c}{d}{Y}{e}{f}{g} 
+\sum_{X Y} \Fact{X Y}^{2}\ninej{a}{b}{X}{c}{d}{Y}{e}{f}{g} 
 \sixj{a}{b}{X}{Y}{g}{h}
 \sixj{c}{d}{Y}{b}{h}{j}
-=(-1)^{2 h} \frac{\delta_{fj}}{\Pi_{f}^{2}}\{b d f\}\sixj{e}{j}{g}{h}{a}{c},
+=(-1)^{2 h} \frac{\delta_{fj}}{\Fact{f}^{2}}\{b d f\}\sixj{e}{j}{g}{h}{a}{c},
 \label{chap12:eq:49a}
 \end{equation}
 \[
@@ -2166,7 +2166,7 @@ where $R=a+b+c+d+e+f+p+q+r$,\\
 \end{tikzpicture}
 \]
 \begin{equation}
-\sum_{X Y} \Pi_{X Y}^{2}
+\sum_{X Y} \Fact{X Y}^{2}
 \ninej{a}{f}{X}{d}{q}{e}{p}{c}{b}
 \ninej{a}{f}{X}{h}{r}{e}{Y}{g}{b}
 \sixj{a}{h}{Y}{g}{b}{s}
@@ -2211,12 +2211,12 @@ where $R=a+b+c+d+e+f+p+q+r$,\\
 
 \subsection{(iii) Triple summation}
 \begin{equation}
-\sum_{X Y Z} \Pi_{X Y Z}^{2}
+\sum_{X Y Z} \Fact{X Y Z}^{2}
 \ninej{a}{b}{p}{c}{d}{X}{q}{Y}{Z} 
 \sixj{p}{X}{Z}{d}{e}{c}
 \sixj{q}{Y}{Z}{d}{e}{b}
 =
-(-1)^{2e}{\Pi_{d}^{2}}
+(-1)^{2e}{\Fact{d}^{2}}
 \sixj{a}{b}{p}{e}{c}{q},
 \end{equation}
 \[
@@ -2248,12 +2248,12 @@ where $R=a+b+c+d+e+f+p+q+r$,\\
 \end{tikzpicture}
 \]
 \begin{equation}
-\sum_{X Y Z}(-1)^{X+Y-e-h} \Pi_{X Y Z}^{2}
+\sum_{X Y Z}(-1)^{X+Y-e-h} \Fact{X Y Z}^{2}
 \ninej{a}{b}{X}{c}{d}{Z}{e}{f}{g} 
 \ninej{g}{b}{Y}{c}{d}{Z}{h}{j}{a} 
 \sixj{a}{b}{X}{g}{Z}{Y}
 =
-\frac{\delta_{fj}}{\Pi_{d}^{2}}
+\frac{\delta_{fj}}{\Fact{d}^{2}}
 \{bdf\}
 \sixj{e}{f}{g}{h}{c}{a},
 \end{equation}
@@ -2292,7 +2292,7 @@ where $R=a+b+c+d+e+f+p+q+r$,\\
 \end{tikzpicture}
 \]
 \begin{equation}
-\sum_{X Y Z}(-1)^{X+f-a-l} \Pi_{X Y Z}^{2}\ninej{a}{b}{p}{c}{d}{X}{q}{Y}{Z} \label{chap12:eq:50}\ninej{b}{d}{Y}{c}{f}{Z}{l}{k}{q}\sixj{p}{X}{Z}{c}{f}{d}=\frac{\delta_{p k}}{\Pi_{k}^{2}}\{d f p\}\sixj{a}{b}{p}{l}{q}{c},
+\sum_{X Y Z}(-1)^{X+f-a-l} \Fact{X Y Z}^{2}\ninej{a}{b}{p}{c}{d}{X}{q}{Y}{Z} \label{chap12:eq:50}\ninej{b}{d}{Y}{c}{f}{Z}{l}{k}{q}\sixj{p}{X}{Z}{c}{f}{d}=\frac{\delta_{p k}}{\Fact{k}^{2}}\{d f p\}\sixj{a}{b}{p}{l}{q}{c},
 \end{equation}
 \[
 \begin{tikzpicture}[baseline=0pt,font=\small]
@@ -2329,7 +2329,7 @@ where $R=a+b+c+d+e+f+p+q+r$,\\
 \end{tikzpicture}
 \]
 \begin{equation}
-\sum_{X Y Z} \Pi_{X Y Z}^{2}\ninej{a}{b}{p}{c}{d}{X}{q}{Y}{Z} \label{chap12:eq:51}\ninej{c}{d}{X}{e}{f}{Z}{g}{h}{p}\ninej{b}{d}{Y}{e}{f}{Z}{j}{k}{q}=\frac{\delta_{h k}}{\Pi_{h}^{2}}\{d f h\}\ninej{a}{b}{p}{c}{e}{g}{q}{j}{h},
+\sum_{X Y Z} \Fact{X Y Z}^{2}\ninej{a}{b}{p}{c}{d}{X}{q}{Y}{Z} \label{chap12:eq:51}\ninej{c}{d}{X}{e}{f}{Z}{g}{h}{p}\ninej{b}{d}{Y}{e}{f}{Z}{j}{k}{q}=\frac{\delta_{h k}}{\Fact{h}^{2}}\{d f h\}\ninej{a}{b}{p}{c}{e}{g}{q}{j}{h},
 \end{equation}
 % eq 51: three flat 9j-hex (X,Y,Z bold) = theta(d f h) . rect(h,k) . 9j-hex
 % LHS 9j's: hex1 {b d Y;e f Z;j k q}, hex2 {a b p;c d X;q Y Z}, hex3 {c d X;e f Z;g h p}
@@ -2374,8 +2374,8 @@ where $R=a+b+c+d+e+f+p+q+r$,\\
 \subsection{Sums Involving Products of Four $3 n j$ Symbols}
 \subsubsection{(i) Single summation}
 \begin{gather}
-\sum_{X}(-1)^{R-X} \Pi_{X}^{2}\sixj{a}{b}{X}{c}{d}{p}\sixj{c}{d}{X}{c}{f}{q}\sixj{e}{f}{X}{g}{h}{r}\sixj{g}{h}{X}{b}{a}{s}\notag\\
-=\sum_{Y}(-1)^{2 Y+a+b+e+\rho} \Pi_{Y}^{2}\ninej{s}{h}{b}{g}{r}{f}{a}{e}{Y} \sixj{b}{f}{Y}{q}{p}{c}
+\sum_{X}(-1)^{R-X} \Fact{X}^{2}\sixj{a}{b}{X}{c}{d}{p}\sixj{c}{d}{X}{c}{f}{q}\sixj{e}{f}{X}{g}{h}{r}\sixj{g}{h}{X}{b}{a}{s}\notag\\
+=\sum_{Y}(-1)^{2 Y+a+b+e+\rho} \Fact{Y}^{2}\ninej{s}{h}{b}{g}{r}{f}{a}{e}{Y} \sixj{b}{f}{Y}{q}{p}{c}
 \twelvejI{e,h,b,c,r,s,p,q,f,g,a,d},
 \label{chap12:eq:52}
 \end{gather}
@@ -2424,12 +2424,12 @@ where $R=a+b+c+d+e+f+g+h+p+q+r+s$.\\
 
 % PROOFREAD: contains OCR-garbled or 12j Wigner array(s) not auto-converted -- verify/reconstruct against orig.
 \begin{align}
-& \sum_{X} \Pi_{X}^{2}
+& \sum_{X} \Fact{X}^{2}
 \sixj{a}{b}{X}{c}{d}{p}
 \sixj{c}{d}{X}{e}{f}{q}
 \sixj{e}{f}{X}{g}{h}{r}
 \sixj{g}{h}{X}{a}{b}{s}\notag\\
-& =\sum_{X} \Pi_{X}^{2}
+& =\sum_{X} \Fact{X}^{2}
 \ninej{a}{f}{X}{d}{q}{e}{p}{c}{b}
 \ninej{a}{f}{X}{h}{r}{e}{s}{g}{b}=(-1)^{-p+q-r+}
 \twelvejII{a,d,p,f,q,a,g,s,b,r,h,e}, \label{chap12:eq:53}
@@ -2468,7 +2468,7 @@ where $R=a+b+c+d+e+f+g+h+p+q+r+s$.\\
 \]
 \subsubsection{(ii) Double summation}
 \begin{equation}
-\sum_{XY}\Pi_{XY}^2
+\sum_{XY}\Fact{XY}^2
 \sixj{a}{b}{c}{d}{X}{Y}
 \sixj{a}{e}{f}{g}{X}{Y}
 \sixj{c}{g}{p}{f}{d}{X}
@@ -2509,8 +2509,8 @@ where $R=a+b+c+d+e+f+g+h+p+q+r+s$.\\
 \]
 
 \begin{align}
-& \sum_{X Y}(-1)^{X+Y} \Pi_{X Y}^{2}\sixj{a}{b}{c}{d}{X}{Y}\sixj{a}{e}{f}{g}{X}{Y}\sixj{c}{f}{p}{g}{d}{X}\sixj{b}{e}{q}{g}{d}{Y}  \notag\\
-& =(-1)^{-a+b+y c-d+e+f-e-p} \frac{\delta_{p q}}{\Pi_{p}^{2}}\{d g p\}\sixj{a}{b}{c}{p}{f}{e} \label{chap12:eq:54}
+& \sum_{X Y}(-1)^{X+Y} \Fact{X Y}^{2}\sixj{a}{b}{c}{d}{X}{Y}\sixj{a}{e}{f}{g}{X}{Y}\sixj{c}{f}{p}{g}{d}{X}\sixj{b}{e}{q}{g}{d}{Y}  \notag\\
+& =(-1)^{-a+b+y c-d+e+f-e-p} \frac{\delta_{p q}}{\Fact{p}^{2}}\{d g p\}\sixj{a}{b}{c}{p}{f}{e} \label{chap12:eq:54}
 \end{align}
 
 \begin{center}
@@ -2555,7 +2555,7 @@ where $R=a+b+c+d+e+f+g+h+p+q+r+s$.\\
 \end{center}
 % PROOFREAD: contains OCR-garbled or 12j Wigner array(s) not auto-converted -- verify/reconstruct against orig.
 \begin{equation}
-\sum_{X Y}(-1)^{Y} \Pi_{X Y}^{2}\ninej{a}{b}{X}{c}{d}{Y}{p}{q}{r} \label{chap12:eq:55}\sixj{X}{Y}{r}{j}{h}{g}\sixj{a}{b}{X}{h}{g}{e}
+\sum_{X Y}(-1)^{Y} \Fact{X Y}^{2}\ninej{a}{b}{X}{c}{d}{Y}{p}{q}{r} \label{chap12:eq:55}\sixj{X}{Y}{r}{j}{h}{g}\sixj{a}{b}{X}{h}{g}{e}
 \sixj{c}{d}{Y}{j}{g}{f}=(-1)^{a-b+d+e-j-p+r}\ninej{e}{b}{h}{f}{d}{j}{p}{q}{r}\sixj{a}{c}{p}{f}{e}{g},
 \end{equation}
 \[
@@ -2601,8 +2601,8 @@ where $R=a+b+c+d+e+f+g+h+p+q+r+s$.\\
 
 % PROOFREAD: contains OCR-garbled or 12j Wigner array(s) not auto-converted -- verify/reconstruct against orig.
 \begin{gather}
-\sum_{X Y}(-1)^{X+Y} \Pi_{X Y}^{2}\ninej{a}{b}{X}{c}{d}{Y}{p}{q}{s}\ninej{e}{f}{X}{g}{h}{Y}{r}{t}{s}\sixj{a}{b}{X}{f}{e}{k}\sixj{c}{d}{Y}{h}{g}{l}  \notag\\
-=(-1)^{k+l+a+c+p-s-h-t-f} \sum_{Z}(-1)^{Z} \Pi_{Z}^{2}\ninej{c}{g}{l}{a}{e}{k}{p}{r}{Z}\ninej{f}{b}{k}{h}{d}{l}{t}{q}{Z}
+\sum_{X Y}(-1)^{X+Y} \Fact{X Y}^{2}\ninej{a}{b}{X}{c}{d}{Y}{p}{q}{s}\ninej{e}{f}{X}{g}{h}{Y}{r}{t}{s}\sixj{a}{b}{X}{f}{e}{k}\sixj{c}{d}{Y}{h}{g}{l}  \notag\\
+=(-1)^{k+l+a+c+p-s-h-t-f} \sum_{Z}(-1)^{Z} \Fact{Z}^{2}\ninej{c}{g}{l}{a}{e}{k}{p}{r}{Z}\ninej{f}{b}{k}{h}{d}{l}{t}{q}{Z}
 \sixj{p}{r}{Z}{t}{q}{s}, \label{chap12:eq:56}
 \end{gather}
 
@@ -2662,8 +2662,8 @@ where $R=a+b+c+d+e+f+g+h+p+q+r+s$.\\
 \subsubsection{(iii) Triple summation}
 
 \begin{gather}
-\sum_{X_{1} X_{2} X_{3}}(-1)^{X_{1}+X_{2}+X_{3}+a_{1}+a_{2}+a_{3}+b_{1}+b_{3}+b_{3}+c} \Pi_{X_{1} X_{2} X_{3}}^{2}\sixj{a_{1}}{a_{2}}{a_{3}}{X_{1}}{X_{2}}{X_{3}}\sixj{a_{1}}{b_{2}}{b_{3}}{c}{X_{3}}{X_{2}}  \notag\\
-\times\sixj{a_{2}}{b_{3}}{b_{1}}{c}{X_{1}}{X_{3}}\sixj{a_{3}}{b_{1}}{b_{2}}{c}{X_{2}}{X_{1}}=\Pi_{c}^{2}\sixj{a_{1}}{a_{2}}{a_{3}}{b_{1}}{b_{2}}{b_{3}}, \label{chap12:eq:57}
+\sum_{X_{1} X_{2} X_{3}}(-1)^{X_{1}+X_{2}+X_{3}+a_{1}+a_{2}+a_{3}+b_{1}+b_{3}+b_{3}+c} \Fact{X_{1} X_{2} X_{3}}^{2}\sixj{a_{1}}{a_{2}}{a_{3}}{X_{1}}{X_{2}}{X_{3}}\sixj{a_{1}}{b_{2}}{b_{3}}{c}{X_{3}}{X_{2}}  \notag\\
+\times\sixj{a_{2}}{b_{3}}{b_{1}}{c}{X_{1}}{X_{3}}\sixj{a_{3}}{b_{1}}{b_{2}}{c}{X_{2}}{X_{1}}=\Fact{c}^{2}\sixj{a_{1}}{a_{2}}{a_{3}}{b_{1}}{b_{2}}{b_{3}}, \label{chap12:eq:57}
 \end{gather}
 
 \[
@@ -2709,7 +2709,7 @@ where $R=a+b+c+d+e+f+g+h+p+q+r+s$.\\
 \end{tikzpicture}
 \]
 \begin{equation}
-\sum_{X Y Z} \Pi_{X Y Z}^{2}\ninej{X}{Y}{Z}{d}{e}{f}{a}{b}{c} \label{chap12:eq:58}\sixj{X}{Y}{Z}{f}{c}{g}\sixj{X}{a}{d}{b^{\prime}}{g}{c}\sixj{Y}{b}{e}{d^{\prime}}{f}{g}=(-1)^{2(b+d)} \frac{\delta_{b b^{\prime}} \delta_{d d^{\prime}}}{\Pi_{b d}^{2}}\{a b c\}\{d e f\}\{b d g\},
+\sum_{X Y Z} \Fact{X Y Z}^{2}\ninej{X}{Y}{Z}{d}{e}{f}{a}{b}{c} \label{chap12:eq:58}\sixj{X}{Y}{Z}{f}{c}{g}\sixj{X}{a}{d}{b^{\prime}}{g}{c}\sixj{Y}{b}{e}{d^{\prime}}{f}{g}=(-1)^{2(b+d)} \frac{\delta_{b b^{\prime}} \delta_{d d^{\prime}}}{\Fact{b d}^{2}}\{a b c\}\{d e f\}\{b d g\},
 \end{equation}
 \[
 \begin{tikzpicture}[baseline=0pt,font=\small]
@@ -2754,9 +2754,9 @@ where $R=a+b+c+d+e+f+g+h+p+q+r+s$.\\
 \]
 % PROOFREAD: contains OCR-garbled or 12j Wigner array(s) not auto-converted -- verify/reconstruct against orig.
 \begin{equation}
-\sum_{X Y Z}(-1)^{2 Z} \Pi_{X Y Z}^{2}\ninej{a}{b}{X}{c}{d}{Y}{e^{\prime}}{f^{\prime}}{g} \sixj{a}{b}{X}{f}{Z}{d}
+\sum_{X Y Z}(-1)^{2 Z} \Fact{X Y Z}^{2}\ninej{a}{b}{X}{c}{d}{Y}{e^{\prime}}{f^{\prime}}{g} \sixj{a}{b}{X}{f}{Z}{d}
 \sixj{c}{d}{Y}{Z}{e}{a}
-\sixj{e}{f}{g}{X}{Y}{Z}=\frac{\delta_{e e^{\prime}} \delta_{f f^{\prime}}}{\Pi_{e f}^{2}}\{a c e\}\{b d f\}\{e g f\},
+\sixj{e}{f}{g}{X}{Y}{Z}=\frac{\delta_{e e^{\prime}} \delta_{f f^{\prime}}}{\Fact{e f}^{2}}\{a c e\}\{b d f\}\{e g f\},
 \label{chap12:eq:59}
 \end{equation}
 \begin{center}
@@ -2797,8 +2797,8 @@ where $R=a+b+c+d+e+f+g+h+p+q+r+s$.\\
 \]
 \end{center}
 \begin{gather}
-\sum_{X Y Z}(-1)^{Z} \Pi_{X Y Z}^{2}\ninej{a}{b}{c^{\prime}}{d}{e}{f}{X}{Y}{g}\ninej{l}{e}{j}{a}{b}{c}{Z}{Y}{h}\sixj{a}{d}{X}{k}{Z}{l}\sixj{X}{Y}{g}{h}{k}{Z}  \notag\\
-=(-1)^{2 c+b-d+g+j} \frac{\delta_{c c^{\prime}}}{\Pi_{c}^{2}}\{a b c\}\sixj{k}{j}{f}{c}{g}{h}\sixj{k}{j}{f}{e}{d}{l}, \label{chap12:eq:60}
+\sum_{X Y Z}(-1)^{Z} \Fact{X Y Z}^{2}\ninej{a}{b}{c^{\prime}}{d}{e}{f}{X}{Y}{g}\ninej{l}{e}{j}{a}{b}{c}{Z}{Y}{h}\sixj{a}{d}{X}{k}{Z}{l}\sixj{X}{Y}{g}{h}{k}{Z}  \notag\\
+=(-1)^{2 c+b-d+g+j} \frac{\delta_{c c^{\prime}}}{\Fact{c}^{2}}\{a b c\}\sixj{k}{j}{f}{c}{g}{h}\sixj{k}{j}{f}{e}{d}{l}, \label{chap12:eq:60}
 \end{gather}
 
 \begin{center}
@@ -2844,9 +2844,9 @@ where $R=a+b+c+d+e+f+g+h+p+q+r+s$.\\
 
 % PROOFREAD: contains OCR-garbled or 12j Wigner array(s) not auto-converted -- verify/reconstruct against orig.
 \begin{gather}
-\sum_{X Y Z}(-1)^{2 Y-Z} \Pi_{X Y Z}^{2}\ninej{a}{b}{X}{c}{d}{Y}{e}{f}{Z}\ninej{g}{h}{X}{k}{l}{Y}{f}{e}{Z}\sixj{a}{b}{X}{g}{h}{j}
+\sum_{X Y Z}(-1)^{2 Y-Z} \Fact{X Y Z}^{2}\ninej{a}{b}{X}{c}{d}{Y}{e}{f}{Z}\ninej{g}{h}{X}{k}{l}{Y}{f}{e}{Z}\sixj{a}{b}{X}{g}{h}{j}
 \sixj{c}{d}{Y}{k}{l}{j'}
-=(-1)^{-b+c-h+k} \frac{\delta_{j j^{\prime}}}{\Pi_{j}^{2}}\sixj{a}{c}{e}{l}{h}{j}\sixj{b}{d}{f}{k}{g}{j}, \label{chap12:eq:61}
+=(-1)^{-b+c-h+k} \frac{\delta_{j j^{\prime}}}{\Fact{j}^{2}}\sixj{a}{c}{e}{l}{h}{j}\sixj{b}{d}{f}{k}{g}{j}, \label{chap12:eq:61}
 \end{gather}
 \[
 \begin{tikzpicture}[baseline=0pt,font=\small]
@@ -2894,8 +2894,8 @@ where $R=a+b+c+d+e+f+g+h+p+q+r+s$.\\
 \]
 
 \begin{gather}
-\sum_{X Y Z}(-1)^{Y-a-b-c-f-h-p+q} \Pi_{X Y Z}^{2}\ninej{a}{b}{X}{g}{c}{q}{p}{Z}{Y}\ninej{b}{d}{f^{\prime}}{a}{h}{j}{Z}{Y}{p}\sixj{a}{b}{X}{d}{e}{f}\sixj{d}{h}{Y}{q}{X}{e}  \notag\\
-=(-1)^{2 j} \frac{\delta_{f f^{\prime}}}{\Pi_{f}^{2}}\{b d f\}\sixj{e}{g}{j}{p}{f}{a}\sixj{e}{g}{j}{c}{h}{q}, \label{chap12:eq:62}
+\sum_{X Y Z}(-1)^{Y-a-b-c-f-h-p+q} \Fact{X Y Z}^{2}\ninej{a}{b}{X}{g}{c}{q}{p}{Z}{Y}\ninej{b}{d}{f^{\prime}}{a}{h}{j}{Z}{Y}{p}\sixj{a}{b}{X}{d}{e}{f}\sixj{d}{h}{Y}{q}{X}{e}  \notag\\
+=(-1)^{2 j} \frac{\delta_{f f^{\prime}}}{\Fact{f}^{2}}\{b d f\}\sixj{e}{g}{j}{p}{f}{a}\sixj{e}{g}{j}{c}{h}{q}, \label{chap12:eq:62}
 \end{gather}
 
 \begin{center}
@@ -2937,7 +2937,7 @@ where $R=a+b+c+d+e+f+g+h+p+q+r+s$.\\
 \end{center}
 
 \begin{gather}
-  \sum_{XYZ}\Pi_{XYZ}^2 
+  \sum_{XYZ}\Fact{XYZ}^2 
   \ninej{a}{b}{X}{c}{d}{Y}{t}{s}{r}
   \ninej{a}{b}{X}{h}{j}{q}{s}{f}{Z}
   \ninej{k}{l}{p}{c}{d}{Y}{e}{f}{Z}

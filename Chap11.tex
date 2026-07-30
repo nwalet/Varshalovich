@@ -562,7 +562,7 @@ The scalar product of two irreducible tensors of rank $j$, \normalsize$\mathfrak
 \sum_{m=-j}^{j}\braOket{}{\mathfrak{M}}{j m}\braOket{j m}{\mathfrak{N}},
 \]
 % PROOFREAD: OCR-garbled -- \mathfrak{W} is likely \mathfrak{M}; empty-bra \langle| covariant form; \Re likely \mathfrak{N}.
-is represented by the conjunction (closure) of $\ket{j m}$ - and $\rbra{j m}$-lines of subdiagrams corresponding to $\langle | \mathfrak{W} \rket{j m}$ and $\braket{j m}{\Re}$\\
+is represented by the conjunction (closure) of $\ket{j m}$ - and $\rbra{j m}$-lines of subdiagrams corresponding to $\langle | \mathfrak{M} \rket{j m}$ and $\braket{j m}{\mathfrak{N}}$\\
 \begin{center}
 \begin{tikzpicture}[baseline=0pt]
 \node[opbox] (M1) at (0,0) {\normalsize$\mathfrak{M}$};
@@ -1285,7 +1285,7 @@ In this Section the graphical rules for the multiplication of subdiagrams are fo
 \]
 The necessary condition for such a linking is that at least one of these subdiagrams should have no external line. The graphical rule is equivalent to the relation
 \[
-\left(\sum_{m}\braOket{j m}{\mathfrak{M}}{j m}\right) \times\left(\sum_{m^{\prime}}\braOket{j m^{\prime}}{\Re}{j m^{\prime}}\right)=(2 j+1) \sum_{m m^{\prime}}\braOket{j m}{\mathfrak{M}}{j m^{\prime}}\braOket{j m^{\prime}}{\Re}{j m} .
+\left(\sum_{m}\braOket{j m}{\mathfrak{M}}{j m}\right) \times\left(\sum_{m^{\prime}}\braOket{j m^{\prime}}{\mathfrak{R}}{j m^{\prime}}\right)=(2 j+1) \sum_{m m^{\prime}}\braOket{j m}{\mathfrak{M}}{j m^{\prime}}\braOket{j m^{\prime}}{\mathfrak{R}}{j m} .
 \]
 (b) Two subdiagrams representing the factors \normalsize$\mathfrak{N}$ and \normalsize$\mathfrak{N}$ which have at least one identical (for both subdiagrams) node, i.e., three coupled $j$-lines ( $j_{1} j_{2} j_{3}$ ) may be linked together into the combined diagram which corresponds to the product of these factors:\\
 \[
@@ -1319,7 +1319,7 @@ This is equivalent to the relation
 \[
 \begin{gathered}
 {\left[\sum_{m_{1} m_{2} m_{3}}\braOket{00}{\mathfrak{M}}{j_{1} m_{1} j_{2} m_{2} j_{3} m_{3}}\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{m_{2}}{m_{3}}\right] \times\left[\sum_{m_{1}^{\prime} m_{3}^{\prime} m_{3}^{\prime}}\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}^{\prime}}{m_{2}^{\prime}}{m_{3}^{\prime}}\braOket{j_{1} m_{1}^{\prime} j_{2} m_{2}^{\prime} j_{3} m_{3}^{\prime}}{\mathfrak{M}}{}\right]} \\
-=\left\{j_{1} j_{2} j_{3}\right\} \sum_{m_{1} m_{3} m_{3}}\braOket{00}{\mathfrak{M}}{j_{1} m_{1} j_{2} m_{2} j_{3} m_{3}}\braOket{j_{1} m_{1} j_{2} m_{2} j_{3} m_{3}}{\Re}{}
+=\left\{j_{1} j_{2} j_{3}\right\} \sum_{m_{1} m_{3} m_{3}}\braOket{00}{\mathfrak{M}}{j_{1} m_{1} j_{2} m_{2} j_{3} m_{3}}\braOket{j_{1} m_{1} j_{2} m_{2} j_{3} m_{3}}{\mathfrak{R}}{}
 \end{gathered}
 \]
 For example,
@@ -1548,7 +1548,7 @@ Note that Scheme (a) is a special case of Scheme (b) when one of the momenta $j_
 \subsection{Cutting Diagram into Subdiagrams}
 The scalar product of two $n$-fold irreducible tensors of rank $j_{1}, j_{2}, \ldots, j_{n}$, i.e., the $n$-fold invariant sum over projections
 \[
-\left(\mathfrak{M}_{j_{1} j_{2} \ldots j_{n}} \cdot \mathfrak{N}_{j_{1} j_{2} \ldots j_{n}}\right)=\sum_{m_{1} m_{2} \ldots m_{n}}\braOket{00}{\mathbb{M}}{j_{1} m_{1} j_{2} m_{2} \ldots j_{n} m_{n}}\braOket{j_{1} m_{1} j_{2} m_{2} \ldots j_{n} m_{n}}{\Re}{}
+\left(\mathfrak{M}_{j_{1} j_{2} \ldots j_{n}} \cdot \mathfrak{N}_{j_{1} j_{2} \ldots j_{n}}\right)=\sum_{m_{1} m_{2} \ldots m_{n}}\braOket{00}{\mathbb{M}}{j_{1} m_{1} j_{2} m_{2} \ldots j_{n} m_{n}}\braOket{j_{1} m_{1} j_{2} m_{2} \ldots j_{n} m_{n}}{\mathfrak{R}}{}
 \]
 may be transformed into a $k$-fold complete sum (over momenta $X_{1}, X_{2}, \ldots, X_{n}$ with $k=n-3$ and $n \geq 4$ ) of the product of factors:
 \[
@@ -3876,7 +3876,7 @@ This follows from the fact that any dependence on two directions is, actually, t
 \[
 \braOket{00}{\mathfrak{M}}{j_{1} m_{1} j_{2} m_{2} j_{3} m_{3}}=\braOketred{0}{\mathfrak{M}}{j_{1} j_{2} j_{3}}\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{m_{2}}{m_{3}},
 \]
-where $\braOketred{0}{{ } \Re}{j_{1} j_{2} j_{3}}$ is the reduced matrix element defined by
+where $\braOketred{0}{{ } \mathfrak{R}}{j_{1} j_{2} j_{3}}$ is the reduced matrix element defined by
 \[
 % PROOFREAD: OCR-garbled reduced m.e. -- \langle00\|IR\|...\rangle and RHS (stray "9", mismatched \left/\right); reconstruct against orig.
 \left.\left\langle 00\|I R\| j_{1} j_{2} j_{3}\right\rangle=\left.\sum_{m_{1} m_{2} m_{3}}\langle 00| 9\right|_{j 1} m_{1} j_{2} m_{2} j_{3} m_{3}\right\rangle\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{m_{2}}{m_{3}},
@@ -3884,11 +3884,11 @@ where $\braOketred{0}{{ } \Re}{j_{1} j_{2} j_{3}}$ is the reduced matrix element
 \sixjdiagramu{j_1,j_2,j_3,m_1,m_2,m_3,+}
 (e) A diagram with four external $j$-lines corresponding $j_{1} m_{1}, j_{2} m_{2}, j_{3} m_{3}$ and $j_{4} m_{4}$ may be presented as a sum (over $j$ ) of the product of two $3 j m$ symbols
 \[
-\left(j_{1} m_{1} j_{2} m_{2}|\Re| j_{3} m_{3} j_{4} m_{4}\right\rangle=\sum_{j m}(2 j+1)\threej{j_{1}}{j_{2}}{j}{m_{1}}{m_{2}}{m}\braOket{j_{1} j_{2} j m}{\Re}{j_{3} j_{4} j m}\threej{j_{3}}{j_{4}}{j}{m_{3}}{m_{4}}{m},
+\left(j_{1} m_{1} j_{2} m_{2}|\mathfrak{R}| j_{3} m_{3} j_{4} m_{4}\right\rangle=\sum_{j m}(2 j+1)\threej{j_{1}}{j_{2}}{j}{m_{1}}{m_{2}}{m}\braOket{j_{1} j_{2} j m}{\mathfrak{R}}{j_{3} j_{4} j m}\threej{j_{3}}{j_{4}}{j}{m_{3}}{m_{4}}{m},
 \]
 where
 \[
-\braOket{j_{1} j_{2} j m}{\Re}{j_{3} j_{4} j m} \equiv \sum_{m_{1} m_{2} m_{3} m_{6}}\threej{j_{1}}{j_{2}}{j}{m_{1}}{m_{2}}{m}\left(j_{1} m_{1} j_{2} m_{2}|\Re| j_{3} m_{3} j_{4} m_{4}\right)\threej{j_{3}}{j_{4}}{j^{\prime}}{m_{3}}{m_{4}}{m^{\prime}}
+\braOket{j_{1} j_{2} j m}{\mathfrak{R}}{j_{3} j_{4} j m} \equiv \sum_{m_{1} m_{2} m_{3} m_{6}}\threej{j_{1}}{j_{2}}{j}{m_{1}}{m_{2}}{m}\left(j_{1} m_{1} j_{2} m_{2}|\mathfrak{R}| j_{3} m_{3} j_{4} m_{4}\right)\threej{j_{3}}{j_{4}}{j^{\prime}}{m_{3}}{m_{4}}{m^{\prime}}
 \]
 \begin{center}
 \begin{tikzpicture}[baseline=0pt]\node[opbox](M) at (0,0){\normalsize$\mathfrak{N}$}; \draw[jmline] (M) -- (-1.3,0.8) node[left]{$j_1m_1$}; \draw[jmline] (M) -- (-1.3,-0.8) node[left]{$j_2m_2$}; \draw[jmline] (M) -- (1.3,0.8) node[right]{$j_3m_3$}; \draw[jmline] (M) -- (1.3,-0.8) node[right]{$j_4m_4$};\end{tikzpicture}

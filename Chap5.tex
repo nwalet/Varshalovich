@@ -1,4 +1,4 @@
-\chapter{SPHERICAL HARMONICS}
+\chapter{SPHERICAL HARMONICS}\label{chap:5}
 A spherical harmonic $Y_{l m}(\vartheta, \varphi)$ is a single-valued, continuous, bounded complex function of two real arguments $\vartheta, \varphi$ with $0 \leq \vartheta \leq \pi$ and $0 \leq \varphi<2 \pi$. It is characterized by two parameters $l$ and $m$, which take values $l=0,1,2, \ldots$ and $m=l, l-1, l-2, \ldots-l+2,-l+1,-l$. Therefore, for a given $l$ there exist $(2 l+1)$ functions corresponding to different $m$ 's. All derivatives of $Y_{l m}(\vartheta, \varphi)$ are single-valued, continuous and finite functions.
 
 The spherical harmonics play an important role in quantum mechanics. They are eigenfunctions of the operator of orbital angular momentum and describe the angular distribution of particles which move in a spherically-symmetric field with the orbital angular momentum $l$ and projection $m$. Strictly speaking, $l$ specifies the absolute value of orbital angular momentum because $l(l+1)$ is the eigenvalue of the square of the orbital angular momentum operator, $\widehat{\vect{L}}^{2} ; m$ is the eigenvalue of $\widehat{L}_{z}$ which is the projection of the orbital angular momentum operator on the quantization axis.
@@ -98,9 +98,9 @@ The functions $u_{l m}(\vartheta, \varphi)$ and $v_{l m}(\vartheta, \varphi)$ ar
 \end{equation}
 in polar coordinates is given by
 \[
-3_{l m}(r, \vartheta, \varphi)=r^{l} Y_{l m}(\vartheta, \varphi) \text { and } \Re_{l m}(r, \vartheta, \varphi)=r^{-l-1} Y_{l m}(\vartheta, \varphi)
+\mathfrak{Z}{l m}(r, \vartheta, \varphi)=r^{l} Y_{l m}(\vartheta, \varphi) \text { and } \mathfrak{R}_{l m}(r, \vartheta, \varphi)=r^{-l-1} Y_{l m}(\vartheta, \varphi)
 \]
-where $3_{l m}(r, \vartheta, \varphi)$ is regular and $\Re_{l m}(r, \vartheta, \varphi)$ is singular at $r=0$. These functions are called the solid harmonics. In the cartesian coordinate representation, a function $\vect{3}_{l m}$ is a homogeneous harmonic polynomial of degree $l$
+where $\mathfrak{Z}{l m}(r, \vartheta, \varphi)$ is regular and $\mathfrak{R}_{l m}(r, \vartheta, \varphi)$ is singular at $r=0$. These functions are called the solid harmonics. In the cartesian coordinate representation, a function $\vect{3}_{l m}$ is a homogeneous harmonic polynomial of degree $l$
 \begin{equation}
 r^{l} Y_{l m}(\vartheta, \varphi)=\sqrt{\frac{2 l+1}{4 \pi}(l+m)!(l-m)!} \sum_{p, q, r} \frac{1}{p!q!r!}\left(-\frac{x+i y}{2}\right)^{p}\left(\frac{x-i y}{2}\right)^{q} z^{r} \label{chap5:eq:16}
 \end{equation}
@@ -113,7 +113,7 @@ in polar coordinates may be expressed in terms of the functions $z_{l}(k r) Y_{l
 
 The functions $\mathfrak{I}_{l m}(r, \vartheta, \varphi)=i^{l} j_{l}(k r) Y_{l m}(\vartheta, \varphi)$ and $\mathfrak{N}_{l m}(r, \vartheta, \varphi)=i^{l} n_{l}(k r) Y_{l m}(\vartheta, \varphi)$ are called the standing spherical waves; $\mathcal{L}_{l m}$ is regular at $r=0$, whereas $\mathcal{N}_{l m}$ is irregular. The functions $\mathfrak{B}_{l m}^{(1)}(r, \vartheta, \varphi)= i^{l} h_{l}^{(1)}(k r) Y_{l m}(\vartheta, \varphi)$ and $\mathfrak{B}_{l m}^{(2)}(r, \vartheta, \varphi)=i^{l} h_{l}^{(2)}(k r) Y_{l m}(\vartheta, \varphi)$ are called the running spherical waves. The first of these corresponds to a spherical wave which converges to the origin, $r=0$, while the second corresponds to an outgoing spherical wave. In the limit $k \rightarrow 0$ Eq. \eqref{chap5:eq:17} transforms into \eqref{chap5:eq:15}. In this case
 \[
-\mathfrak{L}_{l m}(r, \vartheta, \varphi) \rightarrow 3_{l m}(r, \vartheta, \varphi), \mathfrak{N}_{l m}(r, \vartheta, \varphi) \rightarrow \Re_{l m}(r, \vartheta, \varphi)
+\mathfrak{L}_{l m}(r, \vartheta, \varphi) \rightarrow \mathfrak{Z}{l m}(r, \vartheta, \varphi), \mathfrak{N}_{l m}(r, \vartheta, \varphi) \rightarrow \mathfrak{R}_{l m}(r, \vartheta, \varphi)
 \]
 \subsubsection{(c) Solutions of the equation}
 \begin{equation}
@@ -125,7 +125,7 @@ f_{l m}^{n}(r, \vartheta, \varphi)=r^{n} Y_{l m}(\vartheta, \varphi)
 \]
 For $r=0$ a function $f_{l m}^{n}(r, \vartheta, \varphi)$ is regular, if $n \geq 0$, but irregular if $n<0$. When $n=l$ or $n=-l-1$, Eq. \eqref{chap5:eq:18} transforms into \eqref{chap5:eq:15}, yielding
 \begin{equation}
-f_{l m}^{l}(r, \vartheta, \varphi)=3_{l m}(r, \vartheta, \varphi), f_{l m}^{l-1}(r, \vartheta, \varphi)=\Re_{l m}(r, \vartheta, \varphi) \label{chap5:eq:19}
+f_{l m}^{l}(r, \vartheta, \varphi)=\mathfrak{Z}{l m}(r, \vartheta, \varphi), f_{l m}^{l-1}(r, \vartheta, \varphi)=\mathfrak{R}_{l m}(r, \vartheta, \varphi) \label{chap5:eq:19}
 \end{equation}
 Note that along with the above solutions, which are regular at $\vartheta=0, \pi$, the equations under consideration have irregular solutions, which are not discussed here.
 
@@ -1137,7 +1137,7 @@ F(\vect{R}, \vect{r})=f\left(\vect{r}_{1}, \vect{r}_{2}\right)=\sum_{l_{1} l_{3}
 \end{equation}
 \begin{figure}[tbh]
 \begin{center}
-  \includegraphics[alt={},max width=0.4\textwidth]{402d9a1b-ee97-49cb-ae14-75458391be12-177_736_783_276_688}
+  \includegraphics[alt={},max width=0.4\textwidth]{402d9a1b-ee97-49cb-ae14-75458391be12-177_736_78\mathfrak{Z}276_688}
 \caption{Relations between the vectors $\vect{R}, \vect{r}$ and $\vect{r}_{1}, \vect{r}_{2}$.}
 \label{chap5:fig:2}
 \end{center}
