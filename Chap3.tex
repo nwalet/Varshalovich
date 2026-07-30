@@ -1,86 +1,86 @@
-\chapter{IRREDUCIBLE TENSORS}
-\section{DEFINITION AND PROPERTIES OF IRREDUCIBLE TENSORS}
-\subsection{Definition}
+\chapter{Irreducible tensors}\label{chap:3}
+\section{Definition and properties of irreducible tensors}\label{sec:3.1}
+\subsection{Definition}\label{sec:3.1.1}
 Irreducible tensors occupy a central position in angular momentum theory. Under rotations of coordinate systems these tensors transform in the same manner as eigenfunctions of the angular momentum operator. The use of this property permits us to develop very effective methods for calculating matrix elements of different quantum-mechanical operators.
 
 An irreducible tensor $\mathfrak{M}_{J}$ of rank $J$ (with $J$ integer or half-integer) is defined as a set of $2 J+1$ functions (components) $\mathfrak{M}_{J M}$ (where $M=-J,-J+1, \ldots, J-1, J$ ) which satisfy the following commutation rules with spherical components of the angular momentum operator
 \begin{gather}
-{\left[\hat{J}_{ \pm 1}, \mathfrak{M}_{J M}\right]=\mp \frac{1}{\sqrt{2}} e^{ \pm i \delta} \sqrt{J(J+1)-M(M \pm 1)} \mathfrak{M}_{J M \pm 1}}  \label{chap3:eq:1}\\
+{\left[\hat{J}_{ \pm 1}, \mathfrak{M}_{J M}\right]=\mp \frac{1}{\sqrt{2}} e^{ \pm i \delta} \sqrt{J(J+1)-M(M \pm 1)} \mathfrak{M}_{J M \pm 1}}  \label{eq:3:1:1}\\
 {\left[\hat{J}_{0}, \mathfrak{M}_{J M}\right]=M \mathfrak{M}_{J M}} \notag
 \end{gather}
 In compact form
 \begin{equation}
-\left[\widehat{J}_{\mu}, \mathfrak{M}_{J M}\right]=e^{i M \delta} \sqrt{J(J+1)} \clebsch{J}{M}{1}{\mu}{J}{M+\mu} \mathfrak{M}_{J m+\mu} \label{chap3:eq:2}
+\left[\widehat{J}_{\mu}, \mathfrak{M}_{J M}\right]=e^{i M \delta} \sqrt{J(J+1)} \clebsch{J}{M}{1}{\mu}{J}{M+\mu} \mathfrak{M}_{J m+\mu} \label{eq:3:1:2}
 \end{equation}
 From these relations it follows that
 \begin{equation}
-\left[\hat{\vect{J}}^{2}, \mathfrak{M}_{J M}\right]=J(J+1) \mathfrak{M}_{J M} \label{chap3:eq:3}
+\left[\hat{\vect{J}}^{2}, \mathfrak{M}_{J M}\right]=J(J+1) \mathfrak{M}_{J M} \label{eq:3:1:3}
 \end{equation}
-The quantity $\delta$ in Eq. \eqref{chap3:eq:1} which determines relative phases of different $\mathfrak{M}_{J M}$ components is arbitrary. Let us adopt $\delta=0$, i.e., $e^{ \pm i \delta}=1$, and choose the positive sign of the square root. The linear equations \eqref{chap3:eq:1} define the components of the irreducible tensor $\mathfrak{M}_{J M}$ within an arbitrary scalar factor, which is the same for all the components. This factor can be a real or complex number, function or operator. In the case of integer rank $J$ the overall phase of the $\mathfrak{M}_{J M}$ components is usually defined in such manner that
+The quantity $\delta$ in Eq. \eqref{eq:3:1:1} which determines relative phases of different $\mathfrak{M}_{J M}$ components is arbitrary. Let us adopt $\delta=0$, i.e., $e^{ \pm i \delta}=1$, and choose the positive sign of the square root. The linear equations \eqref{eq:3:1:1} define the components of the irreducible tensor $\mathfrak{M}_{J M}$ within an arbitrary scalar factor, which is the same for all the components. This factor can be a real or complex number, function or operator. In the case of integer rank $J$ the overall phase of the $\mathfrak{M}_{J M}$ components is usually defined in such manner that
 \begin{equation}
-\left(\mathfrak{M}_{J M}\right)^{*}=(-1)^{-M} \mathfrak{M}_{J-M} . \label{chap3:eq:4}
+\left(\mathfrak{M}_{J M}\right)^{*}=(-1)^{-M} \mathfrak{M}_{J-M} . \label{eq:3:1:4}
 \end{equation}
 This choice of the phase coincides with that for spherical harmonics (Chap. 5). However, sometimes in quantummechanical applications it is convenient to redefine irreducible tensors as
 \begin{equation}
-\tilde{\mathfrak{M}}_{J}=i^{J} \mathfrak{M}_{J} . \label{chap3:eq:5}
+\tilde{\mathfrak{M}}_{J}=i^{J} \mathfrak{M}_{J} . \label{eq:3:1:5}
 \end{equation}
 Then one has
 \begin{equation}
-\left(\tilde{\mathfrak{M}}_{J M}\right)^{*}=(-1)^{J-M} \tilde{\mathfrak{M}}_{J-M} . \label{chap3:eq:6}
+\left(\tilde{\mathfrak{M}}_{J M}\right)^{*}=(-1)^{J-M} \tilde{\mathfrak{M}}_{J-M} . \label{eq:3:1:6}
 \end{equation}
-The choice of the phase \eqref{chap3:eq:6} can be used for tensors of integer as well as half-integer rank $J$. Making use of this phase convention for tensor operators as well as for wavefunctions describing initial $|a\rangle$ and final states $|b\rangle$ we get the following relations for matrix elements of Hermitian $\tilde{\mathfrak{M}}_{J}^{\dagger}=\tilde{\mathfrak{M}}_{J}$ operators
+The choice of the phase \eqref{eq:3:1:6} can be used for tensors of integer as well as half-integer rank $J$. Making use of this phase convention for tensor operators as well as for wavefunctions describing initial $|a\rangle$ and final states $|b\rangle$ we get the following relations for matrix elements of Hermitian $\tilde{\mathfrak{M}}_{J}^{\dagger}=\tilde{\mathfrak{M}}_{J}$ operators
 \begin{equation}
-\braOket{b}{\tilde{\mathfrak{M}}_{J M}}{a}=\left(\braOket{a}{\left(\tilde{\mathfrak{M}}_{J M}\right)^{*}}{b}\right)^{*} . \label{chap3:eq:7}
+\braOket{b}{\tilde{\mathfrak{M}}_{J M}}{a}=\left(\braOket{a}{\left(\tilde{\mathfrak{M}}_{J M}\right)^{*}}{b}\right)^{*} . \label{eq:3:1:7}
 \end{equation}
-\subsection{Covariant and Contravariant Components}
+\subsection{Covariant and Contravariant Components}\label{sec:3.1.2}
 Any irreducible tensor $\mathfrak{M}_{J}$ of rank $J$ can be expanded in a series based on a complete set of the unit orthonormalized irreducible tensors $\vect{e}_{J M}$ of rank $J$
 \begin{equation}
-\vect{e}_{J}^{M} \cdot \vect{e}_{J^{\prime} M^{\prime}}=\delta_{J J^{\prime}} \delta_{M M^{\prime}} \label{chap3:eq:8}
+\vect{e}_{J}^{M} \cdot \vect{e}_{J^{\prime} M^{\prime}}=\delta_{J J^{\prime}} \delta_{M M^{\prime}} \label{eq:3:1:8}
 \end{equation}
 The tensors $\vect{e}_{J M}$ can be composed, for example, of the basis spin functions. The expansion of $\mathfrak{M}_{J}$ is written as
 \begin{equation}
-\mathfrak{M}_{J}=\sum_{M} \mathrm{e}_{J}^{M} \cdot \mathfrak{M}_{J M}=\sum_{M} \mathrm{e}_{J M} \cdot \mathfrak{M}_{J}^{M} . \label{chap3:eq:9}
+\mathfrak{M}_{J}=\sum_{M} \mathrm{e}_{J}^{M} \cdot \mathfrak{M}_{J M}=\sum_{M} \mathrm{e}_{J M} \cdot \mathfrak{M}_{J}^{M} . \label{eq:3:1:9}
 \end{equation}
 $\mathfrak{M}_{J M}$ represents the covariant component of the tensor $\mathfrak{M}_{J}$ and $\mathfrak{M}_{J}^{M}$ denotes the contravariant component. These components are related by
 \begin{gather}
 \mathfrak{M}_{J}^{M}=\left(\mathfrak{M}_{J M}\right)^{*}=(-1)^{-M} \mathfrak{M}_{J-M},  \notag\\
-\hat{\mathfrak{M}}_{J}^{M}=\left(\hat{\mathfrak{M}}_{J M}\right)^{*}=(-1)^{J-M} \mathfrak{M}_{J-M} . \label{chap3:eq:10}
+\hat{\mathfrak{M}}_{J}^{M}=\left(\hat{\mathfrak{M}}_{J M}\right)^{*}=(-1)^{J-M} \mathfrak{M}_{J-M} . \label{eq:3:1:10}
 \end{gather}
-\subsection{Transformation of Irreducible Tensors Under a Rotation of the Coordinate System}
+\subsection{Transformation of Irreducible Tensors Under a Rotation of the Coordinate System}\label{sec:3.1.3}
 Under rotations of the coordinate system described by the Euler angles $\alpha, \beta, \gamma$, the components of irreducible tensors $\mathfrak{M}_{J M}$ and and $\tilde{\mathfrak{M}}_{J M}$ undergo linear transformation. The coefficients of such transformation are the Wigner $D$-functions (Chap. 4)
 \begin{align}
 & \mathfrak{M}_{J M^{\prime}}\left(X^{\prime}\right)=\hat{D}(\alpha, \beta, \gamma) \mathfrak{M}_{J M^{\prime}}(X)[\hat{D}(\alpha, \beta, \gamma)]^{-1}=\sum_{M} \mathfrak{M}_{J M}(X) D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma),  \notag\\
-& \tilde{\mathfrak{M}}_{J M^{\prime}}\left(X^{\prime}\right)=\hat{D}(\alpha, \beta, \gamma) \tilde{\mathfrak{M}}_{J M^{\prime}}(X)[\hat{D}(\alpha, \beta, \gamma)]^{-1}=\sum_{M} \tilde{\mathfrak{M}}_{J M}(X) D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma) . \label{chap3:eq:11}
+& \tilde{\mathfrak{M}}_{J M^{\prime}}\left(X^{\prime}\right)=\hat{D}(\alpha, \beta, \gamma) \tilde{\mathfrak{M}}_{J M^{\prime}}(X)[\hat{D}(\alpha, \beta, \gamma)]^{-1}=\sum_{M} \tilde{\mathfrak{M}}_{J M}(X) D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma) . \label{eq:3:1:11}
 \end{align}
 Here $X$ and $X^{\prime}$ denote sets of all arguments of the tensor in the initial and final coordinate systems, respectively.
 
-\subsection{Transformation of Irreducible Tensors Under Inversion of the Coordinate System}
+\subsection{Transformation of Irreducible Tensors Under Inversion of the Coordinate System}\label{sec:3.1.4}
 The transformation properties of irreducible tensor components under inversion of the coordinate system, $\vect{r} \rightarrow-\vect{r}$, permit us generally to represent an irreducible tensor $\mathfrak{M}_{J}$ of integer rank $J$ as the sum of two tensors $\mathfrak{M}_{J}^{(+1)}$ and $\mathfrak{M}_{J}^{(-1)}$, i.e.,
 \begin{equation}
-\mathfrak{M}_{j}=\mathfrak{M}_{J}^{(+1)}+\mathfrak{M}_{J}^{(-1)} \label{chap3:eq:12}
+\mathfrak{M}_{j}=\mathfrak{M}_{J}^{(+1)}+\mathfrak{M}_{J}^{(-1)} \label{eq:3:1:12}
 \end{equation}
 Each of these tensors has definite parity.\\
 Under inversion of the coordinate system the tensors $\mathfrak{M}_{J}^{( \pm 1)}$ transform in the following way
 \begin{equation}
-\widehat{P}_{r} \mathfrak{M}_{J}^{\left(\pi_{J}\right)} \widehat{P}_{r}^{-1}=\pi_{J} \mathfrak{W}_{J}^{\left(\pi_{J}\right)}, \quad\left(\pi_{J}= \pm 1\right) . \label{chap3:eq:13}
+\widehat{P}_{r} \mathfrak{M}_{J}^{\left(\pi_{J}\right)} \widehat{P}_{r}^{-1}=\pi_{J} \mathfrak{W}_{J}^{\left(\pi_{J}\right)}, \quad\left(\pi_{J}= \pm 1\right) . \label{eq:3:1:13}
 \end{equation}
-The tensor $\mathfrak{M}_{J}^{\left(\pi_{J}\right)}$ with parity $\pi_{J}=(-1)^{J}$ is called the true (or polar) irreducible tensor of rank $J$. Tensor $\mathfrak{M}_{J}^{\left(\pi_{J}\right)}$ with parity $\pi_{J}=(-1)^{J+1}$ is the pseudotensor (or axial tensor) of rank $J$. The relations \eqref{chap3:eq:12} and \eqref{chap3:eq:13} are valid for the tensors $\tilde{\mathfrak{M}}_{J}$ as well.
+The tensor $\mathfrak{M}_{J}^{\left(\pi_{J}\right)}$ with parity $\pi_{J}=(-1)^{J}$ is called the true (or polar) irreducible tensor of rank $J$. Tensor $\mathfrak{M}_{J}^{\left(\pi_{J}\right)}$ with parity $\pi_{J}=(-1)^{J+1}$ is the pseudotensor (or axial tensor) of rank $J$. The relations \eqref{eq:3:1:12} and \eqref{eq:3:1:13} are valid for the tensors $\tilde{\mathfrak{M}}_{J}$ as well.
 
-\subsection{Double Tensors}
+\subsection{Double Tensors}\label{sec:3.1.5}
 A double tensor $W_{J_{1}} J_{2}(1,2)$ of ranks $J_{1}$ and $J_{2}$ has $\left(2 J_{1}+1\right)\left(2 J_{2}+1\right)$ components and depends on variables of two different subsystems, 1 and 2 . The components of the double tensor satisfy the following commutation relations
 \begin{gather}
-{\left[\widehat{J}_{ \pm 1}(1), W_{J_{1} M_{1} J_{2} M_{2}}(1,2)\right]=\mp \frac{1}{\sqrt{2}} \sqrt{J_{1}\left(J_{1}+1\right)-M_{1}\left(M_{1} \pm 1\right)} W_{J_{1} M_{1} \pm 1 J_{2} M_{2}}(1,2)}  \label{chap3:eq:14}\\
-{\left[\widehat{J}_{0}(1), W_{J_{1} M_{1} J_{2} M_{2}}(1,2)\right]=M_{1} W_{J_{1} M_{1} J_{2} M_{3}}(1,2)}  \label{chap3:eq:15}\\
-{\left[\widehat{J}_{ \pm 1}(2), W_{J_{1} M_{1} J_{2} M_{2}}(1,2)\right]=\mp \frac{1}{\sqrt{2}} \sqrt{J_{2}\left(J_{2}+1\right)-M_{2}\left(M_{2} \pm 1\right)} W_{J_{1} M_{1} J_{2} M_{2} \pm 1}(1,2)}  \label{chap3:eq:16}\\
-{\left[\widehat{J}_{0}(2), W_{J_{1} M_{1} J_{2} M_{2}}(1,2)\right]=M_{2} W_{J_{1} M_{1} J_{2} M_{2}}(1,2)} \label{chap3:eq:17}
+{\left[\widehat{J}_{ \pm 1}(1), W_{J_{1} M_{1} J_{2} M_{2}}(1,2)\right]=\mp \frac{1}{\sqrt{2}} \sqrt{J_{1}\left(J_{1}+1\right)-M_{1}\left(M_{1} \pm 1\right)} W_{J_{1} M_{1} \pm 1 J_{2} M_{2}}(1,2)}  \label{eq:3:1:14}\\
+{\left[\widehat{J}_{0}(1), W_{J_{1} M_{1} J_{2} M_{2}}(1,2)\right]=M_{1} W_{J_{1} M_{1} J_{2} M_{3}}(1,2)}  \label{eq:3:1:15}\\
+{\left[\widehat{J}_{ \pm 1}(2), W_{J_{1} M_{1} J_{2} M_{2}}(1,2)\right]=\mp \frac{1}{\sqrt{2}} \sqrt{J_{2}\left(J_{2}+1\right)-M_{2}\left(M_{2} \pm 1\right)} W_{J_{1} M_{1} J_{2} M_{2} \pm 1}(1,2)}  \label{eq:3:1:16}\\
+{\left[\widehat{J}_{0}(2), W_{J_{1} M_{1} J_{2} M_{2}}(1,2)\right]=M_{2} W_{J_{1} M_{1} J_{2} M_{2}}(1,2)} \label{eq:3:1:17}
 \end{gather}
 Here $\widehat{\vect{J}}(1)$ and $\widehat{\vect{J}}(2)$ are the operators of the total angular momenta of subsystems 1 and 2 , respectively.\\
 Under rotation of subsystem 1 and 2 the double tensor $W_{J_{1} J_{2}}(1,2)$ transforms according to the representation $D^{J_{1}}$ or $D^{J_{2}}$, respectively.
 \begin{align}
-& W_{J_{1} M_{1}^{\prime} J_{2} M_{2}}\left(1^{\prime}, 2\right)=\sum_{M_{1}} W_{J_{1} M_{1} J_{2} M_{2}}(1,2) D_{M_{1} M_{1}^{\prime}}^{J_{1}}\left(\alpha_{1}, \beta_{1}, \gamma_{1}\right)  \label{chap3:eq:18}\\
-& W_{J_{1} M_{1} J_{2} M_{2}^{\prime}}\left(1,2^{\prime}\right)=\sum_{M_{2}} W_{J_{1} M_{1} J_{2} M_{2}}(1,2) D_{M_{2} M_{2}^{\prime}}^{J_{2}}\left(\alpha_{2}, \beta_{2}, \gamma_{2}\right) \label{chap3:eq:19}
+& W_{J_{1} M_{1}^{\prime} J_{2} M_{2}}\left(1^{\prime}, 2\right)=\sum_{M_{1}} W_{J_{1} M_{1} J_{2} M_{2}}(1,2) D_{M_{1} M_{1}^{\prime}}^{J_{1}}\left(\alpha_{1}, \beta_{1}, \gamma_{1}\right)  \label{eq:3:1:18}\\
+& W_{J_{1} M_{1} J_{2} M_{2}^{\prime}}\left(1,2^{\prime}\right)=\sum_{M_{2}} W_{J_{1} M_{1} J_{2} M_{2}}(1,2) D_{M_{2} M_{2}^{\prime}}^{J_{2}}\left(\alpha_{2}, \beta_{2}, \gamma_{2}\right) \label{eq:3:1:19}
 \end{align}
-\subsection{Examples of Irreducible Tensors}
+\subsection{Examples of Irreducible Tensors}\label{sec:3.1.6}
 In this section we present some examples of irreducible tensors considered in this book.\\
 (a) The operators of the angular momenta $\widehat{\vect{J}}, \widehat{\vect{L}}, \widehat{\vect{S}}$ (Chap. 2) are irreducible tensor operators of rank 1.\\
 (b) The polarization operator $\widehat{T}_{L M}(S)$ (Sec. 2.4) is an irreducible tensor operator of rank $L$.\\
@@ -90,84 +90,84 @@ In this section we present some examples of irreducible tensors considered in th
 
 We may apply the results given in this chapter for all the tensors mentioned above.
 
-\subsection{Direct and Irreducible Tensor Products. Commutators of Tensor Products}
+\subsection{Direct and Irreducible Tensor Products. Commutators of Tensor Products}\label{sec:3.1.7}
 An irreducible tensor product $\mathfrak{L}_{J}$ of two irreducible tensors $\mathfrak{M}_{J_{1}}$ and $\mathfrak{N}_{J_{2}}$ of ranks $J_{1}$ and $J_{2}$ is defined as the tensor of rank $J$ whose components $\mathfrak{L}_{J M}$ can be expressed in terms of $\mathfrak{M}_{J_{1} M_{1}}$ and $\mathfrak{N}_{J_{2} M_{2}}$ according to
 \begin{equation}
-\mathcal{L}_{J M}=\sum_{M_{1} M_{3}} \clebsch{J_{1}}{M_{1}}{J_{2}}{M_{2}}{J}{M} \mathfrak{M}_{J_{1} M_{1}} \mathfrak{N}_{J_{2} M_{2}} \label{chap3:eq:20}
+\mathcal{L}_{J M}=\sum_{M_{1} M_{3}} \clebsch{J_{1}}{M_{1}}{J_{2}}{M_{2}}{J}{M} \mathfrak{M}_{J_{1} M_{1}} \mathfrak{N}_{J_{2} M_{2}} \label{eq:3:1:20}
 \end{equation}
 Irreducible tensor product is denoted as
 \begin{equation}
-\mathfrak{L}_{J} \equiv\left\{\mathfrak{M}_{J_{1}} \otimes \mathfrak{N}_{J_{2}}\right\}_{J} . \label{chap3:eq:21}
+\mathfrak{L}_{J} \equiv\left\{\mathfrak{M}_{J_{1}} \otimes \mathfrak{N}_{J_{2}}\right\}_{J} . \label{eq:3:1:21}
 \end{equation}
 The direct product of two irreducible tensors $\mathfrak{M}_{J_{1}}$ and $\mathfrak{N}_{J_{2}}$ is defined as a set of $\left(2 J_{1}+1\right)\left(2 J_{2}+1\right)$ components $\mathfrak{M}_{J_{1} M_{1}} \mathfrak{N}_{J_{2} M_{2}}$ This tensor is generally reducible and can be decomposed into parts which themselves transform\\
 independently under a rotation of the coordinate system. In other words, the direct product can be represented as a sum of irreducible tensors $\mathfrak{L}_{J M}$
 \begin{equation}
-\mathfrak{M}_{J_{1} M_{1}} \mathfrak{N}_{J_{2} M_{2}}=\sum_{J=\left|J_{1}-J_{2}\right|}^{J_{1}+J_{2}} \clebsch{J_{1}}{M_{1}}{J_{2}}{M_{2}}{J}{M} \mathfrak{L}_{J M} \label{chap3:eq:22}
+\mathfrak{M}_{J_{1} M_{1}} \mathfrak{N}_{J_{2} M_{2}}=\sum_{J=\left|J_{1}-J_{2}\right|}^{J_{1}+J_{2}} \clebsch{J_{1}}{M_{1}}{J_{2}}{M_{2}}{J}{M} \mathfrak{L}_{J M} \label{eq:3:1:22}
 \end{equation}
-It is essential that the irreducible tensor product $\tilde{\mathfrak{L}}_{J M}$ satisfies the same equality \eqref{chap3:eq:6} as $\tilde{\mathfrak{M}}_{J_{1} M_{1}}$ and $\tilde{\mathfrak{N}}_{J_{2} M_{2}}$
+It is essential that the irreducible tensor product $\tilde{\mathfrak{L}}_{J M}$ satisfies the same equality \eqref{eq:3:1:6} as $\tilde{\mathfrak{M}}_{J_{1} M_{1}}$ and $\tilde{\mathfrak{N}}_{J_{2} M_{2}}$
 \begin{equation}
-\left(\tilde{\mathfrak{L}}_{J M}\right)^{*}=(-1)^{J-M} \tilde{\mathfrak{L}}_{J-M}\left(\tilde{\mathfrak{L}}_{J M}=\left\{\tilde{\mathfrak{M}}_{J_{1}} \otimes \tilde{\mathfrak{N}}_{J_{2}}\right\}_{J M}\right) \label{chap3:eq:23}
+\left(\tilde{\mathfrak{L}}_{J M}\right)^{*}=(-1)^{J-M} \tilde{\mathfrak{L}}_{J-M}\left(\tilde{\mathfrak{L}}_{J M}=\left\{\tilde{\mathfrak{M}}_{J_{1}} \otimes \tilde{\mathfrak{N}}_{J_{2}}\right\}_{J M}\right) \label{eq:3:1:23}
 \end{equation}
-This property is specific for tensors of the $\tilde{\mathfrak{M}}_{J M}$-type. The tensor product $\mathfrak{L}_{J M}$ does not satisfy the relation \eqref{chap3:eq:4} although $\mathfrak{M}_{J_{1} M_{1}}$ and $\mathfrak{N}_{J_{2} M_{2}}$ satisfy this relation.
+This property is specific for tensors of the $\tilde{\mathfrak{M}}_{J M}$-type. The tensor product $\mathfrak{L}_{J M}$ does not satisfy the relation \eqref{eq:3:1:4} although $\mathfrak{M}_{J_{1} M_{1}}$ and $\mathfrak{N}_{J_{2} M_{2}}$ satisfy this relation.
 
 Let us introduce some definitions and notations which will be widely used in the consideration of products of non-commuting tensor operators.
 
 The commutator of components of two irreducible tensors is defined by
 \begin{equation}
-\Re_{J_{1} M_{1} J_{2} M_{2}} \equiv\left[\mathfrak{M}_{J_{1} M_{1}}, \mathfrak{N}_{J_{2} M_{2}}\right] \equiv \mathfrak{M}_{J_{1} M_{1}} \mathfrak{N}_{J_{2} M_{2}}-\mathfrak{N}_{J_{2} M_{2}} \mathfrak{N}_{J_{1} M_{1}} \label{chap3:eq:24}
+\mathfrak{R}_{J_{1} M_{1} J_{2} M_{2}} \equiv\left[\mathfrak{M}_{J_{1} M_{1}}, \mathfrak{N}_{J_{2} M_{2}}\right] \equiv \mathfrak{M}_{J_{1} M_{1}} \mathfrak{N}_{J_{2} M_{2}}-\mathfrak{N}_{J_{2} M_{2}} \mathfrak{N}_{J_{1} M_{1}} \label{eq:3:1:24}
 \end{equation}
 The commutator of an irreducible tensor product is written as
 \begin{equation}
-\Re_{J M}^{J_{1} J_{2}} \equiv\left\{\mathfrak{M}_{J_{1}} \otimes \mathfrak{N}_{J_{2}}\right\}_{J M}-(-1)^{J_{1}+J_{2}-J}\left\{\mathfrak{N}_{J_{2}} \otimes \mathfrak{M}_{J_{1}}\right\}_{J M} . \label{chap3:eq:25}
+\mathfrak{R}_{J M}^{J_{1} J_{2}} \equiv\left\{\mathfrak{M}_{J_{1}} \otimes \mathfrak{N}_{J_{2}}\right\}_{J M}-(-1)^{J_{1}+J_{2}-J}\left\{\mathfrak{N}_{J_{2}} \otimes \mathfrak{M}_{J_{1}}\right\}_{J M} . \label{eq:3:1:25}
 \end{equation}
-The functions $\Re_{J M}^{J_{1} J_{2}}$ are the components of some irreducible tensor. They may be expressed in the form
+The functions $\mathfrak{R}_{J M}^{J_{1} J_{2}}$ are the components of some irreducible tensor. They may be expressed in the form
 \begin{equation}
-\Re_{J M}^{J_{1} J_{2}}=\sum_{M_{1} M_{2}} \clebsch{J_{1}}{M_{1}}{J_{2}}{M_{2}}{J}{M} \Re_{J_{1} M_{1} J_{2} M_{2}} \label{chap3:eq:26}
+\mathfrak{R}_{J M}^{J_{1} J_{2}}=\sum_{M_{1} M_{2}} \clebsch{J_{1}}{M_{1}}{J_{2}}{M_{2}}{J}{M} \mathfrak{R}_{J_{1} M_{1} J_{2} M_{2}} \label{eq:3:1:26}
 \end{equation}
 For commuting tensors we get
 \begin{equation}
-\left\{\mathfrak{M}_{J_{1}} \otimes \mathfrak{N}_{J_{2}}\right\}_{J M}=(-1)^{J_{1}+J_{2}-J}\left\{\mathfrak{N}_{J_{2}} \otimes \mathfrak{M}_{J_{1}}\right\}_{J M} \label{chap3:eq:27}
+\left\{\mathfrak{M}_{J_{1}} \otimes \mathfrak{N}_{J_{2}}\right\}_{J M}=(-1)^{J_{1}+J_{2}-J}\left\{\mathfrak{N}_{J_{2}} \otimes \mathfrak{M}_{J_{1}}\right\}_{J M} \label{eq:3:1:27}
 \end{equation}
 On the other hand, for non-commuting tensors we have
 \begin{equation}
-\left\{\mathfrak{M}_{J_{1}} \otimes \mathfrak{N}_{J_{2}}\right\}_{J M}=(-1)^{J_{1}+J_{2}-J}\left\{\mathfrak{N}_{J_{2}} \otimes \mathfrak{M}_{J_{1}}\right\}_{J M}+\mathfrak{R}_{J M}^{J_{1} J_{2}} \label{chap3:eq:28}
+\left\{\mathfrak{M}_{J_{1}} \otimes \mathfrak{N}_{J_{2}}\right\}_{J M}=(-1)^{J_{1}+J_{2}-J}\left\{\mathfrak{N}_{J_{2}} \otimes \mathfrak{M}_{J_{1}}\right\}_{J M}+\mathfrak{R}_{J M}^{J_{1} J_{2}} \label{eq:3:1:28}
 \end{equation}
 In particular, from these equations one can see that an irreducible (rank-I) tensor product of two identical tensors $\mathfrak{M}_{J}$ is equal to zero, if $I=2 J-1,2 J-3, \ldots$ and the tensor components commute
 \begin{equation}
-\left\{\mathfrak{M}_{J} \otimes \mathfrak{M}_{J}\right\}_{I}=0 \label{chap3:eq:29}
+\left\{\mathfrak{M}_{J} \otimes \mathfrak{M}_{J}\right\}_{I}=0 \label{eq:3:1:29}
 \end{equation}
-\subsection{Scalar Products of Irreducible Tensors}
+\subsection{Scalar Products of Irreducible Tensors}\label{sec:3.1.8}
 The scalar product of two irreducible tensors $\mathfrak{M}_{J}$ and $\mathfrak{N}_{J}$ of the same rank is defined as
 \begin{equation}
-\left(\mathfrak{M}_{J} \cdot \mathfrak{N}_{J}\right)=\sum_{M}(-1)^{-M} \mathfrak{M}_{J M} \mathfrak{N}_{J-M}=\sum_{M} \mathfrak{M}_{J M} \mathfrak{N}_{J M}^{*}=\sum_{M} \mathfrak{M}_{J M} \mathfrak{N}_{J}^{M} \label{chap3:eq:30}
+one can ex\left(\mathfrak{M}_{J} \cdot \mathfrak{N}_{J}\right)=\sum_{M}(-1)^{-M} \mathfrak{M}_{J M} \mathfrak{N}_{J-M}=\sum_{M} \mathfrak{M}_{J M} \mathfrak{N}_{J M}^{*}=\sum_{M} \mathfrak{M}_{J M} \mathfrak{N}_{J}^{M} \label{eq:3:1:30}
 \end{equation}
 Similarly, the scalar product of two irreducible tensors $\tilde{\mathfrak{N}}_{J}$ and $\tilde{\mathfrak{R}}_{J}$ is given by
 \begin{equation*}
-\left(\tilde{\mathfrak{M}}_{J} \cdot \tilde{\mathfrak{N}}_{J}\right)=\sum_{M}(-1)^{J-M} \tilde{\mathfrak{M}}_{J M} \tilde{\mathfrak{N}}_{J-M}=\sum_{M} \tilde{\mathfrak{M}}_{J M} \tilde{\mathfrak{N}}_{J M}^{*}=\sum_{M} \tilde{\mathfrak{M}}_{J M} \tilde{\mathfrak{N}}_{J}^{M} . \tag{$\{31\}$}
+\left(\tilde{\mathfrak{M}}_{J} \cdot \tilde{\mathfrak{N}}_{J}\right)=\sum_{M}(-1)^{J-M} \tilde{\mathfrak{M}}_{J M} \tilde{\mathfrak{N}}_{J-M}=\sum_{M} \tilde{\mathfrak{M}}_{J M} \tilde{\mathfrak{N}}_{J M}^{*}=\sum_{M} \tilde{\mathfrak{M}}_{J M} \tilde{\mathfrak{N}}_{J}^{M} . 
 \end{equation*}
 Note that
 \begin{equation}
-\left(\mathfrak{M}_{J} \cdot \mathfrak{N}_{J}\right)=\left(\tilde{\mathfrak{M}}_{J} \cdot \tilde{\mathfrak{N}}_{J}\right) . \label{chap3:eq:31}
+\left(\mathfrak{M}_{J} \cdot \mathfrak{N}_{J}\right)=\left(\tilde{\mathfrak{M}}_{J} \cdot \tilde{\mathfrak{N}}_{J}\right) . \label{eq:3:1:31}
 \end{equation}
 Scalar products differ from irreducible tensor products of zero rank only by some numerical factor. The latter tensor products read
 \begin{align}
-& \left\{\mathfrak{M}_{J} \otimes \mathfrak{N}_{J}\right\}_{00}=\sum_{M_{1} M_{2}} \clebsch{J}{M_{1}}{J}{M_{2}}{0}{0} \mathfrak{M}_{J M_{1}} \mathfrak{N}_{J M_{2}}=\frac{1}{\sqrt{2 J+1}} \sum_{M}(-1)^{J-M} \mathfrak{M}_{J M} \mathfrak{N}_{J-M},  \label{chap3:eq:32}\\
-& \left\{\tilde{\mathfrak{M}}{ }_{J} \otimes \tilde{\mathfrak{N}}_{J}\right\}_{00}=\sum_{M_{1} M_{2}} \clebsch{J}{M_{1}}{J}{M_{2}}{0}{0} \tilde{\mathfrak{M}}_{J M_{1}} \tilde{\mathfrak{N}}_{J M_{2}}=\frac{1}{\sqrt{2 J+1}} \sum_{M}(-1)^{J-M} \tilde{\mathfrak{M}}_{J M} \tilde{\mathfrak{N}}_{J-M} . \label{chap3:eq:33}
+& \left\{\mathfrak{M}_{J} \otimes \mathfrak{N}_{J}\right\}_{00}=\sum_{M_{1} M_{2}} \clebsch{J}{M_{1}}{J}{M_{2}}{0}{0} \mathfrak{M}_{J M_{1}} \mathfrak{N}_{J M_{2}}=\frac{1}{\sqrt{2 J+1}} \sum_{M}(-1)^{J-M} \mathfrak{M}_{J M} \mathfrak{N}_{J-M},  \label{eq:3:1:32}\\
+& \left\{\tilde{\mathfrak{M}}{ }_{J} \otimes \tilde{\mathfrak{N}}_{J}\right\}_{00}=\sum_{M_{1} M_{2}} \clebsch{J}{M_{1}}{J}{M_{2}}{0}{0} \tilde{\mathfrak{M}}_{J M_{1}} \tilde{\mathfrak{N}}_{J M_{2}}=\frac{1}{\sqrt{2 J+1}} \sum_{M}(-1)^{J-M} \tilde{\mathfrak{M}}_{J M} \tilde{\mathfrak{N}}_{J-M} . \label{eq:3:1:33}
 \end{align}
 Hence, the relations between scalar products and tensor products of zero rank are determined by
 \begin{gather}
 \left(\mathfrak{M}_{J} \cdot \mathfrak{N}_{J}\right)=(-1)^{-J} \sqrt{2 J+1}\left\{\mathfrak{M}_{J} \otimes \mathfrak{N}_{J}\right\}_{00},  \notag\\
-\left(\tilde{\mathfrak{M}}_{J} \cdot \tilde{\mathfrak{N}}_{J}\right)=\sqrt{2 J+1}\left\{\tilde{\mathfrak{M}}_{J} \otimes \tilde{\mathfrak{N}}_{J}\right\}_{00} \label{chap3:eq:34}
+\left(\tilde{\mathfrak{M}}_{J} \cdot \tilde{\mathfrak{N}}_{J}\right)=\sqrt{2 J+1}\left\{\tilde{\mathfrak{M}}_{J} \otimes \tilde{\mathfrak{N}}_{J}\right\}_{00} \label{eq:3:1:34}
 \end{gather}
 For the scalar product of double tensors we have
 \begin{equation}
-\left(\widetilde{W}_{J_{1} J_{2}}(1,2) \cdot \widetilde{U}_{J_{1} J_{2}}(1,2)\right)=\sum_{M_{1} M_{2}}(-1)^{J_{1}-M_{1}+J_{2}-M_{2}} \widetilde{W}_{J_{1} M_{1} J_{2} M_{2}}(1,2) \widetilde{U}_{J_{1}-M_{1} J_{2}-M_{2}}(1,2) . \label{chap3:eq:35}
+\left(\widetilde{W}_{J_{1} J_{2}}(1,2) \cdot \widetilde{U}_{J_{1} J_{2}}(1,2)\right)=\sum_{M_{1} M_{2}}(-1)^{J_{1}-M_{1}+J_{2}-M_{2}} \widetilde{W}_{J_{1} M_{1} J_{2} M_{2}}(1,2) \widetilde{U}_{J_{1}-M_{1} J_{2}-M_{2}}(1,2) . \label{eq:3:1:35}
 \end{equation}
-\section{RELATION BETWEEN THE IRREDUCIBLE TENSOR ALGEBRA AND VECTOR AND TENSOR THEORY}
-\subsection{Vectors and Irreducible Tensors}
+\section{Relation between the irreducible tensor algebra and vector and tensor theory}\label{sec:3.2}
+\subsection{Vectors and Irreducible Tensors}\label{sec:3.2.1}
 An arbitrary vector $\vect{A}$ is an irreducible tensor of rank one. Its spherical components may be treated as components of an irreducible tensor $\vect{A}_{1}$, of rank one, for which $A_{1}^{\mu}=(-1)^{\mu} A_{1-\mu}$.
 \begin{equation}
-A_{1 \mu} \equiv A_{\mu}, \quad A^{1 \mu} \equiv A^{\mu} \label{chap3:eq:36}
+A_{1 \mu} \equiv A_{\mu}, \quad A^{1 \mu} \equiv A^{\mu} \label{eq:3:2:1}
 \end{equation}
 A polar vector is a true tensor of rank one. Under inversion of the coordinate system its components change their sign. An axial vector is a pseudotensor of rank one. Under coordinate inversion its components remain unchanged.
 
@@ -178,153 +178,153 @@ Using two vectors $\vect{A}=\vect{A}_{1}$ and $\vect{B}=\vect{B}_{1}$ one can co
 If one of the vectors $\vect{A}$ or $\vect{B}$ is polar and the other axial, then $\left\{\vect{A}_{1} \otimes \vect{B}_{1}\right\}_{00}$ is a pseudoscalar, $\left\{\vect{A}_{1} \otimes \vect{B}_{1}\right\}_{1 \mu}$ is a polar vector, $\left\{\vect{A}_{1} \otimes \vect{B}_{1}\right\}_{2 \mu}$ is a pseudotensor of rank two. If both vectors $\vect{A}$ and $\vect{B}$ are either polar or axial, then $\left\{\vect{A}_{1} \otimes \vect{B}_{1}\right\}_{00}$ is a scalar, $\left\{\vect{A}_{1} \otimes \vect{B}_{1}\right\}_{1 \mu}$ is an axial vector and $\left\{\vect{A}_{1} \otimes \vect{B}_{1}\right\}_{2 \mu}$ is a true tensor of rank two.\\
 (a) The irreducible tensor product of rank zero differs from the scalar product of vectors $\vect{A}$ and $\vect{B}$ by a numerical factor:
 \begin{equation}
-\left\{\vect{A}_{1} \otimes \vect{B}_{1}\right\}_{00}=-\frac{1}{\sqrt{3}}(\vect{A} \cdot \vect{B}) \label{chap3:eq:37}
+\left\{\vect{A}_{1} \otimes \vect{B}_{1}\right\}_{00}=-\frac{1}{\sqrt{3}}(\vect{A} \cdot \vect{B}) \label{eq:3:2:2}
 \end{equation}
 The scalar product of irreducible tensors $\vect{A}_{1}$ and $\vect{B}_{1}$ introduced in Sec. 3.1.8 coincides with the scalar product of vectors,
 \begin{equation}
-\left(\vect{A}_{1} \cdot \vect{B}_{1}\right)=(\vect{A} \cdot \vect{B}) . \label{chap3:eq:38}
+\left(\vect{A}_{1} \cdot \vect{B}_{1}\right)=(\vect{A} \cdot \vect{B}) . \label{eq:3:2:3}
 \end{equation}
 (b) The irreducible tensor product of rank one is related to the vector product of vectors $\vect{A}$ and $\vect{B}$ by
 \begin{equation}
-\left\{\vect{A}_{1} \otimes \vect{B}_{1}\right\}_{1}=\frac{i}{\sqrt{2}}[\vect{A} \times \vect{B}] \label{chap3:eq:39}
+\left\{\vect{A}_{1} \otimes \vect{B}_{1}\right\}_{1}=\frac{i}{\sqrt{2}}[\vect{A} \times \vect{B}] \label{eq:3:2:4}
 \end{equation}
 The components of the tensor product of rank one can be expressed in terms of products of spherical components of vectors $\vect{A}$ and $\vect{B}$ as
 \begin{equation}
-\left\{\vect{A}_{1} \otimes \vect{B}_{1}\right\}_{1 M}=\frac{i}{\sqrt{2}}[\vect{A} \times \vect{B}]_{M}=\sum_{M \nu} \clebsch{1}{\mu}{1}{\nu}{1}{M} A_{\mu} B_{\nu} \label{chap3:eq:40}
+\left\{\vect{A}_{1} \otimes \vect{B}_{1}\right\}_{1 M}=\frac{i}{\sqrt{2}}[\vect{A} \times \vect{B}]_{M}=\sum_{M \nu} \clebsch{1}{\mu}{1}{\nu}{1}{M} A_{\mu} B_{\nu} \label{eq:3:2:5}
 \end{equation}
 (c) The components of a tensor product of rank two are also related to products of spherical components of $\vect{A}$ and $\vect{B}$ :
 \begin{equation}
-\left\{\vect{A}_{1} \otimes \vect{B}_{1}\right\}_{2 M}=\sum_{\mu, \nu} \clebsch{1}{\mu}{1}{\nu}{2}{M} A_{\mu} B_{\nu}=\sqrt{\frac{3|M|-2}{14|M|-12}} \sum_{\substack{\mu+\nu=M \\ \mu \geq \nu}}\left(A_{\mu} B_{\nu}+A_{\nu} B_{\mu}\right) \label{chap3:eq:41}
+\left\{\vect{A}_{1} \otimes \vect{B}_{1}\right\}_{2 M}=\sum_{\mu, \nu} \clebsch{1}{\mu}{1}{\nu}{2}{M} A_{\mu} B_{\nu}=\sqrt{\frac{3|M|-2}{14|M|-12}} \sum_{\substack{\mu+\nu=M \\ \mu \geq \nu}}\left(A_{\mu} B_{\nu}+A_{\nu} B_{\mu}\right) \label{eq:3:2:6}
 \end{equation}
-In more detailed form Eq. \eqref{chap3:eq:41} may be written as
+In more detailed form Eq. \eqref{eq:3:2:6} may be written as
 \begin{gather}
 \left\{\vect{A}_{1} \otimes \vect{B}_{1}\right\}_{2+2}=A_{+1} B_{+1},  \notag\\
 \left\{\vect{A}_{1} \otimes \vect{B}_{1}\right\}_{2+1}=\frac{1}{\sqrt{2}}\left(A_{+1} B_{0}+A_{0} B_{+1}\right),  \notag\\
-\left\{\vect{A}_{1} \otimes \vect{B}_{1}\right\}_{20}=\frac{1}{\sqrt{6}}\left(A_{+1} B_{-1}+2 A_{0} B_{0}+A_{-1} B_{+1}\right),  \label{chap3:eq:42}\\
+\left\{\vect{A}_{1} \otimes \vect{B}_{1}\right\}_{20}=\frac{1}{\sqrt{6}}\left(A_{+1} B_{-1}+2 A_{0} B_{0}+A_{-1} B_{+1}\right),  \label{eq:3:2:7}\\
 \left\{\vect{A}_{1} \otimes \vect{B}_{1}\right\}_{2-1}=\frac{1}{\sqrt{2}}\left(A_{-1} B_{0}+A_{0} B_{-1}\right),  \notag\\
 \left\{\vect{A}_{1} \otimes \vect{B}_{1}\right\}_{2-2}=A_{-1} B_{-1} . \notag
 \end{gather}
 Given three commuting vectors $\vect{A}_{1}, \vect{B}_{1}, \vect{C}_{1}$ we can compose the following irreducible tensor products of ranks 0 and 1:
 \begin{gather}
-\left\{\left\{\vect{A}_{1} \otimes \vect{B}_{1}\right\}_{0} \otimes \vect{C}_{1}\right\}_{1}=-\frac{1}{\sqrt{3}}(\vect{A} \cdot \vect{B}) \cdot \vect{C},  \label{chap3:eq:43}\\
-\left\{\left\{\vect{A}_{1} \otimes \vect{B}_{1}\right\}_{1} \otimes \vect{C}_{1}\right\}_{0}=-\frac{i}{\sqrt{6}}[\vect{A} \times \vect{B}] \cdot \vect{C},  \label{chap3:eq:44}\\
-\left.\left\{\left\{\vect{A}_{1} \otimes \vect{B}_{1}\right\}_{1} \otimes \vect{C}_{1}\right\}_{1}=-\frac{1}{2}[\mid \vect{A} \times \vect{B}] \times \vect{C}\right]=\frac{1}{2} \vect{A}(\vect{B} \cdot \vect{C})-\frac{1}{2} \vect{B}(\vect{A} \cdot \vect{C}),  \label{chap3:eq:45}\\
-\left\{\left\{\vect{A}_{1} \otimes \vect{B}_{1}\right\}_{2} \otimes \vect{C}_{1}\right\}_{1}=\sqrt{\frac{3}{5}}\left\{\frac{1}{3} \vect{C}(\vect{A} \cdot \vect{B})-\frac{1}{2} \vect{B}(\vect{A} \cdot \vect{C})-\frac{1}{2} \vect{A}(\vect{B} \cdot \vect{C})\right\} . \label{chap3:eq:46}
+\left\{\left\{\vect{A}_{1} \otimes \vect{B}_{1}\right\}_{0} \otimes \vect{C}_{1}\right\}_{1}=-\frac{1}{\sqrt{3}}(\vect{A} \cdot \vect{B}) \cdot \vect{C},  \label{eq:3:2:8}\\
+\left\{\left\{\vect{A}_{1} \otimes \vect{B}_{1}\right\}_{1} \otimes \vect{C}_{1}\right\}_{0}=-\frac{i}{\sqrt{6}}[\vect{A} \times \vect{B}] \cdot \vect{C},  \label{eq:3:2:9}\\
+\left.\left\{\left\{\vect{A}_{1} \otimes \vect{B}_{1}\right\}_{1} \otimes \vect{C}_{1}\right\}_{1}=-\frac{1}{2}[\mid \vect{A} \times \vect{B}] \times \vect{C}\right]=\frac{1}{2} \vect{A}(\vect{B} \cdot \vect{C})-\frac{1}{2} \vect{B}(\vect{A} \cdot \vect{C}),  \label{eq:3:2:10}\\
+\left\{\left\{\vect{A}_{1} \otimes \vect{B}_{1}\right\}_{2} \otimes \vect{C}_{1}\right\}_{1}=\sqrt{\frac{3}{5}}\left\{\frac{1}{3} \vect{C}(\vect{A} \cdot \vect{B})-\frac{1}{2} \vect{B}(\vect{A} \cdot \vect{C})-\frac{1}{2} \vect{A}(\vect{B} \cdot \vect{C})\right\} . \label{eq:3:2:11}
 \end{gather}
-In addition to the foregoing formulas, there exist products which differ from Eqs. \eqref{chap3:eq:43}-\eqref{chap3:eq:46} by vector coupling schemes. The problems concerned with recoupling in tensor products are considered below (Sec. 3.3).
+In addition to the foregoing formulas, there exist products which differ from Eqs. \eqref{eq:3:2:8}-\eqref{eq:3:2:11} by vector coupling schemes. The problems concerned with recoupling in tensor products are considered below (Sec. 3.3).
 
 Given four commuting vectors $\vect{A}_{1}, \vect{B}_{1}, \vect{C}_{1}$ and $\vect{D}_{1}$ we can compose the following irreducible tensor products of ranks 0 and 1 :
 \begin{gather}
-\left\{\left\{\vect{A}_{1} \otimes \vect{B}_{1}\right\}_{0} \otimes\left\{\vect{C}_{1} \otimes \vect{D}_{1}\right\}_{0}\right\}_{0}=\frac{1}{3}(\vect{A} \cdot \vect{B})(\vect{D} \cdot \vect{C}),  \label{chap3:eq:47}\\
-\left\{\left\{\vect{A}_{1} \otimes \vect{B}_{1}\right\}_{1} \otimes\left\{\vect{C}_{1} \otimes \vect{D}_{1}\right\}_{0}\right\}_{1}=-\frac{i}{\sqrt{6}}[\vect{A} \times \vect{B}](\vect{C} \cdot \vect{D}),  \label{chap3:eq:48}\\
-\left\{\left\{\vect{A}_{1} \otimes \vect{B}_{1}\right\}_{0} \otimes\left\{\vect{C}_{1} \otimes \vect{D}_{1}\right\}_{1}\right\}_{1}=-\frac{i}{\sqrt{6}}(\vect{A} \cdot \vect{B})[\vect{C} \times \vect{D}],  \label{chap3:eq:49}\\
-\left\{\left\{\vect{A}_{1} \otimes \vect{B}_{1}\right\}_{1} \otimes\left\{\vect{C}_{1} \otimes \vect{D}_{1}\right\}_{1}\right\}_{0}=\frac{1}{2 \sqrt{3}}\{(\vect{A} \cdot \vect{C})(\vect{B} \cdot \vect{D})-(\vect{A} \cdot \vect{D})(\vect{B} \cdot \vect{C})\}, \label{chap3:eq:50}
+\left\{\left\{\vect{A}_{1} \otimes \vect{B}_{1}\right\}_{0} \otimes\left\{\vect{C}_{1} \otimes \vect{D}_{1}\right\}_{0}\right\}_{0}=\frac{1}{3}(\vect{A} \cdot \vect{B})(\vect{D} \cdot \vect{C}),  \label{eq:3:2:12}\\
+\left\{\left\{\vect{A}_{1} \otimes \vect{B}_{1}\right\}_{1} \otimes\left\{\vect{C}_{1} \otimes \vect{D}_{1}\right\}_{0}\right\}_{1}=-\frac{i}{\sqrt{6}}[\vect{A} \times \vect{B}](\vect{C} \cdot \vect{D}),  \label{eq:3:2:13}\\
+\left\{\left\{\vect{A}_{1} \otimes \vect{B}_{1}\right\}_{0} \otimes\left\{\vect{C}_{1} \otimes \vect{D}_{1}\right\}_{1}\right\}_{1}=-\frac{i}{\sqrt{6}}(\vect{A} \cdot \vect{B})[\vect{C} \times \vect{D}],  \label{eq:3:2:14}\\
+\left\{\left\{\vect{A}_{1} \otimes \vect{B}_{1}\right\}_{1} \otimes\left\{\vect{C}_{1} \otimes \vect{D}_{1}\right\}_{1}\right\}_{0}=\frac{1}{2 \sqrt{3}}\{(\vect{A} \cdot \vect{C})(\vect{B} \cdot \vect{D})-(\vect{A} \cdot \vect{D})(\vect{B} \cdot \vect{C})\}, \label{eq:3:2:15}
 \end{gather}
 \begin{gather}
 \left\{\left\{\vect{A}_{1} \otimes \vect{B}_{1}\right\}_{1} \otimes\left\{\vect{C}_{1} \otimes \vect{D}_{1}\right\}_{1}\right\}_{1}=-\frac{i}{2 \sqrt{2}}\{\vect{C}(\vect{D} \cdot[\vect{A} \times \vect{B}])-\vect{D}(\vect{C} \cdot[\vect{A} \times \vect{B}])\}  \notag\\
-=-\frac{i}{2 \sqrt{2}}\{\vect{B}(\vect{A} \cdot[\vect{C} \times \vect{D}])-\vect{A}(\vect{B} \cdot[\vect{C} \times \vect{D}])\},  \label{chap3:eq:51}\\
-\left\{\left\{\vect{A}_{1} \otimes \vect{B}_{1}\right\}_{2} \otimes\left\{\vect{C}_{1} \otimes \vect{D}_{1}\right\}_{1}\right\}_{1}=\frac{i \sqrt{3}}{\sqrt{2 \cdot 5}}\left\{\frac{1}{3}(\vect{A} \cdot \vect{B})[\vect{C} \times \vect{D}]-\frac{1}{2} \vect{B}(\vect{D} \cdot[\vect{A} \times \vect{C}])-\frac{1}{2} \vect{A}(\vect{D} \cdot[\vect{B} \times \vect{C}])\right\},  \label{chap3:eq:52}\\
-\left\{\left\{\vect{A}_{1} \otimes \vect{B}_{1}\right\}_{1} \otimes\left\{\vect{C}_{1} \otimes \vect{D}_{1}\right\}_{2}\right\}_{1}=\frac{i \sqrt{3}}{\sqrt{2 \cdot 5}}\left\{\frac{1}{3}(\vect{C} \cdot \vect{D})[\vect{A} \times \vect{B}]-\frac{1}{2} \vect{C}(\vect{B} \cdot[\vect{D} \times \vect{A}])-\frac{1}{2} \vect{D}(\vect{B} \cdot[\vect{C} \times \vect{A}])\right\},  \label{chap3:eq:53}\\
-\left\{\left\{\vect{A}_{1} \otimes \vect{B}_{1}\right\}_{2} \otimes\left\{\vect{C}_{1} \otimes \vect{D}_{1}\right\}_{2}\right\}_{0}=\frac{1}{\sqrt{5}}\left\{\frac{1}{2}(\vect{A} \cdot \vect{C})(\vect{B} \cdot \vect{D})-\frac{1}{3}(\vect{A} \cdot \vect{B})(\vect{C} \cdot \vect{D})+\frac{1}{2}(\vect{A} \cdot \vect{D})(\vect{B} \cdot \vect{C})\right\},  \label{chap3:eq:54}\\
+=-\frac{i}{2 \sqrt{2}}\{\vect{B}(\vect{A} \cdot[\vect{C} \times \vect{D}])-\vect{A}(\vect{B} \cdot[\vect{C} \times \vect{D}])\},  \label{eq:3:2:16}\\
+\left\{\left\{\vect{A}_{1} \otimes \vect{B}_{1}\right\}_{2} \otimes\left\{\vect{C}_{1} \otimes \vect{D}_{1}\right\}_{1}\right\}_{1}=\frac{i \sqrt{3}}{\sqrt{2 \cdot 5}}\left\{\frac{1}{3}(\vect{A} \cdot \vect{B})[\vect{C} \times \vect{D}]-\frac{1}{2} \vect{B}(\vect{D} \cdot[\vect{A} \times \vect{C}])-\frac{1}{2} \vect{A}(\vect{D} \cdot[\vect{B} \times \vect{C}])\right\},  \label{eq:3:2:17}\\
+\left\{\left\{\vect{A}_{1} \otimes \vect{B}_{1}\right\}_{1} \otimes\left\{\vect{C}_{1} \otimes \vect{D}_{1}\right\}_{2}\right\}_{1}=\frac{i \sqrt{3}}{\sqrt{2 \cdot 5}}\left\{\frac{1}{3}(\vect{C} \cdot \vect{D})[\vect{A} \times \vect{B}]-\frac{1}{2} \vect{C}(\vect{B} \cdot[\vect{D} \times \vect{A}])-\frac{1}{2} \vect{D}(\vect{B} \cdot[\vect{C} \times \vect{A}])\right\},  \label{eq:3:2:18}\\
+\left\{\left\{\vect{A}_{1} \otimes \vect{B}_{1}\right\}_{2} \otimes\left\{\vect{C}_{1} \otimes \vect{D}_{1}\right\}_{2}\right\}_{0}=\frac{1}{\sqrt{5}}\left\{\frac{1}{2}(\vect{A} \cdot \vect{C})(\vect{B} \cdot \vect{D})-\frac{1}{3}(\vect{A} \cdot \vect{B})(\vect{C} \cdot \vect{D})+\frac{1}{2}(\vect{A} \cdot \vect{D})(\vect{B} \cdot \vect{C})\right\},  \label{eq:3:2:19}\\
 \left\{\left\{\vect{A}_{1} \otimes \vect{B}_{1}\right\}_{2} \otimes\left\{\vect{C}_{1} \otimes \vect{D}_{1}\right\}_{2}\right\}_{1}=  \notag\\
--\frac{i}{2 \sqrt{2 \cdot 5}}\{(\vect{A} \cdot \vect{C})[\vect{B} \times \vect{D}]+(\vect{A} \cdot \vect{D})[\vect{B} \times \vect{C}]+(\vect{B} \cdot \vect{C})[\vect{A} \times \vect{D}]+(\vect{B} \cdot \vect{D})[\vect{A} \times \vect{C}]\} . \label{chap3:eq:55}
+-\frac{i}{2 \sqrt{2 \cdot 5}}\{(\vect{A} \cdot \vect{C})[\vect{B} \times \vect{D}]+(\vect{A} \cdot \vect{D})[\vect{B} \times \vect{C}]+(\vect{B} \cdot \vect{C})[\vect{A} \times \vect{D}]+(\vect{B} \cdot \vect{D})[\vect{A} \times \vect{C}]\} . \label{eq:3:2:20}
 \end{gather}
 The change of coupling schemes in products of four operators is discussed in Sec. 3.3.\\
 Products constructed from the components of identical vectors have the following property
 \begin{equation}
-\left\{\ldots\left\{\left\{\vect{A}_{1} \otimes \vect{A}_{1}\right\}_{l_{2}} \otimes \vect{A}_{1}\right\}_{l_{3}} \ldots \otimes \vect{A}_{1}\right\}_{l_{n}}=\left\{\vect{A}_{1} \otimes \ldots\left\{\vect{A}_{1} \otimes\left\{\vect{A}_{1} \otimes \vect{A}_{1}\right\}_{l_{2}}\right\}_{l_{3}} \ldots\right\}_{l_{n}} \label{chap3:eq:56}
+\left\{\ldots\left\{\left\{\vect{A}_{1} \otimes \vect{A}_{1}\right\}_{l_{2}} \otimes \vect{A}_{1}\right\}_{l_{3}} \ldots \otimes \vect{A}_{1}\right\}_{l_{n}}=\left\{\vect{A}_{1} \otimes \ldots\left\{\vect{A}_{1} \otimes\left\{\vect{A}_{1} \otimes \vect{A}_{1}\right\}_{l_{2}}\right\}_{l_{3}} \ldots\right\}_{l_{n}} \label{eq:3:2:21}
 \end{equation}
 f a vector $\vect{A}$ does not contain any spin variable and differential operator one can express such products in erms of spherical harmonics (Chap. 5), i.e.,
 \begin{equation}
-\left\{\ldots\left\{\left\{\vect{A}_{1} \otimes \vect{A}_{1}\right\}_{l_{2}} \otimes \vect{A}_{1}\right\}_{l_{3}} \ldots \otimes \vect{A}_{1}\right\}_{l_{n} m_{n}}=\sqrt{\frac{4 \pi}{2 l_{n}+1}}|\vect{A}|^{n} Y_{l_{n} m_{n}}(\vartheta, \varphi) \prod_{i=2}^{n} \clebsch{1}{0}{l_{i-1}}{0}{l_{i}}{0} \label{chap3:eq:57}
+\left\{\ldots\left\{\left\{\vect{A}_{1} \otimes \vect{A}_{1}\right\}_{l_{2}} \otimes \vect{A}_{1}\right\}_{l_{3}} \ldots \otimes \vect{A}_{1}\right\}_{l_{n} m_{n}}=\sqrt{\frac{4 \pi}{2 l_{n}+1}}|\vect{A}|^{n} Y_{l_{n} m_{n}}(\vartheta, \varphi) \prod_{i=2}^{n} \clebsch{1}{0}{l_{i-1}}{0}{l_{i}}{0} \label{eq:3:2:22}
 \end{equation}
-vhere $\vartheta, \varphi$ are the polar angles of the vector $\vect{A}$ and $l_{1}=1$. In particular, if $l_{2}=2, l_{3}=3, \ldots, l_{n}=n$, we have
+where $\vartheta, \varphi$ are the polar angles of the vector $\vect{A}$ and $l_{1}=1$. In particular, if $l_{2}=2, l_{3}=3, \ldots, l_{n}=n$, we have
 \begin{equation}
-\left\{\ldots\left\{\left\{\vect{A}_{1} \otimes \vect{A}_{1}\right\}_{2} \otimes \vect{A}_{1}\right\}_{3} \ldots \otimes \vect{A}_{1}\right\}_{n m}=\sqrt{\frac{4 \pi n!}{(2 n+1)!!}}|\vect{A}|^{n} Y_{n m}(\vartheta, \varphi) \label{chap3:eq:58}
+\left\{\ldots\left\{\left\{\vect{A}_{1} \otimes \vect{A}_{1}\right\}_{2} \otimes \vect{A}_{1}\right\}_{3} \ldots \otimes \vect{A}_{1}\right\}_{n m}=\sqrt{\frac{4 \pi n!}{(2 n+1)!!}}|\vect{A}|^{n} Y_{n m}(\vartheta, \varphi) \label{eq:3:2:23}
 \end{equation}
-\subsection{Cartesian Tensors of Second and Third Ranks}
-An arbitrary cartesian tensor of second rank $T_{i k}(i, k=x, y, z)$ is, generally, reducible and may be decomosed into three irreducible parts:\\
+\subsection{Cartesian Tensors of Second and Third Ranks}\label{sec:3.2.2}
+An arbitrary cartesian tensor of second rank $T_{i k}(i, k=x, y, z)$ is, generally, reducible and may be decomposed into three irreducible parts:\\
 (a) a tensor which is proportional to the unit tensor, $E_{i k}=E \delta_{i k}$;\\
 (b) an antisymmetric tensor $A_{i k}=-A_{k i}$;\\
 (c) a symmetric traceless tensor $S_{i k}=S_{k i}, \sum_{i} S_{i i}=0$. Thus,
 \begin{gather}
-T_{i k}=E \delta_{i k}+A_{i k}+S_{i k},  \label{chap3:eq:59}\\
-E=\frac{1}{3} \operatorname{Tr}\left(T_{i k}\right)=\frac{1}{3} \sum_{i} T_{i i},  \label{chap3:eq:60}\\
-A_{i k}=\frac{1}{2}\left(T_{i k}-T_{k i}\right),  \label{chap3:eq:61}\\
-S_{i k}=\frac{1}{2}\left(T_{i k}+T_{k i}-\frac{2}{3} \delta_{i k} \sum_{l} T_{l l}\right) . \label{chap3:eq:62}
+T_{i k}=E \delta_{i k}+A_{i k}+S_{i k},  \label{eq:3:2:24}\\
+E=\frac{1}{3} \operatorname{Tr}\left(T_{i k}\right)=\frac{1}{3} \sum_{i} T_{i i},  \label{eq:3:2:25}\\
+A_{i k}=\frac{1}{2}\left(T_{i k}-T_{k i}\right),  \label{eq:3:2:26}\\
+S_{i k}=\frac{1}{2}\left(T_{i k}+T_{k i}-\frac{2}{3} \delta_{i k} \sum_{l} T_{l l}\right) . \label{eq:3:2:27}
 \end{gather}
 The value $E$ is invariant under rotations of coordinate systems. It is an irreducible tensor of zero rank
 \begin{equation}
-\mathfrak{I}_{00}=E . \label{chap3:eq:63}
+\mathfrak{I}_{00}=E . \label{eq:3:2:28}
 \end{equation}
 The antisymmetric tensor $A_{i k}$ is equivalent to the axial vector
 \begin{equation}
-A_{i k}=\varepsilon_{i k l} \mathscr{A}_{l}, \quad \mathscr{A}_{i}=\frac{1}{2} \sum_{k l} \varepsilon_{i k l} A_{k l} \label{chap3:eq:64}
+A_{i k}=\varepsilon_{i k l} \mathscr{A}_{l}, \quad \mathscr{A}_{i}=\frac{1}{2} \sum_{k l} \varepsilon_{i k l} A_{k l} \label{eq:3:2:29}
 \end{equation}
 Using the components $A_{i k}$, one can form an irreducible pseudotensor of rank one:
 \begin{gather}
 \mathfrak{I}_{10}=\mathfrak{U}_{x}=A_{x y}  \notag\\
-\mathfrak{I}_{1 \pm 1}=\mp \frac{1}{\sqrt{2}}\left(\mathfrak{U}_{x} \pm i \mathfrak{U}_{y}\right)=\mp \frac{1}{\sqrt{2}}\left(A_{y x} \pm i A_{x x}\right) \label{chap3:eq:65}
+\mathfrak{I}_{1 \pm 1}=\mp \frac{1}{\sqrt{2}}\left(\mathfrak{U}_{x} \pm i \mathfrak{U}_{y}\right)=\mp \frac{1}{\sqrt{2}}\left(A_{y x} \pm i A_{x x}\right) \label{eq:3:2:30}
 \end{gather}
 Using the components of the symmetric traceless tensor $S_{i j}$, we may construct an irreducible tensor of second rank.
 \begin{gather}
 \mathfrak{I}_{20}=S_{x x}  \notag\\
-\mathfrak{I}_{2 \pm 1}=\mp \sqrt{\frac{2}{3}}\left(S_{x x} \pm i S_{x y}\right)  \label{chap3:eq:66}\\
+\mathfrak{I}_{2 \pm 1}=\mp \sqrt{\frac{2}{3}}\left(S_{x x} \pm i S_{x y}\right)  \label{eq:3:2:31}\\
 \mathfrak{I}_{2 \pm 2}=\sqrt{\frac{1}{6}}\left(S_{x x}-S_{y y} \pm 2 i S_{x y}\right) \notag
 \end{gather}
 Thus, from nine cartesian components $T_{i k}$ of a tensor of second rank we can compose one tensor of zero rank (scalar which has one component), one pseudotensor of the first rank (three components) and one irreducible tensor of second rank (five components).
 
 From the 27 cartesian components $T_{i k l}$ of a tensor of third rank we can compose one pseudotensor of zero rank $\mathfrak{T}_{00}$ (scalar, which has one component), three tensors of first rank $\mathfrak{T}_{1 \mu}$ ( $3 \times 3=9$ components), two irreducible tensors of second rank $\mathfrak{T}_{2 \mu}(2 \times 5=10$ components $)$ and one irreducible tensor of third rank $\mathfrak{T}_{3 \mu}$ (seven components). In this case construction of the tensors of first and second ranks is not unique.
 
-\subsection{Differential Operations as Irreducible Tensor Products}
+\subsection{Differential Operations as Irreducible Tensor Products}\label{sec:3.2.3}
 Differential operations on scalars and vectors (see Sec. 1.3) can be written in the form of irreducible tensor products of the operator $\vect{\nabla}$ and corresponding scalars and vectors,
 \begin{gather}
-\operatorname{grad} \Phi=\left\{\nabla_{1} \otimes \Phi\right\}_{1},  \label{chap3:eq:67}\\
-\operatorname{div} \vect{A}=-\sqrt{3}\left\{\nabla_{1} \otimes \vect{A}_{1}\right\}_{0}  \label{chap3:eq:68}\\
-\operatorname{curl} \vect{A}=-i \sqrt{2}\left\{\nabla_{1} \otimes \vect{A}_{1}\right\}_{1},  \label{chap3:eq:69}\\
-\Delta=\nabla^{2}=-\sqrt{3}\left\{\nabla_{1} \otimes \nabla_{1}\right\}_{0},  \label{chap3:eq:70}\\
-\operatorname{grad} \operatorname{div} \vect{A}=-\sqrt{3}\left\{\nabla_{1} \otimes\left\{\nabla_{1} \otimes \vect{A}_{1}\right\}_{0}\right\}_{1},  \label{chap3:eq:71}\\
-\operatorname{curl} \operatorname{curl} \vect{A}=-2\left\{\nabla_{1} \otimes\left\{\nabla_{1} \otimes \vect{A}_{1}\right\}_{1}\right\}_{1},  \label{chap3:eq:72}\\
-\operatorname{div} \operatorname{grad} \Phi=-\sqrt{3}\left\{\nabla_{1} \otimes\left\{\nabla_{1} \otimes \Phi\right\}_{1}\right\}_{0}=-\sqrt{3}\left\{\nabla_{1} \otimes \nabla_{1}\right\}_{0} \Phi,  \label{chap3:eq:73}\\
-\operatorname{curl} \operatorname{grad} \Phi=-i \sqrt{2}\left\{\nabla_{1} \otimes\left\{\nabla_{1} \otimes \Phi\right\}_{1}\right\}_{1}=0,  \label{chap3:eq:74}\\
-\operatorname{div} \operatorname{curl} \vect{A}=i \sqrt{6}\left\{\nabla_{1} \otimes\left\{\nabla_{1} \otimes \vect{A}_{1}\right\}_{1}\right\}_{0}=0 . \label{chap3:eq:75}
+\operatorname{grad} \Phi=\left\{\nabla_{1} \otimes \Phi\right\}_{1},  \label{eq:3:2:32}\\
+\operatorname{div} \vect{A}=-\sqrt{3}\left\{\nabla_{1} \otimes \vect{A}_{1}\right\}_{0}  \label{eq:3:2:33}\\
+\operatorname{curl} \vect{A}=-i \sqrt{2}\left\{\nabla_{1} \otimes \vect{A}_{1}\right\}_{1},  \label{eq:3:2:34}\\
+\Delta=\nabla^{2}=-\sqrt{3}\left\{\nabla_{1} \otimes \nabla_{1}\right\}_{0},  \label{eq:3:2:35}\\
+\operatorname{grad} \operatorname{div} \vect{A}=-\sqrt{3}\left\{\nabla_{1} \otimes\left\{\nabla_{1} \otimes \vect{A}_{1}\right\}_{0}\right\}_{1},  \label{eq:3:2:36}\\
+\operatorname{curl} \operatorname{curl} \vect{A}=-2\left\{\nabla_{1} \otimes\left\{\nabla_{1} \otimes \vect{A}_{1}\right\}_{1}\right\}_{1},  \label{eq:3:2:37}\\
+\operatorname{div} \operatorname{grad} \Phi=-\sqrt{3}\left\{\nabla_{1} \otimes\left\{\nabla_{1} \otimes \Phi\right\}_{1}\right\}_{0}=-\sqrt{3}\left\{\nabla_{1} \otimes \nabla_{1}\right\}_{0} \Phi,  \label{eq:3:2:38}\\
+\operatorname{curl} \operatorname{grad} \Phi=-i \sqrt{2}\left\{\nabla_{1} \otimes\left\{\nabla_{1} \otimes \Phi\right\}_{1}\right\}_{1}=0,  \label{eq:3:2:39}\\
+\operatorname{div} \operatorname{curl} \vect{A}=i \sqrt{6}\left\{\nabla_{1} \otimes\left\{\nabla_{1} \otimes \vect{A}_{1}\right\}_{1}\right\}_{0}=0 . \label{eq:3:2:40}
 \end{gather}
 As follows from Sec. 1.3.1 the operator $\vect{\nabla}$ is given by
 \begin{equation}
-\nabla=\vect{n} \frac{\partial}{\partial r}-\frac{i}{r}[\vect{n} \times \hat{\vect{L}}] \label{chap3:eq:76}
+\nabla=\vect{n} \frac{\partial}{\partial r}-\frac{i}{r}[\vect{n} \times \hat{\vect{L}}] \label{eq:3:2:41}
 \end{equation}
 In spherical component form it is written as
 \begin{equation}
-\nabla_{\mu}=\sqrt{\frac{4 \pi}{3}}\left(Y_{1 \mu} \frac{\partial}{\partial r}-\frac{\sqrt{2}}{r}\left\{\vect{Y}_{1} \otimes \widehat{\vect{L}}_{1}\right\}_{1 \mu}\right) \label{chap3:eq:77}
+\nabla_{\mu}=\sqrt{\frac{4 \pi}{3}}\left(Y_{1 \mu} \frac{\partial}{\partial r}-\frac{\sqrt{2}}{r}\left\{\vect{Y}_{1} \otimes \widehat{\vect{L}}_{1}\right\}_{1 \mu}\right) \label{eq:3:2:42}
 \end{equation}
 Here $\vect{Y}_{1}$ is an irreducible tensor, whose components are spherical harmonics $Y_{1 \mu}(\vect{n})$ (Chap. 5); $\hat{\vect{L}}_{1}=\hat{\vect{L}}$ is the orbital angular momentum operator (see Sec. 2.2).
 
 When expanding any scalar function $\Phi(\vect{r})$ in a Taylor series, one will deal with arbitrarily large powers of operator $\vect{\nabla}$ :
 \begin{align}
 \Phi(\vect{r}+\delta \vect{r}) & =e^{(\delta \vect{r} \cdot \vect{\nabla})} \Phi(\vect{r})=\Phi(\vect{r})+(\delta \vect{r} \cdot \nabla) \Phi(\vect{r})+\frac{1}{2!}(\delta \vect{r} \cdot \nabla)^{2} \Phi(\vect{r})+\ldots  \notag\\
-& =\Phi(\vect{r})+\delta r(\vect{u} \cdot \nabla) \Phi(\vect{r})+\frac{1}{2!}(\delta r)^{2}(\vect{u} \cdot \nabla)^{2} \Phi(\vect{r})+\ldots \label{chap3:eq:78}
+& =\Phi(\vect{r})+\delta r(\vect{u} \cdot \nabla) \Phi(\vect{r})+\frac{1}{2!}(\delta r)^{2}(\vect{u} \cdot \nabla)^{2} \Phi(\vect{r})+\ldots \label{eq:3:2:43}
 \end{align}
 Here $\vect{u}=\delta \vect{r} /|\delta \vect{r}|$ and $(\vect{u} \cdot \vect{\nabla})=d / d s$ is the operator of directional differentiation in the direction $\vect{u}$ (see Sec. 1.3). The operator $(\vect{u} \cdot \vect{\nabla})^{n} \equiv d^{n} / d s^{n}$ can be written in the form of tensor product
 \begin{equation}
-\left.(u \cdot \nabla)^{n}=(-1)^{n} \sum_{l_{2}, l_{3}, \ldots l_{n}}(-1)^{l_{n}}\left(\left\{\ldots\left\{\left\{u_{1} \otimes u_{1}\right\}_{l_{2}} \otimes u_{1}\right\}_{l_{3}} \ldots \otimes u_{1}\right\}_{l_{n}} \cdot\left\{\ldots\left\{\left\{\nabla_{1} \otimes \nabla_{1}\right\}_{l_{2}} \otimes \nabla_{1}\right\}_{l_{3}} \ldots \otimes \nabla_{1}\right\}_{l_{n}}\right)\right\} \label{chap3:eq:79}
+(u \cdot \nabla)^{n}=(-1)^{n} \sum_{l_{2}, l_{3}, \ldots l_{n}}(-1)^{l_{n}}\left(\left\{\ldots\left\{\left\{u_{1} \otimes u_{1}\right\}_{l_{2}} \otimes u_{1}\right\}_{l_{3}} \ldots \otimes u_{1}\right\}_{l_{n}} \cdot\left\{\ldots\left\{\left\{\nabla_{1} \otimes \nabla_{1}\right\}_{l_{2}} \otimes \nabla_{1}\right\}_{l_{3}} \ldots \otimes \nabla_{1}\right\}_{l_{n}}\right) \label{eq:3:2:44}
 \end{equation}
-Using Eqs. \eqref{chap3:eq:57} and \eqref{chap3:eq:58} one can express multiple.tensor products of the unit vector $u$ which enters Eq. \eqref{chap3:eq:79} in terms of spherical harmonics.
+Using Eqs. \eqref{eq:3:2:22} and \eqref{eq:3:2:23} one can express multiple.tensor products of the unit vector $u$ which enters Eq. \eqref{eq:3:2:44} in terms of spherical harmonics.
 
-\section{RECOUPLING IN IRREDUCIBLE TENSOR PRODUCTS}
+\section{Recoupling in irreducible tensor products}\label{sec:3.3}
 The irreducible tensor product of two irreducible tensors is defined in Sec. 3.1.7. By making use of the same relations one can form irreducible tensor products of three and more irreducible tensors. However, in these cases different orders and different coupling schemes of tensors in products are possible.
 
-The recoupling tensors without change of their order may be carried out by some real (for a given definition of the vector addition coefficients) and orthogonal matrix which performs the direct and inverse transformation. When the tensor order has to be changed one should take account of the commutation rules (Eqs. \eqref{chap3:eq:24}-\eqref{chap3:eq:28}). We will use the notation
+The recoupling tensors without change of their order may be carried out by some real (for a given definition of the vector addition coefficients) and orthogonal matrix which performs the direct and inverse transformation. When the tensor order has to be changed one should take account of the commutation rules (Eqs. \eqref{eq:3:1:24}-\eqref{eq:3:1:28}). We will use the notation
 \[
 \Pi_{a b c \ldots d}=[(2 a+1)(2 b+1)(2 c+1) \ldots(2 d+1)]^{\frac{1}{2}}
 \]
-\subsection{Relations Valid for Commuting as well as Non-Commuting Tensors}
+\subsection{Relations Valid for Commuting as well as Non-Commuting Tensors}\label{sec:3.3.1}
 For recoupling tensors without changing their order in irreducible tensor products of three and four tensors, one has the following relations:
 \begin{gather}
 \left\{\left\{\vect{P}_{a} \otimes \vect{Q}_{b}\right\}_{c} \otimes \vect{R}_{d}\right\}_{f}=(-1)^{a+b+f+d} \sum_{h} \Pi_{h c}\left\{\begin{array}{lll}
 a & b & c \\
 d & f & h
-\end{array}\right\}\left\{\vect{P}_{a} \otimes\left\{\vect{Q}_{b} \otimes \vect{R}_{d}\right\}_{h}\right\}_{f}  \label{chap3:eq:80}\\
-\left(\left\{\vect{P}_{a} \otimes \vect{Q}_{b}\right\}_{c} \cdot \vect{R}_{c}\right)=(-1)^{-c+a} \frac{\Pi_{c}}{\Pi_{a}}\left(\vect{P}_{a} ;\left\{\vect{Q}_{b} \otimes \vect{R}_{c}\right\}_{a}\right),  \label{chap3:eq:81}\\
+\end{array}\right\}\left\{\vect{P}_{a} \otimes\left\{\vect{Q}_{b} \otimes \vect{R}_{d}\right\}_{h}\right\}_{f}  \label{eq:3:3:1}\\
+\left(\left\{\vect{P}_{a} \otimes \vect{Q}_{b}\right\}_{c} \cdot \vect{R}_{c}\right)=(-1)^{-c+a} \frac{\Pi_{c}}{\Pi_{a}}\left(\vect{P}_{a} ;\left\{\vect{Q}_{b} \otimes \vect{R}_{c}\right\}_{a}\right),  \label{eq:3:3:2}\\
 \left\{\left\{\vect{P}_{a} \otimes \vect{Q}_{b}\right\}_{c} \otimes\left\{\vect{R}_{d} \otimes \vect{S}_{e}\right\}_{f}\right\}_{k}=(-1)^{d+c+e+k} \sum_{h} \Pi_{h f}\left\{\begin{array}{lc}
 d & c h \\
 k & e
@@ -332,73 +332,73 @@ k & e
 =(-1)^{a+f+b+k} \sum_{h} \Pi_{h c}\left\{\begin{array}{lll}
 a & b & c \\
 f & k & h
-\end{array}\right\}\left\{\vect{P}_{a} \otimes\left\{\vect{Q}_{b} \otimes\left\{\vect{R}_{d} \otimes \vect{S}_{e}\right\}_{f}\right\}_{h}\right\}_{k} \label{chap3:eq:82}
+\end{array}\right\}\left\{\vect{P}_{a} \otimes\left\{\vect{Q}_{b} \otimes\left\{\vect{R}_{d} \otimes \vect{S}_{e}\right\}_{f}\right\}_{h}\right\}_{k} \label{eq:3:3:3}
 \end{gather}
 \begin{gather}
-\left(\left\{\vect{P}_{a} \otimes \vect{Q}_{b}\right\}_{c} \cdot\left\{\vect{R}_{d} \otimes \vect{S}_{e}\right\}_{c}\right)=\frac{(-1)^{-c+e} \Pi_{c}}{\Pi_{e}}\left(\left\{\left\{\vect{P}_{a} \otimes \vect{Q}_{b}\right\}_{c} \otimes \vect{R}_{d}\right\}_{e} \cdot \vect{S}_{e}\right)=(-1)^{-c+a} \frac{\Pi_{c}}{\Pi_{a}}\left(\vect{P}_{a} \cdot\left\{\vect{Q}_{b} \otimes\left\{\vect{R}_{d} \otimes \vect{S}_{e}\right\}_{f}\right\}_{a}\right),  \label{chap3:eq:83}\\
+\left(\left\{\vect{P}_{a} \otimes \vect{Q}_{b}\right\}_{c} \cdot\left\{\vect{R}_{d} \otimes \vect{S}_{e}\right\}_{c}\right)=\frac{(-1)^{-c+e} \Pi_{c}}{\Pi_{e}}\left(\left\{\left\{\vect{P}_{a} \otimes \vect{Q}_{b}\right\}_{c} \otimes \vect{R}_{d}\right\}_{e} \cdot \vect{S}_{e}\right)=(-1)^{-c+a} \frac{\Pi_{c}}{\Pi_{a}}\left(\vect{P}_{a} \cdot\left\{\vect{Q}_{b} \otimes\left\{\vect{R}_{d} \otimes \vect{S}_{e}\right\}_{f}\right\}_{a}\right),  \label{eq:3:3:4}\\
 \left\{\left\{\left\{\vect{P}_{a} \otimes \vect{Q}_{b}\right\}_{c} \otimes \vect{R}_{d}\right\}_{h} \otimes \vect{S}_{e}\right\}_{k}=\sum_{f, q}(-1)^{a+f+b-d-c-e} \Pi_{c q h f}\left\{\begin{array}{lll}
 a & b & c \\
 f & k & q
 \end{array}\right\}\left\{\begin{array}{lc}
 d & c \\
 k & c
-\end{array}\right\}\left\{\vect{P}_{a} \otimes\left\{\vect{Q}_{b} \otimes\left\{\vect{R}_{d} \otimes \vect{S}_{e}\right\}_{f}\right\}_{q}\right\}_{k},  \label{chap3:eq:84}\\
-\left(\left\{\left\{\vect{P}_{a} \otimes \vect{Q}_{b}\right\}_{c} \otimes \vect{R}_{d}\right\}_{e} \cdot \vect{S}_{e}\right)=(-1)^{-c+a} \frac{\Pi_{e}}{\Pi_{a}}\left(\vect{P}_{a} \cdot\left\{\vect{Q}_{b} \otimes\left\{\vect{R}_{d} \otimes \vect{S}_{e}\right\}_{f}\right\}_{a}\right) \label{chap3:eq:85}
+\end{array}\right\}\left\{\vect{P}_{a} \otimes\left\{\vect{Q}_{b} \otimes\left\{\vect{R}_{d} \otimes \vect{S}_{e}\right\}_{f}\right\}_{q}\right\}_{k},  \label{eq:3:3:5}\\
+\left(\left\{\left\{\vect{P}_{a} \otimes \vect{Q}_{b}\right\}_{c} \otimes \vect{R}_{d}\right\}_{e} \cdot \vect{S}_{e}\right)=(-1)^{-c+a} \frac{\Pi_{e}}{\Pi_{a}}\left(\vect{P}_{a} \cdot\left\{\vect{Q}_{b} \otimes\left\{\vect{R}_{d} \otimes \vect{S}_{e}\right\}_{f}\right\}_{a}\right) \label{eq:3:3:6}
 \end{gather}
-\subsection{Relations for Commuting Tensors}
+\subsection{Relations for Commuting Tensors}\label{sec:3.3.2}
 To change the coupling scheme for irreducible products of three and four commuting tensors one can use the following relations
 \begin{align}
 \left\{\vect{P}_{\vect{a}} \otimes\left\{\vect{Q}_{b} \otimes \vect{R}_{d}\right\}_{f}\right\}_{e} & =(-1)^{b+d-f}\left\{\vect{P}_{a} \otimes\left\{\vect{R}_{d} \otimes \vect{Q}_{b}\right\}_{f}\right\}_{e}=(-1)^{a+f-e}\left\{\left\{\vect{Q}_{b} \otimes \vect{R}_{d}\right\}_{f} \otimes \vect{P}_{a}\right\}_{e}  \notag\\
-& =(-1)^{a+b+d-e}\left\{\left\{\vect{R}_{d} \otimes \vect{Q}_{b}\right\}_{f} \otimes \vect{P}_{a}\right\}_{e}, \label{chap3:eq:86}
+& =(-1)^{a+b+d-e}\left\{\left\{\vect{R}_{d} \otimes \vect{Q}_{b}\right\}_{f} \otimes \vect{P}_{a}\right\}_{e}, \label{eq:3:3:7}
 \end{align}
 \begin{gather}
 \left\{\left\{\vect{P}_{a} \otimes \vect{Q}_{b}\right\}_{c} \otimes \vect{R}_{d}\right\}_{f}=(-1)^{c+d+f} \sum_{h!} \Pi_{c h}\left\{\begin{array}{lll}
 a & b & c \\
 f & d & h
-\end{array}\right\}\left\{\vect{Q}_{b} \otimes\left\{\vect{P}_{a} \otimes \vect{R}_{d}\right\}_{h}\right\}_{f},  \label{chap3:eq:87}\\
-\left(\left\{\vect{P}_{a} \otimes \vect{Q}_{b}\right\}_{c} \cdot \vect{R}_{c}\right)=(-1)^{-a} \frac{\Pi_{c}}{\Pi_{b}}\left(\vect{Q}_{b} \cdot\left\{\vect{P}_{a} \otimes \vect{R}_{c}\right\}_{b}\right) \label{chap3:eq:88}
+\end{array}\right\}\left\{\vect{Q}_{b} \otimes\left\{\vect{P}_{a} \otimes \vect{R}_{d}\right\}_{h}\right\}_{f},  \label{eq:3:3:8}\\
+\left(\left\{\vect{P}_{a} \otimes \vect{Q}_{b}\right\}_{c} \cdot \vect{R}_{c}\right)=(-1)^{-a} \frac{\Pi_{c}}{\Pi_{b}}\left(\vect{Q}_{b} \cdot\left\{\vect{P}_{a} \otimes \vect{R}_{c}\right\}_{b}\right) \label{eq:3:3:9}
 \end{gather}
 \begin{align}
 \left\{\vect{P}_{a} \otimes\right. & \left.\left\{\vect{Q}_{b} \otimes\left\{\vect{R}_{d} \otimes \vect{S}_{e}\right\}_{f}\right\}_{h}\right\}_{k}=(-1)^{d+e-f}\left\{\vect{P}_{a} \otimes\left\{\vect{Q}_{b} \otimes\left\{\vect{S}_{e} \otimes \vect{R}_{d}\right\}_{f}\right\}_{h}\right\}_{k}  \notag\\
 & =(-1)^{d+b+e-h}\left\{\vect{P}_{a} \otimes\left\{\left\{\vect{S}_{b} \otimes \vect{R}_{d}\right\}_{f} \otimes \vect{Q}_{b}\right\}_{h}\right\}_{k}=(-1)^{b+f-h}\left\{\vect{P}_{a} \otimes\left\{\left\{\vect{R}_{d} \otimes \vect{S}_{e}\right\}_{f} \otimes \vect{Q}_{b}\right\}_{h}\right\}_{k}  \notag\\
 & =(-1)^{a+h-k}\left\{\left\{\vect{Q}_{b} \otimes\left\{\vect{R}_{d} \otimes \vect{S}_{e}\right\}_{f}\right\}_{h} \otimes \vect{P}_{a}\right\}_{k}=(-1)^{d+e+a+h-f-k}\left\{\left\{\vect{Q}_{b} \otimes\left\{\vect{S}_{e} \otimes \vect{R}_{d}\right\}_{f}\right\}_{h} \otimes \vect{P}_{a}\right\}_{k}  \notag\\
-& =(-1)^{a+b+d+e-h}\left\{\left\{\left\{\vect{Q}_{e} \otimes \vect{R}_{d}\right\}_{f} \otimes \vect{Q}_{b}\right\}_{h} \otimes \vect{P}_{a}\right\}_{k}=(-1)^{a+b+f-k}\left\{\left\{\left\{\vect{R}_{d} \otimes \vect{S}_{e}\right\}_{f} \otimes \vect{Q}_{b}\right\}_{h} \otimes \vect{P}_{a}\right\}_{k}, \label{chap3:eq:89}
+& =(-1)^{a+b+d+e-h}\left\{\left\{\left\{\vect{Q}_{e} \otimes \vect{R}_{d}\right\}_{f} \otimes \vect{Q}_{b}\right\}_{h} \otimes \vect{P}_{a}\right\}_{k}=(-1)^{a+b+f-k}\left\{\left\{\left\{\vect{R}_{d} \otimes \vect{S}_{e}\right\}_{f} \otimes \vect{Q}_{b}\right\}_{h} \otimes \vect{P}_{a}\right\}_{k}, \label{eq:3:3:10}
 \end{align}
 \begin{gather}
 \left\{\left\{\vect{P}_{a} \otimes \vect{Q}_{b}\right\}_{e} \otimes\left\{\vect{R}_{d} \otimes \vect{S}_{e}\right\}_{f}\right\}_{h}=\sum_{g h} \Pi_{c f g h}\left\{\begin{array}{lll}
 a & b & c \\
 d & e & f \\
 g & h & k
-\end{array}\right\}\left\{\left\{\vect{P}_{a} \otimes \vect{R}_{d}\right\}_{g} \otimes\left\{\vect{Q}_{b} \otimes \vect{S}_{e}\right\}_{h}\right\}_{h}  \label{chap3:eq:90}\\
+\end{array}\right\}\left\{\left\{\vect{P}_{a} \otimes \vect{R}_{d}\right\}_{g} \otimes\left\{\vect{Q}_{b} \otimes \vect{S}_{e}\right\}_{h}\right\}_{h}  \label{eq:3:3:11}\\
 \left\{\left\{\vect{P}_{a} \otimes \vect{Q}_{b}\right)_{c} \otimes\left\{\vect{R}_{d} \otimes \vect{S}_{e}\right\}_{f}\right\}_{k}=\sum_{g h}(-1)^{h+b-k-e} \Pi_{c f g h}^{2}\left\{\begin{array}{lll}
 a & b & c \\
 g & d & h
 \end{array}\right\}\left\{\begin{array}{lcl}
 d & e & f \\
 k & c & g
-\end{array}\right\}\left\{\left\{\left\{\vect{P}_{a} \otimes \vect{R}_{d}\right\}_{h} \otimes \vect{Q}_{b}\right\}_{g} \otimes \vect{S}_{c}\right\}_{k}  \label{chap3:eq:91}\\
+\end{array}\right\}\left\{\left\{\left\{\vect{P}_{a} \otimes \vect{R}_{d}\right\}_{h} \otimes \vect{Q}_{b}\right\}_{g} \otimes \vect{S}_{c}\right\}_{k}  \label{eq:3:3:12}\\
 \left.\left(\left\{\vect{P}_{a} \otimes \vect{Q}_{b}\right\}_{c} \cdot\left\{\vect{R}_{d} \otimes \vect{S}_{e}\right\}_{c}\right)=(-1)^{2 a+b-d} \sum_{g} \Pi_{c}^{2}\left\{\begin{array}{lll}
 a & b & c \\
 e & d & g
-\end{array}\right\}\left(\left\{\vect{P}_{a} \otimes \vect{R}_{d}\right\}_{g} \cdot\left\{\vect{Q}_{b} \otimes \vect{S}_{e}\right\}_{g}\right)\right\}  \label{chap3:eq:92}\\
+\end{array}\right\}\left(\left\{\vect{P}_{a} \otimes \vect{R}_{d}\right\}_{g} \cdot\left\{\vect{Q}_{b} \otimes \vect{S}_{e}\right\}_{g}\right)\right\}  \label{eq:3:3:13}\\
 \left(\left\{\vect{P}_{a} \otimes \vect{Q}_{b}\right\}_{c} \cdot\left\{\vect{R}_{d} \otimes \vect{S}_{e}\right\}_{c}\right)=\sum_{h}(-1)^{e+b+d+h} \frac{\Pi_{c c h}}{\Pi_{e}}\left\{\begin{array}{lll}
 a & b & c \\
 e & d & h
-\end{array}\right\}\left(\left\{\left\{\vect{P}_{a} \otimes \vect{R}_{d}\right\}_{h} \otimes \vect{Q}_{b}\right\}_{e} \cdot \vect{S}_{e}\right) \label{chap3:eq:93}
+\end{array}\right\}\left(\left\{\left\{\vect{P}_{a} \otimes \vect{R}_{d}\right\}_{h} \otimes \vect{Q}_{b}\right\}_{e} \cdot \vect{S}_{e}\right) \label{eq:3:3:14}
 \end{gather}
-Equation \eqref{chap3:eq:27} and Eqs. \eqref{chap3:eq:90}-\eqref{chap3:eq:93} permit us to obtain all other permutations. The product $\left\{\vect{P}_{a} \otimes \vect{Q}_{b}\right\}_{b}$ is orthogonal to tensor $\vect{Q}_{b}$, if $a=2 b-1,2 b-2, \ldots$
+Equation \eqref{eq:3:1:27} and Eqs. \eqref{eq:3:3:11}-\eqref{eq:3:3:14} permit us to obtain all other permutations. The product $\left\{\vect{P}_{a} \otimes \vect{Q}_{b}\right\}_{b}$ is orthogonal to tensor $\vect{Q}_{b}$, if $a=2 b-1,2 b-2, \ldots$
 \begin{equation}
-\left(\left\{\vect{P}_{a} \otimes \vect{Q}_{b}\right\}_{b} \cdot \vect{Q}_{b}\right)=0 \label{chap3:eq:94}
+\left(\left\{\vect{P}_{a} \otimes \vect{Q}_{b}\right\}_{b} \cdot \vect{Q}_{b}\right)=0 \label{eq:3:3:15}
 \end{equation}
-\subsection{Relations for Non-Commuting Tensors}
-A change of the coupling scheme for irreducible tensor products of three and four non-commuting tensors ives
+\subsection{Relations for Non-Commuting Tensors}\label{sec:3.3.3}
+A change of the coupling scheme for irreducible tensor products of three and four non-commuting tensors gives
 \begin{align}
-& \left\{\left\{\vect{P}_{a} \otimes \vect{Q}_{b}\right\}_{c} \otimes \vect{R}_{d}\right\}_{f}=(-1)^{f+d+c} \sum_{h} \Pi_{c h}\left\{\begin{array}{lll}
+\left\{\left\{\vect{P}_{a} \otimes \vect{Q}_{b}\right\}_{c} \otimes \vect{R}_{d}\right\}_{f}&=(-1)^{f+d+c} \sum_{h} \Pi_{c h}\left\{\begin{array}{lll}
 a & b & c \\
 f & d & h
-\end{array}\right\}\left\{\vect{Q}_{b} \otimes\left\{\vect{P}_{a} \otimes \vect{R}_{d}\right\}_{h}\right\}_{f}+\left\{\Re_{c}^{a b} \otimes \vect{R}_{d}\right\}_{f},  \label{chap3:eq:95}\\
-& \left(\left\{\vect{P}_{a} \otimes \vect{Q}_{b}\right\}_{c} \cdot \vect{R}_{c}\right)=(-1)^{-a} \frac{\Pi_{c}}{\Pi_{b}}\left(\vect{Q}_{b} \cdot\left\{\vect{P}_{a} \otimes \vect{R}_{c}\right\}_{b}\right)+\left(\Re_{c}^{a b} \cdot \vect{R}_{c}\right),  \label{chap3:eq:96}\\
-& \left\{\vect{P}_{a} \otimes\left\{\vect{Q}_{b} \otimes \vect{R}_{d}\right\}_{h}\right\}_{f}=\sum_{c g}(-1)^{a+b-c} \Pi_{c c g h}\left\{\begin{array}{lll}
+\end{array}\right\}\left\{\vect{Q}_{b} \otimes\left\{\vect{P}_{a} \otimes \vect{R}_{d}\right\}_{h}\right\}_{f}+\left\{\mathfrak{R}_{c}^{a b} \otimes \vect{R}_{d}\right\}_{f},  \label{eq:3:3:16}\\
+ \left(\left\{\vect{P}_{a} \otimes \vect{Q}_{b}\right\}_{c} \cdot \vect{R}_{c}\right)&=(-1)^{-a} \frac{\Pi_{c}}{\Pi_{b}}\left(\vect{Q}_{b} \cdot\left\{\vect{P}_{a} \otimes \vect{R}_{c}\right\}_{b}\right)+\left(\mathfrak{R}_{c}^{a b} \cdot \vect{R}_{c}\right),  \label{eq:3:3:17}\\
+ \left\{\vect{P}_{a} \otimes\left\{\vect{Q}_{b} \otimes \vect{R}_{d}\right\}_{h}\right\}_{f}&=\sum_{c g}(-1)^{a+b-c} \Pi_{c c g h}\left\{\begin{array}{lll}
 a & b & c \\
 f & d & g
 \end{array}\right\}\left\{\begin{array}{lll}
@@ -408,29 +408,29 @@ d & f & h
 & +\sum_{c}(-1)^{a+b+f+d} \Pi_{c h}\left\{\begin{array}{lll}
 a & b & c \\
 d & f & h
-\end{array}\right\}\left\{\Re_{c}^{a b} \otimes \vect{R}_{d}\right\}_{f},  \label{chap3:eq:97}\\
-& \left(\vect{P}_{a} \cdot\left\{\vect{Q}_{b} \otimes \vect{R}_{d}\right\}_{a}\right)=(-1)^{2 b-d} \frac{\Pi_{a}}{\Pi_{b}}\left(\vect{Q}_{b} \cdot\left\{\vect{P}_{a} \otimes \vect{R}_{d}\right\}_{b}\right)+(-1)^{-a+d} \frac{\Pi_{a}}{\Pi_{d}}\left(\Re_{d}^{a b} \cdot \vect{R}_{d}\right),  \label{chap3:eq:98}\\
-& \left\{\left\{\vect{P}_{a} \otimes \vect{Q}_{b}\right\}_{c} \otimes\left\{\vect{R}_{d} \otimes \vect{S}_{e}\right\}_{f}\right\}_{k}=\sum_{g r} \Pi_{c f g r}\left\{\begin{array}{lll}
+\end{array}\right\}\left\{\mathfrak{R}_{c}^{a b} \otimes \vect{R}_{d}\right\}_{f},  \label{eq:3:3:18}\\
+\left(\vect{P}_{a} \cdot\left\{\vect{Q}_{b} \otimes \vect{R}_{d}\right\}_{a}\right)&=(-1)^{2 b-d} \frac{\Pi_{a}}{\Pi_{b}}\left(\vect{Q}_{b} \cdot\left\{\vect{P}_{a} \otimes \vect{R}_{d}\right\}_{b}\right)+(-1)^{-a+d} \frac{\Pi_{a}}{\Pi_{d}}\left(\mathfrak{R}_{d}^{a b} \cdot \vect{R}_{d}\right),  \label{eq:3:3:19}\\
+&\left\{\left\{\vect{P}_{a} \otimes \vect{Q}_{b}\right\}_{c} \otimes\left\{\vect{R}_{d} \otimes \vect{S}_{e}\right\}_{f}\right\}_{k}&=\sum_{g r} \Pi_{c f g r}\left\{\begin{array}{lll}
 a & b & c \\
 d & e & f \\
 r & g & k
 \end{array}\right\}\left\{\left\{\vect{P}_{a} \otimes \vect{R}_{d}\right\}_{r} \otimes\left\{\vect{Q}_{b} \otimes \vect{S}_{e}\right\}_{g}\right\}_{k}  \notag\\
-& +\sum_{h q}(-1)^{a+k+d+e-f-h} \Pi_{c h q f}\left\{\begin{array}{lll}
+ +\sum_{h q}(-1)^{a+k+d+e-f-h} &\Pi_{c h q f}\left\{\begin{array}{lll}
 a & b & c \\
 f & k & h
 \end{array}\right\}\left\{\begin{array}{lll}
 d & e & f \\
 h & b & q
-\end{array}\right\}\left\{\vect{P}_{a} \otimes\left\{\Re_{q}^{b d} \otimes \vect{S}_{e}\right\}_{h}\right\}_{k},  \label{chap3:eq:99}\\
-& \left(\left\{\vect{P}_{a} \otimes \vect{Q}_{b}\right\}_{c} \cdot\left\{\vect{R}_{d} \otimes \vect{S}_{e}\right\}_{c}\right)=\sum_{g}(-1)^{d+b+2 g} \Pi_{c}^{2}\left\{\begin{array}{lll}
+\end{array}\right\}\left\{\vect{P}_{a} \otimes\left\{\mathfrak{R}_{q}^{b d} \otimes \vect{S}_{e}\right\}_{h}\right\}_{k},  \label{eq:3:3:20}\\
+ \left(\left\{\vect{P}_{a} \otimes \vect{Q}_{b}\right\}_{c} \cdot\left\{\vect{R}_{d} \otimes \vect{S}_{e}\right\}_{c}\right)&=\sum_{g}(-1)^{d+b+2 g} \Pi_{c}^{2}\left\{\begin{array}{lll}
 a & b & c \\
 e & d & g
 \end{array}\right\}\left(\left\{\vect{P}_{a} \otimes \vect{R}_{d}\right\}_{g} \cdot\left\{\vect{Q}_{b} \otimes \vect{S}_{e}\right\}_{g}\right)  \notag\\
 & +\sum_{q}(-1)^{d+e+c-b} \frac{\Pi_{c c q}}{\Pi_{a}}\left\{\begin{array}{lll}
 a & b & c \\
 d & e & q
-\end{array}\right\}\left(\vect{P}_{a} \cdot\left\{\Re_{q}^{b d} \otimes \vect{S}_{e}\right\}_{a}\right),  \label{chap3:eq:100}\\
-& \left\{\left\{\vect{P}_{a} \otimes \vect{Q}_{b}\right\}_{c} \otimes\left\{\vect{R}_{d} \otimes \vect{S}_{e}\right\}_{f}\right\}_{k}=\sum_{h q}(-1)^{a-b+k-d-g} \Pi_{h c f g}\left\{\begin{array}{lll}
+\end{array}\right\}\left(\vect{P}_{a} \cdot\left\{\mathfrak{R}_{q}^{b d} \otimes \vect{S}_{e}\right\}_{a}\right),  \label{eq:3:3:21}\\
+ \left\{\left\{\vect{P}_{a} \otimes \vect{Q}_{b}\right\}_{c} \otimes\left\{\vect{R}_{d} \otimes \vect{S}_{e}\right\}_{f}\right\}_{k}&=\sum_{h q}(-1)^{a-b+k-d-g} \Pi_{h c f g}\left\{\begin{array}{lll}
 a & b & c \\
 f & k & h
 \end{array}\right\}\left\{\begin{array}{lll}
@@ -443,7 +443,7 @@ f & k & h
 \end{array}\right\}\left\{\begin{array}{lll}
 d & e & f \\
 h & b & q
-\end{array}\right\}\left\{\vect{P}_{a} \otimes\left\{\Re_{q}^{b d} \otimes \vect{S}_{e}\right\}_{h}\right\}_{k},  \label{chap3:eq:101}\\
+\end{array}\right\}\left\{\vect{P}_{a} \otimes\left\{\mathfrak{R}_{q}^{b d} \otimes \vect{S}_{e}\right\}_{h}\right\}_{k},  \label{eq:3:3:22}\\
 & \left(\left\{\vect{P}_{a} \otimes \vect{Q}_{b}\right\}_{c} \cdot\left\{\vect{R}_{d} \otimes \vect{S}_{e}\right\}_{c}\right)=\sum_{g}(-1)^{a+d+g+b} \frac{\Pi_{c c g}}{\Pi_{a}}\left\{\begin{array}{lll}
 b & e & g \\
 d & a & c
@@ -451,6 +451,6 @@ d & a & c
 & +\sum_{q}(-1)^{d+e+c-b} \frac{\Pi_{c c q}}{\Pi_{a}}\left\{\begin{array}{lll}
 a & b & c \\
 d & e & q
-\end{array}\right\}\left(\vect{P}_{a} \cdot\left\{\Re_{q}^{b d} \otimes \vect{S}_{e}\right\}_{a}\right) . \label{chap3:eq:102}
+\end{array}\right\}\left(\vect{P}_{a} \cdot\left\{\mathfrak{R}_{q}^{b d} \otimes \vect{S}_{e}\right\}_{a}\right) . \label{eq:3:3:23}
 \end{align}
-he definition of the commutator $\Re_{q}^{b d}$ is given in Eq. \eqref{chap3:eq:26}. By making use of the foregoing formulas, one n obtain all other relations for irreducible products of non-commuting tensors.
+The definition of the commutator $\mathfrak{R}_{q}^{b d}$ is given in Eq. \eqref{eq:3:1:26}. By making use of the foregoing formulas, one can obtain all other relations for irreducible products of non-commuting tensors.
