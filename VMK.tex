@@ -115,8 +115,6 @@
 
 \usepackage{enumitem}
 
-
-
 \setcounter{secnumdepth}{3}
 \usepackage{titlesec}
 \renewcommand{\thesubsubsection}{\alph{subsubsection}}
@@ -124,6 +122,8 @@
 {\normalfont\itshape}
 {(\thesubsubsection)}{0.5em}{}
 
+\usepackage{relsize}
+\newcommand{\Fact}[1]{{\mathlarger{\Pi}_{#1}}}
 
 \newunicodechar{∇}{\ifmmode\nabla\else{$\nabla$}\fi}
 \newunicodechar{→}{\ifmmode\rightarrow\else{$\rightarrow$}\fi}
@@ -139,7 +139,7 @@
 A. N. Moskalev\\
 V. K. Khersonskii}
 \date{}
-\includeonly{Chap2}
+\includeonly{Chap3}
 \begin{document}
 \captionsetup{singlelinecheck=false}\maketitle
 \include{preamble}
