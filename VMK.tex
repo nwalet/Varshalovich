@@ -80,12 +80,16 @@
 \newcommand{\vect}[1]{\mathbf{#1}}
 \newcommand{\mat}[1]{\boldsymbol{#1}}
 %Wigner 3j symbol, reading order: top row then bottom row
-\newcommand{\threej}[6]{\renewcommand{\arraystretch}{1}\arraycolsep=0.2em\left(\hspace*{-0.2em}\begin{array}{rrr} #1 & #2 & #3 \\ #4 & #5 & #6 \end{array}\hspace*{-0.2em}\right)}
+\newcommand{\threej}[6]{%
+\renewcommand{\arraystretch}{1}\arraycolsep=0.2em\left(\hspace*{-0.2em}\begin{array}{rrr} #1 & #2 & #3 \\ #4 & #5 & #6 \end{array}\hspace*{-0.2em}\right)}
 %Wigner 6j symbol, reading order: top row then bottom row
-\newcommand{\sixj}[6]{{\renewcommand{\arraystretch}{1}\left\{\begin{array}{ccc} #1 & #2 & #3 \\ #4 & #5 & #6 \end{array}\right\}}}
+\newcommand{\sixj}[6]{%
+{\renewcommand{\arraystretch}{1}\arraycolsep=0.2em\left\{\hspace*{-0.2em}%
+\begin{array}{ccc} #1 & #2 & #3 \\ #4 & #5 & #6 \end{array}\hspace*{-0.2em}\right\}}}
 
 %Wigner 9j symbol, reading order: top row, middle row, bottom row
-\newcommand{\ninej}[9]{{\renewcommand{\arraystretch}{1}\left\{\begin{array}{ccc} #1 & #2 & #3 \\ #4 & #5 & #6 \\ #7 & #8 & #9 \end{array}\right\}}}
+\newcommand{\ninej}[9]{{\renewcommand{\arraystretch}{1}\arraycolsep=0.2em\left\{\hspace*{-0.2em}%
+\begin{array}{ccc} #1 & #2 & #3 \\ #4 & #5 & #6 \\ #7 & #8 & #9 \end{array}\hspace*{-0.2em}\right\}}}
 
 %12-entry symbol from a sum of four 6j symbols, 4x4 layout (see
 %CONVERSION_RULES.md); a single \newcommand/\NewDocumentCommand cannot take

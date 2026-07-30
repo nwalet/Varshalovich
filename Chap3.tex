@@ -57,7 +57,7 @@ Here $X$ and $X^{\prime}$ denote sets of all arguments of the tensor in the init
 \subsection{Transformation of Irreducible Tensors Under Inversion of the Coordinate System}\label{sec:3.1.4}
 The transformation properties of irreducible tensor components under inversion of the coordinate system, $\vect{r} \rightarrow-\vect{r}$, permit us generally to represent an irreducible tensor $\mathfrak{M}_{J}$ of integer rank $J$ as the sum of two tensors $\mathfrak{M}_{J}^{(+1)}$ and $\mathfrak{M}_{J}^{(-1)}$, i.e.,
 \begin{equation}
-\mathfrak{M}_{j}=\mathfrak{M}_{J}^{(+1)}+\mathfrak{M}_{J}^{(-1)} \label{eq:3:1:12}
+\mathfrak{M}_{j}=\mathfrak{M}_{J}^{(+1)}+\mathfrak{M}_{J}^{(-1)}. \label{eq:3:1:12}
 \end{equation}
 Each of these tensors has definite parity.\\
 Under inversion of the coordinate system the tensors $\mathfrak{M}_{J}^{( \pm 1)}$ transform in the following way
@@ -68,12 +68,12 @@ The tensor $\mathfrak{M}_{J}^{\left(\pi_{J}\right)}$ with parity $\pi_{J}=(-1)^{
 
 \subsection{Double Tensors}\label{sec:3.1.5}
 A double tensor $W_{J_{1}} J_{2}(1,2)$ of ranks $J_{1}$ and $J_{2}$ has $\left(2 J_{1}+1\right)\left(2 J_{2}+1\right)$ components and depends on variables of two different subsystems, 1 and 2 . The components of the double tensor satisfy the following commutation relations
-\begin{gather}
-{\left[\widehat{J}_{ \pm 1}(1), W_{J_{1} M_{1} J_{2} M_{2}}(1,2)\right]=\mp \frac{1}{\sqrt{2}} \sqrt{J_{1}\left(J_{1}+1\right)-M_{1}\left(M_{1} \pm 1\right)} W_{J_{1} M_{1} \pm 1 J_{2} M_{2}}(1,2)}  ,\label{eq:3:1:14}\\
-{\left[\widehat{J}_{0}(1), W_{J_{1} M_{1} J_{2} M_{2}}(1,2)\right]=M_{1} W_{J_{1} M_{1} J_{2} M_{3}}(1,2)}  ,\label{eq:3:1:15}\\
-{\left[\widehat{J}_{ \pm 1}(2), W_{J_{1} M_{1} J_{2} M_{2}}(1,2)\right]=\mp \frac{1}{\sqrt{2}} \sqrt{J_{2}\left(J_{2}+1\right)-M_{2}\left(M_{2} \pm 1\right)} W_{J_{1} M_{1} J_{2} M_{2} \pm 1}(1,2)} , \label{eq:3:1:16}\\
-{\left[\widehat{J}_{0}(2), W_{J_{1} M_{1} J_{2} M_{2}}(1,2)\right]=M_{2} W_{J_{1} M_{1} J_{2} M_{2}}(1,2)}. \label{eq:3:1:17}
-\end{gather}
+\begin{align}
+\left[\widehat{J}_{ \pm 1}(1), W_{J_{1} M_{1} J_{2} M_{2}}(1,2)\right]&=\mp \frac{1}{\sqrt{2}} \sqrt{J_{1}\left(J_{1}+1\right)-M_{1}\left(M_{1} \pm 1\right)} W_{J_{1} M_{1} \pm 1 J_{2} M_{2}}(1,2)  ,\label{eq:3:1:14}\\
+\left[\widehat{J}_{0}(1), W_{J_{1} M_{1} J_{2} M_{2}}(1,2)\right]&=M_{1} W_{J_{1} M_{1} J_{2} M_{3}}(1,2)  ,\label{eq:3:1:15}\\
+\left[\widehat{J}_{ \pm 1}(2), W_{J_{1} M_{1} J_{2} M_{2}}(1,2)\right]&=\mp \frac{1}{\sqrt{2}} \sqrt{J_{2}\left(J_{2}+1\right)-M_{2}\left(M_{2} \pm 1\right)} W_{J_{1} M_{1} J_{2} M_{2} \pm 1}(1,2) , \label{eq:3:1:16}\\
+\left[\widehat{J}_{0}(2), W_{J_{1} M_{1} J_{2} M_{2}}(1,2)\right]&=M_{2} W_{J_{1} M_{1} J_{2} M_{2}}(1,2). \label{eq:3:1:17}
+\end{align}
 Here $\widehat{\vect{J}}(1)$ and $\widehat{\vect{J}}(2)$ are the operators of the total angular momenta of subsystems 1 and 2 , respectively.\\
 Under rotation of subsystem 1 and 2 the double tensor $W_{J_{1} J_{2}}(1,2)$ transforms according to the representation $D^{J_{1}}$ or $D^{J_{2}}$, respectively.
 \begin{align}
@@ -197,21 +197,21 @@ The components of the tensor product of rank one can be expressed in terms of pr
 \begin{equation}
 \left\{\vect{A}_{1} \otimes \vect{B}_{1}\right\}_{2 M}=\sum_{\mu, \nu} \clebsch{1}{\mu}{1}{\nu}{2}{M} A_{\mu} B_{\nu}=\sqrt{\frac{3|M|-2}{14|M|-12}} \sum_{\substack{\mu+\nu=M \\ \mu \geq \nu}}\left(A_{\mu} B_{\nu}+A_{\nu} B_{\mu}\right) .\label{eq:3:2:6}
 \end{equation}
-In more detailed form Eq. \eqref{eq:3:2:6} may be written as
-\begin{gather}
-\left\{\vect{A}_{1} \otimes \vect{B}_{1}\right\}_{2+2}=A_{+1} B_{+1},  \notag\\
-\left\{\vect{A}_{1} \otimes \vect{B}_{1}\right\}_{2+1}=\frac{1}{\sqrt{2}}\left(A_{+1} B_{0}+A_{0} B_{+1}\right),  \notag\\
-\left\{\vect{A}_{1} \otimes \vect{B}_{1}\right\}_{20}=\frac{1}{\sqrt{6}}\left(A_{+1} B_{-1}+2 A_{0} B_{0}+A_{-1} B_{+1}\right),  \label{eq:3:2:7}\\
-\left\{\vect{A}_{1} \otimes \vect{B}_{1}\right\}_{2-1}=\frac{1}{\sqrt{2}}\left(A_{-1} B_{0}+A_{0} B_{-1}\right),  \notag\\
-\left\{\vect{A}_{1} \otimes \vect{B}_{1}\right\}_{2-2}=A_{-1} B_{-1} . \notag
-\end{gather}
+In a more detailed form Eq. \eqref{eq:3:2:6} may be written as
+\begin{align}
+\left\{\vect{A}_{1} \otimes \vect{B}_{1}\right\}_{2+2}&=A_{+1} B_{+1},  \notag\\
+\left\{\vect{A}_{1} \otimes \vect{B}_{1}\right\}_{2+1}&=\frac{1}{\sqrt{2}}\left(A_{+1} B_{0}+A_{0} B_{+1}\right),  \notag\\
+\left\{\vect{A}_{1} \otimes \vect{B}_{1}\right\}_{20}&=\frac{1}{\sqrt{6}}\left(A_{+1} B_{-1}+2 A_{0} B_{0}+A_{-1} B_{+1}\right),  \label{eq:3:2:7}\\
+\left\{\vect{A}_{1} \otimes \vect{B}_{1}\right\}_{2-1}&=\frac{1}{\sqrt{2}}\left(A_{-1} B_{0}+A_{0} B_{-1}\right),  \notag\\
+\left\{\vect{A}_{1} \otimes \vect{B}_{1}\right\}_{2-2}&=A_{-1} B_{-1} . \notag
+\end{align}
 Given three commuting vectors $\vect{A}_{1}, \vect{B}_{1}, \vect{C}_{1}$ we can compose the following irreducible tensor products of ranks 0 and 1:
-\begin{gather}
-\left\{\left\{\vect{A}_{1} \otimes \vect{B}_{1}\right\}_{0} \otimes \vect{C}_{1}\right\}_{1}=-\frac{1}{\sqrt{3}}(\vect{A} \cdot \vect{B}) \cdot \vect{C},  \label{eq:3:2:8}\\
-\left\{\left\{\vect{A}_{1} \otimes \vect{B}_{1}\right\}_{1} \otimes \vect{C}_{1}\right\}_{0}=-\frac{i}{\sqrt{6}}[\vect{A} \times \vect{B}] \cdot \vect{C},  \label{eq:3:2:9}\\
-\left.\left\{\left\{\vect{A}_{1} \otimes \vect{B}_{1}\right\}_{1} \otimes \vect{C}_{1}\right\}_{1}=-\frac{1}{2}[\mid \vect{A} \times \vect{B}] \times \vect{C}\right]=\frac{1}{2} \vect{A}(\vect{B} \cdot \vect{C})-\frac{1}{2} \vect{B}(\vect{A} \cdot \vect{C}),  \label{eq:3:2:10}\\
-\left\{\left\{\vect{A}_{1} \otimes \vect{B}_{1}\right\}_{2} \otimes \vect{C}_{1}\right\}_{1}=\sqrt{\frac{3}{5}}\left\{\frac{1}{3} \vect{C}(\vect{A} \cdot \vect{B})-\frac{1}{2} \vect{B}(\vect{A} \cdot \vect{C})-\frac{1}{2} \vect{A}(\vect{B} \cdot \vect{C})\right\} . \label{eq:3:2:11}
-\end{gather}
+\begin{align}
+\left\{\left\{\vect{A}_{1} \otimes \vect{B}_{1}\right\}_{0} \otimes \vect{C}_{1}\right\}_{1}&=-\frac{1}{\sqrt{3}}(\vect{A} \cdot \vect{B}) \cdot \vect{C},  \label{eq:3:2:8}\\
+\left\{\left\{\vect{A}_{1} \otimes \vect{B}_{1}\right\}_{1} \otimes \vect{C}_{1}\right\}_{0}&=-\frac{i}{\sqrt{6}}[\vect{A} \times \vect{B}] \cdot \vect{C},  \label{eq:3:2:9}\\
+\left\{\left\{\vect{A}_{1} \otimes \vect{B}_{1}\right\}_{1} \otimes \vect{C}_{1}\right\}_{1}&=-\frac{1}{2}\left[[ \vect{A} \times \vect{B}] \times \vect{C}\right]=\frac{1}{2} \vect{A}(\vect{B} \cdot \vect{C})-\frac{1}{2} \vect{B}(\vect{A} \cdot \vect{C}),  \label{eq:3:2:10}\\
+\left\{\left\{\vect{A}_{1} \otimes \vect{B}_{1}\right\}_{2} \otimes \vect{C}_{1}\right\}_{1}&=\sqrt{\frac{3}{5}}\left\{\frac{1}{3} \vect{C}(\vect{A} \cdot \vect{B})-\frac{1}{2} \vect{B}(\vect{A} \cdot \vect{C})-\frac{1}{2} \vect{A}(\vect{B} \cdot \vect{C})\right\} . \label{eq:3:2:11}
+\end{align}
 In addition to the foregoing formulas, there exist products which differ from Eqs. \eqref{eq:3:2:8}-\eqref{eq:3:2:11} by vector coupling schemes. The problems concerned with recoupling in tensor products are considered below (Sec. 3.3).
 
 Given four commuting vectors $\vect{A}_{1}, \vect{B}_{1}, \vect{C}_{1}$ and $\vect{D}_{1}$ we can compose the following irreducible tensor products of ranks 0 and 1 :
@@ -247,23 +247,23 @@ where $\vartheta, \varphi$ are the polar angles of the vector $\vect{A}$ and $l_
 An arbitrary cartesian tensor of second rank $T_{i k}(i, k=x, y, z)$ is, generally, reducible and may be decomposed into three irreducible parts:
 \begin{enumerate}[label=(\alph*)]
 \item a tensor which is proportional to the unit tensor, $E_{i k}=E \delta_{i k}$;
-\item an antisymmetric tensor $A_{i k}=-A_{k i}$;\\
+\item an antisymmetric tensor $A_{i k}=-A_{k i}$.
 \item a symmetric traceless tensor $S_{i k}=S_{k i}, \sum_{i} S_{i i}=0$.
 \end{enumerate}
 Thus,
-\begin{gather}
-T_{i k}=E \delta_{i k}+A_{i k}+S_{i k},  \label{eq:3:2:24}\\
-E=\frac{1}{3} \operatorname{Tr}\left(T_{i k}\right)=\frac{1}{3} \sum_{i} T_{i i},  \label{eq:3:2:25}\\
-A_{i k}=\frac{1}{2}\left(T_{i k}-T_{k i}\right),  \label{eq:3:2:26}\\
-S_{i k}=\frac{1}{2}\left(T_{i k}+T_{k i}-\frac{2}{3} \delta_{i k} \sum_{l} T_{l l}\right) . \label{eq:3:2:27}
-\end{gather}
+\begin{align}
+T_{i k}&=E \delta_{i k}+A_{i k}+S_{i k},  \label{eq:3:2:24}\\
+E&=\frac{1}{3} \operatorname{Tr}\left(T_{i k}\right)=\frac{1}{3} \sum_{i} T_{i i},  \label{eq:3:2:25}\\
+A_{i k}&=\frac{1}{2}\left(T_{i k}-T_{k i}\right),  \label{eq:3:2:26}\\
+S_{i k}&=\frac{1}{2}\biggl(T_{i k}+T_{k i}-\frac{2}{3} \delta_{i k} \sum_{l} T_{l l}\biggr) . \label{eq:3:2:27}
+\end{align}
 The value $E$ is invariant under rotations of coordinate systems. It is an irreducible tensor of zero rank
 \begin{equation}
 \mathfrak{I}_{00}=E . \label{eq:3:2:28}
 \end{equation}
 The antisymmetric tensor $A_{i k}$ is equivalent to the axial vector
 \begin{equation}
-A_{i k}=\varepsilon_{i k l} \mathscr{A}_{l}, \quad \mathscr{A}_{i}=\frac{1}{2} \sum_{k l} \varepsilon_{i k l} A_{k l}. \label{eq:3:2:29}
+A_{i k}=\varepsilon_{i k l} \mathfrak{U}_{l}, \quad \mathfrak{U}_{i}=\frac{1}{2} \sum_{k l} \varepsilon_{i k l} A_{k l}. \label{eq:3:2:29}
 \end{equation}
 Using the components $A_{i k}$, one can form an irreducible pseudotensor of rank one:
 \begin{gather}
