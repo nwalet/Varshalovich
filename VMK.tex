@@ -30,6 +30,22 @@
 \usepackage{fontspec}
 \usepackage{newunicodechar}
 \usepackage{diagrams}
+\usepackage{xcolor}
+\usepackage{listings}
+\lstdefinestyle{vmkcode}{%
+  basicstyle=\ttfamily\footnotesize,
+  keywordstyle=\color{blue!55!black},
+  commentstyle=\color{green!40!black}\itshape,
+  stringstyle=\color{purple!65!black},
+  showstringspaces=false,
+  columns=fullflexible,
+  breaklines=true,
+  frame=single,
+  rulecolor=\color{black!25},
+  xleftmargin=1em,
+  aboveskip=0.7em,belowskip=0.4em,
+}
+\lstset{style=vmkcode}
 %New command to display footnote whose markers will always be hidden
 \let\svthefootnote\thefootnote
 \newcommand\blfootnotetext[1]{%
@@ -143,7 +159,7 @@
 A. N. Moskalev\\
 V. K. Khersonskii}
 \date{}
-\includeonly{Chap4}
+\includeonly{Chap2}
 \begin{document}
 \captionsetup{singlelinecheck=false}\maketitle
 \include{preamble}
