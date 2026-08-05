@@ -16,12 +16,12 @@ Covered
     8.7.1  Sums involving one CG                 eq. 162-164   [done]
     8.7.2  Sums of products of two CG            eq. 165-172   [done]
     8.7.3  three CG (one 6j)                     eq. 173-180   [done]
+    8.7.4  four CG (one 9j)                      eq. 181-191   [done]
     8.7.5  CG and one 6j                         eq. 192-199   [done]
     8.7.7  Additional sums of two CG             eq. 205-208   [done]
 
 Not yet covered:
-    8.7.4  four CG (one 9j)                      eq. 181-191   (some OCR damage)
-    8.7.6  CG and one 9j                         eq. 200-204   (some OCR damage)
+    8.7.6  CG and one 9j                         eq. 200-204   (next)
 
 Usage:
     python3 sums_8_7.py [--n N] [--seed S]
@@ -32,7 +32,7 @@ import argparse
 import random
 
 from sympy import Rational, Integer, sqrt, factorial as fac, S
-from sympy.physics.wigner import clebsch_gordan, wigner_6j
+from sympy.physics.wigner import clebsch_gordan, wigner_6j, wigner_9j
 
 HALF = Rational(1, 2)
 TOL = S(10) ** (-18)
@@ -95,6 +95,14 @@ def w6(a, b, c, d, e, f):
 def sgn(n):
     """(-1)^n kept symbolic (n may be a momentum sum, not always integer)."""
     return S.NegativeOne ** n
+
+
+def w9(a, b, c, d, e, f, g, h, i):
+    """Wigner 9j symbol {a b c; d e f; g h i} (0 outside the physical domain)."""
+    try:
+        return wigner_9j(a, b, c, d, e, f, g, h, i)
+    except Exception:
+        return S.Zero
 
 
 MR = [Rational(i, 2) for i in range(0, 9)]     # internal momentum range 0..4
@@ -387,6 +395,166 @@ SEC_873 = [
 
 
 # ===========================================================================
+# 8.7.4  Sums of products of four CG (one 9j)                (eq. 181-191)
+#
+# sum_{be ga ep ph} [phase] C C C C
+#   = phase Pi(..) sum_{k ka} C_{g eta, j (+/-mu)}^{k ka} C_{d de, a (+/-al)}^{k ka}
+#       {c b a; f e d; j g k}                       (eq. 187 uses {a b c; d e f; k g j}).
+# Eight external momenta a..j; the internal momentum k is summed over its range.
+# ===========================================================================
+def _cfg874():
+    for _ in range(3000):
+        a = rj(HALF, Rational(3, 2)); b = rj(HALF, Rational(3, 2)); c = random.choice(crange(a, b))
+        d = rj(HALF, Rational(3, 2)); e = rj(HALF, Rational(3, 2)); f = random.choice(crange(d, e))
+        g = random.choice(crange(b, e)); j = random.choice(crange(c, f))
+        ks = [k for k in crange(j, g) if abs(a - d) <= k <= a + d]
+        if ks and any(w9(c, b, a, f, e, d, j, g, k) != 0 for k in ks):
+            return (a, b, c, d, e, f, g, j, ks)
+    return None
+
+
+def _four(b, c, e, f, term):
+    return sum((term(be, ga, ep, ph) for be in proj(b) for ga in proj(c)
+                for ep in proj(e) for ph in proj(f)), S.Zero)
+
+
+def W9(a, b, c, d, e, f, g, j, k):
+    return w9(c, b, a, f, e, d, j, g, k)           # {c b a; f e d; j g k}
+
+
+def _run874(lhsf, rhsf):
+    P = _cfg874()
+    if P is None:
+        return None
+    a, b, c, d, e, f, g, j, ks = P
+    al = random.choice(proj(a)); de = random.choice(proj(d)); eta = random.choice(proj(g))
+    rhs, mu = rhsf(a, b, c, d, e, f, g, j, ks, al, de, eta)
+    if rhs == 0 or abs(mu) > j:
+        return None
+    return lhsf(a, b, c, d, e, f, g, j, al, de, eta, mu), rhs
+
+
+def r181():
+    return _run874(
+        lambda a, b, c, d, e, f, g, j, al, de, eta, mu: _four(b, c, e, f, lambda be, ga, ep, ph:
+            C(b, c, a, be, ga, al) * C(e, f, d, ep, ph, de) * C(e, b, g, ep, be, eta) * C(f, c, j, ph, ga, mu)),
+        lambda a, b, c, d, e, f, g, j, ks, al, de, eta: (
+            Pi(a, d, g, j) * sum((C(g, j, k, eta, al + de - eta, al + de) * C(d, a, k, de, al, al + de)
+                                  * W9(a, b, c, d, e, f, g, j, k) for k in ks), S.Zero), al + de - eta))
+
+
+def r182():
+    return _run874(
+        lambda a, b, c, d, e, f, g, j, al, de, eta, mu: _four(b, c, e, f, lambda be, ga, ep, ph:
+            C(b, c, a, be, -ga, al) * C(e, f, d, ep, -ph, de) * C(b, e, g, be, ep, eta) * C(c, f, j, ga, ph, mu)),
+        lambda a, b, c, d, e, f, g, j, ks, al, de, eta: (
+            sgn(b + e - g) * Pi(a, d, g, j) * sum((C(g, j, k, eta, -(eta - al - de), al + de)
+                * C(d, a, k, de, al, al + de) * W9(a, b, c, d, e, f, g, j, k) for k in ks), S.Zero), eta - al - de))
+
+
+def r183():
+    return _run874(
+        lambda a, b, c, d, e, f, g, j, al, de, eta, mu: _four(b, c, e, f, lambda be, ga, ep, ph:
+            C(b, a, c, be, al, ga) * C(f, j, c, ph, mu, ga) * C(b, g, e, be, eta, ep) * C(f, d, e, ph, de, ep)),
+        lambda a, b, c, d, e, f, g, j, ks, al, de, eta: (
+            sgn(a - b + f - j) * (2 * c + 1) * (2 * e + 1) * sum((C(g, j, k, eta, al + de - eta, al + de)
+                * C(d, a, k, de, al, al + de) * W9(a, b, c, d, e, f, g, j, k) for k in ks), S.Zero), al + de - eta))
+
+
+def r184():
+    return _run874(
+        lambda a, b, c, d, e, f, g, j, al, de, eta, mu: _four(b, c, e, f, lambda be, ga, ep, ph:
+            C(a, b, c, al, be, ga) * C(g, e, b, eta, ep, be) * C(d, f, e, de, ph, ep) * C(j, c, f, mu, ga, ph)),
+        lambda a, b, c, d, e, f, g, j, ks, al, de, eta: (
+            sgn(d + e - c - j) * Pi(b, c, e, f) * sum((sgn(k - (al + de))
+                * C(g, j, k, eta, -(al + de) - eta, -(al + de)) * C(d, a, k, de, al, al + de)
+                * W9(a, b, c, d, e, f, g, j, k) for k in ks), S.Zero), -(al + de) - eta))
+
+
+def r185():
+    return _run874(
+        lambda a, b, c, d, e, f, g, j, al, de, eta, mu: _four(b, c, e, f, lambda be, ga, ep, ph:
+            C(b, a, c, be, -al, ga) * C(e, d, f, ep, -de, ph) * C(g, b, e, eta, -be, ep) * C(j, c, f, mu, -ga, ph)),
+        lambda a, b, c, d, e, f, g, j, ks, al, de, eta: (
+            sgn(b - c - g - al + eta) * Pi(c, e, f, f) * sum((C(g, j, k, eta, -(eta - al - de), al + de)
+                * C(d, a, k, de, al, al + de) * W9(a, b, c, d, e, f, g, j, k) for k in ks), S.Zero), eta - al - de))
+
+
+def r186():
+    return _run874(
+        lambda a, b, c, d, e, f, g, j, al, de, eta, mu: _four(b, c, e, f, lambda be, ga, ep, ph:
+            C(b, c, a, be, -ga, al) * C(e, f, d, ep, ph, de) * C(e, g, b, -ep, eta, be) * C(f, j, c, ph, mu, ga)),
+        lambda a, b, c, d, e, f, g, j, ks, al, de, eta: (
+            sgn(b + f - g - de) * Pi(a, b, c, d) * sum((C(g, j, k, eta, -(eta - al - de), al + de)
+                * C(d, a, k, de, al, al + de) * W9(a, b, c, d, e, f, g, j, k) for k in ks), S.Zero), eta - al - de))
+
+
+def r187():
+    return _run874(
+        lambda a, b, c, d, e, f, g, j, al, de, eta, mu: _four(b, c, e, f, lambda be, ga, ep, ph:
+            C(b, c, a, be, ga, al) * C(e, f, d, ep, ph, de) * C(e, g, b, ep, eta, be) * C(f, j, c, ph, mu, ga)),
+        lambda a, b, c, d, e, f, g, j, ks, al, de, eta: (
+            sum((Pi(b, c, d, k) * C(g, j, k, eta, al - de - eta, al - de) * C(d, k, a, de, al - de, al)
+                 * w9(a, b, c, d, e, f, k, g, j) for k in ks if abs(al - de) <= k), S.Zero), al - de - eta))
+
+
+def r188():
+    return _run874(
+        lambda a, b, c, d, e, f, g, j, al, de, eta, mu: _four(b, c, e, f, lambda be, ga, ep, ph:
+            C(b, c, a, be, -ga, al) * C(e, f, d, ep, -ph, de) * C(g, b, e, eta, -be, ep) * C(j, f, c, mu, -ph, ga)),
+        lambda a, b, c, d, e, f, g, j, ks, al, de, eta: (
+            sgn(c + e - g + j + al - (eta - al - de)) * Pi(a, d, e, c) * sum((C(g, j, k, eta, -(eta - al - de), al + de)
+                * C(d, a, k, de, al, al + de) * W9(a, b, c, d, e, f, g, j, k) for k in ks), S.Zero), eta - al - de))
+
+
+def r189():
+    return _run874(
+        lambda a, b, c, d, e, f, g, j, al, de, eta, mu: _four(b, c, e, f, lambda be, ga, ep, ph:
+            C(b, c, a, be, ga, al) * C(b, g, e, be, eta, ep) * C(f, d, e, ph, de, ep) * C(f, c, j, ph, ga, mu)),
+        lambda a, b, c, d, e, f, g, j, ks, al, de, eta: (
+            sgn(j - a + de - eta) * Pi(a, e, e, j) * sum((C(g, j, k, eta, -(eta - de + al), de - al)
+                * C(d, a, k, de, -al, de - al) * W9(a, b, c, d, e, f, g, j, k) for k in ks), S.Zero), eta - de + al))
+
+
+def r190():
+    # NOTE: Chap8.tex eq (8.7.190) prints the phase as (-1)^{j-a-g+de}; verified
+    # correct only as (-1)^{j-a+g+de} (the -g should be +g -- an OCR sign flip).
+    return _run874(
+        lambda a, b, c, d, e, f, g, j, al, de, eta, mu: _four(b, c, e, f, lambda be, ga, ep, ph:
+            C(b, c, a, be, ga, al) * C(g, e, b, eta, ep, be) * C(f, d, e, ph, de, ep) * C(f, c, j, ph, ga, mu)),
+        lambda a, b, c, d, e, f, g, j, ks, al, de, eta: (
+            sgn(j - a + g + de) * Pi(a, b, e, j) * sum((C(g, j, k, -eta, eta + de - al, de - al)
+                * C(d, a, k, de, -al, de - al) * W9(a, b, c, d, e, f, g, j, k) for k in ks), S.Zero), al - de - eta))
+
+
+def r191():
+    # NOTE: Chap8.tex eq (8.7.191) prints the sum as sum_{be ga ep}; it must also
+    # run over phi (sum_{be ga ep ph}) -- an OCR omission (verified).
+    return _run874(
+        lambda a, b, c, d, e, f, g, j, al, de, eta, mu: _four(b, c, e, f, lambda be, ga, ep, ph:
+            sgn(c - ga + e - ep) * C(a, b, c, al, be, ga) * C(d, f, e, de, ph, ep)
+            * C(e, b, g, ep, be, eta) * C(c, f, j, ga, ph, mu)),
+        lambda a, b, c, d, e, f, g, j, ks, al, de, eta: (
+            sgn(a + d - al - de) * Pi(c, e, g, j) * sum((C(g, j, k, eta, -(eta - de + al), de - al)
+                * C(d, a, k, de, -al, de - al) * W9(a, b, c, d, e, f, g, j, k) for k in ks), S.Zero), eta - de + al))
+
+
+SEC_874 = [
+    ("eq 8.7.181  four CG + 9j", r181),
+    ("eq 8.7.182  four CG + 9j", r182),
+    ("eq 8.7.183  four CG + 9j", r183),
+    ("eq 8.7.184  four CG + 9j", r184),
+    ("eq 8.7.185  four CG + 9j", r185),
+    ("eq 8.7.186  four CG + 9j", r186),
+    ("eq 8.7.187  four CG + 9j (alt 9j)", r187),
+    ("eq 8.7.188  four CG + 9j", r188),
+    ("eq 8.7.189  four CG + 9j", r189),
+    ("eq 8.7.190  four CG + 9j (phase OCR)", r190),
+    ("eq 8.7.191  four CG + 9j (sum OCR)", r191),
+]
+
+
+# ===========================================================================
 # 8.7.5  Sums of products of CG and one 6j symbol            (eq. 192-199)
 #
 # Form  sum_{internal} [phase] Pi(..) C C {6j} = C C   (two CG on the RHS).
@@ -598,13 +766,13 @@ IMPLEMENTED = [
     ("8.7.1  Sums involving one CG", SEC_871),
     ("8.7.2  Sums of products of two CG", SEC_872),
     ("8.7.3  three CG (one 6j)", SEC_873),
+    ("8.7.4  four CG (one 9j)", SEC_874),
     ("8.7.5  CG and one 6j", SEC_875),
     ("8.7.7  Additional sums of two CG", SEC_877),
 ]
 
 TODO = [
-    ("8.7.4  four CG (one 9j)      eq. 181-191", "some indices still OCR-damaged"),
-    ("8.7.6  CG and one 9j         eq. 200-204", "some indices still OCR-damaged"),
+    ("8.7.6  CG and one 9j         eq. 200-204", "next"),
 ]
 
 
