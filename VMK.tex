@@ -30,6 +30,7 @@
 \usepackage{fontspec}
 \usepackage{newunicodechar}
 \usepackage{diagrams}
+\usetikzlibrary{patterns,angles,quotes}
 \usepackage{xcolor}
 \usepackage{listings}
 \lstdefinestyle{vmkcode}{%
@@ -144,7 +145,7 @@
 
 \usepackage{relsize}
 \newcommand{\Fact}[1]{{\mathlarger{\Pi}_{#1}}}
-
+\newcommand{\Fhg}[2]{\prescript{}{#1}{F}_{#2}^{}}
 \newunicodechar{∇}{\ifmmode\nabla\else{$\nabla$}\fi}
 \newunicodechar{→}{\ifmmode\rightarrow\else{$\rightarrow$}\fi}
 \newunicodechar{𝜆}{\ifmmode\lambda\else{$\lambda$}\fi}
