@@ -18,10 +18,8 @@ Covered
     8.7.3  three CG (one 6j)                     eq. 173-180   [done]
     8.7.4  four CG (one 9j)                      eq. 181-191   [done]
     8.7.5  CG and one 6j                         eq. 192-199   [done]
+    8.7.6  CG and one 9j                         eq. 200-203   [done, 204 flagged]
     8.7.7  Additional sums of two CG             eq. 205-208   [done]
-
-Not yet covered:
-    8.7.6  CG and one 9j                         eq. 200-204   (next)
 
 Usage:
     python3 sums_8_7.py [--n N] [--seed S]
@@ -106,6 +104,7 @@ def w9(a, b, c, d, e, f, g, h, i):
 
 
 MR = [Rational(i, 2) for i in range(0, 9)]     # internal momentum range 0..4
+MMj = Rational(3, 2)                            # external-momentum cap for 8.7.6
 
 
 # ===========================================================================
@@ -684,6 +683,88 @@ SEC_875 = [
 
 
 # ===========================================================================
+# 8.7.6  Sums of products of CG and one 9j symbol            (eq. 200-204)
+#
+# The "inverse" 9j relations: a 9j-sum over TWO momenta = product of three CG.
+# eq. 204 is left out -- it is OCR-damaged (sum_{aj} should be sum_{gj}; the 2nd
+# RHS coefficient C_{e eps,j phi}^{d de} should read f; C_{d de,a al}^{k al}
+# should end in kappa; and \Fact{a d j j g g} is suspect).
+# ===========================================================================
+def r200():
+    e = rj(HALF, MMj); f = rj(HALF, MMj); b = rj(HALF, MMj); c = rj(HALF, MMj)
+    d = random.choice(crange(e, f)); g = random.choice(crange(e, b)); j = random.choice(crange(f, c))
+    be = random.choice(proj(b)); ga = random.choice(proj(c)); ep = random.choice(proj(e)); ph = random.choice(proj(f))
+    al = be + ga; de = ep + ph; eta = ep + be; mu = ph + ga; ka = eta + mu
+    if abs(de) > d or abs(eta) > g or abs(mu) > j:
+        return None
+    rhs = C(e, f, d, ep, ph, de) * C(e, b, g, ep, be, eta) * C(f, c, j, ph, ga, mu)
+    if rhs == 0:
+        return None
+    lhs = sum((Pi(a, d, g, j) * C(b, c, a, be, ga, al) * C(g, j, k, eta, mu, ka)
+               * C(d, a, k, de, al, ka) * W9(a, b, c, d, e, f, g, j, k)
+               for a in crange(b, c) for k in crange(g, j)), S.Zero)
+    return lhs, rhs
+
+
+def r201():
+    e = rj(HALF, MMj); f = rj(HALF, MMj); a = rj(HALF, MMj); b = rj(HALF, MMj)
+    d = random.choice(crange(e, f)); c = random.choice(crange(a, b)); k = random.choice(crange(d, a))
+    be = random.choice(proj(b)); ga = random.choice(proj(c)); ep = random.choice(proj(e)); ph = random.choice(proj(f))
+    al = be + ga; de = ep + ph; ka = de + al; eta = ep + be; mu = ph + ga
+    if abs(al) > a or abs(de) > d or abs(ka) > k:
+        return None
+    rhs = C(d, a, k, de, al, ka) * C(e, f, d, ep, ph, de) * C(b, c, a, be, ga, al)
+    if rhs == 0:
+        return None
+    lhs = sum((Pi(a, d, g, j) * C(g, j, k, eta, mu, ka) * C(e, b, g, ep, be, eta)
+               * C(f, c, j, ph, ga, mu) * W9(a, b, c, d, e, f, g, j, k)
+               for g in crange(e, b) for j in crange(f, c)), S.Zero)
+    return lhs, rhs
+
+
+def r202():
+    # NOTE: Chap8.tex eq (8.7.202) writes the weight as \Fact{a d g j}^{-1};
+    # the "-1" is an OCR error -- it is \Fact{a d g j} (verified here).
+    e = rj(HALF, MMj); f = rj(HALF, MMj); a = rj(HALF, MMj); b = rj(HALF, MMj)
+    d = random.choice(crange(e, f)); c = random.choice(crange(a, b)); k = random.choice(crange(d, a))
+    be = random.choice(proj(b)); ga = random.choice(proj(c)); ep = random.choice(proj(e)); ph = random.choice(proj(f))
+    al = be - ga; de = ep - ph; ka = de + al; eta = be + ep; mu = ga + ph
+    if abs(al) > a or abs(de) > d or abs(ka) > k:
+        return None
+    rhs = C(d, a, k, de, al, ka) * C(e, f, d, ep, -ph, de) * C(b, c, a, be, -ga, al)
+    if rhs == 0:
+        return None
+    lhs = sum((sgn(b + e - g) * Pi(a, d, g, j) * C(g, j, k, eta, -mu, ka) * C(b, e, g, be, ep, eta)
+               * C(c, f, j, ga, ph, mu) * W9(a, b, c, d, e, f, g, j, k)
+               for g in crange(b, e) for j in crange(c, f)), S.Zero)
+    return lhs, rhs
+
+
+def r203():
+    b = rj(HALF, MMj); c = rj(HALF, MMj); e = rj(HALF, MMj); f = rj(HALF, MMj)
+    g = random.choice(crange(e, b)); j = random.choice(crange(f, c)); k = random.choice(crange(g, j))
+    be = random.choice(proj(b)); ga = random.choice(proj(c)); ep = random.choice(proj(e)); ph = random.choice(proj(f))
+    al = be - ga; de = ep + ph; eta = be + ep; mu = ga - ph; ka = al + de
+    if abs(eta) > g or abs(mu) > j or abs(ka) > k:
+        return None
+    rhs = C(g, j, k, eta, -mu, ka) * C(e, g, b, -ep, eta, be) * C(f, j, c, ph, mu, ga)
+    if rhs == 0:
+        return None
+    lhs = sum((sgn(b + f - g - de) * Pi(a, b, c, d) * C(b, c, a, be, -ga, al) * C(e, f, d, ep, ph, de)
+               * C(d, a, k, de, al, ka) * W9(a, b, c, d, e, f, g, j, k)
+               for a in crange(b, c) for d in crange(e, f)), S.Zero)
+    return lhs, rhs
+
+
+SEC_876 = [
+    ("eq 8.7.200  9j-sum (a,k) = 3 CG", r200),
+    ("eq 8.7.201  9j-sum (g,j) = 3 CG", r201),
+    ("eq 8.7.202  9j-sum (g,j) = 3 CG", r202),
+    ("eq 8.7.203  9j-sum (a,d) = 3 CG", r203),
+]
+
+
+# ===========================================================================
 # 8.7.7  Additional sums of products of two CG               (eq. 205-208)
 # ===========================================================================
 def r205():
@@ -764,11 +845,12 @@ IMPLEMENTED = [
     ("8.7.3  three CG (one 6j)", SEC_873),
     ("8.7.4  four CG (one 9j)", SEC_874),
     ("8.7.5  CG and one 6j", SEC_875),
+    ("8.7.6  CG and one 9j", SEC_876),
     ("8.7.7  Additional sums of two CG", SEC_877),
 ]
 
 TODO = [
-    ("8.7.6  CG and one 9j         eq. 200-204", "next"),
+    ("8.7.6  eq 204 only", "OCR-damaged: sum_{aj}->sum_{gj}, C_{e,jphi}->f, ^{ka}->kappa, Fact suspect"),
 ]
 
 
