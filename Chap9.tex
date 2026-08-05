@@ -1,7 +1,7 @@
 \chapter{6j SYMBOLS AND THE RACAH COEFFICIENTS}
 \section{DEFINITION}
 \subsection{6j Symbols}
-The Wigner $6 j$ symbols $[110]$ are related to the coefficients of transformations between different coupling schemes of three angular momenta. The angular momenta $\mathrm{j}_{1}, \mathrm{j}_{2}, \mathrm{j}_{3}$ may be coupled to give a resultant angular momentum $j$ and its projection $m$ in three different ways:
+The Wigner $6 j$ symbols [110] are related to the coefficients of transformations between different coupling schemes of three angular momenta. The angular momenta $\mathrm{j}_{1}, \mathrm{j}_{2}, \mathrm{j}_{3}$ may be coupled to give a resultant angular momentum $j$ and its projection $m$ in three different ways:
 \begin{equation}
 \begin{array}{rlrl}
 \text { I) } \vect{j}_{1}+\vect{j}_{2}  =\vect{j}_{12}, & \vect{j}_{12}+\vect{j}_{3}=\vect{j}, \\
@@ -9,52 +9,55 @@ The Wigner $6 j$ symbols $[110]$ are related to the coefficients of transformati
 \text { III) } \vect{j}_{1}+\vect{j}_{3}=\vect{j}_{13}, & \vect{j}_{13}+\vect{j}_{2}=\vect{j} . \label{chap9:eq:1}
 \end{array}
 \end{equation}
-Let $\left|j_{1} j_{2}\left(j_{12}\right) j_{3} j m\right\rangle$ denote the state vectors corresponding to the coupling scheme I. These vectors are eigenvectors of the operators $\widehat{j}_{1}^{2}, \widehat{j}_{2}^{2}, \hat{j}_{3}^{2}, \hat{j}_{12}^{2}, \hat{j}^{2}, \hat{j}_{x}$ and may be written as
+Let $\ket{j_{1} j_{2}\left(j_{12}\right) j_{3} j m}$ denote the state vectors corresponding to the coupling scheme I. These vectors are eigenvectors of the operators $\widehat{j}_{1}^{2}, \widehat{j}_{2}^{2}, \hat{j}_{3}^{2}, \hat{j}_{12}^{2}, \hat{j}^{2}, \hat{j}_{x}$ and may be written as
 \begin{equation}
-\left|j_{1} j_{2}\left(j_{12}\right) j_{33} j m\right\rangle=\sum_{m_{1} m_{2} m_{2}} \clebsch{j_{12}}{m_{12}}{j_{2}}{m_{3}}{j}{m} C_{j_{2} m_{12} m_{2}}^{j_{12} m_{12}}\left|j_{1} m_{1}, j_{2} m_{2}, j_{3} m_{3}\right\rangle . \label{chap9:eq:2}
+\ket{j_{1} j_{2}\left(j_{12}\right) j_{33} j m}=\sum_{m_{1} m_{2} m_{2}} \clebsch{j_{12}}{m_{12}}{j_{2}}{m_{3}}{j}{m} C_{j_{2} m_{12} m_{2}}^{j_{12} m_{12}}\ket{j_{1} m_{1}, j_{2} m_{2}, j_{3} m_{3}} . \label{chap9:eq:2}
 \end{equation}
 The state vectors corresponding to the coupling scheme II are eigenvectors of the operators $\widehat{j}_{1}^{2}, \widehat{j}_{2}^{2}, \widehat{j}_{3}^{2}, \widehat{j}_{23}^{2}, \widehat{j}^{2}, \widehat{j}_{x}$,
 \begin{equation}
-\left|j_{1}, j_{2} j_{3}\left(j_{23}\right) j m\right\rangle=\sum_{m_{1} m_{2} m_{3}} \clebsch{j_{1}}{m_{1}}{j_{23}}{m_{23}}{j}{m} \clebsch{j_{2}}{m_{2}}{j_{2}}{m_{3}}{j_{2}}{m_{20}}\left|j_{1} m_{1}, j_{2} m_{2}, j_{3} m_{3}\right\rangle . \label{chap9:eq:3}
+\ket{j_{1}, j_{2} j_{3}\left(j_{23}\right) j m}=\sum_{m_{1} m_{2} m_{3}} \clebsch{j_{1}}{m_{1}}{j_{23}}{m_{23}}{j}{m} \clebsch{j_{2}}{m_{2}}{j_{2}}{m_{3}}{j_{2}}{m_{20}}\ket{j_{1} m_{1}, j_{2} m_{2}, j_{3} m_{3}} . \label{chap9:eq:3}
 \end{equation}
 Similarly, the state vectors corresponding to the coupling scheme III are eigenvectors of the operators $\widehat{\vect{j}}_{\frac{1}{2}}^{2}, \widehat{\vect{j}}_{2}^{2}, \widehat{\vect{j}}_{3}^{2}$, $\widehat{j}_{13}^{2}, \widehat{j}^{2}, \widehat{j}_{x}$,
 \begin{equation}
-\left|j_{1} j_{3}\left(j_{13}\right) \dot{j}_{2} j m\right\rangle=\sum_{m_{1} m_{2} m_{3}} \clebsch{j_{13}}{m_{13}}{j_{2}}{m_{2}}{j}{m} \clebsch{j_{1}}{m_{1}}{j_{3}}{m_{2}}{j_{13}}{m_{13}}\left|j_{1} m_{1}, j_{2} m_{2}, j_{3} m_{3}\right\rangle . \label{chap9:eq:4}
+\ket{j_{1} j_{3}\left(j_{13}\right) \dot{j}_{2} j m}=\sum_{m_{1} m_{2} m_{3}} \clebsch{j_{13}}{m_{13}}{j_{2}}{m_{2}}{j}{m} \clebsch{j_{1}}{m_{1}}{j_{3}}{m_{2}}{j_{13}}{m_{13}}\ket{j_{1} m_{1}, j_{2} m_{2}, j_{3} m_{3}} . \label{chap9:eq:4}
 \end{equation}
 States belonging to each coupling scheme form a complete set of states. A transition from one coupling scheme to another is performed by some unitary transformation which relates the states with the same total angular momentum $j$ and projection $m$. The coefficients $U$ of this transformation differ from the $6 j$ symbols only by normalization and phase factors. These factors are chosen in such a way to make the $6 j$ symbols more symmetric (Sec. 9.4).
 
 One defines the Wigner $6 j$ symbols $\sixj{j_{1}}{j_{2}}{j_{12}}{j_{3}}{j}{j_{23}}$ by the relation
 \begin{align}
-& \braket{j_{1} j_{2}\left(j_{12}\right) j_{3} j m}{j_{1}, j_{2} j_{3}\left(j_{23}\right) j^{\prime} m^{\prime}}=\delta_{j j^{\prime}} \delta_{m m^{\prime}} U\left(j_{1} j_{2} j j_{3} ; j_{12} j_{23}\right)  \notag\\
+ \braket{j_{1} j_{2}\left(j_{12}\right) j_{3} j m}{j_{1}, j_{2} j_{3}\left(j_{23}\right) j^{\prime} m^{\prime}}=&\delta_{j j^{\prime}} \delta_{m m^{\prime}} U\left(j_{1} j_{2} j j_{3} ; j_{12} j_{23}\right)  \notag\\
 = & \delta_{j j^{\prime}} \delta_{m m^{\prime}}(-1)^{j_{1}+j_{2}+j_{3}+j} \sqrt{\left(2 j_{12}+1\right)\left(2 j_{23}+1\right)}\sixj{j_{1}}{j_{2}}{j_{12}}{j_{3}}{j}{j_{23}} . \label{chap9:eq:5}
 \end{align}
 From Eq. \eqref{chap9:eq:5} one may obtain [92,64]
-\begin{gather}
-\braket{j_{1} j_{2}\left(j_{12}\right) j_{3} j m}{j_{1} j_{3}\left(j_{13}\right) j_{2} j^{\prime} m^{\prime}}=\delta_{j j^{\prime}} \delta_{m m^{\prime}}(-1)^{j+j_{1}-j_{12}-j_{13}} U\left(j_{2} j_{1} j j_{3} ; j_{12} j_{13}\right)  \notag\\
-=\delta_{j j^{\prime}} \delta_{m m^{\prime}}(-1)^{j_{2}+j_{3}+j_{12}+j_{13}} \sqrt{\left(2 j_{12}+1\right)\left(2 j_{13}+1\right)}\sixj{j_{2}}{j_{1}}{j_{12}}{j_{3}}{j}{j_{13}}  \label{chap9:eq:6}\\
-\braket{j_{1}, j_{2} j_{3}\left(j_{23}\right) j m}{j_{1} j_{3}\left(j_{13}\right) j_{2} j^{\prime} m^{\prime}}=\delta_{j j^{\prime}} \delta_{m m^{\prime}}(-1)^{j_{2}+j_{3}-j_{23}} U\left(j_{1} j_{3} j j_{2} ; j_{13} j_{23}\right)  \notag\\
-=\delta_{j j^{\prime}} \delta_{m m^{\prime}}(-1)^{j_{1}+j+j_{23}} \sqrt{\left(2 j_{13}+1\right)\left(2 j_{23}+1\right)}\sixj{j_{1}}{j_{3}}{j_{13}}{j_{2}}{j}{j_{23}} . \label{chap9:eq:7}
-\end{gather}
-According to the definition (5) the $6 j$ symbols may be given in terms of the Clebsch-Gordan coefficients
-\begin{gather}
-\sum \clebsch{j_{12}}{m_{12}}{j_{3}}{m_{3}}{j}{m} \clebsch{j_{1}}{m_{1}}{j_{2}}{m_{2}}{j_{12}}{m_{12}} \clebsch{j_{1}}{m_{1}}{j_{23}}{m_{23}}{j^{\prime}}{m^{\prime}} \clebsch{j_{2}}{m_{2}}{j_{3}}{m_{3}}{j_{23}}{m_{23}}  \notag\\
-=\delta_{j j^{\prime}} \delta_{m m^{\prime}}(-1)^{j_{1}+j_{2}+j_{3}+j} \sqrt{\left(2 j_{12}+1\right)\left(2 j_{23}+1\right)}\sixj{j_{1}}{j_{2}}{j_{12}}{j_{3}}{j}{j_{23}} . \label{chap9:eq:8}
-\end{gather}
-Here the sum is over $m_{1}, m_{2}, m_{3}, m_{12}, m_{23}$ while $m$ and $m^{\prime}$ are fixed. This relation completely determines absolute values and phases of the $6 j$ symbols. The $6 j$ symbols turn out tô be real just as the Clebsch-Gordan coefficients are.
-
-The quantum-mechanical rules of vector addition impose some restrictions on possible values of momenta which are arguments of the $6 j$ symbol $\sixj{j_{1}}{j_{2}}{j_{12}}{j_{3}}{j}{j_{23}}$.\\
-(a) All momenta are integer or half-integer nonnegative numbers (with one exception considered in Sec. 9.4).\\
-(b) Each triad $\left(j_{1} j_{2} j_{12}\right),\left(j_{12} j_{3} j\right),\left(j_{2} j_{3} j_{23}\right)$ and $\left(j_{23} j_{1} j\right)$ should satisfy the triangular condition (Eq. 8.1(1)). The unitarity of the recoupling transformations implies the orthogonality and normalization conditions of the $6 j$ symbols.
 \begin{align}
-& \sum_{j_{12}}\left(2 j_{12}+1\right)\left(2 j_{23}+1\right)\sixj{j_{1}}{j_{2}}{j_{12}}{j_{3}}{j}{j_{23}}\sixj{j_{1}}{j_{2}}{j_{12}}{j_{3}}{j}{j_{23}^{\prime}}=\delta_{j_{23} j_{23}^{\prime}}  \label{chap9:eq:9}\\
-& \sum_{j_{23}}\left(2 j_{12}+1\right)\left(2 j_{23}+1\right)\sixj{j_{1}}{j_{2}}{j_{12}}{j_{3}}{j}{j_{23}}\sixj{j_{1}}{j_{2}}{j_{12}^{\prime}}{j_{3}}{j}{j_{23}}=\delta_{j_{12} j_{23}^{\prime}} \label{chap9:eq:10}
+\braket{j_{1} j_{2}\left(j_{12}\right) j_{3} j m}{j_{1} j_{3}\left(j_{13}\right) j_{2} j^{\prime} m^{\prime}}=&\delta_{j j^{\prime}} \delta_{m m^{\prime}}(-1)^{j+j_{1}-j_{12}-j_{13}} U\left(j_{2} j_{1} j j_{3} ; j_{12} j_{13}\right)  \notag\\
+=&\delta_{j j^{\prime}} \delta_{m m^{\prime}}(-1)^{j_{2}+j_{3}+j_{12}+j_{13}} \sqrt{\left(2 j_{12}+1\right)\left(2 j_{13}+1\right)}\sixj{j_{2}}{j_{1}}{j_{12}}{j_{3}}{j}{j_{13}}  \label{chap9:eq:6}\\
+\braket{j_{1}, j_{2} j_{3}\left(j_{23}\right) j m}{j_{1} j_{3}\left(j_{13}\right) j_{2} j^{\prime} m^{\prime}}=&\delta_{j j^{\prime}} \delta_{m m^{\prime}}(-1)^{j_{2}+j_{3}-j_{23}} U\left(j_{1} j_{3} j j_{2} ; j_{13} j_{23}\right)  \notag\\
+=&\delta_{j j^{\prime}} \delta_{m m^{\prime}}(-1)^{j_{1}+j+j_{23}} \sqrt{\left(2 j_{13}+1\right)\left(2 j_{23}+1\right)}\sixj{j_{1}}{j_{3}}{j_{13}}{j_{2}}{j}{j_{23}} . \label{chap9:eq:7}
+\end{align}
+According to the definition (5) the $6 j$ symbols may be given in terms of the Clebsch-Gordan coefficients
+\begin{multline}
+\sum \clebsch{j_{12}}{m_{12}}{j_{3}}{m_{3}}{j}{m} \clebsch{j_{1}}{m_{1}}{j_{2}}{m_{2}}{j_{12}}{m_{12}} \clebsch{j_{1}}{m_{1}}{j_{23}}{m_{23}}{j^{\prime}}{m^{\prime}} \clebsch{j_{2}}{m_{2}}{j_{3}}{m_{3}}{j_{23}}{m_{23}}  \\
+=\delta_{j j^{\prime}} \delta_{m m^{\prime}}(-1)^{j_{1}+j_{2}+j_{3}+j} \sqrt{\left(2 j_{12}+1\right)\left(2 j_{23}+1\right)}\sixj{j_{1}}{j_{2}}{j_{12}}{j_{3}}{j}{j_{23}} . \label{chap9:eq:8}
+\end{multline}
+Here the sum is over $m_{1}, m_{2}, m_{3}, m_{12}, m_{23}$ while $m$ and $m^{\prime}$ are fixed. This relation completely determines absolute values and phases of the $6 j$ symbols. The $6 j$ symbols turn out to be real just as the Clebsch-Gordan coefficients are.
+
+The quantum-mechanical rules of vector addition impose some restrictions on possible values of momenta which are arguments of the $6 j$ symbol $\sixj{j_{1}}{j_{2}}{j_{12}}{j_{3}}{j}{j_{23}}$.
+\begin{enumerate}[label=(\alph*)]
+\item All momenta are integer or half-integer nonnegative numbers (with one exception considered in Sec. 9.4).
+\item Each triad $\left(j_{1} j_{2} j_{12}\right),\left(j_{12} j_{3} j\right),\left(j_{2} j_{3} j_{23}\right)$ and $\left(j_{23} j_{1} j\right)$ should satisfy the triangular condition (Eq. 8.1(1)). 
+\end{enumerate}
+The unitarity of the recoupling transformations implies the orthogonality and normalization conditions of the $6 j$ symbols,
+\begin{align}
+& \sum_{j_{12}}\left(2 j_{12}+1\right)\left(2 j_{23}+1\right)\sixj{j_{1}}{j_{2}}{j_{12}}{j_{3}}{j}{j_{23}}\sixj{j_{1}}{j_{2}}{j_{12}}{j_{3}}{j}{j_{23}^{\prime}}=\delta_{j_{23} j_{23}^{\prime}} , \label{chap9:eq:9}\\
+& \sum_{j_{23}}\left(2 j_{12}+1\right)\left(2 j_{23}+1\right)\sixj{j_{1}}{j_{2}}{j_{12}}{j_{3}}{j}{j_{23}}\sixj{j_{1}}{j_{2}}{j_{12}^{\prime}}{j_{3}}{j}{j_{23}}=\delta_{j_{12} j_{23}^{\prime}} . \label{chap9:eq:10}
 \end{align}
 Below we shall use Latin letters $a, b, c$, etc., to denote arguments of the $6 j$ symbols.
 
 \subsection{Racah Coefficients}
 Instead of the Wigner $6 j$ symbols the Racah coefficients [91] are often used, especially in spectroscopy theory. These coefficients differ from the $6 j$ symbols only by a phase factor:
 \begin{equation}
-\sixj{a}{b}{c}{d}{e}{f}  \label{chap9:eq:11} \equiv(-1)^{a+b+d+e} W(a b e d ; c f)
+\sixj{a}{b}{c}{d}{e}{f}  \label{chap9:eq:11} \equiv(-1)^{a+b+d+e} W(a b e d ; c f) .
 \end{equation}
 The Racah coefficients were introduced independently of the $6 j$ symbols. The phase of the Racah coefficients coincides with the phase of the coefficients which describe the transformation between I and II coupling schemes (Eq. (5)).
 
@@ -65,7 +68,7 @@ The $6 j$ symbols and the Racah coefficients may be written in the form of a $3 
 R_{11} & R_{12} & R_{13} & R_{14}  \label{chap9:eq:12}\\
 R_{21} & R_{22} & R_{93} & R_{24} \\
 R_{31} & R_{32} & R_{33} & R_{34}
-\end{array}\right\| \equiv\sixj{a}{b}{c}{d}{e}{f} \equiv(-1)^{a+b+d+e} W(\text { abed } ; c f)
+\end{array}\right\| \equiv\sixj{a}{b}{c}{d}{e}{f} \equiv(-1)^{a+b+d+e} W(a b e d; c f) ,
 \end{equation}
 where
 \begin{equation}
@@ -96,20 +99,20 @@ Note the following relations:
 \end{gather}
 One may also use the following parametrisation of the elements $R_{i \alpha}$ [45]:
 \begin{equation}
-R_{i \alpha}=A_{i}-B_{\alpha} \label{chap9:eq:16}
+R_{i \alpha}=A_{i}-B_{\alpha} . \label{chap9:eq:16}
 \end{equation}
 Here $A_{i}, B_{\alpha}$ are integer nonnegative numbers
 \begin{equation}
 \begin{array}{ll}
-A_{1}=a+b+d+e, & B_{1}=a+b+c \\
-A_{2}=a+c+d+f, & B_{2}=a+e+f \\
-A_{3}=b+c+e+f, & B_{3}=b+d+f \\
-& B_{4}=c+d+e \label{chap9:eq:17}
+A_{1}=a+b+d+e, & B_{1}=a+b+c,  \\
+A_{2}=a+c+d+f, & B_{2}=a+e+f, \\
+A_{3}=b+c+e+f, & B_{3}=b+d+f, \\
+& B_{4}=c+d+e, \label{chap9:eq:17}
 \end{array}
 \end{equation}
 with
 \begin{equation}
-\sum_{i=1}^{3} A_{i}=\sum_{\alpha=1}^{4} B_{\alpha}=2(a+b+c+d+e+f) \label{chap9:eq:18}
+\sum_{i=1}^{3} A_{i}=\sum_{\alpha=1}^{4} B_{\alpha}=2(a+b+c+d+e+f). \label{chap9:eq:18}
 \end{equation}
 The inverse relations are
 \begin{align}
@@ -123,7 +126,7 @@ The $R$ symbols provide the simplest formulation of the symmetry properties of t
 The $6 j$ symbols $\sixj{a}{b}{c}{d}{e}{f}$ vanish if at least one of the triads $(a b c),(c d e),(a e f)$ and $(b d f)$ does not obey the triangular conditions 8.1 (1). The expressions for the $6 j$ symbols given below are valid if all these conditions are satisfied. Corresponding expressions for the Racah coefficients may be obtained by the use of the relations between these coefficients and the $6 j$ symbols \eqref{chap9:eq:11}.
 
 \subsection{Expressions for the 6j Symbols in Terms of Finite Sums}
-In the expressions presented below the sums are over all integer nonnegative values of $n$ so that no factorial in denominators has a negative argument. The quantities $\Delta(a b c)$ are defined by Eq. $8.2(1)$. Numerical values of $\Delta(a b c)$ are given in Table 8.12.
+In the expressions presented below the sums are over all integer nonnegative values of $n$ so that no factorial in denominators has a negative argument. The quantities $\Delta(a b c)$ are defined in Eq. $8.2(1)$. %Numerical values of $\Delta(a b c)$ are given in Table 8.12.
 \begin{gather}
 \sixj{a}{b}{c}{d}{e}{f}=\Delta(a b c) \Delta(c d e) \Delta(a e f) \Delta(b d f)  \notag\\
 \times \sum_{n} \frac{(-1)^{n}(n+1)!}{(n-a-b-c)!(n-c-d-e)!(n-a-e-f)!(n-b-d-f)!(a+b+d+e-n)!}  \notag\\
@@ -159,32 +162,32 @@ R_{31} & R_{32} & R_{33} & R_{34}
 Here $R_{i \alpha}$ are elements of the $R$ symbol (Sec. 9.1.3), $B_{\alpha}$ are given by Eq. \eqref{chap9:eq:17}, $x_{i}, y_{\alpha}$ are summation indices, $n \equiv \sum_{i=1}^{3} x_{i}+\sum_{\alpha=1}^{4} y_{\alpha}$. The sums are over all integer nonnegative values of $x_{i}, y_{\alpha}$ which satisfy the conditions $x_{i}+y_{\alpha}=R_{i \alpha}$. These conditions show that only one of the summation indices is independent. The sum in \eqref{chap9:eq:26} contains $r+1$ terms where $r=\min \left\{R_{i \alpha}\right\}$. If we take the quantity $n$ (integer nonnegative) as an independent summation index, then $x_{i}=A_{i}-n, y_{\alpha}=n-B_{\alpha}, A_{i}$ and $B_{\alpha}$ being given by Eq. \eqref{chap9:eq:17}. In this case the Bargmann formula \eqref{chap9:eq:26} reduces to the Racah formula \eqref{chap9:eq:20}.
 
 \subsection{Relations Between the $6 j$ Symbols and the Generalized Hypergeometric Functions}
-The $6 j$ symbols may be written in terms of the hypergeometric functions ${ }_{4} F_{3}$ with unit argument:
+The $6 j$ symbols may be written in terms of the hypergeometric functions ${ }\Fhg{4}{3}$ with unit argument:
 \begin{align}
-& \sixj{a}{b}{c}{d}{e}{f}=(-1)^{a+b+d+e} \frac{\Delta(a b c) \Delta(c d e) \Delta(a e f) \Delta(b d f)(a+b+d+e+1)!}{(a+b-c)!(-c+d+e)!(a+e-f)!(b+d-f)!(-a+c-d+f)!(-b+c-e+f)!}  \notag\\
-& \times_{4} F_{3}\left[\left.\begin{array}{c}
+\sixj{a}{b}{c}{d}{e}{f}&=(-1)^{a+b+d+e} \frac{\Delta(a b c) \Delta(c d e) \Delta(a e f) \Delta(b d f)(a+b+d+e+1)!}{(a+b-c)!(-c+d+e)!(a+e-f)!(b+d-f)!(-a+c-d+f)!(-b+c-e+f)!}  \notag\\
+& \times\Fhg{4}{3}\left[\left.\begin{array}{c}
 -a-b+c, c-d-e,-a-e+f,-b-d+f \\
 -a-b-d-e-1,-a+c-d+f+1,-b+c-e+f+1
 \end{array} \right\rvert\, 1\right], \quad(\text { Rose [30]) }  \label{chap9:eq:27}\\
-& \sixj{a}{b}{c}{d}{e}{f}=(-1)^{a+c+d+f} \frac{\Delta(a e f) \Delta(b d f)(-a+b+c)!(c-d+e)!(a-c+d+f)!}{\Delta(a b c) \Delta(c d e)(a-e+f)!(-b+d+f)!(-a+b-d+e)!(b+c+e-f+1)!}  \notag\\
-& \times 4 F_{3}\left[\left.\begin{array}{c}
+\sixj{a}{b}{c}{d}{e}{f}&=(-1)^{a+c+d+f} \frac{\Delta(a e f) \Delta(b d f)(-a+b+c)!(c-d+e)!(a-c+d+f)!}{\Delta(a b c) \Delta(c d e)(a-e+f)!(-b+d+f)!(-a+b-d+e)!(b+c+e-f+1)!}  \notag\\
+& \times \Fhg{4}{3}\left[\left.\begin{array}{c}
 -a+b+c+1, c-d+e+1,-a+e-f, b-d-f \\
 -a+c-d-f,-a+b-d+e+1, b+c+e-f+2
 \end{array} \right\rvert\, 1\right],  \label{chap9:eq:28}\\
-& \sixj{a}{b}{c}{d}{e}{f}=(-1)^{a+c+d+f} \frac{\Delta(a b c) \Delta(b d f)(a-b+d+e)!(-b+c+e+f)!(a+c+d+f+1)!}{\Delta(a e f) \Delta(c d e)(a-b+c)!(-b+d+f)!(a+e+f+1)!(c+d+e+1)!}  \notag\\
-& \times 4 F_{3}\left[\left.\begin{array}{c}
+ \sixj{a}{b}{c}{d}{e}{f}&=(-1)^{a+c+d+f} \frac{\Delta(a b c) \Delta(b d f)(a-b+d+e)!(-b+c+e+f)!(a+c+d+f+1)!}{\Delta(a e f) \Delta(c d e)(a-b+c)!(-b+d+f)!(a+e+f+1)!(c+d+e+1)!}  \notag\\
+& \times \Fhg{4}{3}\left[\left.\begin{array}{c}
 -a+b-c, b-d-f,-a-e-f-1,-c-d-e-1 \\
 -a+b-d-e, b-c-e-f,-a-c-d-f-1
 \end{array} \right\rvert\, 1\right],  \label{chap9:eq:29}\\
-& \sixj{a}{b}{c}{d}{e}{f}=(-1)^{a+b+d+e}  \notag\\
+ \sixj{a}{b}{c}{d}{e}{f}&=(-1)^{a+b+d+e}  \notag\\
 & \times \frac{\Delta(a b c) \Delta(c d e) \Delta(a e f) \Delta(b d f)(a+e+f+1)!(b+d+f+1)!(a+c+d-f)!}{(a+b-c)!(a-b+c)!(-c+d+e)!(c+d-e)!(a+e-f)!(b+d-f)!(-a+c-d+f)!(2 f+1)!}  \notag\\
-& \times_{4} F_{3}\left[\left.\begin{array}{c}
+& \times\Fhg{4}{3}\left[\left.\begin{array}{c}
 -a-e+f,-b-d+f,-a+e+f+1, b-d+f+1 \\
 -a-c-d+f,-a+c-d+f+1,2 f+2
 \end{array} \right\rvert\, 1\right],  \label{chap9:eq:30}\\
-& \sixj{a}{b}{c}{d}{e}{f}=(-1)^{b+c+e+f}  \notag\\
+ \sixj{a}{b}{c}{d}{e}{f}&=(-1)^{b+c+e+f}  \notag\\
 & \times \frac{\Delta(a b c) \Delta(c d e) \Delta(a e f) \Delta(b d f)(2 b)!(b+c-e+f)!(b+c+e+f+1)!}{(-a+b+c)!(a+b-c)!(c-d+e)!(c+d-e)!(a-e+f)!(-a+e+f)!(b+d-f)!(b-d+f)!}  \notag\\
-& \times_{4} F_{3}\left[\left.\begin{array}{c}
+& \times\Fhg{4}{3}\left[\left.\begin{array}{c}
 a-b-c,-b+d-f,-a-b-c-1,-b-d-f-1 \\
 -2 b,-b-c+e-f,-b-c-e-f-1
 \end{array} \right\rvert\, 1\right] . \label{chap9:eq:31}
@@ -285,13 +288,15 @@ is the character of the representation of rank $j$ (Sec. 4.14)
 \int f(R) d R \equiv \int_{0}^{2 \pi} d \alpha \int_{0}^{\pi} \sin \beta d \beta \int_{0}^{2 \pi} d \gamma f(\alpha, \beta, \gamma)
 \]
 Note also the following integral representations for some special $6 j$ symbols
-\begin{gather}
-\sixj{a}{b}{c}{a}{b}{f}=\frac{(-1)^{2 c}}{\left(8 \pi^{2}\right)^{2}} \int d R_{1} d R_{2} \chi^{c}\left(R_{1}\right) \chi^{f}\left(R_{2}\right) \chi^{a}\left(R_{2} R_{1}\right) \chi^{b}\left(R_{2}^{-1} R_{1}\right),  \label{chap9:eq:45}\\
-\sixj{a}{b}{g}{d}{b}{c}\sixj{a}{b}{g}{d}{b}{f}\sixj{a}{b}{c}{d}{b}{f}  \notag\\
-=\frac{(-1)^{2 a}}{\left(8 \pi^{2}\right)^{4}} \int d R_{1} d R_{2} d R_{3} d R_{4} \chi^{c}\left(R_{1}\right) \chi^{g}\left(R_{2}\right) \chi^{f}\left(R_{3}\right) \chi^{a}\left(R_{4} R_{2}\right) \chi^{b}\left(R_{4} R_{3} R_{2} R_{1} R_{4}\right) \chi^{d}\left(R_{1} R_{4} R_{3}\right),  \label{chap9:eq:46}\\
-\sixj{a}{b}{c}{d}{e}{f}\sixj{a}{e}{f}{a}{b}{c}\sixj{d}{b}{f}{a}{b}{c}\sixj{d}{e}{c}{a}{b}{c}  \notag\\
-=\frac{(-1)^{2 d}}{\left(8 \pi^{2}\right)^{5}} \int d R_{1} d R_{2} d R_{3} d R_{4} d R_{5} \chi^{d}\left(R_{1}\right) \chi^{e}\left(R_{2}\right) \chi^{f}\left(R_{3}\right) \chi^{a}\left(R_{4}\right) \chi^{a}\left(R_{5}^{-1} R_{3} R_{2}\right) \chi^{b}\left(R_{6} R_{4} R_{2} R_{1}\right) \chi^{c}\left(R_{4}^{-1} R_{5} R_{1} R_{3}\right) \label{chap9:eq:47}
-\end{gather}
+\begin{align}
+\MoveEqLeft{\sixj{a}{b}{c}{a}{b}{f}=\frac{(-1)^{2 c}}{\left(8 \pi^{2}\right)^{2}} \int d R_{1} d R_{2} \chi^{c}\left(R_{1}\right) \chi^{f}\left(R_{2}\right) \chi^{a}\left(R_{2} R_{1}\right) \chi^{b}\left(R_{2}^{-1} R_{1}\right),}  \label{chap9:eq:45}\\
+\MoveEqLeft{\sixj{a}{b}{g}{d}{b}{c}\sixj{a}{b}{g}{d}{b}{f}\sixj{a}{b}{c}{d}{b}{f} } \notag\\
+=&\frac{(-1)^{2 a}}{\left(8 \pi^{2}\right)^{4}} \int d R_{1} d R_{2} d R_{3} d R_{4} \chi^{c}\left(R_{1}\right) \chi^{g}\left(R_{2}\right) \chi^{f}\left(R_{3}\right) \chi^{a}\left(R_{4} R_{2}\right) \chi^{b}\left(R_{4} R_{3} R_{2} R_{1} R_{4}\right) \chi^{d}\left(R_{1} R_{4} R_{3}\right),  \label{chap9:eq:46}\\
+\MoveEqLeft{\sixj{a}{b}{c}{d}{e}{f}\sixj{a}{e}{f}{a}{b}{c}\sixj{d}{b}{f}{a}{b}{c}\sixj{d}{e}{c}{a}{b}{c}}  \notag\\
+=&\frac{(-1)^{2 d}}{\left(8 \pi^{2}\right)^{5}} \int d R_{1} d R_{2} d R_{3} d R_{4} d R_{5} \chi^{d}\left(R_{1}\right) \chi^{e}\left(R_{2}\right) \chi^{f}\left(R_{3}\right) \chi^{a}\left(R_{4}\right) 
+\notag\\&\qquad\qquad \qquad\times
+\chi^{a}\left(R_{5}^{-1} R_{3} R_{2}\right) \chi^{b}\left(R_{6} R_{4} R_{2} R_{1}\right) \chi^{c}\left(R_{4}^{-1} R_{5} R_{1} R_{3}\right). \label{chap9:eq:47}
+\end{align}
 \section{SYMMETRIES OF THE $6 j$ SYMBOLS AND THE RACAH COEFFICIENTS}
 \subsection{R-Symbols}
 The symmetry properties of the $6 j$ symbols and the $W$-coefficients may be formulated in a fairly simple way if these coefficients are written in terms of the $R$ symbols (see Sec. 9.1.3).
@@ -316,7 +321,7 @@ In other words, any permutation of parameters $A_{i}$ or $B_{\alpha}$ (see Sec. 
 
 \subsection{6j Symbols}
 The above-mentioned symmetries of the $R$ symbol are equivalent to the following symmetries of the $6 j$ symbols.\\[0pt]
-\subsubsection{(a) Classical Symmetries [110]}
+\subsubsection{Classical Symmetries [110]}
 The $6 j$ symbol is invariant under any permutation of its columns or under interchange of the upper and lower arguments in each of any two columns:
 \begin{equation}
 \begin{aligned}
@@ -329,7 +334,7 @@ The $6 j$ symbol is invariant under any permutation of its columns or under inte
 \end{equation}
 
 These relations involve $3!\times 4=24$ different $6 j$ symbols.\\[0pt]
-\subsubsection{(b) Regge Symmetries [95]}
+\subsubsection{Regge Symmetries [95]}
 The relations below are functional ones, i.e. in general they cannot be obtained by interchanging the $6 j$ symbol arguments.
 \begin{gather}
 \sixj{a}{b}{c}{d}{e}{f}
@@ -347,7 +352,7 @@ These relations are especially useful when $s_{i}$ equals one of the $6 j$ symbo
 
 \subsection{Racah Coefficients}
 For the Racah coefficients the symmetry relations are the following.\\[0pt]
-\subsubsection{(a) Classical Symmetries [91]}
+\subsubsection{Classical Symmetries [91]}
 \begin{align}
 & W(a b e d ; c f)=W(d e b a ; c f)=W(e d a b ; c f)=W(b a d e ; c f)  \notag\\
 =&W(a e b d ; f c)=W(d b e a ; f c)=W(b d a e ; f c)=W(e a d b ; f c)  \notag\\
@@ -360,7 +365,7 @@ where
 \begin{equation}
 \varepsilon_{1}=(-1)^{b+e-c-f}, \quad \varepsilon_{2}=(-1)^{a+d-c-f} \label{chap9:eq:53}
 \end{equation}
-\subsubsection{(b) Regge Symmetries}
+\subsubsection{Regge Symmetries}
 \begin{align}
 W(a b e d ; c f)&=W\left(s_{3}-a, s_{3}-b, s_{3}-e, s_{3}-d ; c f\right)=\varepsilon_{1} W\left(a, s_{1}-b, s_{1}-e, d ; s_{1}-c, s_{1}-f\right)  \notag\\
 &=\varepsilon_{1} W\left(s_{2}-d, s_{3}-e, s_{3}-b, s_{2}-a ; s_{1}-f, s_{1}-c\right)=\varepsilon_{2} W\left(s_{2}-a, b, e, s_{2}-d ; s_{2}-c, s_{2}-f\right)  \notag\\
@@ -420,21 +425,18 @@ Here
 \section{EXPLICIT FORMS OF THE $6 j$ SYMBOLS FOR CERTAIN ARGUMENTS}
 \subsection{One of Arguments is Equal to Zero}
 For the $6 j$ symbols one obtains
-\begin{equation}
-\begin{array}{lll}
-\sixj{0}{b}{c}{d}{e}{f}=(-1)^{b+e+d} \frac{\delta_{b c} \delta_{e f}}{\sqrt{(2 b+1)(2 e+1)}}, & \sixj{a}{b}{c}{0}{e}{f}=(-1)^{a+b+e} \frac{\delta_{b f} \delta_{c e}}{\sqrt{(2 b+1)(2 c+1)}}, \\
-\sixj{a}{0}{c}{d}{e}{f}=(-1)^{a+d+e} \frac{\delta_{a c} \delta_{d f}}{\sqrt{(2 a+1)(2 d+1)}}, & \sixj{a}{b}{c}{d}{0}{f}=(-1)^{a+b+d} \frac{\delta_{a f} \delta_{c d}}{\sqrt{(2 a+1)(2 c+1)}}, \\
-\sixj{a}{b}{0}{d}{e}{f}=(-1)^{a+e+f} \frac{\delta_{a b} \delta_{d e}}{\sqrt{(2 a+1)(2 d+1)}}, & \sixj{a}{b}{c}{d}{e}{0}=(-1)^{a+b+c} \frac{\delta_{a e} \delta_{b d}}{\sqrt{(2 a+1)(2 b+1)}} . \label{chap9:eq:59}
-\end{array}
-\end{equation}
+\begin{alignat}{2}
+\sixj{0}{b}{c}{d}{e}{f}&=(-1)^{b+e+d} \frac{\delta_{b c} \delta_{e f}}{\sqrt{(2 b+1)(2 e+1)}}, \quad& \sixj{a}{b}{c}{0}{e}{f}&=(-1)^{a+b+e} \frac{\delta_{b f} \delta_{c e}}{\sqrt{(2 b+1)(2 c+1)}},\notag\\
+\sixj{a}{0}{c}{d}{e}{f}&=(-1)^{a+d+e} \frac{\delta_{a c} \delta_{d f}}{\sqrt{(2 a+1)(2 d+1)}}, & \sixj{a}{b}{c}{d}{0}{f}&=(-1)^{a+b+d} \frac{\delta_{a f} \delta_{c d}}{\sqrt{(2 a+1)(2 c+1)}}, \notag\\
+\sixj{a}{b}{0}{d}{e}{f}&=(-1)^{a+e+f} \frac{\delta_{a b} \delta_{d e}}{\sqrt{(2 a+1)(2 d+1)}}, & \sixj{a}{b}{c}{d}{e}{0}&=(-1)^{a+b+c} \frac{\delta_{a e} \delta_{b d}}{\sqrt{(2 a+1)(2 b+1)}} . \label{chap9:eq:59}
+\end{alignat}
 Analogous relations for the Racah coefficients are
-\[
-\begin{array}{ll}
-W(0 b e d ; c f)=\frac{\delta_{b c} \delta_{e f}}{\sqrt{(2 b+1)(2 e+1)}}, & W(a 0 e d ; c f)=\frac{\delta_{a c} \delta_{d f}}{\sqrt{(2 a+1)(2 d+1)}}, \\
-W(a b 0 d ; c f)=\frac{\delta_{a f} \delta_{c d}}{\sqrt{(2 a+1)(2 c+1)}}, & W(a b e 0 ; c f)=\frac{\delta_{b f} \delta_{c e}}{\sqrt{(2 b+1)(2 c+1)}}, \\
-W(a b e d ; 0 f)=(-1)^{a+e-f} \frac{\delta_{a b} \delta_{d e}}{\sqrt{(2 a+1)(2 d+1)}}, & W(a b e d ; c 0)=(-1)^{a+b-c} \frac{\delta_{a e} \delta_{b d}}{\sqrt{(2 a+1)(2 b+1)}}
-\end{array}
-\]
+\begin{alignat}{2}
+W(0 b e d ; c f)&=\frac{\delta_{b c} \delta_{e f}}{\sqrt{(2 b+1)(2 e+1)}}, \quad& W(a 0 e d ; c f)&=\frac{\delta_{a c} \delta_{d f}}{\sqrt{(2 a+1)(2 d+1)}}, \notag\\
+W(a b 0 d ; c f)&=\frac{\delta_{a f} \delta_{c d}}{\sqrt{(2 a+1)(2 c+1)}}, & W(a b e 0 ; c f)&=\frac{\delta_{b f} \delta_{c e}}{\sqrt{(2 b+1)(2 c+1)}}, \\
+W(a b e d ; 0 f)&=(-1)^{a+e-f} \frac{\delta_{a b} \delta_{d e}}{\sqrt{(2 a+1)(2 d+1)}}, & W(a b e d ; c 0)&=(-1)^{a+b-c} \frac{\delta_{a e} \delta_{b d}}{\sqrt{(2 a+1)(2 b+1)}}\notag
+\end{alignat}
+
 In this case all other arguments are supposed to satisfy the triangular condition.
 
 \subsection{One of Arguments is Equal to the Sum of Two Others}
@@ -592,8 +594,8 @@ In this section only the most important sums involving products of the $6 j$ sym
 & \sum_{X}(-1)^{2 X}(2 X+1)\sixj{a}{b}{X}{c}{d}{p}\sixj{c}{d}{X}{e}{f}{q}\sixj{e}{f}{X}{a}{b}{r}=\ninej{a}{f}{r}{d}{q}{e}{p}{c}{b},  \label{chap9:eq:100}\\
 & \sum_{X}(-1)^{R+X}(2 X+1)\sixj{a}{b}{X}{c}{d}{p}\sixj{c}{d}{X}{e}{f}{q}\sixj{e}{f}{X}{b}{a}{r}=\sixj{p}{q}{r}{e}{a}{d}\sixj{p}{q}{r}{f}{b}{c},  \label{chap9:eq:101}\\
 & (R=a+b+c+d+e+f+p+q+r)  \notag\\
-& \sum_{X}(2 X+1)\sixj{a}{b}{X}{c}{d}{p}\sixj{c}{d}{X}{e}{f}{q}\sixj{e}{f}{X}{g}{h}{r}\sixj{g}{h}{X}{a}{b}{s}=(-1)^{p-s-q+r}\twelvej{- & h & a & s}{c & - & p & b}{f & r & - & g}{q & e & d & -},  \label{chap9:eq:102}\\
-& \sum_{X}(-1)^{T-X}(2 X+1)\sixj{a}{b}{X}{c}{d}{p}\sixj{c}{d}{X}{e}{f}{q}\sixj{e}{f}{X}{g}{h}{r}\sixj{g}{h}{X}{b}{a}{s}=\twelvejalt{a & d & e & h}{p & q & r & s}{b & c & f & g},  \notag\\
+& \sum_{X}(2 X+1)\sixj{a}{b}{X}{c}{d}{p}\sixj{c}{d}{X}{e}{f}{q}\sixj{e}{f}{X}{g}{h}{r}\sixj{g}{h}{X}{a}{b}{s}=(-1)^{p-s-q+r}\twelvejII{h,a,s,c,p,b,f,r,g,q,e,d},  \label{chap9:eq:102}\\
+& \sum_{X}(-1)^{T-X}(2 X+1)\sixj{a}{b}{X}{c}{d}{p}\sixj{c}{d}{X}{e}{f}{q}\sixj{e}{f}{X}{g}{h}{r}\sixj{g}{h}{X}{b}{a}{s}=\twelvejI{a,d,e,h,p,q,r,s,b,c,f,g},  \notag\\
 & (T=a+b+c+d+e+f+g+h+p+q+r+s) . \label{chap9:eq:103}
 \end{align}
 Many other sums, involving the $6 j$ symbols as well as the $3 j m$ symbols and the $9 j$ symbols, will be given in Chap. 12.
