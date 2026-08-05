@@ -15,14 +15,13 @@ Notation:  Pi(a,b,..) = [(2a+1)(2b+1)...]^{1/2}   (the book's \Fact{a b ...}).
 Covered
     8.7.1  Sums involving one CG                 eq. 162-164   [done]
     8.7.2  Sums of products of two CG            eq. 165-172   [done]
+    8.7.3  three CG (one 6j)                     eq. 173-180   [done]
     8.7.7  Additional sums of two CG             eq. 205-208   [done]
 
-Not covered (heavily OCR-damaged in the source -- garbled indices throughout;
-need reconstruction from the scan before they can be tested):
-    8.7.3  three CG (one 6j)                     eq. 173-180
-    8.7.4  four CG (one 9j)                      eq. 181-191
-    8.7.5  CG and one 6j                         eq. 192-199
-    8.7.6  CG and one 9j                         eq. 200-204
+Not yet covered:
+    8.7.4  four CG (one 9j)                      eq. 181-191   (some OCR damage)
+    8.7.5  CG and one 6j                         eq. 192-199   (next)
+    8.7.6  CG and one 9j                         eq. 200-204   (some OCR damage)
 
 Usage:
     python3 sums_8_7.py [--n N] [--seed S]
@@ -33,7 +32,7 @@ import argparse
 import random
 
 from sympy import Rational, Integer, sqrt, factorial as fac, S
-from sympy.physics.wigner import clebsch_gordan
+from sympy.physics.wigner import clebsch_gordan, wigner_6j
 
 HALF = Rational(1, 2)
 TOL = S(10) ** (-18)
@@ -83,6 +82,14 @@ def proj(j):
 
 def crange(a, b):
     return [abs(a - b) + i for i in range(int(2 * min(a, b)) + 1)]
+
+
+def w6(a, b, c, d, e, f):
+    """Wigner 6j symbol {a b c; d e f} (0 outside the physical domain)."""
+    try:
+        return wigner_6j(a, b, c, d, e, f)
+    except Exception:
+        return S.Zero
 
 
 # ===========================================================================
@@ -246,6 +253,134 @@ SEC_872 = [
 
 
 # ===========================================================================
+# 8.7.3  Sums of products of three CG (one 6j)               (eq. 173-180)
+#
+# All have the form   sum_{al be de} [phase] C C C
+#                        = kappa Pi(..) C_{c ga, f phi}^{e eps} {a b c; e f d}
+# with kappa1 = (-1)^{b+c+d+f}, kappa2 = (-1)^{a+b+e+f}, and eps = ga + phi.
+# ===========================================================================
+def _cfg873():
+    """(a,b,c,d,e,f, ga, phi, eps) with {a b c; e f d} != 0 and C_{c,f}^{e} != 0."""
+    a = b = c = d = e = f = None
+    for _ in range(400):
+        a, b, c, d, e, f = (rj(HALF, 2) for _ in range(6))
+        if w6(a, b, c, e, f, d) != 0:
+            break
+    else:
+        return None
+    ga = random.choice(proj(c)); phi = random.choice(proj(f)); eps = ga + phi
+    if abs(eps) > e or C(c, f, e, ga, phi, eps) == 0:
+        return None
+    return (a, b, c, d, e, f, ga, phi, eps)
+
+
+def _triple(a, b, d, term):
+    return sum((term(al, be, de) for al in proj(a) for be in proj(b) for de in proj(d)), S.Zero)
+
+
+def r173():
+    P = _cfg873()
+    if P is None:
+        return None
+    a, b, c, d, e, f, ga, phi, eps = P
+    lhs = _triple(a, b, d, lambda al, be, de:
+                  C(a, b, c, al, be, ga) * C(d, b, e, de, be, eps) * C(a, f, d, al, phi, de))
+    rhs = ph(b + c + d + f) * Pi(c, d) * C(c, f, e, ga, phi, eps) * w6(a, b, c, e, f, d)
+    return lhs, rhs
+
+
+def r174():
+    # NOTE: Chap8.tex eq (8.7.174) prints the RHS coefficient as C_{e eps,f phi}^{e eps};
+    # that is an OCR error -- it must be C_{c ga, f phi}^{e eps} (verified here).
+    P = _cfg873()
+    if P is None:
+        return None
+    a, b, c, d, e, f, ga, phi, eps = P
+    lhs = _triple(a, b, d, lambda al, be, de:
+                  C(b, c, a, be, ga, al) * C(b, e, d, be, eps, de) * C(a, f, d, al, phi, de))
+    rhs = ph(b + c + d + f) * Pi(a, d, d) / Pi(e) * C(c, f, e, ga, phi, eps) * w6(a, b, c, e, f, d)
+    return lhs, rhs
+
+
+def r175():
+    P = _cfg873()
+    if P is None:
+        return None
+    a, b, c, d, e, f, ga, phi, eps = P
+    lhs = _triple(a, b, d, lambda al, be, de:
+                  C(b, a, c, be, al, ga) * C(b, d, e, be, de, eps) * C(a, f, d, al, phi, de))
+    rhs = ph(a + b + e + f) * Pi(c, d) * C(c, f, e, ga, phi, eps) * w6(a, b, c, e, f, d)
+    return lhs, rhs
+
+
+def r176():
+    P = _cfg873()
+    if P is None:
+        return None
+    a, b, c, d, e, f, ga, phi, eps = P
+    lhs = _triple(a, b, d, lambda al, be, de: ph(a - al) *
+                  C(a, b, c, al, be, ga) * C(d, b, e, de, be, eps) * C(d, a, f, de, -al, phi))
+    rhs = ph(b + c + d + f) * Pi(c, f) * C(c, f, e, ga, phi, eps) * w6(a, b, c, e, f, d)
+    return lhs, rhs
+
+
+def r177():
+    P = _cfg873()
+    if P is None:
+        return None
+    a, b, c, d, e, f, ga, phi, eps = P
+    lhs = _triple(a, b, d, lambda al, be, de: ph(b + be) *
+                  C(a, b, c, al, be, ga) * C(b, e, d, -be, eps, de) * C(a, f, d, al, phi, de))
+    rhs = ph(b + c + d + f) * Pi(c, d, d) / Pi(e) * C(c, f, e, ga, phi, eps) * w6(a, b, c, e, f, d)
+    return lhs, rhs
+
+
+def r178():
+    P = _cfg873()
+    if P is None:
+        return None
+    a, b, c, d, e, f, ga, phi, eps = P
+    lhs = _triple(a, b, d, lambda al, be, de: ph(a - al) *
+                  C(b, a, c, be, al, ga) * C(b, d, e, be, de, eps) * C(d, a, f, de, -al, phi))
+    rhs = ph(a + b + e + f) * Pi(c, f) * C(c, f, e, ga, phi, eps) * w6(a, b, c, e, f, d)
+    return lhs, rhs
+
+
+def r179():
+    P = _cfg873()
+    if P is None:
+        return None
+    a, b, c, d, e, f, ga, phi, eps = P
+    lhs = _triple(a, b, d, lambda al, be, de: ph(b + be) *
+                  C(b, c, a, -be, ga, al) * C(d, b, e, de, be, eps) * C(a, f, d, al, phi, de))
+    rhs = ph(b + c + d + f) * Pi(a, d) * C(c, f, e, ga, phi, eps) * w6(a, b, c, e, f, d)
+    return lhs, rhs
+
+
+def r180():
+    P = _cfg873()
+    if P is None:
+        return None
+    a, b, c, d, e, f, ga, phi, eps = P
+    lhs = _triple(a, b, d, lambda al, be, de: ph(a - al) *
+                  C(a, c, b, al, -ga, be) * C(d, b, e, de, -be, eps) * C(a, f, d, al, phi, de))
+    rhs = ph(b + c + d + f) * Pi(b, d) * C(c, f, e, ga, phi, eps) * w6(a, b, c, e, f, d)
+    return lhs, rhs
+
+
+SEC_873 = [
+    ("eq 8.7.173  three CG + 6j", r173),
+    ("eq 8.7.174  three CG + 6j (RHS coeff OCR)", r174),
+    ("eq 8.7.175  three CG + 6j", r175),
+    ("eq 8.7.176  three CG + 6j", r176),
+    ("eq 8.7.177  three CG + 6j", r177),
+    ("eq 8.7.178  three CG + 6j", r178),
+    ("eq 8.7.179  three CG + 6j", r179),
+    ("eq 8.7.180  three CG + 6j", r180),
+]
+
+
+# ===========================================================================
 # 8.7.7  Additional sums of products of two CG               (eq. 205-208)
 # ===========================================================================
 def r205():
@@ -323,14 +458,14 @@ SEC_877 = [
 IMPLEMENTED = [
     ("8.7.1  Sums involving one CG", SEC_871),
     ("8.7.2  Sums of products of two CG", SEC_872),
+    ("8.7.3  three CG (one 6j)", SEC_873),
     ("8.7.7  Additional sums of two CG", SEC_877),
 ]
 
 TODO = [
-    ("8.7.3  three CG (one 6j)     eq. 173-180", "OCR-damaged indices"),
-    ("8.7.4  four CG (one 9j)      eq. 181-191", "OCR-damaged indices"),
-    ("8.7.5  CG and one 6j         eq. 192-199", "OCR-damaged indices"),
-    ("8.7.6  CG and one 9j         eq. 200-204", "OCR-damaged indices"),
+    ("8.7.4  four CG (one 9j)      eq. 181-191", "some indices still OCR-damaged"),
+    ("8.7.5  CG and one 6j         eq. 192-199", "next"),
+    ("8.7.6  CG and one 9j         eq. 200-204", "some indices still OCR-damaged"),
 ]
 
 
