@@ -18,7 +18,7 @@ Covered
     8.7.3  three CG (one 6j)                     eq. 173-180   [done]
     8.7.4  four CG (one 9j)                      eq. 181-191   [done]
     8.7.5  CG and one 6j                         eq. 192-199   [done]
-    8.7.6  CG and one 9j                         eq. 200-203   [done, 204 flagged]
+    8.7.6  CG and one 9j                         eq. 200-204   [done]
     8.7.7  Additional sums of two CG             eq. 205-208   [done]
 
 Usage:
@@ -686,9 +686,9 @@ SEC_875 = [
 # 8.7.6  Sums of products of CG and one 9j symbol            (eq. 200-204)
 #
 # The "inverse" 9j relations: a 9j-sum over TWO momenta = product of three CG.
-# eq. 204 is left out -- it is OCR-damaged (sum_{aj} should be sum_{gj}; the 2nd
-# RHS coefficient C_{e eps,j phi}^{d de} should read f; C_{d de,a al}^{k al}
-# should end in kappa; and \Fact{a d j j g g} is suspect).
+# (eq. 204 needed several OCR fixes now applied: sum_{aj}->sum_{gj}; the 2nd RHS
+# coefficient's j->f; the last ^{al}->kappa; and the phase's leading a->g.  Its
+# weight \Fact{a d j j g g} is correct.)
 # ===========================================================================
 def r200():
     e = rj(HALF, MMj); f = rj(HALF, MMj); b = rj(HALF, MMj); c = rj(HALF, MMj)
@@ -756,11 +756,29 @@ def r203():
     return lhs, rhs
 
 
+def r204():
+    b = rj(HALF, MMj); c = rj(HALF, MMj); e = rj(HALF, MMj); f = rj(HALF, MMj)
+    a = random.choice(crange(b, c)); d = random.choice(crange(e, f)); k = random.choice(crange(d, a))
+    be = random.choice(proj(b)); ga = random.choice(proj(c)); ep = random.choice(proj(e)); ph = random.choice(proj(f))
+    al = be - ga; de = ep + ph; eta = be + ep; mu = ga - ph; ka = al + de
+    if abs(al) > a or abs(de) > d or abs(ka) > k:
+        return None
+    rhs = C(b, c, a, be, -ga, al) * C(e, f, d, ep, ph, de) * C(d, a, k, de, al, ka)
+    if rhs == 0:
+        return None
+    lhs = sum((sgn(g - b - f + ph + ep) * Pi(a, d, j, j, g, g) / Pi(b, c)
+               * C(g, j, k, eta, -mu, ka) * C(e, g, b, -ep, eta, be) * C(f, j, c, ph, mu, ga)
+               * W9(a, b, c, d, e, f, g, j, k)
+               for g in crange(e, b) for j in crange(f, c) if abs(g - j) <= k <= g + j), S.Zero)
+    return lhs, rhs
+
+
 SEC_876 = [
     ("eq 8.7.200  9j-sum (a,k) = 3 CG", r200),
     ("eq 8.7.201  9j-sum (g,j) = 3 CG", r201),
     ("eq 8.7.202  9j-sum (g,j) = 3 CG", r202),
     ("eq 8.7.203  9j-sum (a,d) = 3 CG", r203),
+    ("eq 8.7.204  9j-sum (g,j) = 3 CG", r204),
 ]
 
 
@@ -849,9 +867,7 @@ IMPLEMENTED = [
     ("8.7.7  Additional sums of two CG", SEC_877),
 ]
 
-TODO = [
-    ("8.7.6  eq 204 only", "OCR-damaged: sum_{aj}->sum_{gj}, C_{e,jphi}->f, ^{ka}->kappa, Fact suspect"),
-]
+TODO = []
 
 
 def run(n, seed):
