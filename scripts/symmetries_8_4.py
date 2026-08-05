@@ -18,14 +18,14 @@ Conventions (matching the book and sympy):
                     == sympy.physics.wigner.clebsch_gordan(a,b,c,alpha,beta,gamma)
 
 Relations covered
-    8.4.2  3jm symbols          eq. (8.4.58) .. (8.4.62)
-    8.4.3  Clebsch-Gordan       eq. (8.4.63) .. (8.4.68)
-    8.4.5  inversion / t-reversal eq. (8.4.76),(8.4.77)  [reduce to (64)/identity]
+    8.4.2  3jm symbols          eq. (8.4.5) .. (8.4.9)
+    8.4.3  Clebsch-Gordan       eq. (8.4.10) .. (8.4.15)
+    8.4.5  inversion / t-reversal eq. (8.4.23),(8.4.24)  [reduce to (8.4.11)/identity]
 
 Not covered (OCR-damaged in the source and/or requiring negative-j analytic
 continuation that sympy does not implement):
-    8.4.1  R-symbol relations   eq. (8.4.54)..(8.4.57)
-    8.4.4  "mirror" symmetry    eq. (8.4.69)..(8.4.74)
+    8.4.1  R-symbol relations   eq. (8.4.1)..(8.4.4)
+    8.4.4  "mirror" symmetry    eq. (8.4.16)..(8.4.21)
 
 Usage:
     python3 symmetries_8_4.py [--n N] [--seed S] [--jmax J]
@@ -106,7 +106,7 @@ def random_configs(n, jmax, rng_reject=10000):
 def three_j_relations():
     rels = {}
 
-    # eq (8.4.58) -- permutations of columns  (last phase corrected a+b+c;
+    # eq (8.4.5) -- permutations of columns  (last phase corrected a+b+c;
     # the source prints (-1)^{alpha+b+c}, an obvious OCR typo)
     def f58a(a, b, c, al, be):
         g = -(al + be)
@@ -128,12 +128,12 @@ def three_j_relations():
         g = -(al + be)
         return three_j(a, b, c, al, be, g), ph(a + b + c) * three_j(c, b, a, g, be, al)
 
-    # eq (8.4.59) -- change of sign of all projections
+    # eq (8.4.6) -- change of sign of all projections
     def f59(a, b, c, al, be):
         g = -(al + be)
         return three_j(a, b, c, al, be, g), ph(a + b + c) * three_j(a, b, c, -al, -be, -g)
 
-    # eq (8.4.60) -- Regge, replacement of arguments (first<->third R rows)
+    # eq (8.4.7) -- Regge, replacement of arguments (first<->third R rows)
     def f60(a, b, c, al, be):
         g = -(al + be)
         H = Rational(1, 2)
@@ -143,7 +143,7 @@ def three_j_relations():
         )
         return three_j(a, b, c, al, be, g), rhs
 
-    # eq (8.4.61) -- Regge, transposition of the R-symbol
+    # eq (8.4.8) -- Regge, transposition of the R-symbol
     def f61(a, b, c, al, be):
         g = -(al + be)
         H = Rational(1, 2)
@@ -153,7 +153,7 @@ def three_j_relations():
         )
         return three_j(a, b, c, al, be, g), rhs
 
-    # eq (8.4.62) -- the six group representatives (all equal the LHS)
+    # eq (8.4.9) -- the six group representatives (all equal the LHS)
     def _f62(idx):
         def f(a, b, c, al, be):
             g = -(al + be)
@@ -178,23 +178,23 @@ def three_j_relations():
             return three_j(a, b, c, al, be, g), three_j(*forms[idx])
         return f
 
-    rels["eq 8.4.58a  (abc)=(bca)"] = f58a
-    rels["eq 8.4.58b  (abc)=(cab)"] = f58b
-    rels["eq 8.4.58c  (abc)=+/-(acb)"] = f58c
-    rels["eq 8.4.58d  (abc)=+/-(bac)"] = f58d
-    rels["eq 8.4.58e  (abc)=+/-(cba)"] = f58e
-    rels["eq 8.4.59   projection sign flip"] = f59
-    rels["eq 8.4.60   Regge (arg replacement)"] = f60
-    rels["eq 8.4.61   Regge (transposition)"] = f61
+    rels["eq 8.4.5a  (abc)=(bca)"] = f58a
+    rels["eq 8.4.5b  (abc)=(cab)"] = f58b
+    rels["eq 8.4.5c  (abc)=+/-(acb)"] = f58c
+    rels["eq 8.4.5d  (abc)=+/-(bac)"] = f58d
+    rels["eq 8.4.5e  (abc)=+/-(cba)"] = f58e
+    rels["eq 8.4.6   projection sign flip"] = f59
+    rels["eq 8.4.7   Regge (arg replacement)"] = f60
+    rels["eq 8.4.8   Regge (transposition)"] = f61
     for i in range(5):
-        rels[f"eq 8.4.62   group repr. #{i + 1}"] = _f62(i)
+        rels[f"eq 8.4.9   group repr. #{i + 1}"] = _f62(i)
     return rels
 
 
 def cg_relations():
     rels = {}
 
-    # eq (8.4.63) -- five CG symmetry relations
+    # eq (8.4.10) -- five CG symmetry relations
     def f63a(a, b, c, al, be):
         g = al + be
         return cg(a, b, c, al, be, g), ph(a + b - c) * cg(b, a, c, be, al, g)
@@ -215,12 +215,12 @@ def cg_relations():
         g = al + be
         return cg(a, b, c, al, be, g), ph(b + be) * sqrt((2 * c + 1) / (2 * a + 1)) * cg(b, c, a, -be, g, al)
 
-    # eq (8.4.64) -- sign flip of all projections
+    # eq (8.4.11) -- sign flip of all projections
     def f64(a, b, c, al, be):
         g = al + be
         return cg(a, b, c, al, be, g), ph(a + b - c) * cg(a, b, c, -al, -be, -g)
 
-    # eq (8.4.65)-(8.4.66) -- Regge shuffle, no weight factor
+    # eq (8.4.12)-(8.4.13) -- Regge shuffle, no weight factor
     def f65(a, b, c, al, be):
         g = al + be
         H = Rational(1, 2)
@@ -232,7 +232,7 @@ def cg_relations():
         gp = a - b
         return cg(a, b, c, al, be, g), cg(ap, bp, cp, alp, bep, gp)
 
-    # eq (8.4.67)-(8.4.68) -- Regge shuffle with weight factor
+    # eq (8.4.14)-(8.4.15) -- Regge shuffle with weight factor
     def f67(a, b, c, al, be):
         g = al + be
         H = Rational(1, 2)
@@ -244,22 +244,22 @@ def cg_relations():
         gp = ((a - al) + (b - be) - 2 * (c - g)) * H
         return cg(a, b, c, al, be, g), ph(b + be) * sqrt((2 * c + 1) / (2 * cp + 1)) * cg(ap, bp, cp, alp, bep, gp)
 
-    rels["eq 8.4.63a  swap a<->b"] = f63a
-    rels["eq 8.4.63b  a alpha, c -gamma"] = f63b
-    rels["eq 8.4.63c  c gamma, a -alpha"] = f63c
-    rels["eq 8.4.63d  c -gamma, b beta"] = f63d
-    rels["eq 8.4.63e  b -beta, c gamma"] = f63e
-    rels["eq 8.4.64   projection sign flip"] = f64
-    rels["eq 8.4.65/66 Regge shuffle"] = f65
-    rels["eq 8.4.67/68 Regge shuffle (wtd)"] = f67
+    rels["eq 8.4.10a  swap a<->b"] = f63a
+    rels["eq 8.4.10b  a alpha, c -gamma"] = f63b
+    rels["eq 8.4.10c  c gamma, a -alpha"] = f63c
+    rels["eq 8.4.10d  c -gamma, b beta"] = f63d
+    rels["eq 8.4.10e  b -beta, c gamma"] = f63e
+    rels["eq 8.4.11   projection sign flip"] = f64
+    rels["eq 8.4.12/8.4.13 Regge shuffle"] = f65
+    rels["eq 8.4.14/8.4.15 Regge shuffle (wtd)"] = f67
 
-    # eq (8.4.77) -- time reversal reduces to (8.4.64); include as an explicit
+    # eq (8.4.24) -- time reversal reduces to (8.4.11); include as an explicit
     # check that C(-al,-be,-gam) = (-1)^{a+b-c} C(al,be,gam)
     def f77(a, b, c, al, be):
         g = al + be
         return cg(a, b, c, -al, -be, -g), ph(a + b - c) * cg(a, b, c, al, be, g)
 
-    rels["eq 8.4.77   time reversal (=64)"] = f77
+    rels["eq 8.4.24   time reversal (=8.4.11)"] = f77
     return rels
 
 
@@ -299,8 +299,8 @@ def run(n, seed, jmax):
         print()
 
     print("Not tested (OCR-damaged / negative-j continuation, unsupported):")
-    print("    Sec. 8.4.1  R-symbol relations      eq. (8.4.54)-(8.4.57)")
-    print("    Sec. 8.4.4  'mirror' symmetry       eq. (8.4.69)-(8.4.74)")
+    print("    Sec. 8.4.1  R-symbol relations      eq. (8.4.1)-(8.4.4)")
+    print("    Sec. 8.4.4  'mirror' symmetry       eq. (8.4.16)-(8.4.21)")
     print()
     print("ALL RELATIONS HOLD" if all_ok else "SOME RELATIONS FAILED -- see above")
     return all_ok

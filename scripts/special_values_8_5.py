@@ -16,14 +16,14 @@ Convention (book == sympy):
         == sympy.physics.wigner.clebsch_gordan(a, b, c, alpha, beta, gamma)
 
 Covered
-    8.5.1  Special values of momenta a,b,c   eq. (8.5.78)-(8.5.100)
-    8.5.2  Special values of projections     eq. (8.5.109)-(8.5.125)
+    8.5.1  Special values of momenta a,b,c   eq. (8.5.1)-(8.5.23)
+    8.5.2  Special values of projections     eq. (8.5.32)-(8.5.48)
 
 Not covered (defined through auxiliary functions C,D,E,F that still carry OCR
 artifacts -- flag for manual repair, as was done for the broken relations in
 Sec. 8.4):
-    eq. (8.5.101)-(8.5.108)            Stone C/D/E/F formulas (e.g. eq.103
-                                        exponent 1/3, eq.104 phase (a-1)/2)
+    eq. (8.5.24)-(8.5.31)            Stone C/D/E/F formulas (e.g. eq.8.5.26
+                                        exponent 1/3, eq.8.5.27 phase (a-1)/2)
 
 Usage:
     python3 special_values_8_5.py [--n N] [--seed S]
@@ -475,49 +475,49 @@ def s125():                                   # (a,a-1, b,beta | c,c-1)
 # registry
 # ---------------------------------------------------------------------------
 SEC_851 = [
-    ("eq 8.5.78   c=0", s78),
-    ("eq 8.5.79   b=0", s79),
-    ("eq 8.5.80   c=a+b, alpha=a", s80),
-    ("eq 8.5.81   c=a+b (quasi-binom)", s81),
-    ("eq 8.5.82   c=a+b (quasi-binom 2)", s82),
-    ("eq 8.5.83   c=a+b, stretched", s83),
-    ("eq 8.5.84   c=a+b, (aa,b-b)", s84),
-    ("eq 8.5.85   c=a+b-1", s85),
-    ("eq 8.5.86   c=a+b-1, zero rule", s86),
-    ("eq 8.5.87   c=a+b-1, particular", s87),
-    ("eq 8.5.88   c=a+b-1, particular", s88),
-    ("eq 8.5.89   c=a+b-1, particular", s89),
-    ("eq 8.5.90   c=a-b", s90),
-    ("eq 8.5.91   c=a-b (quasi-binom)", s91),
-    ("eq 8.5.92   c=a-b (quasi-binom 2)", s92),
-    ("eq 8.5.93   c=a-b, particular", s93),
-    ("eq 8.5.94   c=a-b+1", s94),
-    ("eq 8.5.95   c=a-b+1, particular", s95),
-    ("eq 8.5.96   c=a+b-2", s96),
-    ("eq 8.5.97   c=a+b-2, particular", s97),
-    ("eq 8.5.98   c=a-b+2", s98),
-    ("eq 8.5.99   c=a-b+2, particular", s99),
-    ("eq 8.5.100  a=b, alpha=beta", s100),
+    ("eq 8.5.1   c=0", s78),
+    ("eq 8.5.2   b=0", s79),
+    ("eq 8.5.3   c=a+b, alpha=a", s80),
+    ("eq 8.5.4   c=a+b (quasi-binom)", s81),
+    ("eq 8.5.5   c=a+b (quasi-binom 2)", s82),
+    ("eq 8.5.6   c=a+b, stretched", s83),
+    ("eq 8.5.7   c=a+b, (aa,b-b)", s84),
+    ("eq 8.5.8   c=a+b-1", s85),
+    ("eq 8.5.9   c=a+b-1, zero rule", s86),
+    ("eq 8.5.10   c=a+b-1, particular", s87),
+    ("eq 8.5.11   c=a+b-1, particular", s88),
+    ("eq 8.5.12   c=a+b-1, particular", s89),
+    ("eq 8.5.13   c=a-b", s90),
+    ("eq 8.5.14   c=a-b (quasi-binom)", s91),
+    ("eq 8.5.15   c=a-b (quasi-binom 2)", s92),
+    ("eq 8.5.16   c=a-b, particular", s93),
+    ("eq 8.5.17   c=a-b+1", s94),
+    ("eq 8.5.18   c=a-b+1, particular", s95),
+    ("eq 8.5.19   c=a+b-2", s96),
+    ("eq 8.5.20   c=a+b-2, particular", s97),
+    ("eq 8.5.21   c=a-b+2", s98),
+    ("eq 8.5.22   c=a-b+2, particular", s99),
+    ("eq 8.5.23  a=b, alpha=beta", s100),
 ]
 
 SEC_852 = [
-    ("eq 8.5.109  alpha=beta=gamma=0", s109),
-    ("eq 8.5.110  (a0 b0|a+b 0)", s110),
-    ("eq 8.5.111  (a0 b0|a-b 0)", s111),
-    ("eq 8.5.112  gamma=c", s112),
-    ("eq 8.5.113  alpha=a", s113),
-    ("eq 8.5.114  (aa bb|cc)", s114),
-    ("eq 8.5.115  (aa b-b|cc)", s115),
-    ("eq 8.5.116  (aa b,c-a|cc)", s116),
-    ("eq 8.5.117  (a,a-1,...|cc)", s117),
-    ("eq 8.5.118  (aa...|c,c-1)", s118),
-    ("eq 8.5.119  (cc b0|cc)", s119),
-    ("eq 8.5.120  (c,c-b,bb|cc)", s120),
-    ("eq 8.5.121  gamma=c-1", s121),
-    ("eq 8.5.122  alpha=a-1", s122),
-    ("eq 8.5.123  zero rule", s123),
-    ("eq 8.5.124  zero rule", s124),
-    ("eq 8.5.125  (a,a-1,...|c,c-1)", s125),
+    ("eq 8.5.32  alpha=beta=gamma=0", s109),
+    ("eq 8.5.33  (a0 b0|a+b 0)", s110),
+    ("eq 8.5.34  (a0 b0|a-b 0)", s111),
+    ("eq 8.5.35  gamma=c", s112),
+    ("eq 8.5.36  alpha=a", s113),
+    ("eq 8.5.37  (aa bb|cc)", s114),
+    ("eq 8.5.38  (aa b-b|cc)", s115),
+    ("eq 8.5.39  (aa b,c-a|cc)", s116),
+    ("eq 8.5.40  (a,a-1,...|cc)", s117),
+    ("eq 8.5.41  (aa...|c,c-1)", s118),
+    ("eq 8.5.42  (cc b0|cc)", s119),
+    ("eq 8.5.43  (c,c-b,bb|cc)", s120),
+    ("eq 8.5.44  gamma=c-1", s121),
+    ("eq 8.5.45  alpha=a-1", s122),
+    ("eq 8.5.46  zero rule", s123),
+    ("eq 8.5.47  zero rule", s124),
+    ("eq 8.5.48  (a,a-1,...|c,c-1)", s125),
 ]
 
 
@@ -563,7 +563,7 @@ def run(n, seed):
         print()
 
     print("Not tested (auxiliary-function formulas with OCR artifacts -- flag for repair):")
-    print("    eq. (8.5.101)-(8.5.108)     Stone C/D/E/F formulas")
+    print("    eq. (8.5.24)-(8.5.31)     Stone C/D/E/F formulas")
     print()
     print("ALL FORMULAS HOLD" if all_ok else "SOME FORMULAS FAILED -- see above")
     return all_ok

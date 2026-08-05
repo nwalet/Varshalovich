@@ -13,13 +13,13 @@ Convention (book == sympy):  C_{a al, b be}^{c ga} == clebsch_gordan(a,b,c,al,be
 Notation:  Pi(a,b,..) = [(2a+1)(2b+1)...]^{1/2}   (the book's \Fact{a b ...}).
 
 Covered
-    8.7.1  Sums involving one CG                 eq. 162-164   [done]
-    8.7.2  Sums of products of two CG            eq. 165-172   [done]
-    8.7.3  three CG (one 6j)                     eq. 173-180   [done]
-    8.7.4  four CG (one 9j)                      eq. 181-191   [done]
-    8.7.5  CG and one 6j                         eq. 192-199   [done]
-    8.7.6  CG and one 9j                         eq. 200-204   [done]
-    8.7.7  Additional sums of two CG             eq. 205-208   [done]
+    8.7.1  Sums involving one CG                 eq. 8.7.1-8.7.3   [done]
+    8.7.2  Sums of products of two CG            eq. 8.7.4-8.7.11   [done]
+    8.7.3  three CG (one 6j)                     eq. 8.7.12-8.7.19   [done]
+    8.7.4  four CG (one 9j)                      eq. 8.7.20-8.7.30   [done]
+    8.7.5  CG and one 6j                         eq. 8.7.31-8.7.38   [done]
+    8.7.6  CG and one 9j                         eq. 8.7.39-8.7.43   [done]
+    8.7.7  Additional sums of two CG             eq. 8.7.44-8.7.47   [done]
 
 Usage:
     python3 sums_8_7.py [--n N] [--seed S]
@@ -108,7 +108,7 @@ MMj = Rational(3, 2)                            # external-momentum cap for 8.7.
 
 
 # ===========================================================================
-# 8.7.1  Sums involving one Clebsch-Gordan coefficient       (eq. 162-164)
+# 8.7.1  Sums involving one Clebsch-Gordan coefficient       (eq. 8.7.1-8.7.3)
 # ===========================================================================
 def r162():
     # sum_al C_{a al, b 0}^{a al} = Pi(a)^2 delta_{b0}
@@ -145,14 +145,14 @@ def r164():
 
 
 SEC_871 = [
-    ("eq 8.7.162  sum_al C_{a,b0}^{a}", r162),
-    ("eq 8.7.163  sum_al (-1)^.. C_{a,a}^{c0}", r163),
-    ("eq 8.7.164  weighted sum = 0", r164),
+    ("eq 8.7.1  sum_al C_{a,b0}^{a}", r162),
+    ("eq 8.7.2  sum_al (-1)^.. C_{a,a}^{c0}", r163),
+    ("eq 8.7.3  weighted sum = 0", r164),
 ]
 
 
 # ===========================================================================
-# 8.7.2  Sums of products of two Clebsch-Gordan coefficients  (eq. 165-172)
+# 8.7.2  Sums of products of two Clebsch-Gordan coefficients  (eq. 8.7.4-8.7.11)
 # ===========================================================================
 def r165():
     # sum_{al be} C_{a al,b be}^{c ga} C_{a al,b be}^{c' ga'} = d_{cc'} d_{ga ga'}
@@ -256,19 +256,19 @@ def r172():
 
 
 SEC_872 = [
-    ("eq 8.7.165  orthogonality (c,ga)", r165),
-    ("eq 8.7.166  orthogonality (b,be)", r166),
-    ("eq 8.7.167  recoupled orthogonality", r167),
-    ("eq 8.7.168  recoupled orthogonality", r168),
-    ("eq 8.7.169  recoupled orthogonality", r169),
-    ("eq 8.7.170  completeness (al,be)", r170),
-    ("eq 8.7.171  weighted completeness", r171),
-    ("eq 8.7.172  weighted sum over a", r172),
+    ("eq 8.7.4  orthogonality (c,ga)", r165),
+    ("eq 8.7.5  orthogonality (b,be)", r166),
+    ("eq 8.7.6  recoupled orthogonality", r167),
+    ("eq 8.7.7  recoupled orthogonality", r168),
+    ("eq 8.7.8  recoupled orthogonality", r169),
+    ("eq 8.7.9  completeness (al,be)", r170),
+    ("eq 8.7.10  weighted completeness", r171),
+    ("eq 8.7.11  weighted sum over a", r172),
 ]
 
 
 # ===========================================================================
-# 8.7.3  Sums of products of three CG (one 6j)               (eq. 173-180)
+# 8.7.3  Sums of products of three CG (one 6j)               (eq. 8.7.12-8.7.19)
 #
 # All have the form   sum_{al be de} [phase] C C C
 #                        = kappa Pi(..) C_{c ga, f phi}^{e eps} {a b c; e f d}
@@ -382,23 +382,23 @@ def r180():
 
 
 SEC_873 = [
-    ("eq 8.7.173  three CG + 6j", r173),
-    ("eq 8.7.174  three CG + 6j", r174),
-    ("eq 8.7.175  three CG + 6j", r175),
-    ("eq 8.7.176  three CG + 6j", r176),
-    ("eq 8.7.177  three CG + 6j", r177),
-    ("eq 8.7.178  three CG + 6j", r178),
-    ("eq 8.7.179  three CG + 6j", r179),
-    ("eq 8.7.180  three CG + 6j", r180),
+    ("eq 8.7.12  three CG + 6j", r173),
+    ("eq 8.7.13  three CG + 6j", r174),
+    ("eq 8.7.14  three CG + 6j", r175),
+    ("eq 8.7.15  three CG + 6j", r176),
+    ("eq 8.7.16  three CG + 6j", r177),
+    ("eq 8.7.17  three CG + 6j", r178),
+    ("eq 8.7.18  three CG + 6j", r179),
+    ("eq 8.7.19  three CG + 6j", r180),
 ]
 
 
 # ===========================================================================
-# 8.7.4  Sums of products of four CG (one 9j)                (eq. 181-191)
+# 8.7.4  Sums of products of four CG (one 9j)                (eq. 8.7.20-8.7.30)
 #
 # sum_{be ga ep ph} [phase] C C C C
 #   = phase Pi(..) sum_{k ka} C_{g eta, j (+/-mu)}^{k ka} C_{d de, a (+/-al)}^{k ka}
-#       {c b a; f e d; j g k}                       (eq. 187 uses {a b c; d e f; k g j}).
+#       {c b a; f e d; j g k}                       (eq. 8.7.26 uses {a b c; d e f; k g j}).
 # Eight external momenta a..j; the internal momentum k is summed over its range.
 # ===========================================================================
 def _cfg874():
@@ -535,22 +535,22 @@ def r191():
 
 
 SEC_874 = [
-    ("eq 8.7.181  four CG + 9j", r181),
-    ("eq 8.7.182  four CG + 9j", r182),
-    ("eq 8.7.183  four CG + 9j", r183),
-    ("eq 8.7.184  four CG + 9j", r184),
-    ("eq 8.7.185  four CG + 9j", r185),
-    ("eq 8.7.186  four CG + 9j", r186),
-    ("eq 8.7.187  four CG + 9j (alt 9j)", r187),
-    ("eq 8.7.188  four CG + 9j", r188),
-    ("eq 8.7.189  four CG + 9j", r189),
-    ("eq 8.7.190  four CG + 9j", r190),
-    ("eq 8.7.191  four CG + 9j", r191),
+    ("eq 8.7.20  four CG + 9j", r181),
+    ("eq 8.7.21  four CG + 9j", r182),
+    ("eq 8.7.22  four CG + 9j", r183),
+    ("eq 8.7.23  four CG + 9j", r184),
+    ("eq 8.7.24  four CG + 9j", r185),
+    ("eq 8.7.25  four CG + 9j", r186),
+    ("eq 8.7.26  four CG + 9j (alt 9j)", r187),
+    ("eq 8.7.27  four CG + 9j", r188),
+    ("eq 8.7.28  four CG + 9j", r189),
+    ("eq 8.7.29  four CG + 9j", r190),
+    ("eq 8.7.30  four CG + 9j", r191),
 ]
 
 
 # ===========================================================================
-# 8.7.5  Sums of products of CG and one 6j symbol            (eq. 192-199)
+# 8.7.5  Sums of products of CG and one 6j symbol            (eq. 8.7.31-8.7.38)
 #
 # Form  sum_{internal} [phase] Pi(..) C C {6j} = C C   (two CG on the RHS).
 # The internal (summed) momentum differs per identity; its projection is
@@ -671,22 +671,22 @@ def r199():
 
 
 SEC_875 = [
-    ("eq 8.7.192  CG + 6j (sum e)", r192),
-    ("eq 8.7.193  CG + 6j (sum f)", r193),
-    ("eq 8.7.194  CG + 6j (sum c)", r194),
-    ("eq 8.7.195  CG + 6j (sum c)", r195),
-    ("eq 8.7.196  CG + 6j (sum c)", r196),
-    ("eq 8.7.197  CG + 6j (sum f)", r197),
-    ("eq 8.7.198  CG + 6j (sum c)", r198),
-    ("eq 8.7.199  CG + 6j (sum c)", r199),
+    ("eq 8.7.31  CG + 6j (sum e)", r192),
+    ("eq 8.7.32  CG + 6j (sum f)", r193),
+    ("eq 8.7.33  CG + 6j (sum c)", r194),
+    ("eq 8.7.34  CG + 6j (sum c)", r195),
+    ("eq 8.7.35  CG + 6j (sum c)", r196),
+    ("eq 8.7.36  CG + 6j (sum f)", r197),
+    ("eq 8.7.37  CG + 6j (sum c)", r198),
+    ("eq 8.7.38  CG + 6j (sum c)", r199),
 ]
 
 
 # ===========================================================================
-# 8.7.6  Sums of products of CG and one 9j symbol            (eq. 200-204)
+# 8.7.6  Sums of products of CG and one 9j symbol            (eq. 8.7.39-8.7.43)
 #
 # The "inverse" 9j relations: a 9j-sum over TWO momenta = product of three CG.
-# (eq. 204 needed several OCR fixes now applied: sum_{aj}->sum_{gj}; the 2nd RHS
+# (eq. 8.7.43 needed several OCR fixes now applied: sum_{aj}->sum_{gj}; the 2nd RHS
 # coefficient's j->f; the last ^{al}->kappa; and the phase's leading a->g.  Its
 # weight \Fact{a d j j g g} is correct.)
 # ===========================================================================
@@ -723,7 +723,7 @@ def r201():
 
 
 def r202():
-    # NOTE: Chap8.tex eq (8.7.202) writes the weight as \Fact{a d g j}^{-1};
+    # NOTE: Chap8.tex eq (8.7.41) writes the weight as \Fact{a d g j}^{-1};
     # the "-1" is an OCR error -- it is \Fact{a d g j} (verified here).
     e = rj(HALF, MMj); f = rj(HALF, MMj); a = rj(HALF, MMj); b = rj(HALF, MMj)
     d = random.choice(crange(e, f)); c = random.choice(crange(a, b)); k = random.choice(crange(d, a))
@@ -774,16 +774,16 @@ def r204():
 
 
 SEC_876 = [
-    ("eq 8.7.200  9j-sum (a,k) = 3 CG", r200),
-    ("eq 8.7.201  9j-sum (g,j) = 3 CG", r201),
-    ("eq 8.7.202  9j-sum (g,j) = 3 CG", r202),
-    ("eq 8.7.203  9j-sum (a,d) = 3 CG", r203),
-    ("eq 8.7.204  9j-sum (g,j) = 3 CG", r204),
+    ("eq 8.7.39  9j-sum (a,k) = 3 CG", r200),
+    ("eq 8.7.40  9j-sum (g,j) = 3 CG", r201),
+    ("eq 8.7.41  9j-sum (g,j) = 3 CG", r202),
+    ("eq 8.7.42  9j-sum (a,d) = 3 CG", r203),
+    ("eq 8.7.43  9j-sum (g,j) = 3 CG", r204),
 ]
 
 
 # ===========================================================================
-# 8.7.7  Additional sums of products of two CG               (eq. 205-208)
+# 8.7.7  Additional sums of products of two CG               (eq. 8.7.44-8.7.47)
 # ===========================================================================
 def r205():
     # Morgan: sum_{l'=0}^{l} (C_{l0,(l'+J)0}^{(l-l'+J)0})^2
@@ -831,7 +831,7 @@ def r207():
 def r208():
     # Dunlop-Judd: sum_m C_{a m,k 0}^{a m} C_{c M-m,k 0}^{c M-m}
     #  = (-1)^k Pi(a,c)/(2k+1) sqrt((2a-k)!(2c+k+1)!/((2c-k)!(2a+k+1)!)),  a-c >= |M|
-    # NOTE: Chap8.tex eq (8.7.208) prints the prefactor as (2a+1)(2c+1); that is
+    # NOTE: Chap8.tex eq (8.7.47) prints the prefactor as (2a+1)(2c+1); that is
     # an OCR error -- it must be [(2a+1)(2c+1)]^{1/2} = \Fact{a c}, verified here
     # (the printed form is off by exactly sqrt((2a+1)(2c+1))).
     a = rint(1, 4); c = rint(0, int(a))
@@ -847,10 +847,10 @@ def r208():
 
 
 SEC_877 = [
-    ("eq 8.7.205  Morgan", r205),
-    ("eq 8.7.206  Morgan", r206),
-    ("eq 8.7.207  Din", r207),
-    ("eq 8.7.208  Dunlop-Judd", r208),
+    ("eq 8.7.44  Morgan", r205),
+    ("eq 8.7.45  Morgan", r206),
+    ("eq 8.7.46  Din", r207),
+    ("eq 8.7.47  Dunlop-Judd", r208),
 ]
 
 

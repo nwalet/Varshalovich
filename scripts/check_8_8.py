@@ -10,15 +10,15 @@ sympy: expand both sides and confirm the difference is identically zero (or,
 for the hypergeometric / d-function cases, evaluate at several points).
 
 Covered
-    8.8  eq 210   products of binomials, one variable per momentum
-    8.8  eq 210b  products of binomials, two variables per momentum
-    8.8  eq 210c  exponential generating function
-    8.8  eq 211   hypergeometric generating function (Akim-Levin)
-    8.8  eq 212   Wigner d-function generating function
-    8.8  eq 213   Schwinger generating function for C_{a0,b0}^{c0}
+    8.8  eq 8.8.2   products of binomials, one variable per momentum
+    8.8  eq 8.8.3  products of binomials, two variables per momentum
+    8.8  eq 8.8.4  exponential generating function
+    8.8  eq 8.8.5   hypergeometric generating function (Akim-Levin)
+    8.8  eq 8.8.6   Wigner d-function generating function
+    8.8  eq 8.8.7   Schwinger generating function for C_{a0,b0}^{c0}
 
 Not covered
-    8.8  eq 209   Regge determinant to power J -- a sum over all R-symbols at
+    8.8  eq 8.8.1   Regge determinant to power J -- a sum over all R-symbols at
                   fixed J; checkable only by enumerating them, cumbersome.
 
 Usage:  python3 check_8_8.py
@@ -134,15 +134,15 @@ def eq213(a, b, c):
 
 
 CASES = {
-    "eq 210  binomials (1 var/mom)": (eq210, [(1, 1, 1), (1, 1, 2), (2, 1, 1),
+    "eq 8.8.2  binomials (1 var/mom)": (eq210, [(1, 1, 1), (1, 1, 2), (2, 1, 1),
                                               (Rational(1, 2), Rational(1, 2), 1)]),
-    "eq 210b binomials (2 var/mom)": (eq210b, [(1, 1, 1), (1, 1, 2), (2, 1, 1)]),
-    "eq 210c exponential":           (eq210c, [(1, 1, 1), (1, 1, 2), (2, 2, 2),
+    "eq 8.8.3 binomials (2 var/mom)": (eq210b, [(1, 1, 1), (1, 1, 2), (2, 1, 1)]),
+    "eq 8.8.4 exponential":           (eq210c, [(1, 1, 1), (1, 1, 2), (2, 2, 2),
                                                (Rational(3, 2), 1, Rational(1, 2))]),
-    "eq 211  hypergeometric":        (eq211, [(2, 1, 2, 1), (2, 2, 2, 0), (1, 1, 2, 0), (2, 1, 1, 0)]),
-    "eq 212  Wigner d-function":     (eq212, [(1, 1, 1, 0), (1, 1, 2, 1), (2, 1, 2, -1),
+    "eq 8.8.5  hypergeometric":        (eq211, [(2, 1, 2, 1), (2, 2, 2, 0), (1, 1, 2, 0), (2, 1, 1, 0)]),
+    "eq 8.8.6  Wigner d-function":     (eq212, [(1, 1, 1, 0), (1, 1, 2, 1), (2, 1, 2, -1),
                                               (Rational(1, 2), Rational(1, 2), 1, 0)]),
-    "eq 213  Schwinger":             (eq213, [(1, 1, 2), (2, 2, 2), (1, 1, 0), (2, 1, 1), (2, 2, 0)]),
+    "eq 8.8.7  Schwinger":             (eq213, [(1, 1, 2), (2, 2, 2), (1, 1, 0), (2, 1, 1), (2, 2, 0)]),
 }
 
 
@@ -155,7 +155,7 @@ def run():
         ok = all(results)
         all_ok &= ok
         print(f"  [{'OK  ' if ok else 'FAIL'}] {label:32s} {sum(results)}/{len(results)} cases")
-    print("\n  (not checked: eq 209, Regge determinant -- sum over all R-symbols, cumbersome)")
+    print("\n  (not checked: eq 8.8.1, Regge determinant -- sum over all R-symbols, cumbersome)")
     print("\nALL CHECKED IDENTITIES HOLD" if all_ok else "SOME IDENTITIES FAILED")
     return all_ok
 

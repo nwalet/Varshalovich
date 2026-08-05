@@ -9,14 +9,14 @@ evaluate both sides with sympy's clebsch_gordan (coefficients that fall outside
 the physical domain are treated as 0), and compare.
 
 The tests are SPLIT BY SUBSECTION, matching the book:
-    8.6.1  General recursion relations          eq. 126-128   [done]
-    8.6.2  Arguments alpha,beta,gamma change 1  eq. 129-133   [done]
-    8.6.3  Arguments change by 1/2              eq. 134-143   [done]
-    8.6.4  The case alpha=beta=gamma=0          eq. 144-147   [done]
-    8.6.5  Arguments a,b,c change by 1          eq. 148-151   [done]
-    8.6.6  Arguments a,b,alpha,beta change 1    eq. 152-153   [done]
-    8.6.7  Arguments c,b,gamma,beta change 1    eq. 154-156   [done]
-    8.6.8  Recursion relations for R-symbols    eq. 157-161   [done, 158 skipped]
+    8.6.1  General recursion relations          eq. 8.6.1-8.6.3   [done]
+    8.6.2  Arguments alpha,beta,gamma change 1  eq. 8.6.4-8.6.8   [done]
+    8.6.3  Arguments change by 1/2              eq. 8.6.9-8.6.19   [done]
+    8.6.4  The case alpha=beta=gamma=0          eq. 8.6.20-8.6.23   [done]
+    8.6.5  Arguments a,b,c change by 1          eq. 8.6.24-8.6.27   [done]
+    8.6.6  Arguments a,b,alpha,beta change 1    eq. 8.6.28-8.6.30   [done]
+    8.6.7  Arguments c,b,gamma,beta change 1    eq. 8.6.31-8.6.34   [done]
+    8.6.8  Recursion relations for R-symbols    eq. 8.6.35-8.6.39   [done, 8.6.36 skipped]
 
 Convention (book == sympy):
     C_{a alpha, b beta}^{c gamma} == clebsch_gordan(a, b, c, alpha, beta, gamma)
@@ -109,12 +109,12 @@ def cfg_zero(jmax=3):
 
 
 def qp(x, n):
-    """quasi-power  x^(n) = x!/(x-n)!  (used in eq. 128)."""
+    """quasi-power  x^(n) = x!/(x-n)!  (used in eq. 8.6.3)."""
     return fac(x) / fac(x - n)
 
 
 # ===========================================================================
-# 8.6.1  General recursion relations                 (eq. 126-128)
+# 8.6.1  General recursion relations                 (eq. 8.6.1-8.6.3)
 # ===========================================================================
 def r126():
     # Yutsis-Bandzaitis: sum over c' of C_{a al, b-k, be-k}^{c', ga-k},
@@ -176,7 +176,7 @@ def r127():
 
 
 def r128():
-    # quasi-power form of eq.126 (well-defined only for b+be >= 2k; the source
+    # quasi-power form of eq.8.6.1 (well-defined only for b+be >= 2k; the source
     # k-range 1/2 <= k <= (b-kappa)/2 must be intersected with that).
     cfg = cfg_master()
     if cfg is None:
@@ -205,14 +205,14 @@ def r128():
 
 
 SEC_861 = [
-    ("eq 8.6.126  Yutsis-Bandzaitis (sum c')", r126),
-    ("eq 8.6.127  Stone (sum b')", r127),
-    ("eq 8.6.128  quasi-power form", r128),
+    ("eq 8.6.1  Yutsis-Bandzaitis (sum c')", r126),
+    ("eq 8.6.2  Stone (sum b')", r127),
+    ("eq 8.6.3  quasi-power form", r128),
 ]
 
 
 # ===========================================================================
-# 8.6.2  Arguments alpha, beta, gamma change by 1     (eq. 129-133)
+# 8.6.2  Arguments alpha, beta, gamma change by 1     (eq. 8.6.4-8.6.8)
 # ===========================================================================
 def r129():
     # [(c +/-g)(c -/+g+1)]^1/2 C_{a al,b be}^{c,g -/+1}
@@ -294,16 +294,16 @@ def r130():
 
 
 SEC_862 = [
-    ("eq 8.6.129  master ladder in gamma", r129),
-    ("eq 8.6.130  |gamma|=c", r130),
-    ("eq 8.6.131  |al|=|be|=1/2", r131),
-    ("eq 8.6.132  |al|=|be|=1 (exp 1/3->1/2)", r132),
-    ("eq 8.6.133  |al|=|be|=1 (exp 4/2->1/2)", r133),
+    ("eq 8.6.4  master ladder in gamma", r129),
+    ("eq 8.6.5  |gamma|=c", r130),
+    ("eq 8.6.6  |al|=|be|=1/2", r131),
+    ("eq 8.6.7  |al|=|be|=1 (exp 1/3->1/2)", r132),
+    ("eq 8.6.8  |al|=|be|=1 (exp 4/2->1/2)", r133),
 ]
 
 
 # ===========================================================================
-# 8.6.3  Arguments change by 1/2                      (eq. 134-143)
+# 8.6.3  Arguments change by 1/2                      (eq. 8.6.9-8.6.19)
 # ===========================================================================
 def r134():
     cfg = cfg_master()
@@ -382,7 +382,7 @@ def r139():
 
 
 def r139b():
-    # the multline between eq.139 and eq.140 (labelled chap8:eq:139b in the
+    # the multline between eq.8.6.14 and eq.8.6.16 (labelled eq:8:6:15 in the
     # source); changes a by +1/2 (term 1) and b by +1/2 (term 2), both to c-1/2.
     cfg = cfg_master()
     if cfg is None:
@@ -427,7 +427,7 @@ def r141():
 
 
 def r142():
-    # particular case of eq.134/135, a+b+c odd
+    # particular case of eq.8.6.9/8.6.10, a+b+c odd
     a = rhalf(3); b = rhalf(3)
     c = abs(a - b) + random.randint(0, int(2 * min(a, b)))
     if (a + b + c) % 2 == 0:
@@ -444,7 +444,7 @@ def r142():
 
 
 def r143():
-    # particular case of eq.134/135, a+b+c even
+    # particular case of eq.8.6.9/8.6.10, a+b+c even
     a = rhalf(3); b = rhalf(3)
     c = abs(a - b) + random.randint(0, int(2 * min(a, b)))
     if (a + b + c) % 2 == 1:
@@ -461,22 +461,22 @@ def r143():
 
 
 SEC_863 = [
-    ("eq 8.6.134  a-+1/2,b-1/2", r134),
-    ("eq 8.6.135  a-+1/2,b+1/2", r135),
-    ("eq 8.6.136  a+1/2,b-1/2", r136),
-    ("eq 8.6.137  a-1/2,b+1/2", r137),
-    ("eq 8.6.138  b-1/2,c-1/2", r138),
-    ("eq 8.6.139  a-1/2,c-1/2", r139),
-    ("eq 8.6.139b multline", r139b),
-    ("eq 8.6.140  a-1/2,c+1/2", r140),
-    ("eq 8.6.141  b-1/2, c-/+1/2", r141),
-    ("eq 8.6.142  |al|=|be|=1/2, a+b+c odd", r142),
-    ("eq 8.6.143  |al|=|be|=1/2, a+b+c even", r143),
+    ("eq 8.6.9  a-+1/2,b-1/2", r134),
+    ("eq 8.6.10  a-+1/2,b+1/2", r135),
+    ("eq 8.6.11  a+1/2,b-1/2", r136),
+    ("eq 8.6.12  a-1/2,b+1/2", r137),
+    ("eq 8.6.13  b-1/2,c-1/2", r138),
+    ("eq 8.6.14  a-1/2,c-1/2", r139),
+    ("eq 8.6.15 multline", r139b),
+    ("eq 8.6.16  a-1/2,c+1/2", r140),
+    ("eq 8.6.17  b-1/2, c-/+1/2", r141),
+    ("eq 8.6.18  |al|=|be|=1/2, a+b+c odd", r142),
+    ("eq 8.6.19  |al|=|be|=1/2, a+b+c even", r143),
 ]
 
 
 # ===========================================================================
-# 8.6.4  The case alpha = beta = gamma = 0            (eq. 144-147)
+# 8.6.4  The case alpha = beta = gamma = 0            (eq. 8.6.20-8.6.23)
 # ===========================================================================
 def r144():
     z = cfg_zero()
@@ -549,15 +549,15 @@ def r147():
 
 
 SEC_864 = [
-    ("eq 8.6.144  a+p, b-p", r144),
-    ("eq 8.6.145  a+1, b-1", r145),
-    ("eq 8.6.146  b+2p", r146),
-    ("eq 8.6.147  b+2", r147),
+    ("eq 8.6.20  a+p, b-p", r144),
+    ("eq 8.6.21  a+1, b-1", r145),
+    ("eq 8.6.22  b+2p", r146),
+    ("eq 8.6.23  b+2", r147),
 ]
 
 
 # ===========================================================================
-# 8.6.5  Arguments a, b, c change by 1                (eq. 148-151)
+# 8.6.5  Arguments a, b, c change by 1                (eq. 8.6.24-8.6.27)
 #
 # Master three-term recursions in a (the base coefficient C_{a al,b be}^{c ga}
 # is the middle term; a is shifted by -1, 0, +1).  All keep (alpha,beta,gamma).
@@ -643,15 +643,15 @@ def r151():
 
 
 SEC_865 = [
-    ("eq 8.6.148  b-1; a shift", r148),
-    ("eq 8.6.149  2beta; a shift", r149),
-    ("eq 8.6.150  b+1; a shift", r150),
-    ("eq 8.6.151  c-1, c-2", r151),
+    ("eq 8.6.24  b-1; a shift", r148),
+    ("eq 8.6.25  2beta; a shift", r149),
+    ("eq 8.6.26  b+1; a shift", r150),
+    ("eq 8.6.27  c-1, c-2", r151),
 ]
 
 
 # ===========================================================================
-# 8.6.6  Arguments a, b, alpha, beta change by 1      (eq. 152-153 + a middle
+# 8.6.6  Arguments a, b, alpha, beta change by 1      (eq. 8.6.28-8.6.30 + a middle
 #        gather).  a shifted by -1,0,+1; alpha-/+1, beta+/-1 (so alpha+beta
 #        stays gamma).
 # ===========================================================================
@@ -677,7 +677,7 @@ def r152():
 
 
 def r152b():
-    # the middle gather (labelled chap8:eq:152b): 2beta-type, no a/b shift.
+    # the middle gather (labelled eq:8:6:29): 2beta-type, no a/b shift.
     # The {a(a+1)+b(b+1)-c(c+1)} factor sits OUTSIDE the radical.
     cfg = cfg_master()
     if cfg is None:
@@ -717,14 +717,14 @@ def r153():
 
 
 SEC_866 = [
-    ("eq 8.6.152  b-1; a shift, al-/+1", r152),
-    ("eq 8.6.152b middle gather", r152b),
-    ("eq 8.6.153  b+1; a shift, al-/+1", r153),
+    ("eq 8.6.28  b-1; a shift, al-/+1", r152),
+    ("eq 8.6.29 middle gather", r152b),
+    ("eq 8.6.30  b+1; a shift, al-/+1", r153),
 ]
 
 
 # ===========================================================================
-# 8.6.7  Arguments c, b, gamma, beta change by 1      (eq. 154-156 + a middle
+# 8.6.7  Arguments c, b, gamma, beta change by 1      (eq. 8.6.31-8.6.34 + a middle
 #        gather).  c shifted by -1,0,+1; beta+/-1, gamma+/-1.
 # ===========================================================================
 def r154():
@@ -764,7 +764,7 @@ def r155():
 
 
 def r155b():
-    # the middle gather (labelled chap8:eq:155b): 2beta-type, no b/c shift.
+    # the middle gather (labelled eq:8:6:33): 2beta-type, no b/c shift.
     # The {-a(a+1)+b(b+1)+c(c+1)} factor sits OUTSIDE the radical.
     cfg = cfg_master()
     if cfg is None:
@@ -808,17 +808,17 @@ def r156():
 
 
 SEC_867 = [
-    ("eq 8.6.154  c-1; beta,gamma shift", r154),
-    ("eq 8.6.155  b-1; c shift", r155),
-    ("eq 8.6.155b middle gather", r155b),
-    ("eq 8.6.156  b+1; c shift", r156),
+    ("eq 8.6.31  c-1; beta,gamma shift", r154),
+    ("eq 8.6.32  b-1; c shift", r155),
+    ("eq 8.6.33 middle gather", r155b),
+    ("eq 8.6.34  b+1; c shift", r156),
 ]
 
 
 # ===========================================================================
-# 8.6.8  Recursion relations for the Regge R-symbols  (eq. 157-161)
+# 8.6.8  Recursion relations for the Regge R-symbols  (eq. 8.6.35-8.6.39)
 #
-# The Regge R-symbol ||R|| equals the 3jm symbol (Sec. 8.1.3, eq. 13-15):
+# The Regge R-symbol ||R|| equals the 3jm symbol (Sec. 8.1.3, eq. 8.1.14-8.1.16):
 #   R = [[-a+b+c, a-b+c, a+b-c],
 #        [ a+al ,  b+be,  c+ga ],
 #        [ a-al ,  b-be,  c-ga ]]     (alpha+beta+gamma = 0).
@@ -916,12 +916,12 @@ def r161():
 
 
 SEC_868 = [
-    ("eq 8.6.157  Regge R-symbol", r157),
-    ("eq 8.6.159  Regge R-symbol", r159),
-    ("eq 8.6.160  Regge R-symbol", r160),
-    ("eq 8.6.161  Regge R-symbol", r161),
+    ("eq 8.6.35  Regge R-symbol", r157),
+    ("eq 8.6.37  Regge R-symbol", r159),
+    ("eq 8.6.38  Regge R-symbol", r160),
+    ("eq 8.6.39  Regge R-symbol", r161),
 ]
-# NOTE eq 8.6.158 is a "column" recursion: it shifts R_{1k}+1 and R_{2k}-1, so
+# NOTE eq 8.6.36 is a "column" recursion: it shifts R_{1k}+1 and R_{2k}-1, so
 # each array has equal COLUMN sums but row sums J+1, J-1, J.  A Regge symbol
 # needs all six line sums equal, so every term vanishes as a standard 3jm and
 # the relation is only trivially (vacuously) satisfied here.  Verifying it would
@@ -943,7 +943,7 @@ IMPLEMENTED = [
 ]
 
 TODO = [
-    ("8.6.8  eq 158 only", "column recursion -- row-unbalanced arrays, vacuous as standard 3jm"),
+    ("8.6.8  eq 8.6.36 only", "column recursion -- row-unbalanced arrays, vacuous as standard 3jm"),
 ]
 
 

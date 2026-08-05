@@ -5,11 +5,11 @@ The Clebsch-Gordan coefficients are vector addition coefficients. They play an i
 \subsection{The Clebsch-Gordan Coefficients}
 Let $\vect{j}_{1}$ and $\vect{j}_{2}$ be two angular momenta with projections $m_{1}$ and $m_{2}$ on the quantization axis. A ClebschGordan coefficients represents the probability amplitude that $\mathrm{j}_{1}$ and $\mathrm{j}_{2}$ are coupled into a resultant angular momentum $\vect{j}$ with projection $m$. In accordance with the vector addition rules $\vect{j}_{1}+\vect{j}_{2}=\vect{j}$, the Clebsch-Gordan coefficient vanishes unless the triangular conditions (triangular inequalities) are fulfilled, i.e.,
 \begin{equation}
-\left|j_{1}-j_{2}\right| \leq j \leq j_{1}+j_{2}, \label{chap8:eq:1}
+\left|j_{1}-j_{2}\right| \leq j \leq j_{1}+j_{2}, \label{eq:8:1:1}
 \end{equation}
 and the requirement
 \begin{equation}
-m_{1}+m_{2}=m, \label{chap8:eq:2}
+m_{1}+m_{2}=m, \label{eq:8:1:2}
 \end{equation}
 is satisfied. It will also be assumed that arguments of the Clebsch-Gordan coefficients satisfy the following conditions:
 \begin{enumerate}[label=(\alph*)]
@@ -19,18 +19,18 @@ is satisfied. It will also be assumed that arguments of the Clebsch-Gordan coeff
 \item $\left|m_{1}\right| \leq j_{1},\left|m_{2}\right| \leq j_{2},|m| \leq j$;
 \item $j_{1}+m_{1}, j_{2}+m_{2}, j+m, j_{1}+j_{2}+j$ are integer non-negative numbers.
 \end{enumerate}
-%no eq. 3 in book!
-\addtocounter{equation}{1}
+%no eq. 3 in book! conditions (a)-(d) above occupy equation number 8.1.3
+\refstepcounter{equation}\label{eq:8:1:3}
 The absolute value of a Clebsch-Gordan coefficient is given by
 \begin{equation}
-\left[\clebsch{j_{1}}{m_{1}}{j_{2}}{m_{2}}{j}{m}\right]^{2}=\frac{2 j+1}{8 \pi} \int_{0}^{2 \pi} d \alpha \int_{0}^{\pi} d \beta \sin \beta \int_{0}^{2 \pi} d \gamma D_{m_{1} m_{1}}^{j_{1}}(\alpha, \beta, \gamma) D_{m_{2} m_{2}}^{j_{2}}(\alpha, \beta, \gamma) D_{m m}^{j *}(\alpha, \beta, \gamma). \label{chap8:eq:3}
+\left[\clebsch{j_{1}}{m_{1}}{j_{2}}{m_{2}}{j}{m}\right]^{2}=\frac{2 j+1}{8 \pi} \int_{0}^{2 \pi} d \alpha \int_{0}^{\pi} d \beta \sin \beta \int_{0}^{2 \pi} d \gamma D_{m_{1} m_{1}}^{j_{1}}(\alpha, \beta, \gamma) D_{m_{2} m_{2}}^{j_{2}}(\alpha, \beta, \gamma) D_{m m}^{j *}(\alpha, \beta, \gamma). \label{eq:8:1:4}
 \end{equation}
 The phase of the Clebsch-Gordan coefficients may be chosen in different ways. The phase convention proposed by Condon and Shortley [10] is universally accepted. In accordance with this convention the Clebsch-Gordan
 
 
 coefficients are real and their phases are fixed by the additional relation
 \begin{equation}
-\clebsch{j_{1}}{m_{1}}{j_{2}}{m_{2}}{j}{m} \clebsch{j_{1}}{j_{1}}{j_{2}}{-j_{2}}{j}{j_{1}-j_{2}}=\frac{2 j+1}{8 \pi} \int_{0}^{2 \pi} d \alpha \int_{0}^{\pi} d \beta \sin \beta \int_{0}^{2 \pi} d \gamma D_{m_{1} j_{1}}^{j_{1}}(\alpha, \beta, \gamma) D_{m_{2}-j_{2}}^{j_{2}}(\alpha, \beta, \gamma) D_{m j_{1}-j_{2}}^{j *}(\alpha, \beta, \gamma), \label{chap8:eq:4}
+\clebsch{j_{1}}{m_{1}}{j_{2}}{m_{2}}{j}{m} \clebsch{j_{1}}{j_{1}}{j_{2}}{-j_{2}}{j}{j_{1}-j_{2}}=\frac{2 j+1}{8 \pi} \int_{0}^{2 \pi} d \alpha \int_{0}^{\pi} d \beta \sin \beta \int_{0}^{2 \pi} d \gamma D_{m_{1} j_{1}}^{j_{1}}(\alpha, \beta, \gamma) D_{m_{2}-j_{2}}^{j_{2}}(\alpha, \beta, \gamma) D_{m j_{1}-j_{2}}^{j *}(\alpha, \beta, \gamma), \label{eq:8:1:5}
 \end{equation}
 where
 \[
@@ -39,44 +39,44 @@ where
 Under such a phase definition the Clebsch-Gordan coefficients satisfy the relations
 \begin{gather}
 \clebsch{j}{m}{0}{0}{j}{m}=1, \quad \clebsch{j_{1}}{j_{1}}{j_{2}}{j_{2}}{j_{1}+j_{2}}{j_{1}+j_{2}}=1, \quad \clebsch{j_{1}}{m_{1}}{j_{2}}{m_{2}}{j_{1}+j_{2}}{m_{1}+m_{2}}>0, \quad \clebsch{j_{1}}{m_{1}}{j_{2}}{-j_{2}}{j}{m}>0, \quad(-1)^{j_{1}+j_{2}-j} \clebsch{j_{1}}{m_{1}}{j_{2}}{j_{2}}{j}{m}>0, \notag\\
-(-1)^{j_{1}-m_{1}} \clebsch{j_{1}}{m_{1}}{j_{2}}{m_{2}}{j}{j}>0, \quad(-1)^{j_{2}+m_{2}} \clebsch{j_{1}}{m_{1}}{j_{2}}{m_{2}}{j_{1}-j_{2}}{m}>0 . \label{chap8:eq:5}
+(-1)^{j_{1}-m_{1}} \clebsch{j_{1}}{m_{1}}{j_{2}}{m_{2}}{j}{j}>0, \quad(-1)^{j_{2}+m_{2}} \clebsch{j_{1}}{m_{1}}{j_{2}}{m_{2}}{j_{1}-j_{2}}{m}>0 . \label{eq:8:1:6}
 \end{gather}
 The Clebsch-Gordan coefficients are elements of the unitary matrix which performs direct and inverse transformations between state vectors $\left|j_{1} m_{1} j_{2} m_{2}\right\rangle$ and $\left|j_{1} j_{2} j m\right\rangle$
 \begin{equation}
-\clebsch{j_{1}}{m_{1}}{j_{2}}{m_{2}}{j}{m}=\braket{j_{1} m_{1} j_{2} m_{2}}{j_{1} j_{2} j m}=\braket{j_{1} j_{2} j m}{j_{1} m_{1} j_{2} m_{2}} . \label{chap8:eq:6}
+\clebsch{j_{1}}{m_{1}}{j_{2}}{m_{2}}{j}{m}=\braket{j_{1} m_{1} j_{2} m_{2}}{j_{1} j_{2} j m}=\braket{j_{1} j_{2} j m}{j_{1} m_{1} j_{2} m_{2}} . \label{eq:8:1:7}
 \end{equation}
 The unitarity relation is
 \begin{gather}
 \sum_{m_{1} m_{2}} \clebsch{j_{1}}{m_{1}}{j_{2}}{m_{2}}{j}{m} \clebsch{j_{1}}{m_{1}}{j_{2}}{m_{2}}{j^{\prime}}{m^{\prime}}=\delta_{j j^{\prime}} \delta_{m m^{\prime}}. \notag\\
-\sum_{j(m)} \clebsch{j_{1}}{m_{1}}{j_{2}}{m_{2}}{j}{m} \clebsch{j_{1}}{m_{1}^{\prime}}{j_{2}}{m_{2}^{\prime}}{j}{m}=\delta_{m_{1} m_{1}^{\prime}} \delta_{m_{2} m_{2}^{\prime}}. \label{chap8:eq:7}
+\sum_{j(m)} \clebsch{j_{1}}{m_{1}}{j_{2}}{m_{2}}{j}{m} \clebsch{j_{1}}{m_{1}^{\prime}}{j_{2}}{m_{2}^{\prime}}{j}{m}=\delta_{m_{1} m_{1}^{\prime}} \delta_{m_{2} m_{2}^{\prime}}. \label{eq:8:1:8}
 \end{gather}
 The direct product of two irreducible tensors $\mathfrak{M}_{j_{1} m_{1}}$ and $\mathfrak{N}_{j_{2} m_{2}}$ may be decomposed into irreducible tensors. The coefficients of this decomposition are just the Clebsch-Gordan coefficients:
 \begin{equation}
-\mathfrak{M}_{j_{1} m_{1}} \mathfrak{N}_{j_{2} m_{2}}=\sum_{j(m)} \clebsch{j_{1}}{m_{1}}{j_{2}}{m_{2}}{j}{m}\left\{\mathfrak{N}_{j_{1}} \otimes \mathfrak{N}_{j_{2}}\right\}_{j m} . \label{chap8:eq:8}
+\mathfrak{M}_{j_{1} m_{1}} \mathfrak{N}_{j_{2} m_{2}}=\sum_{j(m)} \clebsch{j_{1}}{m_{1}}{j_{2}}{m_{2}}{j}{m}\left\{\mathfrak{N}_{j_{1}} \otimes \mathfrak{N}_{j_{2}}\right\}_{j m} . \label{eq:8:1:9}
 \end{equation}
 The inverse relation is
 \begin{equation}
-\left\{\mathfrak{M}_{j_{1}} \otimes \mathfrak{N}_{j_{2}}\right\}_{j m}=\sum_{m_{1} m_{2}} \clebsch{j_{1}}{m_{1}}{j_{2}}{m_{2}}{j}{m_{1}} \mathfrak{M}_{j_{1} m_{1}} \mathfrak{R}_{j_{2} m_{2}} . \label{chap8:eq:9}
+\left\{\mathfrak{M}_{j_{1}} \otimes \mathfrak{N}_{j_{2}}\right\}_{j m}=\sum_{m_{1} m_{2}} \clebsch{j_{1}}{m_{1}}{j_{2}}{m_{2}}{j}{m_{1}} \mathfrak{M}_{j_{1} m_{1}} \mathfrak{R}_{j_{2} m_{2}} . \label{eq:8:1:10}
 \end{equation}
 \subsection{The Wigner 3jm Symbols}
 Not infrequently the Wigner $3 j \mathrm{~m}$ symbols [110] are used instead of the Clebsch-Gordan coefficients. These symbols possess simpler symmetry properties. The $3 j \mathrm{~m}$ symbols are related to the Clebsch-Gordan coefficients by
 \begin{equation}
-\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{m_{2}}{m_{3}}\label{chap8:eq:10}=(-1)^{j_{3}+m_{3}+2 j_{1}} \frac{1}{\sqrt{2 j_{3}+1}} \clebsch{j_{1}}{-m_{1}}{j_{2}}{-m_{3}}{j_{3}}{m_{3}} .
+\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{m_{2}}{m_{3}}\label{eq:8:1:11}=(-1)^{j_{3}+m_{3}+2 j_{1}} \frac{1}{\sqrt{2 j_{3}+1}} \clebsch{j_{1}}{-m_{1}}{j_{2}}{-m_{3}}{j_{3}}{m_{3}} .
 \end{equation}
 The inverse relation is
 \begin{equation}
-\clebsch{j_{1}}{m_{1}}{j_{2}}{m_{2}}{j_{3}}{m_{3}}=(-1)^{j_{1}-j_{2}+m_{3}} \sqrt{2 j_{3}+1}\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{m_{2}}{-m_{3}}\label{chap8:eq:11} .
+\clebsch{j_{1}}{m_{1}}{j_{2}}{m_{2}}{j_{3}}{m_{3}}=(-1)^{j_{1}-j_{2}+m_{3}} \sqrt{2 j_{3}+1}\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{m_{2}}{-m_{3}}\label{eq:8:1:12} .
 \end{equation}
 The $3 j \mathrm{~m}$ symbol represents the probability amplitude that three angular momenta $\mathrm{j}_{1}, \mathrm{j}_{2}$ and $\mathrm{j}_{3}$ with projections $m_{1}, m_{2}$ and $m_{3}$ are coupled to yield zero angular momentum:
 \begin{equation}
-\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{m_{2}}{m_{3}}\label{chap8:eq:12}=\eta \sum_{j^{\prime} m^{\prime}} \clebsch{j_{1}}{m_{1}}{j_{2}}{m_{3}}{j^{\prime}}{m^{\prime}} \clebsch{j^{\prime}}{m^{\prime}}{j_{3}}{m_{3}}{0}{0}
+\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{m_{2}}{m_{3}}\label{eq:8:1:13}=\eta \sum_{j^{\prime} m^{\prime}} \clebsch{j_{1}}{m_{1}}{j_{2}}{m_{3}}{j^{\prime}}{m^{\prime}} \clebsch{j^{\prime}}{m^{\prime}}{j_{3}}{m_{3}}{0}{0}
 \end{equation}
 The phase factor $\eta=(-1)^{j_{1}-j_{2}+j_{3}}$ is chosen in such a way that any cyclic permutation of columns leaves the $3 j m$ symbol unchanged. Below we shall use, along with the letters $j, m$ other Latin letters ( $a, b, c$, etc.) to denote angular momenta, and Greek letters ( $\alpha, \beta, \gamma$, etc.) to denote momentum projections in the arguments of the $3 j m$ symbols and Clebsch-Gordan coefficients.
 
 \subsection{Regge R-Symbols}
 The Wigner $3 j m$ symbol may be represented by a square $3 \times 3$ array $\left\|R_{i k}\right\|(i, k=1,2,3)$ which is called the Regge $R$-symbol [94]
 \begin{equation}
-\threej{a}{b}{c}{\alpha}{\beta}{\gamma}\label{chap8:eq:13}=\left\|\begin{array}{lll}
+\threej{a}{b}{c}{\alpha}{\beta}{\gamma}\label{eq:8:1:14}=\left\|\begin{array}{lll}
 R_{11} & R_{12} & R_{13} \\
 R_{21} & R_{22} & R_{23} \\
 R_{31} & R_{32} & R_{33}
@@ -87,7 +87,7 @@ where
 \begin{array}{lll}
 R_{11}=-a+b+c, & R_{12}=a-b+c, & R_{13}=a+b-c, \\
 R_{21}=a+\alpha, & R_{22}=b+\beta, & R_{23}=c+\gamma, \\
-R_{31}=a-\alpha, & R_{32}=b-\beta, & R_{33}=c-\gamma. \label{chap8:eq:14}
+R_{31}=a-\alpha, & R_{32}=b-\beta, & R_{33}=c-\gamma. \label{eq:8:1:15}
 \end{array}
 \end{equation}
 The inverse relations are
@@ -95,25 +95,25 @@ The inverse relations are
 \begin{array}{ll}
 2 a=R_{21}+R_{31}=R_{12}+R_{13}, & 2 \alpha=R_{21}-R_{31}=R_{32}-R_{22}+R_{33}-R_{23}, \\
 2 b=R_{22}+R_{32}=R_{11}+R_{13}, & 2 \beta=R_{22}-R_{32}=R_{31}-R_{21}+R_{33}-R_{23}, \\
-2 c=R_{23}+R_{33}=R_{11}+R_{12}, & 2 \gamma=R_{23}-R_{33}=R_{31}-R_{21}+R_{32}-R_{22} . \label{chap8:eq:15}
+2 c=R_{23}+R_{33}=R_{11}+R_{12}, & 2 \gamma=R_{23}-R_{33}=R_{31}-R_{21}+R_{32}-R_{22} . \label{eq:8:1:16}
 \end{array}
 \end{equation}
 All nine elements $R_{i k}$ are non-negative integers which satisfy the relations
 \begin{equation}
-\sum_{i} R_{i k}=J, \quad \sum_{k} R_{i k}=J, \label{chap8:eq:16}
+\sum_{i} R_{i k}=J, \quad \sum_{k} R_{i k}=J, \label{eq:8:1:17}
 \end{equation}
 where
 \begin{equation}
-J=a+b+c. \label{chap8:eq:17}
+J=a+b+c. \label{eq:8:1:18}
 \end{equation}
 \section{EXPLICIT FORMS OF THE CLEBSCH-GORDAN COEFFICIENTS AND THEIR RELATIONS TO OTHER FUNCTIONS}
-Below we shall assume that the arguments of the Clebsch-Gordan coefficients and $3 j m$ symbols satisfy Eqs.~\ref{eq:8:1:1}-\ref{eq:8.1:3}. In addition we introduce the $\Delta$-symbol defined by
+Below we shall assume that the arguments of the Clebsch-Gordan coefficients and $3 j m$ symbols satisfy Eqs.~\ref{eq:8:1:1}-\ref{eq:8:1:3}. In addition we introduce the $\Delta$-symbol defined by
 \begin{equation}
-\Delta(a b c)=\left[\frac{(a+b-c)!(a-b+c)!(-a+b+c)!}{(a+b+c+1)!}\right]^{\frac{1}{2}}. \label{chap8:eq:18}
+\Delta(a b c)=\left[\frac{(a+b-c)!(a-b+c)!(-a+b+c)!}{(a+b+c+1)!}\right]^{\frac{1}{2}}. \label{eq:8:2:1}
 \end{equation}
 The $\Delta$-symbol is invariant under permutations of $a, b, c$. Numerical values of the $\Delta$-symbol are given in Table 8.12 for $\frac{1}{2} \leq a, b, c \leq 5$. If one of the momenta $a, b, c$ equals zero, the $\Delta$-symbol is reduced to
 \begin{equation}
-\Delta(a a 0)=\frac{1}{\sqrt{2 a+1}}. \label{chap8:eq:19}
+\Delta(a a 0)=\frac{1}{\sqrt{2 a+1}}. \label{eq:8:2:2}
 \end{equation}
 \subsection{Representations of the Clebsch-Gordan Coefficients in the Form of Algebraic Sums}
 \begin{align}
@@ -133,17 +133,17 @@ The $\Delta$-symbol is invariant under permutations of $a, b, c$. Numerical valu
 (Wigner [43])
 \begin{align}
 \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}= & \delta_{\gamma, \alpha+\beta} \frac{\Delta(a b c)}{(a-b+c)!(a+b-c)!}\left[\frac{(a+\alpha)!(a-\alpha)!(b-\beta)!(c+\gamma)!(2 c+1)}{(b+\beta)!(c-\gamma)!}\right]^{\frac{1}{2}}  \notag\\
-& \times \sum_{z} \frac{(-1)^{b+\beta+x}(2 c-z)!(a+b-c+z)!}{z!(c-a+b-z)!(c+\gamma-z)!(a-c-\beta+z)!}. \label{chap8:eq:20}
+& \times \sum_{z} \frac{(-1)^{b+\beta+x}(2 c-z)!(a+b-c+z)!}{z!(c-a+b-z)!(c+\gamma-z)!(a-c-\beta+z)!}. \label{eq:8:2:6}
 \end{align}
 (Majumdar [82])
 \begin{align}
 \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}= & \delta_{\gamma, \alpha+\beta} \frac{\Delta(a b c)(a+b+c+1)!}{(a-b+c)!}\left[\frac{(a-\alpha)!(c+\gamma)!(2 c+1)}{(a+\alpha)!(b+\beta)!(b-\beta)!(c-\gamma)!}\right]^{\frac{1}{2}}. \notag\\
-& \times \sum_{z} \frac{(-1)^{b+\beta+z}(2 c-z)!(c+b+\alpha-z)!}{z!(c-a+b-z)!(c+\gamma-z)!(a+b+c+1-z)!}. \label{chap8:eq:21}
+& \times \sum_{z} \frac{(-1)^{b+\beta+z}(2 c-z)!(c+b+\alpha-z)!}{z!(c-a+b-z)!(c+\gamma-z)!(a+b+c+1-z)!}. \label{eq:8:2:7}
 \end{align}
 (Bandzaitis and Yutsis [51])
 \begin{align}
 \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}= & \frac{\delta_{\gamma, \alpha+\beta}}{\Delta(a b c)}\left[\frac{(a+\alpha)!(a-\alpha)!(c+\gamma)!(c-\gamma)!(2 c+1)}{(b+\beta)!(b-\beta)!}\right]^{\frac{1}{2}}  \notag\\
-& \times \sum_{z} \frac{(-1)^{a-\alpha+z}(a+b-\gamma-z)!(b+c-\alpha-z)!}{z!(a-\alpha-z)!(c-\gamma-z)!(a+b+c+1-z)!}. \label{chap8:eq:22}
+& \times \sum_{z} \frac{(-1)^{a-\alpha+z}(a+b-\gamma-z)!(b+c-\alpha-z)!}{z!(a-\alpha-z)!(c-\gamma-z)!(a+b+c+1-z)!}. \label{eq:8:2:8}
 \end{align}
 (Bandzaitis and Yutsis [51]).\\
 In Eqs.~(3)-(8) the summation index $z$ assumes integer values for which all the factorial arguments are nonnegative.
@@ -151,61 +151,61 @@ In Eqs.~(3)-(8) the summation index $z$ assumes integer values for which all the
 \subsection{Quasi-Binomial Representation of the Clebsch-Gordan Coefficients}
 The Clebsch-Gordan coefficients can be presented in the form of quasi-binomials $(u \pm v)^{(k)}[48]^{2}$
 \begin{equation}
-\left.\left.\clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}=\delta_{\gamma, \alpha+\beta} \frac{\Delta(a b c)}{(a+b-c)!}\left[\frac{(c-\gamma)!(c+\gamma)!(2 c+1)}{(a-\alpha)!(a+\alpha)!(b-\beta)!(b+\beta)!}\right]^{\frac{1}{2}} \right\rvert\,(a+\alpha)(b-\beta)-(a-\alpha)(b+\beta)\right]^{(a+b-c)} . \label{chap8:eq:23}
+\left.\left.\clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}=\delta_{\gamma, \alpha+\beta} \frac{\Delta(a b c)}{(a+b-c)!}\left[\frac{(c-\gamma)!(c+\gamma)!(2 c+1)}{(a-\alpha)!(a+\alpha)!(b-\beta)!(b+\beta)!}\right]^{\frac{1}{2}} \right\rvert\,(a+\alpha)(b-\beta)-(a-\alpha)(b+\beta)\right]^{(a+b-c)} . \label{eq:8:2:9}
 \end{equation}
 For calculating the quasi-binomial one should use the binomial formula with all powers replaced by quasipowers.
 \begin{equation}
-(u \pm v)^{(k)}=\sum_{z}( \pm 1)^{z}\binom{k}{z} u^{(k-z)} v^{(z)}. \label{chap8:eq:24}
+(u \pm v)^{(k)}=\sum_{z}( \pm 1)^{z}\binom{k}{z} u^{(k-z)} v^{(z)}. \label{eq:8:2:10}
 \end{equation}
 Quasi-powers (or generalized powers) are defined by
 \begin{gather}
 u^{(z)} \equiv u^{(1)(z)}=\frac{\Gamma(u+1)}{\Gamma(u-z+1)}, \notag\\
-u^{(-1)(z)}=(u+z)^{(z)}=\frac{\Gamma(u+z+1)}{\Gamma(u+1)}. \label{chap8:eq:25}
+u^{(-1)(z)}=(u+z)^{(z)}=\frac{\Gamma(u+z+1)}{\Gamma(u+1)}. \label{eq:8:2:11}
 \end{gather}
 If $z$ is integer and positive, we get
 \begin{align}
 u^{(z)} & =u(u-1) \ldots(u-z+1), \notag\\
-u^{(-1)(z)} & =(u+1)(u+2) \ldots(u+z). \label{chap8:eq:26}
+u^{(-1)(z)} & =(u+1)(u+2) \ldots(u+z). \label{eq:8:2:12}
 \end{align}
 \subsection{Clebsch-Gordan Coefficients and Finite Differences}
 The Clebsch-Gordan coefficient are related to finite differences [41]
 \begin{gather}
 \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}=\delta_{\gamma, \alpha+\beta}(-1)^{a-c+\beta}\left[\frac{(c+\gamma)!(a+b-c)!(2 c+1)}{(c-\gamma)!(c+a-b)!(c-a+b)!(a+b+c+1)!}\right]^{\frac{1}{2}}  \notag\\
-\times\left[\frac{(a-\alpha)^{(a-b-\gamma)}}{(a+\alpha)^{(a-b+\gamma)}}\right]^{\frac{1}{2}} \Delta_{\alpha}^{c-\gamma}\left[\frac{(a+\alpha)^{(c+a-b)}}{(a-\alpha)^{(a-b-c)}}\right]. \label{chap8:eq:27}
+\times\left[\frac{(a-\alpha)^{(a-b-\gamma)}}{(a+\alpha)^{(a-b+\gamma)}}\right]^{\frac{1}{2}} \Delta_{\alpha}^{c-\gamma}\left[\frac{(a+\alpha)^{(c+a-b)}}{(a-\alpha)^{(a-b-c)}}\right]. \label{eq:8:2:13}
 \end{gather}
 where the difference of order $k$ with respect to the argument $a$ is given by
 \begin{equation}
-\Delta_{a}^{k} f(a)=\sum_{n=0}^{k}(-1)^{k-n} \frac{k!}{n!(k-n)!} f(a+n). \label{chap8:eq:28}
+\Delta_{a}^{k} f(a)=\sum_{n=0}^{k}(-1)^{k-n} \frac{k!}{n!(k-n)!} f(a+n). \label{eq:8:2:14}
 \end{equation}
 In particular,
 \begin{gather}
 \Delta_{a} f(a)=f(a+1)-f(a), \notag\\
-\Delta_{a} a^{(n)}=n a^{(n-1)} . \label{chap8:eq:29}
+\Delta_{a} a^{(n)}=n a^{(n-1)} . \label{eq:8:2:15}
 \end{gather}
 Finite differences are analogous to differentials, while quasi-powers are analogous to ordinary powers. From this it can be concluded that the Clebsch-Gordan coefficients are analogous to the Wigner $D$-functions [20, 58]. To illustrate this similarity let us introduce the notations
 \begin{equation}
-j=b, \quad \mu=c-a, \quad \nu=\beta, \quad P=\frac{1}{2}(a+b+c), \quad Q=a+\alpha-\frac{1}{2}(a+b+c) . \label{chap8:eq:30}
+j=b, \quad \mu=c-a, \quad \nu=\beta, \quad P=\frac{1}{2}(a+b+c), \quad Q=a+\alpha-\frac{1}{2}(a+b+c) . \label{eq:8:2:16}
 \end{equation}
 \footnotetext{${ }^{2}$ This follows from the fact that the Clebsch-Gordan coefficients may be expressed in terms of orthogonal polynomials of a discrete variable (Hahn polynomials); see Refs. [142, 143].
 }Now, Eq.~(3) may be rewritten in terms of quasi-powers
 \begin{align}
 \sqrt{\frac{a+b+c+1}{2 c+1}} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}= & {\left[\frac{(j+\mu)!(j-\mu)!(j+\nu)!(j-\nu)!}{(2 P)^{(2 j)}(P-Q)^{(j+\mu)}(P-Q)^{(j+\nu)}(P+Q)^{(-\mu-\nu)}}\right]^{\frac{1}{2}} }  \notag\\
-& \times \sum_{x}(-1)^{z} \frac{(P-Q)^{(j+\mu+z)}(P+Q)^{(j-\mu-z)}}{z!(j-\mu-z)!(j+\nu-z)!(\mu-\nu+z)!}. \label{chap8:eq:31}
+& \times \sum_{x}(-1)^{z} \frac{(P-Q)^{(j+\mu+z)}(P+Q)^{(j-\mu-z)}}{z!(j-\mu-z)!(j+\nu-z)!(\mu-\nu+z)!}. \label{eq:8:2:17}
 \end{align}
 Replacing quasi-powers in (17) by ordinary powers and introducing the angle $\vartheta$ according to
 \begin{equation}
-\cos \theta=\frac{Q}{P}, \quad \cos \frac{\theta}{2}=\sqrt{\frac{P+Q}{2 P}}, \quad \sin \frac{\theta}{2}=\sqrt{\frac{P-Q}{2 P}}, \label{chap8:eq:32}
+\cos \theta=\frac{Q}{P}, \quad \cos \frac{\theta}{2}=\sqrt{\frac{P+Q}{2 P}}, \quad \sin \frac{\theta}{2}=\sqrt{\frac{P-Q}{2 P}}, \label{eq:8:2:18}
 \end{equation}
-we see that \eqref{chap8:eq:31} reduces to the following relation for the Wigner $D$-function
+we see that \eqref{eq:8:2:17} reduces to the following relation for the Wigner $D$-function
 \begin{align}
 & d_{\nu \mu}^{j}(\theta)=\left[\frac{(j+\mu)!(j-\mu)!(j+\nu)!(j-\nu)!}{(2 P)^{2 j}(P-Q)^{j+\mu}(P-Q)^{j+\nu}(P+Q)^{-\mu-\nu}}\right]^{\frac{1}{2}}  \notag\\
-& \times \sum_{x}(-1)^{x} \frac{(P-Q)^{j+\mu+x}(P+Q)^{j-\mu-x}}{z!(j-\mu-z)!(j+\nu-z)!(\mu-\nu+z)!}. \label{chap8:eq:33}
+& \times \sum_{x}(-1)^{x} \frac{(P-Q)^{j+\mu+x}(P+Q)^{j-\mu-x}}{z!(j-\mu-z)!(j+\nu-z)!(\mu-\nu+z)!}. \label{eq:8:2:19}
 \end{align}
-\eqref{chap8:eq:33} is similar to Eq.~4.3(4). The analogy between \eqref{chap8:eq:31} and \eqref{chap8:eq:33} permits us to connect the recursion relations, symmetry properties, etc. of the Wigner D-functions and the Clebsch-Gordan coefficients [58]. Since for $u \gg z, u \gg 1$ quasi-powers became asymptotically equal to ordinary powers, a Clebsch-Gordan coefficient turns into a $D$-function in the large-momentum limit (\eqref{chap8:eq:214}).
+\eqref{eq:8:2:19} is similar to Eq.~4.3(4). The analogy between \eqref{eq:8:2:17} and \eqref{eq:8:2:19} permits us to connect the recursion relations, symmetry properties, etc. of the Wigner D-functions and the Clebsch-Gordan coefficients [58]. Since for $u \gg z, u \gg 1$ quasi-powers became asymptotically equal to ordinary powers, a Clebsch-Gordan coefficient turns into a $D$-function in the large-momentum limit (\eqref{eq:8:9:1}).
 
 \subsection{Expressions for the Clebsch-Gordan Coefficients in Terms of the Binomial Coefficients [126]}
 \begin{equation}
-\clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}=\delta_{\gamma, \alpha+\beta}\left[\frac{\binom{2 a}{J-2 c}\binom{2 b}{J-2 c}}{\binom{J+1}{J-2 c}\binom{2 a}{a-\alpha}\binom{2 b}{b-\beta}\binom{2 c}{c-\gamma}}\right]^{\frac{1}{2}} \sum_{x}(-1)^{x}\binom{J-2 c}{z}\binom{J-2 b}{a-\alpha-z}\binom{J-2 a}{b+\beta-z}, \label{chap8:eq:34}
+\clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}=\delta_{\gamma, \alpha+\beta}\left[\frac{\binom{2 a}{J-2 c}\binom{2 b}{J-2 c}}{\binom{J+1}{J-2 c}\binom{2 a}{a-\alpha}\binom{2 b}{b-\beta}\binom{2 c}{c-\gamma}}\right]^{\frac{1}{2}} \sum_{x}(-1)^{x}\binom{J-2 c}{z}\binom{J-2 b}{a-\alpha-z}\binom{J-2 a}{b+\beta-z}, \label{eq:8:2:20}
 \end{equation}
 where $J=a+b+c$.
 
@@ -216,7 +216,7 @@ The Clebsch-Gordan coefficients may be expressed via the generalized hypergeomet
 \times\Fhg{3}{2}\left[\left.\begin{array}{c}
 -a-b+c,-a+\alpha,-b-\beta \\
 -a+c-\beta+1,-b+c+\alpha+1
-\end{array} \right\rvert\, 1\right], \label{chap8:eq:35}
+\end{array} \right\rvert\, 1\right], \label{eq:8:2:21}
 \end{gather}
 \begin{align}
 & \begin{aligned}
@@ -234,9 +234,9 @@ a-b-\gamma+1,-b-c-\alpha \\
 \end{array} \right\rvert\, 1\right]\\
 &\qquad 
 (\text { Rose }(30))
-\end{aligned}, \label{chap8:eq:36}\\
+\end{aligned}, \label{eq:8:2:23}\\
 & \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}=\delta_{\gamma, \alpha+\beta}(-1)^{b+\beta} \frac{\Delta(a b c)(2 c)!}{(a-b+c)!(-a+b+c)!(a-c-\beta)!}\left[\frac{(a+\alpha)!(a-\alpha)!(b-\beta)!(2 c+1)}{(b+\beta)!(c+\gamma)!(c-\gamma)!}\right]^{\frac{1}{2}}  \notag\\
-&  \label{chap8:eq:37}\\
+&  \label{eq:8:2:24}\\
 & \quad \times\Fhg{3}{2}\left[\begin{array}{c}
 a-b-c, a+b-c+1,-c-\gamma \mid 1], \\
 -2 c, a-c-\beta+1
@@ -245,39 +245,39 @@ a-b-c, a+b-c+1,-c-\gamma \mid 1], \\
 & \quad \times\Fhg{3}{2}\left[\begin{array}{c}
 a-b-c,-a-b-c-1,-c-\gamma \mid 1], \\
 -2 c,-b-c-\alpha
-\end{array}\right. \label{chap8:eq:38}\\
+\end{array}\right. \label{eq:8:2:25}\\
 & \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}=\delta_{\gamma, \alpha+\beta}(-1)^{a-\alpha} \frac{(a+b-\gamma)!(b+c-\alpha)!}{\Delta(a b c)(a+b+c+1)!}\left[\frac{(a+\alpha)!(c+\gamma)!(2 c+1)}{(a-\alpha)!(b+\beta)!(b-\beta)!(c-\gamma)!}\right]^{\frac{1}{2}}  \notag\\
 & \quad \times\Fhg{3}{2}\left[\begin{array}{c}
 -a-b-c-1,-a+\alpha,-c+\gamma \mid 1 \\
 -a-b+\gamma,-b-c+\alpha
-\end{array}\right] . \label{chap8:eq:39}
+\end{array}\right] . \label{eq:8:2:26}
 \end{align}
 Equations (21)-(26) may be associated with Eqs.~(3)-(8), respectively.\\[0pt]
 According to Ref. [36], all $\Fhg{3}{2}$-functions of unit argument, which are given by finite sums, may be expressed in terms of the Clebsch-Gordan coefficients. Any Clebsch-Gordan coefficient may also be represented in the form of derivatives of the hypergeometric functions [46]:
 \begin{gather}
 \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}=\delta_{\gamma, \alpha+\beta}(-1)^{a+b-c} \frac{\Delta(a b c)}{(a+b-c)!(-a+b+c)!(a-b+\gamma)!}\left[\frac{(a+\alpha)!(a-\alpha)!(b+\beta)!(c+\gamma)!(2 c+1)}{(b-\beta)!(c-\gamma)!}\right]^{\frac{1}{2}}  \notag\\
-\times\left\{\frac{d^{b-\beta}}{(d t)^{b-\beta}}\left[(1-t)^{a+b-c} F(a-b-c,-c+\gamma ; a-b+\gamma+1 ; t)\right]\right\}_{t=0}. \label{chap8:eq:40}
+\times\left\{\frac{d^{b-\beta}}{(d t)^{b-\beta}}\left[(1-t)^{a+b-c} F(a-b-c,-c+\gamma ; a-b+\gamma+1 ; t)\right]\right\}_{t=0}. \label{eq:8:2:27}
 \end{gather}
 \subsection{Representations of the $3 j \mathrm{~m}$ Symbols in the Form of Algebraic Sums}
 The explicit form of the Wigner $3 j m$ symbols may be obtained from Eqs.~(3)-(8) for the Clebsch-Gordan coefficients. Rewriting these equations in terms of the $R$-symbol elements, we get the following relations for\\
 the $3 j m$ symbols [45]
 \begin{align}
  \threej{a}{b}{c}{\alpha}{\beta}{\gamma}&=(-1)^{R_{21}+R_{32}}\left[\frac{\prod_{i, j=1}^{3}\left(R_{i j}\right)!}{(J+1)!}\right]^{\frac{1}{2}} \notag \\
-& \times \sum_{x}(-1)^{x} \frac{1}{z!\left(R_{13}-z\right)!\left(R_{22}-z\right)!\left(R_{31}-z\right)!\left(R_{33}-R_{22}+z\right)!\left(R_{11}-R_{22}+z\right)!}, \label{chap8:eq:41}\\
+& \times \sum_{x}(-1)^{x} \frac{1}{z!\left(R_{13}-z\right)!\left(R_{22}-z\right)!\left(R_{31}-z\right)!\left(R_{33}-R_{22}+z\right)!\left(R_{11}-R_{22}+z\right)!}, \label{eq:8:2:28}\\
 \threej{a}{b}{c}{\alpha}{\beta}{\gamma}&=(-1)^{R_{21}+R_{31}+R_{32}}\left[\frac{R_{13}!R_{23}!R_{31}!R_{32}!R_{33}!}{(J+1)!R_{11}!R_{12}!R_{21}!R_{22}!}\right]^{\frac{1}{2}}  \notag\\
- &\times \sum_{x}(-1)^{x} \frac{\left(R_{21}+z\right)!\left(R_{11}+R_{31}-z\right)!}{z!\left(R_{31}-z\right)!\left(R_{23}-z\right)!\left(R_{13}-R_{31}+z\right)!}, \label{chap8:eq:42}\\
+ &\times \sum_{x}(-1)^{x} \frac{\left(R_{21}+z\right)!\left(R_{11}+R_{31}-z\right)!}{z!\left(R_{31}-z\right)!\left(R_{23}-z\right)!\left(R_{13}-R_{31}+z\right)!}, \label{eq:8:2:29}\\
  \threej{a}{b}{c}{\alpha}{\beta}{\gamma}&=(-1)^{R_{21}+R_{22}+R_{32}}\left[\frac{R_{11}!R_{12}!R_{13}!R_{23}!R_{33}!}{(J+1)!R_{21}!R_{22}!R_{31}!R_{32}!}\right]^{\frac{1}{2}} \sum_{z}(-1)^{z} \frac{\left(R_{31}+z\right)!\left(R_{32}+R_{33}-z\right)!}{z!\left(R_{11}-z\right)!\left(R_{33}-z\right)!\left(R_{12}-R_{33}+z\right)!}, \\
- \threej{a}{b}{c}{\alpha}{\beta}{\gamma}&=(-1)^{R_{21}+R_{22}+R_{32}}\left[\frac{R_{11}!R_{21}!R_{31}!R_{32}!R_{33}!}{(J+1)!R_{12}!R_{13}!R_{22}!R_{33}!}\right]^{\frac{1}{2}} \sum_{z}(-1)^{z} \frac{\left(R_{13}+z\right)!\left(R_{23}+R_{33}-z\right)!}{z!\left(R_{11}-z\right)!\left(R_{33}-z\right)!\left(R_{21}-R_{33}+z\right)!}, \label{chap8:eq:43}\\
- \threej{a}{b}{c}{\alpha}{\beta}{\gamma}&=(-1)^{R_{21}+R_{22}+R_{32}}\left[\frac{(J+1)!R_{11}!R_{13}!R_{31}!R_{39}!}{R_{12}!R_{21}!R_{22}!R_{23}!R_{32}!}\right]^{\frac{1}{2}} \sum_{z}(-1)^{z} \frac{\left(R_{11}+R_{21}-z\right)!\left(R_{23}+R_{33}-z\right)!}{z!\left(R_{11}-z\right)!\left(R_{33}-z\right)!(J+1-z)!}, \label{chap8:eq:44}\\
- \threej{a}{b}{c}{\alpha}{\beta}{\gamma}&=(-1)^{R_{21}+R_{31}+R_{32}}\left[\frac{(J+1)!R_{21}!R_{23}!R_{31}!R_{39}!}{R_{11}!R_{12}!R_{13}!R_{22}!R_{32}!}\right]^{\frac{1}{2}} \sum_{z}(-1)^{z} \frac{\left(R_{11}+R_{31}-z\right)!\left(R_{13}+R_{23}-z\right)!}{z!\left(R_{23}-z\right)!\left(R_{31}-z\right)!(J+1-z)!}, \label{chap8:eq:45}
+ \threej{a}{b}{c}{\alpha}{\beta}{\gamma}&=(-1)^{R_{21}+R_{22}+R_{32}}\left[\frac{R_{11}!R_{21}!R_{31}!R_{32}!R_{33}!}{(J+1)!R_{12}!R_{13}!R_{22}!R_{33}!}\right]^{\frac{1}{2}} \sum_{z}(-1)^{z} \frac{\left(R_{13}+z\right)!\left(R_{23}+R_{33}-z\right)!}{z!\left(R_{11}-z\right)!\left(R_{33}-z\right)!\left(R_{21}-R_{33}+z\right)!}, \label{eq:8:2:31}\\
+ \threej{a}{b}{c}{\alpha}{\beta}{\gamma}&=(-1)^{R_{21}+R_{22}+R_{32}}\left[\frac{(J+1)!R_{11}!R_{13}!R_{31}!R_{39}!}{R_{12}!R_{21}!R_{22}!R_{23}!R_{32}!}\right]^{\frac{1}{2}} \sum_{z}(-1)^{z} \frac{\left(R_{11}+R_{21}-z\right)!\left(R_{23}+R_{33}-z\right)!}{z!\left(R_{11}-z\right)!\left(R_{33}-z\right)!(J+1-z)!}, \label{eq:8:2:32}\\
+ \threej{a}{b}{c}{\alpha}{\beta}{\gamma}&=(-1)^{R_{21}+R_{31}+R_{32}}\left[\frac{(J+1)!R_{21}!R_{23}!R_{31}!R_{39}!}{R_{11}!R_{12}!R_{13}!R_{22}!R_{32}!}\right]^{\frac{1}{2}} \sum_{z}(-1)^{z} \frac{\left(R_{11}+R_{31}-z\right)!\left(R_{13}+R_{23}-z\right)!}{z!\left(R_{23}-z\right)!\left(R_{31}-z\right)!(J+1-z)!}, \label{eq:8:2:33}
 \end{align}
 where $J=a+b+c$.
 
 \subsection{Quasi-binomial Representations of the $3jm$ Symbols}
 \begin{equation}
-\threej{a}{b}{c}{\alpha}{\beta}{\gamma}\label{chap8:eq:46}=(-1)^{R_{21}+R_{32}}\left[\frac{R_{21}^{(-1)\left(R_{31}-R_{13}\right)} R_{31}^{(-1)\left(R_{32}-R_{13}\right)} R_{32}^{(-1)\left(R_{22}-R_{13}\right)} R_{22}^{(-1)\left(R_{21}-R_{13}\right)}}{(J+1)!R_{13}!}\right]^{\frac{1}{4}}(u-v)^{\left(R_{13}\right)} .
+\threej{a}{b}{c}{\alpha}{\beta}{\gamma}\label{eq:8:2:34}=(-1)^{R_{21}+R_{32}}\left[\frac{R_{21}^{(-1)\left(R_{31}-R_{13}\right)} R_{31}^{(-1)\left(R_{32}-R_{13}\right)} R_{32}^{(-1)\left(R_{22}-R_{13}\right)} R_{22}^{(-1)\left(R_{21}-R_{13}\right)}}{(J+1)!R_{13}!}\right]^{\frac{1}{4}}(u-v)^{\left(R_{13}\right)} .
 \end{equation}
-The quasi-binomial may be evaluated according to Eqs.~\eqref{chap8:eq:24} and \eqref{chap8:eq:25}. Variables $u$ and $v$ may be chosen in different ways [45]:
+The quasi-binomial may be evaluated according to Eqs.~\eqref{eq:8:2:10} and \eqref{eq:8:2:11}. Variables $u$ and $v$ may be chosen in different ways [45]:
 \begin{align}
 (a)& \qquad u=R_{21}^{(1)} R_{32}^{(1)}, && v=R_{22}^{(1)} R_{31}^{(1)},\notag\\
 (b)& \qquad u=R_{21}^{(1)} R_{11}^{(-1)}, && v=R_{22}^{(1)} R_{12}^{(-1)},\notag\\
@@ -289,17 +289,17 @@ The quasi-binomial may be evaluated according to Eqs.~\eqref{chap8:eq:24} and \e
 The Clebsch-Gordan coefficients may be represented by the following integrals [41] ( $J=a+b+c$ )
 \begin{gather}
 \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}=\frac{(-1)^{a-c+\beta}}{2^{J+1}}\left[\frac{(c+\gamma)!(J-2 c)!(J+1)!(2 c+1)}{(a-\alpha)!(a+\alpha)!(b-\beta)!(b+\beta)!(c-\gamma)!(J-2 a)!(J-2 b)!}\right]^{\frac{1}{2}}  \notag\\
-\times \int_{-1}^{1}(1-x)^{a-\alpha}(1+x)^{b-\beta} \frac{d^{c-\gamma}}{(d x)^{c-\gamma}}\left[(1-x)^{J-2 a}(1+x)^{J-2 b}\right] d x, \label{chap8:eq:47}\\
+\times \int_{-1}^{1}(1-x)^{a-\alpha}(1+x)^{b-\beta} \frac{d^{c-\gamma}}{(d x)^{c-\gamma}}\left[(1-x)^{J-2 a}(1+x)^{J-2 b}\right] d x, \label{eq:8:3:1}\\
 \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}=\frac{(-1)^{a-c+\beta}}{2^{J+1}}\left[\frac{(J-2 b)!(J-2 c)!(J+1)!(2 c+1)}{(a-\alpha)!(a+\alpha)!(b-\beta)!(b+\beta)!(c-\gamma)!(c+\gamma)!(J-2 a)!}\right]^{\frac{1}{2}}  \notag\\
-\times \int_{-1}^{1}(1-x)^{b+\beta}(1+x)^{b-\beta} \frac{d^{J-2 a}}{(d x)^{J-2 a}}\left[(1-x)^{c-\gamma}(1+x)^{c+\gamma}\right] d x. \label{chap8:eq:48}
+\times \int_{-1}^{1}(1-x)^{b+\beta}(1+x)^{b-\beta} \frac{d^{J-2 a}}{(d x)^{J-2 a}}\left[(1-x)^{c-\gamma}(1+x)^{c+\gamma}\right] d x. \label{eq:8:3:2}
 \end{gather}
 In particular, if $\alpha=\beta=\gamma=0$, then
 \begin{equation}
-\clebsch{a}{0}{b}{0}{c}{0}=\frac{(-1)^{a-c}}{2^{J+1} a!b!c!}\left[\frac{(J-2 b)!(J-2 c)!(J+1)!(2 c+1)}{(J-2 a)!}\right]^{\frac{1}{2}} \int_{-1}^{1}\left(1-x^{2}\right)^{b} \frac{d^{J-2 a}}{(d x)^{J-2 a}}\left[\left(1-x^{2}\right)^{c}\right] d x. \label{chap8:eq:49}
+\clebsch{a}{0}{b}{0}{c}{0}=\frac{(-1)^{a-c}}{2^{J+1} a!b!c!}\left[\frac{(J-2 b)!(J-2 c)!(J+1)!(2 c+1)}{(J-2 a)!}\right]^{\frac{1}{2}} \int_{-1}^{1}\left(1-x^{2}\right)^{b} \frac{d^{J-2 a}}{(d x)^{J-2 a}}\left[\left(1-x^{2}\right)^{c}\right] d x. \label{eq:8:3:3}
 \end{equation}
 \subsection{Integrals Involving the Wigner D-Functions}
 \begin{equation}
-\clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}=\frac{1}{8 \pi^{2}}\left[\frac{(a+b+c+1)!(a+b-c)!(2 c+1)}{(2 a)!(2 b)!}\right]^{\frac{1}{2}} \int d R D_{\alpha a}^{a}(R) D_{\beta-b}^{b}(R) D_{\gamma a-b}^{c *}(R), \label{chap8:eq:50}
+\clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}=\frac{1}{8 \pi^{2}}\left[\frac{(a+b+c+1)!(a+b-c)!(2 c+1)}{(2 a)!(2 b)!}\right]^{\frac{1}{2}} \int d R D_{\alpha a}^{a}(R) D_{\beta-b}^{b}(R) D_{\gamma a-b}^{c *}(R), \label{eq:8:3:4}
 \end{equation}
 where $R$ means the set of the Euler angles (see Sec. 4.12)
 \begin{equation}
@@ -314,15 +314,15 @@ where $R$ means the set of the Euler angles (see Sec. 4.12)
 \subsection{Integral Involving the Spherical Harmonics}
 If $a, b, c$ are integers and $J=a+b+c=2 g$ is even (i.e., $g$ is integer), then
 \begin{equation}
-\clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}=(-1)^{g-c}\left[\frac{4 \pi}{(2 a+1)(2 b+1)}\right]^{\frac{1}{2}} \frac{(g-a)!(g-b)!(g-c)!}{\Delta(a b c) g!} \int_{0}^{2 \pi} d \varphi \int_{0}^{\pi} d \vartheta \sin \vartheta Y_{a \alpha}(\vartheta, \varphi) Y_{b \beta}(\vartheta, \varphi) Y_{c \gamma}^{*}(\vartheta, \varphi). \label{chap8:eq:51}
+\clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}=(-1)^{g-c}\left[\frac{4 \pi}{(2 a+1)(2 b+1)}\right]^{\frac{1}{2}} \frac{(g-a)!(g-b)!(g-c)!}{\Delta(a b c) g!} \int_{0}^{2 \pi} d \varphi \int_{0}^{\pi} d \vartheta \sin \vartheta Y_{a \alpha}(\vartheta, \varphi) Y_{b \beta}(\vartheta, \varphi) Y_{c \gamma}^{*}(\vartheta, \varphi). \label{eq:8:3:6}
 \end{equation}
 \subsection{Integral Representations for Products of the Clebsch-Gordan Coefficients}
 \begin{equation}
-\clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} \clebsch{a}{\alpha^{\prime}}{b}{\beta^{\prime}}{c}{\gamma^{\prime}}=\frac{2 c+1}{8 \pi^{2}} \int d R D_{\alpha \alpha^{\prime}}^{a}(R) D_{\beta \beta^{\prime}}^{b}(R) D_{\gamma \gamma^{\prime}}^{c *}(R). \label{chap8:eq:52}
+\clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} \clebsch{a}{\alpha^{\prime}}{b}{\beta^{\prime}}{c}{\gamma^{\prime}}=\frac{2 c+1}{8 \pi^{2}} \int d R D_{\alpha \alpha^{\prime}}^{a}(R) D_{\beta \beta^{\prime}}^{b}(R) D_{\gamma \gamma^{\prime}}^{c *}(R). \label{eq:8:3:7}
 \end{equation}
 In particular,
 \begin{equation}
-\left[\clebsch{a}{0}{b}{0}{c}{0}\right]^{2}=\frac{2 c+1}{2} \int_{0}^{\pi} d \theta \sin \vartheta P_{a}(\cos \vartheta) P_{b}(\cos \vartheta) P_{c}(\cos \vartheta). \label{chap8:eq:53}
+\left[\clebsch{a}{0}{b}{0}{c}{0}\right]^{2}=\frac{2 c+1}{2} \int_{0}^{\pi} d \theta \sin \vartheta P_{a}(\cos \vartheta) P_{b}(\cos \vartheta) P_{c}(\cos \vartheta). \label{eq:8:3:8}
 \end{equation}
 \section{SYMMETRY PROPERTIES}
 The simplest way to formulate the symmetry properties of the Clebsch-Gordan coefficients and 3jm symbols is to use the representations of these coefficients in the form of the Regge $R$-symbols [94] (see Sec. 8.1.3).
@@ -339,11 +339,11 @@ R_{31} & R_{32} & R_{33}
 R_{1 i} & R_{1 k} & R_{1 i} \\
 R_{2 i} & R_{2 k} & R_{2 l} \\
 R_{3 i} & R_{3 k} & R_{3 l}
-\end{array}\right\|,   \label{chap8:eq:54}
+\end{array}\right\|,   \label{eq:8:4:1}
 \end{equation}
 where
 \begin{equation}
-c= \begin{cases}+1 & \text { for cyclic permutation (even number of permutations) }  \\ (-1)^{J} & \text { for non-cyclic permutation (odd number of permutations) }\end{cases}, \label{chap8:eq:55}
+c= \begin{cases}+1 & \text { for cyclic permutation (even number of permutations) }  \\ (-1)^{J} & \text { for non-cyclic permutation (odd number of permutations) }\end{cases}, \label{eq:8:4:2}
 \end{equation}
 and
 \[
@@ -371,7 +371,7 @@ R_{31} & R_{32} & R_{33}
 R_{11} & R_{21} & R_{31} \\
 R_{12} & R_{22} & R_{32} \\
 R_{13} & R_{23} & R_{33}
-\end{array}\right\|.  \label{chap8:eq:57}
+\end{array}\right\|.  \label{eq:8:4:4}
 \end{equation}
 These symmetry transformations relate $6 \times 6 \times 2=72$ generally different coefficients.
 
@@ -383,29 +383,29 @@ The above relations are equivalent to the following symmetry properties of the $
 \item Permutations of columns (corresponding to permutations of columns of the $R$-symbol):
 \begin{align}
 \threej{a}{b}{c}{\alpha}{\beta}{\gamma}=\threej{b}{c}{a}{\beta}{\gamma}{\alpha}=\threej{c}{a}{b}{\gamma}{\alpha}{\beta} & =(-1)^{a+b+c}\threej{a}{c}{b}{\alpha}{\gamma}{\beta}  \notag\\
-& =(-1)^{\alpha+\beta+\gamma}\threej{b}{a}{c}{\beta}{\alpha}{\gamma}=(-1)^{\alpha+b+c}\threej{c}{b}{a}{\gamma}{\beta}{\alpha}. \label{chap8:eq:58}
+& =(-1)^{\alpha+\beta+\gamma}\threej{b}{a}{c}{\beta}{\alpha}{\gamma}=(-1)^{\alpha+b+c}\threej{c}{b}{a}{\gamma}{\beta}{\alpha}. \label{eq:8:4:5}
 \end{align}
 \item Change of signs of momentum projections (corresponding to the permutation of the second and third rows of the $R$-symbol)
 \begin{equation}
-\threej{a}{b}{c}{\alpha}{\beta}{\gamma}\label{chap8:eq:59}=(-1)^{a+b+c}\threej{a}{b}{c}{-\alpha}{-\beta}{-\gamma}
+\threej{a}{b}{c}{\alpha}{\beta}{\gamma}\label{eq:8:4:6}=(-1)^{a+b+c}\threej{a}{b}{c}{-\alpha}{-\beta}{-\gamma}
 \end{equation}
 \subsubsection{Regge symmetries [94]}
 \item Replacement of arguments:
 \begin{equation}
-\threej{a}{b}{c}{\alpha}{\beta}{\gamma}\label{chap8:eq:60}=(-1)^{a+b+c}\threej{\frac{b+c+\alpha}{2}}{\frac{a+c+\beta}{2}}{\frac{a+b+\gamma}{2}}{a-\frac{b+c-\alpha}{2}}{b-\frac{a+c-\beta}{2}}{c-\frac{a+b-\gamma}{2}}
+\threej{a}{b}{c}{\alpha}{\beta}{\gamma}\label{eq:8:4:7}=(-1)^{a+b+c}\threej{\frac{b+c+\alpha}{2}}{\frac{a+c+\beta}{2}}{\frac{a+b+\gamma}{2}}{a-\frac{b+c-\alpha}{2}}{b-\frac{a+c-\beta}{2}}{c-\frac{a+b-\gamma}{2}}
 \end{equation}
 (corresponding to the permutation of the first and third rows of the $R$-symbol) and\\
 \item
 \begin{equation}
-\threej{a}{b}{c}{\alpha}{\beta}{\gamma}\label{chap8:eq:61}=\threej{a}{\frac{b+c-\alpha}{2}}{\frac{b+c+\alpha}{2}}{-b+c}{\frac{b-c-\alpha}{2}-\gamma}{\frac{b-c+\alpha}{2}+\gamma}
+\threej{a}{b}{c}{\alpha}{\beta}{\gamma}\label{eq:8:4:8}=\threej{a}{\frac{b+c-\alpha}{2}}{\frac{b+c+\alpha}{2}}{-b+c}{\frac{b-c-\alpha}{2}-\gamma}{\frac{b-c+\alpha}{2}+\gamma}
 \end{equation}
-This corresponds to the transposition of the $R$-symbol. According to the above symmetry properties, 72 formally different $3 j m$ symbols have the same absolute values. One can decompose these symbols into six groups ( 12 coefficients in each group). The $3 j m$ symbols which belong to different groups correspond to triangles of different forms but the same perimeter $J=a+b+c$. On the other hand, all $3 j m$ symbols which belong to one group are related by the classical symmetry properties \eqref{chap8:eq:58} and \eqref{chap8:eq:59}. In \eqref{chap8:eq:62} we list one $3 j m$ symbol from each group.
+This corresponds to the transposition of the $R$-symbol. According to the above symmetry properties, 72 formally different $3 j m$ symbols have the same absolute values. One can decompose these symbols into six groups ( 12 coefficients in each group). The $3 j m$ symbols which belong to different groups correspond to triangles of different forms but the same perimeter $J=a+b+c$. On the other hand, all $3 j m$ symbols which belong to one group are related by the classical symmetry properties \eqref{eq:8:4:5} and \eqref{eq:8:4:6}. In \eqref{eq:8:4:9} we list one $3 j m$ symbol from each group.
 \begin{align}
 & \threej{a}{b}{c}{\alpha}{\beta}{\gamma}=\threej{a}{\frac{b+c-\alpha}{2}}{\frac{b+c+\alpha}{2}}{c-b}{\frac{b+\beta-c-\gamma}{2}}{\frac{b-\beta-c+\gamma}{2}}=\threej{b}{\frac{a+c-\beta}{2}}{\frac{a+c+\beta}{2}}{a-c}{\frac{-a-\alpha+c+\gamma}{2}}{\frac{-a+\alpha+c-\gamma}{2}}  \notag\\
 & =\threej{c}{\frac{a+b-\gamma}{2}}{\frac{a+b+\gamma}{2}}{b-a}{\frac{a+\alpha-b-\beta}{2}}{\frac{a-\alpha-b+\beta}{2}}=\threej{\frac{b+c-\alpha}{2}}{\frac{a+c-\beta}{2}}{\frac{a+b-\gamma}{2}}{a-\alpha-\frac{b+c-\alpha}{2}}{b-\beta-\frac{a+c-\beta}{2}}{c-\gamma-\frac{a+b-\gamma}{2}}  \notag\\
 & =\threej{\frac{b+c+\alpha}{2}}{\frac{a+c+\beta}{2}}{\frac{a+b+\gamma}{2}}%
 {\frac{b+c+\alpha}{2}-a-\alpha}{\frac{a+c+\beta}{2}-b-\beta}{\frac{a+b+\gamma}{2}-c-\gamma}
- . \label{chap8:eq:62}
+ . \label{eq:8:4:9}
 \end{align}
 \end{enumerate}
 \subsection{Symmetry Properties of the Clebsch-Gordan Coefficients}
@@ -413,22 +413,22 @@ This corresponds to the transposition of the $R$-symbol. According to the above 
 \item
   \begin{align}
 \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}=(-1)^{a+b-c} \clebsch{b}{\beta}{a}{\alpha}{c}{\gamma} & =(-1)^{a-\alpha} \sqrt{\frac{2 c+1}{2 b+1}} \clebsch{a}{\alpha}{c}{-\gamma}{b}{-\beta}=(-1)^{a-\alpha} \sqrt{\frac{2 c+1}{2 b+1}} \clebsch{c}{\gamma}{a}{-\alpha}{b}{\beta}  \notag\\
-& =(-1)^{b+\beta} \sqrt{\frac{2 c+1}{2 a+1}} \clebsch{c}{-\gamma}{b}{\beta}{a}{-\alpha}=(-1)^{b+\beta} \sqrt{\frac{2 c+1}{2 a+1}} \clebsch{b}{-\beta}{c}{\gamma}{a}{\alpha}. \label{chap8:eq:63}
+& =(-1)^{b+\beta} \sqrt{\frac{2 c+1}{2 a+1}} \clebsch{c}{-\gamma}{b}{\beta}{a}{-\alpha}=(-1)^{b+\beta} \sqrt{\frac{2 c+1}{2 a+1}} \clebsch{b}{-\beta}{c}{\gamma}{a}{\alpha}. \label{eq:8:4:10}
 \end{align}
 \item
 \begin{equation}
-\clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}=(-1)^{a+b-c} \clebsch{a}{-\alpha}{b}{-\beta}{c}{-\gamma}. \label{chap8:eq:64}
+\clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}=(-1)^{a+b-c} \clebsch{a}{-\alpha}{b}{-\beta}{c}{-\gamma}. \label{eq:8:4:11}
 \end{equation}
 \item
 \begin{equation}
-\clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}=\clebsch{a^{\prime}}{\alpha^{\prime}}{b^{\prime}}{\beta^{\prime}}{c^{\prime}}{\gamma^{\prime}}, \label{chap8:eq:65}
+\clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}=\clebsch{a^{\prime}}{\alpha^{\prime}}{b^{\prime}}{\beta^{\prime}}{c^{\prime}}{\gamma^{\prime}}, \label{eq:8:4:12}
 \end{equation}
 where
 \begin{align}
 2 a^{\prime} & =(a+\alpha)+(b+\beta), & 2 a & =\left(a^{\prime}+a^{\prime}\right)+\left(b^{\prime}+\beta^{\prime}\right), \notag\\
 2 \alpha^{\prime} & =(a+\alpha)-(b+\beta), & 2 \alpha & =\left(a^{\prime}+\alpha^{\prime}\right)-\left(b^{\prime}+\beta^{\prime}\right), \notag\\
 2 b^{\prime} & =(a-\alpha)+(b-\beta), & 2 b & =\left(a^{\prime}-\alpha^{\prime}\right)+\left(b^{\prime}-\beta^{\prime}\right), \notag\\
-2 \beta^{\prime} & =(a-\alpha)-(b-\beta), & 2 \beta & =\left(a^{\prime}-\alpha^{\prime}\right)-\left(b^{\prime}-\beta^{\prime}\right), \label{chap8:eq:66}
+2 \beta^{\prime} & =(a-\alpha)-(b-\beta), & 2 \beta & =\left(a^{\prime}-\alpha^{\prime}\right)-\left(b^{\prime}-\beta^{\prime}\right), \label{eq:8:4:13}
 \end{align}
 \[
 \begin{aligned}
@@ -438,13 +438,13 @@ c^{\prime} & =c, & c & =c^{\prime} \\
 \]
 \item
 \begin{equation}
-\clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}=(-1)^{b+\beta} \sqrt{\frac{2 c+1}{2 c^{\prime}+1}} \clebsch{a^{\prime}}{\alpha^{\prime}}{b^{\prime}}{\beta^{\prime}}{c^{\prime}}{\gamma^{\prime}}, \label{chap8:eq:67}
+\clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}=(-1)^{b+\beta} \sqrt{\frac{2 c+1}{2 c^{\prime}+1}} \clebsch{a^{\prime}}{\alpha^{\prime}}{b^{\prime}}{\beta^{\prime}}{c^{\prime}}{\gamma^{\prime}}, \label{eq:8:4:14}
 \end{equation}
 where
 \begin{align}
 2 a^{\prime} & =(b-\beta)+(c+\gamma), & 2 a & =\left(b^{\prime}-\beta^{\prime}\right)+\left(c^{\prime}+\gamma^{\prime}\right), \notag\\
 2 \alpha^{\prime} & =2(a+\alpha)-(b-\beta)-(c+\gamma), & 2 \alpha & =2\left(a^{\prime}+\alpha^{\prime}\right)-\left(b^{\prime}-\beta^{\prime}\right)-\left(c^{\prime}+\gamma^{\prime}\right), \notag\\
-2 b^{\prime} & =(a-\alpha)+(c+\gamma), & 2 b & =\left(a^{\prime}-\alpha^{\prime}\right)+\left(c^{\prime}+\gamma^{\prime}\right), \label{chap8:eq:68}\\
+2 b^{\prime} & =(a-\alpha)+(c+\gamma), & 2 b & =\left(a^{\prime}-\alpha^{\prime}\right)+\left(c^{\prime}+\gamma^{\prime}\right), \label{eq:8:4:15}\\
 2 \beta^{\prime} & =2(b+\beta)-(a-\alpha)-(c+\gamma), & 2 \beta & =2\left(b^{\prime}+\beta^{\prime}\right)-\left(a^{\prime}-\alpha^{\prime}\right)-\left(c^{\prime}+\gamma^{\prime}\right), \notag\\
 2 c^{\prime} & =(a-\alpha)+(b-\beta), & 2 c & =\left(a^{\prime}-\alpha^{\prime}\right)+\left(b^{\prime}-\beta^{\prime}\right), \notag\\
 2 \gamma^{\prime} & =(a-\alpha)+(b-\beta)-2(c-\gamma), & 2 \gamma & =\left(a^{\prime}-\alpha^{\prime}\right)+\left(b^{\prime}-\beta^{\prime}\right)-2\left(c^{\prime}-\gamma^{\prime}\right) . \notag
@@ -455,24 +455,24 @@ The original relations which define the $3 j m$ symbols and the Clebsch-Gordan c
 \subsubsection{$3jm$ symbols}
 The relations for the $3 j m$ symbols are
 \begin{equation}
-\threej{a}{b}{c}{\alpha}{\beta}{\gamma}\label{chap8:eq:69}=(-1)^{b-c-\alpha}\threej{a}{b}{c}{\alpha}{\beta}{\gamma}=i(-1)^{a+\alpha-\beta}\threej{a}{b}{c}{\alpha}{\beta}{\gamma}=i(-1)^{a+b+c}\threej{\bar{a}}{b}{\bar{c}}{\alpha}{\beta}{\gamma} .
+\threej{a}{b}{c}{\alpha}{\beta}{\gamma}\label{eq:8:4:16}=(-1)^{b-c-\alpha}\threej{a}{b}{c}{\alpha}{\beta}{\gamma}=i(-1)^{a+\alpha-\beta}\threej{a}{b}{c}{\alpha}{\beta}{\gamma}=i(-1)^{a+b+c}\threej{\bar{a}}{b}{\bar{c}}{\alpha}{\beta}{\gamma} .
 \end{equation}
 The $3 j \mathrm{~m}$ symbols with negative momenta obey the symmetry relations (5) and (6) provided $\bar{a}, \bar{b}, \bar{c}$ are replaced by $-a,-b,-c$, respectively, in the phase factors of these relations.\\
 \subsubsection{Clebsch-Gordan symbols}
 The relations for the Clebsch-Gordan coefficients are
 \begin{align}
 \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}=(-1)^{a+b-c} \clebsch{a}{\alpha}{\delta}{\beta}{c}{\gamma} & =(-1)^{b-c-\alpha} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}=(-1)^{b+\beta} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}=(-1)^{a-\alpha} \clebsch{a}{\alpha}{\delta}{\beta}{c}{\gamma}=\clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}  \notag\\
-& =\sqrt{\frac{2 c+1}{2 b+1}} \clebsch{a}{\alpha}{c}{\gamma}{b}{\beta}=\sqrt{\frac{2 c+1}{2 a+1}} \clebsch{c}{\gamma}{b}{\beta}{a}{\alpha}=\sqrt{\frac{2 c+1}{2 a+1}} \clebsch{c}{\gamma}{b}{\beta}{a}{\alpha}. \label{chap8:eq:70}
+& =\sqrt{\frac{2 c+1}{2 b+1}} \clebsch{a}{\alpha}{c}{\gamma}{b}{\beta}=\sqrt{\frac{2 c+1}{2 a+1}} \clebsch{c}{\gamma}{b}{\beta}{a}{\alpha}=\sqrt{\frac{2 c+1}{2 a+1}} \clebsch{c}{\gamma}{b}{\beta}{a}{\alpha}. \label{eq:8:4:17}
 \end{align}
-From \eqref{chap8:eq:70} one gets
+From \eqref{eq:8:4:17} one gets
 \begin{align}
-& \clebsch{a}{\bar{a}}{b}{\bar{\beta}}{c}{\bar{\gamma}}=\clebsch{\bar{a}}{\alpha}{\bar{b}}{\beta}{\bar{c}}{\gamma}, \label{chap8:eq:71}\\
-& \clebsch{\bar{a}}{\bar{a}}{b}{\beta}{c}{\gamma}=\clebsch{a}{\alpha}{\bar{b}}{\bar{\beta}}{\bar{c}}{\bar{\gamma}}, \label{chap8:eq:72}\\
-& \clebsch{a}{\alpha}{\bar{b}}{\bar{\beta}}{c}{\gamma}=\clebsch{\bar{a}}{\bar{a}}{b}{\beta}{\bar{c}}{\bar{\gamma}}. \label{chap8:eq:73}
+& \clebsch{a}{\bar{a}}{b}{\bar{\beta}}{c}{\bar{\gamma}}=\clebsch{\bar{a}}{\alpha}{\bar{b}}{\beta}{\bar{c}}{\gamma}, \label{eq:8:4:18}\\
+& \clebsch{\bar{a}}{\bar{a}}{b}{\beta}{c}{\gamma}=\clebsch{a}{\alpha}{\bar{b}}{\bar{\beta}}{\bar{c}}{\bar{\gamma}}, \label{eq:8:4:19}\\
+& \clebsch{a}{\alpha}{\bar{b}}{\bar{\beta}}{c}{\gamma}=\clebsch{\bar{a}}{\bar{a}}{b}{\beta}{\bar{c}}{\bar{\gamma}}. \label{eq:8:4:20}
 \end{align}
 When tabulating formulas for the Clebsch-Gordan coefficients, it is convenient to use the "mirror" symmetry properties in the form
 \begin{equation}
-\clebsch{a}{\alpha}{b}{\beta}{a+k}{\gamma}=(-1)^{b+\beta} \clebsch{a}{\alpha}{b}{\beta}{a-k}{\gamma}. \label{chap8:eq:74}
+\clebsch{a}{\alpha}{b}{\beta}{a+k}{\gamma}=(-1)^{b+\beta} \clebsch{a}{\alpha}{b}{\beta}{a-k}{\gamma}. \label{eq:8:4:21}
 \end{equation}
 \subsection{Properties of the Vector-Addition Coefficients under Transformations of the Coordinate System and Time Reversal}
 The vector-addition coefficients are not invariant under transformations in question, although formally they are independent of coordinates and time.
@@ -481,199 +481,199 @@ The vector-addition coefficients are not invariant under transformations in ques
 
 The projections of angular momenta vary under rotations of the coordinate system. The $3 j m$ symbols and the Clebsch-Gordan coefficients in a new coordinate system may be expressed as superpositions of the corresponding quantities in the initial coordinate system. Thus
 \begin{align}
-\hat{R}\threej{a}{b}{c}{\alpha}{\beta}{\gamma} & \equiv\threej{a}{b}{c}{\alpha^{\prime}}{\beta^{\prime}}{\gamma^{\prime}}=\sum_{\alpha \beta \gamma}\threej{a}{b}{c}{\alpha}{\beta}{\gamma} D_{\alpha \alpha^{\prime}}^{a}(R) D_{\beta \beta^{\prime}}^{b}(R) D_{\gamma \gamma^{\prime}}^{c}(R), \label{chap8:eq:75}\\
+\hat{R}\threej{a}{b}{c}{\alpha}{\beta}{\gamma} & \equiv\threej{a}{b}{c}{\alpha^{\prime}}{\beta^{\prime}}{\gamma^{\prime}}=\sum_{\alpha \beta \gamma}\threej{a}{b}{c}{\alpha}{\beta}{\gamma} D_{\alpha \alpha^{\prime}}^{a}(R) D_{\beta \beta^{\prime}}^{b}(R) D_{\gamma \gamma^{\prime}}^{c}(R), \label{eq:8:4:22}\\
 \widehat{R} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} & \equiv \clebsch{a}{\alpha^{\prime}}{b}{\beta^{\prime}}{c}{\gamma^{\prime}}=\sum_{\alpha \beta \gamma} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} D_{\alpha \alpha^{\prime}}^{a}(R) D_{\beta \beta^{\prime}}^{b}(R) D_{\gamma \gamma^{\prime}}^{c *}(R). \notag
 \end{align}
 \subsubsection{Inversion of the coordinate system.}
 
 The $3 j m$ symbols and the Clebsch-Gordan coefficients are invariant under inversion of the coordinate system, because angular momentum is a pseudovector.
 \begin{align}
-\widehat{P}_{r}\threej{a}{b}{c}{\alpha}{\beta}{\gamma} & =\threej{a}{b}{c}{\alpha}{\beta}{\gamma}, \label{chap8:eq:76}\\
+\widehat{P}_{r}\threej{a}{b}{c}{\alpha}{\beta}{\gamma} & =\threej{a}{b}{c}{\alpha}{\beta}{\gamma}, \label{eq:8:4:23}\\
 \widehat{P}_{r} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} & =\clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}. \notag
 \end{align}
 \subsubsection{(Time reversal.}
 The time reversal changes signs of projections of all angular momenta (reversal of the rotation direction). Hence
 \begin{align}
-\hat{P}_{t}\threej{a}{b}{c}{\alpha}{\beta}{\gamma} & =\threej{a}{b}{c}{-\alpha}{-\beta}{-\gamma}=(-1)^{a+b+c}\threej{a}{b}{c}{\alpha}{\beta}{\gamma}, \label{chap8:eq:77}\\
+\hat{P}_{t}\threej{a}{b}{c}{\alpha}{\beta}{\gamma} & =\threej{a}{b}{c}{-\alpha}{-\beta}{-\gamma}=(-1)^{a+b+c}\threej{a}{b}{c}{\alpha}{\beta}{\gamma}, \label{eq:8:4:24}\\
 \widehat{P}_{t} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} & =\clebsch{a}{-\alpha}{b}{-\beta}{c}{-\gamma}=(-1)^{a+b-c} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}. \notag
 \end{align}
 \section{EXPLICIT FORMS OF THE CLEBSCH-GORDAN COEFFICIENTS FOR SPECIAL VALUES OF THE ARGUMENTS}
 \subsection{Special Values of Momenta $a, b, c$}
 \subsubsection{$c=0$ or $b=0$.}
 \begin{align}
-& \clebsch{a}{\alpha}{b}{\beta}{0}{0}=(-1)^{a-\alpha} \frac{\delta_{\alpha b} \delta_{\alpha,-\beta}}{\sqrt{2 a+1}}, \label{chap8:eq:78}\\
-& \clebsch{a}{\alpha}{0}{0}{\alpha}{\gamma}=\delta_{a c} \delta_{\alpha \gamma}. \label{chap8:eq:79}
+& \clebsch{a}{\alpha}{b}{\beta}{0}{0}=(-1)^{a-\alpha} \frac{\delta_{\alpha b} \delta_{\alpha,-\beta}}{\sqrt{2 a+1}}, \label{eq:8:5:1}\\
+& \clebsch{a}{\alpha}{0}{0}{\alpha}{\gamma}=\delta_{a c} \delta_{\alpha \gamma}. \label{eq:8:5:2}
 \end{align}
 \subsubsection{$c=a+b$} 
 \begin{equation}
-\clebsch{a}{a}{b}{\beta}{a+b}{\alpha+\beta}=\left[\frac{(2 a)!(2 b)!(a+b+\alpha+\beta)!(a+b-\alpha-\beta)!}{(2 a+2 b)!(a+\alpha)!(a-\alpha)!(b+\beta)!(b-\beta)!}\right]^{\frac{1}{2}}. \label{chap8:eq:80}
+\clebsch{a}{a}{b}{\beta}{a+b}{\alpha+\beta}=\left[\frac{(2 a)!(2 b)!(a+b+\alpha+\beta)!(a+b-\alpha-\beta)!}{(2 a+2 b)!(a+\alpha)!(a-\alpha)!(b+\beta)!(b-\beta)!}\right]^{\frac{1}{2}}. \label{eq:8:5:3}
 \end{equation}
-The following two formulas are equivalent to \eqref{chap8:eq:80} (i and $n$ are integer)
+The following two formulas are equivalent to \eqref{eq:8:5:3} (i and $n$ are integer)
 \begin{gather}
-\clebsch{a}{a-n+i}{b}{b-i+1}{a+b}{a+b-n+1}=\left[\frac{\binom{2 a}{n-i}\binom{2 b}{i-1}}{\binom{2 a+2 b}{n-1}}\right]^{\frac{1}{2}}, \label{chap8:eq:81}\\
-\clebsch{a}{a+n-i}{b}{-b+i-1}{a+b}{a-b+n-1}=\left[\frac{\binom{2 a}{i-n}\binom{2 b}{i-1}}{\binom{2 a+2 b}{2 a+n-1}}\right]^{\frac{1}{2}}. \label{chap8:eq:82}
+\clebsch{a}{a-n+i}{b}{b-i+1}{a+b}{a+b-n+1}=\left[\frac{\binom{2 a}{n-i}\binom{2 b}{i-1}}{\binom{2 a+2 b}{n-1}}\right]^{\frac{1}{2}}, \label{eq:8:5:4}\\
+\clebsch{a}{a+n-i}{b}{-b+i-1}{a+b}{a-b+n-1}=\left[\frac{\binom{2 a}{i-n}\binom{2 b}{i-1}}{\binom{2 a+2 b}{2 a+n-1}}\right]^{\frac{1}{2}}. \label{eq:8:5:5}
 \end{gather}
 In particular,
 \begin{gather}
-\clebsch{a}{a}{b}{b}{a+b}{a+b}=1, \label{chap8:eq:83}\\
-\clebsch{a}{a}{b}{-b}{a+b}{a-b}=\left[\frac{(2 a)!(2 b)!}{(2 a+2 b)!}\right]^{\frac{1}{2}}. \label{chap8:eq:84}
+\clebsch{a}{a}{b}{b}{a+b}{a+b}=1, \label{eq:8:5:6}\\
+\clebsch{a}{a}{b}{-b}{a+b}{a-b}=\left[\frac{(2 a)!(2 b)!}{(2 a+2 b)!}\right]^{\frac{1}{2}}. \label{eq:8:5:7}
 \end{gather}
 \subsubsection{$c=a+b-1$}
 \begin{equation}
-\clebsch{a}{\alpha}{b}{\beta}{a+b-1}{\alpha+\beta}=2(b \alpha-a \beta)\left[\frac{(2 a+2 b-1)(2 a-1)!(2 b-1)!(a+b+\alpha+\beta-1)!(a+b-\alpha-\beta-1)!}{(a+\alpha)!(a-\alpha)!(b+\beta)!(b-\beta)!(2 a+2 b)!}\right]^{\frac{1}{2}} . \label{chap8:eq:85}
+\clebsch{a}{\alpha}{b}{\beta}{a+b-1}{\alpha+\beta}=2(b \alpha-a \beta)\left[\frac{(2 a+2 b-1)(2 a-1)!(2 b-1)!(a+b+\alpha+\beta-1)!(a+b-\alpha-\beta-1)!}{(a+\alpha)!(a-\alpha)!(b+\beta)!(b-\beta)!(2 a+2 b)!}\right]^{\frac{1}{2}} . \label{eq:8:5:8}
 \end{equation}
 In particular,
 \begin{gather}
-\clebsch{a}{\alpha}{b}{\beta}{a+b-1}{\alpha+\beta}=0, \quad \text { if } \quad \frac{\alpha}{\beta}=\frac{a}{b}. \label{chap8:eq:86}\\
-\clebsch{a}{a-1}{b}{b}{a+b-1}{a+b-1}=-\sqrt{\frac{b}{a+b}}. \label{chap8:eq:87}\\
-\clebsch{a}{a}{b}{b-1}{a+b-1}{a+b-1}=\sqrt{\frac{a}{a+b}}. \label{chap8:eq:88}\\
-\clebsch{a}{a}{b}{-b}{a+b-1}{a-b}=\left[\frac{(2 a)!(2 b)!(2 a+2 b-1)}{(2 a+2 b)!}\right]^{\frac{1}{2}}, \label{chap8:eq:89}
+\clebsch{a}{\alpha}{b}{\beta}{a+b-1}{\alpha+\beta}=0, \quad \text { if } \quad \frac{\alpha}{\beta}=\frac{a}{b}. \label{eq:8:5:9}\\
+\clebsch{a}{a-1}{b}{b}{a+b-1}{a+b-1}=-\sqrt{\frac{b}{a+b}}. \label{eq:8:5:10}\\
+\clebsch{a}{a}{b}{b-1}{a+b-1}{a+b-1}=\sqrt{\frac{a}{a+b}}. \label{eq:8:5:11}\\
+\clebsch{a}{a}{b}{-b}{a+b-1}{a-b}=\left[\frac{(2 a)!(2 b)!(2 a+2 b-1)}{(2 a+2 b)!}\right]^{\frac{1}{2}}, \label{eq:8:5:12}
 \end{gather}
 \subsubsection{$c=a-b(a \geq b)$}
 \begin{equation}
-\clebsch{a}{\alpha}{b}{\beta}{a-b}{\alpha+\beta}=(-1)^{b+\beta}\left[\frac{(a+\alpha)!(a-\alpha)!(2 b)!(2 a-2 b+1)!}{(2 a+1)!(b+\beta)!(b-\beta)!(a-b+\alpha+\beta)!(a-b-\alpha-\beta)!}\right]^{\frac{1}{2}}. \label{chap8:eq:90}
+\clebsch{a}{\alpha}{b}{\beta}{a-b}{\alpha+\beta}=(-1)^{b+\beta}\left[\frac{(a+\alpha)!(a-\alpha)!(2 b)!(2 a-2 b+1)!}{(2 a+1)!(b+\beta)!(b-\beta)!(a-b+\alpha+\beta)!(a-b-\alpha-\beta)!}\right]^{\frac{1}{2}}. \label{eq:8:5:13}
 \end{equation}
-The following two formulas are equivalent to \eqref{chap8:eq:90} ( $i$ and $n$ are integer)
+The following two formulas are equivalent to \eqref{eq:8:5:13} ( $i$ and $n$ are integer)
 \begin{gather}
-\clebsch{a}{a-n+i}{b}{b-i+1}{a-b}{a+b-n+1}=(-1)^{2 b-i+1}\left[\frac{2 a-2 b+1}{2 a+1} \frac{\binom{2 b}{i-1}\binom{2 a-2 b}{2 a-n+1}}{\binom{2 a}{n-i}}\right]^{\frac{1}{2}}, \label{chap8:eq:91}\\
-\clebsch{a}{a-n+i}{b}{-b-i+1}{a-b}{a-b-n+1}=(-1)^{i+1}\left[\frac{2 a-2 b+1}{2 a+1} \frac{\binom{2 b}{-i+1}\binom{2 a-2 b}{n-1}}{\binom{2 a}{n-i}}\right]^{\frac{1}{2}}. \label{chap8:eq:92}
+\clebsch{a}{a-n+i}{b}{b-i+1}{a-b}{a+b-n+1}=(-1)^{2 b-i+1}\left[\frac{2 a-2 b+1}{2 a+1} \frac{\binom{2 b}{i-1}\binom{2 a-2 b}{2 a-n+1}}{\binom{2 a}{n-i}}\right]^{\frac{1}{2}}, \label{eq:8:5:14}\\
+\clebsch{a}{a-n+i}{b}{-b-i+1}{a-b}{a-b-n+1}=(-1)^{i+1}\left[\frac{2 a-2 b+1}{2 a+1} \frac{\binom{2 b}{-i+1}\binom{2 a-2 b}{n-1}}{\binom{2 a}{n-i}}\right]^{\frac{1}{2}}. \label{eq:8:5:15}
 \end{gather}
 In particular
 \begin{equation}
-\clebsch{a}{a}{b}{-b}{a-b}{a-b}=\sqrt{\frac{2 a-2 b+1}{2 a+1}} . \label{chap8:eq:93}
+\clebsch{a}{a}{b}{-b}{a-b}{a-b}=\sqrt{\frac{2 a-2 b+1}{2 a+1}} . \label{eq:8:5:16}
 \end{equation}
 \subsubsection{$c=a-b+1(a+1 \geq b)$}
 \begin{equation}
-\clebsch{a}{\alpha}{b}{\beta}{a-b+1}{\alpha+\beta}=(-1)^{b+\beta+1} 2(a \beta+b \alpha+\beta)\left[\frac{(2 a-2 b+3)(2 b-1)!(2 a-2 b+1)!(a+\alpha)!(a-\alpha)!}{(2 a+2)!(b+\beta)!(b-\beta)!(a-b+\alpha+\beta+1)!(a-b-\alpha-\beta+1)!}\right]^{\frac{1}{2}} . \label{chap8:eq:94}
+\clebsch{a}{\alpha}{b}{\beta}{a-b+1}{\alpha+\beta}=(-1)^{b+\beta+1} 2(a \beta+b \alpha+\beta)\left[\frac{(2 a-2 b+3)(2 b-1)!(2 a-2 b+1)!(a+\alpha)!(a-\alpha)!}{(2 a+2)!(b+\beta)!(b-\beta)!(a-b+\alpha+\beta+1)!(a-b-\alpha-\beta+1)!}\right]^{\frac{1}{2}} . \label{eq:8:5:17}
 \end{equation}
 In particular,
 \begin{equation}
-\clebsch{a}{a}{b}{-b}{a-b+1}{a-b}=\left[\frac{(2 a-2 b+3) 2 b}{(2 a+2)(2 a+1)}\right]^{\frac{1}{2}}. \label{chap8:eq:95}
+\clebsch{a}{a}{b}{-b}{a-b+1}{a-b}=\left[\frac{(2 a-2 b+3) 2 b}{(2 a+2)(2 a+1)}\right]^{\frac{1}{2}}. \label{eq:8:5:18}
 \end{equation}
 \subsubsection{$c=a+b-2$}
 \begin{align}
 \clebsch{a}{\alpha}{b}{\beta}{a+b-2}{\alpha+\beta} & =\left[\frac{2 a(2 a-1) 2 b(2 b-1)}{2(2 a+2 b-2)(2 a+2 b-1)}\right]^{\frac{1}{2}}\left[\binom{2 a}{a-\alpha}\binom{2 b}{b-\beta}\binom{2 a+2 b-4}{a+b-\alpha-\beta-2}\right]^{-\frac{1}{2}}  \notag\\
-& \times\left\{\binom{2 a-2}{a-\alpha}\binom{2 b-2}{b+\beta}-2\binom{2 a-2}{a-\alpha-1}\binom{2 b-2}{b+\beta-1}+\binom{2 a-2}{a-\alpha-2}\binom{2 b-2}{b+\beta-2}\right\} . \label{chap8:eq:96}
+& \times\left\{\binom{2 a-2}{a-\alpha}\binom{2 b-2}{b+\beta}-2\binom{2 a-2}{a-\alpha-1}\binom{2 b-2}{b+\beta-1}+\binom{2 a-2}{a-\alpha-2}\binom{2 b-2}{b+\beta-2}\right\} . \label{eq:8:5:19}
 \end{align}
 In particular,
 \begin{equation}
-\clebsch{a}{a}{b}{-b}{a+b-2}{a-b}=\left[\frac{(2 a)!(2 b)!(2 a+2 b-3)}{2(2 a+2 b-1)!}\right]^{\frac{1}{2}}. \label{chap8:eq:97}
+\clebsch{a}{a}{b}{-b}{a+b-2}{a-b}=\left[\frac{(2 a)!(2 b)!(2 a+2 b-3)}{2(2 a+2 b-1)!}\right]^{\frac{1}{2}}. \label{eq:8:5:20}
 \end{equation}
 \subsubsection{$c=a-b+2(a+2 \geq b)$}
 \begin{gather}
 \clebsch{a}{\alpha}{b}{\beta}{a-b+2}{\alpha+\beta}=\left[\frac{(2 b-1) 2 b(2 a-2 b+5)(2 a-2 b+4)(2 a-2 b+3)}{2(2 a+1)(2 a+2)(2 a+3)}\right]^{\frac{1}{2}}  \notag\\
 \times\left[\binom{2 a}{a-\alpha}\binom{2 b}{b-\beta}\binom{2 a-2 b+4}{a-b-\alpha-\beta+2}\right]^{-\frac{1}{2}}(-1)^{b+\beta}\left\{\binom{2 b-2}{b+\beta}\binom{2 a-2 b+2}{a-b-\alpha-\beta}\right. \notag\\
-\left.-2\binom{2 b-2}{b+\beta-1}\binom{2 a-2 b+2}{a-b-\alpha-\beta+1}+\binom{2 b-2}{b+\beta-2}\binom{2 a-2 b+2}{a-b-\alpha-\beta+2}\right\} . \label{chap8:eq:98}
+\left.-2\binom{2 b-2}{b+\beta-1}\binom{2 a-2 b+2}{a-b-\alpha-\beta+1}+\binom{2 b-2}{b+\beta-2}\binom{2 a-2 b+2}{a-b-\alpha-\beta+2}\right\} . \label{eq:8:5:21}
 \end{gather}
 In particular,
 \begin{equation}
-\clebsch{a}{a}{b}{-b}{a-b+2}{a-b}=\left[\frac{(2 a-2 b+5) 2 b(2 b-1)}{(2 a+1)(2 a+2)(2 a+3)}\right]^{\frac{1}{2}}. \label{chap8:eq:99}
+\clebsch{a}{a}{b}{-b}{a-b+2}{a-b}=\left[\frac{(2 a-2 b+5) 2 b(2 b-1)}{(2 a+1)(2 a+2)(2 a+3)}\right]^{\frac{1}{2}}. \label{eq:8:5:22}
 \end{equation}
 \subsubsection{$a=b, \alpha=\beta$}
 \begin{equation}
-\clebsch{a}{\alpha}{a}{\alpha}{c}{\gamma}= \begin{cases}0, & \text { if } 2 a+c=2 g+1, \label{chap8:eq:100}\\ \delta_{\gamma, 2 \alpha} \frac{(-1)^{g-c} \sqrt{2 c+1} g!}{\left(\frac{c+\gamma}{2}\right)!\left(\frac{\varepsilon-\gamma}{2}\right)!(g-c)!}\left[\frac{(c+\gamma)!(c-\gamma)!(2 g-2 c)!}{(2 g+1)!}\right]^{\frac{1}{2}}, & \text { if } 2 a+c=2 g,\end{cases}
+\clebsch{a}{\alpha}{a}{\alpha}{c}{\gamma}= \begin{cases}0, & \text { if } 2 a+c=2 g+1, \label{eq:8:5:23}\\ \delta_{\gamma, 2 \alpha} \frac{(-1)^{g-c} \sqrt{2 c+1} g!}{\left(\frac{c+\gamma}{2}\right)!\left(\frac{\varepsilon-\gamma}{2}\right)!(g-c)!}\left[\frac{(c+\gamma)!(c-\gamma)!(2 g-2 c)!}{(2 g+1)!}\right]^{\frac{1}{2}}, & \text { if } 2 a+c=2 g,\end{cases}
 \end{equation}
 $g$ is integer and positive.\\
 \subsubsection{$b=a+\frac{1}{2}$, $\beta=\alpha \pm \frac{1}{2}$, $2 a+c=2 g$}
 \begin{align}
-& \clebsch{a}{\alpha}{a+\frac{1}{2}}{\alpha+\frac{1}{2}}{c+\frac{1}{2}}{2 \alpha+\frac{1}{2}}=\left[\frac{c+2 \alpha+1}{a+\alpha+1}\right]^{\frac{1}{2}} C, \label{chap8:eq:101}\\
+& \clebsch{a}{\alpha}{a+\frac{1}{2}}{\alpha+\frac{1}{2}}{c+\frac{1}{2}}{2 \alpha+\frac{1}{2}}=\left[\frac{c+2 \alpha+1}{a+\alpha+1}\right]^{\frac{1}{2}} C, \label{eq:8:5:24}\\
 & \clebsch{a}{a}{a+\frac{1}{2}}{\alpha-\frac{1}{2}}{c+\frac{1}{2}}{2 \alpha-\frac{1}{2}}=\left[\frac{c-2 \alpha+1}{a-\alpha+1}\right]^{\frac{1}{2}} C, \notag
 \end{align}
 where
 \begin{equation}
-C=\frac{(-1)^{c / 2-a}\left(a+\frac{c}{2}\right)!}{\left(a-\frac{c}{2}\right)!\left(\frac{c}{2}+\alpha\right)!\left(\frac{c}{2}-\alpha\right)!}\left[\frac{(2 a+c+2)(2 a-c)!(c+2 \alpha)!(c-2 \alpha)!}{2(2 a+c+1)!}\right]^{\frac{1}{2}}, \label{chap8:eq:102}
+C=\frac{(-1)^{c / 2-a}\left(a+\frac{c}{2}\right)!}{\left(a-\frac{c}{2}\right)!\left(\frac{c}{2}+\alpha\right)!\left(\frac{c}{2}-\alpha\right)!}\left[\frac{(2 a+c+2)(2 a-c)!(c+2 \alpha)!(c-2 \alpha)!}{2(2 a+c+1)!}\right]^{\frac{1}{2}}, \label{eq:8:5:25}
 \end{equation}
 \subsubsection{$b=a+\frac{1}{2}$, $\beta=\alpha \pm \frac{1}{2}$, $2 a+c=2 g+1$}
 \begin{align}
 & \clebsch{a}{\alpha}{a+\frac{1}{2}}{\alpha+\frac{1}{2}}{c+\frac{1}{2}}{2 \alpha+\frac{1}{2}}=\left[\frac{c-2 \alpha+1}{a+\alpha+1}\right]^{\frac{1}{2}} D, \notag\\
-& \clebsch{a}{\alpha}{a+\frac{1}{2}}{\alpha-\frac{1}{2}}{c+\frac{1}{2}}{2 \alpha-\frac{1}{2}}=-\left[\frac{c+2 \alpha+1}{a-\alpha+1}\right]^{\frac{1}{2}} D, \label{chap8:eq:103}
+& \clebsch{a}{\alpha}{a+\frac{1}{2}}{\alpha-\frac{1}{2}}{c+\frac{1}{2}}{2 \alpha-\frac{1}{2}}=-\left[\frac{c+2 \alpha+1}{a-\alpha+1}\right]^{\frac{1}{2}} D, \label{eq:8:5:26}
 \end{align}
 where
 \begin{equation}
-D=\frac{(-1)^{\frac{a-1}{2}-a}\left(a+\frac{c+1}{2}\right)!}{\left(a-\frac{c+1}{2}\right)!\left(\frac{c+1}{2}+\alpha\right)!\left(\frac{c+1}{2}-\alpha\right)!}\left[\frac{(2 a-c)!(c+2 \alpha+1)!(c-2 \alpha+1)!}{2(2 a+c+2)!}\right]^{\frac{1}{2}}. \label{chap8:eq:104}
+D=\frac{(-1)^{\frac{a-1}{2}-a}\left(a+\frac{c+1}{2}\right)!}{\left(a-\frac{c+1}{2}\right)!\left(\frac{c+1}{2}+\alpha\right)!\left(\frac{c+1}{2}-\alpha\right)!}\left[\frac{(2 a-c)!(c+2 \alpha+1)!(c-2 \alpha+1)!}{2(2 a+c+2)!}\right]^{\frac{1}{2}}. \label{eq:8:5:27}
 \end{equation}
 \subsubsection{$b=a+1$; $\beta=\alpha$, $\alpha \pm 1$; $2 a+c=2 g$}
 \begin{align}
 \clebsch{a}{\alpha}{a+1}{a+1}{c}{2 a+1} & =-\left[\frac{(c+2 \alpha+1)(c-2 \alpha)}{(a+\alpha+2)(a+\alpha+1)}\right]^{\frac{1}{2}} E, \notag\\
-\clebsch{a}{\alpha}{a+1}{\alpha}{c}{2 \alpha} & =\frac{2 \alpha}{[(a+\alpha+1)(a-\alpha+1)]^{\frac{1}{2}}} E, \label{chap8:eq:105}\\
+\clebsch{a}{\alpha}{a+1}{\alpha}{c}{2 \alpha} & =\frac{2 \alpha}{[(a+\alpha+1)(a-\alpha+1)]^{\frac{1}{2}}} E, \label{eq:8:5:28}\\
 \clebsch{a}{\alpha}{a+1}{\alpha-1}{c}{2 \alpha-1} & =\left[\frac{(c-2 \alpha+1)(c+2 \alpha)}{(a-\alpha+2)(a-\alpha+1)}\right]^{\frac{1}{2}} E, \notag
 \end{align}
 where
 \begin{equation}
-E=\frac{(-1)^{\frac{c}{2}-a}\left(a+\frac{c}{2}\right)!}{2\left(a-\frac{c}{2}\right)!\left(\frac{c}{2}+\alpha\right)!\left(\frac{c}{2}-\alpha\right)!}\left[\frac{(2 c+1)(2 a+c+2)(2 a-c+1)!(c+2 \alpha)!(c-2 \alpha)!}{c(c+1)(2 a+c+1)!}\right]^{\frac{1}{2}}. \label{chap8:eq:106}
+E=\frac{(-1)^{\frac{c}{2}-a}\left(a+\frac{c}{2}\right)!}{2\left(a-\frac{c}{2}\right)!\left(\frac{c}{2}+\alpha\right)!\left(\frac{c}{2}-\alpha\right)!}\left[\frac{(2 c+1)(2 a+c+2)(2 a-c+1)!(c+2 \alpha)!(c-2 \alpha)!}{c(c+1)(2 a+c+1)!}\right]^{\frac{1}{2}}. \label{eq:8:5:29}
 \end{equation}
 \subsubsection{$b=a+1$; $\beta=\alpha$, $\alpha \pm 1$; $2 a+c=2 g+1$}
 \begin{align}
 \clebsch{a}{\alpha}{a+1}{\alpha+1}{c}{2 \alpha+1} & =\frac{c(c+1)+(2 \alpha+1)(2 a+2)}{2\left(\frac{c+1}{2}+\alpha\right)!\left(\frac{c+1}{2}-\alpha\right)!}\left[\frac{(c+2 \alpha+1)!(c-2 \alpha-1)!}{(a+\alpha+2)(a+\alpha+1)}\right]^{\frac{1}{2}} F, \notag\\
-\clebsch{a}{\alpha}{a+1}{\alpha}{c}{2 \alpha} & =\frac{2 a+2}{\left(\frac{c-1}{2}+\alpha\right)!\left(\frac{c-1}{2}-\alpha\right)!}\left[\frac{(c+2 \alpha)!(c-2 \alpha)!}{(a+\alpha+1)(a-\alpha+1)}\right]^{\frac{1}{2}} F, \label{chap8:eq:107}\\
+\clebsch{a}{\alpha}{a+1}{\alpha}{c}{2 \alpha} & =\frac{2 a+2}{\left(\frac{c-1}{2}+\alpha\right)!\left(\frac{c-1}{2}-\alpha\right)!}\left[\frac{(c+2 \alpha)!(c-2 \alpha)!}{(a+\alpha+1)(a-\alpha+1)}\right]^{\frac{1}{2}} F, \label{eq:8:5:30}\\
 \clebsch{a}{\alpha}{a+1}{\alpha-1}{c}{2 \alpha-1} & =\frac{c(c+1)-(2 \alpha-1)(2 a+2)}{2\left(\frac{c+1}{2}-\alpha\right)!\left(\frac{c-1}{2}+\alpha\right)!}\left[\frac{(c+2 \alpha-1)!(c-2 \alpha+1)!}{(a-\alpha+2)(a-\alpha+1)}\right]^{\frac{1}{2}} F, \notag
 \end{align}
 where
 \begin{equation}
-F=\frac{(-1)^{\frac{c-1}{2}-a}\left(a+\frac{c+1}{2}\right)!}{\left(a-\frac{c-1}{2}\right)!}\left[\frac{(2 c+1)(2 a-c+1)!}{c(c+1)(2 a+c+2)!}\right]^{\frac{1}{2}}. \label{chap8:eq:108}
+F=\frac{(-1)^{\frac{c-1}{2}-a}\left(a+\frac{c+1}{2}\right)!}{\left(a-\frac{c-1}{2}\right)!}\left[\frac{(2 c+1)(2 a-c+1)!}{c(c+1)(2 a+c+2)!}\right]^{\frac{1}{2}}. \label{eq:8:5:31}
 \end{equation}
 Equations (24)-(31) were obtained by Stone [107].
 
 \subsection{Special Values of Momentum Projections}
 \subsubsection{$\alpha=\beta=\gamma=0$}
 \begin{equation}
-\clebsch{a}{0}{b}{0}{c}{0}= \begin{cases}0, & \text { if } a+b+c=2 g+1  \\ \frac{(-1)^{g-c} \sqrt{2 c+1} g!}{(g-a)!(g-b)!(g-c)!}\left[\frac{(2 g-2 a)!(2 g-2 b)!(2 g-2 c)!}{(2 g+1)!}\right]^{\frac{1}{2}}, & \text { if } a+b+c=2 g\end{cases}, \label{chap8:eq:109}
+\clebsch{a}{0}{b}{0}{c}{0}= \begin{cases}0, & \text { if } a+b+c=2 g+1  \\ \frac{(-1)^{g-c} \sqrt{2 c+1} g!}{(g-a)!(g-b)!(g-c)!}\left[\frac{(2 g-2 a)!(2 g-2 b)!(2 g-2 c)!}{(2 g+1)!}\right]^{\frac{1}{2}}, & \text { if } a+b+c=2 g\end{cases}, \label{eq:8:5:32}
 \end{equation}
 $g$ is integer and positive. In particular,
 \begin{gather}
-\clebsch{a}{0}{b}{0}{a+b}{0}=\frac{(a+b)!}{a!b!}\left[\frac{(2 a)!(2 b)!}{(2 a+2 b)!}\right]^{\frac{1}{2}}, \label{chap8:eq:110}\\
-\clebsch{a}{0}{b}{0}{a-b}{0}=(-1)^{b} \frac{a!}{b!(a-b)!}\left[\frac{(2 b)!(2 a-2 b+1)!}{(2 a+1)!}\right]^{\frac{1}{2}}. \label{chap8:eq:111}
+\clebsch{a}{0}{b}{0}{a+b}{0}=\frac{(a+b)!}{a!b!}\left[\frac{(2 a)!(2 b)!}{(2 a+2 b)!}\right]^{\frac{1}{2}}, \label{eq:8:5:33}\\
+\clebsch{a}{0}{b}{0}{a-b}{0}=(-1)^{b} \frac{a!}{b!(a-b)!}\left[\frac{(2 b)!(2 a-2 b+1)!}{(2 a+1)!}\right]^{\frac{1}{2}}. \label{eq:8:5:34}
 \end{gather}
 \subsubsection{ $\gamma=c$ or $\alpha=a$ :}
 \begin{gather}
-\clebsch{a}{\alpha}{b}{\beta}{c}{c}=\delta_{\alpha+\beta, c}(-1)^{a-\alpha}\left[\frac{(2 c+1)!(a+b-c)!(a+\alpha)!(b+\beta)!}{(a+b+c+1)!(a-b+c)!(-a+b+c)!(a-\alpha)!(b-\beta)!}\right]^{\frac{1}{2}}, \label{chap8:eq:112}\\
-\clebsch{a}{a}{b}{\beta}{c}{\gamma}=\delta_{\gamma-\beta, \alpha}\left[\frac{(2 c+1)(2 a)!(-a+b+c)!(b-\beta)!(c+\gamma)!}{(a+b+c+1)!(a-b+c)!(a+b-c)!(b+\beta)!(c-\gamma)!}\right]^{\frac{1}{2}}. \label{chap8:eq:113}
+\clebsch{a}{\alpha}{b}{\beta}{c}{c}=\delta_{\alpha+\beta, c}(-1)^{a-\alpha}\left[\frac{(2 c+1)!(a+b-c)!(a+\alpha)!(b+\beta)!}{(a+b+c+1)!(a-b+c)!(-a+b+c)!(a-\alpha)!(b-\beta)!}\right]^{\frac{1}{2}}, \label{eq:8:5:35}\\
+\clebsch{a}{a}{b}{\beta}{c}{\gamma}=\delta_{\gamma-\beta, \alpha}\left[\frac{(2 c+1)(2 a)!(-a+b+c)!(b-\beta)!(c+\gamma)!}{(a+b+c+1)!(a-b+c)!(a+b-c)!(b+\beta)!(c-\gamma)!}\right]^{\frac{1}{2}}. \label{eq:8:5:36}
 \end{gather}
 In particular,
 \begin{gather}
-\clebsch{a}{a}{b}{b}{c}{c}=\delta_{a+b, c}, \label{chap8:eq:114}\\
-\clebsch{a}{a}{b}{-b}{c}{c}=\delta_{a-b, c}\left[\frac{2 c+1}{2 a+1}\right]^{\frac{1}{2}}, \label{chap8:eq:115}\\
-\clebsch{a}{a}{b}{c-a}{c}{c}=\left[\frac{(2 a)!(2 c+1)!}{(a+b+c+1)!(a-b+c)!}\right]^{\frac{1}{2}}, \label{chap8:eq:116}\\
-\clebsch{a}{a-1}{b}{c-a+1}{c}{c}=-\left[\frac{(2 a-1)!(2 c+1)!(a+b-c)(-a+b+c+1)}{(a+b+c+1)!(a-b+c)!}\right]^{\frac{1}{2}}, \label{chap8:eq:117}\\
-\clebsch{a}{a}{b}{c-a-1}{c}{c-1}=\left[\frac{(2 a)!(2 c+1)!(a+b-c+1)(-a+b+c)}{(a+b+c+1)!(a-b+c)!2 c}\right]^{\frac{1}{2}}, \label{chap8:eq:118}\\
-\clebsch{c}{c}{b}{0}{c}{c}=(2 c)!\left[\frac{2 c+1}{(2 c-b)!(2 c+b+1)!}\right]^{\frac{1}{2}}, \label{chap8:eq:119}\\
-\clebsch{c}{c-b}{b}{b}{c}{c}=(-1)^{b}\left[\frac{(2 c+1)!(2 b)!}{(2 c+b+1)!b!}\right]^{\frac{1}{2}}, \label{chap8:eq:120}
+\clebsch{a}{a}{b}{b}{c}{c}=\delta_{a+b, c}, \label{eq:8:5:37}\\
+\clebsch{a}{a}{b}{-b}{c}{c}=\delta_{a-b, c}\left[\frac{2 c+1}{2 a+1}\right]^{\frac{1}{2}}, \label{eq:8:5:38}\\
+\clebsch{a}{a}{b}{c-a}{c}{c}=\left[\frac{(2 a)!(2 c+1)!}{(a+b+c+1)!(a-b+c)!}\right]^{\frac{1}{2}}, \label{eq:8:5:39}\\
+\clebsch{a}{a-1}{b}{c-a+1}{c}{c}=-\left[\frac{(2 a-1)!(2 c+1)!(a+b-c)(-a+b+c+1)}{(a+b+c+1)!(a-b+c)!}\right]^{\frac{1}{2}}, \label{eq:8:5:40}\\
+\clebsch{a}{a}{b}{c-a-1}{c}{c-1}=\left[\frac{(2 a)!(2 c+1)!(a+b-c+1)(-a+b+c)}{(a+b+c+1)!(a-b+c)!2 c}\right]^{\frac{1}{2}}, \label{eq:8:5:41}\\
+\clebsch{c}{c}{b}{0}{c}{c}=(2 c)!\left[\frac{2 c+1}{(2 c-b)!(2 c+b+1)!}\right]^{\frac{1}{2}}, \label{eq:8:5:42}\\
+\clebsch{c}{c-b}{b}{b}{c}{c}=(-1)^{b}\left[\frac{(2 c+1)!(2 b)!}{(2 c+b+1)!b!}\right]^{\frac{1}{2}}, \label{eq:8:5:43}
 \end{gather}
 \subsubsection{ $\gamma=c-1$ or $\alpha=a-1$ :}
 \begin{align}
 \clebsch{a}{\alpha}{b}{\beta}{c}{c-1}= & \delta_{\alpha+\beta, c-1}(-1)^{a-\alpha}\{(b-\beta)(b+\beta+1)-(a-\alpha)(a+\alpha+1)\}  \notag\\
-& \times\left[\frac{(2 c+1)(2 c-1)!(a+b-c)!(a+\alpha)!(b+\beta)!}{(a+b+c+1)!(a-b+c)!(-a+b+c)!(a-\alpha)!(b-\beta)!}\right]^{\frac{1}{2}}, \label{chap8:eq:121}\\
+& \times\left[\frac{(2 c+1)(2 c-1)!(a+b-c)!(a+\alpha)!(b+\beta)!}{(a+b+c+1)!(a-b+c)!(-a+b+c)!(a-\alpha)!(b-\beta)!}\right]^{\frac{1}{2}}, \label{eq:8:5:44}\\
 \clebsch{a}{a-1}{b}{\beta}{c}{\gamma}= & \delta_{\gamma-\beta, a-1}\{(c-\gamma)(c+\gamma+1)-(b+\beta)(b-\beta+1)\}  \notag\\
-& \times\left[\frac{(2 c+1)(2 a-1)!(-a+b+c)!(b-\beta)!(c+\gamma)!}{(a+b+c+1)!(a-b+c)!(a+b-c)!(b+\beta)!(c-\gamma)!}\right]^{\frac{1}{2}}, \label{chap8:eq:122}
+& \times\left[\frac{(2 c+1)(2 a-1)!(-a+b+c)!(b-\beta)!(c+\gamma)!}{(a+b+c+1)!(a-b+c)!(a+b-c)!(b+\beta)!(c-\gamma)!}\right]^{\frac{1}{2}}, \label{eq:8:5:45}
 \end{align}
 In particular,
 \begin{gather}
-\clebsch{a}{\alpha}{a}{\alpha}{c}{c-1}=0, \label{chap8:eq:123}\\
-\clebsch{a}{a-1}{c}{-\gamma}{c}{\gamma}=0, \label{chap8:eq:124}\\
-\clebsch{a}{a-1}{b}{\beta}{c}{c-1}=\delta_{\beta, c-a}\{a(a+1)-b(b+1)+c(c+1)-2 a c\}\left[\frac{(2 c+1)(2 c-1)!(2 a-1)!}{(a+b+c+1)!(a-b+c)!}\right]^{\frac{1}{2}} . \label{chap8:eq:125}
+\clebsch{a}{\alpha}{a}{\alpha}{c}{c-1}=0, \label{eq:8:5:46}\\
+\clebsch{a}{a-1}{c}{-\gamma}{c}{\gamma}=0, \label{eq:8:5:47}\\
+\clebsch{a}{a-1}{b}{\beta}{c}{c-1}=\delta_{\beta, c-a}\{a(a+1)-b(b+1)+c(c+1)-2 a c\}\left[\frac{(2 c+1)(2 c-1)!(2 a-1)!}{(a+b+c+1)!(a-b+c)!}\right]^{\frac{1}{2}} . \label{eq:8:5:48}
 \end{gather}
 \section{RECURSION RELATIONS FOR THE CLEBSCH-GORDAN COEFFICIENTS}
 \subsection{General Recursion Relations}
 \begin{align}
 \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}= & {\left[\frac{(b+\beta-2 k)!(c+\gamma)!(a+b-c)!(-a+b+c)!(a+b+c+1)!(2 c+1)}{(b+\beta)!(c-\gamma)!(a-b+c)!}\right]^{\frac{1}{2}} }  \notag\\
 & \times \sum_{c^{\prime}=c-k}^{c+k}(-1)^{c^{\prime}+k-c} \clebsch{a}{\alpha}{b-k}{\beta-k}{c^{\prime}}{\gamma-k} \frac{\left(c^{\prime}-k+c\right)!(2 k)!}{\left(c+k-c^{\prime}\right)!\left(c+c^{\prime}+k+1\right)!\left(c^{\prime}+k-c\right)!}  \notag\\
-& \times\left[\frac{\left(c^{\prime}+k-\gamma\right)!\left(a-b+c^{\prime}+k\right)!\left(2 c^{\prime}+1\right)}{\left(c^{\prime}-k+\gamma\right)!\left(-a+b+c^{\prime}-k\right)!\left(a+b-c^{\prime}-k\right)!\left(a+b+c^{\prime}-k+1\right)!}\right]^{\frac{1}{2}}. \label{chap8:eq:126}
+& \times\left[\frac{\left(c^{\prime}+k-\gamma\right)!\left(a-b+c^{\prime}+k\right)!\left(2 c^{\prime}+1\right)}{\left(c^{\prime}-k+\gamma\right)!\left(-a+b+c^{\prime}-k\right)!\left(a+b-c^{\prime}-k\right)!\left(a+b+c^{\prime}-k+1\right)!}\right]^{\frac{1}{2}}. \label{eq:8:6:1}
 \end{align}
-(Yutsis and Bandzaitis [45]) where $k$ is integer or half-integer, $0 \leq k \leq(b+\beta) / 2$. In accordance with the choice of $k$ \eqref{chap8:eq:126} yields different recursion relations.
+(Yutsis and Bandzaitis [45]) where $k$ is integer or half-integer, $0 \leq k \leq(b+\beta) / 2$. In accordance with the choice of $k$ \eqref{eq:8:6:1} yields different recursion relations.
 
 Note also the relation obtained by Stone [107]
 \begin{align}
 \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}= & {\left[\frac{(a+b+c+1)!(a-b+c)!(a+b-c)!(b+\beta)!(b-\beta)!(a-b+\alpha-\beta)!(a-b-\alpha+\beta)!}{(-a+b+c)!(a+\alpha)!(a-\alpha)!}\right]^{\frac{1}{2}} }  \notag\\
 & \times \sum_{b^{\prime}}(-1)^{b-b^{\prime} / 2} 
 \clebsch{a-b}{\alpha-\beta}{b^{\prime}}{2 \beta}{c}{\gamma} \frac{\left(2 b^{\prime}+1\right)\left(b+\frac{b^{\prime}}{2}\right)!}{\left(2 b+b^{\prime}+1\right)!\left(b-\frac{b^{\prime}}{2}\right)!\left(\frac{b^{\prime}}{2}+\beta\right)!\left(\frac{b^{\prime}}{2}-\beta\right)!}  \notag\\
-& \times\left[\frac{\left(-a+b+c+b^{\prime}\right)!\left(b^{\prime}+2 \beta\right)!\left(b^{\prime}-2 \beta\right)!}{\left(a-b+c+b^{\prime}+1\right)!\left(a-b+c-b^{\prime}\right)!\left(a-b-c+b^{\prime}\right)!}\right]^{\frac{1}{2}}. \label{chap8:eq:127}
+& \times\left[\frac{\left(-a+b+c+b^{\prime}\right)!\left(b^{\prime}+2 \beta\right)!\left(b^{\prime}-2 \beta\right)!}{\left(a-b+c+b^{\prime}+1\right)!\left(a-b+c-b^{\prime}\right)!\left(a-b-c+b^{\prime}\right)!}\right]^{\frac{1}{2}}. \label{eq:8:6:2}
 \end{align}
 Here $a-b \geq|\alpha-\beta| \geq 0, b^{\prime}$ is integer, $b^{\prime}+2 b$ is even, and $a-b+c \geq b^{\prime} \geq|-a+b+c|, 2 b \geq b^{\prime} \geq|2 \beta|$.\\[0pt]
 Equation (1) may be rewritten by the use of quasi-powers in the form [45]
 \begin{align}
 \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}= & { \left.\left[\frac{2 c+1}{(b+\beta)^{(2 k)}}\right]^{\frac{1}{2}} \sum_{k^{\prime}=-k}^{k}(-1)^{k+k^{\prime}} \clebsch{a}{\alpha}{b-k}{\beta-k}{c+k^{\prime}}{\gamma-k} \right\rvert\,(c+\gamma)^{\left(k-k^{\prime}\right)}\left(c-\gamma+k+k^{\prime}\right)^{\left(k+k^{\prime}\right)}(a+b-c)^{\left(k+k^{\prime}\right)} }  \notag\\
 & \left.\times(-a+b+c)^{\left(k-k^{\prime}\right)}(a+b+c+1)^{\left(k-k^{\prime}\right)}\left(a-b+c+k+k^{\prime}\right)^{\left(k+k^{\prime}\right)}\left(2 c+2 k^{\prime}+1\right)\right]^{\frac{1}{2}}  \notag\\
-& \times \frac{(2 k)^{\left(k+k^{\prime}\right)}}{\left(2 c+k+k^{\prime}+1\right)^{(2 k+1)}\left(k+k^{\prime}\right)^{\left(k+k^{\prime}\right)}}, \label{chap8:eq:128}
+& \times \frac{(2 k)^{\left(k+k^{\prime}\right)}}{\left(2 c+k+k^{\prime}+1\right)^{(2 k+1)}\left(k+k^{\prime}\right)^{\left(k+k^{\prime}\right)}}, \label{eq:8:6:3}
 \end{align}
 where
 \[
@@ -681,45 +681,45 @@ a^{(n)}=\frac{a!}{(a-n)!}, \quad \frac{1}{2} \leq k \leq \frac{b-\kappa}{2}, \qu
 \]
 \subsection{Arguments $\alpha, \beta, \gamma$ Change by 1}
 \begin{equation}
-[(c \pm \gamma)(c \mp \gamma+1)]^{\frac{1}{2}} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma \mp 1}=[(a \mp \alpha)(a \pm \alpha+1)]^{\frac{1}{2}} \clebsch{a}{\alpha \pm 1}{b}{\beta}{c}{\gamma}+[(b \mp \beta)(b \pm \beta+1)]^{\frac{1}{2}} \clebsch{a}{\alpha}{b}{\beta \pm 1}{c}{\gamma}. \label{chap8:eq:129}
+[(c \pm \gamma)(c \mp \gamma+1)]^{\frac{1}{2}} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma \mp 1}=[(a \mp \alpha)(a \pm \alpha+1)]^{\frac{1}{2}} \clebsch{a}{\alpha \pm 1}{b}{\beta}{c}{\gamma}+[(b \mp \beta)(b \pm \beta+1)]^{\frac{1}{2}} \clebsch{a}{\alpha}{b}{\beta \pm 1}{c}{\gamma}. \label{eq:8:6:4}
 \end{equation}
 In particular, for $|\gamma|=c$ one has
 \begin{equation}
 \clebsch{a}{\alpha \mp 1}{ b}{\beta}{c}{ \pm c}=-
-\clebsch{a}{\alpha}{ b}{\beta\mp 1}{c}{\pm c}\left[\frac{(b \pm \beta)(b \mp \beta+1)}{(a \pm \alpha)(a \mp \alpha+1)}\right]^{\frac{1}{2}}, \label{chap8:eq:130}
+\clebsch{a}{\alpha}{ b}{\beta\mp 1}{c}{\pm c}\left[\frac{(b \pm \beta)(b \mp \beta+1)}{(a \pm \alpha)(a \mp \alpha+1)}\right]^{\frac{1}{2}}, \label{eq:8:6:5}
 \end{equation}
 when $|\alpha|=|\beta|=\frac{1}{2}$
 \begin{equation}
-\clebsch{a}{\frac{1}{2}}{b}{\frac{1}{2}}{c}{1}=\clebsch{a}{\frac{1}{2}}{b}{-\frac{1}{2}}{c}{0} \frac{(2 b+1)+(-1)^{a+b-c}(2 a+1)}{2[c(c+1)]^{\frac{1}{2}}}, \label{chap8:eq:131}
+\clebsch{a}{\frac{1}{2}}{b}{\frac{1}{2}}{c}{1}=\clebsch{a}{\frac{1}{2}}{b}{-\frac{1}{2}}{c}{0} \frac{(2 b+1)+(-1)^{a+b-c}(2 a+1)}{2[c(c+1)]^{\frac{1}{2}}}, \label{eq:8:6:6}
 \end{equation}
 and for $|\alpha|=|\beta|=1, a+b+c$ even, one gets
 \begin{gather}
-\clebsch{a}{1}{b}{-1}{c}{0}=\clebsch{a}{0}{b}{0}{c}{0} \frac{c(c+1)-a(a+1)-b(b+1)}{2[a(a+1) b(b+1)]^{\frac{1}{2}}}, \label{chap8:eq:132}\\
-\clebsch{a}{1}{b}{1}{c}{2}=\clebsch{a}{0}{b}{0}{c}{0} \frac{a(a+1)[c(c+1)-a(a+1)+b(b+1)]+b(b+1)[c(c+1)+a(a+1)-b(b+1)]}{2[a(a+1) b(b+1)(c-1) c(c+1)(c+2)]^{\frac{1}{2}}}. \label{chap8:eq:133}
+\clebsch{a}{1}{b}{-1}{c}{0}=\clebsch{a}{0}{b}{0}{c}{0} \frac{c(c+1)-a(a+1)-b(b+1)}{2[a(a+1) b(b+1)]^{\frac{1}{2}}}, \label{eq:8:6:7}\\
+\clebsch{a}{1}{b}{1}{c}{2}=\clebsch{a}{0}{b}{0}{c}{0} \frac{a(a+1)[c(c+1)-a(a+1)+b(b+1)]+b(b+1)[c(c+1)+a(a+1)-b(b+1)]}{2[a(a+1) b(b+1)(c-1) c(c+1)(c+2)]^{\frac{1}{2}}}. \label{eq:8:6:8}
 \end{gather}
 \subsection{Arguments Change by $1/2$}
 \begin{gather}
 (2 a+1)[b \pm \beta]^{\frac{1}{2}} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}=\mp[(a \mp \alpha)(a+b-c)(a+b+c+1)]^{\frac{1}{2}} \clebsch{a-\frac{1}{2}}{\alpha \pm \frac{1}{2}}{b-\frac{1}{2}}{\beta \mp \frac{1}{2}}{c}{\gamma}  \notag\\
-+[(a \pm \alpha+1)(-a+b+c)(a-b+c+1)]^{\frac{1}{2}} \clebsch{a+\frac{1}{2}}{\alpha \pm \frac{1}{2}}{b-\frac{1}{2}}{\beta \mp \frac{1}{2}}{c}{\gamma}  \label{chap8:eq:134}
++[(a \pm \alpha+1)(-a+b+c)(a-b+c+1)]^{\frac{1}{2}} \clebsch{a+\frac{1}{2}}{\alpha \pm \frac{1}{2}}{b-\frac{1}{2}}{\beta \mp \frac{1}{2}}{c}{\gamma}  \label{eq:8:6:9}
 \end{gather}
 \begin{gather}
 (2 a+1)[b \mp \beta+1]^{\frac{1}{2}} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}=[(a \mp \alpha)(a-b+c)(-a+b+c+1)]^{\frac{1}{2}} \clebsch{a-\frac{1}{2}}{\alpha \pm \frac{1}{2}}{b+\frac{1}{2}}{\beta \mp \frac{1}{2}}{c}{\gamma}  \notag\\
-\pm[(a \pm \alpha+1)(a+b-c+1)(a+b+c+2)]^{\frac{1}{2}} \clebsch{a+\frac{1}{2}}{\alpha \pm \frac{1}{2}}{b+\frac{1}{2}}{\beta \mp \frac{1}{2}}{c}{\gamma}  \label{chap8:eq:135}
+\pm[(a \pm \alpha+1)(a+b-c+1)(a+b+c+2)]^{\frac{1}{2}} \clebsch{a+\frac{1}{2}}{\alpha \pm \frac{1}{2}}{b+\frac{1}{2}}{\beta \mp \frac{1}{2}}{c}{\gamma}  \label{eq:8:6:10}
 \end{gather}
 \begin{multline}
 {[(-a+b+c)(a-b+c+1)]^{\frac{1}{2}} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}=[(a-\alpha+1)(b-\beta)]^{\frac{1}{2}} \clebsch{a+\frac{1}{2}}{\alpha-\frac{1}{2}}{b-\frac{1}{2}}{\beta+\frac{1}{2}}{c}{\gamma}}  \\
-+[(a+\alpha+1)(b+\beta)]^{\frac{1}{2}} \clebsch{a+\frac{1}{2}}{\alpha+\frac{1}{2}}{b-\frac{1}{2}}{\beta-\frac{1}{2}}{c}{\gamma}  \label{chap8:eq:136}
++[(a+\alpha+1)(b+\beta)]^{\frac{1}{2}} \clebsch{a+\frac{1}{2}}{\alpha+\frac{1}{2}}{b-\frac{1}{2}}{\beta-\frac{1}{2}}{c}{\gamma}  \label{eq:8:6:11}
 \end{multline}
 \begin{multline}
 {[(a-b+c)(-a+b+c+1)]^{\frac{1}{2}} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}=[(a-\alpha)(b-\beta+1)]^{\frac{1}{2}} \clebsch{a-\frac{1}{2}}{\alpha+\frac{1}{2}}{b+\frac{1}{2}}{\beta-\frac{1}{2}}{c}{\gamma}}  \\
-+[(a+\alpha)(b+\beta+1)]^{\frac{1}{2}} \clebsch{a-\frac{1}{2}}{\alpha-\frac{1}{2}}{b+\frac{1}{2}}{\beta+\frac{1}{2}}{c}{\gamma}  \label{chap8:eq:137}
++[(a+\alpha)(b+\beta+1)]^{\frac{1}{2}} \clebsch{a-\frac{1}{2}}{\alpha-\frac{1}{2}}{b+\frac{1}{2}}{\beta+\frac{1}{2}}{c}{\gamma}  \label{eq:8:6:12}
 \end{multline}
 \begin{multline}
 \left[\frac{2 c(-a+b+c)(a+b+c+1)}{2 c+1}\right]^{\frac{1}{2}}
 \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}=
 [(b-\beta)(c-\gamma)]^{\frac{1}{2}} 
 \clebsch{a}{\alpha}{b-\frac{1}{2}}{\beta+\frac{1}{2}}{c-\frac{1}{2}}{\gamma+\frac{1}{2}}
-+[(b+\beta)(c+\gamma)]^\frac{1}{2} \clebsch{a}{\alpha}{b-\frac{1}{2}}{\beta-\frac{1}{2}}{c-\frac{1}{2}}{\gamma-\frac{1}{2}} , \label{chap8:eq:138}
++[(b+\beta)(c+\gamma)]^\frac{1}{2} \clebsch{a}{\alpha}{b-\frac{1}{2}}{\beta-\frac{1}{2}}{c-\frac{1}{2}}{\gamma-\frac{1}{2}} , \label{eq:8:6:13}
 \end{multline}
 \begin{multline}
 {\left[\frac{2 c(c \mp \gamma)(a+b+c+1)}{2 c+1}\right]}^{\frac{1}{2}}
@@ -727,67 +727,67 @@ and for $|\alpha|=|\beta|=1, a+b+c$ even, one gets
 =[(a \mp \alpha)(a-b+c)]^{\frac{1}{2}} 
 \clebsch{a-\frac{1}{2}}{\alpha\pm\frac{1}{2}}{b}{\beta}{c-\frac{1}{2}}{\gamma\pm\frac{1}{2}}+
 [(b\mp\beta)(-a+b+c)]^{\frac{1}{2}} 
-\clebsch{a}{\alpha}{b-\frac{1}{2}}{\beta\pm\frac{1}{2}} {c-\frac{1}{2}}{\gamma\pm\frac{1}{2}}, \label{chap8:eq:139}
+\clebsch{a}{\alpha}{b-\frac{1}{2}}{\beta\pm\frac{1}{2}} {c-\frac{1}{2}}{\gamma\pm\frac{1}{2}}, \label{eq:8:6:14}
 \end{multline}
 \begin{multline}
   {\left[\frac{2 c(c \mp \gamma)(a+b-c+1)}{2 c+1}\right]}^{\frac{1}{2}}
 \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}
 =\pm[(a \pm \alpha+1)(-a+b+c)]^{\frac{1}{2}} 
 \clebsch{a+\frac{1}{2}}{\alpha\pm\frac{1}{2}}{b}{\beta}{c-\frac{1}{2}}{\gamma\pm\frac{1}{2}}\\
-\mp[(b \pm \beta+1)(a-b+c)]^{\frac{1}{2}} \clebsch{a}{\alpha}{b+\frac{1}{2}}{\beta \pm \frac{1}{2}}{c-\frac{1}{2}}{\gamma \pm \frac{1}{2}} , \label{chap8:eq:139b}
+\mp[(b \pm \beta+1)(a-b+c)]^{\frac{1}{2}} \clebsch{a}{\alpha}{b+\frac{1}{2}}{\beta \pm \frac{1}{2}}{c-\frac{1}{2}}{\gamma \pm \frac{1}{2}} , \label{eq:8:6:15}
 \end{multline}
 \begin{multline}
 {\left[\frac{2(c+1)(c \pm \gamma+1)(a+b-c)}{2 c+1}\right]^{\frac{1}{2}}\clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}
 =\mp[(a \mp \alpha)(-a+b+c+1)]^{\frac{1}{2}} \clebsch{a-\frac{1}{2}}{\alpha \pm \frac{1}{2}}{b}{\beta}{c+\frac{1}{2}}{\gamma \pm \frac{1}{2}}} \\
-\pm[(b \mp \beta)(a-b+c+1)]^{\frac{1}{2}} \clebsch{a}{\alpha}{b-\frac{1}{2}}{\beta \pm \frac{1}{2}}{c+\frac{1}{2}}{\gamma \pm \frac{1}{2}}, \label{chap8:eq:140}
+\pm[(b \mp \beta)(a-b+c+1)]^{\frac{1}{2}} \clebsch{a}{\alpha}{b-\frac{1}{2}}{\beta \pm \frac{1}{2}}{c+\frac{1}{2}}{\gamma \pm \frac{1}{2}}, \label{eq:8:6:16}
 \end{multline}
 \begin{multline}
 {\left[(2c+1)(b\mp\beta)\right]^{\frac{1}{2}}\clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}=\left[\frac{(c\mp\gamma)(-a+b+c)(a+b+c+1)}{2c}\right]^{\frac{1}{2}} \clebsch{a}{\alpha}{b-\frac{1}{2}}{\beta \pm \frac{1}{2}}{c-\frac{1}{2}}{\gamma \pm \frac{1}{2}}} \\
 \pm\left[\frac{(c \pm \gamma+1)(a-b+c+1)(a+b-c)}{2(c+1)}\right]^{\frac{1}{2}}
 \clebsch{a}{\alpha}{b-\frac{1}{2}}{\beta \pm \frac{1}{2}}{c+\frac{1}{2}}{\gamma\pm\frac{1}{2}}. 
-\label{chap8:eq:141}
+\label{eq:8:6:17}
 \end{multline}
-In particular, Eqs.~\eqref{chap8:eq:134} and \eqref{chap8:eq:135} yield
+In particular, Eqs.~\eqref{eq:8:6:9} and \eqref{eq:8:6:10} yield
 \begin{equation}
-\clebsch{a}{\pm \frac{1}{2}}{b}{\mp \frac{1}{2}}{c}{0}= \pm \clebsch{a-\frac{1}{2}}{0}{b-\frac{1}{2}}{0}{c}{0}\left[\frac{(a+b-c)(a+b+c+1)}{(2 a+1)(2 b+1)}\right]^{\frac{1}{2}}=\mp \clebsch{a+\frac{1}{2}}{0}{b+\frac{1}{2}}{0}{c}{0}\left[\frac{(a+b-c+1)(a+b+c+2)}{(2 a+1)(2 b+1)}\right]^{\frac{1}{2}}, \label{chap8:eq:142}
+\clebsch{a}{\pm \frac{1}{2}}{b}{\mp \frac{1}{2}}{c}{0}= \pm \clebsch{a-\frac{1}{2}}{0}{b-\frac{1}{2}}{0}{c}{0}\left[\frac{(a+b-c)(a+b+c+1)}{(2 a+1)(2 b+1)}\right]^{\frac{1}{2}}=\mp \clebsch{a+\frac{1}{2}}{0}{b+\frac{1}{2}}{0}{c}{0}\left[\frac{(a+b-c+1)(a+b+c+2)}{(2 a+1)(2 b+1)}\right]^{\frac{1}{2}}, \label{eq:8:6:18}
 \end{equation}
 if $a+b+c$ is odd, and
 \begin{equation}
-\clebsch{a}{\pm \frac{1}{2}}{b}{\mp \frac{1}{2}}{c}{0}=\clebsch{a+\frac{1}{2}}{0}{b-\frac{1}{2}}{0}{c}{0}\left[\frac{(-a+b+c)(a-b+c+1)}{(2 a+1)(2 b+1)}\right]^{\frac{1}{2}}=\clebsch{a-\frac{1}{2}}{0}{b+\frac{1}{2}}{0}{c}{0}\left[\frac{(a-b+c)(-a+b+c+1)}{(2 a+1)(2 b+1)}\right]^{\frac{1}{2}}, \label{chap8:eq:143}
+\clebsch{a}{\pm \frac{1}{2}}{b}{\mp \frac{1}{2}}{c}{0}=\clebsch{a+\frac{1}{2}}{0}{b-\frac{1}{2}}{0}{c}{0}\left[\frac{(-a+b+c)(a-b+c+1)}{(2 a+1)(2 b+1)}\right]^{\frac{1}{2}}=\clebsch{a-\frac{1}{2}}{0}{b+\frac{1}{2}}{0}{c}{0}\left[\frac{(a-b+c)(-a+b+c+1)}{(2 a+1)(2 b+1)}\right]^{\frac{1}{2}}, \label{eq:8:6:19}
 \end{equation}
 if $a+b+c$ is even.
 
 \subsection{The Case When $\alpha=\beta=\gamma=0$}
 Let $p$ be integer and $2 g=a+b+c$. Then
 \begin{equation}
-\clebsch{a+p}{0}{b-p}{0}{c}{0}=\clebsch{a}{0}{b}{0}{c}{0} \frac{(g-a)!(g-b)!}{(g-a-p)!(g-b+p)!}\left[\frac{(2 g-2 a-2 p)!(2 g-2 b+2 p)!}{(2 g-2 a)!(2 g-2 b)!}\right]^{\frac{1}{2}}. \label{chap8:eq:144}
+\clebsch{a+p}{0}{b-p}{0}{c}{0}=\clebsch{a}{0}{b}{0}{c}{0} \frac{(g-a)!(g-b)!}{(g-a-p)!(g-b+p)!}\left[\frac{(2 g-2 a-2 p)!(2 g-2 b+2 p)!}{(2 g-2 a)!(2 g-2 b)!}\right]^{\frac{1}{2}}. \label{eq:8:6:20}
 \end{equation}
-In particular, \eqref{chap8:eq:144} yields
+In particular, \eqref{eq:8:6:20} yields
 \begin{gather}
-\clebsch{a+1}{0}{b-1}{0}{c}{0}=\clebsch{a}{0}{b}{0}{c}{0}\left[\frac{(-a+b+c)(a-b+c+1)}{(-a+b+c-1)(a-b+c+2)}\right]^{\frac{1}{2}}, \label{chap8:eq:145}\\
+\clebsch{a+1}{0}{b-1}{0}{c}{0}=\clebsch{a}{0}{b}{0}{c}{0}\left[\frac{(-a+b+c)(a-b+c+1)}{(-a+b+c-1)(a-b+c+2)}\right]^{\frac{1}{2}}, \label{eq:8:6:21}\\
 \clebsch{a}{0}{b+2p}{0}{c}{0}=\clebsch{a}{0}{b}{0}{c}{0}(-1)^{p} \frac{(g+p)!(g-a)!(g-b)!(g-c)!}{g!(g-a+p)!(g-b-p)!(g-c+p)!}, \notag\\
-\times\left[\frac{(a+b-c+2 p)!(a-b+c-2 p)!(-a+b+c+2 p)!(a+b+c+1)!}{(a+b-c)!(a-b+c)!(-a+b+c)!(a+b+c+2 p+1)!}\right]^{\frac{1}{2}}. \label{chap8:eq:146}
+\times\left[\frac{(a+b-c+2 p)!(a-b+c-2 p)!(-a+b+c+2 p)!(a+b+c+1)!}{(a+b-c)!(a-b+c)!(-a+b+c)!(a+b+c+2 p+1)!}\right]^{\frac{1}{2}}. \label{eq:8:6:22}
 \end{gather}
-Moreover, from \eqref{chap8:eq:146} one gets
+Moreover, from \eqref{eq:8:6:22} one gets
 \begin{equation}
-\clebsch{a}{0}{b+2}{0}{c}{0}=-\clebsch{a}{0}{b}{0}{c}{0}\left[\frac{(a+b+c+2)(a+b-c+1)(a-b+c)(-a+b+c+1)}{(a+b+c+3)(a+b-c+2)(a-b+c-1)(-a+b+c+2)}\right]^{\frac{1}{2}}. \label{chap8:eq:147}
+\clebsch{a}{0}{b+2}{0}{c}{0}=-\clebsch{a}{0}{b}{0}{c}{0}\left[\frac{(a+b+c+2)(a+b-c+1)(a-b+c)(-a+b+c+1)}{(a+b+c+3)(a+b-c+2)(a-b+c-1)(-a+b+c+2)}\right]^{\frac{1}{2}}. \label{eq:8:6:23}
 \end{equation}
 \subsection{Arguments $a, b, c$ Change by 1}
 \begin{align}
 & 2\left[b^{2}-\beta^{2}\right]^{\frac{1}{2}} \clebsch{a}{\alpha}{b-1}{\beta}{c}{\gamma}=\frac{1}{a(2 a+1)}\left[\left(a^{2}-\alpha^{2}\right)(-a+b+c)(-a+b+c+1)(a-b+c)(a-b+c+1)\right]^{\frac{1}{2}} \notag\\
 & \quad \times \clebsch{a-1}{\alpha}{b}{\beta}{c}{\gamma}+\frac{\alpha}{a(a+1)}[(-a+b+c)(a-b+c+1)(a+b-c)(a+b+c+1)]^{\frac{1}{2}} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}  \notag\\
-& -\frac{1}{(a+1)(2 a+1)}\left\{\left[(a+1)^{2}-\alpha^{2}\right](a+b-c)(a+b-c+1)(a+b+c+1)(a+b+c+2)\right\}^{\frac{1}{2}} \clebsch{a+1}{\alpha}{b}{\beta}{c}{\gamma}, \label{chap8:eq:148}\\
+& -\frac{1}{(a+1)(2 a+1)}\left\{\left[(a+1)^{2}-\alpha^{2}\right](a+b-c)(a+b-c+1)(a+b+c+1)(a+b+c+2)\right\}^{\frac{1}{2}} \clebsch{a+1}{\alpha}{b}{\beta}{c}{\gamma}, \label{eq:8:6:24}\\
 & 2 \beta \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}=-\frac{1}{a(2 a+1)}\left[\left(a^{2}-\alpha^{2}\right)(-a+b+c+1)(a-b+c)(a+b-c)(a+b+c+1)\right]^{\frac{1}{2}} \clebsch{a-1}{\alpha}{b}{\beta}{c}{\gamma}  \notag\\
 & \quad-\frac{\alpha}{a(a+1)}\{a(a+1)+b(b+1)-c(c+1)\} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}  \notag\\
-& -\frac{1}{(a+1)(2 a+1)}\left\{\left[(a+1)^{2}-\alpha^{2}\right](-a+b+c)(a-b+c+1)(a+b-c+1)(a+b+c+2)\right\}^{\frac{1}{2}} \clebsch{a+1}{\alpha}{b}{\beta}{c}{\gamma}, \label{chap8:eq:149}
+& -\frac{1}{(a+1)(2 a+1)}\left\{\left[(a+1)^{2}-\alpha^{2}\right](-a+b+c)(a-b+c+1)(a+b-c+1)(a+b+c+2)\right\}^{\frac{1}{2}} \clebsch{a+1}{\alpha}{b}{\beta}{c}{\gamma}, \label{eq:8:6:25}
 \end{align}
 \begin{gather}
 2\left[(b+1)^{2}-\beta^{2}\right]^{\frac{1}{2}} \clebsch{a}{\alpha}{b+1}{\beta}{c}{\gamma}=-\frac{1}{a(2 a+1)}\left[\left(a^{2}-\alpha^{2}\right)(a+b-c)(a+b-c+1)(a+b+c+1)(a+b+c+2)\right]^{\frac{1}{2}} \notag\\
 \times \clebsch{a-1}{\alpha}{b}{\beta}{c}{\gamma}+\frac{\alpha}{a(a+1)}[(-a+b+c+1)(a-b+c)(a+b-c+1)(a+b+c+2)]^{\frac{1}{2}} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}  \notag\\
-+\frac{1}{(a+1)(2 a+1)}\left\{\left[(a+1)^{2}-\alpha^{2}\right](-a+b+c)(-a+b+c+1)(a-b+c)(a-b+c+1)\right\}^{\frac{1}{2}} \clebsch{a+1}{\alpha}{b}{\beta}{c}{\gamma}, \label{chap8:eq:150}\\
++\frac{1}{(a+1)(2 a+1)}\left\{\left[(a+1)^{2}-\alpha^{2}\right](-a+b+c)(-a+b+c+1)(a-b+c)(a-b+c+1)\right\}^{\frac{1}{2}} \clebsch{a+1}{\alpha}{b}{\beta}{c}{\gamma}, \label{eq:8:6:26}\\
 \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}=\left[\frac{4 c^{2}(2 c+1)(2 c-1)}{(c+\gamma)(c-\gamma)(-a+b+c)(a-b+c)(a+b-c+1)(a+b+c+1)}\right]^{\frac{1}{2}}  \notag\\
 \times\left\{\frac{(\alpha-\beta) c(c-1)-\gamma a(a+1)+\gamma b(b+1)}{2 c(c-1)} \clebsch{a}{\alpha}{b}{\beta}{c-1}{\gamma}\right. \notag\\
-\left.-\left[\frac{(c-\gamma-1)(c+\gamma-1)(-a+b+c-1)(a-b+c-1)(a+b-c+2)(a+b+c)}{4(c-1)^{2}(2 c-3)(2 c-1)}\right]^{\frac{1}{2}} \clebsch{a}{\alpha}{b}{\beta}{c-2}{\gamma}\right\} . \label{chap8:eq:151}
+\left.-\left[\frac{(c-\gamma-1)(c+\gamma-1)(-a+b+c-1)(a-b+c-1)(a+b-c+2)(a+b+c)}{4(c-1)^{2}(2 c-3)(2 c-1)}\right]^{\frac{1}{2}} \clebsch{a}{\alpha}{b}{\beta}{c-2}{\gamma}\right\} . \label{eq:8:6:27}
 \end{gather}
 \subsection{Arguments $a, b, \alpha, \beta$ Change by 1}
 \begin{gather}
@@ -795,44 +795,44 @@ Moreover, from \eqref{chap8:eq:146} one gets
 =\frac{1}{2 a(2 a+1)}[(a \pm \alpha)(a \pm \alpha-1)(-a+b+c)(-a+b+c+1)(a-b+c)(a-b+c+1)]^{\frac{1}{2}} \clebsch{a-1}{\alpha \mp 1}{b}{\beta \pm 1}{c}{\gamma}  \notag\\
 \mp \frac{1}{2 a(a+1)}[(a \pm \alpha)(a \mp \alpha+1)(-a+b+c)(a-b+c+1)(a+b-c)(a+b+c+1)]^{\frac{1}{2}} \clebsch{a}{\alpha \mp 1}{b}{\beta \pm 1}{c}{\gamma}  \notag\\
 +\frac{1}{2(a+1)(2 a+1)}[(a \mp \alpha+1)(a \mp \alpha+2)(a+b-c)(a+b-c+1)(a+b+c+1)(a+b+c+2)]^{\frac{1}{2}}  \notag\\
-\times \clebsch{a+1}{\alpha \mp 1}{b}{\beta \pm 1}{c}{\gamma} . \label{chap8:eq:152}\end{gather}
+\times \clebsch{a+1}{\alpha \mp 1}{b}{\beta \pm 1}{c}{\gamma} . \label{eq:8:6:28}\end{gather}
 \begin{gather}
 [(b\mp\beta)(b\pm\beta+1)]^{\frac{1}{2}}\clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}\notag\\
 = \pm \frac{1}{2 a(2 a+1)}[(a \pm \alpha)(a \pm \alpha-1)(-a+b+c+1)(a-b+c)(a+b-c)(a+b+c+1)]^{\frac{1}{2}} \clebsch{a-1}{\alpha \mp 1}{b}{\beta \pm 1}{c}{\gamma}  \notag\\
 \quad-\frac{1}{2 a(a+1)}\{a(a+1)+b(b+1)-c(c+1)\}\left[(a \pm \alpha)(a \mp \alpha+1)\right]^{\frac{1}{2}} \clebsch{a}{\alpha \mp 1}{b}{\beta \pm 1}{c}{\gamma}  \notag\\
 \mp \frac{1}{2(a+1)(2 a+1)}[(a \mp \alpha+1)(a \mp \alpha+2)(-a+b+c)(a-b+c+1)(a+b-c+1)(a+b+c+2)]^{\frac{1}{2}}  \notag\\
-\quad \times \clebsch{a+1}{\alpha \mp 1}{b}{\beta \pm 1}{c}{\gamma} . \label{chap8:eq:152b}
+\quad \times \clebsch{a+1}{\alpha \mp 1}{b}{\beta \pm 1}{c}{\gamma} . \label{eq:8:6:29}
 \end{gather}
 \begin{gather}
 {[(b \mp \beta)(b \mp \beta+1)]^{\frac{1}{2}} \clebsch{a}{\alpha}{b+1}{\beta}{c}{\gamma}}  \notag\\
 =\frac{1}{2 a(2 a+1)}[(a \pm \alpha)(a \pm \alpha-1)(a+b-c)(a+b-c+1)(a+b+c+1)(a+b+c+2)]^{\frac{1}{2}} \clebsch{a-1}{\alpha \mp 1}{b}{\beta \pm 1}{c}{\gamma}  \notag\\
 \pm \frac{1}{2 a(a+1)}[(a \pm \alpha)(a \mp \alpha+1)(-a+b+c+1)(a-b+c)(a+b-c+1)(a+b+c+2)]^{\frac{1}{2}} \clebsch{a}{\alpha \mp 1}{b}{\beta \pm 1}{c}{\gamma}  \notag\\
 +\frac{1}{2(a+1)(2 a+1)}[(a \mp \alpha+1)(a \mp \alpha+2)(-a+b+c)(-a+b+c+1)(a-b+c)(a-b+c+1)]^{\frac{1}{2}}  \notag\\
-\times \clebsch{a+1}{\alpha \mp 1}{b}{\beta \pm 1}{c}{\gamma} \label{chap8:eq:153}
+\times \clebsch{a+1}{\alpha \mp 1}{b}{\beta \pm 1}{c}{\gamma} \label{eq:8:6:30}
 \end{gather}
 \subsection{Arguments $c, b, \gamma, \beta$ Change by 1}
 \begin{gather}
 {\left[\frac{(-a+b+c)(a-b+c)(a+b-c+1)(a+b+c+1)(2 c-1)}{(2 c+1)}\right]^{\frac{1}{2}} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}}  \notag\\
 =[(b+\beta)(b-\beta+1)(c+\gamma)(c+\gamma-1)]^{\frac{1}{2}} \clebsch{a}{\alpha}{b}{\beta-1}{c-1}{\gamma-1}-2 \beta\left[c^{2}-\gamma^{2}\right]^{\frac{1}{2}} \clebsch{a}{\alpha}{b}{\beta}{c-1}{\gamma}  \notag\\
--[(b-\beta)(b+\beta+1)(c-\gamma)(c-\gamma-1)]^{\frac{1}{2}} \clebsch{a}{\alpha}{b}{\beta+1}{c-1}{\gamma+1} . \label{chap8:eq:154}
+-[(b-\beta)(b+\beta+1)(c-\gamma)(c-\gamma-1)]^{\frac{1}{2}} \clebsch{a}{\alpha}{b}{\beta+1}{c-1}{\gamma+1} . \label{eq:8:6:31}
 \end{gather}
 \begin{gather}
 {[(b \mp \beta)(b \mp \beta+1)]^{\frac{1}{2}} \clebsch{a}{\alpha}{b-1}{\beta}{c}{\gamma}}  \notag\\
 =\frac{1}{2 c}\left[\frac{(c \pm \gamma)(c \pm \gamma-1)(a-b+c)(a-b+c+1)(a+b-c)(a+b-c+1)}{(2 c-1)(2 c+1)}\right]^{\frac{1}{2}} \clebsch{a}{\alpha}{b}{\beta \mp 1}{c-1}{\gamma \mp 1}  \notag\\
 \pm \frac{1}{2 c(c+1)}[(c \pm \gamma)(c \mp \gamma+1)(-a+b+c)(a-b+c+1)(a+b-c)(a+b+c+1)]^{\frac{1}{2}} \clebsch{a}{\alpha}{b}{\beta \mp 1}{c}{\gamma \mp 1}  \notag\\
-+\frac{1}{2(c+1)}\left[\frac{(c \mp \gamma+1)(c \mp \gamma+2)(-a+b+c)(-a+b+c+1)(a+b+c+1)(a+b+c+2)}{(2 c+1)(2 c+3)}\right]^{\frac{1}{2}} \clebsch{a}{\alpha}{b}{\beta \mp 1}{c+1}{\gamma \mp 1}  \label{chap8:eq:155}
++\frac{1}{2(c+1)}\left[\frac{(c \mp \gamma+1)(c \mp \gamma+2)(-a+b+c)(-a+b+c+1)(a+b+c+1)(a+b+c+2)}{(2 c+1)(2 c+3)}\right]^{\frac{1}{2}} \clebsch{a}{\alpha}{b}{\beta \mp 1}{c+1}{\gamma \mp 1}  \label{eq:8:6:32}
 \end{gather}
 \begin{gather}
   [(b\pm\beta)(b\mp\beta+1)]^{\frac{1}{2}}\clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}\notag\\
 = \pm \frac{1}{2 c}\left[\frac{(c \pm \gamma)(c \pm \gamma-1)(-a+b+c)(a-b+c)(a+b-c+1)(a+b+c+1)}{(2 c-1)(2 c+1)}\right]^{\frac{1}{2}} \clebsch{a}{\alpha}{b}{\beta \mp 1}{c-1}{\gamma \mp 1}  \notag\\
 +\frac{1}{2 c(c+1)}\{-a(a+1)+b(b+1)+c(c+1)\}[(c \pm \gamma)(c \mp \gamma+1)]^{\frac{1}{2}} \clebsch{a}{\alpha}{b}{\beta \mp 1}{c}{\gamma \mp 1}  \notag\\
-\mp \frac{1}{2(c+1)}\left[\frac{(c \mp \gamma+1)(c \mp \gamma+2)(-a+b+c+1)(a-b+c+1)(a+b-c)(a+b+c+2)}{(2 c+1)(2 c+3)}\right]^{\frac{1}{2}} \clebsch{a}{\alpha}{b}{\beta \mp 1}{c+1}{\gamma \mp 1} \label{chap8:eq:155b}
+\mp \frac{1}{2(c+1)}\left[\frac{(c \mp \gamma+1)(c \mp \gamma+2)(-a+b+c+1)(a-b+c+1)(a+b-c)(a+b+c+2)}{(2 c+1)(2 c+3)}\right]^{\frac{1}{2}} \clebsch{a}{\alpha}{b}{\beta \mp 1}{c+1}{\gamma \mp 1} \label{eq:8:6:33}
 \end{gather}
 \begin{gather}
   [(b\pm\beta)(b\pm\beta+1)]^{\frac{1}{2}}\clebsch{a}{\alpha}{b+1}{\beta}{c}{\gamma}\notag\\
 =\frac{1}{2 c}\left[\frac{(c \pm \gamma)(c \pm \gamma-1)(-a+b+c)(-a+b+c+1)(a+b+c+1)(a+b+c+2)}{(2 c-1)(2 c+1)}\right]^{\frac{1}{2}} \clebsch{a}{\alpha}{b}{\beta \mp 1}{c-1}{\gamma \mp 1} \notag\\
 \mp \frac{1}{2 c(c+1)}[(c \pm \gamma)(c \mp \gamma+1)(-a+b+c+1)(a-b+c)(a+b-c+1)(a+b+c+2)]^{\frac{1}{2}} \clebsch{a}{\alpha}{b}{\beta \mp 1}{c}{\gamma \mp 1}  \notag\\
-+\frac{1}{2(c+1)}\left[\frac{(c \mp \gamma+1)(c \mp \gamma+2)(a-b+c)(a-b+c+1)(a+b-c)(a+b-c+1)}{(2 c+1)(2 c+3)}\right]^{\frac{1}{2}} \clebsch{a}{\alpha}{b}{\beta \mp 1}{c+1}{\gamma \mp 1} .  \label{chap8:eq:156}
++\frac{1}{2(c+1)}\left[\frac{(c \mp \gamma+1)(c \mp \gamma+2)(a-b+c)(a-b+c+1)(a+b-c)(a+b-c+1)}{(2 c+1)(2 c+3)}\right]^{\frac{1}{2}} \clebsch{a}{\alpha}{b}{\beta \mp 1}{c+1}{\gamma \mp 1} .  \label{eq:8:6:34}
 \end{gather}
 \subsection{Recursion Relations for the Regge Symbols}
 Recursion relations for the Regge $R$-symbols are very convenient because each relation is equivalent to a variety of formally different expressions for the Clebsch-Gordan coefficients. The formulas given below represent some recursion relations $[86,103]$. In these formulas we use the notation $J=\sum_{k=1}^{3} R_{i k}=\sum_{i=1}^{3} R_{i k}=a+b+c$.
@@ -850,7 +850,7 @@ R_{31} & R_{32} & R_{33}-1
 R_{11}-1 & R_{12} & R_{13} \\
 R_{21} & R_{22} & R_{23}-1 \\
 R_{31} & R_{32}-1 & R_{33}
-\end{array}\right\|=0 . \label{chap8:eq:157}\\
+\end{array}\right\|=0 . \label{eq:8:6:35}\\
 & {\left[\left(R_{11}+1\right) R_{21}\right]^{\frac{1}{2}}\left\|\begin{array}{lll}
 R_{11}+1 & R_{12} & R_{13} \\
 R_{21}-1 & R_{22} & R_{23} \\
@@ -866,7 +866,7 @@ R_{21} & R_{22} & R_{23}-1 \\
 R_{31} & R_{32} & R_{33}
 \end{array}\right\|=0 .
 \footnote{Column recursion — it shifts R₁ₖ+1 and R₂ₖ−1, so each array has equal column sums but row sums J+1, J−1, J. A Regge symbol requires all six line-sums equal, so every term vanishes as a standard 3jm and the relation is only vacuously satisfied.  It's not an OCR issue; the transcription matches the scan.}
-\label{chap8:eq:158}\\
+\label{eq:8:6:36}\\
 & {\left[R_{11} R_{22}(J+1)\right]^{\frac{1}{2}}\left\|\begin{array}{lll}
 R_{11} & R_{12} & R_{13} \\
 R_{21} & R_{22} & R_{23} \\
@@ -880,7 +880,7 @@ R_{31} & R_{32} & R_{33}-1
 R_{11}-1 & R_{12} & R_{13} \\
 R_{21}+1 & R_{22}-1 & R_{23}-1 \\
 R_{31}-1 & R_{32} & R_{33}
-\end{array}\right\|=0 . \label{chap8:eq:159}\\
+\end{array}\right\|=0 . \label{eq:8:6:37}\\
 & \left(R_{11}+R_{12}+1\right)\left[R_{22}\right]^{\frac{1}{2}}\left\|\begin{array}{lll}
 R_{11} & R_{12} & R_{13} \\
 R_{21} & R_{22} & R_{23} \\
@@ -894,7 +894,7 @@ R_{31} & R_{32} & R_{33}
 R_{11}-1 & R_{12} & R_{13} \\
 R_{21} & R_{22}-1 & R_{23} \\
 R_{31} & R_{32} & R_{33}-1
-\end{array}\right\|=0 . \label{chap8:eq:160}\\
+\end{array}\right\|=0 . \label{eq:8:6:38}\\
 & \left(R_{22}-R_{33}\right)\left[R_{11} R_{23} R_{32}\right]^{\frac{1}{2}}\left\|\begin{array}{lll}
 R_{11}-1 & R_{12} & R_{13} \\
 R_{21} & R_{22} & R_{23}-1 \\
@@ -909,7 +909,7 @@ R_{31}-1 & R_{32} & R_{33}
 R_{11} & R_{12}-1 & R_{13} \\
 R_{21}-1 & R_{22} & R_{23} \\
 R_{31} & R_{32} & R_{33}-1
-\end{array}\right\|=0 . \label{chap8:eq:161}
+\end{array}\right\|=0 . \label{eq:8:6:39}
 \end{align}
 \section{SUMS OF PRODUCTS OF THE CLEBSCH-GORDAN COEFFICIENTS}
 Sums of products of the vector-addition coefficients are more conveniently represented in terms of the $3 j m$ symbols than in terms of the Clebsch-Gordan coefficients, because the $3 j m$ symbols have simpler symmetry relations. The sums expressed in terms of the $3 j m$ symbols will be given in Sec. 12.2. Nevertheless the ClebschGordan coefficients are also widely used. That is why we present the formulas which seem to be most useful for sums of products containing the Clebsch-Gordan coefficients. For practical convenience we consider various versions of the formulas which differ by permutations of upper and lower arguments. In these formulas we use the notation
@@ -918,98 +918,98 @@ Sums of products of the vector-addition coefficients are more conveniently repre
 \]
 \subsection{Sums Involving One Clebsch-Gordan Coefficient}
 \begin{gather}
-\sum_{\alpha} \clebsch{a}{\alpha}{b}{0}{a}{\alpha}=\Fact{a}^{2} \delta_{b 0}, \label{chap8:eq:162}\\
-\sum_{\alpha}(-1)^{a-\alpha} \clebsch{a}{\alpha}{a}{-\alpha}{c}{0}=\Fact{a} \delta_{c 0}, \label{chap8:eq:163}\\
-\sum_{\alpha \beta \gamma}(-1)^{c+\gamma} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}[(a+\alpha)!(a-\alpha)!(b+\beta)!(b-\beta)!(c+\gamma)!(c-\gamma)!]^{-\frac{1}{2}}=0. \label{chap8:eq:164}
+\sum_{\alpha} \clebsch{a}{\alpha}{b}{0}{a}{\alpha}=\Fact{a}^{2} \delta_{b 0}, \label{eq:8:7:1}\\
+\sum_{\alpha}(-1)^{a-\alpha} \clebsch{a}{\alpha}{a}{-\alpha}{c}{0}=\Fact{a} \delta_{c 0}, \label{eq:8:7:2}\\
+\sum_{\alpha \beta \gamma}(-1)^{c+\gamma} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}[(a+\alpha)!(a-\alpha)!(b+\beta)!(b-\beta)!(c+\gamma)!(c-\gamma)!]^{-\frac{1}{2}}=0. \label{eq:8:7:3}
 \end{gather}
 \subsection{Sums Involving Products of Two Clebsch-Gordan Coefficients}
 \begin{gather}
-\sum_{\alpha \beta} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} \clebsch{a}{\alpha}{b}{\beta}{c^{\prime}}{\gamma^{\prime}}=\delta_{c c^{\prime}} \delta_{\gamma \gamma^{\prime}}, \label{chap8:eq:165}\\
-\sum_{\alpha \gamma} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} \clebsch{a}{\alpha}{b^{\prime}}{\beta^{\prime}}{c}{\gamma}=\frac{\Fact{c}^{2}}{\Fact{b}^{2}} \delta_{b b^{\prime}} \delta_{\beta \beta^{\prime}}, \label{chap8:eq:166}\\
-\sum_{\alpha \beta}(-1)^{b+\beta} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} \clebsch{c^{\prime}}{-\gamma^{\prime}}{a}{\alpha}{b}{-\beta}=(-1)^{c+\gamma} \frac{\Fact{b}}{\Fact{c}} \delta_{c c^{\prime}} \delta_{\gamma \gamma^{\prime}}, \label{chap8:eq:167}\\
-\sum_{\alpha \beta}(-1)^{a+\alpha} \clebsch{b}{\beta}{a}{\alpha}{c}{\gamma} \clebsch{a}{-\alpha}{c^{\prime}}{\gamma^{\prime}}{b}{\beta}=\frac{\Fact{b}}{\Fact{c}} \delta_{c c^{\prime}} \delta_{\gamma \gamma^{\prime}}, \label{chap8:eq:168}\\
-\sum_{\alpha \beta} \clebsch{c}{\gamma}{b}{\beta}{a}{\alpha} \clebsch{c^{\prime}}{-\gamma^{\prime}}{a}{\alpha}{b}{\beta}=(-1)^{b-a-\gamma} \frac{\Fact{a b}}{\Fact{c}^{2}} \delta_{c c^{\prime}} \delta_{\gamma \gamma^{\prime}}, \label{chap8:eq:169}\\
-\sum_{c \gamma} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} \clebsch{a}{\alpha^{\prime}}{b}{\beta^{\prime}}{c}{\gamma}=\delta_{\alpha \alpha^{\prime}} \delta_{\beta \beta^{\prime}}, \label{chap8:eq:170}\\
-\sum_{c \gamma} \Fact{c}^{2} \clebsch{a}{\alpha}{c}{\gamma}{b}{\beta} \clebsch{a}{\alpha^{\prime}}{c}{\gamma}{b}{\beta^{\prime}}=\Fact{b}^{2} \delta_{\alpha \alpha^{\prime}} \delta_{\beta \beta^{\prime}}, \label{chap8:eq:171}\\
-\sum_{a \alpha}(-1)^{a-\alpha} \Fact{a}^{2} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} \clebsch{a}{\alpha}{c}{\gamma^{\prime}}{b}{\beta^{\prime}}=\Fact{b c} \delta_{\gamma,-\gamma^{\prime}} \delta_{\beta,-\beta^{\prime}}. \label{chap8:eq:172}
+\sum_{\alpha \beta} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} \clebsch{a}{\alpha}{b}{\beta}{c^{\prime}}{\gamma^{\prime}}=\delta_{c c^{\prime}} \delta_{\gamma \gamma^{\prime}}, \label{eq:8:7:4}\\
+\sum_{\alpha \gamma} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} \clebsch{a}{\alpha}{b^{\prime}}{\beta^{\prime}}{c}{\gamma}=\frac{\Fact{c}^{2}}{\Fact{b}^{2}} \delta_{b b^{\prime}} \delta_{\beta \beta^{\prime}}, \label{eq:8:7:5}\\
+\sum_{\alpha \beta}(-1)^{b+\beta} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} \clebsch{c^{\prime}}{-\gamma^{\prime}}{a}{\alpha}{b}{-\beta}=(-1)^{c+\gamma} \frac{\Fact{b}}{\Fact{c}} \delta_{c c^{\prime}} \delta_{\gamma \gamma^{\prime}}, \label{eq:8:7:6}\\
+\sum_{\alpha \beta}(-1)^{a+\alpha} \clebsch{b}{\beta}{a}{\alpha}{c}{\gamma} \clebsch{a}{-\alpha}{c^{\prime}}{\gamma^{\prime}}{b}{\beta}=\frac{\Fact{b}}{\Fact{c}} \delta_{c c^{\prime}} \delta_{\gamma \gamma^{\prime}}, \label{eq:8:7:7}\\
+\sum_{\alpha \beta} \clebsch{c}{\gamma}{b}{\beta}{a}{\alpha} \clebsch{c^{\prime}}{-\gamma^{\prime}}{a}{\alpha}{b}{\beta}=(-1)^{b-a-\gamma} \frac{\Fact{a b}}{\Fact{c}^{2}} \delta_{c c^{\prime}} \delta_{\gamma \gamma^{\prime}}, \label{eq:8:7:8}\\
+\sum_{c \gamma} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} \clebsch{a}{\alpha^{\prime}}{b}{\beta^{\prime}}{c}{\gamma}=\delta_{\alpha \alpha^{\prime}} \delta_{\beta \beta^{\prime}}, \label{eq:8:7:9}\\
+\sum_{c \gamma} \Fact{c}^{2} \clebsch{a}{\alpha}{c}{\gamma}{b}{\beta} \clebsch{a}{\alpha^{\prime}}{c}{\gamma}{b}{\beta^{\prime}}=\Fact{b}^{2} \delta_{\alpha \alpha^{\prime}} \delta_{\beta \beta^{\prime}}, \label{eq:8:7:10}\\
+\sum_{a \alpha}(-1)^{a-\alpha} \Fact{a}^{2} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} \clebsch{a}{\alpha}{c}{\gamma^{\prime}}{b}{\beta^{\prime}}=\Fact{b c} \delta_{\gamma,-\gamma^{\prime}} \delta_{\beta,-\beta^{\prime}}. \label{eq:8:7:11}
 \end{gather}
 \subsection{Sums Involving Products of Three Clebsch-Gordan Coefficients}
 \begin{gather}
-\sum_{\alpha \beta \delta} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} \clebsch{d}{\delta}{b}{\beta}{e}{\varepsilon} \clebsch{a}{\alpha}{f}{\varphi}{d}{\delta}=\kappa_{1} \Fact{c d} \clebsch{c}{\gamma}{f}{\varphi}{e}{\varepsilon}\sixj{a}{b}{c}{e}{f}{d}, \label{chap8:eq:173}\\
-\sum_{\alpha \beta \delta} \clebsch{b}{\beta}{c}{\gamma}{a}{\alpha} \clebsch{b}{\beta}{e}{\varepsilon}{d}{\delta} \clebsch{a}{\alpha}{f}{\varphi}{d}{\delta}=\kappa_{1} \frac{\Fact{a d d}}{\Fact{e}} \clebsch{c}{\gamma}{f}{\varphi}{e}{\varepsilon}\sixj{a}{b}{c}{e}{f}{d}, \label{chap8:eq:174}\\
+\sum_{\alpha \beta \delta} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} \clebsch{d}{\delta}{b}{\beta}{e}{\varepsilon} \clebsch{a}{\alpha}{f}{\varphi}{d}{\delta}=\kappa_{1} \Fact{c d} \clebsch{c}{\gamma}{f}{\varphi}{e}{\varepsilon}\sixj{a}{b}{c}{e}{f}{d}, \label{eq:8:7:12}\\
+\sum_{\alpha \beta \delta} \clebsch{b}{\beta}{c}{\gamma}{a}{\alpha} \clebsch{b}{\beta}{e}{\varepsilon}{d}{\delta} \clebsch{a}{\alpha}{f}{\varphi}{d}{\delta}=\kappa_{1} \frac{\Fact{a d d}}{\Fact{e}} \clebsch{c}{\gamma}{f}{\varphi}{e}{\varepsilon}\sixj{a}{b}{c}{e}{f}{d}, \label{eq:8:7:13}\\
 \sum_{\alpha \beta \delta} 
 \clebsch{b}{\beta}{a}{\alpha}{c}{\gamma} 
 \clebsch{b}{\beta}{d}{\delta}{e}{\varepsilon} 
 \clebsch{a}{\alpha}{f}{\varphi}{d}{\delta}
 =\kappa_{2} \Fact{c d} 
 \clebsch{c}{\gamma}{f}{\varphi}{e}{\varepsilon}
-\sixj{a}{b}{c}{e}{f}{d}, \label{chap8:eq:175}\\
-\sum_{\alpha \beta \delta}(-1)^{a-\alpha} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} \clebsch{d}{\delta}{b}{\beta}{e}{\varepsilon} \clebsch{d}{\delta}{a}{-\alpha}{f}{\varphi}=\kappa_{1} \Fact{c f} \clebsch{c}{\gamma}{f}{\varphi}{e}{\varepsilon}\sixj{a}{b}{c}{e}{f}{d}, \label{chap8:eq:176}\\
-\sum_{\alpha \beta \delta}(-1)^{b+\beta} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} \clebsch{b}{-\beta}{e}{\varepsilon}{d}{\delta} \clebsch{a}{\alpha}{f}{\varphi}{d}{\delta}=\kappa_{1} \frac{\Fact{c d d}}{\Fact{e}} \clebsch{c}{\gamma}{f}{\varphi}{e}{\varepsilon}\sixj{a}{b}{c}{e}{f}{d}, \label{chap8:eq:177}\\
+\sixj{a}{b}{c}{e}{f}{d}, \label{eq:8:7:14}\\
+\sum_{\alpha \beta \delta}(-1)^{a-\alpha} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} \clebsch{d}{\delta}{b}{\beta}{e}{\varepsilon} \clebsch{d}{\delta}{a}{-\alpha}{f}{\varphi}=\kappa_{1} \Fact{c f} \clebsch{c}{\gamma}{f}{\varphi}{e}{\varepsilon}\sixj{a}{b}{c}{e}{f}{d}, \label{eq:8:7:15}\\
+\sum_{\alpha \beta \delta}(-1)^{b+\beta} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} \clebsch{b}{-\beta}{e}{\varepsilon}{d}{\delta} \clebsch{a}{\alpha}{f}{\varphi}{d}{\delta}=\kappa_{1} \frac{\Fact{c d d}}{\Fact{e}} \clebsch{c}{\gamma}{f}{\varphi}{e}{\varepsilon}\sixj{a}{b}{c}{e}{f}{d}, \label{eq:8:7:16}\\
 \sum_{\alpha \beta \delta}(-1)^{a-\alpha} \clebsch{b}{\beta}{a}{\alpha}{c}{\gamma} \clebsch{b}{\beta}{d}{\delta}{e}{\varepsilon} \clebsch{d}{\delta}{a}{-\alpha}{f}{\varphi}=\kappa_{2} \Fact{c f} \clebsch{c}{\gamma}{f}{\varphi}{e}{\varepsilon}
-\sixj{a}{b}{c}{e}{f}{d}, \label{chap8:eq:178}\\
+\sixj{a}{b}{c}{e}{f}{d}, \label{eq:8:7:17}\\
 \sum_{\alpha \beta \delta}(-1)^{b+\beta} \clebsch{b}{-\beta}{c}{\gamma}{a}{\alpha} \clebsch{d}{\delta}{b}{\beta}{e}{\varepsilon} \clebsch{a}{\alpha}{f}{\varphi}{d}{\delta}=\kappa_{1} \Fact{a d} \clebsch{c}{\gamma}{f}{\varphi}{e}{\varepsilon}
-\sixj{a}{b}{c}{e}{f}{d}, \label{chap8:eq:179}\\
-\sum_{\alpha \beta \delta}(-1)^{a-\alpha} \clebsch{a}{\alpha}{c}{-\gamma}{b}{\beta} \clebsch{d}{\delta}{b}{-\beta}{e}{\varepsilon} \clebsch{a}{\alpha}{f}{\varphi}{d}{\delta}=\kappa_{1} \Fact{b d} \clebsch{c}{\gamma}{f}{\varphi}{e}{\varepsilon}\sixj{a}{b}{c}{e}{f}{d}, \label{chap8:eq:180}
+\sixj{a}{b}{c}{e}{f}{d}, \label{eq:8:7:18}\\
+\sum_{\alpha \beta \delta}(-1)^{a-\alpha} \clebsch{a}{\alpha}{c}{-\gamma}{b}{\beta} \clebsch{d}{\delta}{b}{-\beta}{e}{\varepsilon} \clebsch{a}{\alpha}{f}{\varphi}{d}{\delta}=\kappa_{1} \Fact{b d} \clebsch{c}{\gamma}{f}{\varphi}{e}{\varepsilon}\sixj{a}{b}{c}{e}{f}{d}, \label{eq:8:7:19}
 \end{gather}
 where $\kappa_{1}=(-1)^{b+c+d+f}, \kappa_{2}=(-1)^{a+b+e+f}$.\\
 \subsection{Sums Involving Products of Four Clebsch-Gordan Coefficients}
 \begin{align}
 & \sum_{\beta \gamma \varepsilon \varphi} \clebsch{b}{\beta}{c}{\gamma}{a}{\alpha} \clebsch{e}{\varepsilon}{f}{\varphi}{d}{\delta} \clebsch{e}{\varepsilon}{b}{\beta}{g}{\eta} \clebsch{f}{\varphi}{c}{\gamma}{j}{\mu}  \notag\\
-& =(-1)^{a-b+c+d+e-f} \sum_{s \sigma} \Fact{s s a g} \clebsch{a}{\alpha}{s}{\sigma}{j}{\mu} \clebsch{g}{\eta}{s}{\sigma}{d}{\delta}\sixj{b}{c}{a}{j}{s}{f}\sixj{b}{e}{g}{d}{s}{f}=\Fact{a d g j} \sum_{k \kappa} \clebsch{g}{\eta}{j}{\mu}{k}{\kappa} \clebsch{d}{\delta}{a}{\alpha}{k}{\kappa}\ninej{c}{b}{a}{f}{e}{d}{j}{g}{k}, \label{chap8:eq:181}\\
-& \sum_{\beta \gamma \varepsilon \varphi} \clebsch{b}{\beta}{c}{-\gamma}{a}{\alpha} \clebsch{e}{\varepsilon}{f}{-\varphi}{d}{\delta} \clebsch{b}{\beta}{e}{\varepsilon}{g}{\eta} \clebsch{c}{\gamma}{f}{\varphi}{j}{\mu}=(-1)^{b+e-g} \Fact{a d g j} \sum_{k \kappa} \clebsch{g}{\eta}{j}{-\mu}{k}{\kappa} \clebsch{d}{\delta}{a}{\alpha}{k}{\kappa}\ninej{c}{b}{a}{f}{e}{d}{j}{g}{k}, \label{chap8:eq:182}\\
-& \sum_{\beta \gamma \varepsilon \varphi} \clebsch{b}{\beta}{a}{\alpha}{c}{\gamma} \clebsch{f}{\varphi}{j}{\mu}{c}{\gamma} \clebsch{b}{\beta}{g}{\eta}{e}{\varepsilon} \clebsch{f}{\varphi}{d}{\delta}{e}{\varepsilon}=(-1)^{a-b+f-j} \Fact{c e}^{2} \sum_{k \kappa} \clebsch{g}{\eta}{j}{\mu}{k}{\kappa} \clebsch{d}{\delta}{a}{\alpha}{k}{\kappa}\ninej{c}{b}{a}{f}{e}{d}{j}{g}{k}, \label{chap8:eq:183}\\
-& \sum_{\beta \gamma \varepsilon \varphi} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} \clebsch{g}{\eta}{e}{\varepsilon}{b}{\beta} \clebsch{d}{\delta}{f}{\varphi}{e}{\varepsilon} \clebsch{j}{\mu}{c}{\gamma}{f}{\varphi}=(-1)^{d+e-c-j} \Fact{b c e f} \sum_{k \kappa}(-1)^{k-\kappa} \clebsch{g}{\eta}{j}{\mu}{k}{-\kappa} \clebsch{d}{\delta}{a}{\alpha}{k}{\kappa}\ninej{c}{b}{a}{f}{e}{d}{j}{g}{k}, \label{chap8:eq:184}\\
-& \sum_{\beta \gamma \varepsilon \varphi} \clebsch{b}{\beta}{a}{-\alpha}{c}{\gamma} \clebsch{e}{\varepsilon}{d}{-\delta}{f}{\varphi} \clebsch{g}{\eta}{b}{-\beta}{e}{\varepsilon} \clebsch{j}{\mu}{c}{-\gamma}{f}{\varphi}=(-1)^{b-c-g-\alpha+\eta} \Fact{c e f f} \sum_{k \kappa} \clebsch{g}{\eta}{j}{-\mu}{k}{\kappa} \clebsch{d}{\delta}{a}{\alpha}{k}{\kappa}\ninej{c}{b}{a}{f}{e}{d}{j}{g}{k}, \label{chap8:eq:185}
+& =(-1)^{a-b+c+d+e-f} \sum_{s \sigma} \Fact{s s a g} \clebsch{a}{\alpha}{s}{\sigma}{j}{\mu} \clebsch{g}{\eta}{s}{\sigma}{d}{\delta}\sixj{b}{c}{a}{j}{s}{f}\sixj{b}{e}{g}{d}{s}{f}=\Fact{a d g j} \sum_{k \kappa} \clebsch{g}{\eta}{j}{\mu}{k}{\kappa} \clebsch{d}{\delta}{a}{\alpha}{k}{\kappa}\ninej{c}{b}{a}{f}{e}{d}{j}{g}{k}, \label{eq:8:7:20}\\
+& \sum_{\beta \gamma \varepsilon \varphi} \clebsch{b}{\beta}{c}{-\gamma}{a}{\alpha} \clebsch{e}{\varepsilon}{f}{-\varphi}{d}{\delta} \clebsch{b}{\beta}{e}{\varepsilon}{g}{\eta} \clebsch{c}{\gamma}{f}{\varphi}{j}{\mu}=(-1)^{b+e-g} \Fact{a d g j} \sum_{k \kappa} \clebsch{g}{\eta}{j}{-\mu}{k}{\kappa} \clebsch{d}{\delta}{a}{\alpha}{k}{\kappa}\ninej{c}{b}{a}{f}{e}{d}{j}{g}{k}, \label{eq:8:7:21}\\
+& \sum_{\beta \gamma \varepsilon \varphi} \clebsch{b}{\beta}{a}{\alpha}{c}{\gamma} \clebsch{f}{\varphi}{j}{\mu}{c}{\gamma} \clebsch{b}{\beta}{g}{\eta}{e}{\varepsilon} \clebsch{f}{\varphi}{d}{\delta}{e}{\varepsilon}=(-1)^{a-b+f-j} \Fact{c e}^{2} \sum_{k \kappa} \clebsch{g}{\eta}{j}{\mu}{k}{\kappa} \clebsch{d}{\delta}{a}{\alpha}{k}{\kappa}\ninej{c}{b}{a}{f}{e}{d}{j}{g}{k}, \label{eq:8:7:22}\\
+& \sum_{\beta \gamma \varepsilon \varphi} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} \clebsch{g}{\eta}{e}{\varepsilon}{b}{\beta} \clebsch{d}{\delta}{f}{\varphi}{e}{\varepsilon} \clebsch{j}{\mu}{c}{\gamma}{f}{\varphi}=(-1)^{d+e-c-j} \Fact{b c e f} \sum_{k \kappa}(-1)^{k-\kappa} \clebsch{g}{\eta}{j}{\mu}{k}{-\kappa} \clebsch{d}{\delta}{a}{\alpha}{k}{\kappa}\ninej{c}{b}{a}{f}{e}{d}{j}{g}{k}, \label{eq:8:7:23}\\
+& \sum_{\beta \gamma \varepsilon \varphi} \clebsch{b}{\beta}{a}{-\alpha}{c}{\gamma} \clebsch{e}{\varepsilon}{d}{-\delta}{f}{\varphi} \clebsch{g}{\eta}{b}{-\beta}{e}{\varepsilon} \clebsch{j}{\mu}{c}{-\gamma}{f}{\varphi}=(-1)^{b-c-g-\alpha+\eta} \Fact{c e f f} \sum_{k \kappa} \clebsch{g}{\eta}{j}{-\mu}{k}{\kappa} \clebsch{d}{\delta}{a}{\alpha}{k}{\kappa}\ninej{c}{b}{a}{f}{e}{d}{j}{g}{k}, \label{eq:8:7:24}
 \end{align}
 \begin{align}
-& \sum_{\beta \gamma \varepsilon \varphi} \clebsch{b}{\beta}{c}{-\gamma}{a}{\alpha} \clebsch{e}{\varepsilon}{f}{\varphi}{d}{\delta} \clebsch{e}{-\varepsilon}{g}{\eta}{b}{\beta} \clebsch{f}{\varphi}{j}{\mu}{c}{\gamma}=(-1)^{b+f-g-\delta} \Fact{a b c d} \sum_{k \kappa} \clebsch{g}{\eta}{j}{-\mu}{k}{\kappa} \clebsch{d}{\delta}{a}{\alpha}{k}{\kappa}\ninej{c}{b}{a}{f}{e}{d}{j}{g}{k}, \label{chap8:eq:186}\\
-& \sum_{\beta \gamma \varepsilon \varphi} \clebsch{b}{\beta}{c}{\gamma}{a}{\alpha} \clebsch{e}{\varepsilon}{f}{\varphi}{d}{\delta} \clebsch{e}{\varepsilon}{g}{\eta}{b}{\beta} \clebsch{f}{\varphi}{j}{\mu}{c}{\gamma}=\sum_{k \kappa} \Fact{b c d k} \clebsch{g}{\eta}{j}{\mu}{k}{\kappa} \clebsch{d}{ \delta}{k}{\kappa}{a}{\alpha}\ninej{a}{b}{c}{d}{e}{f}{k}{g}{j}, \label{chap8:eq:187}\\
-& \sum_{\beta \gamma \varepsilon \varphi} \clebsch{b}{\beta}{c}{-\gamma}{a}{\alpha} \clebsch{e}{\varepsilon}{f}{-\varphi}{d}{\delta} \clebsch{g}{\eta}{b}{-\beta}{e}{\varepsilon} \clebsch{j}{\mu}{f}{-\varphi}{c}{\gamma}=(-1)^{c+e-g+j+\alpha-\mu} \Fact{a d e c} \sum_{k \kappa} \clebsch{g}{\eta}{j}{-\mu}{k}{\kappa} \clebsch{d}{\delta}{a}{\alpha}{k}{\kappa}\ninej{c}{b}{a}{f}{e}{d}{j}{g}{k}, \label{chap8:eq:188}\\
-& \sum_{\beta \gamma \varepsilon \varphi} \clebsch{b}{\beta}{c}{\gamma}{a}{\alpha} \clebsch{b}{\beta}{g}{\eta}{e}{\varepsilon} \clebsch{f}{\varphi}{d}{\delta}{e}{\varepsilon} \clebsch{f}{\varphi}{c}{\gamma}{j}{\mu}=(-1)^{j-a+\delta-\eta} \Fact{a e e j} \sum_{k \kappa} \clebsch{g}{\eta}{j}{-\mu}{k}{\kappa} \clebsch{d}{\delta}{a}{-\alpha}{k}{\kappa}\ninej{c}{b}{a}{f}{e}{d}{j}{g}{k}, \label{chap8:eq:189}\\
-& \sum_{\beta \gamma \varepsilon \varphi} \clebsch{b}{\beta}{c}{\gamma}{a}{\alpha} \clebsch{g}{\eta}{e}{\varepsilon}{b}{\beta} \clebsch{f}{\varphi}{d}{\delta}{e}{\varepsilon} \clebsch{f}{\varphi}{c}{\gamma}{j}{\mu}=(-1)^{j-a+g+\delta} \Fact{a b e j} \sum_{k \kappa} \clebsch{g}{-\eta}{j}{-\mu}{k}{\kappa} \clebsch{d}{\delta}{a}{-\alpha}{k}{\kappa}\ninej{c}{b}{a}{f}{e}{d}{j}{g}{k}, \label{chap8:eq:190}\\
-& \sum_{\beta \gamma \varepsilon\varphi}(-1)^{c-\gamma+e-\varepsilon} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} \clebsch{d}{\delta}{f}{\varphi}{e}{\varepsilon} \clebsch{e}{\varepsilon}{b}{\beta}{g}{\eta} \clebsch{c}{\gamma}{f}{\varphi}{j}{\mu}=(-1)^{a+d-\alpha-\delta} \Fact{c e g j} \sum_{k \kappa} \clebsch{g}{\eta}{j}{-\mu}{k}{\kappa} \clebsch{d}{\delta}{a}{-\alpha}{k}{\kappa}\ninej{c}{b}{a}{f}{e}{d}{j}{g}{k} . \label{chap8:eq:191}
+& \sum_{\beta \gamma \varepsilon \varphi} \clebsch{b}{\beta}{c}{-\gamma}{a}{\alpha} \clebsch{e}{\varepsilon}{f}{\varphi}{d}{\delta} \clebsch{e}{-\varepsilon}{g}{\eta}{b}{\beta} \clebsch{f}{\varphi}{j}{\mu}{c}{\gamma}=(-1)^{b+f-g-\delta} \Fact{a b c d} \sum_{k \kappa} \clebsch{g}{\eta}{j}{-\mu}{k}{\kappa} \clebsch{d}{\delta}{a}{\alpha}{k}{\kappa}\ninej{c}{b}{a}{f}{e}{d}{j}{g}{k}, \label{eq:8:7:25}\\
+& \sum_{\beta \gamma \varepsilon \varphi} \clebsch{b}{\beta}{c}{\gamma}{a}{\alpha} \clebsch{e}{\varepsilon}{f}{\varphi}{d}{\delta} \clebsch{e}{\varepsilon}{g}{\eta}{b}{\beta} \clebsch{f}{\varphi}{j}{\mu}{c}{\gamma}=\sum_{k \kappa} \Fact{b c d k} \clebsch{g}{\eta}{j}{\mu}{k}{\kappa} \clebsch{d}{ \delta}{k}{\kappa}{a}{\alpha}\ninej{a}{b}{c}{d}{e}{f}{k}{g}{j}, \label{eq:8:7:26}\\
+& \sum_{\beta \gamma \varepsilon \varphi} \clebsch{b}{\beta}{c}{-\gamma}{a}{\alpha} \clebsch{e}{\varepsilon}{f}{-\varphi}{d}{\delta} \clebsch{g}{\eta}{b}{-\beta}{e}{\varepsilon} \clebsch{j}{\mu}{f}{-\varphi}{c}{\gamma}=(-1)^{c+e-g+j+\alpha-\mu} \Fact{a d e c} \sum_{k \kappa} \clebsch{g}{\eta}{j}{-\mu}{k}{\kappa} \clebsch{d}{\delta}{a}{\alpha}{k}{\kappa}\ninej{c}{b}{a}{f}{e}{d}{j}{g}{k}, \label{eq:8:7:27}\\
+& \sum_{\beta \gamma \varepsilon \varphi} \clebsch{b}{\beta}{c}{\gamma}{a}{\alpha} \clebsch{b}{\beta}{g}{\eta}{e}{\varepsilon} \clebsch{f}{\varphi}{d}{\delta}{e}{\varepsilon} \clebsch{f}{\varphi}{c}{\gamma}{j}{\mu}=(-1)^{j-a+\delta-\eta} \Fact{a e e j} \sum_{k \kappa} \clebsch{g}{\eta}{j}{-\mu}{k}{\kappa} \clebsch{d}{\delta}{a}{-\alpha}{k}{\kappa}\ninej{c}{b}{a}{f}{e}{d}{j}{g}{k}, \label{eq:8:7:28}\\
+& \sum_{\beta \gamma \varepsilon \varphi} \clebsch{b}{\beta}{c}{\gamma}{a}{\alpha} \clebsch{g}{\eta}{e}{\varepsilon}{b}{\beta} \clebsch{f}{\varphi}{d}{\delta}{e}{\varepsilon} \clebsch{f}{\varphi}{c}{\gamma}{j}{\mu}=(-1)^{j-a+g+\delta} \Fact{a b e j} \sum_{k \kappa} \clebsch{g}{-\eta}{j}{-\mu}{k}{\kappa} \clebsch{d}{\delta}{a}{-\alpha}{k}{\kappa}\ninej{c}{b}{a}{f}{e}{d}{j}{g}{k}, \label{eq:8:7:29}\\
+& \sum_{\beta \gamma \varepsilon\varphi}(-1)^{c-\gamma+e-\varepsilon} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} \clebsch{d}{\delta}{f}{\varphi}{e}{\varepsilon} \clebsch{e}{\varepsilon}{b}{\beta}{g}{\eta} \clebsch{c}{\gamma}{f}{\varphi}{j}{\mu}=(-1)^{a+d-\alpha-\delta} \Fact{c e g j} \sum_{k \kappa} \clebsch{g}{\eta}{j}{-\mu}{k}{\kappa} \clebsch{d}{\delta}{a}{-\alpha}{k}{\kappa}\ninej{c}{b}{a}{f}{e}{d}{j}{g}{k} . \label{eq:8:7:30}
 \end{align}
 \subsection{Sums Involving Products of the Clebsch-Gordan Coefficients and One 6j Symbol}
 \begin{align}
 & \sum_{e \varepsilon}(-1)^{2 e} \Fact{c d} \clebsch{b}{\beta}{d}{\delta}{e}{\varepsilon} \clebsch{f}{\varphi}{c}{\gamma}{e}{\varepsilon}
 \sixj{a}{b}{c}{e}{f}{d}
 =\clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} 
-\clebsch{a}{\alpha}{f}{\varphi}{d}{\delta}, \label{chap8:eq:192}\\
-& \sum_{f \varphi}(-1)^{c+d+f} \Fact{c e} \clebsch{e}{\varepsilon}{a}{\alpha}{f}{\varphi} \clebsch{d}{\delta}{c}{\gamma}{f}{\varphi}\sixj{b}{a}{c}{f}{d}{e}=\clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} \clebsch{d}{\delta}{b}{\beta}{e}{\varepsilon}, \label{chap8:eq:193}\\
-& \sum_{c \gamma}(-1)^{2 e-d+\alpha+\varphi} \Fact{a e} \clebsch{f}{-\varphi}{b}{\beta}{c}{\gamma} \clebsch{e}{\varepsilon}{a}{-\alpha}{c}{\gamma}\sixj{c}{f}{b}{d}{e}{a}=\clebsch{b}{\beta}{d}{\delta}{e}{\varepsilon} \clebsch{f}{\varphi}{d}{\delta}{a}{\alpha}, \label{chap8:eq:194}\\
-& \sum_{c \gamma}(-1)^{c+d-\beta-\varphi} \Fact{d}^{2} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} \clebsch{f}{-\varphi}{e}{\varepsilon}{c}{\gamma}\sixj{a}{b}{c}{e}{f}{d}=\clebsch{a}{\alpha}{f}{\varphi}{d}{\delta} \clebsch{b}{-\beta}{e}{\varepsilon}{d}{\delta}, \label{chap8:eq:195}\\
-& \sum_{c \gamma}(-1)^{2 e} \Fact{c d} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} \clebsch{f}{\varphi}{c}{\gamma}{e}{\varepsilon}\sixj{a}{b}{c}{e}{f}{d}=\clebsch{b}{\beta}{d}{\delta}{e}{\varepsilon} \clebsch{a}{\alpha}{f}{\varphi}{d}{\delta}, \label{chap8:eq:196}\\
-& \sum_{f \varphi}(-1)^{2 c} \Fact{e f} \clebsch{b}{\beta}{d}{\delta}{f}{\varphi} \clebsch{a}{\alpha}{f}{\varphi}{c}{\gamma}\sixj{a}{b}{e}{d}{c}{f}=\clebsch{b}{\beta}{a}{\alpha}{e}{\varepsilon} \clebsch{d}{\delta}{e}{\varepsilon}{c}{\gamma}, \label{chap8:eq:197}\\
-& \sum_{c \gamma}(-1)^{e+d-\beta} \frac{\Fact{c d d}}{\Fact{e}} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} \clebsch{f}{\varphi}{c}{\gamma}{e}{\varepsilon}\sixj{a}{b}{c}{e}{f}{d}=\clebsch{b}{-\beta}{e}{\varepsilon}{d}{\delta} \clebsch{a}{\alpha}{f}{\varphi}{d}{\delta}, \label{chap8:eq:198}\\
-& \sum_{c \gamma}(-1)^{2 e} \frac{\Fact{a c c}}{\Fact{b}} \clebsch{f}{\varphi}{c}{\gamma}{b}{\beta} \clebsch{c}{\gamma}{a}{\alpha}{e}{\varepsilon}\sixj{c}{f}{b}{d}{e}{a}=\clebsch{d}{\delta}{b}{\beta}{e}{\varepsilon} \clebsch{f}{\varphi}{d}{\delta}{a}{\alpha} . \label{chap8:eq:199}
+\clebsch{a}{\alpha}{f}{\varphi}{d}{\delta}, \label{eq:8:7:31}\\
+& \sum_{f \varphi}(-1)^{c+d+f} \Fact{c e} \clebsch{e}{\varepsilon}{a}{\alpha}{f}{\varphi} \clebsch{d}{\delta}{c}{\gamma}{f}{\varphi}\sixj{b}{a}{c}{f}{d}{e}=\clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} \clebsch{d}{\delta}{b}{\beta}{e}{\varepsilon}, \label{eq:8:7:32}\\
+& \sum_{c \gamma}(-1)^{2 e-d+\alpha+\varphi} \Fact{a e} \clebsch{f}{-\varphi}{b}{\beta}{c}{\gamma} \clebsch{e}{\varepsilon}{a}{-\alpha}{c}{\gamma}\sixj{c}{f}{b}{d}{e}{a}=\clebsch{b}{\beta}{d}{\delta}{e}{\varepsilon} \clebsch{f}{\varphi}{d}{\delta}{a}{\alpha}, \label{eq:8:7:33}\\
+& \sum_{c \gamma}(-1)^{c+d-\beta-\varphi} \Fact{d}^{2} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} \clebsch{f}{-\varphi}{e}{\varepsilon}{c}{\gamma}\sixj{a}{b}{c}{e}{f}{d}=\clebsch{a}{\alpha}{f}{\varphi}{d}{\delta} \clebsch{b}{-\beta}{e}{\varepsilon}{d}{\delta}, \label{eq:8:7:34}\\
+& \sum_{c \gamma}(-1)^{2 e} \Fact{c d} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} \clebsch{f}{\varphi}{c}{\gamma}{e}{\varepsilon}\sixj{a}{b}{c}{e}{f}{d}=\clebsch{b}{\beta}{d}{\delta}{e}{\varepsilon} \clebsch{a}{\alpha}{f}{\varphi}{d}{\delta}, \label{eq:8:7:35}\\
+& \sum_{f \varphi}(-1)^{2 c} \Fact{e f} \clebsch{b}{\beta}{d}{\delta}{f}{\varphi} \clebsch{a}{\alpha}{f}{\varphi}{c}{\gamma}\sixj{a}{b}{e}{d}{c}{f}=\clebsch{b}{\beta}{a}{\alpha}{e}{\varepsilon} \clebsch{d}{\delta}{e}{\varepsilon}{c}{\gamma}, \label{eq:8:7:36}\\
+& \sum_{c \gamma}(-1)^{e+d-\beta} \frac{\Fact{c d d}}{\Fact{e}} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} \clebsch{f}{\varphi}{c}{\gamma}{e}{\varepsilon}\sixj{a}{b}{c}{e}{f}{d}=\clebsch{b}{-\beta}{e}{\varepsilon}{d}{\delta} \clebsch{a}{\alpha}{f}{\varphi}{d}{\delta}, \label{eq:8:7:37}\\
+& \sum_{c \gamma}(-1)^{2 e} \frac{\Fact{a c c}}{\Fact{b}} \clebsch{f}{\varphi}{c}{\gamma}{b}{\beta} \clebsch{c}{\gamma}{a}{\alpha}{e}{\varepsilon}\sixj{c}{f}{b}{d}{e}{a}=\clebsch{d}{\delta}{b}{\beta}{e}{\varepsilon} \clebsch{f}{\varphi}{d}{\delta}{a}{\alpha} . \label{eq:8:7:38}
 \end{align}
 \subsection{Sums Involving Products of the Clebsch-Gordan Coefficients and One 9j Symbol}
 \begin{align}
-& \sum_{a k} \Fact{a d g j} \clebsch{b}{\beta}{c}{\gamma}{a}{\alpha} \clebsch{g}{\eta}{j}{\mu}{k}{\kappa} \clebsch{d}{\delta}{a}{\alpha}{k}{\kappa}\ninej{c}{b}{a}{f}{e}{d}{j}{g}{k}=\clebsch{e}{\varepsilon}{f}{\varphi}{d}{\delta} \clebsch{e}{\varepsilon}{b}{\beta}{g}{\eta} \clebsch{f}{\varphi}{c}{\gamma}{j}{\mu}, \label{chap8:eq:200}\\
-& \sum_{g j} \Fact{a d g j} \clebsch{g}{\eta}{j}{\mu}{k}{\kappa} \clebsch{e}{\varepsilon}{b}{\beta}{g}{\eta} \clebsch{f}{\varphi}{c}{\gamma}{j}{\mu}\ninej{c}{b}{a}{f}{e}{d}{j}{g}{k}=\clebsch{d}{\delta}{a}{\alpha}{k}{\kappa} \clebsch{e}{\varepsilon}{f}{\varphi}{d}{\delta} \clebsch{b}{\beta}{c}{\gamma}{a}{\alpha}, \label{chap8:eq:201}\\
-& \sum_{g j}(-1)^{b+e-g} \Fact{a d g j} \clebsch{g}{\eta}{j}{-\mu}{k}{\kappa} \clebsch{b}{\beta}{e}{\varepsilon}{g}{\eta} \clebsch{c}{\gamma}{f}{\varphi}{j}{\mu}\ninej{c}{b}{a}{f}{e}{d}{j}{g}{k}=\clebsch{d}{\delta}{a}{\alpha}{k}{\kappa} \clebsch{e}{\varepsilon}{f}{-\varphi}{d}{\delta} \clebsch{b}{\beta}{c}{-\gamma}{a}{\alpha}, \label{chap8:eq:202}\\
-& \sum_{a d}(-1)^{b+f-g-\delta} \Fact{a b c d} \clebsch{b}{\beta}{c}{-\gamma}{a}{\alpha} \clebsch{e}{\varepsilon}{f}{\varphi}{d}{\delta} \clebsch{d}{\delta}{a}{\alpha}{k}{\kappa}\ninej{c}{b}{a}{f}{e}{d}{j}{g}{k}=\clebsch{g}{\eta}{j}{-\mu}{k}{\kappa} \clebsch{e}{-\varepsilon}{g}{\eta}{b}{\beta} \clebsch{f}{\varphi}{j}{\mu}{c}{\gamma}, \label{chap8:eq:203}\\
-& \sum_{g j}(-1)^{g-b-f+\varphi+\varepsilon} \frac{\Fact{a d j j g g}}{\Fact{b c}} \clebsch{g}{\eta}{j}{-\mu}{k}{\kappa} \clebsch{e}{-\varepsilon}{g}{\eta}{b}{\beta} \clebsch{f}{\varphi}{j}{\mu}{c}{\gamma}\ninej{c}{b}{a}{f}{e}{d}{j}{g}{k}=\clebsch{b}{\beta}{c}{-\gamma}{a}{\alpha} \clebsch{e}{\varepsilon}{f}{\varphi}{d}{\delta} \clebsch{d}{\delta}{a}{\alpha}{k}{\kappa} . \label{chap8:eq:204}
+& \sum_{a k} \Fact{a d g j} \clebsch{b}{\beta}{c}{\gamma}{a}{\alpha} \clebsch{g}{\eta}{j}{\mu}{k}{\kappa} \clebsch{d}{\delta}{a}{\alpha}{k}{\kappa}\ninej{c}{b}{a}{f}{e}{d}{j}{g}{k}=\clebsch{e}{\varepsilon}{f}{\varphi}{d}{\delta} \clebsch{e}{\varepsilon}{b}{\beta}{g}{\eta} \clebsch{f}{\varphi}{c}{\gamma}{j}{\mu}, \label{eq:8:7:39}\\
+& \sum_{g j} \Fact{a d g j} \clebsch{g}{\eta}{j}{\mu}{k}{\kappa} \clebsch{e}{\varepsilon}{b}{\beta}{g}{\eta} \clebsch{f}{\varphi}{c}{\gamma}{j}{\mu}\ninej{c}{b}{a}{f}{e}{d}{j}{g}{k}=\clebsch{d}{\delta}{a}{\alpha}{k}{\kappa} \clebsch{e}{\varepsilon}{f}{\varphi}{d}{\delta} \clebsch{b}{\beta}{c}{\gamma}{a}{\alpha}, \label{eq:8:7:40}\\
+& \sum_{g j}(-1)^{b+e-g} \Fact{a d g j} \clebsch{g}{\eta}{j}{-\mu}{k}{\kappa} \clebsch{b}{\beta}{e}{\varepsilon}{g}{\eta} \clebsch{c}{\gamma}{f}{\varphi}{j}{\mu}\ninej{c}{b}{a}{f}{e}{d}{j}{g}{k}=\clebsch{d}{\delta}{a}{\alpha}{k}{\kappa} \clebsch{e}{\varepsilon}{f}{-\varphi}{d}{\delta} \clebsch{b}{\beta}{c}{-\gamma}{a}{\alpha}, \label{eq:8:7:41}\\
+& \sum_{a d}(-1)^{b+f-g-\delta} \Fact{a b c d} \clebsch{b}{\beta}{c}{-\gamma}{a}{\alpha} \clebsch{e}{\varepsilon}{f}{\varphi}{d}{\delta} \clebsch{d}{\delta}{a}{\alpha}{k}{\kappa}\ninej{c}{b}{a}{f}{e}{d}{j}{g}{k}=\clebsch{g}{\eta}{j}{-\mu}{k}{\kappa} \clebsch{e}{-\varepsilon}{g}{\eta}{b}{\beta} \clebsch{f}{\varphi}{j}{\mu}{c}{\gamma}, \label{eq:8:7:42}\\
+& \sum_{g j}(-1)^{g-b-f+\varphi+\varepsilon} \frac{\Fact{a d j j g g}}{\Fact{b c}} \clebsch{g}{\eta}{j}{-\mu}{k}{\kappa} \clebsch{e}{-\varepsilon}{g}{\eta}{b}{\beta} \clebsch{f}{\varphi}{j}{\mu}{c}{\gamma}\ninej{c}{b}{a}{f}{e}{d}{j}{g}{k}=\clebsch{b}{\beta}{c}{-\gamma}{a}{\alpha} \clebsch{e}{\varepsilon}{f}{\varphi}{d}{\delta} \clebsch{d}{\delta}{a}{\alpha}{k}{\kappa} . \label{eq:8:7:43}
 \end{align}
-Sums of larger numbers of the Clebsch-Gordan coefficients may be obtained from the above equations using the orthogonality relation (\eqref{chap8:eq:7}).
+Sums of larger numbers of the Clebsch-Gordan coefficients may be obtained from the above equations using the orthogonality relation (\eqref{eq:8:1:8}).
 
 \subsection{Some Additional Sums of Products of Two Clebsch-Gordan Coefficients}
 We note also some other sums of products of the Clebsch-Gordan coefficients. The first two sums, obtained by Morgan [136], are written as
 \begin{equation}
-\sum_{l^{\prime}=0}^{l} \frac{1}{\left(2 l^{\prime}-1\right)\left(2 l-2 l^{\prime}+2 J+1\right)}\left(\clebsch{l}{0}{l^{\prime}+J}{0}{l-l^{\prime}+J}{0}\right)^{2}=-\frac{\delta_{l0}}{2 J+1}, \label{chap8:eq:205}
+\sum_{l^{\prime}=0}^{l} \frac{1}{\left(2 l^{\prime}-1\right)\left(2 l-2 l^{\prime}+2 J+1\right)}\left(\clebsch{l}{0}{l^{\prime}+J}{0}{l-l^{\prime}+J}{0}\right)^{2}=-\frac{\delta_{l0}}{2 J+1}, \label{eq:8:7:44}
 \end{equation}
 and
 \begin{equation}
 \sum_{l^{\prime}=0}^{l}\left(\frac{1}{2 l^{\prime}+3}-\frac{l+1}{2 l+3} \frac{1}{2 l^{\prime}+1}\right) \frac{1}{2 l-2 l^\prime+2 J+1}
 \left(
   \clebsch{l}{0}{l^\prime+J}{0}{l-l^\prime+J}{0}
-\right)^{2}=0 . \label{chap8:eq:206}
+\right)^{2}=0 . \label{eq:8:7:45}
 \end{equation}
 In these equations $l, l^{\prime}, J$ are integers.\\[0pt]
 Din proved the following identity [134]
 \begin{equation}
-\sum_{i=|c-b|}^{c+b} \frac{2 i+1}{i(i+1)-a(a+1)}\left(\clebsch{i}{0}{b}{0}{c}{0}\right)^{2}=0, \label{chap8:eq:207}
+\sum_{i=|c-b|}^{c+b} \frac{2 i+1}{i(i+1)-a(a+1)}\left(\clebsch{i}{0}{b}{0}{c}{0}\right)^{2}=0, \label{eq:8:7:46}
 \end{equation}
 where $a, b, c$ are non-negative integers, with $a+b+c$ odd, which satisfy the triangular condition
 \[
@@ -1017,7 +1017,7 @@ where $a, b, c$ are non-negative integers, with $a+b+c$ odd, which satisfy the t
 \]
 The sum runs only over values of $i$ for which the Clebsch-Gordan coefficient does not vanish. Dunlop and Judd [135] give the following relation
 \begin{equation}
-\sum_{m} \clebsch{a}{m}{k}{0}{a}{m} \clebsch{c}{M-m}{k}{0}{c}{M-m}=(-1)^{k} \frac{\Fact{a c}}{2 k+1} \sqrt{\frac{(2 a-k)!(2 c+k+1)!}{(2 c-k)!(2 a+k+1)!}}, \label{chap8:eq:208}
+\sum_{m} \clebsch{a}{m}{k}{0}{a}{m} \clebsch{c}{M-m}{k}{0}{c}{M-m}=(-1)^{k} \frac{\Fact{a c}}{2 k+1} \sqrt{\frac{(2 a-k)!(2 c+k+1)!}{(2 c-k)!(2 a+k+1)!}}, \label{eq:8:7:47}
 \end{equation}
 which is valid for $a-c \geq|M|$.
 
@@ -1034,47 +1034,47 @@ w_{1} & w_{2} & w_{3}
 R_{11} & R_{12} & R_{13} \\
 R_{21} & R_{22} & R_{23} \\
 R_{31} & R_{32} & R_{33}
-\end{array}\right\| \frac{u_{1}^{R_{11}} u_{2}^{R_{12}} u_{3}^{R_{13}} v_{1}^{R_{21}} v_{2}^{R_{22}} v_{3}^{R_{23}} w_{1}^{R_{31}} w_{2}^{R_{32}} w_{3}^{R_{33}}}{\left[R_{11}!R_{12}!R_{13}!R_{21}!R_{22}!R_{23}!R_{31}!R_{32}!R_{33}!\right]^{\frac{1}{2}}} . \label{chap8:eq:209}
+\end{array}\right\| \frac{u_{1}^{R_{11}} u_{2}^{R_{12}} u_{3}^{R_{13}} v_{1}^{R_{21}} v_{2}^{R_{22}} v_{3}^{R_{23}} w_{1}^{R_{31}} w_{2}^{R_{32}} w_{3}^{R_{33}}}{\left[R_{11}!R_{12}!R_{13}!R_{21}!R_{22}!R_{23}!R_{31}!R_{32}!R_{33}!\right]^{\frac{1}{2}}} . \label{eq:8:8:1}
 \end{equation}
-(Regge [94], Shelepin [106]). Here $R_{i k}$ are the elements of the $R$-symbol (see Sec. 8.1.3). The $R$-symbols and the Clebsch-Gordan coefficients are related by Eqs.~\eqref{chap8:eq:13} and \eqref{chap8:eq:10}.
+(Regge [94], Shelepin [106]). Here $R_{i k}$ are the elements of the $R$-symbol (see Sec. 8.1.3). The $R$-symbols and the Clebsch-Gordan coefficients are related by Eqs.~\eqref{eq:8:1:14} and \eqref{eq:8:1:11}.
 
 \subsection{Products of Binomials}
 \begin{align}
 \MoveEqLeft{(t_1-t_2)^{J-2c} (t_2-t_3)^{J-2a}(t_3-t_1)^{J-2b}}\notag\\
 = & \left[(J+1)!\frac{(J-2 a)!(J-2 b)!(J-2 c)!}{2 c+1}\right]^{\frac{1}{2}} 
 \sum_{\substack{\alpha, \beta, \gamma \\ \alpha+\beta+\gamma=0}}(-1)^{a-b-\gamma}   %\notag\\\times & 
-\frac{t_{1}^{a+\alpha} t_{2}^{b+\beta} t_{3}^{c+\gamma}}{[(a+\alpha)!(a-\alpha)!(b+\beta)!(b-\beta)!(c+\gamma)!(c-\gamma)!]^{\frac{1}{2}}} \clebsch{a}{\alpha}{b}{\beta}{c}{-\gamma}, \label{chap8:eq:210}\\
+\frac{t_{1}^{a+\alpha} t_{2}^{b+\beta} t_{3}^{c+\gamma}}{[(a+\alpha)!(a-\alpha)!(b+\beta)!(b-\beta)!(c+\gamma)!(c-\gamma)!]^{\frac{1}{2}}} \clebsch{a}{\alpha}{b}{\beta}{c}{-\gamma}, \label{eq:8:8:2}\\
 \MoveEqLeft{\left(v_{1} u_{2}-u_{1} v_{2}\right)^{J-2 c}\left(w_{1} v_{2}-w_{2} v_{1}\right)^{J-2 a}\left(u_{1} w_{2}-w_{1} u_{2}\right)^{J-2 b}} \notag \\
 = & \left[\frac{(J+1)!(J-2 a)!(J-2 b)!(J-2 c)!}{2 c+1}\right]^{\frac{1}{2}}\notag\\& \times 
 \sum_{\substack{\alpha, \beta, \gamma \\ \alpha+\beta+\gamma=0}}
 (-1)^{a-b-\gamma} 
-\frac{u_{1}^{a-\alpha} u_{2}^{a+\alpha} v_{1}^{b-\beta} v_{2}^{b+\beta} w_{1}^{c-\gamma} w_{2}^{c+\gamma}}{[(a+\alpha)!(a-\alpha)!(b+\beta)!(b-\beta)!(c+\gamma)!(c-\gamma)!]^{\frac{1}{2}}} \clebsch{a}{\alpha}{b}{\beta}{c}{-\gamma} . \label{chap8:eq:210b}
+\frac{u_{1}^{a-\alpha} u_{2}^{a+\alpha} v_{1}^{b-\beta} v_{2}^{b+\beta} w_{1}^{c-\gamma} w_{2}^{c+\gamma}}{[(a+\alpha)!(a-\alpha)!(b+\beta)!(b-\beta)!(c+\gamma)!(c-\gamma)!]^{\frac{1}{2}}} \clebsch{a}{\alpha}{b}{\beta}{c}{-\gamma} . \label{eq:8:8:3}
 \end{align}
 
 \subsection{Exponential Function}
 \begin{align}
 \MoveEqLeft{\exp\{x_1(t_2-t_3)+x_2(t_3-t_1)+x_3(t_1-t_2)\}}\notag\\
-  &=\sum_{\substack{a, b, c \\ \alpha, \beta, \gamma}} \frac{(-1)^{a-b-\gamma}}{\Delta(a b c)} \frac{x_1^{-a+b+c}x_2^{a-b+c}x_3^{a+b-c}t_1^{a+\alpha}t_2^{b+\beta}t_3^{c+\gamma}}{[(2 c+1)(a+\alpha)!(a-\alpha)!(b+\beta)!(b-\beta)!(c+\gamma)!(c-\gamma)!]^{\frac{1}{2}}} \clebsch{a}{\alpha}{b}{\beta}{c}{-\gamma}, \label{chap8:eq:210c}
+  &=\sum_{\substack{a, b, c \\ \alpha, \beta, \gamma}} \frac{(-1)^{a-b-\gamma}}{\Delta(a b c)} \frac{x_1^{-a+b+c}x_2^{a-b+c}x_3^{a+b-c}t_1^{a+\alpha}t_2^{b+\beta}t_3^{c+\gamma}}{[(2 c+1)(a+\alpha)!(a-\alpha)!(b+\beta)!(b-\beta)!(c+\gamma)!(c-\gamma)!]^{\frac{1}{2}}} \clebsch{a}{\alpha}{b}{\beta}{c}{-\gamma}, \label{eq:8:8:4}
 \end{align}
-where $\Delta(a b c)$ is given by \eqref{chap8:eq:18}.
+where $\Delta(a b c)$ is given by \eqref{eq:8:2:1}.
 
 \subsection{Hypergeometric Function}
 \begin{gather}
 {\left[\frac{(J-2 b)!(c+\gamma)!(2 c+1)}{(J-2 a)!(J-2 c)!(c-\gamma)!(J+1)!}\right]^{\frac{1}{2}} \frac{(t-1)^{J-2 c}}{(a-b+\gamma)!} F(\gamma-c, a-b-c ; a-b+\gamma+1 ; t)}  \notag\\
 =\sum_{\substack{\alpha, \beta \\
-\alpha+\beta=\gamma}} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} \frac{t^{b-\beta}}{[(a+\alpha)!(a-\alpha)!(b+\beta)!(b-\beta)!]^{\frac{1}{2}}}. \label{chap8:eq:211}
+\alpha+\beta=\gamma}} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} \frac{t^{b-\beta}}{[(a+\alpha)!(a-\alpha)!(b+\beta)!(b-\beta)!]^{\frac{1}{2}}}. \label{eq:8:8:5}
 \end{gather}
 (Akim and Levin [46])
 
 \subsection{Wigner D-Function}
 \begin{equation}
-\left[\frac{(2 c+1)}{(J+1)!(J-2 c)!}\right]^{\frac{1}{2}} d_{\gamma \gamma^{\prime}}^{c}(\theta)=\sum_{\substack{\alpha, \beta \\ \alpha+\beta=\gamma}}(-1)^{b+\beta} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} \frac{\left(\cos \frac{\theta}{2}\right)^{a+b+\alpha-\beta}\left(\sin \frac{\theta}{2}\right)^{a+b-\alpha+\beta}}{[(a+\alpha)!(a-\alpha)!(b+\beta)!(b-\beta)!]^{\frac{1}{2}}}, \label{chap8:eq:212}
+\left[\frac{(2 c+1)}{(J+1)!(J-2 c)!}\right]^{\frac{1}{2}} d_{\gamma \gamma^{\prime}}^{c}(\theta)=\sum_{\substack{\alpha, \beta \\ \alpha+\beta=\gamma}}(-1)^{b+\beta} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} \frac{\left(\cos \frac{\theta}{2}\right)^{a+b+\alpha-\beta}\left(\sin \frac{\theta}{2}\right)^{a+b-\alpha+\beta}}{[(a+\alpha)!(a-\alpha)!(b+\beta)!(b-\beta)!]^{\frac{1}{2}}}, \label{eq:8:8:6}
 \end{equation}
 where $a-b=\gamma^{\prime},|a-b| \leq c \leq a+b$.
 
 \subsection{Generating Function for the Coefficients $\clebsch{a}{0}{b}{0}{c}{0}$}
 \begin{equation}
-\frac{1}{1+u^{2}+v^{2}+w^{2}}=\sum_{a b c}(-1)^{a-b}\left[\frac{(J+1)!}{2 c+1}\right]^{\frac{1}{2}} \clebsch{a}{0}{b}{0}{c}{0} \frac{u^{J-2 a} v^{J-2 b} w^{J-2 c}}{[(J-2 a)!(J-2 b)!(J-2 c)!]^{\frac{1}{2}}} . \label{chap8:eq:213}
+\frac{1}{1+u^{2}+v^{2}+w^{2}}=\sum_{a b c}(-1)^{a-b}\left[\frac{(J+1)!}{2 c+1}\right]^{\frac{1}{2}} \clebsch{a}{0}{b}{0}{c}{0} \frac{u^{J-2 a} v^{J-2 b} w^{J-2 c}}{[(J-2 a)!(J-2 b)!(J-2 c)!]^{\frac{1}{2}}} . \label{eq:8:8:7}
 \end{equation}
 (Schwinger [101])
 
@@ -1083,64 +1083,64 @@ Asymptotic expressions permit us to simplify calculations of the Clebsch-Gordan 
 \subsection{Asymptotic Expressions for $a, c \gg b$}
 \begin{multline}
 \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} \approx[(b+\beta)!(b-\beta)!(b+\delta)!(b-\delta)!]^{\frac{1}{2}}  \\
-\times \sum_{s} \frac{(-1)^{b-\delta-s}\left(\cos \frac{\vartheta}{2}\right)^{2s+\beta+\delta}\left(\sin \frac{\vartheta}{2}\right)^{2 b-\beta-\delta-2 s}}{s!(s+\beta+\delta)!(b-\beta-s)!(b-\delta-s)!}=\delta_{\gamma-\alpha, \beta} D_{\beta \delta}^{b}(0, \vartheta, 0), \label{chap8:eq:214}
+\times \sum_{s} \frac{(-1)^{b-\delta-s}\left(\cos \frac{\vartheta}{2}\right)^{2s+\beta+\delta}\left(\sin \frac{\vartheta}{2}\right)^{2 b-\beta-\delta-2 s}}{s!(s+\beta+\delta)!(b-\beta-s)!(b-\delta-s)!}=\delta_{\gamma-\alpha, \beta} D_{\beta \delta}^{b}(0, \vartheta, 0), \label{eq:8:9:1}
 \end{multline}
 where $\delta=c-a$, and $\vartheta$ is the angle between the momentum $c$ and the $z$ axis,
 \begin{equation}
-\cos \frac{\vartheta}{2}=\sqrt{\frac{c+\gamma+\frac{1}{2}}{2 c+1}}=\clebsch{c}{\gamma}{\frac{1}{2}}{\frac{1}{2}}{c+\frac{1}{2}}{\gamma+\frac{1}{2}}, \quad \sin \frac{\vartheta}{2}=\sqrt{\frac{c-\gamma+\frac{1}{2}}{2 c+1}}=\clebsch{c}{\gamma}{\frac{1}{2}}{-\frac{1}{2}}{c+\frac{1}{2}}{\gamma-\frac{1}{2}}, \quad \cos \vartheta=\frac{\gamma}{c+\frac{1}{2}} . \label{chap8:eq:215}
+\cos \frac{\vartheta}{2}=\sqrt{\frac{c+\gamma+\frac{1}{2}}{2 c+1}}=\clebsch{c}{\gamma}{\frac{1}{2}}{\frac{1}{2}}{c+\frac{1}{2}}{\gamma+\frac{1}{2}}, \quad \sin \frac{\vartheta}{2}=\sqrt{\frac{c-\gamma+\frac{1}{2}}{2 c+1}}=\clebsch{c}{\gamma}{\frac{1}{2}}{-\frac{1}{2}}{c+\frac{1}{2}}{\gamma-\frac{1}{2}}, \quad \cos \vartheta=\frac{\gamma}{c+\frac{1}{2}} . \label{eq:8:9:2}
 \end{equation}
 This formula was obtained by Edmonds [64], Brussaard and Tolhoek [60]. In particular,
 \begin{align}
-\clebsch{a}{\alpha}{b}{b}{c}{\gamma} &\approx \delta_{b, \gamma-\alpha}(-1)^{b-\delta}\left[\frac{(2 b)!}{(b+\delta) !(b-\delta)!}\right]^{\frac{1}{2}}\left(\cos \frac{\vartheta}{2}\right)^{b+\delta}\left(\sin \frac{\vartheta}{2}\right)^{b-\delta}, \label{chap8:eq:216}\\
-\clebsch{a}{\alpha}{b}{\beta}{c}{c} &\approx \delta_{\beta, c-\alpha} D_{\beta c-a}^{b}(0,0,0)=\delta_{\beta, c-\alpha} \delta_{\beta, c-a}, \label{chap8:eq:217}\\
-\clebsch{a}{-\beta}{b}{\beta}{c}{0} &\approx D_{\beta c-a}^{b}\left(0, \frac{\pi}{2}, 0\right), \label{chap8:eq:218}\\
-\clebsch{c}{\gamma}{b}{0}{c}{\gamma} &\approx P_{b}(\cos \vartheta), \label{chap8:eq:219}\\
-\clebsch{c}{\alpha}{b}{\beta}{c}{\gamma} &\approx \delta_{\beta, \gamma-\alpha} \sqrt{\frac{4 \pi}{2 b+1}} Y_{b \beta}(\vartheta, 0), \label{chap8:eq:220}\\
-\clebsch{c}{\pm c}{b}{0}{c}{\pm c} &\approx( \pm 1)^{b}. \label{chap8:eq:221}
+\clebsch{a}{\alpha}{b}{b}{c}{\gamma} &\approx \delta_{b, \gamma-\alpha}(-1)^{b-\delta}\left[\frac{(2 b)!}{(b+\delta) !(b-\delta)!}\right]^{\frac{1}{2}}\left(\cos \frac{\vartheta}{2}\right)^{b+\delta}\left(\sin \frac{\vartheta}{2}\right)^{b-\delta}, \label{eq:8:9:3}\\
+\clebsch{a}{\alpha}{b}{\beta}{c}{c} &\approx \delta_{\beta, c-\alpha} D_{\beta c-a}^{b}(0,0,0)=\delta_{\beta, c-\alpha} \delta_{\beta, c-a}, \label{eq:8:9:4}\\
+\clebsch{a}{-\beta}{b}{\beta}{c}{0} &\approx D_{\beta c-a}^{b}\left(0, \frac{\pi}{2}, 0\right), \label{eq:8:9:5}\\
+\clebsch{c}{\gamma}{b}{0}{c}{\gamma} &\approx P_{b}(\cos \vartheta), \label{eq:8:9:6}\\
+\clebsch{c}{\alpha}{b}{\beta}{c}{\gamma} &\approx \delta_{\beta, \gamma-\alpha} \sqrt{\frac{4 \pi}{2 b+1}} Y_{b \beta}(\vartheta, 0), \label{eq:8:9:7}\\
+\clebsch{c}{\pm c}{b}{0}{c}{\pm c} &\approx( \pm 1)^{b}. \label{eq:8:9:8}
 \end{align}
-If $a, c \gg b \gg 1$ one can use in \eqref{chap8:eq:214} the asymptotic expressions for the Wigner $D$-function (Eqs.~4.18(1)4.18(4)). Then the Clebsch-Gordan coefficients may be represented in the form
+If $a, c \gg b \gg 1$ one can use in \eqref{eq:8:9:1} the asymptotic expressions for the Wigner $D$-function (Eqs.~4.18(1)4.18(4)). Then the Clebsch-Gordan coefficients may be represented in the form
 \begin{gather}
-\clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} \approx \frac{(-1)^{\beta-\delta}}{(\beta-\delta)!}\left[\frac{2}{\pi} \frac{(b+\beta)!(b-\beta+1)!}{(b+\delta)!(b-\delta)!}\right]^{\frac{1}{2}} \frac{\cos \left[(2 b+1) \frac{\vartheta}{2}-\frac{\pi}{2}\left(\beta-\delta+\frac{1}{2}\right)\right]}{\sqrt{\sin \vartheta}}, \label{chap8:eq:222}\\
+\clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} \approx \frac{(-1)^{\beta-\delta}}{(\beta-\delta)!}\left[\frac{2}{\pi} \frac{(b+\beta)!(b-\beta+1)!}{(b+\delta)!(b-\delta)!}\right]^{\frac{1}{2}} \frac{\cos \left[(2 b+1) \frac{\vartheta}{2}-\frac{\pi}{2}\left(\beta-\delta+\frac{1}{2}\right)\right]}{\sqrt{\sin \vartheta}}, \label{eq:8:9:9}\\
 \text { if } \beta \geq \delta, \beta \geq 0, \notag\\
-\clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} \approx \frac{1}{(\delta-\beta)!}\left[\frac{2}{\pi} \frac{(b+\delta)!(b-\delta+1)!}{(b+\beta)!(b-\beta)!}\right]^{\frac{1}{2}} \frac{\cos \left[(2 b+1) \frac{\vartheta}{2}-\frac{\pi}{2}\left(\delta-\beta+\frac{1}{2}\right)\right]}{\sqrt{\sin \vartheta}}, \label{chap8:eq:223}\\
+\clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} \approx \frac{1}{(\delta-\beta)!}\left[\frac{2}{\pi} \frac{(b+\delta)!(b-\delta+1)!}{(b+\beta)!(b-\beta)!}\right]^{\frac{1}{2}} \frac{\cos \left[(2 b+1) \frac{\vartheta}{2}-\frac{\pi}{2}\left(\delta-\beta+\frac{1}{2}\right)\right]}{\sqrt{\sin \vartheta}}, \label{eq:8:9:10}\\
 \text { if } \delta \geq \beta, \delta \geq 0 . \notag
 \end{gather}
 \subsection{Asymptotic Expressions for $a, b, c, \gamma \gg a+b-\gamma$}
 \begin{equation}
-\clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} \approx(-1)^{a+b-c} \frac{(c+\gamma+1)^{b-\beta}}{(a-b-\alpha)!}\left[\frac{(2 c+1)(a-b+c)!(a-\alpha)!(b+\beta)!(c-\gamma)!(c+\gamma)!}{(a+b-c)!(-a+b+c)!(a+b+c+1)!(a+\alpha)!(b-\beta)!}\right]^{\frac{1}{2}}. \label{chap8:eq:224}
+\clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} \approx(-1)^{a+b-c} \frac{(c+\gamma+1)^{b-\beta}}{(a-b-\alpha)!}\left[\frac{(2 c+1)(a-b+c)!(a-\alpha)!(b+\beta)!(c-\gamma)!(c+\gamma)!}{(a+b-c)!(-a+b+c)!(a+b+c+1)!(a+\alpha)!(b-\beta)!}\right]^{\frac{1}{2}}. \label{eq:8:9:11}
 \end{equation}
 (Akim and Levin [46]).
 
 \subsection{Semiclassical Formulas for $a, b, c \gg 1$}
 \begin{equation}
-\clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} \approx(-1)^{2 b+c+\gamma+1} \sqrt{\frac{2 c+1}{2 \pi S}} \cos \left[j_{1} \theta_{1}+j_{2} \theta_{2}+j_{3} \theta_{3}-m_{2} \varphi_{1}+m_{1} \varphi_{2}+\frac{\pi}{4}\right], \label{chap8:eq:225}
+\clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} \approx(-1)^{2 b+c+\gamma+1} \sqrt{\frac{2 c+1}{2 \pi S}} \cos \left[j_{1} \theta_{1}+j_{2} \theta_{2}+j_{3} \theta_{3}-m_{2} \varphi_{1}+m_{1} \varphi_{2}+\frac{\pi}{4}\right], \label{eq:8:9:12}
 \end{equation}
 (Ponzano and Regge [89]), where
 \begin{gather}
-j_{1} \equiv a+\frac{1}{2}, j_{2} \equiv b+\frac{1}{2}, j_{3} \equiv c+\frac{1}{2}, m_{1} \equiv \alpha, \quad m_{2} \equiv \beta, \quad m_{3} \equiv-\gamma, \label{chap8:eq:226}\\
+j_{1} \equiv a+\frac{1}{2}, j_{2} \equiv b+\frac{1}{2}, j_{3} \equiv c+\frac{1}{2}, m_{1} \equiv \alpha, \quad m_{2} \equiv \beta, \quad m_{3} \equiv-\gamma, \label{eq:8:9:13}\\
 S^{2}=\frac{1}{16}\left\{-j_{1}^{4}-j_{2}^{4}-j_{3}^{4}+2\left(j_{1}^{2} j_{2}^{2}+j_{1}^{2} j_{3}^{2}+j_{2}^{2} j_{3}^{2}\right)+4\left(j_{1}^{2} m_{2} m_{3}+j_{2}^{2} m_{1} m_{3}+j_{3}^{2} m_{1} m_{2}\right)\right\}  \notag\\
 =-\frac{1}{16}\left|\begin{array}{cccc}
 0 & j_{1}^{2}-m_{1}^{2} & j_{2}^{2}-m_{2}^{2} & 1 \\
 j_{1}^{2}-m_{1}^{2} & 0 & j_{3}^{2}-m_{3}^{2} & 1 \\
 j_{2}^{2}-m_{2}^{2} & j_{3}^{2}-m_{3}^{2} & 0 & 1 \\
 1 & 1 & 1 & 0
-\end{array}\right| . \label{chap8:eq:227}
+\end{array}\right| . \label{eq:8:9:14}
 \end{gather}
-If $m_{1}=m_{2}=m_{3}=0$, \eqref{chap8:eq:227} reduces to
+If $m_{1}=m_{2}=m_{3}=0$, \eqref{eq:8:9:14} reduces to
 \begin{gather}
-S^{2}=\frac{1}{16}\left(a+b+c+\frac{3}{2}\right)\left(-a+b+c+\frac{1}{2}\right)\left(a-b+c+\frac{1}{2}\right)\left(a+b-c+\frac{1}{2}\right), \label{chap8:eq:228}
+S^{2}=\frac{1}{16}\left(a+b+c+\frac{3}{2}\right)\left(-a+b+c+\frac{1}{2}\right)\left(a-b+c+\frac{1}{2}\right)\left(a+b-c+\frac{1}{2}\right), \label{eq:8:9:15}
 \end{gather}
 \begin{equation}\begin{gathered}
 \cos \theta_{i}=\frac{2 j_{i}^{2} m_{l}+m_{i}\left(j_{i}^{2}-j_{k}^{2}+j_{l}^{2}\right)}{\sqrt{\left(j_{i}^{2}-m_{i}^{2}\right)\left(4 j_{i}^{2} j_{l}^{2}-\left(j_{i}^{2}-j_{k}^{2}+j_{l}^{2}\right)^{2}\right)}}, \\
 \cos \varphi_{i}=\frac{1}{2} \frac{j_{i}^{2}-j_{k}^{2}-j_{l}^{2}-2 m_{k} m_{l}}{\sqrt{\left(j_{k}^{2}-m_{k}^{2}\right)\left(j_{l}^{2}-m_{l}^{2}\right)}}. 
-\end{gathered} \label{chap8:eq:229}
+\end{gathered} \label{eq:8:9:16}
 \end{equation}
-Indices $i, k, l$ in \eqref{chap8:eq:229} are those which may be obtained by cyclic permutation of $1,2,3$. The quantities which enter Eqs.~\eqref{chap8:eq:227}-\eqref{chap8:eq:229} have a simple geometrical interpretation. Three momenta $j_{1}=a+\frac{1}{2}, j_{2}=b+\frac{1}{2}$ and $j_{3}=c+\frac{1}{2}$ form a triangle oriented in space in such a manner that the projections of its sides on the $z$ axis are\\
+Indices $i, k, l$ in \eqref{eq:8:9:16} are those which may be obtained by cyclic permutation of $1,2,3$. The quantities which enter Eqs.~\eqref{eq:8:9:14}-\eqref{eq:8:9:16} have a simple geometrical interpretation. Three momenta $j_{1}=a+\frac{1}{2}, j_{2}=b+\frac{1}{2}$ and $j_{3}=c+\frac{1}{2}$ form a triangle oriented in space in such a manner that the projections of its sides on the $z$ axis are\\
 equal to $m_{1}, m_{2}$ and $m_{3}$, respectively (Fig.~\ref{chap8:fig:1}). $S$ is an area of the triangle projection onto the ( $x, y$ )-plane. Let us construct a trihedral prism whose sidelong edges are parallel to the $z$ axis and one of the cross sections coincides with the oriented triangle. Then $\theta_{i}$ is the angle between the normals to the planes adjacent to the edge $j_{i}$. The angles $\varphi_{i}$ are shown in Fig.~\ref{chap8:fig:1}.
 
 In particular, if $\alpha=\beta=\gamma=0$, we get $\theta_{1}=\theta_{2}=\theta_{3}=\pi / 2$.
 \begin{equation}
-\clebsch{a}{0}{b}{0}{c}{0} \approx(-1)^{(a+b-c)/2}\left[\frac{1+(-1)^{a+b-c}}{2}\right] \sqrt{\frac{2 c+1}{2 \pi S}} . \label{chap8:eq:230}
+\clebsch{a}{0}{b}{0}{c}{0} \approx(-1)^{(a+b-c)/2}\left[\frac{1+(-1)^{a+b-c}}{2}\right] \sqrt{\frac{2 c+1}{2 \pi S}} . \label{eq:8:9:17}
 \end{equation}
 Equations (12)-(17) are valid, if $S^{2}>0$.
 
@@ -1184,23 +1184,25 @@ Equations (12)-(17) are valid, if $S^{2}>0$.
   \node[below,rotate=-30] at ($(A)!0.55!(C)$)              {$j_{1}=a+\tfrac12$};
   \node[below right=1pt,fill=white]  at ($(B)!0.65!(C)$)         {$j_{2}=b+\tfrac12$};
   \end{tikzpicture}
-\caption{Geometric interpretation of the parameters in the asymptotic relation \eqref{chap8:eq:225}.}
+\caption{Geometric interpretation of the parameters in the asymptotic relation \eqref{eq:8:9:12}.}
 \label{chap8:fig:1}
 \end{center}
 \end{figure}
 
 More accurate expressions valid not only for $S^{2}>0$ but also if $S^{2}<0$ or $S^{2} \approx 0$ were obtained by Schulten and Gordon [140]. In the case of $S^{2} \geq 0$ they derived
+\begin{subequations}
 \begin{gather}
 \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}=(-1)^{2 b+c+\gamma+1} \sqrt{\frac{2 c+1}{2 S}} Z^{\frac{1}{4}} \notag\\
 \times \begin{cases}\cos \Omega_{0} A i(-Z)-\sin \Omega_{0} B i(-Z), & \text { if } \Omega-\Omega_{0}<0, \\
-\cos \Omega_{0} B i(-Z)-\sin \Omega_{0} A i(-Z), & \text { if } \Omega-\Omega_{0}>0,\end{cases}, \label{chap8:eq:231}
+\cos \Omega_{0} B i(-Z)-\sin \Omega_{0} A i(-Z), & \text { if } \Omega-\Omega_{0}>0,\end{cases}, \label{eq:8:9:18a}
 \end{gather}
 while for $S^{2} \leq 0$
 \begin{gather}
 \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}=(-1)^{2 b+c+\gamma+1} \sqrt{\frac{2 c+1}{2|S|}} Z^{\frac{1}{4}} \notag\\
 \times \begin{cases}\cos \Omega_{0} A i(Z)-\sin \Omega_{0} B i(Z), & \text { if } \Omega-\Omega_{0}<0, \\
-\cos \Omega_{0} B i(Z)-\sin \Omega_{0} A i(Z), & \text { if } \Omega-\Omega_{0}>0 .\end{cases}. \label{chap8:eq:232}
+\cos \Omega_{0} B i(Z)-\sin \Omega_{0} A i(Z), & \text { if } \Omega-\Omega_{0}>0 .\end{cases}. \label{eq:8:9:18b}
 \end{gather}
+\end{subequations}
 In these equations $A i(Z)$ and $B i(Z)$ are the Airy functions
 \[
 \begin{aligned}
@@ -1223,11 +1225,11 @@ According to Sec. 8.1.1 the square of a Clebsch-Gordan coefficient represents th
 
 If the vector $j$ as well as the magnitudes of $j_{1}$ and $j_{2}$ are given, the possible positions of the end of the vector $\mathrm{j}_{1}$ form a circle (Fig.~\ref{chap8:fig:2}). The probability in question is proportional to the length of the circle arc confined between the planes $z=m_{1}$ and $z=m_{2}$. In the classical limit (for $\left.j_{1}, j_{2}, j \gg 1\right)$ this probability may be expressed by
 \begin{equation}
-\left(\clebsch{j_{1}}{m_{1}}{j_{2}}{m_{2}}{j}{m}\right)^{2} \approx \frac{2 j+1}{\pi}\left[-\left(j_{1}^{4}+j_{2}^{4}+j^{4}\right)+2\left(j_{1}^{2} j_{2}^{2}+j_{1}^{2} j^{2}+j_{2}^{2} j^{2}\right)-4\left(j_{1}^{2} m_{2} m+j_{2}^{2} m_{1} m-j^{2} m_{1} m_{2}\right)\right]^{-\frac{1}{2}}. \label{chap8:eq:233}
+\left(\clebsch{j_{1}}{m_{1}}{j_{2}}{m_{2}}{j}{m}\right)^{2} \approx \frac{2 j+1}{\pi}\left[-\left(j_{1}^{4}+j_{2}^{4}+j^{4}\right)+2\left(j_{1}^{2} j_{2}^{2}+j_{1}^{2} j^{2}+j_{2}^{2} j^{2}\right)-4\left(j_{1}^{2} m_{2} m+j_{2}^{2} m_{1} m-j^{2} m_{1} m_{2}\right)\right]^{-\frac{1}{2}}. \label{eq:8:9:19}
 \end{equation}
-\eqref{chap8:eq:233} is valid only on the average, because if $j_{1}, j_{2}$ and $j$ are large, even fairly minor relative variations of these quantities lead to rapid oscillations of the Clebsch-Gordan coefficients (See \eqref{chap8:eq:225}). When $m_{1}=m_{2}=m=0$ and $j_{1}+j_{2}-j$ is even, one has
+\eqref{eq:8:9:19} is valid only on the average, because if $j_{1}, j_{2}$ and $j$ are large, even fairly minor relative variations of these quantities lead to rapid oscillations of the Clebsch-Gordan coefficients (See \eqref{eq:8:9:12}). When $m_{1}=m_{2}=m=0$ and $j_{1}+j_{2}-j$ is even, one has
 \begin{equation}
-\clebsch{j_{1}}{0}{j_{2}}{0}{j}{0} \approx(-1)^{(j_1+j_{2}-j)/2} \sqrt{\frac{2 j+1}{\pi}}\left[-\left(j_{1}^{4}+j_{2}^{4}+j^{4}\right)+2\left(j_{1}^{2} j_{2}^{2}+j_{1}^{2} j^{2}+j_{2}^{2} j^{2}\right)\right]^{-\frac{1}{4}}. \label{chap8:eq:234}
+\clebsch{j_{1}}{0}{j_{2}}{0}{j}{0} \approx(-1)^{(j_1+j_{2}-j)/2} \sqrt{\frac{2 j+1}{\pi}}\left[-\left(j_{1}^{4}+j_{2}^{4}+j^{4}\right)+2\left(j_{1}^{2} j_{2}^{2}+j_{1}^{2} j^{2}+j_{2}^{2} j^{2}\right)\right]^{-\frac{1}{4}}. \label{eq:8:9:20}
 \end{equation}
 \begin{figure}[tbh!]
 \begin{center}
@@ -1261,7 +1263,7 @@ If the vector $j$ as well as the magnitudes of $j_{1}$ and $j_{2}$ are given, th
 \end{figure}
 
 \section{ZEROS OF THE VECTOR-ADDITION COEFFICIENTS}
-A Clebsch-Gordan coefficient $\clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}$ and associated $3 j m$ symbol $\threej{a}{b}{c}{\alpha}{\beta}{-\gamma}$ vanish unless triangular conditions are satisfied (Eqs.~\eqref{chap8:eq:1} and \eqref{chap8:eq:2}). However, there exist non-trivial cases when the Clebsch-Gordan coefficients are equal to zero although the triangular conditions are fulfilled. This leads to some additional selection rules which forbid the quantum transitions whose amplitudes are proportional to the appropriate Clebsch-Gordan coefficients. Here we point out the most important relations between the arguments for which the Clebsch-Gordan coefficients vanish.
+A Clebsch-Gordan coefficient $\clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}$ and associated $3 j m$ symbol $\threej{a}{b}{c}{\alpha}{\beta}{-\gamma}$ vanish unless triangular conditions are satisfied (Eqs.~\eqref{eq:8:1:1} and \eqref{eq:8:1:2}). However, there exist non-trivial cases when the Clebsch-Gordan coefficients are equal to zero although the triangular conditions are fulfilled. This leads to some additional selection rules which forbid the quantum transitions whose amplitudes are proportional to the appropriate Clebsch-Gordan coefficients. Here we point out the most important relations between the arguments for which the Clebsch-Gordan coefficients vanish.
 \begin{enumerate}[label=(\alph*)]
 \item $\clebsch{a}{0}{b}{0}{c}{0}=0$, if $J \equiv a+b+c$ is odd;
 \item $\clebsch{a}{\alpha}{a}{\alpha}{c}{\gamma}=0$, $\clebsch{a}{-\alpha}{c}{\gamma}{a}{\alpha}=0$, $\clebsch{c}{\gamma}{a}{-\alpha}{a}{\alpha}=0$, if $J=2 a+c$ is odd;
@@ -1277,7 +1279,7 @@ A Clebsch-Gordan coefficient $\clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}$ and asso
 \clebsch{a}{\alpha}{b}{b-1}{a}{-\alpha}=0 .
 \]
 \end{enumerate}
-Below we list particular 3jm symbols with $J=a+b+c \leq 17$ which vanish in nontrivial cases. They are arranged in the order of increasing $J$ and $a \leq b \leq c$. Roots of other 3jm symbols may be obtained by the use of the simplest symmetry properties of the $3 j \mathrm{~m}$ symbols, concerned with the permutations of momenta $a, b, c$ and sign changes of the projections $\alpha, \beta, \gamma$ (see Eqs.~\eqref{chap8:eq:58} and \eqref{chap8:eq:59}), Hence, any $3 j m$ symbols from the table given below generally represents 12 formally different versions of the $3 j m$ symbols or the Clebsch-Gordan coefficients which are equal to zero. One should bear in mind that the $3 j \mathrm{~m}$ symbols and the Clebsch-Gordan coefficients are related by (see Sec. 8.1.2)
+Below we list particular 3jm symbols with $J=a+b+c \leq 17$ which vanish in nontrivial cases. They are arranged in the order of increasing $J$ and $a \leq b \leq c$. Roots of other 3jm symbols may be obtained by the use of the simplest symmetry properties of the $3 j \mathrm{~m}$ symbols, concerned with the permutations of momenta $a, b, c$ and sign changes of the projections $\alpha, \beta, \gamma$ (see Eqs.~\eqref{eq:8:4:5} and \eqref{eq:8:4:6}), Hence, any $3 j m$ symbols from the table given below generally represents 12 formally different versions of the $3 j m$ symbols or the Clebsch-Gordan coefficients which are equal to zero. One should bear in mind that the $3 j \mathrm{~m}$ symbols and the Clebsch-Gordan coefficients are related by (see Sec. 8.1.2)
 \[
 \threej{a}{b}{c}{\alpha}{\beta}{-\gamma}=(-1)^{a+b+\gamma} \frac{1}{\sqrt{2 c+1}} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} .
 \]
