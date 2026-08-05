@@ -16,7 +16,7 @@ The tests are SPLIT BY SUBSECTION, matching the book:
     8.6.5  Arguments a,b,c change by 1          eq. 148-151   [done]
     8.6.6  Arguments a,b,alpha,beta change 1    eq. 152-153   [done]
     8.6.7  Arguments c,b,gamma,beta change 1    eq. 154-156   [done]
-    8.6.8  Recursion relations for R-symbols    eq. 157-161   [TODO]
+    8.6.8  Recursion relations for R-symbols    eq. 157-161   [done, 158 skipped]
 
 Convention (book == sympy):
     C_{a alpha, b beta}^{c gamma} == clebsch_gordan(a, b, c, alpha, beta, gamma)
@@ -33,7 +33,7 @@ import argparse
 import random
 
 from sympy import Rational, Integer, sqrt, factorial as fac, S
-from sympy.physics.wigner import clebsch_gordan
+from sympy.physics.wigner import clebsch_gordan, wigner_3j
 
 HALF = Rational(1, 2)
 TOL = S(10) ** (-18)
@@ -815,6 +815,119 @@ SEC_867 = [
 ]
 
 
+# ===========================================================================
+# 8.6.8  Recursion relations for the Regge R-symbols  (eq. 157-161)
+#
+# The Regge R-symbol ||R|| equals the 3jm symbol (Sec. 8.1.3, eq. 13-15):
+#   R = [[-a+b+c, a-b+c, a+b-c],
+#        [ a+al ,  b+be,  c+ga ],
+#        [ a-al ,  b-be,  c-ga ]]     (alpha+beta+gamma = 0).
+# Each relation shifts individual entries by +/-1 (line sums move J -> J+/-1)
+# and the shifted array is evaluated as its own 3jm symbol.
+# ===========================================================================
+def Rmat(a, b, c, al, be, ga):
+    return [[-a + b + c, a - b + c, a + b - c],
+            [a + al, b + be, c + ga],
+            [a - al, b - be, c - ga]]
+
+
+def shift(R, *changes):
+    m = [row[:] for row in R]
+    for (i, j, d) in changes:
+        m[i][j] = m[i][j] + d
+    return m
+
+
+def Rval(m):
+    """value of the Regge symbol ||m|| = 3jm recovered from the array
+    (0 unless it is a valid, line-balanced non-negative-integer array)."""
+    for row in m:
+        for e in row:
+            if e < 0:
+                return S.Zero
+    a = Rational(m[1][0] + m[2][0], 2); b = Rational(m[1][1] + m[2][1], 2); c = Rational(m[1][2] + m[2][2], 2)
+    al = Rational(m[1][0] - m[2][0], 2); be = Rational(m[1][1] - m[2][1], 2); ga = Rational(m[1][2] - m[2][2], 2)
+    if al + be + ga != 0 or c < abs(a - b) or c > a + b or not (a + b + c).is_integer:
+        return S.Zero
+    if abs(al) > a or abs(be) > b or abs(ga) > c:
+        return S.Zero
+    return wigner_3j(a, b, c, al, be, ga)
+
+
+def cfg_3jm(jmax=3):
+    """valid (a,b,c,alpha,beta) with gamma=-(alpha+beta) and a non-zero 3jm."""
+    a = rj(HALF, jmax); b = rj(HALF, jmax); c = rc(a, b)
+    al = rproj(a); be = rproj(b); ga = -(al + be)
+    if abs(ga) > c or Rval(Rmat(a, b, c, al, be, ga)) == 0:
+        return None
+    return (a, b, c, al, be)
+
+
+def _rsym(build):
+    """shared driver: build the list of (signed) terms, require the relation to
+    be non-vacuous (>= 2 terms non-zero), and return (sum, 0)."""
+    cfg = cfg_3jm()
+    if cfg is None:
+        return None
+    a, b, c, al, be = cfg
+    R = Rmat(a, b, c, al, be, -(al + be))
+    J = a + b + c
+    terms = build(R, J)
+    if sum(1 for t in terms if t != 0) < 2:
+        return None
+    return sum(terms, S.Zero), S.Zero
+
+
+def r157():
+    def build(R, J):
+        return [sqrt(R[0][0] * (J + 1)) * Rval(R),
+                -sqrt(R[1][1] * R[2][2]) * Rval(shift(R, (0, 0, -1), (1, 1, -1), (2, 2, -1))),
+                sqrt(R[1][2] * R[2][1]) * Rval(shift(R, (0, 0, -1), (1, 2, -1), (2, 1, -1)))]
+    return _rsym(build)
+
+
+def r159():
+    def build(R, J):
+        return [sqrt(R[0][0] * R[1][1] * (J + 1)) * Rval(R),
+                -(R[1][1] + R[1][2]) * sqrt(R[2][2]) * Rval(shift(R, (0, 0, -1), (1, 1, -1), (2, 2, -1))),
+                -sqrt(R[1][2] * R[2][0] * (R[1][0] + 1))
+                * Rval(shift(R, (0, 0, -1), (1, 0, 1), (1, 1, -1), (1, 2, -1), (2, 0, -1)))]
+    return _rsym(build)
+
+
+def r160():
+    def build(R, J):
+        return [(R[0][0] + R[0][1] + 1) * sqrt(R[1][1]) * Rval(R),
+                sqrt(R[0][2] * (R[1][2] + 1) * (R[0][1] + 1))
+                * Rval(shift(R, (0, 1, 1), (0, 2, -1), (1, 1, -1), (1, 2, 1))),
+                -sqrt(R[0][0] * R[2][2] * (J + 1)) * Rval(shift(R, (0, 0, -1), (1, 1, -1), (2, 2, -1)))]
+    return _rsym(build)
+
+
+def r161():
+    def build(R, J):
+        return [(R[1][1] - R[2][2]) * sqrt(R[0][0] * R[1][2] * R[2][1])
+                * Rval(shift(R, (0, 0, -1), (1, 2, -1), (2, 1, -1))),
+                (R[2][2] - R[0][0]) * sqrt(R[0][2] * R[1][1] * R[2][0])
+                * Rval(shift(R, (0, 2, -1), (1, 1, -1), (2, 0, -1))),
+                (R[0][0] - R[1][1]) * sqrt(R[0][1] * R[1][0] * R[2][2])
+                * Rval(shift(R, (0, 1, -1), (1, 0, -1), (2, 2, -1)))]
+    return _rsym(build)
+
+
+SEC_868 = [
+    ("eq 8.6.157  Regge R-symbol", r157),
+    ("eq 8.6.159  Regge R-symbol", r159),
+    ("eq 8.6.160  Regge R-symbol", r160),
+    ("eq 8.6.161  Regge R-symbol", r161),
+]
+# NOTE eq 8.6.158 is a "column" recursion: it shifts R_{1k}+1 and R_{2k}-1, so
+# each array has equal COLUMN sums but row sums J+1, J-1, J.  A Regge symbol
+# needs all six line sums equal, so every term vanishes as a standard 3jm and
+# the relation is only trivially (vacuously) satisfied here.  Verifying it would
+# require the generalised symbol of refs [86,103]; skipped.
+
+
 # ---------------------------------------------------------------------------
 # driver
 # ---------------------------------------------------------------------------
@@ -826,10 +939,11 @@ IMPLEMENTED = [
     ("8.6.5  Arguments a,b,c change by 1", SEC_865),
     ("8.6.6  Arguments a,b,alpha,beta change by 1", SEC_866),
     ("8.6.7  Arguments c,b,gamma,beta change by 1", SEC_867),
+    ("8.6.8  Recursion relations for the R-symbols", SEC_868),
 ]
 
 TODO = [
-    ("8.6.8  Recursion relations for the R-symbols", "eq. 157-161 (need R-symbol map)"),
+    ("8.6.8  eq 158 only", "column recursion -- row-unbalanced arrays, vacuous as standard 3jm"),
 ]
 
 
