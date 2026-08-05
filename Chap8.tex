@@ -1041,7 +1041,7 @@ R_{31} & R_{32} & R_{33}
 \subsection{Products of Binomials}
 \begin{align}
 \MoveEqLeft{(t_1-t_2)^{J-2c} (t_2-t_3)^{J-2a}(t_3-t_1)^{J-2b}}\notag\\
-= & \left[\frac{(J-2 a)!(J-2 b)!(J-2 c)!}{2 c+1}\right]^{\frac{1}{2}} 
+= & \left[(J+1)!\frac{(J-2 a)!(J-2 b)!(J-2 c)!}{2 c+1}\right]^{\frac{1}{2}} 
 \sum_{\substack{\alpha, \beta, \gamma \\ \alpha+\beta+\gamma=0}}(-1)^{a-b-\gamma}   %\notag\\\times & 
 \frac{t_{1}^{a+\alpha} t_{2}^{b+\beta} t_{3}^{c+\gamma}}{[(a+\alpha)!(a-\alpha)!(b+\beta)!(b-\beta)!(c+\gamma)!(c-\gamma)!]^{\frac{1}{2}}} \clebsch{a}{\alpha}{b}{\beta}{c}{-\gamma}, \label{chap8:eq:210}\\
 \MoveEqLeft{\left(v_{1} u_{2}-u_{1} v_{2}\right)^{J-2 c}\left(w_{1} v_{2}-w_{2} v_{1}\right)^{J-2 a}\left(u_{1} w_{2}-w_{1} u_{2}\right)^{J-2 b}} \notag \\
@@ -1054,7 +1054,7 @@ R_{31} & R_{32} & R_{33}
 \subsection{Exponential Function}
 \begin{align}
 \MoveEqLeft{\exp\{x_1(t_2-t_3)+x_2(t_3-t_1)+x_3(t_1-t_2)\}}\notag\\
-  &=\sum_{\substack{a, b, c \\ \alpha, \beta, \gamma}} \frac{(-1)^{a-b-\gamma}}{\Delta(a b c)} \frac{\exp \left\{x_{1}\left(t_{2}-t_{3}\right)+x_{2}\left(t_{3}-t_{1}\right)+x_{3}\left(t_{1}-t_{2}\right)\right\}}{[(2 c+1)(a+\alpha)!(a-\alpha)!(b+\beta)!(b-\beta)!(c+\gamma)!(c-\gamma)!]^{\frac{1}{2}}} \clebsch{a}{\alpha}{b}{\beta}{c}{-\gamma}, \label{chap8:eq:210c}
+  &=\sum_{\substack{a, b, c \\ \alpha, \beta, \gamma}} \frac{(-1)^{a-b-\gamma}}{\Delta(a b c)} \frac{x_1^{-a+b+c}x_2^{a-b+c}x_3^{a+b-c}t_1^{a+\alpha}t_2^{b+\beta}t_3^{c+\gamma}}{[(2 c+1)(a+\alpha)!(a-\alpha)!(b+\beta)!(b-\beta)!(c+\gamma)!(c-\gamma)!]^{\frac{1}{2}}} \clebsch{a}{\alpha}{b}{\beta}{c}{-\gamma}, \label{chap8:eq:210c}
 \end{align}
 where $\Delta(a b c)$ is given by \eqref{chap8:eq:18}.
 
@@ -1068,7 +1068,7 @@ where $\Delta(a b c)$ is given by \eqref{chap8:eq:18}.
 
 \subsection{Wigner D-Function}
 \begin{equation}
-\left[\frac{(2 c+1)}{(J+1)!(J-2 c)!}\right]^{\frac{1}{2}} d_{\gamma \gamma^{\prime}}^{c}(\theta)=\sum_{\substack{\alpha, \beta \\ \alpha+\beta=\gamma}}(-1)^{b+\beta} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} \frac{\left(\cos \frac{\beta}{2}\right)^{a+b+\alpha-\beta}\left(\sin \frac{\theta}{2}\right)^{a+b-\alpha+\beta}}{\left\{\left.(a+\alpha)!(a-\alpha)!(b+\beta)!(b-\beta)!\right|^{\frac{1}{2}}\right.}, \label{chap8:eq:212}
+\left[\frac{(2 c+1)}{(J+1)!(J-2 c)!}\right]^{\frac{1}{2}} d_{\gamma \gamma^{\prime}}^{c}(\theta)=\sum_{\substack{\alpha, \beta \\ \alpha+\beta=\gamma}}(-1)^{b+\beta} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} \frac{\left(\cos \frac{\theta}{2}\right)^{a+b+\alpha-\beta}\left(\sin \frac{\theta}{2}\right)^{a+b-\alpha+\beta}}{[(a+\alpha)!(a-\alpha)!(b+\beta)!(b-\beta)!]^{\frac{1}{2}}}, \label{chap8:eq:212}
 \end{equation}
 where $a-b=\gamma^{\prime},|a-b| \leq c \leq a+b$.
 
@@ -1083,7 +1083,7 @@ Asymptotic expressions permit us to simplify calculations of the Clebsch-Gordan 
 \subsection{Asymptotic Expressions for $a, c \gg b$}
 \begin{multline}
 \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} \approx[(b+\beta)!(b-\beta)!(b+\delta)!(b-\delta)!]^{\frac{1}{2}}  \\
-\times \sum_{\cdot} \frac{(-1)^{b-\delta-\beta}\left(\cos \frac{\beta}{2}\right)^{20+\beta+\delta}\left(\sin \frac{\alpha}{2}\right)^{2 b-\beta-\delta-2 \beta}}{s!(s+\beta+\delta)!(b-\beta-s)!(b-\delta-s)!}=\delta_{\gamma-\alpha, \beta} D_{\beta \delta}^{b}(0, \vartheta, 0), \label{chap8:eq:214}
+\times \sum_{s} \frac{(-1)^{b-\delta-s}\left(\cos \frac{\vartheta}{2}\right)^{2s+\beta+\delta}\left(\sin \frac{\vartheta}{2}\right)^{2 b-\beta-\delta-2 s}}{s!(s+\beta+\delta)!(b-\beta-s)!(b-\delta-s)!}=\delta_{\gamma-\alpha, \beta} D_{\beta \delta}^{b}(0, \vartheta, 0), \label{chap8:eq:214}
 \end{multline}
 where $\delta=c-a$, and $\vartheta$ is the angle between the momentum $c$ and the $z$ axis,
 \begin{equation}
@@ -1091,7 +1091,7 @@ where $\delta=c-a$, and $\vartheta$ is the angle between the momentum $c$ and th
 \end{equation}
 This formula was obtained by Edmonds [64], Brussaard and Tolhoek [60]. In particular,
 \begin{align}
-\clebsch{a}{\alpha}{b}{b}{c}{\gamma} &\approx \delta_{b, \gamma-\alpha}(-1)^{b-\delta}\left[\frac{(2 b)!}{(b+\delta) H(b-\delta)!}\right]^{\frac{1}{2}}\left(\cos \frac{\vartheta}{2}\right)^{b+\delta}\left(\sin \frac{\vartheta}{2}\right)^{b-\delta}, \label{chap8:eq:216}\\
+\clebsch{a}{\alpha}{b}{b}{c}{\gamma} &\approx \delta_{b, \gamma-\alpha}(-1)^{b-\delta}\left[\frac{(2 b)!}{(b+\delta) !(b-\delta)!}\right]^{\frac{1}{2}}\left(\cos \frac{\vartheta}{2}\right)^{b+\delta}\left(\sin \frac{\vartheta}{2}\right)^{b-\delta}, \label{chap8:eq:216}\\
 \clebsch{a}{\alpha}{b}{\beta}{c}{c} &\approx \delta_{\beta, c-\alpha} D_{\beta c-a}^{b}(0,0,0)=\delta_{\beta, c-\alpha} \delta_{\beta, c-a}, \label{chap8:eq:217}\\
 \clebsch{a}{-\beta}{b}{\beta}{c}{0} &\approx D_{\beta c-a}^{b}\left(0, \frac{\pi}{2}, 0\right), \label{chap8:eq:218}\\
 \clebsch{c}{\gamma}{b}{0}{c}{\gamma} &\approx P_{b}(\cos \vartheta), \label{chap8:eq:219}\\
