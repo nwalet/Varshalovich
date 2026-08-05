@@ -9,7 +9,7 @@ evaluate both sides with sympy's clebsch_gordan (coefficients that fall outside
 the physical domain are treated as 0), and compare.
 
 The tests are SPLIT BY SUBSECTION, matching the book:
-    8.6.1  General recursion relations          eq. 126-128   [TODO]
+    8.6.1  General recursion relations          eq. 126-128   [done]
     8.6.2  Arguments alpha,beta,gamma change 1  eq. 129-133   [done]
     8.6.3  Arguments change by 1/2              eq. 134-143   [done]
     8.6.4  The case alpha=beta=gamma=0          eq. 144-147   [done]
@@ -106,6 +106,109 @@ def cfg_zero(jmax=3):
     if C(a, b, c, 0, 0, 0) == 0:
         return None
     return (a, b, c)
+
+
+def qp(x, n):
+    """quasi-power  x^(n) = x!/(x-n)!  (used in eq. 128)."""
+    return fac(x) / fac(x - n)
+
+
+# ===========================================================================
+# 8.6.1  General recursion relations                 (eq. 126-128)
+# ===========================================================================
+def r126():
+    # Yutsis-Bandzaitis: sum over c' of C_{a al, b-k, be-k}^{c', ga-k},
+    # parametrised by k (integer or half-integer, 0 < k <= (b+be)/2).
+    cfg = cfg_master()
+    if cfg is None:
+        return None
+    a, b, c, al, be = cfg
+    g = al + be
+    kmax = (b + be) / 2
+    ks = [Rational(m, 2) for m in range(1, int(2 * kmax) + 1) if Rational(m, 2) <= kmax]
+    if not ks:
+        return None
+    k = random.choice(ks)
+    pref = sqrt(fac(b + be - 2 * k) * fac(c + g) * fac(a + b - c) * fac(-a + b + c)
+                * fac(a + b + c + 1) * (2 * c + 1) / (fac(b + be) * fac(c - g) * fac(a - b + c)))
+    tot = S.Zero
+    for i in range(int(2 * k) + 1):
+        cp = c - k + i
+        cv = C(a, b - k, cp, al, be - k, g - k)
+        if cv == 0:
+            continue
+        tot += ((-1) ** int(cp + k - c) * cv * fac(cp - k + c) * fac(2 * k)
+                / (fac(c + k - cp) * fac(c + cp + k + 1) * fac(cp + k - c))
+                * sqrt(fac(cp + k - g) * fac(a - b + cp + k) * (2 * cp + 1)
+                       / (fac(cp - k + g) * fac(-a + b + cp - k)
+                          * fac(a + b - cp - k) * fac(a + b + cp - k + 1))))
+    return C(a, b, c, al, be, g), pref * tot
+
+
+def r127():
+    # Stone: sum over b' of C_{a-b, al-be, b', 2be}^{c ga}
+    # (needs a-b >= |al-be| >= 0; b' integer, b'+2b even, |2be|,|-a+b+c| <= b' <= 2b, a-b+c)
+    b = rj(HALF, 2); a = rj(b, 3); c = rc(a, b)
+    al = rproj(a); be = rproj(b); g = al + be
+    if abs(g) > c or a - b < abs(al - be) or C(a, b, c, al, be, g) == 0:
+        return None
+    pref = sqrt(fac(a + b + c + 1) * fac(a - b + c) * fac(a + b - c) * fac(b + be) * fac(b - be)
+                * fac(a - b + al - be) * fac(a - b - al + be)
+                / (fac(-a + b + c) * fac(a + al) * fac(a - al)))
+    lo = max(abs(2 * be), abs(-a + b + c)); hi = min(2 * b, a - b + c)
+    tot = S.Zero; nterm = 0
+    bp = lo
+    while bp <= hi:
+        if Integer(bp + 2 * b) % 2 != 0:
+            bp += 1
+            continue
+        cv = C(a - b, bp, c, al - be, 2 * be, g)
+        if cv != 0:
+            tot += ((-1) ** int(b - bp / 2) * cv * (2 * bp + 1) * fac(b + bp / 2)
+                    / (fac(2 * b + bp + 1) * fac(b - bp / 2) * fac(bp / 2 + be) * fac(bp / 2 - be))
+                    * sqrt(fac(-a + b + c + bp) * fac(bp + 2 * be) * fac(bp - 2 * be)
+                           / (fac(a - b + c + bp + 1) * fac(a - b + c - bp) * fac(a - b - c + bp))))
+            nterm += 1
+        bp += 1
+    if nterm == 0:
+        return None
+    return C(a, b, c, al, be, g), pref * tot
+
+
+def r128():
+    # quasi-power form of eq.126 (well-defined only for b+be >= 2k; the source
+    # k-range 1/2 <= k <= (b-kappa)/2 must be intersected with that).
+    cfg = cfg_master()
+    if cfg is None:
+        return None
+    a, b, c, al, be = cfg
+    g = al + be
+    kappa = 0 if b.is_integer else HALF
+    kmax = (b - kappa) / 2
+    ks = [Rational(m, 2) for m in range(1, int(2 * kmax) + 1)
+          if Rational(m, 2) <= kmax and b + be >= m]
+    if not ks:
+        return None
+    k = random.choice(ks)
+    tot = S.Zero
+    for j in range(int(2 * k) + 1):
+        kp = -k + j
+        cv = C(a, b - k, c + kp, al, be - k, g - k)
+        if cv == 0:
+            continue
+        inner = (qp(c + g, k - kp) * qp(c - g + k + kp, k + kp) * qp(a + b - c, k + kp)
+                 * qp(-a + b + c, k - kp) * qp(a + b + c + 1, k - kp)
+                 * qp(a - b + c + k + kp, k + kp) * (2 * c + 2 * kp + 1))
+        tot += ((-1) ** int(k + kp) * cv * sqrt(inner) * qp(2 * k, k + kp)
+                / (qp(2 * c + k + kp + 1, 2 * k + 1) * qp(k + kp, k + kp)))
+    return C(a, b, c, al, be, g), sqrt((2 * c + 1) / qp(b + be, 2 * k)) * tot
+
+
+SEC_861 = [
+    ("eq 8.6.126  Yutsis-Bandzaitis (sum c')", r126),
+    ("eq 8.6.127  Stone (sum b')", r127),
+    ("eq 8.6.128  quasi-power form", r128),
+]
 
 
 # ===========================================================================
@@ -716,6 +819,7 @@ SEC_867 = [
 # driver
 # ---------------------------------------------------------------------------
 IMPLEMENTED = [
+    ("8.6.1  General recursion relations", SEC_861),
     ("8.6.2  Arguments alpha,beta,gamma change by 1", SEC_862),
     ("8.6.3  Arguments change by 1/2", SEC_863),
     ("8.6.4  The case alpha=beta=gamma=0", SEC_864),
@@ -725,7 +829,6 @@ IMPLEMENTED = [
 ]
 
 TODO = [
-    ("8.6.1  General recursion relations", "eq. 126-128 (sums; eq.128 quasi-powers, exp 1/3 OCR)"),
     ("8.6.8  Recursion relations for the R-symbols", "eq. 157-161 (need R-symbol map)"),
 ]
 
