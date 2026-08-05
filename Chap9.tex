@@ -17,7 +17,7 @@ The state vectors corresponding to the coupling scheme II are eigenvectors of th
 \begin{equation}
 \ket{j_{1}, j_{2} j_{3}\left(j_{23}\right) j m}=\sum_{m_{1} m_{2} m_{3}} \clebsch{j_{1}}{m_{1}}{j_{23}}{m_{23}}{j}{m} \clebsch{j_{2}}{m_{2}}{j_{2}}{m_{3}}{j_{2}}{m_{20}}\ket{j_{1} m_{1}, j_{2} m_{2}, j_{3} m_{3}} . \label{chap9:eq:3}
 \end{equation}
-Similarly, the state vectors corresponding to the coupling scheme III are eigenvectors of the operators $\widehat{\vect{j}}_{\frac{1}{2}}^{2}, \widehat{\vect{j}}_{2}^{2}, \widehat{\vect{j}}_{3}^{2}$, $\widehat{j}_{13}^{2}, \widehat{j}^{2}, \widehat{j}_{x}$,
+Similarly, the state vectors corresponding to the coupling scheme III are eigenvectors of the operators $\widehat{\vect{j}}_{1}^{2}, \widehat{\vect{j}}_{2}^{2}, \widehat{\vect{j}}_{3}^{2}$, $\widehat{j}_{13}^{2}, \widehat{j}^{2}, \widehat{j}_{x}$,
 \begin{equation}
 \ket{j_{1} j_{3}\left(j_{13}\right) \dot{j}_{2} j m}=\sum_{m_{1} m_{2} m_{3}} \clebsch{j_{13}}{m_{13}}{j_{2}}{m_{2}}{j}{m} \clebsch{j_{1}}{m_{1}}{j_{3}}{m_{2}}{j_{13}}{m_{13}}\ket{j_{1} m_{1}, j_{2} m_{2}, j_{3} m_{3}} . \label{chap9:eq:4}
 \end{equation}
@@ -194,27 +194,15 @@ a-b-c,-b+d-f,-a-b-c-1,-b-d-f-1 \\
 \end{align}
 Equations \eqref{chap9:eq:27}-\eqref{chap9:eq:31} present Eqs. \eqref{chap9:eq:21}-\eqref{chap9:eq:25} in terms of the hypergeometric functions.
 
-\subsection{Relations Between the $6 j$ Symbols and the 3jm Symbols}
-The $6 j$ symbols may be written as sums of products of the Clebsch-Gordan coefficients (Eq. \eqref{chap9:eq:8}) or 3jm symbols. The relations between the $6 j$ symbols and the $3 j m$ symbols are
+\subsection{Relations Between the $6 j$ Symbols and the $3jm$ Symbols}
+The $6 j$ symbols may be written as sums of products of the Clebsch-Gordan coefficients (Eq. \eqref{chap9:eq:8}) or $3jm$ symbols. The relations between the $6 j$ symbols and the $3 j m$ symbols are
 \begin{equation}
-\sixj{a}{b}{c}{d}{e}{f}  \label{chap9:eq:32}=\sum(-1)^{d+e+f+\delta+e+\varphi}\left(\begin{array}{lll}
-a & b & c \\
-\alpha & \beta & \gamma
-\end{array}\right)\left(\begin{array}{ccc}
-a & e & f \\
-\alpha & \varepsilon & -\varphi
-\end{array}\right)\left(\begin{array}{ccc}
-d & b & f \\
--\delta & \beta & \varphi
-\end{array}\right)\left(\begin{array}{rrc}
-d & e & c \\
-\delta & -\varepsilon & \gamma
-\end{array}\right) .
+\sixj{a}{b}{c}{d}{e}{f}  \label{chap9:eq:32}=\sum(-1)^{d+e+f+\delta+e+\varphi}\threej{a }{ b }{ c }{\alpha }{ \beta }{ \gamma}\threej{a }{ e }{ f }{\alpha }{ \varepsilon }{ -\varphi}\threej{d }{ b }{ f }{-\delta }{ \beta }{ \varphi}\threej{d }{ e }{ c }{\delta }{ -\varepsilon }{ \gamma} .
 \end{equation}
-In Eq. \eqref{chap9:eq:32} the sum is over all possible values of $\alpha, \beta, \gamma, \delta, \varepsilon, \varphi$ with only three summation indices being independent. Some other sums of the $3 j \mathrm{~m}$ symbols which yield the $6 j$ symbols will be considered in Chap. 12 .
+In Eq. \eqref{chap9:eq:32} the sum is over all possible values of $\alpha, \beta, \gamma, \delta, \varepsilon, \varphi$ with only three summation indices being independent. Some other sums of the $3 j m$ symbols which yield the $6 j$ symbols will be considered in Chap. 12 .
 
 \subsection{Quasi-Binomial Representation of the 6j Symbols}
-The $6 j$ symbols may be written in terms of quasi-binomials [45, 99] which are defined in Sec. 8.2.2. These representations are widely used in tabulating the formulas for the $6 j$ symbols.
+The $6 j$ symbols may be written in terms of quasi-binomials [45, 99] which are defined in Sec. \ref{sec:8.2.2}. These representations are widely used in tabulating the formulas for the $6 j$ symbols.
 
 Let us introduce the following definitions:
 \begin{equation}
@@ -283,7 +271,7 @@ Here
 \[
 \chi^{j}(R) \equiv \sum_{m} D_{m m}^{j}(R) \equiv \sum_{m} D_{m m}^{j}(\alpha, \beta, \gamma)
 \]
-is the character of the representation of rank $j$ (Sec. 4.14)
+is the character of the representation of rank $j$ (Sec. \ref{sec:4.14})
 \[
 \int f(R) d R \equiv \int_{0}^{2 \pi} d \alpha \int_{0}^{\pi} \sin \beta d \beta \int_{0}^{2 \pi} d \gamma f(\alpha, \beta, \gamma)
 \]
@@ -609,10 +597,7 @@ If $R \gg 1$ and $a, b, c$ etc. are arbitrary, one gets the following asymptotic
 where $\alpha=f-e, \beta=d-f, \gamma=d-e$.\\
 For the $6 j$ symbols and the $3 j m$ symbols this relation assumes the form [47]
 \begin{equation}
-\sixj{a}{b}{c}{d+R}{e+R}{f+r}  \label{chap9:eq:105} \approx \frac{(-1)^{a+b+c+2(d+e+f)}}{\sqrt{2 R}}\left(\begin{array}{ccc}
-a & b & c \\
-e-f & f-d & d-e
-\end{array}\right) .
+\sixj{a}{b}{c}{d+R}{e+R}{f+r}  \label{chap9:eq:105} \approx \frac{(-1)^{a+b+c+2(d+e+f)}}{\sqrt{2 R}}\threej{a }{ b }{ c }{e-f }{ f-d }{ d-e} .
 \end{equation}
 The asymptotic relation between the $R$ symbols which correspond to the $6 j$ symbols and the Clebsch-Gordan coefficients is written as
 \begin{align}
@@ -642,7 +627,7 @@ The asymptotic behaviour of the $6 j$ symbols $\sixj{a}{b}{c}{d}{e}{f}$ for larg
 \end{center}
 \end{figure}
 
-\subsubsection{(a) The Ponzano-Regge Formula [89] (semiclassical approximation to the $6 j$ symbols)}
+\subsubsection{The Ponzano-Regge Formula [89] (semiclassical approximation to the $6 j$ symbols)}
 If $a, b, c, d, e, f \gg 1$, then
 \begin{equation}
 \sixj{a}{b}{c}{d}{e}{f}  \label{chap9:eq:108} \approx \frac{1}{\sqrt{12 \pi V}} \cos \left(\sum_{i, k=1}^{4} j_{i k} \Theta_{i k}+\frac{\pi}{4}\right), \quad\left(V^{2}>0\right)
@@ -696,7 +681,7 @@ $\mathrm{Ai}(z)$ and $\mathrm{Bi}(z)$ being the Airy functions [27],
 z= \begin{cases}-(3 V)^{2}\left(4 \prod_{i=1}^{4} S_{i}\right)^{-\frac{2}{3}} & \text { if } V^{2}>0,  \label{chap9:eq:116}\\ (3|V|)^{2}\left(4 \prod_{i=1}^{4} S_{i}\right)^{-\frac{2}{3}} & \text { if } V^{2}<0 .\end{cases}
 \end{equation}
 Note that the Ponzano-Regge approximation is sufficiently accurate even at comparatively small angular momenta $a, b, c$ etc. Asymptotic expressions similar to \eqref{chap9:eq:115} but extended over the entire domain of angular momenta are obtained in Ref. [140].\\[0pt]
-\subsubsection{(b) The Edmonds' Formula [16]}
+\subsubsection{The Edmonds' Formula [16]}
 If $f, m, n$ are arbitrary integers or half-integers and $a, b, c \gg f, m, n$, then
 \begin{equation}
 \sixj{a}{b}{c}{b+m}{a+n}{f}  \label{chap9:eq:117} \approx \frac{(-1)^{a+b+c+f+m}}{\sqrt{(2 a+1)(2 b+1)}} d_{m n}^{f}(\theta),
@@ -729,7 +714,7 @@ where the tetrahedron volume is given by
 \begin{equation}
 V=\frac{1}{6}\left(a+\frac{1}{2}\right)\left(b+\frac{1}{2}\right)\left(f+\frac{1}{2}\right) \sin \Theta . \label{chap9:eq:122}
 \end{equation}
-\subsubsection{(c) If $a, b, c, d, e, f \gg 1, m, n, p$ one has}
+\subsubsection{$a, b, c, d, e, f \gg 1, m, n, p$}In this case,  one has
 \begin{equation}
 \sixj{a}{b}{c}{d}{e}{f}  \label{chap9:eq:123}\sixj{a}{b}{c}{d+m}{e+n}{f+p} \approx \frac{\Theta\left(V^{2}\right)}{24 \pi V} \cos \left(m \Theta_{1}+n \Theta_{2}+p \Theta_{3}\right) .
 \end{equation}
@@ -756,12 +741,13 @@ In Eq. \eqref{chap9:eq:125} $\varphi_{i k} \equiv \varphi_{k i}$ is the angle be
 \cos \varphi_{i k}=\frac{l_{i}\left(l_{i}+1\right)+l_{k}\left(l_{k}+1\right)-j(j+1)}{2 \sqrt{l_{i}\left(l_{i}+1\right) l_{k}\left(l_{k}+1\right)}} \label{chap9:eq:126}
 \end{equation}
 with $i \neq k \neq l$ and $j_{1} \equiv a, j_{2} \equiv b, j_{3} \equiv c$.\\
-\subsubsection{(d) In particular, for $m=n=p=0$ Eq. \protect\eqref{chap9:eq:123} yields the Wigner formula [43]}
+\subsubsection{$m=n=p=0$}In particular, for $m=n=p=0$ Eq. \protect\eqref{chap9:eq:123} yields the Wigner formula [43]
 \begin{equation}
 \sixj{a}{b}{c}{d}{e}{f}^{2}  \label{chap9:eq:127} \approx \frac{\Theta\left(V^{2}\right)}{24 \pi V}, \quad(a, b, c, d, e, f \gg 1)
 \end{equation}
 This formula is valid only on the average because the $6 j$ symbols oscillate rapidly with momentum variations in the region of large angular momenta.\\
-\subsubsection{(e) If $a, b, c$, etc. are fixed and $R \rightarrow \infty$, one has [89]}
+\subsubsection{$R \rightarrow \infty$}
+If $a, b, c$, etc. are fixed and $R \rightarrow \infty$, one has [89]
 \begin{align}
 \sixj{a}{b+R}{c+R}{d}{e+R}{f+R} \approx & (-1)^{\varphi}\left[\frac{(a-b+c)!(a-e+f)!(c+d-e)!(-b+d+f)!}{(a+b-c)!(a+e-f)!(-c+d+e)!(b+d-f)!}\right]^{\frac{1}{2} \operatorname{sign}(c+f-b-e)}  \notag\\
 & \times \frac{(2 R)^{-1-|b+e-c-f|}}{|b+e-c-f|!}\left[1+0\left(\frac{1}{R^{2}}\right)\right] . \label{chap9:eq:128}
