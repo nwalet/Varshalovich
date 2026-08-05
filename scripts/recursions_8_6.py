@@ -14,8 +14,8 @@ The tests are SPLIT BY SUBSECTION, matching the book:
     8.6.3  Arguments change by 1/2              eq. 134-143   [done]
     8.6.4  The case alpha=beta=gamma=0          eq. 144-147   [done]
     8.6.5  Arguments a,b,c change by 1          eq. 148-151   [done]
-    8.6.6  Arguments a,b,alpha,beta change 1    eq. 152-153   [TODO]
-    8.6.7  Arguments c,b,gamma,beta change 1    eq. 154-156   [TODO]
+    8.6.6  Arguments a,b,alpha,beta change 1    eq. 152-153   [done]
+    8.6.7  Arguments c,b,gamma,beta change 1    eq. 154-156   [done]
     8.6.8  Recursion relations for R-symbols    eq. 157-161   [TODO]
 
 Convention (book == sympy):
@@ -545,9 +545,171 @@ SEC_865 = [
     ("eq 8.6.150  b+1; a shift", r150),
     ("eq 8.6.151  c-1, c-2", r151),
 ]
-# NOTE eq 8.6.150 in the source carries display-only OCR debris (a malformed
-# \left.\beta^2\right| bracket and a stray ",(26" before the label); the maths
-# is correct as tested here, but those tokens should be cleaned up.
+
+
+# ===========================================================================
+# 8.6.6  Arguments a, b, alpha, beta change by 1      (eq. 152-153 + a middle
+#        gather).  a shifted by -1,0,+1; alpha-/+1, beta+/-1 (so alpha+beta
+#        stays gamma).
+# ===========================================================================
+def r152():
+    cfg = cfg_master()
+    if cfg is None:
+        return None
+    a, b, c, al, be = cfg
+    if b < 1:
+        return None
+    s = random.choice([1, -1]); g = al + be
+    lhs = sqrt((b + s * be) * (b + s * be + 1)) * C(a, b - 1, c, al, be, g)
+    rhs = (1 / (2 * a * (2 * a + 1))
+           * sqrt((a + s * al) * (a + s * al - 1) * (-a + b + c) * (-a + b + c + 1) * (a - b + c) * (a - b + c + 1))
+           * C(a - 1, b, c, al - s, be + s, g)
+           - s / (2 * a * (a + 1))
+           * sqrt((a + s * al) * (a - s * al + 1) * (-a + b + c) * (a - b + c + 1) * (a + b - c) * (a + b + c + 1))
+           * C(a, b, c, al - s, be + s, g)
+           + 1 / (2 * (a + 1) * (2 * a + 1))
+           * sqrt((a - s * al + 1) * (a - s * al + 2) * (a + b - c) * (a + b - c + 1) * (a + b + c + 1) * (a + b + c + 2))
+           * C(a + 1, b, c, al - s, be + s, g))
+    return lhs, rhs
+
+
+def r152b():
+    # the middle gather (labelled chap8:eq:152b): 2beta-type, no a/b shift.
+    # The {a(a+1)+b(b+1)-c(c+1)} factor sits OUTSIDE the radical.
+    cfg = cfg_master()
+    if cfg is None:
+        return None
+    a, b, c, al, be = cfg
+    s = random.choice([1, -1]); g = al + be
+    lhs = sqrt((b - s * be) * (b + s * be + 1)) * C(a, b, c, al, be, g)
+    rhs = (s / (2 * a * (2 * a + 1))
+           * sqrt((a + s * al) * (a + s * al - 1) * (-a + b + c + 1) * (a - b + c) * (a + b - c) * (a + b + c + 1))
+           * C(a - 1, b, c, al - s, be + s, g)
+           - 1 / (2 * a * (a + 1)) * (a * (a + 1) + b * (b + 1) - c * (c + 1))
+           * sqrt((a + s * al) * (a - s * al + 1))
+           * C(a, b, c, al - s, be + s, g)
+           - s / (2 * (a + 1) * (2 * a + 1))
+           * sqrt((a - s * al + 1) * (a - s * al + 2) * (-a + b + c) * (a - b + c + 1) * (a + b - c + 1) * (a + b + c + 2))
+           * C(a + 1, b, c, al - s, be + s, g))
+    return lhs, rhs
+
+
+def r153():
+    cfg = cfg_master()
+    if cfg is None:
+        return None
+    a, b, c, al, be = cfg
+    s = random.choice([1, -1]); g = al + be
+    lhs = sqrt((b - s * be) * (b - s * be + 1)) * C(a, b + 1, c, al, be, g)
+    rhs = (1 / (2 * a * (2 * a + 1))
+           * sqrt((a + s * al) * (a + s * al - 1) * (a + b - c) * (a + b - c + 1) * (a + b + c + 1) * (a + b + c + 2))
+           * C(a - 1, b, c, al - s, be + s, g)
+           + s / (2 * a * (a + 1))
+           * sqrt((a + s * al) * (a - s * al + 1) * (-a + b + c + 1) * (a - b + c) * (a + b - c + 1) * (a + b + c + 2))
+           * C(a, b, c, al - s, be + s, g)
+           + 1 / (2 * (a + 1) * (2 * a + 1))
+           * sqrt((a - s * al + 1) * (a - s * al + 2) * (-a + b + c) * (-a + b + c + 1) * (a - b + c) * (a - b + c + 1))
+           * C(a + 1, b, c, al - s, be + s, g))
+    return lhs, rhs
+
+
+SEC_866 = [
+    ("eq 8.6.152  b-1; a shift, al-/+1", r152),
+    ("eq 8.6.152b middle gather", r152b),
+    ("eq 8.6.153  b+1; a shift, al-/+1", r153),
+]
+
+
+# ===========================================================================
+# 8.6.7  Arguments c, b, gamma, beta change by 1      (eq. 154-156 + a middle
+#        gather).  c shifted by -1,0,+1; beta+/-1, gamma+/-1.
+# ===========================================================================
+def r154():
+    cfg = cfg_master()
+    if cfg is None:
+        return None
+    a, b, c, al, be = cfg
+    if c < 1:
+        return None
+    g = al + be
+    lhs = sqrt((-a + b + c) * (a - b + c) * (a + b - c + 1) * (a + b + c + 1) * (2 * c - 1) / (2 * c + 1)) * C(a, b, c, al, be, g)
+    rhs = (sqrt((b + be) * (b - be + 1) * (c + g) * (c + g - 1)) * C(a, b, c - 1, al, be - 1, g - 1)
+           - 2 * be * sqrt(c ** 2 - g ** 2) * C(a, b, c - 1, al, be, g)
+           - sqrt((b - be) * (b + be + 1) * (c - g) * (c - g - 1)) * C(a, b, c - 1, al, be + 1, g + 1))
+    return lhs, rhs
+
+
+def r155():
+    cfg = cfg_master()
+    if cfg is None:
+        return None
+    a, b, c, al, be = cfg
+    if b < 1 or c < 1:
+        return None
+    s = random.choice([1, -1]); g = al + be
+    lhs = sqrt((b - s * be) * (b - s * be + 1)) * C(a, b - 1, c, al, be, g)
+    rhs = (1 / (2 * c)
+           * sqrt((c + s * g) * (c + s * g - 1) * (a - b + c) * (a - b + c + 1) * (a + b - c) * (a + b - c + 1) / ((2 * c - 1) * (2 * c + 1)))
+           * C(a, b, c - 1, al, be - s, g - s)
+           + s / (2 * c * (c + 1))
+           * sqrt((c + s * g) * (c - s * g + 1) * (-a + b + c) * (a - b + c + 1) * (a + b - c) * (a + b + c + 1))
+           * C(a, b, c, al, be - s, g - s)
+           + 1 / (2 * (c + 1))
+           * sqrt((c - s * g + 1) * (c - s * g + 2) * (-a + b + c) * (-a + b + c + 1) * (a + b + c + 1) * (a + b + c + 2) / ((2 * c + 1) * (2 * c + 3)))
+           * C(a, b, c + 1, al, be - s, g - s))
+    return lhs, rhs
+
+
+def r155b():
+    # the middle gather (labelled chap8:eq:155b): 2beta-type, no b/c shift.
+    # The {-a(a+1)+b(b+1)+c(c+1)} factor sits OUTSIDE the radical.
+    cfg = cfg_master()
+    if cfg is None:
+        return None
+    a, b, c, al, be = cfg
+    if c < 1:
+        return None
+    s = random.choice([1, -1]); g = al + be
+    lhs = sqrt((b + s * be) * (b - s * be + 1)) * C(a, b, c, al, be, g)
+    rhs = (s / (2 * c)
+           * sqrt((c + s * g) * (c + s * g - 1) * (-a + b + c) * (a - b + c) * (a + b - c + 1) * (a + b + c + 1) / ((2 * c - 1) * (2 * c + 1)))
+           * C(a, b, c - 1, al, be - s, g - s)
+           + 1 / (2 * c * (c + 1)) * (-a * (a + 1) + b * (b + 1) + c * (c + 1))
+           * sqrt((c + s * g) * (c - s * g + 1))
+           * C(a, b, c, al, be - s, g - s)
+           - s / (2 * (c + 1))
+           * sqrt((c - s * g + 1) * (c - s * g + 2) * (-a + b + c + 1) * (a - b + c + 1) * (a + b - c) * (a + b + c + 2) / ((2 * c + 1) * (2 * c + 3)))
+           * C(a, b, c + 1, al, be - s, g - s))
+    return lhs, rhs
+
+
+def r156():
+    cfg = cfg_master()
+    if cfg is None:
+        return None
+    a, b, c, al, be = cfg
+    if c < 1:
+        return None
+    s = random.choice([1, -1]); g = al + be
+    lhs = sqrt((b + s * be) * (b + s * be + 1)) * C(a, b + 1, c, al, be, g)
+    rhs = (1 / (2 * c)
+           * sqrt((c + s * g) * (c + s * g - 1) * (-a + b + c) * (-a + b + c + 1) * (a + b + c + 1) * (a + b + c + 2) / ((2 * c - 1) * (2 * c + 1)))
+           * C(a, b, c - 1, al, be - s, g - s)
+           - s / (2 * c * (c + 1))
+           * sqrt((c + s * g) * (c - s * g + 1) * (-a + b + c + 1) * (a - b + c) * (a + b - c + 1) * (a + b + c + 2))
+           * C(a, b, c, al, be - s, g - s)
+           + 1 / (2 * (c + 1))
+           * sqrt((c - s * g + 1) * (c - s * g + 2) * (a - b + c) * (a - b + c + 1) * (a + b - c) * (a + b - c + 1) / ((2 * c + 1) * (2 * c + 3)))
+           * C(a, b, c + 1, al, be - s, g - s))
+    return lhs, rhs
+
+
+SEC_867 = [
+    ("eq 8.6.154  c-1; beta,gamma shift", r154),
+    ("eq 8.6.155  b-1; c shift", r155),
+    ("eq 8.6.155b middle gather", r155b),
+    ("eq 8.6.156  b+1; c shift", r156),
+]
 
 
 # ---------------------------------------------------------------------------
@@ -558,12 +720,12 @@ IMPLEMENTED = [
     ("8.6.3  Arguments change by 1/2", SEC_863),
     ("8.6.4  The case alpha=beta=gamma=0", SEC_864),
     ("8.6.5  Arguments a,b,c change by 1", SEC_865),
+    ("8.6.6  Arguments a,b,alpha,beta change by 1", SEC_866),
+    ("8.6.7  Arguments c,b,gamma,beta change by 1", SEC_867),
 ]
 
 TODO = [
     ("8.6.1  General recursion relations", "eq. 126-128 (sums; eq.128 quasi-powers, exp 1/3 OCR)"),
-    ("8.6.6  Arguments a,b,alpha,beta change by 1", "eq. 152-153"),
-    ("8.6.7  Arguments c,b,gamma,beta change by 1", "eq. 154-156"),
     ("8.6.8  Recursion relations for the R-symbols", "eq. 157-161 (need R-symbol map)"),
 ]
 
