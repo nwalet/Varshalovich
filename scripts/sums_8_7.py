@@ -517,8 +517,6 @@ def r189():
 
 
 def r190():
-    # NOTE: Chap8.tex eq (8.7.190) prints the phase as (-1)^{j-a-g+de}; verified
-    # correct only as (-1)^{j-a+g+de} (the -g should be +g -- an OCR sign flip).
     return _run874(
         lambda a, b, c, d, e, f, g, j, al, de, eta, mu: _four(b, c, e, f, lambda be, ga, ep, ph:
             C(b, c, a, be, ga, al) * C(g, e, b, eta, ep, be) * C(f, d, e, ph, de, ep) * C(f, c, j, ph, ga, mu)),
@@ -528,8 +526,6 @@ def r190():
 
 
 def r191():
-    # NOTE: Chap8.tex eq (8.7.191) prints the sum as sum_{be ga ep}; it must also
-    # run over phi (sum_{be ga ep ph}) -- an OCR omission (verified).
     return _run874(
         lambda a, b, c, d, e, f, g, j, al, de, eta, mu: _four(b, c, e, f, lambda be, ga, ep, ph:
             sgn(c - ga + e - ep) * C(a, b, c, al, be, ga) * C(d, f, e, de, ph, ep)
@@ -549,8 +545,8 @@ SEC_874 = [
     ("eq 8.7.187  four CG + 9j (alt 9j)", r187),
     ("eq 8.7.188  four CG + 9j", r188),
     ("eq 8.7.189  four CG + 9j", r189),
-    ("eq 8.7.190  four CG + 9j (phase OCR)", r190),
-    ("eq 8.7.191  four CG + 9j (sum OCR)", r191),
+    ("eq 8.7.190  four CG + 9j", r190),
+    ("eq 8.7.191  four CG + 9j", r191),
 ]
 
 
