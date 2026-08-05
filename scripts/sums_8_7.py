@@ -16,11 +16,11 @@ Covered
     8.7.1  Sums involving one CG                 eq. 162-164   [done]
     8.7.2  Sums of products of two CG            eq. 165-172   [done]
     8.7.3  three CG (one 6j)                     eq. 173-180   [done]
+    8.7.5  CG and one 6j                         eq. 192-199   [done]
     8.7.7  Additional sums of two CG             eq. 205-208   [done]
 
 Not yet covered:
     8.7.4  four CG (one 9j)                      eq. 181-191   (some OCR damage)
-    8.7.5  CG and one 6j                         eq. 192-199   (next)
     8.7.6  CG and one 9j                         eq. 200-204   (some OCR damage)
 
 Usage:
@@ -90,6 +90,14 @@ def w6(a, b, c, d, e, f):
         return wigner_6j(a, b, c, d, e, f)
     except Exception:
         return S.Zero
+
+
+def sgn(n):
+    """(-1)^n kept symbolic (n may be a momentum sum, not always integer)."""
+    return S.NegativeOne ** n
+
+
+MR = [Rational(i, 2) for i in range(0, 9)]     # internal momentum range 0..4
 
 
 # ===========================================================================
@@ -290,8 +298,6 @@ def r173():
 
 
 def r174():
-    # NOTE: Chap8.tex eq (8.7.174) prints the RHS coefficient as C_{e eps,f phi}^{e eps};
-    # that is an OCR error -- it must be C_{c ga, f phi}^{e eps} (verified here).
     P = _cfg873()
     if P is None:
         return None
@@ -370,13 +376,146 @@ def r180():
 
 SEC_873 = [
     ("eq 8.7.173  three CG + 6j", r173),
-    ("eq 8.7.174  three CG + 6j (RHS coeff OCR)", r174),
+    ("eq 8.7.174  three CG + 6j", r174),
     ("eq 8.7.175  three CG + 6j", r175),
     ("eq 8.7.176  three CG + 6j", r176),
     ("eq 8.7.177  three CG + 6j", r177),
     ("eq 8.7.178  three CG + 6j", r178),
     ("eq 8.7.179  three CG + 6j", r179),
     ("eq 8.7.180  three CG + 6j", r180),
+]
+
+
+# ===========================================================================
+# 8.7.5  Sums of products of CG and one 6j symbol            (eq. 192-199)
+#
+# Form  sum_{internal} [phase] Pi(..) C C {6j} = C C   (two CG on the RHS).
+# The internal (summed) momentum differs per identity; its projection is
+# pinned by the coefficients, so only the momentum is summed (over MR).
+# ===========================================================================
+def r192():
+    a, b, c, d, f = (rj(HALF, 2) for _ in range(5))
+    al = random.choice(proj(a)); be = random.choice(proj(b)); phi = random.choice(proj(f))
+    ga = al + be; de = al + phi; eps = al + be + phi
+    if abs(ga) > c or abs(de) > d:
+        return None
+    rhs = C(a, b, c, al, be, ga) * C(a, f, d, al, phi, de)
+    if rhs == 0:
+        return None
+    lhs = sum((sgn(2 * e) * Pi(c, d) * C(b, d, e, be, de, eps) * C(f, c, e, phi, ga, eps)
+               * w6(a, b, c, e, f, d) for e in MR), S.Zero)
+    return lhs, rhs
+
+
+def r193():
+    a, b, c, d, e = (rj(HALF, 2) for _ in range(5))
+    al = random.choice(proj(a)); be = random.choice(proj(b)); de = random.choice(proj(d))
+    ga = al + be; eps = de + be; phi = de + al + be
+    if abs(ga) > c or abs(eps) > e:
+        return None
+    rhs = C(a, b, c, al, be, ga) * C(d, b, e, de, be, eps)
+    if rhs == 0:
+        return None
+    lhs = sum((sgn(c + d + f) * Pi(c, e) * C(e, a, f, eps, al, phi) * C(d, c, f, de, ga, phi)
+               * w6(b, a, c, f, d, e) for f in MR), S.Zero)
+    return lhs, rhs
+
+
+def r194():
+    a, b, d, e, f = (rj(HALF, 2) for _ in range(5))
+    be = random.choice(proj(b)); de = random.choice(proj(d)); phi = random.choice(proj(f))
+    eps = be + de; al = phi + de; ga = be - phi
+    if abs(eps) > e or abs(al) > a:
+        return None
+    rhs = C(b, d, e, be, de, eps) * C(f, d, a, phi, de, al)
+    if rhs == 0:
+        return None
+    lhs = sum((sgn(2 * e - d + al + phi) * Pi(a, e) * C(f, b, c, -phi, be, ga)
+               * C(e, a, c, eps, -al, ga) * w6(c, f, b, d, e, a) for c in MR), S.Zero)
+    return lhs, rhs
+
+
+def r195():
+    a, b, d, e, f = (rj(HALF, 2) for _ in range(5))
+    al = random.choice(proj(a)); be = random.choice(proj(b)); phi = random.choice(proj(f))
+    de = al + phi; eps = al + be + phi; ga = al + be
+    if abs(de) > d or abs(eps) > e:
+        return None
+    rhs = C(a, f, d, al, phi, de) * C(b, e, d, -be, eps, de)
+    if rhs == 0:
+        return None
+    lhs = sum((sgn(c + d - be - phi) * (2 * d + 1) * C(a, b, c, al, be, ga)
+               * C(f, e, c, -phi, eps, ga) * w6(a, b, c, e, f, d) for c in MR), S.Zero)
+    return lhs, rhs
+
+
+def r196():
+    a, b, d, e, f = (rj(HALF, 2) for _ in range(5))
+    al = random.choice(proj(a)); be = random.choice(proj(b)); phi = random.choice(proj(f))
+    de = al + phi; eps = al + be + phi; ga = al + be
+    if abs(de) > d or abs(eps) > e:
+        return None
+    rhs = C(b, d, e, be, de, eps) * C(a, f, d, al, phi, de)
+    if rhs == 0:
+        return None
+    lhs = sum((sgn(2 * e) * Pi(c, d) * C(a, b, c, al, be, ga) * C(f, c, e, phi, ga, eps)
+               * w6(a, b, c, e, f, d) for c in MR), S.Zero)
+    return lhs, rhs
+
+
+def r197():
+    a, b, c, d, e = (rj(HALF, 2) for _ in range(5))
+    al = random.choice(proj(a)); be = random.choice(proj(b)); de = random.choice(proj(d))
+    eps = be + al; ga = de + eps; phi = be + de
+    if abs(eps) > e or abs(ga) > c:
+        return None
+    rhs = C(b, a, e, be, al, eps) * C(d, e, c, de, eps, ga)
+    if rhs == 0:
+        return None
+    lhs = sum((sgn(2 * c) * Pi(e, f) * C(b, d, f, be, de, phi) * C(a, f, c, al, phi, ga)
+               * w6(a, b, e, d, c, f) for f in MR), S.Zero)
+    return lhs, rhs
+
+
+def r198():
+    a, b, d, e, f = (rj(HALF, 2) for _ in range(5))
+    al = random.choice(proj(a)); be = random.choice(proj(b)); phi = random.choice(proj(f))
+    de = al + phi; eps = al + be + phi; ga = al + be
+    if abs(de) > d or abs(eps) > e:
+        return None
+    rhs = C(b, e, d, -be, eps, de) * C(a, f, d, al, phi, de)
+    if rhs == 0:
+        return None
+    lhs = sum((sgn(e + d - be) * sqrt((2 * c + 1) * (2 * d + 1) ** 2 / (2 * e + 1))
+               * C(a, b, c, al, be, ga) * C(f, c, e, phi, ga, eps) * w6(a, b, c, e, f, d)
+               for c in MR), S.Zero)
+    return lhs, rhs
+
+
+def r199():
+    a, b, d, e, f = (rj(HALF, 2) for _ in range(5))
+    be = random.choice(proj(b)); de = random.choice(proj(d)); phi = random.choice(proj(f))
+    eps = de + be; al = phi + de; ga = be - phi
+    if abs(eps) > e or abs(al) > a:
+        return None
+    rhs = C(d, b, e, de, be, eps) * C(f, d, a, phi, de, al)
+    if rhs == 0:
+        return None
+    lhs = sum((sgn(2 * e) * sqrt((2 * a + 1) * (2 * c + 1) ** 2 / (2 * b + 1))
+               * C(f, c, b, phi, ga, be) * C(c, a, e, ga, al, eps) * w6(c, f, b, d, e, a)
+               for c in MR), S.Zero)
+    return lhs, rhs
+
+
+SEC_875 = [
+    ("eq 8.7.192  CG + 6j (sum e)", r192),
+    ("eq 8.7.193  CG + 6j (sum f)", r193),
+    ("eq 8.7.194  CG + 6j (sum c)", r194),
+    ("eq 8.7.195  CG + 6j (sum c)", r195),
+    ("eq 8.7.196  CG + 6j (sum c)", r196),
+    ("eq 8.7.197  CG + 6j (sum f)", r197),
+    ("eq 8.7.198  CG + 6j (sum c)", r198),
+    ("eq 8.7.199  CG + 6j (sum c)", r199),
 ]
 
 
@@ -459,12 +598,12 @@ IMPLEMENTED = [
     ("8.7.1  Sums involving one CG", SEC_871),
     ("8.7.2  Sums of products of two CG", SEC_872),
     ("8.7.3  three CG (one 6j)", SEC_873),
+    ("8.7.5  CG and one 6j", SEC_875),
     ("8.7.7  Additional sums of two CG", SEC_877),
 ]
 
 TODO = [
     ("8.7.4  four CG (one 9j)      eq. 181-191", "some indices still OCR-damaged"),
-    ("8.7.5  CG and one 6j         eq. 192-199", "next"),
     ("8.7.6  CG and one 9j         eq. 200-204", "some indices still OCR-damaged"),
 ]
 
