@@ -14,7 +14,15 @@ Usage:  python3 check_10_9.py
 """
 import math
 from sympy import Rational, S, sqrt
-from sympy.physics.wigner import wigner_6j, wigner_9j
+from sympy.physics.wigner import wigner_3j, wigner_6j, wigner_9j
+
+
+def w3(a, b, c, al, be, ga):
+    if abs(al) > a or abs(be) > b or abs(ga) > c or al + be + ga != 0:
+        return S.Zero
+    if not (abs(a - b) <= c <= a + b and (a + b + c) == int(a + b + c)):
+        return S.Zero
+    return wigner_3j(a, b, c, al, be, ga)
 
 H = Rational(1, 2)
 
@@ -184,6 +192,94 @@ def run():
                             b7 += 0 if close(lhs, rhs) else 1
     print(f"  [{'OK  ' if g7 and not b7 else 'FAIL'}] eq 10.9.7  {{.. ; g+1 g 1}} recursion ({g7 - b7}/{g7})")
     ok &= g7 > 0 and b7 == 0
+
+    # eq 10.9.9 : {a b c; d e f; 1/2 1/2 1}{c f 1; 1/2 1/2 g} = 6j products
+    g9 = b9 = 0
+    for a in Rp:
+        for b in Rp:
+            for c in Rp:
+                for d in Rp:
+                    for e in Rp:
+                        for f in Rp:
+                            for g in Rp:
+                                t = (a, b, c, d, e, f, H, H, 1)
+                                if not v9(t):
+                                    continue
+                                w6l = w6(c, f, 1, H, H, g)
+                                if w6l == 0:   # identity meaningful only where this 6j != 0
+                                    continue
+                                lhs = w9(*t) * w6l
+                                rhs = ((-1) ** (2 * g) / 3 * w6(a, b, c, H, g, e) * w6(e, d, f, H, g, a)
+                                       - (-1) ** (b + d - g) / (6 * (2 * c + 1)) * w6(a, b, c, e, d, H) * (1 if f == c else 0))
+                                g9 += 1
+                                b9 += 0 if close(lhs, rhs) else 1
+    print(f"  [{'OK  ' if g9 and not b9 else 'FAIL'}] eq 10.9.9  (1/2 1/2 1) -> 6j     ({g9 - b9}/{g9})")
+    ok &= g9 > 0 and b9 == 0
+
+    # eq 10.9.10 : (1/2 1/2 1) triad -> 3jm, d+e+c even
+    g10 = b10 = 0
+    for a in Rp:
+        for b in Rp:
+            for c in Rp:
+                for d in Rp:
+                    for e in Rp:
+                        t = (a, b, c, d, e, c, H, H, 1)
+                        if not v9(t):
+                            continue
+                        if not (c == int(c) and d == int(d) and e == int(e) and (c + d + e) % 2 == 0):
+                            continue
+                        lhs = sqrt(6 * (2 * c + 1) * (2 * d + 1) * (2 * e + 1)) * w3(c, d, e, 0, 0, 0) * w9(*t)
+                        rhs = w3(a, b, c, H, H, -1)
+                        g10 += 1
+                        b10 += 0 if close(lhs, rhs) else 1
+    print(f"  [{'OK  ' if g10 and not b10 else 'FAIL'}] eq 10.9.10 (1/2 1/2 1) -> 3jm    ({g10 - b10}/{g10})")
+    ok &= g10 > 0 and b10 == 0
+
+    # eq 10.9.11 : c+1 case (d+e+c odd)
+    g11 = b11 = 0
+    for a in Rp:
+        for b in Rp:
+            for c in Rp:
+                for d in Rp:
+                    for e in Rp:
+                        t = (a, b, c, d, e, c + 1, H, H, 1)
+                        if not v9(t):
+                            continue
+                        if not (c == int(c) and d == int(d) and e == int(e) and (c + d + e) % 2 == 1):
+                            continue
+                        lhs = w3(c + 1, d, e, 0, 0, 0) * w9(*t)
+                        num = (d - a) * (2 * a + 1) + (e - b) * (2 * b + 1) + c + 1
+                        rhs = ((-1) ** (b + e + H) * num
+                               / sqrt(6 * (c + 1) * (2 * c + 1) * (2 * c + 3) * (2 * d + 1) * (2 * e + 1))
+                               * w3(a, b, c, H, -H, 0))
+                        g11 += 1
+                        b11 += 0 if close(lhs, rhs) else 1
+    print(f"  [{'OK  ' if g11 and not b11 else 'FAIL'}] eq 10.9.11 c+1 -> 3jm           ({g11 - b11}/{g11})")
+    ok &= g11 > 0 and b11 == 0
+
+    # eq 10.9.12 : c-1 case
+    g12 = b12 = 0
+    for a in Rp:
+        for b in Rp:
+            for c in Rp:
+                for d in Rp:
+                    for e in Rp:
+                        if c - 1 < 0:
+                            continue
+                        t = (a, b, c, d, e, c - 1, H, H, 1)
+                        if not v9(t):
+                            continue
+                        if not (c == int(c) and d == int(d) and e == int(e) and (c + d + e) % 2 == 1):
+                            continue
+                        lhs = w3(c - 1, d, e, 0, 0, 0) * w9(*t)
+                        num = (d - a) * (2 * a + 1) + (e - b) * (2 * b + 1) - c
+                        rhs = ((-1) ** (b + e + H) * num
+                               / sqrt(6 * c * (2 * c + 1) * (2 * c - 1) * (2 * d + 1) * (2 * e + 1))
+                               * w3(a, b, c, H, -H, 0))
+                        g12 += 1
+                        b12 += 0 if close(lhs, rhs) else 1
+    print(f"  [{'OK  ' if g12 and not b12 else 'FAIL'}] eq 10.9.12 c-1 -> 3jm           ({g12 - b12}/{g12})")
+    ok &= g12 > 0 and b12 == 0
 
     print("\nALL CHECKED 10.9 FORMS PASS" if ok else "\nSOME 10.9 CHECKS FAILED")
     return ok
