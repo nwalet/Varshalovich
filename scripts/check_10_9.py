@@ -299,10 +299,11 @@ def run():
                 for d in Rp:
                     for e in Rp:
                         for g in Rp:
-                            lhs6 = w6(a, b, c + 1, d + 1, e, c)
                             br = ((c + 1) * (a - d) * (a + d + 1) - (g + 1) * (a - b) * (a + b + 1)
                                   + (g + 1) * (c + 1) * (g - c))
-                            lhs = lhs6 * br
+                            lhs = (w9(a, b, c + 1, d, e, c, g + 1, g, 1) * br
+                                   * sqrt((2 * g + 3) * (2 * g + 2) * (2 * g + 1) * (2 * c + 3) * (2 * c + 2) * (2 * c + 1))
+                                   * (-1) ** (b + c + d + g))
                             A1 = Aq(a + H, d, g + H, b, c + H)
                             A2 = Aq(d + H, a, g + H, e, c + H)
                             A3 = Aq(b + H, a, c + H, e, g + H)
@@ -313,10 +314,8 @@ def run():
                                    - (g + 1) * A3 * w6(a, b, c, e, d, g + 1))
                             g8 += 1
                             b8 += 0 if close(lhs, rhs) else 1
-    # eq 10.9.8 FLAGGED: as transcribed it fails badly (RHS too large by varying
-    # factors) even where all four 6j are on valid triangles -- an OCR error
-    # remains (A_q args / bracket / a 6j argument); needs the scan.
-    print(f"  [FLAG] eq 10.9.8  6j recursion (A_q)     ({g8 - b8}/{g8}, needs scan)")
+    print(f"  [{'OK  ' if g8 and not b8 else 'FAIL'}] eq 10.9.8  9j recursion (A_q)     ({g8 - b8}/{g8})")
+    ok &= g8 > 0 and b8 == 0
 
     print("\nALL CHECKED 10.9 FORMS PASS" if ok else "\nSOME 10.9 CHECKS FAILED")
     return ok
