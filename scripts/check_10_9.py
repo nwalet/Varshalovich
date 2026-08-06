@@ -133,6 +133,58 @@ def run():
     print(f"  [{'OK  ' if g6 and not b6 else 'FAIL'}] eq 10.9.6  {{.. ; g g 1}} -> 6j    ({g6 - b6}/{g6})")
     ok &= g6 > 0 and b6 == 0
 
+    # eq 10.9.2 : the 8 permuted 9j are all equal
+    g2 = b2 = 0
+    for c in Rp:
+        for e in Rp:
+            for b in Rp:
+                for g in Rp:
+                    for d in Rp:
+                        for a in Rp:
+                            ref = w9(0, c, c, g, e, b, g, d, a)
+                            if not v9((0, c, c, g, e, b, g, d, a)):
+                                continue
+                            forms = [(c, 0, c, d, g, a, e, g, b), (g, g, 0, e, d, c, b, a, c),
+                                     (g, b, e, 0, c, c, g, a, d), (a, g, d, c, 0, c, b, g, e),
+                                     (b, a, c, g, g, 0, e, d, c), (c, e, d, c, b, a, 0, g, g),
+                                     (d, c, e, a, c, b, g, 0, g)]
+                            for fm in forms:
+                                g2 += 1
+                                b2 += 0 if close(w9(*fm), ref) else 1
+    print(f"  [{'OK  ' if g2 and not b2 else 'FAIL'}] eq 10.9.2  8 permuted 9j equal  ({g2 - b2}/{g2})")
+    ok &= g2 > 0 and b2 == 0
+
+    # eq 10.9.7 : {a b c; d e c; g+1 g 1} recursion into two 6j
+    g7 = b7 = 0
+    for a in Rp:
+        for b in Rp:
+            for c in Rp:
+                for d in Rp:
+                    for e in Rp:
+                        for g in Rp:
+                            t = (a, b, c, d, e, c, g + 1, g, 1)
+                            if not v9(t):
+                                continue
+                            fac = (-1) ** (b + d + g + c) * sqrt(Rational((2 * g + 3) * (2 * g + 2) * (2 * g + 1) * (2 * c + 2) * (2 * c + 1) * (2 * c), 2))
+                            lhs = w9(*t) * fac
+
+                            def rad(*xs):
+                                p = S.One
+                                for x in xs:
+                                    if x < 0:
+                                        return None
+                                    p *= x
+                                return sqrt(p)
+                            r1 = rad(b - e + g + 1, -b + e + g + 1, b + e + g + 2, b + e - g)
+                            r2 = rad(a - d + g + 1, -a + d + g + 1, a + d + g + 2, a + d - g)
+                            if r1 is None or r2 is None:
+                                continue
+                            rhs = r1 * w6(a, d, g + 1, e, b, c) + r2 * w6(a, d, g, e, b, c)
+                            g7 += 1
+                            b7 += 0 if close(lhs, rhs) else 1
+    print(f"  [{'OK  ' if g7 and not b7 else 'FAIL'}] eq 10.9.7  {{.. ; g+1 g 1}} recursion ({g7 - b7}/{g7})")
+    ok &= g7 > 0 and b7 == 0
+
     print("\nALL CHECKED 10.9 FORMS PASS" if ok else "\nSOME 10.9 CHECKS FAILED")
     return ok
 
