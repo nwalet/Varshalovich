@@ -108,6 +108,88 @@ def eq82(a, b, c, d, e, f, h, j):
     return close(pref * s, w9((a, b, c, d, e, f, g, h, j)))
 
 
+def prodf(args):
+    if any(F(t) is None for t in args):
+        return None
+    p = S.One
+    for t in args:
+        p *= fac(t)
+    return p
+
+
+# ---- eq 10.8.10 : {d+g b c; d e f; g h c+f} ----
+def eq810(b, c, d, e, f, g, h):
+    a, j = d + g, c + f
+    v = (a, b, c, d, e, f, g, h, j)
+    if not valid9(v):
+        return None
+    pref = ((-1) ** (d + h - b - f) * sqrt(fac(2 * c) * fac(2 * f) * fac(2 * d) * fac(2 * g)
+            / (fac(2 * c + 2 * f + 1) * fac(2 * d + 2 * g + 1))) * fac(d + e - f)
+            / (D(d + g, b, c) * D(c + f, g, h))
+            * fac(b + e - h) * fac(d + g + b - c) * fac(c + f + h - g)
+            / (D(b, e, h) * D(d, e, f) * fac(d + e + f + 1) * fac(b + e + h + 1) * fac(d + g + b + c + 1)))
+    s = S.Zero
+    for x in nrange(2 * e, b + e - h, d + e - f):
+        t = prodf([2 * e - x, h + b - e + x, d + g + e + c - h - x])
+        u = prodf([x, b + e - h - x, d + e - f - x])
+        if t is None or u is None:
+            continue
+        s += t / u
+    return close(pref * s, w9(v))
+
+
+# ---- eq 10.8.11 : {a b a+b; d e f; a+d h j} ----
+def eq811(a, b, d, e, f, h, j):
+    v = (a, b, a + b, d, e, f, a + d, h, j)
+    if not valid9(v):
+        return None
+    pref = (D(a + b, f, j) * D(a + d, h, j) / (D(b, e, h) * D(d, e, f))
+            * sqrt(fac(2 * b) * fac(2 * d) / (fac(2 * a + 2 * b + 1) * fac(2 * a + 2 * d + 1)))
+            * fac(a + b + f + j + 1) * fac(a + d + h + j + 1) * fac(h - b + e) * fac(e - d + f)
+            / (fac(f + j - a - b) * fac(h + j - a - d) * fac(b + e + h + 1) * fac(d + e + f + 1)))
+    s = S.Zero
+    for x in nrange(a + b + f - j, a + d + h - j):
+        t = prodf([a + b + e + d - j - x, j + f - a - b + x, j + h - a - d + x])
+        u = prodf([x, a + b + f - j - x, a + d + h - j - x, j + e - a - b - d + x, 2 * j + 1 + x])
+        if t is None or u is None:
+            continue
+        s += (-1) ** x * t / u
+    return close(pref * s, w9(v))
+
+
+# ---- eq 10.8.12 : {a b a-b; d e f; a-d h j} (sum from x=1) ----
+def eq812(a, b, d, e, f, h, j):
+    if a - b < 0 or a - d < 0:
+        return None
+    v = (a, b, a - b, d, e, f, a - d, h, j)
+    if not valid9(v):
+        return None
+    pref = ((-1) ** (b + f - d - h) * sqrt(fac(2 * a - 2 * b) * fac(2 * a - 2 * d) * fac(2 * b) * fac(2 * d))
+            / (D(a - b, f, j) * D(a - d, h, j) * D(b, e, h) * D(d, e, f))
+            * fac(b + f + j - a) * fac(d + h + j - a) * fac(h - b + e) * fac(e - d + f)
+            / (fac(a - b + f + j + 1) * fac(a - d + h + j + 1) * fac(b + e + h + 1) * fac(d + e + f + 1)))
+    s = S.Zero
+    for x in range(1, int(2 * j) + 3):
+        t = prodf([x - 1, b + e + d - a - j + x - 1, a - d + h + j - x + 1, a - b + f + j - x + 1])
+        u = prodf([2 * j + 1 - x, b + f - a - j + x - 1, d + h - a - j + x - 1, a + e + j - b - d - x + 1])
+        if t is None or u is None:
+            continue
+        s += t / u
+    return close(pref * s, w9(v))
+
+
+# ---- eq 10.8.13 : {a b a+b; d e f; g h a+b+f} (closed form) ----
+def eq813(a, b, d, e, f, g, h):
+    v = (a, b, a + b, d, e, f, g, h, a + b + f)
+    if not valid9(v):
+        return None
+    val = ((-1) ** (a + d - g) * D(a + b + f, g, h) / (D(a, d, g) * D(b, e, h) * D(d, e, f))
+           * sqrt(fac(2 * a) * fac(2 * b) * fac(2 * f) / ((2 * a + 2 * b + 1) * fac(2 * a + 2 * b + 2 * f + 1)))
+           * fac(a + b + g + h + f + 1) * fac(g - a + d) * fac(e - b + h) * fac(d + e - f)
+           / (fac(g + h - a - b - f) * fac(a + g + d + 1) * fac(b + e + h + 1) * fac(d + e + f + 1)))
+    return close(val, w9(v))
+
+
 CASES = [(1, 1, 1, 1, 1, 1, 1, 1), (1, 1, 2, 1, 1, 1, 1, 2), (1, 2, 2, 1, 1, 1, 2, 1),
          (H, 1, H, 1, 1, 1, Rational(3, 2), 1), (1, 1, 1, 1, 2, 2, 1, 2),
          (Rational(3, 2), 1, H, 1, 1, 1, 1, Rational(3, 2)), (1, 2, 1, 1, 1, 2, 2, 1)]
@@ -174,7 +256,30 @@ def run():
         ok &= oo
         print(f"  [{'OK  ' if oo else 'FAIL'}] {name:24s}    ({sum(rs)}/{len(rs)} cases)")
 
-    print("\n(remaining 10.8.10-10.8.31 pending)")
+    # eq 10.8.10 - 10.8.13 : iterate their own free-parameter grids
+    P = [H, 1, Rational(3, 2), 2]
+
+    def scan(name, fn, nvars):
+        good = bad = 0
+        import itertools
+        for combo in itertools.product(P, repeat=nvars):
+            r = fn(*combo)
+            if r is None:
+                continue
+            good += 1
+            if not r:
+                bad += 1
+        okk = good > 0 and bad == 0
+        print(f"  [{'OK  ' if okk else 'FAIL'}] {name:24s}    ({good - bad}/{good} cases)")
+        return okk
+
+    ok &= scan("eq 10.8.10 algebraic sum", eq810, 7)
+    ok &= scan("eq 10.8.11 algebraic sum", eq811, 7)
+    ok &= scan("eq 10.8.12 algebraic sum", eq812, 7)
+    ok &= scan("eq 10.8.13 closed form", eq813, 7)
+
+    print("\nALL 10.8 (thru 10.8.13) PASS" if ok else "\nSOME 10.8 CHECKS FAILED")
+    print("(remaining 10.8.14-10.8.31 pending)")
     return ok
 
 
