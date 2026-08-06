@@ -190,6 +190,172 @@ def eq813(a, b, d, e, f, g, h):
     return close(val, w9(v))
 
 
+def chk(v, val):
+    if val is None:
+        return None
+    return close(val, w9(v))
+
+
+# ---- Sec 10.8.4 three degenerate triads ----
+def eq814(a, b, d, e, g, h):
+    v = (a, b, a + b, d, e, d + e, g, h, g + h)
+    if not valid9(v):
+        return None
+    return chk(v, D(a + b, d + e, g + h) / (D(a, d, g) * D(b, e, h))
+               * fac(a + b + e + d + g + h + 1) / (fac(a + d + g + 1) * fac(b + e + h + 1))
+               * sqrt(fac(2 * a) * fac(2 * b) * fac(2 * d) * fac(2 * e) * fac(2 * g) * fac(2 * h)
+                      / (fac(2 * a + 2 * b + 1) * fac(2 * d + 2 * e + 1) * fac(2 * g + 2 * h + 1))))
+
+
+def eq815(b, c, d, e, g, h):
+    v = (c + b, b, c, d, e, d + e, g, h, g + h)
+    if not valid9(v) or (d - b - c + g) < 0:
+        return None
+    return chk(v, (-1) ** (b + e - h) * D(c + b, d, g) / (D(c, d + e, g + h) * D(b, e, h))
+               * fac(d + e - c + g + h) / (fac(b + e + h + 1) * fac(d - b - c + g))
+               * sqrt(fac(2 * b) * fac(2 * c) * fac(2 * d) * fac(2 * e) * fac(2 * g) * fac(2 * h)
+                      / (fac(2 * b + 2 * c + 1) * fac(2 * d + 2 * e + 1) * fac(2 * g + 2 * h + 1))))
+
+
+def eq816(a, b, e, f, g, h):
+    v = (a, b, a + b, e + f, e, f, g, h, a + b + f)
+    if not valid9(v):
+        return None
+    return chk(v, (-1) ** (a + e + f - g) * D(a + b + f, g, h) / (D(a, g, e + f) * D(b, e, h))
+               * fac(a + b + g + h + f + 1) * fac(e - b + h) / (fac(g + h - a - b - f) * fac(b + e + h + 1))
+               * fac(e + g + f - a) / fac(a + e + f + g + 1)
+               * sqrt(fac(2 * a) * fac(2 * b) * fac(2 * e)
+                      / ((2 * a + 2 * b + 1) * fac(2 * e + 2 * f + 1) * fac(2 * a + 2 * b + 2 * f + 1))))
+
+
+def eq817(a, b, c, d, f, j):
+    v = (a, b, c, d, d + f, f, a + d, b + d + f, j)
+    if not valid9(v):
+        return None
+    return chk(v, D(a + d, b + d + f, j) / (D(a, b, c) * D(c, f, j))
+               * fac(a + b + 2 * d + f + j + 1) * fac(a - b + c) * fac(j + c - f)
+               / (fac(a + b + c + 1) * fac(c + f + j + 1) * fac(a - b - f + j))
+               * sqrt(fac(2 * a) * fac(2 * b) * fac(2 * f)
+                      / (fac(2 * a + 2 * d + 1) * (2 * f + 2 * d + 1) * fac(2 * b + 2 * d + 2 * f + 1))))
+
+
+# ---- Sec 10.8.5 four degenerate triads ----
+def eq818(a, b, d, e, f):
+    v = (a, b, a + b, d, e, f, a + d, b + e, a + b + f)
+    if not valid9(v):
+        return None
+    return chk(v, D(a + b + f, a + d, b + e) / D(d, e, f)
+               * fac(2 * a + 2 * b + d + e + f + 1) / fac(d + e + f + 1)
+               * sqrt(fac(2 * e) * fac(2 * d) * fac(2 * f)
+                      / ((2 * a + 2 * b + 1) * fac(2 * a + 2 * d + 1) * fac(2 * e + 2 * b + 1) * fac(2 * a + 2 * b + 2 * f + 1))))
+
+
+def eq820(a, b, f, g, h):
+    v = (a, b, a + b, a + g, b + h, f, g, h, a + b + f)
+    if not valid9(v) or (-a - b + g + h - f) < 0:
+        return None
+    return chk(v, (-1) ** (2 * a) * D(a + b + f, g, h) / D(a + g, b + h, f)
+               * fac(a + b + g + h - f) / fac(-a - b + g + h - f)
+               * sqrt(fac(2 * f) * fac(2 * g) * fac(2 * h)
+                      / ((2 * a + 2 * b + 1) * fac(2 * a + 2 * b + 2 * f + 1) * fac(2 * a + 2 * g + 1) * fac(2 * b + 2 * h + 1))))
+
+
+def eq821(a, b, d, f, h):
+    v = (a, b, a + b, d, b + h, f, a + d, h, a + b + f)
+    if not valid9(v) or (d + h - f - b) < 0:
+        return None
+    return chk(v, D(h, a + d, a + b + f) / D(d, f, b + h)
+               * fac(2 * a + b + d + h + f + 1) * fac(d + b + h - f) / (fac(h + d + b + f + 1) * fac(d + h - f - b))
+               * sqrt(fac(2 * d) * fac(2 * f) * fac(2 * h)
+                      / ((2 * a + 2 * b + 1) * fac(2 * a + 2 * d + 1) * fac(2 * b + 2 * h + 1) * fac(2 * a + 2 * b + 2 * f + 1))))
+
+
+def eq822(a, b, f, g, h):
+    v = (a, b, a + b, a + g, a + g + f, f, g, h, a + b + f)
+    if not valid9(v):
+        return None
+    return chk(v, (-1) ** (2 * a) * D(a + b + f, g, h) / D(b, h, a + g + f)
+               * fac(a - b + f + g + h) / fac(g + h - a - b - f)
+               * sqrt(fac(2 * b) * fac(2 * g)
+                      / ((2 * a + 2 * g + 1) * (2 * a + 2 * b + 1) * fac(2 * a + 2 * f + 2 * g + 1) * fac(2 * a + 2 * b + 2 * f + 1))))
+
+
+def eq823(a, b, d, f, h, third):
+    v = (a, b, a + b, d, d + f, f, a + d, h, a + b + f)
+    if not valid9(v) or (h + d - f - b) < 0:
+        return None
+    return chk(v, D(a + b + f, a + d, h) / D(b, d + f, f)
+               * fac(2 * a + b + d + h + f + 1) * fac(h - b + d + f) / (fac(b + d + f + h + 1) * fac(h + d - f - b))
+               * sqrt(fac(2 * b) * fac(2 * d) * fac(third)
+                      / ((2 * a + 2 * b + 1) * fac(2 * a + 2 * d + 1) * fac(2 * d + 2 * f + 1) * fac(2 * a + 2 * b + 2 * f + 1))))
+
+
+def eq824(a, b, d, f, g):
+    v = (a, b, a + b, d, d + f, f, g, b + d + f, a + b + f)
+    if not valid9(v):
+        return None
+    return chk(v, (-1) ** (a + d - g) * D(a + b + f, g, d + f + b) / D(a, d, g)
+               * fac(2 * b + 2 * f + a + d + g + 1) / fac(a + d + g + 1)
+               * sqrt(fac(2 * a) * fac(2 * d)
+                      / ((2 * a + 2 * b + 1) * (2 * d + 2 * f + 1) * fac(2 * a + 2 * b + 2 * f + 1) * fac(2 * d + 2 * b + 2 * f + 1))))
+
+
+def eq825(a, b, d, f, h):
+    v = (a, b, a + b, d, b + h, f, a + b + f + h, h, a + b + f)
+    if not valid9(v) or (b + d + h - f) < 0:
+        return None
+    return chk(v, (-1) ** (d - b - f - h) / (D(d, f, b + h) * D(a, d, a + b + f + h))
+               * fac(b + d + h - f) / (fac(2 * a + d + b + f + h + 1) * (d + b + h + f + 1))
+               * sqrt(fac(2 * a) * fac(2 * f) * fac(2 * a + 2 * b + 2 * h + 2 * f + 1)
+                      / ((2 * a + 2 * b + 1) * (2 * a + 2 * b + 2 * f + 1) * fac(2 * b + 2 * h + 1))))
+
+
+def eq826(a, b, e, f, j, third):
+    v = (a, b, a + b, e + f, e, f, a + e + f, b + e, j)
+    if not valid9(v):
+        return None
+    return chk(v, (-1) ** (f + a + b - j) * D(j, b + e, a + e + f) / D(f, a + b, j)
+               * fac(f + j + b + a + 2 * e + 1) / fac(f + a + b + j + 1)
+               * sqrt(fac(2 * f) * fac(2 * b) * fac(third)
+                      / ((2 * f + 2 * e + 1) * fac(2 * e + 2 * b + 1) * fac(2 * a + 2 * b + 1) * fac(2 * f + 2 * e + 2 * a + 1))))
+
+
+# ---- Sec 10.8.6 five / six degenerate ----
+def eq827(a, b, d, e):
+    v = (a, b, a + b, d, e, d + e, a + d, b + e, a + b + d + e)
+    if not valid9(v):
+        return None
+    return chk(v, 1 / sqrt((2 * a + 2 * b + 1) * (2 * d + 2 * e + 1) * (2 * a + 2 * d + 1) * (2 * b + 2 * e + 1)))
+
+
+def eq828(a, b):
+    v = (a, b, a + b, a, b, a + b, 2 * a, 2 * b, 2 * a + 2 * b)
+    if not valid9(v):
+        return None
+    return chk(v, 1 / ((2 * a + 2 * b + 1) * sqrt((4 * a + 1) * (4 * b + 1))))
+
+
+def eq829(a):
+    v = (a, a, 2 * a, a, a, 2 * a, 2 * a, 2 * a, 4 * a)
+    if not valid9(v):
+        return None
+    return chk(v, S(1) / (4 * a + 1) ** 2)
+
+
+def eq830(a, b, f, g):
+    v = (a, b, a + b, a + g, a + g + f, f, g, a + b + f + g, a + b + f)
+    if not valid9(v):
+        return None
+    return chk(v, (-1) ** (2 * a) / sqrt((2 * a + 2 * g + 1) * (2 * a + 2 * b + 1) * (2 * a + 2 * b + 2 * f + 1) * (2 * a + 2 * g + 2 * f + 1)))
+
+
+def eq831(a, b, f):
+    v = (a, b, a + b, a + b, a + b + f, f, b, a + 2 * b + f, a + b + f)
+    if not valid9(v):
+        return None
+    return chk(v, (-1) ** (2 * a) / ((2 * a + 2 * b + 1) * (2 * a + 2 * b + 2 * f + 1)))
+
+
 CASES = [(1, 1, 1, 1, 1, 1, 1, 1), (1, 1, 2, 1, 1, 1, 1, 2), (1, 2, 2, 1, 1, 1, 2, 1),
          (H, 1, H, 1, 1, 1, Rational(3, 2), 1), (1, 1, 1, 1, 2, 2, 1, 2),
          (Rational(3, 2), 1, H, 1, 1, 1, 1, Rational(3, 2)), (1, 2, 1, 1, 1, 2, 2, 1)]
@@ -278,8 +444,22 @@ def run():
     ok &= scan("eq 10.8.12 algebraic sum", eq812, 7)
     ok &= scan("eq 10.8.13 closed form", eq813, 7)
 
-    print("\nALL 10.8 (thru 10.8.13) PASS" if ok else "\nSOME 10.8 CHECKS FAILED")
-    print("(remaining 10.8.14-10.8.31 pending)")
+    for name, fn, n in [("eq 10.8.14", eq814, 6), ("eq 10.8.15", eq815, 6), ("eq 10.8.16", eq816, 6),
+                        ("eq 10.8.17", eq817, 6), ("eq 10.8.18", eq818, 5), ("eq 10.8.20", eq820, 5),
+                        ("eq 10.8.21", eq821, 5), ("eq 10.8.22", eq822, 5), ("eq 10.8.24", eq824, 5),
+                        ("eq 10.8.25", eq825, 5), ("eq 10.8.27", eq827, 4), ("eq 10.8.28", eq828, 2),
+                        ("eq 10.8.29", eq829, 1), ("eq 10.8.30", eq830, 4), ("eq 10.8.31", eq831, 3)]:
+        ok &= scan(name + " closed form", fn, n)
+
+    # FLAGGED (OCR errors that could not be reconstructed numerically):
+    #  10.8.19 : LHS printed as a 4x2 array, not a valid 3x3 9j.
+    #  10.8.23 : an argument-dependent error remains beyond the doubled (2d)!(2d)!.
+    #  10.8.26 : an argument-dependent error remains beyond the doubled (2b)!(2b)!.
+    print("  [FLAG] eq 10.8.19  LHS is an OCR-mangled 4x2 array, not a valid 9j")
+    print("  [FLAG] eq 10.8.23  argument-dependent OCR error (doubled (2d)! and more)")
+    print("  [FLAG] eq 10.8.26  argument-dependent OCR error (doubled (2b)! and more)")
+
+    print("\nALL CHECKED 10.8 FORMS PASS" if ok else "\nSOME 10.8 CHECKS FAILED")
     return ok
 
 
