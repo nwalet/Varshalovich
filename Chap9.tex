@@ -608,7 +608,7 @@ If $R \gg 1$ and $a, b, c$ etc. are arbitrary, one gets the following asymptotic
 where $\alpha=f-e, \beta=d-f, \gamma=d-e$.\\
 For the $6 j$ symbols and the $3 j m$ symbols this relation assumes the form [47]
 \begin{equation}
-\sixj{a}{b}{c}{d+R}{e+R}{f+r}  \label{eq:9:9:2} \approx \frac{(-1)^{a+b+c+2(d+e+f)}}{\sqrt{2 R}}\threej{a }{ b }{ c }{e-f }{ f-d }{ d-e} .
+\sixj{a}{b}{c}{d+R}{e+R}{f+R}  \label{eq:9:9:2} \approx \frac{(-1)^{a+b+c+2(d+e+f)}}{\sqrt{2 R}}\threej{a }{ b }{ c }{e-f }{ f-d }{ d-e} .
 \end{equation}
 The asymptotic relation between the $R$ symbols which correspond to the $6 j$ symbols and the Clebsch-Gordan coefficients is written as
 \begin{align}
@@ -625,7 +625,7 @@ a-e+f & b+d-f & c-d+e
 \end{align}
 In particular, when $d=e=f=0$ one obtains [60]
 \begin{equation}
-\sixj{a}{b}{c}{R}{R}{R}  \label{eq:9:9:4} \approx \frac{(-1)^{c}}{\sqrt{2 R(2 c+1)}} C_{a 060}^{c 0}
+\sixj{a}{b}{c}{R}{R}{R}  \label{eq:9:9:4} \approx \frac{(-1)^{c}}{\sqrt{2 R(2 c+1)}} \clebsch{a}{0}{b}{0}{c}{0}
 \end{equation}
 \subsection{Asymptotic Expressions for the $6 j$ Symbols}\label{sec:9.9.2}
 The asymptotic behaviour of the $6 j$ symbols $\sixj{a}{b}{c}{d}{e}{f}$ for large angular momenta is closely associated with geometric properties of the tetrahedron whose edges are $a+\frac{1}{2}, b+\frac{1}{2}$, etc. (Fig.~\ref{chap9:fig:1}).
@@ -772,7 +772,7 @@ In particular, if $m=n=0, a, b, c \gg f$ and $f$ is an arbitrary integer, then \
 \end{equation}
 where $P_{f}$ is the Legendre polynomial. If, in addition, $f$ is large ( $a, b, c \gg f \gg 1$ ), one can substitute into \eqref{eq:9:9:16} asymptotic expressions for the Legendre polynomials to obtain
 \begin{equation}
-\sixj{a}{b}{c}{b}{a}{f}  \label{eq:9:9:17} \approx(-1)^{a+b+c+s}\left[\frac{4}{\pi(2 a+1)(2 b+1)(2 f+1) \sin \theta}\right]^{\frac{1}{3}} \cos \left[\left(f+\frac{1}{2}\right) \theta-\frac{\pi}{4}\right] .
+\sixj{a}{b}{c}{b}{a}{f}  \label{eq:9:9:17} \approx(-1)^{a+b+c+f}\left[\frac{4}{\pi(2 a+1)(2 b+1)(2 f+1) \sin \theta}\right]^{\frac{1}{3}} \cos \left[\left(f+\frac{1}{2}\right) \theta-\frac{\pi}{4}\right] .
 \end{equation}
 This expression may also be written in the form (cf. Eq. \eqref{eq:9:9:5})
 \begin{equation}
@@ -792,7 +792,7 @@ where $V$ is the tetrahedron volume \eqref{eq:9:9:7}
 \end{equation}
 $\Theta_{i}$ is the angle between two external normals to the planes adjacent to the edge $l_{i}+\frac{1}{2}$ (Fig.~\ref{chap9:fig:3}), with $l_{1} \equiv d, l_{2} \equiv e, l_{3} \equiv f$. The angles $\Theta_{i}$ can be evaluated from
 \begin{equation}
-\cos \theta_{i}=\frac{\cos \varphi_{i k} \cos \varphi_{i l}-\cos \varphi_{k l}}{\sin \varphi_{i k} \sin \varphi_{i l}} \label{eq:9:9:22}
+\cos \Theta_{i}=\frac{\cos \varphi_{i k} \cos \varphi_{i l}-\cos \varphi_{k l}}{\sin \varphi_{i k} \sin \varphi_{i l}} \label{eq:9:9:22}
 \end{equation}
 where combinations $i, k, l$ are obtained by cyclic permutations of $1,2,3$.
 
@@ -860,7 +860,7 @@ where combinations $i, k, l$ are obtained by cyclic permutations of $1,2,3$.
 
 In Eq. \eqref{eq:9:9:22} $\varphi_{i k} \equiv \varphi_{k i}$ is the angle between the edges $l_{i}+\frac{1}{2}$ and $l_{k}+\frac{1}{2}$ of the tetrahedron (Fig.~\ref{chap9:fig:3})
 \begin{equation}
-\cos \varphi_{i k}=\frac{l_{i}\left(l_{i}+1\right)+l_{k}\left(l_{k}+1\right)-j(j+1)}{2 \sqrt{l_{i}\left(l_{i}+1\right) l_{k}\left(l_{k}+1\right)}} \label{eq:9:9:23}
+\cos \varphi_{i k}=\frac{l_{i}\left(l_{i}+1\right)+l_{k}\left(l_{k}+1\right)-j_{l}\left(j_{l}+1\right)}{2 \sqrt{l_{i}\left(l_{i}+1\right) l_{k}\left(l_{k}+1\right)}} \label{eq:9:9:23}
 \end{equation}
 with $i \neq k \neq l$ and $j_{1} \equiv a, j_{2} \equiv b, j_{3} \equiv c$.\\
 \subsubsection{$m=n=p=0$}In particular, for $m=n=p=0$ Eq. \protect\eqref{eq:9:9:20} yields the Wigner formula [43]
@@ -872,7 +872,7 @@ This formula is valid only on the average because the $6 j$ symbols oscillate ra
 If $a, b, c$, etc. are fixed and $R \rightarrow \infty$, one has [89]
 \begin{align}
 \sixj{a}{b+R}{c+R}{d}{e+R}{f+R} \approx & (-1)^{\varphi}\left[\frac{(a-b+c)!(a-e+f)!(c+d-e)!(-b+d+f)!}{(a+b-c)!(a+e-f)!(-c+d+e)!(b+d-f)!}\right]^{\frac{1}{2} \operatorname{sign}(c+f-b-e)}  \notag\\
-& \times \frac{(2 R)^{-1-|b+e-c-f|}}{|b+e-c-f|!}\left[1+0\left(\frac{1}{R^{2}}\right)\right] . \label{eq:9:9:25}
+& \times \frac{(2 R)^{-1-|b+e-c-f|}}{|b+e-c-f|!}\left[1+O\left(\frac{1}{R^{2}}\right)\right] . \label{eq:9:9:25}
 \end{align}
 In this case
 \begin{gather}
