@@ -250,7 +250,7 @@ The following two relations were obtained in Ref. [45]:
 \begin{gather}
 \ninej{a}{b}{c}{d}{e}{f}{g}{h}{j}=\frac{(-1)^{a+b-c-g-h+j}}{2^{b+e+h+1}} \cdot \frac{\Delta(a b c) \Delta(d e f) \Delta(b e h)}{\Delta(a d g) \Delta(c f j) \Delta(g h j)}  \notag\\
 \times \frac{(a+d-g)!(c+f-j)!(g-h+j)!(b+e+h+1)!}{(a-b+c)!(-a+b+c)!(d-e+f)!(-d+e+f)!(a+d+g+1)!(-b+e+h)!(b+e+j-g)!}  \notag\\
-\times \sum_{x y} \frac{(-1)^{x+v}(2 a-x)!(-a+b+c+x)!(-a-e+f+g+x)!(2 d-y)!(c-d+e!+j+y)!}{x!y!(a+b-c-x)!(-a+c-e+g-j+x)!(d+e-f-y)!}  \notag\\
+\times \sum_{x y} \frac{(-1)^{x+y}(2 a-x)!(-a+b+c+x)!(-a-e+f+g+x)!(2 d-y)!(c-d+e+j+y)!}{x!y!(a+b-c-x)!(-a+c-e+g-j+x)!(d+e-f-y)!}  \notag\\
 \times \frac{1}{(a+d-g-x-y)!(-a-d+g+c+f+j+1+x+y)!}  \notag\\
 \times \int_{-1}^{1}(1+z)^{2 e}{ }_{3} F_{2}\left[\begin{array}{c}
 -b-e+g-j,-a-e+f+g+1+x, d-e-f-y ; z-1 \\
@@ -261,8 +261,8 @@ z+1
 \end{gather}
 \subsection{Representation Involving the Wigner $D$ Functions}\label{sec:10.3.2}
 \begin{align}
-& \ninej{a}{b}{c}{d}{e}{f}{g}{h}{j} \clebsch{c}{\gamma}{\rho}{\varphi}{j}{\mu}=(-1)^{c-f-g+h} \frac{[(2 j+1)(a+b-c)!(a+b+c+1)!(d+e-f)!(d+e+f+1)!]^{\frac{d}{2}}}{(a+d+g+1)!(b+e+h+1)!\Delta(a d g) \Delta(b e h)}  \notag\\
-& \times[(g+h-j)!(g+h+j+1)!]^{\frac{1}{2}} \int d R_{1} d R_{2} d R_{3} B_{b c h}^{a d g}\left(R_{1}, R_{2}, R_{3}\right) D_{b-a, \gamma}^{o}\left(R_{1}\right) D_{c-d, \varphi}^{j}\left(R_{2}\right) D_{g-h, \mu}^{j *}\left(R_{3}\right) \label{eq:10:3:2}
+& \ninej{a}{b}{c}{d}{e}{f}{g}{h}{j} \clebsch{c}{\gamma}{\rho}{\varphi}{j}{\mu}=(-1)^{c-f-g+h} \frac{[(2 j+1)(a+b-c)!(a+b+c+1)!(d+e-f)!(d+e+f+1)!]^{\frac{1}{2}}}{(a+d+g+1)!(b+e+h+1)!\Delta(a d g) \Delta(b e h)}  \notag\\
+& \times[(g+h-j)!(g+h+j+1)!]^{\frac{1}{2}} \int d R_{1} d R_{2} d R_{3} B_{b c h}^{a d g}\left(R_{1}, R_{2}, R_{3}\right) D_{b-a, \gamma}^{c}\left(R_{1}\right) D_{c-d, \varphi}^{j}\left(R_{2}\right) D_{g-h, \mu}^{j *}\left(R_{3}\right) \label{eq:10:3:2}
 \end{align}
 In this equation $\gamma, \varphi, \mu$ are arbitrary integer or half-integer numbers and
 \begin{equation}
@@ -306,15 +306,15 @@ B_{a d g}\left(\Omega_{1}, \Omega_{2}, \Omega_{3}\right)=\left(\sin \frac{\Omega
 Any $9 j$ symbol possesses the following symmetry properties with respect to permutations [74]: even permutations of columns or rows as well as transposition leave the $9 j$ symbol unchanged; odd permutations of columns or rows introduce the phase factor $(-1)^{R}$, where $R$ is sum of all arguments of the $9 j$ symbol. These symmetry properties may be written as follows\\
 \subsubsection{Column permutations}
 \begin{equation}
-\ninej{j_{11}}{j_{12}}{j_{13}  \label{eq:10:4:1}}{j_{21}}{j_{22}}{j_{23}}{j_{31}}{j_{32}}{j_{33}}=\varepsilon\ninej{j_{1 i}}{j_{1 k}}{j_{1 l}}{j_{2 i}}{j_{2 k}}{j_{2 l}}{j_{3 i}}{j_{3 k}}{j_{3 l}}
+\ninej{j_{11}}{j_{12}}{j_{13}}{j_{21}}{j_{22}}{j_{23}}{j_{31}}{j_{32}}{j_{33}} \label{eq:10:4:1}=\varepsilon\ninej{j_{1 i}}{j_{1 k}}{j_{1 l}}{j_{2 i}}{j_{2 k}}{j_{2 l}}{j_{3 i}}{j_{3 k}}{j_{3 l}}
 \end{equation}
 \subsubsection{Row permutations}
 \begin{equation}
-\ninej{j_{11}}{j_{12}}{j_{13}  \label{eq:10:4:2}}{j_{21}}{j_{22}}{j_{23}}{j_{31}}{j_{32}}{j_{33}}=\varepsilon\ninej{j_{i 1}}{j_{i 2}}{j_{i 3}}{j_{k 1}}{j_{k 2}}{j_{k 3}}{j_{i 1}}{j_{i 2}}{j_{i 3}}
+\ninej{j_{11}}{j_{12}}{j_{13}}{j_{21}}{j_{22}}{j_{23}}{j_{31}}{j_{32}}{j_{33}} \label{eq:10:4:2}=\varepsilon\ninej{j_{i 1}}{j_{i 2}}{j_{i 3}}{j_{k 1}}{j_{k 2}}{j_{k 3}}{j_{l 1}}{j_{l 2}}{j_{l 3}}
 \end{equation}
 \subsubsection{Transposition}
 \begin{equation}
-\ninej{j_{11}}{j_{12}}{j_{13}  \label{eq:10:4:3}}{j_{21}}{j_{22}}{j_{23}}{j_{31}}{j_{32}}{j_{33}}=\ninej{j_{11}}{j_{21}}{j_{31}}{j_{12}}{j_{22}}{j_{32}}{j_{13}}{j_{23}}{j_{33}}
+\ninej{j_{11}}{j_{12}}{j_{13}}{j_{21}}{j_{22}}{j_{23}}{j_{31}}{j_{32}}{j_{33}} \label{eq:10:4:3}=\ninej{j_{11}}{j_{21}}{j_{31}}{j_{12}}{j_{22}}{j_{32}}{j_{13}}{j_{23}}{j_{33}}
 \end{equation}
 Here
 \begin{gather}
