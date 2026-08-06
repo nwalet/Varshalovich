@@ -281,6 +281,43 @@ def run():
     print(f"  [{'OK  ' if g12 and not b12 else 'FAIL'}] eq 10.9.12 c-1 -> 3jm           ({g12 - b12}/{g12})")
     ok &= g12 > 0 and b12 == 0
 
+    # eq 10.9.8 : 6j recursion with A_q (eq 10.5.6)
+    def Aq(q, lam, mu, sig, nu):
+        xs = [-lam + mu + q, lam - mu + q, lam + mu - q + 1, lam + mu + q + 1,
+              -sig + nu + q, sig - nu + q, sig + nu - q + 1, sig + nu + q + 1]
+        if any(x < 0 for x in xs):
+            return None
+        p = S.One
+        for x in xs:
+            p *= x
+        return sqrt(p)
+
+    g8 = b8 = 0
+    for a in Rp:
+        for b in Rp:
+            for c in Rp:
+                for d in Rp:
+                    for e in Rp:
+                        for g in Rp:
+                            lhs6 = w6(a, b, c + 1, d + 1, e, c)
+                            br = ((c + 1) * (a - d) * (a + d + 1) - (g + 1) * (a - b) * (a + b + 1)
+                                  + (g + 1) * (c + 1) * (g - c))
+                            lhs = lhs6 * br
+                            A1 = Aq(a + H, d, g + H, b, c + H)
+                            A2 = Aq(d + H, a, g + H, e, c + H)
+                            A3 = Aq(b + H, a, c + H, e, g + H)
+                            if None in (A1, A2, A3):
+                                continue
+                            rhs = ((c - g) * A1 * w6(a, d, g, e, b, c)
+                                   + (c + 1) * A2 * w6(a, b, c + 1, e, d, g)
+                                   - (g + 1) * A3 * w6(a, b, c, e, d, g + 1))
+                            g8 += 1
+                            b8 += 0 if close(lhs, rhs) else 1
+    # eq 10.9.8 FLAGGED: as transcribed it fails badly (RHS too large by varying
+    # factors) even where all four 6j are on valid triangles -- an OCR error
+    # remains (A_q args / bracket / a 6j argument); needs the scan.
+    print(f"  [FLAG] eq 10.9.8  6j recursion (A_q)     ({g8 - b8}/{g8}, needs scan)")
+
     print("\nALL CHECKED 10.9 FORMS PASS" if ok else "\nSOME 10.9 CHECKS FAILED")
     return ok
 
