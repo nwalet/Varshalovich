@@ -20,8 +20,19 @@ Argument order (as in the \twelvejI macro):
 Usage:  python3 check_10_13.py
 """
 import math
-from sympy import Rational, S
+from sympy import Rational, S, sqrt, factorial as fac
 from sympy.physics.wigner import wigner_6j, wigner_9j
+
+
+def D(a, b, c):
+    # VMK's asymmetric D-symbol, eq 10.13.14 (NOT the symmetric Delta):
+    #   D(abc) = [ (-a+b+c)! / ( (a+b+c+1)! (a-b+c)! (a+b-c)! ) ]^(1/2)
+    return sqrt(fac(-a + b + c) / (fac(a + b + c + 1) * fac(a - b + c) * fac(a + b - c)))
+
+
+def T(a, b, c):
+    return 1 if (a >= 0 and b >= 0 and c >= 0 and abs(a - b) <= c <= a + b
+                 and (a + b + c) == int(a + b + c)) else 0
 
 H = Rational(1, 2)
 
@@ -275,6 +286,134 @@ def run():
     print(f"  [{'OK  ' if okk else 'FAIL'}] {'eq 10.13.27 symmetry perms':36s} ({good - bad}/{good})")
     if firstbad:
         print(f"        first mismatch: {firstbad}")
+
+    # eq 10.13.33 : 12j(II) with one argument (a2) = 0 -> two 6j
+    good = bad = 0
+    import itertools
+    for a3, a4, b1, b3, b4, c1, c2, c4, d1, d2, d3 in itertools.product([H, 1, Rational(3, 2)], repeat=11):
+        v = (0, a3, a4, b1, b3, b4, c1, c2, c4, d1, d2, d3)
+        if not valid12II(*v):
+            continue
+        lhs = TW2(*v)
+        rhs = ((-1) ** (b3 + b4 - d1 - c1) * (1 if a3 == a4 else 0) * (1 if c2 == d2 else 0)
+               / sqrt((2 * a3 + 1) * (2 * c2 + 1))
+               * w6(b1, b3, b4, a3, c4, d3) * w6(c1, c2, c4, d3, b1, d1))
+        good += 1
+        if not close(lhs, rhs):
+            bad += 1
+        if good >= 4000:
+            break
+    okk = good > 0 and bad == 0
+    ok &= okk
+    print(f"  [{'OK  ' if okk else 'FAIL'}] {'eq 10.13.33 one arg 0 -> two 6j':36s} ({good - bad}/{good})")
+
+    # eq 10.13.30 : a2 = b1 + c4 + d3 (tetrad sum) -> closed D-form
+    good = bad = 0
+    for a3, a4, b1, b3, b4, c1, c2, c4, d1, d2, d3 in itertools.product([H, 1, Rational(3, 2)], repeat=11):
+        a2 = b1 + c4 + d3
+        v = (a2, a3, a4, b1, b3, b4, c1, c2, c4, d1, d2, d3)
+        if not valid12II(*v):
+            continue
+        lhs = TW2(*v)
+        rhs = ((-1) ** (b3 - b4 + c1 - d1) * fac(2 * b1) * fac(2 * c4) * fac(2 * d3)
+               / fac(2 * b1 + 2 * c4 + 2 * d3 + 1)
+               * D(b1, b3, b4) * D(c4, c1, c2) * D(d3, d1, d2) * D(b1, d1, c1) * D(c4, b4, a4) * D(d3, b3, a3)
+               / (D(b1 + d3 + c4, a4, a3) * D(b1 + d3 + c4, c2, d2)))
+        good += 1
+        if not close(lhs, rhs):
+            bad += 1
+        if good >= 3000:
+            break
+    okk = good > 0 and bad == 0
+    ok &= okk
+    print(f"  [{'OK  ' if okk else 'FAIL'}] {'eq 10.13.30 tetrad-sum closed form':36s} ({good - bad}/{good})")
+
+    # eq 10.13.25 : 12j(II) orthogonality (sum over x1,x2,x3)
+    def orth25(a2, a3, a4, b1, b3, b4, c1, c4, d1, a4p, b1p, b4p):
+        rng = [Rational(i, 2) for i in range(0, int(2 * (a2 + a3 + a4 + b1 + b3 + b4 + c1 + c4 + d1)) + 1)]
+        tot = S.Zero
+        for x1 in rng:
+            for x2 in rng:
+                for x3 in rng:
+                    t1 = TW2(a2, a3, a4, b1, b3, b4, c1, x1, c4, d1, x2, x3)
+                    if t1 == 0:
+                        continue
+                    tot += ((2 * x1 + 1) * (2 * x2 + 1) * (2 * x3 + 1) * t1
+                            * TW2(a2, a3, a4p, b1p, b3, b4p, c1, x1, c4, d1, x2, x3))
+        rhs = ((1 if a4 == a4p else 0) * (1 if b1 == b1p else 0) * (1 if b4 == b4p else 0)
+               / ((2 * a4 + 1) * (2 * b1 + 1) * (2 * b4 + 1))
+               * T(a2, a3, a4) * T(b1, b3, b4) * T(b1, c1, d1) * T(a4, b4, c4))
+        return close(tot, rhs)
+
+    cases25 = [(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), (1, 1, 1, 1, 1, 1, 1, 1, 1, 1, H, 1),
+               (H, 1, 1, 1, 1, 1, H, 1, H, 1, 1, 1)]
+    r25 = all(orth25(*c) for c in cases25)
+    print(f"  [{'OK  ' if r25 else 'FAIL'}] {'eq 10.13.25 orthogonality (12jII)':36s}")
+    ok &= r25
+
+    # eq 10.13.35 : a2 = b1 = 1/2 (two 1/2's in tetrad (a2,c4,d3,b1)) -> 6j.6j + 9j.9j
+    good = bad = 0
+    for a3, a4, b3, b4, c1, c2, c4, d1, d2, d3 in itertools.product([H, 1, Rational(3, 2), 2], repeat=10):
+        v = (H, a3, a4, H, b3, b4, c1, c2, c4, d1, d2, d3)
+        if not valid12II(*v):
+            continue
+        lhs = TW2(*v)
+        rhs = ((-1) ** (2 * b3 + 2 * d1) * (1 if d3 == c4 else 0) / (2 * (2 * d3 + 1))
+               * w6(a3, a4, H, b4, b3, d3) * w6(d2, c2, H, c1, d1, d3)
+               + 3 * (-1) ** (b3 - a4 - d1 + c2)
+               * w9(a3, b3, d3, a4, b4, c4, H, H, 1) * w9(d2, d1, d3, c2, c1, c4, H, H, 1))
+        good += 1
+        if not close(lhs, rhs):
+            bad += 1
+        if good >= 1500:
+            break
+    okk = good > 0 and bad == 0
+    ok &= okk
+    print(f"  [{'OK  ' if okk else 'FAIL'}] {'eq 10.13.35 two 1/2 -> 6j.6j+9j.9j':36s} ({good - bad}/{good})")
+
+    # eq 10.13.31 : each tetrad arg = sum of its two triad partners -> Clebsch-Gordan sum.
+    # NB: tex fixes applied here -- 9th arg c4 = c1+c2 (OCR had c2+c3), and f() (eq
+    # 10.13.32) is [(a+b+c+1)!(a+b-c)!]^{-1/2} (OCR dropped the second factorial).
+    from sympy.physics.quantum.cg import CG
+
+    def cg(a, al, b, be, c, ga):
+        return CG(a, al, b, be, c, ga).doit() if al + be == ga else S.Zero
+
+    def ff(a, b, c):
+        return 1 / sqrt(fac(a + b + c + 1) * fac(a + b - c))
+
+    good = bad = 0
+    for a3, a4, b3, b4, c1, c2, d1, d2 in itertools.product([H, 1, Rational(3, 2), 2], repeat=8):
+        a2, b1, c4, d3 = a3 + a4, b3 + b4, c1 + c2, d1 + d2
+        v = (a2, a3, a4, b1, b3, b4, c1, c2, c4, d1, d2, d3)
+        if not valid12II(*v):
+            continue
+        lhs = TW2(*v)
+        pref = ((-1) ** (b3 - a4 - d1 + c2) * ff(a3, b3, d1 + d2) * ff(a4, b4, c1 + c2)
+                * ff(d1, c1, b3 + b4) * ff(d2, c2, a3 + a4)
+                * sqrt(fac(2 * a3) * fac(2 * a4) * fac(2 * b3) * fac(2 * b4)
+                       * fac(2 * c1) * fac(2 * c2) * fac(2 * d1) * fac(2 * d2)
+                       / (fac(2 * a3 + 2 * a4 + 1) * fac(2 * b3 + 2 * b4 + 1)
+                          * fac(2 * c1 + 2 * c2 + 1) * fac(2 * d1 + 2 * d2 + 1))))
+        tot = S.Zero
+        for x in [Rational(i, 2) for i in range(0, int(2 * (a3 + a4 + b3 + b4)) + 1)]:
+            tot += (1 / (ff(a3 + a4, b3 + b4, x) * ff(d1 + d2, c1 + c2, x))
+                    * cg(d1 + d2, a3 - b3, c1 + c2, a4 - b4, x, a3 + a4 - b3 - b4)
+                    * cg(a3 + a4, d2 - c2, b3 + b4, d1 - c1, x, d1 + d2 - c1 - c2))
+        good += 1
+        if not close(lhs, pref * tot):
+            bad += 1
+        if good >= 150:
+            break
+    okk = good > 0 and bad == 0
+    ok &= okk
+    print(f"  [{'OK  ' if okk else 'FAIL'}] {'eq 10.13.31 tetrad=sum -> CG sum':36s} ({good - bad}/{good})")
+
+    # eq 10.13.34 : a3 = b4 = 1/2 (two 1/2's in tetrad (a3,b4,d2,c1)).  As transcribed
+    # this contains D(1,b1,b3) and D(1,a2,c4) whose arguments are half-integer sums
+    # (b1+b3, a2+c4 are half-integer here), so the D-symbols are ill-defined and the
+    # closed form does NOT verify numerically -- suspected OCR error, needs a scan.
+    print("  [SKIP] eq 10.13.34 two 1/2 -> 6j.6j D-form  (does not verify; suspected OCR, needs scan)")
 
     print("\nALL CHECKED 10.13 FORMS PASS" if ok else "\nSOME 10.13 CHECKS FAILED")
     return ok
