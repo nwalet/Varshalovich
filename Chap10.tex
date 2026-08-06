@@ -42,8 +42,8 @@ Using this definition, we may also obtain
 \end{gather}
 As follows from definition \eqref{eq:10:1:5} a $9 j$ symbol can be represented as a sum of products of the Clebsch-Gordan coefficients:
 \begin{align}
-& \sum_{m_{1} m_{1 k}} \clebsch{j_{1}}{m_{1}}{j_{2}}{m_{2}}{j_{12}}{m_{12}} \clebsch{j_{3}}{m_{3}}{j_{4}}{m_{4}}{j_{3}}{m_{34}} \clebsch{j_{12}}{m_{12}}{j_{34}}{m_{34}}{j}{m^{2}} \clebsch{j_{2}}{m_{1}}{j_{3}}{m_{3}}{j_{13}}{m_{13}} \clebsch{j_{2}}{m_{2}}{j_{4}}{m_{4}}{j_{24}}{m_{24}} \clebsch{j_{13}}{m_{13}}{j_{24}}{m_{24}}{j^{\prime}}{m^{\prime}}  \notag\\
-& \quad=\delta_{j j^{\prime}} \delta_{m m^{\prime}}\left[\left(2 j_{12}+1\right)\left(2 j_{13}+1\right)\left(2 j_{24}+1\right)\left(2 j_{34}+1\right)\right]^{\frac{1}{3}}\ninej{j_{1}}{j_{2}}{j_{12}}{j_{3}}{j_{4}}{j_{34}}{j_{13}}{j_{24}}{j} \label{eq:10:1:8}
+& \sum_{\substack{m_{1} m_{2} m_{3} m_{4} \\ m_{12} m_{34} m_{13} m_{24}}} \clebsch{j_{1}}{m_{1}}{j_{2}}{m_{2}}{j_{12}}{m_{12}} \clebsch{j_{3}}{m_{3}}{j_{4}}{m_{4}}{j_{34}}{m_{34}} \clebsch{j_{12}}{m_{12}}{j_{34}}{m_{34}}{j}{m} \clebsch{j_{1}}{m_{1}}{j_{3}}{m_{3}}{j_{13}}{m_{13}} \clebsch{j_{2}}{m_{2}}{j_{4}}{m_{4}}{j_{24}}{m_{24}} \clebsch{j_{13}}{m_{13}}{j_{24}}{m_{24}}{j^{\prime}}{m^{\prime}}  \notag\\
+& \quad=\delta_{j j^{\prime}} \delta_{m m^{\prime}}\left[\left(2 j_{12}+1\right)\left(2 j_{13}+1\right)\left(2 j_{24}+1\right)\left(2 j_{34}+1\right)\right]^{\frac{1}{2}}\ninej{j_{1}}{j_{2}}{j_{12}}{j_{3}}{j_{4}}{j_{34}}{j_{13}}{j_{24}}{j} \label{eq:10:1:8}
 \end{align}
 This equation unambiguously fixes the absolute value and phase of the $9 j$ symbol. The $9 j$ symbols are real.\\
 Below we shall also use Latin letters ( $a, b, c$, etc.) to denote arguments of the $9 j$ symbols.\\
@@ -66,7 +66,7 @@ These relations follow from the unitarity of transformations which relate state 
 A $9 j$ symbol may be represented as a $3 \times 6$ array $\left\|r_{i k}, r_{i k}^{\prime}\right\|$ (Shelepin [105], Wu [111]) which is called the $r$-symbol: \footnote{The array $\left\|r_{i k}, r_{i k}^{\prime}\right\|$ under discussion (Wu [111]) differs from the $r$-symbol introduced by Shelepin [105].
 }
 \begin{equation}
-\ninej{a}{b}{c  \label{eq:10:1:11}}{d}{e}{f}{g}{h}{j} \equiv\left\|\begin{array}{llllll}
+\ninej{a}{b}{c}{d}{e}{f}{g}{h}{j} \label{eq:10:1:11}\equiv\left\|\begin{array}{llllll}
 r_{11} & r_{12} & r_{13} & r_{11}^{\prime} & r_{12}^{\prime} & r_{13}^{\prime} \\
 r_{21} & r_{22} & r_{23} & r_{21}^{\prime} & r_{22}^{\prime} & r_{23}^{\prime} \\
 r_{31} & r_{32} & r_{33} & r_{31}^{\prime} & r_{32}^{\prime} & r_{33}^{\prime}
@@ -112,10 +112,9 @@ The expressions given below represent the $9 j$ symbols in the forms of algebrai
 \begin{gather}
 \ninej{a}{b}{c}{d}{e}{f}{g}{h}{j}=\frac{\Delta(a b c) \Delta(d e f) \Delta(b e h) \Delta(g h j)}{\Delta(a d g) \Delta(c f j)}  \notag\\
 \times \frac{(a+d-g)!(c+f-j)!(g+h+j+1)!}{(a+d+g+1)!(a-b+c)!(-a+b+c)!(d-e+f)!(-d+e+f)!(b-e+h)!(-b+e+h)!}  \notag\\
-\times \sum_{x y x t}(-1)^{a-c+e-g+j+x+y+x+t} \frac{(2 a-x)!(2 b-y)!(2 d-z)!(2 e-t)!}{x!y!z!t!}  \notag\\
+\times \sum_{x y z t}(-1)^{a-c+e-g+j+x+y+z+t} \frac{(2 a-x)!(2 b-y)!(2 d-z)!(2 e-t)!}{x!y!z!t!}  \notag\\
 \times \frac{(-a+b+c+x)!(-b+e+h+y)!(-d+e+f+z)!(b-e+g-j+t)!(-a-e+f+g+x+t)!}{(a+b-c-x)!(b+e-h-y)!(d+e-f-z)!(b+e-g+j-t)!(a+d-g-x-z)!(e-b+h+y-t)!}  \notag\\
-\times \frac{(c-d+e+j+z-t)!}{(-d+e+f+z-t)!(b-e+g-j-y+t)!(-a+c-e+g-j+x+t)!\times}  \notag\\
-\times(-a+c-d+f+g+j+1+x+z)!. \label{eq:10:2:1}
+\times \frac{(c-d+e+j+z-t)!}{(-d+e+f+z-t)!(b-e+g-j-y+t)!(-a+c-e+g-j+x+t)!(-a+c-d+f+g+j+1+x+z)!} . \label{eq:10:2:1}
 \end{gather}
 In Eq. \eqref{eq:10:2:1} the sums are over all integer values of $x, y, z, t$ for which the factorial arguments are greater than or equal to zero. An expression for the $9 j$ symbols in the form of triple sum was proposed by Alisauskas and Yutsis [131].
 
@@ -205,12 +204,12 @@ t & =j_{11}+j_{22}+j_{33} \notag
 \end{align}
 \subsection{9j Symbols as Sums of Products of the Clebsch-Gordan Coefficients or the 3jm Symbols [110]}\label{sec:10.2.3}
 \begin{gather}
-\ninej{a}{b}{c}{d}{e}{f}{g}{h}{j}=\left[\left.(2 c+1)(2 f+1)(2 g+1)(2 h+1)\right|^{-\frac{1}{2}}(2 j+1)^{-1} \sum_{\substack{\alpha \beta \gamma \delta \varepsilon \varphi \\
-\eta \mu \nu}} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} \clebsch{d}{\delta}{e}{c}{f}{\varphi} \clebsch{c}{\gamma}{f}{\varphi}{j}{\nu} \clebsch{a}{\alpha}{d}{\delta}{g}{\eta} \clebsch{b}{\beta}{e}{c}{h}{\mu} \clebsch{g}{\eta}{h}{\mu}{j}{\nu}\right.  \label{eq:10:2:15}\\
+\ninej{a}{b}{c}{d}{e}{f}{g}{h}{j}=\left[(2 c+1)(2 f+1)(2 g+1)(2 h+1)\right]^{-\frac{1}{2}}(2 j+1)^{-1} \sum_{\substack{\alpha \beta \gamma \delta \varepsilon \varphi \\
+\eta \mu \nu}} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} \clebsch{d}{\delta}{e}{\varepsilon}{f}{\varphi} \clebsch{c}{\gamma}{f}{\varphi}{j}{\nu} \clebsch{a}{\alpha}{d}{\delta}{g}{\eta} \clebsch{b}{\beta}{e}{\varepsilon}{h}{\mu} \clebsch{g}{\eta}{h}{\mu}{j}{\nu}  \label{eq:10:2:15}\\
 \ninej{a}{b}{c}{d}{e}{f}{g}{h}{j}=\frac{(-1)^{2(c+g)}}{(2 a+1)(2 e+1)(2 j+1)} \sum_{\substack{\alpha \beta \gamma \\
 \delta \varepsilon \varphi \\
 \eta \mu \nu}} \clebsch{c}{\gamma}{b}{\beta}{a}{\alpha} \clebsch{g}{\eta}{d}{\delta}{a}{\alpha} \clebsch{b}{\beta}{h}{\mu}{e}{\varepsilon} \clebsch{d}{\delta}{f}{\varphi}{e}{\varepsilon} \clebsch{h}{\mu}{g}{\eta}{j}{\nu} \clebsch{f}{\varphi}{c}{\gamma}{j}{\nu}  \label{eq:10:2:16}\\
-\ninej{a}{b}{c}{d}{e}{f}{g}{h}{j}=\sum_{\substack{\alpha \beta \eta \delta c \varphi \\
+\ninej{a}{b}{c}{d}{e}{f}{g}{h}{j}=\sum_{\substack{\alpha \beta \gamma \delta \varepsilon \varphi \\
 \eta \mu \nu}}\left(\begin{array}{lll}
 a & b & c \\
 \alpha & \beta & \gamma
