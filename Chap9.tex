@@ -18,15 +18,15 @@ The Wigner $6 j$ symbols [110] are related to the coefficients of transformation
 \end{equation}
 Let $\ket{j_{1} j_{2}\left(j_{12}\right) j_{3} j m}$ denote the state vectors corresponding to the coupling scheme I. These vectors are eigenvectors of the operators $\widehat{j}_{1}^{2}, \widehat{j}_{2}^{2}, \hat{j}_{3}^{2}, \hat{j}_{12}^{2}, \hat{j}^{2}, \hat{j}_{x}$ and may be written as
 \begin{equation}
-\ket{j_{1} j_{2}\left(j_{12}\right) j_{33} j m}=\sum_{m_{1} m_{2} m_{2}} \clebsch{j_{12}}{m_{12}}{j_{2}}{m_{3}}{j}{m} C_{j_{2} m_{12} m_{2}}^{j_{12} m_{12}}\ket{j_{1} m_{1}, j_{2} m_{2}, j_{3} m_{3}} . \label{eq:9:1:2}
+\ket{j_{1} j_{2}\left(j_{12}\right) j_{3} j m}=\sum_{m_{1} m_{2} m_{3}} \clebsch{j_{12}}{m_{12}}{j_{3}}{m_{3}}{j}{m} \clebsch{j_{1}}{m_{1}}{j_{2}}{m_{2}}{j_{12}}{m_{12}}\ket{j_{1} m_{1}, j_{2} m_{2}, j_{3} m_{3}} . \label{eq:9:1:2}
 \end{equation}
 The state vectors corresponding to the coupling scheme II are eigenvectors of the operators $\widehat{j}_{1}^{2}, \widehat{j}_{2}^{2}, \widehat{j}_{3}^{2}, \widehat{j}_{23}^{2}, \widehat{j}^{2}, \widehat{j}_{x}$,
 \begin{equation}
-\ket{j_{1}, j_{2} j_{3}\left(j_{23}\right) j m}=\sum_{m_{1} m_{2} m_{3}} \clebsch{j_{1}}{m_{1}}{j_{23}}{m_{23}}{j}{m} \clebsch{j_{2}}{m_{2}}{j_{2}}{m_{3}}{j_{2}}{m_{20}}\ket{j_{1} m_{1}, j_{2} m_{2}, j_{3} m_{3}} . \label{eq:9:1:3}
+\ket{j_{1}, j_{2} j_{3}\left(j_{23}\right) j m}=\sum_{m_{1} m_{2} m_{3}} \clebsch{j_{1}}{m_{1}}{j_{23}}{m_{23}}{j}{m} \clebsch{j_{2}}{m_{2}}{j_{3}}{m_{3}}{j_{23}}{m_{23}}\ket{j_{1} m_{1}, j_{2} m_{2}, j_{3} m_{3}} . \label{eq:9:1:3}
 \end{equation}
 Similarly, the state vectors corresponding to the coupling scheme III are eigenvectors of the operators $\widehat{\vect{j}}_{1}^{2}, \widehat{\vect{j}}_{2}^{2}, \widehat{\vect{j}}_{3}^{2}$, $\widehat{j}_{13}^{2}, \widehat{j}^{2}, \widehat{j}_{x}$,
 \begin{equation}
-\ket{j_{1} j_{3}\left(j_{13}\right) \dot{j}_{2} j m}=\sum_{m_{1} m_{2} m_{3}} \clebsch{j_{13}}{m_{13}}{j_{2}}{m_{2}}{j}{m} \clebsch{j_{1}}{m_{1}}{j_{3}}{m_{2}}{j_{13}}{m_{13}}\ket{j_{1} m_{1}, j_{2} m_{2}, j_{3} m_{3}} . \label{eq:9:1:4}
+\ket{j_{1} j_{3}\left(j_{13}\right) j_{2} j m}=\sum_{m_{1} m_{2} m_{3}} \clebsch{j_{13}}{m_{13}}{j_{2}}{m_{2}}{j}{m} \clebsch{j_{1}}{m_{1}}{j_{3}}{m_{3}}{j_{13}}{m_{13}}\ket{j_{1} m_{1}, j_{2} m_{2}, j_{3} m_{3}} . \label{eq:9:1:4}
 \end{equation}
 States belonging to each coupling scheme form a complete set of states. A transition from one coupling scheme to another is performed by some unitary transformation which relates the states with the same total angular momentum $j$ and projection $m$. The coefficients $U$ of this transformation differ from the $6 j$ symbols only by normalization and phase factors. These factors are chosen in such a way to make the $6 j$ symbols more symmetric (Sec. 9.4).
 
@@ -57,7 +57,7 @@ The quantum-mechanical rules of vector addition impose some restrictions on poss
 The unitarity of the recoupling transformations implies the orthogonality and normalization conditions of the $6 j$ symbols,
 \begin{align}
 & \sum_{j_{12}}\left(2 j_{12}+1\right)\left(2 j_{23}+1\right)\sixj{j_{1}}{j_{2}}{j_{12}}{j_{3}}{j}{j_{23}}\sixj{j_{1}}{j_{2}}{j_{12}}{j_{3}}{j}{j_{23}^{\prime}}=\delta_{j_{23} j_{23}^{\prime}} , \label{eq:9:1:9}\\
-& \sum_{j_{23}}\left(2 j_{12}+1\right)\left(2 j_{23}+1\right)\sixj{j_{1}}{j_{2}}{j_{12}}{j_{3}}{j}{j_{23}}\sixj{j_{1}}{j_{2}}{j_{12}^{\prime}}{j_{3}}{j}{j_{23}}=\delta_{j_{12} j_{23}^{\prime}} . \label{eq:9:1:10}
+& \sum_{j_{23}}\left(2 j_{12}+1\right)\left(2 j_{23}+1\right)\sixj{j_{1}}{j_{2}}{j_{12}}{j_{3}}{j}{j_{23}}\sixj{j_{1}}{j_{2}}{j_{12}^{\prime}}{j_{3}}{j}{j_{23}}=\delta_{j_{12} j_{12}^{\prime}} . \label{eq:9:1:10}
 \end{align}
 Below we shall use Latin letters $a, b, c$, etc., to denote arguments of the $6 j$ symbols.
 
@@ -73,7 +73,7 @@ The $6 j$ symbols and the Racah coefficients may be written in the form of a $3 
 \begin{equation}
 \left\|\begin{array}{llll}
 R_{11} & R_{12} & R_{13} & R_{14}  \label{eq:9:1:12}\\
-R_{21} & R_{22} & R_{93} & R_{24} \\
+R_{21} & R_{22} & R_{23} & R_{24} \\
 R_{31} & R_{32} & R_{33} & R_{34}
 \end{array}\right\| \equiv\sixj{a}{b}{c}{d}{e}{f} \equiv(-1)^{a+b+d+e} W(a b e d; c f) ,
 \end{equation}
@@ -139,14 +139,14 @@ In the expressions presented below the sums are over all integer nonnegative val
 \begin{gather}
 \sixj{a}{b}{c}{d}{e}{f}=\Delta(a b c) \Delta(c d e) \Delta(a e f) \Delta(b d f)  \notag\\
 \times \sum_{n} \frac{(-1)^{n}(n+1)!}{(n-a-b-c)!(n-c-d-e)!(n-a-e-f)!(n-b-d-f)!(a+b+d+e-n)!}  \notag\\
-\times(a+c+d+f-n)!(b+c+e+f-n)!  \notag\\
+\times \frac{1}{(a+c+d+f-n)!(b+c+e+f-n)!}  \notag\\
 \text { (Racah [91]) } \label{eq:9:2:1}
 \end{gather}
 By the replacement $n \rightarrow a+b+d+e-n$ one can rewrite Eq. \eqref{eq:9:2:1} in the form
 \begin{gather}
 \sixj{a}{b}{c}{d}{e}{f}=(-1)^{a+b+d+e} \Delta(a b c) \Delta(c d e) \Delta(a e f) \Delta(b d f)  \notag\\
 \times \sum_{n} \frac{(-1)^{n}(a+b+d+e+1-n)!}{n!(a+b-c-n)!(-c+d+e-n)!(a+e-f-n)!(b+d-f-n)!}  \notag\\
-\times(-a+c-d+f+n)!(-b+c-e+f+n)!  \notag\\
+\times \frac{1}{(-a+c-d+f+n)!(-b+c-e+f+n)!}  \notag\\
 \text { (Racah [91]) } \label{eq:9:2:2}
 \end{gather}
 Some other expressions for the $6 j$ symbols which cannot be easily reduced to \eqref{eq:9:2:1} and \eqref{eq:9:2:2} are [45,50].
@@ -206,7 +206,7 @@ Equations \eqref{eq:9:2:8}-\eqref{eq:9:2:12} present Eqs. \eqref{eq:9:2:2}-\eqre
 \subsection{Relations Between the $6 j$ Symbols and the $3jm$ Symbols}\label{sec:9.2.4}
 The $6 j$ symbols may be written as sums of products of the Clebsch-Gordan coefficients (Eq. \eqref{eq:9:1:8}) or $3jm$ symbols. The relations between the $6 j$ symbols and the $3 j m$ symbols are
 \begin{equation}
-\sixj{a}{b}{c}{d}{e}{f}  \label{eq:9:2:13}=\sum(-1)^{d+e+f+\delta+e+\varphi}\threej{a }{ b }{ c }{\alpha }{ \beta }{ \gamma}\threej{a }{ e }{ f }{\alpha }{ \varepsilon }{ -\varphi}\threej{d }{ b }{ f }{-\delta }{ \beta }{ \varphi}\threej{d }{ e }{ c }{\delta }{ -\varepsilon }{ \gamma} .
+\sixj{a}{b}{c}{d}{e}{f}  \label{eq:9:2:13}=\sum(-1)^{d+e+f+\delta+\varepsilon+\varphi}\threej{a }{ b }{ c }{\alpha }{ \beta }{ \gamma}\threej{a }{ e }{ f }{\alpha }{ \varepsilon }{ -\varphi}\threej{d }{ b }{ f }{-\delta }{ \beta }{ \varphi}\threej{d }{ e }{ c }{\delta }{ -\varepsilon }{ \gamma} .
 \end{equation}
 In Eq. \eqref{eq:9:2:13} the sum is over all possible values of $\alpha, \beta, \gamma, \delta, \varepsilon, \varphi$ with only three summation indices being independent. Some other sums of the $3 j m$ symbols which yield the $6 j$ symbols will be considered in Chap. 12 .
 
@@ -292,7 +292,7 @@ Note also the following integral representations for some special $6 j$ symbols
 \MoveEqLeft{\sixj{a}{b}{c}{d}{e}{f}\sixj{a}{e}{f}{a}{b}{c}\sixj{d}{b}{f}{a}{b}{c}\sixj{d}{e}{c}{a}{b}{c}}  \notag\\
 =&\frac{(-1)^{2 d}}{\left(8 \pi^{2}\right)^{5}} \int d R_{1} d R_{2} d R_{3} d R_{4} d R_{5} \chi^{d}\left(R_{1}\right) \chi^{e}\left(R_{2}\right) \chi^{f}\left(R_{3}\right) \chi^{a}\left(R_{4}\right) 
 \notag\\&\qquad\qquad \qquad\times
-\chi^{a}\left(R_{5}^{-1} R_{3} R_{2}\right) \chi^{b}\left(R_{6} R_{4} R_{2} R_{1}\right) \chi^{c}\left(R_{4}^{-1} R_{5} R_{1} R_{3}\right). \label{eq:9:3:4}
+\chi^{a}\left(R_{5}^{-1} R_{3} R_{2}\right) \chi^{b}\left(R_{5} R_{4} R_{2} R_{1}\right) \chi^{c}\left(R_{4}^{-1} R_{5} R_{1} R_{3}\right). \label{eq:9:3:4}
 \end{align}
 \section{Symmetries of the $6 j$ Symbols and the Racah Coefficients}\label{sec:9.4}
 \subsection{R-Symbols}\label{sec:9.4.1}
