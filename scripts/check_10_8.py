@@ -239,6 +239,17 @@ def eq817(a, b, c, d, f, j):
                       / (fac(2 * a + 2 * d + 1) * (2 * f + 2 * d + 1) * fac(2 * b + 2 * d + 2 * f + 1))))
 
 
+# ---- eq 10.8.19 : {c+b b c; d b+h d+b+h; g h g+h} (author-reconstructed) ----
+def eq819(b, c, d, g, h):
+    v = (c + b, b, c, d, b + h, d + b + h, g, h, g + h)
+    if not valid9(v) or (d + g - b - c) < 0 or (2 * h + b + d + g - c) < 0:
+        return None
+    return chk(v, (-1) ** (2 * b) * D(c + b, d, g) / D(c, d + b + h, g + h)
+               * fac(2 * h + b + d + g - c) / fac(d + g - b - c)
+               * sqrt(fac(2 * c) * fac(2 * d) * fac(2 * g)
+                      / ((2 * b + 2 * h + 1) * fac(2 * b + 2 * c + 1) * fac(2 * b + 2 * d + 2 * h + 1) * fac(2 * g + 2 * h + 1))))
+
+
 # ---- Sec 10.8.5 four degenerate triads ----
 def eq818(a, b, d, e, f):
     v = (a, b, a + b, d, e, f, a + d, b + e, a + b + f)
@@ -445,7 +456,8 @@ def run():
     ok &= scan("eq 10.8.13 closed form", eq813, 7)
 
     for name, fn, n in [("eq 10.8.14", eq814, 6), ("eq 10.8.15", eq815, 6), ("eq 10.8.16", eq816, 6),
-                        ("eq 10.8.17", eq817, 6), ("eq 10.8.18", eq818, 5), ("eq 10.8.20", eq820, 5),
+                        ("eq 10.8.17", eq817, 6), ("eq 10.8.18", eq818, 5), ("eq 10.8.19", eq819, 5),
+                        ("eq 10.8.20", eq820, 5),
                         ("eq 10.8.21", eq821, 5), ("eq 10.8.22", eq822, 5), ("eq 10.8.24", eq824, 5),
                         ("eq 10.8.25", eq825, 5), ("eq 10.8.27", eq827, 4), ("eq 10.8.28", eq828, 2),
                         ("eq 10.8.29", eq829, 1), ("eq 10.8.30", eq830, 4), ("eq 10.8.31", eq831, 3)]:
@@ -455,7 +467,6 @@ def run():
     #  10.8.19 : LHS printed as a 4x2 array, not a valid 3x3 9j.
     #  10.8.23 : an argument-dependent error remains beyond the doubled (2d)!(2d)!.
     #  10.8.26 : an argument-dependent error remains beyond the doubled (2b)!(2b)!.
-    print("  [FLAG] eq 10.8.19  LHS is an OCR-mangled 4x2 array, not a valid 9j")
     print("  [FLAG] eq 10.8.23  argument-dependent OCR error (doubled (2d)! and more)")
     print("  [FLAG] eq 10.8.26  argument-dependent OCR error (doubled (2b)! and more)")
 

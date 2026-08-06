@@ -735,27 +735,24 @@ Equation \eqref{eq:10:8:2} may also be rewritten in the quasi-trinomial form
 \end{equation}
 where $A^{(x)}, B^{(y)}$ and $C^{(k-x-y)}$ are quasi-powers (Eq. 8.2(11)). Using Eq. \eqref{eq:10:8:4}, one gets [45]
 \begin{align}
-& \ninej{a}{b}{c}{d}{e}{f}{a+d}{h}{j}=(-1)^{b+e-h}\left[\begin{array}{c}
-(2 d)!(a+b+c+1)^{(-1)(h+j-b-c+d)}(a-b+c)^{(-1)(b+j-h-c+d)} \times \\
-\times(b-c+a)^{(-1)(h+c-b-j+d)}(b+c-a)^{(1)(b+c-h-j+d)} \\
-(e-d+f)!(d-e+f)!(d+e-f)!(e+d+f+1)!(f-j+c)!\times \\
-\times(e+h-b)!(e-h+b)!(f+j-c)!(b+e+h+1)^{(2 e+1)} \times \\
-\times(c+f+j+1)^{(2 f+1)}(2 a)^{(-1)(2 d+1)}
-\end{array}\right]^{\frac{1}{2}}  \notag\\
-& \times(2 e)!(2 f)!\left[(h+j-a-d)^{(1)}-\frac{(e-h+b)^{(1)}(b-e+h)^{(-1)}}{(2 e)^{(1)}}-\frac{(f-j+c)^{(1)}(c-f+j)^{(-1)}}{(2 f)^{(1)}}\right]^{(e+f-d)} \label{eq:10:8:5}
+& \ninej{a}{b}{c}{d}{e}{f}{a+d}{h}{j}=(-1)^{b+e-h}\nonumber\\
+& \times
+\left[\frac{(2d)!}{(e-d+f)!(d-e+f)!(d+e-f)!(e+d+f+1)!(f-j+c)!(e+h-b)!(e-h+b)!(f+j-c)!}\right]^\frac12 \notag\\
+&\times\left[\frac{(a+b+c+1)^{(-1)(h+j-b-c+d)}(a-b+c)^{(-1)(b+j-h-c+d)}(b-c+a)^{(-1)(h+c-b-j+d)}(b+c-a)^{(1)(b+c-h-j+d)} }{(b+e+h+1)^{(2 e+1)} (c+f+j+1)^{(2 f+1)}(2 a)^{(-1)(2 d+1)}}\right]^{\frac{1}{2}}  \notag\\
+& \times(2 e)!(2 f)!\left[(h+j-a-d)^{(1)}-\frac{(e-h+b)^{(1)}(b-e+h)^{(-1)}}{(2 e)^{(1)}}-\frac{(f-j+c)^{(1)}(c-f+j)^{(-1)}}{(2 f)^{(1)}}\right]^{(e+f-d)} . \label{eq:10:8:5}
 \end{align}
 If one argument is equal to the difference of the other two from the same triad, the expression for the $9 j$ symbol may be obtained from the above equations either by using the "mirror" symmetry properties (Sec. 10.4.3),
 \begin{equation}
 \ninej{a}{b}{c  \label{eq:10:8:6}}{d}{e}{f}{a-d}{h}{j}=i(-1)^{d+h-b-j+c}\ninej{\bar{a}}{b}{c}{d}{e}{f}{\bar{a}+d}{h}{j},
 \end{equation}
-or by renaming and permutating the arguments:
+or by renaming and permuting the arguments:
 \begin{equation}
 \ninej{a}{b}{c  \label{eq:10:8:7}}{d}{e}{f}{a-d}{h}{j} \underset{a=d+g}{\longrightarrow}\ninej{d+g}{b}{c}{d}{e}{f}{g}{h}{j}=\ninej{d}{e}{f}{g}{h}{j}{d+g}{b}{c} .
 \end{equation}
 The equations of Sections 10.8.3-10.8.6 may be derived from Eqs. \eqref{eq:10:8:2}-\eqref{eq:10:8:5}.
 
 \subsection{Two Degenerate Triads}\label{sec:10.8.3}
-In this case there exist five types of relations which cannot be transformed to one another by renaming and permutating the arguments [45, 104]. All these relations are given below
+In this case there exist five types of relations which cannot be transformed to one another by renaming and permuting the arguments [45, 104]. All these relations are given below
 \begin{gather}
 \ninej{a}{b}{c}{d}{e}{f}{a+d}{b+e}{j}=\frac{\Delta(a+d b+e j)}{\Delta(a b c) \Delta(d e f) \Delta(c f j)}\left[\frac{(2 a)!(2 b)!(2 d)!(2 e)!}{(2 a+2 b+1)!(2 d+2 e+1)!}\right]^{\frac{1}{2}}  \notag\\
 \times \frac{(a+b+d+e+j+1)!(a-b+c)!(d-e+f)!(c+f-j)!}{(a+b+c+1)!(d+e+f+1)!(c+f+j+1)!}  \notag\\
@@ -791,17 +788,15 @@ Below we present the simplest expressions of $9 j$ symbols
 & \times\left[\frac{(2 a)!(2 b)!(2 f)!}{(2 a+2 d+1)!(2 f+2 d+1)(2 b+2 d+2 f+1)!}\right]^{\frac{1}{2}} . \label{eq:10:8:17}
 \end{align}
 \subsection{Four Degenerate Triads}\label{sec:10.8.5}
-\begin{gather}
-\ninej{a}{b}{a+b}{d}{e}{f}{a+d}{b+e}{a+b+f}=\frac{\Delta(a+b+f a+d b+e)}{\Delta(d e f)} \cdot \frac{(2 a+2 b+d+e+f+1)!}{(d+e+f+1)!}  \notag\\
-\times\left[\frac{(2 e)!(2 d)!(2 f)!}{(2 a+2 b+1)(2 a+2 d+1)!(2 e+2 b+1)!(2 a+2 b+2 f+1)!)}\right]^{\frac{1}{2}}  \label{eq:10:8:18}\\
-\left\{\begin{array}{cc}
-c+b & b \\
-d & b+h \\
-g & h \\
-h & g+h
-\end{array}\right\}=(-1)^{2 b} \frac{\Delta(c+b d g)}{\Delta(c d+b+h g+h)} \cdot \frac{(2 h+b+d+g-c)!}{(d+g-b-c)!}  \notag\\
-\times\left[\frac{(2 c)!(2 d)!(2 g)!}{(2 b+2 h+1)(2 b+2 c+1)!(2 b+2 d+2 h+1)!(2 g+2 h+1)!}\right]^{\frac{1}{2}} \label{eq:10:8:19}
-\end{gather}
+\begin{align}
+\ninej{a}{b}{a+b}{d}{e}{f}{a+d}{b+e}{a+b+f}&=\frac{\Delta(a+b+f a+d b+e)}{\Delta(d e f)} \cdot \frac{(2 a+2 b+d+e+f+1)!}{(d+e+f+1)!}  \notag\\
+&\times\left[\frac{(2 e)!(2 d)!(2 f)!}{(2 a+2 b+1)(2 a+2 d+1)!(2 e+2 b+1)!(2 a+2 b+2 f+1)!}\right]^{\frac{1}{2}}  \label{eq:10:8:18}
+\end{align}
+\begin{align}
+\ninej{c+b}{b}{c}{d}{b+h}{d+b+h}{g}{h}{g+h}
+&=(-1)^{2 b} \frac{\Delta(c+b d g)}{\Delta(c d+b+h g+h)} \cdot \frac{(2 h+b+d+g-c)!}{(d+g-b-c)!}  \notag\\
+&\times\left[\frac{(2 c)!(2 d)!(2 g)!}{(2 b+2 h+1)(2 b+2 c+1)!(2 b+2 d+2 h+1)!(2 g+2 h+1)!}\right]^{\frac{1}{2}} \label{eq:10:8:19}
+\end{align}
 \begin{align}
 & \ninej{a}{b}{a+b}{a+g}{b+h}{f}{g}{h}{a+b+f}=(-1)^{2 a} \frac{\Delta(a+b+f g h)}{\Delta(a+g b+h f)} \cdot \frac{(a+b+g+h-f)!}{(-a-b+g+h-f)!}  \notag\\
 & \times\left[\frac{(2 f)!(2 g)!(2 h)!}{(2 a+2 b+1)(2 a+2 b+2 f+1)!(2 a+2 g+1)!(2 b+2 h+1)!}\right]^{\frac{1}{2}},  \label{eq:10:8:20}\\
