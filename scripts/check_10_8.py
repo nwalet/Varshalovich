@@ -291,11 +291,12 @@ def eq822(a, b, f, g, h):
                       / ((2 * a + 2 * g + 1) * (2 * a + 2 * b + 1) * fac(2 * a + 2 * f + 2 * g + 1) * fac(2 * a + 2 * b + 2 * f + 1))))
 
 
-def eq823(a, b, d, f, h, third):
+def eq823(a, b, d, f, h, third=None):
     v = (a, b, a + b, d, d + f, f, a + d, h, a + b + f)
     if not valid9(v) or (h + d - f - b) < 0:
         return None
-    return chk(v, D(a + b + f, a + d, h) / D(b, d + f, f)
+    third = 2 * d if third is None else third   # doubled (2d)! is genuine
+    return chk(v, D(a + b + f, a + d, h) / D(b, d + f, h)   # OCR: last Delta arg f -> h
                * fac(2 * a + b + d + h + f + 1) * fac(h - b + d + f) / (fac(b + d + f + h + 1) * fac(h + d - f - b))
                * sqrt(fac(2 * b) * fac(2 * d) * fac(third)
                       / ((2 * a + 2 * b + 1) * fac(2 * a + 2 * d + 1) * fac(2 * d + 2 * f + 1) * fac(2 * a + 2 * b + 2 * f + 1))))
@@ -458,7 +459,8 @@ def run():
     for name, fn, n in [("eq 10.8.14", eq814, 6), ("eq 10.8.15", eq815, 6), ("eq 10.8.16", eq816, 6),
                         ("eq 10.8.17", eq817, 6), ("eq 10.8.18", eq818, 5), ("eq 10.8.19", eq819, 5),
                         ("eq 10.8.20", eq820, 5),
-                        ("eq 10.8.21", eq821, 5), ("eq 10.8.22", eq822, 5), ("eq 10.8.24", eq824, 5),
+                        ("eq 10.8.21", eq821, 5), ("eq 10.8.22", eq822, 5), ("eq 10.8.23", eq823, 5),
+                        ("eq 10.8.24", eq824, 5),
                         ("eq 10.8.25", eq825, 5), ("eq 10.8.27", eq827, 4), ("eq 10.8.28", eq828, 2),
                         ("eq 10.8.29", eq829, 1), ("eq 10.8.30", eq830, 4), ("eq 10.8.31", eq831, 3)]:
         ok &= scan(name + " closed form", fn, n)
@@ -467,8 +469,8 @@ def run():
     #  10.8.19 : LHS printed as a 4x2 array, not a valid 3x3 9j.
     #  10.8.23 : an argument-dependent error remains beyond the doubled (2d)!(2d)!.
     #  10.8.26 : an argument-dependent error remains beyond the doubled (2b)!(2b)!.
-    print("  [FLAG] eq 10.8.23  argument-dependent OCR error (doubled (2d)! and more)")
-    print("  [FLAG] eq 10.8.26  argument-dependent OCR error (doubled (2b)! and more)")
+    print("  [FLAG] eq 10.8.26  fails numerically (ratios rational, j-dependent); the two")
+    print("         Delta's are structurally correct, so a factorial argument is OCR-wrong")
 
     print("\nALL CHECKED 10.8 FORMS PASS" if ok else "\nSOME 10.8 CHECKS FAILED")
     return ok
