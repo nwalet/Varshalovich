@@ -118,6 +118,69 @@ def gen_cases():
     return [c for c in out if valid12(*c)]
 
 
+# ================= 12j(II), arg order (a2 a3 a4 | b1 b3 b4 | c1 c2 c4 | d1 d2 d3) =========
+def valid12II(a2, a3, a4, b1, b3, b4, c1, c2, c4, d1, d2, d3):
+    triads = [(a2, a3, a4), (b1, b3, b4), (c1, c2, c4), (d1, d2, d3),
+              (b1, c1, d1), (a2, c2, d2), (a3, b3, d3), (a4, b4, c4)]
+    if not all(tri(*t) for t in triads):
+        return False
+
+    def tet(j1, j2, j3, j4):
+        return ((j1 + j2 + j3 + j4) == int(j1 + j2 + j3 + j4)
+                and j1 <= j2 + j3 + j4 and j2 <= j1 + j3 + j4
+                and j3 <= j1 + j2 + j4 and j4 <= j1 + j2 + j3)
+    return tet(a2, c4, d3, b1) and tet(a3, b4, d2, c1) and tet(a4, b3, c2, d1)
+
+
+# eq 10.13.26 : reference (four 6j)
+def TW2(a2, a3, a4, b1, b3, b4, c1, c2, c4, d1, d2, d3):
+    ph = (-1) ** (b3 - a4 - d1 + c2)
+    tot = S.Zero
+    for x in xrange12((a2, a3, a4, b1, b3, b4, c1, c2, c4, d1, d2, d3)):
+        tot += ((2 * x + 1) * w6(a3, b4, x, b1, d3, b3) * w6(a3, b4, x, c4, a2, a4)
+                * w6(b1, d3, x, d2, c1, d1) * w6(c4, a2, x, d2, c1, c2))
+    return ph * tot
+
+
+# eq 10.13.26 (2nd form): two 9j
+def TW2_9j(a2, a3, a4, b1, b3, b4, c1, c2, c4, d1, d2, d3):
+    ph = (-1) ** (b3 - a4 - d1 + c2)
+    tot = S.Zero
+    for x in xrange12((a2, a3, a4, b1, b3, b4, c1, c2, c4, d1, d2, d3)):
+        tot += ((2 * x + 1) * w9(a3, b3, d3, a4, b4, c4, a2, b1, x)
+                * w9(d2, d1, d3, c2, c1, c4, a2, b1, x))
+    return ph * tot
+
+
+def gen_cases_II():
+    import itertools
+    out = []
+    for combo in itertools.product([1, H], repeat=12):
+        if valid12II(*combo):
+            out.append(combo)
+        if len(out) >= 40:
+            break
+    out.append((1,) * 12)
+    return [c for c in out if valid12II(*c)]
+
+
+def extract_sym_II():
+    """Pull the eq 10.13.27 symmetry block and return all \\twelvejII arg-lists
+    (as lists of subscripted-letter tokens)."""
+    import re
+    text = open('../Chap10.tex').read()
+    start = text.index('relate 48 formally different')
+    end = text.index('Recursion relations', start)
+    region = text[start:end]
+    out = []
+    for m in re.finditer(r'\\twelvejII\{([^{}]*(?:\{[^{}]*\}[^{}]*)*)\}', region):
+        toks = [t.strip() for t in m.group(1).split(',')]
+        # normalise a_{2} -> a2
+        toks = [t.replace('_{', '').replace('}', '') for t in toks]
+        out.append(toks)
+    return out
+
+
 def run():
     print("Section 10.13 : 12j(I) cross-checks\n")
     CASES = gen_cases()
@@ -170,6 +233,48 @@ def run():
     okk = good > 0 and bad == 0
     print(f"  [{'OK  ' if okk else 'FAIL'}] {'eq 10.13.9 symmetry perms':36s} ({good - bad}/{good})")
     ok &= okk
+
+    # ---- 12j(II) ----
+    print()
+    CII = gen_cases_II()
+    # eq 10.13.26 two-9j form vs four-6j reference
+    good = bad = 0
+    for c in CII:
+        good += 1
+        if not close(TW2_9j(*c), TW2(*c)):
+            bad += 1
+    okk = good > 0 and bad == 0
+    ok &= okk
+    print(f"  [{'OK  ' if okk else 'FAIL'}] {'eq 10.13.26 two-9j vs four-6j':36s} ({good - bad}/{good})")
+
+    # eq 10.13.27 : 48 symmetry permutations extracted from the tex
+    names = ['a2', 'a3', 'a4', 'b1', 'b3', 'b4', 'c1', 'c2', 'c4', 'd1', 'd2', 'd3']
+    forms = extract_sym_II()
+    print(f"  extracted {len(forms)} \\twelvejII entries from eq 10.13.27")
+    good = bad = 0
+    firstbad = None
+    for c in CII:
+        sub = dict(zip(names, c))
+        ref = TW2(*c)
+        if ref == 0:
+            continue
+        for f in forms:
+            try:
+                vals = [sub[t] for t in f]
+            except KeyError:
+                continue
+            if len(vals) != 12 or not valid12II(*vals):
+                continue
+            good += 1
+            if not close(TW2(*vals), ref):
+                bad += 1
+                if firstbad is None:
+                    firstbad = f
+    okk = good > 0 and bad == 0
+    ok &= okk
+    print(f"  [{'OK  ' if okk else 'FAIL'}] {'eq 10.13.27 symmetry perms':36s} ({good - bad}/{good})")
+    if firstbad:
+        print(f"        first mismatch: {firstbad}")
 
     print("\nALL CHECKED 10.13 FORMS PASS" if ok else "\nSOME 10.13 CHECKS FAILED")
     return ok
