@@ -80,22 +80,22 @@ def eq83(a, b, c, d, e, f, h, j):
     return close(pref * s, w9((a, b, c, d, e, f, g, h, j)))
 
 
-# ---- eq 10.8.2 : one degenerate triad, double algebraic sum ----
-# the two "?" denominators are the OCR-suspect (c-c-a+h-x+y) and (e-c-d+j+x-y)
-def eq82(a, b, c, d, e, f, h, j, d1f, d2f):
+# ---- eq 10.8.2 : one degenerate triad, double algebraic sum (corrected) ----
+# OCR fixes: prefactor (b+e+h+1)!(d+e+f+1)! (were b+c+h, d+c+f) and the sum
+# denominator (c-e-a+h-x+y) (was the corrupt "c-c-a").
+def eq82(a, b, c, d, e, f, h, j):
     g = a + d
     if not valid9((a, b, c, d, e, f, g, h, j)):
         return None
     pref = (D(h, j, a + d) / (D(a, b, c) * D(b, e, h) * D(d, e, f) * D(c, f, j))
             * sqrt(fac(2 * a) * fac(2 * d) / fac(2 * a + 2 * d + 1))
             * fac(b + c - a) * fac(b + e - h) * fac(e + f - d) * fac(c + f - j) * fac(a + d + h + j + 1)
-            / (fac(a + b + c + 1) * fac(b + c + h + 1) * fac(d + c + f + 1) * fac(c + f + j + 1)))
+            / (fac(a + b + c + 1) * fac(b + e + h + 1) * fac(d + e + f + 1) * fac(c + f + j + 1)))
     s = S.Zero
     for x in nrange(2 * c):
         for y in nrange(2 * e):
             args_num = [2 * c - x, 2 * e - y, j + f - c + x, h + b - e + y]
-            args_den = [x, y, c + f - j - x, b + e - h - y, d1f(a, b, c, d, e, f, h, j, x, y),
-                        d2f(a, b, c, d, e, f, h, j, x, y)]
+            args_den = [x, y, c + f - j - x, b + e - h - y, c - e - a + h - x + y, e - c - d + j + x - y]
             if any(F(t) is None for t in args_num + args_den):
                 continue
             num = S.One
@@ -162,13 +162,10 @@ def run():
     print(f"  [{'OK  ' if o83 else 'FAIL'}] eq 10.8.3  CG-sum form          ({sum(r83)}/{len(r83)} cases)")
     ok &= o83
 
-    # eq 10.8.2 : printed double-sum denominators are OCR-corrupt (the "c-c-a"
-    # term) and could not be reconstructed; the equivalent CG form 10.8.3 is
-    # verified above, so 10.8.2 is FLAGGED.
-    d1p = lambda a, b, c, d, e, f, h, j, x, y: c - c - a + h - x + y
-    d2p = lambda a, b, c, d, e, f, h, j, x, y: e - c - d + j + x - y
-    rr = [r for r in (eq82(*x, d1p, d2p) for x in CASES) if r is not None]
-    print(f"  [FLAG] eq 10.8.2  printed double-sum  ({sum(rr)}/{len(rr)} cases) -- denominators corrupt")
+    rr = [r for r in (eq82(*x) for x in CASES) if r is not None]
+    o82 = all(rr) and len(rr) > 0
+    ok &= o82
+    print(f"  [{'OK  ' if o82 else 'FAIL'}] eq 10.8.2  double-sum [corrected] ({sum(rr)}/{len(rr)} cases)")
 
     for name, fn, args in [("eq 10.8.8  algebraic sum", eq88, [(a, b, c, d, e, f, j) for (a, b, c, d, e, f, h, j) in CASES]),
                            ("eq 10.8.9  CG [/->f fix]", eq89, [(a, b, c, d, e, f, j) for (a, b, c, d, e, f, h, j) in CASES])]:
@@ -177,7 +174,7 @@ def run():
         ok &= oo
         print(f"  [{'OK  ' if oo else 'FAIL'}] {name:24s}    ({sum(rs)}/{len(rs)} cases)")
 
-    print("\n(10.8.2 flagged: use 10.8.3; remaining 10.8.10-31 pending)")
+    print("\n(remaining 10.8.10-10.8.31 pending)")
     return ok
 
 
