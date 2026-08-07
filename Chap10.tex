@@ -1288,8 +1288,12 @@ If one argument is equal to zero, a $12 j(\mathrm{II})$ symbol is reduced to pro
 \end{align}
 If two arguments from any tetrad are equal to $\frac{1}{2}$ we obtain
 \begin{gather}
-\twelvejII{a_{2},\frac{1}{2},a_{4},b_{1},b_{3},\frac{1}{2},c_{1},c_{2},c_{4},d_{1},d_{2},d_{3}}=\frac{\delta_{b_{1} d_{3}} \delta_{c_{4} a_{2}} \delta_{c_{1} d_{3}}}{2\left(2 b_{1}+1\right)\left(2 c_{1}+1\right)\left(2 c_{4}+1\right)}  \notag\\
-+(-1)^{e}\sixj{b_{1}}{d_{3}}{1}{d_{2}}{c_{1}}{d_{1}}\sixj{c_{4}}{a_{2}}{1}{d_{2}}{c_{1}}{c_{2}} \frac{D\left(\frac{1}{2} a_{2} a_{4}\right) D\left(\frac{1}{2} b_{1} b_{3}\right) D\left(\frac{1}{2} c_{4} a_{4}\right) D\left(\frac{1}{2} b_{3} d_{3}\right)}{2 D\left(1 b_{1} b_{3}\right) D\left(1 a_{2} c_{4}\right)}  \label{eq:10:13:34}\\
+% Source misprints corrected for numerical consistency (verified 2445/2445,
+% scripts/check_10_13.py): third Kronecker delta was \delta_{c_1 d_3} -> \delta_{c_1 d_2};
+% denominator D-symbols were D(1 b_1 b_3) D(1 a_2 c_4) -> D(1 b_1 d_3) D(1 c_4 a_2)
+% (D is the asymmetric symbol of Eq. (10.13.14), so argument order matters).
+\twelvejII{a_{2},\frac{1}{2},a_{4},b_{1},b_{3},\frac{1}{2},c_{1},c_{2},c_{4},d_{1},d_{2},d_{3}}=\frac{\delta_{b_{1} d_{3}} \delta_{c_{4} a_{2}} \delta_{c_{1} d_{2}}}{2\left(2 b_{1}+1\right)\left(2 c_{1}+1\right)\left(2 c_{4}+1\right)}  \notag\\
++(-1)^{\varepsilon}\sixj{b_{1}}{d_{3}}{1}{d_{2}}{c_{1}}{d_{1}}\sixj{c_{4}}{a_{2}}{1}{d_{2}}{c_{1}}{c_{2}} \frac{D\left(\frac{1}{2} a_{2} a_{4}\right) D\left(\frac{1}{2} b_{1} b_{3}\right) D\left(\frac{1}{2} c_{4} a_{4}\right) D\left(\frac{1}{2} b_{3} d_{3}\right)}{2 D\left(1 b_{1} d_{3}\right) D\left(1 c_{4} a_{2}\right)}  \label{eq:10:13:34}\\
 \varepsilon=b_{1}+b_{3}+c_{2}+c_{4}+a_{2}-a_{4}-d_{1}+d_{3}  \notag\\
 \twelvejII{\frac{1}{2},a_{3},a_{4},\frac{1}{2},b_{3},b_{4},c_{1},c_{2},c_{4},d_{1},d_{2},d_{3}}=(-1)^{2 b_{3}+2 d_{1}} \frac{\delta_{d_{3} c_{4}}}{2\left(2 d_{3}+1\right)}\sixj{a_{3}}{a_{4}}{\frac{1}{2}}{b_{4}}{b_{3}}{d_{3}}\sixj{d_{2}}{c_{2}}{\frac{1}{2}}{c_{1}}{d_{1}}{d_{3}}  \notag\\
 +3(-1)^{b_{3}-a_{4}-d_{1}+c_{2}}\ninej{a_{3}}{b_{3}}{d_{3}}{a_{4}}{b_{4}}{c_{4}}{\frac{1}{2}}{\frac{1}{2}}{1}\ninej{d_{2}}{d_{1}}{d_{3}}{c_{2}}{c_{1}}{c_{4}}{\frac{1}{2}}{\frac{1}{2}}{1} . \label{eq:10:13:35}

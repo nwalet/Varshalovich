@@ -409,11 +409,31 @@ def run():
     ok &= okk
     print(f"  [{'OK  ' if okk else 'FAIL'}] {'eq 10.13.31 tetrad=sum -> CG sum':36s} ({good - bad}/{good})")
 
-    # eq 10.13.34 : a3 = b4 = 1/2 (two 1/2's in tetrad (a3,b4,d2,c1)).  As transcribed
-    # this contains D(1,b1,b3) and D(1,a2,c4) whose arguments are half-integer sums
-    # (b1+b3, a2+c4 are half-integer here), so the D-symbols are ill-defined and the
-    # closed form does NOT verify numerically -- suspected OCR error, needs a scan.
-    print("  [SKIP] eq 10.13.34 two 1/2 -> 6j.6j D-form  (does not verify; suspected OCR, needs scan)")
+    # eq 10.13.34 : a3 = b4 = 1/2 (two 1/2's in tetrad (a3,b4,d2,c1)) -> delta + 6j.6j
+    # D-form.  Two source misprints corrected here (see Chap10.tex note): the third
+    # Kronecker delta is delta_{c1,d2} (not delta_{c1,d3}), and the denominator
+    # D-symbols are D(1,b1,d3)*D(1,c4,a2) (not D(1,b1,b3)*D(1,a2,c4)); order matters
+    # because D (eq 10.13.14) is asymmetric.
+    good = bad = 0
+    for a2, a4, b1, b3, c1, c2, c4, d1, d2, d3 in itertools.product([H, 1, Rational(3, 2), 2], repeat=10):
+        v = (a2, H, a4, b1, b3, H, c1, c2, c4, d1, d2, d3)
+        if not valid12II(*v):
+            continue
+        lhs = TW2(*v)
+        eps = b1 + b3 + c2 + c4 + a2 - a4 - d1 + d3
+        t1 = ((1 if b1 == d3 else 0) * (1 if c4 == a2 else 0) * (1 if c1 == d2 else 0)
+              / (2 * (2 * b1 + 1) * (2 * c1 + 1) * (2 * c4 + 1)))
+        t2 = ((-1) ** eps * w6(b1, d3, 1, d2, c1, d1) * w6(c4, a2, 1, d2, c1, c2)
+              * D(H, a2, a4) * D(H, b1, b3) * D(H, c4, a4) * D(H, b3, d3)
+              / (2 * D(1, b1, d3) * D(1, c4, a2)))
+        good += 1
+        if not close(lhs, t1 + t2):
+            bad += 1
+        if good >= 2000:
+            break
+    okk = good > 0 and bad == 0
+    ok &= okk
+    print(f"  [{'OK  ' if okk else 'FAIL'}] {'eq 10.13.34 two 1/2 -> delta+6j.6j':36s} ({good - bad}/{good})")
 
     print("\nALL CHECKED 10.13 FORMS PASS" if ok else "\nSOME 10.13 CHECKS FAILED")
     return ok
