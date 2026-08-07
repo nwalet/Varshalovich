@@ -435,6 +435,71 @@ def run():
     ok &= okk
     print(f"  [{'OK  ' if okk else 'FAIL'}] {'eq 10.13.34 two 1/2 -> delta+6j.6j':36s} ({good - bad}/{good})")
 
+    # eq 10.13.4 : 12j(I) orthogonality, sum over a2,a3,a4.  Confirms the corrected
+    # RHS Kronecker deltas delta_{c2' c2} delta_{c3' c3} delta_{c4' c4} (the OCR text
+    # had delta_{c3' c2} delta_{c3' c3} delta_{c1' c4}).
+    def frng(v):
+        return [Rational(i, 2) for i in range(0, int(2 * v) + 2)]
+
+    def tri(a, b, c):
+        return abs(a - b) <= c <= a + b and (a + b + c) == int(a + b + c)
+
+    def orth4(a1, b12, b23, b34, b41, c1, c2, c3, c4, c2p, c3p, c4p):
+        tot = S.Zero
+        for a2 in frng(a1 + b12):
+            if not tri(a1, b12, a2):
+                continue
+            for a3 in frng(a2 + b23):
+                if not tri(a2, b23, a3):
+                    continue
+                for a4 in frng(a3 + b34):
+                    if not (tri(a3, b34, a4) and tri(a4, b41, c1)):
+                        continue
+                    t = TW(a1, a2, a3, a4, b12, b23, b34, b41, c1, c2, c3, c4)
+                    if t == 0:
+                        continue
+                    tot += ((2 * a2 + 1) * (2 * a3 + 1) * (2 * a4 + 1) * t
+                            * TW(a1, a2, a3, a4, b12, b23, b34, b41, c1, c2p, c3p, c4p))
+        d = (1 if c2p == c2 else 0) * (1 if c3p == c3 else 0) * (1 if c4p == c4 else 0)
+        tr = tri(c1, b12, c2) and tri(c2, b23, c3) and tri(c3, b34, c4) and tri(c4, b41, a1)
+        rhs = d / ((2 * c2 + 1) * (2 * c3 + 1) * (2 * c4 + 1)) * (1 if tr else 0)
+        return close(tot, rhs)
+
+    cases4 = [(H, H, H, H, H, H, 1, H, 1, 1, H, 1),   # diagonal c'=c
+              (H, H, H, H, H, H, 1, H, 1, H, H, 1),   # c2' != c2 -> 0
+              (1, H, H, H, H, H, 1, H, 1, H, 1, 1)]   # c2',c3' != -> 0
+    r4 = all(orth4(*c) for c in cases4)
+    ok &= r4
+    print(f"  [{'OK  ' if r4 else 'FAIL'}] {'eq 10.13.4 orthogonality (12jI)':36s}")
+
+    # eq 10.13.28 : recursion relation for the 12j(II) symbol (sum over a3' = sum over b4').
+    good = bad = 0
+    for a2, a3, a4, b1, b3, b4, c1, c2, c4, d1, d2, d3 in itertools.product([H, 1, Rational(3, 2)], repeat=12):
+        if not valid12II(a2, a3, a4, b1, b3, b4, c1, c2, c4, d1, d2, d3):
+            continue
+        for lam in [H, 1]:
+            for a4p in [a4 - H, a4 + H, a4 - 1, a4 + 1]:
+                for b3p in [b3 - H, b3 + H, b3 - 1, b3 + 1]:
+                    if a4p < 0 or b3p < 0:
+                        continue
+                    L = S.Zero
+                    for a3p in frng(a3 + lam):
+                        L += ((2 * a3p + 1) * w6(lam, a3, a3p, d3, b3p, b3) * w6(lam, a3, a3p, a2, a4, a4p)
+                              * TW2(a2, a3p, a4, b1, b3p, b4, c1, c2, c4, d1, d2, d3))
+                    R = S.Zero
+                    for b4p in frng(b4 + lam):
+                        R += ((2 * b4p + 1) * w6(lam, b4, b4p, c4, a4p, a4) * w6(lam, b4, b4p, b1, b3, b3p)
+                              * TW2(a2, a3, a4p, b1, b3, b4p, c1, c2, c4, d1, d2, d3))
+                    R *= (-1) ** (b1 + a2 - d3 - c4)
+                    good += 1
+                    if not close(L, R):
+                        bad += 1
+        if good >= 400:
+            break
+    okk = good > 0 and bad == 0
+    ok &= okk
+    print(f"  [{'OK  ' if okk else 'FAIL'}] {'eq 10.13.28 recursion (12jII)':36s} ({good - bad}/{good})")
+
     print("\nALL CHECKED 10.13 FORMS PASS" if ok else "\nSOME 10.13 CHECKS FAILED")
     return ok
 
