@@ -14,20 +14,11 @@
 % To fold this into the main book instead of building it standalone, move the
 % \usepackage[...]{biblatex} and \addbibresource lines into VMK.tex's preamble,
 % \include this file's body, and run the bibliography backend on VMK.
-\documentclass[10pt]{article}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{fontspec}
-\usepackage[a4paper,margin=2cm]{geometry}
-\usepackage[backend=bibtex,style=numeric,sorting=none,defernumbers=true]{biblatex}
-\addbibresource{references.bib}
+
 
 % Cite everything so the whole database is printed, in database order.
 \nocite{*}
 
-\begin{document}
 \begin{center}\Large\bfseries REFERENCES\end{center}
 
 \printbibliography[keyword=books,  heading=subbibliography, title={I.~~Books and Reviews}]
@@ -38,4 +29,3 @@
 \section*{V.~~Additional Papers Since the Book Came Out}
 \emph{(none)}
 
-\end{document}

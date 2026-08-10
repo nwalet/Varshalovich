@@ -28,9 +28,13 @@
 \usepackage{mathtools}
 \usepackage{polyglossia}
 \usepackage{fontspec}
+\usepackage[backend=bibtex,style=numeric,sorting=none,defernumbers=true]{biblatex}
+\addbibresource{references.bib}
+\usepackage{makeidx}
+\makeindex
 \usepackage{newunicodechar}
 \usepackage{diagrams}
-\usetikzlibrary{patterns,angles,quotes}
+\usetikzlibrary{patterns,angles,quotes,arrows.meta}
 \usepackage{xcolor}
 \usepackage{listings}
 \lstdefinestyle{vmkcode}{%
@@ -146,6 +150,12 @@
 \usepackage{relsize}
 \newcommand{\Fact}[1]{{\mathlarger{\Pi}_{#1}}}
 \newcommand{\Fhg}[2]{\prescript{}{#1}{F}_{#2}^{}}
+\newcommand{\Fnm}[6][l]{\prescript{}{#2}{F}_{#3}^{}%
+\if#1l \left(#4 ; #5 ; #6\right)
+\else\left[\begin{array}{c} #4\\#5\end{array}\middle|#6\right]
+\fi
+}
+
 \newunicodechar{∇}{\ifmmode\nabla\else{$\nabla$}\fi}
 \newunicodechar{→}{\ifmmode\rightarrow\else{$\rightarrow$}\fi}
 \newunicodechar{𝜆}{\ifmmode\lambda\else{$\lambda$}\fi}
@@ -160,7 +170,7 @@
 A. N. Moskalev\\
 V. K. Khersonskii}
 \date{}
-\includeonly{Chap9}
+\includeonly{Chap1,references,glossary}
 \begin{document}
 \captionsetup{singlelinecheck=false}\maketitle
 \include{preamble}
@@ -178,4 +188,7 @@ V. K. Khersonskii}
 \include{Chap11}
 \include{Chap12}
 \include{Chap13}
+\include{references}
+\include{glossary}
+\printindex
 \end{document}
