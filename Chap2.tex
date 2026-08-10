@@ -212,7 +212,7 @@ The commutation rules of $\hat{\vect{L}}$ with the total angular momentum operat
 \subsection{Explicit Form}
 The cartesian components of the operator $\hat{\vect{L}}$ are given by
 \begin{equation}
-\hat{L}_{x}=-i\left(y \frac{\partial}{\partial z}-z \frac{\partial}{\partial y}\right), \quad \hat{L}_{y}=-i\left(z \frac{\partial}{\partial x}-x \frac{\partial}{\partial z}\right), \quad \hat{L}_{x}=-i\left(x \frac{\partial}{\partial y}-y \frac{\partial}{\partial x}\right) . \label{eq:2:2:13}
+\hat{L}_{x}=-i\left(y \frac{\partial}{\partial z}-z \frac{\partial}{\partial y}\right), \quad \hat{L}_{y}=-i\left(z \frac{\partial}{\partial x}-x \frac{\partial}{\partial z}\right), \quad \hat{L}_{z}=-i\left(x \frac{\partial}{\partial y}-y \frac{\partial}{\partial x}\right) . \label{eq:2:2:13}
 \end{equation}
 or in a more compact form
 \begin{equation}
@@ -326,8 +326,8 @@ For spherical components of the spin operator $\widehat{S}$ the following relati
 \operatorname{Tr}\left\{\widehat{S}_{\mu}\right\} & =0,  \notag\\
 \operatorname{Tr}\left\{\widehat{S}_{\mu} \widehat{S}_{\nu}\right\} & =\frac{S(S+1)(2 S+1)}{3}(-1)^{\mu} \delta_{\mu-\nu},  \notag\\
 \operatorname{Tr}\left\{\widehat{S}_{\mu} \widehat{S}_{\nu} \widehat{S}_{\lambda}\right\} & =-\frac{S(S+1)(2 S+1)}{\sqrt{6}}\begin{pmatrix}
-1 & 1 \\
-\mu & \nu
+1 & 1 & 1 \\
+\mu & \nu & \lambda
 \end{pmatrix}=\frac{S(S+1)(2 S+1)}{3 \sqrt{2}}(-1)^{1+\lambda} \clebsch{1}{\mu}{1}{\nu}{1}{-\lambda},  \label{eq:2:3:12}\\
 \operatorname{Tr}\left\{\widehat{S}_{\mu} \widehat{S}_{\nu} \widehat{S}_{\lambda} \hat{S}_{\rho}\right\}= & \frac{S(S+1)(2 S+1)}{15}\left\{\left[S(S+1)+\frac{1}{2}\right](-1)^{\mu+\lambda}\left(\delta_{\mu-\nu} \delta_{\lambda-\rho}+\delta_{\mu-\rho} \delta_{\nu-\lambda}\right)\right.  \notag\\
 & \left.\quad+[S(S+1)-2](-1)^{\mu+\nu} \delta_{\mu-\lambda} \delta_{\nu-\rho}\right\} . \notag
@@ -380,7 +380,7 @@ When $L=1$ the operators $\widehat{T}_{L M}(S)$ are proportional to the spherica
 \widehat{T}_{1 M}(S)=\frac{\sqrt{3}}{\sqrt{S(S+1)(2 S+1)}} \widehat{S}_{M}, \quad(M= \pm 1,0). \label{eq:2:4:10}
 \end{equation}
 The polarization operators for a spin value $S=1$ are considered in Sec. 2.6.\\
-2.4.3. Properties of $\widehat{T}_{L M}(S)$ under Transformations of the Coordinate System\\
+\subsection{Properties of $\widehat{T}_{L M}(S)$ under Transformations of the Coordinate System}
 (a) Coordinate inversion ( $\vect{r} \rightarrow-\vect{r}$ )
 
 The polarization operators $\widehat{T}_{L M}(S)$ are invariant under coordinate inversion
@@ -436,7 +436,7 @@ The polarization operators satisfy the following commutation relations
 & \left\{\widehat{T}_{L_{1} M_{1}}(S), \widehat{T}_{L_{2} M_{2}}(S)\right\}=  \notag\\
 & \quad \sqrt{\left(2 L_{1}+1\right)\left(2 L_{2}+1\right)} \sum_{L_{3}}(-1)^{2 S+L_{3}}\left[1+(-1)^{L_{1}+L_{2}+L_{3}}\right]
 \sixj{L_{1}}{L_{2}}{L_{3}} {S}{S}{S}
- \clebsch{L_{1}}{M_{1}}{L_{2}}{M_{3}}{L_{3}}{M_{3}} 
+ \clebsch{L_{1}}{M_{1}}{L_{2}}{M_{2}}{L_{3}}{M_{3}}
  \widehat{T}_{L_{3} M_{3}}(S) .\label{eq:2:4:20}
 \end{align}
 Equation \eqref{eq:2:4:1} is a special case of \eqref{eq:2:4:19} for $L_{1}=1$.
@@ -450,8 +450,8 @@ Equation \eqref{eq:2:4:1} is a special case of \eqref{eq:2:4:19} for $L_{1}=1$.
 \end{gather}
 In general
 \begin{align}
-\operatorname{Tr}\left\{\hat{T}_{L_{1} M_{1}}(S)\right. & \left.\hat{T}_{L_{2} M_{2}}(S) \ldots \hat{T}_{L_{n} M_{n}}(S)\right\}=\frac{\left[\left(2 L_{1}+1\right)\left(2 L_{2}+1\right) \ldots\left(2 L_{n}+1\right)\right]}{(2 S+1)^{n / 2}}  ,\notag\\
-& \times \delta_{M_{1}+M_{3}+M_{3}+\ldots+M_{n, 0}} \sum_{m} \clebsch{L_{1}}{M_{1}}{S}{m}{S}{m+\mu_{1}} \clebsch{L_{2}}{M_{2}}{S}{m+\mu_{1}}{S}{m+\mu_{2}} \ldots \clebsch{L_{n}}{M_{n}}{S}{m+\mu_{n-1}}{S}{m} ,\label{eq:2:4:24}
+\operatorname{Tr}\left\{\hat{T}_{L_{1} M_{1}}(S)\right. & \left.\hat{T}_{L_{2} M_{2}}(S) \ldots \hat{T}_{L_{n} M_{n}}(S)\right\}=\frac{\left[\left(2 L_{1}+1\right)\left(2 L_{2}+1\right) \ldots\left(2 L_{n}+1\right)\right]^{\frac{1}{2}}}{(2 S+1)^{n / 2}}  ,\notag\\
+& \times \delta_{M_{1}+M_{2}+M_{3}+\ldots+M_{n, 0}} \sum_{m} \clebsch{L_{1}}{M_{1}}{S}{m}{S}{m+\mu_{1}} \clebsch{L_{2}}{M_{2}}{S}{m+\mu_{1}}{S}{m+\mu_{2}} \ldots \clebsch{L_{n}}{M_{n}}{S}{m+\mu_{n-1}}{S}{m} ,\label{eq:2:4:24}
 \end{align}
 where
 \[
@@ -517,7 +517,7 @@ The four matrices $\widehat{S}_{x}, \widehat{S}_{y}, \widehat{S}_{z}$ and $\wide
 \begin{align}
 \widehat{S}_{i} \widehat{S}_{k}= & \frac{1}{4} \delta_{i k} \widehat{I}+\frac{i}{2} \varepsilon_{i k l} \widehat{S}_{l},  \label{eq:2:5:11}\\
 \widehat{S}_{i} \widehat{S}_{k} \widehat{S}_{l}= & \frac{i}{8} \varepsilon_{i k l} \widehat{I}+\frac{1}{4}\left(\widehat{S}_{i} \delta_{k l}-\widehat{S}_{k} \delta_{i l}+\widehat{S}_{l} \delta_{i k}\right)  ,\label{eq:2:5:12}\\
-\widehat{S}_{i} \widehat{S}_{k} \widehat{S}_{l} \widehat{S}_{j}= & \frac{1}{6}\left(\delta_{i k} \delta_{l j}-\delta_{i l} \delta_{k j}+\delta_{i j} \delta_{k l}\right) \widehat{I} , \notag\\
+\widehat{S}_{i} \widehat{S}_{k} \widehat{S}_{l} \widehat{S}_{j}= & \frac{1}{16}\left(\delta_{i k} \delta_{l j}-\delta_{i l} \delta_{k j}+\delta_{i j} \delta_{k l}\right) \widehat{I} , \notag\\
 & +\frac{i}{8}\left(\delta_{i k} \varepsilon_{l j m}-\delta_{i l} \varepsilon_{k j m}+\delta_{i j} \varepsilon_{k l m}+\delta_{k l} \varepsilon_{i j m}-\delta_{k j} \varepsilon_{i l m}+\delta_{l j} \varepsilon_{i k m}\right) \widehat{S}_{m} .\label{eq:2:5:13}
 \end{align}
 In more detailed form, Eq. \eqref{eq:2:5:11} is written as
@@ -575,21 +575,21 @@ e^{\alpha \widehat{S}_{+1}}=\widehat{I}+\alpha \widehat{S}_{+1}, \quad e^{\alpha
 \begin{equation}
 \hat{D}^{\frac{1}{2}}(\alpha, \beta, \gamma)=e^{-i \alpha \hat{S}_{z}} \cdot e^{-i \beta \hat{S}_{y}} \cdot e^{-i \gamma \hat{S}_{z}}=\begin{pmatrix}
 \cos \frac{\beta}{2} e^{-i \frac{\alpha+\gamma}{2}} & -\sin \frac{\beta}{2} e^{-i \frac{\alpha-\gamma}{2}}  \label{eq:2:5:32}\\
-\sin \frac{\beta}{2} e^{i \frac{\alpha-\alpha}{2}} & \cos \frac{\beta}{2} e^{i \frac{\alpha+\alpha}{2}}
+\sin \frac{\beta}{2} e^{i \frac{\alpha-\gamma}{2}} & \cos \frac{\beta}{2} e^{i \frac{\alpha+\gamma}{2}}
 \end{pmatrix}.
 \end{equation}
 The inverse matrix is
 \begin{gather}
 {\left[\hat{D}^{\frac{1}{2}}(\alpha, \beta, \gamma)\right]^{-1}=\left[\hat{D}^{\frac{1}{2}}(\alpha, \beta, \gamma)\right]^{+}=\hat{D}^{\frac{1}{2}}(\pi-\gamma, \beta,-\pi-\alpha)=\hat{D}^{\frac{1}{2}}(-\gamma,-\beta,-\alpha)} , \notag\\
 =\begin{pmatrix}
-\cos \frac{\beta}{2} e^{i \frac{\alpha+\alpha}{2}} & \sin \frac{\beta}{2} e^{-i \frac{\alpha-\alpha}{2}} \\
--\sin \frac{\beta}{2} e^{i \frac{\alpha-\alpha}{2}} & \cos \frac{\beta}{2} e^{-i \frac{\alpha+\alpha}{2}}
+\cos \frac{\beta}{2} e^{i \frac{\alpha+\gamma}{2}} & \sin \frac{\beta}{2} e^{-i \frac{\alpha-\gamma}{2}} \\
+-\sin \frac{\beta}{2} e^{i \frac{\alpha-\gamma}{2}} & \cos \frac{\beta}{2} e^{-i \frac{\alpha+\gamma}{2}}
 \end{pmatrix}. \label{eq:2:5:33}
 \end{gather}
 Matrix elements of the operator $\hat{D}^{\frac{1}{2}}(\alpha, \beta, \gamma)$ are the Wigner $D$-functions $D_{M M^{\prime}}^{\frac{1}{2}}(\alpha, \beta, \gamma)$ (Chap. 4). The expansion of $\widehat{D}^{\frac{1}{2}}(\alpha, \beta, \gamma)$ in terms of the spin matrices has the form
 \begin{align}
 \widehat{D}^{\frac{1}{2}}(\alpha, \beta, \gamma) & =\cos \frac{\beta}{2} \cos \frac{\alpha+\gamma}{2} \widehat{I}+2 i \sin \frac{\beta}{2} \sin \frac{\alpha-\gamma}{2} \widehat{S}_{x}-2 i \sin \frac{\beta}{2} \cos \frac{\alpha-\gamma}{2} \widehat{S}_{y}-2 i \cos \frac{\beta}{2} \sin \frac{\alpha+\gamma}{2} \widehat{S}_{z},  \label{eq:2:5:34}\\
-\widehat{D}^{\frac{1}{2}}(\alpha, \beta, \gamma) & =\cos \frac{\beta}{2} \cos \frac{\alpha+\gamma}{2} \widehat{I}+\sqrt{2} \sin \frac{\beta}{2} e^{-i \frac{\alpha-\alpha}{2}} \widehat{S}_{+1}-2 i \cos \frac{\beta}{2} \sin \frac{\alpha+\gamma}{2} \widehat{S}_{0}+\sqrt{2} \sin \frac{\beta}{2} e^{i \frac{\alpha-\alpha}{2}} \widehat{S}_{-1} . \label{eq:2:5:35}
+\widehat{D}^{\frac{1}{2}}(\alpha, \beta, \gamma) & =\cos \frac{\beta}{2} \cos \frac{\alpha+\gamma}{2} \widehat{I}+\sqrt{2} \sin \frac{\beta}{2} e^{-i \frac{\alpha-\gamma}{2}} \widehat{S}_{+1}-2 i \cos \frac{\beta}{2} \sin \frac{\alpha+\gamma}{2} \widehat{S}_{0}+\sqrt{2} \sin \frac{\beta}{2} e^{i \frac{\alpha-\gamma}{2}} \widehat{S}_{-1} . \label{eq:2:5:35}
 \end{align}
 (b) Under rotations of the coordinate system through an angle $\omega$ about an axis $\vect{n}(\boldsymbol{\Theta}, \Phi)$ spin functions and spin matrices for $S=\frac{1}{2}$ are transformed by the rotation operator $\hat{U}^{\frac{1}{2}}(\omega ; \Theta, \Phi)$ which is special case of the operator given by Eq. \eqref{eq:1:4:33}.
 \begin{equation}
@@ -602,7 +602,7 @@ The inverse matrix is
 \begin{align}
 {\left[\hat{U}^{\frac{1}{2}}(\omega ; \Theta, \Phi)\right]^{-1} } & =\left[\hat{U}^{\frac{1}{2}}(\omega ; \Theta, \Phi)\right]^{+}=\hat{U}^{\frac{1}{2}}(\omega ; \pi-\Theta, \pi+\Phi)=\hat{U}^{\frac{1}{2}}(-\omega ; \Theta, \Phi)  \notag\\
 & =\begin{pmatrix}
-\cos \frac{\omega}{2}+i \sin \frac{\omega}{2} \cos \Theta & i \sin \frac{\omega}{2} \sin \Theta e^{-i \Phi_{1}} \\
+\cos \frac{\omega}{2}+i \sin \frac{\omega}{2} \cos \Theta & i \sin \frac{\omega}{2} \sin \Theta e^{-i \Phi} \\
 i \sin \frac{\omega}{2} \sin \Theta e^{i \Phi} & \cos \frac{\omega}{2}-i \sin \frac{\omega}{2} \cos \Theta
 \end{pmatrix} \label{eq:2:5:37}
 \end{align}
@@ -698,14 +698,14 @@ $\widehat{Q}_{i k}$ is called the quadrupole tensor. It has 5 linearly independe
 \begin{gather}
 \widehat{T}_{2 \pm 2}=\frac{1}{2}\left(\widehat{Q}_{x x}-\widehat{Q}_{y y} \pm 2 i \widehat{Q}_{x y}\right) , \notag\\
 \widehat{T}_{2 \pm 1}=\mp\left(\widehat{Q}_{x z} \pm i \widehat{Q}_{y z}\right),  \label{eq:2:6:7}\\
-\widehat{T}_{20}=\sqrt{\frac{3}{2}} \widehat{Q}_{x z} .\notag
+\widehat{T}_{20}=\sqrt{\frac{3}{2}} \widehat{Q}_{z z} .\notag
 \end{gather}
 The inverse relations are
 \begin{equation}
 \begin{aligned}
 \hat{Q}_{x x}=\frac{1}{2}\left(\hat{T}_{22}+\hat{T}_{2-2}\right)-\frac{1}{\sqrt{6}} \hat{T}_{20}, && \hat{Q}_{x y}=\hat{Q}_{y x}=\frac{i}{2}\left(\hat{T}_{2-2}-\hat{T}_{22}\right), \\
-\hat{Q}_{y y}=-\frac{1}{2}\left(\hat{T}_{22}+\hat{T}_{2-2}\right)-\frac{1}{\sqrt{6}} \hat{T}_{20}, && \hat{Q}_{x x}=\hat{Q}_{x x}=\frac{1}{2}\left(\hat{T}_{2-1}-\hat{T}_{21}\right),  \label{eq:2:6:8}\\
-\hat{Q}_{x x}=\sqrt{\frac{2}{3}} \hat{T}_{20}, && \hat{Q}_{y x}=\hat{Q}_{x y}=\frac{i}{2}\left(\hat{T}_{2-1}+\hat{T}_{21}\right).
+\hat{Q}_{y y}=-\frac{1}{2}\left(\hat{T}_{22}+\hat{T}_{2-2}\right)-\frac{1}{\sqrt{6}} \hat{T}_{20}, && \hat{Q}_{x z}=\hat{Q}_{z x}=\frac{1}{2}\left(\hat{T}_{2-1}-\hat{T}_{21}\right),  \label{eq:2:6:8}\\
+\hat{Q}_{z z}=\sqrt{\frac{2}{3}} \hat{T}_{20}, && \hat{Q}_{y z}=\hat{Q}_{z y}=\frac{i}{2}\left(\hat{T}_{2-1}+\hat{T}_{21}\right).
 \end{aligned}
 \end{equation}
 \subsection{Explicit Form}
@@ -765,7 +765,7 @@ The quadrupole tensor $\widehat{Q}_{i k}(i, k=x, y, z)$ in the spherical basis r
 -1 & 0 & -3 \\
 0 & 2 & 0 \\
 -3 & 0 & -1
-\end{pmatrix}, \quad \hat{Q}_{x z}=\frac{1}{3}\begin{pmatrix}
+\end{pmatrix}, \quad \hat{Q}_{z z}=\frac{1}{3}\begin{pmatrix}
 1 & 0 & 0 \\
 0 & -2 & 0 \\
 0 & 0 & 1
@@ -774,11 +774,11 @@ The quadrupole tensor $\widehat{Q}_{i k}(i, k=x, y, z)$ in the spherical basis r
 0 & 0 & -1 \\
 0 & 0 & 0 \\
 1 & 0 & 0
-\end{pmatrix}, \quad \hat{Q}_{x x}=\hat{Q}_{x x}=\frac{1}{2 \sqrt{2}}\begin{pmatrix}
+\end{pmatrix}, \quad \hat{Q}_{x z}=\hat{Q}_{z x}=\frac{1}{2 \sqrt{2}}\begin{pmatrix}
 0 & 1 & 0 \\
 1 & 0 & -1 \\
 0 & -1 & 0
-\end{pmatrix}, \quad \hat{Q}_{y z}=\hat{Q}_{x y}=\frac{i}{2 \sqrt{2}}\begin{pmatrix}
+\end{pmatrix}, \quad \hat{Q}_{y z}=\hat{Q}_{z y}=\frac{i}{2 \sqrt{2}}\begin{pmatrix}
 0 & -1 & 0 \\
 1 & 0 & 1 \\
 0 & -1 & 0
@@ -788,7 +788,7 @@ The components of the quadrupole tensor $\widehat{Q}_{i k}$ in the spherical bas
 \begin{equation}
 \widehat{Q}_{i k}^{+}=\widehat{Q}_{i k}, \quad(i, k=x, y, z), \label{eq:2:6:16}
 \end{equation}
-The matrices $\hat{Q}_{x x}, \hat{Q}_{y y}, \hat{Q}_{x z}, \hat{Q}_{x x}, \hat{Q}_{x x}$ are real, whereas $\hat{Q}_{x y}, \hat{Q}_{y x}, \hat{Q}_{y z}, \hat{Q}_{x y}$ are purely imaginary. The polarization operators $\widehat{T}_{L M}$ in the spherical basis representation are given by
+The matrices $\hat{Q}_{x x}, \hat{Q}_{y y}, \hat{Q}_{z z}, \hat{Q}_{x z}, \hat{Q}_{z x}$ are real, whereas $\hat{Q}_{x y}, \hat{Q}_{y x}, \hat{Q}_{y z}, \hat{Q}_{z y}$ are purely imaginary. The polarization operators $\widehat{T}_{L M}$ in the spherical basis representation are given by
 \begin{gather}
 \hat{T}_{00}=\frac{1}{\sqrt{3}}\begin{pmatrix}
 1 & 0 & 0 \\
@@ -968,7 +968,7 @@ i & 1 & 0 \\
 \end{gather}
 The polarization operators $\widehat{T}_{L M}$ in the cartesian basis representation satisfy the relations
 \begin{gather}
-\widehat{T}_{L M}^{+}=(-1)^{M} \widehat{T}_{L M} , \label{eq:2:6:34}\\
+\widehat{T}_{L M}^{+}=(-1)^{M} \widehat{T}_{L-M} , \label{eq:2:6:34}\\
 \widehat{T}_{L M}^{*}=(-1)^{L+M} \widehat{T}_{L-M}. \label{eq:2:6:35}
 \end{gather}
 One can easily transform any matrix in the cartesian basis representation into a matrix in the spherical basis representation and vice versa with the aid of the unitary matrix $U$,
@@ -1021,8 +1021,8 @@ Other particular cases of \eqref{eq:2:6:42} are
 \hat{S}_{i} \hat{S}_{k} \hat{S}_{k}+\hat{S}_{k} \hat{S}_{k} \hat{S}_{i}=\hat{S}_{i}+\delta_{i k} \hat{S}_{k} \quad \text { (no sum over $k$) } , \label{eq:2:6:45}\\
 \hat{S}_{x} \hat{S}_{y} \hat{S}_{z}+\hat{S}_{y} \hat{S}_{z} \hat{S}_{x}+\hat{S}_{z} \hat{S}_{x} \hat{S}_{y}=i \hat{I},  \notag\\
 \hat{S}_{x} \hat{S}_{z} \hat{S}_{y}+\hat{S}_{z} \hat{S}_{y} \hat{S}_{x}+\hat{S}_{y} \hat{S}_{x} \hat{S}_{z}=-i \hat{I} ,\label{eq:2:6:46}\\
-\hat{S}_{x} \hat{S}_{z} \hat{S}_{z}=\hat{S}_{y} \hat{S}_{y} \hat{S}_{x}=\frac{1}{2} \hat{S}_{x}-i \hat{Q}_{y x}  ,\label{eq:2:6:47}\\
-\hat{S}_{x} \hat{S}_{y} \hat{S}_{y}=\hat{S}_{z} \hat{S}_{z} \hat{S}_{x}=\frac{1}{2} \hat{S}_{x}+i \hat{Q}_{y x},  \notag\\
+\hat{S}_{x} \hat{S}_{z} \hat{S}_{z}=\hat{S}_{y} \hat{S}_{y} \hat{S}_{x}=\frac{1}{2} \hat{S}_{x}-i \hat{Q}_{y z}  ,\label{eq:2:6:47}\\
+\hat{S}_{x} \hat{S}_{y} \hat{S}_{y}=\hat{S}_{z} \hat{S}_{z} \hat{S}_{x}=\frac{1}{2} \hat{S}_{x}+i \hat{Q}_{y z},  \notag\\
 \hat{S}_{y} \hat{S}_{x} \hat{S}_{x}=\hat{S}_{z} \hat{S}_{z} \hat{S}_{y}=\frac{1}{2} \hat{S}_{y}-i \hat{Q}_{x z} , \notag\\
 \hat{S}_{y} \hat{S}_{z} \hat{S}_{z}=\hat{S}_{x} \hat{S}_{x} \hat{S}_{y}=\frac{1}{2} \hat{S}_{y}+i \hat{Q}_{x z} , \label{eq:2:6:48}\\
 \hat{S}_{z} \hat{S}_{y} \hat{S}_{y}=\hat{S}_{x} \hat{S}_{x} \hat{S}_{z}=\frac{1}{2} \hat{S}_{z}-i \hat{Q}_{x y} , \label{eq:2:6:49}\\
@@ -1066,7 +1066,7 @@ In particular
 \end{gather}
 (iii)
 \begin{equation}
-\hat{T}_{L_{1} M_{1}} \hat{T}_{L_{2} M_{2}}=\sqrt{\left(2 L_{1}+1\right)\left(2 L_{2}+1\right)} \sum_{L}(-1)^{L}\sixj{L_{1} }{ L_{2} }{ L  \label{eq:2:6:62}}{1 }{ 1 }{ 1} \clebsch{L_{1}}{M_{1}}{L_{2}}{M_{2}}{L}{M} \hat{T}_{L M}.
+\hat{T}_{L_{1} M_{1}} \hat{T}_{L_{2} M_{2}}=\sqrt{\left(2 L_{1}+1\right)\left(2 L_{2}+1\right)} \sum_{L}(-1)^{L}\sixj{L_{1} }{ L_{2} }{ L }{1 }{ 1 }{ 1} \clebsch{L_{1}}{M_{1}}{L_{2}}{M_{2}}{L}{M} \hat{T}_{L M}. \label{eq:2:6:62}
 \end{equation}
 Particularly,
 \begin{gather}
