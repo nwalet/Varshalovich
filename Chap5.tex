@@ -748,22 +748,37 @@ Here $j_{l}(x)$ is a spherical Bessel function, $\vartheta_{k}$ and $\varphi_{k}
 \sum_{m=-l}^{l} \sqrt{\frac{\left(l^{2}-m^{2}\right)\left[(l+1)^{2}-m^{2}\right]}{(2 l-1)(2 l+3)}} Y_{l-1 m}(\vartheta, \varphi) Y_{l+1 m}^{*}(\vartheta, \varphi)=\frac{l(l+1)}{8 \pi}\left(3 \cos ^{2} \vartheta-1\right),  \label{eq:5:10:4}\\
 \sum_{m=-l}^{l} \frac{(\mp i)^{m}}{\sqrt{(l-m)!(l+m)!}} Y_{l m}(\vartheta, \varphi)=\sqrt{\frac{2 l+1}{4 \pi}} \, \frac{(\cos \vartheta \pm i \sin \vartheta \cos \varphi)^{l}}{l!} . \label{eq:5:10:5}
 \end{gather}
-\subsection{Sums over $l$ (with fixed $m \geq 0$ )}\label{sec:5.10.2}
+
+\subsection{Sums over $l$ (with fixed $m \geq 0$)}\label{sec:5.10.2}
+
 In the equations given below [27] we will use the notation $R=\sqrt{1-2 t \cos \vartheta+t^{2}}$.
 \begin{gather}
 \sum_{l=m}^{n+m}(-1)^{l} \frac{t^{n-l+m}}{(n-l+m)!\sqrt{(l-m)!(l+m)!}} \sqrt{\frac{4 \pi}{2 l+1}} Y_{l m}(\vartheta, \varphi)  \notag\\
-=(-1)^{n} \frac{(2 m-1)!!}{(2 m+n)!}\left(\sin \vartheta e^{i \varphi}\right)^{m}\left(1-2 t \cos \vartheta+t^{2}\right)^{\frac{n}{2}} C_{n}^{m+\frac{1}{2}}\left(\frac{\cos \vartheta-t}{\sqrt{1-2 t \cos \vartheta+t^{2}}}\right),(|t|<1),  \label{eq:5:10:6}\\
+=(-1)^{n} \frac{(2 m-1)!!}{(2 m+n)!}\left(\sin \vartheta e^{i \varphi}\right)^{m}\left(1-2 t \cos \vartheta+t^{2}\right)^{\frac{n}{2}} C_{n}^{m+\frac{1}{2}}\left(\frac{\cos \vartheta-t}{\sqrt{1-2 t \cos \vartheta+t^{2}}}\right),(|t|<1),  \label{eq:5:10:6}
+\end{gather}
+
+\begin{gather}
 \sum_{l=m}^{\infty} \sqrt{\frac{4 \pi}{(2 l+1)(l-m)!(l+m)!}} \, \frac{1}{l!} t^{l-m} Y_{l m}(\vartheta, \varphi)  \notag\\
 =\frac{\left(-\sin \vartheta e^{i \varphi}\right)^{m}}{2^{m}(m!)^{2}} o_{1}\left(; m+1 ; t \cos ^{2} \frac{\vartheta}{2}\right) 
-\Fnm[l]{0}{1}{}{m+1}{-t \sin ^{2} \frac{\vartheta}{2},(|t|<1),  \label{eq:5:10:7}\\
+\Fnm[l]{0}{1}{}{m+1}{-t \sin ^{2} \frac{\vartheta}{2}},(|t|<1),  \label{eq:5:10:7}
+\end{gather}
+
+\begin{gather}
 \sum_{l=m}^{\infty} \frac{(n+l-m)!t^{l-m}}{\sqrt{(l+m)!(l-m)!}} \sqrt{\frac{4 \pi}{2 l+1}} Y_{l m}(\vartheta, \varphi)  \notag\\
 =\frac{n!}{2^{m} m!} \, \frac{\left(-\sin \vartheta e^{i \varphi}\right)^{m}}{(1-t \cos \vartheta)^{n+1}} F\left\{\frac{n+1}{2}, \frac{n}{2}+1 ; m+1 ;-\left(\frac{t \sin \vartheta}{1-t \cos \vartheta}\right)^{2}\right\},(|t|<1), \label{eq:5:10:8}
 \end{gather}
+
 \begin{gather}
 \sum_{l=m}^{\infty} \sqrt{\frac{4 \pi}{(2 l+1)(l-m)!(l+m)!}} \, \frac{(l+m-n)!(l-m+n-1)!}{l!} t^{l-m} Y_{l m}(\vartheta, \varphi)=\frac{(2 m-n)!(n-1)!}{2^{m}(m!)^{2}}  \notag\\
-\times\left(-\sin \vartheta e^{i \varphi}\right)^{m} F\left(n, 2 m+1-n ; m+1 ; \frac{1-t-R}{2}\right) F\left(n, 2 m+1-n ; m+1 ; \frac{1+t-R}{2}\right),(|t|<1),  \label{eq:5:10:9}\\
+\times\left(-\sin \vartheta e^{i \varphi}\right)^{m} F\left(n, 2 m+1-n ; m+1 ; \frac{1-t-R}{2}\right) F\left(n, 2 m+1-n ; m+1 ; \frac{1+t-R}{2}\right),(|t|<1),  \label{eq:5:10:9}
+\end{gather}
+
+\begin{gather}
 \sum_{l=m}^{\infty} \sqrt{\frac{4 \pi(l-m)!}{(2 l+1)(l+m)!}} L_{l-m}^{2 m}(y) t^{l-m} Y_{l m}(\vartheta, \varphi)  \notag\\
-=\frac{1}{2^{m} m!} \, \frac{\left(-\sin \vartheta e^{i \varphi}\right)^{m}}{R^{2 m+1}} \exp \left[-\frac{y t(\cos \vartheta-t)}{R^{2}}\right] \Fnm[l]{0}{1}{}{m+1}{-\frac{y^{2} t^{2} \sin ^{2} \vartheta}{4 R^{4}}},(|t|<1),  \label{eq:5:10:10}\\
+=\frac{1}{2^{m} m!} \, \frac{\left(-\sin \vartheta e^{i \varphi}\right)^{m}}{R^{2 m+1}} \exp \left[-\frac{y t(\cos \vartheta-t)}{R^{2}}\right] \Fnm[l]{0}{1}{}{m+1}{-\frac{y^{2} t^{2} \sin ^{2} \vartheta}{4 R^{4}}},(|t|<1),  \label{eq:5:10:10}
+\end{gather}
+
+\begin{gather}
 \sum_{l=m}^{\infty} i^{l-m} \sqrt{\frac{4 \pi(2 l+1)(l+m)!}{(l-m)!}} j(t) Y_{l m}(\vartheta, \varphi)=\left(-t \sin \vartheta e^{i \varphi}\right)^{m} e^{i t \cos \vartheta},  \label{eq:5:10:11}\\
 \sum_{l=m, m+2, \ldots}^{\infty} i^{l-m} \sqrt{\frac{4 \pi(2 l+1)(l+m)!}{(l-m)!}} j(t) Y_{l m}(\vartheta, \varphi)=\left(-t \sin \vartheta e^{i \varphi}\right)^{m} \cos (t \cos \vartheta),  \label{eq:5:10:12}\\
 \sum_{l=m+1, m+3, \ldots}^{\infty} i^{l-m-1} \sqrt{\frac{4 \pi(2 l+1)(l+m)!}{(l-m)!}} j(t) Y_{l m}(\vartheta, \varphi)=\left(-t \sin \vartheta e^{i \varphi}\right)^{m} \sin (t \cos \vartheta),  \label{eq:5:10:13}\\
@@ -771,6 +786,7 @@ In the equations given below [27] we will use the notation $R=\sqrt{1-2 t \cos \
 \sum_{l=m}^{\infty} \sqrt{\frac{4 \pi(2 l+1)(l+m)!}{(l-m)!}} j_{l}(x) z_{l}(y) Y_{l m}(\vartheta, \varphi)=\left(-\frac{x y \sin \vartheta e^{i \varphi}}{\sqrt{x^{2}+y^{2}-2 x y \cos \vartheta}}\right)^{m} z_{m}\left(\sqrt{x^{2}+y^{2}-2 x y \cos \vartheta}\right),  \label{eq:5:10:15}\\
 \sum_{l=m}^{\infty} i^{l-m} j i(t) Y_{l m}\left(\vartheta_{1}, \varphi_{1}\right) Y_{l m}^{*}\left(\vartheta_{2}, \varphi_{2}\right)=\frac{1}{4 \pi} J_{m}\left(t \sin \vartheta_{1} \sin \vartheta_{2}\right) e^{i t \cos \vartheta_{1} \cos \vartheta_{2} e^{i m\left(\varphi_{1}-\varphi_{2}\right)}} \label{eq:5:10:16}
 \end{gather}
+
 \section{Generating functions for $Y_{l m}(\vartheta, \varphi)$}\label{sec:5.11}
 For fixed $m$ one has (see Refs. [4, 22])
 \begin{equation}
