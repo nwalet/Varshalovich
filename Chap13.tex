@@ -1,5 +1,5 @@
-\chapter{MATRIX ELEMENTS OF IRREDUCIBLE TENSOR OPERATORS}
-\section{THE WIGNER-ECKART THEOREM AND THE EVALUATION OF MATRIX ELEMENTS}
+\chapter{Matrix elements of irreducible tensor operators}\label{chap:13}
+\section{The Wigner-Eckart theorem and the evaluation of matrix elements}\label{sec:13:1}
 In this section we consider the evaluation of matrix elements of irreducible tensor operators in a general form.\\
 Let a quantum mechanical system be characterized by a set of the quantum numbers ( \(n j m\) ), where \(j\) and \(m\) are the angular momentum and its projection on the quantization axis, respectively. The symbol \(n\) stands for all other quantum numbers required to define the state of the system. Let \(\Psi_{n j m}\) be the wave function of this state. The matrix element of any irreducible tensor operator \(\widehat{\mathfrak{M}}_{k}\) of rank \(k\) between the states \(\left(n^{\prime} j^{\prime} m^{\prime}\right)\) and ( \(n j m\) ) is defined as
 \begin{equation}
@@ -7,7 +7,7 @@ Let a quantum mechanical system be characterized by a set of the quantum numbers
 \end{equation}
 where \(\widehat{\mathfrak{M}}_{k c}\) is a tensor component.
 
-\subsection{Wigner-Eckart Theorem}
+\subsection{Wigner-Eckart Theorem}\label{sec:13:1.1}
 The Wigner-Eckart theorem is widely used for evaluation of matrix elements. According to this theorem, the dependence of any matrix element on the orientation of the coordinate system, i.e., on the projections \(m\), \(m^{\prime}\) and \(\kappa\), is entirely included in the \(3 j m\) symbol or the Clebsch-Gordan coefficient,
 \begin{equation}
 \braOket{ n^{\prime} j^{\prime} m^{\prime}}{ \widehat{\mathfrak{M}}_{k \kappa}}{n j m}=(-1)^{j^{\prime}-m^{\prime}}\left(\begin{array}{ccc}
@@ -27,7 +27,7 @@ In this section, as well as in Chap.~\ref{chap:12} we shall again use the notati
 \Fact{a b \ldots c} \equiv[(2 a+1)(2 b+1) \ldots(2 c+1)]^{\frac{1}{2}}.
 \end{equation*}
 
-\subsection{Sum Rules}
+\subsection{Sum Rules}\label{sec:13:1.2}
 Making use of the definition \eqref{eq:13:1:2}, one can obtain the following rules for sums of matrix elements of irreducible tensor operators:
 \begin{align}
 \sum_{m \kappa}\left|\braOket{n^{\prime} j^{\prime}m^{\prime}}{\widehat{\mathfrak{M}}_{k \kappa}}{ n j m}\right|^{2} & =\frac{\left|\braOketred{n^{\prime} j^{\prime}}{\widehat{\mathfrak{M}}_{k}}{ n j}\right|^{2}}{2 j^{\prime}+1},  \label{eq:13:1:4}\\
@@ -35,7 +35,7 @@ Making use of the definition \eqref{eq:13:1:2}, one can obtain the following rul
 \sum_{m m^{\prime}}\left|\braOket{n^{\prime} j^{\prime}m^{\prime}}{\widehat{\mathfrak{M}}_{k \kappa}}{ n j m}\right|^{2} & =\frac{\left|\braOketred{n^{\prime} j^{\prime}}{\widehat{\mathfrak{M}}_{k}}{ n j}\right|^{2}}{2 k+1},  \label{eq:13:1:6}\\
 \sum_{m m^{\prime} \kappa}\left|\braOket{n^{\prime} j^{\prime}m^{\prime}}{\widehat{\mathfrak{M}}_{k \kappa}}{ n j m}\right|^{2} & =\left|\braOketred{n^{\prime} j^{\prime}}{\widehat{\mathfrak{M}}_{k}}{ n j}\right|^{2}. \label{eq:13:1:7}
 \end{align}
-\subsection{Matrix Elements of Products of Irreducible Tensor Operators}
+\subsection{Matrix Elements of Products of Irreducible Tensor Operators}\label{sec:13:1.3}
 From two irreducible tensor operators \(\widehat{P}_{a \alpha}\) and \(\widehat{Q}_{b \beta}\) one can compose the direct or reducible product \(\widehat{P}_{a \alpha}\, \widehat{Q}_{b \beta}\) and the irreducible product \(\left\{\hat{\vect{P}}_{a} \otimes \hat{\vect{Q}}_{b}\right\}_{c \gamma}\) of rank \(c\) (see Chap.~\ref{chap:3}). A matrix element of the direct tensor product may be written in the form
 \begin{equation}
 \braOket{n^{\prime} j^{\prime} m^{\prime}}{\hat{P}_{a \alpha} \, \hat{Q}_{b \rho}}{n j m}=\frac{(-1)^{2 a+2 b}}{\Fact{j^{\prime}}} \sum_{n_{1} j_{1} m_{1}} 
@@ -160,7 +160,7 @@ j_{1} j_{2} j_{3}}}(-1)^{-j+j_{2}}\sixj{a}{b}{c}{j_{2}}{j}{j_{1}}\sixj{d}{e}{c}{
 \braOketred{ n_{2} j_{2}}{\widehat{\vect{R}}_{d}}{ n_{3} j_{3}}
 \braOketred{ n_{3} j_{3}}{\widehat{\vect{S}}_{e}}{ n j} . \label{eq:13:1:19}
 \end{gather}
-\subsection{Matrix Elements of Operators Which Depend on Variables of Two Subsystems}
+\subsection{Matrix Elements of Operators Which Depend on Variables of Two Subsystems}\label{sec:13:1.4}
 If a quantum-mechanical system consists of two subsystems, 1 and 2 , and eigenstates of these subsystems are characterized by the sets of quantum numbers \(\left(n_{1} j_{1} m_{1}\right)\) and \(\left(n_{2} j_{2} m_{2}\right)\), it is often convenient to introduce the two following representations of matrix elements.\\
 (a) The angular momenta of both subsystems are not coupled. Then
 \begin{equation}
@@ -309,7 +309,7 @@ Matrix elements of irreducible tensor products with other coupling schemes of op
 If the wave functions and operators depend on variables of three or more subsystems, the evaluation of matrix elements is reduced to the successive use of the above equations.
 
 \subsection{Matrix Elements of Operators Which Depend on 
- Variables of One of the Subsystems}
+ Variables of One of the Subsystems}\label{sec:13:1.5}
 Let \(\widehat{P}_{a \alpha}(1)\) be an operator which depends on variables of subsystem 1. Matrix elements of this operator are diagonal with respect to quantum numbers which characterize eigenstates of subsystem 2 .
 \begin{equation}
 \braOket{ n_{1}^{\prime} j_{1}^{\prime} m_{1}^{\prime} ; n_{2}^{\prime} j_{2}^{\prime} m_{2}^{\prime}}{ \widehat{P}_{a \alpha}(1)}{n_{1} j_{1} m_{1} ; n_{2} j_{2} m_{2}}=\delta_{n_{2}^{\prime} n_{2}} \delta_{j_{2}^{\prime} j_{2}} \delta_{m_{2}^{\prime} m_{2}}\braOket{ n_{1}^{\prime} j_{1}^{\prime} m_{1}^{\prime}}{ \widehat{P}_{a \alpha}(1)}{n_{1} j_{1} m_{1}} \label{eq:13:1:39}
@@ -369,8 +369,8 @@ J_{1} J_{2} J_{3}}}(-1)^{J_{2}}\sixj{a}{b}{c}{J_{2}}{j_{1}}{J_{1}}\sixj{d}{c}{f}
 \end{gather}
 Matrix elements for tensor products with other coupling schemes of operators may be obtained from the foregoing equations by the use of the recoupling rules and the commutation relations for irreducible tensors (Chap.~\ref{chap:3}).
 
-\section{MATRIX ELEMENTS OF BASIC TENSOR OPERATORS}
-\subsection{Some Introductory Remarks}
+\section{Matrix elements of basic tensor operators}\label{sec:13:2}
+\subsection{Some Introductory Remarks}\label{sec:13:2.1}
 In this section we shall consider matrix elements of the following operators and their tensor products:\\
 (a) the unit operator \(\widehat{I}\);\\
 (b) the unit vector operator \(\widehat{\vect{n}} \equiv \widehat{\vect{n}}_{1}\);\\
@@ -419,7 +419,7 @@ If some operator \(\widehat{R}_{a \alpha}(r, \vartheta, \varphi ; \xi)\) acts on
 or from the corresponding equations of the section above.\\
 From now on, we will omit the arguments of operators in the expressions for matrix elements to simplify the equations. In addition, the index \(n\) will also be dropped in all the cases for which it is not essential.
 
-\subsection{Matrix Elements of the Unit Operator \(\hat{\mathrm{I}}\)}
+\subsection{Matrix Elements of the Unit Operator \(\hat{\mathrm{I}}\)}\label{sec:13:2.2}
 The unit operator \(\widehat{\vect{I}}\) is an irreducible tensor operator of rank zero. It does not act on variables \(r, \vartheta, \varphi, \xi\). Hence, in any representation its diagonal matrix elements are determined by
 \begin{equation}
 \braOket{\lambda^{\prime}}{ \hat{\vect{I}}}{\lambda}=
@@ -429,7 +429,7 @@ All non-diagonal matrix elements vanish. A reduced matrix element of the operato
 \begin{equation}
 \braOketred{l}{\hat{\vect{I}}}{l}=\sqrt{2 l+1}, \quad(s\|\hat{\vect{I}}\| s)=\sqrt{2 s+1}, \quad\braOketred{ l^{\prime} s^{\prime} J}{\hat{\vect{I}}}{ l s J}=\sqrt{2 J+1} \delta_{l l^{\prime}} \delta_{s a^{\prime}} \label{eq:13:2:9}
 \end{equation}
-\subsection{Matrix Elements of the Unit Vector \(\hat{\vect{n}}(\vartheta, \varphi) \equiv \widehat{\vect{n}}_{1}(\vartheta, \varphi)\)}
+\subsection{Matrix Elements of the Unit Vector \(\hat{\vect{n}}(\vartheta, \varphi) \equiv \widehat{\vect{n}}_{1}(\vartheta, \varphi)\)}\label{sec:13:2.3}
 The unit vector operator \(\widehat{\vect{n}}_{1}(\vartheta, \varphi)\) acts only on variables \(\vartheta, \varphi\). In the (lm)-representation matrix elements of spherical components of this operator are given by
 \begin{equation}
 \braOket{ l^{\prime} m^{\prime}}{ \widehat{n}_{1 \mu}}{l m}=
@@ -502,7 +502,7 @@ From Eq. \eqref{eq:13:2:19} one obtains two obvious equalities,
 \end{gathered}
 \end{equation}
 
-\subsection{Matrix Elements of the Operator \(\hat{\nabla}(r, \vartheta, \varphi) \equiv \hat{\nabla}_{1}(r, \vartheta, \varphi)\)}
+\subsection{Matrix Elements of the Operator \(\hat{\nabla}(r, \vartheta, \varphi) \equiv \hat{\nabla}_{1}(r, \vartheta, \varphi)\)}\label{sec:13:2.4}
 The operator \(\hat{\nabla}_{1}(r, \vartheta, \varphi)\) acts only on variables \(r, \vartheta, \varphi\). The matrix elements of its spherical components are determined by
 \begin{equation}
 \braOket{ n^{\prime} l^{\prime} m^{\prime}}{ \hat{\nabla}_{1 \mu}}{n l m}=
@@ -636,7 +636,7 @@ Using Eqs. \eqref{eq:13:2:104} and \eqref{eq:13:2:105}, we find
 \clebsch{l}{0}{2}{0}{xxx^{\prime\prime}}{0}
 \clebsch{l}{m}{2}{\kappa}{xxx^{\prime\prime}}{m^{\prime}} \delta_{k 2} \label{eq:13:2:36}
 \end{equation}
-\subsection{Matrix Elements of the Total Angular Momentum Operator \(\widehat{\vect{J}} \equiv \widehat{\vect{J}}_{1}\)}
+\subsection{Matrix Elements of the Total Angular Momentum Operator \(\widehat{\vect{J}} \equiv \widehat{\vect{J}}_{1}\)}\label{sec:13:2.5}
 The operator of the total angular momentum \(\widehat{\vect{J}}=\widehat{\vect{L}}+\widehat{\vect{S}}\) acts on position as well as spin variables. Making use of the Wigner-Eckart theorem, we get
 \begin{equation}
 \braOket{ l^{\prime} s^{\prime} J^{\prime} M^{\prime}}{ \hat{J}_{1 \mu}}{l s J M}=\frac{\braOketred{ l^{\prime} s^{\prime} J^{\prime}}{\widehat{\vect{J}}_{1}}{ l s J}}{\sqrt{2 J^{\prime}+1}} 
@@ -822,7 +822,7 @@ Equation \eqref{eq:13:2:62} may also be represented by
 & \times \sqrt{J^{\prime}\left(J^{\prime}+1\right)}\sixj{J}{J^{\prime}}{1}{l^{\prime}}{l}{s}\sixj{1}{1}{k}{J^{\prime}}{J}{J^{\prime}}\braOketred{ l^{\prime}}{\left(\nabla_{\Omega}\right)_{1}}{ l} 
 \clebsch{J}{M}{k}{c}{J^{\prime}}{M^{\prime}} \label{eq:13:2:65}
 \end{align}
-\subsection{Matrix Elements of the Orbital Angular Momentum Operator \(\hat{\vect{L}} \equiv \hat{\vect{L}}_{1}\)}
+\subsection{Matrix Elements of the Orbital Angular Momentum Operator \(\hat{\vect{L}} \equiv \hat{\vect{L}}_{1}\)}\label{sec:13:2.6}
 This operator acts only on the position variables \(\theta, \varphi\). In accordance with the Wigner-Eckart theorem, we get
 \begin{equation}
 \braOket{ l^{\prime} m^{\prime}}{ \widehat{L}_{1 \mu}}{l m}=\frac{\braOketred{ l^{\prime}}{\widehat{\vect{L}}_{1}}{ l}}{\sqrt{2 l^{\prime}+1}} 
@@ -963,7 +963,7 @@ From Eqs. \eqref{eq:13:2:92}, \eqref{eq:13:2:66} and \eqref{eq:13:2:67} we find
 \clebsch{J}{M}{1}{\mu+\nu}{J^{\prime}}{M^{\prime}}
 \end{equation}
 
-\subsection{Matrix Elements of the Spin Angular Momentum Operator \(\widehat{\vect{S}} \equiv \widehat{\vect{S}}_{1}\)}
+\subsection{Matrix Elements of the Spin Angular Momentum Operator \(\widehat{\vect{S}} \equiv \widehat{\vect{S}}_{1}\)}\label{sec:13:2.7}
 This operator acts only on spin variables. Using the Wigner-Eckart theorem, we get
 \begin{gather}
 \braOket{ s^{\prime} m_{s}^{\prime}}{ \widehat{S}_{1 \mu}}{s m_{s}}=\frac{\braOketred{ s^{\prime}}{\widehat{\vect{S}}_{1}}{ s}}{\sqrt{2 s^{\prime}+1}} 
@@ -1013,7 +1013,7 @@ Using Eqs. \eqref{eq:13:2:94} and \eqref{eq:13:2:95}, we find
 \]
 
 To obtain matrix elements of direct products of the operator \(\widehat{\vect{S}}_{1}\) and the operators \(\widehat{\vect{n}}_{1},\left(\widehat{\boldsymbol{V}}_{\Omega}\right)_{1}, \widehat{\vect{L}}_{1}\) or \(\widehat{\vect{J}}_{1}\) one should decompose the direct products into irreducible products in accordance with Eq.~\eqref{eq:3:1:22} and use Eqs. \eqref{eq:13:2:97}-\eqref{eq:13:2:101}.\\
-13.2.8. Matrix Elements of the Spherical Harmonic Operator \(\hat{Y}_{L \nu} \equiv Y_{L \nu}(\vartheta, \varphi)\)
+\subsection{Matrix Elements of the Spherical Harmonic Operator \(\hat{Y}_{L \nu} \equiv Y_{L \nu}(\vartheta, \varphi)\)}\label{sec:13:2:8}
 
 A spherical harmonic operator, \(Y_{L \nu}\), depends only on position variables \(\vartheta, \varphi\). From the Wigner-Eckart theorem it follows that
 \begin{gather}
@@ -1294,7 +1294,7 @@ The commutators of the operators in Eqs. \eqref{eq:13:2:128}-\eqref{eq:13:2:147}
 \end{gather}
 The evaluation of matrix elements of these commutators may be performed using the foregoing equations.
 
-\subsection{9 Matrix Elements of Some Scalar and Vector Products}
+\subsection{Matrix Elements of Some Scalar and Vector Products}\label{sec:13:2.9}
 Using Eq. \eqref{eq:13:2:33}, one can easily obtain matrix elements of scalar and vector products of the operators \(\hat{\vect{n}}\) and \(\hat{\nabla}_{\Omega}\)
 \begin{gather}
 \braOket{l^{\prime} m^{\prime}}{\left(\widehat{\vect{n}} \cdot \widehat{\nabla}_{\Omega}\right)}{l m}=0  \label{eq:13:2:150}\\
