@@ -695,22 +695,22 @@ The operator \(\hat{\nabla}_{1}(r, \vartheta, \varphi)\) acts only on variables 
 \end{equation}
 where
 \begin{equation}
-\braOketred{ n^{\prime} l^{\prime}}{\widehat{\nabla}_{1}}{ n l}=\sqrt{l+1} A_{n^{\prime} l^{\prime} n!} \delta_{l^{\prime} l+1}-\sqrt{l} B_{n^{\prime} l^{\prime} n!} \delta_{l^{\prime} l-1}. \label{eq:13:2:22}
+\braOketred{ n^{\prime} l^{\prime}}{\widehat{\nabla}_{1}}{ n l}=\sqrt{l+1} A_{n^{\prime} l^{\prime} n l} \delta_{l^{\prime} l+1}-\sqrt{l} B_{n^{\prime} l^{\prime} n l} \delta_{l^{\prime} l-1}. \label{eq:13:2:22}
 \end{equation}
-The quantities \(A_{n^{\prime} l^{\prime} n!= l}\) and \(B_{n^{\prime} l^{\prime} n l}\) in Eq. \eqref{eq:13:2:22} may be represented as the integrals
+The quantities \(A_{n^{\prime} l^{\prime} n l}\) and \(B_{n^{\prime} l^{\prime} n l}\) in Eq. \eqref{eq:13:2:22} may be represented as the integrals
 \begin{align}
 & A_{n^{\prime} l^{\prime} n l}=\int_{0}^{\infty} \Psi_{n^{\prime} l^{\prime}}^{*}(r)\left(\frac{\partial}{\partial r}-\frac{l}{r}\right) \Psi_{n l}(r) r^{2} d r ,\notag\\
-& B_{n^{\prime} l^{\prime} n l}=\int_{0}^{\infty} \Psi_{n^{\prime} l^{\prime}}^{}(r)\left(\frac{\partial}{\partial r}+\frac{l+1}{r}\right) \Psi_{n l}(r) r^{2} d r. \label{eq:13:2:23}
+& B_{n^{\prime} l^{\prime} n l}=\int_{0}^{\infty} \Psi_{n^{\prime} l^{\prime}}^{*}(r)\left(\frac{\partial}{\partial r}+\frac{l+1}{r}\right) \Psi_{n l}(r) r^{2} d r. \label{eq:13:2:23}
 \end{align}
 Here \(\Psi_{n l}(r)\) is the radial part of the corresponding wave function.\\
 Reduced matrix elements of the operator \(\widehat{\nabla}_{1}(r, \vartheta, \varphi)\) in the $nlsJM$ representation may be obtained from Eq. \eqref{eq:13:2:5} by replacing \(\hat{\mathfrak{M}}_{k} \rightarrow \hat{\nabla}_{1}\).
 
-The matrix elements \eqref{eq:13:2:21} vanish unless \(l^{\prime}=l+1\). In detailed form Eq. \eqref{eq:13:2:21} reads
+The matrix elements \eqref{eq:13:2:21} vanish unless \(l^{\prime}=l \pm 1\). In detailed form Eq. \eqref{eq:13:2:21} reads
 \begin{align}
 \braOket{ n^{\prime} l+1 m^{\prime}}{ \hat{\nabla}_{1 \pm 1}}{n l m} & =\sqrt{\frac{(l \pm m+1)(l \pm m+2)}{2(2 l+1)(2 l+3)}} A_{n^{\prime} l+1, n l} \delta_{m^{\prime} m \pm 1} \notag\\
 \braOket{ n^{\prime} l+1 m^{\prime}}{ \hat{\nabla}_{10}}{n l m} & =\sqrt{\frac{(l-m+1)(l+m+1)}{(2 l+1)(2 l+3)}} A_{n^{\prime} l+1, n l} \delta_{m^{\prime} m} \notag\\
 \braOket{ n^{\prime} l-1 m^{\prime}}{ \hat{\nabla}_{1 \pm 1}}{n l m} & =-\sqrt{\frac{(l \mp m-1)(l \mp m)}{2(2 l+1)(2 l-1)}} B_{n^{\prime} l-1, n l} \delta_{m^{\prime} m \pm 1}  \label{eq:13:2:24}\\
-\braOket{ n^{\prime} l-1 m^{\prime}}{ \hat{\nabla}_{10}}{n l m} & =\sqrt{\frac{(l-m)(l+m)}{(2 l+1)(2 l-1)} B_{n^{\prime} l-1, n l} \delta_{m^{\prime} m}}, \notag
+\braOket{ n^{\prime} l-1 m^{\prime}}{ \hat{\nabla}_{10}}{n l m} & =\sqrt{\frac{(l-m)(l+m)}{(2 l+1)(2 l-1)}} B_{n^{\prime} l-1, n l} \delta_{m^{\prime} m}, \notag
 \end{align}
 All other matrix elements equal zero. The matrix elements of the cartesian components of \(\widehat{\nabla}_{1}(r, \vartheta, \varphi)\) are as\\
 follows:
@@ -720,7 +720,7 @@ follows:
 \braOket{ n^{\prime} l^{\prime} m \pm 1}{ \hat{\nabla}_{y}}{n l m}= & \frac{i}{2} \sqrt{\frac{(l \pm m+1)(l \pm m+2)}{(2 l+1)(2 l+3)}} A_{n^{\prime} l+1, n l} \delta_{l^{\prime} l+1}, \notag\\
 & -\frac{i}{2} \sqrt{\frac{(l \mp m-1)(l \mp m)}{(2 l+1)(2 l-1)}} B_{n^{\prime} l-1, n l} \delta_{l^{\prime} l-1}, \label{eq:13:2:25}\\
 \braOket{ n^{\prime} l^{\prime} m}{ \hat{\nabla}_{z}}{n l m}= & \sqrt{\frac{(l-m+1)(l+m+1)}{(2 l+1)(2 l+3)}} A_{n^{\prime} l+1, n l} \delta_{l^{\prime} l+1}, \notag\\
-& +\sqrt{\frac{(l-m)(l+m)}{(2 l+1)(2 l-1)} B_{n^{\prime} l-1, n l} \delta_{l^{\prime} l-1}}. \notag
+& +\sqrt{\frac{(l-m)(l+m)}{(2 l+1)(2 l-1)}} B_{n^{\prime} l-1, n l} \delta_{l^{\prime} l-1}. \notag
 \end{align}
 All other matrix elements are equal zero.\\
 The matrix elements of the angular part of \(\widehat{\nabla}(r, \vartheta, \varphi)\) may be presented in a simpler form. According to Eq.~\eqref{eq:1:3:10},
@@ -731,7 +731,7 @@ This operator is independent of \(r\). The use of the Wigner-Eckart theorem yiel
 \begin{equation}
 \braOket{ l^{\prime} m^{\prime}}{\left(\widehat{\nabla}_{\Omega}\right)_{1 \mu}}{l m}=\frac{
 \braOketred{ l^{\prime}}{\left(\widehat{\nabla}_{\Omega}\right)_{1}}{ l}}{\sqrt{2 l^{\prime}+1}} 
-\clebsch{l}{m}{1}{\mu}{\prime^{\prime}}{m^{\prime}} \label{eq:13:2:26}
+\clebsch{l}{m}{1}{\mu}{l^{\prime}}{m^{\prime}} \label{eq:13:2:26}
 \end{equation}
 where
 \begin{equation}
@@ -745,7 +745,7 @@ Similarly, Eqs. \eqref{eq:13:2:24} and \eqref{eq:13:2:25} become valid for \(\le
 Let us consider the matrix elements of products of two operators \(\left(\widehat{\nabla}_{\Omega}\right)_{1}\). In the case of the direct product we obtain
 \begin{align}
 & 
-\braOket{ l^{\prime} m^{\prime}}{\left(\hat{\nabla}_{\Omega}\right)_{1 \mu}\left(\hat{\nabla}_{\Omega}\right)_{1 \nu}}{l m}=\frac{(-1)^{1-\mu}}{3} l(l+1) \delta_{l l^{\prime}} \delta_{m m^{\prime}} \delta_{\mu-\nu}+
+\braOket{ l^{\prime} m^{\prime}}{\left(\hat{\nabla}_{\Omega}\right)_{1 \mu}\left(\hat{\nabla}_{\Omega}\right)_{1 \nu}}{l m}=\frac{(-1)^{1-\mu}}{3} l(l+1) \delta_{l l^{\prime}} \delta_{m m^{\prime}} \delta_{\mu,-\nu}+
 \clebsch{1}{\mu}{1}{\nu}{2}{\kappa}\left\{\frac{l(l+1) \sqrt{(l+1)(l+2)}}{\sqrt{(2 l+3)(2 l+5)}} 
 \clebsch{l}{m}{2}{\kappa}{l+2}{m+\kappa} \delta_{l^{\prime} l+2}\right. \notag\\
 & \left.\quad+\frac{1}{2 l+1} \sqrt{\frac{l(l+1)}{6(2 l-1)(2 l+3)}}\left[4 l^{3}+6 l^{2}-4 l-3\right] 
@@ -755,7 +755,7 @@ Let us consider the matrix elements of products of two operators \(\left(\wideha
 The matrix elements of the product of cartesian components \(\left(\widehat{\nabla}_{\Omega}\right)_{i}\left(\widehat{\nabla}_{\Omega}\right)_{k}(i, k=x, y, z)\) are related to the matrix elements \eqref{eq:13:2:29} by means of Eqs. \eqref{eq:13:2:18} where one should make the replacement \(\hat{n}_{i} \hat{n}_{k} \rightarrow\left(\hat{\nabla}_{\Omega}\right)_{i}\left(\hat{\nabla}_{\Omega}\right)_{k}(i, k=x, y, z)\). In the case of the irreducible tensor product of two operators \(\left(\widehat{\vec{\nabla}}_{\Omega}\right)_{1}\) one has
 \begin{gather}
 \braOket{ l^{\prime} m^{\prime}}{\left\{\left(\hat{\nabla}_{\Omega}\right)_{1} \otimes\left(\widehat{\nabla}_{\Omega}\right)_{1}\right\}_{k \kappa}}{l m} \notag\\
-=(-1)^{k+l+l^{\prime}} \sqrt{\frac{2 k+l}{2 l^{\prime}+1}} 
+=(-1)^{k+l+l^{\prime}} \sqrt{\frac{2 k+1}{2 l^{\prime}+1}}
 \clebsch{l}{m}{k}{\kappa}{l^{\prime}}{m^{\prime}} \sum_{l^{\prime \prime}}
 \sixj{1}{1}{k}{l^{\prime}}{l}{l^{\prime \prime}}
 \braOketred{ l^{\prime}}{\left(\widehat{\nabla}_{\Omega}\right)_{1}}{ l^{\prime \prime}}
@@ -769,14 +769,14 @@ In particular, Eq. \eqref{eq:13:2:30} yields the well known expression for the m
 Matrix elements of products of the operators \(\widehat{\vect{n}}_{1}\) and \(\left(\widehat{\boldsymbol{\nabla}}_{\Omega}\right)_{1}\) are of interest for application. For the matrix elements of the direct product of these operators one obtains
 \begin{align}
 & 
-\braOket{ l^{\prime} m^{\prime}}{ \hat{n}_{1 \mu}\left(\hat{\nabla}_{\Omega}\right)_{1 \nu}}{l m}=-\delta_{l^{\prime}} \sqrt{\frac{l(l+1)}{2}}\left\{
+\braOket{ l^{\prime} m^{\prime}}{ \hat{n}_{1 \mu}\left(\hat{\nabla}_{\Omega}\right)_{1 \nu}}{l m}=-\delta_{l^{\prime} l} \sqrt{\frac{l(l+1)}{2}}\left\{
 \clebsch{1}{\mu}{1}{\nu}{1}{\kappa} 
 \clebsch{l}{m}{1}{\kappa}{l}{m^{\prime}}+\sqrt{\frac{3}{(2 l-1)(2 l+3)}} 
 \clebsch{1}{\mu}{1}{\nu}{2}{\kappa} 
 \clebsch{l}{m}{2}{\kappa}{l}{m^{\prime}}\right\} \notag\\
 & -\delta_{l^{\prime} l+2} l \sqrt{\frac{(l+1)(l+2)}{(2 l+3)(2 l+5)}} 
 \clebsch{1}{\mu}{1}{\nu}{2}{\kappa} 
-\clebsch{l}{m}{2}{\kappa}{l^{\prime}}{m^{\prime}}+\delta_{l^{\prime l}-2}(l+1) \sqrt{\frac{l(l-1)}{(2 l-1)(2 l-3)}} 
+\clebsch{l}{m}{2}{\kappa}{l^{\prime}}{m^{\prime}}+\delta_{l^{\prime} l-2}(l+1) \sqrt{\frac{l(l-1)}{(2 l-1)(2 l-3)}}
 \clebsch{1}{\mu}{1}{\nu}{2}{\kappa} 
 \clebsch{l}{m}{2}{\kappa}{l^{\prime}}{m^{\prime}} \label{eq:13:2:31}
 \end{align}
@@ -786,15 +786,15 @@ The matrix element of the direct product \(\left(\widehat{\nabla}_{\Omega}\right
 \end{equation*}
 where \(\mathfrak{R}_{1 \nu 1 \mu}\) is the commutator of the operator components in question (see Sec.~\ref{sec:3.1.7})
 \begin{equation}
-\mathfrak{R}_{1 \nu 1 \mu}\left(\hat{n}_{1 \nu},\left(\hat{\nabla}_{\Omega}\right)_{1 \mu}\right)=-\left(\hat{\nabla}_{\Omega}\right)_{1 \mu} \hat{n}_{1 \nu}=(-1)^{1+\nu} \frac{2}{3} \delta_{\nu-\mu}+2 \sqrt{\frac{2 \pi}{15}} 
+\mathfrak{R}_{1 \nu 1 \mu}\left(\hat{n}_{1 \nu},\left(\hat{\nabla}_{\Omega}\right)_{1 \mu}\right)=-\left(\hat{\nabla}_{\Omega}\right)_{1 \mu} \hat{n}_{1 \nu}=(-1)^{1+\nu} \frac{2}{3} \delta_{\nu,-\mu}+2 \sqrt{\frac{2 \pi}{15}} 
 \clebsch{1}{\mu}{1}{\nu}{2}{\mu+\nu} Y_{2 \mu+\nu}(\vartheta, \varphi) \label{eq:13:2:32}
 \end{equation}
 and
 \begin{equation}
-\braOket{l^{\prime} m^{\prime}}{\mathfrak{R}_{1 \mu 1 \nu}\left(\widehat{n}_{1 \nu},\left(\widehat{\nabla}_{\Omega}\right)_{1 \mu}\right)}{l m}=(-1)^{1+\nu} \frac{2}{3} \delta_{\nu-\mu} \delta_{l l^{\prime}} \delta_{m m^{\prime}}+\sqrt{\frac{2}{3} \frac{2 l+1}{2 l^{\prime}+1}} 
+\braOket{l^{\prime} m^{\prime}}{\mathfrak{R}_{1 \mu 1 \nu}\left(\widehat{n}_{1 \nu},\left(\widehat{\nabla}_{\Omega}\right)_{1 \mu}\right)}{l m}=(-1)^{1+\nu} \frac{2}{3} \delta_{\nu,-\mu} \delta_{l l^{\prime}} \delta_{m m^{\prime}}+\sqrt{\frac{2}{3} \frac{2 l+1}{2 l^{\prime}+1}}
 \clebsch{l}{0}{2}{0}{l^{\prime}}{0} 
 \clebsch{1}{\mu}{1}{\nu}{2}{\mu+\nu} 
-\clebsch{l}{m}{2}{\mu+\nu}{\prime^{\prime}}{m^{\prime}} \tag{13.2.32a}
+\clebsch{l}{m}{2}{\mu+\nu}{l^{\prime}}{m^{\prime}} \tag{13.2.32a}
 \end{equation}
 To determine the matrix elements of products of cartesian components of the operators \(\hat{\vect{n}}_{1}\) and \(\left(\hat{\nabla}_{\Omega}\right)_{1}\) one can transform these products to the products of spherical components (see Eq.~\eqref{eq:1:2:11}) and use Eq. \eqref{eq:13:2:31}.
 
@@ -805,7 +805,7 @@ For the irreducible tensor product of \(\hat{\vect{n}}_{1}(\vartheta, \varphi)\)
 \clebsch{l}{m}{k}{\kappa}{l^{\prime}}{m^{\prime}} \sqrt{\frac{2 k+1}{2 l^{\prime}+1}} \sum_{l^{\prime \prime}} \sqrt{2 l^{\prime \prime}+1}
 \sixj{1}{l}{l^{\prime \prime}}{l^\prime}{1}{k} \quad 
 \clebsch{l^{\prime\prime}}{0}{1}{0}{l^{\prime}}{0} 
-\braOketred{ l^{\prime \prime}}{\left(\hat{\nabla}_{0}\right)_{1}}{ l} .\label{eq:13:2:33}
+\braOketred{ l^{\prime \prime}}{\left(\hat{\nabla}_{\Omega}\right)_{1}}{ l} .\label{eq:13:2:33}
 \end{equation}
 
 The reduced matrix element of \(\left(\widehat{\nabla}_{\Omega}\right)_{1}\) in \eqref{eq:13:2:33} is given by Eq. \eqref{eq:13:2:27}
@@ -820,9 +820,9 @@ The second term in Eq. \eqref{eq:13:2:34} is the matrix element of the commutato
 \end{equation}
 Using Eqs. \eqref{eq:13:2:104} and \eqref{eq:13:2:105}, we find
 \begin{equation}
-\braOket{ l^{\prime} m^{\prime}}{ \mathfrak{R}_{k \kappa}^{11}\left(\widehat{\vect{n}}_{1},\left(\widehat{\nabla}_{\Omega}\right)_{1}\right)}{l m}=\frac{2}{\sqrt{3}} \delta_{k 0} \delta_{l l} \delta_{m m^{\prime}}+\sqrt{\frac{2}{3} \frac{2 l+1}{2 l^{\prime}+1}} 
-\clebsch{l}{0}{2}{0}{xxx^{\prime\prime}}{0}
-\clebsch{l}{m}{2}{\kappa}{xxx^{\prime\prime}}{m^{\prime}} \delta_{k 2} \label{eq:13:2:36}
+\braOket{ l^{\prime} m^{\prime}}{ \mathfrak{R}_{k \kappa}^{11}\left(\widehat{\vect{n}}_{1},\left(\widehat{\nabla}_{\Omega}\right)_{1}\right)}{l m}=\frac{2}{\sqrt{3}} \delta_{k 0} \delta_{l l^{\prime}} \delta_{m m^{\prime}}+\sqrt{\frac{2}{3} \frac{2 l+1}{2 l^{\prime}+1}}
+\clebsch{l}{0}{2}{0}{l^{\prime}}{0}
+\clebsch{l}{m}{2}{\kappa}{l^{\prime}}{m^{\prime}} \delta_{k 2} \label{eq:13:2:36}
 \end{equation}
 \subsection{Matrix Elements of the Total Angular Momentum Operator \(\widehat{\vect{J}} \equiv \widehat{\vect{J}}_{1}\)}\label{sec:13:2.5}
 The operator of the total angular momentum \(\widehat{\vect{J}}=\widehat{\vect{L}}+\widehat{\vect{S}}\) acts on position as well as spin variables. Making use of the Wigner-Eckart theorem, we get
