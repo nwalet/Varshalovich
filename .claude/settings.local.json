@@ -1,7 +1,16 @@
 {
   "permissions": {
     "allow": [
-      "Bash(git pull *)"
+      "Bash(git pull *)",
+      "Bash(rm -f VMK.out VMK.aux VMK.bbl VMK.toc; xelatex -interaction=nonstopmode -halt-on-error VMK.tex > /tmp/vmk_bib2.log 2>&1; echo \"xelatex1 exit=$?\"; grep -nE \"^!\" /tmp/vmk_bib2.log | head)",
+      "Bash(xelatex -interaction=nonstopmode VMK.tex)",
+      "Bash(cp VMK.tex /tmp/VMK.tex.bak)",
+      "Bash(sed -i '' 's/\\\\\\\\includeonly{Chap13,references,glossary}/\\\\\\\\includeonly{references,glossary}/' VMK.tex)",
+      "Bash(rm -f VMK.aux VMK.bbl VMK.out)",
+      "Bash(echo \"final xelatex exit=$?\")"
+    ],
+    "additionalDirectories": [
+      "/Users/mccssnrw/Documents/Projects/VMK"
     ]
   }
 }

@@ -1,5 +1,5 @@
 \chapter{6j Symbols and the Racah Coefficients}
-% styles for the Sec. 9.9 tetrahedron figures (Figs. 9.1-9.3)
+% styles for the Sec.~\ref{sec:9.9} tetrahedron figures (Figs. 9.1-9.3)
 \tikzset{
   edge/.style={line width=1pt},
   vlbl/.style={font=\normalsize},
@@ -28,7 +28,7 @@ Similarly, the state vectors corresponding to the coupling scheme III are eigenv
 \begin{equation}
 \ket{j_{1} j_{3}\left(j_{13}\right) j_{2} j m}=\sum_{m_{1} m_{2} m_{3}} \clebsch{j_{13}}{m_{13}}{j_{2}}{m_{2}}{j}{m} \clebsch{j_{1}}{m_{1}}{j_{3}}{m_{3}}{j_{13}}{m_{13}}\ket{j_{1} m_{1}, j_{2} m_{2}, j_{3} m_{3}} . \label{eq:9:1:4}
 \end{equation}
-States belonging to each coupling scheme form a complete set of states. A transition from one coupling scheme to another is performed by some unitary transformation which relates the states with the same total angular momentum $j$ and projection $m$. The coefficients $U$ of this transformation differ from the $6 j$ symbols only by normalization and phase factors. These factors are chosen in such a way to make the $6 j$ symbols more symmetric (Sec. 9.4).
+States belonging to each coupling scheme form a complete set of states. A transition from one coupling scheme to another is performed by some unitary transformation which relates the states with the same total angular momentum $j$ and projection $m$. The coefficients $U$ of this transformation differ from the $6 j$ symbols only by normalization and phase factors. These factors are chosen in such a way to make the $6 j$ symbols more symmetric (Sec.~\ref{sec:9.4}).
 
 One defines the Wigner $6 j$ symbols $\sixj{j_{1}}{j_{2}}{j_{12}}{j_{3}}{j}{j_{23}}$ by the relation
 \begin{align}
@@ -51,7 +51,7 @@ Here the sum is over $m_{1}, m_{2}, m_{3}, m_{12}, m_{23}$ while $m$ and $m^{\pr
 
 The quantum-mechanical rules of vector addition impose some restrictions on possible values of momenta which are arguments of the $6 j$ symbol $\sixj{j_{1}}{j_{2}}{j_{12}}{j_{3}}{j}{j_{23}}$.
 \begin{enumerate}[label=(\alph*)]
-\item All momenta are integer or half-integer nonnegative numbers (with one exception considered in Sec. 9.4).
+\item All momenta are integer or half-integer nonnegative numbers (with one exception considered in Sec.~\ref{sec:9.4}).
 \item Each triad $\left(j_{1} j_{2} j_{12}\right),\left(j_{12} j_{3} j\right),\left(j_{2} j_{3} j_{23}\right)$ and $\left(j_{23} j_{1} j\right)$ should satisfy the triangular condition (Eq. 8.1(1)). 
 \end{enumerate}
 The unitarity of the recoupling transformations implies the orthogonality and normalization conditions of the $6 j$ symbols,
@@ -168,7 +168,7 @@ R_{21} & R_{22} & R_{23} & R_{24} \\
 R_{31} & R_{32} & R_{33} & R_{34}
 \end{array}\right\|=\left[\frac{\prod_{i=1}^{3} \prod_{\alpha=1}^{4}\left(R_{i \alpha}\right)!}{\prod_{\alpha=1}^{4}\left(B_{\alpha}+1\right)!}\right]^{\frac{1}{2}} \sum_{x_{i}, y_{\alpha}} \frac{(-1)^{n}(n+1)!}{\prod_{i=1}^{3}\left(x_{i}\right)!\prod_{\alpha=1}^{4}\left(y_{\alpha}\right)!}
 \end{equation}
-Here $R_{i \alpha}$ are elements of the $R$ symbol (Sec. 9.1.3), $B_{\alpha}$ are given by Eq. \eqref{eq:9:1:18}, $x_{i}, y_{\alpha}$ are summation indices, $n \equiv \sum_{i=1}^{3} x_{i}+\sum_{\alpha=1}^{4} y_{\alpha}$. The sums are over all integer nonnegative values of $x_{i}, y_{\alpha}$ which satisfy the conditions $x_{i}+y_{\alpha}=R_{i \alpha}$. These conditions show that only one of the summation indices is independent. The sum in \eqref{eq:9:2:7} contains $r+1$ terms where $r=\min \left\{R_{i \alpha}\right\}$. If we take the quantity $n$ (integer nonnegative) as an independent summation index, then $x_{i}=A_{i}-n, y_{\alpha}=n-B_{\alpha}, A_{i}$ and $B_{\alpha}$ being given by Eq. \eqref{eq:9:1:18}. In this case the Bargmann formula \eqref{eq:9:2:7} reduces to the Racah formula \eqref{eq:9:2:1}.
+Here $R_{i \alpha}$ are elements of the $R$ symbol (Sec.~\ref{sec:9.1.3}), $B_{\alpha}$ are given by Eq. \eqref{eq:9:1:18}, $x_{i}, y_{\alpha}$ are summation indices, $n \equiv \sum_{i=1}^{3} x_{i}+\sum_{\alpha=1}^{4} y_{\alpha}$. The sums are over all integer nonnegative values of $x_{i}, y_{\alpha}$ which satisfy the conditions $x_{i}+y_{\alpha}=R_{i \alpha}$. These conditions show that only one of the summation indices is independent. The sum in \eqref{eq:9:2:7} contains $r+1$ terms where $r=\min \left\{R_{i \alpha}\right\}$. If we take the quantity $n$ (integer nonnegative) as an independent summation index, then $x_{i}=A_{i}-n, y_{\alpha}=n-B_{\alpha}, A_{i}$ and $B_{\alpha}$ being given by Eq. \eqref{eq:9:1:18}. In this case the Bargmann formula \eqref{eq:9:2:7} reduces to the Racah formula \eqref{eq:9:2:1}.
 
 \subsection{Relations Between the $6 j$ Symbols and the Generalized Hypergeometric Functions}\label{sec:9.2.3}
 The $6 j$ symbols may be written in terms of the hypergeometric functions ${ }\Fhg{4}{3}$ with unit argument:
@@ -208,10 +208,10 @@ The $6 j$ symbols may be written as sums of products of the Clebsch-Gordan coeff
 \begin{equation}
 \sixj{a}{b}{c}{d}{e}{f}  \label{eq:9:2:13}=\sum(-1)^{d+e+f+\delta+\varepsilon+\varphi}\threej{a }{ b }{ c }{\alpha }{ \beta }{ \gamma}\threej{a }{ e }{ f }{\alpha }{ \varepsilon }{ -\varphi}\threej{d }{ b }{ f }{-\delta }{ \beta }{ \varphi}\threej{d }{ e }{ c }{\delta }{ -\varepsilon }{ \gamma} .
 \end{equation}
-In Eq. \eqref{eq:9:2:13} the sum is over all possible values of $\alpha, \beta, \gamma, \delta, \varepsilon, \varphi$ with only three summation indices being independent. Some other sums of the $3 j m$ symbols which yield the $6 j$ symbols will be considered in Chap. 12 .
+In Eq. \eqref{eq:9:2:13} the sum is over all possible values of $\alpha, \beta, \gamma, \delta, \varepsilon, \varphi$ with only three summation indices being independent. Some other sums of the $3 j m$ symbols which yield the $6 j$ symbols will be considered in Chap.~\ref{chap:12} .
 
 \subsection{Quasi-Binomial Representation of the 6j Symbols}\label{sec:9.2.5}
-The $6 j$ symbols may be written in terms of quasi-binomials [45, 99] which are defined in Sec. \ref{sec:8.2.2}. These representations are widely used in tabulating the formulas for the $6 j$ symbols.
+The $6 j$ symbols may be written in terms of quasi-binomials [45, 99] which are defined in Sec.~\ref{sec:8.2.2}. These representations are widely used in tabulating the formulas for the $6 j$ symbols.
 
 Let us introduce the following definitions:
 \begin{equation}
@@ -225,7 +225,7 @@ Then the dependence of the $6 j$ symbols on $k_{1}$ and $k_{2}$ is given by
 \sixj{a}{b}{c}{d}{e}{f} \equiv\sixj{b+k_{2}}{b}{c}{d}{d+k_{1}}{f}  \notag\\
 =(-1)^{E+k_{1}+k_{2}+1}\left[\frac{\left(c+k_{2}\right)^{\left(2 k_{2}\right)} B^{\left(k_{2}-k_{1}\right)} D^{(-1)\left(k_{2}-k_{1}\right)} E^{(-1)\left(k_{2}+k_{1}\right)} F^{(-1)\left(k_{2}+k_{1}\right)}}{\left(c+k_{1}\right)!\left(c-k_{1}\right)!\left(2 b+c+k_{2}+1\right)^{(2 c+1)}\left(2 d+c+k_{1}+1\right)^{(2 c+1)}}\right]^{\frac{1}{2}}(u-v)^{\left(c-k_{2}\right)} . \label{eq:9:2:15}
 \end{gather}
-The quantities $u$ and $v$ may be chosen in different ways. This depends on which equations in Sec. 9.2.1. are supposed to be written in a quasi-binomial form [45].
+The quantities $u$ and $v$ may be chosen in different ways. This depends on which equations in Sec.~\ref{sec:9.2.1}. are supposed to be written in a quasi-binomial form [45].
 
 Equations \eqref{eq:9:2:1} and \eqref{eq:9:2:2} are obtained by putting
 \begin{align}
@@ -280,7 +280,7 @@ Here
 \[
 \chi^{j}(R) \equiv \sum_{m} D_{m m}^{j}(R) \equiv \sum_{m} D_{m m}^{j}(\alpha, \beta, \gamma)
 \]
-is the character of the representation of rank $j$ (Sec. \ref{sec:4.14})
+is the character of the representation of rank $j$ (Sec.~\ref{sec:4.14})
 \[
 \int f(R) d R \equiv \int_{0}^{2 \pi} d \alpha \int_{0}^{\pi} \sin \beta d \beta \int_{0}^{2 \pi} d \gamma f(\alpha, \beta, \gamma)
 \]
@@ -296,7 +296,7 @@ Note also the following integral representations for some special $6 j$ symbols
 \end{align}
 \section{Symmetries of the $6 j$ Symbols and the Racah Coefficients}\label{sec:9.4}
 \subsection{R-Symbols}\label{sec:9.4.1}
-The symmetry properties of the $6 j$ symbols and the $W$-coefficients may be formulated in a fairly simple way if these coefficients are written in terms of the $R$ symbols (see Sec. 9.1.3).
+The symmetry properties of the $6 j$ symbols and the $W$-coefficients may be formulated in a fairly simple way if these coefficients are written in terms of the $R$ symbols (see Sec.~\ref{sec:9.1.3}).
 
 The value of the $R$ symbol is invariant under any permutation of its rows or columns [105]
 \begin{equation}
@@ -314,7 +314,7 @@ R_{2 \alpha} & R_{2 \beta} & R_{2 \gamma} & R_{2 \delta} \\
 R_{3 \alpha} & R_{3 \beta} & R_{3 \gamma} & R_{3 \delta}
 \end{array}\right\| .
 \end{equation}
-In other words, any permutation of parameters $A_{i}$ or $B_{\alpha}$ (see Sec. 9.1.3) leaves the value of the $R$ symbol unchanged. These symmetry relations involve $3!\times 4!=144$ generally different Racah coefficients.
+In other words, any permutation of parameters $A_{i}$ or $B_{\alpha}$ (see Sec.~\ref{sec:9.1.3}) leaves the value of the $R$ symbol unchanged. These symmetry relations involve $3!\times 4!=144$ generally different Racah coefficients.
 
 \subsection{6j Symbols}\label{sec:9.4.2}
 The above-mentioned symmetries of the $R$ symbol are equivalent to the following symmetries of the $6 j$ symbols.\\[0pt]
@@ -597,7 +597,7 @@ In this section only the most important sums involving products of the $6 j$ sym
 & \sum_{X}(-1)^{T-X}(2 X+1)\sixj{a}{b}{X}{c}{d}{p}\sixj{c}{d}{X}{e}{f}{q}\sixj{e}{f}{X}{g}{h}{r}\sixj{g}{h}{X}{b}{a}{s}=\twelvejI{a,d,e,h,p,q,r,s,b,c,f,g},  \notag\\
 & (T=a+b+c+d+e+f+g+h+p+q+r+s) . \label{eq:9:8:8}
 \end{align}
-Many other sums, involving the $6 j$ symbols as well as the $3 j m$ symbols and the $9 j$ symbols, will be given in Chap. 12.
+Many other sums, involving the $6 j$ symbols as well as the $3 j m$ symbols and the $9 j$ symbols, will be given in Chap.~\ref{chap:12}.
 
 \section{Asymptotics of the $6 j$ Symbols for Large Angular Momenta}\label{sec:9.9}
 \subsection{Asymptotic Relations Between the 6j Symbols and the Clebsch-Gordan Coefficients}\label{sec:9.9.1}
@@ -721,7 +721,7 @@ If $f, m, n$ are arbitrary integers or half-integers and $a, b, c \gg f, m, n$, 
 \begin{equation}
 \sixj{a}{b}{c}{b+m}{a+n}{f}  \label{eq:9:9:14} \approx \frac{(-1)^{a+b+c+f+m}}{\sqrt{(2 a+1)(2 b+1)}} d_{m n}^{f}(\theta),
 \end{equation}
-where $d_{m n}^{f}(\Theta)$ is the rotation matrix (Chap. 4), $\Theta$ is an angle between the tetrahedron edges $a+n+\frac{1}{2}$ and $b+m+\frac{1}{2}$ (Fig.~\ref{chap9:fig:2})
+where $d_{m n}^{f}(\Theta)$ is the rotation matrix (Chap.~\ref{chap:4}), $\Theta$ is an angle between the tetrahedron edges $a+n+\frac{1}{2}$ and $b+m+\frac{1}{2}$ (Fig.~\ref{chap9:fig:2})
 \begin{equation}
 \cos \theta=\frac{a(a+1)+b(b+1)-c(c+1)}{2 \sqrt{a(a+1) b(b+1)}} . \label{eq:9:9:15}
 \end{equation}
@@ -917,7 +917,7 @@ Table 9.11. 1. All arguments $a, b, c, d, e, f$ are integers.\\
 2. $a \geq b, c, d, e, f ; b \geq c, e, f$.\\
 3. If $a=b$, then $d \geq e$; if $b=c$, then $e \geq f$; if $a=d$, then $c \geq f$.
 
-Any $6 j$ symbol can be written in one of these forms by using the classical symmetries (Sec. 9.4.2).
+Any $6 j$ symbol can be written in one of these forms by using the classical symmetries (Sec.~\ref{sec:9.4.2}).
 
 Tables 9.1.-9.8. Algebraic Expressions for the 6j Symbols.
 

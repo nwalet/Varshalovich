@@ -1,14 +1,14 @@
 \chapter{Tensor spherical harmonics}\label{chap:7}
 \section{General properties of tensor spherical harmonics}\label{sec:7.1}
 \subsection{Definition}\label{sec:7.1.1}
-The tensor spherical harmonics $Y_{J M}^{L S}(\vartheta, \varphi)$, by definition, are eigenfunctions of the operators $\widehat{\vect{J}}^{2}, \widehat{J}_{z}, \widehat{\vect{L}}^{2}$ and $\widehat{\vect{S}}^{2}$ where $\widehat{\vect{L}}$ is the operator of orbital angular momentum (Sec.2.2), $\widehat{\vect{S}}$ is the spin operator (Sec.2.3), and $\widehat{\vect{J}}=\widehat{\vect{L}}+\widehat{\vect{S}}$ is the operator of total angular momentum (Sec.2.1):
+The tensor spherical harmonics $Y_{J M}^{L S}(\vartheta, \varphi)$, by definition, are eigenfunctions of the operators $\widehat{\vect{J}}^{2}, \widehat{J}_{z}, \widehat{\vect{L}}^{2}$ and $\widehat{\vect{S}}^{2}$ where $\widehat{\vect{L}}$ is the operator of orbital angular momentum (Sec.~\ref{sec:2.2}), $\widehat{\vect{S}}$ is the spin operator (Sec.~\ref{sec:2.3}), and $\widehat{\vect{J}}=\widehat{\vect{L}}+\widehat{\vect{S}}$ is the operator of total angular momentum (Sec.~\ref{sec:2.1}):
 \begin{align}
 \hat{\vect{J}}^{2} Y_{J M}^{L S}(\vartheta, \varphi) & =J(J+1) Y_{J M}^{L S}(\vartheta, \varphi), \notag\\
 \widehat{J}_{x} Y_{J M}^{L S}(\vartheta, \varphi) & =M Y_{J M}^{L S}(\vartheta, \varphi), \notag\\
 \hat{\vect{L}}^{2} Y_{J M}^{L S}(\vartheta, \varphi) & =L(L+1) Y_{J M}^{L S}(\vartheta, \varphi), \label{eq:7:1:1}\\
 \hat{\vect{S}}^{2} Y_{J M}^{L S}(\vartheta, \varphi) & =S(S+1) Y_{J M}^{L S}(\vartheta, \varphi). \notag
 \end{align}
-A tensor spherical harmonic describes the angular distribution and polarization of spin- $S$ particles in a state with definite total angular momentum $J$, projection $M$, and orbital angular momentum $L$. The spin value $S$ is sometimes called the rank of the tensor spherical harmonic. Accordingly, one often uses such names as spinor spherical harmonics ($S=\frac{1}{2}$), vector spherical harmonics ($S=1$), etc. However, strictly speaking, these terms are not entirely adequate because, in fact, the transformation properties of the tensor spherical harmonics under rotation of coordinate system are determined by $J$, but not by $S$ (see Sec. 7.1.4).
+A tensor spherical harmonic describes the angular distribution and polarization of spin- $S$ particles in a state with definite total angular momentum $J$, projection $M$, and orbital angular momentum $L$. The spin value $S$ is sometimes called the rank of the tensor spherical harmonic. Accordingly, one often uses such names as spinor spherical harmonics ($S=\frac{1}{2}$), vector spherical harmonics ($S=1$), etc. However, strictly speaking, these terms are not entirely adequate because, in fact, the transformation properties of the tensor spherical harmonics under rotation of coordinate system are determined by $J$, but not by $S$ (see Sec.~\ref{sec:7.1.4}).
 
 The tensor spherical harmonics may be constructed from the spherical harmonics $Y_{L M}(\vartheta, \varphi)$ (eigenfunctions of $\widehat{\vect{L}}^{2}$ and $\widehat{L}_{x}$ ) and the spin functions $X S_{\sigma}$ (eigenfunctions of $\widehat{\vect{S}}^{2}$ and $\widehat{S}_{x}$ ) in accordance with the coupling scheme of two angular momenta
 \begin{equation}
@@ -23,7 +23,7 @@ The indices $J$ and $S$ are integer or half-integer nonnegative numbers, and $L$
 The tensor spherical harmonics with fixed indices are functions of three variables: two polar angles $\vartheta, \varphi(0 \leq \vartheta \leq \pi, 0 \leq \varphi<2 \pi)$ and spin variable $\xi(\xi=-S,-S+1, \ldots, S-1, S)$ which is the argument of spin function\\
 $\chi_{\text {S } \sigma}$. The spin variable $\xi$ is usually not mentioned as an argument of tensor spherical harmonics. Instead, the tensor spherical harmonics are written in matrix form by analogy with spin functions. More precisely, $Y_{J M}^{L S}(\vartheta, \varphi)$ is represented by a column matrix with $2 S+1$ elements, and $Y_{J M}^{L S+}(\vartheta, \varphi)$ is represented by a row matrix. Summation over spin variable is replaced by matrix multiplication.
 
-The tensor spherical harmonics $Y_{J M}^{L S}(\vartheta, \varphi)$ constitute a complete orthonormal set for series expansion of $\operatorname{rank} S$ tensor functions within the domain of arguments $0 \leq \vartheta \leq \pi, 0 \leq \varphi<2 \pi$ (see Sec. 7.1.8).
+The tensor spherical harmonics $Y_{J M}^{L S}(\vartheta, \varphi)$ constitute a complete orthonormal set for series expansion of $\operatorname{rank} S$ tensor functions within the domain of arguments $0 \leq \vartheta \leq \pi, 0 \leq \varphi<2 \pi$ (see Sec.~\ref{sec:7.1.8}).
 
 Note also the following orthogonality relations for $Y_{J M}^{L S}(\vartheta, \varphi)$ which have the same $J, M$ and $S$ but different $L$ :
 \begin{equation}
@@ -44,7 +44,7 @@ from which one obtains
 \begin{equation}
 \left[Y_{J M}^{L S}(\vartheta, \varphi)\right]_{\mu}=(-1)^{S-\mu} \clebsch{L}{M+\mu}{S}{-\mu}{J}{M} Y_{L M+\mu}(\vartheta, \varphi). \label{eq:7:1:7}
 \end{equation}
-If $S$ is integer, an alternative definition of the covariant spherical components that is widely used is (see Sec. 7.3.2)
+If $S$ is integer, an alternative definition of the covariant spherical components that is widely used is (see Sec.~\ref{sec:7.3.2})
 \begin{equation}
 \left[Y_{J M}^{L S}(\vartheta, \varphi)\right]_{\mu}=(-1)^{\mu}\left[Y_{J M}^{L S}(\vartheta, \varphi)\right]^{-\mu}, \label{eq:7:1:8}
 \end{equation}
@@ -101,7 +101,7 @@ Under rotations of the coordinate system specified by the Euler angles $\alpha, 
 \begin{equation}
 Y_{J M^{\prime}}^{L S}\left(\vartheta^{\prime}, \varphi^{\prime}\right) \equiv \hat{D}(\alpha, \beta, \gamma) Y_{J M^{\prime}}^{L S}(\vartheta, \varphi)=\sum_{M=-J}^{J} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma) Y_{J M}^{L S}(\vartheta, \varphi), \label{eq:7:1:18}
 \end{equation}
-where $M$ is the projection of total angular momentum on the initial $z$-axis, $M^{\prime}$ is its projection on the final $z^{\prime}$ axis; $\vartheta, \varphi$ and $\vartheta^{\prime}, \varphi^{\prime}$ are polar angles of the unit vector $\vect{n}$ in the initial and final coordinate systems, respectively. The relations between $\vartheta^{\prime}, \varphi^{\prime}$ and $\vartheta, \varphi$ are given by Eqs. 1.4(2), 1.4(3). The coefficients $D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)$ are matrix elements of the rotation operator, i.e., the Wigner $D$-functions (Chap. 4). Note that the transformation properties of tensor spherical harmonics are determined by the total angular momentum $\vect{J}$, but not by the spin S. Thus, it is $J$ that determines true rank of a tensor spherical harmonic.
+where $M$ is the projection of total angular momentum on the initial $z$-axis, $M^{\prime}$ is its projection on the final $z^{\prime}$ axis; $\vartheta, \varphi$ and $\vartheta^{\prime}, \varphi^{\prime}$ are polar angles of the unit vector $\vect{n}$ in the initial and final coordinate systems, respectively. The relations between $\vartheta^{\prime}, \varphi^{\prime}$ and $\vartheta, \varphi$ are given by Eqs. 1.4(2), 1.4(3). The coefficients $D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)$ are matrix elements of the rotation operator, i.e., the Wigner $D$-functions (Chap.~\ref{chap:4}). Note that the transformation properties of tensor spherical harmonics are determined by the total angular momentum $\vect{J}$, but not by the spin S. Thus, it is $J$ that determines true rank of a tensor spherical harmonic.
 
 \subsection{Differential Equations}\label{sec:7.1.5}
 \begin{enumerate}[label=(\alph*)]
@@ -109,7 +109,7 @@ where $M$ is the projection of total angular momentum on the initial $z$-axis, $
 \begin{equation}
 \left\{\Delta_{\Omega}+L(L+1)\right\} Y_{J M}^{L S}(\vartheta, \varphi)=0, \label{eq:7:1:19}
 \end{equation}
-where $\Delta_{\Omega}$ is the angular part of the Laplace operator (see Sec. 1.3.2). The expanded form of \eqref{eq:7:1:19} is
+where $\Delta_{\Omega}$ is the angular part of the Laplace operator (see Sec.~\ref{sec:1.3.2}). The expanded form of \eqref{eq:7:1:19} is
 \begin{equation}
 \frac{1}{\sin \vartheta} \cdot \frac{\partial}{\partial \vartheta}\left\{\sin \vartheta \frac{\partial}{\partial \vartheta} Y_{J M}^{L S}(\vartheta, \varphi)\right\}+\frac{1}{\sin ^{2} \vartheta} \frac{\partial^{2}}{\partial \varphi^{2}} Y_{J M}^{L S}(\vartheta, \varphi)+L(L+1) Y_{J M}^{L S}(\vartheta, \varphi)=0 . \label{eq:7:1:20}
 \end{equation}
@@ -226,22 +226,22 @@ These coefficients satisfy the relation
 \end{equation}
 \section{Spinor spherical harmonics}\label{sec:7.2}
 \subsection{Definition}\label{sec:7.2.1}
-The spinor spherical harmonics $\Omega_{J M}^{L}(\vartheta, \varphi)$ are defined as tensor spherical harmonics with $S=\frac{1}{2}$ (Sec. 7.1.1)
+The spinor spherical harmonics $\Omega_{J M}^{L}(\vartheta, \varphi)$ are defined as tensor spherical harmonics with $S=\frac{1}{2}$ (Sec.~\ref{sec:7.1.1})
 \begin{equation}
 \Omega_{J M}^{L}(\vartheta, \varphi) \equiv Y_{J M}^{L \frac{1}{2}}(\vartheta, \varphi). \label{eq:7:2:1}
 \end{equation}
-They are eigenfunctions of the operators $\widehat{\vect{J}}^{2}, \widehat{J}_{x}, \widehat{\vect{L}}^{2}, \widehat{\vect{S}}^{2}$ where $\widehat{\vect{L}}$ is the operator of orbital angular momentum (Sec. 2.2), $\widehat{\mathrm{S}}$ is the spin operator for $S=\frac{1}{2}$ (Sec. 2.5) and $\widehat{\mathrm{J}}$ is the operator of total angular momentum (Sec. 2.1)
+They are eigenfunctions of the operators $\widehat{\vect{J}}^{2}, \widehat{J}_{x}, \widehat{\vect{L}}^{2}, \widehat{\vect{S}}^{2}$ where $\widehat{\vect{L}}$ is the operator of orbital angular momentum (Sec.~\ref{sec:2.2}), $\widehat{\mathrm{S}}$ is the spin operator for $S=\frac{1}{2}$ (Sec.~\ref{sec:2.5}) and $\widehat{\mathrm{J}}$ is the operator of total angular momentum (Sec.~\ref{sec:2.1})
 \begin{align}
 \hat{J}^{2} \Omega_{J M}^{L}(\vartheta, \varphi) & =J(J+1) \Omega_{J M}^{L}(\vartheta, \varphi), \notag\\
 \widehat{J}_{z} \Omega_{J M}^{L}(\vartheta, \varphi) & =M \Omega_{J M}^{L}(\vartheta, \varphi), \notag\\
 \hat{\vect{L}}^{2} \Omega_{J M}^{L}(\vartheta, \varphi) & =L(L+1) \Omega_{J M}^{L}(\vartheta, \varphi), \label{eq:7:2:2}\\
 \widehat{\vect{S}}^{2} \Omega_{J M}^{L}(\vartheta, \varphi) & =\frac{3}{4} \Omega_{J M}^{L}(\vartheta, \varphi). \notag
 \end{align}
-The spinor spherical harmonics may be expressed in terms of scalar spherical harmonics $Y_{L M}(\vartheta, \varphi)$ (Chap. 5) and spin functions $\chi_{\frac{1}{2} \sigma}$ (Sec. 6.2) as
+The spinor spherical harmonics may be expressed in terms of scalar spherical harmonics $Y_{L M}(\vartheta, \varphi)$ (Chap.~\ref{chap:5}) and spin functions $\chi_{\frac{1}{2} \sigma}$ (Sec.~\ref{sec:6.2}) as
 \begin{equation}
 \Omega_{J M}^{L}(\vartheta, \varphi)=\sum_{m \sigma} \clebsch{L}{m}{\frac{1}{2}}{\sigma}{J}{M} Y_{L m}(\vartheta, \varphi) \chi_{\frac{1}{2} \sigma}. \label{eq:7:2:3}
 \end{equation}
-For the spinor spherical harmonics $J$ is a half-integer nonnegative number because $L$ is always integer. For given $J$ only two values of $L$ are possible, $L=J \pm \frac{1}{2}$, while $M$ assumes $2 J+1$ values: $M=-J,-J+1, \ldots, J-1, J$. The spinor spherical harmonics are orthonormalized in the domain of angles $0 \leq \vartheta \leq \pi, 0 \leq \varphi<2 \pi$ (Sec.7.2.7).
+For the spinor spherical harmonics $J$ is a half-integer nonnegative number because $L$ is always integer. For given $J$ only two values of $L$ are possible, $L=J \pm \frac{1}{2}$, while $M$ assumes $2 J+1$ values: $M=-J,-J+1, \ldots, J-1, J$. The spinor spherical harmonics are orthonormalized in the domain of angles $0 \leq \vartheta \leq \pi, 0 \leq \varphi<2 \pi$ (Sec.~\ref{sec:7.2.7}).
 
 \subsection{Components of Spinor Spherical Harmonics}\label{sec:7.2.2}
 \begin{enumerate}[label=(\alph*)]
@@ -280,7 +280,7 @@ A more detailed form of \eqref{eq:7:2:9} is
 & \Omega_{J M}^{J+\frac{1}{2}}(\vartheta, \varphi)=\binom{-\sqrt{\frac{J-M+1}{2(J+1)}} Y_{J+\frac{1}{2} M-\frac{1}{2}}(\vartheta, \varphi)}{\sqrt{\frac{J+M+1}{2(J+1)}} Y_{J+\frac{1}{2} M+\frac{1}{2}}(\vartheta, \varphi)}, \label{eq:7:2:12}\\
 & \Omega_{J M}^{J-\frac{1}{2}}(\vartheta, \varphi)=\binom{\sqrt{\frac{J+M}{2 J}} Y_{J-\frac{1}{2} M-\frac{1}{2}}(\vartheta, \varphi),}{\sqrt{\frac{J-M}{2 J}} Y_{J-\frac{1}{2} M+\frac{1}{2}}(\vartheta, \varphi)}. \label{eq:7:2:13}
 \end{align}
-\item An expansion of $\Omega_{J M}^{L}(\vartheta, \varphi)$ in terms of helicity basis spin functions $\chi_{\frac{1}{2} \lambda}(\vartheta, \varphi)$ (Sec. 6.2.5) may be written as
+\item An expansion of $\Omega_{J M}^{L}(\vartheta, \varphi)$ in terms of helicity basis spin functions $\chi_{\frac{1}{2} \lambda}(\vartheta, \varphi)$ (Sec.~\ref{sec:6.2.5}) may be written as
 \begin{equation}
 \Omega_{J M}^{L}(\vartheta, \varphi)=\sqrt{\frac{2 L+1}{4 \pi}} \sum_{\lambda} \clebsch{L}{0}{\frac{1}{2}}{\lambda}{J}{\lambda} D_{-\lambda-M}^{J}(0, \vartheta, \varphi) \chi_{\frac{1}{2} \lambda}(\vartheta, \varphi), \label{eq:7:2:14}
 \end{equation}
@@ -326,10 +326,10 @@ Under rotations specified by the Euler angles $\alpha, \beta, \gamma$ the spinor
 \begin{equation}
 \Omega_{J M^{\prime}}^{L}\left(\vartheta^{\prime}, \varphi^{\prime}\right)=\hat{D}(\alpha, \beta, \gamma) \Omega_{J M^{\prime}}^{L}(\vartheta, \varphi)=\sum_{M=-J}^{J} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma) \Omega_{J M}^{L}(\vartheta, \varphi), \label{eq:7:2:22}
 \end{equation}
-where $D_{M M}^{J}$, are the Wigner $D$-functions (Chap. 4), $M^{\prime}$ is the projection of total angular momentum on the rotated $z^{\prime}$-axis; $\vartheta, \varphi$ and $\vartheta^{\prime}, \varphi^{\prime}$ are polar angles of the position vector $\vect{r}$ in the initial and final coordinate systems. The relations between $\vartheta^{\prime}, \varphi^{\prime}$ and $\vartheta, \varphi$ are given by Eqs. 1.4(2)-1.4(3).
+where $D_{M M}^{J}$, are the Wigner $D$-functions (Chap.~\ref{chap:4}), $M^{\prime}$ is the projection of total angular momentum on the rotated $z^{\prime}$-axis; $\vartheta, \varphi$ and $\vartheta^{\prime}, \varphi^{\prime}$ are polar angles of the position vector $\vect{r}$ in the initial and final coordinate systems. The relations between $\vartheta^{\prime}, \varphi^{\prime}$ and $\vartheta, \varphi$ are given by Eqs. 1.4(2)-1.4(3).
 
 \subsection{Action of $\vect{\nabla}$ and Angular Momentum Operators}\label{sec:7.2.5}
-The spinor spherical harmonics satisfy Eqs. \eqref{eq:7:1:24}-\eqref{eq:7:1:38} for $S=\frac{1}{2}$. Note also the following relations in which $\widehat{\vect{S}}$ is the spin operator (Sec.2.5), $\widehat{\vect{L}}$ is the operator of orbital angular momentum (Sec.2.2), $\widehat{\vect{J}}=\widehat{\vect{L}}+\widehat{\vect{S}}$ is the operator of total angular momentum, and $\vect{n}(\vartheta, \varphi)=\vect{r} / r$.
+The spinor spherical harmonics satisfy Eqs. \eqref{eq:7:1:24}-\eqref{eq:7:1:38} for $S=\frac{1}{2}$. Note also the following relations in which $\widehat{\vect{S}}$ is the spin operator (Sec.~\ref{sec:2.5}), $\widehat{\vect{L}}$ is the operator of orbital angular momentum (Sec.~\ref{sec:2.2}), $\widehat{\vect{J}}=\widehat{\vect{L}}+\widehat{\vect{S}}$ is the operator of total angular momentum, and $\vect{n}(\vartheta, \varphi)=\vect{r} / r$.
 \begin{enumerate}[label=(\alph*)]
 \item
 \begin{equation}
@@ -420,7 +420,7 @@ The expansion \eqref{eq:7:2:38} is valid for the range $0 \leq \vartheta \leq \p
 {L_{2}}{J_{2}}{\frac{1}{2}}%
 {L}{J}{1} \clebsch{J_{1}}{-M_{1}}{J_{2}}{M_{2}}{J}{M} \vect{Y}_{J M}^{L}(\vartheta, \varphi), \label{eq:7:2:41}
 \end{gather}
-where $\widehat{\mathrm{S}}$ is the spin operator, $\vect{Y}_{J M}^{L}$ is a vector spherical harmonic (see Sec. 7.3).
+where $\widehat{\mathrm{S}}$ is the spin operator, $\vect{Y}_{J M}^{L}$ is a vector spherical harmonic (see Sec.~\ref{sec:7.3}).
 
 \subsection{Addition Theorems}\label{sec:7.2.9}
 Let $\vect{n}_{1}$ and $\vect{n}_{2}$ be unit vectors with polar angles $\vartheta_{1}, \varphi_{1}$ and $\vartheta_{2}, \varphi_{2}, \cos \omega_{12} \equiv \vect{n}_{1} \cdot \vect{n}_{2}=\cos \vartheta_{1} \cos \vartheta_{2}+ \sin \vartheta_{1} \sin \vartheta_{2} \cos \left(\varphi_{1}-\varphi_{2}\right)$. The addition theorem for the spinor spherical harmonics may be written in the form
@@ -429,7 +429,7 @@ Let $\vect{n}_{1}$ and $\vect{n}_{2}$ be unit vectors with polar angles $\varthe
 4 \pi \sum_{M=-J}^{J} \Omega_{J M}^{L+}\left(\vartheta_{1}, \varphi_{1}\right) \hat{\mathrm{S}} \Omega_{J M}^{L^{\prime}}\left(\vartheta_{2}, \varphi_{2}\right)= \begin{cases}i\left|\vect{n}_{1} \times \vect{n}_{2}\right| P_{L}^{\prime}\left(\cos \omega_{12}\right) & \text { if } L^{\prime}=L \\
 \left(L^{\prime}-L\right)\left\{\vect{n}_{1} P_{L^{\prime}}^{\prime}\left(\cos \omega_{12}\right)-\vect{n}_{2} P_{L^{\prime}}^{\prime}\left(\cos \omega_{12}\right)\right\}, & \text { if } L^{\prime}=2 J-L\end{cases}, \label{eq:7:2:43}
 \end{gather}
-where $P_{L}(x)$ is a Legendre polynomial, $P_{L}^{\prime}(x)=d P_{L}(x) / d x, \widehat{\vect{S}}$ is the spin operator (Sec. 2.5). Another form of the addition theorem may be obtained for matrix products of the type
+where $P_{L}(x)$ is a Legendre polynomial, $P_{L}^{\prime}(x)=d P_{L}(x) / d x, \widehat{\vect{S}}$ is the spin operator (Sec.~\ref{sec:2.5}). Another form of the addition theorem may be obtained for matrix products of the type
 \begin{gather}
 4 \pi \sum_{M=-J}^{J} \Omega_{J M}^{L}\left(\vartheta_{1}, \varphi_{1}\right) \Omega_{J M}^{L+}\left(\vartheta_{2}, \varphi_{2}\right)  \notag\\
 =\left(J+\frac{1}{2}\right) \hat{I} P_{L}\left(\cos \omega_{12}\right)-i 4(J-L) \hat{\vect{S}} \cdot\left[\vect{n}_{1} \times \vect{n}_{2}\right] P_{L}^{\prime}\left(\cos \omega_{12}\right),  \label{eq:7:2:44}\\
@@ -485,11 +485,11 @@ The explicit forms of $W_{J M}(\vartheta)$ for $J=\frac{1}{2}, \frac{3}{2}, \fra
 
 \section{Vector spherical harmonics}\label{sec:7.3}
 \subsection{Definition}\label{sec:7.3.1}
-The vector spherical harmonics $\vect{Y}_{J M}^{L}(\vartheta, \varphi)$ are defined as the tensor spherical harmonics at $S=1$ (Sec. 7.1.1).
+The vector spherical harmonics $\vect{Y}_{J M}^{L}(\vartheta, \varphi)$ are defined as the tensor spherical harmonics at $S=1$ (Sec.~\ref{sec:7.1.1}).
 \begin{equation}
 \vect{Y}_{J M}^{L}(\vartheta, \varphi) \equiv Y_{J M}^{L 1}(\vartheta, \varphi). \label{eq:7:3:1}
 \end{equation}
-They are eigenfunctions of the operators $\widehat{\vect{J}}^{2}, \widehat{J}_{z}, \widehat{\vect{L}}^{2}, \widehat{\vect{S}}^{2}$ where $\widehat{\vect{L}}$ is the orbital angular momentum operator (Sec. 2.2), $\widehat{\vect{S}}$ is the spin operator for $S=1$ (Sec. 2.6), and $\widehat{\vect{J}}=\widehat{\vect{L}}+\widehat{\vect{S}}$ is the total angular momentum operator (Sec. 2.1)
+They are eigenfunctions of the operators $\widehat{\vect{J}}^{2}, \widehat{J}_{z}, \widehat{\vect{L}}^{2}, \widehat{\vect{S}}^{2}$ where $\widehat{\vect{L}}$ is the orbital angular momentum operator (Sec.~\ref{sec:2.2}), $\widehat{\vect{S}}$ is the spin operator for $S=1$ (Sec.~\ref{sec:2.6}), and $\widehat{\vect{J}}=\widehat{\vect{L}}+\widehat{\vect{S}}$ is the total angular momentum operator (Sec.~\ref{sec:2.1})
 \begin{align}
 \hat{\vect{J}}^{2} \vect{Y}_{J M}^{L}(\vartheta, \varphi) & =J(J+1) \vect{Y}_{J M}^{L}(\vartheta, \varphi), \notag\\
 \widehat{J}_{z} \vect{Y}_{J M}^{L}(\vartheta, \varphi) & =M \vect{Y}_{J M}^{L}(\vartheta, \varphi), \notag\\
@@ -535,7 +535,7 @@ According to \eqref{eq:7:1:2}, the vector spherical harmonics $\vect{Y}_{J M}^{L
 \begin{equation}
 \vect{Y}_{J M}^{L}(\vartheta, \varphi)=\sum_{m, \sigma} \clebsch{L}{m}{1}{\sigma}{J}{M} Y_{L m}(\vartheta, \varphi) \vect{e}_{\sigma}, \label{eq:7:3:3}
 \end{equation}
-where $\clebsch{L}{m}{1}{\sigma}{J}{M}$ is the Clebsch-Gordan coefficient (Chap. 8), $Y_{L M}$ is a scalar spherical harmonic (Chap. 5), and $\vect{e}_{\sigma}$ is a covariant spherical basis vector (spin function for an $S=1$ particle, Sec. 1.1.3); $J$ and $L$ are nonnegative integers. For a given $J$, three values of $L$ are possible: $L=J, J \pm 1$ (with the only exception that $L=1$ for $J=0$ ), and $M$ takes the values $M=-J,-J+1, \ldots, J-1, J$.
+where $\clebsch{L}{m}{1}{\sigma}{J}{M}$ is the Clebsch-Gordan coefficient (Chap.~\ref{chap:8}), $Y_{L M}$ is a scalar spherical harmonic (Chap.~\ref{chap:5}), and $\vect{e}_{\sigma}$ is a covariant spherical basis vector (spin function for an $S=1$ particle, Sec.~\ref{sec:1.1.3}); $J$ and $L$ are nonnegative integers. For a given $J$, three values of $L$ are possible: $L=J, J \pm 1$ (with the only exception that $L=1$ for $J=0$ ), and $M$ takes the values $M=-J,-J+1, \ldots, J-1, J$.
 
 The vectors $\vect{Y}_{J M}^{L}(\vartheta, \varphi)$ which have the same $J, M$ but different $L$ satisfy the orthogonality relations
 \begin{equation}
@@ -571,7 +571,7 @@ The inverse relations are written as
 \vect{Y}_{J M}^{J}(\vartheta, \varphi) & =\vect{Y}_{J M}^{(0)}(\vartheta, \varphi), \label{eq:7:3:10}\\
 \vect{Y}_{J M}^{J-1}(\vartheta, \varphi) & =\sqrt{\frac{J+1}{2 J+1}} \vect{Y}_{J M}^{(1)}(\vartheta, \varphi)+\sqrt{\frac{J}{2 J+1}} \vect{Y}_{J M}^{(-1)}(\vartheta, \varphi). \notag
 \end{align}
-The vector spherical harmonics $\vect{Y}_{J M}^{L}(\vartheta, \varphi)$, as well as $\vect{Y}_{J M}^{(\lambda)}(\vartheta, \varphi)$ constitute a complete orthonormal vector set for the range $0 \leq \vartheta \leq \pi, 0 \leq \varphi<2 \pi$ (see Sec. 7.3.13 below).
+The vector spherical harmonics $\vect{Y}_{J M}^{L}(\vartheta, \varphi)$, as well as $\vect{Y}_{J M}^{(\lambda)}(\vartheta, \varphi)$ constitute a complete orthonormal vector set for the range $0 \leq \vartheta \leq \pi, 0 \leq \varphi<2 \pi$ (see Sec.~\ref{sec:7.3.13} below).
 
 \subsection{Components of Vector Spherical Harmonics}\label{sec:7.3.2}
 \begin{enumerate}[label=(\alph*)]
@@ -641,7 +641,7 @@ and may be written as
 {\left[\vect{Y}_{J M}^{(-1)}(\vartheta, \varphi)\right]^{-1}=-\left[\vect{Y}_{J M}^{(-1)}(\vartheta, \varphi)\right]_{+1} } & =\left[\frac{(J-M)(J-M-1)}{2(2 J-1)(2 J+1)}\right]^{\frac{1}{2}} Y_{J-1 M+1}(\vartheta, \varphi), \notag\\
 & -\left[\frac{(J+M+1)(J+M+2)}{2(2 J+1)(2 J+3)}\right]^{\frac{1}{2}} Y_{J+1 M+1}(\vartheta, \varphi). \notag
 \end{align}
-\item An expansion of $\vect{Y}_{J M}^{(\lambda)}(\vartheta, \varphi)$ in terms of the polar basis vectors $\vect{e}_{r}$, $\vect{e}_{\vartheta}$ and $\vect{e}_{\varphi}$ (Sec. 1.1.2) is given by
+\item An expansion of $\vect{Y}_{J M}^{(\lambda)}(\vartheta, \varphi)$ in terms of the polar basis vectors $\vect{e}_{r}$, $\vect{e}_{\vartheta}$ and $\vect{e}_{\varphi}$ (Sec.~\ref{sec:1.1.2}) is given by
 \begin{equation}
 \vect{Y}_{J M}^{(\lambda)}(\vartheta, \varphi)=\left[\vect{Y}_{J M}^{(\lambda)}(\vartheta, \varphi)\right]_{r} \vect{e}_{r}+\left[\vect{Y}_{J M}^{(\lambda)}(\vartheta, \varphi)\right]_{\vartheta} \vect{e}_{\vartheta}+\left[\vect{Y}_{J M}^{(\lambda)}(\vartheta, \varphi)\right]_{\varphi} \vect{e}_{\varphi}, \label{eq:7:3:24}
 \end{equation}
@@ -663,7 +663,7 @@ where the polar components of $\vect{Y}_{J M}^{(\lambda)}(\vartheta, \varphi)$ h
 & {\left[\vect{Y}_{J M}^{(-1)}(\vartheta, \varphi)\right]_{\vartheta}=0}, \label{eq:7:3:27}\\
 & {\left[\vect{Y}_{J M}^{(-1)}(\vartheta, \varphi)\right]_{\varphi}=0}. \notag
 \end{align}
-\item An expansion of $\vect{Y}_{J M}^{L}(\vartheta, \varphi)$ in terms of helicity basis vectors $\vect{e}_{\nu}^{\prime}(\vartheta, \varphi)$ (Sec. 1.1.4) may be written as
+\item An expansion of $\vect{Y}_{J M}^{L}(\vartheta, \varphi)$ in terms of helicity basis vectors $\vect{e}_{\nu}^{\prime}(\vartheta, \varphi)$ (Sec.~\ref{sec:1.1.4}) may be written as
 \begin{equation}
 \vect{Y}_{J M}^{L}(\vartheta, \varphi)=\sum_{\nu}\left[\vect{Y}_{J M}^{L}(\vartheta, \varphi)\right]^{\nu} \vect{e}_{\nu}^{\prime}(\vartheta, \varphi)=\sum_{\nu}(-1)^{\nu}\left[\vect{Y}_{J M}^{L}(\vartheta, \varphi)\right]_{-\nu}^{\prime} \vect{e}_{\nu}^{\prime}(\vartheta, \varphi), \label{eq:7:3:28}
 \end{equation}
@@ -734,12 +734,12 @@ The complex conjugates of the spherical components of $\vect{Y}_{J M}^{L}$ and $
 \end{align}
 \subsubsection{Rotations of the coordinate system}
 
-Under rotations specified by the Euler angles $\alpha, \beta, \gamma$ (Sec. 1.4) the vector spherical harmonics transform according to
+Under rotations specified by the Euler angles $\alpha, \beta, \gamma$ (Sec.~\ref{sec:1.4}) the vector spherical harmonics transform according to
 \begin{align}
 & \vect{Y}_{J M^{\prime}}^{L}\left(\vartheta^{\prime}, \varphi^{\prime}\right)=\hat{D}(\alpha, \beta, \gamma) \vect{Y}_{J M^{\prime}}^{L}(\vartheta, \varphi)=\sum_{M} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma) \vect{Y}_{J M}^{L}(\vartheta, \varphi)  \notag\\
 & \vect{Y}_{J M^{\prime}}^{(\lambda)}\left(\vartheta^{\prime}, \varphi^{\prime}\right)=\hat{D}(\alpha, \beta, \gamma) \vect{Y}_{J M^{\prime}}^{(\lambda)}(\vartheta, \varphi)=\sum_{M}^{J} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma) \vect{Y}_{J M}^{(\lambda)}(\vartheta, \varphi). \label{eq:7:3:45}
 \end{align}
-where $D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)$ are the Wigner $D$-functions (Chap. 4), $M^{\prime}$ is the projection of total angular momentum on the new $z^{\prime}$-axis; $\vartheta, \varphi$ and $\vartheta^{\prime}, \varphi^{\prime}$ are polar angles of $r$ in the initial and final coordinate systems, respectively. The relations between $\vartheta^{\prime}, \varphi^{\prime}$ and $\vartheta, \varphi$ are given by eqs. 1.4(2), 1.4(3).
+where $D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)$ are the Wigner $D$-functions (Chap.~\ref{chap:4}), $M^{\prime}$ is the projection of total angular momentum on the new $z^{\prime}$-axis; $\vartheta, \varphi$ and $\vartheta^{\prime}, \varphi^{\prime}$ are polar angles of $r$ in the initial and final coordinate systems, respectively. The relations between $\vartheta^{\prime}, \varphi^{\prime}$ and $\vartheta, \varphi$ are given by eqs. 1.4(2), 1.4(3).
 
 \subsection{Differential Equations}\label{sec:7.3.5}
 \begin{enumerate}[label=(\alph*)]
@@ -1300,23 +1300,23 @@ J & M & $W_{J M}^{\perp}(\vartheta)$ & $w_{J M}{\|}(\vartheta)$ \\
 The spherical harmonics defined by other authors are presented on the left-hand sides of the equalities given below. On the right-hand sides of these equalities we exhibit the corresponding harmonics in our notation.
 
 \subsubsection{Tensor spherical harmonics}
-Berestetskii, Dolginov and Ter-Martirosian [55]
+Berestetskii, Dolginov and Ter-Martirosian \cite{ref055}
 \[
 Y_{l m}^{L \lambda}=\eta Y_{l m}^{l+\lambda L}, \quad \text { where } \eta= \begin{cases}(-1)^{L} & \text { for integer } L \\ 1 & \text { for half-integer } L .\end{cases}
 \]
-Newton [28]
+Newton \cite{ref028}
 \[
 \mathcal{U}_{j l S}^{M}=i^{l+S} Y_{j M}^{l S}
 \]
 \subsubsection{Spinor spherical harmonics}
-Akhiezer and Berestetskii [2]: $\Omega_{j l m}=\Omega_{j m}^{l}$;\\[0pt]
-Berestetskii, Dolginov and Ter-Martirosian [55]: $Y_{j \mu}^{(\lambda)}=\Omega_{j \mu}^{j+\lambda}$;\\[0pt]
-Berestetskii, Lifshitz and Pitaevsky [6]: $\Omega_{j l m}=i^{l} \Omega_{j m}^{l}$.
+Akhiezer and Berestetskii \cite{ref002}: $\Omega_{j l m}=\Omega_{j m}^{l}$;\\[0pt]
+Berestetskii, Dolginov and Ter-Martirosian \cite{ref055}: $Y_{j \mu}^{(\lambda)}=\Omega_{j \mu}^{j+\lambda}$;\\[0pt]
+Berestetskii, Lifshitz and Pitaevsky \cite{ref006}: $\Omega_{j l m}=i^{l} \Omega_{j m}^{l}$.
 
 \subsubsection{Vector spherical harmonics}
-Akhiezer and Berestetskii [2]: $\vect{Y}_{J M}^{(\lambda)}=\vect{Y}_{J M}^{(\lambda)}, \vect{Y}_{J L M}=\vect{Y}_{J M}^{L}$;\\[0pt]
-Blatt and Weisskopf [7]; Rose [30]: $\mathrm{T}_{L \lambda}^{M}=(-1)^{\lambda+1-L} \vect{Y}_{L M}^{(\lambda)}$;\\[0pt]
-Berestetskii, Dolginov and Ter-Martirosian [55]: $\vect{Y}_{l m}^{(\lambda)}=-\vect{Y}_{l m}^{l+\lambda}$.\\[0pt]
-Jackson [23]: $\vect{X}_{l m}=\vect{Y}_{l m}^{(0)}$.\\[0pt]
-Newton [28]: $\vect{Y}_{J M}^{(e)}=i^{J} \vect{Y}_{J M}^{(1)}, \vect{Y}_{J M}^{(m)}=i^{J+1} \vect{Y}_{J M}^{(0)}, \vect{Y}_{J M}^{(0)}=i^{J} \vect{Y}_{J M}^{(-1)}, \vect{Y}_{J l}^{M}=i^{l+1} \vect{Y}_{J M}^{l}$.\\[0pt]
-Berestetskii, Lifshitz and Pitaevskii [6]: $\vect{Y}_{J M}^{(e)}=i^{J} \vect{Y}_{J M}^{(1)}, \vect{Y}_{J M}^{(M)}=i^{J+1} \vect{Y}_{J M}^{(0)}, \vect{Y}_{J M}^{(l)}=i^{J} \vect{Y}_{J M}^{(-1)}$.
+Akhiezer and Berestetskii \cite{ref002}: $\vect{Y}_{J M}^{(\lambda)}=\vect{Y}_{J M}^{(\lambda)}, \vect{Y}_{J L M}=\vect{Y}_{J M}^{L}$;\\[0pt]
+Blatt and Weisskopf \cite{ref007}; Rose \cite{ref030}: $\mathrm{T}_{L \lambda}^{M}=(-1)^{\lambda+1-L} \vect{Y}_{L M}^{(\lambda)}$;\\[0pt]
+Berestetskii, Dolginov and Ter-Martirosian \cite{ref055}: $\vect{Y}_{l m}^{(\lambda)}=-\vect{Y}_{l m}^{l+\lambda}$.\\[0pt]
+Jackson \cite{ref023}: $\vect{X}_{l m}=\vect{Y}_{l m}^{(0)}$.\\[0pt]
+Newton \cite{ref028}: $\vect{Y}_{J M}^{(e)}=i^{J} \vect{Y}_{J M}^{(1)}, \vect{Y}_{J M}^{(m)}=i^{J+1} \vect{Y}_{J M}^{(0)}, \vect{Y}_{J M}^{(0)}=i^{J} \vect{Y}_{J M}^{(-1)}, \vect{Y}_{J l}^{M}=i^{l+1} \vect{Y}_{J M}^{l}$.\\[0pt]
+Berestetskii, Lifshitz and Pitaevskii \cite{ref006}: $\vect{Y}_{J M}^{(e)}=i^{J} \vect{Y}_{J M}^{(1)}, \vect{Y}_{J M}^{(M)}=i^{J+1} \vect{Y}_{J M}^{(0)}, \vect{Y}_{J M}^{(l)}=i^{J} \vect{Y}_{J M}^{(-1)}$.
