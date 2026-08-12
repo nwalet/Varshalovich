@@ -20,7 +20,7 @@ j^{\prime} & k & j  \\
 The invariant factor \(\braOketred{ n^{\prime} j^{\prime}}{\widehat{\mathfrak{M}}_{k}}{ n j}\) is called the reduced matrix element of the set of tensor operators \(\widehat{\mathfrak{M}}_{k \kappa}\).\\
 As follows from the definition \eqref{eq:13:1:2}, the reduced matrix element of the unit operator is given by
 \begin{equation}
-\braOketred{ n^{\prime} j^{\prime}}{\hat{\vect{I}}}{ n j}=\sqrt{2 j+1} \delta_{n^{\prime} n^{\prime}} \delta_{j^{\prime} j}.  \label{eq:13:1:3}
+\braOketred{ n^{\prime} j^{\prime}}{\hat{\vect{I}}}{ n j}=\sqrt{2 j+1} \delta_{n^{\prime} n} \delta_{j^{\prime} j}.  \label{eq:13:1:3}
 \end{equation}
 In this section, as well as in Chap.~\ref{chap:12} we shall again use the notation
 \begin{equation*}
@@ -38,7 +38,7 @@ Making use of the definition \eqref{eq:13:1:2}, one can obtain the following rul
 \subsection{Matrix Elements of Products of Irreducible Tensor Operators}\label{sec:13:1.3}
 From two irreducible tensor operators \(\widehat{P}_{a \alpha}\) and \(\widehat{Q}_{b \beta}\) one can compose the direct or reducible product \(\widehat{P}_{a \alpha}\, \widehat{Q}_{b \beta}\) and the irreducible product \(\left\{\hat{\vect{P}}_{a} \otimes \hat{\vect{Q}}_{b}\right\}_{c \gamma}\) of rank \(c\) (see Chap.~\ref{chap:3}). A matrix element of the direct tensor product may be written in the form
 \begin{equation}
-\braOket{n^{\prime} j^{\prime} m^{\prime}}{\hat{P}_{a \alpha} \, \hat{Q}_{b \rho}}{n j m}=\frac{(-1)^{2 a+2 b}}{\Fact{j^{\prime}}} \sum_{n_{1} j_{1} m_{1}} 
+\braOket{n^{\prime} j^{\prime} m^{\prime}}{\hat{P}_{a \alpha} \, \hat{Q}_{b \beta}}{n j m}=\frac{(-1)^{2 a+2 b}}{\Fact{j^{\prime}}} \sum_{n_{1} j_{1} m_{1}} 
 \clebsch{j_{1}}{m_{1}}{a}{\alpha}{j^{\prime}}{m^{\prime}} 
 \clebsch{j}{m}{b}{\beta}{j_{1}}{m_{1}} \frac{1}{\Fact{j_1}}
 \braOketred{n^{\prime} j^{\prime}}{\hat{P}_{a}}{n_{1} j_{1}}
@@ -46,7 +46,7 @@ From two irreducible tensor operators \(\widehat{P}_{a \alpha}\) and \(\widehat{
 \end{equation}
 Another frequently used relationship for the same matrix element is as follows:
 \begin{equation}
-\braOket{n^{\prime} j^{\prime} m^{\prime}}{\hat{P}_{a \alpha} \, \hat{Q}_{b \rho}}{n j m}=\frac{(-1)^{j^{\prime}+j}}{\Fact{j^{\prime}}} \sum_{c \gamma}(-1)^{-c} \Fact{c} 
+\braOket{n^{\prime} j^{\prime} m^{\prime}}{\hat{P}_{a \alpha} \, \hat{Q}_{b \beta}}{n j m}=\frac{(-1)^{j^{\prime}+j}}{\Fact{j^{\prime}}} \sum_{c \gamma}(-1)^{-c} \Fact{c} 
 \clebsch{j}{m}{c}{\gamma}{j^{\prime}}{m^{\prime}} 
 \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} 
 \sum_{n_{1} j_{1}}
@@ -83,7 +83,7 @@ From the three irreducible tensor operators \(\widehat{P}_{a \alpha}\), \(\wideh
 Making permutations of operators one can construct other products which differ from the given above only by commutators of operators. The matrix element of the direct product of three tensor operators is given by
 \begin{gather}
 \braOket{n^{\prime} j^{\prime} m^{\prime}}{\hat{P}_{a \alpha} \, \hat{Q}_{b \beta} \, \hat{R}_{d \delta}}{n j m}=\frac{(-1)^{2 a+2 b+2 d}}{\Fact{j^{\prime}}} \sum_{n_{1} j_{1} n_{2} j_{2}} \frac{1}{\Fact{j_{1} j_{2}}}
-\braOketred{n^\prime j;}{\hat{P}_{a}}{n_{1} j_{1}}
+\braOketred{n^\prime j^{\prime}}{\hat{P}_{a}}{n_{1} j_{1}}
 \braOketred{n_{1} j_{1}}{\hat{Q}_{b}}{n_2 j_2}\notag\\
 \times
 \braOketred{n_{2} j_{2}}{\hat{R}_{d}}{n j}
@@ -128,8 +128,8 @@ j_{1} j_{2} j_{3}}}\braOketred{ n^{\prime} j^{\prime}}{\widehat{\vect{P}}_{a}}{ 
 \times\braOketred{ n_{3} j_{3}}{\widehat{\vect{S}}_{e}}{ n j} \frac{1}{\Fact{j_{1} j_{2} j_{3}}} \sum_{m_{1} m_{2} m_{3}} 
 \clebsch{j_{1}}{m_{1}}{a}{\alpha}{j^{\prime}}{m^{\prime}} 
 \clebsch{j_{2}}{m_{2}}{b}{\beta}{j_{1}}{m_{1}} 
-\clebsch{j_{2}}{m_{3}}{d}{\delta}{j_{2}}{m_{2}} 
-\clebsch{j_{3}}{m}{e}{\varepsilon}{j_{3}}{m_{3}}. \label{eq:13:1:15}
+\clebsch{j_{3}}{m_{3}}{d}{\delta}{j_{2}}{m_{2}}
+\clebsch{j}{m}{e}{\varepsilon}{j_{3}}{m_{3}}. \label{eq:13:1:15}
 \end{gather}
 Matrix elements of products of (b)- and (c)-type products can be evaluated by using Eqs. \eqref{eq:13:1:8}-\eqref{eq:13:1:14}.
 
@@ -146,13 +146,13 @@ j_{1} j_{2} j_{3}}}(-1)^{j_{2}} \cdot\sixj{a}{b}{c}{j_{2}}{j}{j_{1}}\sixj{d}{c}{
 Finally Eq.~\eqref{eq:3:3:5} allows one to simplify the calculation of matrix elements of the tensor product \(\left\{\widehat{\vect{P}}_{a} \otimes\left\{\widehat{\vect{Q}}_{b} \otimes\right.\right.\)\(\left.\left.\left\{\widehat{\vect{R}}_{d} \otimes \widehat{\vect{S}}_{e}\right\}_{h}\right\}_{f}\right\}_{k \kappa}\) to Eq. \eqref{eq:13:1:16}. Thus
 \begin{gather}
 \braOket{ n^{\prime} j^{\prime} m^{\prime}}{\left\{\left\{\widehat{\vect{P}}_{a} \otimes \widehat{\vect{Q}}_{b}\right\}_{c} \otimes\left\{\widehat{\vect{R}}_{d} \otimes \widehat{\vect{S}}_{e}\right\}_{j}\right\}_{k c}}{n j m}=(-1)^{2 j^{\prime}+c-k-f} \frac{\Fact{c f k}}{\Fact{j^{\prime}}} 
-\clebsch{j^{\prime}}{m}{k}{c}{j^{\prime}}{m^{\prime}} \sum_{\substack{n_{1} n_{2} n_{3} \notag\\
+\clebsch{j}{m}{k}{c}{j^{\prime}}{m^{\prime}} \sum_{\substack{n_{1} n_{2} n_{3} \notag\\
 j_{1} j_{2} j_{3}}}\sixj{a}{b}{c}{j_{2}}{j^{\prime}}{j_{1}}\sixj{d}{e}{f}{j}{j_{2}}{j_{3}} \\
 \times\sixj{f}{c}{k}{j^{\prime}}{j}{j_{2}}\braOketred{ n^{\prime} j^{\prime}}{\widehat{\vect{P}}_{a}}{ n_{1} j_{1}}\braOketred{ n_{1} j_{1}}{\widehat{\vect{Q}}_{b}}{ n_{2} j_{2}}\braOketred{ n_{2} j_{2}}{\widehat{\vect{R}}_{d}}{ n_{3} j_{3}}\braOketred{ n_{3} j_{3}}{\widehat{\vect{S}}_{e}}{ n j},  \label{eq:13:1:18}
 \end{gather}
 \begin{gather}
 %\left.
-    \braOket{n^{\prime} j^{\prime} m^{\prime}}{\left(\left\{\widehat{\vect{P}}_{a} \otimes \widehat{\vect{Q}}_{b}\right\}_{c} \cdot\left\{\widehat{\vect{R}}_{d} \otimes \widehat{\vect{S}}_{e}\right\}_{c}\right)}{n j m}=\delta_{j^{\prime}} \delta_{m^{\prime} m} \frac{\Fact{c}^{2}}{\Fact{j}^{2}} \sum_{\substack{n_{1} n_{2} n_{3}notag \\
+    \braOket{n^{\prime} j^{\prime} m^{\prime}}{\left(\left\{\widehat{\vect{P}}_{a} \otimes \widehat{\vect{Q}}_{b}\right\}_{c} \cdot\left\{\widehat{\vect{R}}_{d} \otimes \widehat{\vect{S}}_{e}\right\}_{c}\right)}{n j m}=\delta_{j^{\prime} j} \delta_{m^{\prime} m} \frac{\Fact{c}^{2}}{\Fact{j}^{2}} \sum_{\substack{n_{1} n_{2} n_{3} \\
 j_{1} j_{2} j_{3}}}(-1)^{-j+j_{2}}\sixj{a}{b}{c}{j_{2}}{j}{j_{1}}\sixj{d}{e}{c}{j}{j_{2}}{j_{3}} \notag\\
 \times
 \braOketred{ n^{\prime} j}{\widehat{\vect{P}}_{a}}{ n_{1} j_{1}}
@@ -232,14 +232,14 @@ Matrix elements of the same operators can be evaluated in the \(\left(n_{1} j_{1
 =(-1)^{2 c} \Fact{c j} 
 \clebsch{j}{m}{c}{\gamma}{j^{\prime}}{m^{\prime}}\ninej{a}{b}{c}{j_{1}^{\prime}}{j_{2}^{\prime}}{j^{\prime}}{j_{1}}{j_{2}}{j}\braOketred{ n_{1}^{\prime} j_{1}^{\prime}}{\widehat{\vect{P}}_{a}(1)}{ n_{1} j_{1}}\braOketred{ n_{2}^{\prime} j_{2}^{\prime}}{\widehat{\vect{Q}}_{b}(2)}{ n_{2} j_{2}}  \label{eq:13:1:28}\\
 \braOket{ n_{1}^{\prime} j_{1}^{\prime} n_{2}^{\prime} j_{2}^{\prime} j^{\prime} m^{\prime}}{\left(\widehat{\vect{P}}_{a}(1) \cdot \widehat{\vect{Q}}_{a}(2)\right)}{n_{1} j_{1} n_{2} j_{2} j m}\notag \\
-=\delta_{j^{\prime} j^{\prime}} \delta_{m^{\prime} m}(-1)^{j+j_{1}+j_{2}^{\prime}}\sixj{j_{1}^{\prime}}{j_{1}}{a}{j_{2}}{j_{2}^{\prime}}{j}\braOketred{ n_{1}^{\prime} j_{1}^{\prime}}{\widehat{\vect{P}}_{a}(1)}{ n_{1} j_{1}}\braOketred{ n_{2}^{\prime} j_{2}^{\prime}}{\widehat{\vect{Q}}_{a}(2)}{ n_{2} j_{2}} \label{eq:13:1:29}
+=\delta_{j^{\prime} j} \delta_{m^{\prime} m}(-1)^{j+j_{1}+j_{2}^{\prime}}\sixj{j_{1}^{\prime}}{j_{1}}{a}{j_{2}}{j_{2}^{\prime}}{j}\braOketred{ n_{1}^{\prime} j_{1}^{\prime}}{\widehat{\vect{P}}_{a}(1)}{ n_{1} j_{1}}\braOketred{ n_{2}^{\prime} j_{2}^{\prime}}{\widehat{\vect{Q}}_{a}(2)}{ n_{2} j_{2}} \label{eq:13:1:29}
 \end{gather}
 Let us consider the products of three operators which depend only on variables of one of the subsystems. In this case the matrix elements of direct products of these operators can be evaluated by the successive use of Eqs. \eqref{eq:13:1:24}, \eqref{eq:13:1:27} and \eqref{eq:13:1:8}. If two of three operators form an irreducible tensor product, Eqs. \eqref{eq:13:1:25}, \eqref{eq:13:1:28}, \eqref{eq:13:1:9} and \eqref{eq:13:1:10} must additionally be applied.
 
 Matrix elements of irreducible tensor products of three tensor operators may be represented in the forms
 \begin{align}
 & \braOket{ n_{1}^{\prime} j_{1}^{\prime} m_{1}^{\prime} ; n_{2}^{\prime} j_{2}^{\prime} m_{2}^{\prime}}{\left\{\left\{\hat{\vect{P}}_{a}(1) \otimes \widehat{\vect{Q}}_{b}(2)\right\}_{c} \otimes \widehat{\vect{R}}_{d}(1)\right\}_{e c}}{n_{1} j_{1} m_{1} ; n_{2} j_{2} m_{2}} \notag \\
-& =(-1)^{b-c-d-j_{1}-j_{1}^{\prime}} \frac{\Fact{c}}{\Fact{j_{1}^{\prime} j_{2}^{\prime}}} \sum_{f N J} \Fact{\rho \beta}^{2} 
+& =(-1)^{b-c-d-j_{1}-j_{1}^{\prime}} \frac{\Fact{c}}{\Fact{j_{1}^{\prime} j_{2}^{\prime}}} \sum_{f N J} \Fact{f}^{2}
 \clebsch{f}{\varphi}{b}{\beta}{e}{s} 
 \clebsch{j_{1}}{m_{1}}{f}{\varphi}{j_{1}^{\prime}}{m_{1}^{\prime}} 
 \clebsch{j_{2}}{m_{2}}{b}{\beta}{j_{2}^{\prime}}{m_{2}^{\prime}}
@@ -270,16 +270,16 @@ We give below expressions for matrix elements of irreducible tensor products of 
 & \times \sum_{g h \sigma \eta} \Fact{g h}^{2} 
 \clebsch{h}{\sigma}{g}{\eta}{k}{\kappa} 
 \clebsch{h}{\sigma}{j_{1}}{m_{1}}{j_{1}^{\prime}}{m_{1}^{\prime}} 
-\clebsch{g}{\eta}{j_{2}}{m_{2}}{j_{1}^{\prime}}{m_{2}^{\prime}}
+\clebsch{g}{\eta}{j_{2}}{m_{2}}{j_{2}^{\prime}}{m_{2}^{\prime}}
 \ninej{a}{b}{c}{d}{e}{f}{h}{g}{k} \sum_{N_{1} J_{1} N_{2} J_{2}}\sixj{a}{d}{h}{j_{1}}{j_{1}^{\prime}}{J_{1}}\sixj{b}{e}{g}{j_{2}}{j_{2}^{\prime}}{J_{2}} \notag\\
 & \times\braOketred{ n_{1}^{\prime} j_{1}^{\prime}}{\widehat{\vect{P}}_{a}(1)}{ N_{1} J_{1}}\braOketred{ N_{1} J_{1}}{\widehat{\mathrm{R}}_{d}(1)}{ n_{1} j_{1}}\braOketred{ n_{2}^{\prime} j_{2}^{\prime}}{\widehat{\mathrm{Q}}_{b}(2)}{ N_{2} J_{2}}\braOketred{ N_{2} J_{2}}{\widehat{\vect{S}}_{e}(2)}{ n_{2} j_{2}}, \label{eq:13:1:33}\\
 & \braOket{n_{1}^{\prime} j_{1}^{\prime} n_{2}^{\prime} j_{2}^{\prime} j^{\prime} m^{\prime}}{\left\{\left\{\widehat{\vect{P}}_{a}(1) \otimes \widehat{\vect{Q}}_{b}(2)\right\}_{c} \otimes\left\{\widehat{\vect{R}}_{d}(1) \otimes \widehat{\vect{S}}_{e}(2)\right\}_{f}\right\}_{k c}}{n_{1} j_{1} n_{2} j_{2} j m} \notag\\
 & =(-1)^{j+j^{\prime}-k} \Fact{c f j k} 
-\clebsch{j}{m}{k}{k}{j^{\prime}}{m^{\prime}} 
-\sum_{g h} \Fact{g h}^{2}\ninej{a}{b}{c}{d}{e}{f}{h}{g}{k}\ninej{j_{1}}{j_{1}^{\prime}}{h}{j_{2}}{j_{2}^{\prime}}{g}{j}{j^{\prime}}{k} \sum_{N_{1}} J_{1} N_{3} J_{2}, ~\sixj{d}{a}{h}{j_{1}^{\prime}}{j_{1}}{J_{1}}
+\clebsch{j}{m}{k}{\kappa}{j^{\prime}}{m^{\prime}}
+\sum_{g h} \Fact{g h}^{2}\ninej{a}{b}{c}{d}{e}{f}{h}{g}{k}\ninej{j_{1}}{j_{1}^{\prime}}{h}{j_{2}}{j_{2}^{\prime}}{g}{j}{j^{\prime}}{k}\sum_{N_{1} J_{1} N_{2} J_{2}}\sixj{d}{a}{h}{j_{1}^{\prime}}{j_{1}}{J_{1}}
 \sixj{e}{b}{g}{j_{2}^{\prime}}{j_{2}}{J_{2}} \notag\\
 & \times\braOketred{ n_{1}^{\prime} j_{1}^{\prime}}{\hat{\vect{P}}_{a}(1)}{ N_{1} J_{1}}\braOketred{ N_{1} J_{1}}{\hat{\vect{R}}_{d}(1)}{ n_{1} j_{1}}\braOketred{ n_{2}^{\prime} j_{2}^{\prime}}{\widehat{\vect{Q}}_{b}(2)}{ N_{2} J_{2}}\braOketred{ N_{2} J_{2}}{\widehat{\vect{S}}_{e}(2)}{ n_{2} j_{2}},  \label{eq:13:1:34}\\
-& \braOket{ n_{1}^{\prime} j_{1}^{\prime} n_{2}^{\prime} j_{2}^{\prime} j^{\prime} m^{\prime}}{\left(\left\{\hat{\vect{P}}_{a}(1) \otimes \widehat{\vect{Q}}_{b}(2)\right\}_{c} \cdot\left\{\widehat{\vect{R}}_{d}(1) \otimes \widehat{\vect{S}}_{e}(2)\right\}_{c}}{n_{1} j_{1} n_{2} j_{2} j m}=\delta_{j^{\prime} j} \delta_{m^{\prime} m}(-1)^{2 c+j_{1}^{\prime}+j_{2}-j-b-d} \Fact{c}^{2}\right. \notag\\
+& \braOket{ n_{1}^{\prime} j_{1}^{\prime} n_{2}^{\prime} j_{2}^{\prime} j^{\prime} m^{\prime}}{\left(\left\{\hat{\vect{P}}_{a}(1) \otimes \widehat{\vect{Q}}_{b}(2)\right\}_{c} \cdot\left\{\widehat{\vect{R}}_{d}(1) \otimes \widehat{\vect{S}}_{e}(2)\right\}_{c}\right)}{n_{1} j_{1} n_{2} j_{2} j m}=\delta_{j^{\prime} j} \delta_{m^{\prime} m}(-1)^{2 c+j_{1}^{\prime}+j_{2}-j-b-d} \Fact{c}^{2} \notag\\
 & \times \sum_{g} \Fact{g}^{2}\sixj{a}{b}{c}{e}{d}{g}\sixj{j_{1}^{\prime}}{j_{1}}{g}{j_{2}}{j_{2}^{\prime}}{j} \sum_{N_{1} J_{1} N_{2} J_{2}}\sixj{d}{a}{g}{j_{1}^{\prime}}{j_{1}}{J_{1}}\sixj{e}{b}{g}{j_{2}^{\prime}}{j_{2}}{J_{2}} \notag\\
 & \times\braOketred{ n_{1}^{\prime} j_{1}^{\prime}}{\hat{\mathrm{P}}_{\mathrm{a}}(1)}{ N_{1} J_{1}}\braOketred{ N_{1} J_{1}}{\hat{\mathrm{R}}_{d}(1)}{ n_{1} j_{1}}\braOketred{ n_{2}^{\prime} j_{2}^{\prime}}{\hat{\mathrm{Q}}_{\mathrm{b}}(2)}{ N_{2} J_{2}}
 \braOketred{N_{2} J_{2}}{\hat{\mathrm{~S}}_{e}(2)}{ n_{2} j_{2}}, \label{eq:13:1:35}
@@ -295,12 +295,9 @@ We give below expressions for matrix elements of irreducible tensor products of 
 & \times\braOketred{ n_{2}^{\prime} j_{2}^{\prime}}{\widehat{\vect{Q}}_{b}(2)}{ N_{2} J_{2}}\braOketred{ N_{2} J_{2}}{\widehat{\vect{S}}_{e}(2)}{ n_{2} j_{2}},  \label{eq:13:1:36}\\
 & \braOket{ n_{1}^{\prime} j_{1}^{\prime} n_{2}^{\prime} j_{2}^{\prime} j^{\prime} m^{\prime}}{\left\{\left\{\left\{\widehat{\vect{P}}_{a}(1) \otimes \widehat{\vect{Q}}_{b}(2)\right\}_{c} \otimes \widehat{\vect{R}}_{d}(1)\right\}_{f} \otimes \widehat{\vect{S}}_{e}(2)\right\}_{k \kappa}}{n_{1} j_{1} n_{2} j_{2} j m} \notag\\
 & =(-1)^{c+d-e-j-j^{\prime}} \Fact{c f j k} 
-\clebsch{j}{m}{k}{\kappa}{j^{\prime}}{m^{\prime}} \sum_{g h} \Fact{g h}^{2}\sixj{a}{d}{h}{f}{b}{c}\sixj{b}{e}{g}{k}{h}{f}\ninej{j_{1}}{j_{1}^{\prime}}{h}{j_{2}}{j_{2}^{\prime}}{g}{j}{j^{\prime}}{k} \sum_{N_{1}} \sum_{1} N_{2} J_{2} ~\left(\begin{array}{ccc}
-d & a & h \\
-j_{1}^{\prime} & j_{1} & J_{1}
-\end{array}\right\}\sixj{e}{b}{g}{j_{2}^{\prime}}{j_{2}}{J_{2}} \notag\\
+\clebsch{j}{m}{k}{\kappa}{j^{\prime}}{m^{\prime}} \sum_{g h} \Fact{g h}^{2}\sixj{a}{d}{h}{f}{b}{c}\sixj{b}{e}{g}{k}{h}{f}\ninej{j_{1}}{j_{1}^{\prime}}{h}{j_{2}}{j_{2}^{\prime}}{g}{j}{j^{\prime}}{k} \sum_{N_{1} J_{1} N_{2} J_{2}}\sixj{d}{a}{h}{j_{1}^{\prime}}{j_{1}}{J_{1}}\sixj{e}{b}{g}{j_{2}^{\prime}}{j_{2}}{J_{2}} \notag\\
 & \braOketred{ n_{1}^{\prime} j_{1}^{\prime}}{\widehat{\vect{P}}_{a}(1)}{ N_{1} J_{1}}\braOketred{ N_{1} J_{1}}{\widehat{\vect{R}}_{d}(1)}{ n_{1} j_{1}}\braOketred{ n_{2}^{\prime} j_{2}^{\prime}}{\widehat{\vect{Q}}_{b}(2)}{ N_{2} J_{2}}\braOketred{ N_{2} J_{2}}{\widehat{\vect{S}}_{e}(2)}{ n_{2} j_{2}},  \label{eq:13:1:37}\\
-& \braOket{ n_{1}^{\prime} j_{1}^{\prime} n_{2}^{\prime} j_{2}^{\prime} j^{\prime} m^{\prime}}{\left(\left\{\left\{\widehat{\vect{P}}_{a}(1) \otimes \widehat{\vect{Q}}_{b}(2)\right\}_{c} \otimes \widehat{\vect{R}}_{d}(1)\right\}_{f} \cdot \widehat{\vect{S}}_{j}(2)\right)}{n_{1} j_{1} n_{2} j_{2} j m} \notag\\
+& \braOket{ n_{1}^{\prime} j_{1}^{\prime} n_{2}^{\prime} j_{2}^{\prime} j^{\prime} m^{\prime}}{\left(\left\{\left\{\widehat{\vect{P}}_{a}(1) \otimes \widehat{\vect{Q}}_{b}(2)\right\}_{c} \otimes \widehat{\vect{R}}_{d}(1)\right\}_{f} \cdot \widehat{\vect{S}}_{f}(2)\right)}{n_{1} j_{1} n_{2} j_{2} j m} \notag\\
 & =\delta_{j^{\prime} j} \delta_{m^{\prime} m}(-1)^{c+d-b+j-j+j_{1}^{\prime}+j_{2}} \Fact{c f} \sum_{g} \Fact{g}^{2}\sixj{a}{b}{c}{f}{d}{g}\sixj{j_{1}^{\prime}}{j_{1}}{g}{j_{2}}{j_{2}^{\prime}}{j} \sum_{N_{1} J_{1} N_{2} J_{2}}\sixj{a}{d}{g}{j_{1}}{j_{1}^{\prime}}{J_{1}}\sixj{b}{f}{g}{j_{2}}{j_{2}^{\prime}}{J_{2}} \notag\\
 & \times\braOketred{ n_{1}^{\prime} j_{1}^{\prime}}{\widehat{\vect{P}}_{a}(1)}{ N_{1} J_{1}}\braOketred{ N_{1} J_{1}}{\widehat{\vect{R}}_{d}(1)}{ n_{1} j_{1}}\braOketred{ n_{2}^{\prime} j_{2}^{\prime}}{\widehat{\vect{Q}}_{b}(2)}{ N_{2} J_{2}}\braOketred{ N_{2} J_{2}}{\widehat{\vect{S}}_{f}(2)}{ n_{2} j_{2}} . \label{eq:13:1:38}
 \end{align}
@@ -334,7 +331,7 @@ For an irreducible tensor product one gets the expressions
 \braOket{ n_{1}^{\prime} j_{1}^{\prime} n_{2}^{\prime} j_{2}^{\prime} j^{\prime} m^{\prime}}{\left\{\widehat{\vect{P}}_{a}(1) \otimes \widehat{\vect{Q}}_{b}(1)\right\}_{c \gamma}}{n_{1} j_{1} n_{2} j_{2} j m}=\delta_{n_{2}^{\prime} n_{2}} \delta_{j_{2}^{\prime} j_{2}}(-1)^{j_{2}+j-j_{1}+2 c} \Fact{j c} 
 \clebsch{j}{m}{c}{\gamma}{j^{\prime}}{m^{\prime}}\sixj{j_{1}}{j_{2}}{j}{j^{\prime}}{c}{j_{1}^{\prime}} \notag\\
 \times \sum_{N J}\sixj{a}{b}{c}{j_{1}}{j_{1}^{\prime}}{J}\braOketred{ n_{1}^{\prime} j_{1}^{\prime}}{\widehat{\vect{P}}_{a}(1)}{ N J}\braOketred{ N J}{\widehat{\vect{Q}}_{b}(1)}{ n_{1} j_{1}}  \label{eq:13:1:42}\\
-\braOket{ n_{1}^{\prime} j_{1}^{\prime} n_{2}^{\prime} j_{2}^{\prime} j^{\prime} m^{\prime}}{\left(\widehat{\vect{P}}_{a}(1) \cdot \widehat{\vect{Q}}_{a}(1)\right)}{n_{1} j_{1} n_{2} j_{2} j m}=\delta_{n_{2}^{\prime} n_{2}} \delta_{j_{2}^{\prime} j_{2}} \delta_{j_{1}^{\prime} j_{1}} \delta_{j^{\prime} j^{\prime}} \delta_{m^{\prime} m} \\
+\braOket{ n_{1}^{\prime} j_{1}^{\prime} n_{2}^{\prime} j_{2}^{\prime} j^{\prime} m^{\prime}}{\left(\widehat{\vect{P}}_{a}(1) \cdot \widehat{\vect{Q}}_{a}(1)\right)}{n_{1} j_{1} n_{2} j_{2} j m}=\delta_{n_{2}^{\prime} n_{2}} \delta_{j_{2}^{\prime} j_{2}} \delta_{j_{1}^{\prime} j_{1}} \delta_{j^{\prime} j} \delta_{m^{\prime} m} \\
 \times \frac{1}{\Fact{j_{1}}^{2}}(-1)^{-j_{1}} \sum_{J N}(-1)^{J}\braOketred{n_{1}^{\prime} j_{1}}{\widehat{\vect{P}}_{a}(1)}{ N J}\braOketred{ N J}{\widehat{\vect{Q}}_{a}(1)}{ n_{1} j_{1}} \label{eq:13:1:43}
 \end{gather}
 In the case of the irreducible tensor product of three operators we obtain
@@ -343,7 +340,7 @@ In the case of the irreducible tensor product of three operators we obtain
 =\delta_{n_{2}^{\prime} n_{2}} \delta_{j_{2}^{\prime} j_{2}}(-1)^{j+j_{1}-j_{1}^{\prime}+j_{2}+c} \Fact{j f c} 
 \clebsch{j}{m}{f}{\varphi}{j^{\prime}}{m^{\prime}}\sixj{j_{1}}{j_{2}}{j}{j^{\prime}}{f}{j_{1}^{\prime}} \times \sum_{N_{1} J_{1} N_{2} J_{2}}(-1)^{J_{2}}\sixj{a}{b}{c}{J_{2}}{j_{1}^{\prime}}{J_{1}}\sixj{d}{c}{f}{j_{1}^{\prime}}{j_{1}}{J_{2}} \notag\\
 \times\braOketred{ n_{1}^{\prime} j_{1}^{\prime}}{\widehat{\vect{P}}_{a}(1)}{ N_{1} J_{1}}\braOketred{ N_{1} J_{1}}{\widehat{\vect{Q}}_{b}(1)}{ N_{2} J_{2}}\braOketred{ N_{2} J_{2}}{\widehat{\vect{R}}_{d}(1)}{ n_{1} j_{1}}  \label{eq:13:1:44}\\
-\braOket{ n_{1}^{\prime} j_{1}^{\prime} n_{2}^{\prime} j_{2}^{\prime} j^{\prime} m^{\prime}}{\left(\left\{\widehat{\vect{P}}_{a}(1) \otimes \widehat{\vect{Q}}_{b}(1)\right\}_{c} \cdot \widehat{\vect{R}}_{c}(1)\right)}{n_{1} j_{1} n_{2} j_{2} j m}=\delta_{n_{2}^{\prime} n_{2}} \delta_{j_{1}^{\prime} j_{1}} \delta_{j_{2}^{\prime} j_{2}} \delta_{j^{\prime} j^{\prime}} \delta_{m^{\prime} m}(-1)^{-c+2 j_{1}} \notag\\
+\braOket{ n_{1}^{\prime} j_{1}^{\prime} n_{2}^{\prime} j_{2}^{\prime} j^{\prime} m^{\prime}}{\left(\left\{\widehat{\vect{P}}_{a}(1) \otimes \widehat{\vect{Q}}_{b}(1)\right\}_{c} \cdot \widehat{\vect{R}}_{c}(1)\right)}{n_{1} j_{1} n_{2} j_{2} j m}=\delta_{n_{2}^{\prime} n_{2}} \delta_{j_{1}^{\prime} j_{1}} \delta_{j_{2}^{\prime} j_{2}} \delta_{j^{\prime} j} \delta_{m^{\prime} m}(-1)^{-c+2 j_{1}} \notag\\
 \times \frac{\Fact{c}}{\Fact{j_{1}}^{2}} \sum_{N_{1} N_{2} J}\sixj{a}{b}{c}{J_{2}}{j_{1}}{J_{1}}\braOketred{ n_{1}^{\prime} j_{1}}{\widehat{\vect{P}}_{a}(1)}{ N_{1} J_{1}}\braOketred{ N_{1} J_{1}}{\widehat{\vect{Q}}_{b}(1)}{ N_{2} J_{2}}\braOketred{ N_{2} J_{2}}{\widehat{\vect{R}}_{c}(1)}{ n_{1} j_{1}} \label{eq:13:1:45}
 \end{gather}
 The matrix elements of irreducible tensor products of four operators may be evaluated using the expressions given below:
@@ -353,17 +350,17 @@ The matrix elements of irreducible tensor products of four operators may be eval
 \clebsch{j}{m}{k}{\kappa}{j^{\prime}}{m^{\prime}}\sixj{j_{1}}{j_{2}}{j}{j^{\prime}}{k}{j_{1}^{\prime}} \sum_{N_{1} N_{2} N_{3}}(-1)^{2 J_{2}}\sixj{a}{b}{c}{J_{2}}{j_{1}^{\prime}}{J_{1}}\sixj{e}{d}{f}{J_{2}}{j_{1}}{J_{3}}\sixj{f}{c}{k}{j_{1}^{\prime}}{j_{1}}{J_{2}} \notag\\
 \times\braOketred{n_{1}^{\prime} j_{1}^{\prime}}{\widehat{\vect{P}}_{a}(1)}{ N_{1} J_{1}}\braOketred{ N_{1} J_{1}}{\widehat{\vect{Q}}_{b}(1)}{ N_{2} J_{2}}\braOketred{ N_{2} J_{2}}{\widehat{\vect{R}}_{d}(1)}{ N_{3} J_{3}}\braOketred{ N_{3} J_{3}}{\widehat{\vect{S}}_{e}(1)}{ n_{1} j_{1}},  \label{eq:13:1:46}\\
 \braOket{ n_{1}^{\prime} j_{1}^{\prime} n_{2}^{\prime} j_{2}^{\prime} j^{\prime} m^{\prime}}{\left(\left\{\widehat{\vect{P}}_{a}(1) \otimes \widehat{\vect{Q}}_{b}(1)\right\}_{c} \cdot\left\{\widehat{\vect{R}}_{d}(1) \otimes \widehat{\vect{S}}_{e}(1)\right\}_{c}\right)}{n_{1} j_{1} n_{2} j_{2} j m}\notag \\
-=\delta_{n_{2}^{\prime} n_{2}} \delta_{j_{1}^{\prime} j_{1}} \delta_{j_{2}^{\prime} j_{2}} \delta_{j^{\prime}} \delta_{m^{\prime} m} \frac{(-1)^{-j_{1}}}{\Fact{j_{1}}^{2}} \sum_{N_{J_{1}} J_{2} N_{3}}(-1)^{J_{2}}\sixj{a}{b}{c}{J_{2}}{j_{1}}{J_{1}}\sixj{e}{d}{c}{J_{2}}{j_{1}}{J_{3}}\notag \\
+=\delta_{n_{2}^{\prime} n_{2}} \delta_{j_{1}^{\prime} j_{1}} \delta_{j_{2}^{\prime} j_{2}} \delta_{j^{\prime} j} \delta_{m^{\prime} m} \frac{(-1)^{-j_{1}}}{\Fact{j_{1}}^{2}} \sum_{N_{J_{1}} J_{2} N_{3}}(-1)^{J_{2}}\sixj{a}{b}{c}{J_{2}}{j_{1}}{J_{1}}\sixj{e}{d}{c}{J_{2}}{j_{1}}{J_{3}}\notag \\
 \times \Fact{c}^{2} \cdot\braOketred{ n_{1}^{\prime} j_{1}}{\widehat{\vect{P}}_{a}(1)}{ N_{1} J_{1}}\braOketred{ N_{1} J_{1}}{\widehat{\vect{Q}}_{b}(1)}{ N_{2} J_{2}}\braOketred{ N_{2} J_{2}}{\widehat{\vect{R}}_{d}(1)}{ N_{3} J_{3}}\braOketred{ N_{3} J_{3}}{\widehat{\vect{S}}_{e}(1)}{ n_{1} j_{1}},  \label{eq:13:1:47}\\
 \braOket{ n_{1}^{\prime} j_{1}^{\prime} n_{2}^{\prime} j_{2}^{\prime} j^{\prime} m^{\prime}}{\left\{\left\{\left\{\widehat{\vect{P}}_{a}(1) \otimes \widehat{\vect{Q}}_{b}(1)\right\}_{c} \otimes \widehat{\vect{R}}_{d}(1)\right\}_{f} \otimes \widehat{\vect{S}}_{e}(1)\right\}_{k c}}{n_{1} j_{1} n_{2} j_{2} j m} \notag\\
 =\delta_{n_{2}^{\prime} n_{2}} \delta_{j_{2}^{\prime} j_{2}}(-1)^{j_{1}+j_{2}+j+j^{\prime}+c} \Fact{f c k j} 
-\clebsch{j^{\prime}}{m}{k}{\kappa}{j^{\prime}}{m^{\prime}}\sixj{j_{1}}{j_{2}}{j}{j^{\prime}}{k}{j_{1}^{\prime}}_{N_{1} N_{2} N_{3}}(-1)^{J_{2}+J_{3}}\sixj{a}{b}{c}{J_{2}}{j_{1}^{\prime}}{J_{1}}\sixj{d}{c}{f}{j_{1}^{\prime}}{J_{3}}{J_{2}}\sixj{e}{f}{k}{j_{1}^{\prime}}{j_{1}}{J_{3}}\notag \\
+\clebsch{j}{m}{k}{\kappa}{j^{\prime}}{m^{\prime}}\sixj{j_{1}}{j_{2}}{j}{j^{\prime}}{k}{j_{1}^{\prime}}\sum_{N_{1} N_{2} N_{3}}(-1)^{J_{2}+J_{3}}\sixj{a}{b}{c}{J_{2}}{j_{1}^{\prime}}{J_{1}}\sixj{d}{c}{f}{j_{1}^{\prime}}{J_{3}}{J_{2}}\sixj{e}{f}{k}{j_{1}^{\prime}}{j_{1}}{J_{3}}\notag \\
 \times\braOketred{ n_{1}^{\prime} j_{1}^{\prime}}{\widehat{\vect{P}}_{a}(1)}{ N_{1} J_{1}}\braOketred{ N_{1} J_{1}}{\widehat{\vect{Q}}_{b}(1)}{ N_{2} J_{2}}\braOketred{ N_{2} J_{2}}{\widehat{\vect{R}}_{d}(1)}{ N_{3} J_{3}}\braOketred{N_{3} J_{3}}{\widehat{\vect{S}}_{e}(1)}{ n_{1} j_{1}}, \label{eq:13:1:48}
 \end{gather}
 
 \begin{gather}
 \braOket{ n_{1}^{\prime} j_{1}^{\prime} n_{2}^{\prime} j_{2}^{\prime} j^{\prime} m^{\prime}}{\left(\left\{\left\{\widehat{\vect{P}}_{a}(1) \otimes \widehat{\vect{Q}}_{b}(1)\right\}_{c} \otimes \widehat{\vect{R}}_{d}(1)\right\}_{f} \cdot \widehat{\vect{S}}_{f}(1)\right)}{n_{1} j_{1} n_{2} j_{2} j m} \notag\\
-=\delta_{n_{2}^{\prime} n_{2}} \delta_{j_{1}^{\prime} j_{1}} \delta_{j_{2}^{\prime} j_{2}} \delta_{j^{\prime} j^{\prime}} \delta_{m^{\prime} m}(-1)^{c-f-j_{1}} \frac{\Fact{f c}}{\Fact{j_{1}}^{2}} \sum_{\substack{N_{1} N_{2} N_{3} \\
+=\delta_{n_{2}^{\prime} n_{2}} \delta_{j_{1}^{\prime} j_{1}} \delta_{j_{2}^{\prime} j_{2}} \delta_{j^{\prime} j} \delta_{m^{\prime} m}(-1)^{c-f-j_{1}} \frac{\Fact{f c}}{\Fact{j_{1}}^{2}} \sum_{\substack{N_{1} N_{2} N_{3} \\
 J_{1} J_{2} J_{3}}}(-1)^{J_{2}}\sixj{a}{b}{c}{J_{2}}{j_{1}}{J_{1}}\sixj{d}{c}{f}{j_{1}}{J_{3}}{J_{2}} \notag\\
 \times\braOketred{ n_{1}^{\prime} j_{1}}{\widehat{\vect{P}}_{a}(1)}{ N_{1} J_{1}}\braOketred{ N_{1} J_{1}}{\widehat{\vect{Q}}_{b}(1)}{ N_{2} J_{2}}\braOketred{ N_{2} J_{2}}{\widehat{\vect{R}}_{d}(1)}{ N_{3} J_{3}}\braOketred{ N_{3} J_{3}}{\widehat{\vect{S}}_{f}(1)}{ n_{1} j_{1}} \label{eq:13:1:49}
 \end{gather}
