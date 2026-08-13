@@ -1083,7 +1083,7 @@ Taking Eqs. \eqref{eq:13:2:104} and \eqref{eq:13:2:105} in account one finds
 \end{equation}
 The matrix element of the direct product \(\widehat{L}_{1 \nu} \widehat{n}_{1 \mu}\) is
 \begin{equation}
-\braOket{ l^{\prime} m^{\prime}}{ \widehat{L}_{1 \nu} \widehat{n}_{1 \mu}}{l m}=Fact{l}\sqrt{\frac{ l^{\prime}\bigl(l^{\prime}+1\bigr)}{2 l^{\prime}+1}} 
+\braOket{ l^{\prime} m^{\prime}}{ \widehat{L}_{1 \nu} \widehat{n}_{1 \mu}}{l m}=\Fact{l}\sqrt{\frac{ l^{\prime}\bigl(l^{\prime}+1\bigr)}{2 l^{\prime}+1}} 
 \clebsch{l}{0}{1}{0}{l^{\prime}}{0} 
 \clebsch{l^{\prime}}{m+\mu}{1}{\nu}{l^{\prime}}{m^{\prime}} 
 \clebsch{l}{m}{1}{\mu}{l^{\prime}}{m+\mu} \label{eq:13:2:72}
@@ -1092,7 +1092,7 @@ In the case of irreducible tensor products of the operators in question one gets
 \begin{align}
 & 
 \braOket{ l^{\prime} m^{\prime}}{\bigl\{\widehat{\vect{n}}_{1} \otimes \widehat{\vect{L}}_{1}\bigr\}_{k \kappa}}{l m}=(-1)^{l^{\prime}+l+k} 
-\clebsch{l}{m}{k}{\kappa}{l^{\prime}}{m^{\prime}} \Fact{k l l}\Fact{l^\prime}\sqrt{{ l(l+1)}}
+\clebsch{l}{m}{k}{\kappa}{l^{\prime}}{m^{\prime}} \Fact{k l l}/\Fact{l^\prime}\sqrt{ l(l+1)}
 \clebsch{l}{0}{1}{0}{l^{\prime}}{0}
 \sixj{1}{1}{k}{l^{\prime}}{l}{l}  \label{eq:13:2:73}\\
 & 
@@ -1167,7 +1167,7 @@ The matrix elements of the irreducible tensor product of the operators \(\wideha
 \sixj{l}{s}{J}{J^{\prime}}{1}{l},  \label{eq:13:2:86}\\
 \braOket{ l^{\prime} s^{\prime} J^{\prime} M^{\prime}}{\bigl\{\widehat{\vect{J}}_{1} \otimes \widehat{\vect{L}}_{1}\bigr\}_{k \kappa}}{l s J M}=(-1)^{s+l-J^{\prime}+k+1} \delta_{l^{\prime} l} \delta_{s s^{\prime}}
 \clebsch{J}{M}{k}{\kappa}{J^{\prime}}{M^{\prime}}\notag \\
-\times \Fact{k l J J^\prime}sqrt{ l(l+1) J^{\prime}\bigl(J^{\prime}+1\bigr)}
+\times \Fact{k l J J^\prime}\sqrt{ l(l+1) J^{\prime}\bigl(J^{\prime}+1\bigr)}
 \sixj{1}{1}{k}{J^{\prime}}{J}{J^{\prime}}
 \sixj{l}{s}{J}{J^{\prime}}{1}{l} . \label{eq:13:2:87}
 \end{gather}
@@ -1250,7 +1250,7 @@ The operators \(\widehat{\vect{S}}_{1}\) and \(\widehat{\vect{J}}_{1}\) do not c
 \sixj{1}{1}{k}{J^{\prime}}{J}{J}
 \sixj{s}{l}{J}{J^{\prime}}{1}{s} 
 \clebsch{J}{M}{k}{\kappa}{J^{\prime}}{M^{\prime}}  \label{eq:13:2:100}\\
-\braOket{ l^{\prime} s^{\prime} J^{\prime} M^{\prime}}{\bigl\{\widehat{\vect{J}}_{1} \otimes \widehat{\vect{S}}_{1}\bigr\}_{k \kappa}}{l s J M}= & (-1)^{J+k-l-s+1} \delta_{s^{\prime} s} \delta_{l^{\prime} l} \Fact{k J J^\prime}\sqrt{ J^{\prime}\bigl(J^{\prime}+1\bigr)(J^{\prime})}\notag \\
+\braOket{ l^{\prime} s^{\prime} J^{\prime} M^{\prime}}{\bigl\{\widehat{\vect{J}}_{1} \otimes \widehat{\vect{S}}_{1}\bigr\}_{k \kappa}}{l s J M}= & (-1)^{J+k-l-s+1} \delta_{s^{\prime} s} \delta_{l^{\prime} l} \Fact{k J J^\prime}\sqrt{ J^{\prime}\bigl(J^{\prime}+1\bigr)}\notag \\
 & \times \Fact{s}\sqrt{s(s+1)}
 \sixj{1}{1}{k}{J^{\prime}}{J}{J^{\prime}}
 \sixj{s}{l}{J}{J^{\prime}}{1}{s} 
@@ -1289,7 +1289,7 @@ Similar relationships for an operator \(\widehat{C}_{L \nu}(\vartheta, \varphi)\
 Let us consider the matrix elements of some tensor products involving \(\widehat{Y}_{L \nu}(\vartheta, \varphi)\).\\
 For products of the commuting operators \(\widehat{\vect{n}}_{1}\) and \(\widehat{\vect{Y}}_{L}\), we get
 \begin{gather}
-\braOket{l^{\prime} m^{\prime}}{\widehat{n}_{1 \mu} \widehat{Y}_{L \nu}}{ l m}=-\Fact{L l}/\Fact{l^\prime}\sqrt{\frac{1}{4 \pi(l^{\prime})}}\bigl\{\sqrt{\frac{l^{\prime}+1}{2 l^{\prime}+3}}
+\braOket{l^{\prime} m^{\prime}}{\widehat{n}_{1 \mu} \widehat{Y}_{L \nu}}{ l m}=-\Fact{L l}/\Fact{l^\prime}\sqrt{\frac{1}{4 \pi}}\bigl\{\sqrt{\frac{l^{\prime}+1}{2 l^{\prime}+3}}
 \clebsch{l}{0}{L}{0}{l^{\prime}+1}{0}
 \clebsch{l}{m}{L}{\nu}{l^{\prime}+1}{m+\nu} \clebsch{l^{\prime}+1}{m+\nu}{1}{\mu}{l^{\prime}}{m^{\prime}} \notag\\
 -\sqrt{\frac{l^{\prime}}{2 l^{\prime}-1}}
@@ -1407,7 +1407,7 @@ The matrix elements of products of the operators \(\widehat{\vect{J}}_{1}\) and 
 \clebsch{J}{M}{L}{\nu}{J^{\prime}}{M+\nu}
 \clebsch{J^{\prime}}{M+\nu}{1}{\mu}{J^{\prime}}{M^{\prime}}
 \clebsch{l}{0}{L}{0}{l^{\prime}}{0}
-\sixj{l}{s}{J}{J^{\prime}}{L}{l^{\prime}}m  \label{eq:13:2:124}
+\sixj{l}{s}{J}{J^{\prime}}{L}{l^{\prime}}  \label{eq:13:2:124}
 \end{multline}
 
 \begin{multline}
@@ -1440,7 +1440,7 @@ The matrix elements of these commutators in the $lsJM$-representation are given 
 \end{align}
 Below we also present expressions for matrix elements of some more complex tensor products which include the spherical harmonic operator:
 \begin{multline}
-\braOket{ l^{\prime} m^{\prime}}{\bigl\{\widehat{\vect{n}}_{1} \otimes\bigl(\delop_{\Omega}\bigr)_{1}\bigr\}_{k \kappa} \widehat{Y}_{L \nu}}{l m}=\sum_{L^{\prime} \nu^{\prime} l^{\prime \prime}}(-1)^{l^{\prime}+L^{\prime}+k} \Fact{L l k l^{\prime \prime}}/\Fact{L^\prime L^\prime}\sqrt{\frac{1}{4 \pi}} \\
+\braOket{ l^{\prime} m^{\prime}}{\bigl\{\widehat{\vect{n}}_{1} \otimes\bigl(\delop_{\Omega}\bigr)_{1}\bigr\}_{k \kappa} \widehat{Y}_{L \nu}}{l m}=\sum_{L^{\prime} \nu^{\prime} l^{\prime \prime}}(-1)^{l^{\prime}+L^{\prime}+k} \Fact{L l k l^{\prime \prime}}/\Fact{l^\prime L^\prime}\sqrt{\frac{1}{4 \pi}} \\
 \times 
 \clebsch{l}{m}{L}{\nu}{L^{\prime}}{\nu^{\prime}} 
 \clebsch{L^{\prime}}{\nu^{\prime}}{k}{\kappa}{l^{\prime}}{m^{\prime}} 
