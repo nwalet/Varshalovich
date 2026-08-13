@@ -1,4 +1,4 @@
-\chapter{THE GRAPHICAL METHOD IN ANGULAR MOMENTUM THEORY}\label{chap:11}
+\chapter{The graphical method in angular momentum theory}\label{chap:11}
 To solve many quantum mechanical problems involving angular and spin dependences one has to integrate a product of the spherical harmonics or the Wigner D-functions and to sum products of the Clebsch-Gordan coefficients and $3 n j$ symbols. Expressions of this kind are, as a rule, rather complicated. They contain so many arguments and parameters that it is difficult to understand interrelations between them, to find out the symmetry of the expression, and to see its invariance with respect to a particular transformation.
 
 The representation of such expressions in diagrammatic form facilitates their general analysis. A graphical representation is more compact and clear. All arguments and parameter interrelations are obvious. The structure and symmetries of the expression as a whole and each part of the expression are evident. Moreover, the graphical technique substantially reduces the calculation job.
@@ -8,11 +8,11 @@ There are several versions of the graphical method. A handy technique for summin
 
 In this chapter we represent the unified graphical method in detail. The basic elements of diagrams are defined in Sections 11.1 and 11.2 where the graphical representation of the standard functions and main operations of the angular momentum theory are given. Section 11.3 exhibits the rules of the diagram technique, i.e., the graphical method of calculation. For practical convenience, all the definitions and rules are arranged in tables. The general scheme of application of the diagram technique is formulated in Sec.~\ref{sec:11.4}.
 
-\section{GRAPHICAL REPRESENTATION OF FUNCTIONS}\label{sec:12.1}
+\section{Graphical representation of functions}\label{sec:11.1}
 A principle of any graphical method is in establishing a one-to-one correspondence between elements of a diagram and constituents of the analytic expression. Any expression inherent in the theory may be represented by a definite diagram, and vice versa, any such diagram represents a definite analytic expression.
 
 Moreover, a transformation of the expression under some analytic operation corresponds to a certain transformation of the associated diagram. That is why all calculations of spin angular quantities may be performed by the graphical method instead of the analytic one.
-\subsection{Basic Elements of Diagrams}
+\subsection{Basic Elements of Diagrams}\label{sec:11.1.1}
 The Dirac representation of quantum mechanical quantities seems to be most adequate to the graphical method. This representation operates with state vectors: the "kets", $|\Psi\rangle$ and the Hermitian conjugate "bras", $\langle\psi|$. Graphically, these vectors are represented by directed lines connected with nodes (dot or cross bar).
 
 A line with an arrow coming out of a node represents the "ket" $|\Psi\rangle$, i.e., a covariant (standard) state vector, whereas, a line with double arrow coming into the node represents the "bra" $\langle\Psi|$, i.e. a contravariant (Hermitian conjugate) state vector.
@@ -71,7 +71,7 @@ corresponds to the $\Omega$-line with a dot node. The completeness condition for
 \]
 respectively.
 
-\subsection{Diagrams of the Basic Functions of the Theory}
+\subsection{Diagrams of the Basic Functions of the Theory}\label{sec:11.1.2}
 Quantum mechanical quantities, i.e., state vectors and operators, may depend on many spin and angular variables (such as $j m$ or $\Omega)$ and also on coordinate system rotation $R$. Accordingly, these state vectors and matrix elements of the operators may be represented graphically as blocks (i.e., as subdiagrams) with external $j m$-, $\Omega$ - and/or $R$-lines associated with the corresponding spin angular variables. A diagram corresponding to a composite expression will be a combination of such blocks connected by some of jm-, $\Omega$ - and $R$-lines.
 
 Diagrams of some spin and angular functions are listed in Tables 11.1-11.3; graphical displays of their properties and relations is given in Tables 11.4-11.14.
@@ -298,7 +298,7 @@ $=$
 \end{center}
 \end{table}
 
-\section{GRAPHICAL REPRESENTATION OF THE MAIN OPERATIONS OF THE THEORY}
+\section{Graphical representation of the main operations of the theory}\label{sec:11.2}
 Expressions which occur in calculations based on the quantum theory of angular momentum have a specific character. They contain spin angular variables of two kinds, i.e., external and internal ones.
 \begin{enumerate}
 \item External variables are actual arguments of the expression under consideration. The evaluation of an expression does not involve any integration or summation over external variables, i.e., they appear as fixed (but, in principle, changeable) parameters.
@@ -308,7 +308,7 @@ In other words, quantum mechanical problems are mainly concerned with invariant 
 
 This section describes the graphical representation of those analytic operations which are specific to angular momentum theory, while the rules of calculations by the graphical method will be formulated in the next section.
 
-\subsection{Multiplication}
+\subsection{Multiplication}\label{sec:11.2.1}
 The product (direct product) of factors \normalsize$\mathfrak{M}$ and \normalsize$\mathfrak{N}$ is represented graphically by unlinked subdiagrams (blocks) which correspond to factors \normalsize$\mathfrak{M}$ and \normalsize$\mathfrak{N}$. The mutual disposition and orientation of these subdiagrams are inessential. For example, the product
 \[
 \threej{A}{B}{C}{\alpha}{\beta}{\gamma}\sixj{A}{B}{C}{a}{b}{c}
@@ -319,7 +319,7 @@ may be represented by\\
 \includegraphics[valign=c]{fig11_2_2}
 \end{center}
 
-\subsection{Invariant Summation over Projections}
+\subsection{Invariant Summation over Projections}\label{sec:11.2.2}
 The scalar product of two irreducible tensors of rank $j$, \normalsize$\mathfrak{M}_{j m}$ and \normalsize$\mathfrak{N}_{j m}$, i.e., the sum of bilinear combinations over all possible values of the projection $m$
 \[
 \sum_{m=-j}^{j}\braOket{}{\mathfrak{M}}{j m}\braOket{j m}{\mathfrak{N}},
@@ -398,7 +398,7 @@ One should especially mention the entirely invariant sums of products of two, fo
 \end{center}
 \end{table}
 
-\subsection{Summation over Angular Momentum}
+\subsection{Summation over Angular Momentum}\label{sec:11.2.3}
 A thick $j$-line linking two subdiagrams, as in
 \begin{center}
 \includegraphics[valign=c]{fig11_2_11}
@@ -437,7 +437,7 @@ A Clebsch-Gordan coefficient may be represented as a sum over $c^{\prime} \gamma
     }
 }
 \]
-\subsection{Invariant Integration over Directions}
+\subsection{Invariant Integration over Directions}\label{sec:11.2.4}
 A double integral of a bilinear form
 \[
 \int\braOket{}{\mathfrak{N}}{\Omega} \frac{d \Omega}{\Omega_{0}}\braket{\Omega}{\mathfrak{N}},
@@ -460,7 +460,7 @@ The resultant $\Omega$-line has the same direction as the original $\ket{\Omega}
 \vcenter{\hbox{\includegraphics[valign=c]{fig11_2_18}}}\]
 whereas $\Omega_{0}=4 \pi$ for integration of the functions $C_{l m}(\Omega)=|4 \pi /(2 l+1)|^{1 / 2} Y_{l m}(\Omega)$.
 
-\subsection{Integration over Rotation Parameters}
+\subsection{Integration over Rotation Parameters}\label{sec:11.2.5}
 
 
 \begin{table}[ptbh!]
@@ -546,10 +546,10 @@ may be represented by a conjunction of corresponding $R$ - and $R^{-1}$-lines of
 \]
 Note that integrals of three or more functions of $R$ may be reduced to standard bilinear forms, using the Clebsch-Gordan expansion.
 
-\section{RULES OF THE GRAPHICAL TECHNIQUE}
+\section{Rules of the graphical technique}\label{sec:11.3}
 In this section the rules of calculation by the graphical method will be formulated, specifically, the rules for the reduction of diagrams to standard diagrams which represent the basis functions of the angular momentum theory.
 
-\subsection{Deformation of Diagrams}
+\subsection{Deformation of Diagrams}\label{sec:11.3.1}
 Expressions which appear in calculations based on the theory of angular momentum can be rather complicated. Corresponding diagrams consist of many lines, thin and thick, solid and dashed, single and double. These lines are partly linked to some nodes. One can clearly distinguish two types of lines: internal and external. Internal lines have both ends linked to nodes, whereas external lines have one end linked to a node but the other free. Any identical transformation of an analytic expression corresponds to some transformation of the internal lines of the diagram with external lines remaining unchanged.
 
 If the structure of the inner part of a diagram is unimportant, it may be replaced by a block with the same external lines, because these are just the external lines which determine the transformation properties of corresponding diagram (or sub-diagram) under rotation of the coordinate system. For instance, any closed diagram without external lines is invariant under such rotation and may be reduced to some of the $3 n j$ symbols or their combinations.
@@ -585,7 +585,7 @@ The expressions corresponding to two topologically similar diagrams are equal in
 \begin{table}[ptbh!]
 \begin{center}
 \captionsetup{justification=centering,labelformat=empty}
-\caption{Table 11.6.\\ Symmetry of 3nj Symbol Diagrams.}
+\caption{Table 11.6.\\ Symmetry of $3nj$ Symbol Diagrams.}
 \label{chap11:tab:2}
 \renewcommand{\arraystretch}{1.5}
 \begin{tabular}{c}
@@ -661,7 +661,7 @@ $9j$ Symbol $\ninej{a_{1}}{a_{2}}{a_{3}}{c_{1}}{c_{2}}{c_{3}}{b_{1}}{b_{2}}{b_{3
 \end{center}
 \end{table}
 
-\subsection{Change of Node Sign}
+\subsection{Change of Node Sign}\label{sec:11.3.2}
 The reversal of the sign in a node joining $\left(j_{1} j_{2} j_{3}\right)$-lines corresponds to the change of the momentum-coupling order. This transformation is equivalent to introducing the additional phase factor $(-1)^{j_{1}+j_{2}+j_{3}}$. For example,
 \[
 \includegraphics[valign=c]{fig11_3_46}
@@ -678,7 +678,7 @@ The reversal of signs of all the nodes in a diagram produces an additional phase
 \includegraphics[valign=c]{fig11_3_51}
 \end{align*}
 
-\subsection{Change of Direction of External Lines}
+\subsection{Change of Direction of External Lines}\label{sec:11.3.3}
 The direction of an external $j$-line specifies the form (covariant or contravariant, i.e. $|j m\rangle$ or $\langle j m|)$ of an irreducible tensor of rank $j$ (Sec.~\ref{sec:11.1.1}). The conversion of covariant components of a tensor into contravariant ones, as well as the inverse transformation, is carried out by contraction (over $m$ ) of the tensor in question with the tensor $\binom{j}{m m^{\prime}}=(-1)^{j+m} \delta_{m-m^{\prime}}$, which may be considered as the metric tensor for the $(2 j+1)$ dimensional space of the functions $|j m\rangle$. Such a transformation reads
 \[
 \begin{gathered}
@@ -712,7 +712,7 @@ and, conversely,
 \[
 \sum_{\alpha^{\prime}}\binom{a}{\alpha \alpha^{\prime}}(-1)^{a-\alpha^{\prime}}\threej{a}{b}{c}{-\alpha^{\prime}}{\beta}{\gamma}=\threej{a}{b}{c}{\alpha}{\beta}{\gamma} .
 \]
-\subsection{Change of Direction of Integral Lines}
+\subsection{Change of Direction of Integral Lines}\label{sec:11.3.4}
 The reversal of the direction of any internal $j$-line produces the phase factor $(-1)^{2 j}$ in the associated analytic expression, because
 \[
 \sum_{m}(-1)^{j-m} \mathfrak{M}_{j m} \mathfrak{N}_{j-m}=(-1)^{2 j} \sum_{m}(-1)^{j-m} \mathfrak{M}_{j-m} \mathfrak{N}_{j m} .
@@ -724,7 +724,7 @@ The reversal of the directions of three internal $j$-lines ( $j_{1} j_{2} j_{3}$
 
 For a closed diagram associated with a $3 n j$ symbol the reversal of directions of all the $j$-lines and simultaneous reversal of signs of all the nodes do not change the meaning of the expression.
 
-\subsection{Linking Subdiagrams}
+\subsection{Linking Subdiagrams}\label{sec:11.3.5}
 In this Section the graphical rules for the multiplication of subdiagrams are formulated. These are the rules for linking the subdiagrams (blocks) into one united diagram.\\
 (a) Two subdiagrams representing factors \normalsize$\mathfrak{M}$ and \normalsize$\mathfrak{N}$, which have at least one identical (for both subdiagrams) $j$-line, may be linked together into the combined diagram which displays the product of these factors:
 \[
@@ -776,7 +776,7 @@ As in Scheme (a), at least one of these subdiagrams should have no external line
 \]
 Note that Scheme (a) is a special case of Scheme (b) when one of the momenta $j_{1}, j_{2}, j_{3}$ equals zero.
 
-\subsection{Cutting Diagram into Subdiagrams}
+\subsection{Cutting Diagram into Subdiagrams}\label{sec:11.3.6}
 The scalar product of two $n$-fold irreducible tensors of rank $j_{1}, j_{2}, \ldots, j_{n}$, i.e., the $n$-fold invariant sum over projections
 \[
 \left(\mathfrak{M}_{j_{1} j_{2} \ldots j_{n}} \cdot \mathfrak{N}_{j_{1} j_{2} \ldots j_{n}}\right)=\sum_{m_{1} m_{2} \ldots m_{n}}\braOket{00}{\mathbb{M}}{j_{1} m_{1} j_{2} m_{2} \ldots j_{n} m_{n}}\braOket{j_{1} m_{1} j_{2} m_{2} \ldots j_{n} m_{n}}{\mathfrak{R}}{}
@@ -816,7 +816,7 @@ In many cases, the successive use of these rules allows one to divide a diagram 
 
 The most important cases for the application of the cutting rules are in the separation of external lines of a diagram, i.e., in extracting the dependence on all the external variables in the form of the standard functions of the theory ( $\clebsch{j_{1}}{m_{1}}{j_{2}}{m_{2}}{j}{m}, D_{m m^{\prime}}^{j}(R), C_{j m}(\Omega)$, etc.). Such a separation is the essence of the Wigner-Eckart theorem which will be discussed in Sec.~\ref{sec:11.4.2}.
 
-\subsection{Graphical Method of Summation}
+\subsection{Graphical Method of Summation}\label{sec:11.3.7}
 According to Sec.~\ref{sec:11.2.3}, a complete invariant sum over angular momentum $j$ and projection $m$ is graphically represented by a thick $j$-line. Such a summation may be easily performed by the diagram technique, if this thick $j$-line connects two identical nodes.
 
 Rule $\sum$ : Any thick $j$-line which connects identical pairs of thin $j$-lines, may be removed provided the ends of the thin lines with equal momenta are linked together. This is displayed below:
@@ -873,7 +873,7 @@ In fact, all the rules for complete invariant summation formulated in this secti
 \[
 \sum_{j m}\ket{j m}\bra{j m}=\sum_{j m}\rket{j m}(2 j+1)\rbra{j m}=1,
 \]
-\subsection{Replacing An Internal $\Omega$-Line by a Thick $j$-Line}
+\subsection{Replacing An Internal $\Omega$-Line by a Thick $j$-Line}\label{sec:11.3.8}
 Each internal $\Omega$-line which represents invariant integration over direction angles $\Omega\{\vartheta, \varphi\}$ may be replaced by a thick $j$-line representing the complete invariant sum over $j$ and $m$, according to
 \[
 \int d \Omega\braOket{\Omega}{\mathfrak{M}}{\Omega}=\sum_{j m}(j m|\mathfrak{M}| j m\rangle,
@@ -884,7 +884,7 @@ where
 \]
 Thus, all the $\Omega$-lines in the inner part of a diagram may be converted into the $j$-lines. Hence, it is sufficient to formulate the rules of graphical operations only for diagrams in which all the internal lines are $j$-lines.
 
-\subsection{Elimination of $j=0$ Line}
+\subsection{Elimination of $j=0$ Line}\label{sec:11.3.9}
 In the particular case of $j=0$ the corresponding expression is independent of the angular variables $\Omega\{\vartheta, \varphi\}$. Hence, the corresponding $j$-line may be removed from a diagram without changing its meaning. However, there remain the nodes which were initially connected with this $j=0$ line. These nodes may also be extracted from the diagram in the form of a separated subdiagram corresponding to the factor
 \[
 K=( \pm 1)^{2 j_{1}} \frac{\delta_{j_{1} j_{2}}}{\sqrt{2 j_{1}+1}} .
@@ -898,7 +898,7 @@ Thus elimination of the $j=0$ line may be illustrated by\\
 
 Some special cases of the $3 j m$ and $3 n j$ symbols with $j=0$ are presented in Table~11.7.
 
-\subsection{Elimination of the $R=1$ Line}
+\subsection{Elimination of the $R=1$ Line}\label{sec:11.3.10}
 In the particular case $R=1$, a double dashed $R$-line corresponds to no rotation, i.e., it represents a fictitious lependence. Hence, an $R=1$ line may be removed and the lines adjacent to the $R$-line have to be closed. This operation does not change the meaning of the diagram.\\
 \includegraphics[valign=c]{fig11_3_90}\quad$=K\times$
 \includegraphics[valign=c]{fig11_3_91}
@@ -1797,10 +1797,10 @@ $=(-1)^{-k}\displaystyle\sum_{\gamma''}$%
 
 
 
-\section{SUMMARY OF THE GRAPHICAL TECHNIQUE}
+\section{Summary of the graphical technique}\label{sec:11.4}
 The preceeding sections present the principles of the graphical methods of angular momentum theory, i.e., graphical representations of the basis functions and operations (Secs. 11.1 and 11.2) as well as the rules of handling them (Sec.~\ref{sec:11.3}). This section resumes the discussion of the general properties of diagrams, the Wigner-Eckart theorem in diagrammatic form and the scheme for the application of the graphical technique.
 
-\subsection{General Properties of Diagrams}
+\subsection{General Properties of Diagrams}\label{sec:11.4.1}
 Let us summarize the main properties of diagrams which are consequences of the graphical relationships discussed above.\\
 (a) Any diagram may be arbitrarily turned and deformed, bent or stretched. Along with these continuous transformations, discrete transformations such as reflection and inversion are also allowed.
 
@@ -1813,7 +1813,7 @@ A transformed diagram corresponds to the same analytic expression provided node 
 Hence, for a diagram with one external $j$-line $j$ has to be zero; for a diagram which has two external $j$-lines associated with $j_{1}$ and $j_{2}$ one has $j_{1}=j_{2}$.\\
 (d) Any diagram may be cut into two subdiagrams in many different ways. The total angular momenta of both these subdiagrams are identical. Moreover, the angular momenta will be the same for all the diagram cross-sections with fixed sets of external lines for each subdiagram.
 
-\subsection{Generalized Wigner-Eckart Theorem in Diagrammatic Form}
+\subsection{Generalized Wigner-Eckart Theorem in Diagrammatic Form}\label{sec:11.4.2}
 Standard functions of angular momentum theory may be used as a basis for the expansion of any expression. However, sometimes all the dependence of the expression on external variables may be factorized in the form of some standard function. Graphically such a function may be separated according to the rules of Sec.~\ref{sec:11.3.6}. The most important special cases are the following.\\
 (a) A diagram without external lines (i.e. a closed diagram) is invariant with respect to coordinate-system rotations.\\
 (b) A diagram with one external line also is invariant. This is a consequence of the fact that, in principle, one cannot distinguish any preferred direction in isotropic space. Therefore, any dependence on one direction is fictitious, so that such an external $j$-line has to correspond to $j=0$ and may be eliminated in accordance with the rule of Sec.~\ref{sec:11.3.9}.
@@ -1973,7 +1973,7 @@ $\begin{aligned}[t]
 
 
 
-\subsection{Scheme for the Application of the Graphical Technique}
+\subsection{Scheme for the Application of the Graphical Technique}\label{sec:11.4.3}
 The aim of calculations inherent in the angular momentum theory is to transform an original formula in such a way as to express all the dependence on the orientation of the coordinate system in the form of a simple standard function $\left(\clebsch{j_{1}}{m_{1}}{j_{2}}{m_{2}}{j}{m}, Y_{l m}(\Omega), D_{M M^{\prime}}^{J}(R)\right.$, or some related combination). The remaining factor (or the expansion coefficient) is invariant and can be represented as a product (or sum of products) of the standard $3 j, 6 j, 9 j$ symbols.
 
 To carry out these calculations by the graphical method one has to perform the following operations:\\
