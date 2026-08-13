@@ -1207,7 +1207,7 @@ This operator acts only on spin variables. Using the Wigner-Eckart theorem, we g
 \begin{gather}
 \braOket{ s^{\prime} m_{s}^{\prime}}{ \widehat{S}_{1 \mu}}{s m_{s}}=\frac{
 \braOketred{ s^{\prime}}{\widehat{\vect{S}}_{1}}{ s}}{\sqrt{2 s^{\prime}+1}} 
-\clebsch{s}{m,}{1}{\mu}{s^{\prime}}{m^{\prime}}  \label{eq:13:2:94}\\
+\clebsch{s}{m_{s}}{1}{\mu}{s^{\prime}}{m_{s}^{\prime}}  \label{eq:13:2:94}\\
 \braOketred{ s^{\prime}}{\widehat{\vect{S}}_{1}}{ s}=\delta_{s s^{\prime}} \sqrt{s(s+1)(2 s+1)} \label{eq:13:2:95}
 \end{gather}
 Equations \eqref{eq:13:2:39}-\eqref{eq:13:2:47} were obtained for the matrix elements of the operator \(\widehat{\vect{J}}_{1}\) and they remain valid for the spin operator \(\widehat{\vect{S}}_{1}\) after the replacement
@@ -1229,12 +1229,11 @@ The operators \(\widehat{\vect{n}}_{1},\bigl(\widehat{\nabla}_{\Omega}\bigr)_{1}
 \clebsch{J}{M}{k}{\kappa}{J^{\prime}}{M^{\prime}}
 \ninej{l}{1}{l^{\prime}}{s}{1}{s}{J}{k}{J^{\prime}},  \label{eq:13:2:97}\\
 & 
-\braOket{ l^{\prime} s^{\prime} J^{\prime} M^{\prime}}{\bigl\{
-\braOketred{\widehat{\nabla}_{\Omega}\bigr)_{1} \otimes \widehat{\vect{S}}_{1}\bigr\}_{k \kappa}}{l s J M}=\delta_{e e^{\prime}} \sqrt{(2 k+1)(2 J+1)(2 s+1) s(s+1)}\bigl(l^{\prime}}{\bigl(\widehat{\nabla}_{\Omega}\bigr)_{1}}{ l} 
+\braOket{ l^{\prime} s^{\prime} J^{\prime} M^{\prime}}{\bigl\{\bigl(\widehat{\nabla}_{\Omega}\bigr)_{1} \otimes \widehat{\vect{S}}_{1}\bigr\}_{k \kappa}}{l s J M}=\delta_{s s^{\prime}} \sqrt{(2 k+1)(2 J+1)(2 s+1) s(s+1)}\braOketred{ l^{\prime}}{\bigl(\widehat{\nabla}_{\Omega}\bigr)_{1}}{ l}
 \clebsch{J}{M}{k}{\kappa}{J^{\prime}}{M^{\prime}}
 \ninej{l}{1}{l^{\prime}}{s}{1}{s}{J}{k}{J^{\prime}},  \label{eq:13:2:98}\\
 & 
-\braOket{ l^{\prime} s^{\prime} J^{\prime} M^{\prime}}{\bigl\{\widehat{\vect{L}}_{1} \otimes \widehat{\vect{S}}_{1}\bigr\}_{k \kappa}}{l s J M}=\delta_{l l} \delta_{s^{\prime}} \sqrt{(2 k+1)(2 J+1)(2 l+1)(2 s+1) l(l+1) s(s+1)} 
+\braOket{ l^{\prime} s^{\prime} J^{\prime} M^{\prime}}{\bigl\{\widehat{\vect{L}}_{1} \otimes \widehat{\vect{S}}_{1}\bigr\}_{k \kappa}}{l s J M}=\delta_{l l^{\prime}} \delta_{s s^{\prime}} \sqrt{(2 k+1)(2 J+1)(2 l+1)(2 s+1) l(l+1) s(s+1)}
 \clebsch{J}{M}{k}{\kappa}{J^{\prime}}{M^{\prime}}
 \ninej{l}{1}{l}{s}{1}{s}{J}{k}{J^{\prime}}, \label{eq:13:2:99}
 \end{align}
@@ -1245,7 +1244,7 @@ The operators \(\widehat{\vect{S}}_{1}\) and \(\widehat{\vect{J}}_{1}\) do not c
 \sixj{1}{1}{k}{J^{\prime}}{J}{J}
 \sixj{s}{l}{J}{J^{\prime}}{1}{s} 
 \clebsch{J}{M}{k}{\kappa}{J^{\prime}}{M^{\prime}}  \label{eq:13:2:100}\\
-\braOket{ l^{\prime} s^{\prime} J^{\prime} M^{\prime}}{\bigl\{\widehat{\vect{J}}_{1} \otimes \widehat{\vect{S}}_{1}\bigr\}_{k \kappa}}{l s J M}= & (-1)^{J+k-l-s^{+} 1} \delta_{s^{\prime} \delta} \delta_{l^{\prime} l} \sqrt{(2 k+1)(2 J+1) J^{\prime}\bigl(J^{\prime}+1\bigr)\bigl(2 J^{\prime}+1\bigr)}\notag \\
+\braOket{ l^{\prime} s^{\prime} J^{\prime} M^{\prime}}{\bigl\{\widehat{\vect{J}}_{1} \otimes \widehat{\vect{S}}_{1}\bigr\}_{k \kappa}}{l s J M}= & (-1)^{J+k-l-s+1} \delta_{s^{\prime} s} \delta_{l^{\prime} l} \sqrt{(2 k+1)(2 J+1) J^{\prime}\bigl(J^{\prime}+1\bigr)\bigl(2 J^{\prime}+1\bigr)}\notag \\
 & \times \sqrt{s(s+1)(2 s+1)}
 \sixj{1}{1}{k}{J^{\prime}}{J}{J^{\prime}}
 \sixj{s}{l}{J}{J^{\prime}}{1}{s} 
@@ -1257,11 +1256,11 @@ The commutator of the product \(\bigl\{\widehat{\vect{S}}_{1} \otimes \widehat{\
 \end{equation}
 Using Eqs. \eqref{eq:13:2:94} and \eqref{eq:13:2:95}, we find
 \begin{equation}
-\braOket{ l^{\prime} s^{\prime} J^{\prime} M^{\prime}}{ \mathfrak{R}_{k \kappa}^{11}\bigl(\widehat{\vect{S}}_{1}, \widehat{\vect{J}}_{1}\bigr)}{l s J M}=(-1)^{l+s+J^{\prime}} \delta_{l l} \delta_{e e^{\prime}} \delta_{k 1} \sqrt{2 s(s+1)(2 s+1)(2 J+1)}
+\braOket{ l^{\prime} s^{\prime} J^{\prime} M^{\prime}}{ \mathfrak{R}_{k \kappa}^{11}\bigl(\widehat{\vect{S}}_{1}, \widehat{\vect{J}}_{1}\bigr)}{l s J M}=(-1)^{l+s+J^{\prime}} \delta_{l l^{\prime}} \delta_{s s^{\prime}} \delta_{k 1} \sqrt{2 s(s+1)(2 s+1)(2 J+1)}
 \sixj{s}{l}{J}{J^{\prime}}{1}{s}
 \clebsch{J}{M}{k}{\kappa}{J^{\prime}}{M^{\prime}}. \label{eq:13:2:103} 
 \end{equation}
-To obtain matrix elements of direct products of the operator \(\widehat{\vect{S}}_{1}\) and the operators \(\widehat{\vect{n}}_{1},\bigl(\widehat{\boldsymbol{V}}_{\Omega}\bigr)_{1}, \widehat{\vect{L}}_{1}\) or \(\widehat{\vect{J}}_{1}\) one should decompose the direct products into irreducible products in accordance with Eq.~\eqref{eq:3:1:22} and use Eqs. \eqref{eq:13:2:97}-\eqref{eq:13:2:101}.
+To obtain matrix elements of direct products of the operator \(\widehat{\vect{S}}_{1}\) and the operators \(\widehat{\vect{n}}_{1},\bigl(\widehat{\boldsymbol{\nabla}}_{\Omega}\bigr)_{1}, \widehat{\vect{L}}_{1}\) or \(\widehat{\vect{J}}_{1}\) one should decompose the direct products into irreducible products in accordance with Eq.~\eqref{eq:3:1:22} and use Eqs. \eqref{eq:13:2:97}-\eqref{eq:13:2:101}.
 
 \subsection{Matrix Elements of the Spherical Harmonic Operator \(\hat{Y}_{L \nu} \equiv Y_{L \nu}(\vartheta, \varphi)\)}\label{sec:13:2:8}
 
