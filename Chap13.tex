@@ -1267,7 +1267,7 @@ To obtain matrix elements of direct products of the operator \(\widehat{\vect{S}
 A spherical harmonic operator, \(Y_{L \nu}\), depends only on position variables \(\vartheta, \varphi\). From the Wigner-Eckart theorem it follows that
 \begin{gather}
 \braOket{ l^{\prime} m^{\prime}}{ \hat{Y}_{L \nu}}{l m}=\frac{
-\braOketred{ l^{\prime}}{\hat{Y}_{l}}{ l}}{\sqrt{2 l^{\prime}+1}} 
+\braOketred{ l^{\prime}}{\hat{Y}_{L}}{ l}}{\sqrt{2 l^{\prime}+1}}
 \clebsch{l}{m}{L}{\nu}{l^{\prime}}{m^{\prime}}  \label{eq:13:2:104}\\
 \braOketred{ l^{\prime}}{\hat{Y}_{L}}{ l}=\sqrt{\frac{(2 L+1)(2 l+1)}{4 \pi}} 
 \clebsch{l}{0}{L}{0}{l^{\prime}}{0} \label{eq:13:2:105}
@@ -1276,21 +1276,21 @@ Similar relationships for an operator \(\hat{C}_{L \nu}(\vartheta, \varphi)\) (s
 \begin{align}
 \braOket{ l^{\prime} m^{\prime}}{ \widehat{C}_{L \nu}}{l m} & =\frac{
 \braOketred{ l^{\prime}}{\widehat{\mathrm{C}}_{L}}{ l}}{\sqrt{2 l^{\prime}+1}} 
-\clebsch{l}{m}{L}{\nu}{\prime^{\prime}}{m^{\prime}}  \label{eq:13:2:106}\\
+\clebsch{l}{m}{L}{\nu}{l^{\prime}}{m^{\prime}}  \label{eq:13:2:106}\\
 \braOketred{ l^{\prime}}{\widehat{\mathrm{C}}_{L}}{ l} & =\sqrt{2 l+1} 
 \clebsch{l}{0}{L}{0}{l^{\prime}}{0} \label{eq:13:2:107}
 \end{align}
 Let us consider the matrix elements of some tensor products involving \(\hat{Y}_{L \nu}(\vartheta, \varphi)\).\\
 For products of the commuting operators \(\widehat{\vect{n}}_{1}\) and \(\widehat{\vect{Y}}_{L}\), we get
 \begin{gather}
-\braOket{l^{\prime} m^{\prime}}{\widehat{n}_{1 \mu} \hat{Y}_{L \nu}}{ l m}=-\sqrt{\frac{(2 L+1)(2 l+1)}{4 \pi\bigl(2 l^{\prime}+1\bigr)}}\bigl\{\sqrt{\frac{l^{\prime}+1}{2 l^{\prime}+3}} 
-\clebsch{1}{0}{L}{0}{l^{\prime}+1}{0} 
-\clebsch{l}{m}{L}{\nu}{l^{\prime}+1}{m+\nu} C_{l^{\prime}+1 m+\nu 1}^{l^{\prime} m^{\prime}} \notag\\
--\sqrt{\frac{l^{\prime}}{2 l^{\prime}-1}} 
-\clebsch{l}{0}{L}{0}{l^{\prime}}{0} 
-\clebsch{l}{m}{L}{\nu}{l^{\prime}-1}{m+\nu} 
-\clebsch{l^{\prime}-1}{m+\nu}{1}{\mu}{l^{\prime}}{m}\bigr\}  \label{eq:13:2:108}\\
-\braOket{ l^{\prime} m^{\prime}}{\bigl\{\hat{\mathrm{n}}_{1} \otimes \hat{\mathrm{Y}}_{L}\bigr\}_{L^{\prime} \nu^{\prime}}}{l m}=(-1)^{L^{\prime}+l^{\prime}+1} \sqrt{\frac{(2 L+1)\bigl(2 L^{\prime}+1\bigr)(2 l+1)}{4 \pi\bigl(2 l^{\prime}+1\bigr)}} 
+\braOket{l^{\prime} m^{\prime}}{\widehat{n}_{1 \mu} \hat{Y}_{L \nu}}{ l m}=-\sqrt{\frac{(2 L+1)(2 l+1)}{4 \pi\bigl(2 l^{\prime}+1\bigr)}}\bigl\{\sqrt{\frac{l^{\prime}+1}{2 l^{\prime}+3}}
+\clebsch{l}{0}{L}{0}{l^{\prime}+1}{0}
+\clebsch{l}{m}{L}{\nu}{l^{\prime}+1}{m+\nu} \clebsch{l^{\prime}+1}{m+\nu}{1}{\mu}{l^{\prime}}{m^{\prime}} \notag\\
+-\sqrt{\frac{l^{\prime}}{2 l^{\prime}-1}}
+\clebsch{l}{0}{L}{0}{l^{\prime}-1}{0}
+\clebsch{l}{m}{L}{\nu}{l^{\prime}-1}{m+\nu}
+\clebsch{l^{\prime}-1}{m+\nu}{1}{\mu}{l^{\prime}}{m^{\prime}}\bigr\}  \label{eq:13:2:108}\\
+\braOket{ l^{\prime} m^{\prime}}{\bigl\{\hat{\mathrm{n}}_{1} \otimes \hat{\mathrm{Y}}_{L}\bigr\}_{L^{\prime} \nu^{\prime}}}{l m}=(-1)^{L^{\prime}+l^{\prime}+l} \sqrt{\frac{(2 L+1)\bigl(2 L^{\prime}+1\bigr)(2 l+1)}{4 \pi\bigl(2 l^{\prime}+1\bigr)}}
 \clebsch{l}{m}{L^{\prime}}{\nu^{\prime}}{l^{\prime}}{m^{\prime}} \notag\\
 \times \sum_{k} \sqrt{2 k+1} 
 \clebsch{k}{0}{1}{0}{l^{\prime}}{0} 
@@ -1303,9 +1303,9 @@ The matrix elements of products of the non-commuting operators \(\bigl(\hat{\nab
 \clebsch{l}{0}{L}{0}{l^{\prime}-1}{0} \notag\\
 \times 
 \clebsch{l}{m}{L}{\nu}{l^{\prime}-1}{m+\nu} 
-\clebsch{l^{\prime}-1}{m+\nu}{1}{\mu}{l^{\prime}}{m^{\prime}}+\bigl(l^{\prime}+2\bigr) \sqrt{\frac{l^{\prime}+1}{2 l^{\prime}+3}} 
-\clebsch{l}{0}{L}{0}{l^{\prime}}{0} 
-\clebsch{l}{m}{L}{\nu}{l^{\prime}+1}{m+\nu} 
+\clebsch{l^{\prime}-1}{m+\nu}{1}{\mu}{l^{\prime}}{m^{\prime}}+\bigl(l^{\prime}+2\bigr) \sqrt{\frac{l^{\prime}+1}{2 l^{\prime}+3}}
+\clebsch{l}{0}{L}{0}{l^{\prime}+1}{0}
+\clebsch{l}{m}{L}{\nu}{l^{\prime}+1}{m+\nu}
 \clebsch{l^{\prime}+1}{m+\nu}{1}{\mu}{l^{\prime}}{m^{\prime}}\bigr\}  \label{eq:13:2:110}\\
 \braOket{ l^{\prime} m^{\prime}}{\bigl\{\bigl(\hat{\nabla}_{\Omega}\bigr)_{1} \otimes \hat{\mathrm{Y}}_{L}\bigr\}_{L^{\prime} \nu^{\prime}}}{l m}=(-1)^{L^{\prime}+l^{\prime}+1} \sqrt{\frac{(2 L+1)(2 l+1)\bigl(2 L^{\prime}+1\bigr)}{4 \pi\bigl(2 l^{\prime}+1\bigr)}} \notag\\
 \times \sum_{k}
@@ -1363,7 +1363,7 @@ The matrix elements of products of the operators \(\hat{\vect{L}}_{1}\) and \(\h
 \end{gather}
 The commutators of these operators are
 \begin{gather}
-\mathfrak{R}_{1 \mu L \nu}\bigl(\hat{L}_{1 \mu}, \hat{Y}_{L \nu}\bigr)=\sqrt{L(L+1)} C_{L \nu+\mu}^{L \nu+\mu} \hat{Y}_{L \mu+\nu}  \label{eq:13:2:118}\\
+\mathfrak{R}_{1 \mu L \nu}\bigl(\hat{L}_{1 \mu}, \hat{Y}_{L \nu}\bigr)=\sqrt{L(L+1)} \clebsch{L}{\nu}{1}{\mu}{L}{\mu+\nu} \hat{Y}_{L \mu+\nu}  \label{eq:13:2:118}\\
 \mathfrak{R}_{L^{\prime} \nu^{\prime}}^{1 L}\bigl(\hat{\vect{L}}_{1}, \hat{\vect{Y}}_{L}\bigr)=-\sqrt{L(L+1)} \hat{Y}_{L \mu+\nu} \delta_{L^{\prime} L} \delta_{\nu^{\prime} \mu+\nu} \label{eq:13:2:119}
 \end{gather}
 Using Eqs. \eqref{eq:13:2:104} and \eqref{eq:13:2:105}, we find the expressions for the matrix elements of the commutators,
@@ -1374,14 +1374,14 @@ Using Eqs. \eqref{eq:13:2:104} and \eqref{eq:13:2:105}, we find the expressions 
 \clebsch{L}{\nu}{1}{\mu}{L}{\nu+\mu} 
 \clebsch{l}{0}{L}{0}{l^{\prime}}{0}  \label{eq:13:2:120}\\
 & 
-\braOket{ l^{\prime} m^{\prime}}{ \mathfrak{R}_{L^{\prime} \nu^{\prime}}^{L L}\bigl(\hat{\vect{L}}_{1}, \hat{\vect{Y}}_{L}\bigr)}{l m}=-\sqrt{\frac{L(L+1)(2 L+1)(2 l+1)}{4 \pi\bigl(2 l^{\prime}+1\bigr)}} 
+\braOket{ l^{\prime} m^{\prime}}{ \mathfrak{R}_{L^{\prime} \nu^{\prime}}^{1 L}\bigl(\hat{\vect{L}}_{1}, \hat{\vect{Y}}_{L}\bigr)}{l m}=-\sqrt{\frac{L(L+1)(2 L+1)(2 l+1)}{4 \pi\bigl(2 l^{\prime}+1\bigr)}}
 \clebsch{l}{0}{L}{0}{l^{\prime}}{0} 
 \clebsch{l}{m}{L}{\mu+\nu}{l^{\prime}}{m^{\prime}} \delta_{L^{\prime} L} \label{eq:13:2:121}
 \end{align}
 In the case of products of the operators \(\widehat{\vect{S}}_{1}\) and \(\widehat{\vect{Y}}_{L}\) the matrix elements may be evaluated in the $lsJM$ representation:
 \begin{align}
-\braOket{ l^{\prime} s^{\prime} J^{\prime} M^{\prime}}{ \widehat{S}_{1 \mu} \widehat{Y}_{L \nu}}{l s J M}= & \delta_{s s^{\prime}} \sqrt{\frac{(2 J+1)(2 l+1)(2 L+1) s(s+1)(2 s+1)}{4 \pi}} 
-\clebsch{1}{0}{L}{0}{l^{\prime}}{0} \notag\\
+\braOket{ l^{\prime} s^{\prime} J^{\prime} M^{\prime}}{ \widehat{S}_{1 \mu} \widehat{Y}_{L \nu}}{l s J M}= & \delta_{s s^{\prime}} \sqrt{\frac{(2 J+1)(2 l+1)(2 L+1) s(s+1)(2 s+1)}{4 \pi}}
+\clebsch{l}{0}{L}{0}{l^{\prime}}{0} \notag\\
 & \times \sum_{k}(-1)^{L+k+1} \sqrt{2 k+1} 
 \clebsch{J}{M}{k}{\mu+\nu}{J^{\prime}}{M^{\prime}} 
 \clebsch{1}{\mu}{L}{\nu}{k}{\mu+\nu}
@@ -1389,25 +1389,25 @@ In the case of products of the operators \(\widehat{\vect{S}}_{1}\) and \(\wideh
 \end{align}
 
 \begin{align}
-\braOket{ l^{\prime} s^{\prime} J^{\prime} M^{\prime}}{\bigl\{\hat{\vect{Y}}_{L} \otimes \hat{\vect{S}}_{1}\bigr\}_{L^{\prime} \nu^{\prime}}}{l s J M}= & \delta_{s^{\prime}} \sqrt{\frac{(2 J+1)\bigl(2 L^{\prime}+1\bigr)(2 L+1)(2 l+1) s(s+1)(2 s+1)}{4 \pi}} \notag\\
-& \times 
-\clebsch{l}{0}{L}{0}{xxx^\prime}{0} 
+\braOket{ l^{\prime} s^{\prime} J^{\prime} M^{\prime}}{\bigl\{\hat{\vect{Y}}_{L} \otimes \hat{\vect{S}}_{1}\bigr\}_{L^{\prime} \nu^{\prime}}}{l s J M}= & \delta_{s s^{\prime}} \sqrt{\frac{(2 J+1)\bigl(2 L^{\prime}+1\bigr)(2 L+1)(2 l+1) s(s+1)(2 s+1)}{4 \pi}} \notag\\
+& \times
+\clebsch{l}{0}{L}{0}{l^{\prime}}{0}
 \clebsch{J}{M}{L^{\prime}}{\nu^{\prime}}{J^{\prime}}{M^{\prime}}
 \ninej{l}{L}{l^{\prime}}{s}{1}{s}{J}{L^{\prime}}{J^{\prime}} \label{eq:13:2:123}
 \end{align}
 The matrix elements of products of the operators \(\widehat{\vect{J}}_{1}\) and \(\widehat{\vect{Y}}_{L}\) in the same representation may be obtained by using the relations
 \begin{gather}
-\braOket{ l^{\prime} s^{\prime} J^{\prime} M^{\prime}}{ \hat{J}_{1 \mu} \hat{Y}_{L \nu}}{l s J M}=(-1)^{l^{\prime}+s+J+L} \delta_{s,{ }^{\prime}} \sqrt{\frac{(2 L+1)(2 l+1)(2 J+1) J^{\prime}\bigl(J^{\prime}+1\bigr)}{4 \pi}} \notag\\
-\times 
-\clebsch{J}{M}{L}{\nu}{J^{\prime}}{M+\nu} 
-\clebsch{J^{\prime}}{M+\nu}{1}{\mu}{J^{\prime}}{M^{\prime}} 
-\clebsch{L}{0}{1}{0}{l^{\prime}}{0}
+\braOket{ l^{\prime} s^{\prime} J^{\prime} M^{\prime}}{ \hat{J}_{1 \mu} \hat{Y}_{L \nu}}{l s J M}=(-1)^{l^{\prime}+s+J+L} \delta_{s s^{\prime}} \sqrt{\frac{(2 L+1)(2 l+1)(2 J+1) J^{\prime}\bigl(J^{\prime}+1\bigr)}{4 \pi}} \notag\\
+\times
+\clebsch{J}{M}{L}{\nu}{J^{\prime}}{M+\nu}
+\clebsch{J^{\prime}}{M+\nu}{1}{\mu}{J^{\prime}}{M^{\prime}}
+\clebsch{l}{0}{L}{0}{l^{\prime}}{0}
 \sixj{l}{s}{J}{J^{\prime}}{L}{l^{\prime}}  \label{eq:13:2:124}\\
-\braOket{ l^{\prime} s^{\prime} J^{\prime} M^{\prime}}{\bigl\{\hat{\vect{J}}_{1} \otimes \hat{\vect{Y}}_{L}\bigr\}_{L^{\prime} \nu^{\prime}}}{l J M}=(-1)^{l+\omega^{\prime}-J^{\prime}} \delta_{s o^{\prime}} \sqrt{\frac{(2 L+1)\bigl(2 L^{\prime}+1\bigr)(2 l+1)(2 J+1) J^{\prime}\bigl(J^{\prime}+1\bigr)\bigl(2 J^{\prime}+1\bigr)}{4 \pi}} \notag\\
-\times 
+\braOket{ l^{\prime} s^{\prime} J^{\prime} M^{\prime}}{\bigl\{\hat{\vect{J}}_{1} \otimes \hat{\vect{Y}}_{L}\bigr\}_{L^{\prime} \nu^{\prime}}}{l s J M}=(-1)^{l+s+L^{\prime}-J^{\prime}} \delta_{s s^{\prime}} \sqrt{\frac{(2 L+1)\bigl(2 L^{\prime}+1\bigr)(2 l+1)(2 J+1) J^{\prime}\bigl(J^{\prime}+1\bigr)\bigl(2 J^{\prime}+1\bigr)}{4 \pi}} \notag\\
+\times
 \clebsch{J}{M}{L^{\prime}}{\nu^{\prime}}{J^{\prime}}{M^{\prime}}
-\sixj{L}{1}{L^{\prime}}{J^{\prime}}{J}{J^{\prime}} 
-\clebsch{L}{0}{1}{0}{l^{\prime}}{0}
+\sixj{L}{1}{L^{\prime}}{J^{\prime}}{J}{J^{\prime}}
+\clebsch{l}{0}{L}{0}{l^{\prime}}{0}
 \sixj{l}{s}{J}{J^{\prime}}{L}{l^{\prime}} \label{eq:13:2:125}
 \end{gather}
 The commutators of these operators are reduced to the commutators of \(\hat{\vect{L}}_{1}\) and \(\hat{\vect{Y}}_{L}\). Namely,
@@ -1417,15 +1417,15 @@ The commutators of these operators are reduced to the commutators of \(\hat{\vec
 \end{align*}
 The matrix elements of these commutators in the $lsJM$-representation are given by
 \begin{align}
-\braOket{ l^{\prime} s^{\prime} J^{\prime} M^{\prime}}{ \mathfrak{R}_{1 \mu L \nu}\bigl(\hat{J}_{1 \mu}, \hat{Y}_{L \nu}\bigr)}{l_{s} J M}=&(-1)^{J+l^{\prime}+s+L} \delta_{\theta^{\prime}} \sqrt{\frac{L(L+1)(2 L+1)(2 l+1)(2 J+1)}{4 \pi}}\notag \\
-&\times 
-\clebsch{1}{0}{L}{0}{l^{\prime}}{0}
+\braOket{ l^{\prime} s^{\prime} J^{\prime} M^{\prime}}{ \mathfrak{R}_{1 \mu L \nu}\bigl(\hat{J}_{1 \mu}, \hat{Y}_{L \nu}\bigr)}{l s J M}=&(-1)^{J+l^{\prime}+s+L} \delta_{s s^{\prime}} \sqrt{\frac{L(L+1)(2 L+1)(2 l+1)(2 J+1)}{4 \pi}}\notag \\
+&\times
+\clebsch{l}{0}{L}{0}{l^{\prime}}{0}
 \sixj{l}{s}{J}{J^{\prime}}{L}{l^{\prime}} 
 \clebsch{L}{\nu}{1}{\mu}{L}{\mu+\nu} 
 \clebsch{J}{M}{L}{\mu+\nu}{J^{\prime}}{M^{\prime}} , \label{eq:13:2:126}\\
-\braOket{ l^{\prime} s^{\prime} J^{\prime} M^{\prime}}{ \mathfrak{R}_{L^{\prime} \nu^{\prime}}^{1 L}\bigl(\hat{\vect{J}}_{1}, \hat{\vect{Y}}_{L}\bigr)}{l s J M}=&(-1)^{J+l^{\prime}+s+L+1} \delta_{s, \prime^{\prime}} \delta_{L L^{\prime}} \sqrt{\frac{L(L+1)(2 L+1)(2 l+1)(2 J+1)}{4 \pi}}\notag \\
-& \times 
-\clebsch{1}{0}{L}{0}{l^{\prime}}{0}
+\braOket{ l^{\prime} s^{\prime} J^{\prime} M^{\prime}}{ \mathfrak{R}_{L^{\prime} \nu^{\prime}}^{1 L}\bigl(\hat{\vect{J}}_{1}, \hat{\vect{Y}}_{L}\bigr)}{l s J M}=&(-1)^{J+l^{\prime}+s+L+1} \delta_{s s^{\prime}} \delta_{L L^{\prime}} \sqrt{\frac{L(L+1)(2 L+1)(2 l+1)(2 J+1)}{4 \pi}}\notag \\
+& \times
+\clebsch{l}{0}{L}{0}{l^{\prime}}{0}
 \sixj{l}{s}{J}{J^{\prime}}{L}{l^{\prime}} 
 \clebsch{J}{M}{L}{\nu^{\prime}}{J^{\prime}}{M^{\prime}}. \label{eq:13:2:127}
 \end{align}
