@@ -129,8 +129,6 @@ def LSY_book(lp,s,Jp,Mp,k,kap,L,nu,l,J,M,cg3,withpre):
             *w6(l,s,J,J1,L,lp)*w9(lp,1,lp,s,1,s,J1,k,Jp))
     return pre*cg3*tot
 c142=[(1,h,3*h,h,1,0,1,0,2,3*h,h),(2,h,3*h,h,1,0,1,0,2,3*h,h),(3,h,5*h,h,1,0,2,1,2,3*h,h),(1,h,h,h,2,0,1,0,1,3*h,h)]
-for tag,cg3,wp in [("CG=C^{l'0}_{L0,l0}+pre",lambda c:CG(c[6],c[9-2] if False else 0,0),0)]:
-    pass
 print("142 (CG3=C^{l'0}_{L0,l0}, WITH sqrt prefactor):",
       all(close(LSY_true(*c),LSY_book(*c,CG(c[6],c[8],c[0],0,0,0),True)) for c in c142))
 print("142 (CG3=C^{l'0}_{L0,10},  no prefactor):",
