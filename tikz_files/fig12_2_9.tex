@@ -1,0 +1,25 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{diagrams}
+\begin{document}
+$
+\begin{tikzpicture}[baseline=0pt,font=\small]
+\begin{scope}
+  \dhexflat{0}{0}{c}{f}{a}{d}{e}{b}
+  \draw[dl](v2)--(v5)node[wb,pos=0.28]{$p$};
+  \draw[dlu](v1)--(v4)node[wb,pos=0.28]{$X$};
+  \draw[dl](v3)--(v0)node[wb,pos=0.72]{$q$};
+\end{scope}\begin{scope}[xshift=2.2cm]
+    \dsixjsq[1]{0}{0}{f}{e}{a}{b}{s}{X}
+  \end{scope}
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \begin{scope}
+  \dsixjsq{0}{0}{b}{c}{a}{d}{s}{p}
+\end{scope}
+\begin{scope}[xshift=2cm]
+  \dsixjsq{0}{0}{c}{f}{d}{e}{s}{q}
+\end{scope}
+\end{tikzpicture}
+$
+\end{document}

@@ -1,0 +1,51 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{diagrams}
+% shared LHS of fig12_2_11 & fig12_2_12: two pointy-top 9j-hexagons
+% (defined locally in Chap12.tex, not in diagrams.sty)
+\newcommand{\pElevenLHS}{%
+  \begin{scope}
+    \dninehex{0}{0}{a}{b}{d}{q}{X}{r}
+    \draw[dlu](hLR)--(hUR); % X edge bold
+    \draw[dl](hT)--(hB)node[wb,pos=0.27]{$c$};
+    \draw[dl](hUR)--(hLL)node[wb,pos=0.30]{$s$};
+    \draw[dl](hUL)--(hLR)node[wb,pos=0.70]{$p$};
+  \end{scope}
+  \begin{scope}[xshift=3cm]
+    \dninehex{0}{0}{r}{X}{q}{h}{f}{e}
+    \draw[dlu](hUL)--(hLL); % X edge bold
+    \draw[dl](hT)--(hB)node[wb,pos=0.27]{$g$};
+    \draw[dl](hUR)--(hLL)node[wb,pos=0.30]{$p$};
+    \draw[dl](hUL)--(hLR)node[wb,pos=0.70]{$s$};
+  \end{scope}}
+\begin{document}
+$
+\begin{tikzpicture}[baseline=0pt,font=\small]\pElevenLHS\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  % octagon vertices
+  \coordinate(Ta)at(-0.6,1.4);\coordinate(Tb)at(0.6,1.4);
+  \coordinate(Ra)at(1.4,0.6);\coordinate(Rb)at(1.4,-0.6);
+  \coordinate(Qa)at(0.6,-1.4);\coordinate(Qb)at(-0.6,-1.4);
+  \coordinate(La)at(-1.4,-0.6);\coordinate(Lb)at(-1.4,0.6);
+  % octagon edges
+  \draw[dl](Ta)--(Tb)node[midway,above,inner sep=1pt]{$r$};
+  \draw[dl](Tb)--(Ra)node[midway,above right,inner sep=1pt]{$e$};
+  \draw[dl](Ra)--(Rb)node[midway,right,inner sep=1pt]{$f$};
+  \draw[dl](Rb)--(Qa)node[midway,below right,inner sep=1pt]{$h$};
+  \draw[dl](Qa)--(Qb)node[midway,below,inner sep=1pt]{$q$};
+  \draw[dl](Qb)--(La)node[midway,below left,inner sep=1pt]{$d$};
+  \draw[dl](La)--(Lb)node[midway,left,inner sep=1pt]{$b$};
+  \draw[dl](Lb)--(Ta)node[midway,above left,inner sep=1pt]{$a$};
+  % internal # lattice (2 verticals + 2 horizontals) -> central square
+  \draw[dl](Ta)--(Qb);
+  \draw[dl](Tb)--(Qa);
+  \draw[dl](Lb)--(Ra);
+  \draw[dl](La)--(Rb);
+  % central-square edge labels
+  \node[wb,inner sep=1.5pt] at(0,0.6){$p$};
+  \node[wb,inner sep=1.5pt] at(0.6,0){$g$};
+  \node[wb,inner sep=1.5pt] at(0,-0.6){$s$};
+  \node[wb,inner sep=1.5pt] at(-0.6,0){$c$};
+\end{tikzpicture}
+$
+\end{document}

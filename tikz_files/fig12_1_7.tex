@@ -1,0 +1,41 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{diagrams}
+\begin{document}
+$
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  % apex-right triangle: base q on the left (vertical), apex VR on the right
+  \coordinate(c)at(0,0);
+  \coordinate(TL)at($(c)+(120:0.95)$);\coordinate(BL)at($(c)+(240:0.95)$);\coordinate(VR)at($(c)+(0:0.95)$);
+  \draw[dl](TL)--(BL)node[midway,left,inner sep=1pt]{$q$};
+  \draw[dl](TL)--(VR)node[midway,above right,inner sep=1pt]{$r$};
+  \draw[dl](BL)--(VR)node[midway,below right,inner sep=1pt]{$p$};
+  \draw[dl](TL)--($(TL)+(120:0.7)$)node[at end,above left]{$b\beta$};
+  \draw[dl](BL)--($(BL)+(240:0.7)$)node[at end,below left]{$a\alpha$};
+  \coordinate(N)at($(VR)+(1.1,0)$);
+  \draw[dl](VR)--(N)node[midway,above,inner sep=1pt]{$s$};
+  \draw[dl](N)--($(N)+(45:0.7)$)node[at end,right]{$c\gamma$};
+  \draw[dl](N)--($(N)+(-45:0.7)$)node[at end,right]{$d\delta$};
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  % 6j-triangle apex-right (q left edge, r top, p bottom; inner b,a,s)
+  \coordinate(c)at(0,0);
+  \coordinate(TL)at($(c)+(120:0.95)$);\coordinate(BL)at($(c)+(240:0.95)$);\coordinate(VR)at($(c)+(0:0.95)$);
+  \draw[dl](TL)--(BL)node[midway,left,inner sep=1pt]{$q$};
+  \draw[dl](TL)--(VR)node[midway,above right,inner sep=1pt]{$r$};
+  \draw[dl](BL)--(VR)node[midway,below right,inner sep=1pt]{$p$};
+  \draw[dl](c)--(TL)node[pos=0.5,right,inner sep=1pt]{$b$};
+  \draw[dl](c)--(BL)node[pos=0.5,right,inner sep=1pt]{$a$};
+  \draw[dl](c)--(VR)node[pos=0.4,above,inner sep=1pt]{$s$};
+\end{tikzpicture}
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  % bowtie with s middle
+  \coordinate(L)at(0,0);\coordinate(R)at(1.5,0);
+  \draw[dl](L)--(R)node[midway,above,inner sep=1pt]{$s$};
+  \draw[dl](L)--($(L)+(120:0.8)$)node[at end,left]{$b\beta$};
+  \draw[dl](L)--($(L)+(240:0.8)$)node[at end,left]{$a\alpha$};
+  \draw[dl](R)--($(R)+(60:0.8)$)node[at end,right]{$c\gamma$};
+  \draw[dl](R)--($(R)+(-60:0.8)$)node[at end,right]{$d\delta$};
+\end{tikzpicture}
+$
+\end{document}

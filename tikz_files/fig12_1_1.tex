@@ -1,0 +1,17 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{diagrams}
+\begin{document}
+$
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \coordinate(L)at(0,0){};\coordinate(R)at(1.5,0){};
+  \draw[dl](-0.95,0)--(L)node[at start,above]{$a\alpha$};
+  \draw[dl](R)--(2.45,0)node[at end,above]{$a'\alpha'$};
+  \dlens{L}{R}{p}{q}
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \draw[dl](0,0)--(1.9,0)node[pos=0.1,above]{$a\alpha$}node[pos=0.9,above]{$a'\alpha'$};
+  \dtheta{3.1}{0}{p}{a}{q}
+\end{tikzpicture}
+$
+\end{document}

@@ -1,0 +1,41 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{diagrams}
+\begin{document}
+$
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \coordinate(VL)at(-1.7,0);\coordinate(VR)at(1.7,0);
+  \draw[dl](-2.6,0)--(VL)node[at start,left]{$a\alpha$};
+  \draw[dl](VR)--(2.6,0)node[at end,right]{$a'\alpha'$};
+  \coordinate(qa)at(-0.7,0.6);\coordinate(qb)at(0.7,0.6);
+  \draw[dl](VL)--(qa)node[midway,above left,inner sep=1pt]{$q$};
+  \draw[dl](qb)--(VR)node[midway,above right,inner sep=1pt]{$q'$};
+  \draw[dl](qa)to[bend left=50]node[midway,above,inner sep=1pt]{$u$}(qb);
+  \draw[dl](qa)to[bend right=50]node[midway,below,inner sep=1pt]{$v$}(qb);
+  \coordinate(pa)at(-0.7,-0.6);\coordinate(pb)at(0.7,-0.6);
+  \draw[dl](VL)--(pa)node[midway,below left,inner sep=1pt]{$p$};
+  \draw[dl](pb)--(VR)node[midway,below right,inner sep=1pt]{$p'$};
+  \draw[dl](pa)to[bend left=50]node[midway,above,inner sep=1pt]{$t$}(pb);
+  \draw[dl](pa)to[bend right=50]node[midway,below,inner sep=1pt]{$s$}(pb);
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \draw[dl](0,0)--(1.7,0)node[pos=0.1,above]{$a\alpha$}node[pos=0.9,above]{$a'\alpha'$};
+\end{tikzpicture}
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \begin{scope}[yshift=1.2cm]
+    \dtheta{0}{0}{u}{v}{q}
+  \end{scope}
+\begin{scope}
+  \dtheta{0}{0}{q}{a}{p}
+\end{scope}
+\begin{scope}[yshift=-1.2cm]
+  \dtheta{0}{0}{p}{t}{s}\end{scope}
+\begin{scope}[xshift=1cm,yshift=0.5cm]
+  \coordinate(L)at(0,0);\coordinate(R)at(1.1,0);\dlens{L}{R}{q'}{q}
+\end{scope}
+\begin{scope}[xshift=1cm,yshift=-0.5cm]
+  \coordinate(L)at(0,0);\coordinate(R)at(1.1,0);\dlens{L}{R}{p}{p'}
+\end{scope}
+\end{tikzpicture}
+$
+\end{document}

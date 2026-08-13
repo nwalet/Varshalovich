@@ -23,88 +23,26 @@ Hereafter, we use the notation
 \sum_{\psi \kappa}(-1)^{p-\psi+q-\kappa}\threej{a}{p}{q}{-\alpha}{\psi}{\kappa} \label{chap12:eq:3}\threej{p}{q}{a^{\prime}}{-\psi}{-\kappa}{\alpha^{\prime}}=\frac{(-1)^{a+\alpha}}{\Fact{a}^{2}}\{a p q\} \delta_{a a^{\prime}} \delta_{\alpha \alpha^{\prime}}
 \end{equation}
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \coordinate(L)at(0,0){};\coordinate(R)at(1.5,0){};
-  \draw[dl](-0.95,0)--(L)node[at start,above]{$a\alpha$};
-  \draw[dl](R)--(2.45,0)node[at end,above]{$a'\alpha'$};
-  \dlens{L}{R}{p}{q}
-\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \draw[dl](0,0)--(1.9,0)node[pos=0.1,above]{$a\alpha$}node[pos=0.9,above]{$a'\alpha'$};
-  \dtheta{3.1}{0}{p}{a}{q}
-\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_1_1}
 \]
 \begin{equation}
 \sum_{q \kappa}(-1)^{q-\kappa} \Fact{q}^{2}\threej{a}{b}{q}{-\alpha}{-\beta}{\kappa} \label{chap12:eq:4}\threej{q}{a}{b}{-\kappa}{\alpha^{\prime}}{\beta^{\prime}}=(-1)^{a+\alpha+b+\beta} \delta_{\alpha \alpha^{\prime}} \delta_{\beta \beta^{\prime}},
 \end{equation}
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \coordinate(L)at(0,0){};\coordinate(R)at(1.6,0){};
-  \draw[dlu](L)--(R);
-  \draw[dl](-0.85,0.75)--(L)node[at start,left]{$a\alpha$};
-  \draw[dl](-0.85,-0.75)--(L)node[at start,left]{$b\beta$};
-  \draw[dl](R)--(2.45,0.75)node[at end,right]{$a\alpha'$};
-  \draw[dl](R)--(2.45,-0.75)node[at end,right]{$b\beta'$};
-\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \draw[dl](0,0.5)--(1.9,0.5)node[pos=0.08,above]{$a\alpha$}node[pos=0.92,above]{$a\alpha'$};
-  \draw[dl](0,-0.5)--(1.9,-0.5)node[pos=0.08,above]{$b\beta$}node[pos=0.92,above]{$b\beta'$};
-\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_1_2}
 \]
 \begin{equation}
 \sum_{\kappa}(-1)^{q-\kappa}\threej{a}{b}{q}{\alpha}{\beta}{-\kappa} \label{chap12:eq:5}\threej{q}{d}{c}{\kappa}{\delta}{\gamma}=(-1)^{2 a} \sum_{x \xi}(-1)^{x-\xi} \Fact{x}^{2}\threej{a}{c}{x}{\alpha}{\gamma}{-\xi}\threej{x}{d}{b}{\xi}{\delta}{\beta}\sixj{b}{d}{x}{c}{a}{q},
 \end{equation}
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \coordinate(L)at(0,0){};\coordinate(R)at(1.6,0){};
-  \draw[dl](L)--(R)node[midway,above]{$q$};
-  \draw[dl](-0.85,0.75)--(L)node[at start,left]{$a\alpha$};
-  \draw[dl](-0.85,-0.75)--(L)node[at start,left]{$b\beta$};
-  \draw[dl](R)--(2.45,0.75)node[at end,right]{$c\gamma$};
-  \draw[dl](R)--(2.45,-0.75)node[at end,right]{$d\delta$};
-\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  % vertical bowtie, X ultra-thick
-  \coordinate(T)at(0,0.8){};\coordinate(B)at(0,-0.8){};
-  \draw[dlu](T)--(B)node[midway,right]{$X$};
-  \draw[dl](T)--(-0.8,1.55)node[at end,left]{$a\alpha$};
-  \draw[dl](T)--(0.8,1.55)node[at end,right]{$c\gamma$};
-  \draw[dl](B)--(-0.8,-1.55)node[at end,left]{$b\beta$};
-  \draw[dl](B)--(0.8,-1.55)node[at end,right]{$d\delta$};
-\end{tikzpicture}
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \dsixjsq[1]{0}{0}{a}{c}{b}{d}{q}{X}
-\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_1_3}
 \]
 \subsection{Sums Involving Products of Three $3 j m$ Symbols}
 \begin{equation}
 \sum_{\kappa \psi \rho}(-1)^{p-\psi+q-\kappa+r-\rho}\threej{p}{a}{q}{\psi}{\alpha}{-\kappa} \label{chap12:eq:6}\threej{q}{b}{r}{\kappa}{\beta}{-\rho}\threej{r}{c}{p}{\rho}{\gamma}{-\psi}=\threej{a}{b}{c}{-\alpha}{-\beta}{-\gamma}\sixj{a}{b}{c}{r}{p}{q},
 \end{equation}
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \coordinate(L) at (180:0.9);
-  \coordinate(T) at (60:0.9);
-  \coordinate(B) at (300:0.9);
-  \draw[dl](L)--($(L)+(180:0.6)$)node[left]{$a\alpha$};
-  \draw[dl](T)--($(T)+(60:0.6)$)node[at end,right]{$b\beta$};
-  \draw[dl](B)--($(B)+(300:0.6)$)node[at end,right]{$c\gamma$};
-  \draw[dl](L)--(T)node[midway,above left]{$q$};
-  \draw[dl](T)--(B)node[midway,right]{$r$};
-  \draw[dl](L)--(B)node[midway,below left]{$p$};
-\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \coordinate(N)at(0,0);
-  \draw[dl](-0.95,0)--(N)node[at start,left]{$a\alpha$};
-  \draw[dl](N)--(0.8,0.75)node[at end,right]{$b\beta$};
-  \draw[dl](N)--(0.8,-0.75)node[at end,right]{$c\gamma$};
-\end{tikzpicture}
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \dsixjtri{0}{0}{q}{r}{p}{a}{b}{c}
-\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_1_4}
 \]
 
 \begin{gather}
@@ -113,54 +51,7 @@ Hereafter, we use the notation
 \varepsilon \eta}} \Fact{x y}^{2}\threej{a}{d}{x}{\alpha}{\delta}{\xi}\threej{x}{c}{y}{-\xi}{-\gamma}{-\eta}\threej{y}{b}{e}{\eta}{\beta}{\varepsilon}\ninej{a}{b}{p}{d}{e}{q}{x}{y}{c}, \label{chap12:eq:7}
 \end{gather}
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  % LHS zigzag tree of three 3jm nodes joined by p,q
-  \coordinate(C) at (0,0);
-  \coordinate (Ht) at (90:1.2);  
-  \coordinate (Hl) at (150:1.2); \coordinate (Hr) at (30:1.2); 
-  \coordinate (Hll) at (210:1.2); \coordinate(Hrr) at (-30:1.2);
-  \coordinate (Hlu) at ($(Hl)+(150:1.2)$);
-  \coordinate (Hru) at ($(Hr)+(30:1.2)$);
-  \coordinate (Htu) at ($(Ht)+(90:1.2)$);
-  \draw[dl](Ht)--(Hr)node[midway,above right,inner sep=1pt]{$q$};
-  \draw[dl](Ht)--(Hl)node[midway,above left,inner sep=1pt]{$p$};
-  \draw[dl](Hl)--(Hlu)node[at end,left]{$b\beta$};
-  \draw[dl](Hl)--(Hll)node[at end,below]{$a\alpha$};
-  \draw[dl](Ht)--(Htu)node[at end,above]{$c\gamma$};
-  \draw[dl](Hr)--(Hru)node[at end,right]{$d\delta$};
-  \draw[dl](Hr)--(Hrr)node[at end,below]{$e\epsilon$};
-\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \coordinate(C) at (0,0);
-  \coordinate (Ht) at (90:1.2);  
-  \coordinate (Hl) at (150:1.2); \coordinate (Hr) at (30:1.2); 
-  \coordinate (Hll) at (210:1.2); \coordinate(Hrr) at (-30:1.2);
-  \coordinate (Hlu) at ($(Hl)+(150:1.2)$);
-  \coordinate (Hru) at ($(Hr)+(30:1.2)$);
-  \coordinate (Htu) at ($(Ht)+(90:1.2)$);
-  \draw[dlu](Ht)--(Hr)node[midway,above right,inner sep=1pt]{$y$};
-  \draw[dlu](Ht)--(Hl)node[midway,above left,inner sep=1pt]{$x$};
-  \draw[dl](Hl)--(Hlu)node[at end,left]{$d\delta$};
-  \draw[dl](Hl)--(Hll)node[at end,below]{$a\alpha$};
-  \draw[dl](Ht)--(Htu)node[at end,above]{$c\gamma$};
-  \draw[dl](Hr)--(Hru)node[at end,right]{$b\beta$};
-  \draw[dl](Hr)--(Hrr)node[at end,below]{$e\epsilon$};
-  % 9j-hexagon {a b p; d e q; x y c}; outer x,y (summed) ultra-thick; 5 ext legs
-  \coordinate(hc)at(0,0);
-  \coordinate(hT)at($(hc)+(90:0.8)$);\coordinate(hUL)at($(hc)+(150:0.8)$);
-  \coordinate(hLL)at($(hc)+(210:0.8)$);\coordinate(hB)at($(hc)+(270:0.8)$);
-  \coordinate(hLR)at($(hc)+(330:0.8)$);\coordinate(hUR)at($(hc)+(30:0.8)$);
-  \draw[dlu](hT)--(hUL)node[midway,below right,inner sep=1pt]{$x$};
-  \draw[dlu](hUR)--(hT)node[midway,below left,inner sep=1pt]{$y$};
-  \draw[dl](hUL)--(hLL)node[midway,left,inner sep=1pt]{$a$};
-  \draw[dl](hLR)--(hUR)node[midway,right,inner sep=1pt]{$e$};
-  \draw[dl](hLL)--(hB)node[midway,below left,inner sep=1pt]{$p$};
-  \draw[dl](hB)--(hLR)node[midway,below right,inner sep=1pt]{$q$};
-  \draw[dl](hT)--(hB)node[pos=0.7,right,inner sep=1pt]{$c$};
-  \draw[dl](hUL)--(hLR)node[pos=0.28,below,inner sep=1pt]{$b$};
-  \draw[dl](hUR)--(hLL)node[pos=0.28,below,inner sep=1pt]{$d$};
-\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_1_5}
 \]
 
 \subsection{Sums Involving Products of Four $3 j m$ Symbols}
@@ -175,27 +66,7 @@ p & a \\
 \end{gather}
 
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \coordinate(M)at (1,0);
-  \coordinate(T)at($(M)+(90:0.85)$);
-  \coordinate(B)at($(M)+(-90:0.85)$);
-  \coordinate(L)at($(M)+(180:0.85)$);
-  \coordinate(R)at($(M)+(0:0.85)$);
-  \draw[dl]($(L)-(0.7,0)$)--(L)node[at start,left]{$a\alpha$};
-  \draw[dl](R)--($(R)+(0.7,0)$)node[at end,right]{$a'\alpha'$};
-  \draw[dl](L)--(T)node[midway,above left]{$q$};
-  \draw[dl](T)--(R)node[midway,above right]{$r$};
-  \draw[dl](L)--(B)node[midway,below left]{$p$};
-  \draw[dl](B)--(R)node[midway,below right]{$s$};
-  \draw[dl](T)--(B)node[pos=0.35,right]{$t$};
-\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \draw[dl](0,0)--(1.9,0)node[pos=0.08,above]{$a\alpha$}node[pos=0.92,above]{$a'\alpha'$};
-\end{tikzpicture}
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \dsixjsq{0}{0}{q}{r}{p}{s}{a}{t}
-\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_1_6}
 \]
 
 \begin{gather}
@@ -204,41 +75,7 @@ p & a \\
 \end{gather}
 
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  % apex-right triangle: base q on the left (vertical), apex VR on the right
-  \coordinate(c)at(0,0);
-  \coordinate(TL)at($(c)+(120:0.95)$);\coordinate(BL)at($(c)+(240:0.95)$);\coordinate(VR)at($(c)+(0:0.95)$);
-  \draw[dl](TL)--(BL)node[midway,left,inner sep=1pt]{$q$};
-  \draw[dl](TL)--(VR)node[midway,above right,inner sep=1pt]{$r$};
-  \draw[dl](BL)--(VR)node[midway,below right,inner sep=1pt]{$p$};
-  \draw[dl](TL)--($(TL)+(120:0.7)$)node[at end,above left]{$b\beta$};
-  \draw[dl](BL)--($(BL)+(240:0.7)$)node[at end,below left]{$a\alpha$};
-  \coordinate(N)at($(VR)+(1.1,0)$);
-  \draw[dl](VR)--(N)node[midway,above,inner sep=1pt]{$s$};
-  \draw[dl](N)--($(N)+(45:0.7)$)node[at end,right]{$c\gamma$};
-  \draw[dl](N)--($(N)+(-45:0.7)$)node[at end,right]{$d\delta$};
-\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  % 6j-triangle apex-right (q left edge, r top, p bottom; inner b,a,s)
-  \coordinate(c)at(0,0);
-  \coordinate(TL)at($(c)+(120:0.95)$);\coordinate(BL)at($(c)+(240:0.95)$);\coordinate(VR)at($(c)+(0:0.95)$);
-  \draw[dl](TL)--(BL)node[midway,left,inner sep=1pt]{$q$};
-  \draw[dl](TL)--(VR)node[midway,above right,inner sep=1pt]{$r$};
-  \draw[dl](BL)--(VR)node[midway,below right,inner sep=1pt]{$p$};
-  \draw[dl](c)--(TL)node[pos=0.5,right,inner sep=1pt]{$b$};
-  \draw[dl](c)--(BL)node[pos=0.5,right,inner sep=1pt]{$a$};
-  \draw[dl](c)--(VR)node[pos=0.4,above,inner sep=1pt]{$s$};
-\end{tikzpicture}
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  % bowtie with s middle
-  \coordinate(L)at(0,0);\coordinate(R)at(1.5,0);
-  \draw[dl](L)--(R)node[midway,above,inner sep=1pt]{$s$};
-  \draw[dl](L)--($(L)+(120:0.8)$)node[at end,left]{$b\beta$};
-  \draw[dl](L)--($(L)+(240:0.8)$)node[at end,left]{$a\alpha$};
-  \draw[dl](R)--($(R)+(60:0.8)$)node[at end,right]{$c\gamma$};
-  \draw[dl](R)--($(R)+(-60:0.8)$)node[at end,right]{$d\delta$};
-\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_1_7}
 \]
 
 \begin{align}
@@ -247,80 +84,13 @@ p & a \\
 \end{align}
 
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \dsq{0}{0}{p}{q}{r}{s}
-  \draw[dl](sqTL)--($(sqTL)+(135:0.7)$)node[at end,above]{$c\gamma$};
-  \draw[dl](sqTR)--($(sqTR)+(45:0.7)$)node[at end,above]{$d\delta$};
-  \draw[dl](sqBL)--($(sqBL)+(225:0.7)$)node[at end,below]{$b\beta$};
-  \draw[dl](sqBR)--($(sqBR)+(-45:0.7)$)node[at end,below]{$a\alpha$};
-\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  % left 6j-triangle apex-right, legs cgamma(up)/bbeta(down), X exits right
-  \coordinate(c)at(0,0);
-  \coordinate(TL)at($(c)+(120:0.9)$);
-  \coordinate(BL)at($(c)+(240:0.9)$);
-  \coordinate(VL)at($(c)+(0:0.9)$);
-  \draw[dl](TL)--(BL)node[midway,left,inner sep=1pt]{$r$};
-  \draw[dl](TL)--(VL)node[midway,above right,inner sep=1pt]{$p$};
-  \draw[dl](BL)--(VL)node[midway,below right,inner sep=1pt]{$q$};
-  \draw[dl](c)--(TL)node[pos=0.5,right,inner sep=1pt]{$c$};
-  \draw[dl](c)--(BL)node[pos=0.5,right,inner sep=1pt]{$b$};
-  \draw[dlu](c)--(VL)node[pos=0.4,above,inner sep=1pt]{$x$};
-  \coordinate(c2)at($(VL)+(2.4,0)$);
-  \coordinate(TR)at($(c2)+(60:0.9)$);
-  \coordinate(BR)at($(c2)+(-60:0.9)$);
-  \coordinate(VR)at($(c2)+(180:0.9)$);
-  \draw[dl](TR)--(BR)node[midway,right,inner sep=1pt]{$s$};
-  \draw[dl](VR)--(TR)node[midway,above left,inner sep=1pt]{$p$};
-  \draw[dl](VR)--(BR)node[midway,below left,inner sep=1pt]{$q$};
-  \draw[dl](c2)--(TR)node[pos=0.5,left,inner sep=1pt]{$d$};
-  \draw[dl](c2)--(BR)node[pos=0.5,left,inner sep=1pt]{$a$};
-  \draw[dlu](c2)--(VR)node[pos=0.4,above,inner sep=1pt]{$x$};
-  % external legs attach near the apex, angling away from the centre
-   \coordinate(VRs) at ([xshift=-2mm]VR);
-   \coordinate(VLs) at ([xshift=2mm]VL);
-  \draw[dl](VRs)--($(VRs)+(55:0.95)$)node[at end,above]{$c\gamma$};
-  \draw[dl](VRs)--($(VRs)+(-55:0.95)$)node[at end,below]{$a\alpha$};
-  \draw[dl](VLs)--($(VLs)+(125:0.95)$)node[at end,above]{$d\delta$};
-  \draw[dl](VLs)--($(VLs)+(-125:0.95)$)node[at end,below]{$b\beta$};
-% ultra-thick summed X joining the two apexes
-  \draw[dlu](VRs)--(VLs)node[midway,above,inner sep=1pt]{$x$};
-  \end{tikzpicture}
+  \includegraphics[alt={}]{fig12_1_8}
 \]
 \begin{equation}
 =(-1)^{2 r-s-d-a-q} \sum_{x \xi}(-1)^{x-\xi} \Fact{x}^{2}\threej{a}{x}{c}{\alpha}{-\xi}{\gamma} \label{chap12:eq:11}\threej{b}{x}{d}{\beta}{\xi}{\delta}\ninej{a}{p}{q}{x}{d}{b}{c}{s}{r},
 \end{equation}
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  % LHS: two short verticals q,s with crossing diagonals p,r and 4 corner legs
-  \coordinate(nw)at(135:2);\coordinate(sw)at(-135:2);
-  \coordinate(ne)at(45:2);\coordinate(se)at(-45:2);
-  \coordinate(NW)at($(nw)!0.25!(se)$);\coordinate(SE)at($(nw)!0.75!(se)$);
-  \coordinate(NE)at($(ne)!0.25!(sw)$);\coordinate(SW)at($(ne)!0.75!(sw)$);
-  \draw[dl](nw)--(se) node[at start,above] {$c\gamma$} node[at end,below]{$a\alpha$};
-  \draw[dl](ne)--(sw) node[at start,above] {$d\delta$} node[at end,below]{$b\beta$};
-  \draw[dl](NW)--(SW)node[midway,left,inner sep=1pt]{$q$};
-  \draw[dl](NE)--(SE)node[midway,right,inner sep=1pt]{$s$};
-  \draw[dl](SW)--(NE)node[pos=0.15,below,inner sep=1pt]{$p$};
-  \draw[dl](SE)--(NW)node[pos=0.15,below,inner sep=1pt]{$r$};
-\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  % vertical bowtie, X ultra-thick
-  \coordinate(T)at(0,0.8);\coordinate(B)at(0,-0.8);
-  \draw[dlu](T)--(B)node[midway,right,inner sep=1pt]{$X$};
-  \draw[dl](T)--($(T)+(135:0.8)$)node[at end,left]{$b\beta$};
-  \draw[dl](T)--($(T)+(45:0.8)$)node[at end,right]{$d\delta$};
-  \draw[dl](B)--($(B)+(225:0.8)$)node[at end,left]{$a\alpha$};
-  \draw[dl](B)--($(B)+(-45:0.8)$)node[at end,right]{$c\gamma$};
-\end{tikzpicture}
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \dninehex{0}{0}{b}{q}{a}{c}{s}{d}
-  \draw[dlu](hT)--(hB)node[pos=0.28,right,inner sep=1pt]{$x$};
-  \draw[dl](hUR)--(hLL)node[pos=0.72,below,inner sep=1pt]{$p$};
-  \draw[dl](hUL)--(hLR)node[pos=0.72,below,inner sep=1pt]{$r$};
-\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_1_9}
 \]
 
 \subsection{Sums Involving Products of Five 3jm Symbols}
@@ -331,39 +101,7 @@ p & a \\
 \end{align}
 
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \coordinate(Ln)at(0,0);
-  \coordinate(TL)at(1.1,0.75);\coordinate(TR)at(2.5,0.75);
-  \coordinate(BL)at(1.1,-0.75);\coordinate(BR)at(2.5,-0.75);
-  \draw[dl](-0.9,0)--(Ln)node[at start,left]{$a\alpha$};
-  \draw[dl](Ln)--(TL)node[midway,above left,inner sep=1pt]{$u$};
-  \draw[dl](Ln)--(BL)node[midway,below left,inner sep=1pt]{$v$};
-  \draw[dl](TL)--(TR)node[midway,above,inner sep=1pt]{$p$};
-  \draw[dl](BL)--(BR)node[midway,below,inner sep=1pt]{$r$};
-  \draw[dl](TR)--(BR)node[midway,right,inner sep=1pt]{$t$};
-  \draw[dl](TL)--(BR)node[pos=0.32,above right,inner sep=1pt]{$q$};
-  \draw[dl](BL)--(TR)node[pos=0.32,below right,inner sep=1pt]{$s$};
-\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \draw[dl](-0.9,0)--(0,0)node[at start,left]{$a\alpha$};
-  \fill(0,0)circle(1.6pt);
-\end{tikzpicture}
-\quad
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \coordinate(L)at(0,0);\coordinate(R)at(1.1,0);\dlens{L}{R}{u}{v}
-\end{tikzpicture}
-\quad
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \coordinate(TL)at(0,0.8);\coordinate(TR)at(1.6,0.8);
-  \coordinate(BL)at(0,-0.8);\coordinate(BR)at(1.6,-0.8);
-  \draw[dl](TL)--(TR)node[midway,above,inner sep=1pt]{$p$};
-  \draw[dl](BL)--(BR)node[midway,below,inner sep=1pt]{$r$};
-  \draw[dl](TL)--(BL)node[midway,left,inner sep=1pt]{$u$};
-  \draw[dl](TR)--(BR)node[midway,right,inner sep=1pt]{$t$};
-  \draw[dl](TL)--(BR)node[pos=0.3,above,inner sep=1pt]{$q$};
-  \draw[dl](BL)--(TR)node[pos=0.3,below,inner sep=1pt]{$s$};
-\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_1_10}
 \]
 
 \begin{align}
@@ -373,36 +111,7 @@ p & a \\
 \end{align}
 
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  % LHS: aa -> triangle (q,p) then r,s / t,u inner to legs bb, cc
-  \coordinate(Ln)at(0,0);\coordinate(A)at(30:2.5);\coordinate(B)at(-30:2.5);
-  \coordinate(A1) at ($(Ln)!0.3!(A)$);\coordinate(A2) at ($(Ln)!0.6!(A)$);
-  \coordinate(B1) at ($(Ln)!0.3!(B)$);\coordinate(B2) at ($(Ln)!0.6!(B)$);
-  \draw[dl](-0.9,0)--(Ln)node[at start,left]{$a\alpha$};
-  \draw[dl](Ln)--(A1)node[midway,above,inner sep=1pt]{$q$};
-  \draw[dl](A1)--(A2)node[midway,above,inner sep=1pt]{$r$};
-  \draw[dl](A2)--(A)node[at end,right]{$b\beta$};
-  \draw[dl](Ln)--(B1)node[midway,below,inner sep=1pt]{$p$};
-  \draw[dl](B1)--(B2)node[midway,below,inner sep=1pt]{$s$};
-  \draw[dl](B2)--(B)node[at end,right]{$c\gamma$};
-  \draw[dl](A1)--(B1)node[midway,right,inner sep=1pt]{$t$};
-  \draw[dl](A2)--(B2)node[midway,right,inner sep=1pt]{$u$};
-\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \dsixjsq{0}{0}{q}{r}{p}{s}{a}{t}
-\end{tikzpicture}
-\quad
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \dsixjsq{0}{0}{r}{b}{s}{c}{a}{u}
-\end{tikzpicture}
-\quad
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \coordinate(N)at(0,0);
-  \draw[dl](-0.9,0)--(N)node[at start,left]{$a\alpha$};
-  \draw[dl](N)--(0.8,0.75)node[at end,right]{$b\beta$};
-  \draw[dl](N)--(0.8,-0.75)node[at end,right]{$c\gamma$};
-\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_1_11}
 \]
 
 \begin{gather}
@@ -411,41 +120,7 @@ p & a \\
 \end{gather}
 
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \coordinate(Ln)at(0,0);\coordinate(A)at(30:2.5);\coordinate(B)at(-30:2.5);
-  \coordinate(A1)at($(Ln)!0.35!(A)$);\coordinate(A2)at($(Ln)!0.62!(A)$);
-  \coordinate(B1)at($(Ln)!0.35!(B)$);\coordinate(B2)at($(Ln)!0.62!(B)$);
-  \draw[dl](-0.9,0)--(Ln)node[at start,left]{$a\alpha$};
-  \draw[dl](Ln)--(A1)node[midway,above,inner sep=1pt]{$q$};
-  \draw[dl](A1)--(A2)node[midway,above,inner sep=1pt]{$r$};
-  \draw[dl](A2)--(A)node[at end,right]{$b\beta$};
-  \draw[dl](Ln)--(B1)node[midway,below,inner sep=1pt]{$p$};
-  \draw[dl](B1)--(B2)node[midway,below,inner sep=1pt]{$u$};
-  \draw[dl](B2)--(B)node[at end,right]{$c\gamma$};
-  \draw[dl](A1)--(B2)node[pos=0.7,right,inner sep=1pt]{$s$};
-  \draw[dl](B1)--(A2)node[pos=0.7,right,inner sep=1pt]{$t$};
-\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  % flat-top hexagon: vertices at 0,60,...,300
-  \foreach \a in {0,60,120,180,240,300}{\coordinate(v\a)at(\a:1);}
-  \draw[dl](v60)--(v120)node[midway,above,inner sep=1pt]{$r$};
-  \draw[dl](v120)--(v180)node[midway,above left,inner sep=1pt]{$q$};
-  \draw[dl](v0)--(v60)node[midway,above right,inner sep=1pt]{$b$};
-  \draw[dl](v180)--(v240)node[midway,below left,inner sep=1pt]{$p$};
-  \draw[dl](v300)--(v0)node[midway,below right,inner sep=1pt]{$c$};
-  \draw[dl](v240)--(v300)node[midway,below,inner sep=1pt]{$u$};
-  \draw[dl](v180)--(v0)node[pos=0.28,below,inner sep=1pt]{$a$};
-  \draw[dl](v60)--(v240)node[pos=0.28,right,inner sep=1pt]{$s$};
-  \draw[dl](v120)--(v300)node[pos=0.28,left,inner sep=1pt]{$t$};
-\end{tikzpicture}
-\quad
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \coordinate(N)at(0,0);
-  \draw[dl](-0.9,0)--(N)node[at start,left]{$a\alpha$};
-  \draw[dl](N)--(0.8,0.75)node[at end,right]{$b\beta$};
-  \draw[dl](N)--(0.8,-0.75)node[at end,right]{$c\gamma$};
-\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_1_12}
 \]
 
 \begin{align}
@@ -454,96 +129,13 @@ p & a \\
 \end{align}
 
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  % regular pentagon, vertex at the bottom (ee); legs radiate out
-  \foreach \a in  {270,342,54,126,198}{\coordinate(v\a)at(\a:1.2);}
-  \draw[dl](v126)--(v54)node[midway,above,inner sep=1pt]{$r$};
-  \draw[dl](v198)--(v126)node[midway,left,inner sep=1pt]{$q$};
-  \draw[dl](v54)--(v342)node[midway,right,inner sep=1pt]{$s$};
-  \draw[dl](v198)--(v270)node[midway,below left,inner sep=1pt]{$p$};
-  \draw[dl](v342)--(v270)node[midway,below right,inner sep=1pt]{$t$};
-  \draw[dl](v126)--($(v126)+(126:0.8)$)node[at end,above]{$b\beta$};
-  \draw[dl](v54)--($(v54)+(54:0.8)$)node[at end,above]{$c\gamma$};
-  \draw[dl](v198)--($(v198)+(198:0.8)$)node[at end,left]{$a\alpha$};
-  \draw[dl](v342)--($(v342)+(342:0.8)$)node[at end,right]{$d\delta$};
-  \draw[dl](v270)--($(v270)+(270:0.8)$)node[at end,below]{$e\epsilon$};
-\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  % central node; x,y (ultra-thick) up-left/up-right to the two upper triangles;
-  % e straight down to the lower (apex-down) triangle.
-  \coordinate(C)at(0,0);
-  \coordinate(NL)at(-1.8,0.7);\coordinate(NR)at(1.8,0.7);
-  \draw[dlu](C)--(NL)node[midway,above,inner sep=1pt]{$x$};
-  \draw[dlu](C)--(NR)node[midway,above,inner sep=1pt]{$y$};
-  \draw[dl](C)--(0,-0.8)node[right,inner sep=1pt]{$e\epsilon$};
-  \draw[dl](NL)--($(NL)+(90:0.7)$)node[at end,above]{$b\beta$};
-  \draw[dl](NL)--($(NL)+(220:0.7)$)node[at end,left]{$a\alpha$};
-  \draw[dl](NR)--($(NR)+(90:0.8)$)node[at end,above]{$c\gamma$};
-  \draw[dl](NR)--($(NR)+(320:0.8)$)node[at end,right]{$d\delta$};
-  % upper-left 6j-triangle (apex-up): q left, r right, p base; inner b,a,x
-  \dsixjtri{-1.8}{-0.7}{q}{r}{p}{b}{a}{x}
-  \draw[dlu](-1.8,-0.7)--($(-1.8,-0.7)+(330:1)$); % x spoke (sBR) bold
-  % upper-right 6j-triangle
-  \dsixjtri{1.8}{-0.7}{r}{s}{t}{c}{y}{d}
-  \draw[dlu](1.8,-0.7)--($(1.8,-0.7)+(210:1)$); % y spoke (sBL) bold
-  % lower (apex-down) 6j-triangle: p left, t right; inner x,y,e ; leg ee down
-  \coordinate(bc)at(0,-1.75);
-  \coordinate(bT)at($(bc)+(270:0.85)$);\coordinate(bL)at($(bc)+(150:0.85)$);\coordinate(bR)at($(bc)+(30:0.85)$);
-  \draw[dl](bL)--(bT)node[midway,below left,inner sep=1pt]{$p$};
-  \draw[dl](bT)--(bR)node[midway,below right,inner sep=1pt]{$t$};
-  \draw[dl](bL)--(bR)node[midway,above,inner sep=1pt]{$r$};
-  \draw[dlu](bc)--(bL)node[pos=0.5,below,inner sep=1pt]{$x$};
-  \draw[dlu](bc)--(bR)node[pos=0.5,below,inner sep=1pt]{$y$};
-  \draw[dl](bc)--(bT)node[pos=0.5,right,inner sep=1pt]{$e$};
-\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_1_13}
 \]
 \begin{equation}
 =(-1)^{p-t-b-a-d-c} \sum_{x \xi y \eta}(-1)^{x-\xi+y-\eta} \Fact{x y}^{2}\threej{a}{b}{x}{\alpha}{\beta}{\xi} \label{chap12:eq:16}\threej{x}{d}{y}{-\xi}{\delta}{-\eta}\threej{y}{c}{e}{\eta}{\gamma}{\varepsilon}\sixj{a}{b}{x}{r}{p}{q}\ninej{c}{e}{y}{r}{p}{x}{s}{t}{d},
 \end{equation}
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  % LHS: bb,aa (left) cross to p; middle box; ce,cg,dd (right) -- approximate
-  \foreach \i in {0,...,4}{\coordinate(v\i) at (180-36+\i*72:1.2);}
-  \draw[dl](v0)--(v1)node[midway,left,inner sep=1pt]{$q$};
-  \draw[dl](v0)--(v2)node[pos=0.7,left,inner sep=1pt]{$r$};
-  \draw[dl](v1)--(v4)node[pos=0.7,left,inner sep=1pt]{$p$};
-  \draw[dl](v2)--(v3)node[midway,right,inner sep=1pt]{$s$};
-  \draw[dl](v3)--(v4)node[midway,right,inner sep=1pt]{$t$};
-  \draw[dl](v0)--($(v0)+(144:0.8)$)node[at end,above]{$b\beta$};
-  \draw[dl](v1)--($(v1)+(216:0.8)$)node[at end,below]{$a\alpha$};
-  \draw[dl](v2)--($(v2)+(288:0.8)$)node[at end,below]{$c\gamma$};
-  \draw[dl](v3)--($(v3)+(0:0.8)$)node[at end,above]{$d\delta$};
-  \draw[dl](v4)--($(v4)+(72:0.8)$)node[at end,above]{$e\epsilon$};
-\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  % top tree: aa - x(bold) - C - y(bold) - ee ; dd down from C
-  \coordinate(C)at(0,1.);
-  \draw[dlu](-1.5,1)--(C)node[midway,above,inner sep=1pt]{$x$};
-  \draw[dlu](C)--(1.5,1)node[midway,above,inner sep=1pt]{$y$};
-  \draw[dl](-1.5,1)--($(-1.5,1)+(130:0.8)$)node[at end,left]{$a\alpha$};
-  \draw[dl](1.5,1)--($(1.5,1)+(50:0.8)$)node[at end,right]{$e\epsilon$};
-  \draw[dl](C)--($(C)+(90:0.8)$)node[at end,above]{$d\delta$};
-  \draw[dl](-1.5,1)--($(-1.5,1)+(220:0.9)$)node[at end,left]{$b\beta$}; 
-  \draw[dl](1.5,1)--($(1.5,1)+(-50:0.8)$)node[at end,right]{$c\gamma$};
-  % 6j-diamond (left) with x bold; hexagon (right) with x,y bold
-  \dsixjsq{-1.5}{-0.2}{b}{x}{q}{p}{r}{a}
-  \draw[dlu]($(-1.5,-0.2)+(90:0.9)$)--($(-1.5,-0.2)+(0:0.9)$);% x edge bold (approx)
-  % flat-top hexagon (right)
-  \begin{scope}[shift={(1,-0.2)}]
-    \foreach \a in {0,60,120,180,240,300}{\coordinate(v\a)at(\a:0.95);}
-    \draw[dlu](v180)--(v120)node[midway,above left,inner sep=1pt]{$x$};
-    \draw[dlu](v60)--(v120)node[midway,above,inner sep=1pt]{$y$};
-    \draw[dl](v0)--(v60)node[midway,right,inner sep=1pt]{$c$};
-    \draw[dl](v300)--(v0)node[midway,right,inner sep=1pt]{$s$};
-    \draw[dl](v240)--(v300)node[midway,below,inner sep=1pt]{$t$};
-    \draw[dl](v180)--(v240)node[midway,left,inner sep=1pt]{$p$};
-    \draw[dl](v180)--(v0)node[pos=0.3,below,inner sep=1pt]{$r$};
-    \draw[dl](v60)--(v240)node[pos=0.3,right,inner sep=1pt]{$e$};
-    \draw[dl](v120)--(v300)node[pos=0.7,left,inner sep=1pt]{$d$};
-  \end{scope}
-\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_1_14}
 \]
 
 \begin{gather}
@@ -552,65 +144,7 @@ p & a \\
 \end{gather}
 
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  % LHS: eq16 pentagon rotated -90 (base 144 -> 54), relabelled
-  \foreach \i in {0,...,4}{\coordinate(v\i) at (54+\i*72:1.2);}
-  \draw[dl](v0)--(v1)node[midway,above,inner sep=1pt]{$r$};
-  \draw[dl](v0)--(v2)node[pos=0.6,above,inner sep=1pt]{$q$};
-  \draw[dl](v1)--(v4)node[pos=0.6,above,inner sep=1pt]{$s$};
-  \draw[dl](v2)--(v3)node[midway,below left,inner sep=1pt]{$p$};
-  \draw[dl](v3)--(v4)node[midway,below right,inner sep=1pt]{$t$};
-  \draw[dl](v0)--($(v0)+(54:0.8)$)node[at end,above]{$b\beta$};
-  \draw[dl](v1)--($(v1)+(126:0.8)$)node[at end,above]{$c\gamma$};
-  \draw[dl](v2)--($(v2)+(198:0.8)$)node[at end,left]{$a\alpha$};
-  \draw[dl](v3)--($(v3)+(270:0.8)$)node[at end,below]{$e\epsilon$};
-  \draw[dl](v4)--($(v4)+(342:0.8)$)node[at end,right]{$d\delta$};
-\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  % --- top: square with crossed diagonals (z) ---
-  \coordinate(sc)at(0,2.5);
-  \coordinate(sTL)at($(sc)+(135:1)$);\coordinate(sTR)at($(sc)+(45:1)$);
-  \coordinate(sBL)at($(sc)+(225:1)$);\coordinate(sBR)at($(sc)+(-45:1)$);
-  \draw[dl](sTL)--(sTR) node[midway,above]{$r$};
-  \draw[dlu](sBL)--(sBR) node[midway,below]{$z$};
-  \draw[dl](sTL)--(sBL) node[midway,left]{$c$};
-  \draw[dl](sTR)--(sBR) node[midway,right]{$b$};
-  \draw[dl](sTL)--(sBR) node[pos=0.3,above]{$s$};
-  \draw[dl](sTR)--(sBL) node[pos=0.35,above]{$q$};
-  % --- left 6j-triangle (apex-left), NO outward legs; edges c(to NL), z(to sq), x ---
-  \coordinate(lc)at(-1.4,0.8);
-  \coordinate(lA)at($(lc)+(180:1)$);\coordinate(lT)at($(lc)+(60:1)$);\coordinate(lB)at($(lc)+(-60:1)$);
-  \draw[dl](lA)--(lT)node[midway,above left,inner sep=1pt]{$c$};
-  \draw[dlu](lT)--(lB)node[midway,right,inner sep=1pt]{$z$};
-  \draw[dlu](lA)--(lB)node[midway,below left,inner sep=1pt]{$x$};
-  \draw[dl](lc)--(lA)node[pos=0.5,above,inner sep=1pt]{$a$};\draw[dl](lc)--(lT)node[pos=0.5,left,inner sep=1pt]{$q$};\draw[dl](lc)--(lB)node[pos=0.3,below left,inner sep=1pt]{$p$};
-  % --- right 6j-triangle (apex-right) ---
-  \coordinate(rc)at(1.4,0.8);
-  \coordinate(rA)at($(rc)+(0:1)$);\coordinate(rT)at($(rc)+(120:1)$);\coordinate(rB)at($(rc)+(240:1)$);
-  \draw[dl](rT)--(rA)node[midway,above right,inner sep=1pt]{$b$};
-  \draw[dlu](rT)--(rB)node[midway,left,inner sep=1pt]{$z$};
-  \draw[dlu](rB)--(rA)node[midway,below right,inner sep=1pt]{$y$};
-  \draw[dl](rc)--(rA)node[pos=0.5,above,inner sep=1pt]{$d$};\draw[dl](rc)--(rT)node[pos=0.5,right,inner sep=1pt]{$s$};\draw[dl](rc)--(rB)node[pos=0.3,below right,inner sep=1pt]{$t$};
-  % --- centre downward 6j-triangle ---
-  \coordinate(bc)at(0,-0.7);
-  \coordinate(bA)at($(bc)+(270:1)$);\coordinate(bL)at($(bc)+(150:1)$);\coordinate(bR)at($(bc)+(30:1)$);
-  \draw[dlu](bL)--(bR)node[midway,above,inner sep=1pt]{$z$};
-  \draw[dlu](bL)--(bA)node[midway,below left,inner sep=1pt]{$x$};
-  \draw[dlu](bR)--(bA)node[midway,below right,inner sep=1pt]{$y$};
-  \draw[dl](bc)--(bA)node[pos=0.5,right,inner sep=1pt]{$e$};\draw[dl](bc)--(bL)node[pos=0.3,above,inner sep=1pt]{$p$};\draw[dl](bc)--(bR)node[pos=0.3,above,inner sep=1pt]{$t$};
-  % big outer triangle NL,NR,NB: its edges are the long x,y (and top) summed lines;
-  % the external 3jm legs attach at its corners.
-  \coordinate(NL)at($(lA)-(0.3,0)$);\coordinate(NR)at($(rA)+(0.3,0)$);\coordinate(NB)at($(bA)-(0,0.3)$);
-  \draw[dlu](NL)--(NB)node[pos=0.62,below left,inner sep=1pt]{$x$};
-  \draw[dlu](NR)--(NB)node[pos=0.62,below right,inner sep=1pt]{$y$};
-  \draw[dl](NL)--($(NL)+(100:0.9)$)node[at end,above]{$c\gamma$};
-  \draw[dl](NL)--($(NL)+(225:0.9)$)node[at end,below]{$a\alpha$};
-  \draw[dl](NR)--($(NR)+(80:0.9)$)node[at end,above]{$b\beta$};
-  \draw[dl](NR)--($(NR)+(-45:0.9)$)node[at end,below]{$d\delta$};
-  \draw[dl](NB)--($(NB)+(270:0.9)$)node[at end,below]{$e\epsilon$};
- 
-\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_1_15}
 \]
 
 \subsection{Sums Involving Products of Six 3jm Symbols}
@@ -629,31 +163,7 @@ p & a \\
 \label{chap12:eq:18}
 \end{gather}
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \coordinate(VL)at(-1.15,0);\coordinate(VR)at(1.15,0);
-  \coordinate(VT)at(0,1.15);\coordinate(VB)at(0,-1.15);
-  \draw[dl](-2,0)--(VL)node[at start,above]{$a\alpha$};
-  \draw[dl](VR)--(2,0)node[at end,above]{$a'\alpha'$};
-  \draw[dl](VL)--(VT)node[midway,above left,inner sep=1pt]{$q$};
-  \draw[dl](VT)--(VR)node[midway,above right,inner sep=1pt]{$r$};
-  \draw[dl](VL)--(VB)node[midway,below left,inner sep=1pt]{$p$};
-  \draw[dl](VB)--(VR)node[midway,below right,inner sep=1pt]{$s$};
-  \coordinate(lt)at(0,0.5);\coordinate(lb)at(0,-0.5);
-  \draw[dl](VT)--(lt)node[midway,right,inner sep=1pt]{$t$};
-  \draw[dl](lb)--(VB)node[pos=0.3,right,inner sep=1pt]{$t'$};
-  \draw[dl](lt)to[bend right=90]node[midway,left,inner sep=1pt]{$v$}(lb);
-  \draw[dl](lt)to[bend left=90]node[midway,right,inner sep=1pt]{$u$}(lb);
-\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \draw[dl](0,0)--(1.7,0)node[pos=0.1,above]{$a\alpha$}node[pos=0.9,above]{$a'\alpha'$};
-\end{tikzpicture}
-\quad
-\begin{tikzpicture}[baseline=0pt,font=\small]\dsixjsq{0}{0}{q}{r}{p}{s}{a}{t}\end{tikzpicture}
-\quad
-\begin{tikzpicture}[baseline=0pt,font=\small]\dthetav{0}{0}{v}{t}{u}\end{tikzpicture}
-\quad
-\begin{tikzpicture}[baseline=0pt,font=\small]\dlensv{0}{0}{t}{t'}\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_1_16}
 \]
 
 \begin{gather}
@@ -665,41 +175,7 @@ p & a \\
 \end{gather}
 
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \coordinate(VL)at(-1.7,0);\coordinate(VR)at(1.7,0);
-  \draw[dl](-2.6,0)--(VL)node[at start,left]{$a\alpha$};
-  \draw[dl](VR)--(2.6,0)node[at end,right]{$a'\alpha'$};
-  \coordinate(qa)at(-0.7,0.6);\coordinate(qb)at(0.7,0.6);
-  \draw[dl](VL)--(qa)node[midway,above left,inner sep=1pt]{$q$};
-  \draw[dl](qb)--(VR)node[midway,above right,inner sep=1pt]{$q'$};
-  \draw[dl](qa)to[bend left=50]node[midway,above,inner sep=1pt]{$u$}(qb);
-  \draw[dl](qa)to[bend right=50]node[midway,below,inner sep=1pt]{$v$}(qb);
-  \coordinate(pa)at(-0.7,-0.6);\coordinate(pb)at(0.7,-0.6);
-  \draw[dl](VL)--(pa)node[midway,below left,inner sep=1pt]{$p$};
-  \draw[dl](pb)--(VR)node[midway,below right,inner sep=1pt]{$p'$};
-  \draw[dl](pa)to[bend left=50]node[midway,above,inner sep=1pt]{$t$}(pb);
-  \draw[dl](pa)to[bend right=50]node[midway,below,inner sep=1pt]{$s$}(pb);
-\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \draw[dl](0,0)--(1.7,0)node[pos=0.1,above]{$a\alpha$}node[pos=0.9,above]{$a'\alpha'$};
-\end{tikzpicture}
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \begin{scope}[yshift=1.2cm]
-    \dtheta{0}{0}{u}{v}{q}
-  \end{scope}
-\begin{scope}
-  \dtheta{0}{0}{q}{a}{p}
-\end{scope}
-\begin{scope}[yshift=-1.2cm]
-  \dtheta{0}{0}{p}{t}{s}\end{scope}
-\begin{scope}[xshift=1cm,yshift=0.5cm]
-  \coordinate(L)at(0,0);\coordinate(R)at(1.1,0);\dlens{L}{R}{q'}{q}
-\end{scope}
-\begin{scope}[xshift=1cm,yshift=-0.5cm]
-  \coordinate(L)at(0,0);\coordinate(R)at(1.1,0);\dlens{L}{R}{p}{p'}
-\end{scope}
-\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_1_17}
 \]
 
 \begin{gather}
@@ -719,35 +195,7 @@ s & t &a^{\prime} \\
 \end{array}\right)=\frac{(-1)^{s-p-\alpha-g}}{\Fact{a}^{2}}\sixj{q}{g}{s}{u}{r}{v}\sixj{a}{p}{q}{g}{s}{t} \delta_{a a^{\prime}} \delta_{\alpha \alpha^{\prime}} \label{chap12:eq:20}
 \end{gather}
 \[
-\begin{tikzpicture}[baseline=-20pt,font=\small]
-  \foreach \i in {1,...,5} {\coordinate (n\i) at (72*\i-18:1);}
-  \coordinate (O) at (0,0);
-  \draw[dl](n1)--(n2) node[midway,above] {$r$};
-  \draw[dl](n2)--(n3) node[midway,left] {$q$};
-  \draw[dl](n3)--(n4) node[midway,below] {$p$};
-  \draw[dl](n4)--(n5) node[midway,below] {$t$};
-  \draw[dl](n5)--(n1) node[midway,right] {$s$};
-  \draw[dl] (n1)--(O) node[wb,midway] {$u$};
-  \draw[dl] (n2)--(O) node[wb,midway] {$v$};
-  \draw[dl] (n4)--(O) node[wb,midway] {$g$};
-  \draw[dl] (n3) -- ($(n3)-(0.7,0)$) node[at end, above] {$a\alpha$};
-  \draw[dl] (n5) -- ($(n5)+(0.7,0)$) node[at end, above] {$a'\alpha'$};
-\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \draw[dl](0,0)--(1.7,0)node[pos=0.1,above]{$a\alpha$}node[pos=0.9,above]{$a'\alpha'$};
-\begin{scope}[shift={(3,0)}]\dsixjsq{0}{0}{q}{g}{u}{r}{s}{v}
-\end{scope}
-  \begin{scope}[shift={(3,2)}]
-    \coordinate(c)at(0,0);\coordinate(B)at(-90:1);\coordinate(L)at(30:1);\coordinate(R)at(150:1);
-    \draw[dl](B)--(R)node[midway,left,inner sep=2pt]{$s$};
-    \draw[dl](R)--(L)node[midway,above,inner sep=2pt]{$r$};
-    \draw[dl](L)--(B)node[midway,right,inner sep=2pt]{$q$};
-    \draw[dl](c)--(B)node[wb,pos=0.5]{$g$};
-    \draw[dl](c)--(L)node[wb,pos=0.5]{$v$};
-    \draw[dl](c)--(R)node[wb,pos=0.5]{$u$};
-  \end{scope}
-\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_1_18}
 \]
 \begin{gather}
 \sum_{\substack{\psi \kappa \rho \sigma \\
@@ -763,32 +211,7 @@ s&t & a^{\prime} \\
 \end{gather}
 
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]
-\coordinate (L) at (-1.2,0);
-\coordinate (R) at (1.2,0);
-\coordinate (lT) at (-0.4,0.7);
-\coordinate (lB) at (-0.4,-0.7);
-\coordinate (rT) at (0.4,0.7);
-\coordinate (rB) at (0.4,-0.7);
-\draw[dl](L)--(lT) node[midway,above] {$q$};
-\draw[dl](lT)--(rT) node[midway,above] {$r$};
-\draw[dl](rT)--(R) node[midway,above] {$u$};
-\draw[dl](L)--(lB) node[midway,below] {$p$};
-\draw[dl](lB)--(rB) node[midway,below] {$s$};
-\draw[dl](rB)--(R) node[midway,below] {$t$};
-\draw[dl](rB)--(rT) node[midway,left] {$g$};
-\draw[dl](lB)--(lT) node[midway,right] {$v$};
-\draw[dl](R)--($(R)+(1,0)$) node[near end, above] {$a'\alpha'$};
-\draw[dl](L)--($(L)-(1,0)$) node[near end, above] {$a\alpha$};
-\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \draw[dl](0,0)--(1.7,0)node[pos=0.1,above]{$a\alpha$}node[pos=0.9,above]{$a'\alpha'$};
-\end{tikzpicture}
-\quad
-\begin{tikzpicture}[baseline=0pt,font=\small]\dsixjsq{0}{0}{q}{r}{p}{s}{a}{v}\end{tikzpicture}
-\quad
-\begin{tikzpicture}[baseline=0pt,font=\small]\dsixjsq{0}{0}{r}{u}{s}{t}{a}{g}\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_1_19}
 \]
 \begin{gather}
 \sum_{\substack{\psi \kappa \rho \sigma \\
@@ -806,34 +229,7 @@ s&t & a^{\prime} \\
  \delta_{a a^{\prime}} \delta_{\alpha \alpha^{\prime}}, .\label{chap12:eq:21a}
 \end{gather}
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]  \coordinate(c)at(0,0);
-  \foreach \i in {1,...,6} {\coordinate(h\i) at ($(c)+(60*\i:1)$);}
-  \draw[dl](h1)--(h2)node[midway,above,inner sep=2pt]{$r$};
-  \draw[dl](h2)--(h3)node[midway,left,inner sep=2pt]{$p$};
-  \draw[dl](h3)--(h4)node[midway,left,inner sep=2pt]{$q$};
-  \draw[dl](h4)--(h5)node[midway,below,inner sep=2pt]{$s$};
-  \draw[dl](h5)--(h6)node[midway,right,inner sep=2pt]{$t$};
-  \draw[dl](h6)--(h1)node[midway,right,inner sep=2pt]{$u$};
-  \draw[dl](h4)--(h1)node[wb,pos=0.25]{$g$};
-  \draw[dl](h2)--(h5)node[wb,pos=0.75]{$v$};
-  \draw[dl](h3)--($(h3)-(1,0)$)node[wb,pos=0.75]{$a\alpha$};
-  \draw[dl](h6)--($(h6)+(1,0)$)node[wb,pos=0.75]{$a'\alpha'$};
-\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-    \draw[dl](-1,0)--(1,0)node[wb,pos=0.2,above]{$a\alpha$}node[wb,pos=0.8,above]{$a'\alpha'$};
-  \coordinate(c)at(2.5,0);
-  \foreach \i in {1,...,6} {\coordinate(h\i) at ($(c)+(60*\i:1)$);}
-  \draw[dl](h1)--(h2)node[midway,above,inner sep=2pt]{$r$};
-  \draw[dl](h2)--(h3)node[midway,left,inner sep=2pt]{$p$};
-  \draw[dl](h3)--(h4)node[midway,left,inner sep=2pt]{$q$};
-  \draw[dl](h4)--(h5)node[midway,below,inner sep=2pt]{$s$};
-  \draw[dl](h5)--(h6)node[midway,right,inner sep=2pt]{$t$};
-  \draw[dl](h6)--(h1)node[midway,right,inner sep=2pt]{$u$};
-  \draw[dl](h4)--(h1)node[wb,pos=0.25]{$g$};
-  \draw[dl](h3)--(h6)node[wb,pos=0.75]{$a$};
-  \draw[dl](h2)--(h5)node[wb,pos=0.75]{$v$};
-\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_1_20}
 \]
 \begin{gather}
 \sum_{\substack{\psi \kappa \nu \rho  \\
@@ -857,59 +253,7 @@ s&t & a^{\prime} \\
 \end{gather}
 
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  % LHS: two squares sharing middle edge g
-  \coordinate(TL)at(-1,0.7);\coordinate(TM)at(0,0.7);\coordinate(TR)at(1,0.7);
-  \coordinate(BL)at(-1,-0.7);\coordinate(BM)at(0,-0.7);\coordinate(BR)at(1,-0.7);
-  \draw[dl](TL)--(TM)node[midway,above,inner sep=1pt]{$q$};
-  \draw[dl](TM)--(TR)node[midway,above,inner sep=1pt]{$u$};
-  \draw[dl](BL)--(BM)node[midway,below,inner sep=1pt]{$s$};
-  \draw[dl](BM)--(BR)node[midway,below,inner sep=1pt]{$v$};
-  \draw[dl](TL)--(BL)node[midway,left,inner sep=1pt]{$p$};
-  \draw[dl](TR)--(BR)node[midway,right,inner sep=1pt]{$r$};
-  \draw[dl](TM)--(BM)node[midway,right,inner sep=1pt]{$g$};
-  \draw[dl](TL)--($(TL)+(120:0.8)$)node[at end,left]{$a\alpha$};
-  \draw[dl](TR)--($(TR)+(60:0.8)$)node[at end,right]{$b\beta$};
-  \draw[dl](BL)--($(BL)+(240:0.8)$)node[at end,left]{$d\delta$};
-  \draw[dl](BR)--($(BR)+(-60:0.8)$)node[at end,right]{$c\gamma$};
-\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  % bowtie (top), x bold
-  \begin{scope}[shift={(0,1.9)}]
-    \coordinate(L)at(-0.8,0);\coordinate(R)at(0.8,0);
-    \draw[dlu](L)--(R)node[midway,above,inner sep=1pt]{$x$};
-    \draw[dl](L)--($(L)+(130:0.8)$)node[at end,left]{$a\alpha$};
-    \draw[dl](L)--($(L)+(230:0.8)$)node[at end,left]{$d\delta$};
-    \draw[dl](R)--($(R)+(50:0.8)$)node[at end,right]{$b\beta$};
-    \draw[dl](R)--($(R)+(-50:0.8)$)node[at end,right]{$c\gamma$};
-  \end{scope}
-  % left 6j-triangle (apex-right): p left, q top, s bottom; inner a,d,x
-  \begin{scope}[shift={(-2.7,0)}]
-    \coordinate(c)at(0,0);\coordinate(T)at(120:0.9);\coordinate(B)at(240:0.9);\coordinate(V)at(0:0.9);
-    \draw[dl](T)--(B)node[midway,left,inner sep=1pt]{$p$};
-    \draw[dl](T)--(V)node[midway,above right,inner sep=1pt]{$q$};
-    \draw[dl](B)--(V)node[midway,below right,inner sep=1pt]{$s$};
-    \draw[dl](c)--(T)node[wb,pos=0.5,inner sep=1pt]{$a$};
-    \draw[dl](c)--(B)node[wb,pos=0.5]{$d$};
-    \draw[dlu](c)--(V)node[wb,pos=0.45,inner sep=1pt] {$x$};
-  \end{scope}
-  % middle 6j-diamond: q,u,s,v edges; x horizontal (bold), g vertical
-  \begin{scope}[shift={(0,0)}]
-    \draw[dlu](180:0.9)--(0:0.9);
-    \dsixjsq{0}{0}{q}{u}{s}{v}{x}{g}
-  \end{scope}
-  % right 6j-triangle (apex-left): u top, r right, v bottom; inner b,c,x
-  \begin{scope}[shift={(2.7,0)}]
-    \coordinate(c)at(0,0);\coordinate(T)at(60:0.9);\coordinate(B)at(300:0.9);\coordinate(V)at(180:0.9);
-    \draw[dl](T)--(V)node[midway,above left,inner sep=1pt]{$u$};
-    \draw[dl](T)--(B)node[midway,right,inner sep=1pt]{$r$};
-    \draw[dl](V)--(B)node[midway,below left,inner sep=1pt]{$v$};
-    \draw[dl](c)--(T)node[wb,pos=0.5]{$b$};
-    \draw[dl](c)--(B)node[wb,pos=0.5]{$c$};
-    \draw[dlu](c)--(V)node[wb,pos=0.5]{$x$};
-  \end{scope}
-\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_1_21}
 \]
 
 \begin{equation}
@@ -925,72 +269,7 @@ s&t & a^{\prime} \\
 
 
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \coordinate(TL)at(-1,0.7);\coordinate(TM)at(0,0.7);\coordinate(TR)at(1,0.7);
-  \coordinate(BL)at(-1,-0.7);\coordinate(BM)at(0,-0.7);\coordinate(BR)at(1,-0.7);
-  \draw[dl](TL)--(TM)node[midway,above,inner sep=1pt]{$q$};
-  \draw[dl](TM)--(TR)node[midway,above,inner sep=1pt]{$u$};
-  \draw[dl](BL)--(BM)node[midway,below,inner sep=1pt]{$s$};
-  \draw[dl](BM)--(BR)node[midway,below,inner sep=1pt]{$v$};
-  \draw[dl](TL)--(BL)node[midway,left,inner sep=1pt]{$p$};
-  \draw[dl](TR)--(BR)node[midway,right,inner sep=1pt]{$r$};
-  \draw[dl](TM)--(BM)node[midway,right,inner sep=1pt]{$g$};
-  \draw[dl](TL)--($(TL)+(120:0.8)$)node[at end,left]{$a\alpha$};
-  \draw[dl](TR)--($(TR)+(60:0.8)$)node[at end,right]{$b\beta$};
-  \draw[dl](BL)--($(BL)+(240:0.8)$)node[at end,left]{$d\delta$};
-  \draw[dl](BR)--($(BR)+(-60:0.8)$)node[at end,right]{$c\gamma$};
-\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  % TL apex-right {a p q; g u x}: outer a(top) p(left) x(bottom,bold); inner q,g,u
-  \begin{scope}[shift={(-2,1)}]
-    \coordinate(c)at(0,0);\coordinate(T)at(120:1);\coordinate(B)at(240:1);\coordinate(V)at(0:1);
-    \draw[dl](T)--(V)node[midway,above,inner sep=1pt]{$a$};
-    \draw[dl](T)--(B)node[midway,left,inner sep=1pt]{$p$};
-    \draw[dlu](B)--(V)node[midway,below,inner sep=1pt]{$x$};
-    \draw[dl](c)--(T)node[wb,pos=0.5,inner sep=1pt]{$q$};
-    \draw[dl](c)--(B)node[wb,pos=0.5,inner sep=1pt]{$g$};
-    \draw[dl](c)--(V)node[wb,pos=0.5,inner sep=1pt]{$u$};
-  \end{scope}
-  % TR apex-left {a y b; r u x}
-  \begin{scope}[shift={(0.3,1)}]
-    \coordinate(c)at(0,0);\coordinate(T)at(60:1);\coordinate(B)at(300:1);\coordinate(V)at(180:1);
-    \draw[dl](T)--(V)node[midway,above,inner sep=1pt]{$a$};
-    \draw[dlu](T)--(B)node[midway,right,inner sep=1pt]{$y$};
-    \draw[dlu](V)--(B)node[midway,below,inner sep=1pt]{$x$};
-    \draw[dl](c)--(T)node[wb,pos=0.5]{$b$};
-    \draw[dl](c)--(B)node[wb,pos=0.5]{$r$};
-    \draw[dl](c)--(V)node[wb,pos=0.5]{$u$};
-  \end{scope}
-  % BL apex-right {v g s; p d x}
-  \begin{scope}[shift={(-2,-1)}]
-    \coordinate(c)at(0,0);\coordinate(T)at(120:1);\coordinate(B)at(240:1);\coordinate(V)at(0:1);
-    \draw[dlu](T)--(V)node[midway,above,inner sep=1pt]{$x$};
-    \draw[dl](T)--(B)node[midway,left,inner sep=1pt]{$p$};
-    \draw[dl](B)--(V)node[midway,below,inner sep=1pt]{$d$};
-    \draw[dl](c)--(T)node[wb,pos=0.5]{$g$};
-    \draw[dl](c)--(B)node[wb,pos=0.5]{$s$};
-    \draw[dl](c)--(V)node[wb,pos=0.5]{$v$};
-  \end{scope}
-  % BR apex-left {d y c; r v x}
-  \begin{scope}[shift={(0.3,-1)}]
-    \coordinate(c)at(0,0);\coordinate(T)at(60:1);\coordinate(B)at(300:1);\coordinate(V)at(180:1);
-    \draw[dlu](T)--(V)node[midway,above,inner sep=1pt]{$x$};
-    \draw[dlu](T)--(B)node[midway,right,inner sep=1pt]{$y$};
-    \draw[dl](B)--(V)node[midway,below,inner sep=1pt]{$d$};
-    \draw[dl](c)--(T)node[wb,pos=0.5]{$r$};
-    \draw[dl](c)--(B)node[wb,pos=0.5]{$c$};
-    \draw[dl](c)--(V)node[wb,pos=0.5]{$v$};
-  \end{scope}
-  % y (bold) down the right side to a Y for dd,cc
-  \coordinate(YL)at(2.0,-1.8);
-  \coordinate(YH)at(2.0,1.8);
-  \draw[dlu](YH)--(YL)node[pos=0.6,right,inner sep=1pt]{$y$};
-  \draw[dl](YL)--($(YL)+(-150:0.8)$)node[at end,below]{$d\delta$};
-  \draw[dl](YL)--($(YL)+(-30:0.8)$)node[at end,below]{$c\gamma$};
-  \draw[dl](YH)--($(YH)+(150:0.8)$)node[at end,above]{$a\alpha$};
-  \draw[dl](YH)--($(YH)+(30:0.8)$)node[at end,above]{$b\beta$};
-\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_1_22}
 \]
 % PROOFREAD: contains OCR-garbled or 12j Wigner array(s) not auto-converted -- verify/reconstruct against orig.
 \begin{equation}
@@ -1003,49 +282,7 @@ s&t & a^{\prime} \\
 \label{chap12:eq:23}
 \end{equation}
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]\coordinate(TL)at(-1,0.7);\coordinate(TM)at(0,0.7);\coordinate(TR)at(1,0.7);
-  \coordinate(BL)at(-1,-0.7);\coordinate(BM)at(0,-0.7);\coordinate(BR)at(1,-0.7);
-  \draw[dl](TL)--(TM)node[midway,above,inner sep=1pt]{$q$};
-  \draw[dl](TM)--(TR)node[midway,above,inner sep=1pt]{$u$};
-  \draw[dl](BL)--(BM)node[midway,below,inner sep=1pt]{$s$};
-  \draw[dl](BM)--(BR)node[midway,below,inner sep=1pt]{$v$};
-  \draw[dl](TL)--(BL)node[midway,left,inner sep=1pt]{$p$};
-  \draw[dl](TR)--(BR)node[midway,right,inner sep=1pt]{$r$};
-  \draw[dl](TM)--(BM)node[midway,right,inner sep=1pt]{$g$};
-  \draw[dl](TL)--($(TL)+(120:0.8)$)node[at end,left]{$a\alpha$};
-  \draw[dl](TR)--($(TR)+(60:0.8)$)node[at end,right]{$b\beta$};
-  \draw[dl](BL)--($(BL)+(240:0.8)$)node[at end,left]{$d\delta$};
-  \draw[dl](BR)--($(BR)+(-60:0.8)$)node[at end,right]{$c\gamma$};
-\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  % 9j hexagon (pointy-top): outer q,p,s,v,x,u ; central diameters g,d,a
-  \dninehex{0}{0}{q}{p}{s}{v}{x}{u}
-  \coordinate(hc)at(0,0);
-  \draw[dl](hB)--(hT)node[wb,pos=0.3]{$g$};
-  \draw[dl](hUR)--(hLL)node[wb,pos=0.3]{$d$};
-  \draw[dl](hUL)--(hLR)node[wb,pos=0.3]{$a$};
-  \draw[dlu] (hUR)--(hLR);
-  % top diamond {u b / x y}, hd=d, vd=r
-  \begin{scope}[shift={(2.1,1.1)}]
-    \dsixjsq{0}{0}{u}{b}{x}{y}{d}{r}
-    \draw[dlu](ql)--(qb);
-    \draw[dlu](qb)--(qr);
-  \end{scope}
-  % bottom diamond {x y / v c}, hd=a, vd=r
-  \begin{scope}[shift={(2.1,-1.1)}]
-    \dsixjsq{0}{0}{x}{y}{v}{c}{a}{r}
-    \draw[dlu](ql)--(qt);
-    \draw[dlu](qt)--(qr);
-  \end{scope}
-  % Y (right): y vertical; top->bb,dd ; bottom->cc,aa
-  \coordinate(YH)at(4.0,1.4);\coordinate(YL)at(4.0,-1.4);
-  \draw[dlu](YH)--(YL)node[midway,right,inner sep=1pt]{$y$};
-  \draw[dl](YH)--($(YH)+(150:0.8)$)node[at end,above]{$b\beta$};
-  \draw[dl](YH)--($(YH)+(30:0.8)$)node[at end,above]{$d\delta$};
-  \draw[dl](YL)--($(YL)+(210:0.8)$)node[at end,below]{$c\gamma$};
-  \draw[dl](YL)--($(YL)+(-30:0.8)$)node[at end,below]{$a\alpha$};
-\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_1_23}
 \]
 % PROOFREAD: contains OCR-garbled or 12j Wigner array(s) not auto-converted -- verify/reconstruct against orig.
 \[
@@ -1068,62 +305,7 @@ r & c & s \\
 =(-1)^{a+b+c+u+s}\sixj{a}{p}{q}{g}{v}{u} \label{chap12:eq:24} \sum_{x \xi}(-1)^{x-\xi} \Fact{x}^{2}\threej{a}{d}{x}{\alpha}{\delta}{\xi}\threej{x}{b}{c}{-\xi}{\beta}{\gamma}\sixj{a}{d}{x}{s}{v}{u}\sixj{x}{b}{c}{r}{s}{v},
 \end{equation}
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \coordinate(TL)at(0,1.5);\coordinate(TR)at(1.5,1.5);\coordinate(BR)at(1.5,0);
-  \coordinate(BL)at(0,0);
-  \coordinate(BM)at(0.7,0);\coordinate(ML)at(0,0.7);
-  \draw[dl](TL)--(TR)node[midway,above,inner sep=1pt]{$r$};
-  \draw[dl](TR)--(BR)node[midway,right,inner sep=1pt]{$s$};
-  \draw[dl](BR)--(BM)node[midway,below,inner sep=1pt]{$u$};
-  \draw[dl](BM)--(BL)node[midway,below,inner sep=1pt]{$p$};
-  \draw[dl](BL)--(ML)node[midway,left,inner sep=1pt]{$q$};
-  \draw[dl](ML)--(TL)node[midway,left,inner sep=1pt]{$v$};
-  \draw[dl](ML)--(BM)node[midway,above right,inner sep=1pt]{$g$};
-  \draw[dl](TL)--($(TL)+(135:0.8)$)node[at end,left]{$b\beta$};
-  \draw[dl](TR)--($(TR)+(45:0.8)$)node[at end,right]{$c\gamma$};
-  \draw[dl](BR)--($(BR)+(-45:0.8)$)node[at end,right]{$d\delta$};
-  \draw[dl](BL)--($(BL)+(225:0.8)$)node[at end,left]{$a\alpha$};
-\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  % left 6j-tri (apex-up) {a p q / g v u}: outer g,v,u ; spokes q,p,a
-  \begin{scope}[shift={(0,0)}]
-    \coordinate(c)at(0,0);\coordinate(T)at(90:1);\coordinate(L)at(210:1);\coordinate(R)at(330:1);
-    \draw[dl](T)--(L)node[midway,above left,inner sep=1pt]{$g$};
-    \draw[dl](T)--(R)node[midway,above right,inner sep=1pt]{$v$};
-    \draw[dl](L)--(R)node[midway,below,inner sep=1pt]{$u$};
-    \draw[dl](c)--(T)node[wb,pos=0.5]{$q$};
-    \draw[dl](c)--(L)node[wb,pos=0.5]{$p$};
-    \draw[dl](c)--(R)node[wb,pos=0.5]{$a$};
-  \end{scope}
-  % middle 6j-tri (apex-up) {a d x / s v u}: outer v,s,u ; spokes x,a,d
-  \begin{scope}[shift={(2.4,0)}]
-    \coordinate(c)at(0,0);\coordinate(T)at(90:1);\coordinate(L)at(210:1);\coordinate(R)at(330:1);
-    \draw[dl](T)--(L)node[midway,above left,inner sep=1pt]{$v$};
-    \draw[dl](T)--(R)node[midway,above right,inner sep=1pt]{$s$};
-    \draw[dl](L)--(R)node[midway,below,inner sep=1pt]{$u$};
-    \draw[dlu](c)--(T)node[wb,pos=0.5]{$x$};
-    \draw[dl](c)--(L)node[wb,pos=0.5]{$a$};
-    \draw[dl](c)--(R)node[wb,pos=0.5]{$d$};
-  \end{scope}
-  % top 6j-tri (apex-DOWN) {x b c / r s v}: outer r,v,s ; spokes b,c,x
-  \begin{scope}[shift={(2.4,2.15)}]
-    \coordinate(c)at(0,0);\coordinate(B)at(270:1);\coordinate(TLv)at(150:1);\coordinate(TRv)at(30:1);
-    \draw[dl](TLv)--(TRv)node[midway,above,inner sep=1pt]{$r$};
-    \draw[dl](TLv)--(B)node[midway,below left,inner sep=1pt]{$v$};
-    \draw[dl](TRv)--(B)node[midway,below right,inner sep=1pt]{$s$};
-    \draw[dl](c)--(TLv)node[wb,pos=0.5]{$b$};
-    \draw[dl](c)--(TRv)node[wb,pos=0.5]{$c$};
-    \draw[dlu](c)--(B)node[wb,pos=0.5]{$x$};
-  \end{scope}
-  % Y (right): x vertical; top->bb,cc ; bottom->aa,dd
-  \coordinate(YH)at(5.0,2.0);\coordinate(YL)at(5.0,-1.0);
-  \draw[dlu](YH)--(YL)node[midway,right,inner sep=1pt]{$x$};
-  \draw[dl](YH)--($(YH)+(150:0.8)$)node[at end,above]{$b\beta$};
-  \draw[dl](YH)--($(YH)+(30:0.8)$)node[at end,above]{$c\gamma$};
-  \draw[dl](YL)--($(YL)+(210:0.8)$)node[at end,below]{$a\alpha$};
-  \draw[dl](YL)--($(YL)+(-30:0.8)$)node[at end,below]{$d\delta$};
-\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_1_24}
 \]
 \[
 \begin{gathered}
@@ -1136,120 +318,13 @@ r \nu \mu}}(-1)^{p-\psi+q-\kappa+r-\rho+s-\sigma+t-r+u-\nu+v-\mu}\threej{p}{a}{q
 =(-1)^{q+v+t-o-d+2 u} \sum_{x y \eta}(-1)^{x+y-\eta} \Fact{x y}^{2}\threej{a}{b}{y}{\alpha}{\beta}{-\eta} \label{chap12:eq:25}\threej{y}{c}{d}{\eta}{\gamma}{\delta}\sixj{p}{r}{x}{c}{v}{s}\sixj{p}{r}{x}{u}{a}{q}\sixj{a}{b}{y}{t}{x}{u}\sixj{y}{c}{d}{v}{t}{x}=
 \end{equation}
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \coordinate(A)at(0,0.9);\coordinate(B)at(1.6,0.9);\coordinate(E)at(1.6,-0.9);\coordinate(D)at(0,-0.9);
-  \coordinate(L)at(-0.8,0);\coordinate(C)at(0.8,0);
-  \draw[dl](L)--(A)node[midway,above left,inner sep=1pt]{$q$};
-  \draw[dl](L)--(D)node[midway,below left,inner sep=1pt]{$p$};
-  \draw[dl](A)--(B)node[midway,above,inner sep=1pt]{$u$};
-  \draw[dl](B)--(E)node[midway,right,inner sep=1pt]{$t$};
-  \draw[dl](D)--(E)node[midway,below,inner sep=1pt]{$v$};
-  \draw[dl](A)--(C)node[midway,above right,inner sep=1pt]{$r$};
-  \draw[dl](D)--(C)node[midway,below right,inner sep=1pt]{$s$};
-  \draw[dl](C)--($(C)+(0:0.55)$)node[at end,above,inner sep=1pt]{$c\gamma$};
-  \draw[dl](L)--($(L)+(180:0.7)$)node[at end,above]{$a\alpha$};
-  \draw[dl](B)--($(B)+(60:0.8)$)node[at end,right]{$b\beta$};
-  \draw[dl](E)--($(E)+(-60:0.8)$)node[at end,right]{$d\delta$};
-\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  % TL apex-down: outer u(top) r(left) x(right); spokes q,a,p
-  \begin{scope}[shift={(0,1.3)}]
-    \coordinate(c)at(0,0);\coordinate(B)at(270:1);\coordinate(TLv)at(150:1);\coordinate(TRv)at(30:1);
-    \draw[dl](TLv)--(TRv)node[midway,above,inner sep=1pt]{$u$};
-    \draw[dl](TLv)--(B)node[midway,below left,inner sep=1pt]{$r$};
-    \draw[dlu](TRv)--(B)node[midway,below right,inner sep=1pt]{$x$};
-    \draw[dl](c)--(TLv)node[wb,pos=0.5]{$q$};
-    \draw[dl](c)--(TRv)node[wb,pos=0.5]{$a$};
-    \draw[dl](c)--(B)node[wb,pos=0.5]{$p$};
-  \end{scope}
-  % TR apex-down: outer u(top) x(left,bold) t(right); spokes a,b,y
-  \begin{scope}[shift={(2.4,1.3)}]
-    \coordinate(c)at(0,0);\coordinate(B)at(270:1);\coordinate(TLv)at(150:1);\coordinate(TRv)at(30:1);
-    \draw[dl](TLv)--(TRv)node[midway,above,inner sep=1pt]{$u$};
-    \draw[dlu](TLv)--(B)node[midway,below left,inner sep=1pt]{$x$};
-    \draw[dl](TRv)--(B)node[midway,below right,inner sep=1pt]{$t$};
-    \draw[dl](c)--(TLv)node[wb,pos=0.5]{$a$};
-    \draw[dl](c)--(TRv)node[wb,pos=0.5]{$b$};
-    \draw[dlu](c)--(B)node[wb,pos=0.5]{$y$};
-  \end{scope}
-  % BL apex-up: outer c(bottom) r(left) x(right); spokes p,s,v
-  \begin{scope}[shift={(0,-1.3)}]
-    \coordinate(c)at(0,0);\coordinate(T)at(90:1);\coordinate(Lv)at(210:1);\coordinate(Rv)at(330:1);
-    \draw[dl](T)--(Lv)node[midway,above left,inner sep=1pt]{$r$};
-    \draw[dlu](T)--(Rv)node[midway,above right,inner sep=1pt]{$x$};
-    \draw[dl](Lv)--(Rv)node[midway,below,inner sep=1pt]{$c$};
-    \draw[dl](c)--(T)node[wb,pos=0.5]{$p$};
-    \draw[dl](c)--(Lv)node[wb,pos=0.5]{$s$};
-    \draw[dl](c)--(Rv)node[wb,pos=0.5]{$v$};
-  \end{scope}
-  % BR apex-up: outer v(bottom) x(left,bold) t(right); spokes y,c,d
-  \begin{scope}[shift={(2.4,-1.3)}]
-    \coordinate(c)at(0,0);\coordinate(T)at(90:1);\coordinate(Lv)at(210:1);\coordinate(Rv)at(330:1);
-    \draw[dlu](T)--(Lv)node[midway,above left,inner sep=1pt]{$x$};
-    \draw[dl](T)--(Rv)node[midway,above right,inner sep=1pt]{$t$};
-    \draw[dl](Lv)--(Rv)node[midway,below,inner sep=1pt]{$v$};
-    \draw[dlu](c)--(T)node[wb,pos=0.5]{$y$};
-    \draw[dl](c)--(Lv)node[wb,pos=0.5]{$c$};
-    \draw[dl](c)--(Rv)node[wb,pos=0.5]{$d$};
-  \end{scope}
-  % Y (right): y vertical; top->aa,bb ; bottom->cc,dd
-  \coordinate(YH)at(5.0,1.3);\coordinate(YL)at(5.0,-1.3);
-  \draw[dlu](YH)--(YL)node[midway,right,inner sep=1pt]{$y$};
-  \draw[dl](YH)--($(YH)+(150:0.8)$)node[at end,above]{$a\alpha$};
-  \draw[dl](YH)--($(YH)+(30:0.8)$)node[at end,above]{$b\beta$};
-  \draw[dl](YL)--($(YL)+(210:0.8)$)node[at end,below]{$c\gamma$};
-  \draw[dl](YL)--($(YL)+(-30:0.8)$)node[at end,below]{$d\delta$};
-\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_1_25}
 \]
 \begin{equation}
 =(-1)^{q+u-a-s-b-d} \sum_{x \xi}(-1)^{x-\xi} \Fact{x}^{2}\threej{a}{x}{c}{\alpha}{-\xi}{\gamma} \label{chap12:eq:26}\threej{d}{x}{b}{\delta}{\xi}{\beta}\sixj{d}{x}{b}{u}{t}{v}\ninej{a}{x}{c}{p}{v}{s}{q}{u}{r},
 \end{equation}
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \coordinate(A)at(0,0.9);\coordinate(B)at(1.6,0.9);\coordinate(E)at(1.6,-0.9);\coordinate(D)at(0,-0.9);
-  \coordinate(L)at(-1.1,0);\coordinate(C)at(0.7,0);
-  \draw[dl](L)--(A)node[midway,above left,inner sep=1pt]{$q$};
-  \draw[dl](L)--(D)node[midway,below left,inner sep=1pt]{$p$};
-  \draw[dl](A)--(B)node[midway,above,inner sep=1pt]{$u$};
-  \draw[dl](B)--(E)node[midway,right,inner sep=1pt]{$t$};
-  \draw[dl](D)--(E)node[midway,below,inner sep=1pt]{$v$};
-  \draw[dl](A)--(C)node[midway,above right,inner sep=1pt]{$r$};
-  \draw[dl](D)--(C)node[midway,below right,inner sep=1pt]{$s$};
-  \draw[dl](C)--($(C)+(0:0.55)$)node[at end,above,inner sep=1pt]{$c\gamma$};
-  \draw[dl](L)--($(L)+(180:0.7)$)node[at end,above]{$a\alpha$};
-  \draw[dl](B)--($(B)+(60:0.8)$)node[at end,right]{$b\beta$};
-  \draw[dl](E)--($(E)+(-60:0.8)$)node[at end,right]{$d\delta$};
-\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  % H (left): x horizontal; left->cc(up),aa(down) ; right->bb(up),dd(down)
-  \coordinate(XL)at(-0.8,0);\coordinate(XR)at(0.8,0);
-  \draw[dlu](XL)--(XR)node[midway,above,inner sep=1pt]{$x$};
-  \draw[dl](XL)--($(XL)+(130:0.8)$)node[at end,left]{$c\gamma$};
-  \draw[dl](XL)--($(XL)+(230:0.8)$)node[at end,left]{$a\alpha$};
-  \draw[dl](XR)--($(XR)+(50:0.8)$)node[at end,right]{$b\beta$};
-  \draw[dl](XR)--($(XR)+(-50:0.8)$)node[at end,right]{$d\delta$};
-  % flat-top 9j-hexagon: vertices at 0,60,120,180,240,300
-  \begin{scope}[shift={(3.0,0)}]
-    \coordinate(hc)at(0,0);
-    \foreach \i in {0,...,5}{\coordinate(v\i) at (60*\i:1);}
-    \draw[dl](v2)--(v1)node[midway,above,inner sep=1pt]{$r$};
-    \draw[dl](v1)--(v0)node[midway,above right,inner sep=1pt]{$u$};
-    \draw[dl](v0)--(v5)node[midway,below right,inner sep=1pt]{$v$};
-    \draw[dl](v5)--(v4)node[midway,below,inner sep=1pt]{$p$};
-    \draw[dl](v4)--(v3)node[midway,below left,inner sep=1pt]{$a$};
-    \draw[dl](v3)--(v2)node[midway,above left,inner sep=1pt]{$c$};
-    \draw[dlu](v3)--(v0)node[wb,pos=0.28]{$x$};
-    \draw[dl](v1)--(v4)node[wb,pos=0.30]{$q$};
-    \draw[dl](v2)--(v5)node[wb,pos=0.70]{$s$};
-  \end{scope}
-  % 6j-diamond {u b / v d}, hd=x (bold), vd=t
-  \begin{scope}[shift={(5.7,0)}]
-    \draw[dlu](180:0.9)--(0:0.9);
-    \dsixjsq{0}{0}{u}{b}{v}{d}{x}{t}
-  \end{scope}
-\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_1_26}
 \]
 
 \begin{align}
@@ -1260,72 +335,7 @@ r \nu \mu}}(-1)^{p-\psi+q-\kappa+r-\rho+s-\sigma+t-r+u-\nu+v-\mu}\threej{p}{a}{q
 \end{align}
 
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  % hexagon loop (pointy-top): edges r,q,p,u,t,s ; legs c,b,a,f,e,d
-  \dninehex{0}{0}{r}{q}{p}{u}{t}{s}
-  \draw[dl](hT)--($(hT)+(90:0.8)$)node[at end,above]{$c\gamma$};
-  \draw[dl](hUL)--($(hUL)+(150:0.8)$)node[at end,left]{$b\beta$};
-  \draw[dl](hLL)--($(hLL)+(210:0.8)$)node[at end,left]{$a\alpha$};
-  \draw[dl](hB)--($(hB)+(270:0.8)$)node[at end,below]{$f\varphi$};
-  \draw[dl](hLR)--($(hLR)+(330:0.8)$)node[at end,right]{$e\varepsilon$};
-  \draw[dl](hUR)--($(hUR)+(30:0.8)$)node[at end,right]{$d\delta$};
-\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  % --- 3jm-tree: centre J, three bold legs x,y,z each ending in a pair ---
-  \coordinate(J)at(1.4,0);
-  \coordinate(Px)at($(J)-(1.1,0)$);\coordinate(Py)at($(J)+(60:1.4)$);\coordinate(Pz)at($(J)+(-60:1.4)$);
-  \draw[dlu](J)--(Px)node[midway,above,inner sep=1pt]{$x$};
-  \draw[dlu](J)--(Py)node[midway,above left,inner sep=1pt]{$y$};
-  \draw[dlu](J)--(Pz)node[midway,below left,inner sep=1pt]{$z$};
-  \draw[dl](Px)--($(Px)+(120:0.8)$)node[at end,left]{$b\beta$};
-  \draw[dl](Px)--($(Px)+(240:0.8)$)node[at end,left]{$a\alpha$};
-  \draw[dl](Py)--($(Py)+(120:0.8)$)node[at end,above]{$c\gamma$};
-  \draw[dl](Py)--($(Py)+(0:0.8)$)node[at end,right]{$d\delta$};
-  \draw[dl](Pz)--($(Pz)+(240:0.8)$)node[at end,below]{$f\varphi$};
-  \draw[dl](Pz)--($(Pz)+(0:0.8)$)node[at end,right]{$e\varepsilon$};
-  % --- four 6j-triangles ---
-  % mid-left (apex-right) {a x b / r q p}: edges q(left) r(UR) p(LR); spokes b,a,x
-  \begin{scope}[shift={(3,0)}]
-    \coordinate(c)at(0,0);\coordinate(T)at(120:1);\coordinate(B)at(240:1);\coordinate(V)at(0:1);
-    \draw[dl](T)--(B)node[midway,left,inner sep=1pt]{$q$};
-    \draw[dl](T)--(V)node[midway,above right,inner sep=1pt]{$r$};
-    \draw[dl](B)--(V)node[midway,below right,inner sep=1pt]{$p$};
-    \draw[dl](c)--(T)node[wb,pos=0.5]{$b$};
-    \draw[dl](c)--(B)node[wb,pos=0.5]{$a$};
-    \draw[dlu](c)--(V)node[wb,pos=0.45]{$x$};
-  \end{scope}
-  % mid-right (apex-left) {x y z / r t p}: edges r(UL) t(right) p(LL); spokes y,z,x
-  \begin{scope}[shift={(5.3,0)}]
-    \coordinate(c)at(0,0);\coordinate(T)at(60:1);\coordinate(B)at(300:1);\coordinate(V)at(180:1);
-    \draw[dl](T)--(V)node[midway,above left,inner sep=1pt]{$r$};
-    \draw[dl](T)--(B)node[midway,right,inner sep=1pt]{$t$};
-    \draw[dl](V)--(B)node[midway,below left,inner sep=1pt]{$p$};
-    \draw[dlu](c)--(T)node[wb,pos=0.5]{$y$};
-    \draw[dlu](c)--(B)node[wb,pos=0.5]{$z$};
-    \draw[dlu](c)--(V)node[wb,pos=0.45]{$x$};
-  \end{scope}
-  % top-right (apex-right) {c y d / t s r}: edges s(top) r(left) t(right); spokes c,d,y
-  \begin{scope}[shift={(6.4,2)}]
-    \coordinate(c)at(0,0);\coordinate(T)at(120:1);\coordinate(B)at(240:1);\coordinate(V)at(0:1);
-    \draw[dl](T)--(B)node[midway,left,inner sep=1pt]{$r$};
-    \draw[dl](T)--(V)node[midway,above right,inner sep=1pt]{$s$};
-    \draw[dl](B)--(V)node[midway,below right,inner sep=1pt]{$t$};
-    \draw[dl](c)--(T)node[wb,pos=0.5]{$c$};
-    \draw[dlu](c)--(B)node[wb,pos=0.5]{$y$};
-    \draw[dl](c)--(V)node[wb,pos=0.45]{$d$};
-  \end{scope}
-  % bottom-right (apex-right) {e z f / t u p}: edges t(right) u(bottom) p(left); spokes z,e,f
-  \begin{scope}[shift={(6.4,-2)}]
-    \coordinate(c)at(0,0);\coordinate(T)at(120:1);\coordinate(B)at(240:1);\coordinate(V)at(0:1);
-    \draw[dl](T)--(B)node[midway,left,inner sep=1pt]{$p$};
-    \draw[dl](T)--(V)node[midway,above right,inner sep=1pt]{$t$};
-    \draw[dl](B)--(V)node[midway,below right,inner sep=1pt]{$u$};
-    \draw[dlu](c)--(T)node[wb,pos=0.5]{$z$};
-    \draw[dl](c)--(B)node[wb,pos=0.5]{$f$};
-    \draw[dl](c)--(V)node[wb,pos=0.45]{$e$};
-  \end{scope}
-\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_1_27}
 \]
 \[
 =(-1)^{2 p-u-r+a+b+d+e-c} \sum_{\substack{x y z \\ \xi \eta \xi}}(-1)^{x} \Fact{x y z}^{2}(-1)^{x-\xi+y-\eta+x-\xi}
@@ -1334,71 +344,7 @@ r \nu \mu}}(-1)^{p-\psi+q-\kappa+r-\rho+s-\sigma+t-r+u-\nu+v-\mu}\threej{p}{a}{q
 \times\threej{a}{b}{x}{\alpha}{\beta}{-\xi} \label{chap12:eq:28}\threej{x}{c}{y}{\xi}{\gamma}{-\eta}\threej{y}{f}{z}{\eta}{\varphi}{-\zeta}\threej{z}{d}{e}{\zeta}{\delta}{e}\sixj{a}{b}{x}{r}{p}{q}\sixj{x}{c}{y}{s}{p}{r}\sixj{y}{f}{z}{u}{s}{p}\sixj{z}{d}{e}{t}{u}{s}=
 \end{equation}
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  % hexagon loop (pointy-top): edges r,q,p,u,t,s ; legs c,b,a,f,e,d
-  \dninehex{0}{0}{r}{q}{p}{u}{t}{s}
-  \draw[dl](hT)--($(hT)+(90:0.8)$)node[at end,above]{$c\gamma$};
-  \draw[dl](hUL)--($(hUL)+(150:0.8)$)node[at end,left]{$b\beta$};
-  \draw[dl](hLL)--($(hLL)+(210:0.8)$)node[at end,left]{$a\alpha$};
-  \draw[dl](hB)--($(hB)+(270:0.8)$)node[at end,below]{$f\varphi$};
-  \draw[dl](hLR)--($(hLR)+(330:0.8)$)node[at end,right]{$e\varepsilon$};
-  \draw[dl](hUR)--($(hUR)+(30:0.8)$)node[at end,right]{$d\delta$};
-\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  % --- top: four 6j-triangles, alternating apex-down / apex-up ---
-  % T1 apex-down {a b x / r p q}: top r, left q, right p ; spokes b,x,a
-  \begin{scope}[shift={(0,-0.5)}]
-    \coordinate(c)at(0,0);\coordinate(TLv)at(150:1);\coordinate(TRv)at(30:1);\coordinate(B)at(270:1);
-    \draw[dl](TLv)--(TRv)node[midway,above,inner sep=1pt]{$r$};
-    \draw[dl](TLv)--(B)node[midway,below left,inner sep=1pt]{$q$};
-    \draw[dl](TRv)--(B)node[midway,below right,inner sep=1pt]{$p$};
-    \draw[dl](c)--(TLv)node[wb,pos=0.5]{$b$};
-    \draw[dlu](c)--(TRv)node[wb,pos=0.5]{$x$};
-    \draw[dl](c)--(B)node[wb,pos=0.5]{$a$};
-  \end{scope}
-  % T2 apex-up {x c y / s p r}: left r, right s, bottom p ; spokes c,x,y
-  \begin{scope}[shift={(1.8,0.5)}]
-    \coordinate(c)at(0,0);\coordinate(T)at(90:1);\coordinate(Lv)at(210:1);\coordinate(Rv)at(330:1);
-    \draw[dl](T)--(Lv)node[midway,above left,inner sep=1pt]{$r$};
-    \draw[dl](T)--(Rv)node[midway,above right,inner sep=1pt]{$s$};
-    \draw[dl](Lv)--(Rv)node[pos=0.3,below,inner sep=1pt]{$p$};
-    \draw[dl](c)--(T)node[wb,pos=0.5]{$c$};
-    \draw[dlu](c)--(Lv)node[wb,pos=0.5]{$x$};
-    \draw[dlu](c)--(Rv)node[wb,pos=0.5]{$y$};
-  \end{scope}
-  % T3 apex-down {y f z / u s p}: top s, left p, right u ; spokes y,z,f
-  \begin{scope}[shift={(3.6,-0.5)}]
-    \coordinate(c)at(0,0);\coordinate(TLv)at(150:1);\coordinate(TRv)at(30:1);\coordinate(B)at(270:1);
-    \draw[dl](TLv)--(TRv)node[midway,above,inner sep=1pt]{$s$};
-    \draw[dl](TLv)--(B)node[midway,below left,inner sep=1pt]{$p$};
-    \draw[dl](TRv)--(B)node[midway,below right,inner sep=1pt]{$u$};
-    \draw[dlu](c)--(TLv)node[wb,pos=0.5]{$y$};
-    \draw[dlu](c)--(TRv)node[wb,pos=0.5]{$z$};
-    \draw[dl](c)--(B)node[wb,pos=0.5]{$f$};
-  \end{scope}
-  % T4 apex-up {z d e / t u s}: left s, right t, bottom u ; spokes d,z,e
-  \begin{scope}[shift={(5.4,0.5)}]
-    \coordinate(c)at(0,0);\coordinate(T)at(90:1);\coordinate(Lv)at(210:1);\coordinate(Rv)at(330:1);
-    \draw[dl](T)--(Lv)node[midway,above left,inner sep=1pt]{$s$};
-    \draw[dl](T)--(Rv)node[midway,above right,inner sep=1pt]{$t$};
-    \draw[dl](Lv)--(Rv)node[pos=0.3,below,inner sep=1pt]{$u$};
-    \draw[dl](c)--(T)node[wb,pos=0.5]{$d$};
-    \draw[dlu](c)--(Lv)node[wb,pos=0.5]{$z$};
-    \draw[dl](c)--(Rv)node[wb,pos=0.5]{$e$};
-  \end{scope}
-  % --- bottom: x-y-z caterpillar tree ---
-  \coordinate(A)at(0,-2);\coordinate(Bv)at(1.8,-1.4);\coordinate(Cv)at(3.6,-2);\coordinate(Dv)at(5.4,-1.4);
-  \draw[dlu](A)--(Bv)node[midway,above,inner sep=1pt]{$x$};
-  \draw[dlu](Bv)--(Cv)node[midway,above,inner sep=1pt]{$y$};
-  \draw[dlu](Cv)--(Dv)node[midway,above,inner sep=1pt]{$z$};
-  \draw[dl](A)--($(A)+(150:0.8)$)node[at end,left]{$b\beta$};
-  \draw[dl](A)--($(A)+(270:0.8)$)node[at end,below]{$a\alpha$};
-  \draw[dl](Bv)--($(Bv)+(90:0.8)$)node[at end,above]{$c\gamma$};
-  \draw[dl](Cv)--($(Cv)+(270:0.8)$)node[at end,below]{$f\varphi$};
-  \draw[dl](Dv)--($(Dv)+(90:0.8)$)node[at end,above]{$d\delta$};
-  \draw[dl](Dv)--($(Dv)+(-20:0.9)$)node[at end,right]{$e\varepsilon$};
-\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_1_28}
 \]
 
 \begin{gather}
@@ -1408,60 +354,7 @@ r \nu \mu}}(-1)^{p-\psi+q-\kappa+r-\rho+s-\sigma+t-r+u-\nu+v-\mu}\threej{p}{a}{q
 \end{gather}
 
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  % hexagon loop (pointy-top): edges r,q,p,u,t,s ; legs c,b,a,f,e,d
-  \dninehex{0}{0}{r}{q}{p}{u}{t}{s}
-  \draw[dl](hT)--($(hT)+(90:0.8)$)node[at end,above]{$c\gamma$};
-  \draw[dl](hUL)--($(hUL)+(150:0.8)$)node[at end,left]{$b\beta$};
-  \draw[dl](hLL)--($(hLL)+(210:0.8)$)node[at end,left]{$a\alpha$};
-  \draw[dl](hB)--($(hB)+(270:0.8)$)node[at end,below]{$f\varphi$};
-  \draw[dl](hLR)--($(hLR)+(330:0.8)$)node[at end,right]{$e\varepsilon$};
-  \draw[dl](hUR)--($(hUR)+(30:0.8)$)node[at end,right]{$d\delta$};
-\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  % --- 3jm-tree: centre J; x(up-left)->a,b ; y(up-right)->d,e ; z(down)->c,f ---
-  \coordinate(J)at(1.2,-0.2);
-  \coordinate(Lv)at($(J)+(150:1.2)$);\coordinate(Rv)at($(J)+(30:1.2)$);\coordinate(Bv)at($(J)+(270:1.2)$);
-  \draw[dlu](J)--(Lv)node[midway,above right,inner sep=1pt]{$x$};
-  \draw[dlu](J)--(Rv)node[midway,above left,inner sep=1pt]{$y$};
-  \draw[dlu](J)--(Bv)node[midway,right,inner sep=1pt]{$z$};
-  \draw[dl](Lv)--($(Lv)+(90:0.8)$)node[at end,above]{$b\beta$};
-  \draw[dl](Lv)--($(Lv)+(210:0.8)$)node[at end,left]{$a\alpha$};
-  \draw[dl](Rv)--($(Rv)+(90:0.8)$)node[at end,above]{$d\delta$};
-  \draw[dl](Rv)--($(Rv)+(-30:0.8)$)node[at end,right]{$e\varepsilon$};
-  \draw[dl](Bv)--($(Bv)+(210:0.8)$)node[at end,below]{$c\gamma$};
-  \draw[dl](Bv)--($(Bv)+(-30:0.8)$)node[at end,below]{$f\varphi$};
-  % --- left 6j-triangle (apex-up) {a x b / r q p}: edges b(UL) x(UR) r(bot); spokes a,q,p
-  \begin{scope}[shift={(4.5,0.5)}]
-    \coordinate(c)at(0,0);\coordinate(T)at(90:1);\coordinate(L)at(210:1);\coordinate(R)at(330:1);
-    \draw[dl](T)--(L)node[midway,above left,inner sep=1pt]{$b$};
-    \draw[dlu](T)--(R)node[midway,above right,inner sep=1pt]{$x$};
-    \draw[dl](L)--(R)node[midway,below,inner sep=1pt]{$r$};
-    \draw[dl](c)--(T)node[wb,pos=0.5]{$a$};
-    \draw[dl](c)--(L)node[wb,pos=0.5]{$q$};
-    \draw[dl](c)--(R)node[wb,pos=0.5]{$p$};
-  \end{scope}
-  % --- flat 9j-hexagon (pointy-top): edges x,r,c,f,s,y ; diameters z(vert,bold),p,q
-  \begin{scope}[shift={(6.3,-0.5)}]
-    \dninehex{0}{0}{x}{r}{c}{f}{s}{y}
-    \draw[dlu](hT) --(hUR);
-    \draw[dlu](hT) --(hUL);
-    \draw[dlu](hT)--(hB)node[wb,pos=0.3]{$z$};
-    \draw[dl](hUL)--(hLR)node[wb,pos=0.3]{$p$};
-    \draw[dl](hUR)--(hLL)node[wb,pos=0.3]{$q$};
-  \end{scope}
-  % --- right 6j-triangle (apex-up) {e y d / s t u}: edges y(UL) e(UR) u(bot); spokes d,s,t
-  \begin{scope}[shift={(9.1,0.5)}]
-    \coordinate(c)at(0,0);\coordinate(T)at(90:1);\coordinate(L)at(210:1);\coordinate(R)at(330:1);
-    \draw[dlu](T)--(L)node[midway,above left,inner sep=1pt]{$y$};
-    \draw[dl](T)--(R)node[midway,above right,inner sep=1pt]{$e$};
-    \draw[dl](L)--(R)node[midway,below,inner sep=1pt]{$u$};
-    \draw[dl](c)--(T)node[wb,pos=0.5]{$d$};
-    \draw[dl](c)--(L)node[wb,pos=0.5]{$s$};
-    \draw[dl](c)--(R)node[wb,pos=0.5]{$t$};
-  \end{scope}
-\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_1_29}
 \]
 
 \section{SUMMATION OF PRODUCTS OF $6 j$ AND $9 j$ SYMBOLS}
@@ -1477,9 +370,7 @@ Some of the sums presented are taken from Refs. \cite{ref024} and \cite{ref044}.
 \end{equation}
 
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]\cthetav[dlu]{0}{0}{a}{X}{b}\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]\dloop{0}{0}{a}\dloop{1.4}{0}{b}\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_2_1}
 \]
 
 \begin{equation}
@@ -1487,62 +378,31 @@ Some of the sums presented are taken from Refs. \cite{ref024} and \cite{ref044}.
 \end{equation}
 
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]\cthetav[dlu]{0}{0}{a}{X}{a}\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]\dloop{0}{0}{a}\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_2_2}
 \]
 \begin{equation}
 \sum_{x} \Fact{x}^{2}\sixj{a}{b}{X}{a}{b}{c} \label{chap12:eq:32}=(-1)^{2 c}\{a b c\},
 \end{equation}
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]\dsixjsq[1]{0}{0}{a}{b}{b}{a}{c}{X}\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]\ctheta{0}{0}{a}{c}{b}\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_2_3}
 \]
 \begin{equation}
 \sum_{X}(-1)^{a+b+X} \Fact{X}^{2}\sixj{a}{b}{x}{b}{a}{c} \label{chap12:eq:33}=\Fact{a b} \delta_{c 0}
 \end{equation}
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]\dsixjsq[1]{0}{0}{a}{b}{a}{b}{c}{X}\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \dloop{0}{0}{a}\dloop{1.9}{0}{b}
-  \draw[dl](0.42,0)--(1.48,0)node[midway,above,inner sep=1pt]{$c$};
-\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_2_4}
 \]
 \begin{equation}
 \sum_{X} \Fact{X}^{2}\ninej{a}{b}{e}{c}{d}{f}{e}{f}{X} \label{chap12:eq:34}=\frac{\delta_{b c}}{\Fact{b}^{2}}\{a b e\}\{b d f\}
 \end{equation}
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \dninehex{0}{0}{e}{a}{e}{f}{d}{f}
-  \draw[dlu](hT)--(hB)node[wb,pos=0.25]{$X$};
-  \draw[dl](hUL)--(hLR)node[wb,pos=0.25]{$c$};
-  \draw[dl](hUR)--(hLL)node[wb,pos=0.75]{$b$};
-\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \cthetav{0}{0}{a}{b}{e}
-  \drect{1.6}{0}{b}{c}
-  \cthetav{3.1}{0}{f}{b}{d}
-\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_2_5}
 \]
 \begin{equation}
 \sum_{X}(-1)^{a+b+c+d-X} \Fact{X}^{2}\ninej{a}{b}{e}{c}{d}{f}{f}{e}{X} \label{chap12:eq:35}=\frac{\delta_{a d}}{\Fact{a}^{2}}\{d b e\}\{a c f\}
 \end{equation}
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \dninehex{0}{0}{e}{a}{f}{e}{d}{f}
-  \draw[dlu](hT)--(hB)node[wb,pos=0.25]{$X$};
-  \draw[dl](hUL)--(hLR)node[wb,pos=0.25]{$c$};
-  \draw[dl](hUR)--(hLL)node[wb,pos=0.75]{$b$};
-\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \cthetav{0}{0}{a}{c}{f}
-  \drect{1.6}{0}{a}{d}
-  \cthetav{3.1}{0}{e}{b}{d}
-\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_2_6}
 \]
 \subsection{Sums Involving Products of Two $3 n j$ Symbols}
 \subsubsection{(i) Single summation}
@@ -1551,28 +411,14 @@ Some of the sums presented are taken from Refs. \cite{ref024} and \cite{ref044}.
 \label{chap12:eq:36}
 \end{equation}
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]\dsixjsq[1]{0}{0}{b}{c}{a}{d}{p}{X}\end{tikzpicture}
-\begin{tikzpicture}[baseline=0pt,font=\small]\dsixjsq[1]{0}{0}{c}{b}{d}{a}{q}{X}\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \cthetav{0}{0}{a}{d}{p}
-  \drect{1.6}{0}{p}{q}
-  \cthetav{3.1}{0}{p}{c}{b}
-\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_2_7}
 \]
 \begin{equation}
 \sum_{X}(-1)^{p+q+X} \Fact{X}^{2}\sixj{a}{b}{X}{c}{d}{p} \sixj{c}{d}{X}{b}{a}{q}=\sixj{c}{a}{q}{d}{b}{p}
 \label{chap12:eq:37}
 \end{equation}
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]\dsixjsq[1]{0}{0}{b}{c}{a}{d}{p}{X}\end{tikzpicture}
-\begin{tikzpicture}[baseline=0pt,font=\small]\dsixjsq[1]{0}{0}{c}{a}{d}{b}{q}{X}\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \dsq{0}{0}{c}{d}{p}{q}
-  \draw[dl](sqTL)--(sqBR)node[pos=0.28,right,inner sep=1pt]{$b$};
-  \draw[dl](sqTR)--(sqBL)node[pos=0.28,left,inner sep=1pt]{$a$};
-\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_2_8}
 \]
 \begin{equation}
 \sum_{X} \Fact{X}^{2}
@@ -1581,25 +427,7 @@ Some of the sums presented are taken from Refs. \cite{ref024} and \cite{ref044}.
  \label{chap12:eq:38}
 \end{equation}
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]
-\begin{scope}
-  \dhexflat{0}{0}{c}{f}{a}{d}{e}{b}
-  \draw[dl](v2)--(v5)node[wb,pos=0.28]{$p$};
-  \draw[dlu](v1)--(v4)node[wb,pos=0.28]{$X$};
-  \draw[dl](v3)--(v0)node[wb,pos=0.72]{$q$};
-\end{scope}\begin{scope}[xshift=2.2cm]
-    \dsixjsq[1]{0}{0}{f}{e}{a}{b}{s}{X}
-  \end{scope}
-\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \begin{scope}
-  \dsixjsq{0}{0}{b}{c}{a}{d}{s}{p}
-\end{scope}
-\begin{scope}[xshift=2cm]
-  \dsixjsq{0}{0}{c}{f}{d}{e}{s}{q}
-\end{scope}
-\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_2_9}
 \]
 \begin{equation}
 \sum_X (-1)^{R+X}\Fact{X}^2 
@@ -1612,25 +440,7 @@ Some of the sums presented are taken from Refs. \cite{ref024} and \cite{ref044}.
 \end{equation}
 where $R=a+b+c+d+e+f+p+q$\\
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \begin{scope}
-  \dhexflat{0}{0}{c}{f}{a}{d}{e}{b}
-  \draw[dl](v2)--(v5)node[wb,pos=0.28]{$p$};
-  \draw[dlu](v1)--(v4)node[wb,pos=0.28]{$X$};
-  \draw[dl](v3)--(v0)node[wb,pos=0.72]{$q$};
-\end{scope}\begin{scope}[xshift=2.2cm]
-  \dsixjsq[1]{0}{0}{f}{b}{a}{e}{s}{X}
-\end{scope}
-\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \begin{scope}
-  \dsixjsq{0}{0}{a}{p}{e}{q}{s}{d}
-\end{scope}
-\begin{scope}[xshift=2cm]
-  \dsixjsq{0}{0}{p}{b}{q}{f}{s}{c}
-\end{scope}
-\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_2_10}
 \]
 \begin{equation}
 \sum_X\Fact{X}^2\ninej{a}{b}{p}{c}{d}{q}{r}{s}{X}
@@ -1638,51 +448,8 @@ where $R=a+b+c+d+e+f+p+q$\\
 =
 (-1)^{b-c-f+g}\twelvejII{r,a,c,s,b,d,h,g,q,f,e,p}
 \end{equation}
-% shared LHS of p11 & p12: two pointy-top 9j-hexagons
-\newcommand{\pElevenLHS}{%
-  \begin{scope}
-    \dninehex{0}{0}{a}{b}{d}{q}{X}{r}
-    \draw[dlu](hLR)--(hUR); % X edge bold
-    \draw[dl](hT)--(hB)node[wb,pos=0.27]{$c$};
-    \draw[dl](hUR)--(hLL)node[wb,pos=0.30]{$s$};
-    \draw[dl](hUL)--(hLR)node[wb,pos=0.70]{$p$};
-  \end{scope}
-  \begin{scope}[xshift=3cm]
-    \dninehex{0}{0}{r}{X}{q}{h}{f}{e}
-    \draw[dlu](hUL)--(hLL); % X edge bold
-    \draw[dl](hT)--(hB)node[wb,pos=0.27]{$g$};
-    \draw[dl](hUR)--(hLL)node[wb,pos=0.30]{$p$};
-    \draw[dl](hUL)--(hLR)node[wb,pos=0.70]{$s$};
-  \end{scope}}
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]\pElevenLHS\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  % octagon vertices
-  \coordinate(Ta)at(-0.6,1.4);\coordinate(Tb)at(0.6,1.4);
-  \coordinate(Ra)at(1.4,0.6);\coordinate(Rb)at(1.4,-0.6);
-  \coordinate(Qa)at(0.6,-1.4);\coordinate(Qb)at(-0.6,-1.4);
-  \coordinate(La)at(-1.4,-0.6);\coordinate(Lb)at(-1.4,0.6);
-  % octagon edges
-  \draw[dl](Ta)--(Tb)node[midway,above,inner sep=1pt]{$r$};
-  \draw[dl](Tb)--(Ra)node[midway,above right,inner sep=1pt]{$e$};
-  \draw[dl](Ra)--(Rb)node[midway,right,inner sep=1pt]{$f$};
-  \draw[dl](Rb)--(Qa)node[midway,below right,inner sep=1pt]{$h$};
-  \draw[dl](Qa)--(Qb)node[midway,below,inner sep=1pt]{$q$};
-  \draw[dl](Qb)--(La)node[midway,below left,inner sep=1pt]{$d$};
-  \draw[dl](La)--(Lb)node[midway,left,inner sep=1pt]{$b$};
-  \draw[dl](Lb)--(Ta)node[midway,above left,inner sep=1pt]{$a$};
-  % internal # lattice (2 verticals + 2 horizontals) -> central square
-  \draw[dl](Ta)--(Qb);
-  \draw[dl](Tb)--(Qa);
-  \draw[dl](Lb)--(Ra);
-  \draw[dl](La)--(Rb);
-  % central-square edge labels
-  \node[wb,inner sep=1.5pt] at(0,0.6){$p$};
-  \node[wb,inner sep=1.5pt] at(0.6,0){$g$};
-  \node[wb,inner sep=1.5pt] at(0,-0.6){$s$};
-  \node[wb,inner sep=1.5pt] at(-0.6,0){$c$};
-\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_2_11}
 \]
 \begin{equation}
 (-1)^{p+q-r-s} \sum_{X} \Fact{X}^{2}
@@ -1691,60 +458,14 @@ where $R=a+b+c+d+e+f+p+q$\\
 \label{chap12:eq:39}
 \end{equation}
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]\pElevenLHS\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  % RHS-top {a p b; r e g; c f Y}
-  \begin{scope}[yshift=1.5cm]
-    \dhexflat{0}{0}{r}{e}{f}{Y}{b}{a}
-    \draw[dlu](v5)--(v4); % Y edge bold
-    \draw[dl](v1)--(v4)node[wb,pos=0.30]{$g$};
-    \draw[dl](v2)--(v5)node[wb,pos=0.30]{$c$};
-    \draw[dl](v0)--(v3)node[wb,pos=0.30]{$p$};
-  \end{scope}
-  % RHS-bottom {d s b; q h g; c f Y}
-  \begin{scope}[yshift=-1.5cm]
-    \dhexflat{0}{0}{Y}{f}{h}{q}{d}{b}
-    \draw[dlu](v2)--(v1); % Y edge bold (top)
-    \draw[dl](v1)--(v4)node[wb,pos=0.30]{$c$};
-    \draw[dl](v2)--(v5)node[wb,pos=0.70]{$g$};
-    \draw[dl](v0)--(v3)node[wb,pos=0.70]{$s$};
-  \end{scope}
-\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_2_12}
 \]
 \subsubsection{(ii) Double summation}
 \begin{equation}
 \sum_{X Y} \Fact{X Y}^{2}\ninej{a}{b}{X}{c}{d}{Y}{e}{f}{j} \label{chap12:eq:40}\ninej{a}{b}{X}{c}{d}{Y}{g}{h}{j}=\frac{\delta_{e g} \delta_{f h}}{\Fact{e f}^{2}}\{a c e\}\{b d h\}\{g f j\},
 \end{equation}
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  % hex1 {a b X; c d Y; e f j}
-  \begin{scope}
-    \dhexflat{0}{0}{a}{X}{Y}{d}{f}{e}
-    \draw[dlu](v1)--(v0); % X edge bold (UR)
-    \draw[dlu](v0)--(v5); % Y edge bold (LR)
-    \draw[dl](v3)--(v0)node[wb,pos=0.30]{$j$};
-    \draw[dl](v2)--(v5)node[wb,pos=0.30]{$c$};
-    \draw[dl](v1)--(v4)node[wb,pos=0.70]{$b$};
-  \end{scope}
-  % hex2 {a b X; c d Y; g h j}
-  \begin{scope}[xshift=3cm]
-    \dhexflat{0}{0}{a}{g}{h}{d}{Y}{X}
-    \draw[dlu](v3)--(v2); % X edge bold (UL)
-    \draw[dlu](v4)--(v3); % Y edge bold (LL)
-    \draw[dl](v3)--(v0)node[wb,pos=0.70]{$j$};
-    \draw[dl](v2)--(v5)node[wb,pos=0.70]{$b$};
-    \draw[dl](v1)--(v4)node[wb,pos=0.30]{$c$};
-  \end{scope}
-\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \cthetav{0}{0}{a}{c}{e}
-  \drects{1.5}{0}{e}{g}{e}{g}
-  \cthetav{2.9}{0}{g}{j}{f}
-  \drects{4.4}{0}{f}{h}{f}{h}
-  \cthetav{5.8}{0}{h}{d}{b}
-\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_2_13}
 \]
 
 \begin{equation}
@@ -1759,68 +480,21 @@ where $R=a+b+c+d+e+f+p+q$\\
   \sum_{XYZ} \Fact{XYZ}^2 \sixj{X}{Y}{Z}{a}{b}{c}^2=\Fact{abc}^2
 \end{equation}
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \begin{scope}
-    \dsixjsq[2]{0}{0}{b}{X}{a}{Y}{Z}{c}
-    \draw[dlu](qt)--(qr);\draw[dlu](qr)--(qb); % X (UR), Y (LR) edges bold
-  \end{scope}
-  \begin{scope}[xshift=2.6cm]
-    \dsixjsq[2]{0}{0}{X}{b}{Y}{a}{Z}{c}
-    \draw[dlu](ql)--(qt);\draw[dlu](ql)--(qb); % X (UL), Y (LL) edges bold
-  \end{scope}
-\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \dloop{0}{0}{a}\dloop{1.3}{0}{b}\dloop{2.6}{0}{c}
-\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_2_14}
 \]
 \begin{equation}
   \sum_{XYZ} \Fact{XYZ}^2 \ninej{X}{Y}{Z}{a}{b}{c}{d}{e}{f}
   \sixj{X}{Y}{Z}{c}{a}{b}= \{abc\}
 \end{equation}
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \begin{scope}
-    \dhexflat{0}{0}{a}{X}{Y}{c}{a}{c}
-    \draw[dlu](v1)--(v0);\draw[dlu](v0)--(v5); % X (UR), Y (LR) edges bold
-    \draw[dl](v2)--(v5)node[wb,pos=0.30]{$b$};
-    \draw[dl](v1)--(v4)node[wb,pos=0.30]{$b$};
-    \draw[dlu](v0)--(v3)node[wb,pos=0.70]{$Z$};
-  \end{scope}
-  \begin{scope}[xshift=3cm]
-    \dsixjsq[2]{0}{0}{X}{a}{Y}{c}{Z}{b}
-    \draw[dlu](ql)--(qt);\draw[dlu](ql)--(qb); % X (UL), Y (LL) edges bold
-  \end{scope}
-\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]\cthetav{0}{0}{a}{b}{c}\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_2_15}
 \]
 \begin{equation}
 \sum_{X Y Z} \Fact{X Y Z}^{2}\ninej{X}{Y}{Z}{a}{b}{c}{d}{e}{f}^2=\{a b c\}\{d e f\}
 \label{chap12:eq:41}
 \end{equation}
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \begin{scope}
-    \dhexflat{0}{0}{a}{X}{Y}{e}{f}{c}
-    \draw[dlu](v1)--(v0);\draw[dlu](v0)--(v5); % X (UR), Y (LR) edges bold
-    \draw[dl](v2)--(v5)node[wb,pos=0.30]{$b$};
-    \draw[dl](v1)--(v4)node[wb,pos=0.70]{$d$};
-    \draw[dlu](v0)--(v3)node[wb,pos=0.70]{$Z$};
-  \end{scope}
-  \begin{scope}[xshift=3cm]
-    \dhexflat{0}{0}{a}{c}{f}{e}{Y}{X}
-    \draw[dlu](v3)--(v2);\draw[dlu](v4)--(v3); % X (UL), Y (LL) edges bold
-    \draw[dl](v2)--(v5)node[wb,pos=0.30]{$d$};
-    \draw[dl](v1)--(v4)node[wb,pos=0.70]{$b$};
-    \draw[dlu](v0)--(v3)node[wb,pos=0.70]{$Z$};
-  \end{scope}
-\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \cthetav{0}{0}{a}{b}{c}
-  \cthetav{1.6}{0}{d}{e}{f}
-\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_2_16}
 \]
 
 \subsection{Sums Involving Products of Three $3 n j$ Symbols}
@@ -1836,70 +510,13 @@ where $R=a+b+c+d+e+f+p+q$\\
 \end{equation}
 where $R=a+b+c+d+e+f+p+q+r$,\\
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  % sq-BL {a b X; r e f}: top f, bot a, left r, right X(bold); diag b,e
-  \begin{scope}
-    \dsq{0}{0}{f}{a}{r}{X}
-    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.3]{$b$};
-    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.3]{$e$};
-    \draw[dlu](sqTR)--(sqBR);
-  \end{scope}
-  % sq-top {c d X; q e f}: top q, bot X(bold), left f, right d; diag c,e
-  \begin{scope}[shift={(1.4,1.9)}]
-    \dsq{0}{0}{q}{X}{f}{d}
-    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.3]{$c$};
-    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.3]{$e$};
-    \draw[dlu](sqBL)--(sqBR);
-  \end{scope}
-  % sq-BR {c d X; p a b}: top d, bot b, left X(bold), right p; diag c,a
-  \begin{scope}[shift={(2.8,0)}]
-    \dsq{0}{0}{d}{b}{X}{p}
-    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.3]{$c$};
-    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.3]{$a$};
-    \draw[dlu](sqTL)--(sqBL);
-  \end{scope}
-\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \begin{scope}\dsixjsq{0}{0}{a}{p}{e}{q}{r}{d}\end{scope}
-  \begin{scope}[xshift=2.4cm]\dsixjsq{0}{0}{p}{b}{q}{f}{r}{c}\end{scope}
-\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_2_17}
 \]
 \begin{equation}
 \sum_{X}(-1)^{2 X} \Fact{X}^{2}\sixj{a}{b}{X}{c}{d}{p} \label{chap12:eq:43}\sixj{c}{d}{X}{e}{f}{q}\sixj{e}{f}{X}{a}{b}{r}=\ninej{a}{f}{r}{d}{q}{e}{p}{c}{b},
 \end{equation}
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  % sq-BL {a b X; r e f}: top f, bot b, left r, right X(bold); diag a,e
-  \begin{scope}
-    \dsq{0}{0}{f}{b}{r}{X}
-    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.3]{$a$};
-    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.3]{$e$};
-    \draw[dlu](sqTR)--(sqBR);
-  \end{scope}
-  % sq-top {c d X; q e f}: top q, bot X(bold), left f, right d; diag c,e
-  \begin{scope}[shift={(1.4,1.9)}]
-    \dsq{0}{0}{q}{X}{f}{d}
-    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.3]{$c$};
-    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.3]{$e$};
-    \draw[dlu](sqBL)--(sqBR);
-  \end{scope}
-  % sq-BR {c d X; p a b}: top d, bot b, left X(bold), right p; diag c,a
-  \begin{scope}[shift={(2.8,0)}]
-    \dsq{0}{0}{d}{b}{X}{p}
-    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.3]{$c$};
-    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.3]{$a$};
-    \draw[dlu](sqTL)--(sqBL);
-  \end{scope}
-\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  % 9j-hexagon (flat-top) {a f r; d q e; p c b}: outer q,d,p,b,r,f ; diameters c,a,e
-  \dhexflat{0}{0}{q}{d}{p}{b}{r}{f}
-  \draw[dl](v2)--(v5)node[wb,pos=0.30]{$c$};
-  \draw[dl](v1)--(v4)node[wb,pos=0.70]{$e$};
-  \draw[dl](v0)--(v3)node[wb,pos=0.30]{$a$};
-\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_2_18}
 \]
 \begin{equation}
 (-1)^{p+q-e-f} \sum_{X} \Fact{X}^{2}\ninej{a}{b}{p}{c}{d}{q}{e}{f}{X} \sixj{p}{q}{X}{k}{l}{g}\sixj{e}{f}{X}{k}{l}{h}=
@@ -1907,42 +524,7 @@ where $R=a+b+c+d+e+f+p+q+r$,\\
 \label{chap12:eq:44}
 \end{equation}
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  % diamond1 {l p ; k q ; g,X}: X vertical bold
-  \begin{scope}
-    \dsixjsq[1]{0}{0}{l}{p}{k}{q}{g}{X}
-  \end{scope}
-  % 9j-hex (flat-top): top a, UR e, LR f, bot d, LL q, UL p ; diameters b,X,c
-  \begin{scope}[xshift=2.6cm]
-    \dhexflat{0}{0}{a}{e}{f}{d}{q}{p}
-    \draw[dl](v2)--(v5)node[wb,pos=0.30]{$b$};
-    \draw[dlu](v0)--(v3)node[wb,pos=0.30]{$X$};
-    \draw[dl](v1)--(v4)node[wb,pos=0.70]{$c$};
-  \end{scope}
-  % diamond2 {e l ; f k ; X,h}: X horizontal bold
-  \begin{scope}[xshift=5.2cm]
-    \dsixjsq[2]{0}{0}{e}{l}{f}{k}{X}{h}
-  \end{scope}
-\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \coordinate(O)at(0,0);
-  \foreach[count=\i] \ang in {90,45,0,-45,-90,-135,180,135}{\coordinate(w\i)at(\ang:1.6);}
-  % 8 outer edges (clockwise from top)
-  \draw[dl](w1)--(w2)node[midway,above right,inner sep=1pt]{$f$};
-  \draw[dl](w2)--(w3)node[midway,right,inner sep=1pt]{$h$};
-  \draw[dl](w3)--(w4)node[midway,right,inner sep=1pt]{$e$};
-  \draw[dl](w4)--(w5)node[midway,below right,inner sep=1pt]{$c$};
-  \draw[dl](w5)--(w6)node[midway,below left,inner sep=1pt]{$q$};
-  \draw[dl](w6)--(w7)node[midway,left,inner sep=1pt]{$g$};
-  \draw[dl](w7)--(w8)node[midway,left,inner sep=1pt]{$p$};
-  \draw[dl](w8)--(w1)node[midway,above left,inner sep=1pt]{$b$};
-  % 4 diameters through centre
-  \draw[dl](w1)--(w5)node[wb,pos=0.72]{$d$};
-  \draw[dl](w2)--(w6)node[wb,pos=0.25]{$k$};
-  \draw[dl](w3)--(w7)node[wb,pos=0.72]{$l$};
-  \draw[dl](w4)--(w8)node[wb,pos=0.75]{$a$};
-\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_2_19}
 \]
 \begin{align}
 &(-1)^{p+q-e-f} \sum_{X} \Fact{X}^{2}\ninej{a}{b}{p}{c}{d}{q}{e}{f}{X}
@@ -1955,47 +537,7 @@ where $R=a+b+c+d+e+f+p+q+r$,\\
  \label{chap12:eq:45}
 \end{align}
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  % hexagon (top): top d, UR c, LR e, bot X(bold), LL p, UL b ; diam f,a,q
-  \begin{scope}[shift={(0,1.3)}]
-    \dhexflat{0}{0}{d}{c}{e}{X}{p}{b}
-    \draw[dlu](v5)--(v4); % X bottom edge bold
-    \draw[dl](v2)--(v5)node[wb,pos=0.30]{$f$};
-    \draw[dl](v0)--(v3)node[wb,pos=0.70]{$a$};
-    \draw[dl](v1)--(v4)node[wb,pos=0.30]{$q$};
-  \end{scope}
-  % diamond1 (BL) {p X ; g k ; l,q}: X UR edge bold
-  \begin{scope}[shift={(-1.2,-1.0)}]
-    \dsixjsq{0}{0}{p}{X}{g}{k}{l}{q}
-    \draw[dlu](qt)--(qr);
-  \end{scope}
-  % diamond2 (BR) {X e ; k h ; l,f}: X UL edge bold
-  \begin{scope}[shift={(1.2,-1.0)}]
-    \dsixjsq{0}{0}{X}{e}{k}{h}{l}{f}
-    \draw[dlu](ql)--(qt);
-  \end{scope}
-\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  % diamond1 (TL) {p l ; b Y ; a,g}: Y BR edge bold
-  \begin{scope}[shift={(0,1.4)}]
-    \dsixjsq{0}{0}{p}{l}{b}{Y}{a}{g}
-    \draw[dlu](qr)--(qb);
-  \end{scope}
-  % diamond2 (TR) {l e ; Y c ; a,h}: Y BL edge bold
-  \begin{scope}[shift={(2.4,1.4)}]
-    \dsixjsq{0}{0}{l}{e}{Y}{c}{a}{h}
-    \draw[dlu](ql)--(qb);
-  \end{scope}
-  % hexagon (bottom): top Y(bold), UR c, LR q, bot k, LL f, UL b ; diam d,g,h
-  \begin{scope}[shift={(1.2,-1.0)}]
-    \dhexflat{0}{0}{Y}{c}{q}{k}{f}{b}
-    \draw[dlu](v2)--(v1); % Y top edge bold
-    \draw[dl](v0)--(v3)node[wb,pos=0.70]{$d$};
-    \draw[dl](v2)--(v5)node[wb,pos=0.30]{$g$};
-    \draw[dl](v1)--(v4)node[wb,pos=0.70]{$h$};
-  \end{scope}
-\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_2_20}
 \]
 
 \subsubsection{(ii) Double summation}
@@ -2003,90 +545,19 @@ where $R=a+b+c+d+e+f+p+q+r$,\\
 \sum_{X Y} \Fact{X Y}^{2}\sixj{a}{b}{X}{c}{d}{p} \label{chap12:eq:46}\sixj{c}{d}{X}{a}{b}{Y}\sixj{a}{b}{q}{c}{d}{Y}=\sixj{a}{b}{q}{c}{d}{p},
 \end{equation}
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \begin{scope} % sq1: a c p X ; diag d,b ; X right edge bold
-    \dsq{0}{0}{a}{c}{p}{X}
-    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$d$};
-    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$b$};
-    \draw[dlu](sqTR)--(sqBR);
-  \end{scope}
-  \begin{scope}[xshift=2.4cm] % sq2: a c X Y ; diag b,d ; X left, Y right bold
-    \dsq{0}{0}{a}{c}{X}{Y}
-    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$b$};
-    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$d$};
-    \draw[dlu](sqTL)--(sqBL);\draw[dlu](sqTR)--(sqBR);
-  \end{scope}
-  \begin{scope}[xshift=4.8cm] % sq3: a c Y q ; diag d,b ; Y left bold
-    \dsq{0}{0}{a}{c}{Y}{q}
-    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$d$};
-    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$b$};
-    \draw[dlu](sqTL)--(sqBL);
-  \end{scope}
-\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \dsq{0}{0}{a}{c}{p}{q}
-  \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$d$};
-  \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$b$};
-\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_2_21}
 \]
 \begin{equation}
 \sum_{X Y}(-1)^{X+Y+p} \Fact{X Y}^{2}\sixj{a}{b}{X}{c}{d}{p} \label{chap12:eq:47}\sixj{a}{c}{Y}{d}{b}{X}\sixj{a}{d}{q}{b}{c}{Y}=\frac{\delta_{p q}}{\Fact{p}^{2}}\{a d p\}\{b c p\}
 \end{equation}
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \begin{scope} % sq1 (BL): a d b c ; diag X(bold) p
-    \dsq{0}{0}{a}{c}{d}{b}
-    \draw[dlu](sqTL)--(sqBR)node[wb,pos=0.32]{$X$};
-    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$p$};
-  \end{scope}
-  \begin{scope}[shift={(1.4,1.9)}] % sq2 (top): c a d b ; diag Y(bold) X(bold)
-    \dsq{0}{0}{c}{b}{a}{d}
-    \draw[dlu](sqTL)--(sqBR)node[wb,pos=0.32]{$Y$};
-    \draw[dlu](sqTR)--(sqBL)node[wb,pos=0.68]{$X$};
-  \end{scope}
-  \begin{scope}[shift={(2.8,0)}] % sq3 (BR): d b a c ; diag Y(bold) q
-    \dsq{0}{0}{d}{c}{b}{a}
-    \draw[dlu](sqTL)--(sqBR)node[wb,pos=0.32]{$Y$};
-    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$q$};
-  \end{scope}
-\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \cthetav{0}{0}{a}{d}{p}
-  \drect{1.5}{0}{p}{q}
-  \cthetav{2.9}{0}{b}{c}{p}
-\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_2_22}
 \]
 \begin{equation}
 \sum_{X Y}(-1)^{X+Y+2 a-s-t} \Fact{X Y}^{2}\ninej{a}{b}{p}{c}{d}{X}{q}{Y}{g} \label{chap12:eq:48}\sixj{c}{d}{X}{p}{g}{s}\sixj{b}{d}{Y}{q}{g}{t}=\ninej{a}{b}{p}{c}{g}{s}{q}{t}{d},
 \end{equation}
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \begin{scope}[shift={(0,1.9)}] % sq1: c d g p ; diag X(bold) s
-    \dsq{0}{0}{c}{p}{d}{g}
-    \draw[dlu](sqTL)--(sqBR)node[wb,pos=0.32]{$X$};
-    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$s$};
-  \end{scope}
-  \begin{scope}[shift={(2.4,1.9)}] % sq2: b g d q ; diag Y(bold) t
-    \dsq{0}{0}{b}{q}{g}{d}
-    \draw[dlu](sqTL)--(sqBR)node[wb,pos=0.32]{$Y$};
-    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$t$};
-  \end{scope}
-  \begin{scope}[shift={(1.2,0)}] % hexagon (bottom): g q c d b p ; diam Y,a,X
-    \dhexflat{0}{0}{g}{q}{c}{d}{b}{p}
-    \draw[dlu](v2)--(v5)node[wb,pos=0.30]{$Y$};
-    \draw[dl](v0)--(v3)node[wb,pos=0.70]{$a$};
-    \draw[dlu](v1)--(v4)node[wb,pos=0.70]{$X$};
-  \end{scope}
-\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \dhexflat{0}{0}{g}{t}{q}{a}{p}{s}
-  \draw[dl](v2)--(v5)node[wb,pos=0.30]{$d$};
-  \draw[dl](v1)--(v4)node[wb,pos=0.30]{$b$};
-  \draw[dl](v0)--(v3)node[wb,pos=0.70]{$c$};
-\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_2_23}
 \]
 \begin{equation}
 \sum_{X Y} \Fact{X Y}^{2}\ninej{a}{b}{p}{c}{d}{X}{q}{Y}{g} \sixj{c}{d}{X}{g}{p}{s}
@@ -2095,35 +566,7 @@ where $R=a+b+c+d+e+f+p+q+r$,\\
 \label{chap12:eq:49}
 \end{equation}
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \begin{scope}[shift={(0,1.9)}] % sq1: d c g p ; diag X(bold) s
-    \dsq{0}{0}{d}{p}{c}{g}
-    \draw[dlu](sqTL)--(sqBR)node[wb,pos=0.32]{$X$};
-    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$s$};
-  \end{scope}
-  \begin{scope}[shift={(2.4,1.9)}] % sq2: d g b q ; diag Y(bold) t
-    \dsq{0}{0}{d}{q}{g}{b}
-    \draw[dlu](sqTL)--(sqBR)node[wb,pos=0.32]{$Y$};
-    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$t$};
-  \end{scope}
-  \begin{scope}[shift={(1.2,0)}] % hexagon (bottom): g q c d b p ; diam Y,a,X
-    \dhexflat{0}{0}{g}{q}{c}{d}{b}{p}
-    \draw[dlu](v2)--(v5)node[wb,pos=0.30]{$Y$};
-    \draw[dl](v0)--(v3)node[wb,pos=0.70]{$a$};
-    \draw[dlu](v1)--(v4)node[wb,pos=0.70]{$X$};
-  \end{scope}
-\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \ctheta{0}{2.0}{d}{g}{s}
-  \drects{0}{0.55}{s}{s}{}{t}
-  % 6j-square (bottom) {a b p; s c q}: top s, bot a, left b, right c ; diag q,p
-  \begin{scope}[shift={(0,-1.5)}]
-    \dsq{0}{0}{s}{a}{b}{c}
-    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$q$};
-    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$p$};
-  \end{scope}
-\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_2_24}
 \]
 \begin{equation}
 \sum_{X Y} \Fact{X Y}^{2}\ninej{a}{b}{X}{c}{d}{Y}{e}{f}{g} 
@@ -2133,37 +576,7 @@ where $R=a+b+c+d+e+f+p+q+r$,\\
 \label{chap12:eq:49a}
 \end{equation}
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \begin{scope}[shift={(0,1.9)}] % sq1: h a Y X ; diag g,b ; Y right + X bottom edges bold
-    \dsq{0}{0}{h}{X}{a}{Y}
-    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$g$};
-    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$b$};
-    \draw[dlu](sqTR)--(sqBR);\draw[dlu](sqBL)--(sqBR);
-  \end{scope}
-  \begin{scope}[shift={(2.4,1.9)}] % sq2: b Y j c ; diag h,d ; Y left edge bold
-    \dsq{0}{0}{b}{c}{Y}{j}
-    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$h$};
-    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$d$};
-    \draw[dlu](sqTL)--(sqBL);
-  \end{scope}
-  \begin{scope}[shift={(1.2,0)}] % hexagon: Y c e f b X ; diam g,a,d ; Y top + X UL bold
-    \dhexflat{0}{0}{Y}{c}{e}{f}{b}{X}
-    \draw[dlu](v2)--(v1);\draw[dlu](v3)--(v2);
-    \draw[dl](v2)--(v5)node[wb,pos=0.30]{$g$};
-    \draw[dl](v1)--(v4)node[wb,pos=0.30]{$a$};
-    \draw[dl](v0)--(v3)node[wb,pos=0.70]{$d$};
-  \end{scope}
-\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \cthetav{0}{0}{b}{d}{f}
-  \drect{1.5}{0}{f}{j}
-  \begin{scope}[shift={(3.2,0)}] % 6j-square: top h, left j, right a, bot e ; diag c,g
-    \dsq{0}{0}{h}{e}{j}{a}
-    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$c$};
-    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$g$};
-  \end{scope}
-\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_2_25}
 \]
 \begin{equation}
 \sum_{X Y} \Fact{X Y}^{2}
@@ -2179,34 +592,7 @@ where $R=a+b+c+d+e+f+p+q+r$,\\
 \end{equation}
 
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \begin{scope} % hex1 (pointy): c p d e X f ; X eR bold ; diam q,b,a
-    \dninehex{0}{0}{c}{p}{d}{e}{X}{f}
-    \draw[dlu](hLR)--(hUR);
-    \draw[dl](hT)--(hB)node[wb,pos=0.27]{$q$};
-    \draw[dl](hUR)--(hLL)node[wb,pos=0.30]{$b$};
-    \draw[dl](hUL)--(hLR)node[wb,pos=0.70]{$a$};
-  \end{scope}
-  \begin{scope}[xshift=3cm] % hex2 (pointy): f X e h Y g ; X eL + Y eR bold ; diam a,b,r
-    \dninehex{0}{0}{f}{X}{e}{h}{Y}{g}
-    \draw[dlu](hUL)--(hLL);\draw[dlu](hLR)--(hUR);
-    \draw[dl](hT)--(hB)node[wb,pos=0.27]{$a$};
-    \draw[dl](hUR)--(hLL)node[wb,pos=0.30]{$b$};
-    \draw[dl](hUL)--(hLR)node[wb,pos=0.70]{$r$};
-  \end{scope}
-  \begin{scope}[shift={(5.4,0)}] % square: b Y s h ; diag g,a ; Y left edge bold
-    \dsq{0}{0}{b}{h}{Y}{s}
-    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$g$};
-    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$a$};
-    \draw[dlu](sqTL)--(sqBL);
-  \end{scope}
-\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \begin{scope}\dsixjsq{0}{0}{a}{d}{b}{c}{s}{p}\end{scope}
-  \begin{scope}[xshift=2.4cm]\dsixjsq{0}{0}{d}{e}{c}{f}{s}{q}\end{scope}
-  \begin{scope}[xshift=4.8cm]\dsixjsq{0}{0}{e}{h}{f}{g}{s}{r}\end{scope}
-\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_2_26}
 \]
 
 \subsection{(iii) Triple summation}
@@ -2220,32 +606,7 @@ where $R=a+b+c+d+e+f+p+q+r$,\\
 \sixj{a}{b}{p}{e}{c}{q},
 \end{equation}
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \begin{scope}[shift={(0,1.9)}] % diamond1 {c e ; X Z ; d,p}: X BL, Z BR edges bold
-    \dsixjsq{0}{0}{c}{e}{X}{Z}{d}{p}
-    \draw[dlu](ql)--(qb);\draw[dlu](qb)--(qr);
-  \end{scope}
-  \begin{scope}[shift={(2.4,1.9)}] % diamond2 {e b ; Z Y ; d,q}: Z BL, Y BR edges bold
-    \dsixjsq{0}{0}{e}{b}{Z}{Y}{d}{q}
-    \draw[dlu](ql)--(qb);\draw[dlu](qb)--(qr);
-  \end{scope}
-  \begin{scope}[shift={(1.2,0)}] % hexagon: Z Y b a c X ; diam p,q,d ; Z top, Y UR, X UL bold
-    \dhexflat{0}{0}{Z}{Y}{b}{a}{c}{X}
-    \draw[dlu](v2)--(v1);\draw[dlu](v1)--(v0);\draw[dlu](v3)--(v2);
-    \draw[dl](v2)--(v5)node[wb,pos=0.30]{$p$};
-    \draw[dl](v1)--(v4)node[wb,pos=0.30]{$q$};
-    \draw[dl](v0)--(v3)node[wb,pos=0.70]{$d$};
-  \end{scope}
-\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \dloop{0}{0}{d}
-  \begin{scope}[shift={(2,0)}] % 6j-square {a e c b ; q,p}: top c, left a, right e, bot b ; diag q,p
-    \dsq{0}{0}{c}{b}{a}{e}
-    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$q$};
-    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$p$};
-  \end{scope}
-\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_2_27}
 \]
 \begin{equation}
 \sum_{X Y Z}(-1)^{X+Y-e-h} \Fact{X Y Z}^{2}
@@ -2258,75 +619,13 @@ where $R=a+b+c+d+e+f+p+q+r$,\\
 \sixj{e}{f}{g}{h}{c}{a},
 \end{equation}
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \begin{scope} % hex1 (pointy) 9j{a b X; c d Z; e f g}-> outer a,b,j,g,Z,c ; diam c,d,X
-    \dninehex{0}{0}{a}{b}{j}{g}{Z}{c}
-    \draw[dlu](hLR)--(hUR); % Z edge bold
-    \draw[dl](hT)--(hB)node[wb,pos=0.27]{$c$};
-    \draw[dl](hUR)--(hLL)node[wb,pos=0.30]{$d$};
-    \draw[dlu](hUL)--(hLR)node[wb,pos=0.70]{$X$};
-  \end{scope}
-  \begin{scope}[shift={(2,-1.6)}] % 6j-square {a b X; g Z Y}: top Z, left g, right a, bot b ; diag X,Y
-    \dsq{0}{0}{Z}{b}{g}{a}
-    \draw[dlu](sqTL)--(sqBR)node[wb,pos=0.32]{$X$};
-    \draw[dlu](sqTR)--(sqBL)node[wb,pos=0.68]{$Y$};
-    \draw[dlu](sqTL)--(sqTR); % Z top edge bold
-  \end{scope}
-  \begin{scope}[shift={(4,0)}] % hex2 (pointy) 9j{g b Y; c d Z; h j a}-> outer c,Z,a,j,b,g ; diam h,Y,d
-    \dninehex{0}{0}{c}{Z}{a}{j}{b}{g}
-    \draw[dlu](hUL)--(hLL); % Z edge bold
-    \draw[dl](hT)--(hB)node[wb,pos=0.27]{$h$};
-    \draw[dlu](hUR)--(hLL)node[wb,pos=0.30]{$Y$};
-    \draw[dl](hUL)--(hLR)node[wb,pos=0.70]{$d$};
-  \end{scope}
-\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \begin{scope}[shift={(0,1.5)}] % 6j-square {e f g; h c a}: top c, left a, right g, bot f ; diag e,h
-    \dsq{0}{0}{c}{f}{a}{g}
-    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$e$};
-    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$h$};
-  \end{scope}
-  \drects{0}{-0.2}{}{}{f}{j}
-  \begin{scope}[shift={(0,-1.5)}]\ctheta{0}{0}{f}{d}{b}\end{scope}
-\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_2_28}
 \]
 \begin{equation}
 \sum_{X Y Z}(-1)^{X+f-a-l} \Fact{X Y Z}^{2}\ninej{a}{b}{p}{c}{d}{X}{q}{Y}{Z} \label{chap12:eq:50}\ninej{b}{d}{Y}{c}{f}{Z}{l}{k}{q}\sixj{p}{X}{Z}{c}{f}{d}=\frac{\delta_{p k}}{\Fact{k}^{2}}\{d f p\}\sixj{a}{b}{p}{l}{q}{c},
 \end{equation}
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \begin{scope}[shift={(1.1,1)}] % sq {p X Z; d e c}: top d, left X, right f, bot Z ; diag c,p
-    \dsq{0}{0}{d}{Z}{X}{f}
-    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$c$};
-    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$p$};
-    \draw[dlu](sqTL)--(sqBL);\draw[dlu](sqBL)--(sqBR); % X left, Z bottom bold
-  \end{scope}
-  \begin{scope}[shift={(0,-0.9)}] % hex1 (flat) 9j{a b p; c d X; q Y Z}-> outer X,Z,Y,b,a,c ; diam d,p,q
-    \dhexflat{0}{0}{X}{Z}{Y}{b}{a}{c}
-    \draw[dlu](v2)--(v1);\draw[dlu](v1)--(v0);\draw[dlu](v0)--(v5); % X top,Z UR,Y LR bold
-    \draw[dl](v2)--(v5)node[wb,pos=0.30]{$d$};
-    \draw[dl](v1)--(v4)node[wb,pos=0.70]{$p$};
-    \draw[dl](v0)--(v3)node[wb,pos=0.70]{$q$};
-  \end{scope}
-  \begin{scope}[shift={(2.6,-0.9)}] % hex2 (flat) 9j{b d Y; c f Z; l k q}-> outer f,k,l,b,Y,Z ; diam c,d,q
-    \dhexflat{0}{0}{f}{k}{l}{b}{Y}{Z}
-    \draw[dlu](v3)--(v2);\draw[dlu](v4)--(v3); % Z UL, Y LL bold
-    \draw[dl](v2)--(v5)node[wb,pos=0.30]{$c$};
-    \draw[dl](v1)--(v4)node[wb,pos=0.70]{$d$};
-    \draw[dl](v0)--(v3)node[wb,pos=0.70]{$q$};
-  \end{scope}
-\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \cthetav{0}{0}{d}{f}{k}
-  \drect{1.5}{0}{p}{k}
-  \begin{scope}[shift={(3.2,0)}] % 6j-square {a b p; l q c}: top b, left p, right c, bot a ; diag a,l
-    \dsq{0}{0}{b}{a}{p}{c}
-    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$a$};
-    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$l$};
-  \end{scope}
-\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_2_29}
 \]
 \begin{equation}
 \sum_{X Y Z} \Fact{X Y Z}^{2}\ninej{a}{b}{p}{c}{d}{X}{q}{Y}{Z} \label{chap12:eq:51}\ninej{c}{d}{X}{e}{f}{Z}{g}{h}{p}\ninej{b}{d}{Y}{e}{f}{Z}{j}{k}{q}=\frac{\delta_{h k}}{\Fact{h}^{2}}\{d f h\}\ninej{a}{b}{p}{c}{e}{g}{q}{j}{h},
@@ -2334,41 +633,7 @@ where $R=a+b+c+d+e+f+p+q+r$,\\
 % eq 51: three flat 9j-hex (X,Y,Z bold) = theta(d f h) . rect(h,k) . 9j-hex
 % LHS 9j's: hex1 {b d Y;e f Z;j k q}, hex2 {a b p;c d X;q Y Z}, hex3 {c d X;e f Z;g h p}
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \begin{scope}[shift={(0,0.3)}] % hex1 {b d Y;e f Z;j k q}: outer f,d,Y,q,j,e ; diam b,Z,k
-    \dhexflat{0}{0}{f}{d}{}{q}{j}{e}
-    \draw[dlu](v0)--(v5); % Y edge bold
-    \draw[dl](v0)--(v3)node[wb,pos=0.30]{$b$};
-    \draw[dlu](v2)--(v5)node[wb,pos=0.30]{$Z$};
-    \draw[dl](v1)--(v4)node[wb,pos=0.70]{$k$};
-  \end{scope}
-  \begin{scope}[shift={(2,-0.6)}] % hex2 {a b p;c d X;q Y Z}: outer d,Z,p,a,q,b ; diam c,X,Y
-    \dhexflat{0}{0}{d}{X}{p}{a}{q}{Y}
-    \draw[dlu](v1)--(v0); % X edge bold
-    \draw[dlu](v2)--(v3); % Y edge bold
-    \draw[dlu](v0)--(v3)node[wb,pos=0.30]{$Z$};
-    \draw[dl](v2)--(v5)node[wb,pos=0.30]{$b$};
-    \draw[dl](v1)--(v4)node[wb,pos=0.70]{$c$};
-  \end{scope}
-  \begin{scope}[shift={(4,0.3)}] % hex3 {c d X;e f Z;g h p}: outer f,e,g,p,X,d ; diam c,Z,h
-    \dhexflat{0}{0}{f}{e}{g}{p}{}{d}
-    \draw[dlu](v4)--(v3); % X edge bold
-    \draw[dl](v0)--(v3)node[wb,pos=0.30]{$c$};
-    \draw[dl](v2)--(v5)node[wb,pos=0.30]{$h$};
-    \draw[dlu](v1)--(v4)node[wb,pos=0.70]{$Z$};
-  \end{scope}
-\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \cthetav{0}{0}{d}{f}{h}
-  \drect{1.5}{0}{h}{k}
-  \begin{scope}[shift={(3.4,0)}] % 9j-hex {a b p;c e g;q j h}: outer g,c,a,b,j,k ; diam p,q,e
-    \dninehex{0}{0}{g}{k}{j}{b}{a}{c}
-    \draw[dl](hT)--(hB)node[wb,pos=0.27]{$p$};
-    \draw[dl](hUR)--(hLL)node[wb,pos=0.30]{$q$};
-    \draw[dl](hUL)--(hLR)node[wb,pos=0.70]{$e$};
-  \end{scope}
-\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_2_30}
 \]
 
 \subsection{Sums Involving Products of Four $3 n j$ Symbols}
@@ -2381,45 +646,10 @@ where $R=a+b+c+d+e+f+p+q+r$,\\
 \end{gather}
 where $R=a+b+c+d+e+f+g+h+p+q+r+s$.\\
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \begin{scope}\dsixjsq[2]{0}{0}{b}{c}{a}{d}{X}{p}\end{scope}
-  \begin{scope}[xshift=2.3cm]\dsixjsq[2]{0}{0}{c}{f}{d}{e}{X}{q}\end{scope}
-  \begin{scope}[xshift=4.6cm]\dsixjsq[2]{0}{0}{f}{g}{e}{h}{X}{r}\end{scope}
-  \begin{scope}[xshift=6.9cm]\dsixjsq[2]{0}{0}{g}{a}{h}{b}{X}{s}\end{scope}
-\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_2_31}
 \]
 \[
-=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  % 9j-hex {s h b; g r f; a e Y}: outer s,g,r,e,Y,b ; diam h,f,a (Y bold)
-  \begin{scope}
-    \dhexflat{0}{0}{s}{g}{r}{e}{Y}{b}
-    \draw[dlu](v4)--(v3); % Y edge bold (LL)
-    \draw[dl](v0)--(v3)node[wb,pos=0.30]{$h$};
-    \draw[dl](v2)--(v5)node[wb,pos=0.30]{$f$};
-    \draw[dl](v1)--(v4)node[wb,pos=0.70]{$a$};
-  \end{scope}
-  % 6j-diamond {b f Y; q p c}: edges b,f,q,p ; diag c(h), Y(v, bold)
-  \begin{scope}[xshift=2.6cm]
-    \dsixjsq[1]{0}{0}{b}{f}{q}{p}{c}{Y}
-  \end{scope}
-  % 12j octagon-WHEEL (twelvejI): 8 outer edges + 4 diameters through centre
-  \begin{scope}[shift={(6.0,0)}]
-    \foreach[count=\i] \ang in {90,45,0,-45,-90,-135,180,135}{\coordinate(w\i)at(\ang:1.6);}
-    \draw[dl](w8)--(w1)node[midway,above left,inner sep=1pt]{$d$};
-    \draw[dl](w1)--(w2)node[midway,above right,inner sep=1pt]{$e$};
-    \draw[dl](w2)--(w3)node[midway,right,inner sep=1pt]{$h$};
-    \draw[dl](w3)--(w4)node[midway,right,inner sep=1pt]{$b$};
-    \draw[dl](w4)--(w5)node[midway,below right,inner sep=1pt]{$c$};
-    \draw[dl](w5)--(w6)node[midway,below left,inner sep=1pt]{$f$};
-    \draw[dl](w6)--(w7)node[midway,left,inner sep=1pt]{$g$};
-    \draw[dl](w7)--(w8)node[midway,left,inner sep=1pt]{$a$};
-    \draw[dl](w1)--(w5)node[wb,pos=0.72]{$q$};
-    \draw[dl](w2)--(w6)node[wb,pos=0.25]{$r$};
-    \draw[dl](w3)--(w7)node[wb,pos=0.72]{$s$};
-    \draw[dl](w4)--(w8)node[wb,pos=0.72]{$p$};
-  \end{scope}
-\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_2_32}
 \]
 
 % PROOFREAD: contains OCR-garbled or 12j Wigner array(s) not auto-converted -- verify/reconstruct against orig.
@@ -2436,35 +666,10 @@ where $R=a+b+c+d+e+f+g+h+p+q+r+s$.\\
 \end{align}
 
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \begin{scope}\dsixjsq[2]{0}{0}{b}{c}{a}{d}{X}{p}\end{scope}
-  \begin{scope}[xshift=2.3cm]\dsixjsq[2]{0}{0}{c}{f}{d}{e}{X}{q}\end{scope}
-  \begin{scope}[xshift=4.6cm]\dsixjsq[2]{0}{0}{f}{g}{e}{h}{X}{r}\end{scope}
-  \begin{scope}[xshift=6.9cm]\dsixjsq[2]{0}{0}{g}{b}{h}{a}{X}{s}\end{scope}
-\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_2_33}
 \]
 \[
-=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  % 12j octagon-LATTICE (twelvejII, second kind): 8 outer edges + central # square
-  \coordinate(Ta)at(-0.6,1.4);\coordinate(Tb)at(0.6,1.4);
-  \coordinate(Ra)at(1.4,0.6);\coordinate(Rb)at(1.4,-0.6);
-  \coordinate(Qa)at(0.6,-1.4);\coordinate(Qb)at(-0.6,-1.4);
-  \coordinate(La)at(-1.4,-0.6);\coordinate(Lb)at(-1.4,0.6);
-  \draw[dl](Ta)--(Tb)node[midway,above,inner sep=1pt]{$b$};
-  \draw[dl](Tb)--(Ra)node[midway,above right,inner sep=1pt]{$g$};
-  \draw[dl](Ra)--(Rb)node[midway,right,inner sep=1pt]{$r$};
-  \draw[dl](Rb)--(Qa)node[midway,below right,inner sep=1pt]{$h$};
-  \draw[dl](Qa)--(Qb)node[midway,below,inner sep=1pt]{$a$};
-  \draw[dl](Qb)--(La)node[midway,below left,inner sep=1pt]{$d$};
-  \draw[dl](La)--(Lb)node[midway,left,inner sep=1pt]{$q$};
-  \draw[dl](Lb)--(Ta)node[midway,above left,inner sep=1pt]{$c$};
-  \draw[dl](Ta)--(Qb);\draw[dl](Tb)--(Qa);\draw[dl](Lb)--(Ra);\draw[dl](La)--(Rb);
-  \node[wb,inner sep=1.5pt] at(0,0.6){$f$};
-  \node[wb,inner sep=1.5pt] at(0.6,0){$s$};
-  \node[wb,inner sep=1.5pt] at(0,-0.6){$e$};
-  \node[wb,inner sep=1.5pt] at(-0.6,0){$p$};
-\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_2_34}
 \]
 \subsubsection{(ii) Double summation}
 \begin{equation}
@@ -2479,33 +684,7 @@ where $R=a+b+c+d+e+f+g+h+p+q+r+s$.\\
 \end{equation}
 
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \begin{scope} % square-left: top c, left p, right X, bot f ; diag g,d ; X right bold
-    \dsq{0}{0}{c}{f}{p}{X}
-    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$g$};
-    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$d$};
-    \draw[dlu](sqTR)--(sqBR);
-  \end{scope}
-  \begin{scope}[shift={(1.6,1.3)}] % diamond1 (top) {c b X Y ; a,d}: X BL, Y BR edges bold
-    \dsixjsq{0}{0}{c}{b}{X}{Y}{a}{d}
-    \draw[dlu](ql)--(qb);\draw[dlu](qb)--(qr);
-  \end{scope}
-  \begin{scope}[shift={(1.6,-1.3)}] % diamond2 (bottom) {X Y f e ; g,a}: X UL, Y UR edges bold
-    \dsixjsq{0}{0}{X}{Y}{f}{e}{g}{a}
-    \draw[dlu](ql)--(qt);\draw[dlu](qt)--(qr);
-  \end{scope}
-  \begin{scope}[shift={(3.2,0)}] % square-right: top b, left Y, right q, bot e ; diag d,g ; Y left bold
-    \dsq{0}{0}{b}{e}{Y}{q}
-    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$d$};
-    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$g$};
-    \draw[dlu](sqTL)--(sqBL);
-  \end{scope}
-\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \begin{scope}[shift={(0,1.3)}]\dsixjsq{0}{0}{c}{b}{p}{q}{a}{g}\end{scope}
-  \begin{scope}[shift={(0,-1.3)}]\dsixjsq{0}{0}{p}{q}{f}{e}{d}{a}\end{scope}
-\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_2_35}
 \]
 
 \begin{align}
@@ -2515,42 +694,7 @@ where $R=a+b+c+d+e+f+g+h+p+q+r+s$.\\
 
 \begin{center}
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  % triangle-left (apex-left) {d p g / c f X}: edges c(UL) f(BL) X(right,bold) ; spokes d,p,g
-  \begin{scope}[shift={(0,0)}]
-    \coordinate(c)at(0,0);\coordinate(T)at(60:1);\coordinate(B)at(300:1);\coordinate(V)at(180:1);
-    \draw[dl](T)--(V)node[midway,above left,inner sep=1pt]{$c$};
-    \draw[dl](B)--(V)node[midway,below left,inner sep=1pt]{$f$};
-    \draw[dlu](T)--(B)node[midway,right,inner sep=1pt]{$X$};
-    \draw[dl](c)--(T)node[wb,pos=0.5]{$d$};
-    \draw[dl](c)--(V)node[wb,pos=0.5]{$p$};
-    \draw[dl](c)--(B)node[wb,pos=0.5]{$g$};
-  \end{scope}
-  \begin{scope}[shift={(1.7,1.3)}] % diamond-top {c b X Y ; a,d}: X BL, Y BR edges bold
-    \dsixjsq{0}{0}{c}{b}{X}{Y}{a}{d}
-    \draw[dlu](ql)--(qb);\draw[dlu](qb)--(qr);
-  \end{scope}
-  \begin{scope}[shift={(1.7,-1.3)}] % diamond-bottom {X Y f e ; a,g}: X UL, Y UR edges bold
-    \dsixjsq{0}{0}{X}{Y}{f}{e}{a}{g}
-    \draw[dlu](ql)--(qt);\draw[dlu](qt)--(qr);
-  \end{scope}
-  % triangle-right (apex-right) {d q g / b e Y}: edges b(UR) e(BR) Y(left,bold) ; spokes d,q,g
-  \begin{scope}[shift={(3.4,0)}]
-    \coordinate(c)at(0,0);\coordinate(T)at(120:1);\coordinate(B)at(240:1);\coordinate(V)at(0:1);
-    \draw[dl](T)--(V)node[midway,above right,inner sep=1pt]{$b$};
-    \draw[dl](B)--(V)node[midway,below right,inner sep=1pt]{$e$};
-    \draw[dlu](T)--(B)node[midway,left,inner sep=1pt]{$Y$};
-    \draw[dl](c)--(T)node[wb,pos=0.5]{$d$};
-    \draw[dl](c)--(V)node[wb,pos=0.5]{$q$};
-    \draw[dl](c)--(B)node[wb,pos=0.5]{$g$};
-  \end{scope}
-\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \begin{scope}\dsixjsq{0}{0}{c}{b}{f}{e}{a}{p}\end{scope}
-  \begin{scope}[shift={(2.2,0)}]\ctheta{0}{0}{d}{p}{g}\end{scope}
-  \drect{3.8}{0}{p}{q}
-\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_2_36}
 \]
 \end{center}
 % PROOFREAD: contains OCR-garbled or 12j Wigner array(s) not auto-converted -- verify/reconstruct against orig.
@@ -2559,44 +703,7 @@ where $R=a+b+c+d+e+f+g+h+p+q+r+s$.\\
 \sixj{c}{d}{Y}{j}{g}{f}=(-1)^{a-b+d+e-j-p+r}\ninej{e}{b}{h}{f}{d}{j}{p}{q}{r}\sixj{a}{c}{p}{f}{e}{g},
 \end{equation}
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \begin{scope} % square {a b X;h g e}: top h, left e, right X, bot a ; diag b,g ; X right bold
-    \dsq{0}{0}{h}{a}{e}{X}
-    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$b$};
-    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$g$};
-    \draw[dlu](sqTR)--(sqBR);
-  \end{scope}
-  \begin{scope}[shift={(1.6,1.4)}] % diamond {X Y r;j h g}: h(UL) j(UR) X(BL) Y(BR) ; r(h) g(v) ; X,Y bold
-    \dsixjsq{0}{0}{h}{j}{X}{Y}{r}{g}
-    \draw[dlu](ql)--(qb);\draw[dlu](qb)--(qr);
-  \end{scope}
-  \begin{scope}[shift={(3.3,-0.2)}] % triangle-right (apex-right) {c d Y;j g f}: j(UR) d(BR) Y(left,bold); spokes g,f,c
-    \coordinate(c)at(0,0);\coordinate(T)at(120:1);\coordinate(B)at(240:1);\coordinate(V)at(0:1);
-    \draw[dl](T)--(V)node[midway,above right,inner sep=1pt]{$j$};
-    \draw[dl](B)--(V)node[midway,below right,inner sep=1pt]{$d$};
-    \draw[dlu](T)--(B)node[midway,left,inner sep=1pt]{$Y$};
-    \draw[dl](c)--(T)node[wb,pos=0.5]{$g$};
-    \draw[dl](c)--(V)node[wb,pos=0.5]{$f$};
-    \draw[dl](c)--(B)node[wb,pos=0.5]{$c$};
-  \end{scope}
-  \begin{scope}[shift={(1.6,-1.6)}] % hexagon {a b X;c d Y;p q r} (pointy): outer X,a,p,q,d,Y ; diam b,c,r
-    \dninehex{0}{0}{X}{a}{p}{q}{d}{Y}
-    \draw[dlu](hT)--(hUL);\draw[dlu](hUR)--(hT); % X (UL), Y (UR) edges bold
-    \draw[dl](hT)--(hB)node[wb,pos=0.27]{$b$};
-    \draw[dl](hUR)--(hLL)node[wb,pos=0.30]{$c$};
-    \draw[dl](hUL)--(hLR)node[wb,pos=0.70]{$r$};
-  \end{scope}
-\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \begin{scope}\dsixjsq{0}{0}{g}{e}{c}{p}{a}{f}\end{scope}
-  \begin{scope}[shift={(2.6,0)}] % 9j-hex {e b h;f d j;p q r}: outer h,j,d,q,p,e ; diam b,f,r
-    \dhexflat{0}{0}{h}{j}{d}{q}{p}{e}
-    \draw[dl](v2)--(v5)node[wb,pos=0.30]{$b$};
-    \draw[dl](v1)--(v4)node[wb,pos=0.30]{$f$};
-    \draw[dl](v0)--(v3)node[wb,pos=0.70]{$r$};
-  \end{scope}
-\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_2_37}
 \]
 
 % PROOFREAD: contains OCR-garbled or 12j Wigner array(s) not auto-converted -- verify/reconstruct against orig.
@@ -2607,57 +714,7 @@ where $R=a+b+c+d+e+f+g+h+p+q+r+s$.\\
 \end{gather}
 
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \begin{scope}[shift={(1.4,2.0)}] % square-top {a b X;f e k}: top k, left a, right f, bot X ; diag e,b ; X bot bold
-    \dsq{0}{0}{k}{X}{a}{f}
-    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$e$};
-    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$b$};
-    \draw[dlu](sqBL)--(sqBR);
-  \end{scope}
-  \begin{scope} % hexagon-left {a b X;c d Y;p q s}: outer a,X,Y,d,q,p ; diam c,s,b
-    \dhexflat{0}{0}{a}{X}{Y}{d}{q}{p}
-    \draw[dlu](v1)--(v0);\draw[dlu](v0)--(v5); % X UR, Y LR edges bold
-    \draw[dl](v2)--(v5)node[wb,pos=0.30]{$c$};
-    \draw[dl](v0)--(v3)node[wb,pos=0.30]{$s$};
-    \draw[dl](v1)--(v4)node[wb,pos=0.70]{$b$};
-  \end{scope}
-  \begin{scope}[shift={(2.8,0)}] % hexagon-right {e f X;g h Y;r t s}: outer f,t,r,g,Y,X ; diam e,s,h
-    \dhexflat{0}{0}{f}{t}{r}{g}{Y}{X}
-    \draw[dlu](v3)--(v2);\draw[dlu](v4)--(v3); % X UL, Y LL edges bold
-    \draw[dl](v2)--(v5)node[wb,pos=0.30]{$e$};
-    \draw[dl](v0)--(v3)node[wb,pos=0.30]{$s$};
-    \draw[dl](v1)--(v4)node[wb,pos=0.70]{$h$};
-  \end{scope}
-  \begin{scope}[shift={(1.4,-2.0)}] % square-bottom {c d Y;h g l}: top Y, left d, right g, bot l ; diag c,h ; Y top bold
-    \dsq{0}{0}{Y}{l}{d}{g}
-    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$c$};
-    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$h$};
-    \draw[dlu](sqTL)--(sqTR);
-  \end{scope}
-\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \begin{scope}[shift={(1.4,2.0)}] % square-top {p r Z;t q s}: top s, left p, right t, bot Z ; diag q,r ; Z bot bold
-    \dsq{0}{0}{s}{Z}{p}{t}
-    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$q$};
-    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$r$};
-    \draw[dlu](sqBL)--(sqBR);
-  \end{scope}
-  \begin{scope} % hexagon-left {c g l;a e k;p r Z}: outer p,Z,l,g,e,a ; diam k,r,c
-    \dhexflat{0}{0}{p}{Z}{l}{g}{e}{a}
-    \draw[dlu](v1)--(v0); % Z UR edge bold
-    \draw[dl](v2)--(v5)node[wb,pos=0.30]{$k$};
-    \draw[dl](v0)--(v3)node[wb,pos=0.30]{$r$};
-    \draw[dl](v1)--(v4)node[wb,pos=0.70]{$c$};
-  \end{scope}
-  \begin{scope}[shift={(2.8,0)}] % hexagon-right {f b k;h d l;t q Z}: outer t,f,b,d,l,Z ; diam q,k,h
-    \dhexflat{0}{0}{t}{f}{b}{d}{l}{Z}
-    \draw[dlu](v3)--(v2); % Z UL edge bold
-    \draw[dl](v2)--(v5)node[wb,pos=0.30]{$q$};
-    \draw[dl](v0)--(v3)node[wb,pos=0.30]{$k$};
-    \draw[dl](v1)--(v4)node[wb,pos=0.70]{$h$};
-  \end{scope}
-\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_2_38}
 \]
 \subsubsection{(iii) Triple summation}
 
@@ -2667,90 +724,13 @@ where $R=a+b+c+d+e+f+g+h+p+q+r+s$.\\
 \end{gather}
 
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \begin{scope}[shift={(1.2,2.2)}] % diamond {a3 b1 b2;c X2 X1}: b2(UL) b1(UR) X2(BL) X1(BR); a3(v) c(h)
-    \dsixjsq{0}{0}{b_2}{b_1}{X_2}{X_1}{c}{a_3}
-    \draw[dlu](ql)--(qb);\draw[dlu](qb)--(qr);
-  \end{scope}
-  \begin{scope}[shift={(1.2,0.1)}] % triangle {a1 a2 a3;X1 X2 X3}: outer X2,X1,X3 bold ; spokes a1,a3,a2
-    \coordinate(c)at(0,0);\coordinate(T)at(90:1);\coordinate(L)at(210:1);\coordinate(R)at(330:1);
-    \draw[dlu](T)--(L)node[midway,above left,inner sep=1pt]{$X_2$};
-    \draw[dlu](T)--(R)node[midway,above right,inner sep=1pt]{$X_1$};
-    \draw[dlu](L)--(R)node[midway,below,inner sep=1pt]{$X_3$};
-    \draw[dl](c)--(L)node[wb,pos=0.5]{$a_1$};
-    \draw[dl](c)--(R)node[wb,pos=0.5]{$a_3$};
-    \draw[dl](c)--(T)node[wb,pos=0.5]{$a_2$};
-  \end{scope}
-  \begin{scope}[shift={(0,-2.2)}] % square-left {a1 b2 b3;c X3 X2}: top X2, left b2, right X3, bot b3 ; diag c,a1
-    \dsq{0}{0}{X_2}{b_3}{b_2}{X_3}
-    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$c$};
-    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$a_1$};
-    \draw[dlu](sqTL)--(sqTR);\draw[dlu](sqTR)--(sqBR); % X2 top, X3 right bold
-  \end{scope}
-  \begin{scope}[shift={(2.6,-2.2)}] % square-right {a2 b3 b1;c X1 X3}: top X1, left X3, right b1, bot b3 ; diag a2,c
-    \dsq{0}{0}{X_1}{b_3}{X_3}{b_1}
-    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$a_2$};
-    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$c$};
-    \draw[dlu](sqTL)--(sqTR);\draw[dlu](sqTL)--(sqBL); % X1 top, X3 left bold
-  \end{scope}
-\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \dloop{0}{0}{c}
-  \begin{scope}[shift={(2.2,0)}] % 6j-tri {a1 a2 a3;b1 b2 b3}: outer b2,b1,b3 ; spokes a1,a3,a2
-    \coordinate(c)at(0,0);\coordinate(T)at(90:1);\coordinate(L)at(210:1);\coordinate(R)at(330:1);
-    \draw[dl](T)--(L)node[midway,above left,inner sep=1pt]{$b_2$};
-    \draw[dl](T)--(R)node[midway,above right,inner sep=1pt]{$b_1$};
-    \draw[dl](L)--(R)node[midway,below,inner sep=1pt]{$b_3$};
-    \draw[dl](c)--(L)node[wb,pos=0.5]{$a_1$};
-    \draw[dl](c)--(R)node[wb,pos=0.5]{$a_3$};
-    \draw[dl](c)--(T)node[wb,pos=0.5]{$a_2$};
-  \end{scope}
-\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_2_39}
 \]
 \begin{equation}
 \sum_{X Y Z} \Fact{X Y Z}^{2}\ninej{X}{Y}{Z}{d}{e}{f}{a}{b}{c} \label{chap12:eq:58}\sixj{X}{Y}{Z}{f}{c}{g}\sixj{X}{a}{d}{b^{\prime}}{g}{c}\sixj{Y}{b}{e}{d^{\prime}}{f}{g}=(-1)^{2(b+d)} \frac{\delta_{b b^{\prime}} \delta_{d d^{\prime}}}{\Fact{b d}^{2}}\{a b c\}\{d e f\}\{b d g\},
 \end{equation}
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \begin{scope}[shift={(1.6,2.0)}] % diamond {X Y Z;f c g}: c(UL) f(UR) X(BL) Y(BR); g(h) Z(v,bold)
-    \dsixjsq[1]{0}{0}{c}{f}{X}{Y}{g}{Z}
-    \draw[dlu](ql)--(qb);\draw[dlu](qb)--(qr); % X BL, Y BR edges bold
-  \end{scope}
-  \begin{scope}[shift={(0,0)}] % triangle-left (apex-left) {X a d;b' g c}: c(UL) a(BL) X(right,bold); spokes b',g,d
-    \coordinate(c)at(0,0);\coordinate(T)at(60:1);\coordinate(B)at(300:1);\coordinate(V)at(180:1);
-    \draw[dl](T)--(V)node[midway,above left,inner sep=1pt]{$c$};
-    \draw[dl](B)--(V)node[midway,below left,inner sep=1pt]{$a$};
-    \draw[dlu](T)--(B)node[midway,right,inner sep=1pt]{$X$};
-    \draw[dl](c)--(T)node[wb,pos=0.5]{$b'$};
-    \draw[dl](c)--(V)node[wb,pos=0.5]{$d$};
-    \draw[dl](c)--(B)node[wb,pos=0.5]{$g$};
-  \end{scope}
-  \begin{scope}[shift={(3.2,0)}] % triangle-right (apex-right) {Y b e;d' f g}: f(UR) e(BR) Y(left,bold); spokes g,d',b
-    \coordinate(c)at(0,0);\coordinate(T)at(120:1);\coordinate(B)at(240:1);\coordinate(V)at(0:1);
-    \draw[dl](T)--(V)node[midway,above right,inner sep=1pt]{$f$};
-    \draw[dl](B)--(V)node[midway,below right,inner sep=1pt]{$e$};
-    \draw[dlu](T)--(B)node[midway,left,inner sep=1pt]{$Y$};
-    \draw[dl](c)--(T)node[wb,pos=0.5]{$g$};
-    \draw[dl](c)--(V)node[wb,pos=0.5]{$d'$};
-    \draw[dl](c)--(B)node[wb,pos=0.5]{$b$};
-  \end{scope}
-  \begin{scope}[shift={(1.6,-2.0)}] % hexagon {X Y Z;d e f;a b c} (pointy): outer X,a,c,f,e,Y ; diam Z,b,d
-    \dninehex{0}{0}{X}{a}{c}{f}{e}{Y}
-    \draw[dlu](hT)--(hUL);\draw[dlu](hUR)--(hT); % X (UL), Y (UR) edges bold
-    \draw[dlu](hT)--(hB)node[wb,pos=0.27]{$Z$};
-    \draw[dl](hUR)--(hLL)node[wb,pos=0.30]{$b$};
-    \draw[dl](hUL)--(hLR)node[wb,pos=0.70]{$d$};
-  \end{scope}
-\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \cthetav{0}{0}{a}{c}{b}
-  \drect{1.4}{0}{b}{b'}
-  \cthetav{2.8}{0}{b}{g}{d}
-  \drect{4.2}{0}{d}{d'}
-  \cthetav{5.6}{0}{d}{e}{f}
-\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_2_40}
 \]
 % PROOFREAD: contains OCR-garbled or 12j Wigner array(s) not auto-converted -- verify/reconstruct against orig.
 \begin{equation}
@@ -2761,39 +741,7 @@ where $R=a+b+c+d+e+f+g+h+p+q+r+s$.\\
 \end{equation}
 \begin{center}
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \begin{scope} % square-left: top f, left d, right X, bot a ; diag b,Z ; X right + Z diag bold
-    \dsq{0}{0}{f}{a}{d}{X}
-    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$b$};
-    \draw[dlu](sqTR)--(sqBL)node[wb,pos=0.68]{$Z$};
-    \draw[dlu](sqTR)--(sqBR);
-  \end{scope}
-  \begin{scope}[shift={(1.6,1.5)}] % diamond-top {X Y Z;f e g}: f(UL) e(UR) X(BL) Y(BR); g(h) Z(v,bold)
-    \dsixjsq[1]{0}{0}{f}{e}{X}{Y}{g}{Z}
-    \draw[dlu](ql)--(qb);\draw[dlu](qb)--(qr);
-  \end{scope}
-  \begin{scope}[shift={(3.2,0)}] % square-right: top e, left Y, right a, bot d ; diag Z,c ; Y left + Z diag bold
-    \dsq{0}{0}{e}{d}{Y}{a}
-    \draw[dlu](sqTL)--(sqBR)node[wb,pos=0.32]{$Z$};
-    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$c$};
-    \draw[dlu](sqTL)--(sqBL);
-  \end{scope}
-  \begin{scope}[shift={(1.6,-1.7)}] % hexagon (pointy): outer X,a,e',f',d,Y ; diam g,b,c ; X,Y bold
-    \dninehex{0}{0}{X}{a}{e'}{f'}{d}{Y}
-    \draw[dlu](hT)--(hUL);\draw[dlu](hUR)--(hT); % X (UL), Y (UR) edges bold
-    \draw[dl](hT)--(hB)node[wb,pos=0.27]{$g$};
-    \draw[dl](hUR)--(hLL)node[wb,pos=0.30]{$b$};
-    \draw[dl](hUL)--(hLR)node[wb,pos=0.70]{$c$};
-  \end{scope}
-\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \cthetav{0}{0}{a}{c}{e}
-  \drect{1.4}{0}{e}{e'}
-  \cthetav{2.8}{0}{b}{d}{f}
-  \drect{4.2}{0}{f}{f'}
-  \cthetav{5.6}{0}{e}{f}{g}
-\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_2_41}
 \]
 \end{center}
 \begin{gather}
@@ -2803,42 +751,7 @@ where $R=a+b+c+d+e+f+g+h+p+q+r+s$.\\
 
 \begin{center}
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \begin{scope}[shift={(0,1.5)}] % hex-TL (pointy) outer c',a,j,Z,e,Y ; diam h,l,b ; Z,Y bold
-    \dninehex{0}{0}{c'}{j}{e}{Y}{Z}{a}
-    \draw[dlu](hLR)--(hUR);\draw[dlu](hB)--(hLR); % Z (eR), Y (eBR) edges bold
-    \draw[dl](hT)--(hB)node[wb,pos=0.27]{$h$};
-    \draw[dl](hUR)--(hLL)node[wb,pos=0.30]{$l$};
-    \draw[dl](hUL)--(hLR)node[wb,pos=0.70]{$b$};
-  \end{scope}
-  \begin{scope}[shift={(0,-1.5)}] % hex-BL (pointy) outer e,f,c,a,X,Y ; diam b,d,g ; X,Y bold
-    \dninehex{0}{0}{e}{f}{c}{a}{X}{Y}
-    \draw[dlu](hLR)--(hUR);\draw[dlu](hUR)--(hT); % X (eR), Y (eTR) edges bold
-    \draw[dl](hT)--(hB)node[wb,pos=0.27]{$b$};
-    \draw[dl](hUR)--(hLL)node[wb,pos=0.30]{$d$};
-    \draw[dl](hUL)--(hLR)node[wb,pos=0.70]{$g$};
-  \end{scope}
-  \begin{scope}[shift={(2.0,0.2)}] % triangle (apex-right): Z(UR) X(BR) Y(left,bold); spokes h,k,g
-    \coordinate(c)at(0,0);\coordinate(T)at(120:1);\coordinate(B)at(240:1);\coordinate(V)at(0:1);
-    \draw[dl](T)--(V)node[midway,above right,inner sep=1pt]{$Z$};
-    \draw[dl](B)--(V)node[midway,below right,inner sep=1pt]{$X$};
-    \draw[dlu](T)--(B)node[midway,left,inner sep=1pt]{$Y$};
-    \draw[dl](c)--(T)node[wb,pos=0.5]{$h$};
-    \draw[dl](c)--(V)node[wb,pos=0.5]{$k$};
-    \draw[dl](c)--(B)node[wb,pos=0.5]{$g$};
-  \end{scope}
-  \begin{scope}[shift={(4.0,0.2)}] % diamond: Z(UL) l(UR) X(BL) d(BR); k(h) a(v) ; Z,X bold
-    \dsixjsq{0}{0}{Z}{l}{X}{d}{k}{a}
-    \draw[dlu](ql)--(qt);\draw[dlu](ql)--(qb); % Z UL, X BL edges bold
-  \end{scope}
-\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \cthetav{0}{0}{a}{b}{c}
-  \begin{scope}[shift={(1.9,0)}]\dsixjsq{0}{0}{h}{j}{g}{f}{c}{k}\end{scope}
-  \begin{scope}[shift={(4.2,0)}]\dsixjsq{0}{0}{j}{l}{f}{d}{e}{k}\end{scope}
-  \drect{5.8}{0}{c'}{c}
-\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_2_42}
 \]
 \end{center}
 
@@ -2849,48 +762,7 @@ where $R=a+b+c+d+e+f+g+h+p+q+r+s$.\\
 =(-1)^{-b+c-h+k} \frac{\delta_{j j^{\prime}}}{\Fact{j}^{2}}\sixj{a}{c}{e}{l}{h}{j}\sixj{b}{d}{f}{k}{g}{j}, \label{chap12:eq:61}
 \end{gather}
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \begin{scope}[shift={(1.4,2.0)}] % hex-top {a b X;c d Y;e f Z}: outer e,a,X,Y,d,f ; diam b,c,Z
-    \dninehex{0}{0}{e}{a}{X}{Y}{d}{f}
-    \draw[dlu](hLL)--(hB);\draw[dlu](hB)--(hLR); % X (eBL), Y (eBR) edges bold
-    \draw[dlu](hT)--(hB)node[wb,pos=0.72]{$Z$};
-    \draw[dl](hUR)--(hLL)node[wb,pos=0.28]{$b$};
-    \draw[dl](hUL)--(hLR)node[wb,pos=0.28]{$c$};
-  \end{scope}
-  \begin{scope} % square-left {a b X;g h j}: top a, left j, right X, bot g ; diag h,b ; X right bold
-    \dsq{0}{0}{a}{g}{j}{X}
-    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$h$};
-    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$b$};
-    \draw[dlu](sqTR)--(sqBR);
-  \end{scope}
-  \begin{scope}[shift={(2.8,0)}] % square-right {c d Y;k l j'}: top d, left Y, right j', bot l ; diag c,k ; Y left bold
-    \dsq{0}{0}{d}{l}{Y}{j'}
-    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$c$};
-    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$k$};
-    \draw[dlu](sqTL)--(sqBL);
-  \end{scope}
-  \begin{scope}[shift={(1.4,-2.0)}] % hex-bottom {g h X;k l Y;f e Z}: outer X,g,f,e,l,Y ; diam k,h,Z
-    \dninehex{0}{0}{X}{g}{f}{e}{l}{Y}
-    \draw[dlu](hT)--(hUL);\draw[dlu](hUR)--(hT); % X (eTL), Y (eTR) edges bold
-    \draw[dlu](hT)--(hB)node[wb,pos=0.72]{$Z$};
-    \draw[dl](hUR)--(hLL)node[wb,pos=0.28]{$k$};
-    \draw[dl](hUL)--(hLR)node[wb,pos=0.28]{$h$};
-  \end{scope}
-\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \begin{scope} % square {a c e;l h j}: top a, left e, right j, bot l ; diag c,h
-    \dsq{0}{0}{a}{l}{e}{j}
-    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$c$};
-    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$h$};
-  \end{scope}
-  \drect{2.0}{0}{j}{j'}
-  \begin{scope}[shift={(4.0,0)}] % square {b d f;k g j}: top b, left j, right f, bot k ; diag g,d
-    \dsq{0}{0}{b}{k}{j}{f}
-    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$g$};
-    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$d$};
-  \end{scope}
-\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_2_43}
 \]
 
 \begin{gather}
@@ -2899,41 +771,7 @@ where $R=a+b+c+d+e+f+g+h+p+q+r+s$.\\
 \end{gather}
 
 \begin{center}
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \begin{scope}[shift={(0,2.0)}] % square-left {a b X;d e f}: top e, left f, right X, bot b ; diag a,d ; X right bold
-    \dsq{0}{0}{e}{b}{f}{X}
-    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$a$};
-    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$d$};
-    \draw[dlu](sqTR)--(sqBR);
-  \end{scope}
-  \begin{scope}[shift={(2.4,2.0)}] % square-right {d h Y;q X e}: top e, left X, right h, bot Y ; diag d,q ; X left + Y bot bold
-    \dsq{0}{0}{e}{Y}{X}{h}
-    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$d$};
-    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$q$};
-    \draw[dlu](sqTL)--(sqBL);\draw[dlu](sqBL)--(sqBR);
-  \end{scope}
-  \begin{scope}[shift={(0.6,0)}] % hex-left {a b X;g c q;p Z Y}: outer X,b,c,g,p,Y ; diam a,Z,q ; X,Y,Z bold
-    \dninehex{0}{0}{X}{b}{c}{g}{p}{Y}
-    \draw[dlu](hT)--(hUL);\draw[dlu](hUR)--(hT); % X (eTL), Y (eTR) edges bold
-    \draw[dl](hT)--(hB)node[wb,pos=0.27]{$a$};
-    \draw[dlu](hUR)--(hLL)node[wb,pos=0.30]{$Z$};
-    \draw[dl](hUL)--(hLR)node[wb,pos=0.70]{$q$};
-  \end{scope}
-  \begin{scope}[shift={(3.0,0)}] % hex-right {b d f';a h j;Z Y p}: outer Y,p,f',b,c,h ; diam d,Z,j ; Y,Z bold
-    \dninehex{0}{0}{Y}{p}{f'}{b}{c}{h}
-    \draw[dlu](hT)--(hUL); % Y (eTL) edge bold
-    \draw[dl](hT)--(hB)node[wb,pos=0.27]{$d$};
-    \draw[dlu](hUR)--(hLL)node[wb,pos=0.30]{$Z$};
-    \draw[dl](hUL)--(hLR)node[wb,pos=0.70]{$j$};
-  \end{scope}
-\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \cthetav{0}{0}{b}{f}{d}
-  \drect{1.5}{0}{f}{f'}
-  \begin{scope}[shift={(3.1,0)}]\dsixjsq{0}{0}{f}{e}{p}{g}{j}{a}\end{scope}
-  \begin{scope}[shift={(5.4,0)}]\dsixjsq{0}{0}{e}{h}{g}{c}{j}{q}\end{scope}
-\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_2_44}
 \end{center}
 
 \begin{gather}
@@ -2950,52 +788,7 @@ where $R=a+b+c+d+e+f+g+h+p+q+r+s$.\\
 
 
 \[
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \begin{scope}[shift={(0,0.3)}] % hex-left {a b X;c d Y;t s r}: outer c,d,s,r,X,a ; diam t,b,Y ; X,Y bold
-    \dninehex{0}{0}{c}{d}{s}{r}{X}{a}
-    \draw[dlu](hLR)--(hUR); % X (eR) edge bold
-    \draw[dl](hT)--(hB)node[wb,pos=0.27]{$t$};
-    \draw[dlu](hUR)--(hLL)node[wb,pos=0.70]{$Y$};
-    \draw[dl](hUL)--(hLR)node[wb,pos=0.30]{$b$};
-  \end{scope}
-  \begin{scope}[shift={(2.0,2.0)}] % hex-top {a b X;h j q;s f Z}: outer h,a,X,Z,f,j ; diam q,b,s ; X,Z bold
-    \dninehex{0}{0}{h}{a}{X}{Z}{f}{j}
-    \draw[dlu](hLL)--(hB);\draw[dlu](hB)--(hLR); % X (eBL), Z (eBR) edges bold
-    \draw[dl](hT)--(hB)node[wb,pos=0.27]{$q$};
-    \draw[dl](hUR)--(hLL)node[wb,pos=0.30]{$b$};
-    \draw[dl](hUL)--(hLR)node[wb,pos=0.70]{$s$};
-  \end{scope}
-  \begin{scope}[shift={(2.0,-1.5)}] % diamond {p q r;X Y Z}: q(UL) Z(UR) r(BL) p(BR); X(h) Y(v) ; X,Y,Z bold
-    \dsixjsq[3]{0}{0}{q}{Z}{r}{p}{X}{Y}
-    \draw[dlu](qt)--(qr); % Z (UR) edge bold
-  \end{scope}
-  \begin{scope}[shift={(4.0,0.3)}] % hex-right {k l p;c d Y;e f Z}: outer f,Z,p,k,c,d ; diam e,l,Y ; Y,Z bold
-    \dninehex{0}{0}{f}{Z}{p}{k}{c}{d}
-    \draw[dlu](hUL)--(hLL); % Z (eL) edge bold
-    \draw[dl](hT)--(hB)node[wb,pos=0.27]{$e$};
-    \draw[dlu](hUR)--(hLL)node[wb,pos=0.70]{$Y$};
-    \draw[dl](hUL)--(hLR)node[wb,pos=0.30]{$l$};
-  \end{scope}
-\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \begin{scope}[shift={(0,1.6)}] % square {k h t;a c e}: top e, left c, right h, bot t ; diag k,a
-    \dsq{0}{0}{e}{t}{c}{h}
-    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$k$};
-    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$a$};
-  \end{scope}
-  \begin{scope}[shift={(3.6,1.6)}] % square {l j s;b d f}: top b, left j, right d, bot l ; diag f,s
-    \dsq{0}{0}{b}{l}{j}{d}
-    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$f$};
-    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$s$};
-  \end{scope}
-  \begin{scope}[shift={(1.8,-0.7)}] % hex {k l p;h j q;t s r}: outer h,t,r,p,l,j ; diam k,s,q
-    \dninehex{0}{0}{h}{t}{r}{p}{l}{j}
-    \draw[dl](hT)--(hB)node[wb,pos=0.27]{$k$};
-    \draw[dl](hUR)--(hLL)node[wb,pos=0.30]{$s$};
-    \draw[dl](hUL)--(hLR)node[wb,pos=0.70]{$q$};
-  \end{scope}
-\end{tikzpicture}
+  \includegraphics[alt={}]{fig12_2_45}
 \]
 
 

@@ -1,0 +1,35 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{diagrams}
+\begin{document}
+$
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  % LHS: two short verticals q,s with crossing diagonals p,r and 4 corner legs
+  \coordinate(nw)at(135:2);\coordinate(sw)at(-135:2);
+  \coordinate(ne)at(45:2);\coordinate(se)at(-45:2);
+  \coordinate(NW)at($(nw)!0.25!(se)$);\coordinate(SE)at($(nw)!0.75!(se)$);
+  \coordinate(NE)at($(ne)!0.25!(sw)$);\coordinate(SW)at($(ne)!0.75!(sw)$);
+  \draw[dl](nw)--(se) node[at start,above] {$c\gamma$} node[at end,below]{$a\alpha$};
+  \draw[dl](ne)--(sw) node[at start,above] {$d\delta$} node[at end,below]{$b\beta$};
+  \draw[dl](NW)--(SW)node[midway,left,inner sep=1pt]{$q$};
+  \draw[dl](NE)--(SE)node[midway,right,inner sep=1pt]{$s$};
+  \draw[dl](SW)--(NE)node[pos=0.15,below,inner sep=1pt]{$p$};
+  \draw[dl](SE)--(NW)node[pos=0.15,below,inner sep=1pt]{$r$};
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  % vertical bowtie, X ultra-thick
+  \coordinate(T)at(0,0.8);\coordinate(B)at(0,-0.8);
+  \draw[dlu](T)--(B)node[midway,right,inner sep=1pt]{$X$};
+  \draw[dl](T)--($(T)+(135:0.8)$)node[at end,left]{$b\beta$};
+  \draw[dl](T)--($(T)+(45:0.8)$)node[at end,right]{$d\delta$};
+  \draw[dl](B)--($(B)+(225:0.8)$)node[at end,left]{$a\alpha$};
+  \draw[dl](B)--($(B)+(-45:0.8)$)node[at end,right]{$c\gamma$};
+\end{tikzpicture}
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \dninehex{0}{0}{b}{q}{a}{c}{s}{d}
+  \draw[dlu](hT)--(hB)node[pos=0.28,right,inner sep=1pt]{$x$};
+  \draw[dl](hUR)--(hLL)node[pos=0.72,below,inner sep=1pt]{$p$};
+  \draw[dl](hUL)--(hLR)node[pos=0.72,below,inner sep=1pt]{$r$};
+\end{tikzpicture}
+$
+\end{document}

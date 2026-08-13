@@ -1,0 +1,27 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{diagrams}
+\begin{document}
+$
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \coordinate(M)at (1,0);
+  \coordinate(T)at($(M)+(90:0.85)$);
+  \coordinate(B)at($(M)+(-90:0.85)$);
+  \coordinate(L)at($(M)+(180:0.85)$);
+  \coordinate(R)at($(M)+(0:0.85)$);
+  \draw[dl]($(L)-(0.7,0)$)--(L)node[at start,left]{$a\alpha$};
+  \draw[dl](R)--($(R)+(0.7,0)$)node[at end,right]{$a'\alpha'$};
+  \draw[dl](L)--(T)node[midway,above left]{$q$};
+  \draw[dl](T)--(R)node[midway,above right]{$r$};
+  \draw[dl](L)--(B)node[midway,below left]{$p$};
+  \draw[dl](B)--(R)node[midway,below right]{$s$};
+  \draw[dl](T)--(B)node[pos=0.35,right]{$t$};
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \draw[dl](0,0)--(1.9,0)node[pos=0.08,above]{$a\alpha$}node[pos=0.92,above]{$a'\alpha'$};
+\end{tikzpicture}
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \dsixjsq{0}{0}{q}{r}{p}{s}{a}{t}
+\end{tikzpicture}
+$
+\end{document}

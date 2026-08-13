@@ -1,0 +1,49 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{diagrams}
+\begin{document}
+$
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  % regular pentagon, vertex at the bottom (ee); legs radiate out
+  \foreach \a in  {270,342,54,126,198}{\coordinate(v\a)at(\a:1.2);}
+  \draw[dl](v126)--(v54)node[midway,above,inner sep=1pt]{$r$};
+  \draw[dl](v198)--(v126)node[midway,left,inner sep=1pt]{$q$};
+  \draw[dl](v54)--(v342)node[midway,right,inner sep=1pt]{$s$};
+  \draw[dl](v198)--(v270)node[midway,below left,inner sep=1pt]{$p$};
+  \draw[dl](v342)--(v270)node[midway,below right,inner sep=1pt]{$t$};
+  \draw[dl](v126)--($(v126)+(126:0.8)$)node[at end,above]{$b\beta$};
+  \draw[dl](v54)--($(v54)+(54:0.8)$)node[at end,above]{$c\gamma$};
+  \draw[dl](v198)--($(v198)+(198:0.8)$)node[at end,left]{$a\alpha$};
+  \draw[dl](v342)--($(v342)+(342:0.8)$)node[at end,right]{$d\delta$};
+  \draw[dl](v270)--($(v270)+(270:0.8)$)node[at end,below]{$e\epsilon$};
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  % central node; x,y (ultra-thick) up-left/up-right to the two upper triangles;
+  % e straight down to the lower (apex-down) triangle.
+  \coordinate(C)at(0,0);
+  \coordinate(NL)at(-1.8,0.7);\coordinate(NR)at(1.8,0.7);
+  \draw[dlu](C)--(NL)node[midway,above,inner sep=1pt]{$x$};
+  \draw[dlu](C)--(NR)node[midway,above,inner sep=1pt]{$y$};
+  \draw[dl](C)--(0,-0.8)node[right,inner sep=1pt]{$e\epsilon$};
+  \draw[dl](NL)--($(NL)+(90:0.7)$)node[at end,above]{$b\beta$};
+  \draw[dl](NL)--($(NL)+(220:0.7)$)node[at end,left]{$a\alpha$};
+  \draw[dl](NR)--($(NR)+(90:0.8)$)node[at end,above]{$c\gamma$};
+  \draw[dl](NR)--($(NR)+(320:0.8)$)node[at end,right]{$d\delta$};
+  % upper-left 6j-triangle (apex-up): q left, r right, p base; inner b,a,x
+  \dsixjtri{-1.8}{-0.7}{q}{r}{p}{b}{a}{x}
+  \draw[dlu](-1.8,-0.7)--($(-1.8,-0.7)+(330:1)$); % x spoke (sBR) bold
+  % upper-right 6j-triangle
+  \dsixjtri{1.8}{-0.7}{r}{s}{t}{c}{y}{d}
+  \draw[dlu](1.8,-0.7)--($(1.8,-0.7)+(210:1)$); % y spoke (sBL) bold
+  % lower (apex-down) 6j-triangle: p left, t right; inner x,y,e ; leg ee down
+  \coordinate(bc)at(0,-1.75);
+  \coordinate(bT)at($(bc)+(270:0.85)$);\coordinate(bL)at($(bc)+(150:0.85)$);\coordinate(bR)at($(bc)+(30:0.85)$);
+  \draw[dl](bL)--(bT)node[midway,below left,inner sep=1pt]{$p$};
+  \draw[dl](bT)--(bR)node[midway,below right,inner sep=1pt]{$t$};
+  \draw[dl](bL)--(bR)node[midway,above,inner sep=1pt]{$r$};
+  \draw[dlu](bc)--(bL)node[pos=0.5,below,inner sep=1pt]{$x$};
+  \draw[dlu](bc)--(bR)node[pos=0.5,below,inner sep=1pt]{$y$};
+  \draw[dl](bc)--(bT)node[pos=0.5,right,inner sep=1pt]{$e$};
+\end{tikzpicture}
+$
+\end{document}

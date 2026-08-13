@@ -1,0 +1,37 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{diagrams}
+\begin{document}
+$
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  % sq-BL {a b X; r e f}: top f, bot b, left r, right X(bold); diag a,e
+  \begin{scope}
+    \dsq{0}{0}{f}{b}{r}{X}
+    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.3]{$a$};
+    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.3]{$e$};
+    \draw[dlu](sqTR)--(sqBR);
+  \end{scope}
+  % sq-top {c d X; q e f}: top q, bot X(bold), left f, right d; diag c,e
+  \begin{scope}[shift={(1.4,1.9)}]
+    \dsq{0}{0}{q}{X}{f}{d}
+    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.3]{$c$};
+    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.3]{$e$};
+    \draw[dlu](sqBL)--(sqBR);
+  \end{scope}
+  % sq-BR {c d X; p a b}: top d, bot b, left X(bold), right p; diag c,a
+  \begin{scope}[shift={(2.8,0)}]
+    \dsq{0}{0}{d}{b}{X}{p}
+    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.3]{$c$};
+    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.3]{$a$};
+    \draw[dlu](sqTL)--(sqBL);
+  \end{scope}
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  % 9j-hexagon (flat-top) {a f r; d q e; p c b}: outer q,d,p,b,r,f ; diameters c,a,e
+  \dhexflat{0}{0}{q}{d}{p}{b}{r}{f}
+  \draw[dl](v2)--(v5)node[wb,pos=0.30]{$c$};
+  \draw[dl](v1)--(v4)node[wb,pos=0.70]{$e$};
+  \draw[dl](v0)--(v3)node[wb,pos=0.30]{$a$};
+\end{tikzpicture}
+$
+\end{document}

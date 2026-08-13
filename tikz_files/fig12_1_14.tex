@@ -1,0 +1,48 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{diagrams}
+\begin{document}
+$
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  % LHS: bb,aa (left) cross to p; middle box; ce,cg,dd (right) -- approximate
+  \foreach \i in {0,...,4}{\coordinate(v\i) at (180-36+\i*72:1.2);}
+  \draw[dl](v0)--(v1)node[midway,left,inner sep=1pt]{$q$};
+  \draw[dl](v0)--(v2)node[pos=0.7,left,inner sep=1pt]{$r$};
+  \draw[dl](v1)--(v4)node[pos=0.7,left,inner sep=1pt]{$p$};
+  \draw[dl](v2)--(v3)node[midway,right,inner sep=1pt]{$s$};
+  \draw[dl](v3)--(v4)node[midway,right,inner sep=1pt]{$t$};
+  \draw[dl](v0)--($(v0)+(144:0.8)$)node[at end,above]{$b\beta$};
+  \draw[dl](v1)--($(v1)+(216:0.8)$)node[at end,below]{$a\alpha$};
+  \draw[dl](v2)--($(v2)+(288:0.8)$)node[at end,below]{$c\gamma$};
+  \draw[dl](v3)--($(v3)+(0:0.8)$)node[at end,above]{$d\delta$};
+  \draw[dl](v4)--($(v4)+(72:0.8)$)node[at end,above]{$e\epsilon$};
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  % top tree: aa - x(bold) - C - y(bold) - ee ; dd down from C
+  \coordinate(C)at(0,1.);
+  \draw[dlu](-1.5,1)--(C)node[midway,above,inner sep=1pt]{$x$};
+  \draw[dlu](C)--(1.5,1)node[midway,above,inner sep=1pt]{$y$};
+  \draw[dl](-1.5,1)--($(-1.5,1)+(130:0.8)$)node[at end,left]{$a\alpha$};
+  \draw[dl](1.5,1)--($(1.5,1)+(50:0.8)$)node[at end,right]{$e\epsilon$};
+  \draw[dl](C)--($(C)+(90:0.8)$)node[at end,above]{$d\delta$};
+  \draw[dl](-1.5,1)--($(-1.5,1)+(220:0.9)$)node[at end,left]{$b\beta$}; 
+  \draw[dl](1.5,1)--($(1.5,1)+(-50:0.8)$)node[at end,right]{$c\gamma$};
+  % 6j-diamond (left) with x bold; hexagon (right) with x,y bold
+  \dsixjsq{-1.5}{-0.2}{b}{x}{q}{p}{r}{a}
+  \draw[dlu]($(-1.5,-0.2)+(90:0.9)$)--($(-1.5,-0.2)+(0:0.9)$);% x edge bold (approx)
+  % flat-top hexagon (right)
+  \begin{scope}[shift={(1,-0.2)}]
+    \foreach \a in {0,60,120,180,240,300}{\coordinate(v\a)at(\a:0.95);}
+    \draw[dlu](v180)--(v120)node[midway,above left,inner sep=1pt]{$x$};
+    \draw[dlu](v60)--(v120)node[midway,above,inner sep=1pt]{$y$};
+    \draw[dl](v0)--(v60)node[midway,right,inner sep=1pt]{$c$};
+    \draw[dl](v300)--(v0)node[midway,right,inner sep=1pt]{$s$};
+    \draw[dl](v240)--(v300)node[midway,below,inner sep=1pt]{$t$};
+    \draw[dl](v180)--(v240)node[midway,left,inner sep=1pt]{$p$};
+    \draw[dl](v180)--(v0)node[pos=0.3,below,inner sep=1pt]{$r$};
+    \draw[dl](v60)--(v240)node[pos=0.3,right,inner sep=1pt]{$e$};
+    \draw[dl](v120)--(v300)node[pos=0.7,left,inner sep=1pt]{$d$};
+  \end{scope}
+\end{tikzpicture}
+$
+\end{document}

@@ -1,0 +1,12 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{diagrams}
+\begin{document}
+$
+\begin{tikzpicture}[baseline=0pt,font=\small]\dsixjsq[1]{0}{0}{a}{b}{a}{b}{c}{X}\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \dloop{0}{0}{a}\dloop{1.9}{0}{b}
+  \draw[dl](0.42,0)--(1.48,0)node[midway,above,inner sep=1pt]{$c$};
+\end{tikzpicture}
+$
+\end{document}

@@ -1,0 +1,29 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{diagrams}
+\begin{document}
+$
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \begin{scope} % sq1 (BL): a d b c ; diag X(bold) p
+    \dsq{0}{0}{a}{c}{d}{b}
+    \draw[dlu](sqTL)--(sqBR)node[wb,pos=0.32]{$X$};
+    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$p$};
+  \end{scope}
+  \begin{scope}[shift={(1.4,1.9)}] % sq2 (top): c a d b ; diag Y(bold) X(bold)
+    \dsq{0}{0}{c}{b}{a}{d}
+    \draw[dlu](sqTL)--(sqBR)node[wb,pos=0.32]{$Y$};
+    \draw[dlu](sqTR)--(sqBL)node[wb,pos=0.68]{$X$};
+  \end{scope}
+  \begin{scope}[shift={(2.8,0)}] % sq3 (BR): d b a c ; diag Y(bold) q
+    \dsq{0}{0}{d}{c}{b}{a}
+    \draw[dlu](sqTL)--(sqBR)node[wb,pos=0.32]{$Y$};
+    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$q$};
+  \end{scope}
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \cthetav{0}{0}{a}{d}{p}
+  \drect{1.5}{0}{p}{q}
+  \cthetav{2.9}{0}{b}{c}{p}
+\end{tikzpicture}
+$
+\end{document}

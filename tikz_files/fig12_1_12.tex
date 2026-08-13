@@ -1,0 +1,41 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{diagrams}
+\begin{document}
+$
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \coordinate(Ln)at(0,0);\coordinate(A)at(30:2.5);\coordinate(B)at(-30:2.5);
+  \coordinate(A1)at($(Ln)!0.35!(A)$);\coordinate(A2)at($(Ln)!0.62!(A)$);
+  \coordinate(B1)at($(Ln)!0.35!(B)$);\coordinate(B2)at($(Ln)!0.62!(B)$);
+  \draw[dl](-0.9,0)--(Ln)node[at start,left]{$a\alpha$};
+  \draw[dl](Ln)--(A1)node[midway,above,inner sep=1pt]{$q$};
+  \draw[dl](A1)--(A2)node[midway,above,inner sep=1pt]{$r$};
+  \draw[dl](A2)--(A)node[at end,right]{$b\beta$};
+  \draw[dl](Ln)--(B1)node[midway,below,inner sep=1pt]{$p$};
+  \draw[dl](B1)--(B2)node[midway,below,inner sep=1pt]{$u$};
+  \draw[dl](B2)--(B)node[at end,right]{$c\gamma$};
+  \draw[dl](A1)--(B2)node[pos=0.7,right,inner sep=1pt]{$s$};
+  \draw[dl](B1)--(A2)node[pos=0.7,right,inner sep=1pt]{$t$};
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  % flat-top hexagon: vertices at 0,60,...,300
+  \foreach \a in {0,60,120,180,240,300}{\coordinate(v\a)at(\a:1);}
+  \draw[dl](v60)--(v120)node[midway,above,inner sep=1pt]{$r$};
+  \draw[dl](v120)--(v180)node[midway,above left,inner sep=1pt]{$q$};
+  \draw[dl](v0)--(v60)node[midway,above right,inner sep=1pt]{$b$};
+  \draw[dl](v180)--(v240)node[midway,below left,inner sep=1pt]{$p$};
+  \draw[dl](v300)--(v0)node[midway,below right,inner sep=1pt]{$c$};
+  \draw[dl](v240)--(v300)node[midway,below,inner sep=1pt]{$u$};
+  \draw[dl](v180)--(v0)node[pos=0.28,below,inner sep=1pt]{$a$};
+  \draw[dl](v60)--(v240)node[pos=0.28,right,inner sep=1pt]{$s$};
+  \draw[dl](v120)--(v300)node[pos=0.28,left,inner sep=1pt]{$t$};
+\end{tikzpicture}
+\quad
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \coordinate(N)at(0,0);
+  \draw[dl](-0.9,0)--(N)node[at start,left]{$a\alpha$};
+  \draw[dl](N)--(0.8,0.75)node[at end,right]{$b\beta$};
+  \draw[dl](N)--(0.8,-0.75)node[at end,right]{$c\gamma$};
+\end{tikzpicture}
+$
+\end{document}

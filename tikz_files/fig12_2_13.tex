@@ -1,0 +1,34 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{diagrams}
+\begin{document}
+$
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  % hex1 {a b X; c d Y; e f j}
+  \begin{scope}
+    \dhexflat{0}{0}{a}{X}{Y}{d}{f}{e}
+    \draw[dlu](v1)--(v0); % X edge bold (UR)
+    \draw[dlu](v0)--(v5); % Y edge bold (LR)
+    \draw[dl](v3)--(v0)node[wb,pos=0.30]{$j$};
+    \draw[dl](v2)--(v5)node[wb,pos=0.30]{$c$};
+    \draw[dl](v1)--(v4)node[wb,pos=0.70]{$b$};
+  \end{scope}
+  % hex2 {a b X; c d Y; g h j}
+  \begin{scope}[xshift=3cm]
+    \dhexflat{0}{0}{a}{g}{h}{d}{Y}{X}
+    \draw[dlu](v3)--(v2); % X edge bold (UL)
+    \draw[dlu](v4)--(v3); % Y edge bold (LL)
+    \draw[dl](v3)--(v0)node[wb,pos=0.70]{$j$};
+    \draw[dl](v2)--(v5)node[wb,pos=0.70]{$b$};
+    \draw[dl](v1)--(v4)node[wb,pos=0.30]{$c$};
+  \end{scope}
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \cthetav{0}{0}{a}{c}{e}
+  \drects{1.5}{0}{e}{g}{e}{g}
+  \cthetav{2.9}{0}{g}{j}{f}
+  \drects{4.4}{0}{f}{h}{f}{h}
+  \cthetav{5.8}{0}{h}{d}{b}
+\end{tikzpicture}
+$
+\end{document}

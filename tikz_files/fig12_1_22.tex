@@ -1,0 +1,72 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{diagrams}
+\begin{document}
+$
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \coordinate(TL)at(-1,0.7);\coordinate(TM)at(0,0.7);\coordinate(TR)at(1,0.7);
+  \coordinate(BL)at(-1,-0.7);\coordinate(BM)at(0,-0.7);\coordinate(BR)at(1,-0.7);
+  \draw[dl](TL)--(TM)node[midway,above,inner sep=1pt]{$q$};
+  \draw[dl](TM)--(TR)node[midway,above,inner sep=1pt]{$u$};
+  \draw[dl](BL)--(BM)node[midway,below,inner sep=1pt]{$s$};
+  \draw[dl](BM)--(BR)node[midway,below,inner sep=1pt]{$v$};
+  \draw[dl](TL)--(BL)node[midway,left,inner sep=1pt]{$p$};
+  \draw[dl](TR)--(BR)node[midway,right,inner sep=1pt]{$r$};
+  \draw[dl](TM)--(BM)node[midway,right,inner sep=1pt]{$g$};
+  \draw[dl](TL)--($(TL)+(120:0.8)$)node[at end,left]{$a\alpha$};
+  \draw[dl](TR)--($(TR)+(60:0.8)$)node[at end,right]{$b\beta$};
+  \draw[dl](BL)--($(BL)+(240:0.8)$)node[at end,left]{$d\delta$};
+  \draw[dl](BR)--($(BR)+(-60:0.8)$)node[at end,right]{$c\gamma$};
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  % TL apex-right {a p q; g u x}: outer a(top) p(left) x(bottom,bold); inner q,g,u
+  \begin{scope}[shift={(-2,1)}]
+    \coordinate(c)at(0,0);\coordinate(T)at(120:1);\coordinate(B)at(240:1);\coordinate(V)at(0:1);
+    \draw[dl](T)--(V)node[midway,above,inner sep=1pt]{$a$};
+    \draw[dl](T)--(B)node[midway,left,inner sep=1pt]{$p$};
+    \draw[dlu](B)--(V)node[midway,below,inner sep=1pt]{$x$};
+    \draw[dl](c)--(T)node[wb,pos=0.5,inner sep=1pt]{$q$};
+    \draw[dl](c)--(B)node[wb,pos=0.5,inner sep=1pt]{$g$};
+    \draw[dl](c)--(V)node[wb,pos=0.5,inner sep=1pt]{$u$};
+  \end{scope}
+  % TR apex-left {a y b; r u x}
+  \begin{scope}[shift={(0.3,1)}]
+    \coordinate(c)at(0,0);\coordinate(T)at(60:1);\coordinate(B)at(300:1);\coordinate(V)at(180:1);
+    \draw[dl](T)--(V)node[midway,above,inner sep=1pt]{$a$};
+    \draw[dlu](T)--(B)node[midway,right,inner sep=1pt]{$y$};
+    \draw[dlu](V)--(B)node[midway,below,inner sep=1pt]{$x$};
+    \draw[dl](c)--(T)node[wb,pos=0.5]{$b$};
+    \draw[dl](c)--(B)node[wb,pos=0.5]{$r$};
+    \draw[dl](c)--(V)node[wb,pos=0.5]{$u$};
+  \end{scope}
+  % BL apex-right {v g s; p d x}
+  \begin{scope}[shift={(-2,-1)}]
+    \coordinate(c)at(0,0);\coordinate(T)at(120:1);\coordinate(B)at(240:1);\coordinate(V)at(0:1);
+    \draw[dlu](T)--(V)node[midway,above,inner sep=1pt]{$x$};
+    \draw[dl](T)--(B)node[midway,left,inner sep=1pt]{$p$};
+    \draw[dl](B)--(V)node[midway,below,inner sep=1pt]{$d$};
+    \draw[dl](c)--(T)node[wb,pos=0.5]{$g$};
+    \draw[dl](c)--(B)node[wb,pos=0.5]{$s$};
+    \draw[dl](c)--(V)node[wb,pos=0.5]{$v$};
+  \end{scope}
+  % BR apex-left {d y c; r v x}
+  \begin{scope}[shift={(0.3,-1)}]
+    \coordinate(c)at(0,0);\coordinate(T)at(60:1);\coordinate(B)at(300:1);\coordinate(V)at(180:1);
+    \draw[dlu](T)--(V)node[midway,above,inner sep=1pt]{$x$};
+    \draw[dlu](T)--(B)node[midway,right,inner sep=1pt]{$y$};
+    \draw[dl](B)--(V)node[midway,below,inner sep=1pt]{$d$};
+    \draw[dl](c)--(T)node[wb,pos=0.5]{$r$};
+    \draw[dl](c)--(B)node[wb,pos=0.5]{$c$};
+    \draw[dl](c)--(V)node[wb,pos=0.5]{$v$};
+  \end{scope}
+  % y (bold) down the right side to a Y for dd,cc
+  \coordinate(YL)at(2.0,-1.8);
+  \coordinate(YH)at(2.0,1.8);
+  \draw[dlu](YH)--(YL)node[pos=0.6,right,inner sep=1pt]{$y$};
+  \draw[dl](YL)--($(YL)+(-150:0.8)$)node[at end,below]{$d\delta$};
+  \draw[dl](YL)--($(YL)+(-30:0.8)$)node[at end,below]{$c\gamma$};
+  \draw[dl](YH)--($(YH)+(150:0.8)$)node[at end,above]{$a\alpha$};
+  \draw[dl](YH)--($(YH)+(30:0.8)$)node[at end,above]{$b\beta$};
+\end{tikzpicture}
+$
+\end{document}

@@ -1,0 +1,14 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{diagrams}
+\begin{document}
+$
+\begin{tikzpicture}[baseline=0pt,font=\small]\dsixjsq[1]{0}{0}{b}{c}{a}{d}{p}{X}\end{tikzpicture}
+\begin{tikzpicture}[baseline=0pt,font=\small]\dsixjsq[1]{0}{0}{c}{a}{d}{b}{q}{X}\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \dsq{0}{0}{c}{d}{p}{q}
+  \draw[dl](sqTL)--(sqBR)node[pos=0.28,right,inner sep=1pt]{$b$};
+  \draw[dl](sqTR)--(sqBL)node[pos=0.28,left,inner sep=1pt]{$a$};
+\end{tikzpicture}
+$
+\end{document}

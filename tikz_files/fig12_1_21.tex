@@ -1,0 +1,59 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{diagrams}
+\begin{document}
+$
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  % LHS: two squares sharing middle edge g
+  \coordinate(TL)at(-1,0.7);\coordinate(TM)at(0,0.7);\coordinate(TR)at(1,0.7);
+  \coordinate(BL)at(-1,-0.7);\coordinate(BM)at(0,-0.7);\coordinate(BR)at(1,-0.7);
+  \draw[dl](TL)--(TM)node[midway,above,inner sep=1pt]{$q$};
+  \draw[dl](TM)--(TR)node[midway,above,inner sep=1pt]{$u$};
+  \draw[dl](BL)--(BM)node[midway,below,inner sep=1pt]{$s$};
+  \draw[dl](BM)--(BR)node[midway,below,inner sep=1pt]{$v$};
+  \draw[dl](TL)--(BL)node[midway,left,inner sep=1pt]{$p$};
+  \draw[dl](TR)--(BR)node[midway,right,inner sep=1pt]{$r$};
+  \draw[dl](TM)--(BM)node[midway,right,inner sep=1pt]{$g$};
+  \draw[dl](TL)--($(TL)+(120:0.8)$)node[at end,left]{$a\alpha$};
+  \draw[dl](TR)--($(TR)+(60:0.8)$)node[at end,right]{$b\beta$};
+  \draw[dl](BL)--($(BL)+(240:0.8)$)node[at end,left]{$d\delta$};
+  \draw[dl](BR)--($(BR)+(-60:0.8)$)node[at end,right]{$c\gamma$};
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  % bowtie (top), x bold
+  \begin{scope}[shift={(0,1.9)}]
+    \coordinate(L)at(-0.8,0);\coordinate(R)at(0.8,0);
+    \draw[dlu](L)--(R)node[midway,above,inner sep=1pt]{$x$};
+    \draw[dl](L)--($(L)+(130:0.8)$)node[at end,left]{$a\alpha$};
+    \draw[dl](L)--($(L)+(230:0.8)$)node[at end,left]{$d\delta$};
+    \draw[dl](R)--($(R)+(50:0.8)$)node[at end,right]{$b\beta$};
+    \draw[dl](R)--($(R)+(-50:0.8)$)node[at end,right]{$c\gamma$};
+  \end{scope}
+  % left 6j-triangle (apex-right): p left, q top, s bottom; inner a,d,x
+  \begin{scope}[shift={(-2.7,0)}]
+    \coordinate(c)at(0,0);\coordinate(T)at(120:0.9);\coordinate(B)at(240:0.9);\coordinate(V)at(0:0.9);
+    \draw[dl](T)--(B)node[midway,left,inner sep=1pt]{$p$};
+    \draw[dl](T)--(V)node[midway,above right,inner sep=1pt]{$q$};
+    \draw[dl](B)--(V)node[midway,below right,inner sep=1pt]{$s$};
+    \draw[dl](c)--(T)node[wb,pos=0.5,inner sep=1pt]{$a$};
+    \draw[dl](c)--(B)node[wb,pos=0.5]{$d$};
+    \draw[dlu](c)--(V)node[wb,pos=0.45,inner sep=1pt] {$x$};
+  \end{scope}
+  % middle 6j-diamond: q,u,s,v edges; x horizontal (bold), g vertical
+  \begin{scope}[shift={(0,0)}]
+    \draw[dlu](180:0.9)--(0:0.9);
+    \dsixjsq{0}{0}{q}{u}{s}{v}{x}{g}
+  \end{scope}
+  % right 6j-triangle (apex-left): u top, r right, v bottom; inner b,c,x
+  \begin{scope}[shift={(2.7,0)}]
+    \coordinate(c)at(0,0);\coordinate(T)at(60:0.9);\coordinate(B)at(300:0.9);\coordinate(V)at(180:0.9);
+    \draw[dl](T)--(V)node[midway,above left,inner sep=1pt]{$u$};
+    \draw[dl](T)--(B)node[midway,right,inner sep=1pt]{$r$};
+    \draw[dl](V)--(B)node[midway,below left,inner sep=1pt]{$v$};
+    \draw[dl](c)--(T)node[wb,pos=0.5]{$b$};
+    \draw[dl](c)--(B)node[wb,pos=0.5]{$c$};
+    \draw[dlu](c)--(V)node[wb,pos=0.5]{$x$};
+  \end{scope}
+\end{tikzpicture}
+$
+\end{document}

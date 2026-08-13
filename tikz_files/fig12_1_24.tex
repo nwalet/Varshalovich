@@ -1,0 +1,62 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{diagrams}
+\begin{document}
+$
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \coordinate(TL)at(0,1.5);\coordinate(TR)at(1.5,1.5);\coordinate(BR)at(1.5,0);
+  \coordinate(BL)at(0,0);
+  \coordinate(BM)at(0.7,0);\coordinate(ML)at(0,0.7);
+  \draw[dl](TL)--(TR)node[midway,above,inner sep=1pt]{$r$};
+  \draw[dl](TR)--(BR)node[midway,right,inner sep=1pt]{$s$};
+  \draw[dl](BR)--(BM)node[midway,below,inner sep=1pt]{$u$};
+  \draw[dl](BM)--(BL)node[midway,below,inner sep=1pt]{$p$};
+  \draw[dl](BL)--(ML)node[midway,left,inner sep=1pt]{$q$};
+  \draw[dl](ML)--(TL)node[midway,left,inner sep=1pt]{$v$};
+  \draw[dl](ML)--(BM)node[midway,above right,inner sep=1pt]{$g$};
+  \draw[dl](TL)--($(TL)+(135:0.8)$)node[at end,left]{$b\beta$};
+  \draw[dl](TR)--($(TR)+(45:0.8)$)node[at end,right]{$c\gamma$};
+  \draw[dl](BR)--($(BR)+(-45:0.8)$)node[at end,right]{$d\delta$};
+  \draw[dl](BL)--($(BL)+(225:0.8)$)node[at end,left]{$a\alpha$};
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  % left 6j-tri (apex-up) {a p q / g v u}: outer g,v,u ; spokes q,p,a
+  \begin{scope}[shift={(0,0)}]
+    \coordinate(c)at(0,0);\coordinate(T)at(90:1);\coordinate(L)at(210:1);\coordinate(R)at(330:1);
+    \draw[dl](T)--(L)node[midway,above left,inner sep=1pt]{$g$};
+    \draw[dl](T)--(R)node[midway,above right,inner sep=1pt]{$v$};
+    \draw[dl](L)--(R)node[midway,below,inner sep=1pt]{$u$};
+    \draw[dl](c)--(T)node[wb,pos=0.5]{$q$};
+    \draw[dl](c)--(L)node[wb,pos=0.5]{$p$};
+    \draw[dl](c)--(R)node[wb,pos=0.5]{$a$};
+  \end{scope}
+  % middle 6j-tri (apex-up) {a d x / s v u}: outer v,s,u ; spokes x,a,d
+  \begin{scope}[shift={(2.4,0)}]
+    \coordinate(c)at(0,0);\coordinate(T)at(90:1);\coordinate(L)at(210:1);\coordinate(R)at(330:1);
+    \draw[dl](T)--(L)node[midway,above left,inner sep=1pt]{$v$};
+    \draw[dl](T)--(R)node[midway,above right,inner sep=1pt]{$s$};
+    \draw[dl](L)--(R)node[midway,below,inner sep=1pt]{$u$};
+    \draw[dlu](c)--(T)node[wb,pos=0.5]{$x$};
+    \draw[dl](c)--(L)node[wb,pos=0.5]{$a$};
+    \draw[dl](c)--(R)node[wb,pos=0.5]{$d$};
+  \end{scope}
+  % top 6j-tri (apex-DOWN) {x b c / r s v}: outer r,v,s ; spokes b,c,x
+  \begin{scope}[shift={(2.4,2.15)}]
+    \coordinate(c)at(0,0);\coordinate(B)at(270:1);\coordinate(TLv)at(150:1);\coordinate(TRv)at(30:1);
+    \draw[dl](TLv)--(TRv)node[midway,above,inner sep=1pt]{$r$};
+    \draw[dl](TLv)--(B)node[midway,below left,inner sep=1pt]{$v$};
+    \draw[dl](TRv)--(B)node[midway,below right,inner sep=1pt]{$s$};
+    \draw[dl](c)--(TLv)node[wb,pos=0.5]{$b$};
+    \draw[dl](c)--(TRv)node[wb,pos=0.5]{$c$};
+    \draw[dlu](c)--(B)node[wb,pos=0.5]{$x$};
+  \end{scope}
+  % Y (right): x vertical; top->bb,cc ; bottom->aa,dd
+  \coordinate(YH)at(5.0,2.0);\coordinate(YL)at(5.0,-1.0);
+  \draw[dlu](YH)--(YL)node[midway,right,inner sep=1pt]{$x$};
+  \draw[dl](YH)--($(YH)+(150:0.8)$)node[at end,above]{$b\beta$};
+  \draw[dl](YH)--($(YH)+(30:0.8)$)node[at end,above]{$c\gamma$};
+  \draw[dl](YL)--($(YL)+(210:0.8)$)node[at end,below]{$a\alpha$};
+  \draw[dl](YL)--($(YL)+(-30:0.8)$)node[at end,below]{$d\delta$};
+\end{tikzpicture}
+$
+\end{document}

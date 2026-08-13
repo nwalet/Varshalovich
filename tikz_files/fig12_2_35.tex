@@ -1,0 +1,33 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{diagrams}
+\begin{document}
+$
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \begin{scope} % square-left: top c, left p, right X, bot f ; diag g,d ; X right bold
+    \dsq{0}{0}{c}{f}{p}{X}
+    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$g$};
+    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$d$};
+    \draw[dlu](sqTR)--(sqBR);
+  \end{scope}
+  \begin{scope}[shift={(1.6,1.3)}] % diamond1 (top) {c b X Y ; a,d}: X BL, Y BR edges bold
+    \dsixjsq{0}{0}{c}{b}{X}{Y}{a}{d}
+    \draw[dlu](ql)--(qb);\draw[dlu](qb)--(qr);
+  \end{scope}
+  \begin{scope}[shift={(1.6,-1.3)}] % diamond2 (bottom) {X Y f e ; g,a}: X UL, Y UR edges bold
+    \dsixjsq{0}{0}{X}{Y}{f}{e}{g}{a}
+    \draw[dlu](ql)--(qt);\draw[dlu](qt)--(qr);
+  \end{scope}
+  \begin{scope}[shift={(3.2,0)}] % square-right: top b, left Y, right q, bot e ; diag d,g ; Y left bold
+    \dsq{0}{0}{b}{e}{Y}{q}
+    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$d$};
+    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$g$};
+    \draw[dlu](sqTL)--(sqBL);
+  \end{scope}
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \begin{scope}[shift={(0,1.3)}]\dsixjsq{0}{0}{c}{b}{p}{q}{a}{g}\end{scope}
+  \begin{scope}[shift={(0,-1.3)}]\dsixjsq{0}{0}{p}{q}{f}{e}{d}{a}\end{scope}
+\end{tikzpicture}
+$
+\end{document}

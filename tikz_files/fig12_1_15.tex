@@ -1,0 +1,65 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{diagrams}
+\begin{document}
+$
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  % LHS: eq16 pentagon rotated -90 (base 144 -> 54), relabelled
+  \foreach \i in {0,...,4}{\coordinate(v\i) at (54+\i*72:1.2);}
+  \draw[dl](v0)--(v1)node[midway,above,inner sep=1pt]{$r$};
+  \draw[dl](v0)--(v2)node[pos=0.6,above,inner sep=1pt]{$q$};
+  \draw[dl](v1)--(v4)node[pos=0.6,above,inner sep=1pt]{$s$};
+  \draw[dl](v2)--(v3)node[midway,below left,inner sep=1pt]{$p$};
+  \draw[dl](v3)--(v4)node[midway,below right,inner sep=1pt]{$t$};
+  \draw[dl](v0)--($(v0)+(54:0.8)$)node[at end,above]{$b\beta$};
+  \draw[dl](v1)--($(v1)+(126:0.8)$)node[at end,above]{$c\gamma$};
+  \draw[dl](v2)--($(v2)+(198:0.8)$)node[at end,left]{$a\alpha$};
+  \draw[dl](v3)--($(v3)+(270:0.8)$)node[at end,below]{$e\epsilon$};
+  \draw[dl](v4)--($(v4)+(342:0.8)$)node[at end,right]{$d\delta$};
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  % --- top: square with crossed diagonals (z) ---
+  \coordinate(sc)at(0,2.5);
+  \coordinate(sTL)at($(sc)+(135:1)$);\coordinate(sTR)at($(sc)+(45:1)$);
+  \coordinate(sBL)at($(sc)+(225:1)$);\coordinate(sBR)at($(sc)+(-45:1)$);
+  \draw[dl](sTL)--(sTR) node[midway,above]{$r$};
+  \draw[dlu](sBL)--(sBR) node[midway,below]{$z$};
+  \draw[dl](sTL)--(sBL) node[midway,left]{$c$};
+  \draw[dl](sTR)--(sBR) node[midway,right]{$b$};
+  \draw[dl](sTL)--(sBR) node[pos=0.3,above]{$s$};
+  \draw[dl](sTR)--(sBL) node[pos=0.35,above]{$q$};
+  % --- left 6j-triangle (apex-left), NO outward legs; edges c(to NL), z(to sq), x ---
+  \coordinate(lc)at(-1.4,0.8);
+  \coordinate(lA)at($(lc)+(180:1)$);\coordinate(lT)at($(lc)+(60:1)$);\coordinate(lB)at($(lc)+(-60:1)$);
+  \draw[dl](lA)--(lT)node[midway,above left,inner sep=1pt]{$c$};
+  \draw[dlu](lT)--(lB)node[midway,right,inner sep=1pt]{$z$};
+  \draw[dlu](lA)--(lB)node[midway,below left,inner sep=1pt]{$x$};
+  \draw[dl](lc)--(lA)node[pos=0.5,above,inner sep=1pt]{$a$};\draw[dl](lc)--(lT)node[pos=0.5,left,inner sep=1pt]{$q$};\draw[dl](lc)--(lB)node[pos=0.3,below left,inner sep=1pt]{$p$};
+  % --- right 6j-triangle (apex-right) ---
+  \coordinate(rc)at(1.4,0.8);
+  \coordinate(rA)at($(rc)+(0:1)$);\coordinate(rT)at($(rc)+(120:1)$);\coordinate(rB)at($(rc)+(240:1)$);
+  \draw[dl](rT)--(rA)node[midway,above right,inner sep=1pt]{$b$};
+  \draw[dlu](rT)--(rB)node[midway,left,inner sep=1pt]{$z$};
+  \draw[dlu](rB)--(rA)node[midway,below right,inner sep=1pt]{$y$};
+  \draw[dl](rc)--(rA)node[pos=0.5,above,inner sep=1pt]{$d$};\draw[dl](rc)--(rT)node[pos=0.5,right,inner sep=1pt]{$s$};\draw[dl](rc)--(rB)node[pos=0.3,below right,inner sep=1pt]{$t$};
+  % --- centre downward 6j-triangle ---
+  \coordinate(bc)at(0,-0.7);
+  \coordinate(bA)at($(bc)+(270:1)$);\coordinate(bL)at($(bc)+(150:1)$);\coordinate(bR)at($(bc)+(30:1)$);
+  \draw[dlu](bL)--(bR)node[midway,above,inner sep=1pt]{$z$};
+  \draw[dlu](bL)--(bA)node[midway,below left,inner sep=1pt]{$x$};
+  \draw[dlu](bR)--(bA)node[midway,below right,inner sep=1pt]{$y$};
+  \draw[dl](bc)--(bA)node[pos=0.5,right,inner sep=1pt]{$e$};\draw[dl](bc)--(bL)node[pos=0.3,above,inner sep=1pt]{$p$};\draw[dl](bc)--(bR)node[pos=0.3,above,inner sep=1pt]{$t$};
+  % big outer triangle NL,NR,NB: its edges are the long x,y (and top) summed lines;
+  % the external 3jm legs attach at its corners.
+  \coordinate(NL)at($(lA)-(0.3,0)$);\coordinate(NR)at($(rA)+(0.3,0)$);\coordinate(NB)at($(bA)-(0,0.3)$);
+  \draw[dlu](NL)--(NB)node[pos=0.62,below left,inner sep=1pt]{$x$};
+  \draw[dlu](NR)--(NB)node[pos=0.62,below right,inner sep=1pt]{$y$};
+  \draw[dl](NL)--($(NL)+(100:0.9)$)node[at end,above]{$c\gamma$};
+  \draw[dl](NL)--($(NL)+(225:0.9)$)node[at end,below]{$a\alpha$};
+  \draw[dl](NR)--($(NR)+(80:0.9)$)node[at end,above]{$b\beta$};
+  \draw[dl](NR)--($(NR)+(-45:0.9)$)node[at end,below]{$d\delta$};
+  \draw[dl](NB)--($(NB)+(270:0.9)$)node[at end,below]{$e\epsilon$};
+ 
+\end{tikzpicture}
+$
+\end{document}

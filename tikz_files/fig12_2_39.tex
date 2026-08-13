@@ -1,0 +1,46 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{diagrams}
+\begin{document}
+$
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \begin{scope}[shift={(1.2,2.2)}] % diamond {a3 b1 b2;c X2 X1}: b2(UL) b1(UR) X2(BL) X1(BR); a3(v) c(h)
+    \dsixjsq{0}{0}{b_2}{b_1}{X_2}{X_1}{c}{a_3}
+    \draw[dlu](ql)--(qb);\draw[dlu](qb)--(qr);
+  \end{scope}
+  \begin{scope}[shift={(1.2,0.1)}] % triangle {a1 a2 a3;X1 X2 X3}: outer X2,X1,X3 bold ; spokes a1,a3,a2
+    \coordinate(c)at(0,0);\coordinate(T)at(90:1);\coordinate(L)at(210:1);\coordinate(R)at(330:1);
+    \draw[dlu](T)--(L)node[midway,above left,inner sep=1pt]{$X_2$};
+    \draw[dlu](T)--(R)node[midway,above right,inner sep=1pt]{$X_1$};
+    \draw[dlu](L)--(R)node[midway,below,inner sep=1pt]{$X_3$};
+    \draw[dl](c)--(L)node[wb,pos=0.5]{$a_1$};
+    \draw[dl](c)--(R)node[wb,pos=0.5]{$a_3$};
+    \draw[dl](c)--(T)node[wb,pos=0.5]{$a_2$};
+  \end{scope}
+  \begin{scope}[shift={(0,-2.2)}] % square-left {a1 b2 b3;c X3 X2}: top X2, left b2, right X3, bot b3 ; diag c,a1
+    \dsq{0}{0}{X_2}{b_3}{b_2}{X_3}
+    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$c$};
+    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$a_1$};
+    \draw[dlu](sqTL)--(sqTR);\draw[dlu](sqTR)--(sqBR); % X2 top, X3 right bold
+  \end{scope}
+  \begin{scope}[shift={(2.6,-2.2)}] % square-right {a2 b3 b1;c X1 X3}: top X1, left X3, right b1, bot b3 ; diag a2,c
+    \dsq{0}{0}{X_1}{b_3}{X_3}{b_1}
+    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$a_2$};
+    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$c$};
+    \draw[dlu](sqTL)--(sqTR);\draw[dlu](sqTL)--(sqBL); % X1 top, X3 left bold
+  \end{scope}
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \dloop{0}{0}{c}
+  \begin{scope}[shift={(2.2,0)}] % 6j-tri {a1 a2 a3;b1 b2 b3}: outer b2,b1,b3 ; spokes a1,a3,a2
+    \coordinate(c)at(0,0);\coordinate(T)at(90:1);\coordinate(L)at(210:1);\coordinate(R)at(330:1);
+    \draw[dl](T)--(L)node[midway,above left,inner sep=1pt]{$b_2$};
+    \draw[dl](T)--(R)node[midway,above right,inner sep=1pt]{$b_1$};
+    \draw[dl](L)--(R)node[midway,below,inner sep=1pt]{$b_3$};
+    \draw[dl](c)--(L)node[wb,pos=0.5]{$a_1$};
+    \draw[dl](c)--(R)node[wb,pos=0.5]{$a_3$};
+    \draw[dl](c)--(T)node[wb,pos=0.5]{$a_2$};
+  \end{scope}
+\end{tikzpicture}
+$
+\end{document}

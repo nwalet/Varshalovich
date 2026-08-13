@@ -1,0 +1,19 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{diagrams}
+\begin{document}
+$
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \coordinate(L)at(0,0){};\coordinate(R)at(1.6,0){};
+  \draw[dlu](L)--(R);
+  \draw[dl](-0.85,0.75)--(L)node[at start,left]{$a\alpha$};
+  \draw[dl](-0.85,-0.75)--(L)node[at start,left]{$b\beta$};
+  \draw[dl](R)--(2.45,0.75)node[at end,right]{$a\alpha'$};
+  \draw[dl](R)--(2.45,-0.75)node[at end,right]{$b\beta'$};
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \draw[dl](0,0.5)--(1.9,0.5)node[pos=0.08,above]{$a\alpha$}node[pos=0.92,above]{$a\alpha'$};
+  \draw[dl](0,-0.5)--(1.9,-0.5)node[pos=0.08,above]{$b\beta$}node[pos=0.92,above]{$b\beta'$};
+\end{tikzpicture}
+$
+\end{document}

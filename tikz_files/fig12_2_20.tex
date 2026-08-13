@@ -1,0 +1,47 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{diagrams}
+\begin{document}
+$
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  % hexagon (top): top d, UR c, LR e, bot X(bold), LL p, UL b ; diam f,a,q
+  \begin{scope}[shift={(0,1.3)}]
+    \dhexflat{0}{0}{d}{c}{e}{X}{p}{b}
+    \draw[dlu](v5)--(v4); % X bottom edge bold
+    \draw[dl](v2)--(v5)node[wb,pos=0.30]{$f$};
+    \draw[dl](v0)--(v3)node[wb,pos=0.70]{$a$};
+    \draw[dl](v1)--(v4)node[wb,pos=0.30]{$q$};
+  \end{scope}
+  % diamond1 (BL) {p X ; g k ; l,q}: X UR edge bold
+  \begin{scope}[shift={(-1.2,-1.0)}]
+    \dsixjsq{0}{0}{p}{X}{g}{k}{l}{q}
+    \draw[dlu](qt)--(qr);
+  \end{scope}
+  % diamond2 (BR) {X e ; k h ; l,f}: X UL edge bold
+  \begin{scope}[shift={(1.2,-1.0)}]
+    \dsixjsq{0}{0}{X}{e}{k}{h}{l}{f}
+    \draw[dlu](ql)--(qt);
+  \end{scope}
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  % diamond1 (TL) {p l ; b Y ; a,g}: Y BR edge bold
+  \begin{scope}[shift={(0,1.4)}]
+    \dsixjsq{0}{0}{p}{l}{b}{Y}{a}{g}
+    \draw[dlu](qr)--(qb);
+  \end{scope}
+  % diamond2 (TR) {l e ; Y c ; a,h}: Y BL edge bold
+  \begin{scope}[shift={(2.4,1.4)}]
+    \dsixjsq{0}{0}{l}{e}{Y}{c}{a}{h}
+    \draw[dlu](ql)--(qb);
+  \end{scope}
+  % hexagon (bottom): top Y(bold), UR c, LR q, bot k, LL f, UL b ; diam d,g,h
+  \begin{scope}[shift={(1.2,-1.0)}]
+    \dhexflat{0}{0}{Y}{c}{q}{k}{f}{b}
+    \draw[dlu](v2)--(v1); % Y top edge bold
+    \draw[dl](v0)--(v3)node[wb,pos=0.70]{$d$};
+    \draw[dl](v2)--(v5)node[wb,pos=0.30]{$g$};
+    \draw[dl](v1)--(v4)node[wb,pos=0.70]{$h$};
+  \end{scope}
+\end{tikzpicture}
+$
+\end{document}

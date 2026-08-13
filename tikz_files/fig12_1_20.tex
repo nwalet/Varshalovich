@@ -1,0 +1,34 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{diagrams}
+\begin{document}
+$
+\begin{tikzpicture}[baseline=0pt,font=\small]  \coordinate(c)at(0,0);
+  \foreach \i in {1,...,6} {\coordinate(h\i) at ($(c)+(60*\i:1)$);}
+  \draw[dl](h1)--(h2)node[midway,above,inner sep=2pt]{$r$};
+  \draw[dl](h2)--(h3)node[midway,left,inner sep=2pt]{$p$};
+  \draw[dl](h3)--(h4)node[midway,left,inner sep=2pt]{$q$};
+  \draw[dl](h4)--(h5)node[midway,below,inner sep=2pt]{$s$};
+  \draw[dl](h5)--(h6)node[midway,right,inner sep=2pt]{$t$};
+  \draw[dl](h6)--(h1)node[midway,right,inner sep=2pt]{$u$};
+  \draw[dl](h4)--(h1)node[wb,pos=0.25]{$g$};
+  \draw[dl](h2)--(h5)node[wb,pos=0.75]{$v$};
+  \draw[dl](h3)--($(h3)-(1,0)$)node[wb,pos=0.75]{$a\alpha$};
+  \draw[dl](h6)--($(h6)+(1,0)$)node[wb,pos=0.75]{$a'\alpha'$};
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+    \draw[dl](-1,0)--(1,0)node[wb,pos=0.2,above]{$a\alpha$}node[wb,pos=0.8,above]{$a'\alpha'$};
+  \coordinate(c)at(2.5,0);
+  \foreach \i in {1,...,6} {\coordinate(h\i) at ($(c)+(60*\i:1)$);}
+  \draw[dl](h1)--(h2)node[midway,above,inner sep=2pt]{$r$};
+  \draw[dl](h2)--(h3)node[midway,left,inner sep=2pt]{$p$};
+  \draw[dl](h3)--(h4)node[midway,left,inner sep=2pt]{$q$};
+  \draw[dl](h4)--(h5)node[midway,below,inner sep=2pt]{$s$};
+  \draw[dl](h5)--(h6)node[midway,right,inner sep=2pt]{$t$};
+  \draw[dl](h6)--(h1)node[midway,right,inner sep=2pt]{$u$};
+  \draw[dl](h4)--(h1)node[wb,pos=0.25]{$g$};
+  \draw[dl](h3)--(h6)node[wb,pos=0.75]{$a$};
+  \draw[dl](h2)--(h5)node[wb,pos=0.75]{$v$};
+\end{tikzpicture}
+$
+\end{document}

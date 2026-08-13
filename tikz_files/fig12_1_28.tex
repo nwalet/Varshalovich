@@ -1,0 +1,71 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{diagrams}
+\begin{document}
+$
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  % hexagon loop (pointy-top): edges r,q,p,u,t,s ; legs c,b,a,f,e,d
+  \dninehex{0}{0}{r}{q}{p}{u}{t}{s}
+  \draw[dl](hT)--($(hT)+(90:0.8)$)node[at end,above]{$c\gamma$};
+  \draw[dl](hUL)--($(hUL)+(150:0.8)$)node[at end,left]{$b\beta$};
+  \draw[dl](hLL)--($(hLL)+(210:0.8)$)node[at end,left]{$a\alpha$};
+  \draw[dl](hB)--($(hB)+(270:0.8)$)node[at end,below]{$f\varphi$};
+  \draw[dl](hLR)--($(hLR)+(330:0.8)$)node[at end,right]{$e\varepsilon$};
+  \draw[dl](hUR)--($(hUR)+(30:0.8)$)node[at end,right]{$d\delta$};
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  % --- top: four 6j-triangles, alternating apex-down / apex-up ---
+  % T1 apex-down {a b x / r p q}: top r, left q, right p ; spokes b,x,a
+  \begin{scope}[shift={(0,-0.5)}]
+    \coordinate(c)at(0,0);\coordinate(TLv)at(150:1);\coordinate(TRv)at(30:1);\coordinate(B)at(270:1);
+    \draw[dl](TLv)--(TRv)node[midway,above,inner sep=1pt]{$r$};
+    \draw[dl](TLv)--(B)node[midway,below left,inner sep=1pt]{$q$};
+    \draw[dl](TRv)--(B)node[midway,below right,inner sep=1pt]{$p$};
+    \draw[dl](c)--(TLv)node[wb,pos=0.5]{$b$};
+    \draw[dlu](c)--(TRv)node[wb,pos=0.5]{$x$};
+    \draw[dl](c)--(B)node[wb,pos=0.5]{$a$};
+  \end{scope}
+  % T2 apex-up {x c y / s p r}: left r, right s, bottom p ; spokes c,x,y
+  \begin{scope}[shift={(1.8,0.5)}]
+    \coordinate(c)at(0,0);\coordinate(T)at(90:1);\coordinate(Lv)at(210:1);\coordinate(Rv)at(330:1);
+    \draw[dl](T)--(Lv)node[midway,above left,inner sep=1pt]{$r$};
+    \draw[dl](T)--(Rv)node[midway,above right,inner sep=1pt]{$s$};
+    \draw[dl](Lv)--(Rv)node[pos=0.3,below,inner sep=1pt]{$p$};
+    \draw[dl](c)--(T)node[wb,pos=0.5]{$c$};
+    \draw[dlu](c)--(Lv)node[wb,pos=0.5]{$x$};
+    \draw[dlu](c)--(Rv)node[wb,pos=0.5]{$y$};
+  \end{scope}
+  % T3 apex-down {y f z / u s p}: top s, left p, right u ; spokes y,z,f
+  \begin{scope}[shift={(3.6,-0.5)}]
+    \coordinate(c)at(0,0);\coordinate(TLv)at(150:1);\coordinate(TRv)at(30:1);\coordinate(B)at(270:1);
+    \draw[dl](TLv)--(TRv)node[midway,above,inner sep=1pt]{$s$};
+    \draw[dl](TLv)--(B)node[midway,below left,inner sep=1pt]{$p$};
+    \draw[dl](TRv)--(B)node[midway,below right,inner sep=1pt]{$u$};
+    \draw[dlu](c)--(TLv)node[wb,pos=0.5]{$y$};
+    \draw[dlu](c)--(TRv)node[wb,pos=0.5]{$z$};
+    \draw[dl](c)--(B)node[wb,pos=0.5]{$f$};
+  \end{scope}
+  % T4 apex-up {z d e / t u s}: left s, right t, bottom u ; spokes d,z,e
+  \begin{scope}[shift={(5.4,0.5)}]
+    \coordinate(c)at(0,0);\coordinate(T)at(90:1);\coordinate(Lv)at(210:1);\coordinate(Rv)at(330:1);
+    \draw[dl](T)--(Lv)node[midway,above left,inner sep=1pt]{$s$};
+    \draw[dl](T)--(Rv)node[midway,above right,inner sep=1pt]{$t$};
+    \draw[dl](Lv)--(Rv)node[pos=0.3,below,inner sep=1pt]{$u$};
+    \draw[dl](c)--(T)node[wb,pos=0.5]{$d$};
+    \draw[dlu](c)--(Lv)node[wb,pos=0.5]{$z$};
+    \draw[dl](c)--(Rv)node[wb,pos=0.5]{$e$};
+  \end{scope}
+  % --- bottom: x-y-z caterpillar tree ---
+  \coordinate(A)at(0,-2);\coordinate(Bv)at(1.8,-1.4);\coordinate(Cv)at(3.6,-2);\coordinate(Dv)at(5.4,-1.4);
+  \draw[dlu](A)--(Bv)node[midway,above,inner sep=1pt]{$x$};
+  \draw[dlu](Bv)--(Cv)node[midway,above,inner sep=1pt]{$y$};
+  \draw[dlu](Cv)--(Dv)node[midway,above,inner sep=1pt]{$z$};
+  \draw[dl](A)--($(A)+(150:0.8)$)node[at end,left]{$b\beta$};
+  \draw[dl](A)--($(A)+(270:0.8)$)node[at end,below]{$a\alpha$};
+  \draw[dl](Bv)--($(Bv)+(90:0.8)$)node[at end,above]{$c\gamma$};
+  \draw[dl](Cv)--($(Cv)+(270:0.8)$)node[at end,below]{$f\varphi$};
+  \draw[dl](Dv)--($(Dv)+(90:0.8)$)node[at end,above]{$d\delta$};
+  \draw[dl](Dv)--($(Dv)+(-20:0.9)$)node[at end,right]{$e\varepsilon$};
+\end{tikzpicture}
+$
+\end{document}

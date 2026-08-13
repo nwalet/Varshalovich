@@ -1,0 +1,32 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{diagrams}
+\begin{document}
+$
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \begin{scope} % sq1: a c p X ; diag d,b ; X right edge bold
+    \dsq{0}{0}{a}{c}{p}{X}
+    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$d$};
+    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$b$};
+    \draw[dlu](sqTR)--(sqBR);
+  \end{scope}
+  \begin{scope}[xshift=2.4cm] % sq2: a c X Y ; diag b,d ; X left, Y right bold
+    \dsq{0}{0}{a}{c}{X}{Y}
+    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$b$};
+    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$d$};
+    \draw[dlu](sqTL)--(sqBL);\draw[dlu](sqTR)--(sqBR);
+  \end{scope}
+  \begin{scope}[xshift=4.8cm] % sq3: a c Y q ; diag d,b ; Y left bold
+    \dsq{0}{0}{a}{c}{Y}{q}
+    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$d$};
+    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$b$};
+    \draw[dlu](sqTL)--(sqBL);
+  \end{scope}
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \dsq{0}{0}{a}{c}{p}{q}
+  \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$d$};
+  \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$b$};
+\end{tikzpicture}
+$
+\end{document}

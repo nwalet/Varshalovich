@@ -1,0 +1,42 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{diagrams}
+\begin{document}
+$
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  % diamond1 {l p ; k q ; g,X}: X vertical bold
+  \begin{scope}
+    \dsixjsq[1]{0}{0}{l}{p}{k}{q}{g}{X}
+  \end{scope}
+  % 9j-hex (flat-top): top a, UR e, LR f, bot d, LL q, UL p ; diameters b,X,c
+  \begin{scope}[xshift=2.6cm]
+    \dhexflat{0}{0}{a}{e}{f}{d}{q}{p}
+    \draw[dl](v2)--(v5)node[wb,pos=0.30]{$b$};
+    \draw[dlu](v0)--(v3)node[wb,pos=0.30]{$X$};
+    \draw[dl](v1)--(v4)node[wb,pos=0.70]{$c$};
+  \end{scope}
+  % diamond2 {e l ; f k ; X,h}: X horizontal bold
+  \begin{scope}[xshift=5.2cm]
+    \dsixjsq[2]{0}{0}{e}{l}{f}{k}{X}{h}
+  \end{scope}
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \coordinate(O)at(0,0);
+  \foreach[count=\i] \ang in {90,45,0,-45,-90,-135,180,135}{\coordinate(w\i)at(\ang:1.6);}
+  % 8 outer edges (clockwise from top)
+  \draw[dl](w1)--(w2)node[midway,above right,inner sep=1pt]{$f$};
+  \draw[dl](w2)--(w3)node[midway,right,inner sep=1pt]{$h$};
+  \draw[dl](w3)--(w4)node[midway,right,inner sep=1pt]{$e$};
+  \draw[dl](w4)--(w5)node[midway,below right,inner sep=1pt]{$c$};
+  \draw[dl](w5)--(w6)node[midway,below left,inner sep=1pt]{$q$};
+  \draw[dl](w6)--(w7)node[midway,left,inner sep=1pt]{$g$};
+  \draw[dl](w7)--(w8)node[midway,left,inner sep=1pt]{$p$};
+  \draw[dl](w8)--(w1)node[midway,above left,inner sep=1pt]{$b$};
+  % 4 diameters through centre
+  \draw[dl](w1)--(w5)node[wb,pos=0.72]{$d$};
+  \draw[dl](w2)--(w6)node[wb,pos=0.25]{$k$};
+  \draw[dl](w3)--(w7)node[wb,pos=0.72]{$l$};
+  \draw[dl](w4)--(w8)node[wb,pos=0.75]{$a$};
+\end{tikzpicture}
+$
+\end{document}

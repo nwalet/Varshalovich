@@ -1,0 +1,39 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{diagrams}
+\begin{document}
+$
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \coordinate(Ln)at(0,0);
+  \coordinate(TL)at(1.1,0.75);\coordinate(TR)at(2.5,0.75);
+  \coordinate(BL)at(1.1,-0.75);\coordinate(BR)at(2.5,-0.75);
+  \draw[dl](-0.9,0)--(Ln)node[at start,left]{$a\alpha$};
+  \draw[dl](Ln)--(TL)node[midway,above left,inner sep=1pt]{$u$};
+  \draw[dl](Ln)--(BL)node[midway,below left,inner sep=1pt]{$v$};
+  \draw[dl](TL)--(TR)node[midway,above,inner sep=1pt]{$p$};
+  \draw[dl](BL)--(BR)node[midway,below,inner sep=1pt]{$r$};
+  \draw[dl](TR)--(BR)node[midway,right,inner sep=1pt]{$t$};
+  \draw[dl](TL)--(BR)node[pos=0.32,above right,inner sep=1pt]{$q$};
+  \draw[dl](BL)--(TR)node[pos=0.32,below right,inner sep=1pt]{$s$};
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \draw[dl](-0.9,0)--(0,0)node[at start,left]{$a\alpha$};
+  \fill(0,0)circle(1.6pt);
+\end{tikzpicture}
+\quad
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \coordinate(L)at(0,0);\coordinate(R)at(1.1,0);\dlens{L}{R}{u}{v}
+\end{tikzpicture}
+\quad
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \coordinate(TL)at(0,0.8);\coordinate(TR)at(1.6,0.8);
+  \coordinate(BL)at(0,-0.8);\coordinate(BR)at(1.6,-0.8);
+  \draw[dl](TL)--(TR)node[midway,above,inner sep=1pt]{$p$};
+  \draw[dl](BL)--(BR)node[midway,below,inner sep=1pt]{$r$};
+  \draw[dl](TL)--(BL)node[midway,left,inner sep=1pt]{$u$};
+  \draw[dl](TR)--(BR)node[midway,right,inner sep=1pt]{$t$};
+  \draw[dl](TL)--(BR)node[pos=0.3,above,inner sep=1pt]{$q$};
+  \draw[dl](BL)--(TR)node[pos=0.3,below,inner sep=1pt]{$s$};
+\end{tikzpicture}
+$
+\end{document}

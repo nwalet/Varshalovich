@@ -1,0 +1,38 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{diagrams}
+\begin{document}
+$
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \begin{scope}[shift={(1.1,1)}] % sq {p X Z; d e c}: top d, left X, right f, bot Z ; diag c,p
+    \dsq{0}{0}{d}{Z}{X}{f}
+    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$c$};
+    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$p$};
+    \draw[dlu](sqTL)--(sqBL);\draw[dlu](sqBL)--(sqBR); % X left, Z bottom bold
+  \end{scope}
+  \begin{scope}[shift={(0,-0.9)}] % hex1 (flat) 9j{a b p; c d X; q Y Z}-> outer X,Z,Y,b,a,c ; diam d,p,q
+    \dhexflat{0}{0}{X}{Z}{Y}{b}{a}{c}
+    \draw[dlu](v2)--(v1);\draw[dlu](v1)--(v0);\draw[dlu](v0)--(v5); % X top,Z UR,Y LR bold
+    \draw[dl](v2)--(v5)node[wb,pos=0.30]{$d$};
+    \draw[dl](v1)--(v4)node[wb,pos=0.70]{$p$};
+    \draw[dl](v0)--(v3)node[wb,pos=0.70]{$q$};
+  \end{scope}
+  \begin{scope}[shift={(2.6,-0.9)}] % hex2 (flat) 9j{b d Y; c f Z; l k q}-> outer f,k,l,b,Y,Z ; diam c,d,q
+    \dhexflat{0}{0}{f}{k}{l}{b}{Y}{Z}
+    \draw[dlu](v3)--(v2);\draw[dlu](v4)--(v3); % Z UL, Y LL bold
+    \draw[dl](v2)--(v5)node[wb,pos=0.30]{$c$};
+    \draw[dl](v1)--(v4)node[wb,pos=0.70]{$d$};
+    \draw[dl](v0)--(v3)node[wb,pos=0.70]{$q$};
+  \end{scope}
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \cthetav{0}{0}{d}{f}{k}
+  \drect{1.5}{0}{p}{k}
+  \begin{scope}[shift={(3.2,0)}] % 6j-square {a b p; l q c}: top b, left p, right c, bot a ; diag a,l
+    \dsq{0}{0}{b}{a}{p}{c}
+    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$a$};
+    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$l$};
+  \end{scope}
+\end{tikzpicture}
+$
+\end{document}

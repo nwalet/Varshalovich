@@ -1,0 +1,50 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{diagrams}
+\begin{document}
+$
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \coordinate(A)at(0,0.9);\coordinate(B)at(1.6,0.9);\coordinate(E)at(1.6,-0.9);\coordinate(D)at(0,-0.9);
+  \coordinate(L)at(-1.1,0);\coordinate(C)at(0.7,0);
+  \draw[dl](L)--(A)node[midway,above left,inner sep=1pt]{$q$};
+  \draw[dl](L)--(D)node[midway,below left,inner sep=1pt]{$p$};
+  \draw[dl](A)--(B)node[midway,above,inner sep=1pt]{$u$};
+  \draw[dl](B)--(E)node[midway,right,inner sep=1pt]{$t$};
+  \draw[dl](D)--(E)node[midway,below,inner sep=1pt]{$v$};
+  \draw[dl](A)--(C)node[midway,above right,inner sep=1pt]{$r$};
+  \draw[dl](D)--(C)node[midway,below right,inner sep=1pt]{$s$};
+  \draw[dl](C)--($(C)+(0:0.55)$)node[at end,above,inner sep=1pt]{$c\gamma$};
+  \draw[dl](L)--($(L)+(180:0.7)$)node[at end,above]{$a\alpha$};
+  \draw[dl](B)--($(B)+(60:0.8)$)node[at end,right]{$b\beta$};
+  \draw[dl](E)--($(E)+(-60:0.8)$)node[at end,right]{$d\delta$};
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  % H (left): x horizontal; left->cc(up),aa(down) ; right->bb(up),dd(down)
+  \coordinate(XL)at(-0.8,0);\coordinate(XR)at(0.8,0);
+  \draw[dlu](XL)--(XR)node[midway,above,inner sep=1pt]{$x$};
+  \draw[dl](XL)--($(XL)+(130:0.8)$)node[at end,left]{$c\gamma$};
+  \draw[dl](XL)--($(XL)+(230:0.8)$)node[at end,left]{$a\alpha$};
+  \draw[dl](XR)--($(XR)+(50:0.8)$)node[at end,right]{$b\beta$};
+  \draw[dl](XR)--($(XR)+(-50:0.8)$)node[at end,right]{$d\delta$};
+  % flat-top 9j-hexagon: vertices at 0,60,120,180,240,300
+  \begin{scope}[shift={(3.0,0)}]
+    \coordinate(hc)at(0,0);
+    \foreach \i in {0,...,5}{\coordinate(v\i) at (60*\i:1);}
+    \draw[dl](v2)--(v1)node[midway,above,inner sep=1pt]{$r$};
+    \draw[dl](v1)--(v0)node[midway,above right,inner sep=1pt]{$u$};
+    \draw[dl](v0)--(v5)node[midway,below right,inner sep=1pt]{$v$};
+    \draw[dl](v5)--(v4)node[midway,below,inner sep=1pt]{$p$};
+    \draw[dl](v4)--(v3)node[midway,below left,inner sep=1pt]{$a$};
+    \draw[dl](v3)--(v2)node[midway,above left,inner sep=1pt]{$c$};
+    \draw[dlu](v3)--(v0)node[wb,pos=0.28]{$x$};
+    \draw[dl](v1)--(v4)node[wb,pos=0.30]{$q$};
+    \draw[dl](v2)--(v5)node[wb,pos=0.70]{$s$};
+  \end{scope}
+  % 6j-diamond {u b / v d}, hd=x (bold), vd=t
+  \begin{scope}[shift={(5.7,0)}]
+    \draw[dlu](180:0.9)--(0:0.9);
+    \dsixjsq{0}{0}{u}{b}{v}{d}{x}{t}
+  \end{scope}
+\end{tikzpicture}
+$
+\end{document}

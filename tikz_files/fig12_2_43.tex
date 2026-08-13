@@ -1,0 +1,48 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{diagrams}
+\begin{document}
+$
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \begin{scope}[shift={(1.4,2.0)}] % hex-top {a b X;c d Y;e f Z}: outer e,a,X,Y,d,f ; diam b,c,Z
+    \dninehex{0}{0}{e}{a}{X}{Y}{d}{f}
+    \draw[dlu](hLL)--(hB);\draw[dlu](hB)--(hLR); % X (eBL), Y (eBR) edges bold
+    \draw[dlu](hT)--(hB)node[wb,pos=0.72]{$Z$};
+    \draw[dl](hUR)--(hLL)node[wb,pos=0.28]{$b$};
+    \draw[dl](hUL)--(hLR)node[wb,pos=0.28]{$c$};
+  \end{scope}
+  \begin{scope} % square-left {a b X;g h j}: top a, left j, right X, bot g ; diag h,b ; X right bold
+    \dsq{0}{0}{a}{g}{j}{X}
+    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$h$};
+    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$b$};
+    \draw[dlu](sqTR)--(sqBR);
+  \end{scope}
+  \begin{scope}[shift={(2.8,0)}] % square-right {c d Y;k l j'}: top d, left Y, right j', bot l ; diag c,k ; Y left bold
+    \dsq{0}{0}{d}{l}{Y}{j'}
+    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$c$};
+    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$k$};
+    \draw[dlu](sqTL)--(sqBL);
+  \end{scope}
+  \begin{scope}[shift={(1.4,-2.0)}] % hex-bottom {g h X;k l Y;f e Z}: outer X,g,f,e,l,Y ; diam k,h,Z
+    \dninehex{0}{0}{X}{g}{f}{e}{l}{Y}
+    \draw[dlu](hT)--(hUL);\draw[dlu](hUR)--(hT); % X (eTL), Y (eTR) edges bold
+    \draw[dlu](hT)--(hB)node[wb,pos=0.72]{$Z$};
+    \draw[dl](hUR)--(hLL)node[wb,pos=0.28]{$k$};
+    \draw[dl](hUL)--(hLR)node[wb,pos=0.28]{$h$};
+  \end{scope}
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \begin{scope} % square {a c e;l h j}: top a, left e, right j, bot l ; diag c,h
+    \dsq{0}{0}{a}{l}{e}{j}
+    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$c$};
+    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$h$};
+  \end{scope}
+  \drect{2.0}{0}{j}{j'}
+  \begin{scope}[shift={(4.0,0)}] % square {b d f;k g j}: top b, left j, right f, bot k ; diag g,d
+    \dsq{0}{0}{b}{k}{j}{f}
+    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$g$};
+    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$d$};
+  \end{scope}
+\end{tikzpicture}
+$
+\end{document}

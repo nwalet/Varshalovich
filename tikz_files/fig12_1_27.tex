@@ -1,0 +1,72 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{diagrams}
+\begin{document}
+$
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  % hexagon loop (pointy-top): edges r,q,p,u,t,s ; legs c,b,a,f,e,d
+  \dninehex{0}{0}{r}{q}{p}{u}{t}{s}
+  \draw[dl](hT)--($(hT)+(90:0.8)$)node[at end,above]{$c\gamma$};
+  \draw[dl](hUL)--($(hUL)+(150:0.8)$)node[at end,left]{$b\beta$};
+  \draw[dl](hLL)--($(hLL)+(210:0.8)$)node[at end,left]{$a\alpha$};
+  \draw[dl](hB)--($(hB)+(270:0.8)$)node[at end,below]{$f\varphi$};
+  \draw[dl](hLR)--($(hLR)+(330:0.8)$)node[at end,right]{$e\varepsilon$};
+  \draw[dl](hUR)--($(hUR)+(30:0.8)$)node[at end,right]{$d\delta$};
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  % --- 3jm-tree: centre J, three bold legs x,y,z each ending in a pair ---
+  \coordinate(J)at(1.4,0);
+  \coordinate(Px)at($(J)-(1.1,0)$);\coordinate(Py)at($(J)+(60:1.4)$);\coordinate(Pz)at($(J)+(-60:1.4)$);
+  \draw[dlu](J)--(Px)node[midway,above,inner sep=1pt]{$x$};
+  \draw[dlu](J)--(Py)node[midway,above left,inner sep=1pt]{$y$};
+  \draw[dlu](J)--(Pz)node[midway,below left,inner sep=1pt]{$z$};
+  \draw[dl](Px)--($(Px)+(120:0.8)$)node[at end,left]{$b\beta$};
+  \draw[dl](Px)--($(Px)+(240:0.8)$)node[at end,left]{$a\alpha$};
+  \draw[dl](Py)--($(Py)+(120:0.8)$)node[at end,above]{$c\gamma$};
+  \draw[dl](Py)--($(Py)+(0:0.8)$)node[at end,right]{$d\delta$};
+  \draw[dl](Pz)--($(Pz)+(240:0.8)$)node[at end,below]{$f\varphi$};
+  \draw[dl](Pz)--($(Pz)+(0:0.8)$)node[at end,right]{$e\varepsilon$};
+  % --- four 6j-triangles ---
+  % mid-left (apex-right) {a x b / r q p}: edges q(left) r(UR) p(LR); spokes b,a,x
+  \begin{scope}[shift={(3,0)}]
+    \coordinate(c)at(0,0);\coordinate(T)at(120:1);\coordinate(B)at(240:1);\coordinate(V)at(0:1);
+    \draw[dl](T)--(B)node[midway,left,inner sep=1pt]{$q$};
+    \draw[dl](T)--(V)node[midway,above right,inner sep=1pt]{$r$};
+    \draw[dl](B)--(V)node[midway,below right,inner sep=1pt]{$p$};
+    \draw[dl](c)--(T)node[wb,pos=0.5]{$b$};
+    \draw[dl](c)--(B)node[wb,pos=0.5]{$a$};
+    \draw[dlu](c)--(V)node[wb,pos=0.45]{$x$};
+  \end{scope}
+  % mid-right (apex-left) {x y z / r t p}: edges r(UL) t(right) p(LL); spokes y,z,x
+  \begin{scope}[shift={(5.3,0)}]
+    \coordinate(c)at(0,0);\coordinate(T)at(60:1);\coordinate(B)at(300:1);\coordinate(V)at(180:1);
+    \draw[dl](T)--(V)node[midway,above left,inner sep=1pt]{$r$};
+    \draw[dl](T)--(B)node[midway,right,inner sep=1pt]{$t$};
+    \draw[dl](V)--(B)node[midway,below left,inner sep=1pt]{$p$};
+    \draw[dlu](c)--(T)node[wb,pos=0.5]{$y$};
+    \draw[dlu](c)--(B)node[wb,pos=0.5]{$z$};
+    \draw[dlu](c)--(V)node[wb,pos=0.45]{$x$};
+  \end{scope}
+  % top-right (apex-right) {c y d / t s r}: edges s(top) r(left) t(right); spokes c,d,y
+  \begin{scope}[shift={(6.4,2)}]
+    \coordinate(c)at(0,0);\coordinate(T)at(120:1);\coordinate(B)at(240:1);\coordinate(V)at(0:1);
+    \draw[dl](T)--(B)node[midway,left,inner sep=1pt]{$r$};
+    \draw[dl](T)--(V)node[midway,above right,inner sep=1pt]{$s$};
+    \draw[dl](B)--(V)node[midway,below right,inner sep=1pt]{$t$};
+    \draw[dl](c)--(T)node[wb,pos=0.5]{$c$};
+    \draw[dlu](c)--(B)node[wb,pos=0.5]{$y$};
+    \draw[dl](c)--(V)node[wb,pos=0.45]{$d$};
+  \end{scope}
+  % bottom-right (apex-right) {e z f / t u p}: edges t(right) u(bottom) p(left); spokes z,e,f
+  \begin{scope}[shift={(6.4,-2)}]
+    \coordinate(c)at(0,0);\coordinate(T)at(120:1);\coordinate(B)at(240:1);\coordinate(V)at(0:1);
+    \draw[dl](T)--(B)node[midway,left,inner sep=1pt]{$p$};
+    \draw[dl](T)--(V)node[midway,above right,inner sep=1pt]{$t$};
+    \draw[dl](B)--(V)node[midway,below right,inner sep=1pt]{$u$};
+    \draw[dlu](c)--(T)node[wb,pos=0.5]{$z$};
+    \draw[dl](c)--(B)node[wb,pos=0.5]{$f$};
+    \draw[dl](c)--(V)node[wb,pos=0.45]{$e$};
+  \end{scope}
+\end{tikzpicture}
+$
+\end{document}

@@ -1,0 +1,31 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{diagrams}
+\begin{document}
+$
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \coordinate(VL)at(-1.15,0);\coordinate(VR)at(1.15,0);
+  \coordinate(VT)at(0,1.15);\coordinate(VB)at(0,-1.15);
+  \draw[dl](-2,0)--(VL)node[at start,above]{$a\alpha$};
+  \draw[dl](VR)--(2,0)node[at end,above]{$a'\alpha'$};
+  \draw[dl](VL)--(VT)node[midway,above left,inner sep=1pt]{$q$};
+  \draw[dl](VT)--(VR)node[midway,above right,inner sep=1pt]{$r$};
+  \draw[dl](VL)--(VB)node[midway,below left,inner sep=1pt]{$p$};
+  \draw[dl](VB)--(VR)node[midway,below right,inner sep=1pt]{$s$};
+  \coordinate(lt)at(0,0.5);\coordinate(lb)at(0,-0.5);
+  \draw[dl](VT)--(lt)node[midway,right,inner sep=1pt]{$t$};
+  \draw[dl](lb)--(VB)node[pos=0.3,right,inner sep=1pt]{$t'$};
+  \draw[dl](lt)to[bend right=90]node[midway,left,inner sep=1pt]{$v$}(lb);
+  \draw[dl](lt)to[bend left=90]node[midway,right,inner sep=1pt]{$u$}(lb);
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \draw[dl](0,0)--(1.7,0)node[pos=0.1,above]{$a\alpha$}node[pos=0.9,above]{$a'\alpha'$};
+\end{tikzpicture}
+\quad
+\begin{tikzpicture}[baseline=0pt,font=\small]\dsixjsq{0}{0}{q}{r}{p}{s}{a}{t}\end{tikzpicture}
+\quad
+\begin{tikzpicture}[baseline=0pt,font=\small]\dthetav{0}{0}{v}{t}{u}\end{tikzpicture}
+\quad
+\begin{tikzpicture}[baseline=0pt,font=\small]\dlensv{0}{0}{t}{t'}\end{tikzpicture}
+$
+\end{document}

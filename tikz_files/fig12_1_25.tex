@@ -1,0 +1,71 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{diagrams}
+\begin{document}
+$
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \coordinate(A)at(0,0.9);\coordinate(B)at(1.6,0.9);\coordinate(E)at(1.6,-0.9);\coordinate(D)at(0,-0.9);
+  \coordinate(L)at(-0.8,0);\coordinate(C)at(0.8,0);
+  \draw[dl](L)--(A)node[midway,above left,inner sep=1pt]{$q$};
+  \draw[dl](L)--(D)node[midway,below left,inner sep=1pt]{$p$};
+  \draw[dl](A)--(B)node[midway,above,inner sep=1pt]{$u$};
+  \draw[dl](B)--(E)node[midway,right,inner sep=1pt]{$t$};
+  \draw[dl](D)--(E)node[midway,below,inner sep=1pt]{$v$};
+  \draw[dl](A)--(C)node[midway,above right,inner sep=1pt]{$r$};
+  \draw[dl](D)--(C)node[midway,below right,inner sep=1pt]{$s$};
+  \draw[dl](C)--($(C)+(0:0.55)$)node[at end,above,inner sep=1pt]{$c\gamma$};
+  \draw[dl](L)--($(L)+(180:0.7)$)node[at end,above]{$a\alpha$};
+  \draw[dl](B)--($(B)+(60:0.8)$)node[at end,right]{$b\beta$};
+  \draw[dl](E)--($(E)+(-60:0.8)$)node[at end,right]{$d\delta$};
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  % TL apex-down: outer u(top) r(left) x(right); spokes q,a,p
+  \begin{scope}[shift={(0,1.3)}]
+    \coordinate(c)at(0,0);\coordinate(B)at(270:1);\coordinate(TLv)at(150:1);\coordinate(TRv)at(30:1);
+    \draw[dl](TLv)--(TRv)node[midway,above,inner sep=1pt]{$u$};
+    \draw[dl](TLv)--(B)node[midway,below left,inner sep=1pt]{$r$};
+    \draw[dlu](TRv)--(B)node[midway,below right,inner sep=1pt]{$x$};
+    \draw[dl](c)--(TLv)node[wb,pos=0.5]{$q$};
+    \draw[dl](c)--(TRv)node[wb,pos=0.5]{$a$};
+    \draw[dl](c)--(B)node[wb,pos=0.5]{$p$};
+  \end{scope}
+  % TR apex-down: outer u(top) x(left,bold) t(right); spokes a,b,y
+  \begin{scope}[shift={(2.4,1.3)}]
+    \coordinate(c)at(0,0);\coordinate(B)at(270:1);\coordinate(TLv)at(150:1);\coordinate(TRv)at(30:1);
+    \draw[dl](TLv)--(TRv)node[midway,above,inner sep=1pt]{$u$};
+    \draw[dlu](TLv)--(B)node[midway,below left,inner sep=1pt]{$x$};
+    \draw[dl](TRv)--(B)node[midway,below right,inner sep=1pt]{$t$};
+    \draw[dl](c)--(TLv)node[wb,pos=0.5]{$a$};
+    \draw[dl](c)--(TRv)node[wb,pos=0.5]{$b$};
+    \draw[dlu](c)--(B)node[wb,pos=0.5]{$y$};
+  \end{scope}
+  % BL apex-up: outer c(bottom) r(left) x(right); spokes p,s,v
+  \begin{scope}[shift={(0,-1.3)}]
+    \coordinate(c)at(0,0);\coordinate(T)at(90:1);\coordinate(Lv)at(210:1);\coordinate(Rv)at(330:1);
+    \draw[dl](T)--(Lv)node[midway,above left,inner sep=1pt]{$r$};
+    \draw[dlu](T)--(Rv)node[midway,above right,inner sep=1pt]{$x$};
+    \draw[dl](Lv)--(Rv)node[midway,below,inner sep=1pt]{$c$};
+    \draw[dl](c)--(T)node[wb,pos=0.5]{$p$};
+    \draw[dl](c)--(Lv)node[wb,pos=0.5]{$s$};
+    \draw[dl](c)--(Rv)node[wb,pos=0.5]{$v$};
+  \end{scope}
+  % BR apex-up: outer v(bottom) x(left,bold) t(right); spokes y,c,d
+  \begin{scope}[shift={(2.4,-1.3)}]
+    \coordinate(c)at(0,0);\coordinate(T)at(90:1);\coordinate(Lv)at(210:1);\coordinate(Rv)at(330:1);
+    \draw[dlu](T)--(Lv)node[midway,above left,inner sep=1pt]{$x$};
+    \draw[dl](T)--(Rv)node[midway,above right,inner sep=1pt]{$t$};
+    \draw[dl](Lv)--(Rv)node[midway,below,inner sep=1pt]{$v$};
+    \draw[dlu](c)--(T)node[wb,pos=0.5]{$y$};
+    \draw[dl](c)--(Lv)node[wb,pos=0.5]{$c$};
+    \draw[dl](c)--(Rv)node[wb,pos=0.5]{$d$};
+  \end{scope}
+  % Y (right): y vertical; top->aa,bb ; bottom->cc,dd
+  \coordinate(YH)at(5.0,1.3);\coordinate(YL)at(5.0,-1.3);
+  \draw[dlu](YH)--(YL)node[midway,right,inner sep=1pt]{$y$};
+  \draw[dl](YH)--($(YH)+(150:0.8)$)node[at end,above]{$a\alpha$};
+  \draw[dl](YH)--($(YH)+(30:0.8)$)node[at end,above]{$b\beta$};
+  \draw[dl](YL)--($(YL)+(210:0.8)$)node[at end,below]{$c\gamma$};
+  \draw[dl](YL)--($(YL)+(-30:0.8)$)node[at end,below]{$d\delta$};
+\end{tikzpicture}
+$
+\end{document}

@@ -1,0 +1,57 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{diagrams}
+\begin{document}
+$
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \begin{scope}[shift={(1.4,2.0)}] % square-top {a b X;f e k}: top k, left a, right f, bot X ; diag e,b ; X bot bold
+    \dsq{0}{0}{k}{X}{a}{f}
+    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$e$};
+    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$b$};
+    \draw[dlu](sqBL)--(sqBR);
+  \end{scope}
+  \begin{scope} % hexagon-left {a b X;c d Y;p q s}: outer a,X,Y,d,q,p ; diam c,s,b
+    \dhexflat{0}{0}{a}{X}{Y}{d}{q}{p}
+    \draw[dlu](v1)--(v0);\draw[dlu](v0)--(v5); % X UR, Y LR edges bold
+    \draw[dl](v2)--(v5)node[wb,pos=0.30]{$c$};
+    \draw[dl](v0)--(v3)node[wb,pos=0.30]{$s$};
+    \draw[dl](v1)--(v4)node[wb,pos=0.70]{$b$};
+  \end{scope}
+  \begin{scope}[shift={(2.8,0)}] % hexagon-right {e f X;g h Y;r t s}: outer f,t,r,g,Y,X ; diam e,s,h
+    \dhexflat{0}{0}{f}{t}{r}{g}{Y}{X}
+    \draw[dlu](v3)--(v2);\draw[dlu](v4)--(v3); % X UL, Y LL edges bold
+    \draw[dl](v2)--(v5)node[wb,pos=0.30]{$e$};
+    \draw[dl](v0)--(v3)node[wb,pos=0.30]{$s$};
+    \draw[dl](v1)--(v4)node[wb,pos=0.70]{$h$};
+  \end{scope}
+  \begin{scope}[shift={(1.4,-2.0)}] % square-bottom {c d Y;h g l}: top Y, left d, right g, bot l ; diag c,h ; Y top bold
+    \dsq{0}{0}{Y}{l}{d}{g}
+    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$c$};
+    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$h$};
+    \draw[dlu](sqTL)--(sqTR);
+  \end{scope}
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \begin{scope}[shift={(1.4,2.0)}] % square-top {p r Z;t q s}: top s, left p, right t, bot Z ; diag q,r ; Z bot bold
+    \dsq{0}{0}{s}{Z}{p}{t}
+    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$q$};
+    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$r$};
+    \draw[dlu](sqBL)--(sqBR);
+  \end{scope}
+  \begin{scope} % hexagon-left {c g l;a e k;p r Z}: outer p,Z,l,g,e,a ; diam k,r,c
+    \dhexflat{0}{0}{p}{Z}{l}{g}{e}{a}
+    \draw[dlu](v1)--(v0); % Z UR edge bold
+    \draw[dl](v2)--(v5)node[wb,pos=0.30]{$k$};
+    \draw[dl](v0)--(v3)node[wb,pos=0.30]{$r$};
+    \draw[dl](v1)--(v4)node[wb,pos=0.70]{$c$};
+  \end{scope}
+  \begin{scope}[shift={(2.8,0)}] % hexagon-right {f b k;h d l;t q Z}: outer t,f,b,d,l,Z ; diam q,k,h
+    \dhexflat{0}{0}{t}{f}{b}{d}{l}{Z}
+    \draw[dlu](v3)--(v2); % Z UL edge bold
+    \draw[dl](v2)--(v5)node[wb,pos=0.30]{$q$};
+    \draw[dl](v0)--(v3)node[wb,pos=0.30]{$k$};
+    \draw[dl](v1)--(v4)node[wb,pos=0.70]{$h$};
+  \end{scope}
+\end{tikzpicture}
+$
+\end{document}

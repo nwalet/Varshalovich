@@ -1,0 +1,60 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{diagrams}
+\begin{document}
+$
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  % hexagon loop (pointy-top): edges r,q,p,u,t,s ; legs c,b,a,f,e,d
+  \dninehex{0}{0}{r}{q}{p}{u}{t}{s}
+  \draw[dl](hT)--($(hT)+(90:0.8)$)node[at end,above]{$c\gamma$};
+  \draw[dl](hUL)--($(hUL)+(150:0.8)$)node[at end,left]{$b\beta$};
+  \draw[dl](hLL)--($(hLL)+(210:0.8)$)node[at end,left]{$a\alpha$};
+  \draw[dl](hB)--($(hB)+(270:0.8)$)node[at end,below]{$f\varphi$};
+  \draw[dl](hLR)--($(hLR)+(330:0.8)$)node[at end,right]{$e\varepsilon$};
+  \draw[dl](hUR)--($(hUR)+(30:0.8)$)node[at end,right]{$d\delta$};
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  % --- 3jm-tree: centre J; x(up-left)->a,b ; y(up-right)->d,e ; z(down)->c,f ---
+  \coordinate(J)at(1.2,-0.2);
+  \coordinate(Lv)at($(J)+(150:1.2)$);\coordinate(Rv)at($(J)+(30:1.2)$);\coordinate(Bv)at($(J)+(270:1.2)$);
+  \draw[dlu](J)--(Lv)node[midway,above right,inner sep=1pt]{$x$};
+  \draw[dlu](J)--(Rv)node[midway,above left,inner sep=1pt]{$y$};
+  \draw[dlu](J)--(Bv)node[midway,right,inner sep=1pt]{$z$};
+  \draw[dl](Lv)--($(Lv)+(90:0.8)$)node[at end,above]{$b\beta$};
+  \draw[dl](Lv)--($(Lv)+(210:0.8)$)node[at end,left]{$a\alpha$};
+  \draw[dl](Rv)--($(Rv)+(90:0.8)$)node[at end,above]{$d\delta$};
+  \draw[dl](Rv)--($(Rv)+(-30:0.8)$)node[at end,right]{$e\varepsilon$};
+  \draw[dl](Bv)--($(Bv)+(210:0.8)$)node[at end,below]{$c\gamma$};
+  \draw[dl](Bv)--($(Bv)+(-30:0.8)$)node[at end,below]{$f\varphi$};
+  % --- left 6j-triangle (apex-up) {a x b / r q p}: edges b(UL) x(UR) r(bot); spokes a,q,p
+  \begin{scope}[shift={(4.5,0.5)}]
+    \coordinate(c)at(0,0);\coordinate(T)at(90:1);\coordinate(L)at(210:1);\coordinate(R)at(330:1);
+    \draw[dl](T)--(L)node[midway,above left,inner sep=1pt]{$b$};
+    \draw[dlu](T)--(R)node[midway,above right,inner sep=1pt]{$x$};
+    \draw[dl](L)--(R)node[midway,below,inner sep=1pt]{$r$};
+    \draw[dl](c)--(T)node[wb,pos=0.5]{$a$};
+    \draw[dl](c)--(L)node[wb,pos=0.5]{$q$};
+    \draw[dl](c)--(R)node[wb,pos=0.5]{$p$};
+  \end{scope}
+  % --- flat 9j-hexagon (pointy-top): edges x,r,c,f,s,y ; diameters z(vert,bold),p,q
+  \begin{scope}[shift={(6.3,-0.5)}]
+    \dninehex{0}{0}{x}{r}{c}{f}{s}{y}
+    \draw[dlu](hT) --(hUR);
+    \draw[dlu](hT) --(hUL);
+    \draw[dlu](hT)--(hB)node[wb,pos=0.3]{$z$};
+    \draw[dl](hUL)--(hLR)node[wb,pos=0.3]{$p$};
+    \draw[dl](hUR)--(hLL)node[wb,pos=0.3]{$q$};
+  \end{scope}
+  % --- right 6j-triangle (apex-up) {e y d / s t u}: edges y(UL) e(UR) u(bot); spokes d,s,t
+  \begin{scope}[shift={(9.1,0.5)}]
+    \coordinate(c)at(0,0);\coordinate(T)at(90:1);\coordinate(L)at(210:1);\coordinate(R)at(330:1);
+    \draw[dlu](T)--(L)node[midway,above left,inner sep=1pt]{$y$};
+    \draw[dl](T)--(R)node[midway,above right,inner sep=1pt]{$e$};
+    \draw[dl](L)--(R)node[midway,below,inner sep=1pt]{$u$};
+    \draw[dl](c)--(T)node[wb,pos=0.5]{$d$};
+    \draw[dl](c)--(L)node[wb,pos=0.5]{$s$};
+    \draw[dl](c)--(R)node[wb,pos=0.5]{$t$};
+  \end{scope}
+\end{tikzpicture}
+$
+\end{document}

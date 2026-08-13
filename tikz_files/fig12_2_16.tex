@@ -1,0 +1,27 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{diagrams}
+\begin{document}
+$
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \begin{scope}
+    \dhexflat{0}{0}{a}{X}{Y}{e}{f}{c}
+    \draw[dlu](v1)--(v0);\draw[dlu](v0)--(v5); % X (UR), Y (LR) edges bold
+    \draw[dl](v2)--(v5)node[wb,pos=0.30]{$b$};
+    \draw[dl](v1)--(v4)node[wb,pos=0.70]{$d$};
+    \draw[dlu](v0)--(v3)node[wb,pos=0.70]{$Z$};
+  \end{scope}
+  \begin{scope}[xshift=3cm]
+    \dhexflat{0}{0}{a}{c}{f}{e}{Y}{X}
+    \draw[dlu](v3)--(v2);\draw[dlu](v4)--(v3); % X (UL), Y (LL) edges bold
+    \draw[dl](v2)--(v5)node[wb,pos=0.30]{$d$};
+    \draw[dl](v1)--(v4)node[wb,pos=0.70]{$b$};
+    \draw[dlu](v0)--(v3)node[wb,pos=0.70]{$Z$};
+  \end{scope}
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \cthetav{0}{0}{a}{b}{c}
+  \cthetav{1.6}{0}{d}{e}{f}
+\end{tikzpicture}
+$
+\end{document}

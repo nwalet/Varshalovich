@@ -1,0 +1,32 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{diagrams}
+\begin{document}
+$
+\begin{tikzpicture}[baseline=0pt,font=\small]
+\coordinate (L) at (-1.2,0);
+\coordinate (R) at (1.2,0);
+\coordinate (lT) at (-0.4,0.7);
+\coordinate (lB) at (-0.4,-0.7);
+\coordinate (rT) at (0.4,0.7);
+\coordinate (rB) at (0.4,-0.7);
+\draw[dl](L)--(lT) node[midway,above] {$q$};
+\draw[dl](lT)--(rT) node[midway,above] {$r$};
+\draw[dl](rT)--(R) node[midway,above] {$u$};
+\draw[dl](L)--(lB) node[midway,below] {$p$};
+\draw[dl](lB)--(rB) node[midway,below] {$s$};
+\draw[dl](rB)--(R) node[midway,below] {$t$};
+\draw[dl](rB)--(rT) node[midway,left] {$g$};
+\draw[dl](lB)--(lT) node[midway,right] {$v$};
+\draw[dl](R)--($(R)+(1,0)$) node[near end, above] {$a'\alpha'$};
+\draw[dl](L)--($(L)-(1,0)$) node[near end, above] {$a\alpha$};
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \draw[dl](0,0)--(1.7,0)node[pos=0.1,above]{$a\alpha$}node[pos=0.9,above]{$a'\alpha'$};
+\end{tikzpicture}
+\quad
+\begin{tikzpicture}[baseline=0pt,font=\small]\dsixjsq{0}{0}{q}{r}{p}{s}{a}{v}\end{tikzpicture}
+\quad
+\begin{tikzpicture}[baseline=0pt,font=\small]\dsixjsq{0}{0}{r}{u}{s}{t}{a}{g}\end{tikzpicture}
+$
+\end{document}

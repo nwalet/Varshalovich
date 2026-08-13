@@ -1,0 +1,31 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{diagrams}
+\begin{document}
+$
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \begin{scope}[shift={(0,1.9)}] % sq1: c d g p ; diag X(bold) s
+    \dsq{0}{0}{c}{p}{d}{g}
+    \draw[dlu](sqTL)--(sqBR)node[wb,pos=0.32]{$X$};
+    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$s$};
+  \end{scope}
+  \begin{scope}[shift={(2.4,1.9)}] % sq2: b g d q ; diag Y(bold) t
+    \dsq{0}{0}{b}{q}{g}{d}
+    \draw[dlu](sqTL)--(sqBR)node[wb,pos=0.32]{$Y$};
+    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$t$};
+  \end{scope}
+  \begin{scope}[shift={(1.2,0)}] % hexagon (bottom): g q c d b p ; diam Y,a,X
+    \dhexflat{0}{0}{g}{q}{c}{d}{b}{p}
+    \draw[dlu](v2)--(v5)node[wb,pos=0.30]{$Y$};
+    \draw[dl](v0)--(v3)node[wb,pos=0.70]{$a$};
+    \draw[dlu](v1)--(v4)node[wb,pos=0.70]{$X$};
+  \end{scope}
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \dhexflat{0}{0}{g}{t}{q}{a}{p}{s}
+  \draw[dl](v2)--(v5)node[wb,pos=0.30]{$d$};
+  \draw[dl](v1)--(v4)node[wb,pos=0.30]{$b$};
+  \draw[dl](v0)--(v3)node[wb,pos=0.70]{$c$};
+\end{tikzpicture}
+$
+\end{document}

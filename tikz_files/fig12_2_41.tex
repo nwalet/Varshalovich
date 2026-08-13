@@ -1,0 +1,39 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{diagrams}
+\begin{document}
+$
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \begin{scope} % square-left: top f, left d, right X, bot a ; diag b,Z ; X right + Z diag bold
+    \dsq{0}{0}{f}{a}{d}{X}
+    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$b$};
+    \draw[dlu](sqTR)--(sqBL)node[wb,pos=0.68]{$Z$};
+    \draw[dlu](sqTR)--(sqBR);
+  \end{scope}
+  \begin{scope}[shift={(1.6,1.5)}] % diamond-top {X Y Z;f e g}: f(UL) e(UR) X(BL) Y(BR); g(h) Z(v,bold)
+    \dsixjsq[1]{0}{0}{f}{e}{X}{Y}{g}{Z}
+    \draw[dlu](ql)--(qb);\draw[dlu](qb)--(qr);
+  \end{scope}
+  \begin{scope}[shift={(3.2,0)}] % square-right: top e, left Y, right a, bot d ; diag Z,c ; Y left + Z diag bold
+    \dsq{0}{0}{e}{d}{Y}{a}
+    \draw[dlu](sqTL)--(sqBR)node[wb,pos=0.32]{$Z$};
+    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$c$};
+    \draw[dlu](sqTL)--(sqBL);
+  \end{scope}
+  \begin{scope}[shift={(1.6,-1.7)}] % hexagon (pointy): outer X,a,e',f',d,Y ; diam g,b,c ; X,Y bold
+    \dninehex{0}{0}{X}{a}{e'}{f'}{d}{Y}
+    \draw[dlu](hT)--(hUL);\draw[dlu](hUR)--(hT); % X (UL), Y (UR) edges bold
+    \draw[dl](hT)--(hB)node[wb,pos=0.27]{$g$};
+    \draw[dl](hUR)--(hLL)node[wb,pos=0.30]{$b$};
+    \draw[dl](hUL)--(hLR)node[wb,pos=0.70]{$c$};
+  \end{scope}
+\end{tikzpicture}
+\;=\;
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \cthetav{0}{0}{a}{c}{e}
+  \drect{1.4}{0}{e}{e'}
+  \cthetav{2.8}{0}{b}{d}{f}
+  \drect{4.2}{0}{f}{f'}
+  \cthetav{5.6}{0}{e}{f}{g}
+\end{tikzpicture}
+$
+\end{document}
