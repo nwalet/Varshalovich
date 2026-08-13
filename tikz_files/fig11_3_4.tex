@@ -3,19 +3,19 @@
 \usepackage{diagrams}
 \begin{document}
 \begin{tikzpicture}[baseline=0pt, inner sep=0.2em,font=\scriptsize]
-        \coordinate (T) at ($0.7*(-0.5,-0.7)$);
+        \coordinate (T) at ($0.7*(-0.5,0.7)$);
         \coordinate (B) at ($0.7*(-0.5,-0.7)$);
         \coordinate (M) at ($0.7*(0,0)$);
-        \coordinate (R) at ($0.7*(1,-0.7)$);
+        \coordinate (R) at ($0.7*(2.5,0)$);
     \node[dotnode,label={above:\minusmark}] at (T) {};
     \node[dotnode,label={below:\minusmark}] at (B) {};
     \node[dotnode,label={right:\minusmark}] at (R) {};
     \node[dotnode,label={left:\minusmark}] at (M) {};
-    \normedge[jmlinem=0.75]{TR}{BL}{0.75}{0.15}{$A$} % A
-    \normedge{BL}{TL}{0.5}{0.2}{$B$}
-    \normedge{TL}{TR}{0.5}{0.2}{$C$}
-    \normedge[jmlinem=0.4]{BR}{TL}{0.4}{-0.15}{$a$} % A
-    \normedge{BR}{TR}{0.5}{-0.2}{$b$}
-    \normedge{BR}{BL}{0.5}{0.15}{$c$}
+    \normedge[jmlinem=0.75]{T}{M}{0.75}{0.15}{$B$} 
+    \normedge{B}{T}{0.5}{0.2}{$c$}
+    \normedge{B}{M}{0.7}{-0.15}{$a$}
+    \normedge[jmlinem=0.4]{B}{R}{0.4}{-0.15}{$b$} % A
+    \normedge{R}{T}{0.5}{-0.2}{$A$}
+    \normedge{M}{R}{0.25}{0.15}{$C$}
     \end{tikzpicture}
 \end{document}
