@@ -1688,7 +1688,7 @@ Equation \eqref{eq:13:2:150} follows from the orthogonality of the vectors in qu
 
 Matrix elements of scalar and vector products of the operator \(\widehat{\vect{J}}\) and the operators \(\widehat{\vect{n}}\) and \(\widehat{\nabla}_{\Omega}\) may be derived from Eqs. \eqref{eq:13:2:52}-\eqref{eq:13:2:56} and \eqref{eq:13:2:61}-\eqref{eq:13:2:65}
 \begin{gather}
-\braOket{l^{\prime} s^{\prime} J^{\prime} M^{\prime}}{(\widehat{\vect{n}} \cdot \widehat{\vect{J}})}{ l s J M}=\delta_{s^{\prime} s} \delta_{J^{\prime}} \delta_{M^{\prime} M}(-1)^{s+l^{\prime}+J+1} \sqrt{J(J+1)(2 J+1)(2 l+1)} 
+\braOket{l^{\prime} s^{\prime} J^{\prime} M^{\prime}}{(\widehat{\vect{n}} \cdot \widehat{\vect{J}})}{ l s J M}=\delta_{s^{\prime} s} \delta_{J^{\prime} J} \delta_{M^{\prime} M}(-1)^{s+l^{\prime}+J+1} \sqrt{J(J+1)(2 J+1)(2 l+1)} 
 \clebsch{l}{0}{1}{0}{l^{\prime}}{0}
 \sixj{l}{s}{J}{J}{1}{l^{\prime}}  \label{eq:13:2:152}\\
 \braOket{ l^{\prime} s^{\prime} J^{\prime} M^{\prime}}{[\widehat{\vect{n}} \times \widehat{\vect{J}}]_{\kappa}}{l s J M}=\frac{i}{2}(-1)^{J+s+l^{\prime}}\bigl\{J^{\prime}\bigl(J^{\prime}+1\bigr)-J(J+1)-2\bigr\} \sqrt{(2 l+1)(2 J+1)}\notag \\
@@ -1700,25 +1700,24 @@ Matrix elements of scalar and vector products of the operator \(\widehat{\vect{J
 The scalar product of the operators \(\widehat{\vect{n}}\) and \(\widehat{\vect{J}}\) is commutative. At the same time, the vector product of these operators is not commutative, i.e.,
 \begin{gather}
 \braOket{ l^{\prime} s^{\prime} J^{\prime} M^{\prime}}{\left[ \widehat{\vect{J}} \times \widehat{\vect{n}}\right]_{\kappa}}{l s J M} \notag\\
-=\frac{i}{2}(-1)^{J+s+l^{\prime}+1}\bigl\{J^{\prime}\bigl(J^{\prime}+1\bigr)-J(J+1)+2\bigr\} \sqrt{(2 l+1)(2 J+1)} 
-\clebsch{1}{0}{1}{0}{l^{\prime}}{0}
-\sixj{l}{s}{J}{J^{\prime}}{1}{l^{\prime}} 
+=\frac{i}{2}(-1)^{J+s+l^{\prime}+1}\bigl\{J^{\prime}\bigl(J^{\prime}+1\bigr)-J(J+1)+2\bigr\} \sqrt{(2 l+1)(2 J+1)}
+\clebsch{l}{0}{1}{0}{l^{\prime}}{0}
+\sixj{l}{s}{J}{J^{\prime}}{1}{l^{\prime}}
 \clebsch{J}{M}{1}{\kappa}{J^{\prime}}{M^{\prime}} . \label{eq:13:2:154}
 \end{gather}
 In a similar manner we get
 \begin{gather}
 \braOket{ l^{\prime} s^{\prime} J^{\prime} M^{\prime}}{\bigl(\hat{\nabla}_{\Omega} \cdot \widehat{J}\bigr)}{l s J M}=\delta_{J^{\prime} J} \delta_{s^{\prime} s} \delta_{M^{\prime} M}(-1)^{s+l^{\prime}+J} \sqrt{\bigl(2 l^{\prime}+1\bigr)(2 J+1) J(J+1)}\notag \\
-\times\left[l \sqrt{\frac{l+1}{2 l+3}} \delta_{l l+1}+(l+1) \sqrt{\frac{l}{2 l-1}} \delta_{l l-1}\right]
+\times\left[l \sqrt{\frac{l+1}{2 l+3}} \delta_{l^{\prime} l+1}+(l+1) \sqrt{\frac{l}{2 l-1}} \delta_{l^{\prime} l-1}\right]
 \sixj{l}{s}{J}{J}{1}{l^{\prime}},  \label{eq:13:2:155}\\
-\left.
-\braOket{ l^{\prime} s^{\prime} J^{\prime} M^{\prime}}{ \mid \widehat{\nabla}_{\Omega} \times \widehat{\vect{J}}\right]_{\kappa}}{l s J M}=\frac{i}{2}(-1)^{J+s+l^{\prime}+1} \sqrt{\bigl(2 l^{\prime}+1\bigr)(2 J+1)}\bigl\{J^{\prime}\bigl(J^{\prime}+1\bigr)-J(J+1)-2\bigr\} \notag\\
-\times\left[\sqrt{\frac{l+1}{2 l+3}} \delta_{l l+1}+(l+1) \sqrt{\frac{l}{2 l-1}} \delta_{l l-1}\right]
+\braOket{ l^{\prime} s^{\prime} J^{\prime} M^{\prime}}{\left[\widehat{\nabla}_{\Omega} \times \widehat{\vect{J}}\right]_{\kappa}}{l s J M}=\frac{i}{2}(-1)^{J+s+l^{\prime}+1} \sqrt{\bigl(2 l^{\prime}+1\bigr)(2 J+1)}\bigl\{J^{\prime}\bigl(J^{\prime}+1\bigr)-J(J+1)-2\bigr\} \notag\\
+\times\left[l \sqrt{\frac{l+1}{2 l+3}} \delta_{l^{\prime} l+1}+(l+1) \sqrt{\frac{l}{2 l-1}} \delta_{l^{\prime} l-1}\right]
 \sixj{l}{s}{J}{J^{\prime}}{1}{l^{\prime}} 
 \clebsch{J}{M}{1}{\kappa}{J^{\prime}}{M^{\prime}} . \label{eq:13:2:156}
 \end{gather}
 As in the foregoing case, the scalar product of the vector operators \(\hat{\nabla}_{\Omega}\) and \(\hat{\vect{J}}\) is commutative, while the vector product is not commutative. Therefore,
 \begin{gather}
-\braOket{ l^{\prime} s^{\prime} J^{\prime} M^{\prime}}{ \left[\widehat{\vect{J}} \times \widehat{\nabla}_{\Omega}\right]_{\kappa}}{l s J M}=\frac{i}{2}(-1)^{J++l^{\prime}}\bigl\{J^{\prime}\bigl(J^{\prime}+1\bigr)-J(J+1)+2\bigr\} \sqrt{\bigl(2 l^{\prime}+1\bigr)(2 J+1)}\notag \\
+\braOket{ l^{\prime} s^{\prime} J^{\prime} M^{\prime}}{ \left[\widehat{\vect{J}} \times \widehat{\nabla}_{\Omega}\right]_{\kappa}}{l s J M}=\frac{i}{2}(-1)^{J+s+l^{\prime}}\bigl\{J^{\prime}\bigl(J^{\prime}+1\bigr)-J(J+1)+2\bigr\} \sqrt{\bigl(2 l^{\prime}+1\bigr)(2 J+1)}\notag \\
 \times\left[l \sqrt{\frac{l+1}{2 l+3}} \delta_{l^{\prime} l+1}+(l+1) \sqrt{\frac{l}{2 l-1}} \delta_{l^{\prime} l-1}\right]
 \sixj{l}{s}{J}{J^{\prime}}{1}{l^{\prime}} 
 \clebsch{J}{M}{1}{\kappa}{J^{\prime}}{M^{\prime}} \label{eq:13:2:157}
@@ -1730,35 +1729,35 @@ The matrix elements of scalar and vector products of the operator \(\hat{\vect{L
 \end{align}
 These results follow from the orthogonality of the vectors \(\widehat{\vect{n}}, \widehat{\nabla}_{\Omega}\) and \(\widehat{\vect{L}}\). The vector products \([\widehat{\vect{n}} \times \widehat{\vect{L}}]\) and \(\left[\widehat{\nabla}_{\Omega} \times \widehat{\vect{L}}\right]\) are not commutative. Hence,
 \begin{gather}
-\braOket{ l^{\prime} m^{\prime}}{}{\widehat{\vect{n}} \times \widehat{\vect{L}}|_{\kappa}|l m}=-\frac{i}{2}\left[l^{\prime}\bigl(l^{\prime}+1\bigr)-l(l+1)-2\right] \sqrt{\frac{2 l+1}{2 l^{\prime}+1}} 
+\braOket{ l^{\prime} m^{\prime}}{\left[\widehat{\vect{n}} \times \widehat{\vect{L}}\right]_{\kappa}}{l m}=-\frac{i}{2}\left[l^{\prime}\bigl(l^{\prime}+1\bigr)-l(l+1)-2\right] \sqrt{\frac{2 l+1}{2 l^{\prime}+1}} 
 \clebsch{l}{0}{1}{0}{l^{\prime}}{0} 
 \clebsch{l}{m}{1}{\kappa}{l^{\prime}}{m^{\prime}}=i
 \braOket{ l^{\prime} m^{\prime}}{\bigl(\hat{\nabla}_{\Omega}\bigr)_{1 \kappa}}{l m}  \label{eq:13:2:159}\\
-\braOket{ l^{\prime} m^{\prime}}{}{\widehat{\vect{L}} \times \widehat{\vect{n}}|_{\kappa}|l m}=\frac{i}{2}\left[l^{\prime}\bigl(l^{\prime}+1\bigr)-l(l+1)+2\right] \sqrt{\frac{2 l+1}{2 l^{\prime}+1}} 
+\braOket{ l^{\prime} m^{\prime}}{\left[\widehat{\vect{L}} \times \widehat{\vect{n}}\right]_{\kappa}}{l m}=\frac{i}{2}\left[l^{\prime}\bigl(l^{\prime}+1\bigr)-l(l+1)+2\right] \sqrt{\frac{2 l+1}{2 l^{\prime}+1}} 
 \clebsch{l}{0}{1}{0}{l^{\prime}}{0} 
 \clebsch{l}{m}{1}{\kappa}{l^{\prime}}{m^{\prime}} \label{eq:13:2:160}
 \end{gather}
 and also
 \begin{gather}
 \braOket{ l^{\prime} m^{\prime}}{\bigl\{\widehat{\nabla}_{\Omega} \times \widehat{\vect{L}}\bigr\}_{\kappa}}{l m} \notag\\
-=\frac{i}{2}\left[l^{\prime}\bigl(l^{\prime}+1\bigr)-l(l+1)-2\right]\left[\sqrt{\frac{l+1}{2 l+3}} \delta_{l^{\prime} l+1}+(l+1) \sqrt{\frac{l}{2 l-1}} \delta_{l^{\prime} l-1}\right] 
+=\frac{i}{2}\left[l^{\prime}\bigl(l^{\prime}+1\bigr)-l(l+1)-2\right]\left[l \sqrt{\frac{l+1}{2 l+3}} \delta_{l^{\prime} l+1}+(l+1) \sqrt{\frac{l}{2 l-1}} \delta_{l^{\prime} l-1}\right]
 \clebsch{l}{m}{1}{\kappa}{l^{\prime}}{m^{\prime}},  \label{eq:13:2:161}\\
 \braOket{ l^{\prime} m^{\prime}}{\bigl\{\widehat{\vect{L}} \times \widehat{\nabla}_{\Omega}\bigr\}_{\kappa}}{l m} \notag\\
-=-\frac{i}{2}\left[l^{\prime}\bigl(l^{\prime}+1\bigr)-l(l+1)+2\right]\left[\sqrt{\frac{l+1}{2 l+3}} \delta_{l l+1}+(l+1) \sqrt{\frac{l}{2 l-1}} \delta_{l^{\prime} l-1}\right] 
+=-\frac{i}{2}\left[l^{\prime}\bigl(l^{\prime}+1\bigr)-l(l+1)+2\right]\left[l \sqrt{\frac{l+1}{2 l+3}} \delta_{l^{\prime} l+1}+(l+1) \sqrt{\frac{l}{2 l-1}} \delta_{l^{\prime} l-1}\right]
 \clebsch{l}{m}{1}{\kappa}{l^{\prime}}{m^{\prime}} . \label{eq:13:2:162}
 \end{gather}
 The matrix elements of scalar and vector products of the operators \(\hat{\vect{L}}\) and \(\hat{\vect{J}}\) may be derived from Eqs. \eqref{eq:13:2:86}\eqref{eq:13:2:89}. The scalar product is commutative:
 \begin{equation}
-\braOket{ l^{\prime} s^{\prime} J^{\prime} M^{\prime}}{(\hat{\vect{L}} \cdot \hat{\vect{J}})}{l_{s} J M}=\delta_{l^{\prime} l^{\prime}} \delta_{s^{\prime},} \delta_{J^{\prime} j} \delta_{M^{\prime} M} \frac{J(J+1)+l(l+1)-s(s+1)}{2} \label{eq:13:2:163}
+\braOket{ l^{\prime} s^{\prime} J^{\prime} M^{\prime}}{(\hat{\vect{L}} \cdot \hat{\vect{J}})}{l s J M}=\delta_{l^{\prime} l} \delta_{s^{\prime} s} \delta_{J^{\prime} J} \delta_{M^{\prime} M} \frac{J(J+1)+l(l+1)-s(s+1)}{2} \label{eq:13:2:163}
 \end{equation}
 The vector product is not commutative:
 \begin{gather}
-\braOket{ l^{\prime} s^{\prime} J^{\prime} M^{\prime}}{\bigl\{\hat{\vect{L}} \times \hat{\vect{J}}\bigr\}_{\kappa}}{l s J M}=\frac{i}{2}(-1)^{s+l+J+1} \delta_{l^{\prime} l} \delta_{s^{\prime},} \left[ J(J+1)-J^{\prime}\bigl(J^{\prime}+1\bigr)+2\right] \notag\\
+\braOket{ l^{\prime} s^{\prime} J^{\prime} M^{\prime}}{\bigl\{\hat{\vect{L}} \times \hat{\vect{J}}\bigr\}_{\kappa}}{l s J M}=\frac{i}{2}(-1)^{s+l+J+1} \delta_{l^{\prime} l} \delta_{s^{\prime} s} \left[ J(J+1)-J^{\prime}\bigl(J^{\prime}+1\bigr)+2\right] \notag\\
 \times \sqrt{(2 J+1) l(l+1)(2 l+1)}
 \sixj{l}{s}{J}{J^{\prime}}{1}{l} 
 \clebsch{J}{M}{1}{\kappa}{J^{\prime}}{M^{\prime}}  \label{eq:13:2:164}
 \end{gather}\begin{gather}
-\braOket{ l^{\prime} s^{\prime} J^{\prime} M^{\prime}}{ \hat{\vect{J}} \times \hat{\vect{L}}_{\kappa}}{  l s J M}=\frac{i}{2}(-1)^{s+l+J+1} \delta_{l^{\prime} l} \delta_{s^{\prime},}\left[J^{\prime}\bigl(J^{\prime}+1\bigr)-J(J+1)+2\right] \notag\\
+\braOket{ l^{\prime} s^{\prime} J^{\prime} M^{\prime}}{\left[\hat{\vect{J}} \times \hat{\vect{L}}\right]_{\kappa}}{l s J M}=\frac{i}{2}(-1)^{s+l+J+1} \delta_{l^{\prime} l} \delta_{s^{\prime} s}\left[J^{\prime}\bigl(J^{\prime}+1\bigr)-J(J+1)+2\right] \notag\\
 \times \sqrt{(2 J+1) l(l+1)(2 l+1)}
 \sixj{l}{s}{J}{J^{\prime}}{1}{l^{\prime}} 
 \clebsch{J}{M}{1}{\kappa}{J^{\prime}}{M^{\prime}} \label{eq:13:2:165}
@@ -1766,18 +1765,18 @@ The vector product is not commutative:
 Matrix elements of scalar and vector products of the spin operator \(\widehat{\vect{S}}\) and the operators \(\widehat{\vect{n}}, \widehat{\nabla}_{\Omega}\) and \(\widehat{\vect{L}}\) (which commutative with \(\widehat{\vect{S}})\) may be found from Eqs. \eqref{eq:13:2:95}-\eqref{eq:13:2:99}:
 
 \begin{equation}
-\braOket{ l^{\prime} s^{\prime} J^{\prime} M^{\prime}}{(\widehat{\vect{n}} \cdot \widehat{\vect{S}})}{l s J M}=(-1)^{l+s+J} \delta_{J J^{\prime}} \delta_{M M^{\prime}} \delta_{e^{\prime}} \sqrt{s(s+1)(2 s+1)(2 l+1)} 
+\braOket{ l^{\prime} s^{\prime} J^{\prime} M^{\prime}}{(\widehat{\vect{n}} \cdot \widehat{\vect{S}})}{l s J M}=(-1)^{l+s+J} \delta_{J J^{\prime}} \delta_{M M^{\prime}} \delta_{s s^{\prime}} \sqrt{s(s+1)(2 s+1)(2 l+1)}
 \clebsch{l}{0}{1}{0}{l^{\prime}}{0}
 \sixj{1}{s}{s}{J}{l}{l^{\prime}}\label{eq:13:2:166}
 \end{equation}
 \begin{align}
 & 
-\braOket{ l^{\prime} s^{\prime} J^{\prime} M^{\prime}}{\bigl(\hat{\nabla}_{\Omega} \cdot \widehat{\vect{S}}\bigr)}{l s J M}=(-1)^{l+\vartheta+J+1} \delta_{J J^{\prime}} \delta_{M M^{\prime}} \delta_{s o^{\prime}} \sqrt{s(s+1)(2 s+1)\bigl(2 l^{\prime}+1\bigr)} \notag\\
-& \times\left[\sqrt{\frac{l+1}{2 l+3}} \delta_{l l+1}+(l+1) \sqrt{\frac{l}{2 l-1}} \delta_{l l-1}\right]
+\braOket{ l^{\prime} s^{\prime} J^{\prime} M^{\prime}}{\bigl(\hat{\nabla}_{\Omega} \cdot \widehat{\vect{S}}\bigr)}{l s J M}=(-1)^{l+s+J+1} \delta_{J J^{\prime}} \delta_{M M^{\prime}} \delta_{s s^{\prime}} \sqrt{s(s+1)(2 s+1)\bigl(2 l^{\prime}+1\bigr)} \notag\\
+& \times\left[l \sqrt{\frac{l+1}{2 l+3}} \delta_{l^{\prime} l+1}+(l+1) \sqrt{\frac{l}{2 l-1}} \delta_{l^{\prime} l-1}\right]
 \sixj{1}{s}{s}{J}{l}{l^{\prime}},  \label{eq:13:2:167}
 \end{align}\begin{align}
 & 
-\braOket{ l^{\prime} s^{\prime} J^{\prime} M^{\prime}}{(\hat{\vect{L}} \cdot \hat{\vect{S}})}{l s J M}=\delta_{l l^{\prime}} \delta_{0, g^{\prime}} \delta_{J J^{\prime}} \delta_{M M^{\prime}} \frac{1}{2}[J(J+1)-l(l+1)-s(s+1)],  \label{eq:13:2:168}
+\braOket{ l^{\prime} s^{\prime} J^{\prime} M^{\prime}}{(\hat{\vect{L}} \cdot \hat{\vect{S}})}{l s J M}=\delta_{l l^{\prime}} \delta_{s s^{\prime}} \delta_{J J^{\prime}} \delta_{M M^{\prime}} \frac{1}{2}[J(J+1)-l(l+1)-s(s+1)],  \label{eq:13:2:168}
 \end{align}
 \begin{align}
 & 
@@ -1787,33 +1786,33 @@ Matrix elements of scalar and vector products of the spin operator \(\widehat{\v
 =i(-1)^{l^{\prime}+J+s} \delta_{ss'} \sqrt{(2 l+1)(2 J+1)} 
 \clebsch{l}{0}{1}{0}{l^{\prime}}{0} \notag\\
 & \times \frac{1}{2}\left[\bigl(J^{\prime}-l^{\prime}\bigr)\bigl(J^{\prime}+l^{\prime}+1\bigr)-(J-l)(J+l+1)\right]
-\sixj{J^{\prime}}{l^{\prime}}{3}{l}{J}{1} 
+\sixj{J^{\prime}}{l^{\prime}}{s}{l}{J}{1}
 \clebsch{J}{M}{1}{\kappa}{J^{\prime}}{M^{\prime}},  \label{eq:13:2:169}
 \end{align}
 \begin{align}
 & 
-\braOket{ l^{\prime} s^{\prime} J^{\prime} M^{\prime}}{\left[\hat{\nabla} \widehat{\nabla}_{n} \times \widehat{\vect{S}}\right]_{\kappa}}{l s J M}=i(-1)^{l^{\prime}+J+\iota+1} \delta_{s s^{\prime}} \sqrt{\bigl(2 l^{\prime}+1\bigr)(2 J+1)}
+\braOket{ l^{\prime} s^{\prime} J^{\prime} M^{\prime}}{\left[\bigl(\hat{\nabla}_{\Omega}\bigr) \times \widehat{\vect{S}}\right]_{\kappa}}{l s J M}=i(-1)^{l^{\prime}+J+s+1} \delta_{s s^{\prime}} \sqrt{\bigl(2 l^{\prime}+1\bigr)(2 J+1)}
 \sixj{J^{\prime}}{l^{\prime}}{s}{l}{J}{1} \notag\\
-& \times \frac{1}{2}\left[\bigl(J^{\prime}-l^{\prime}\bigr)\bigl(J^{\prime}+l^{\prime}+1\bigr)-(J-l)(J+l+1)\right]\left[\sqrt{\frac{l+1}{2 l+3}} \delta_{l l+1}+(l+1) \sqrt{\frac{l}{2 l-1}} \delta_{l l-1}\right] 
+& \times \frac{1}{2}\left[\bigl(J^{\prime}-l^{\prime}\bigr)\bigl(J^{\prime}+l^{\prime}+1\bigr)-(J-l)(J+l+1)\right]\left[l \sqrt{\frac{l+1}{2 l+3}} \delta_{l^{\prime} l+1}+(l+1) \sqrt{\frac{l}{2 l-1}} \delta_{l^{\prime} l-1}\right]
 \clebsch{J}{M}{1}{\kappa}{J^{\prime}}{M^{\prime}},  \label{eq:13:2:170}
 \end{align}\begin{align}
 & 
-\braOketred{l^{\prime} s^{\prime} J^{\prime} M^{\prime}}{\left[\widehat{\vect{L}}_{1} \times \widehat{\vect{S}}_{1}\right]_{\kappa}}{l s J M}=i(-1)^{l+J+c} \sqrt{(2 J+1) l(l+1)(2 l+1)} \delta_{l l^{\prime}} \delta_{l^{\prime}} \notag\\
+\braOket{l^{\prime} s^{\prime} J^{\prime} M^{\prime}}{\left[\widehat{\vect{L}}_{1} \times \widehat{\vect{S}}_{1}\right]_{\kappa}}{l s J M}=i(-1)^{l+J+s} \sqrt{(2 J+1) l(l+1)(2 l+1)} \delta_{l l^{\prime}} \delta_{s s^{\prime}} \notag\\
 & \times \frac{1}{2}\left[\bigl(J^{\prime}-l\bigr)\bigl(J^{\prime}+l+1\bigr)-(J-l)(J+l+1)\right]
-\sixj{J^{\prime}}{l}{s}{l}{J}{1} 
+\sixj{J^{\prime}}{l}{s}{l}{J}{1}
 \clebsch{J}{M}{1}{\kappa}{J^{\prime}}{M^{\prime}} . \label{eq:13:2:171}
 \end{align}
 The scalar product of the operators \(\widehat{\vect{S}}\) and \(\widehat{\vect{J}}\) is commutative and its matrix elements are determined by
 \begin{equation}
-\braOket{l^{\prime} s^{\prime} J^{\prime} M^{\prime}}{(\widehat{\vect{S}} \cdot \widehat{\vect{J}})}{ l_{s} J M}=\delta_{l l} \delta_{s,} \delta_{J J^{\prime}} \delta_{M M^{\prime}} \frac{1}{2}[J(J+1)+s(s+1)-l(l+1)] \label{eq:13:2:172}
+\braOket{l^{\prime} s^{\prime} J^{\prime} M^{\prime}}{(\widehat{\vect{S}} \cdot \widehat{\vect{J}})}{ l s J M}=\delta_{l l^{\prime}} \delta_{s s^{\prime}} \delta_{J J^{\prime}} \delta_{M M^{\prime}} \frac{1}{2}[J(J+1)+s(s+1)-l(l+1)] \label{eq:13:2:172}
 \end{equation}
 The vector product of the same operators is not commutative. The matrix elements of this product are given by
 \begin{gather}
-\braOket{ l^{\prime} s^{\prime} J^{\prime} M^{\prime}}{}{\widehat{\vect{S}} \times \widehat{\vect{J}}|_{\kappa}|l s J M}=\frac{i}{2}(-1)^{l+s+J^{\prime}+1} \delta_{s^{\prime}} \delta_{l l}\left[J(J+1)-J^{\prime}\bigl(J^{\prime}+1\bigr)+2\right] \notag\\
+\braOket{ l^{\prime} s^{\prime} J^{\prime} M^{\prime}}{\left[\widehat{\vect{S}} \times \widehat{\vect{J}}\right]_{\kappa}}{l s J M}=\frac{i}{2}(-1)^{l+s+J^{\prime}+1} \delta_{s s^{\prime}} \delta_{l l^{\prime}}\left[J(J+1)-J^{\prime}\bigl(J^{\prime}+1\bigr)+2\right] \notag\\
 \times \sqrt{(2 J+1) s(s+1)(2 s+1)}
 \sixj{s}{l}{J}{J^{\prime}}{1}{s} 
 \clebsch{J}{M}{1}{\kappa}{J^{\prime}}{M^{\prime}}  \label{eq:13:2:173}\\
-\braOket{ l^{\prime} s^{\prime} J^{\prime} M^{\prime} }{ \left[\hat{\vect{J}} \times \widehat{\vect{S}}\right]_{\kappa}}{l s J M}=\frac{i}{2}(-1)^{l+s+J^{\prime}+1} \delta_{l l^{\prime}} \delta_{s^{\prime}}\left[J^{\prime}\bigl(J^{\prime}+1\bigr)-J(J+1)+2\right] \notag\\
+\braOket{ l^{\prime} s^{\prime} J^{\prime} M^{\prime} }{ \left[\hat{\vect{J}} \times \widehat{\vect{S}}\right]_{\kappa}}{l s J M}=\frac{i}{2}(-1)^{l+s+J^{\prime}+1} \delta_{l l^{\prime}} \delta_{s s^{\prime}}\left[J^{\prime}\bigl(J^{\prime}+1\bigr)-J(J+1)+2\right] \notag\\
 \times \sqrt{(2 J+1) s(s+1)(2 s+1)}
 \sixj{s}{l}{J}{J^{\prime}}{1}{s} 
 \clebsch{J}{M}{1}{\kappa}{J^{\prime}}{M^{\prime}} \label{eq:13:2:174}
