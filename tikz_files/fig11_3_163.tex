@@ -1,0 +1,12 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
+  \node[regular polygon,regular polygon sides=3,shape border rotate=-90,draw,thick,
+        inner sep=1.1pt,label={180:\plusmark}](O) at (0,0){};
+  \draw[bjmarrow](-0.85,0.6)--(O);\node at(-0.85,0.6)[left]{$j_1m_1$};
+  \draw[bjmarrow](-0.85,-0.6)--(O);\node at(-0.85,-0.6)[left]{$j_2m_2$};
+  \draw[jmarrow](O)--(1.0,0);\node at(1.0,0)[right]{$JM$};
+\end{tikzpicture}
+\end{document}

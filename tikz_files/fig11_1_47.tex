@@ -1,0 +1,12 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt]
+\node[opbox] (M) at (0,0) {\normalsize$\mathfrak{M}_{\gamma\gamma'}$};
+\node[dotnode,label={0:\plusmark}] (E) at (2,0) {}; 
+\draw[jmlinem] (M) to [bend left] node[pos=0.4,above]{$j$} (E);
+\draw[jmlinem] (M) --(E) node[midway,above]{$\lambda$};
+\draw[jmlinem] (M) to[bend right] node[pos=0.4,below]{$j'$} (E) ;
+\end{tikzpicture}
+\end{document}

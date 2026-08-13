@@ -1,0 +1,14 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
+  \node[dotnode](L)at(-0.16,0){};\node[dotnode](R)at(0.16,0){};
+  \draw[jmarrow](L)--(-0.32,1.2);\node at(-0.32,1.2)[above]{$l_3O$};
+  \draw[jmarrow](R)--(0.32,1.2);\node at(0.32,1.2)[above]{$l_3m_3$};
+  \draw[jmarrow](L)--(-1.15,-0.7);\node at(-1.1,-0.35)[left]{$l_1O$};
+  \draw[jmarrow](R)--(-0.85,-0.9);\node at(-0.85,-0.9)[below]{$l_1m_1$};
+  \draw[jmarrow](L)--(0.85,-0.9);\node at(0.85,-0.9)[below]{$l_2O$};
+  \draw[jmarrow](R)--(1.15,-0.7);\node at(1.1,-0.35)[right]{$l_2m_2$};
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,14 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
+  \node[draw,minimum width=1.7cm,minimum height=0.7cm](M)at(0,0){\normalsize\normalsize$\mathfrak{M}_{\gamma\gamma'}$};
+  \draw[bjmarrow]($(M.north)+(-0.55,1.2)$)--($(M.north)+(-0.55,0)$);
+  \node at($(M.north)+(-0.55,1.35)$){$JM$};
+  \draw[jmarrow]($(M.north)+(0,0)$)--($(M.north)+(0,1.2)$);
+  \node at($(M.north)+(0,1.35)$){$kq$};
+  \draw[jmarrow]($(M.north)+(0.55,0)$)--($(M.north)+(0.55,1.2)$);
+  \node at($(M.north)+(0.55,1.35)$){$J'M'$};
+\end{tikzpicture}
+\end{document}

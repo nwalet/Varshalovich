@@ -1,0 +1,14 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=0.2em,font=\scriptsize]
+    \node[opbox](M) at (0,0){\normalsize\normalsize$\mathfrak{M}$};
+    \node[opbox](N) at (1.8,0){\normalsize\normalsize$\mathfrak{N}$};
+    \draw (N.30) -- ($(N.30)+(0.1,0)$);
+    \draw (N.0) -- ($(N.0)+(0.1,0)$);
+    \draw (N.330) -- ($(N.330)+(0.1,0)$);
+    \draw[jmlinem] (M.30) -- (N.150) node[midway,above] {$j$};
+    \draw[jmlinem] (N.210) -- (M.330) node[midway,above] {$j$};
+\end{tikzpicture}
+\end{document}

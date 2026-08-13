@@ -1,0 +1,24 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
+  \node[opbox,minimum width=0.55cm,minimum height=1.8cm](M) at (0,0){\normalsize$\mathfrak{M}$};
+  \node[opbox,minimum width=0.55cm,minimum height=1.8cm](N) at (3.4,0){\normalsize$\mathfrak{N}$};
+  \coordinate(mA)at($(M.south east)!0.83!(M.north east)$);
+  \coordinate(mB)at($(M.south east)!0.5!(M.north east)$);
+  \coordinate(mC)at($(M.south east)!0.17!(M.north east)$);
+  \coordinate(nA)at($(N.south west)!0.83!(N.north west)$);
+  \coordinate(nB)at($(N.south west)!0.5!(N.north west)$);
+  \coordinate(nC)at($(N.south west)!0.17!(N.north west)$);
+  \node[dotnode,label={above:\plusmark}](pM)at($(M.east)+(1.0,0)$){};
+  \node[dotnode,label={above:\minusmark}](pN)at($(N.west)+(-1.0,0)$){};
+  \draw[jmlinem](mA)--(pM)node[pos=0.4,above]{$j_1$};
+  \draw[jmlinem](mB)--(pM)node[pos=0.4,above]{$j_2$};
+  \draw[jmlinem](mC)--(pM)node[pos=0.4,below]{$j_3$};
+  \draw[jmlinem](pN)--(nA)node[pos=0.6,above]{$j_1$};
+  \draw[jmlinem](pN)--(nB)node[pos=0.6,above]{$j_2$};
+  \draw[jmlinem](pN)--(nC)node[pos=0.6,below]{$j_3$};
+  \foreach \i in {-1,1}{\draw([yshift=\i*5mm]N.east)--([yshift=\i*5mm,xshift=1.5mm]N.east);}
+\end{tikzpicture}
+\end{document}

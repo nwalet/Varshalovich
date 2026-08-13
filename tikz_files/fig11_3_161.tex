@@ -1,0 +1,14 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=-2pt,inner sep=1.5pt,font=\scriptsize]
+  \node[dotnode,label={180:\plusmark}](P)at(0,0){};
+  \node[dotnode,label={0:\minusmark}](Q)at(1.6,0){};
+  \draw[jmlinem](Q)--(P)node[midway,above]{$j_3$};
+  \draw[bjmarrow](-0.8,0.6)--(P);\node at(-0.85,0.75){$j_1m_1$};
+  \draw[bjmarrow](-0.8,-0.6)--(P);\node at(-0.85,-0.75){$j_2m_2$};
+  \draw[jmarrow](Q)--(2.4,0.6);\node at(2.45,0.75){$j_1m'_1$};
+  \draw[jmarrow](Q)--(2.4,-0.6);\node at(2.45,-0.75){$j_2m'_2$};
+\end{tikzpicture}
+\end{document}

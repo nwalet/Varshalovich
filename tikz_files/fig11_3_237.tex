@@ -1,0 +1,16 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
+  \coordinate(A)at(-0.4,0);\coordinate(B)at(0.4,0);
+  \draw[bjmarrow]($(A)-(0.9,0)$)--(A) node[pos=0.2,above]{$jm$};
+  \draw[jmlinem](A)--(B);
+  \draw[jmarrow](B)--($(B)+(0.9,0)$) node[pos=0.8,above]{$jm''$};
+  \node at($(A)+(0,0.22)$){$+$};\node at($(B)+(0,0.22)$){$+$};
+  \coordinate(F)at(0,-0.7);
+  \draw[rline](A)--(F) node[pos=0.55,left]{$R_2$};
+  \draw[rline](B)--(F) node[pos=0.55,right]{$R_1$};
+  \draw[rline](F)--($(F)-(0,0.7)$) node[pos=0.9,right]{$R_2R_1$};
+\end{tikzpicture}
+\end{document}

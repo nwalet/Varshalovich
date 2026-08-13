@@ -1,0 +1,10 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
+  \node[draw,minimum width=0.85cm,minimum height=0.85cm](B){\normalsize\normalsize$\mathfrak{M}$};
+  \draw[bjmarrow]($(B.west)+(-0.95,0)$)--(B.west)node[pos=0.1,above]{$jm$};
+  \draw[jmarrow](B.east)--($(B.east)+(0.95,0)$)node[pos=0.9,above]{$j'm'$};
+\end{tikzpicture}
+\end{document}

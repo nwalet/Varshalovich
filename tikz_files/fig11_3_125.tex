@@ -1,0 +1,23 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
+  \node[opbox,minimum width=0.55cm,minimum height=2.2cm](M) at (0,0){\normalsize$\mathfrak{M}$};
+  \node[opbox,minimum width=0.55cm,minimum height=2.2cm](N) at (2.7,0){\normalsize$\mathfrak{N}$};
+  \coordinate(up)at(1,0.5);\coordinate(lo)at(1,-0.5);
+  \coordinate(un)at(1.7,0.5);\coordinate(ln)at(1.7,-0.5);
+  \draw[jmlinem]([yshift=8mm]M.east)--(up)node[pos=0.4,above]{$j_1$};
+  \draw[jmlinem]([yshift=2.7mm]M.east)--(up)node[pos=0.4,below]{$j_2$};
+  \draw[jmlinem]([yshift=-2.7mm]M.east)--(lo)node[pos=0.4,above]{$j_3$};
+  \draw[jmlinem]([yshift=-8mm]M.east)--(lo)node[pos=0.4,below]{$j_4$};
+  \draw[jmlinem](un)--([yshift=8mm]N.west)node[pos=0.6,above]{$j_1$};
+  \draw[jmlinem](un)--([yshift=2.7mm]N.west)node[pos=0.6,below]{$j_2$};
+  \draw[jmlinem](ln)--([yshift=-2.7mm]N.west)node[pos=0.6,above]{$j_3$};
+  \draw[jmlinem](ln)--([yshift=-8mm]N.west)node[pos=0.6,below]{$j_4$};
+  \draw[jmlinemu](up)--(lo)node[midway,left]{$J$};
+  \draw[jmlinemu](un)--(ln)node[midway,right]{$J$};
+  \node[dotnode,label={right:\plusmark}]at(up){};\node[dotnode,label={right:\plusmark}]at(lo){};
+  \node[dotnode,label={left:\minusmark}]at(un){};\node[dotnode,label={left:\minusmark}]at(ln){};
+\end{tikzpicture}
+\end{document}

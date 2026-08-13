@@ -1,0 +1,20 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=0.4em,font=\scriptsize]
+    \node[opbox,minimum height=20mm](M) at (0,0){\normalsize\normalsize$\mathfrak{M}$};
+    \node[opbox,minimum height=20mm](N) at (3.8,0){\normalsize\normalsize$\mathfrak{N}$};
+    \draw (N.50) -- ($(N.50)+(0.1,0)$);
+    \draw (N.0) -- ($(N.0)+(0.1,0)$);
+    \draw (N.310) -- ($(N.310)+(0.1,0)$);
+    \node[dotnode,label={right:\plusmark}] (mc) at (1.5,0){};
+    \node[dotnode,label={left:\minusmark}] (nc) at (2.3,0){};
+    \draw[jmlinem] (M.50) -- node[midway,above right] {$j_1$} (mc);
+    \draw[jmlinem] (M.0) -- node[midway] {$j_2$} (mc);
+    \draw[jmlinem] (M.310) -- node[midway,below right] {$j_3$} (mc);
+    \draw[jmlinem] (N.230) -- node[midway,below left] {$j_3$} (nc);
+    \draw[jmlinem] (N.180) -- node[midway] {$j_2$} (nc);
+    \draw[jmlinem] (N.130) -- node[midway,above left] {$j_1$} (nc);
+\end{tikzpicture}
+\end{document}

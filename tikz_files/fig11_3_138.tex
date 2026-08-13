@@ -1,0 +1,10 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
+  \node[opbox,minimum width=0.8cm,minimum height=0.8cm](M) at (0,0){\normalsize$\mathfrak{M}$};
+  \node[opbox,minimum width=0.8cm,minimum height=0.8cm](N) at (1.7,0){\normalsize$\mathfrak{N}$};
+  \foreach \i in {-1,1}{\draw([yshift=\i*2.5mm]N.east)--([yshift=\i*2.5mm,xshift=1.5mm]N.east);}
+\end{tikzpicture}
+\end{document}

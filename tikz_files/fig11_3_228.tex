@@ -1,0 +1,17 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
+  \node[label={180:\minusmark}](C)at(0,0){};
+  \node[label={135:\plusmark}](pA)at(0.8,0.5){};
+  \node[label={90:\plusmark}](pB)at(1.0,0){};
+  \node[label={60:\plusmark}](pC)at(1.2,-0.3){};
+  \draw[jmlinem](C)--(pA);\draw[jmlinem](C)--(pB);\draw[jmlinem](C)--(pC);
+  \draw[jmarrow](pA)--($2*(pA)$) node[right]{$j_1m'_1$};
+  \draw[jmarrow](pB)--($2*(pB)$) node[right]{$j_2m'_2$};
+  \draw[jmarrow](pC)--($2*(pC)$) node[right]{$j_3m'_3$};
+  \coordinate(Rp)at(0.8,-0.7);
+  \draw[rline](pA)--(Rp);\draw[rline](pB)--(Rp);\draw[rline](pC)--(Rp);
+\end{tikzpicture}
+\end{document}

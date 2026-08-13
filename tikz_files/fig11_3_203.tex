@@ -1,0 +1,17 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
+  \draw[bomarrown](-1.9,0.45)--(-0.9,0.45);\node at(-1.45,0.72){$\Omega_2$};
+  \node[deltanode](p1)at(-0.9,0.45){};
+  \draw[jmlinem](p1)--(0.1,0.45)node[midway,above]{$l_2$};
+  \node[deltanode](p2)at(0.1,0.45){};
+  \draw[omarrow](p2)--(1.1,0.45);\node at(0.65,0.72){$\Omega_1$};
+  \draw[bomarrown](-1.9,-0.55)--(-0.9,-0.55);\node at(-1.45,-0.28){$\Omega_3$};
+  \node[deltanode](q1)at(-0.9,-0.55){};
+  \draw[jmlinem](q1)--(0.1,-0.55)node[midway,above]{$l_3$};
+  \node[deltanode](q2)at(0.1,-0.55){};
+  \draw[omarrow](q2)--(1.1,-0.55);\node at(0.65,-0.28){$\Omega_1$};
+\end{tikzpicture}
+\end{document}

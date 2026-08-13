@@ -1,0 +1,16 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt, inner sep=0.2em,font=\scriptsize]
+  \coordinate (T) at ($0.6*(0,1)$);
+  \coordinate (L) at ($0.6*(-0.866,-0.5)$);
+  \coordinate (R) at ($0.6*(0.866,-0.5)$); 
+  \draw[jmline] (L) -- (T) node[midway, left]{$a$};
+  \draw[jmline] (T) -- (R) node[midway, right]{$b$};
+  \draw[jmline] (R) -- (L) node[midway, below]{$c$};
+  \node[dotnode, label={above right:{$+$}}] at (L) {};
+  \node[dotnode, label={below:{$+$}}] at (T) {};
+  \node[dotnode, label={above left:{$+$}}] at (R) {};
+\end{tikzpicture}
+\end{document}

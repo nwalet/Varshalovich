@@ -1,0 +1,14 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=1.5pt,font=\scriptsize]
+  \node[dotnode,label={135:\plusmark}](tl)at(0,0.5){};
+  \node[dotnode,label={45:\plusmark}](tr)at(0.9,0.5){};
+  \node[dotnode,label={-135:\plusmark}](bl)at(0,-0.5){};
+  \node[dotnode,label={-45:\plusmark}](br)at(0.9,-0.5){};
+  \draw[jmlinem](tl)--(tr);\draw[jmlinem](br)--(bl);
+  \draw[jmlinem](bl)--(tl)node[pos=0.5,left]{$j_3$};
+  \draw[jmlinem](tr)--(br)node[pos=0.5,right]{$j'_3$};
+\end{tikzpicture}
+\end{document}

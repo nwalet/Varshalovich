@@ -1,0 +1,16 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
+  \node[dotnode](C)at(0,0){};
+  \draw[rline](-1.5,0)--(C);\node at(-0.95,0.28){$R$};
+  \node[dotnode,label={45:\plusmark}](T)at(0.8,0.75){};
+  \node[dotnode,label={-45:\plusmark}](B)at(0.8,-0.75){};
+  \draw[rline](C)--(T);\draw[rline](C)--(B);
+  \draw[bjmarrow](0.8,1.65)--(T);\node at(0.8,1.65)[above]{$j_1m_1$};
+  \draw[jmarrow](T)--(1.9,0.75);\node at(1.9,0.75)[right]{$j_1m'_1$};
+  \draw[bjmarrow](1.9,-0.75)--(B);\node at(1.9,-0.75)[right]{$j_2m_2$};
+  \draw[jmarrow](B)--(0.8,-1.65);\node at(0.8,-1.65)[below]{$j_2m'_2$};
+\end{tikzpicture}
+\end{document}

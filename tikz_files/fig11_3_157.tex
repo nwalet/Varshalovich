@@ -1,0 +1,11 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=-2pt,inner sep=1.5pt,font=\scriptsize]
+  \node[dotnode,label={90:\plusmark}](O)at(0,0){};
+  \draw[jmarrow](O)--(135:1.0);\node at(135:1.0)[above left=-2pt]{$j_1m_1$};
+  \draw[jmarrow](O)--(45:1.0);\node at(45:1.0)[above right=-2pt]{$j_3m_3$};
+  \draw[jmarrow](O)--(0,-0.9);\node at(0,-0.9)[below]{$j_2m_2$};
+\end{tikzpicture}
+\end{document}

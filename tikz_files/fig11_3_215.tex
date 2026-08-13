@@ -1,0 +1,12 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
+  \node[dotnode](L)at(-0.15,0){};\node[dotnode](R)at(0.15,0){};
+  \draw[bjmarrow](-1.1,0.85)--(L);\node at(-1.1,0.85)[left]{$j_1m_1$};
+  \draw[jmarrow](R)--(1.1,0.85);\node at(1.1,0.85)[right]{$j_1m'_1$};
+  \draw[jmarrow](L)--(-1.1,-0.85);\node at(-1.1,-0.85)[left]{$j_2m_2$};
+  \draw[bjmarrow](1.1,-0.85)--(R);\node at(1.1,-0.85)[right]{$j_2m'_2$};
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,19 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
+  \node[opbox,minimum width=2.4cm,minimum height=0.6cm](M){\normalsize$\mathfrak{M}$};
+  \coordinate(l1)at([xshift=-10mm]M.north);\coordinate(l2)at([xshift=-3mm]M.north);
+  \coordinate(lp)at([xshift=-6.5mm,yshift=8mm]M.north);
+  \draw[jmline](l1)--(lp);\draw[jmline](lp)--(l2);
+  \node[dotnode,label={above:\plusmark}]at(lp){};
+  \node at([xshift=-2mm]$(l1)!0.5!(lp)$){$j_1$};\node at([xshift=2mm]$(l2)!0.5!(lp)$){$j_2$};
+  \coordinate(r1)at([xshift=3mm]M.north);\coordinate(r2)at([xshift=10mm]M.north);
+  \coordinate(rp)at([xshift=6.5mm,yshift=8mm]M.north);
+  \draw[jmline](r1)--(rp);\draw[jmline](rp)--(r2);
+  \node[dotnode,label={above:\plusmark}]at(rp){};
+  \node at([xshift=-2mm]$(r1)!0.5!(rp)$){$j_1$};\node at([xshift=2mm]$(r2)!0.5!(rp)$){$j_2$};
+  \draw[jmlinemu](rp)--(lp)node[midway,above]{$J$};
+\end{tikzpicture}
+\end{document}

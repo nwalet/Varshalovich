@@ -1,0 +1,29 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize,label distance=1pt]
+  \coordinate(T)at(90:1.8);\coordinate(BL)at(210:1.8);\coordinate(BR)at(330:1.8);
+  \coordinate (s12) at ($(BL)!0.1!(BR)$);\coordinate (a12) at ($(BL)!0.4!(BR)$);
+  \coordinate (b12) at ($(BL)!0.6!(BR)$);\coordinate (e12) at ($(BL)!0.9!(BR)$);
+  \coordinate (s23) at ($(BR)!0.1!(T)$);\coordinate (a23) at ($(BR)!0.4!(T)$);
+  \coordinate (b23) at ($(BR)!0.6!(T)$);\coordinate (e23) at ($(BR)!0.9!(T)$);
+  \coordinate (s31) at ($(T)!0.1!(BL)$);\coordinate (a31) at ($(T)!0.4!(BL)$);
+  \coordinate (b31) at ($(T)!0.6!(BL)$);\coordinate (e31) at ($(T)!0.9!(BL)$);
+  \draw[bjmarrow] (s12) --(a12) node[at start,below] {$J_{12}M_{12}$};
+  \draw[jmlinem] (a12) --(b12);
+  \draw[jmarrow] (b12) --(e12) node[below] {$J_{12}M'_{12}$};
+  \draw[bjmarrow] (s23) --(a23) node[at start,right] {$J_{23}M_{23}$};
+  \draw[jmlinem] (a23) --(b23);
+  \draw[jmarrow] (b23) --(e23) node[right] {$J_{23}M_{23}'$};
+  \draw[bjmarrow] (s31) --(a31) node[at start,left] {$J_{31}M_{31}$};
+  \draw[jmlinem] (a31) --(b31);
+  \draw[jmarrow] (b31) --(e31) node[left] {$J_{31}M'_{31}$};
+  \node[label={[label distance=-2pt]90:\plusmark}]at(a12){};\draw[rline](a12)--($(a12)+(-90:0.7)$) node[near end,right]{$R_1$};
+  \node[label={[label distance=-2pt]270:\plusmark}]at(b12){};\draw[rline](b12)--($(b12)+(90:0.7)$) node[near end,right]{$R_2$};
+  \node[label={[label distance=-4pt]210:\plusmark}]at(a23){};\draw[rline](a23)--($(a23)+(30:0.7)$) node[right]{$R_2$};
+  \node[label={[label distance=-4pt]30:\plusmark}]at(b23){};\draw[rline](b23)--($(b23)+(-150:0.7)$) node[near end,above]{$R_3$};
+  \node[label={[label distance=-4pt]-30:\plusmark}]at(a31){};\draw[rline](a31)--($(a31)+(150:0.7)$) node[left]{$R_3$};
+  \node[label={[label distance=-4pt]150:\plusmark}]at(b31){};\draw[rline](b31)--($(b31)+(-30:0.7)$) node[midway,below]{$R_1$};
+\end{tikzpicture}
+\end{document}

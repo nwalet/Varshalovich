@@ -1,0 +1,16 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt, inner sep=0.1em,font=\scriptsize]
+    \coordinate (L) at (-0.7,0); \coordinate (R) at (0.7,0);
+    \draw[bjmarrow] (-1.5,0) -- (L) node[at start, above]{$c\gamma$} ;
+    \draw[jmarrow] (R) -- (1.5,0) node[at end, above]{$c'\gamma'$} ;
+%
+    \node[dotnode,label={0:\plusmark}] at (L) {};
+    \node[dotnode,label={180:\minusmark}] at (R) {};
+%
+    \draw[jmlinem] (R) to[bend left=60] node[midway,above] {$a$} (L);
+    \draw[jmlinem] (R) to[bend right=60] node[midway,above] {$b$} (L);
+\end{tikzpicture}
+\end{document}

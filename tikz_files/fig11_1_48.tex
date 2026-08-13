@@ -1,0 +1,15 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt, inner sep=0.2em,font=\scriptsize]
+    \coordinate (T) at (90:0.8); 
+    \coordinate (L) at (210:0.8);
+    \coordinate (R) at (330:0.8);
+    \coordinate (M) at (0,0);
+    \node[label={270:\plusmark}] {};
+    \draw[rline] (M) to node[at end,right]{$R$} (T);
+    \draw[omarrow] (M) to  node[at end,right]{$\Omega$} (R);
+    \draw[bomarrown] (L) to  node [at start,left]{$\Omega'$} (M);
+\end{tikzpicture}
+\end{document}

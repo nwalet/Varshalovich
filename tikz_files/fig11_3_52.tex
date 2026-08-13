@@ -1,0 +1,15 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=0.5em,font=\scriptsize]
+    \node[opbox](M) at (0,0){\normalsize\normalsize$\mathfrak{M}$};
+    \draw[jmarrow] (M) -- (1,0) node[above] {$jm'$};
+    \draw[bjmarrow] (1.5,0) --(2.0,0) node[at start, above] {$jm'$};
+    \draw[jmlinem] (2.3,0) --( 2.0,0);
+    \draw[bjmarrow] (2.8,0) -- (2.3,0) node[at start,above] {$jm$};
+    \node at (3.2,0) {$=$};
+    \node[opbox](M) at (4,0){\normalsize\normalsize$\mathfrak{M}$};
+    \draw[jmarrow] (M) -- (5,0) node[above] {$jm$};
+\end{tikzpicture}
+\end{document}

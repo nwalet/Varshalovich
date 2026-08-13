@@ -1,0 +1,24 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=-34pt,inner sep=2pt,font=\scriptsize]
+  \coordinate(T)at(0,0.95);\coordinate(BL)at(-0.85,-0.35);\coordinate(BR)at(0.85,-0.35);
+  \coordinate(C)at(0,0.15);
+  \draw[jmlinem](BL)--(T)node[midway,left]{$J$};
+  \draw[jmlinem](T)--(BR)node[midway,right]{$J'$};
+  \draw[jmlinemu](BR)--(BL)node[midway,below]{$J''$};
+  \draw[jmlinem](C)--(T)node[pos=0.55,right]{$k$};
+  \draw[jmlinem](C)--(BL)node[pos=0.55,above]{$k_1$};
+  \draw[jmlinem](C)--(BR)node[pos=0.55,above]{$k_2$};
+  \node[dotnode,label={-90:\minusmark}]at(C){};
+  \node[label={-135:\minusmark}]at(BL){};
+  \node[label={-45:\plusmark}]at(BR){};
+  \node[label={0:\plusmark}]at(T){};
+  \coordinate(cc)at($(T)+(0,0.7)$);
+  \draw[jmlinem](T)--($(cc)-(0,0.28)$);
+  \draw[decoration={markings,mark=at position -0.25 with {\arrow{Stealth[reversed,length=2.2mm]}}},postaction={decorate},thick](cc)circle(0.28);
+  \node[dotnode,label={90:\plusmark}]at($(cc)+(0,0.28)$){};
+  \node at(cc){$k$};
+\end{tikzpicture}
+\end{document}

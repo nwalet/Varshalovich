@@ -1,0 +1,15 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
+  \node[opbox,minimum width=0.7cm,minimum height=0.8cm](M) at (0,0){\normalsize$\mathfrak{M}$};
+  \node[opbox,minimum width=0.7cm,minimum height=0.8cm](N) at (2.2,0){\normalsize$\mathfrak{N}$};
+  \draw[jmlinem]([yshift=2.5mm]M.east)--([yshift=2.5mm]N.west)node[midway,above]{$j$};
+  \draw[jmlinem]([yshift=-2.5mm]N.west)--([yshift=-2.5mm]M.east)node[midway,below]{$j$};
+  % free (2j+1) loop below (unlabeled \jloop-style circle)
+  \draw[decoration={markings,mark=at position 0.25 with {\arrow{Stealth[length=2.2mm]}}},
+        postaction={decorate},thick]
+       ($0.5*(M.east)+0.5*(N.west)+(0,-1.1)$)circle(0.25);
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,32 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize,label distance=1pt]
+  \coordinate(T)at(0,1.35);\coordinate(BL)at(-1.35,-0.7);\coordinate(BR)at(1.35,-0.7);
+  \draw(BL)--(T) coordinate[pos=0.4](b31) coordinate[pos=0.6](a31);
+  \draw(BR)--(T) coordinate[pos=0.4](a23) coordinate[pos=0.6](b23);
+  \draw(BL)--(BR) coordinate[pos=0.4](a12) coordinate[pos=0.6](b12);
+  \draw[jmlinem] (BL) --(a12) node[midway,below] {$J_{12}$};
+  \draw[jmlinem] (a12) --(b12);
+  \draw[jmlinem] (b12) --(BR) node[midway,below] {$J_{12}$};
+  \draw[jmlinem] (BR) --(a23) node[midway,right] {$J_{23}$};
+  \draw[jmlinem] (a23) --(b23);
+  \draw[jmlinem] (b23) --(T) node[midway,right] {$J_{23}$};
+  \draw[jmlinem] (T) --(a31) node[midway,left] {$J_{31}$};
+  \draw[jmlinem] (a31) --(b31);
+  \draw[jmlinem] (b31) --(BL) node[midway,left] {$J_{31}$};
+  \node[label={[label distance=2pt]-90:\minusmark}]at(T){};
+  \node[label={30:\minusmark}]at(BL){};
+  \node[label={150:\minusmark}]at(BR){};
+  \node[label={[label distance=-2pt]270:\plusmark}]at(a12){};\draw[rline](a12)--($(a12)+(90:0.7)$) node[midway,left]{$R_1$};
+  \node[label={[label distance=-2pt]90:\plusmark}]at(b12){};\draw[rline](b12)--($(b12)+(270:0.7)$) node[near end,right]{$R_2$};
+  \node[label={[label distance=-4pt]30:\plusmark}]at(a23){};\draw[rline](a23)--($(a23)+(-150:0.7)$) node[midway,below]{$R_2$};
+  \node[label={[label distance=-4pt]210:\plusmark}]at(b23){};\draw[rline](b23)--($(b23)+(30:0.7)$) node[right]{$R_3$};
+  \node[label={[label distance=-4pt]150:\plusmark}]at(a31){};\draw[rline](a31)--($(a31)+(-30:0.7)$) node[midway,above]{$R_3$};
+  \node[label={[label distance=-4pt]-30:\plusmark}]at(b31){};\draw[rline](b31)--($(b31)+(150:0.7)$) node[left]{$R_1$};
+  \draw[jmarrow](T)--($(T)+(90:0.9)$) node[above]{$j_3m'_3$};
+  \draw[jmarrow](BL)--($(BL)+(210:0.9)$) node[below left]{$j_1m'_1$};
+  \draw[jmarrow](BR)--($(BR)+(330:0.9)$) node[below right]{$j_2m'_2$};
+\end{tikzpicture}
+\end{document}

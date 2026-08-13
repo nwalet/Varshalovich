@@ -1,0 +1,17 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=0.15em,font=\scriptsize]
+\coordinate (tl) at (-0.4,0.5); \coordinate (tr) at (0.4,0.5);
+\coordinate (bl) at (-0.4,-0.5); \coordinate (br) at (0.4,-0.5);
+\node[dotnode,label={above:\plusmark}] at (tl){};
+\node[dotnode,label={above:\plusmark}] at (tr){};
+\node[dotnode,label={below:\plusmark}] at (bl){};
+\node[dotnode,label={below:\plusmark}] at (br){};
+\draw[jmlinem] (tl)--(bl) node[midway,left]{$b$};
+\draw[jmlinem] (tr)--(br) node[midway,right]{$b^{\prime}$};
+\draw[jmlinem] (br)--(bl);
+\draw[jmlinem] (tl)--(tr);
+\end{tikzpicture}
+\end{document}

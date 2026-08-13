@@ -1,0 +1,31 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
+  \node[opbox,minimum width=0.5cm,minimum height=2.4cm,rotate=-30](M) at (150:1.7)
+       {\rotatebox{30}{\normalsize\normalsize$\mathfrak{M}$}};
+  \node[opbox,minimum width=0.5cm,minimum height=2.4cm,rotate=30](L) at (30:1.7)
+       {\rotatebox{-30}{\normalsize\normalsize$\mathfrak{L}$}};
+  \node[opbox,minimum width=2.4cm,minimum height=0.5cm](N) at (270:1.7){\normalsize\normalsize$\mathfrak{N}$};
+  \coordinate(mA)at($(M.south east)!0.89!(M.north east)$);
+  \coordinate(mB)at($(M.south east)!0.63!(M.north east)$);
+  \coordinate(mC)at($(M.south east)!0.37!(M.north east)$);
+  \coordinate(mD)at($(M.south east)!0.11!(M.north east)$);
+  \coordinate(lA)at($(L.south west)!0.89!(L.north west)$);
+  \coordinate(lB)at($(L.south west)!0.63!(L.north west)$);
+  \coordinate(lC)at($(L.south west)!0.37!(L.north west)$);
+  \coordinate(lD)at($(L.south west)!0.11!(L.north west)$);
+  \coordinate(nA)at($(N.north east)!0.89!(N.north west)$);
+  \coordinate(nB)at($(N.north east)!0.63!(N.north west)$);
+  \coordinate(nC)at($(N.north east)!0.37!(N.north west)$);
+  \coordinate(nD)at($(N.north east)!0.11!(N.north west)$);
+  % box-to-box j-lines (hexagon)
+  \draw[jmlinem](lA)--(mA)node[pos=0.5,above]{$j_1$};
+  \draw[jmlinem](lB)--(mB)node[pos=0.5,below]{$j_2$};
+  \draw[jmlinem](mC)--(nB)node[pos=0.5,above right]{$j_4$};
+  \draw[jmlinem](mD)--(nA)node[pos=0.5,below left]{$j_3$};
+  \draw[jmlinem](nC)--(lC)node[pos=0.5,above left]{$j_6$};
+  \draw[jmlinem](nD)--(lD)node[pos=0.5,below right]{$j_5$};
+\end{tikzpicture}
+\end{document}

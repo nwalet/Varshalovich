@@ -1,0 +1,13 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=-20pt,inner sep=1pt,font=\scriptsize]
+  \node(hex){\ninejdgen{J,k,J',j_1,k_1,j'_1,j_2,k_2,j'_2,+-+-+-,ddddddddd}};
+  \foreach \x/\lab in {-0.42/J,0/k,0.42/J'}{
+    \coordinate(lc)at($(hex.north)+(\x,0.58)$);
+    \draw[thick,decoration={markings,mark=at position 0.6 with {\arrow{Stealth[length=1.6mm]}}},postaction={decorate}](lc)circle(0.16);
+    \node at(lc){$\lab$};
+    \node[dotnode,label={90:\plusmark}]at($(lc)+(0,0.16)$){};}
+\end{tikzpicture}
+\end{document}

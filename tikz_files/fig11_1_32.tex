@@ -1,0 +1,14 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt, inner sep=0.1em,font=\scriptsize] 
+  \draw[
+        decoration={markings, mark=at position 0.01 with  {\arrow{Stealth[reversed,length=2.2mm]}}, mark=at position 0.51 with  {\arrow{Stealth[reversed,length=2.2mm]}}},
+        postaction={decorate},thick] (0,0.) circle (0.4);
+  \node[label={left:$a$}] at (-0.4,0.) {};
+  \node[label={right:$b$}] at (0.4,0.) {};
+  \node[dotnode, label={below:{\small$+$}}] at (0,0.4) {};
+  \node[dotnode, label={above:{\small$+$}}] at (0,-0.4) {};
+ \end{tikzpicture}
+\end{document}

@@ -1,0 +1,15 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=0.2em,font=\scriptsize]
+\coordinate (T) at (0,0.95);
+\coordinate (L) at (-0.9,-0.55);
+\coordinate (R) at (0.9,-0.55);
+\coordinate (M) at (0,0);
+\node[dotnode,label={above left:\minusmark}] at (M) {};
+\draw[jmline] (M) -- (T) node[above]{$c\gamma$};
+\draw[jmline] (M) -- (L) node[below]{$a\alpha$};
+\draw[jmline] (M) -- (R) node[below]{$b\beta$};
+\end{tikzpicture}
+\end{document}

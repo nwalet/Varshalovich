@@ -1,0 +1,14 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
+  \node[draw,minimum width=1.0cm,minimum height=1.15cm](B){\normalsize\normalsize$\mathfrak{M}$};
+  \coordinate(nw)at($(B.west)+(0,0.32)$);\coordinate(sw)at($(B.west)+(0,-0.32)$);
+  \coordinate(ne)at($(B.east)+(0,0.32)$);\coordinate(se)at($(B.east)+(0,-0.32)$);
+  \draw[bjmarrow]($(nw)+(-0.95,0)$)--(nw)node[pos=0.1,above]{$j_1m_1$};
+  \draw[bjmarrow]($(sw)+(-0.95,0)$)--(sw)node[pos=0.1,below]{$j_2m_2$};
+  \draw[jmarrow](ne)--($(ne)+(0.95,0)$)node[pos=0.9,above]{$j_3m_3$};
+  \draw[jmarrow](se)--($(se)+(0.95,0)$)node[pos=0.9,below]{$j_4m_4$};
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,12 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
+  \pgfmathsetmacro{\Rad}{0.1}
+  \pgfmathsetmacro{\Len}{1.1}
+  \draw[bjmarrow](-\Len-\Rad,0)--(-\Rad,0) node[pos=0.2,above]{$j_3m_3$};
+  \draw[thick](0,0)circle(\Rad);
+  \draw[jmarrow](\Rad,0)--(\Len+\Rad,0) node[pos=0.8,above]{$j'_3m'_3$};
+\end{tikzpicture}
+\end{document}

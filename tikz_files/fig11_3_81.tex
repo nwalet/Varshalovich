@@ -1,0 +1,15 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=0.15em,font=\scriptsize]
+\draw[thick,postaction={decorate,decoration={markings,
+  mark=at position 0.14 with {\arrow{Stealth[length=1.8mm] Stealth[length=1.8mm]}},
+  mark=at position 1 with {\arrow{Stealth[length=1.8mm]}}}}]
+  (0,0.6) node[left]{$a\alpha$} -- (2.8,0.6) node[right]{$a\alpha'$};
+\draw[thick,postaction={decorate,decoration={markings,
+  mark=at position 0.14 with {\arrow{Stealth[length=1.8mm] Stealth[length=1.8mm]}},
+  mark=at position 1 with {\arrow{Stealth[length=1.8mm]}}}}]
+  (0,-0.6) node[left]{$b\beta$} -- (2.8,-0.6) node[right]{$b\beta'$};
+\end{tikzpicture}
+\end{document}

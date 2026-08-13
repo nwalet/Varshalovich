@@ -1,0 +1,26 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
+  \node[dotnode,label={180:\plusmark}](LN)at(0,0){};
+  \node[dotnode,label={0:\minusmark}](RN)at(1.9,0){};
+  \coordinate(M)at(0.95,0);
+  \draw[jmlinemu](LN)--(M);\draw[jmlinemu](M)--(RN);
+  \node[above] at (M){\plusmark};
+  \node at(0.5,0.22){$j_3$};\node at(1.45,0.22){$j_3$};
+  \draw[rline](M)--($(M)-(0,0.85)$) node[below]{$R_3$};
+  \draw[jmarrow](LN)--($(LN)+(140:1.35)$) node[above]{$j_1\tilde m_1$};
+  \draw[jmarrow](LN)--($(LN)+(220:1.35)$) node[below]{$j_2\tilde m_2$};
+  \coordinate(u1)at($(RN)+(45:0.75)$);
+  \draw[bjmarrow]($(RN)+(45:1.6)$)--(u1) node[pos=0,right]{$j_1m_1$};
+  \draw[jmlinem](u1)--(RN) node[midway,below right]{$j_1$};
+  \node[label={-45:\plusmark}]at(u1){};
+  \draw[rline](u1)--($(u1)+(135:0.85)$) node[above]{$R_1$};
+  \coordinate(u2)at($(RN)+(315:0.75)$);
+  \draw[bjmarrow]($(RN)+(315:1.6)$)--(u2) node[pos=0,right]{$j_2m_2$};
+  \draw[jmlinem](u2)--(RN) node[midway,below left]{$j_2$};
+  \node[label={-135:\plusmark}]at(u2){};
+  \draw[rline](u2)--($(u2)+(45:0.85)$) node[right]{$R_2$};
+\end{tikzpicture}
+\end{document}

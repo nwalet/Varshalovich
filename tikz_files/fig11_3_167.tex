@@ -1,0 +1,13 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
+  \node[dotnode,label={180:\minusmark}](A) at (0,0){};
+  \node[dotnode,label={-90:\plusmark}](B) at (1.15,0){};
+  \draw[jmarrow](A)--(-0.8,0.6);\node at(-0.8,0.6)[left]{$j_1m_1$};
+  \draw[jmarrow](A)--(-0.8,-0.6);\node at(-0.8,-0.6)[left]{$j_2m_2$};
+  \draw[jmlinem](A)--(B)node[pos=0.25,above]{$j_3$};
+  \draw[bjmarrow](2.05,0)--(B);\node at(2.05,0)[right]{$JM$};
+\end{tikzpicture}
+\end{document}

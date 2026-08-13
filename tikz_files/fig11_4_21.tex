@@ -1,0 +1,12 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
+  \draw[bomarrown](-1.6,0)--(-0.65,0)node[pos=0.1,above]{$\Omega$};
+  \node[dotnode,label={-90:\minusmark}](O)at(0,0){};
+  \draw[jmlinemu](-0.65,0)--(O)node[midway,above]{$j_1$};
+  \draw[jmarrow](O)--($(O)+(35:0.95)$)node[right]{$j_2m_2$};
+  \draw[jmarrow](O)--($(O)+(-35:0.95)$)node[right]{$j_3m_3$};
+\end{tikzpicture}
+\end{document}

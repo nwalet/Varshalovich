@@ -1,0 +1,36 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
+  \coordinate(iT)at(90:0.6);\coordinate(iBL)at(210:0.6);\coordinate(iBR)at(330:0.6);
+  \draw[jmlinem](iT)--(iBL) node[midway,left]{$J_{31}$};
+  \draw[jmlinem](iBR)--(iT) node[midway,right]{$J_{23}$};
+  \draw[jmlinem](iBL)--(iBR) node[midway,below]{$J_{12}$};
+  \node[label={-90:\minusmark},inner sep=3pt]at(iT){};
+  \node[label={-90:\minusmark},inner sep=2pt]at(iBL){};
+  \node[label={-90:\minusmark},inner sep=2pt]at(iBR){};
+  \coordinate(OT)at(90:1.8);\coordinate(OL)at(210:1.8);\coordinate(OR)at(330:1.8);
+  \coordinate(v3)at($(iT)!0.5!(OT)$);
+  \draw[jmlinem](iT)--(v3);\draw[jmlinem](v3)--(OT);
+  \node[label={0:\plusmark}]at(v3){};
+  \draw[rline](v3)--($(v3)+(180:0.75)$) node[left]{$R_3$};
+  \coordinate(v1)at($(iBL)!0.5!(OL)$);
+  \draw[jmlinem](iBL)--(v1);\draw[jmlinem](v1)--(OL);
+  \node[label={90:\plusmark}]at(v1){};
+  \draw[rline](v1)--($(v1)+(-60:0.75)$) node[below]{$R_1$};
+  \coordinate(v2)at($(iBR)!0.5!(OR)$);
+  \draw[jmlinem](iBR)--(v2);\draw[jmlinem](v2)--(OR);
+  \node[label={-120:\plusmark}]at(v2){};
+  \draw[rline](v2)--($(v2)+(60:0.75)$) node[above]{$R_2$};
+  \node[label={-90:\minusmark},inner sep=2pt]at(OT){};
+  \node[label={0:\minusmark},inner sep=2pt]at(OL){};
+  \node[label={180:\minusmark},inner sep=2pt]at(OR){};
+  \draw[bjmarrow]($(OT)+(160:0.9)$)--(OT) node[pos=0,above left]{$J_{31}M_{31}$};
+  \draw[jmarrow](OT)--($(OT)+(20:0.9)$) node[above right]{$J_{23}M'_{23}$};
+  \draw[bjmarrow]($(OL)+(280:0.9)$)--(OL) node[pos=0,left]{$J_{12}M_{12}$};
+  \draw[jmarrow](OL)--($(OL)+(140:0.9)$) node[above]{$J_{31}M'_{31}$};
+  \draw[bjmarrow]($(OR)+(40:0.9)$)--(OR) node[pos=0,right]{$J_{23}M_{23}$};
+  \draw[jmarrow](OR)--($(OR)+(240:0.9)$) node[below]{$J_{12}M'_{12}$};
+\end{tikzpicture}
+\end{document}

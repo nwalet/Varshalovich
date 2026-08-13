@@ -1,0 +1,17 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
+  \node[dotnode,label={0:\plusmark}](P)at(0,0){};
+  \draw[rline](-1.4,0)--(P);\node at(-0.9,0.28){$R$};
+  \node[dotnode,label={45:\minusmark}](T)at(0.6,1.0){};
+  \node[dotnode,label={-45:\minusmark}](B)at(0.6,-1.0){};
+  \draw[jmlinemu](P)--(T)node[midway,left]{$j_3$};
+  \draw[jmlinemu](B)--(P)node[midway,left]{$j_3$};
+  \draw[bjmarrow](0.6,1.9)--(T);\node at(0.6,1.9)[above]{$j_1m_1$};
+  \draw[bjmarrow](1.7,1.0)--(T);\node at(1.7,1.0)[right]{$j_2m_2$};
+  \draw[jmarrow](B)--(1.7,-1.0);\node at(1.7,-1.0)[right]{$j_1m'_1$};
+  \draw[jmarrow](B)--(0.6,-1.9);\node at(0.6,-1.9)[below]{$j_2m'_2$};
+\end{tikzpicture}
+\end{document}

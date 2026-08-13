@@ -1,0 +1,21 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
+  \coordinate(L)at(0.05,0);\coordinate(R)at(1.35,0);
+  \coordinate(Ll) at ($(L)-(0.9,0)$); \coordinate (Rr) at ($(R)+(0.9,0)$);
+  \draw[bjmarrow](Ll)--(L) node[pos=0.2,above] {$j_3m_3$};
+  \draw[jmarrow](R)--(Rr) node[pos=0.8,above]{$j'_3m'_3$};
+  \draw[jmlinem=0.3](R)to[bend right=90] node[pos=0.1,above] {$j_1$} node[pos=0.5] (n1) {} (L);
+  \draw[jmlinem=0.3](R)to[bend left=90] node[pos=0.3,below] {$j_2$} node[pos=0.5] (n2) {} (L);
+  \coordinate (n3) at (-0.2,0);
+  \coordinate(Fp)at(-0.2,-1.15);
+  \draw[rline](n3)--(Fp);\draw[rline](n1)--(Fp);\draw[rline](n2)--(Fp);
+  \node[dotnode,label={0:\minusmark}] at (L) {};
+  \node[dotnode,label={180:\plusmark}] at (R) {};
+  \node[label={90:\minusmark}] at (n1) {};
+  \node[label={90:\minusmark}] at (n2) {};
+  \node[label={90:\plusmark}] at (n3) {};
+\end{tikzpicture}
+\end{document}

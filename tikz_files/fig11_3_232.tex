@@ -1,0 +1,12 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
+  \node[dotnode,label={180:\plusmark}](A)at(0,0){};
+  \node[dotnode,label={0:\minusmark}](B)at(1.1,0){};
+  \draw[jmlinem](A)to[bend left=70]node[pos=0.5,above]{$j_1$}(B);
+  \draw[jmlinem](A)--(B)node[pos=0.5,above]{$j_2$};
+  \draw[jmlinem](A)to[bend right=70]node[pos=0.5,below]{$j_3$}(B);
+\end{tikzpicture}
+\end{document}

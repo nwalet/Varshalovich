@@ -1,0 +1,23 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
+  \node[opbox,minimum width=0.55cm,minimum height=3.0cm](M) at (0,0){\normalsize$\mathfrak{M}$};
+  \coordinate(T)at(1.0,1.0);\coordinate(C)at(1.0,0);\coordinate(B)at(1.0,-1.0);
+  \coordinate(X)at(1.95,0);
+  \draw[jmlinem]([yshift=12.5mm]M.east)--(T)node[pos=0.4,above]{$j_1$};
+  \draw[jmlinem]([yshift=7.5mm]M.east)--(T)node[pos=0.4,below]{$j_2$};
+  \draw[jmlinem]([yshift=2.5mm]M.east)--(C)node[pos=0.4,above]{$j_3$};
+  \draw[jmlinem]([yshift=-2.5mm]M.east)--(C)node[pos=0.4,below]{$j_4$};
+  \draw[jmlinem]([yshift=-7.5mm]M.east)--(B)node[pos=0.4,above]{$j_5$};
+  \draw[jmlinem]([yshift=-12.5mm]M.east)--(B)node[pos=0.4,below]{$j_6$};
+  \draw[jmlinemu](T)--(X)node[pos=0.45,above right]{$J_{12}$};
+  \draw[jmlinemu](C)--(X)node[pos=0.45,above]{$J_{34}$};
+  \draw[jmlinemu](B)--(X)node[pos=0.45,below right]{$J_{56}$};
+  \node[dotnode,label={right:\plusmark}]at(T){};
+  \node[dotnode]at(C){};
+  \node[dotnode,label={right:\plusmark}]at(B){};
+  \node[dotnode,label={45:\plusmark}]at(X){};
+\end{tikzpicture}
+\end{document}

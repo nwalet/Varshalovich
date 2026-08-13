@@ -1,0 +1,14 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
+  \node[dotnode,label={0:\plusmark}](T)at(0,0.5){};
+  \draw[bjmarrow](-1.0,1.35)--(T);\node at(-1.0,1.35)[left]{$j_1m_1$};
+  \draw[jmarrow](T)--(1.0,1.35);\node at(1.0,1.35)[right]{$j_1m'_1$};
+  \node[dotnode,label={0:\minusmark}](B)at(0,-0.5){};
+  \draw[jmarrow](B)--(-1.0,-1.35);\node at(-1.0,-1.35)[left]{$j_2m_2$};
+  \draw[bjmarrow](1.0,-1.35)--(B);\node at(1.0,-1.35)[right]{$j_2m'_2$};
+  \draw[rline](T)--(B)node[midway,right]{$R$};
+\end{tikzpicture}
+\end{document}

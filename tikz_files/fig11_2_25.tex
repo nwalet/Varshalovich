@@ -1,0 +1,17 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=20pt]
+\node[opbox] (M) at (0,0) {\normalsize$\mathfrak{M}$};
+\node[opbox] (N) at (2,0) {\normalsize$\mathfrak{N}$};
+\coordinate (T) at (1,0.5);
+\node[minusnode] at (T) {};
+\draw[jmlinem] (T) -- (M) node[midway,above left]{$j_1$};
+\draw[jmlinem] (T) -- (N) node[midway,above right]{$j_2$};
+\draw[jmarrow] (T) -- (1,1.4) node[above]{$JM$};
+\draw[
+        decoration={markings, mark=at position 0.25 with  {\arrow{Stealth[length=2.2mm]}}},
+        postaction={decorate},thick] (1,2.1) circle (0.3) node {$J$};
+\end{tikzpicture}
+\end{document}

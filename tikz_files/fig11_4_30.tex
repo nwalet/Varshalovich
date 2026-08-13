@@ -1,0 +1,14 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
+  \node[dotnode,label={-90:\minusmark}](O)at(0,0){};
+  \draw[jmlinemu](O)--(90:0.6)node[pos=0.6,right]{$j_2$};
+  \draw[omarrow](90:0.6)--(90:1.4)node[above]{$\Omega_2$};
+  \draw[bomarrown](210:1.4)--(210:0.6)node[at start,below left]{$\Omega_1$};
+  \draw[jmlinemu](210:0.6)--(O)node[at start,above]{$j_1$};
+  \draw[omarrow](330:0.6)--(330:1.4)node[below right]{$\Omega_3$};
+  \draw[jmlinemu](O)--(330:0.6)node[above]{$j_3$};
+\end{tikzpicture}
+\end{document}

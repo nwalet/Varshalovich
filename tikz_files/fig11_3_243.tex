@@ -1,0 +1,29 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
+  \coordinate(T)at(90:0.75);\coordinate(BL)at(210:0.75);\coordinate(BR)at(330:0.75);
+  \draw[jmlinem](T)--(BL) node[midway,above left]{$J_{31}$};
+  \draw[jmlinem](BR)--(T) node[midway,above right]{$J_{23}$};
+  \draw[jmlinem](BL)--(BR) node[midway,below]{$J_{12}$};
+  \node[inner sep=5pt,label={-90:\minusmark}]at(T){};
+  \node[label={30:\minusmark},inner sep=3pt]at(BL){};
+  \node[label={150:\minusmark},inner sep=3pt]at(BR){};
+  \coordinate(v3)at($(T)+(90:0.6)$);\coordinate(e3)at($(T)+(90:1.25)$);
+  \draw[jmlinem](v3)--(T);
+  \draw[jmarrow](v3)--(e3) node[pos=1,right]{$j_3m'_3$};
+  \node[label={180:\plusmark}]at(v3){};
+  \draw[rline](v3)--($(v3)+(0:0.8)$) node[right]{$R_3$};
+  \coordinate(v1)at($(BL)+(210:0.6)$);\coordinate(e1)at($(BL)+(210:1.25)$);
+  \draw[jmlinem](v1)--(BL);
+  \draw[jmarrow](v1)--(e1) node[pos=1,below]{$j_1m'_1$};
+  \node[label={-60:\plusmark}]at(v1){};
+  \draw[rline](v1)--($(v1)+(120:0.8)$) node[above]{$R_1$};
+  \coordinate(v2)at($(BR)+(330:0.6)$);\coordinate(e2)at($(BR)+(330:1.25)$);
+  \draw[jmlinem](v2)--(BR);
+  \draw[jmarrow](v2)--(e2) node[pos=1,below]{$j_2m'_2$};
+  \node[label={60:\plusmark}]at(v2){};
+  \draw[rline](v2)--($(v2)+(-120:0.8)$) node[below]{$R_2$};
+\end{tikzpicture}
+\end{document}

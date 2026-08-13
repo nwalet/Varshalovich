@@ -1,0 +1,23 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt, inner sep=0.1em,font=\scriptsize]
+    \coordinate (Mr) at (0.0,0);
+    \coordinate (Tr) at ($0.8*(-0.5, 0.866)+(Mr)$);
+    \coordinate (Br) at ($0.8*(-0.5,-0.866)+(Mr)$);
+    \coordinate (Rr) at ($0.8*(1,0)+(Mr)$);
+%
+    \node[dotnode,label={135:\plusmark}] at (Tr) {};
+    \node[dotnode,label={225:\plusmark}] at (Br) {};
+    \node[dotnode,label={0:\plusmark}] at (Rr) {};
+    \node[dotnode,label={180:\plusmark}] at (Mr) {};
+%
+    \normedge{Br}{Rr}{0.5}{-0.25}{$a$}
+    \normedge{Tr}{Rr}{0.5}{0.25}{$c$}
+    \normedge{Br}{Tr}{0.5}{0.25}{$B$}
+    \normedge{Mr}{Rr}{0.3}{0.15}{$b$}
+    \normedge{Tr}{Mr}{0.7}{0.15}{$A$}
+    \normedge{Mr}{Br}{0.2}{0.15}{$C$}
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,18 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
+  \coordinate(Cp)at(0,0.1);
+  \node[label={135:\plusmark}](TL)at(-0.6,0.75){};
+  \node[label={45:\plusmark}](TR)at(0.6,0.75){};
+  \node[label={-90:\plusmark}](Bo)at(0,-0.8){};
+  \draw[rline](Cp)--(TL);\draw[rline](Cp)--(TR);\draw[rline](Cp)--(Bo);
+  \draw[bjmarrow](-1.5,0.35)--(TL);\node at(-1.5,0.35)[left]{$j_1m_1$};
+  \draw[jmarrow](TL)--(-0.6,1.65);\node at(-0.6,1.65)[above left]{$j_1m'_1$};
+  \draw[bjmarrow](0.6,1.65)--(TR);\node at(0.6,1.65)[above left]{$j_3m_3$};
+  \draw[jmarrow](TR)--(1.5,0.35);\node at(1.5,0.35)[right]{$j_3m'_3$};
+  \draw[bjmarrow](0.95,-1.15)--(Bo);\node at(0.95,-1.15)[right]{$j_2m_2$};
+  \draw[jmarrow](Bo)--(-0.95,-1.15);\node at(-0.95,-1.15)[left]{$j_2m'_2$};
+\end{tikzpicture}
+\end{document}

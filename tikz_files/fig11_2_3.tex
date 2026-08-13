@@ -1,0 +1,18 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt]
+\node[opbox] (M1) at (0,0) {\normalsize$\mathfrak{M}$};
+\node[opbox] (N1) at (2.2,0) {\normalsize$\mathfrak{N}$};
+\coordinate (ml) at ($(M1.east)!0.45!(N1.west)$);
+\coordinate (mr) at ($(M1.east)!0.55!(N1.west)$);
+\draw[jmarrow] ($(M1.east)$) -- (ml) node[midway,above]{$jm$};
+\draw[bjmarrow] (mr) -- ($(N1.west)$) node[midway,below]{$jm$};
+\node[left=2pt of M1] {$\displaystyle\sum_m$};
+\node at (3.2,0) {$=$};
+\node[opbox] (M2) at (4.4,0) {\normalsize$\mathfrak{M}$};
+\node[opbox] (N2) at (6.6,0) {\normalsize$\mathfrak{N}$};
+\draw[jmlinem] (M2) -- (N2) node[midway,above]{$j$};
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,21 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=-24pt,inner sep=2pt,font=\scriptsize]
+  \coordinate(TL)at(-0.85,0.55);\coordinate(TR)at(0.85,0.55);\coordinate(BA)at(0,-0.65);
+  \coordinate(C)at(0,0.05);
+  \draw[jmlinem](TL)--(TR)node[midway,above]{$k$};
+  \draw[jmlinem](TL)--(BA)node[pos=0.5,left]{$j'_1$};
+  \draw[jmlinem](TR)--(BA)node[pos=0.5,right]{$j'_2$};
+  \draw[jmlinem](C)--(TL)node[pos=0.55,above]{$j_1$};
+  \draw[jmlinem](C)--(TR)node[pos=0.55,above]{$j_2$};
+  \draw[jmlinem](C)--(BA)node[pos=0.5,right]{$J$};
+  \node[dotnode,label={180:\minusmark}]at(TL){};
+  \node[dotnode,label={0:\plusmark}]at(TR){};
+  \node[dotnode,label={-90:\plusmark}]at(BA){};
+  \draw[jmarrow]($(BA)-(0,1.0)$)--(BA);
+  \node at($(BA)-(0,0.55)$)[right]{$J'M'$};
+  \draw[bjmarrow]($(BA)-(0,2.1)$)--($(BA)-(0,1.15)$)node[at start,below]{$JM$};
+\end{tikzpicture}
+\end{document}

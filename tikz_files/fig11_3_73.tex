@@ -1,0 +1,19 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=0.4em,font=\scriptsize]
+    \node[opbox,minimum height=2.5cm,minimum width=0.7cm](M) at (0,0){\normalsize\normalsize$\mathfrak{M}$};
+    \node[opbox,minimum height=2.5cm,minimum width=0.7cm](N) at (2,0){\normalsize\normalsize$\mathfrak{N}$};
+    \foreach \i in {-1,...,1} {
+        \draw ([yshift=\i*5mm]N.east) -- ([yshift=\i*5mm,xshift=1mm]N.east);}
+    % Equally spaced horizontal connectors: take the fixed edge anchors
+    % (M.east / N.west) and shift both ends by the SAME amount, so each line
+    % stays horizontal and the gaps are uniform. No angles/pgfmath needed.
+    \foreach \i in {1,...,3} {
+        \draw[jmlinem] ([yshift=(3-\i+0.7)*4mm]M.east) -- ([yshift=(3-\i+0.7)*4mm]N.west) node[midway,above] {$j_\i$};
+    }
+      \draw[jmlinem] ([yshift=(-2.7)*4mm]M.east) -- ([yshift=(-2.7)*4mm]N.west) node[midway,above] {$j_n$};
+      \draw[jmlinem] ([yshift=(-1.7)*4mm]M.east) -- ([yshift=(-1.7)*4mm]N.west) node[midway,above] {$j_{n-1}$};
+\end{tikzpicture}
+\end{document}

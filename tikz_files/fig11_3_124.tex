@@ -1,0 +1,12 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
+  \node[opbox,minimum width=2.4cm,minimum height=0.6cm](M){\normalsize$\mathfrak{M}$};
+  \coordinate(a)at([xshift=-9mm]M.north);\coordinate(b)at([xshift=-3mm]M.north);
+  \coordinate(c)at([xshift=3mm]M.north);\coordinate(d)at([xshift=9mm]M.north);
+  \draw[jmlinem](a)to[bend left=88]node[pos=0.12,above]{$j_1$}(c);
+  \draw[jmlinem](b)to[bend left=88]node[pos=0.88,above]{$j_2$}(d);
+\end{tikzpicture}
+\end{document}

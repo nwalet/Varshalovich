@@ -1,0 +1,16 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
+  \node[opbox,minimum width=0.55cm,minimum height=2.2cm](M) at (0,0){\normalsize$\mathfrak{M}$};
+  \coordinate(up)at(1.05,0.5);\coordinate(lo)at(1.05,-0.5);
+  \draw[jmlinem]([yshift=8mm]M.east)--(up)node[pos=0.4,above]{$j_1$};
+  \draw[jmlinem]([yshift=2.7mm]M.east)--(up)node[pos=0.4,below]{$j_2$};
+  \draw[jmlinem]([yshift=-2.7mm]M.east)--(lo)node[pos=0.4,above]{$j_3$};
+  \draw[jmlinem]([yshift=-8mm]M.east)--(lo)node[pos=0.4,below]{$j_4$};
+  \draw[jmlinemu](up)--(lo)node[midway,right]{$J$};
+  \node[dotnode,label={right:\plusmark}]at(up){};
+  \node[dotnode,label={right:\plusmark}]at(lo){};
+\end{tikzpicture}
+\end{document}

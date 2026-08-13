@@ -1,0 +1,13 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
+  \draw[omarrow](-1.5,0)--(-0.7,0);\node at(-1.1,0.28){$\Omega$};
+  \node[deltanode](c)at(-0.7,0){};
+  \rednode{X}
+  \draw[jmlinem](c)--(X)node[midway,above]{$l_3$};
+  \draw[jmarrow](X)--(1.1,0.85);\node at(1.1,0.85)[right]{$l_2m_2$};
+  \draw[jmarrow](X)--(1.1,-0.85);\node at(1.1,-0.85)[right]{$l_1m_1$};
+\end{tikzpicture}
+\end{document}

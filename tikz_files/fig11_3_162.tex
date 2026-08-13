@@ -1,0 +1,15 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=-2pt,inner sep=1.5pt,font=\scriptsize]
+  \draw[postaction={decorate,decoration={markings,mark=at position 0.25 with
+      {\arrow{Stealth[length=2.2mm] Stealth[length=2.2mm]}}}},
+      -{Stealth[length=2.2mm]},thick](0,0.45)--(1.8,0.45);
+  \node at(0.15,0.63){$j_1m_1$};\node at(1.65,0.63){$j_1m'_1$};
+  \draw[postaction={decorate,decoration={markings,mark=at position 0.25 with
+      {\arrow{Stealth[length=2.2mm] Stealth[length=2.2mm]}}}},
+      -{Stealth[length=2.2mm]},thick](0,-0.45)--(1.8,-0.45);
+  \node at(0.15,-0.27){$j_2m_2$};\node at(1.65,-0.27){$j_2m'_2$};
+\end{tikzpicture}
+\end{document}

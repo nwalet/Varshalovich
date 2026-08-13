@@ -1,0 +1,15 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
+  \node[draw,minimum width=1.0cm,minimum height=0.9cm](B){\normalsize\normalsize$\mathfrak{M}$};
+  \node[dotnode,label={180:\minusmark}](L)at($(B.west)+(-0.6,0)$){};
+  \node[dotnode,label={0:\plusmark}](R)at($(B.east)+(0.6,0)$){};
+  \draw[jmlinem](L)--(B.north west)node[pos=0.4,above]{$j_1$};
+  \draw[jmlinem](L)--(B.south west)node[pos=0.4,below]{$j_2$};
+  \draw[jmlinem](B.north east)--(R)node[pos=0.6,above]{$j_3$};
+  \draw[jmlinem](B.south east)--(R)node[pos=0.6,below]{$j_4$};
+  \draw[jmlinemu](L)to[out=75,in=105,looseness=1.5](R)node[midway,above]{$J$};
+\end{tikzpicture}
+\end{document}

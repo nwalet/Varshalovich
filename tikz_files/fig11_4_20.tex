@@ -1,0 +1,11 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
+  \node[draw,minimum width=0.9cm,minimum height=0.9cm](B){\normalsize\normalsize$\mathfrak{M}$};
+  \draw[bomarrown]($(B.west)+(-0.95,0)$)--(B.west)node[pos=0.1,above]{$\Omega$};
+  \draw[jmarrow]($(B.north east)+(-0.15,0)$)--($(B.north east)+(0.75,0.55)$)node[right]{$j_2m_2$};
+  \draw[jmarrow]($(B.south east)+(-0.15,0)$)--($(B.south east)+(0.75,-0.55)$)node[right]{$j_3m_3$};
+\end{tikzpicture}
+\end{document}

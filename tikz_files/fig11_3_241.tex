@@ -1,0 +1,23 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
+  \node[dotnode,label={0:\plusmark}](O)at(0,0){};
+  \coordinate(e3)at(90:1.7);\coordinate(t3)at(90:0.7);
+  \draw[bjmarrow](e3)--(t3) node[pos=0,above]{$j_3m_3$};
+  \draw[jmarrow](t3)--(O);
+  \node[label={0:\plusmark}]at(t3){};
+  \draw[rline](t3)--($(t3)+(180:0.8)$) node[left]{$R_3$};
+  \coordinate(e1)at(215:1.7);\coordinate(t1)at(215:0.7);
+  \draw[bjmarrow](e1)--(t1) node[pos=0,below left]{$j_1m_1$};
+  \draw[jmarrow](t1)--(O);
+  \node[label={90:\plusmark}]at(t1){};
+  \draw[rline](t1)--($(t1)+(305:0.8)$) node[below]{$R_1$};
+  \coordinate(e2)at(325:1.7);\coordinate(t2)at(325:0.7);
+  \draw[bjmarrow](e2)--(t2) node[pos=0,below right]{$j_2m_2$};
+  \draw[jmarrow](t2)--(O);
+  \node[label={90:\plusmark}]at(t2){};
+  \draw[rline](t2)--($(t2)+(55:0.8)$) node[right]{$R_2$};
+\end{tikzpicture}
+\end{document}

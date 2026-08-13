@@ -1,0 +1,21 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt, inner sep=0.2em,font=\scriptsize]
+    \coordinate (MR) at ($0.8*(0.5,0)$);
+    \coordinate (TR) at ($0.8*(0.5,0.866)+(MR)$);
+    \coordinate (BR) at ($0.8*(0.5,-0.866)+(MR)$);
+    \coordinate (ML) at ($0.8*(-0.5,0)$);
+    \coordinate (TL) at ($0.8*(-0.5,0.866)+(ML)$);
+    \coordinate (BL) at ($0.8*(-0.5,-0.866)+(ML)$);
+    
+    \node[label={180:\minusmark}] at (ML) {};
+    \node[label={0:\plusmark}] at (MR) {};
+    \draw[jmarrow] (MR) -- (BR) node[below]{$b'\beta'$};
+    \draw[jmarrow] (MR) -- (TR) node[above]{$a'\alpha'$};
+    \draw[jmarrow] (ML) -- (BL) node[below]{$b\beta$};
+    \draw[jmarrow] (ML) -- (TL) node[above]{$a\alpha$};
+    \draw[jmlinem] (MR) -- (ML) node[midway,above=0.1]{$e$};
+    \end{tikzpicture}
+\end{document}

@@ -1,0 +1,11 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
+  \node[dotnode](O)at(0,0){};
+  \node[deltanode](u)at(0,0.6){};\draw[jmline](O)--(u);\draw[jmarrow](u)--(0,1.35);\node at(0,1.35)[above]{$l_3m_3$};
+  \node[deltanode](a)at(-0.55,-0.55){};\draw[jmline](O)--(a);\draw[jmarrow](a)--(-1.15,-1.15);\node at(-1.15,-1.15)[left]{$l_1m_1$};
+  \node[deltanode](b)at(0.55,-0.55){};\draw[jmline](O)--(b);\draw[jmarrow](b)--(1.15,-1.15);\node at(1.15,-1.15)[right]{$l_2m_2$};
+\end{tikzpicture}
+\end{document}

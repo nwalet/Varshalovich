@@ -1,0 +1,12 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
+  \draw[bjmarrow](-2.0,0)--(-1.0,0);\node at(-1.55,0.28){$l_1m_1$};
+  \node[deltanode](c1)at(-1.0,0){};
+  \draw[omlinem](c1)--(0,0)node[midway,above]{$\Omega$};
+  \node[deltanode](c2)at(0,0){};
+  \draw[jmarrow](c2)--(1.0,0);\node at(0.55,0.28){$l_2m_2$};
+\end{tikzpicture}
+\end{document}

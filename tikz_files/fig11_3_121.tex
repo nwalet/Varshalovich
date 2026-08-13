@@ -1,0 +1,15 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
+\node[opbox,minimum width=2cm,minimum height=0.6cm](M){\normalsize$\mathfrak{M}$};
+\coordinate(la)at([xshift=-8mm]M.north);\coordinate(lb)at([xshift=-2.5mm]M.north);
+\coordinate(lp)at([xshift=-5.25mm,yshift=6.5mm]M.north);
+\coordinate(ra)at([xshift=2.5mm]M.north);\coordinate(rb)at([xshift=8mm]M.north);
+\coordinate(rp)at([xshift=5.25mm,yshift=6.5mm]M.north);
+\draw(la)--(lp)--(lb);\draw(ra)--(rp)--(rb);
+\node[dotnode]at(lp){};\node[dotnode]at(rp){};
+\draw[omlinem](rp)--(lp)node[midway,above]{$\Omega$};
+\end{tikzpicture}
+\end{document}

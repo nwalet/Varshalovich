@@ -1,0 +1,19 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=0.2em,font=\scriptsize]
+\coordinate (T) at (0,0.95);
+\coordinate (L) at (-0.9,-0.55);
+\coordinate (R) at (0.9,-0.55);
+\node[dotnode,label={0:\minusmark}] at (T) {};
+\node[dotnode,label={30:\minusmark}] at (L) {};
+\node[dotnode,label={150:\minusmark}] at (R) {};
+\draw[jmlinem] (T) -- (L) node[midway,left]{$B$};
+\draw[jmlinem] (R) -- (T) node[midway,right]{$A$};
+\draw[jmlinem] (L) -- (R) node[midway,below]{$C$};
+\draw[jmline] (T) -- (0,1.7) node[above]{$c\gamma$};
+\draw[jmline] (L) -- (-1.55,-1.05) node[below]{$a\alpha$};
+\draw[jmline] (R) -- (1.55,-1.05) node[below]{$b\beta$};
+\end{tikzpicture}
+\end{document}

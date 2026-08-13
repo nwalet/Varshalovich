@@ -1,0 +1,11 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
+  \node[draw,minimum width=0.8cm,minimum height=0.8cm](B){\normalsize\normalsize$\mathfrak{M}$};
+  \coordinate(tip)at($(B.east)+(0.45,0)$);
+  \draw(B.north east)--(tip)--(B.south east);
+  \node[dotnode,label={45:\plusmark}]at(tip){};
+\end{tikzpicture}
+\end{document}

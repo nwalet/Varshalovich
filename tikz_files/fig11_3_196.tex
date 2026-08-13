@@ -1,0 +1,15 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=1.5pt,font=\scriptsize]
+  \node[dotnode,label={135:\plusmark}](tl)at(0,0.55){};
+  \node[dotnode,label={45:\plusmark}](tr)at(1.1,0.55){};
+  \node[dotnode,label={-135:\plusmark}](bl)at(0,-0.55){};
+  \node[dotnode,label={-45:\plusmark}](br)at(1.1,-0.55){};
+  \draw[jmlinem](tl)--(tr);
+  \draw[jmlinem](br)--(bl);
+  \draw[jmlinem](bl)--(tl)node[midway,left]{$l_1$};
+  \draw[jmlinem](tr)--(br)node[midway,right]{$l_2$};
+\end{tikzpicture}
+\end{document}

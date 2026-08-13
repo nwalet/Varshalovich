@@ -1,0 +1,15 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
+  \node[dotnode,label={0:\plusmark}](LN)at(0,0){};
+  \draw[jmarrow](LN)--($(LN)-(0.9,0)$) node[left]{$j_3m_3$};
+  \draw[jmarrow](LN)--++(35:2.15) coordinate[pos=0.5](Tv) node[right]{$j_2m'_2$};
+  \draw[jmarrow](LN)--++(-35:2.15) coordinate[pos=0.5](Bv) node[right]{$j_1m'_1$};
+  \node[label={135:\plusmark}]at(Tv){};\node[label={-135:\minusmark}]at(Bv){};
+  \coordinate(Rv)at($(Tv)!0.5!(Bv)+(0.55,0)$);
+  \draw[rline](Tv)--(Rv);\draw[rline](Bv)--(Rv);
+  \draw[rline](Rv)--($(Rv)+(0.8,0)$) node[right]{$R$};
+\end{tikzpicture}
+\end{document}

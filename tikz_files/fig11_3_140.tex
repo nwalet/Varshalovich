@@ -1,0 +1,29 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
+  \node[opbox,minimum width=0.55cm,minimum height=1.6cm](M) at (0,0){\normalsize$\mathfrak{M}$};
+  % closed j1-loop on M's right edge
+  \coordinate(ma)at($(M.south east)!0.8!(M.north east)$);
+  \coordinate(mb)at($(M.south east)!0.2!(M.north east)$);
+  \draw[jmlinem](mb)to[out=0,in=0,looseness=1.6](ma);
+  \node at($(M.east)+(0.62,0)$){$j_1$};
+  % rectangle with four + corner nodes; verticals arrowed upward
+  \node[dotnode,label={135:\plusmark}](tl)at(1.3,0.45){};
+  \node[dotnode,label={45:\plusmark}](tr)at(2.0,0.45){};
+  \node[dotnode,label={-135:\plusmark}](bl)at(1.3,-0.45){};
+  \node[dotnode,label={-45:\plusmark}](br)at(2.0,-0.45){};
+  \draw[thick](tl)--(tr)node[midway,above]{$j_2$};
+  \draw[thick](bl)--(br)node[midway,below]{$j_1$};
+  \draw[jmlinem](bl)--(tl);
+  \draw[jmlinem](br)--(tr);
+  % N with closed j2-loop on its left edge
+  \node[opbox,minimum width=0.55cm,minimum height=1.6cm](N) at (3.5,0){\normalsize$\mathfrak{N}$};
+  \coordinate(na)at($(N.south west)!0.8!(N.north west)$);
+  \coordinate(nb)at($(N.south west)!0.2!(N.north west)$);
+  \draw[jmlinem](na)to[out=180,in=180,looseness=1.6](nb);
+  \node at($(N.west)+(-0.62,0)$){$j_2$};
+  \foreach \i in {-1,1}{\draw([yshift=\i*5mm]N.east)--([yshift=\i*5mm,xshift=1.5mm]N.east);}
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,13 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=0.15em,font=\scriptsize]
+\node[opbox,minimum width=6mm,minimum height=11mm] (M) at (0,0) {};
+\coordinate (N) at (1.6,0);
+\node[dotnode,label={right:\plusmark}] at (N) {};
+\draw[jmlinem] (0.3,0.35) -- (N) node[pos=0.35,above]{$j_1$};
+\draw[jmlinem] (0.3,0) -- (N) node[pos=0.35,above]{$j_2$};
+\draw[jmlinem] (0.3,-0.35) -- (N) node[pos=0.35,below]{$j_3$};
+\end{tikzpicture}
+\end{document}

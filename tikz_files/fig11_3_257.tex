@@ -1,0 +1,18 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=-4pt,inner sep=2pt,font=\scriptsize]
+  \node[draw,minimum width=2.2cm,minimum height=0.85cm](B){\normalsize$(\mathfrak{M}^{(1)}\!\cdot\mathfrak{N}^{(2)})_{\gamma\gamma'}$};
+  \coordinate(tp)at($(B.north)+(0,0.7)$);
+  \utri at(tp){};\node at([yshift=-2mm]tp){\tiny\plusmark};
+  \draw[jmlinem]($(B.north)+(-0.55,0)$)--(tp)node[midway,left]{$j'_1$};
+  \draw[jmlinem]($(B.north)+(0.55,0)$)--(tp)node[midway,right]{$j'_2$};
+  \draw[jmarrow](tp)--($(tp)+(0,0.95)$)node[above]{$J'M'$};
+  \coordinate(bt)at($(B.south)-(0,0.7)$);
+  \wtri at(bt){};\node at([yshift=2mm]bt){\tiny\minusmark};
+  \draw[jmlinem]($(B.south)+(-0.55,0)$)--(bt)node[midway,left]{$j_1$};
+  \draw[jmlinem]($(B.south)+(0.55,0)$)--(bt)node[midway,right]{$j_2$};
+  \draw[bjmarrow]($(bt)-(0,0.95)$)--(bt)node[at start,below]{$JM$};
+\end{tikzpicture}
+\end{document}

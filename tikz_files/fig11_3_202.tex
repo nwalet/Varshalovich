@@ -1,0 +1,14 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
+  \rednode{X}
+  \node[deltanode](a)at(-0.7,0.6){};\draw[jmlinem](a)--(X)node[midway,below right]{$l_2$};
+  \draw[bomarrown](-1.4,1.1)--(a);\node at(-1.4,1.1)[left]{$\Omega_2$};
+  \node[deltanode](b)at(-0.7,-0.6){};\draw[jmlinem](b)--(X)node[midway,above right]{$l_3$};
+  \draw[bomarrown](-1.4,-1.1)--(b);\node at(-1.4,-1.1)[left]{$\Omega_3$};
+  \node[deltanode](c)at(0.95,0){};\draw[jmlinem](X)--(c)node[midway,above]{$l_1$};
+  \draw[bomarrown](1.85,0)--(c);\node at(1.7,0.28){$\Omega_1$};
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,12 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
+  \node[opbox,minimum width=0.55cm,minimum height=1.6cm](M) at (0,0){\normalsize$\mathfrak{M}$};
+  \node[opbox,minimum width=0.55cm,minimum height=1.6cm](N) at (1.9,0){\normalsize$\mathfrak{N}$};
+  \draw[jmlinem]([yshift=5mm]N.west)--([yshift=5mm]M.east)node[midway,above]{$j_1$};
+  \draw[jmlinem]([yshift=-5mm]M.east)--([yshift=-5mm]N.west)node[midway,below]{$j_2$};
+  \foreach \i in {-1,1}{\draw([yshift=\i*5mm]N.east)--([yshift=\i*5mm,xshift=1.5mm]N.east);}
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,15 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=20pt]
+\node[opbox] (M) at (0,0) {\normalsize$\mathfrak{M}$};
+\node[opbox] (N) at (2,0) {\normalsize$\mathfrak{N}$};
+\coordinate (T) at (1,0.5);
+\node[label={below:\plusmark}] at (T) {};
+\node[smalltri,rotate=180] (t) at (T) {};
+\draw[jmlinem] (M) -- (t) node[midway,above left]{$j_1$};
+\draw[jmlinem] (N) -- (t) node[midway,above right]{$j_2$};
+\draw[jmarrow] (t) -- (1,1.4) node[above]{$JM$};
+\end{tikzpicture}
+\end{document}

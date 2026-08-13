@@ -1,0 +1,17 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=0.2em,font=\scriptsize]
+    \node[opboxw](M) at (0,0){\normalsize\normalsize$\mathfrak{M}$};
+    \coordinate (L) at (-0.5,1.2);
+    \coordinate (R) at (0.5,1.2);
+    \node[dotnode,label={above:\plusmark}] at (R) {};
+    \node[dotnode,label={above:\plusmark}] at (L) {};
+    \normedge{M.150}{L}{0.5}{0.2}{$j_1$} 
+    \normedge{M.110}{L}{0.5}{-0.2}{$j_2$} 
+    \normedge{R}{M.70}{0.5}{-0.2}{$j_1$} 
+    \normedge{R}{M.30}{0.5}{0.2}{$j_2$} 
+    \normedge{R}{L}{0.5}{-0.2}{$j$} 
+\end{tikzpicture}
+\end{document}

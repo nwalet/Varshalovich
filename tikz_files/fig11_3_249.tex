@@ -1,0 +1,17 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=-14pt,inner sep=2pt,font=\scriptsize]
+  \node[draw,minimum width=1.6cm,minimum height=0.85cm](B){\normalsize$\{\mathfrak{M}\otimes\mathfrak{N}\}_{\gamma\gamma'}$};
+  \foreach \i in {1,...,4} {\coordinate (n\i) at ([xshift=(\i-2.5)*6mm]B.north);}
+  \node[label={-90:\plusmark}](c1)at([yshift=6mm]B.north){};
+  \node[dotnode,label={90:\plusmark}](c2)at([yshift=16mm]B.north){};
+  \draw[jmlinem](n1)--(c2)node[midway,left]{$J$};
+  \draw[jmlinem](n4)--(c2)node[midway,right]{$J'$};
+  \draw[jmlinem](n2)--(c1)node[midway,left]{$k_1$};
+  \draw[jmlinem](n3)--(c1)node[midway,right]{$k_2$};
+  \draw[jmlinem](c1)--(c2)node[pos=0.2,right]{$k$};
+  \wtri at(c1){};
+\end{tikzpicture}
+\end{document}

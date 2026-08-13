@@ -1,0 +1,19 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt, inner sep=0.2em,font=\scriptsize] 
+  \coordinate (Tl) at ($0.4*(-1,1)$);
+  \coordinate (Tr) at ($0.4*(1,1)$);
+  \coordinate (Bl) at ($0.4*(-1,-1)$); 
+  \coordinate (Br) at ($0.4*(1,-1)$); 
+  \draw[jmline] (Bl) -- (Tl) node[midway, left]{$a$};
+  \draw[jmline] (Tl) -- (Tr) node[midway, above]{$b$};
+  \draw[jmline] (Tr) -- (Br) node[midway, right]{$c$};
+  \draw[jmline] (Br) -- (Bl) node[midway, below]{$d$};
+  \node[dotnode, label={above right:{$+$}}] at (Bl) {};
+  \node[dotnode, label={below right:{$+$}}] at (Tl) {};
+  \node[dotnode, label={below left:{$+$}}] at (Tr) {};
+  \node[dotnode, label={above left:{$+$}}] at (Br) {};
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,16 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=0.15em,font=\scriptsize]
+\coordinate (ML) at (-0.55,0);
+\coordinate (MR) at (0.55,0);
+\node[dotnode,label={180:\plusmark}] at (ML) {};
+\node[dotnode,label={0:\minusmark}] at (MR) {};
+\draw[jmlinem] (MR) -- (ML) node[midway,above]{$c$};
+\draw[bjmarrow] (-1.35,0.8) node[left]{$a\alpha$} -- (ML);
+\draw[bjmarrow] (-1.35,-0.8) node[left]{$b\beta$} -- (ML);
+\draw[jmarrow] (MR) -- (1.35,0.8) node[right]{$a\alpha'$};
+\draw[jmarrow] (MR) -- (1.35,-0.8) node[right]{$b\beta'$};
+\end{tikzpicture}
+\end{document}

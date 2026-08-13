@@ -1,0 +1,38 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt, inner sep=0.1em,font=\scriptsize]
+    \coordinate (MR) at (1.1,0);
+    \coordinate (TR) at ($0.8*(0.5, 0.866)+(MR)$);
+    \coordinate (BR) at ($0.8*(0.5,-0.866)+(MR)$);
+    \coordinate (LR) at ($0.8*(-1,0)+(MR)$);
+    \coordinate (ML) at (-1.2,0);
+    \coordinate (TL) at ($0.8*(-0.5, 0.866)+(ML)$);
+    \coordinate (BL) at ($0.8*(-0.5,-0.866)+(ML)$);
+    \coordinate (RL) at ($0.8*(1,0)+(ML)$);
+%
+    \node[dotnode,label={135:\plusmark}] at (TL) {};
+    \node[dotnode,label={225:\plusmark}] at (BL) {};
+    \node[dotnode,label={0:\plusmark}] at (RL) {};
+    \node[dotnode,label={180:\plusmark}] at (ML) {};
+    \node[dotnode,label={45:\minusmark}] at (TR) {};
+    \node[dotnode,label={315:\minusmark}] at (BR) {};
+    \node[dotnode,label={180:\minusmark}] at (LR) {};
+    \node[dotnode,label={0:\minusmark}] at (MR) {};
+%
+    \normedge{BL}{RL}{0.5}{-0.15}{$a$}
+    \normedge{RL}{TL}{0.5}{-0.15}{$b$}
+    \normedge{TL}{BL}{0.5}{-0.15}{$c$}
+    \normedge{ML}{RL}{0.4}{-0.15}{$C$}
+    \normedge{ML}{TL}{0.4}{-0.15}{$A$}
+    \normedge{ML}{BL}{0.4}{-0.15}{$B$}
+%
+    \normedge{BR}{LR}{0.5}{0.15}{$a$}
+    \normedge{LR}{TR}{0.5}{0.15}{$b$}
+    \normedge{TR}{BR}{0.5}{0.15}{$c'$}
+    \normedge{LR}{MR}{0.6}{-0.15}{$C$}
+    \normedge{TR}{MR}{0.6}{-0.15}{$A$}
+    \normedge{BR}{MR}{0.6}{-0.15}{$B$}
+\end{tikzpicture}
+\end{document}
