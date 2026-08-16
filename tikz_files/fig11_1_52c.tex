@@ -1,0 +1,28 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt, inner sep=0.2em,font=\scriptsize]
+    \begin{scope}
+    \coordinate (T) at (90:0.8); 
+    \coordinate (L) at (210:0.8);
+    \coordinate (R) at (330:0.8);
+    \coordinate (M) at (0,0);
+    \node[label={270:\plusmark}] {};
+    \draw[rline] (M) to node[at end,right]{$R$} (T);
+    \draw[bjmarrow] (R) to  node[at start,below]{$j'm'$}($(M)+(0.05,0)$);
+    \draw[jmarrow] ($(M)-(0.05,0)$) to  node [at end,below]{$jm$} (L);
+    \end{scope}
+    \node at (1,0.35) {$=$};
+    \begin{scope}[shift={(2,0.5)}]
+            \coordinate (B) at (-90:0.8);
+    \coordinate (L) at (-210:0.8);
+    \coordinate (R) at (-330:0.8);
+    \coordinate (M) at (0,0);
+    \node[label={90:\minusmark}] {};
+    \draw[rline] (M) to node[at end,right]{$R$} (B);
+    \draw[bjmarrow] (R) to  node[at start,above]{$j'm'$} ($(M)+(0.05,0)$);
+    \draw[jmarrow] ($(M)-(0.05,0)$) to  node [at end,above]{$jm$} (L);
+    \end{scope}
+\end{tikzpicture}
+\end{document}

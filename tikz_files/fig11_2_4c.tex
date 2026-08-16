@@ -1,0 +1,42 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+$\displaystyle \sum_{\alpha, \beta}$
+\begin{tikzpicture}[baseline=-2pt, inner sep=0.1em,font=\scriptsize]
+    \begin{scope}
+    \coordinate (L) at ($0.8*(-1,0)$);
+    \coordinate (TR) at ($0.8*(0.5,0.866)$);
+    \coordinate (BR) at ($0.8*(0.5,-0.866)$);
+    \coordinate (M) at (0,0);
+    \node[label={0:\minusmark}] {};
+    \draw[bjmarrow] (L) -- (M) node[near start,above=0.1]{$c\gamma$};
+    \draw[bjmarrow] (TR) -- (M) node[at start,above]{$a\alpha$};
+    \draw[bjmarrow] (BR) -- (M) node[at start,below]{$b\beta$};
+    \end{scope}
+    \begin{scope}[shift={(1.6,0)}]
+    \coordinate (R) at ($0.8*(1,0)$);
+    \coordinate (TL) at ($0.8*(-0.5,0.866)$);
+    \coordinate (TR) at ($0.8*(-0.5,-0.866)$);
+    \coordinate (M) at (0,0);
+    \node[label={180:\plusmark}] {};
+    \draw[jmarrow] (M) -- (R) node[near end,above=0.1]{$c'\gamma'$};
+    \draw[jmarrow] (M) -- (TL) node[above]{$a\alpha$};
+    \draw[jmarrow] (M) -- (TR) node[below]{$b\beta$};
+\end{scope}
+\end{tikzpicture}
+=
+\begin{tikzpicture}[baseline=-2pt, inner sep=0.1em,font=\scriptsize]
+    \coordinate (R) at ($0.6*(1,0)$);
+    \coordinate (Rr) at ($1.2*(1,0)$);
+    \coordinate (L) at ($0.6*(-1,0)$);
+    \coordinate (Ll) at ($1.2*(-1,0)$);
+    \coordinate (M) at (0,0);
+    \node[label={180:\plusmark}] at (R) {};
+    \node[label={0:\minusmark}] at (L) {};
+    \draw[jmarrow] (R) -- (Rr) node[near end,above=0.1]{$c'\gamma'$};
+    \draw[bjmarrow] (Ll) -- (L) node[near start,above=0.1]{$c\gamma$};
+    \draw[jmlinem] (R) to[bend left=90]  node[midway,below=0.05]{$b$} (L);
+    \draw[jmlinem] (R) to[bend right=90] node[midway,above=0.1]{$a$} (L);
+\end{tikzpicture}
+\end{document}

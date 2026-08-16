@@ -3,15 +3,17 @@
 \usepackage{diagrams}
 \begin{document}
 \begin{tikzpicture}[baseline=0pt, inner sep=0.2em,font=\scriptsize]
-    \coordinate (M) at ($0.8*(0.0,0.0)$);
-    \coordinate (T) at ($0.8*(-0.5,0.866)+(M)$);
-    \coordinate (B) at ($0.8*(-0.5,-0.866)+(M)$);
-    \coordinate (R) at ($0.8*(1,0)+(M)$);
-    \coordinate (Rr) at ($(R)+0.8*(1,0)$);
-    \node[label={180:\minusmark}] at (M) {};
-    \draw[jmlinem] (R) -- (M) node[midway,above]{$c'$};
+    \node at (-1.,0) {$\displaystyle(-1)^{2a}$};
+    \coordinate (M) at (0,0);
+    \coordinate (T) at (120:0.8);
+    \coordinate (B) at (240:0.8);
+    \coordinate (R) at (0:0.8);
+    \coordinate (Rr) at ($(R)+(0.8,0)$);
+    \draw[jmlinem,ultra thick] (R) -- (M) node[midway,above]{$c'$};
     \draw[bjmarrow] (T) -- (M) node[at start,above]{$a'\alpha'$};
     \draw[bjmarrow] (B) -- (M) node[at start,below]{$b\beta$};
-    \draw[jmrndarrow] (R) -- (Rr) node[above]{$c\gamma$};
+    \draw[jmarrow] (R) -- (Rr) node[above]{$c\gamma$};
+    \node[dotnode,label={180:\minusmark}] at (M){};
+    \node[dotnode,label={-90:\plusmark}] at (R){};
     \end{tikzpicture}
 \end{document}

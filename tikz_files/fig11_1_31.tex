@@ -3,10 +3,11 @@
 \usepackage{diagrams}
 \begin{document}
 \begin{tikzpicture}[baseline=0pt, inner sep=0.1em,font=\scriptsize] 
+      \pgfmathsetmacro{\rad}{0.5}
   \draw[
-        decoration={markings, mark=at position 0.01 with  {\arrow{Stealth[reversed,length=2.2mm]}}},
-        postaction={decorate},thick] (0,0.) circle (0.4);
-  \node[label={right:$a$}] at (0.4,0.) {};
-  \node[dotnode, label={right:{$+$}}] at (-0.4,0.) {};
+        decoration={markings, mark=at position 0.03 with  {\arrow[rotate=-10]{Stealth[reversed,length=2.2mm]}}},
+        postaction={decorate},thick] (0,0.) circle (\rad);
+  \node[label={right:$a$}] at (\rad,0.) {};
+  \node[dotnode, label={right:\plusmark}] at (\rad,0.) {};
 \end{tikzpicture}
 \end{document}

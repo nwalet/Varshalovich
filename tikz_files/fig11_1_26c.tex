@@ -1,0 +1,34 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt]
+    \begin{scope}
+        \draw[bjmarrow] (-0.5,0.71) -- (0,0) node[at start,left]{$j_1 m_1$};
+        \draw[bjmarrow] (-0.5,-0.71) -- (0,0) node[at start,left]{$j_2 m_2$};
+        \draw[jmarrow]  (0,0) -- (1,0.) node[near end,above]{$j_3m_3$};
+        \node[dotnode,inner sep=1.5pt,label={left:\plusmark}] at (0,0) {};
+    \end{scope}
+    \node at (1.2,0){$=$};
+    \begin{scope}[shift={(2.5,0)}]
+        \draw[bjmarrow] (-0.5,0.71) -- (0,0) node[at start,left]{$j_2 m_2$};
+        \draw[bjmarrow] (-0.5,-0.71) -- (0,0) node[at start,left]{$j_1 m_1$};
+        \draw[jmarrow]  (0,0) -- (1,0.) node[near end,above]{$j_3m_3$};
+        \node[dotnode,inner sep=1.5pt,label={left:\minusmark}] at (0,0) {};
+    \end{scope}
+    \node at (-1.5,-2){$=$};
+    \begin{scope}[shift={(0,-2)}]
+        \draw[bjmarrow]  (-1,0.) -- (0,0) node[near start,above]{$j_3m_3$};
+        \draw[jmarrow]  (0,0) -- (0.5,0.71) node[at end,right]{$j_1 m_1$};
+        \draw[jmarrow]  (0,0) -- (0.5,-0.71) node[at end,right]{$j_2 m_2$};
+        \node[dotnode,inner sep=1.5pt,label={right:\plusmark}] at (0,0) {};
+    \end{scope}
+    \node at (1.2,-2){$=$};
+    \begin{scope}[shift={(2.5,-2)}]
+        \draw[bjmarrow]  (-1,0.) -- (0,0) node[near start,above]{$j_3m_3$};
+        \draw[jmarrow]  (0,0) -- (0.5,0.71) node[at end,right]{$j_2 m_2$};
+        \draw[jmarrow]  (0,0) -- (0.5,-0.71) node[at end,right]{$j_1 m_2$};
+        \node[dotnode,inner sep=1.5pt,label={right:\minusmark}] at (0,0) {};
+    \end{scope}
+\end{tikzpicture}
+\end{document}

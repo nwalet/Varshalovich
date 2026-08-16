@@ -2,15 +2,16 @@
 \usepackage{amsmath,amssymb}
 \usepackage{diagrams}
 \begin{document}
-\begin{tikzpicture}[baseline=0pt, inner sep=0.2em,font=\scriptsize]
-  \coordinate (T) at ($0.6*(0,1)$);
-  \coordinate (L) at ($0.6*(-0.866,-0.5)$);
-  \coordinate (R) at ($0.6*(0.866,-0.5)$); 
-  \draw[jmline] (L) -- (T) node[midway, left]{$a$};
-  \draw[jmline] (T) -- (R) node[midway, right]{$b$};
-  \draw[jmline] (R) -- (L) node[midway, below]{$c$};
-  \node[dotnode, label={above right:{$+$}}] at (L) {};
-  \node[dotnode, label={below:{$+$}}] at (T) {};
-  \node[dotnode, label={above left:{$+$}}] at (R) {};
+\begin{tikzpicture}[baseline=0pt, inner sep=0.3em,font=\scriptsize]
+  \pgfmathsetmacro{\len}{0.9}
+  \coordinate (T) at (90:\len);
+  \coordinate (L) at (210:\len);
+  \coordinate (R) at (330:\len); 
+  \draw[jmlinem] (L) -- (T) node[midway, left]{$a$};
+  \draw[jmlinem] (T) -- (R) node[midway, right]{$b$};
+  \draw[jmlinem] (R) -- (L) node[midway, below]{$c$};
+  \node[dotnode, label={15:\plusmark}] at (L) {};
+  \node[dotnode, label={-90:\plusmark}] at (T) {};
+  \node[dotnode, label={165:\plusmark}] at (R) {};
 \end{tikzpicture}
 \end{document}

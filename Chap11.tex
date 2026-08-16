@@ -1,146 +1,144 @@
 \chapter{The graphical method in angular momentum theory}\label{chap:11}
-To solve many quantum mechanical problems involving angular and spin dependences one has to integrate a product of the spherical harmonics or the Wigner D-functions and to sum products of the Clebsch-Gordan coefficients and $3 n j$ symbols. Expressions of this kind are, as a rule, rather complicated. They contain so many arguments and parameters that it is difficult to understand interrelations between them, to find out the symmetry of the expression, and to see its invariance with respect to a particular transformation.
+To solve many quantum mechanical problems involving angular and spin dependences one has to integrate a product of the spherical harmonics or the Wigner D-functions and to sum products of the Clebsch-Gordan coefficients and \(3 n j\) symbols. Expressions of this kind are, as a rule, rather complicated. They contain so many arguments and parameters that it is difficult to understand interrelations between them, to find out the symmetry of the expression, and to see its invariance with respect to a particular transformation.
 
 The representation of such expressions in diagrammatic form facilitates their general analysis. A graphical representation is more compact and clear. All arguments and parameter interrelations are obvious. The structure and symmetries of the expression as a whole and each part of the expression are evident. Moreover, the graphical technique substantially reduces the calculation job.
 
-There are several versions of the graphical method. A handy technique for summing the $3 j m$ symbol products was suggested by Levinson \cite{ref080}, Yutsis, Levinson and Vanagas \cite{ref044} and Yutsis and Bandzaitis \cite{ref045}. A slightly modified version was proposed by Brink and Satchler \cite{ref009}. A certain development of this diagram technique was presented by El-Baz and Castel \cite{ref017} who extended it to expressions involving continuous variables. This version is now commonly used.\footnote{A somewhat different graphical method was suggested by Shelepin \cite{ref105}, but it is not very widespread now.}
+There are several versions of the graphical method. A handy technique for summing the \(3 j m\) symbol products was suggested by Levinson \cite{ref080}, Yutsis, Levinson and Vanagas \cite{ref044} and Yutsis and Bandzaitis \cite{ref045}. A slightly modified version was proposed by Brink and Satchler \cite{ref009}. A certain development of this diagram technique was presented by El-Baz and Castel \cite{ref017} who extended it to expressions involving continuous variables. This version is now commonly used.\footnote{A somewhat different graphical method was suggested by Shelepin \cite{ref105}, but it is not very widespread now.}
  However, various books and papers concerning such diagrams are somewhat different in definitions, phase conventions, and rules of the graphical technique, although the notations, sometimes, are similar. Therefore, one should be careful in using formulas from various sources.
 
-In this chapter we represent the unified graphical method in detail. The basic elements of diagrams are defined in Sections 11.1 and 11.2 where the graphical representation of the standard functions and main operations of the angular momentum theory are given. Section 11.3 exhibits the rules of the diagram technique, i.e., the graphical method of calculation. For practical convenience, all the definitions and rules are arranged in tables. The general scheme of application of the diagram technique is formulated in Sec.~\ref{sec:11.4}.
+In this chapter we represent the unified graphical method in detail. The basic elements of diagrams are defined in Sections \ref{sec:11.1} and \ref{sec:11.2} where the graphical representation of the standard functions and main operations of the angular momentum theory are given. Section \ref{sec:11.3} exhibits the rules of the diagram technique, i.e., the graphical method of calculation. For practical convenience, all the definitions and rules are arranged in tables. The general scheme of application of the diagram technique is formulated in Sec.~\ref{sec:11.4}.
 
 \section{Graphical representation of functions}\label{sec:11.1}
 A principle of any graphical method is in establishing a one-to-one correspondence between elements of a diagram and constituents of the analytic expression. Any expression inherent in the theory may be represented by a definite diagram, and vice versa, any such diagram represents a definite analytic expression.
 
 Moreover, a transformation of the expression under some analytic operation corresponds to a certain transformation of the associated diagram. That is why all calculations of spin angular quantities may be performed by the graphical method instead of the analytic one.
 \subsection{Basic Elements of Diagrams}\label{sec:11.1.1}
-The Dirac representation of quantum mechanical quantities seems to be most adequate to the graphical method. This representation operates with state vectors: the "kets", $|\Psi\rangle$ and the Hermitian conjugate "bras", $\langle\psi|$. Graphically, these vectors are represented by directed lines connected with nodes (dot or cross bar).
+The Dirac representation of quantum mechanical quantities seems to be most adequate to the graphical method. This representation operates with state vectors: the ``kets'', \(|\Psi\rangle\) and the Hermitian conjugate ``bras'', \(\langle\psi|\). Graphically, these vectors are represented by directed lines connected with nodes (dot or cross bar).
 
-A line with an arrow coming out of a node represents the "ket" $|\Psi\rangle$, i.e., a covariant (standard) state vector, whereas, a line with double arrow coming into the node represents the "bra" $\langle\Psi|$, i.e. a contravariant (Hermitian conjugate) state vector.
+A line with an arrow coming out of a node represents the ``ket'' \(|\Psi\rangle\), i.e., a covariant (standard) state vector, whereas, a line with double arrow coming into the node represents the ``bra'' \(\langle\Psi|\), i.e. a contravariant (Hermitian conjugate) state vector.
 
-A thin solid line corresponds to a state with some definite angular momentum $j$ and projection $m$ : 
+A thin solid line corresponds to a state with some definite angular momentum \(j\) and projection \(m\) : 
 \[
 \begin{aligned}
-& \includegraphics[valign=c]{fig11_1_1}  \qquad \ket{jm}, \\
-& \includegraphics[valign=c]{fig11_1_2}  \qquad \bra{j m}, 
+& \includegraphics[valign=t]{fig11_1_1}  \qquad \ket{jm}, \\
+& \includegraphics[valign=t]{fig11_1_2}  \qquad \bra{j m}, 
 \end{aligned}
 \]
-Such lines are referred to as the $j$-lines.\\
-A dashed line corresponds to a state with some definite direction of the position vector (or linear momentum) $\Omega\{\vartheta, \varphi\}$
+Such lines are referred to as the \(j\)-lines.\\
+A dashed line corresponds to a state with some definite direction of the position vector (or linear momentum) \(\Omega\{\vartheta, \varphi\}\)
 \[
 \begin{aligned}
-& \includegraphics[valign=c]{fig11_1_3}  \qquad \ket{\Omega}, \\
-& \includegraphics[valign=c]{fig11_1_4}  \qquad \bra{\Omega}, 
+& \includegraphics[valign=t]{fig11_1_3}  \qquad \ket{\Omega}, \\
+& \includegraphics[valign=t]{fig11_1_4}  \qquad \bra{\Omega}, 
 \end{aligned}
 \]
-Such lines are referred to as the $\Omega$-lines.\\
-A double dashed line corresponds to a set of the Euler angles $\alpha, \beta, \gamma$ (or the angles $\omega, \Theta, \Phi$ ) which specify a rotation of the coordinate system, $R$. Such lines are called the $R$-lines
+Such lines are referred to as the \(\Omega\)-lines.\\
+A double dashed line corresponds to a set of the Euler angles \(\alpha, \beta, \gamma\) (or the angles \(\omega, \Theta, \Phi\) ) which specify a rotation of the coordinate system, \(R\). Such lines are called the \(R\)-lines
 \[
-\includegraphics[valign=c]{fig11_1_5}
+\includegraphics[valign=t]{fig11_1_5}
 \]
-The symbols $j m, \Omega$ and $R$ are usually indicated near the corresponding lines. Therefore, length, curvature, orientation, and position of the line are inessential. For example, 
+The symbols \(j m, \Omega\) and \(R\) are usually indicated near the corresponding lines. Therefore, length, curvature, orientation, and position of the line are inessential. For example, 
 \begin{center}
-\includegraphics[valign=c]{fig11_1_6} 
+\includegraphics[valign=t]{fig11_1_6} 
 is equivalent to 
-\includegraphics[valign=c]{fig11_1_7} and \includegraphics[valign=c]{fig11_1_8} .
+\includegraphics[valign=t]{fig11_1_7} and \includegraphics[valign=t]{fig11_1_8} .
 \end{center}
 
 However, the arrow direction with respect to the node is of importance.\\
-The normalization of state vectors may be different. In diagrams it is indicated by the type of node. A state vector $|j m\rangle$ normalized according to
+The normalization of state vectors may be different. In diagrams it is indicated by the type of node. A state vector \(|j m\rangle\) normalized according to
 \[
 \braket{j m}{j^{\prime} m^{\prime}}=\delta_{j j^{\prime}} \delta_{m m^{\prime}}
 \]
-is represented by the $j$-line with a bar node, whereas, a state vector $\rket{j m}$, which obeys the normalization condition
+is represented by the \(j\)-line with a bar node, whereas, a state vector \(\rket{j m}\), which obeys the normalization condition
 \[
 \rbraket{j m}{j^{\prime} m^{\prime}}=(2 j+1)^{-1} \delta_{j j^{\prime}} \delta_{m m^{\prime}}
 \]
-is represented by the $j$-line with a dot node. The completeness condition for wave functions $\ket{j m}$ or $\rket{j m}$  reads
+is represented by the \(j\)-line with a dot node. The completeness condition for wave functions \(\ket{j m}\) or \(\rket{j m}\)  reads
 \[
 \sum_{j m}\ket{j m}\bra{j m}=\sum_{j m}\rket{j m}(2 j+1)\rbra{j m}=1
 \]
-Similarly, a state vector $|\Omega\rangle$ normalized by the Dirac $\delta$-function
+Similarly, a state vector \(|\Omega\rangle\) normalized by the Dirac \(\delta\)-function
 \[
 \braket{\Omega}{\Omega^{\prime}}=\delta\left(\Omega-\Omega^{\prime}\right)
 \]
-corresponds to the $\Omega$-line with the bar node, whereas, a state vector $\rket{\Omega}$ normalized by
+corresponds to the \(\Omega\)-line with the bar node, whereas, a state vector \(\rket{\Omega}\) normalized by
 \[
 \rbraket{\Omega}{\Omega^{\prime}}=4 \pi \delta\left(\Omega-\Omega^{\prime}\right)
 \]
-corresponds to the $\Omega$-line with a dot node. The completeness condition for the functions $\ket{\Omega}$ or $\rket{\Omega}$ reads
+corresponds to the \(\Omega\)-line with a dot node. The completeness condition for the functions \(\ket{\Omega}\) or \(\rket{\Omega}\) reads
 \[
 \int\ket{\Omega} d \Omega\bra{\Omega}=1 \quad \text { and } \quad \int \rket{\Omega} \frac{d \Omega}{4 \pi}\rbra{\Omega}=1\,,
 \]
 respectively.
 
 \subsection{Diagrams of the Basic Functions of the Theory}\label{sec:11.1.2}
-Quantum mechanical quantities, i.e., state vectors and operators, may depend on many spin and angular variables (such as $j m$ or $\Omega)$ and also on coordinate system rotation $R$. Accordingly, these state vectors and matrix elements of the operators may be represented graphically as blocks (i.e., as subdiagrams) with external $j m$-, $\Omega$ - and/or $R$-lines associated with the corresponding spin angular variables. A diagram corresponding to a composite expression will be a combination of such blocks connected by some of jm-, $\Omega$ - and $R$-lines.
+Quantum mechanical quantities, i.e., state vectors and operators, may depend on many spin and angular variables (such as \(j m\) or \(\Omega)\) and also on coordinate system rotation \(R\). Accordingly, these state vectors and matrix elements of the operators may be represented graphically as blocks (i.e., as subdiagrams) with external \(j m\)-, \(\Omega\) - and/or \(R\)-lines associated with the corresponding spin angular variables. A diagram corresponding to a composite expression will be a combination of such blocks connected by some of jm-, \(\Omega\) - and \(R\)-lines.
 
 Diagrams of some spin and angular functions are listed in Tables 11.1-11.3; graphical displays of their properties and relations is given in Tables 11.4-11.14.
 
-A spherical harmonic $Y_{l m}(\vartheta, \varphi) \equiv\braket{\Omega}{l m}$ is represented by a junction of a thin solid and dashed lines which correspond to $\ket{l m}$ and $\bra{\Omega}$.
+A spherical harmonic \(Y_{l m}(\vartheta, \varphi) \equiv\braket{\Omega}{l m}\) is represented by a junction of a thin solid and dashed lines which correspond to \(\ket{l m}\) and \(\bra{\Omega}\).
 
-A Wigner $3 j m$ symbol $\threej{a}{b}{c}{\alpha}{\beta}{\gamma} \equiv\rbraket{00}{a \alpha b \beta c \gamma}$ is represented by a dot-node junction of three thin solid lines which correspond to $\rket{a \alpha}, \rket{b \beta}$ and $\rket{c \gamma}$. The sign of the node determines the cyclic order of arguments, i.e., the sequence of coupling of momenta: plus corresponds to the anticlockwise one.
+A Wigner \(3 j m\) symbol \(\threej{a}{b}{c}{\alpha}{\beta}{\gamma} \equiv\rbraket{00}{a \alpha b \beta c \gamma}\) is represented by a dot-node junction of three thin solid lines which correspond to \(\rket{a \alpha}, \rket{b \beta}\) and \(\rket{c \gamma}\). The sign of the node determines the cyclic order of arguments, i.e., the sequence of coupling of momenta: plus corresponds to the anticlockwise one.
 
-The $3 j, 6 j$, and $9 j$ symbols, or, more generally speaking, the $3 n j$ symbols, may be represented graphically by closed diagrams without external lines because they are invariant under coordinate rotation. Such closed diagrams consist of $3 n j$-lines connected in $2 n$ dot nodes by three's, because the $3 n j$ symbols are actually the sums of $2 n$ various $3 j m$ symbols (Sec.~\ref{sec:10.13}). Any $3 n j$ symbol may be represented by several equivalent diagrams which differ in the arrow directions of internal the $j$ lines and in the node signs since each $3 n j$ symbol may be expressed through different sums of products of the 3 jm symbols; such sums turn into one another by replacing summation indices.
+The \(3 j\), \(6 j\), and \(9 j\) symbols, or, more generally speaking, the \(3 n j\) symbols, may be represented graphically by closed diagrams without external lines because they are invariant under coordinate rotation. Such closed diagrams consist of \(3 n j\)-lines connected in \(2 n\) dot nodes by three's, because the \(3 n j\) symbols are actually the sums of \(2 n\) various \(3 j m\) symbols (Sec.~\ref{sec:10.13}). Any \(3 n j\) symbol may be represented by several equivalent diagrams which differ in the arrow directions of internal the \(j\) lines and in the node signs since each \(3 n j\) symbol may be expressed through different sums of products of the \(3 jm\) symbols; such sums turn into one another by replacing summation indices.
 
-Matrix elements of the rotation operator in the $\Omega$-representation, $\braOket{\Omega}{\hat{R}}{\Omega^{\prime}}=\delta\left(\Omega-\hat{R} \Omega^{\prime}\right)$, and in the $j m$ representation, $\braOket{j m}{\widehat{R}}{j^{\prime} m^{\prime}}=\delta_{j j^{\prime}} D_{m m^{\prime}}^{j}(R)$, are displayed as junctions of three lines. One of them is a double dashed $R$-line and the two others are either dashed lines corresponding to $\left|\Omega^{\prime}\right\rangle$ and $\langle\Omega|$ states, or thin solid lines corresponding to $\left|j^{\prime} m^{\prime}\right\rangle$ and $\langle j m|$ states. The sign of the junction node determines the order of arguments; strictly speaking, it shows which of two states is initial and which is final. Plus corresponds to the anticlockwise reading of arguments, and minus to the clockwise one. Therefore, a sign reversal means conversion from the rotation $R$ to the inverse rotation $R^{-1}$.
+Matrix elements of the rotation operator in the \(\Omega\)-representation, \(\braOket{\Omega}{\hat{R}}{\Omega^{\prime}}=\delta\left(\Omega-\hat{R} \Omega^{\prime}\right)\), and in the \(j m\) representation, \(\braOket{j m}{\widehat{R}}{j^{\prime} m^{\prime}}=\delta_{j j^{\prime}} D_{m m^{\prime}}^{j}(R)\), are displayed as junctions of three lines. One of them is a double dashed \(R\)-line and the two others are either dashed lines corresponding to \(\left|\Omega^{\prime}\right\rangle\) and \(\langle\Omega|\) states, or thin solid lines corresponding to \(\left|j^{\prime} m^{\prime}\right\rangle\) and \(\langle j m|\) states. The sign of the junction node determines the order of arguments; strictly speaking, it shows which of two states is initial and which is final. Plus corresponds to the anticlockwise reading of arguments, and minus to the clockwise one. Therefore, a sign reversal means conversion from the rotation \(R\) to the inverse rotation \(R^{-1}\).
 
-Matrix elements of any irreducible tensor operator $\braOket{\Psi}{T_{\lambda \mu}}{\Psi^{\prime}}$ are represented by a block with three external lines corresponding to $\langle\Psi|,\left|\Psi^{\prime}\right\rangle$ and $|\lambda \mu\rangle$; the operator symbol (and other possible quantum numbers) are indicated inside the block.
+Matrix elements of any irreducible tensor operator \(\braOket{\Psi}{T_{\lambda \mu}}{\Psi^{\prime}}\) are represented by a block with three external lines corresponding to \(\langle\Psi|,\left|\Psi^{\prime}\right\rangle\) and \(|\lambda \mu\rangle\); the operator symbol (and other possible quantum numbers) are indicated inside the block.
 
 \begin{table}[ptbh!]
 \begin{center}
-\captionsetup{justification=centering,labelformat=empty}
-\caption{Table 11.1. Basic Elements of Diagrams.}
+\captionsetup{justification=centering}%,labelformat=empty}
+\caption{Basic Elements of Diagrams.}\label{tab:11:1}
 \renewcommand{\arraystretch}{1.5}
 \begin{tabular}{@{}p{0.65\textwidth}c@{}}
 \hline
 {Analytical Expression} & Graphical Representation \\
 \hline
-\multicolumn{2}{c}{$jm$-State Vector}\\
-"ket"  \( \begin{aligned} & \ket{j m} \\ & \rket{j m} \end{aligned} \) & \includegraphics[valign=c]{fig11_1_9}
+\multicolumn{2}{c}{\(jm\)-State Vector}\\
+``ket''  \( \begin{aligned} & \ket{j m} \\ & \rket{j m} \end{aligned} \) & \includegraphics[valign=c]{fig11_1_9}
 \\
-"bra"  \( \begin{aligned} & \bra{j m} \\ & \rbra{j m} \end{aligned} \) & 
+``bra''  \( \begin{aligned} & \bra{j m} \\ & \rbra{j m} \end{aligned} \) & 
 \includegraphics[valign=c]{fig11_1_10}  \\
-\multicolumn{2}{c}{Kronecker $\delta$-Symbol}\\
-$ \braket{j m}{j^{\prime} m^{\prime}}=\delta_{j j^{\prime}} \delta_{m m^{\prime}}$ &
+\multicolumn{2}{c}{Kronecker \(\delta\)-Symbol}\\
+\( \braket{j m}{j^{\prime} m^{\prime}}=\delta_{j j^{\prime}} \delta_{m m^{\prime}}\) &
 \includegraphics[valign=c]{fig11_1_11}
  \\
-$ \rbraket{j m}{j^{\prime} m^{\prime}}=\frac{\delta_{j j^{\prime}} \delta_{m m^{\prime}}}{2 j+1}
-$ &
+\( \rbraket{j m}{j^{\prime} m^{\prime}}=\frac{\delta_{j j^{\prime}} \delta_{m m^{\prime}}}{2 j+1}
+\) &
 \includegraphics[valign=c]{fig11_1_12}
  \\
-\multicolumn{2}{c}{$\Omega$-State Vector}\\
-"ket"  \( \begin{aligned} & \ket{\Omega} \\ & \rket{\Omega} \end{aligned} \) & \includegraphics[valign=c]{fig11_1_13}
+\multicolumn{2}{c}{\(\Omega\)-State Vector}\\
+``ket''  \( \begin{aligned} & \ket{\Omega} \\ & \rket{\Omega} \end{aligned} \) & \includegraphics[valign=c]{fig11_1_13}
 \\
-"bra"  \( \begin{aligned} & \bra{\Omega} \\ & \rbra{\Omega} \end{aligned} \) & 
+``bra''  \( \begin{aligned} & \bra{\Omega} \\ & \rbra{\Omega} \end{aligned} \) & 
 \includegraphics[valign=c]{fig11_1_14}  \\
-\multicolumn{2}{c}{Dirac $\delta$-function}\\
-$ \braket{\Omega}{\Omega^{\prime}}=\delta(\Omega-\Omega')$ &
+\multicolumn{2}{c}{Dirac \(\delta\)-function}\\
+\( \braket{\Omega}{\Omega^{\prime}}=\delta(\Omega-\Omega')\) &
 \includegraphics[valign=c]{fig11_1_15}
  \\
-$ \rbraket{\Omega}{\Omega^{\prime}}={\delta(\Omega-\Omega')}{4 \pi}
-$ &
+\( \rbraket{\Omega}{\Omega^{\prime}}={\delta(\Omega-\Omega')}{4 \pi}
+\) &
 \includegraphics[valign=c]{fig11_1_16}
- \\$ \braket{\Omega _1\Omega_2}{\Omega}=\delta(\Omega_1-\Omega)\delta(\Omega_2-\Omega)$ &
+ \\\( \braket{\Omega _1\Omega_2}{\Omega}=\delta(\Omega_1-\Omega)\delta(\Omega_2-\Omega)\) &
 \includegraphics[valign=c]{fig11_1_17}
  \\
  \multicolumn{2}{c}{Spherical Harmonics}\\
-$ \braket{\Omega}{lm}=Y_{lm}(\Omega)$ &
+\( \braket{\Omega}{lm}=Y_{lm}(\Omega)\) &
 \includegraphics[valign=c]{fig11_1_18}
  \\
- $ \braket{lm}{\Omega}=Y^*_{lm}(\Omega)$ &
+ \( \braket{lm}{\Omega}=Y^*_{lm}(\Omega)\) &
 \includegraphics[valign=c]{fig11_1_19}
  \\
-$ \rbraket{\Omega}{lm}=C_{lm}(\Omega)$ &
+\( \rbraket{\Omega}{lm}=C_{lm}(\Omega)\) &
 \includegraphics[valign=c]{fig11_1_20}
  \\
-$ \rbraket{lm}{\Omega}=C_{lm}^*(\Omega)$ & 
+\( \rbraket{lm}{\Omega}=C_{lm}^*(\Omega)\) & 
 \includegraphics[valign=c]{fig11_1_21}
  \\
 \multicolumn{2}{c}{Clebsch-Gordan Coefficients}\\
-$ \clebsch{j_1}{m_1}{j_2}{m_2}{J}{M}=\braket{j_1 m_1 j_2 m_2}{j_1 j_2 J M}=\braket{j_1j_2JM}{j_1 m_1 j_2 m_2}$ &
-\includegraphics[valign=c]{fig11_1_22}$=$\includegraphics[valign=c]{fig11_1_23}\\
-&$=$\includegraphics[valign=c]{fig11_1_24}$=$
-\includegraphics[valign=c]{fig11_1_25}
+\( \clebsch{j_1}{m_1}{j_2}{m_2}{J}{M}=\braket{j_1 m_1 j_2 m_2}{j_1 j_2 J M}=\braket{j_1j_2JM}{j_1 m_1 j_2 m_2}\) &
+\includegraphics[valign=c]{fig11_1_22c}
 \end{tabular}
 \end{center}
 \end{table}
@@ -148,26 +146,26 @@ $ \clebsch{j_1}{m_1}{j_2}{m_2}{J}{M}=\braket{j_1 m_1 j_2 m_2}{j_1 j_2 J M}=\brak
 \begin{table}[ptbh!]
 \begin{center}
 \captionsetup{justification=centering,labelformat=empty}
-\caption*{Table 11.1. (Cont'd).}
+\caption*{Table \ref{tab:11:1}. (Cont'd).}
 \renewcommand{\arraystretch}{1.5}
 \begin{tabular}{@{}p{0.65\textwidth}c@{}}
 \hline
 {Analytical Expression} & Graphical Representation \\
 \hline
-\multicolumn{2}{c}{Wigner $3jm$ Symbols}\\
-$ \threej{j_1}{n_1}{j_2}{m_2}{j_3}{m_3}=\rbraket{j_1 m_1 j_2 m_2 j_3 m_3}{00}=\rbraket{00}{j_1 m_1 j_2 m_2 j_3 m_3}$ &
-\includegraphics[valign=c]{fig11_1_26}$=$\includegraphics[valign=c]{fig11_1_27}\\
-&$=$\includegraphics[valign=c]{fig11_1_28}$=$
-\includegraphics[valign=c]{fig11_1_29}\\
+\multicolumn{2}{c}{Wigner \(3jm\) Symbols}\\
+\( \threej{j_1}{n_1}{j_2}{m_2}{j_3}{m_3}=\rbraket{j_1 m_1 j_2 m_2 j_3 m_3}{00}=\rbraket{00}{j_1 m_1 j_2 m_2 j_3 m_3}\) &
+\includegraphics[valign=c]{fig11_1_26c}\\
 \multicolumn{2}{c}{Metric tensor}\\
-$\binom{j}{m m^{\prime}}=(-1)^{j+m} \delta_{m,-m^{\prime}}$&
-\metric{jm}{j'm'}{k}$=$
-\metric{jm}{j'm'}{b}
- \\
-$\binom{j}{m^{\prime} m}=(-1)^{j-m} \delta_{-m, m^{\prime}}$&
-\metric{jm}{j'm'}{b}
-$=$
-\metric{jm}{j'm'}{k}\\
+\(\displaystyle\binom{j}{m m^{\prime}}=(-1)^{j+m} \delta_{m,-m^{\prime}}\)&
+%NOTE metric generates tikz--also, these diagrams are not all correct!!
+%Needs
+\metric{jm}{j'm'}{k}
+\(=\)\metric{jm}{j'm'}{b}
+ \\[1em]
+\(\displaystyle\binom{j}{m^{\prime} m}=(-1)^{j-m} \delta_{-m, m^{\prime}}\)&
+\metric[r]{jm}{j'm'}{b}
+\(=\)
+\metric[r]{jm}{j'm'}{k}\\
 \hline
 \end{tabular}
 \end{center}
@@ -177,52 +175,38 @@ $=$
 
 
 
-\begin{table}[tbh!]
+\begin{table}[tbph!]
 \begin{center}
-\captionsetup{justification=centering,labelformat=empty}
-\caption{Table 11.2. Invariant Functions.}
+\captionsetup{justification=centering}%,labelformat=empty}
+\caption{Invariant Functions.}\label{tab:11.2}
 \renewcommand{\arraystretch}{1.5}
 \begin{tabular}{@{}p{0.65\textwidth}c@{}}
 %\begin{tabular}{lc}
 \hline
 {Analytical Expression} & Graphical Representation \\
 \hline
-$(2 a+1)$ & \includegraphics[valign=c]{fig11_1_30}\\[1em]
-$\sqrt{2 a+1}$&
-\includegraphics[valign=c]{fig11_1_31}\\[1em]
-$\delta_{a b} $&
-\includegraphics[valign=c]{fig11_1_32}\\[1em]
-$\frac{\delta_{a b} \delta_{bc}}{\sqrt{2 a+1}}$&
-\includegraphics[valign=c]{fig11_1_33}\\[1em]
-$\frac{\delta_{a} \delta_{b a} \delta_{c d}}{(2 a+1)}$&
-\includegraphics[valign=c]{fig11_1_34}\\
-\multicolumn{2}{c}{$3 j$ Symbol}\\
-$\{a b c\}$&
-\includegraphics[valign=c]{fig11_1_35}
-\end{tabular}
-\end{center}
-\end{table}
-
-
-\begin{table}[tbh!]
-\begin{center}
-\captionsetup{justification=centering,labelformat=empty,}
-\caption*{Table 11.2. Cnt'd.}
-\renewcommand{\arraystretch}{1.5}
-\begin{tabular}{p{0.65\linewidth-2\tabcolsep}m{0.35\linewidth-2\tabcolsep}}
-\hline
-{Analytical Expression} & Graphical Representation \\
-\hline
-\multicolumn{2}{c}{$6 j$ Symbol} \\
-$\sixj{a}{b}{c}{A}{B}{C}$ & \includegraphics[valign=c]{fig11_1_36}$=$\includegraphics[valign=c]{fig11_1_37} \\
-\multicolumn{2}{c}{$9 j$ Symbol} \\
-$\ninej{a_1}{a_2}{a_3}{b_1}{b_2}{b_3}{c_1}{c_2}{c_3}$ & \includegraphics[valign=c]{fig11_1_38}
+\((2 a+1)\) & \includegraphics[valign=t]{fig11_1_30}\\[1em]
+\(\sqrt{2 a+1}\)&
+\includegraphics[valign=t]{fig11_1_31}\\[1em]
+\(\delta_{a b} \)&
+\includegraphics[valign=t]{fig11_1_32}\\[1em]
+\(\displaystyle\frac{\delta_{a b} \delta_{bc}}{\sqrt{2 a+1}}\)&
+\includegraphics[valign=t]{fig11_1_33}\\[1em]
+\(\displaystyle\frac{\delta_{a} \delta_{b a} \delta_{c d}}{(2 a+1)}\)&
+\includegraphics[valign=t]{fig11_1_34}\\
+\multicolumn{2}{c}{\(3 j\) Symbol}\\
+\(\{a b c\}\)&
+\includegraphics[valign=t]{fig11_1_35}\\
+\multicolumn{2}{c}{\(6 j\) Symbol} \\
+\(\sixj{a}{b}{c}{A}{B}{C}\) & \includegraphics[valign=t]{fig11_1_36c} \\
+\multicolumn{2}{c}{\(9 j\) Symbol} \\
+\(\ninej{a_1}{a_2}{a_3}{b_1}{b_2}{b_3}{c_1}{c_2}{c_3}\) & \includegraphics[valign=t]{fig11_1_38}
  \\
- \multicolumn{2}{c}{$12 j$(I) Symbol} \\
- $\twelvejI{a_1,a_2,a_3,a_4,b_1,b_2,b_3,b_4,c_1,c_2,c_3,c_4}$& \includegraphics[valign=c]{fig11_1_39}$=$\includegraphics[valign=c]{fig11_1_40}
+ \multicolumn{2}{c}{\(12 j\)(I) Symbol} \\
+ \(\twelvejI{a_1,a_2,a_3,a_4,b_1,b_2,b_3,b_4,c_1,c_2,c_3,c_4}\)& \includegraphics[valign=c]{fig11_1_39c}
  \\
- \multicolumn{2}{c}{$12 j$(II) Symbol} \\
-$\twelvejII{c2,b_3,a_4,c_3,a_2,b_4,b_2,a_3,c_4,a_1,b_1,c_1}$& \includegraphics[valign=c]{fig11_1_41}$=$\includegraphics[valign=c]{fig11_1_42}
+ \multicolumn{2}{c}{\(12 j\)(II) Symbol} \\
+\(\twelvejII{c2,b_3,a_4,c_3,a_2,b_4,b_2,a_3,c_4,a_1,b_1,c_1}\)& \includegraphics[valign=c]{fig11_1_41c}
  \\
  \hline
 \end{tabular}
@@ -230,26 +214,30 @@ $\twelvejII{c2,b_3,a_4,c_3,a_2,b_4,b_2,a_3,c_4,a_1,b_1,c_1}$& \includegraphics[v
 \end{table}
 \begin{table}[ptbh!]
 \begin{center}
-\captionsetup{justification=centering,labelformat=empty}
-\caption{Table 11.3. Matrix Elements.}
+\captionsetup{justification=centering}%,labelformat=empty}
+\caption{Matrix Elements.}\label{Tab:11.3}
 \renewcommand{\arraystretch}{1.5}
-\begin{tabular}{@{}p{0.65\textwidth}c@{}}
+\begin{tabular}{@{}p{0.5\textwidth}c@{}}
 \hline
 {Analytical Expression} & Graphical Representation \\
 \hline
 \multicolumn{2}{c}{Irreducible Tensor Operator}\\
-$\Omega$-Representation  
-\[\braOket{\gamma \Omega}{\mathfrak{M}_{\lambda \mu}}{\gamma^{\prime} \Omega^{\prime}}\] & 
-\includegraphics[valign=c]{fig11_1_43}\\
-$\gamma$ denotes all quantum numbers except $\Omega$\\
+\(\Omega\)-Representation  \\
+\[\braOket{\gamma \Omega}{\mathfrak{M}_{\lambda \mu}}{\gamma^{\prime} \Omega^{\prime}}\] 
+\(\gamma\) denotes all quantum numbers except \(\Omega\)
+& 
+\includegraphics[valign=t]{fig11_1_43}\\
 Adjoint Matrix \[\braOket{\gamma \Omega}{\mathfrak{M}_{\lambda \mu}^{+}}{\gamma^{\prime} \Omega^{\prime}}=(-1)^{\lambda-\mu}\braOket{\gamma'\Omega'}{\mathfrak{M}_{\lambda-\mu}}{\gamma\Omega}^*\] & 
-\includegraphics[valign=c]{fig11_1_44}\\
-$jm$-Representation \[\braOket{\gamma j m}{\mathfrak{M}_{\lambda \mu}}{\gamma^{\prime} j^{\prime} m^{\prime}}\] & 
-\includegraphics[valign=c]{fig11_1_45}\\
-$\gamma$ denotes all quantum numbers except $jm$\\
-Adjoint Matrix \[\braOket{\gamma j m}{\mathfrak{M}_{\lambda \mu}^{+}}{\gamma^{\prime} j^{\prime} m^{\prime}}=(-1)^{\lambda-\mu}\braOket{\gamma'j'm'}{\mathfrak{M}_{\lambda-\mu}}{\gamma jm}^*\] & 
-\includegraphics[valign=c]{fig11_1_46}\\ 
-Reduced Matrix Element
+\includegraphics[valign=t]{fig11_1_44}\\
+\(jm\)-Representation\\
+ \[\braOket{\gamma j m}{\mathfrak{M}_{\lambda \mu}}{\gamma^{\prime} j^{\prime} m^{\prime}}\] 
+\(\gamma\) denotes all quantum numbers except \(jm\)
+& 
+\includegraphics[valign=t]{fig11_1_45}\\
+Adjoint Matrix\\
+ \[\braOket{\gamma j m}{\mathfrak{M}_{\lambda \mu}^{+}}{\gamma^{\prime} j^{\prime} m^{\prime}}=(-1)^{\lambda-\mu}\braOket{\gamma'j'm'}{\mathfrak{M}_{\lambda-\mu}}{\gamma jm}^*\] & 
+\includegraphics[valign=t]{fig11_1_46}\\ 
+Reduced Matrix Element\\
 \[
 \begin{aligned}
 % PROOFREAD: reduced m.e. bracket convention -- book prints round parens (a||O||b); \braOketred renders angle. Kept angle here per instruction; revisit vs the round \rbraOketred used in Tables 11.14/11.15.
@@ -257,41 +245,20 @@ Reduced Matrix Element
 & \times\threej{j}{\lambda}{j^{\prime}}{-m}{\mu}{m^{\prime}}
 \end{aligned}
 \] &
-\includegraphics[valign=c]{fig11_1_47}\\
-\hline
-\end{tabular}
-\end{center}    
-\end{table}
-
-
-
-
-
-\begin{table}[ptbh!]
-\begin{center}
-\captionsetup{justification=centering,labelformat=empty}
-\renewcommand{\arraystretch}{1.5}
-\caption*{Table 11.3. Cnt'd}
-\begin{tabular}{@{}p{0.65\textwidth}c@{}}
-\hline
-{Analytical Expression} & Graphical Representation \\
-\hline
+\includegraphics[valign=t]{fig11_1_47}\\
 \multicolumn{2}{c}{Rotation Operator} \\
-$\Omega$ representation\\
-$\braOket{\gamma'\Omega'}{D(R)}{\gamma\Omega}=\delta_{\gamma\gamma'}(\Omega'-R\Omega)$&
-\includegraphics[valign=c]{fig11_1_48}
-$=$
-\includegraphics[valign=c]{fig11_1_49}
+\(\Omega\) representation\\
+\[\braOket{\gamma'\Omega'}{D(R)}{\gamma\Omega}=\delta_{\gamma\gamma'}(\Omega'-R\Omega)\]
+&
+\includegraphics[valign=t]{fig11_1_48c}
 \\
-$jm$-Representation\\
-$\braOket{\gamma j m}{D(R)}{\gamma^{\prime} j^{\prime} m^{\prime}}=\delta_{\gamma \gamma^{\prime}} \delta_{j j^{\prime}} D_{m m^{\prime}}^{j}(R)$ & \includegraphics[valign=c]{fig11_1_50}
-$=$
-\includegraphics[valign=c]{fig11_1_51}
+\(jm\)-Representation\\
+\[\braOket{\gamma j m}{D(R)}{\gamma^{\prime} j^{\prime} m^{\prime}}=\delta_{\gamma \gamma^{\prime}} \delta_{j j^{\prime}} D_{m m^{\prime}}^{j}(R)\] 
+& \includegraphics[valign=t]{fig11_1_50c}
  \\
 Inverse Rotation Matrix   \\
-\( \begin{gathered} \braOket{\gamma j m}{D^{+}(R)}{\gamma^{\prime} j^{\prime} m^{\prime}}=\delta_{\gamma \gamma^{\prime}} \delta_{j j^{\prime}} D_{m^{\prime} m}^{j *}(R) \\ =\braOket{\gamma j m}{D^{-1}(R)}{\gamma^{\prime} j^{\prime} m^{\prime}}=\delta_{\gamma \gamma^{\prime}} \delta_{j j^{\prime}} D_{m m^{\prime}}^{j}\left(R^{-1}\right)\end{gathered} \) & \includegraphics[valign=c]{fig11_1_52}
-$=$
-\includegraphics[valign=c]{fig11_1_53}
+\[ \begin{gathered} \braOket{\gamma j m}{D^{+}(R)}{\gamma^{\prime} j^{\prime} m^{\prime}}=\delta_{\gamma \gamma^{\prime}} \delta_{j j^{\prime}} D_{m^{\prime} m}^{j *}(R) \\ =\braOket{\gamma j m}{D^{-1}(R)}{\gamma^{\prime} j^{\prime} m^{\prime}}=\delta_{\gamma \gamma^{\prime}} \delta_{j j^{\prime}} D_{m m^{\prime}}^{j}\left(R^{-1}\right)\end{gathered} \] & 
+\includegraphics[valign=t]{fig11_1_52c}
  \\
 \hline
 \end{tabular}
@@ -302,73 +269,67 @@ $=$
 Expressions which occur in calculations based on the quantum theory of angular momentum have a specific character. They contain spin angular variables of two kinds, i.e., external and internal ones.
 \begin{enumerate}
 \item External variables are actual arguments of the expression under consideration. The evaluation of an expression does not involve any integration or summation over external variables, i.e., they appear as fixed (but, in principle, changeable) parameters.
-\item Internal variables are those over which integration or summation is assumed. It is essential that each internal variable which enters an expression inherent in the theory corresponds to some scalar product $|\Psi\rangle\langle\Psi|$. This is why one does not need to take into account any transformation of internal variables under rotation of the coordinate system. This specific feature is important for practical calculations.
+\item Internal variables are those over which integration or summation is assumed. It is essential that each internal variable which enters an expression inherent in the theory corresponds to some scalar product \(|\Psi\rangle\langle\Psi|\). This is why one does not need to take into account any transformation of internal variables under rotation of the coordinate system. This specific feature is important for practical calculations.
 \end{enumerate}
 In other words, quantum mechanical problems are mainly concerned with invariant integration and/or summation of bilinear forms over total ranges of all internal variables. Accordingly, the graphical method under consideration may be applied only to the expressions of such a type.
 
 This section describes the graphical representation of those analytic operations which are specific to angular momentum theory, while the rules of calculations by the graphical method will be formulated in the next section.
 
 \subsection{Multiplication}\label{sec:11.2.1}
-The product (direct product) of factors \normalsize$\mathfrak{M}$ and \normalsize$\mathfrak{N}$ is represented graphically by unlinked subdiagrams (blocks) which correspond to factors \normalsize$\mathfrak{M}$ and \normalsize$\mathfrak{N}$. The mutual disposition and orientation of these subdiagrams are inessential. For example, the product
+The product (direct product) of factors \normalsize\(\mathfrak{M}\) and \normalsize\(\mathfrak{N}\) is represented graphically by unlinked subdiagrams (blocks) which correspond to factors \normalsize\(\mathfrak{M}\) and \normalsize\(\mathfrak{N}\). The mutual disposition and orientation of these subdiagrams are inessential. For example, the product
 \[
 \threej{A}{B}{C}{\alpha}{\beta}{\gamma}\sixj{A}{B}{C}{a}{b}{c}
 \]
 may be represented by\\
 \begin{center}
-  \includegraphics[valign=c]{fig11_2_1}
-\includegraphics[valign=c]{fig11_2_2}
+  \includegraphics[valign=t]{fig11_2_1c}
 \end{center}
 
 \subsection{Invariant Summation over Projections}\label{sec:11.2.2}
-The scalar product of two irreducible tensors of rank $j$, \normalsize$\mathfrak{M}_{j m}$ and \normalsize$\mathfrak{N}_{j m}$, i.e., the sum of bilinear combinations over all possible values of the projection $m$
+The scalar product of two irreducible tensors of rank \(j\), \normalsize\(\mathfrak{M}_{j m}\) and \normalsize\(\mathfrak{N}_{j m}\), i.e., the sum of bilinear combinations over all possible values of the projection \(m\)
 \[
-\sum_{m=-j}^{j}\braOket{}{\mathfrak{M}}{j m}\braOket{j m}{\mathfrak{N}},
+\sum_{m=-j}^{j}\braOket{}{\mathfrak{M}}{j m}\braOket{j m}{\mathfrak{N}}{},
 \]
 % PROOFREAD: OCR-garbled -- \mathfrak{W} is likely \mathfrak{M}; empty-bra \langle| covariant form; \Re likely \mathfrak{N}.
-is represented by the conjunction (closure) of $\ket{j m}$ - and $\rbra{j m}$-lines of subdiagrams corresponding to $\langle | \mathfrak{M} \rket{j m}$ and $\braket{j m}{\mathfrak{N}}$\\
+is represented by the conjunction (closure) of \(\ket{j m}\) - and \(\rbra{j m}\)-lines of subdiagrams corresponding to \(\langle | \mathfrak{M} \rket{j m}\) and \(\braket{j m}{\mathfrak{N}}\)\\
 \begin{center}
-\includegraphics[valign=c]{fig11_2_3}
+\includegraphics[valign=t]{fig11_2_3}
 \end{center}
 
-The resultant linking $j$-line has the same direction as the original $\ket{j m}$ - and $\bra{j m}$-lines.\\
-For example, the sum of product of two $3jm$ symbols over two projections, $\alpha$ and $\beta$
+The resultant linking \(j\)-line has the same direction as the original \(\ket{j m}\) - and \(\bra{j m}\)-lines.\\
+For example, the sum of product of two \(3jm\) symbols over two projections, \(\alpha\) and \(\beta\)
 \[
 \sum_{\alpha, \beta}\threej{a}{b}{c}{\alpha}{\beta}{\gamma}\threej{a}{b}{c^{\prime}}{\alpha}{\beta}{\gamma^{\prime}}=\sum_{\alpha, \beta}(-1)^{a-\alpha+b-\beta+c-\gamma}\threej{a}{b}{c}{-\alpha}{-\beta}{-\gamma}\threej{a}{b}{c^{\prime}}{\alpha}{\beta}{\gamma^{\prime}}
 \]
-may be displayed as
-\[\sum_{\alpha,\beta}
-\vcenter{\hbox{
-    \includegraphics[valign=c]{fig11_2_4}
+may be displayed as\\
+\centerline{
+      \includegraphics[valign=t]{fig11_2_4c}
     }
-}
-\vcenter{\hbox{\includegraphics[valign=c]{fig11_2_5}}}
-=
-\vcenter{\hbox{\includegraphics[valign=c]{fig11_2_6}}}
-\]
-% PROOFREAD: OCR-garbled covariant/contravariant forms -- empty-bra \langle| notation and delimiter fixes reconstructed; verify against Sec.~\ref{sec:3.1.8}.
-Thus, each internal $j$-line of a diagram represents a scalar product (contraction over $m$ ) of two irreducible tensors of rank $j$. To construct such a scalar product one of these tensors should be written in a covariant form $\langle | \mathfrak{M}\rket{j m} \equiv \mathfrak{M}_{j m}$ while the other should be written in the form $\bra{j m} \mathfrak{N}\rangle=(-1)^{j-m} \mathfrak{N}_{j-m}$ (Sec.~\ref{sec:3.1.8}). Graphically, this means that one of the corresponding subdiagrams has the external $\rket{j m}$-line (with single outward arrow) and the other has the  $\bra{j m}$-line (\emph{with}  double inward arrow).
 
-Two diagrams which differ only by the direction of an internal $j$-line, correspond to analytic expressions which differ only by the phase factor $(-1)^{2 j}$, because
+    % PROOFREAD: OCR-garbled covariant/contravariant forms -- empty-bra \langle| notation and delimiter fixes reconstructed; verify against Sec.~\ref{sec:3.1.8}.
+Thus, each internal \(j\)-line of a diagram represents a scalar product (contraction over \(m\) ) of two irreducible tensors of rank \(j\). To construct such a scalar product one of these tensors should be written in a covariant form \(\langle | \mathfrak{M}\rket{j m} \equiv \mathfrak{M}_{j m}\) while the other should be written in the form \(\bra{j m} \mathfrak{N}\rangle=(-1)^{j-m} \mathfrak{N}_{j-m}\) (Sec.~\ref{sec:3.1.8}). Graphically, this means that one of the corresponding subdiagrams has the external \(\rket{j m}\)-line (with single outward arrow) and the other has the  \(\bra{j m}\)-line (\emph{with}  double inward arrow).
+
+Two diagrams which differ only by the direction of an internal \(j\)-line, correspond to analytic expressions which differ only by the phase factor \((-1)^{2 j}\), because
 \[
 \sum_{m}(-1)^{j-m} \mathfrak{M}_{j m} \mathfrak{N}_{j-m}=(-1)^{2 j} \sum_{m}(-1)^{j-m} \mathfrak{M}_{j-m} \mathfrak{N}_{j m} .
 \]
-One should especially mention the entirely invariant sums of products of two, four, six, or more $3 j m$ symbols over all projections. Corresponding diagrams are closed with respect to all $j$-lines. These sums represent the Wigner $3 n j$ symbols (Table~11.4).
+One should especially mention the entirely invariant sums of products of two, four, six, or more \(3 j m\) symbols over all projections. Corresponding diagrams are closed with respect to all \(j\)-lines. These sums represent the Wigner \(3 n j\) symbols (Table~11.4).
 
-\begin{table}[ptbh!]
+\begin{table}[tbhp!]
 \begin{center}
-\captionsetup{justification=centering,labelformat=empty}
+\captionsetup{justification=centering}%,labelformat=empty}
 \renewcommand{\arraystretch}{1.5}
-\caption{Table 11.4. Sums of $3 j m$ Symbol Products.}
+\caption{Sums of \(3 j m\) Symbol Products.}\label{tab:11.4}
 \small 
-\begin{tabular}{@{}p{0.8\textwidth}c@{}}
+\begin{tabular}{@{}p{0.8\textwidth}>{\centering\arraybackslash}m{0.2\textwidth}@{}}
 \hline
 {Analytical Expression} & Graphical Representation \\
 \hline
-\multicolumn{2}{c}{$3j$ Symbol}\\
+\multicolumn{2}{c}{\(3j\) Symbol}\\
 \[
 \sum_{\mu_{i}}\threej{j_{1}}{j_{2}}{j_{3}}{\mu_{1}}{\mu_{2}}{\mu_{3}}\threej{j_{1}}{j_{2}}{j_{3}}{\mu_{1}}{\mu_{2}}{\mu_{3}}=\sum_{\mu_{i}}(-1)^{j_{1}-\mu_{1}+j_{2}-\mu_{2}+j_{3}-\mu_{3}}\threej{j_{1}}{j_{2}}{j_{3}}{-\mu_{1}}{-\mu_{2}}{-\mu_{3}}\threej{j_{1}}{j_{2}}{j_{3}}{\mu_{1}}{\mu_{2}}{\mu_{3}}=\left\{j_{1} j_{2} j_{3}\right\}
 \] &
-\vspace*{2em}\includegraphics[valign=c]{fig11_2_7}
+\vspace*{2em}\includegraphics[valign=t]{fig11_2_7}
 \\
 \multicolumn{2}{c}{6j Symbol}\\
 \[
@@ -378,10 +339,8 @@ One should especially mention the entirely invariant sums of products of two, fo
 \times\threej{k_{1}}{k_{2}}{j_{3}}{-x_{1}}{x_{2}}{-\mu_{3}}=\sixj{j_{1}}{j_{2}}{j_{3}}{k_{1}}{k_{2}}{k_{3}}
 \end{gathered}
 \]&
-\begin{minipage}{3cm}
-\includegraphics[valign=c]{fig11_2_8}\\
-\includegraphics[valign=c]{fig11_2_9}
-\end{minipage}\\
+\includegraphics[valign=t]{fig11_2_8}\par
+\includegraphics[valign=t]{fig11_2_9}\\
 \multicolumn{2}{c}{9j Symbol}\\
 \[
 \begin{gathered}
@@ -391,7 +350,7 @@ One should especially mention the entirely invariant sums of products of two, fo
 \end{gathered}
 \]
 &
-\includegraphics[valign=c]{fig11_2_10}
+\includegraphics[valign=t]{fig11_2_10}
 \\
 \hline
 \end{tabular}
@@ -399,90 +358,86 @@ One should especially mention the entirely invariant sums of products of two, fo
 \end{table}
 
 \subsection{Summation over Angular Momentum}\label{sec:11.2.3}
-A thick $j$-line linking two subdiagrams, as in
+A thick \(j\)-line linking two subdiagrams, as in
 \begin{center}
-\includegraphics[valign=c]{fig11_2_11}
+\includegraphics[valign=t]{fig11_2_11}
 \end{center}
-represents the complete sum over $j$ and $m$ of scalar products of irreducible tensors of rank $j$
+represents the complete sum over \(j\) and \(m\) of scalar products of irreducible tensors of rank \(j\)
 \[
 \sum_{j=0}^{\infty} N_{j} \sum_{m=-j}^{j}\braOket{}{\mathfrak{M}}{j m}\braOket{j m}{\mathfrak{N}}{},
 \]
-where $N_{j}$ is the weight factor; $N_{j}=2 j+1$ for a summation involving the $3 j m$ symbols, $3 n j$ symbols and the\\
-functions of the type $D_{m m^{\prime}}^{j}(R), C_{j m}(\Omega) \equiv[4 \pi /(2 j+1)]^{1 / 2} Y_{j m}(\Omega)$, or $P_{j}(\cos \omega)$. On the other hand, $N_{j}=1$ for summations involving $\clebsch{j_{1}}{m_{1}}{j_{2}}{m_{2}}{j}{m}, U\left(j_{1} j_{2} j_{3} j_{4} ; j j^{\prime}\right)$, or $Y_{j m}(\Omega)$. For example,
+where \(N_{j}\) is the weight factor; \(N_{j}=2 j+1\) for a summation involving the \(3 j m\) symbols, \(3 n j\) symbols and the\\
+functions of the type \(D_{m m^{\prime}}^{j}(R), C_{j m}(\Omega) \equiv[4 \pi /(2 j+1)]^{1 / 2} Y_{j m}(\Omega)\), or \(P_{j}(\cos \omega)\). On the other hand, \(N_{j}=1\) for summations involving \(\clebsch{j_{1}}{m_{1}}{j_{2}}{m_{2}}{j}{m}, U\left(j_{1} j_{2} j_{3} j_{4} ; j j^{\prime}\right)\), or \(Y_{j m}(\Omega)\). For example,
 \[
 \begin{aligned}
-\sum_{e e}(2 e+1)(-1)^{e-}\threej{a}{b}{e}{\alpha}{\beta}{-\varepsilon}\threej{a^{\prime}}{b^{\prime}}{e}{\alpha^{\prime}}{\beta^{\prime}}{e} 
+\sum_{e \varepsilon}(2 e+1)(-1)^{e-\varepsilon}\threej{a}{b}{e}{\alpha}{\beta}{-\varepsilon}\threej{a^{\prime}}{b^{\prime}}{e}{\alpha^{\prime}}{\beta^{\prime}}{\varepsilon} 
 & &\vcenter{\hbox{
-    \includegraphics[valign=c]{fig11_2_12}
+    \includegraphics[valign=t]{fig11_2_12}
     }
 }
 \\
 \sum_{l m} Y_{l m}(\Omega) Y_{l m}^{*}(\Omega)=\braket{\Omega}{l m}\braket{l m}{\Omega^{\prime}} & &
-\vcenter{\hbox{\includegraphics[valign=c]{fig11_2_13}}}
+\vcenter{\hbox{\includegraphics[valign=t]{fig11_2_13}}}
 \\
 \sum_{C}(2 C+1)\sixj{A}{B}{C}{a}{b}{c}\sixj{A}{B}{C}{a}{b}{c^{\prime}} & &
-\vcenter{\hbox{\includegraphics[valign=c]{fig11_2_14}}}
+\vcenter{\hbox{\includegraphics[valign=t]{fig11_2_14}}}
 \end{aligned}
 \]
-A Clebsch-Gordan coefficient may be represented as a sum over $c^{\prime} \gamma^{\prime}$ of products of two $3 j m$ symbols (Table~11.10a)
+A Clebsch-Gordan coefficient may be represented as a sum over \(c^{\prime} \gamma^{\prime}\) of products of two \(3 j m\) symbols (Table~11.10a)
 \[
 \begin{aligned}
 \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} & \equiv\braket{a \alpha b \beta}{c \gamma}=(-1)^{a-b-c} \sum_{c^{\prime} \gamma^{\prime}}\left(2 c^{\prime}+1\right)\threej{a}{b}{c^{\prime}}{\alpha}{\beta}{\gamma^{\prime}}\threej{c^{\prime}}{c}{0}{\gamma^{\prime}}{\gamma}{0} \\
 & =(-1)^{2 a} \sum_{c^{\prime} \gamma^{\prime}}\left(2 c^{\prime}+1\right)(-1)^{a-\alpha+b-\beta+c^{\prime}-\gamma^{\prime}}\threej{b}{a}{c^{\prime}}{-\beta}{-\alpha}{-\gamma^{\prime}}\threej{c^{\prime}}{c}{0}{\gamma^{\prime}}{\gamma}{0},
 \end{aligned}
-\]
-\[{\scriptsize (-1)^{2a}}
 \vcenter{\hbox{
-    \includegraphics[valign=c]{fig11_2_15}
+    \includegraphics[valign=t]{fig11_2_15}
     }
 }
-\]
 \subsection{Invariant Integration over Directions}\label{sec:11.2.4}
 A double integral of a bilinear form
 \[
 \int\braOket{}{\mathfrak{N}}{\Omega} \frac{d \Omega}{\Omega_{0}}\braket{\Omega}{\mathfrak{N}},
 \]
-over the total solid angle $4 \pi(0 \leq \vartheta \leq \pi, 0 \leq \varphi<2 \pi)$ is represented by dashed $\Omega$-line which links $|\Omega\rangle$ - and $langle\Omega$-lines of subdiagrams corresponding to the integrand factors
+over the total solid angle \(4 \pi(0 \leq \vartheta \leq \pi, 0 \leq \varphi<2 \pi)\) is represented by dashed \(\Omega\)-line which links \(|\Omega\rangle\) - and \(\langle\Omega|\)-lines of subdiagrams corresponding to the integrand factors
 \[ \int
 \vcenter{\hbox{
-    \includegraphics[valign=c]{fig11_2_16}
+    \includegraphics[valign=t]{fig11_2_16}
     }
 }
 =
 \vcenter{\hbox{
-    \includegraphics[valign=c]{fig11_2_17}
+    \includegraphics[valign=t]{fig11_2_17}
     }
 }
 \]
-The resultant $\Omega$-line has the same direction as the original $\ket{\Omega}$ - and $\rbra{\Omega}$-lines. In this case $\Omega_{0}$ is the normalization constant; for integration of the standard spherical harmonics $\Omega_{0}=1$,
+The resultant \(\Omega\)-line has the same direction as the original \(\ket{\Omega}\) - and \(\rbra{\Omega}\)-lines. In this case \(\Omega_{0}\) is the normalization constant; for integration of the standard spherical harmonics \(\Omega_{0}=1\),
 \[
 \int Y_{l m}^{*}(\Omega) Y_{l^{\prime} m^{\prime}}(\Omega) d \Omega=\braket{l m}{\Omega}\left(\Omega\left|l^{\prime} m^{\prime}\right\rangle\right. ,
-\vcenter{\hbox{\includegraphics[valign=c]{fig11_2_18}}}\]
-whereas $\Omega_{0}=4 \pi$ for integration of the functions $C_{l m}(\Omega)=|4 \pi /(2 l+1)|^{1 / 2} Y_{l m}(\Omega)$.
+\vcenter{\hbox{\includegraphics[valign=t]{fig11_2_18}}}\]
+whereas \(\Omega_{0}=4 \pi\) for integration of the functions \(C_{l m}(\Omega)=|4 \pi /(2 l+1)|^{1 / 2} Y_{l m}(\Omega)\).
 
 \subsection{Integration over Rotation Parameters}\label{sec:11.2.5}
 
 
 \begin{table}[ptbh!]
 \begin{center}
-\captionsetup{justification=centering,labelformat=empty}
-\renewcommand{\arraystretch}{1.5}
-\caption{Table 11.5.\\
-Basic Operations of the Theory.}
+\captionsetup{justification=centering}
+\renewcommand{\arraystretch}{1.2}
+\caption{Basic Operations of the Theory.}\label{tab:11.5}
 \small 
-\begin{tabular}{@{}p{0.5\textwidth}|c@{}}
+\begin{tabular}{@{}>{\centering\arraybackslash}m{0.5\textwidth}m{0.5\textwidth}@{}}
 \hline
 {Analytical Expression} & Graphical Representation \\
 \hline
 \multicolumn{2}{c}{Multiplication}\\
-$\braket{}{\mathfrak{M}}\braOket{}{\mathfrak{N}}{}$ &
-  \includegraphics[valign=c]{fig11_2_19}
+\(\displaystyle \braket{}{\mathfrak{M}}\braOket{}{\mathfrak{N}}{}\) &
+  \includegraphics[valign=t]{fig11_2_19}
 \\
 \multicolumn{2}{c}{Invariant Summation over Momentum Projection}\\
 \multicolumn{2}{c}{(Scalar Product of irreducible tensors)}\\
 \[
 \sum_{m}\braOket{}{\mathfrak{N}}{j m}\braOket{j m}{\mathfrak{N}}{} \equiv\left(\mathfrak{N}_{j} \cdot \mathfrak{N}_{j}\right)\]
-&$\sum_{m}$\includegraphics[valign=c]{fig11_2_20}\ $=$\ \includegraphics[valign=c]{fig11_2_21}
+&\(\sum_{m}\)\includegraphics[valign=c]{fig11_2_20}\ \(=\)\ \includegraphics[valign=c]{fig11_2_21}
 \\
 \multicolumn{2}{c}{Complete Summation over Angular Momentum and Projection}\\
 \(
@@ -492,7 +447,7 @@ $\braket{}{\mathfrak{M}}\braOket{}{\mathfrak{N}}{}$ &
 \sum_{j m}|j m\rangle N_{j}\langle j m|=1
 \end{gathered}
 \)
-&$\displaystyle\sum_{j}$\includegraphics[valign=c]{fig11_2_22}\ $=$\ \includegraphics[valign=c]{fig11_2_23}
+&\(\displaystyle\sum_{j}\)\includegraphics[valign=c]{fig11_2_22}\ \(=\)\ \includegraphics[valign=c]{fig11_2_23}
 \\
 \multicolumn{2}{c}{Irreducible Tensor Product of Irreducible Tensors}\\
 \(
@@ -502,7 +457,7 @@ $\braket{}{\mathfrak{M}}\braOket{}{\mathfrak{N}}{}$ &
 \end{aligned}
 \)&
 \includegraphics[valign=c]{fig11_2_24}
-$=$
+\(=\)
 \includegraphics[valign=c]{fig11_2_25}
 \\
 \multicolumn{2}{c}{Complete Invariant Integration over Direction Angles}\\
@@ -511,40 +466,41 @@ $=$
 \]
 Completeness Condition  
 \[\int|\Omega\rangle d \Omega\langle\Omega|=1\]
-&$\int$\includegraphics[valign=c]{fig11_2_26}\ $=$\ \includegraphics[valign=c]{fig11_2_27}\\
+&\(\int\)\includegraphics[valign=c]{fig11_2_26}\ \(=\)\ \includegraphics[valign=c]{fig11_2_27}\\
 \multicolumn{2}{c}{Complete Integration over Rotation Parameters}\\
 \[
 \int\braOket{}{\mathfrak{M}(R^{-1})}{} \frac{d R}{R_{0}}
 \braOket{}{\mathfrak{N}(R)}{}
-\]\\
-Completeness Condition \\
+\]
+Completeness Condition 
 \[
 \int \hat{R}^{-1} \hat{R} \frac{d R}{R_{0}}=1
 \]
-&$\int$\includegraphics[valign=c]{fig11_2_28}\ $=$\ \includegraphics[valign=c]{fig11_2_29}
+&\(\int\)\includegraphics[valign=c]{fig11_2_28}\ \(=\)\ \includegraphics[valign=c]{fig11_2_29}\\
+\hline
 \end{tabular}
 \end{center}
 \end{table}
 
 
-The integration of a bilinear form with respect to parameters which specify the rotation $R$ (the Euler angles $\{\alpha, \beta, \gamma\}$ or the angles $\{\omega, \theta, \Phi\})$ over the entire domain of their definition $\left(R_{0} \equiv \int d R\right.$, see Sec.~\ref{sec:4.10})
+The integration of a bilinear form with respect to parameters which specify the rotation \(R\) (the Euler angles \(\{\alpha, \beta, \gamma\}\) or the angles \(\{\omega, \theta, \Phi\})\) over the entire domain of their definition \(\left(R_{0} \equiv \int d R\right.\), see Sec.~\ref{sec:4.10})
 \[
 % PROOFREAD: OCR-garbled operator integral -- empty-bra \langle| forms and mismatched \left/\right; reconstruct against orig.
 \left.\int\langle | \mathfrak{M}(R)\left\rangle\langle | \mathfrak{N}\left(R^{-1}\right)\right|\right\rangle \frac{d R}{R_{0}}
 \]
-may be represented by a conjunction of corresponding $R$ - and $R^{-1}$-lines of subdiagrams which display the integrand factors.
+may be represented by a conjunction of corresponding \(R\) - and \(R^{-1}\)-lines of subdiagrams which display the integrand factors.
 \[ \int
 \vcenter{\hbox{
-    \includegraphics[valign=c]{fig11_2_30}
+    \includegraphics[valign=t]{fig11_2_30}
     }
 }
 =
 \vcenter{\hbox{
-    \includegraphics[valign=c]{fig11_2_31}
+    \includegraphics[valign=t]{fig11_2_31}
     }
 }
 \]
-Note that integrals of three or more functions of $R$ may be reduced to standard bilinear forms, using the Clebsch-Gordan expansion.
+Note that integrals of three or more functions of \(R\) may be reduced to standard bilinear forms, using the Clebsch-Gordan expansion.
 
 \section{Rules of the graphical technique}\label{sec:11.3}
 In this section the rules of calculation by the graphical method will be formulated, specifically, the rules for the reduction of diagrams to standard diagrams which represent the basis functions of the angular momentum theory.
@@ -552,123 +508,123 @@ In this section the rules of calculation by the graphical method will be formula
 \subsection{Deformation of Diagrams}\label{sec:11.3.1}
 Expressions which appear in calculations based on the theory of angular momentum can be rather complicated. Corresponding diagrams consist of many lines, thin and thick, solid and dashed, single and double. These lines are partly linked to some nodes. One can clearly distinguish two types of lines: internal and external. Internal lines have both ends linked to nodes, whereas external lines have one end linked to a node but the other free. Any identical transformation of an analytic expression corresponds to some transformation of the internal lines of the diagram with external lines remaining unchanged.
 
-If the structure of the inner part of a diagram is unimportant, it may be replaced by a block with the same external lines, because these are just the external lines which determine the transformation properties of corresponding diagram (or sub-diagram) under rotation of the coordinate system. For instance, any closed diagram without external lines is invariant under such rotation and may be reduced to some of the $3 n j$ symbols or their combinations.
+If the structure of the inner part of a diagram is unimportant, it may be replaced by a block with the same external lines, because these are just the external lines which determine the transformation properties of corresponding diagram (or sub-diagram) under rotation of the coordinate system. For instance, any closed diagram without external lines is invariant under such rotation and may be reduced to some of the \(3 n j\) symbols or their combinations.
 
 As pointed out in Sec.~\ref{sec:11.1.1}, the length of the lines, their curvature and orientation are not important. Consequently, any diagram may be arbitrarily rotated and deformed, although the node signs have to be reversed for those nodes where the order of momentum coupling becomes changed.
 
 Thus, any deformation of a diagram performed under the proper check for the node signs does not change the meaning of the diagram, i.e., the deformed and original diagrams represent the same expression. Such diagrams will be called identical. An example of identical diagrams is given below:\\
 \[ 
 \vcenter{\hbox{
-    \includegraphics[valign=c]{fig11_3_1}
+    \includegraphics[valign=t]{fig11_3_1}
     }
 }
 =
 \vcenter{\hbox{
-    \includegraphics[valign=c]{fig11_3_2}
+    \includegraphics[valign=t]{fig11_3_2}
     }
 }
 =
 \vcenter{\hbox{
-    \includegraphics[valign=c]{fig11_3_3}
+    \includegraphics[valign=t]{fig11_3_3}
     }
 }
 =
 \vcenter{\hbox{
-    \includegraphics[valign=c]{fig11_3_4}
+    \includegraphics[valign=t]{fig11_3_4}
     }
 }
 \]
 Two diagrams will be called topologically similar, if it is possible to make them coincident by means of rotations, deformations and/or reflections. Topologically similar diagrams have the same numbers of nodes and of lines, solid and dashed, but they may differ by directions of lines and by node signs.
 
-The expressions corresponding to two topologically similar diagrams are equal in absolute value, but may differ by a phase factor. One may find this factor by means of successive reductions of one diagram to the other, i.e., by reversals of node signs and line directions (where necessary) in accordance with the rules formulated in Secs. 11.3.2 and 11.3.3. In this way one may reduce any diagram to the topologically similar diagram of some basis function of the theory, and determine the additional phase factor. Several examples of such transformation for the $3 j, 6 j$, and $9 j$ symbols are displayed in Table~11.6.
+The expressions corresponding to two topologically similar diagrams are equal in absolute value, but may differ by a phase factor. One may find this factor by means of successive reductions of one diagram to the other, i.e., by reversals of node signs and line directions (where necessary) in accordance with the rules formulated in Secs.~\ref{sec:11.3.2} and \ref{sec:11.3.3}. In this way one may reduce any diagram to the topologically similar diagram of some basis function of the theory, and determine the additional phase factor. Several examples of such transformation for the \(3 j, 6 j\), and \(9 j\) symbols are displayed in Table~11.6.
 
-\begin{table}[ptbh!]
+\begin{table}[tbhp!]
 \begin{center}
-\captionsetup{justification=centering,labelformat=empty}
-\caption{Table 11.6.\\ Symmetry of $3nj$ Symbol Diagrams.}
+\captionsetup{justification=centering}
+\caption{Symmetry of \(3nj\) Symbol Diagrams.}\label{tab:11.6}
 \label{chap11:tab:2}
 \renewcommand{\arraystretch}{1.5}
 \begin{tabular}{c}
   \hline
-$3j$ Symbol $\{a b c\}$\\[2pt]
+\(3j\) Symbol \(\{a b c\}\)\\[2pt]
 Reversal of Node Sign and Line Direction, and Argument Permutation\\[4pt]
 \begin{tabular}{ccccc}
 \includegraphics[valign=c]{fig11_3_5} & 
-$=(-1)^{a+b+c}$ & \includegraphics[valign=c]{fig11_3_6} 
-& $=(-1)^{a+b+c}$ & \includegraphics[valign=c]{fig11_3_7}\;$=$ \\[1.5em]
-\includegraphics[valign=c]{fig11_3_8} & $=$ 
-& \includegraphics[valign=c]{fig11_3_9} & $=(-1)^{2a}$ & \includegraphics[valign=c]{fig11_3_10}\end{tabular}\\
-$6j$ Symbol $\sixj{a}{b}{c}{A}{B}{C}$\\[6pt]
+\(=(-1)^{a+b+c}\) & \includegraphics[valign=c]{fig11_3_6} 
+& \(=(-1)^{a+b+c}\) & \includegraphics[valign=c]{fig11_3_7}\;\(=\) \\[1.5em]
+\includegraphics[valign=c]{fig11_3_8} & \(=\) 
+& \includegraphics[valign=c]{fig11_3_9} & \(=(-1)^{2a}\) & \includegraphics[valign=c]{fig11_3_10}\end{tabular}\\
+\(6j\) Symbol \(\sixj{a}{b}{c}{A}{B}{C}\)\\[6pt]
 \multicolumn{1}{l}{Reversal of Node Sign}\\[4pt]
-\includegraphics[valign=c]{fig11_3_11} $=(-1)^{2(A+B+C)}$
-\includegraphics[valign=c]{fig11_3_12} $=(-1)^{a+b+c}$
+\includegraphics[valign=c]{fig11_3_11} \(=(-1)^{2(A+B+C)}\)
+\includegraphics[valign=c]{fig11_3_12} \(=(-1)^{a+b+c}\)
 \includegraphics[valign=c]{fig11_3_13}\\[10pt]
 \multicolumn{1}{l}{Reversal of Line Direction}\\[4pt]
-\includegraphics[valign=c]{fig11_3_14} $=(-1)^{2(A+B+C)}$
-\includegraphics[valign=c]{fig11_3_15} $=$
-\includegraphics[valign=c]{fig11_3_16} $=(-1)^{2(A+B+C)}$
+\includegraphics[valign=c]{fig11_3_14} \(=(-1)^{2(A+B+C)}\)
+\includegraphics[valign=c]{fig11_3_15} \(=\)
+\includegraphics[valign=c]{fig11_3_16} \(=(-1)^{2(A+B+C)}\)
 \includegraphics[valign=c]{fig11_3_17}\\
 \begin{tabular}{cccc}
 \multicolumn{4}{c}{Argument Permutation}\\[4pt]
-\includegraphics[valign=c]{fig11_3_18} &$=$
-\includegraphics[valign=c]{fig11_3_19} &$=$
-\includegraphics[valign=c]{fig11_3_20} &$=$
-\includegraphics[valign=c]{fig11_3_21} $=$\\[1.5em]
-\includegraphics[valign=c]{fig11_3_22} &$=$
-\includegraphics[valign=c]{fig11_3_23} &$=$
-\includegraphics[valign=c]{fig11_3_24} &$=$
+\includegraphics[valign=c]{fig11_3_18} &\(=\)
+\includegraphics[valign=c]{fig11_3_19} &\(=\)
+\includegraphics[valign=c]{fig11_3_20} &\(=\)
+\includegraphics[valign=c]{fig11_3_21} \(=\)\\[1.5em]
+\includegraphics[valign=c]{fig11_3_22} &\(=\)
+\includegraphics[valign=c]{fig11_3_23} &\(=\)
+\includegraphics[valign=c]{fig11_3_24} &\(=\)
 \includegraphics[valign=c]{fig11_3_25}
 \end{tabular}
 \end{tabular}
 \end{center}
 \end{table}
 
-\begin{table}[ptbh!]
+\begin{table}[tbhp!]
 \begin{center}
-\captionsetup{justification=centering,labelformat=empty}
-\caption*{Table 11.6. (Cont'd)}
+\captionsetup{justification=centering}
+\caption*{Table \ref{tab:11.6}. (Cont'd)}
 \renewcommand{\arraystretch}{1.5}
 \begin{tabular}{cccc}
   \hline
   \multicolumn{4}{c}{
-$9j$ Symbol $\ninej{a_{1}}{a_{2}}{a_{3}}{c_{1}}{c_{2}}{c_{3}}{b_{1}}{b_{2}}{b_{3}}$}\\[6pt]
+\(9j\) Symbol \(\ninej{a_{1}}{a_{2}}{a_{3}}{c_{1}}{c_{2}}{c_{3}}{b_{1}}{b_{2}}{b_{3}}\)}\\[6pt]
 \multicolumn{4}{l}{Reversal of Node Sign}\\[4pt]
-\includegraphics[valign=c]{fig11_3_26} &$=$
-\includegraphics[valign=c]{fig11_3_27} &$=(-1)^{J_0}$
-\includegraphics[valign=c]{fig11_3_28} &$=(-1)^{J_0}$
+\includegraphics[valign=c]{fig11_3_26} &\(=\)
+\includegraphics[valign=c]{fig11_3_27} &\(=(-1)^{J_0}\)
+\includegraphics[valign=c]{fig11_3_28} &\(=(-1)^{J_0}\)
 \includegraphics[valign=c]{fig11_3_29}\\[10pt]
 \multicolumn{4}{l}{Reversal of Line Direction}\\[4pt]
-\includegraphics[valign=c]{fig11_3_30} &$=$
-\includegraphics[valign=c]{fig11_3_31} &$=(-1)^{2(a_2+b_3+c_1)}$
-\includegraphics[valign=c]{fig11_3_32} &$=(-1)^{2(a_2+b_3+c_1)}$
+\includegraphics[valign=c]{fig11_3_30} &\(=\)
+\includegraphics[valign=c]{fig11_3_31} &\(=(-1)^{2(a_2+b_3+c_1)}\)
+\includegraphics[valign=c]{fig11_3_32} &\(=(-1)^{2(a_2+b_3+c_1)}\)
 \includegraphics[valign=c]{fig11_3_33}\\
   \multicolumn{4}{l}{Argument Permutation}\\[4pt]
-\includegraphics[valign=c]{fig11_3_34} &$=$
-\includegraphics[valign=c]{fig11_3_35} &$=(-1)^{J_0}$
-\includegraphics[valign=c]{fig11_3_36} &$=(-1)^{J_0}$
+\includegraphics[valign=c]{fig11_3_34} &\(=\)
+\includegraphics[valign=c]{fig11_3_35} &\(=(-1)^{J_0}\)
+\includegraphics[valign=c]{fig11_3_36} &\(=(-1)^{J_0}\)
 \includegraphics[valign=c]{fig11_3_37}\\[1.5em]
-\includegraphics[valign=c]{fig11_3_38} &$=$
-\includegraphics[valign=c]{fig11_3_39} &$=(-1)^{J_0}$
-\includegraphics[valign=c]{fig11_3_40} &$=(-1)^{J_0}$
+\includegraphics[valign=c]{fig11_3_38} &\(=\)
+\includegraphics[valign=c]{fig11_3_39} &\(=(-1)^{J_0}\)
+\includegraphics[valign=c]{fig11_3_40} &\(=(-1)^{J_0}\)
 \includegraphics[valign=c]{fig11_3_41}\\[1.5em]
-\includegraphics[valign=c]{fig11_3_42} &$=$
-\includegraphics[valign=c]{fig11_3_43} &$=(-1)^{J_0}$
-\includegraphics[valign=c]{fig11_3_44} &$=(-1)^{J_0}$
+\includegraphics[valign=c]{fig11_3_42} &\(=\)
+\includegraphics[valign=c]{fig11_3_43} &\(=(-1)^{J_0}\)
+\includegraphics[valign=c]{fig11_3_44} &\(=(-1)^{J_0}\)
 \includegraphics[valign=c]{fig11_3_45}\\[6pt]
-\multicolumn{4}{l}{where $J_{0} \equiv a_{1}+a_{2}+a_{3}+b_{1}+b_{2}+b_{3}+c_{1}+c_{2}+c_{3}$}\\
+\multicolumn{4}{l}{where \(J_{0} \equiv a_{1}+a_{2}+a_{3}+b_{1}+b_{2}+b_{3}+c_{1}+c_{2}+c_{3}\)}\\
 \hline
 \end{tabular}
 \end{center}
 \end{table}
 
 \subsection{Change of Node Sign}\label{sec:11.3.2}
-The reversal of the sign in a node joining $\left(j_{1} j_{2} j_{3}\right)$-lines corresponds to the change of the momentum-coupling order. This transformation is equivalent to introducing the additional phase factor $(-1)^{j_{1}+j_{2}+j_{3}}$. For example,
+The reversal of the sign in a node joining \(\left(j_{1} j_{2} j_{3}\right)\)-lines corresponds to the change of the momentum-coupling order. This transformation is equivalent to introducing the additional phase factor \((-1)^{j_{1}+j_{2}+j_{3}}\). For example,
 \[
 \includegraphics[valign=c]{fig11_3_46}
 \quad=(-1)^{j_1+j_2+j_3}\quad
 \includegraphics[valign=c]{fig11_3_47}
 \]
-The reversal of signs of all the nodes in a diagram produces an additional phase factor of $(-1)^{2 J_{0}+J_{1}}$, where $J_{0}$ and $J_{1}$ are the algebraic sums of all the momenta for the internal and external lines, respectively. For example,
+The reversal of signs of all the nodes in a diagram produces an additional phase factor of \((-1)^{2 J_{0}+J_{1}}\), where \(J_{0}\) and \(J_{1}\) are the algebraic sums of all the momenta for the internal and external lines, respectively. For example,
 \begin{align*}
   &\includegraphics[valign=c]{fig11_3_48}
 \quad=(-1)^{a+b+c}\quad
@@ -679,7 +635,7 @@ The reversal of signs of all the nodes in a diagram produces an additional phase
 \end{align*}
 
 \subsection{Change of Direction of External Lines}\label{sec:11.3.3}
-The direction of an external $j$-line specifies the form (covariant or contravariant, i.e. $|j m\rangle$ or $\langle j m|)$ of an irreducible tensor of rank $j$ (Sec.~\ref{sec:11.1.1}). The conversion of covariant components of a tensor into contravariant ones, as well as the inverse transformation, is carried out by contraction (over $m$ ) of the tensor in question with the tensor $\binom{j}{m m^{\prime}}=(-1)^{j+m} \delta_{m-m^{\prime}}$, which may be considered as the metric tensor for the $(2 j+1)$ dimensional space of the functions $|j m\rangle$. Such a transformation reads
+The direction of an external \(j\)-line specifies the form (covariant or contravariant, i.e. \(|j m\rangle\) or \(\langle j m|)\) of an irreducible tensor of rank \(j\) (Sec.~\ref{sec:11.1.1}). The conversion of covariant components of a tensor into contravariant ones, as well as the inverse transformation, is carried out by contraction (over \(m\) ) of the tensor in question with the tensor \(\binom{j}{m m^{\prime}}=(-1)^{j+m} \delta_{m-m^{\prime}}\), which may be considered as the metric tensor for the \((2 j+1)\) dimensional space of the functions \(|j m\rangle\). Such a transformation reads
 \[
 \begin{gathered}
 \sum_{m^{\prime}}\braOket{}{\mathfrak{M}}{j m^{\prime}}\binom{ j}{m^{\prime} m}=\braOket{j m}{\mathfrak{M}}{}
@@ -687,7 +643,7 @@ The direction of an external $j$-line specifies the form (covariant or contravar
 \]
 \[
 \sum_{m'}
-\includegraphics[valign=c]{fig11_3_52}
+\includegraphics[valign=t]{fig11_3_52}
 \]
 and the inverse transformation is
 \[
@@ -696,13 +652,13 @@ and the inverse transformation is
 \end{gathered}
 \]\[
 \sum_{m'}
-\includegraphics[valign=c]{fig11_3_53}
+\includegraphics[valign=t]{fig11_3_53}
 \]
-Thus, a reversal of the direction of any external $j$-line ( $j m$ being fixed) corresponds to the transformation
+Thus, a reversal of the direction of any external \(j\)-line ( \(j m\) being fixed) corresponds to the transformation
 \[
 \braOket{}{\mathfrak{M}}{j m} \equiv \mathfrak{M}_{j m} \rightleftarrows\braOket{j m}{\mathfrak{M}}{} \equiv(-1)^{j-m} \mathfrak{M}_{j-m},
 \]
-in the associated analytic expression. In other words, the replacement of a single outward arrow by a double inward one corresponds to the introduction of the phase factor $(-1)^{j-m}$, and substitution of $-m$ for $m$, and vice versa.
+in the associated analytic expression. In other words, the replacement of a single outward arrow by a double inward one corresponds to the introduction of the phase factor \((-1)^{j-m}\), and substitution of \(-m\) for \(m\), and vice versa.
 
 For example,
 \[
@@ -713,33 +669,33 @@ and, conversely,
 \sum_{\alpha^{\prime}}\binom{a}{\alpha \alpha^{\prime}}(-1)^{a-\alpha^{\prime}}\threej{a}{b}{c}{-\alpha^{\prime}}{\beta}{\gamma}=\threej{a}{b}{c}{\alpha}{\beta}{\gamma} .
 \]
 \subsection{Change of Direction of Integral Lines}\label{sec:11.3.4}
-The reversal of the direction of any internal $j$-line produces the phase factor $(-1)^{2 j}$ in the associated analytic expression, because
+The reversal of the direction of any internal \(j\)-line produces the phase factor \((-1)^{2 j}\) in the associated analytic expression, because
 \[
 \sum_{m}(-1)^{j-m} \mathfrak{M}_{j m} \mathfrak{N}_{j-m}=(-1)^{2 j} \sum_{m}(-1)^{j-m} \mathfrak{M}_{j-m} \mathfrak{N}_{j m} .
 \]
-For a closed diagram which represents a $3 n j$ symbol, reversal of the directions of the $j$-lines produces the factor $(-1)^{2 J}$ in the associated expression, where $J$ is the algebraic sum of all the momenta of the $3 n j$ symbol (Table~11.6).
+For a closed diagram which represents a \(3 n j\) symbol, reversal of the directions of the \(j\)-lines produces the factor \((-1)^{2 J}\) in the associated expression, where \(J\) is the algebraic sum of all the momenta of the \(3 n j\) symbol (Table~11.6).
 
-The reversal of the directions of three internal $j$-lines ( $j_{1} j_{2} j_{3}$ ) coupled together in a node does not produce any additional phase factor, since $(-1)^{2\left(j_{1}+j_{2}+j_{3}\right)}=1$. For example,
-\[\includegraphics[valign=c]{fig11_3_54}\quad=\quad\includegraphics[valign=c]{fig11_3_55}\]
+The reversal of the directions of three internal \(j\)-lines ( \(j_{1} j_{2} j_{3}\) ) coupled together in a node does not produce any additional phase factor, since \((-1)^{2\left(j_{1}+j_{2}+j_{3}\right)}=1\). For example,
+\[\includegraphics[valign=t]{fig11_3_54}\quad=\quad\includegraphics[valign=t]{fig11_3_55}\]
 
-For a closed diagram associated with a $3 n j$ symbol the reversal of directions of all the $j$-lines and simultaneous reversal of signs of all the nodes do not change the meaning of the expression.
+For a closed diagram associated with a \(3 n j\) symbol the reversal of directions of all the \(j\)-lines and simultaneous reversal of signs of all the nodes do not change the meaning of the expression.
 
 \subsection{Linking Subdiagrams}\label{sec:11.3.5}
 In this Section the graphical rules for the multiplication of subdiagrams are formulated. These are the rules for linking the subdiagrams (blocks) into one united diagram.\\
-(a) Two subdiagrams representing factors \normalsize$\mathfrak{M}$ and \normalsize$\mathfrak{N}$, which have at least one identical (for both subdiagrams) $j$-line, may be linked together into the combined diagram which displays the product of these factors:
+(a) Two subdiagrams representing factors \normalsize\(\mathfrak{M}\) and \normalsize\(\mathfrak{N}\), which have at least one identical (for both subdiagrams) \(j\)-line, may be linked together into the combined diagram which displays the product of these factors:
 \[
-\includegraphics[valign=c]{fig11_3_56}
-=\includegraphics[valign=c]{fig11_3_57}\quad
-\includegraphics[valign=c]{fig11_3_58}
+\includegraphics[valign=t]{fig11_3_56}
+=\includegraphics[valign=t]{fig11_3_57}\quad
+\includegraphics[valign=t]{fig11_3_58}
 \]
 The necessary condition for such a linking is that at least one of these subdiagrams should have no external line. The graphical rule is equivalent to the relation
 \[
 \left(\sum_{m}\braOket{j m}{\mathfrak{M}}{j m}\right) \times\left(\sum_{m^{\prime}}\braOket{j m^{\prime}}{\mathfrak{R}}{j m^{\prime}}\right)=(2 j+1) \sum_{m m^{\prime}}\braOket{j m}{\mathfrak{M}}{j m^{\prime}}\braOket{j m^{\prime}}{\mathfrak{R}}{j m} .
 \]
-(b) Two subdiagrams representing the factors \normalsize$\mathfrak{N}$ and \normalsize$\mathfrak{N}$ which have at least one identical (for both subdiagrams) node, i.e., three coupled $j$-lines ( $j_{1} j_{2} j_{3}$ ) may be linked together into the combined diagram which corresponds to the product of these factors:\\
+(b) Two subdiagrams representing the factors \normalsize\(\mathfrak{N}\) and \normalsize\(\mathfrak{N}\) which have at least one identical (for both subdiagrams) node, i.e., three coupled \(j\)-lines ( \(j_{1} j_{2} j_{3}\) ) may be linked together into the combined diagram which corresponds to the product of these factors:\\
 \[
-\includegraphics[valign=c]{fig11_3_59}\quad=\quad
-\includegraphics[valign=c]{fig11_3_60}
+\includegraphics[valign=t]{fig11_3_59}\quad=\quad
+\includegraphics[valign=t]{fig11_3_60}
 \]
 This is equivalent to the relation
 \[
@@ -750,42 +706,42 @@ This is equivalent to the relation
 \]
 For example,
 \[
-\vcenter{\hbox{\includegraphics[valign=c]{fig11_3_61}}}
+\vcenter{\hbox{\includegraphics[valign=t]{fig11_3_61}}}
 =
-\vcenter{\hbox{\includegraphics[valign=c]{fig11_3_62}}}
-  \includegraphics[valign=c]{fig11_3_63}
+\vcenter{\hbox{\includegraphics[valign=t]{fig11_3_62}}}
+  \includegraphics[valign=t]{fig11_3_63}
 \]
 \[
-\includegraphics[valign=c]{fig11_3_64}
-\includegraphics[valign=c]{fig11_3_65}
+\includegraphics[valign=t]{fig11_3_64}
+\includegraphics[valign=t]{fig11_3_65}
 =
-\includegraphics[valign=c]{fig11_3_66}
+\includegraphics[valign=t]{fig11_3_66}
 \]
 
-As in Scheme (a), at least one of these subdiagrams should have no external lines. However, in the other subdiagrams the joined $j$-lines may be external. For instance,\\
+As in Scheme (a), at least one of these subdiagrams should have no external lines. However, in the other subdiagrams the joined \(j\)-lines may be external. For instance,\\
 \[
-\vcenter{\hbox{\includegraphics[valign=c]{fig11_3_67}}}
+\vcenter{\hbox{\includegraphics[valign=t]{fig11_3_67}}}
 =
-\includegraphics[valign=c]{fig11_3_68}
-\vcenter{\hbox{\includegraphics[valign=c]{fig11_3_69}}}
+\includegraphics[valign=t]{fig11_3_68}
+\vcenter{\hbox{\includegraphics[valign=t]{fig11_3_69}}}
 \]
 \[
-\includegraphics[valign=c]{fig11_3_70}
-\includegraphics[valign=c]{fig11_3_71}
-=\includegraphics[valign=c]{fig11_3_72}
+\includegraphics[valign=t]{fig11_3_70}
+\includegraphics[valign=t]{fig11_3_71}
+=\includegraphics[valign=t]{fig11_3_72}
 \]
-Note that Scheme (a) is a special case of Scheme (b) when one of the momenta $j_{1}, j_{2}, j_{3}$ equals zero.
+Note that Scheme (a) is a special case of Scheme (b) when one of the momenta \(j_{1}, j_{2}, j_{3}\) equals zero.
 
 \subsection{Cutting Diagram into Subdiagrams}\label{sec:11.3.6}
-The scalar product of two $n$-fold irreducible tensors of rank $j_{1}, j_{2}, \ldots, j_{n}$, i.e., the $n$-fold invariant sum over projections
+The scalar product of two \(n\)-fold irreducible tensors of rank \(j_{1}, j_{2}, \ldots, j_{n}\), i.e., the \(n\)-fold invariant sum over projections
 \[
 \left(\mathfrak{M}_{j_{1} j_{2} \ldots j_{n}} \cdot \mathfrak{N}_{j_{1} j_{2} \ldots j_{n}}\right)=\sum_{m_{1} m_{2} \ldots m_{n}}\braOket{00}{\mathbb{M}}{j_{1} m_{1} j_{2} m_{2} \ldots j_{n} m_{n}}\braOket{j_{1} m_{1} j_{2} m_{2} \ldots j_{n} m_{n}}{\mathfrak{R}}{}
 \]
-may be transformed into a $k$-fold complete sum (over momenta $X_{1}, X_{2}, \ldots, X_{n}$ with $k=n-3$ and $n \geq 4$ ) of the product of factors:
+may be transformed into a \(k\)-fold complete sum (over momenta \(X_{1}, X_{2}, \ldots, X_{n}\) with \(k=n-3\) and \(n \geq 4\) ) of the product of factors:
 \[
 \left(\mathfrak{M}_{j_{1} j_{2} \ldots j_{n}} \cdot \mathfrak{N}_{j_{1} j_{2} \ldots j_{n}}\right)=\sum_{X_{1} X_{2} \ldots X_{k}}^{k=n-3}\left(2 X_{1}+1\right)\left(2 X_{2}+1\right) \ldots\left(2 X_{k}+1\right) \mathfrak{M}_{j_{1} j_{2} \ldots j_{n}}\left(X_{1} X_{2} \ldots X_{k}\right) \mathfrak{N}_{j_{1} j_{2} \ldots j_{n}}\left(X_{1} X_{2} \ldots X_{k}\right) .
 \]
-These factors represent contractions of the original tensors and $3 j m$ symbols:
+These factors represent contractions of the original tensors and \(3 j m\) symbols:
 \[
 \begin{gathered}
 \mathfrak{M}_{j_{1} j_{2} \ldots j_{n}}\left(X_{1} X_{2} \ldots X_{k}\right) \\
@@ -796,34 +752,34 @@ These factors represent contractions of the original tensors and $3 j m$ symbols
 \]
 Again, at least one of these contracted quantities must be a true invariant, i.e., should not depend on any additional momentum projection or direction.
 
-For $n \leq 3$ the sum over $X_{i}$ may be reduced to the direct product of the contracted tensors. For example,
+For \(n \leq 3\) the sum over \(X_{i}\) may be reduced to the direct product of the contracted tensors. For example,
 \[
 \left(\mathfrak{M}_{j_{1} j_{2} \ldots j_{n}} \cdot \mathfrak{N}_{j_{1} j_{2} \ldots j_{n}}\right)=\mathfrak{M}_{j_{1} j_{2} \ldots j_{n}} \cdot \mathfrak{N}_{j_{1} j_{2} \ldots j_{n}} .
 \]
-This means that the original sum becomes factorized. Therefore, the cases $n \leq 3$ are the most important ones for practical applications.
+This means that the original sum becomes factorized. Therefore, the cases \(n \leq 3\) are the most important ones for practical applications.
 
-The analytic transformations under study correspond to cutting the associated diagram into two subdiagrams which represent two factors. The necessary condition is that at least one of these subdiagrams should have no more external lines (apart from those $j$-lines which link the subdiagram together)\\
+The analytic transformations under study correspond to cutting the associated diagram into two subdiagrams which represent two factors. The necessary condition is that at least one of these subdiagrams should have no more external lines (apart from those \(j\)-lines which link the subdiagram together)\\
 \[
-\includegraphics[valign=c]{fig11_3_73}=
-\includegraphics[valign=c]{fig11_3_74}
+\includegraphics[valign=t]{fig11_3_73}=
+\includegraphics[valign=t]{fig11_3_74}
 \]
 
 
-The most important cases of cutting of one, two, three, as well as four, five, and six $j$-lines are presented in Table~11.9.
+The most important cases of cutting of one, two, three, as well as four, five, and six \(j\)-lines are presented in Table~11.9.
 
 In many cases, the successive use of these rules allows one to divide a diagram into several (three or more) subdiagrams representing invariant factors. For example,\\
-\includegraphics[valign=c]{fig11_3_75}\ \includegraphics[valign=c]{fig11_3_76}\ \includegraphics[valign=c]{fig11_3_77}
+\includegraphics[valign=t]{fig11_3_75}\ \includegraphics[valign=t]{fig11_3_76}\ \includegraphics[valign=t]{fig11_3_77}
 
-The most important cases for the application of the cutting rules are in the separation of external lines of a diagram, i.e., in extracting the dependence on all the external variables in the form of the standard functions of the theory ( $\clebsch{j_{1}}{m_{1}}{j_{2}}{m_{2}}{j}{m}, D_{m m^{\prime}}^{j}(R), C_{j m}(\Omega)$, etc.). Such a separation is the essence of the Wigner-Eckart theorem which will be discussed in Sec.~\ref{sec:11.4.2}.
+The most important cases for the application of the cutting rules are in the separation of external lines of a diagram, i.e., in extracting the dependence on all the external variables in the form of the standard functions of the theory ( \(\clebsch{j_{1}}{m_{1}}{j_{2}}{m_{2}}{j}{m}, D_{m m^{\prime}}^{j}(R), C_{j m}(\Omega)\), etc.). Such a separation is the essence of the Wigner-Eckart theorem which will be discussed in Sec.~\ref{sec:11.4.2}.
 
 \subsection{Graphical Method of Summation}\label{sec:11.3.7}
-According to Sec.~\ref{sec:11.2.3}, a complete invariant sum over angular momentum $j$ and projection $m$ is graphically represented by a thick $j$-line. Such a summation may be easily performed by the diagram technique, if this thick $j$-line connects two identical nodes.
+According to Sec.~\ref{sec:11.2.3}, a complete invariant sum over angular momentum \(j\) and projection \(m\) is graphically represented by a thick \(j\)-line. Such a summation may be easily performed by the diagram technique, if this thick \(j\)-line connects two identical nodes.
 
-Rule $\sum$ : Any thick $j$-line which connects identical pairs of thin $j$-lines, may be removed provided the ends of the thin lines with equal momenta are linked together. This is displayed below:
+Rule \(\sum\) : Any thick \(j\)-line which connects identical pairs of thin \(j\)-lines, may be removed provided the ends of the thin lines with equal momenta are linked together. This is displayed below:
 \[
-\includegraphics[valign=c]{fig11_3_78}
+\includegraphics[valign=t]{fig11_3_78}
 =
-\includegraphics[valign=c]{fig11_3_79}
+\includegraphics[valign=t]{fig11_3_79}
 \]
 Such a graphical operation does not change the meaning of a diagram and corresponds to the equation
 \[
@@ -838,43 +794,43 @@ For example,
 \sum_{c \gamma}(2 c+1)(-1)^{a-\alpha+b-\beta+c-\gamma}\threej{a}{b}{c}{-\alpha}{-\beta}{-\gamma}\threej{a}{b}{c}{\alpha^{\prime}}{\beta^{\prime}}{\gamma^{\prime}}=\sum_{c \gamma}(2 c+1)\threej{a}{b}{c}{\alpha}{\beta}{\gamma}\threej{a}{b}{c}{\alpha^{\prime}}{\beta^{\prime}}{\gamma^{\prime}}=\delta_{\alpha \alpha^{\prime}} \delta_{\beta \beta^{\prime}},
 \]
 \begin{center}
-\includegraphics[valign=c]{fig11_3_80}
-\qquad$=$\qquad
-\includegraphics[valign=c]{fig11_3_81}
+\includegraphics[valign=t]{fig11_3_80}
+\qquad\(=\)\qquad
+\includegraphics[valign=t]{fig11_3_81}
 \end{center}
 \[
 \sum_{X}(2 X+1)\ninej{a}{b}{c}{b^{\prime}}{d}{e}{c}{e}{X}=\{a b c\}\{b d e\} \frac{\delta_{b b^{\prime}}}{(2 b+1)}
 \]
 \begin{center}
-\includegraphics[valign=c]{fig11_3_82}
-\quad$=$\quad
-\includegraphics[valign=c]{fig11_3_83}
-\includegraphics[valign=c]{fig11_3_84}
-\includegraphics[valign=c]{fig11_3_85}
+\includegraphics[valign=t]{fig11_3_82}
+\quad\(=\)\quad
+\includegraphics[valign=t]{fig11_3_83}
+\includegraphics[valign=t]{fig11_3_84}
+\includegraphics[valign=t]{fig11_3_85}
 \end{center}
 
-When a common thick $j$-line is included into two or more unlinked subdiagrams, one should preliminarily link these subdiagrams with the aid of the rules of subdiagram multiplication (Sec.~\ref{sec:11.3.5}) in order to arrive at one thick $j$-line. Only after this operation can one perform graphical summation over $j$ and $m$ according to Rule $\sum$. These combined graphical operations are displayed in Table~11.9.
+When a common thick \(j\)-line is included into two or more unlinked subdiagrams, one should preliminarily link these subdiagrams with the aid of the rules of subdiagram multiplication (Sec.~\ref{sec:11.3.5}) in order to arrive at one thick \(j\)-line. Only after this operation can one perform graphical summation over \(j\) and \(m\) according to Rule \(\sum\). These combined graphical operations are displayed in Table~11.9.
 
-The complete invariant summation over $j$ and $m$ may also be performed graphically in the cases when the lines adjacent to the thick $j$-line are dashed $\Omega$-lines. For instance,
+The complete invariant summation over \(j\) and \(m\) may also be performed graphically in the cases when the lines adjacent to the thick \(j\)-line are dashed \(\Omega\)-lines. For instance,
 \[
 \sum_{l m} Y_{l m}(\Omega) Y_{l m}^{*}\left(\Omega^{\prime}\right)=\delta\left(\Omega-\Omega^{\prime}\right)
 \]
 \begin{center}
-\includegraphics[valign=c]{fig11_3_86}
+\includegraphics[valign=t]{fig11_3_86}
 \end{center}
 \[
 \sum_{J M M^{\prime}}(2 J+1) D_{M M^{\prime}}^{J}\left(R_{1}\right) D_{M^{\prime} M}^{J}\left(R_{2}\right)=16 \pi^{2} \delta\left(R_{1}-R_{2}\right),
 \]
 \begin{center}
-\includegraphics[valign=c]{fig11_3_87}
+\includegraphics[valign=t]{fig11_3_87}
 \end{center}
 
-In fact, all the rules for complete invariant summation formulated in this section follow from the completeness of $|j m\rangle$-functions.
+In fact, all the rules for complete invariant summation formulated in this section follow from the completeness of \(|j m\rangle\)-functions.
 \[
 \sum_{j m}\ket{j m}\bra{j m}=\sum_{j m}\rket{j m}(2 j+1)\rbra{j m}=1,
 \]
-\subsection{Replacing An Internal $\Omega$-Line by a Thick $j$-Line}\label{sec:11.3.8}
-Each internal $\Omega$-line which represents invariant integration over direction angles $\Omega\{\vartheta, \varphi\}$ may be replaced by a thick $j$-line representing the complete invariant sum over $j$ and $m$, according to
+\subsection{Replacing An Internal \(\Omega\)-Line by a Thick \(j\)-Line}\label{sec:11.3.8}
+Each internal \(\Omega\)-line which represents invariant integration over direction angles \(\Omega\{\vartheta, \varphi\}\) may be replaced by a thick \(j\)-line representing the complete invariant sum over \(j\) and \(m\), according to
 \[
 \int d \Omega\braOket{\Omega}{\mathfrak{M}}{\Omega}=\sum_{j m}(j m|\mathfrak{M}| j m\rangle,
 \]
@@ -882,33 +838,33 @@ where
 \[
 \braOket{j m}{\mathfrak{M}}{j^{\prime} m^{\prime}} \equiv \iint d \Omega d \Omega^{\prime}\braket{j m}{\Omega^{\prime}}\braOket{\Omega^{\prime}}{\mathfrak{M}}{\Omega}\braket{\Omega}{j^{\prime} m^{\prime}} .
 \]
-Thus, all the $\Omega$-lines in the inner part of a diagram may be converted into the $j$-lines. Hence, it is sufficient to formulate the rules of graphical operations only for diagrams in which all the internal lines are $j$-lines.
+Thus, all the \(\Omega\)-lines in the inner part of a diagram may be converted into the \(j\)-lines. Hence, it is sufficient to formulate the rules of graphical operations only for diagrams in which all the internal lines are \(j\)-lines.
 
-\subsection{Elimination of $j=0$ Line}\label{sec:11.3.9}
-In the particular case of $j=0$ the corresponding expression is independent of the angular variables $\Omega\{\vartheta, \varphi\}$. Hence, the corresponding $j$-line may be removed from a diagram without changing its meaning. However, there remain the nodes which were initially connected with this $j=0$ line. These nodes may also be extracted from the diagram in the form of a separated subdiagram corresponding to the factor
+\subsection{Elimination of \(j=0\) Line}\label{sec:11.3.9}
+In the particular case of \(j=0\) the corresponding expression is independent of the angular variables \(\Omega\{\vartheta, \varphi\}\). Hence, the corresponding \(j\)-line may be removed from a diagram without changing its meaning. However, there remain the nodes which were initially connected with this \(j=0\) line. These nodes may also be extracted from the diagram in the form of a separated subdiagram corresponding to the factor
 \[
 K=( \pm 1)^{2 j_{1}} \frac{\delta_{j_{1} j_{2}}}{\sqrt{2 j_{1}+1}} .
 \]
-The phase of $K$ depends on the node sign and line direction. $K$ is positive if the node sign corresponds to the cyclic order of the coupling momenta $\left(j_{1}, j_{1}, j_{2}\right)$, the $j_{1}$-line is directed toward the node and the $j_{2}$-line is directed outward from the node. In this case the resultant $j_{1}=j_{2}$-line has the same direction as that before the node's removal. In other cases the phase of $K$ may be determined by means of the reduction of the diagram under study to the above case, using the rules of Sec.~\ref{sec:11.3.2}.
+The phase of \(K\) depends on the node sign and line direction. \(K\) is positive if the node sign corresponds to the cyclic order of the coupling momenta \(\left(j_{1}, j_{1}, j_{2}\right)\), the \(j_{1}\)-line is directed toward the node and the \(j_{2}\)-line is directed outward from the node. In this case the resultant \(j_{1}=j_{2}\)-line has the same direction as that before the node's removal. In other cases the phase of \(K\) may be determined by means of the reduction of the diagram under study to the above case, using the rules of Sec.~\ref{sec:11.3.2}.
 
-Thus elimination of the $j=0$ line may be illustrated by\\
-\includegraphics[valign=c]{fig11_3_88}\quad$=K\times$
-\includegraphics[valign=c]{fig11_3_89}
+Thus elimination of the \(j=0\) line may be illustrated by\\
+\includegraphics[valign=t]{fig11_3_88}\quad\(=K\times\)
+\includegraphics[valign=t]{fig11_3_89}
 
 
-Some special cases of the $3 j m$ and $3 n j$ symbols with $j=0$ are presented in Table~11.7.
+Some special cases of the \(3 j m\) and \(3 n j\) symbols with \(j=0\) are presented in Table~11.7.
 
-\subsection{Elimination of the $R=1$ Line}\label{sec:11.3.10}
-In the particular case $R=1$, a double dashed $R$-line corresponds to no rotation, i.e., it represents a fictitious lependence. Hence, an $R=1$ line may be removed and the lines adjacent to the $R$-line have to be closed. This operation does not change the meaning of the diagram.\\
-\includegraphics[valign=c]{fig11_3_90}\quad$=K\times$
-\includegraphics[valign=c]{fig11_3_91}
+\subsection{Elimination of the \(R=1\) Line}\label{sec:11.3.10}
+In the particular case \(R=1\), a double dashed \(R\)-line corresponds to no rotation, i.e., it represents a fictitious dependence. Hence, an \(R=1\) line may be removed and the lines adjacent to the \(R\)-line have to be closed. This operation does not change the meaning of the diagram.\\
+\includegraphics[valign=t]{fig11_3_90}\quad\(=K\times\)
+\includegraphics[valign=t]{fig11_3_91}
 
-Some examples of the expressions and diagrams containing $R=1$ are given in Table~11.8.\\
+Some examples of the expressions and diagrams containing \(R=1\) are given in Table~11.8.\\
 A summary of the rules of graphical operations is presented in Table~11.9.
 \begin{table}[ptbh!]
 \begin{center}
 \captionsetup{justification=centering,labelformat=empty}
-\caption{Table 11.7.\\ Zero Angular Momentum ($J=0$).}
+\caption{Table 11.7.\\ Zero Angular Momentum (\(J=0\)).}
 \small
 \setlength{\tabcolsep}{4pt}
 \renewcommand{\arraystretch}{1.4}
@@ -916,26 +872,26 @@ A summary of the rules of graphical operations is presented in Table~11.9.
 \hline
 {Analytical Expression} & Graphical Representation \\
 \hline
-\multicolumn{2}{c}{$jm$ Symbols}\\
-$\threej{a}{0}{b}{\alpha}{0}{\beta}=\dfrac{\delta_{ab}}{\sqrt{2a+1}}\dbinom{a}{\alpha\beta}=(-1)^{a+\alpha}\dfrac{\delta_{ab}\delta_{\alpha,-\beta}}{\sqrt{2a+1}}$
-& \includegraphics[valign=c]{fig11_3_92}$\;=\;$\includegraphics[valign=c]{fig11_3_93}$\;=\;$\includegraphics[valign=c]{fig11_3_94}$\;=\;$\includegraphics[valign=c]{fig11_3_95} \\
-$\threej{a}{b}{0}{\alpha}{\beta}{0}=\dfrac{\delta_{ab}}{\sqrt{2a+1}}\dbinom{a}{\beta\alpha}=(-1)^{a-\alpha}\dfrac{\delta_{ab}\delta_{\alpha,-\beta}}{\sqrt{2a+1}}$
-& \includegraphics[valign=c]{fig11_3_96}$\;=\;$\includegraphics[valign=c]{fig11_3_97}$\;=\;$\includegraphics[valign=c]{fig11_3_98}$\;=\;$\includegraphics[valign=c]{fig11_3_99} \\
-$(-1)^{a-\alpha}\threej{a}{0}{b}{-\alpha}{0}{\beta}=\dfrac{\delta_{ab}\delta_{\alpha\beta}}{\sqrt{2a+1}}$
-& \includegraphics[valign=c]{fig11_3_100}$\;=\;$\includegraphics[valign=c]{fig11_3_101}$\;=\;$\includegraphics[valign=c]{fig11_3_102} \\
-$(-1)^{a-\alpha}\threej{a}{b}{0}{-\alpha}{\beta}{0}=(-1)^{2a}\dfrac{\delta_{ab}\delta_{\alpha\beta}}{\sqrt{2a+1}}$
-& \includegraphics[valign=c]{fig11_3_103}$\;=\;$\includegraphics[valign=c]{fig11_3_104}$\;=\;$\includegraphics[valign=c]{fig11_3_105} \\
-\multicolumn{2}{c}{$nj$ Symbols}\\
-$\{a\,b\,0\}=\delta_{ab}$
-& \includegraphics[valign=c]{fig11_3_106}$\;=\;$\includegraphics[valign=c]{fig11_3_107} \\
-$\sixj{0}{0}{0}{a}{b}{c}=(-1)^{2a}\dfrac{\delta_{ab}\delta_{bc}}{\sqrt{2a+1}}$
-& \includegraphics[valign=c]{fig11_3_108}$\;=\;$\includegraphics[valign=c]{fig11_3_109} \\
-$\sixj{a}{a^{\prime}}{0}{b}{b^{\prime}}{0}=(-1)^{2a}\dfrac{\delta_{aa^{\prime}}\delta_{bb^{\prime}}\delta_{ab}}{2a+1}$
-& \includegraphics[valign=c]{fig11_3_110}$\;=\;$\includegraphics[valign=c]{fig11_3_111}\,\includegraphics[valign=c]{fig11_3_112}\,\includegraphics[valign=c]{fig11_3_113} \\
-$\sixj{a}{a^{\prime}}{0}{b}{b^{\prime}}{c}=(-1)^{a+b+c}\dfrac{\delta_{aa^{\prime}}\delta_{bb^{\prime}}}{\sqrt{(2a+1)(2b+1)}}\{a\,b\,c\}$
-& \includegraphics[valign=c]{fig11_3_114}$\;=\;$\includegraphics[valign=c]{fig11_3_115}\,\includegraphics[valign=c]{fig11_3_116},\includegraphics[valign=c]{fig11_3_117} \\
-$\ninej{a}{b}{c}{e}{0}{e^{\prime}}{f}{b^{\prime}}{d}=(-1)^{b+c+e+f}\dfrac{\delta_{bb^{\prime}}\delta_{ee^{\prime}}}{\sqrt{(2b+1)(2e+1)}}\sixj{a}{b}{c}{d}{e}{f}$
-& \njhexx{a}{b}{c}{f}{e}{d}{b^{\prime}}{e^{\prime}}$\;=\;$\includegraphics[valign=c]{fig11_3_118}\,\includegraphics[valign=c]{fig11_3_119}\,\includegraphics[valign=c]{fig11_3_120} \\
+\multicolumn{2}{c}{\(jm\) Symbols}\\
+\(\threej{a}{0}{b}{\alpha}{0}{\beta}=\dfrac{\delta_{ab}}{\sqrt{2a+1}}\dbinom{a}{\alpha\beta}=(-1)^{a+\alpha}\dfrac{\delta_{ab}\delta_{\alpha,-\beta}}{\sqrt{2a+1}}\)
+& \includegraphics[valign=t]{fig11_3_92}\(\;=\;\)\includegraphics[valign=t]{fig11_3_93}\(\;=\;\)\includegraphics[valign=t]{fig11_3_94}\(\;=\;\)\includegraphics[valign=t]{fig11_3_95} \\
+\(\threej{a}{b}{0}{\alpha}{\beta}{0}=\dfrac{\delta_{ab}}{\sqrt{2a+1}}\dbinom{a}{\beta\alpha}=(-1)^{a-\alpha}\dfrac{\delta_{ab}\delta_{\alpha,-\beta}}{\sqrt{2a+1}}\)
+& \includegraphics[valign=t]{fig11_3_96}\(\;=\;\)\includegraphics[valign=t]{fig11_3_97}\(\;=\;\)\includegraphics[valign=t]{fig11_3_98}\(\;=\;\)\includegraphics[valign=t]{fig11_3_99} \\
+\((-1)^{a-\alpha}\threej{a}{0}{b}{-\alpha}{0}{\beta}=\dfrac{\delta_{ab}\delta_{\alpha\beta}}{\sqrt{2a+1}}\)
+& \includegraphics[valign=t]{fig11_3_100}\(\;=\;\)\includegraphics[valign=t]{fig11_3_101}\(\;=\;\)\includegraphics[valign=t]{fig11_3_102} \\
+\((-1)^{a-\alpha}\threej{a}{b}{0}{-\alpha}{\beta}{0}=(-1)^{2a}\dfrac{\delta_{ab}\delta_{\alpha\beta}}{\sqrt{2a+1}}\)
+& \includegraphics[valign=t]{fig11_3_103}\(\;=\;\)\includegraphics[valign=t]{fig11_3_104}\(\;=\;\)\includegraphics[valign=t]{fig11_3_105} \\
+\multicolumn{2}{c}{\(nj\) Symbols}\\
+\(\{a\,b\,0\}=\delta_{ab}\)
+& \includegraphics[valign=t]{fig11_3_106}\(\;=\;\)\includegraphics[valign=t]{fig11_3_107} \\
+\(\sixj{0}{0}{0}{a}{b}{c}=(-1)^{2a}\dfrac{\delta_{ab}\delta_{bc}}{\sqrt{2a+1}}\)
+& \includegraphics[valign=t]{fig11_3_108}\(\;=\;\)\includegraphics[valign=t]{fig11_3_109} \\
+\(\sixj{a}{a^{\prime}}{0}{b}{b^{\prime}}{0}=(-1)^{2a}\dfrac{\delta_{aa^{\prime}}\delta_{bb^{\prime}}\delta_{ab}}{2a+1}\)
+& \includegraphics[valign=t]{fig11_3_110}\(\;=\;\)\includegraphics[valign=t]{fig11_3_111}\,\includegraphics[valign=t]{fig11_3_112}\,\includegraphics[valign=t]{fig11_3_113} \\
+\(\sixj{a}{a^{\prime}}{0}{b}{b^{\prime}}{c}=(-1)^{a+b+c}\dfrac{\delta_{aa^{\prime}}\delta_{bb^{\prime}}}{\sqrt{(2a+1)(2b+1)}}\{a\,b\,c\}\)
+& \includegraphics[valign=t]{fig11_3_114}\(\;=\;\)\includegraphics[valign=t]{fig11_3_115}\,\includegraphics[valign=t]{fig11_3_116},\includegraphics[valign=t]{fig11_3_117} \\
+\(\ninej{a}{b}{c}{e}{0}{e^{\prime}}{f}{b^{\prime}}{d}=(-1)^{b+c+e+f}\dfrac{\delta_{bb^{\prime}}\delta_{ee^{\prime}}}{\sqrt{(2b+1)(2e+1)}}\sixj{a}{b}{c}{d}{e}{f}\)
+& \njhexx{a}{b}{c}{f}{e}{d}{b^{\prime}}{e^{\prime}}\(\;=\;\)\includegraphics[valign=t]{fig11_3_118}\,\includegraphics[valign=t]{fig11_3_119}\,\includegraphics[valign=t]{fig11_3_120} \\
 \hline
 \end{tabular}
 \end{center}
@@ -944,7 +900,7 @@ $\ninej{a}{b}{c}{e}{0}{e^{\prime}}{f}{b^{\prime}}{d}=(-1)^{b+c+e+f}\dfrac{\delta
 \begin{table}[ptbh!]
 \begin{center}
 \captionsetup{justification=centering,labelformat=empty}
-\caption{Table 11.8.\\ Zero Rotation ($R=0$).}
+\caption{Table 11.8.\\ Zero Rotation (\(R=0\)).}
 \small
 \setlength{\tabcolsep}{4pt}
 \renewcommand{\arraystretch}{1.5}
@@ -952,22 +908,22 @@ $\ninej{a}{b}{c}{e}{0}{e^{\prime}}{f}{b^{\prime}}{d}=(-1)^{b+c+e+f}\dfrac{\delta
 \hline
 \multicolumn{1}{c|}{Analytical Expression} & Graphical Representation \\
 \hline
-(a) For $R=1$: $\;\delta\!\left(\Omega^{\prime}-\hat{R}\Omega\right)=\delta\!\left(\Omega^{\prime}-\Omega\right)$, i.e.,\newline
-$\braOket{\Omega^{\prime}}{R}{\Omega}=\braket{\Omega^{\prime}}{\Omega}$.
-& \rstubline{o}{\Omega^{\prime}}{\Omega}{-}$\;=\;$\rredline{o}{\Omega^{\prime}}{\Omega} \\
-(b) For $R=1$: $\;\delta_{jj^{\prime}}D_{mm^{\prime}}^{j}(000)=\delta_{jj^{\prime}}\delta_{mm^{\prime}}$, i.e.,\newline
-$\braOket{jm}{D(1)}{j^{\prime}m^{\prime}}=\braket{jm}{j^{\prime}m^{\prime}}$.
-& \rstubline{s}{jm}{j^{\prime}m^{\prime}}{+}$\;=\;$\rredline{s}{jm}{j^{\prime}m^{\prime}} \\
-(c) For $R^{-1}R=1$: $\;\displaystyle\int\delta\!\left(\Omega^{\prime\prime}-R^{-1}\Omega^{\prime}\right)d\Omega^{\prime}\,\delta\!\left(\Omega^{\prime}-R\Omega\right)=\delta\!\left(\Omega^{\prime\prime}-\Omega\right)$,\newline
-i.e., $\braOket{\Omega^{\prime\prime}}{R^{-1}}{\Omega^{\prime}}\braOket{\Omega^{\prime}}{R}{\Omega}=\braket{\Omega^{\prime\prime}}{\Omega}$.
+(a) For \(R=1\): \(\;\delta\!\left(\Omega^{\prime}-\hat{R}\Omega\right)=\delta\!\left(\Omega^{\prime}-\Omega\right)\), i.e.,\newline
+\(\braOket{\Omega^{\prime}}{R}{\Omega}=\braket{\Omega^{\prime}}{\Omega}\).
+& \rstubline{o}{\Omega^{\prime}}{\Omega}{-}\(\;=\;\)\rredline{o}{\Omega^{\prime}}{\Omega} \\
+(b) For \(R=1\): \(\;\delta_{jj^{\prime}}D_{mm^{\prime}}^{j}(000)=\delta_{jj^{\prime}}\delta_{mm^{\prime}}\), i.e.,\newline
+\(\braOket{jm}{D(1)}{j^{\prime}m^{\prime}}=\braket{jm}{j^{\prime}m^{\prime}}\).
+& \rstubline{s}{jm}{j^{\prime}m^{\prime}}{+}\(\;=\;\)\rredline{s}{jm}{j^{\prime}m^{\prime}} \\
+(c) For \(R^{-1}R=1\): \(\;\displaystyle\int\delta\!\left(\Omega^{\prime\prime}-R^{-1}\Omega^{\prime}\right)d\Omega^{\prime}\,\delta\!\left(\Omega^{\prime}-R\Omega\right)=\delta\!\left(\Omega^{\prime\prime}-\Omega\right)\),\newline
+i.e., \(\braOket{\Omega^{\prime\prime}}{R^{-1}}{\Omega^{\prime}}\braOket{\Omega^{\prime}}{R}{\Omega}=\braket{\Omega^{\prime\prime}}{\Omega}\).
 & \rarcline{o}{\Omega^{\prime\prime}}{\Omega}{-}
 \rarcloop{o}{\Omega^{\prime\prime}}{\Omega}{-}{+} \\
-&$\;=\;$\rredline{o}{\Omega^{\prime\prime}}{\Omega} \\
-(d) For $R^{-1}R=1$: $\;\displaystyle\sum_{m^{\prime}}D_{m^{\prime\prime}m^{\prime}}^{j}(R^{-1})D_{m^{\prime}m}^{j}(R)=\delta_{m^{\prime\prime}m}$,\newline
-i.e., $\braOket{jm^{\prime\prime}}{D(R^{-1})}{j^{\prime}m^{\prime}}\braOket{j^{\prime}m^{\prime}}{D(R)}{jm}=\braket{jm^{\prime\prime}}{jm}$.
-& \rarcline{s}{jm^{\prime\prime}}{jm}{+}$\;=\;$
+&\(\;=\;\)\rredline{o}{\Omega^{\prime\prime}}{\Omega} \\
+(d) For \(R^{-1}R=1\): \(\;\displaystyle\sum_{m^{\prime}}D_{m^{\prime\prime}m^{\prime}}^{j}(R^{-1})D_{m^{\prime}m}^{j}(R)=\delta_{m^{\prime\prime}m}\),\newline
+i.e., \(\braOket{jm^{\prime\prime}}{D(R^{-1})}{j^{\prime}m^{\prime}}\braOket{j^{\prime}m^{\prime}}{D(R)}{jm}=\braket{jm^{\prime\prime}}{jm}\).
+& \rarcline{s}{jm^{\prime\prime}}{jm}{+}\(\;=\;\)
 \rarcloop{s}{jm^{\prime\prime}}{jm}{-}{+} \\
-&$\;=\;$\rredline{s}{jm^{\prime\prime}}{jm} \\
+&\(\;=\;\)\rredline{s}{jm^{\prime\prime}}{jm} \\
 \hline
 \end{tabular}
 \end{center}
@@ -997,9 +953,9 @@ Completeness Condition\par
 \int|\Omega\rangle\,d\Omega\,\langle\Omega|=\sum_{JM}|JM\rangle\langle JM|=1
 \)
 &
-\centering Replacing dashed $\Omega$-line by thick solid $j$-line\par\medskip
-\includegraphics[valign=c]{fig11_3_121}\;$=$\;%
-\includegraphics[valign=c]{fig11_3_122}
+\centering Replacing dashed \(\Omega\)-line by thick solid \(j\)-line\par\medskip
+\includegraphics[valign=t]{fig11_3_121}\;\(=\)\;%
+\includegraphics[valign=t]{fig11_3_122}
 \tabularnewline
 \hline
 \end{tabular}
@@ -1017,22 +973,22 @@ Completeness Condition\par
 \hline
 \multicolumn{1}{c|}{Analytical Expression} & Graphical Representation \\
 \hline
-Complete summation over $J$ and $M$&Elimination of thick solid $j$-line\\
+Complete summation over \(J\) and \(M\)&Elimination of thick solid \(j\)-line\\
 \(
 \begin{aligned}
 & \sum_{J M}(2 J+1)\braOket{j_{1} j_{2} ; J M}{\mathfrak{M}}{j_{1} j_{2} ; J M} \\
 & =\sum_{m_{1} m_{2}}\braOket{j_{1} m_{1} j_{2} m_{2}}{\mathfrak{M}}{j_{1} m_{1} j_{2} m_{2}},
 \end{aligned} \)&
-\includegraphics[valign=c]{fig11_3_123}\;$=$\;%
-\includegraphics[valign=c]{fig11_3_124}\\
+\includegraphics[valign=t]{fig11_3_123}\;\(=\)\;%
+\includegraphics[valign=t]{fig11_3_124}\\
 \(\begin{aligned}
 & \sum_{J M M^{\prime}}(2 J+1)\braOket{j_{1} j_{2} ; J M}{\mathfrak{M}}{j_{3} j_{4} ; J M} \\
 & \times\braOket{j_{3} j_{4} ; J M^{\prime}}{\mathfrak{N}}{j_{1} j_{2} ; J M^{\prime}} \\
 & =\sum_{\substack{m_{1} m_{2} \\
 m_{3} m_{4}}}\braOket{j_{1} m_{1} j_{2} m_{2}}{\mathfrak{M}}{j_{3} m_{3} j_{4} m_{4}}\braOket{j_{3} m_{3} j_{4} m_{4}}{\mathfrak{N}}{j_{1} m_{1} j_{2} m_{2}} .
 \end{aligned} \)&
-\includegraphics[valign=c]{fig11_3_125}\;$=$\;%
-\includegraphics[valign=c]{fig11_3_126}\\
+\includegraphics[valign=t]{fig11_3_125}\;\(=\)\;%
+\includegraphics[valign=t]{fig11_3_126}\\
 \(\begin{aligned}
 & \sum_{J M M^{\prime} M^{\prime\prime}}(2 J+1)\braOket{j_{1} j_{2} ; J M}{\mathfrak{M}}{j_{3} j_{4} ; J M} \\
 & \times\braOket{j_{3} j_{4} ; J M^{\prime}}{\mathfrak{N}}{j_{5} j_{6} ; J M^{\prime}}\braOket{j_{5} j_{6} ; J M^{\prime \prime}}{\mathfrak{L}}{j_{1} j_{2} ; J M^{\prime \prime}} \\
@@ -1042,10 +998,10 @@ m_{5} m_{6}}}\braOket{j_{1} m_{1} j_{2} m_{2}}{\mathfrak{M}}{j_{3} m_{3} j_{4} m
 & \times\braOket{j_{3} m_{3} j_{4} m_{4}}{\mathfrak{N}}{j_{5} m_{5} j_{6} m_{6}}\braOket{j_{5} m_{5} j_{6} m_{6}}{\mathfrak{L}}{j_{1} m_{1} j_{2} m_{2}} .
 \end{aligned}
 \)&
-\includegraphics[valign=c]{fig11_3_127}
+\includegraphics[valign=t]{fig11_3_127}
 \newline
-$=$\;%
-\includegraphics[valign=c]{fig11_3_128}\\
+\(=\)\;%
+\includegraphics[valign=t]{fig11_3_128}\\
 where\\
 \(
 \begin{gathered}
@@ -1054,34 +1010,34 @@ where\\
 \end{gathered}
 \)
 \\
-Transformation of product of invariant sums into invariant sum of products (at least one of two factors must be a perfect invariant).&Linking subdiagrams containing identical $j$-line (at least one of subdiagrams should have no other external lines)\\
+Transformation of product of invariant sums into invariant sum of products (at least one of two factors must be a perfect invariant).&Linking subdiagrams containing identical \(j\)-line (at least one of subdiagrams should have no other external lines)\\
 \(
 \begin{aligned}
 &\left(\sum_{m}\braOket{j m}{\mathfrak{M}}{j m}\right)\left(\sum_{m^{\prime}}\braOket{j m^{\prime}}{\mathfrak{N}}{j m^{\prime}}\right) \\
 &=(2 j+1) \sum_{m m^{\prime}}\braOket{j m}{\mathfrak{M}}{j m^{\prime}}\braOket{j m^{\prime}}{\mathfrak{N}}{j m} \end{aligned} \)&
-\includegraphics[valign=c]{fig11_3_129}
-\;$=$\;%
-\includegraphics[valign=c]{fig11_3_130}\\
+\includegraphics[valign=t]{fig11_3_129}
+\;\(=\)\;%
+\includegraphics[valign=t]{fig11_3_130}\\
 \(\begin{aligned}
 & {\left[\sum_{m_{1} m_{2} m_{3}}\braOket{}{\mathfrak{M}}{j_{1} m_{1} j_{2} m_{2} j_{3} m_{3}}\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{m_{2}}{m_{3}}\right] } \\
 & \times {\left[\sum_{m_{1} m_{2} m_{3}}\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{m_{2}}{m_{3}}\braOket{j_{1} m_{1} j_{2} m_{2} j_{3} m_{3}}{\mathfrak{N}}{}\right] } \\
 &= \sum_{m_{1} m_{2} m_{3}}\braOket{}{\mathfrak{M}}{j_{1} m_{1} j_{2} m_{2} j_{3} m_{3}}\braOket{j_{1} m_{1} j_{2} m_{2} j_{3} m_{3}}{\mathfrak{N}}{} .
 \end{aligned}
 \)&
-\includegraphics[valign=c]{fig11_3_131}
+\includegraphics[valign=t]{fig11_3_131}
 \newline
-$=$\;%
-\includegraphics[valign=c]{fig11_3_132}\\
-Expression reduction for $J=0$&Elimination of a $J=0$ line in a diagram\\
+\(=\)\;%
+\includegraphics[valign=t]{fig11_3_132}\\
+Expression reduction for \(J=0\)&Elimination of a \(J=0\) line in a diagram\\
 \(
 \begin{gathered}
 \sum_{m^{\prime}}\braOket{j m}{\mathfrak{M}}{j^{\prime} m^{\prime}}(-1)^{j^{\prime}-m^{\prime}}\threej{j^{\prime}}{0}{j}{-m^{\prime}}{0}{m} \\
 =\frac{\delta_{j j^{\prime}}}{\sqrt{2 j+1}} \sum_{m}\braOket{j m}{\mathfrak{M}}{j m}
 \end{gathered}
 \)&
-\includegraphics[valign=c]{fig11_3_133}
-\;$=$\;%
-\includegraphics[valign=c]{fig11_3_134}
+\includegraphics[valign=t]{fig11_3_133}
+\;\(=\)\;%
+\includegraphics[valign=t]{fig11_3_134}
 \end{tabular}
 \end{center}
 \end{table}
@@ -1097,27 +1053,27 @@ Expression reduction for $J=0$&Elimination of a $J=0$ line in a diagram\\
 \hline
 \multicolumn{1}{c|}{Analytical Expression} & Graphical Representation \\
 \hline
-Expression reduction for $R=1$ &Elimination of the $R=1$ line\\
+Expression reduction for \(R=1\) &Elimination of the \(R=1\) line\\
 \(
 \begin{gathered}
 \sum_{m m^{\prime}}\braOket{j m}{\mathfrak{M}}{j^{\prime} m^{\prime}}\braOket{j^{\prime} m^{\prime}}{D(000)}{j m} \\
 =\delta_{j j^{\prime}} \sum_{m}\braOket{j m}{\mathfrak{M}}{j m}
 \end{gathered}
 \) &
-\includegraphics[valign=c]{fig11_3_135}
-\;$=$\;%
-\includegraphics[valign=c]{fig11_3_136}
+\includegraphics[valign=t]{fig11_3_135}
+\;\(=\)\;%
+\includegraphics[valign=t]{fig11_3_136}
 \\
-Transformation of single, double, or triple invariant sum into direct product of two factors (at least one of the factors must be perfect invariant)&Cutting of a diagram into subdiagrams linked by one, two, or three $j$-lines (at least one of subdiagrams should have no additional external lines)\\
+Transformation of single, double, or triple invariant sum into direct product of two factors (at least one of the factors must be perfect invariant)&Cutting of a diagram into subdiagrams linked by one, two, or three \(j\)-lines (at least one of subdiagrams should have no additional external lines)\\
 \(
 \begin{gathered}
 \sum_{m}\braOket{00}{\mathfrak{M}}{j m}\braOket{j m q}{\mathfrak{N}}{p}=\delta_{j 0} \delta_{m 0}\braOket{00}{\mathfrak{M}}{00} \\
 \times\braOket{00 q}{\mathfrak{N}}{p} .
 \end{gathered}
 \) &
-\includegraphics[valign=c]{fig11_3_137}
-\;$=$\;%
-\includegraphics[valign=c]{fig11_3_138}
+\includegraphics[valign=t]{fig11_3_137}
+\;\(=\)\;%
+\includegraphics[valign=t]{fig11_3_138}
 \\
 \(
 \begin{gathered}
@@ -1126,10 +1082,10 @@ Transformation of single, double, or triple invariant sum into direct product of
 \times\left(\sum_{m_{2}}\braOket{j_{2} m_{2} q}{\mathfrak{N}}{j_{2} m_{2} p}\right)
 \end{gathered}
 \) &
-\includegraphics[valign=c]{fig11_3_139}
+\includegraphics[valign=t]{fig11_3_139}
 \newline
-$=$\;%
-\includegraphics[valign=c]{fig11_3_140}
+\(=\)\;%
+\includegraphics[valign=t]{fig11_3_140}
 \\
 \(
 \begin{gathered}
@@ -1145,12 +1101,12 @@ Here the reduced matrix elements are
 \times\braOket{j_{1} m_{1} j_{2} m_{2} j_{3} m_{3} q}{\mathfrak{N}}{p} .
 \end{gathered}
 \) &
-\includegraphics[valign=c]{fig11_3_141}
+\includegraphics[valign=t]{fig11_3_141}
 \newline
-$=$\;%
-\includegraphics[valign=c]{fig11_3_142}
+\(=\)\;%
+\includegraphics[valign=t]{fig11_3_142}
 \\
-Transformation of $n$-fold invariant sum ( $n>4$ ) over projections into a $k$-fold sum over momenta ( $k=n-3$ ) (at least one of factors under summation must be perfect invariant)&Cutting of a diagram into two subdiagrams linked by $n j$-lines $(n>4)$ (at least one of subdiagrams should have no additional external lines)\\
+Transformation of \(n\)-fold invariant sum ( \(n>4\) ) over projections into a \(k\)-fold sum over momenta ( \(k=n-3\) ) (at least one of factors under summation must be perfect invariant)&Cutting of a diagram into two subdiagrams linked by \(n j\)-lines \((n>4)\) (at least one of subdiagrams should have no additional external lines)\\
 \(
 \begin{aligned}
 & \sum_{\substack{m_{1} m_{2} \\
@@ -1163,13 +1119,13 @@ where
 \braOketred{j_{1} j_{2} J}{\mathfrak{M}}{j_{3} j_{4} J} \equiv \sum_{\substack{m_{1} m_{2} M \\
 m_{3} m_{4}}}\threej{j_{1}}{j_{2}}{J}{m_{1}}{m_{2}}{M}\braOket{j_{1} m_{1} j_{2} m_{2}}{\mathfrak{M}}{j_{3} m_{3} j_{4} m_{4}}\threej{j_{3}}{j_{4}}{J}{m_{3}}{m_{4}}{M}
 \)
-and similarly for $\braOketred{j_{3} j_{4} J q}{\mathfrak{N}}{j_{1} j_{2} J p}$.&
-\includegraphics[valign=c]{fig11_3_143}
+and similarly for \(\braOketred{j_{3} j_{4} J q}{\mathfrak{N}}{j_{1} j_{2} J p}\).&
+\includegraphics[valign=t]{fig11_3_143}
 \newline
-$=$\;%
-\includegraphics[valign=c]{fig11_3_144}
+\(=\)\;%
+\includegraphics[valign=t]{fig11_3_144}
 \;%
-\includegraphics[valign=c]{fig11_3_145}
+\includegraphics[valign=t]{fig11_3_145}
 \end{tabular}
 \end{center}
 \end{table}
@@ -1201,17 +1157,17 @@ where
 \braOketred{0}{\mathfrak{M}}{J_{12} j_{3} J_{45}}=\sum_{m_{i} M_{i k}}\braOket{00}{\mathfrak{M}}{j_{1} m_{1} \ldots j_{5} m_{5}} \\
 \times\threej{j_{1}}{j_{2}}{J_{12}}{m_{1}}{m_{2}}{M_{12}}(-1)^{j_{3}-m_{3}}\threej{J_{12}}{j_{3}}{J_{45}}{M_{12}}{-m_{3}}{M_{45}}\threej{j_{4}}{j_{5}}{J_{45}}{m_{4}}{m_{5}}{M_{45}},
 \end{gathered}
-\)and similarly for $\braOketred{J_{12} j_{3} J_{45} q}{\mathfrak{N}}{p}$.
+\)and similarly for \(\braOketred{J_{12} j_{3} J_{45} q}{\mathfrak{N}}{p}\).
 &
-\includegraphics[valign=c]{fig11_3_146}
+\includegraphics[valign=t]{fig11_3_146}
 \newline
-$=$\;%
-\includegraphics[valign=c]{fig11_3_147}
+\(=\)\;%
+\includegraphics[valign=t]{fig11_3_147}
 \;%
-\includegraphics[valign=c]{fig11_3_148}\\
+\includegraphics[valign=t]{fig11_3_148}\\
 
 
-$\sum_{m_{1} \ldots m_{6}}\braOket{00}{\mathfrak{M}}{j_{1} m_{1} \ldots j_{6} m_{6}}\braOket{j_{1} m_{1} \ldots j_{6} m_{6} q}{\mathfrak{N}}{p}$
+\(\sum_{m_{1} \ldots m_{6}}\braOket{00}{\mathfrak{M}}{j_{1} m_{1} \ldots j_{6} m_{6}}\braOket{j_{1} m_{1} \ldots j_{6} m_{6} q}{\mathfrak{N}}{p}\)
 \(
 \begin{gathered}
 =\sum_{J_{i k}}\left(2 J_{12}+1\right)\left(2 J_{34}+1\right)\left(2 J_{56}+1\right)\braOketred{0}{\mathfrak{M}}{J_{12} J_{34} J_{56}} \\
@@ -1225,20 +1181,20 @@ where
 \times\threej{j_{1}}{j_{2}}{J_{12}}{m_{1}}{m_{2}}{M_{12}}\threej{j_{3}}{j_{4}}{J_{34}}{m_{3}}{m_{4}}{M_{34}}\threej{j_{5}}{j_{6}}{J_{56}}{m_{5}}{m_{6}}{M_{56}}\threej{J_{12}}{J_{34}}{J_{56}}{M_{12}}{M_{34}}{M_{56}},
 \end{gathered}
 \)
-and similarly for $\braOketred{J_{12} J_{34} J_{56} q}{\mathfrak{N}}{p}$. &
-\includegraphics[valign=c]{fig11_3_149}
+and similarly for \(\braOketred{J_{12} J_{34} J_{56} q}{\mathfrak{N}}{p}\). &
+\includegraphics[valign=t]{fig11_3_149}
 \newline
-$=$\;%
-\includegraphics[valign=c]{fig11_3_150}
+\(=\)\;%
+\includegraphics[valign=t]{fig11_3_150}
 \;%
-\includegraphics[valign=c]{fig11_3_151}
+\includegraphics[valign=t]{fig11_3_151}
 \end{tabular}\end{center}
 \end{table}
 
 \begin{table}[ptbh!]
 \begin{center}
 \captionsetup{justification=centering,labelformat=empty}
-\caption*{Table 11.10. \\$3jm $ symbols}
+\caption*{Table 11.10. \\\(3jm \) symbols}
 \small
 \setlength{\tabcolsep}{4pt}
 \renewcommand{\arraystretch}{1.5}
@@ -1251,9 +1207,9 @@ $=$\;%
 \threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{m_{2}}{m_{3}}=(-1)^{j_{1}+j_{2}+j_{3}}\threej{j_{3}}{j_{2}}{j_{1}}{m_{3}}{m_{2}}{m_{1}}
 \)
 &
-\includegraphics[valign=c]{fig11_3_152}
-\;$=$\;%
-\includegraphics[valign=c]{fig11_3_153}\\
+\includegraphics[valign=t]{fig11_3_152}
+\;\(=\)\;%
+\includegraphics[valign=t]{fig11_3_153}\\
 \multicolumn{2}{c}{Hermitian Conjugation}\\
 \(
 \begin{gathered}
@@ -1261,9 +1217,9 @@ $=$\;%
 =\sum_{m_{2}^{\prime} m_{3}^{\prime}}\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{m_{2}^{\prime}}{m_{3}^{\prime}}\binom{j_{2}}{m_{2} m_{2}^{\prime}}\binom{j_{3}}{m_{3} m_{3}^{\prime}}=(-1)^{j_{2}+m_{2}+j_{3}+m_{3}}\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{-m_{2}}{-m_{3}}
 \end{gathered}
 \) &
-\includegraphics[valign=c]{fig11_3_154}
-\;$=(-1)^{2j_1}$\;%
-\includegraphics[valign=c]{fig11_3_155}
+\includegraphics[valign=t]{fig11_3_154}
+\;\(=(-1)^{2j_1}\)\;%
+\includegraphics[valign=t]{fig11_3_155}
 \\
 \(
 \begin{gathered}
@@ -1271,9 +1227,9 @@ $=$\;%
 =(-1)^{j_{1}-m_{1}+j_{2}-m_{2}+j_{3}-m_{3}}\threej{j_{1}}{j_{2}}{j_{3}}{-m_{1}}{-m_{2}}{-m_{3}}=\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{m_{2}}{m_{3}}
 \end{gathered}
 \) &
-\includegraphics[valign=c]{fig11_3_156}
-\;$=$\;%
-\includegraphics[valign=c]{fig11_3_157}
+\includegraphics[valign=t]{fig11_3_156}
+\;\(=\)\;%
+\includegraphics[valign=t]{fig11_3_157}
 \end{tabular}\end{center}\end{table}
 
 \begin{table}[ptbh!]
@@ -1295,11 +1251,11 @@ $=$\;%
 \end{gathered}
 \)
 &
-\includegraphics[valign=c]{fig11_3_158}
-\;$=$\;%
-\includegraphics[valign=c]{fig11_3_159}
+\includegraphics[valign=t]{fig11_3_158}
+\;\(=\)\;%
+\includegraphics[valign=t]{fig11_3_159}
 \;%
-\includegraphics[valign=c]{fig11_3_160}
+\includegraphics[valign=t]{fig11_3_160}
 \\
 \multicolumn{2}{c}{Completeness}\\
 \(
@@ -1310,9 +1266,9 @@ $=$\;%
 \end{gathered}
 \)
 &
-\includegraphics[valign=c]{fig11_3_161}
-\;$=$\;%
-\includegraphics[valign=c]{fig11_3_162}
+\includegraphics[valign=t]{fig11_3_161}
+\;\(=\)\;%
+\includegraphics[valign=t]{fig11_3_162}
 \end{tabular}
 \end{center}
 \end{table}
@@ -1328,20 +1284,20 @@ $=$\;%
 \hline
 \multicolumn{1}{c|}{Analytical Expression} & Graphical Representation \\
 \hline
-$\begin{aligned}[t]
+\(\begin{aligned}[t]
 \clebsch{j_1}{m_1}{j_2}{m_2}{J}{M}&=\braket{j_1m_1j_2m_2}{j_1j_2JM}=\braket{j_1j_2JM}{j_1m_1j_2m_2}\\
 &=(-1)^{2j_1}\sum_{j_3m_3}(2j_3+1)\threej{J}{0}{j_3}{M}{0}{m_3}\threej{j_3}{j_2}{j_1}{m_3}{m_2}{m_1}\\
 &=(-1)^{2j_1}\sqrt{2J+1}\,(-1)^{J+M}\threej{J}{j_2}{j_1}{-M}{m_2}{m_1}\\
 &=(-1)^{2j_2}\sum_{j_3m_3}(2j_3+1)\threej{0}{J}{j_3}{0}{M}{m_3}\threej{j_3}{j_2}{j_1}{m_3}{m_2}{m_1}\\
 &=(-1)^{2j_2}\sqrt{2J+1}\,(-1)^{J-M}\threej{J}{j_2}{j_1}{-M}{m_2}{m_1}
-\end{aligned}$
+\end{aligned}\)
 & \begin{tabular}{@{}c@{}}
-\includegraphics[valign=c]{fig11_3_163}$\;=\;$%
-\includegraphics[valign=c]{fig11_3_164}\\[1.4em]
-$(-1)^{2j_1}$\,\includegraphics[valign=c]{fig11_3_165}$\;=(-1)^{2j_1}\;$%
-\includegraphics[valign=c]{fig11_3_166}\\[1.4em]
-$(-1)^{2j_2}$\,\includegraphics[valign=c]{fig11_3_167}$\;=(-1)^{2j_2}\;$%
-\includegraphics[valign=c]{fig11_3_168}
+\includegraphics[valign=t]{fig11_3_163}\(\;=\;\)%
+\includegraphics[valign=t]{fig11_3_164}\\[1.4em]
+\((-1)^{2j_1}\)\,\includegraphics[valign=t]{fig11_3_165}\(\;=(-1)^{2j_1}\;\)%
+\includegraphics[valign=t]{fig11_3_166}\\[1.4em]
+\((-1)^{2j_2}\)\,\includegraphics[valign=t]{fig11_3_167}\(\;=(-1)^{2j_2}\;\)%
+\includegraphics[valign=t]{fig11_3_168}
 \end{tabular} \\
 \hline
 \end{tabular}
@@ -1351,7 +1307,7 @@ $(-1)^{2j_2}$\,\includegraphics[valign=c]{fig11_3_167}$\;=(-1)^{2j_2}\;$%
 \begin{table}[tbh!]
 \begin{center}
 \captionsetup{justification=centering,labelformat=empty}
-\caption{Table 11.11.\\ Metric Tensor for $(2j+1)$-Dimensional Space of Functions $|jm\rangle$.}
+\caption{Table 11.11.\\ Metric Tensor for \((2j+1)\)-Dimensional Space of Functions \(|jm\rangle\).}
 \small
 \setlength{\tabcolsep}{5pt}
 \renewcommand{\arraystretch}{1.3}
@@ -1360,29 +1316,29 @@ $(-1)^{2j_2}$\,\includegraphics[valign=c]{fig11_3_167}$\;=(-1)^{2j_2}\;$%
 \multicolumn{1}{c|}{Analytical Expression} & Graphical Representation \\
 \hline
 \multicolumn{2}{c}{Definition and Properties}\\
-$|jm\,jm^{\prime}\rangle=\langle jm\,jm^{\prime}|=\dbinom{j}{m\ m^{\prime}}=(-1)^{j+m}\delta_{m,-m^{\prime}}$
-& \metric{jm}{jm^{\prime}}{k}$\,=\,$\metric{jm}{jm^{\prime}}{b} \\
-$\langle jm^{\prime}\,jm|=|jm^{\prime}\,jm\rangle=\dbinom{j}{m^{\prime}\ m}=(-1)^{j-m}\delta_{m^{\prime},-m}$
-& \metric{jm^{\prime}}{jm}{b}$\,=\,$\metric{jm^{\prime}}{jm}{k} \\
-$|jm^{\prime}\,jm\rangle=(-1)^{2j}|jm\,jm^{\prime}\rangle=\langle jm^{\prime}\,jm|=(-1)^{2j}\langle jm\,jm^{\prime}|$
+\(|jm\,jm^{\prime}\rangle=\langle jm\,jm^{\prime}|=\dbinom{j}{m\ m^{\prime}}=(-1)^{j+m}\delta_{m,-m^{\prime}}\)
+& \metric{jm}{jm^{\prime}}{k}\(\,=\,\)\metric{jm}{jm^{\prime}}{b} \\
+\(\langle jm^{\prime}\,jm|=|jm^{\prime}\,jm\rangle=\dbinom{j}{m^{\prime}\ m}=(-1)^{j-m}\delta_{m^{\prime},-m}\)
+& \metric{jm^{\prime}}{jm}{b}\(\,=\,\)\metric{jm^{\prime}}{jm}{k} \\
+\(|jm^{\prime}\,jm\rangle=(-1)^{2j}|jm\,jm^{\prime}\rangle=\langle jm^{\prime}\,jm|=(-1)^{2j}\langle jm\,jm^{\prime}|\)
 & \begin{tabular}{@{}c@{}}
-\metric{jm^{\prime}}{jm}{k}$\,=(-1)^{2j}\,$\metric{jm}{jm^{\prime}}{k}$\,=$ \\
-$=\,$\metric{jm^{\prime}}{jm}{b}$\,=(-1)^{2j}\,$\metric{jm}{jm^{\prime}}{b}
+\metric{jm^{\prime}}{jm}{k}\(\,=(-1)^{2j}\,\)\metric{jm}{jm^{\prime}}{k}\(\,=\) \\
+\(=\,\)\metric{jm^{\prime}}{jm}{b}\(\,=(-1)^{2j}\,\)\metric{jm}{jm^{\prime}}{b}
 \end{tabular} \\
-$\displaystyle\sum_{m^{\prime}}|jm\,jm^{\prime}\rangle\langle jm^{\prime\prime}\,jm^{\prime}|=\langle jm^{\prime\prime}|jm\rangle$
-& \scalebox{0.82}{$\displaystyle\sum_{m^{\prime}}$\,\metric{jm}{jm^{\prime}}{k}\,\metric{jm^{\prime}}{jm^{\prime\prime}}{b}$\,=\,$\metric{jm}{jm^{\prime\prime}}{b}} \\
+\(\displaystyle\sum_{m^{\prime}}|jm\,jm^{\prime}\rangle\langle jm^{\prime\prime}\,jm^{\prime}|=\langle jm^{\prime\prime}|jm\rangle\)
+& \scalebox{0.82}{\(\displaystyle\sum_{m^{\prime}}\)\,\metric{jm}{jm^{\prime}}{k}\,\metric{jm^{\prime}}{jm^{\prime\prime}}{b}\(\,=\,\)\metric{jm}{jm^{\prime\prime}}{b}} \\
 \hline
-\multicolumn{2}{c}{Covariant $\rightleftarrows$ Contravariant. Transformation of the Irreducible Tensor}\\
-$\displaystyle\sum_{m^{\prime}}|jm\,jm^{\prime}\rangle\braOket{jm^{\prime}}{\mathfrak{M}}{}=\braOket{}{\mathfrak{M}}{jm}$
-& \scalebox{0.82}{$\displaystyle\sum_{m^{\prime}}$
-\includegraphics[valign=c]{fig11_3_169}\,
-\metric{jm^{\prime}}{jm}{k}$\,=\,$%
-\includegraphics[valign=c]{fig11_3_170}} \\
-$\displaystyle\sum_{m^{\prime}}\braOket{}{\mathfrak{M}}{jm^{\prime}}\langle jm^{\prime}\,jm|=\braOket{jm}{\mathfrak{M}}{}$
-& \scalebox{0.82}{$\displaystyle\sum_{m^{\prime}}$
-\includegraphics[valign=c]{fig11_3_171}\,
-\metric{jm^{\prime}}{jm}{b}$\,=\,$%
-\includegraphics[valign=c]{fig11_3_172}} \\
+\multicolumn{2}{c}{Covariant \(\rightleftarrows\) Contravariant. Transformation of the Irreducible Tensor}\\
+\(\displaystyle\sum_{m^{\prime}}|jm\,jm^{\prime}\rangle\braOket{jm^{\prime}}{\mathfrak{M}}{}=\braOket{}{\mathfrak{M}}{jm}\)
+& \scalebox{0.82}{\(\displaystyle\sum_{m^{\prime}}\)
+\includegraphics[valign=t]{fig11_3_169}\,
+\metric{jm^{\prime}}{jm}{k}\(\,=\,\)%
+\includegraphics[valign=t]{fig11_3_170}} \\
+\(\displaystyle\sum_{m^{\prime}}\braOket{}{\mathfrak{M}}{jm^{\prime}}\langle jm^{\prime}\,jm|=\braOket{jm}{\mathfrak{M}}{}\)
+& \scalebox{0.82}{\(\displaystyle\sum_{m^{\prime}}\)
+\includegraphics[valign=t]{fig11_3_171}\,
+\metric{jm^{\prime}}{jm}{b}\(\,=\,\)%
+\includegraphics[valign=t]{fig11_3_172}} \\
 \hline
 \multicolumn{2}{c}{Scalar Product of Irreducible Tensors}\\
 \(\begin{aligned}
@@ -1391,16 +1347,16 @@ $\displaystyle\sum_{m^{\prime}}\braOket{}{\mathfrak{M}}{jm^{\prime}}\langle jm^{
 &=\sum_{mm^{\prime}}|jm\,jm^{\prime}\rangle\braOket{jm^{\prime}}{\mathfrak{M}}{}\braOket{jm}{\mathfrak{N}}{}.
 \end{aligned}\)
 & \scalebox{0.82}{\begin{tabular}{@{}c@{}}
-\includegraphics[valign=c]{fig11_3_173}$\;=\displaystyle\sum_{m}$
-\includegraphics[valign=c]{fig11_3_174} \\[0.4em]
-$\displaystyle=\sum_{mm^{\prime}}$
-\includegraphics[valign=c]{fig11_3_175}\,
+\includegraphics[valign=t]{fig11_3_173}\(\;=\displaystyle\sum_{m}\)
+\includegraphics[valign=t]{fig11_3_174} \\[0.4em]
+\(\displaystyle=\sum_{mm^{\prime}}\)
+\includegraphics[valign=t]{fig11_3_175}\,
 \metric{jm}{jm^{\prime}}{b}\,
-\includegraphics[valign=c]{fig11_3_176} \\[0.4em]
-$\displaystyle=\sum_{mm^{\prime}}$
-\includegraphics[valign=c]{fig11_3_177}\,
+\includegraphics[valign=t]{fig11_3_176} \\[0.4em]
+\(\displaystyle=\sum_{mm^{\prime}}\)
+\includegraphics[valign=t]{fig11_3_177}\,
 \metric{jm^{\prime}}{jm}{k}\,
-\includegraphics[valign=c]{fig11_3_178}
+\includegraphics[valign=t]{fig11_3_178}
 \end{tabular}} \\
 \(\begin{aligned}
 &\sum_{m}\braOket{jm}{\mathfrak{M}}{}\braOket{}{\mathfrak{N}}{jm}\\
@@ -1408,20 +1364,20 @@ $\displaystyle=\sum_{mm^{\prime}}$
 &=\sum_{mm^{\prime}}|jm\,jm^{\prime}\rangle\braOket{jm}{\mathfrak{M}}{}\braOket{jm^{\prime}}{\mathfrak{N}}{}.
 \end{aligned}\)
 & \scalebox{0.82}{\begin{tabular}{@{}c@{}}
-\includegraphics[valign=c]{fig11_3_179}$\;=\displaystyle\sum_{m}$
-\includegraphics[valign=c]{fig11_3_180} \\[0.4em]
-$\displaystyle=\sum_{mm^{\prime}}$
-\includegraphics[valign=c]{fig11_3_181}\,
+\includegraphics[valign=t]{fig11_3_179}\(\;=\displaystyle\sum_{m}\)
+\includegraphics[valign=t]{fig11_3_180} \\[0.4em]
+\(\displaystyle=\sum_{mm^{\prime}}\)
+\includegraphics[valign=t]{fig11_3_181}\,
 \metric{jm^{\prime}}{jm}{b}\,
-\includegraphics[valign=c]{fig11_3_182} \\[0.4em]
-$\displaystyle=\sum_{mm^{\prime}}$
-\includegraphics[valign=c]{fig11_3_183}\,
+\includegraphics[valign=t]{fig11_3_182} \\[0.4em]
+\(\displaystyle=\sum_{mm^{\prime}}\)
+\includegraphics[valign=t]{fig11_3_183}\,
 \metric{jm}{jm^{\prime}}{k}\,
-\includegraphics[valign=c]{fig11_3_184}
+\includegraphics[valign=t]{fig11_3_184}
 \end{tabular}} \\
-$\displaystyle\sum_{m}\braOket{}{\mathfrak{M}}{jm}\braOket{jm}{\mathfrak{N}}{}=(-1)^{2j}\sum_{m}\braOket{jm}{\mathfrak{M}}{}\braOket{}{\mathfrak{N}}{jm}$
-& \includegraphics[valign=c]{fig11_3_185}$=(-1)^{2j}$%
-\includegraphics[valign=c]{fig11_3_186} \\
+\(\displaystyle\sum_{m}\braOket{}{\mathfrak{M}}{jm}\braOket{jm}{\mathfrak{N}}{}=(-1)^{2j}\sum_{m}\braOket{jm}{\mathfrak{M}}{}\braOket{}{\mathfrak{N}}{jm}\)
+& \includegraphics[valign=t]{fig11_3_185}\(=(-1)^{2j}\)%
+\includegraphics[valign=t]{fig11_3_186} \\
 \hline
 \end{tabular}
 \end{center}
@@ -1439,44 +1395,44 @@ $\displaystyle\sum_{m}\braOket{}{\mathfrak{M}}{jm}\braOket{jm}{\mathfrak{N}}{}=(
 \multicolumn{1}{c|}{Analytical Expression} & Graphical Representation \\
 \hline
 \multicolumn{2}{c}{Definition}\\
-$C_{lm}(\Omega)\equiv\sqrt{\dfrac{4\pi}{2l+1}}\,Y_{lm}(\Omega)=\rbraket{\Omega}{lm}$,\newline
-$C_{lm}^{*}(\Omega)=(-1)^{m}C_{l-m}(\Omega)=\rbraket{lm}{\Omega}$.
-& \includegraphics[valign=c]{fig11_3_187}\newline
-\includegraphics[valign=c]{fig11_3_188} \\
+\(C_{lm}(\Omega)\equiv\sqrt{\dfrac{4\pi}{2l+1}}\,Y_{lm}(\Omega)=\rbraket{\Omega}{lm}\),\newline
+\(C_{lm}^{*}(\Omega)=(-1)^{m}C_{l-m}(\Omega)=\rbraket{lm}{\Omega}\).
+& \includegraphics[valign=t]{fig11_3_187}\newline
+\includegraphics[valign=t]{fig11_3_188} \\
 \multicolumn{2}{c}{Addition Theorem}\\
-$\displaystyle\sum_{m}C_{lm}(\Omega_1)C_{lm}^{*}(\Omega_2)=P_l(\cos\omega_{12})$,\newline
-where $\omega_{12}$ is the angle between $\Omega_1$ and $\Omega_2$.
-& \includegraphics[valign=c]{fig11_3_189}$\;=\;$%
-\includegraphics[valign=c]{fig11_3_190} \\
+\(\displaystyle\sum_{m}C_{lm}(\Omega_1)C_{lm}^{*}(\Omega_2)=P_l(\cos\omega_{12})\),\newline
+where \(\omega_{12}\) is the angle between \(\Omega_1\) and \(\Omega_2\).
+& \includegraphics[valign=t]{fig11_3_189}\(\;=\;\)%
+\includegraphics[valign=t]{fig11_3_190} \\
 \multicolumn{2}{c}{Completeness}\\
-$\displaystyle\sum_{lm}(2l+1)C_{lm}(\Omega_1)C_{lm}^{*}(\Omega_2)=4\pi\,\delta(\Omega_1-\Omega_2)$.
-& \includegraphics[valign=c]{fig11_3_191}$\;=\;$%
-\includegraphics[valign=c]{fig11_3_192} \\
+\(\displaystyle\sum_{lm}(2l+1)C_{lm}(\Omega_1)C_{lm}^{*}(\Omega_2)=4\pi\,\delta(\Omega_1-\Omega_2)\).
+& \includegraphics[valign=t]{fig11_3_191}\(\;=\;\)%
+\includegraphics[valign=t]{fig11_3_192} \\
 \multicolumn{2}{c}{Orthonormality}\\
-$\displaystyle\int C_{l_1m_1}^{*}(\Omega)C_{l_2m_2}(\Omega)\,\dfrac{d\Omega}{4\pi}=\dfrac{\delta_{l_1l_2}\delta_{m_1m_2}}{(2l_1+1)}$.
+\(\displaystyle\int C_{l_1m_1}^{*}(\Omega)C_{l_2m_2}(\Omega)\,\dfrac{d\Omega}{4\pi}=\dfrac{\delta_{l_1l_2}\delta_{m_1m_2}}{(2l_1+1)}\).
 & \begin{tabular}{@{}c@{}}
-\includegraphics[valign=c]{fig11_3_193}$\;=\;$%
-\includegraphics[valign=c]{fig11_3_194}$\;=$ \\[0.4em]
-$=\;$\includegraphics[valign=c]{fig11_3_195}\qquad
-\includegraphics[valign=c]{fig11_3_196}
+\includegraphics[valign=t]{fig11_3_193}\(\;=\;\)%
+\includegraphics[valign=t]{fig11_3_194}\(\;=\) \\[0.4em]
+\(=\;\)\includegraphics[valign=t]{fig11_3_195}\qquad
+\includegraphics[valign=t]{fig11_3_196}
 \end{tabular} \\
 \multicolumn{2}{c}{Integral of a Product of Three Harmonics}\\
-$\displaystyle\int C_{l_1m_1}(\Omega)C_{l_2m_2}(\Omega)C_{l_3m_3}(\Omega)\,\dfrac{d\Omega}{4\pi}=\threej{l_1}{l_2}{l_3}{0}{0}{0}\threej{l_1}{l_2}{l_3}{m_1}{m_2}{m_3}$.
-& \scalebox{0.78}{\includegraphics[valign=c]{fig11_3_197}}$\;=\;$%
-\scalebox{0.78}{\includegraphics[valign=c]{fig11_3_198}}$\;=\;$%
-\scalebox{0.78}{\includegraphics[valign=c]{fig11_3_199}} \\
+\(\displaystyle\int C_{l_1m_1}(\Omega)C_{l_2m_2}(\Omega)C_{l_3m_3}(\Omega)\,\dfrac{d\Omega}{4\pi}=\threej{l_1}{l_2}{l_3}{0}{0}{0}\threej{l_1}{l_2}{l_3}{m_1}{m_2}{m_3}\).
+& \scalebox{0.78}{\includegraphics[valign=t]{fig11_3_197}}\(\;=\;\)%
+\scalebox{0.78}{\includegraphics[valign=t]{fig11_3_198}}\(\;=\;\)%
+\scalebox{0.78}{\includegraphics[valign=t]{fig11_3_199}} \\
 \multicolumn{2}{c}{Clebsch-Gordan Expansion}\\
-$\displaystyle C_{l_1m_1}(\Omega)C_{l_2m_2}(\Omega)=\sum_{l_3m_3}\threej{l_1}{l_2}{l_3}{0}{0}{0}\threej{l_1}{l_2}{l_3}{m_1}{m_2}{m_3}C_{l_3m_3}^{*}(\Omega)$.
-& \includegraphics[valign=c]{fig11_3_200}$\;=\;$%
-\includegraphics[valign=c]{fig11_3_201} \\
+\(\displaystyle C_{l_1m_1}(\Omega)C_{l_2m_2}(\Omega)=\sum_{l_3m_3}\threej{l_1}{l_2}{l_3}{0}{0}{0}\threej{l_1}{l_2}{l_3}{m_1}{m_2}{m_3}C_{l_3m_3}^{*}(\Omega)\).
+& \includegraphics[valign=t]{fig11_3_200}\(\;=\;\)%
+\includegraphics[valign=t]{fig11_3_201} \\
 \multicolumn{2}{c}{Sum of Scalar Products of Three Harmonics}\\
-$\begin{aligned}
+\(\begin{aligned}
 &\sum_{\substack{m_1m_2m_3\\ l_1}}(2l_1+1)\threej{l_1}{l_2}{l_3}{0}{0}{0}\threej{l_1}{l_2}{l_3}{m_1}{m_2}{m_3}\\
 &\quad\times C_{l_1m_1}(\Omega_1)C_{l_2m_2}(\Omega_2)C_{l_3m_3}(\Omega_3)\\
 &=P_{l_2}(\cos\omega_{21})\,P_{l_3}(\cos\omega_{31}).
-\end{aligned}$
-& \includegraphics[valign=c]{fig11_3_202}$\;=\;$%
-\includegraphics[valign=c]{fig11_3_203} \\
+\end{aligned}\)
+& \includegraphics[valign=t]{fig11_3_202}\(\;=\;\)%
+\includegraphics[valign=t]{fig11_3_203} \\
 \hline
 \end{tabular}
 \end{center}
@@ -1495,61 +1451,61 @@ $\begin{aligned}
 \multicolumn{1}{c|}{Analytical Expression} & Graphical Representation \\
 \hline
 \multicolumn{2}{c}{Adjoint Matrix}\\
-$\begin{aligned}
+\(\begin{aligned}
 \left(D^{j}_{mm'}(R)\right)^{*}&=\sum_{\mu\mu'}\binom{j}{m\ \mu}D^{j}_{\mu\mu'}(R)\binom{j}{\mu'\ m'}\\
 &=(-1)^{m-m'}D^{j}_{-m,-m'}(R).
-\end{aligned}$
+\end{aligned}\)
 &
-\scalebox{0.8}{\includegraphics[valign=c]{fig11_3_204}$=\displaystyle\sum_{\mu\mu'}$%
-\includegraphics[valign=c]{fig11_3_205}%
-\includegraphics[valign=c]{fig11_3_206}%
-\includegraphics[valign=c]{fig11_3_207}}
+\scalebox{0.8}{\includegraphics[valign=t]{fig11_3_204}\(=\displaystyle\sum_{\mu\mu'}\)%
+\includegraphics[valign=t]{fig11_3_205}%
+\includegraphics[valign=t]{fig11_3_206}%
+\includegraphics[valign=t]{fig11_3_207}}
 \\
 \multicolumn{2}{c}{Inverse Matrix}\\
-$D^{j}_{mm'}(R^{-1})=\left(D^{j}_{m'm}(R)\right)^{*}.$
+\(D^{j}_{mm'}(R^{-1})=\left(D^{j}_{m'm}(R)\right)^{*}.\)
 &
-\includegraphics[valign=c]{fig11_3_208}$\;=\;$%
-\includegraphics[valign=c]{fig11_3_209}
+\includegraphics[valign=t]{fig11_3_208}\(\;=\;\)%
+\includegraphics[valign=t]{fig11_3_209}
 \\
 \multicolumn{2}{c}{Unitarity}\\
-$\displaystyle\sum_{m}\left(D^{j}_{mm'}(R)\right)^{*}D^{j}_{m\bar m'}(R)=\sum_{m}D^{j}_{m'm}(R^{-1})D^{j}_{m\bar m'}(R)=\delta_{m'\bar m'}$
+\(\displaystyle\sum_{m}\left(D^{j}_{mm'}(R)\right)^{*}D^{j}_{m\bar m'}(R)=\sum_{m}D^{j}_{m'm}(R^{-1})D^{j}_{m\bar m'}(R)=\delta_{m'\bar m'}\)
 &
-\scalebox{0.86}{\includegraphics[valign=c]{fig11_3_210}$=$%
-\includegraphics[valign=c]{fig11_3_211}}
+\scalebox{0.86}{\includegraphics[valign=t]{fig11_3_210}\(=\)%
+\includegraphics[valign=t]{fig11_3_211}}
 \\
-$\displaystyle\sum_{m'}D^{j}_{mm'}(R)\left(D^{j}_{\bar m m'}(R)\right)^{*}=\sum_{m'}D^{j}_{mm'}(R)D^{j}_{m'\bar m}(R^{-1})=\delta_{m\bar m}$
+\(\displaystyle\sum_{m'}D^{j}_{mm'}(R)\left(D^{j}_{\bar m m'}(R)\right)^{*}=\sum_{m'}D^{j}_{mm'}(R)D^{j}_{m'\bar m}(R^{-1})=\delta_{m\bar m}\)
 &
-\scalebox{0.86}{\includegraphics[valign=c]{fig11_3_212}$=$%
-\includegraphics[valign=c]{fig11_3_213}}
+\scalebox{0.86}{\includegraphics[valign=t]{fig11_3_212}\(=\)%
+\includegraphics[valign=t]{fig11_3_213}}
 \\
 \multicolumn{2}{c}{Orthonormality}\\
-$\displaystyle\int D^{j_1}_{m_1m'_1}(R)\,D^{j_2\,*}_{m_2m'_2}(R)\,\frac{dR}{16\pi^2}=\frac{\delta_{j_1j_2}\delta_{m_1m_2}\delta_{m'_1m'_2}}{(2j_1+1)}$
+\(\displaystyle\int D^{j_1}_{m_1m'_1}(R)\,D^{j_2\,*}_{m_2m'_2}(R)\,\frac{dR}{16\pi^2}=\frac{\delta_{j_1j_2}\delta_{m_1m_2}\delta_{m'_1m'_2}}{(2j_1+1)}\)
 &
-\includegraphics[valign=c]{fig11_3_214}$\;=\;$%
-\includegraphics[valign=c]{fig11_3_215}
+\includegraphics[valign=t]{fig11_3_214}\(\;=\;\)%
+\includegraphics[valign=t]{fig11_3_215}
 \\
 \multicolumn{2}{c}{Completeness}\\
-$\displaystyle\sum_{j=0,1/2,1}^{\infty}(2j+1)\sum_{mm'}D^{j}_{mm'}(R_1)\,D^{j\,*}_{mm'}(R_2)=16\pi^2\,\delta(R_1-R_2)$
+\(\displaystyle\sum_{j=0,1/2,1}^{\infty}(2j+1)\sum_{mm'}D^{j}_{mm'}(R_1)\,D^{j\,*}_{mm'}(R_2)=16\pi^2\,\delta(R_1-R_2)\)
 &
-\includegraphics[valign=c]{fig11_3_216}$\;=\;$%
-\includegraphics[valign=c]{fig11_3_217}
+\includegraphics[valign=t]{fig11_3_216}\(\;=\;\)%
+\includegraphics[valign=t]{fig11_3_217}
 \\
-\multicolumn{2}{c}{Rotation Matrix in $\Omega$-Representation}\\
-$\begin{aligned}
+\multicolumn{2}{c}{Rotation Matrix in \(\Omega\)-Representation}\\
+\(\begin{aligned}
 \delta_{ll'}D^{l}_{mm'}(R)&=\frac{2l+1}{4\pi}\iint d\Omega\,d\Omega'\,C^{*}_{lm}(\Omega)\,\delta(\Omega-R^{-1}\Omega')\,C_{l'm'}(\Omega'),\\
 \langle lm|R|l'm'\rangle&=\langle lm|\Omega\rangle\langle\Omega|R^{-1}|\Omega'\rangle\langle\Omega'|l'm'\rangle.
-\end{aligned}$
+\end{aligned}\)
 &
-\includegraphics[valign=c]{fig11_3_218}$\;=\;$%
-\includegraphics[valign=c]{fig11_3_219}
+\includegraphics[valign=t]{fig11_3_218}\(\;=\;\)%
+\includegraphics[valign=t]{fig11_3_219}
 \\
-$\begin{aligned}
+\(\begin{aligned}
 \delta(\Omega'-R\Omega)&=\sum_{lmm'}\frac{2l+1}{4\pi}\,C_{lm'}(\Omega')\,D^{l}_{m'm}(R^{-1})\,C^{*}_{lm}(\Omega),\\
 \langle\Omega'|R|\Omega\rangle&=\langle\Omega'|l'm'\rangle\langle l'm'|R^{-1}|lm\rangle\langle lm|\Omega\rangle.
-\end{aligned}$
+\end{aligned}\)
 &
-\includegraphics[valign=c]{fig11_3_220}$\;=\;$%
-\includegraphics[valign=c]{fig11_3_221}
+\includegraphics[valign=t]{fig11_3_220}\(\;=\;\)%
+\includegraphics[valign=t]{fig11_3_221}
 \\
 \hline
 \end{tabular}
@@ -1569,43 +1525,43 @@ $\begin{aligned}
 \hline
 \multicolumn{2}{c}{Clebsch-Gordan Expansion and Associated Relations}\\
 % ---- CG row 1 ----
-$\displaystyle D^{j_1}_{m_1m'_1}(R)\,D^{j_2}_{m_2m'_2}(R)=\sum_{j_3m_3m'_3}(2j_3+1)\threej{j_1}{j_2}{j_3}{m_1}{m_2}{m_3}D^{j_3*}_{m_3m'_3}(R)\threej{j_1}{j_2}{j_3}{m'_1}{m'_2}{m'_3}$
+\(\displaystyle D^{j_1}_{m_1m'_1}(R)\,D^{j_2}_{m_2m'_2}(R)=\sum_{j_3m_3m'_3}(2j_3+1)\threej{j_1}{j_2}{j_3}{m_1}{m_2}{m_3}D^{j_3*}_{m_3m'_3}(R)\threej{j_1}{j_2}{j_3}{m'_1}{m'_2}{m'_3}\)
 &
-\scalebox{0.72}{\includegraphics[valign=c]{fig11_3_222}$=$%
-\includegraphics[valign=c]{fig11_3_223}}
+\scalebox{0.72}{\includegraphics[valign=t]{fig11_3_222}\(=\)%
+\includegraphics[valign=t]{fig11_3_223}}
 \\
 % ---- CG row 2 (bubble) ----
-$\displaystyle\sum_{\substack{m_1m_2\\ m'_1m'_2}}\threej{j_1}{j_2}{j_3}{m_1}{m_2}{m_3}D^{j_1}_{m_1m'_1}(R)D^{j_2}_{m_2m'_2}(R)\threej{j_1}{j_2}{j'_3}{m'_1}{m'_2}{m'_3}=\frac{\delta_{j_3j'_3}}{(2j_3+1)}\{j_1j_2j_3\}D^{j_3*}_{m_3m'_3}(R)$
+\(\displaystyle\sum_{\substack{m_1m_2\\ m'_1m'_2}}\threej{j_1}{j_2}{j_3}{m_1}{m_2}{m_3}D^{j_1}_{m_1m'_1}(R)D^{j_2}_{m_2m'_2}(R)\threej{j_1}{j_2}{j'_3}{m'_1}{m'_2}{m'_3}=\frac{\delta_{j_3j'_3}}{(2j_3+1)}\{j_1j_2j_3\}D^{j_3*}_{m_3m'_3}(R)\)
 &
-\scalebox{0.72}{\includegraphics[valign=c]{fig11_3_224}$=$%
-\includegraphics[valign=c]{fig11_3_225}%
-\includegraphics[valign=c]{fig11_3_226}%
-\includegraphics[valign=c]{fig11_3_227}}
+\scalebox{0.72}{\includegraphics[valign=t]{fig11_3_224}\(=\)%
+\includegraphics[valign=t]{fig11_3_225}%
+\includegraphics[valign=t]{fig11_3_226}%
+\includegraphics[valign=t]{fig11_3_227}}
 \\
 % ---- CG row 3 ----
-$\displaystyle\sum_{m_1m_2m_3}\threej{j_1}{j_2}{j_3}{m_1}{m_2}{m_3}D^{j_1}_{m_1m'_1}(R)D^{j_2}_{m_2m'_2}(R)D^{j_3}_{m_3m'_3}(R)=\threej{j_1}{j_2}{j_3}{m'_1}{m'_2}{m'_3}$
+\(\displaystyle\sum_{m_1m_2m_3}\threej{j_1}{j_2}{j_3}{m_1}{m_2}{m_3}D^{j_1}_{m_1m'_1}(R)D^{j_2}_{m_2m'_2}(R)D^{j_3}_{m_3m'_3}(R)=\threej{j_1}{j_2}{j_3}{m'_1}{m'_2}{m'_3}\)
 &
-\scalebox{0.8}{\includegraphics[valign=c]{fig11_3_228}$=$%
-\includegraphics[valign=c]{fig11_3_229}}
+\scalebox{0.8}{\includegraphics[valign=t]{fig11_3_228}\(=\)%
+\includegraphics[valign=t]{fig11_3_229}}
 \\
 % ---- CG row 4 ----
-$\displaystyle\sum_{\substack{m_1m_2\\ m'_1m'_2\\ m''_3}}\threej{j_1}{j_2}{j'_3}{m_1}{m_2}{m'_3}D^{j_1}_{m_1m'_1}(R)D^{j_2}_{m_2m'_2}(R)D^{j_3}_{m_3m''_3}(R)\threej{j_1}{j_2}{j_3}{m'_1}{m'_2}{m''_3}=\frac{\delta_{j_3j'_3}\delta_{m_3m'_3}}{(2j_3+1)}\{j_1j_2j_3\}$
+\(\displaystyle\sum_{\substack{m_1m_2\\ m'_1m'_2\\ m''_3}}\threej{j_1}{j_2}{j'_3}{m_1}{m_2}{m'_3}D^{j_1}_{m_1m'_1}(R)D^{j_2}_{m_2m'_2}(R)D^{j_3}_{m_3m''_3}(R)\threej{j_1}{j_2}{j_3}{m'_1}{m'_2}{m''_3}=\frac{\delta_{j_3j'_3}\delta_{m_3m'_3}}{(2j_3+1)}\{j_1j_2j_3\}\)
 &
-\scalebox{0.75}{\includegraphics[valign=c]{fig11_3_230}$=$%
-\includegraphics[valign=c]{fig11_3_231}%
-\includegraphics[valign=c]{fig11_3_232}}
+\scalebox{0.75}{\includegraphics[valign=t]{fig11_3_230}\(=\)%
+\includegraphics[valign=t]{fig11_3_231}%
+\includegraphics[valign=t]{fig11_3_232}}
 \\
 % ---- CG row 5 ----
-$\displaystyle D^{j_3*}_{m_3m'_3}(R)\threej{j_1}{j_2}{j_3}{m'_1}{m'_2}{m'_3}=\sum_{m_1m_2}\threej{j_1}{j_2}{j_3}{m_1}{m_2}{m_3}D^{j_1}_{m_1m'_1}(R)D^{j_2}_{m_2m'_2}(R)$
+\(\displaystyle D^{j_3*}_{m_3m'_3}(R)\threej{j_1}{j_2}{j_3}{m'_1}{m'_2}{m'_3}=\sum_{m_1m_2}\threej{j_1}{j_2}{j_3}{m_1}{m_2}{m_3}D^{j_1}_{m_1m'_1}(R)D^{j_2}_{m_2m'_2}(R)\)
 &
-\scalebox{0.78}{\includegraphics[valign=c]{fig11_3_233}$=$%
-\includegraphics[valign=c]{fig11_3_234}}
+\scalebox{0.78}{\includegraphics[valign=t]{fig11_3_233}\(=\)%
+\includegraphics[valign=t]{fig11_3_234}}
 \\
 \multicolumn{2}{c}{Integral of Three D-Functions}\\
-$\displaystyle\int D^{j_1}_{m_1m'_1}(R)\,D^{j_2}_{m_2m'_2}(R)\,D^{j_3}_{m_3m'_3}(R)\,\frac{dR}{16\pi^2}=\threej{j_1}{j_2}{j_3}{m_1}{m_2}{m_3}\threej{j_1}{j_2}{j_3}{m'_1}{m'_2}{m'_3}$
+\(\displaystyle\int D^{j_1}_{m_1m'_1}(R)\,D^{j_2}_{m_2m'_2}(R)\,D^{j_3}_{m_3m'_3}(R)\,\frac{dR}{16\pi^2}=\threej{j_1}{j_2}{j_3}{m_1}{m_2}{m_3}\threej{j_1}{j_2}{j_3}{m'_1}{m'_2}{m'_3}\)
 &
-\scalebox{0.78}{\includegraphics[valign=c]{fig11_3_235}$=$%
-\includegraphics[valign=c]{fig11_3_236}}
+\scalebox{0.78}{\includegraphics[valign=t]{fig11_3_235}\(=\)%
+\includegraphics[valign=t]{fig11_3_236}}
 \\
 \end{tabular}
 \end{center}
@@ -1625,30 +1581,30 @@ $\displaystyle\int D^{j_1}_{m_1m'_1}(R)\,D^{j_2}_{m_2m'_2}(R)\,D^{j_3}_{m_3m'_3}
 \hline
 \multicolumn{2}{c}{Addition Theorems}\\
 % ---- row 1: composition of rotations ----
-$\displaystyle\sum_{m'}D^{j}_{mm'}(R_2)\,D^{j}_{m'm''}(R_1)=D^{j}_{mm''}(R_2R_1)$
+\(\displaystyle\sum_{m'}D^{j}_{mm'}(R_2)\,D^{j}_{m'm''}(R_1)=D^{j}_{mm''}(R_2R_1)\)
 &
-\includegraphics[valign=c]{fig11_3_237}$\;=\;$%
-\includegraphics[valign=c]{fig11_3_238}
+\includegraphics[valign=t]{fig11_3_237}\(\;=\;\)%
+\includegraphics[valign=t]{fig11_3_238}
 \\
 % ---- row 2: 6j H-tree = 2x2 D-grid ----
-$\begin{aligned}
+\(\begin{aligned}
 &\sum_{\substack{j_3m_3\\ m'_1m'_2m'_3}}(2j_3+1)\threej{j_1}{j_2}{j_3}{\tilde m_1}{\tilde m_2}{m_3}\\
 &\quad\times D^{j_1}_{m_1m'_1}(R_1)D^{j_2}_{m_2m'_2}(R_2)D^{j_3}_{m_3m'_3}(R_3)\\
 &\quad\times\threej{j_1}{j_2}{j_3}{m'_1}{m'_2}{m'_3}\\
 &=D^{j_1}_{m_1\tilde m_1}(R_1R_3^{-1})D^{j_2}_{m_2\tilde m_2}(R_2R_3^{-1})
-\end{aligned}$
+\end{aligned}\)
 &
-\scalebox{0.72}{\includegraphics[valign=c]{fig11_3_239}$=$%
-\includegraphics[valign=c]{fig11_3_240}}
+\scalebox{0.72}{\includegraphics[valign=t]{fig11_3_239}\(=\)%
+\includegraphics[valign=t]{fig11_3_240}}
 \\
 % ---- row 3: three-D star, R3 redistribution ----
-$\displaystyle\sum_{m'_1m'_2m'_3}D^{j_1}_{m_1m'_1}(R_1)D^{j_2}_{m_2m'_2}(R_2)D^{j_3}_{m_3m'_3}(R_3)\threej{j_1}{j_2}{j_3}{m'_1}{m'_2}{m'_3}=\sum_{m'_1m'_2}D^{j_1}_{m_1m'_1}(R_1R_3^{-1})D^{j_2}_{m_2m'_2}(R_2R_3^{-1})\threej{j_1}{j_2}{j_3}{m'_1}{m'_2}{m_3}$
+\(\displaystyle\sum_{m'_1m'_2m'_3}D^{j_1}_{m_1m'_1}(R_1)D^{j_2}_{m_2m'_2}(R_2)D^{j_3}_{m_3m'_3}(R_3)\threej{j_1}{j_2}{j_3}{m'_1}{m'_2}{m'_3}=\sum_{m'_1m'_2}D^{j_1}_{m_1m'_1}(R_1R_3^{-1})D^{j_2}_{m_2m'_2}(R_2R_3^{-1})\threej{j_1}{j_2}{j_3}{m'_1}{m'_2}{m_3}\)
 &
-\scalebox{0.72}{\includegraphics[valign=c]{fig11_3_241}$=$%
-\includegraphics[valign=c]{fig11_3_242}}
+\scalebox{0.72}{\includegraphics[valign=t]{fig11_3_241}\(=\)%
+\includegraphics[valign=t]{fig11_3_242}}
 \\
 % ---- row 4: 6j-triangle recoupling ----
-$\begin{aligned}
+\(\begin{aligned}
 &\sixj{j_1}{j_2}{j_3}{J_{23}}{J_{31}}{J_{12}}\sum_{m_1m_2m_3}\threej{j_1}{j_2}{j_3}{m_1}{m_2}{m_3}\\
 &\quad\times D^{j_1}_{m_1m'_1}(R_1)D^{j_2}_{m_2m'_2}(R_2)D^{j_3}_{m_3m'_3}(R_3)\\
 &=\sum_{\substack{M_{12}M_{23}M_{31}\\ M'_{12}M'_{23}M'_{31}}}(-1)^{J_{12}-M_{12}+J_{23}-M_{23}+J_{31}-M_{31}}\\
@@ -1656,13 +1612,13 @@ $\begin{aligned}
 &\qquad\times\threej{J_{31}}{j_3}{J_{23}}{M_{31}}{m'_3}{-M'_{23}}\\
 &\quad\times D^{J_{31}}_{M_{31}M'_{31}}(R_3^{-1}R_1)D^{J_{12}}_{M_{12}M'_{12}}(R_1^{-1}R_2)\\
 &\qquad\times D^{J_{23}}_{M_{23}M'_{23}}(R_2^{-1}R_3)
-\end{aligned}$
+\end{aligned}\)
 &
-\scalebox{0.68}{\includegraphics[valign=c]{fig11_3_243}$=$%
-\includegraphics[valign=c]{fig11_3_244}}
+\scalebox{0.68}{\includegraphics[valign=t]{fig11_3_243}\(=\)%
+\includegraphics[valign=t]{fig11_3_244}}
 \\
 % ---- row 5: full double-triangle recoupling ----
-$\begin{aligned}
+\(\begin{aligned}
 &\sum_{j_1j_2j_3}(2j_1+1)(2j_2+1)(2j_3+1)\sixj{j_1}{j_2}{j_3}{J_{23}}{J_{31}}{J_{12}}\\
 &\times\sum_{\substack{m_1m_2m_3\\ m'_1m'_2m'_3}}(-1)^{J_{12}-M_{12}+J_{23}-M_{23}+J_{31}-M_{31}}\\
 &\times\threej{J_{31}}{j_1}{J_{12}}{M'_{31}}{m_1}{-M_{12}}\threej{J_{12}}{j_2}{J_{23}}{M'_{12}}{m_2}{-M_{23}}\\
@@ -1670,10 +1626,10 @@ $\begin{aligned}
 &\times D^{j_1}_{m_1m'_1}(R_1)D^{j_2}_{m_2m'_2}(R_2)D^{j_3}_{m_3m'_3}(R_3)\threej{j_1}{j_2}{j_3}{m'_1}{m'_2}{m'_3}\\
 &=D^{J_{12}}_{M_{12}M'_{12}}(R_1R_2^{-1})D^{J_{23}}_{M_{23}M'_{23}}(R_2R_3^{-1})\\
 &\qquad\times D^{J_{31}}_{M_{31}M'_{31}}(R_3R_1^{-1})
-\end{aligned}$
+\end{aligned}\)
 &
-\scalebox{0.6}{\includegraphics[valign=c]{fig11_3_245}$=$%
-\includegraphics[valign=c]{fig11_3_246}}
+\scalebox{0.6}{\includegraphics[valign=t]{fig11_3_245}\(=\)%
+\includegraphics[valign=t]{fig11_3_246}}
 \\
 \hline
 \end{tabular}
@@ -1700,15 +1656,15 @@ $\begin{aligned}
 \hline
 \multicolumn{1}{c|}{Analytical Expression} & Graphical Representation \\
 \hline
-\multicolumn{2}{c}{\parbox{0.93\textwidth}{\centering Matrix element of an irreducible tensor operator of rank $k$ in the JM-representation
+\multicolumn{2}{c}{\parbox{0.93\textwidth}{\centering Matrix element of an irreducible tensor operator of rank \(k\) in the JM-representation
 (Wigner-Eckart theorem)}}\\
 \[
 \braOket{\gamma J M}{\mathfrak{M}_{kq}}{\gamma^{\prime} J^{\prime} M^{\prime}}=(-1)^{J-M}\threej{J}{k}{J^{\prime}}{-M}{q}{M^{\prime}}\rbraOketred{\gamma J}{\mathfrak{M}_{k}}{\gamma^{\prime} J^{\prime}} .
 \]
-where $\rbraOketred{\gamma J}{\mathfrak{M}_{k}}{\gamma^{\prime} J^{\prime}}$ is the reduced matrix element
+where \(\rbraOketred{\gamma J}{\mathfrak{M}_{k}}{\gamma^{\prime} J^{\prime}}\) is the reduced matrix element
 &
-\scalebox{0.72}{\includegraphics[valign=c]{fig11_3_247}$=$%
-\includegraphics[valign=c]{fig11_3_248}}
+\scalebox{0.72}{\includegraphics[valign=t]{fig11_3_247}\(=\)%
+\includegraphics[valign=t]{fig11_3_248}}
 \\
 \multicolumn{2}{c}{\parbox{0.93\textwidth}{\centering Reduced Matrix elements of irreducible tensor product of irreducible tensor operators.}}\\
 \[
@@ -1719,13 +1675,13 @@ where $\rbraOketred{\gamma J}{\mathfrak{M}_{k}}{\gamma^{\prime} J^{\prime}}$ is 
 \end{gathered}
 \] &
 \scalebox{0.62}{%
-\includegraphics[valign=c]{fig11_3_249}%
-$=\displaystyle\sum_{\gamma''}$%
-\includegraphics[valign=c]{fig11_3_250}%
-\includegraphics[valign=c]{fig11_3_251}%
-\includegraphics[valign=c]{fig11_3_252}}
+\includegraphics[valign=t]{fig11_3_249}%
+\(=\displaystyle\sum_{\gamma''}\)%
+\includegraphics[valign=t]{fig11_3_250}%
+\includegraphics[valign=t]{fig11_3_251}%
+\includegraphics[valign=t]{fig11_3_252}}
 \\
-\multicolumn{2}{c}{\parbox{0.93\textwidth}{\centering Two coupled subsystems in the $j_{1} j_{2};JM$-representation. Reduced matrix element of the irreducible tensor product of two irreducible tensor operators, one of which depends only on variables of the first subsystem and the other depends only on variables of the second subsystem.}}\\
+\multicolumn{2}{c}{\parbox{0.93\textwidth}{\centering Two coupled subsystems in the \(j_{1} j_{2};JM\)-representation. Reduced matrix element of the irreducible tensor product of two irreducible tensor operators, one of which depends only on variables of the first subsystem and the other depends only on variables of the second subsystem.}}\\
 \[
 \begin{aligned}
 & \rbraOketred{\gamma j_{1} j_{2} J}{\left\{\mathfrak{M}_{k_{1}}(1) \otimes \mathfrak{N}_{k_{2}}(2)\right\}_{k}}{\gamma^{\prime} j_{1}^{\prime} j_{2}^{\prime} J^{\prime}} \\
@@ -1734,11 +1690,11 @@ $=\displaystyle\sum_{\gamma''}$%
 \end{aligned}
 \]&
 \scalebox{0.55}{%
-\includegraphics[valign=c]{fig11_3_253}%
-$=\displaystyle\sum_{\gamma''}$%
-\includegraphics[valign=c]{fig11_3_254}%
-\includegraphics[valign=c]{fig11_3_255}%
-\includegraphics[valign=c]{fig11_3_256}
+\includegraphics[valign=t]{fig11_3_253}%
+\(=\displaystyle\sum_{\gamma''}\)%
+\includegraphics[valign=t]{fig11_3_254}%
+\includegraphics[valign=t]{fig11_3_255}%
+\includegraphics[valign=t]{fig11_3_256}
 }
 \end{tabular}
 \end{center}
@@ -1765,11 +1721,11 @@ depend on variables of the first and the second subsystems, respectively.}}\\
 \end{gathered}
 \] &
 \scalebox{0.5}{%
-\includegraphics[valign=c]{fig11_3_257}%
-$=(-1)^{-k}\displaystyle\sum_{\gamma''}$%
-\includegraphics[valign=c]{fig11_3_258}%
-\includegraphics[valign=c]{fig11_3_259}%
-\includegraphics[valign=c]{fig11_3_260}}\\
+\includegraphics[valign=t]{fig11_3_257}%
+\(=(-1)^{-k}\displaystyle\sum_{\gamma''}\)%
+\includegraphics[valign=t]{fig11_3_258}%
+\includegraphics[valign=t]{fig11_3_259}%
+\includegraphics[valign=t]{fig11_3_260}}\\
 \multicolumn{2}{c}{\parbox{0.93\textwidth}{\centering Reduced matrix element of an irreducible tensor operator which depends only on variables of the first subsystem.}}\\
 \[
 \begin{gathered}
@@ -1778,7 +1734,7 @@ $=(-1)^{-k}\displaystyle\sum_{\gamma''}$%
 \times\sixj{J}{k}{J^{\prime}}{j_{1}^{\prime}}{j_{2}}{j_{1}}\rbraOketred{\gamma j_{1}}{\mathfrak{M}_{k}}{\gamma^{\prime} j_{1}^{\prime}} .
 \end{gathered}
 \] &
-\scalebox{0.5}{\redlhs{\mathfrak{M}^{(1)}_{\gamma\gamma'}}{j_1}{j_2}{j'_1}{j'_2}$=$%
+\scalebox{0.5}{\redlhs{\mathfrak{M}^{(1)}_{\gamma\gamma'}}{j_1}{j_2}{j'_1}{j'_2}\(=\)%
 \redrhs{\mathfrak{M}_{\gamma\gamma'}}{j_1}{j'_1}{j_1}{j'_1}{j_2}{j'_2}}\\
 \multicolumn{2}{c}{\parbox{0.93\textwidth}{\centering Reduced matrix element of the irreducible tensor operator which depends only on variables of the second subsystem.}}\\
 \[
@@ -1788,7 +1744,7 @@ $=(-1)^{-k}\displaystyle\sum_{\gamma''}$%
 \times\sixj{J}{k}{J^{\prime}}{j_{2}^{\prime}}{j_{1}}{j_{2}}\rbraOketred{\gamma j_{2}}{\mathfrak{N}_{k}}{\gamma^{\prime} j_{2}^{\prime}} .
 \end{gathered}
 \] &
-\scalebox{0.5}{\redlhs{\mathfrak{N}^{(2)}_{\gamma\gamma'}}{j_1}{j_2}{j'_1}{j'_2}$=$%
+\scalebox{0.5}{\redlhs{\mathfrak{N}^{(2)}_{\gamma\gamma'}}{j_1}{j_2}{j'_1}{j'_2}\(=\)%
 \redrhs{\mathfrak{N}_{\gamma\gamma'}}{j_2}{j'_2}{j_2}{j'_2}{j_1}{j'_1}}\\
 \hline
 \end{tabular}
@@ -1798,49 +1754,49 @@ $=(-1)^{-k}\displaystyle\sum_{\gamma''}$%
 
 
 \section{Summary of the graphical technique}\label{sec:11.4}
-The preceeding sections present the principles of the graphical methods of angular momentum theory, i.e., graphical representations of the basis functions and operations (Secs. 11.1 and 11.2) as well as the rules of handling them (Sec.~\ref{sec:11.3}). This section resumes the discussion of the general properties of diagrams, the Wigner-Eckart theorem in diagrammatic form and the scheme for the application of the graphical technique.
+The preceding sections present the principles of the graphical methods of angular momentum theory, i.e., graphical representations of the basis functions and operations (Secs. \ref{sec:11.1} and \ref{sec:11.2}) as well as the rules of handling them (Sec.~\ref{sec:11.3}). This section resumes the discussion of the general properties of diagrams, the Wigner-Eckart theorem in diagrammatic form and the scheme for the application of the graphical technique.
 
 \subsection{General Properties of Diagrams}\label{sec:11.4.1}
 Let us summarize the main properties of diagrams which are consequences of the graphical relationships discussed above.\\
 (a) Any diagram may be arbitrarily turned and deformed, bent or stretched. Along with these continuous transformations, discrete transformations such as reflection and inversion are also allowed.
 
 A transformed diagram corresponds to the same analytic expression provided node signs are reversed for those nodes in which the cyclic order of the coupled momenta becomes opposite to the initial one.\\
-(b) Each $j$-line holds a fixed value of angular momentum $j$ inspite of any deformation of the line. For an external $j$-line, the projection $m$ is fixed as well as the $j$-value. Moreover, $j$ and $m$ remain unchanged along the line even if any block (subdiagram) is inserted into the line, provided this block has no additional external $j$-lines.\\
+(b) Each \(j\)-line holds a fixed value of angular momentum \(j\) in spite of any deformation of the line. For an external \(j\)-line, the projection \(m\) is fixed as well as the \(j\)-value. Moreover, \(j\) and \(m\) remain unchanged along the line even if any block (subdiagram) is inserted into the line, provided this block has no additional external \(j\)-lines.\\
 (c) The total angular momentum of any diagram or subdiagram, i.e., the vector sum of angular momenta of all external lines, is equal to zero.
 \[
 \sum_{i} \mathrm{j}_{i}=0, \quad \sum_{i} m_{i}=0 .
 \]
-Hence, for a diagram with one external $j$-line $j$ has to be zero; for a diagram which has two external $j$-lines associated with $j_{1}$ and $j_{2}$ one has $j_{1}=j_{2}$.\\
+Hence, for a diagram with one external \(j\)-line \(j\) has to be zero; for a diagram which has two external \(j\)-lines associated with \(j_{1}\) and \(j_{2}\) one has \(j_{1}=j_{2}\).\\
 (d) Any diagram may be cut into two subdiagrams in many different ways. The total angular momenta of both these subdiagrams are identical. Moreover, the angular momenta will be the same for all the diagram cross-sections with fixed sets of external lines for each subdiagram.
 
 \subsection{Generalized Wigner-Eckart Theorem in Diagrammatic Form}\label{sec:11.4.2}
 Standard functions of angular momentum theory may be used as a basis for the expansion of any expression. However, sometimes all the dependence of the expression on external variables may be factorized in the form of some standard function. Graphically such a function may be separated according to the rules of Sec.~\ref{sec:11.3.6}. The most important special cases are the following.\\
 (a) A diagram without external lines (i.e. a closed diagram) is invariant with respect to coordinate-system rotations.\\
-(b) A diagram with one external line also is invariant. This is a consequence of the fact that, in principle, one cannot distinguish any preferred direction in isotropic space. Therefore, any dependence on one direction is fictitious, so that such an external $j$-line has to correspond to $j=0$ and may be eliminated in accordance with the rule of Sec.~\ref{sec:11.3.9}.
+(b) A diagram with one external line also is invariant. This is a consequence of the fact that, in principle, one cannot distinguish any preferred direction in isotropic space. Therefore, any dependence on one direction is fictitious, so that such an external \(j\)-line has to correspond to \(j=0\) and may be eliminated in accordance with the rule of Sec.~\ref{sec:11.3.9}.
 \[
 \braOket{00}{\mathfrak{M}}{j m}=\delta_{j 0} \delta_{m 0}\braOket{00}{\mathfrak{N}}{00}
 \]
-\includegraphics[valign=c]{fig11_4_1}
-(c) A diagram with two external lines corresponding to $\bra{j_{1} m_{1}}$ and $\ket{j_{2} m_{2}}$ is non-zero only if $j_{1}=j_{2}$ and $m_{1}=m_{2}$
+\includegraphics[valign=t]{fig11_4_1}
+(c) A diagram with two external lines corresponding to \(\bra{j_{1} m_{1}}\) and \(\ket{j_{2} m_{2}}\) is non-zero only if \(j_{1}=j_{2}\) and \(m_{1}=m_{2}\)
 \[
 \braOket{j_{1} m_{1}}{\mathfrak{M}}{j_{2} m_{2}}=\frac{\delta_{j_{1} j_{2}} \delta_{m_{1} m_{2}}}{2 j_{1}+1} \sum_{m}\braOket{j_{1} m}{\mathfrak{M}}{j_{1} m}
 \]
 \begin{center}
-\includegraphics[valign=c]{fig11_4_2}
+\includegraphics[valign=t]{fig11_4_2}
 \end{center}
 
-This follows from the fact that any dependence on two directions is, actually, the dependence on the angle between these directions, i.e. it may be represented by the scalar product of two functions $|j m\rangle$ and $\langle j m|$.\\
-(d) A diagram with three external $j$-lines which represent $\rket{j_{1} m_{1}}, \rket{j_{2} m_{2}}$ and $\rket{j_{3} m_{3}}$ is proportional to the $3 j m$ symbol $\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{m_{2}}{m_{3}}$
+This follows from the fact that any dependence on two directions is, actually, the dependence on the angle between these directions, i.e. it may be represented by the scalar product of two functions \(|j m\rangle\) and \(\langle j m|\).\\
+(d) A diagram with three external \(j\)-lines which represent \(\rket{j_{1} m_{1}}, \rket{j_{2} m_{2}}\) and \(\rket{j_{3} m_{3}}\) is proportional to the \(3 j m\) symbol \(\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{m_{2}}{m_{3}}\)
 \[
 \braOket{00}{\mathfrak{M}}{j_{1} m_{1} j_{2} m_{2} j_{3} m_{3}}=\braOketred{0}{\mathfrak{M}}{j_{1} j_{2} j_{3}}\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{m_{2}}{m_{3}},
 \]
-where $\braOketred{0}{{ } \mathfrak{R}}{j_{1} j_{2} j_{3}}$ is the reduced matrix element defined by
+where \(\braOketred{0}{{ } \mathfrak{R}}{j_{1} j_{2} j_{3}}\) is the reduced matrix element defined by
 \[
 % PROOFREAD: OCR-garbled reduced m.e. -- \langle00\|IR\|...\rangle and RHS (stray "9", mismatched \left/\right); reconstruct against orig.
 \left.\left\langle 00\|I R\| j_{1} j_{2} j_{3}\right\rangle=\left.\sum_{m_{1} m_{2} m_{3}}\langle 00| 9\right|_{j 1} m_{1} j_{2} m_{2} j_{3} m_{3}\right\rangle\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{m_{2}}{m_{3}},
 \]
-\includegraphics[valign=c]{fig11_4_3}
-(e) A diagram with four external $j$-lines corresponding $j_{1} m_{1}, j_{2} m_{2}, j_{3} m_{3}$ and $j_{4} m_{4}$ may be presented as a sum (over $j$ ) of the product of two $3 j m$ symbols
+\includegraphics[valign=t]{fig11_4_3}
+(e) A diagram with four external \(j\)-lines corresponding \(j_{1} m_{1}, j_{2} m_{2}, j_{3} m_{3}\) and \(j_{4} m_{4}\) may be presented as a sum (over \(j\) ) of the product of two \(3 j m\) symbols
 \[
 \left(j_{1} m_{1} j_{2} m_{2}|\mathfrak{R}| j_{3} m_{3} j_{4} m_{4}\right\rangle=\sum_{j m}(2 j+1)\threej{j_{1}}{j_{2}}{j}{m_{1}}{m_{2}}{m}\braOket{j_{1} j_{2} j m}{\mathfrak{R}}{j_{3} j_{4} j m}\threej{j_{3}}{j_{4}}{j}{m_{3}}{m_{4}}{m},
 \]
@@ -1849,7 +1805,7 @@ where
 \braOket{j_{1} j_{2} j m}{\mathfrak{R}}{j_{3} j_{4} j m} \equiv \sum_{m_{1} m_{2} m_{3} m_{6}}\threej{j_{1}}{j_{2}}{j}{m_{1}}{m_{2}}{m}\left(j_{1} m_{1} j_{2} m_{2}|\mathfrak{R}| j_{3} m_{3} j_{4} m_{4}\right)\threej{j_{3}}{j_{4}}{j^{\prime}}{m_{3}}{m_{4}}{m^{\prime}}
 \]
 \begin{center}
-\includegraphics[valign=c]{fig11_4_4}
+\includegraphics[valign=t]{fig11_4_4}
 \end{center}
 \begin{table}[ptbh!]
 \begin{center}
@@ -1864,70 +1820,70 @@ Generalized Wigner-Eckart Theorem.}
 \multicolumn{1}{c|}{Analytical Expression} & Graphical Representation \\
 \hline
 % ---- row 1 ----
-$\braOket{00}{\mathfrak{M}}{lm}=\braOket{00}{\mathfrak{M}}{00}\,\delta_{l0}\delta_{m0}$
+\(\braOket{00}{\mathfrak{M}}{lm}=\braOket{00}{\mathfrak{M}}{00}\,\delta_{l0}\delta_{m0}\)
 &
-\includegraphics[valign=c]{fig11_4_5}$=$%
-\includegraphics[valign=c]{fig11_4_6}%
-\includegraphics[valign=c]{fig11_4_7}
+\includegraphics[valign=t]{fig11_4_5}\(=\)%
+\includegraphics[valign=t]{fig11_4_6}%
+\includegraphics[valign=t]{fig11_4_7}
 \\
 % ---- row 2 ----
-$\braOket{jm}{\mathfrak{M}}{j'm'}=\dfrac{\delta_{jj'}\delta_{mm'}}{(2j+1)}\braOketred{j}{\mathfrak{M}}{j}$,\newline
-where $\braOketred{j}{\mathfrak{M}}{j}\equiv\sum_{m}\braOket{jm}{\mathfrak{M}}{jm}$
+\(\braOket{jm}{\mathfrak{M}}{j'm'}=\dfrac{\delta_{jj'}\delta_{mm'}}{(2j+1)}\braOketred{j}{\mathfrak{M}}{j}\),\newline
+where \(\braOketred{j}{\mathfrak{M}}{j}\equiv\sum_{m}\braOket{jm}{\mathfrak{M}}{jm}\)
 &
-\includegraphics[valign=c]{fig11_4_8}$=$%
-\includegraphics[valign=c]{fig11_4_9}%
-\includegraphics[valign=c]{fig11_4_10}
+\includegraphics[valign=t]{fig11_4_8}\(=\)%
+\includegraphics[valign=t]{fig11_4_9}%
+\includegraphics[valign=t]{fig11_4_10}
 \\
 % ---- row 3 ----
-$\braOket{\Omega}{\mathfrak{M}}{jm}=\braket{\Omega}{jm}\dfrac{\braOketred{j}{\mathfrak{M}}{j}}{(2j+1)}$
+\(\braOket{\Omega}{\mathfrak{M}}{jm}=\braket{\Omega}{jm}\dfrac{\braOketred{j}{\mathfrak{M}}{j}}{(2j+1)}\)
 &
-\includegraphics[valign=c]{fig11_4_11}$=$%
-\includegraphics[valign=c]{fig11_4_12}%
-\includegraphics[valign=c]{fig11_4_13}
+\includegraphics[valign=t]{fig11_4_11}\(=\)%
+\includegraphics[valign=t]{fig11_4_12}%
+\includegraphics[valign=t]{fig11_4_13}
 \\
 % ---- row 4 ----
-$\braOket{\Omega_1}{\mathfrak{M}}{\Omega_2}=\dfrac{1}{4\pi}\sum_l P_l(\cos\omega_{12})\braOketred{l}{\mathfrak{M}}{l}$,\newline
-where $\omega_{12}$ is the angle $\widehat{\Omega_1\Omega_2}$ and\newline
-$P_l(\cos\omega_{12})=\sum_m\braket{\Omega_1}{lm}\braket{lm}{\Omega_2}$
+\(\braOket{\Omega_1}{\mathfrak{M}}{\Omega_2}=\dfrac{1}{4\pi}\sum_l P_l(\cos\omega_{12})\braOketred{l}{\mathfrak{M}}{l}\),\newline
+where \(\omega_{12}\) is the angle \(\widehat{\Omega_1\Omega_2}\) and\newline
+\(P_l(\cos\omega_{12})=\sum_m\braket{\Omega_1}{lm}\braket{lm}{\Omega_2}\)
 &
-\includegraphics[valign=c]{fig11_4_14}$=$%
-\includegraphics[valign=c]{fig11_4_15}%
-\includegraphics[valign=c]{fig11_4_16}
+\includegraphics[valign=t]{fig11_4_14}\(=\)%
+\includegraphics[valign=t]{fig11_4_15}%
+\includegraphics[valign=t]{fig11_4_16}
 \\
 % ---- row 5 ----
-$\begin{aligned}[t]
+\(\begin{aligned}[t]
 &\braOket{j_1m_1}{\mathfrak{M}}{j_2m_2 j_3m_3}\\
 &=(-1)^{j_1-m_1}\threej{j_1}{j_2}{j_3}{-m_1}{m_2}{m_3}\braOketred{j_1}{\mathfrak{M}_{j_2}}{j_3},
-\end{aligned}$\newline
+\end{aligned}\)\newline
 where\newline
-$\begin{aligned}[t]
+\(\begin{aligned}[t]
 &\braOketred{j_1}{\mathfrak{M}_{j_2}}{j_3}\equiv\sum_{m_1m_2m_3}(-1)^{j_1-m_1}\\
 &\quad\times\threej{j_1}{j_2}{j_3}{-m_1}{m_2}{m_3}\braOket{j_1m_1}{\mathfrak{M}}{j_2m_2 j_3m_3}
-\end{aligned}$
+\end{aligned}\)
 &
-\includegraphics[valign=c]{fig11_4_17}$=$%
-\includegraphics[valign=c]{fig11_4_18}%
-\includegraphics[valign=c]{fig11_4_19}
+\includegraphics[valign=t]{fig11_4_17}\(=\)%
+\includegraphics[valign=t]{fig11_4_18}%
+\includegraphics[valign=t]{fig11_4_19}
 \\
 % ---- row 6 ----
-$\begin{aligned}[t]
+\(\begin{aligned}[t]
 &\braOket{\Omega}{\mathfrak{M}}{j_2m_2 j_3m_3}=\sum_{j_1m_1}\braket{\Omega}{j_1m_1}\\
 &\quad\times(-1)^{j_1-m_1}\threej{j_1}{j_2}{j_3}{-m_1}{m_2}{m_3}\braOketred{j_1}{\mathfrak{M}_{j_2}}{j_3}
-\end{aligned}$
+\end{aligned}\)
 &
-\includegraphics[valign=c]{fig11_4_20}$=$%
-\includegraphics[valign=c]{fig11_4_21}%
-\includegraphics[valign=c]{fig11_4_22}
+\includegraphics[valign=t]{fig11_4_20}\(=\)%
+\includegraphics[valign=t]{fig11_4_21}%
+\includegraphics[valign=t]{fig11_4_22}
 \\
 % ---- row 7 ----
-$\begin{aligned}[t]
+\(\begin{aligned}[t]
 &\braOket{\Omega_1}{\mathfrak{M}}{j_2m_2 \Omega_3}=\sum_{j_1m_1 j_3m_3}\braket{\Omega_1}{j_1m_1}(-1)^{j_1-m_1}\\
 &\quad\times\threej{j_1}{j_2}{j_3}{-m_1}{m_2}{m_3}\braket{j_3m_3}{\Omega_3}\braOketred{j_1}{\mathfrak{M}_{j_2}}{j_3}
-\end{aligned}$
+\end{aligned}\)
 &
-\includegraphics[valign=c]{fig11_4_23}$=$%
-\includegraphics[valign=c]{fig11_4_24}%
-\includegraphics[valign=c]{fig11_4_25}
+\includegraphics[valign=t]{fig11_4_23}\(=\)%
+\includegraphics[valign=t]{fig11_4_24}%
+\includegraphics[valign=t]{fig11_4_25}
 \\
 \end{tabular}
 \end{center}
@@ -1951,9 +1907,9 @@ $\begin{aligned}[t]
 \times\threej{j_{3}}{j_{4}}{J}{m_{3}}{m_{4}}{M}
 \end{gathered}
 \] &
-\scalebox{0.82}{\includegraphics[valign=c]{fig11_4_26}$=$%
-\includegraphics[valign=c]{fig11_4_27}%
-\includegraphics[valign=c]{fig11_4_28}}
+\scalebox{0.82}{\includegraphics[valign=t]{fig11_4_26}\(=\)%
+\includegraphics[valign=t]{fig11_4_27}%
+\includegraphics[valign=t]{fig11_4_28}}
 \\
 \[
 \begin{gathered}
@@ -1962,9 +1918,9 @@ $\begin{aligned}[t]
 \times\braket{j_{2} m_{2}}{\Omega_{2}}\braket{j_{3} m_{3}}{\Omega_{3}}
 \end{gathered}
 \] &
-\scalebox{0.82}{\includegraphics[valign=c]{fig11_4_29}$=$%
-\includegraphics[valign=c]{fig11_4_30}%
-\includegraphics[valign=c]{fig11_4_31}}
+\scalebox{0.82}{\includegraphics[valign=t]{fig11_4_29}\(=\)%
+\includegraphics[valign=t]{fig11_4_30}%
+\includegraphics[valign=t]{fig11_4_31}}
 \\
 \end{tabular}
 \end{center}
@@ -1974,17 +1930,17 @@ $\begin{aligned}[t]
 
 
 \subsection{Scheme for the Application of the Graphical Technique}\label{sec:11.4.3}
-The aim of calculations inherent in the angular momentum theory is to transform an original formula in such a way as to express all the dependence on the orientation of the coordinate system in the form of a simple standard function $\left(\clebsch{j_{1}}{m_{1}}{j_{2}}{m_{2}}{j}{m}, Y_{l m}(\Omega), D_{M M^{\prime}}^{J}(R)\right.$, or some related combination). The remaining factor (or the expansion coefficient) is invariant and can be represented as a product (or sum of products) of the standard $3 j, 6 j, 9 j$ symbols.
+The aim of calculations inherent in the angular momentum theory is to transform an original formula in such a way as to express all the dependence on the orientation of the coordinate system in the form of a simple standard function \(\left(\clebsch{j_{1}}{m_{1}}{j_{2}}{m_{2}}{j}{m}, Y_{l m}(\Omega), D_{M M^{\prime}}^{J}(R)\right.\), or some related combination). The remaining factor (or the expansion coefficient) is invariant and can be represented as a product (or sum of products) of the standard \(3 j, 6 j, 9 j\) symbols.
 
 To carry out these calculations by the graphical method one has to perform the following operations:\\
-(a) To represent the original analytic expression in diagrammatic form using the graphical representation of functions and operations in accordance with the rules formulated in Sections 11.1 and 11.2.\\
-(b) To eliminate all fictitious $j=0$ lines and $R=1$ lines according to the rules of Sections \ref{sec:11.3.9} and \ref{sec:11.3.10}.\\
-(c) To link step-by-step, all the subdiagrams which have a common thick $j$-line, using the rules for graphical\\
+(a) To represent the original analytic expression in diagrammatic form using the graphical representation of functions and operations in accordance with the rules formulated in Sections \ref{sec:11.1} and \ref{sec:11.2}.\\
+(b) To eliminate all fictitious \(j=0\) lines and \(R=1\) lines according to the rules of Sections \ref{sec:11.3.9} and \ref{sec:11.3.10}.\\
+(c) To link step-by-step, all the subdiagrams which have a common thick \(j\)-line, using the rules for graphical\\
 multiplication of subdiagrams (Sec.~\ref{sec:11.3.5}).\\
-(d) To replace each internal $\Omega$-line by the corresponding thick $j$-line, using the rule of graphical integration (Sec.~\ref{sec:11.3.8}).\\
-(e) To remove thick $j$-lines with identical nodes $\left(j_{1} j_{2} j_{3}\right)$ and reconnect the remaining thin $j_{1}$ - and $j_{2}$-lines in accordance with the rule of graphical summation (Sec.~\ref{sec:11.3.7}).\\
+(d) To replace each internal \(\Omega\)-line by the corresponding thick \(j\)-line, using the rule of graphical integration (Sec.~\ref{sec:11.3.8}).\\
+(e) To remove thick \(j\)-lines with identical nodes \(\left(j_{1} j_{2} j_{3}\right)\) and reconnect the remaining thin \(j_{1}\) - and \(j_{2}\)-lines in accordance with the rule of graphical summation (Sec.~\ref{sec:11.3.7}).\\
 (f) To cut the resultant diagram (according to the rules of Sec.~\ref{sec:11.3.6}) into subdiagrams which are topologically similar to diagrams of the standard functions. In particular, one should separate all the external lines in the form of the simplest possible subdiagram.\\
-(g) To determine the phase factor of a diagram by reducing each subdiagram to some standard diagram (Tables 11.1 and 11.2) by means of reversal (when necessary) of node signs and line directions according to the rules from Section 11.3.2 and 11.3.3.\\
+(g) To determine the phase factor of a diagram by reducing each subdiagram to some standard diagram (Tables 11.1 and 11.2) by means of reversal (when necessary) of node signs and line directions according to the rules from Section \ref{sec:11.3.2} and \ref{sec:11.3.3}.\\
 (h) To represent the final diagram in analytic form.
 
 One can use a simplified version of the graphical method without taking the signs of the nodes and directions of the lines into account, if one is interested only in the absolute value of an expression but not in the phase.

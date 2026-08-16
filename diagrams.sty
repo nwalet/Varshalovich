@@ -120,14 +120,14 @@
   \coordinate (T) at (0,0.5);
   \coordinate (B) at (0,-0.5);
   \threejs@split#1\relax
-  \if d\threejs@da\draw[jmlinem] (T) arc[start angle=90,end angle=270,radius=0.5] node[midway,left=0.1] {$#2$}  (B);
-  \else\draw[jmlinem] (B) arc[start angle=270,end angle=90,radius=0.5] node[midway,left=0.1] {$#2$} (T);\fi
-  \if d\threejs@db\draw[jmlinem] (T) -- (B)  node[midway,right=0.06] {$#3$}  ;
-  \else\draw[jmlinem] (B) -- (T)  node[midway,right=0.06] {$#3$}  ;\fi
-  \if d\threejs@dc\draw[jmlinem] (T) arc[start angle=90, end angle=-90, radius=0.5]  node[midway,right=0.1] {$#4$};
-  \else\draw[jmlinem] (B) arc[start angle=-90, end angle=90, radius=0.5]  node[midway,right=0.1] {$#4$}  ;\fi
-  \node[dotnode,label={above:$#5$}] at (T) {};
-  \node[dotnode,label={below:$#6$}] at (B) {};
+  \if d\threejs@da\draw[jmlinem] (T) arc[start angle=90,end angle=270,radius=0.5] node[midway,left=0.1] {\(#2\)}  (B);
+  \else\draw[jmlinem] (B) arc[start angle=270,end angle=90,radius=0.5] node[midway,left=0.1] {\(#2\)} (T);\fi
+  \if d\threejs@db\draw[jmlinem] (T) -- (B)  node[midway,right=0.06] {\(#3\)}  ;
+  \else\draw[jmlinem] (B) -- (T)  node[midway,right=0.06] {\(#3\)}  ;\fi
+  \if d\threejs@dc\draw[jmlinem] (T) arc[start angle=90, end angle=-90, radius=0.5]  node[midway,right=0.1] {\(#4\)};
+  \else\draw[jmlinem] (B) arc[start angle=-90, end angle=90, radius=0.5]  node[midway,right=0.1] {\(#4\)}  ;\fi
+  \node[dotnode,label={above:\(#5\)}] at (T) {};
+  \node[dotnode,label={below:\(#6\)}] at (B) {};
   \end{tikzpicture}%
 }
 \def\threejs@split#1#2#3\relax{\def\threejs@da{#1}\def\threejs@db{#2}\def\threejs@dc{#3}}
@@ -144,24 +144,36 @@
 % }
 %\threenode{a,ma,b,mb,c,mc,sign}: a single node with three jm-lines radiating
 %out (top-left a, top-right c, bottom b), labelled with the node sign
-\newlistcommand{\threejdiag}{
+\newlistcommand{\threejdiagdraw}
   {
-  \begin{tikzpicture}[baseline=-2pt,inner sep=0.1em,font=\scriptsize]
+    \begin{scope}
   \foreach \i in {0,...,2}{\coordinate (n\i) at (30+120*\i:0.8);}%
 \coordinate (M) at (0,0);
 % 90=360 - angle[2]
 \node[dotnode,label={90:\vmk@sign{\argx{7}}}] at (M) {};
- \foreach \i in {0,...,2}{\draw[jmarrow] (M) -- (n\i) node[label={30+120*\i:$\argx{2*\i+1}$$\argx{2*\i+2}$}]{};}%\argx{2*\i+2}}]{};}
-\end{tikzpicture}}
+ \foreach \i in {0,...,2}{\draw[jmarrow] (M) -- (n\i) node[label={30+120*\i:\(\argx{2*\i+1}\)\(\argx{2*\i+2}\)}]{};}
+    \end{scope}
+  }
+\newcommand{\threejdiag}[1] {
+  {
+  \begin{tikzpicture}[baseline=-2pt,inner sep=0.1em,font=\scriptsize]
+    \threejdiagdraw{#1}
+  \end{tikzpicture}
+  }
 }
 
 %\opline{left label}{right label}{line label}: two operator boxes joined
 %by a single labelled jm-line
+\newcommand{\oplinedraw}[3]{%
+\begin{scope}
+\node[opbox] (M) at (0,0) {\(#1\)};
+\node[opbox] (N) at (2.2,0) {\(#2\)};
+\draw[jmline] (M) -- (N) node[midway,above]{\(#3\)};
+\end{scope}%
+}
 \newcommand{\opline}[3]{%
 \begin{tikzpicture}[baseline=0pt]
-\node[opbox] (M) at (0,0) {$#1$};
-\node[opbox] (N) at (2.2,0) {$#2$};
-\draw[jmline] (M) -- (N) node[midway,above]{$#3$};
+\opelinedraw{#1}{#2}{#3}
 \end{tikzpicture}%
 }
 
@@ -172,22 +184,27 @@
 % and the three node signs + are placed at the three vertices of the triangle.
 %Comma-separated \newlistcommand/\argx calling convention, like \twIdiaga;
 %edges use \normedge for upright, normal-offset labels instead of "sloped".
-\newlistcommand{\sixjdiagramd}{%
-{\begin{tikzpicture}[baseline=0pt, inner sep=0.1em,font=\scriptsize]
-\coordinate (B) at ($0.8*(0,-1)$);
-\coordinate (L) at ($0.8*(-0.866,0.5)$);
-\coordinate (R) at ($0.8*(0.866,0.5)$);
+\newlistcommand{\sixjdiagramddraw}{%
+\begin{scope}
+\coordinate (B) at (\(0.8*(0,-1)\));
+\coordinate (L) at (\(0.8*(-0.866,0.5)\));
+\coordinate (R) at (\(0.8*(0.866,0.5)\));
 \coordinate (M) at (0,0);
 \node[dotnode,label={below:\plusmark}] at (B) {};
 \node[dotnode,label={above left:\plusmark}] at (L) {};
 \node[dotnode,label={above right:\plusmark}] at (R) {};
-\node[dotnode,label={above:$\argx{7}$}] at (M) {};
-\normedge{B}{R}{0.5}{-0.15}{$\argx{4}$} % A
-\normedge{R}{L}{0.5}{-0.2}{$\argx{5}$} % B
-\normedge{L}{B}{0.5}{-0.2}{$\argx{6}$} % C
-\normedge{M}{L}{0.4}{0.14}{$\argx{1}$} % a
-\normedge{M}{B}{0.4}{-0.15}{$\argx{2}$}  % b
-\normedge{M}{R}{0.4}{-0.15}{$\argx{3}$} % c
+\node[dotnode,label={above:\(\argx{7}\)}] at (M) {};
+\normedge{B}{R}{0.5}{-0.15}{\(\argx{4}\)} % A
+\normedge{R}{L}{0.5}{-0.2}{\(\argx{5}\)} % B
+\normedge{L}{B}{0.5}{-0.2}{\(\argx{6}\)} % C
+\normedge{M}{L}{0.4}{0.14}{\(\argx{1}\)} % a
+\normedge{M}{B}{0.4}{-0.15}{\(\argx{2}\)}  % b
+\normedge{M}{R}{0.4}{-0.15}{\(\argx{3}\)} % c
+\end{scope}
+}
+\newcommand{\sixjdiagramd}[1]{%
+{\begin{tikzpicture}[baseline=0pt, inner sep=0.1em,font=\scriptsize]
+\sixjdiagramddraw{#1}
 \end{tikzpicture}}
 }
 %\sixjdiagramu{A,B,C,a,b,c,centersign}: outer triangle (vertices all
@@ -196,20 +213,20 @@
 %node" diagram. Comma-separated calling convention, like \twIdiaga.
 \newlistcommand{\sixjdiagramu}{%
 {\begin{tikzpicture}[baseline=0pt, inner sep=0.2em,font=\scriptsize]
-\coordinate (T) at ($0.8*(0,1)$);
-\coordinate (L) at ($0.8*(-0.866,-0.5)$);
-\coordinate (R) at ($0.8*(0.866,-0.5)$);
+\coordinate (T) at (\(0.8*(0,1)\));
+\coordinate (L) at (\(0.8*(-0.866,-0.5)\));
+\coordinate (R) at (\(0.8*(0.866,-0.5)\));
 \coordinate (M) at (0,0);
 \node[dotnode,label={above:\plusmark}] at (T) {};
 \node[dotnode,label={below:\plusmark}] at (L) {};
 \node[dotnode,label={below:\plusmark}] at (R) {};
-\node[dotnode,label={right:$\argx{7}$}] at (M) {};
-\normedge{T}{L}{0.5}{-0.15}{$\argx{1}$} % A
-\normedge{R}{T}{0.5}{-0.15}{$\argx{2}$} % B
-\normedge{L}{R}{0.5}{-0.15}{$\argx{3}$} %C
-\normedge{M}{T}{0.5}{-0.15}{$\argx{6}$} % c
-\normedge{M}{L}{0.5}{0.15}{$\argx{4}$} % a
-\normedge{R}{M}{0.5}{0.15}{$\argx{5}$} % b
+\node[dotnode,label={right:\(\argx{7}\)}] at (M) {};
+\normedge{T}{L}{0.5}{-0.15}{\(\argx{1}\)} % A
+\normedge{R}{T}{0.5}{-0.15}{\(\argx{2}\)} % B
+\normedge{L}{R}{0.5}{-0.15}{\(\argx{3}\)} %C
+\normedge{M}{T}{0.5}{-0.15}{\(\argx{6}\)} % c
+\normedge{M}{L}{0.5}{0.15}{\(\argx{4}\)} % a
+\normedge{R}{M}{0.5}{0.15}{\(\argx{5}\)} % b
 \end{tikzpicture}}
 }
 
@@ -218,25 +235,28 @@
 %a,b,c, and the outer edges labelled A,B,C. Comma-separated calling
 %convention, like \twIdiaga. (centersign/#7 is accepted but unused, same as
 %before -- this diagram doesn't actually draw a center node/edges.)
-\newlistcommand{\sixjdsq}{%
-{\begin{tikzpicture}[baseline=0pt, inner sep=0.2em,font=\scriptsize]
-\coordinate (T) at ($0.7*(0,1)$);
-\coordinate (L) at ($0.7*(-1,0)$);
-\coordinate (R) at ($0.7*(1,0)$);
-\coordinate (B) at ($0.7*(0,-1)$);
+\newlistcommand{\sixjdsqdraw}{%
+{\coordinate (T) at (\(0.7*(0,1)\));
+\coordinate (L) at (\(0.7*(-1,0)\));
+\coordinate (R) at (\(0.7*(1,0)\));
+\coordinate (B) at (\(0.7*(0,-1)\));
 \node[dotnode,label={above:\plusmark}] at (T) {};
 \node[dotnode,label={left:\minusmark}] at (L) {};
 \node[dotnode,label={right:\minusmark}] at (R) {};
 \node[dotnode,label={below:\plusmark}] at (B) {};
-\normedge{T}{L}{0.5}{-0.15}{$\argx{1}$} % A
-\normedge[jmlinem=0.75]{T}{B}{0.75}{0.15}{$\argx{2}$} % B
-\normedge{T}{R}{0.5}{0.2}{$\argx{3}$} % C
-\normedge{L}{B}{0.5}{-0.15}{$\argx{6}$} % c
-\normedge{B}{R}{0.5}{-0.15}{$\argx{4}$} % a
-\normedge[jmlinem=0.75]{R}{L}{0.75}{0.15}{$\argx{5}$} % b
+\normedge{T}{L}{0.5}{-0.15}{\(\argx{1}\)} % A
+\normedge[jmlinem=0.75]{T}{B}{0.65}{0.15}{\(\argx{2}\)} % B
+\normedge{T}{R}{0.5}{0.2}{\(\argx{3}\)} % C
+\normedge{L}{B}{0.5}{-0.2}{\(\argx{6}\)} % c
+\normedge{B}{R}{0.5}{-0.15}{\(\argx{4}\)} % a
+\normedge[jmlinem=0.75]{R}{L}{0.65}{0.15}{\(\argx{5}\)} % b
+}
+}
+\newcommand{\sixjdsq}[1]{%
+{\begin{tikzpicture}[baseline=0pt, inner sep=0.2em,font=\scriptsize]
+\sixjdsqdraw{#1}
 \end{tikzpicture}}
 }
-
 %\ninejd{1,2,3,4,5,6,7,8,9}: the 9j-symbol hexagon diagram (fixed
 %alternating +/- node signs, no sign argument). Comma-separated calling
 %convention, like \twIdiaga.
@@ -317,12 +337,12 @@
   % \global because \foreach runs its body in a group.
   \foreach \d [count=\k from 0] in \direcs {%
     \global\expandafter\let\csname dir\k\endcsname\d}%
-\ifdir0{\normedge{n1}{n0}{0.5}{0.22}{$\argx{1}$}}{\normedge{n0}{n1}{0.5}{-0.22}{$\argx{1}$}}
-\ifdir1{\normedge{n0}{n2}{0.5}{0.22}{$\argx{2}$}}{\normedge{n2}{n0}{0.5}{-0.22}{$\argx{2}$}}
-\ifdir2{\normedge{n1}{n2}{0.5}{-0.22}{$\argx{3}$}}{\normedge{n2}{n1}{0.5}{0.22}{$\argx{3}$}}
-\ifdir3{\normedge{n1}{n3}{0.6}{0.14}{$\argx{4}$}}{\normedge{n3}{n1}{0.4}{-0.14}{$\argx{4}$}}
-\ifdir4{\normedge{n3}{n2}{0.3}{0.14}{$\argx{5}$}}{\normedge{n2}{n3}{0.7}{-0.14}{$\argx{5}$}}
-\ifdir5{\normedge{n3}{n0}{0.3}{0.13}{$\argx{6}$}}{\normedge{n0}{n3}{0.7}{-0.13}{$\argx{6}$}}
+\ifdir0{\normedge{n1}{n0}{0.5}{0.22}{\(\argx{1}\)}}{\normedge{n0}{n1}{0.5}{-0.22}{\(\argx{1}\)}}
+\ifdir1{\normedge{n0}{n2}{0.5}{0.22}{\(\argx{2}\)}}{\normedge{n2}{n0}{0.5}{-0.22}{\(\argx{2}\)}}
+\ifdir2{\normedge{n1}{n2}{0.5}{-0.22}{\(\argx{3}\)}}{\normedge{n2}{n1}{0.5}{0.22}{\(\argx{3}\)}}
+\ifdir3{\normedge{n1}{n3}{0.6}{0.14}{\(\argx{4}\)}}{\normedge{n3}{n1}{0.4}{-0.14}{\(\argx{4}\)}}
+\ifdir4{\normedge{n3}{n2}{0.3}{0.14}{\(\argx{5}\)}}{\normedge{n2}{n3}{0.7}{-0.14}{\(\argx{5}\)}}
+\ifdir5{\normedge{n3}{n0}{0.3}{0.13}{\(\argx{6}\)}}{\normedge{n0}{n3}{0.7}{-0.13}{\(\argx{6}\)}}
 \end{tikzpicture}}
 }
 %\ninejdgen{s1,...,s9,SIGNS,DIRS}: fully general form of the 
@@ -363,45 +383,48 @@
   \foreach \d [count=\k from 0] in \direcs {%
     \global\expandafter\let\csname dir\k\endcsname\d}%
   % edges: fixed geometry per slot; \ifdir chooses forward vs reverse
-  \ifdir{0}{\normedge{n0}{n1}{0.5}{-0.2}{$\argx{1}$}}{\normedge{n1}{n0}{0.5}{0.2}{$\argx{1}$}}%
-  \ifdir{1}{\normedge[jmlinem=0.25]{n0}{n3}{0.25}{0.2}{$\argx{2}$}}{\normedge[jmlinem=0.75]{n3}{n0}{0.75}{-0.2}{$\argx{2}$}}%
-  \ifdir{2}{\normedge{n0}{n5}{0.5}{0.2}{$\argx{3}$}}{\normedge{n5}{n0}{0.5}{-0.2}{$\argx{3}$}}%
-  \ifdir{3}{\normedge{n2}{n1}{0.5}{0.2}{$\argx{4}$}}{\normedge{n1}{n2}{0.5}{-0.2}{$\argx{4}$}}%
-  \ifdir{4}{\normedge{n2}{n3}{0.5}{-0.2}{$\argx{5}$}}{\normedge{n3}{n2}{0.5}{0.2}{$\argx{5}$}}%
-  \ifdir{5}{\normedge[jmlinem=0.25]{n2}{n5}{0.25}{0.2}{$\argx{6}$}}{\normedge[jmlinem=0.75]{n5}{n2}{0.75}{-0.2}{$\argx{6}$}}%
-  \ifdir{6}{\normedge[jmlinem=0.25]{n4}{n1}{0.25}{0.2}{$\argx{7}$}}{\normedge[jmlinem=0.75]{n1}{n4}{0.75}{-0.2}{$\argx{7}$}}%
-  \ifdir{7}{\normedge{n4}{n3}{0.5}{0.2}{$\argx{8}$}}{\normedge{n3}{n4}{0.5}{-0.2}{$\argx{8}$}}%
-  \ifdir{8}{\normedge{n4}{n5}{0.5}{-0.2}{$\argx{9}$}}{\normedge{n5}{n4}{0.5}{0.2}{$\argx{9}$}}%
+  \ifdir{0}{\normedge{n0}{n1}{0.5}{-0.2}{\(\argx{1}\)}}{\normedge{n1}{n0}{0.5}{0.2}{\(\argx{1}\)}}%
+  \ifdir{1}{\normedge[jmlinem=0.25]{n0}{n3}{0.25}{0.2}{\(\argx{2}\)}}{\normedge[jmlinem=0.75]{n3}{n0}{0.75}{-0.2}{\(\argx{2}\)}}%
+  \ifdir{2}{\normedge{n0}{n5}{0.5}{0.2}{\(\argx{3}\)}}{\normedge{n5}{n0}{0.5}{-0.2}{\(\argx{3}\)}}%
+  \ifdir{3}{\normedge{n2}{n1}{0.5}{0.2}{\(\argx{4}\)}}{\normedge{n1}{n2}{0.5}{-0.2}{\(\argx{4}\)}}%
+  \ifdir{4}{\normedge{n2}{n3}{0.5}{-0.2}{\(\argx{5}\)}}{\normedge{n3}{n2}{0.5}{0.2}{\(\argx{5}\)}}%
+  \ifdir{5}{\normedge[jmlinem=0.25]{n2}{n5}{0.25}{0.2}{\(\argx{6}\)}}{\normedge[jmlinem=0.75]{n5}{n2}{0.75}{-0.2}{\(\argx{6}\)}}%
+  \ifdir{6}{\normedge[jmlinem=0.25]{n4}{n1}{0.25}{0.2}{\(\argx{7}\)}}{\normedge[jmlinem=0.75]{n1}{n4}{0.75}{-0.2}{\(\argx{7}\)}}%
+  \ifdir{7}{\normedge{n4}{n3}{0.5}{0.2}{\(\argx{8}\)}}{\normedge{n3}{n4}{0.5}{-0.2}{\(\argx{8}\)}}%
+  \ifdir{8}{\normedge{n4}{n5}{0.5}{-0.2}{\(\argx{9}\)}}{\normedge{n5}{n4}{0.5}{0.2}{\(\argx{9}\)}}%
 \end{tikzpicture}}%
 }
 
-\newlistcommand{\twIdiaga}{%
-{\begin{tikzpicture}[baseline=0pt, inner sep=0.1em,font=\scriptsize]
+\newlistcommand{\twIdiagadraw}{%
+  \pgfmathsetmacro{\len}{0.9}
   \foreach \i in {0,...,7} {
-    \coordinate (tid\i) at (90+45*\i:0.8);
+    \coordinate (tid\i) at (90+45*\i:\len);
     \node[dotnode,label={90+45*\i:\plusmark}] at (tid\i) {};
   }
   % lines
-  \normedge{tid2}{tid1}{0.5}{0.15}{$\argx{1}$} %a1
-  \normedge{tid0}{tid1}{0.5}{-0.15}{$\argx{2}$} %a2
-  \normedge{tid7}{tid0}{0.5}{-0.15}{$\argx{3}$} %a3
-  \normedge{tid7}{tid6}{0.5}{0.15}{$\argx{4}$} %a4
-  \normedge[jmlinem=0.75]{tid5}{tid1}{0.75}{0.15}{$\argx{5}$} %b1
-  \normedge[jmlinem=0.75]{tid4}{tid0}{0.8}{0.15}{$\argx{6}$} %b2
-  \normedge[jmlinem=0.75]{tid3}{tid7}{0.8}{0.18}{$\argx{7}$} %b3
-  \normedge[jmlinem=0.75]{tid2}{tid6}{0.8}{0.16}{$\argx{8}$} %b4
-  \normedge{tid5}{tid6}{0.5}{-0.15}{$\argx{9}$} %c1
-  \normedge{tid4}{tid5}{0.5}{-0.15}{$\argx{10}$} %c2
-  \normedge{tid3}{tid4}{0.5}{-0.15}{$\argx{11}$} %c3
-  \normedge{tid2}{tid3}{0.5}{-0.15}{$\argx{12}$} %c4
+  \normedge{tid2}{tid1}{0.5}{0.2}{\(\argx{1}\)} %a1
+  \normedge{tid0}{tid1}{0.5}{-0.2}{\(\argx{2}\)} %a2
+  \normedge{tid7}{tid0}{0.5}{-0.15}{\(\argx{3}\)} %a3
+  \normedge{tid7}{tid6}{0.5}{0.2}{\(\argx{4}\)} %a4
+  \normedge[jmlinem=0.75]{tid5}{tid1}{0.75}{0.15}{\(\argx{5}\)} %b1
+  \normedge[jmlinem=0.75]{tid4}{tid0}{0.8}{0.15}{\(\argx{6}\)} %b2
+  \normedge[jmlinem=0.75]{tid3}{tid7}{0.8}{0.18}{\(\argx{7}\)} %b3
+  \normedge[jmlinem=0.75]{tid2}{tid6}{0.8}{0.16}{\(\argx{8}\)} %b4
+  \normedge{tid5}{tid6}{0.5}{-0.2}{\(\argx{9}\)} %c1
+  \normedge{tid4}{tid5}{0.5}{-0.2}{\(\argx{10}\)} %c2
+  \normedge{tid3}{tid4}{0.5}{-0.2}{\(\argx{11}\)} %c3
+  \normedge{tid2}{tid3}{0.5}{-0.2}{\(\argx{12}\)} %c4
+}
+\newcommand{\twIdiaga}[1]{
+{\begin{tikzpicture}[baseline=0pt, inner sep=0.15em,font=\scriptsize]
+  \twIdiagadraw{#1}
 \end{tikzpicture}}
 }
 
-
-\newlistcommand{\twIdiagb}{%
-{\begin{tikzpicture}[baseline=0pt, inner sep=0.15em,font=\scriptsize]
+\newlistcommand{\twIdiagbdraw}{%
+  \pgfmathsetmacro{\len}{0.9}
   \foreach \i in {0,...,7} {
-    \coordinate (tid\i) at (90+22.5+45*\i:0.8);
+    \coordinate (tid\i) at (90+22.5+45*\i:\len);
   }
   \foreach \i in {0,3,5,6} {
     \node[dotnode,label={90+22.5+45*\i:\minusmark}] at (tid\i) {};
@@ -410,28 +433,33 @@
     \node[dotnode,label={90+22.5+45*\i:\plusmark}] at (tid\i) {};
   }
   % lines
-  \normedge{tid2}{tid1}{0.5}{0.2}{$\argx{1}$} %a1
-  \normedge{tid0}{tid1}{0.5}{-0.2}{$\argx{2}$} %a2
-  \normedge[jmlinem=0.2]{tid4}{tid0}{0.2}{0.2}{$\argx{3}$} %a3
-  \normedge{tid5}{tid4}{0.5}{0.2}{$\argx{4}$} %a4
-  \normedge[jmlinem=0.75]{tid6}{tid1}{0.75}{0.15}{$\argx{5}$} %b1
-  \normedge{tid7}{tid0}{0.5}{-0.2}{$\argx{6}$} %b2
-  \normedge{tid3}{tid4}{0.5}{-0.18}{$\argx{7}$} %b3
-  \normedge[jmlinem=0.75]{tid2}{tid5}{0.75}{0.2}{$\argx{8}$} %b4
-  \normedge{tid6}{tid5}{0.5}{0.2}{$\argx{9}$} %c1
-  \normedge{tid7}{tid6}{0.5}{0.2}{$\argx{10}$} %c2
-  \normedge[jmlinem=0.65]{tid3}{tid7}{0.65}{-0.2}{$\argx{11}$} %c3
-  \normedge{tid2}{tid3}{0.5}{-0.15}{$\argx{12}$} %c4
+  \normedge{tid2}{tid1}{0.5}{0.2}{\(\argx{1}\)} %a1
+  \normedge{tid0}{tid1}{0.5}{-0.2}{\(\argx{2}\)} %a2
+  \normedge[jmlinem=0.2]{tid4}{tid0}{0.2}{0.2}{\(\argx{3}\)} %a3
+  \normedge{tid5}{tid4}{0.5}{0.2}{\(\argx{4}\)} %a4
+  \normedge[jmlinem=0.75]{tid6}{tid1}{0.75}{0.15}{\(\argx{5}\)} %b1
+  \normedge{tid7}{tid0}{0.5}{-0.2}{\(\argx{6}\)} %b2
+  \normedge{tid3}{tid4}{0.5}{-0.18}{\(\argx{7}\)} %b3
+  \normedge[jmlinem=0.75]{tid2}{tid5}{0.75}{0.2}{\(\argx{8}\)} %b4
+  \normedge{tid6}{tid5}{0.5}{0.2}{\(\argx{9}\)} %c1
+  \normedge{tid7}{tid6}{0.5}{0.2}{\(\argx{10}\)} %c2
+  \normedge[jmlinem=0.65]{tid3}{tid7}{0.65}{-0.2}{\(\argx{11}\)} %c3
+  \normedge{tid2}{tid3}{0.5}{-0.15}{\(\argx{12}\)} %c4
+}
+
+\newcommand{\twIdiagb}[1]{%
+{\begin{tikzpicture}[baseline=0pt, inner sep=0.15em,font=\scriptsize]
+  \twIdiagbdraw{#1}
 \end{tikzpicture}}
 }
 
-\newlistcommand{\twIIdiaga}{%
-{\begin{tikzpicture}[baseline=0pt, inner sep=0.1em,font=\scriptsize]
+\newlistcommand{\twIIdiagadraw}{%
+{\pgfmathsetmacro{\len}{1}
   \foreach \i in {0,...,3} {
-    \coordinate (tid\i) at ($(225+90*\i:0.8)-0.3*(0.71,0.71)$);
+    \coordinate (tid\i) at ($(225+90*\i:\len)-(45:0.4)$);
   }
   \foreach \i in {4,...,7} {
-    \coordinate (tid\i) at ($(225+90*\i:0.8)+0.3*(0.71,0.71)$);
+    \coordinate (tid\i) at ($(225+90*\i:\len)+(45:0.4)$);
   }
   \node[dotnode,label={210:\minusmark}] at (tid0) {};
   \node[dotnode,label={-60:\minusmark}] at (tid1) {};
@@ -442,26 +470,32 @@
   \node[dotnode,label={45:\minusmark}] at (tid6) {};
   \node[dotnode,label={135:\minusmark}] at (tid7) {};
   % lines
-  \normedge{tid4}{tid0}{0.5}{0.2}{$\argx{1}$} %a1
-  \normedge{tid1}{tid5}{0.5}{-0.2}{$\argx{3}$} %a3
-  \normedge{tid6}{tid2}{0.5}{-0.2}{$\argx{4}$} %a4
-  \normedge{tid3}{tid7}{0.5}{0.2}{$\argx{2}$} %a2
-  \normedge{tid1}{tid0}{0.5}{0.18}{$\argx{6}$} %b2
-  \normedge[jmlinem=0.6]{tid1}{tid2}{0.6}{-0.18}{$\argx{12}$} %c4
-  \normedge{tid3}{tid2}{0.5}{0.18}{$\argx{8}$} %b4
-  \normedge{tid3}{tid0}{0.5}{-0.18}{$\argx{11}$} %c3
-  \normedge[jmlinem=0.4]{tid4}{tid5}{0.4}{-0.18}{$\argx{5}$} %b1
-  \normedge{tid6}{tid5}{0.5}{0.18}{$\argx{10}$} %c2
-  \normedge{tid6}{tid7}{0.5}{-0.18}{$\argx{7}$} %b3
-  \normedge[jmlinem=0.25]{tid4}{tid7}{0.25}{0.18}{$\argx{9}$} %c1
-\end{tikzpicture}}
+  \normedge{tid4}{tid0}{0.5}{0.2}{\(\argx{1}\)} %a1
+  \normedge{tid1}{tid5}{0.5}{-0.2}{\(\argx{3}\)} %a3
+  \normedge{tid6}{tid2}{0.7}{-0.2}{\(\argx{4}\)} %a4
+  \normedge{tid3}{tid7}{0.5}{0.2}{\(\argx{2}\)} %a2
+  \normedge{tid1}{tid0}{0.5}{0.18}{\(\argx{6}\)} %b2
+  \normedge[jmlinem=0.6]{tid1}{tid2}{0.6}{-0.18}{\(\argx{12}\)} %c4
+  \normedge{tid3}{tid2}{0.7}{0.18}{\(\argx{8}\)} %b4
+  \normedge{tid3}{tid0}{0.5}{-0.2}{\(\argx{11}\)} %c3
+  \normedge[jmlinem=0.4]{tid4}{tid5}{0.4}{-0.18}{\(\argx{5}\)} %b1
+  \normedge{tid6}{tid5}{0.5}{0.2}{\(\argx{10}\)} %c2
+  \normedge{tid6}{tid7}{0.5}{-0.2}{\(\argx{7}\)} %b3
+  \normedge[jmlinem=0.25]{tid4}{tid7}{0.25}{0.18}{\(\argx{9}\)} %c1
+}
 }
 
-
-\newlistcommand{\twIIdiagb}{%
+\newcommand{\twIIdiaga}[1]%
 {\begin{tikzpicture}[baseline=0pt, inner sep=0.1em,font=\scriptsize]
+  \twIIdiagadraw{#1}
+\end{tikzpicture}
+}
+
+\newlistcommand{\twIIdiagbdraw}{%
+{
+  \pgfmathsetmacro{\len}{1}
   \foreach \i in {0,...,7} {
-    \coordinate (tid\i) at (90+22.5+45*\i:0.8);
+    \coordinate (tid\i) at (90+22.5+45*\i:\len);
   }
   \foreach \i in {0,1,4,5} {
     \node[dotnode,label={90+22.5+45*\i:\minusmark}] at (tid\i) {};
@@ -470,19 +504,23 @@
     \node[dotnode,label={90+22.5+45*\i:\plusmark}] at (tid\i) {};
   }
   % lines
-  \normedge{tid2}{tid3}{0.5}{-0.2}{$\argx{1}$} %a1
-  \normedge{tid0}{tid1}{0.5}{-0.2}{$\argx{2}$} %a2
-  \normedge{tid4}{tid5}{0.75}{-0.15}{$\argx{3}$} %a3
-  \normedge{tid6}{tid7}{0.5}{-0.2}{$\argx{4}$} %a4
-  \normedge[jmlinem=0.5]{tid2}{tid5}{0.5}{-0.15}{$\argx{5}$} %b1
-  \normedge{tid4}{tid3}{0.5}{0.2}{$\argx{6}$} %b2
-  \normedge[jmlinem=0.5]{tid6}{tid1}{0.5}{-0.2}{$\argx{7}$} %b3
-  \normedge{tid0}{tid7}{0.5}{0.2}{$\argx{8}$} %b4
-  \normedge{tid2}{tid1}{0.5}{0.2}{$\argx{9}$} %c1
-  \normedge{tid6}{tid5}{0.5}{0.2}{$\argx{10}$} %c2
-  \normedge[jmlinem=0.5]{tid0}{tid3}{0.5}{-0.2}{$\argx{11}$} %c3
-  \normedge[jmlinem=0.5]{tid7}{tid4}{0.5}{-0.2}{$\argx{12}$} %c4
-\end{tikzpicture}}
+  \normedge{tid2}{tid3}{0.5}{-0.2}{\(\argx{1}\)} %a1
+  \normedge{tid0}{tid1}{0.5}{-0.2}{\(\argx{2}\)} %a2
+  \normedge{tid4}{tid5}{0.75}{-0.15}{\(\argx{3}\)} %a3
+  \normedge{tid6}{tid7}{0.5}{-0.2}{\(\argx{4}\)} %a4
+  \normedge[jmlinem=0.5]{tid2}{tid5}{0.5}{-0.15}{\(\argx{5}\)} %b1
+  \normedge{tid4}{tid3}{0.5}{0.2}{\(\argx{6}\)} %b2
+  \normedge[jmlinem=0.5]{tid6}{tid1}{0.5}{-0.2}{\(\argx{7}\)} %b3
+  \normedge{tid0}{tid7}{0.5}{0.2}{\(\argx{8}\)} %b4
+  \normedge{tid2}{tid1}{0.5}{0.2}{\(\argx{9}\)} %c1
+  \normedge{tid6}{tid5}{0.5}{0.2}{\(\argx{10}\)} %c2
+  \normedge[jmlinem=0.5]{tid0}{tid3}{0.5}{-0.2}{\(\argx{11}\)} %c3
+  \normedge[jmlinem=0.5]{tid7}{tid4}{0.5}{-0.2}{\(\argx{12}\)} %c4
+}}
+\newcommand{\twIIdiagb}[1]{
+  \begin{tikzpicture}[baseline=0pt, inner sep=0.1em,font=\scriptsize]
+    \twIIdiagbdraw{#1}
+  \end{tikzpicture}
 }
 
 %======== Helpers for Table 11.7 (Zero Angular Momentum, j=0 cases) ========
@@ -496,22 +534,22 @@
 \coordinate (N) at (0,0);
 \node[dotnode,label={90:\vmk@sign{#1}}] at (N) {};
 \if i#3
-  \draw[bjmarrow] (-0.75,0) node[left]{$#2$} -- (N);
+  \draw[bjmarrow] (-0.75,0) node[left]{\(#2\)} -- (N);
 \else
-  \draw[jmarrow] (N) -- (-0.75,0) node[left]{$#2$};
+  \draw[jmarrow] (N) -- (-0.75,0) node[left]{\(#2\)};
 \fi
 \if i#5
-  \draw[bjmarrow] (0.75,0) node[right]{$#4$} -- (N);
+  \draw[bjmarrow] (0.75,0) node[right]{\(#4\)} -- (N);
 \else
-  \draw[jmarrow] (N) -- (0.75,0) node[right]{$#4$};
+  \draw[jmarrow] (N) -- (0.75,0) node[right]{\(#4\)};
 \fi
 \if d#6
-  \draw[bjmarrow] (N) -- (0,-0.9) node[below]{$c=0$};
+  \draw[bjmarrow] (N) -- (0,-0.9) node[below]{\(c=0\)};
 \else 
   \if u#6 
-    \draw[jmarrow] (0,-0.9) node[below]{$c=0$} -- (N);
+    \draw[jmarrow] (0,-0.9) node[below]{\(c=0\)} -- (N);
   \else
-    \draw (0,-0.9) node[below]{$c=0$} -- (N);
+    \draw (0,-0.9) node[below]{\(c=0\)} -- (N);
   \fi
 \fi
 \end{tikzpicture}%
@@ -530,8 +568,8 @@
 \node[dotnode,label={0:\plusmark}] at (R) {};
 \node[dotnode,label={-90:\vmk@sign{#3}}] at (B) {};
 \draw[jmlinem] (L) -- (R);
-\draw[jmlinem] (L) -- (B) node[midway,left]{$#1$};
-\draw[jmlinem] (R) -- (B) node[midway,right]{$#2$};
+\draw[jmlinem] (L) -- (B) node[midway,left]{\(#1\)};
+\draw[jmlinem] (R) -- (B) node[midway,right]{\(#2\)};
 \end{tikzpicture}%
 }
 %\jzld{extdir}{intdir}{leftlab}{rightlab}{botsign}: the reduced form used on the
@@ -547,19 +585,19 @@
 \begin{tikzpicture}[baseline=0pt,inner sep=0.13em,font=\scriptsize]
 \if n#2 % not a metric tensor
 \if o#1
-  \draw[bjmarrow] (-\Len,\HEO) -- (0,\HEO)  node[above]{$a\alpha$};
-  \draw[jmarrow] (0,\HEO) node[above]{$b\beta$} -- (\Len,\HEO) ;
+  \draw[bjmarrow] (-\Len,\HEO) -- (0,\HEO)  node[above]{\(a\alpha\)};
+  \draw[jmarrow] (0,\HEO) node[above]{\(b\beta\)} -- (\Len,\HEO) ;
 \else
-  \draw[jmarrow] (0,\HEO) --(-\Len,\HEO)   node[above]{$a\alpha$};
-  \draw[bjmarrow] (\Len,\HEO) node[above]{$b\beta$}--(0,\HEO) ; 
+  \draw[jmarrow] (0,\HEO) --(-\Len,\HEO)   node[above]{\(a\alpha\)};
+  \draw[bjmarrow] (\Len,\HEO) node[above]{\(b\beta\)}--(0,\HEO) ; 
 \fi
 \else
 \if o#1
-  \draw[jmarrow] (0,\HEO) -- (-\Len,\HEO) node[above]{$a\alpha$};
-  \draw[jmarrow] (0,\HEO) -- (\Len,\HEO) node[above]{$b\beta$};
+  \draw[jmarrow] (0,\HEO) -- (-\Len,\HEO) node[above]{\(a\alpha\)};
+  \draw[jmarrow] (0,\HEO) -- (\Len,\HEO) node[above]{\(b\beta\)};
 \else
-  \draw[bjmarrow] (-\Len,\HEO) node[above]{$a\alpha$} -- (0,\HEO);
-  \draw[bjmarrow] (\Len,\HEO) node[above]{$b\beta$} -- (0,\HEO);
+  \draw[bjmarrow] (-\Len,\HEO) node[above]{\(a\alpha\)} -- (0,\HEO);
+  \draw[bjmarrow] (\Len,\HEO) node[above]{\(b\beta\)} -- (0,\HEO);
 \fi
 \if l#2
   \draw[jmlinem] (\Len,\HEO) -- (-\Len,\HEO);
@@ -568,15 +606,15 @@
 \fi
 \fi
 \fi
-  \coordinate (L) at ($\Sz*(-0.861,0.5)+(0,\HET)$);
-  \coordinate (R) at ($\Sz*(0.861,0.5)+(0,\HET)$);
-  \coordinate (B) at ($\Sz*(0,-1)+(0,\HET)$);
+  \coordinate (L) at (\(\Sz*(-0.861,0.5)+(0,\HET)\));
+  \coordinate (R) at (\(\Sz*(0.861,0.5)+(0,\HET)\));
+  \coordinate (B) at (\(\Sz*(0,-1)+(0,\HET)\));
 \node[dotnode,label={180:\plusmark}] at (L) {};
 \node[dotnode,label={0:\plusmark}] at (R) {};
 \node[dotnode,label={-90:\vmk@sign{#5}}] at (B) {};
 \draw[jmlinem] (L) -- (R);
-\draw[jmlinem] (L) -- (B) node[midway,left]{$#3$};
-\draw[jmlinem] (R) -- (B) node[midway,right]{$#4$};
+\draw[jmlinem] (L) -- (B) node[midway,left]{\(#3\)};
+\draw[jmlinem] (R) -- (B) node[midway,right]{\(#4\)};
 \end{tikzpicture}%
 }
 
@@ -591,7 +629,7 @@
         decoration={markings, mark=at position 0.25 with  {\arrow{Stealth[length=2.2mm]}}},
         postaction={decorate},thick] (0,0.) circle (0.4);
 \fi
-\node (0.0.5) {$#1$};
+\node (0.0.5) {\(#1\)};
 \end{tikzpicture}
 }
 
@@ -605,11 +643,11 @@
 \node[dotnode,label={-90:\vmk@sign{#3}}]at(B){};
 \node[dotnode,label={90:\vmk@sign{#4}}]at(T){};
 \if c#5
-\draw[jmlinem](T)to[bend right=60]node[left]{$#1$}(B);
-\draw[jmlinem](B)to[bend right=60]node[right]{$#2$}(T);
+\draw[jmlinem](T)to[bend right=60]node[left]{\(#1\)}(B);
+\draw[jmlinem](B)to[bend right=60]node[right]{\(#2\)}(T);
 \else
-\draw[jmlinem](T)to[bend left=60]node[right]{$#1$}(B);
-\draw[jmlinem](B)to[bend left=60]node[left]{$#2$}(T);
+\draw[jmlinem](T)to[bend left=60]node[right]{\(#1\)}(B);
+\draw[jmlinem](B)to[bend left=60]node[left]{\(#2\)}(T);
 \fi
 \end{tikzpicture}}
 %\njloopc{a}{c}{b}: same loop with an added vertical c diameter.
@@ -618,9 +656,9 @@
 \coordinate(T)at(0,0.5);\coordinate(B)at(0,-0.5);
 \node[dotnode,label={-90:\vmk@sign{#4}}]at(B){};
 \node[dotnode,label={90:\vmk@sign{#5}}]at(T){};
-\draw[jmlinem](T)to[bend right=60]node[left]{$#1$}(B);
-\draw[jmlinem](T)to[bend left=60]node[right]{$#3$}(B);
-\draw[jmlinem](T)--(B)node[midway,right]{$#2$};
+\draw[jmlinem](T)to[bend right=60]node[left]{\(#1\)}(B);
+\draw[jmlinem](T)to[bend left=60]node[right]{\(#3\)}(B);
+\draw[jmlinem](T)--(B)node[midway,right]{\(#2\)};
 \end{tikzpicture}}
 %\njdtri{a}{b}{c}{botsign}{dir}: closed downward triangle, top edge c, left a,
 %right b, top nodes both +, bottom node = botsign. The {0 0 0; a b c} form.
@@ -633,13 +671,13 @@
 \node[dotnode,label={45:\plusmark}]at(R){};
 \node[dotnode,label={-90:\vmk@sign{#4}}]at(B){};
 \if a#5
-\draw[jmlinem](L)--(R)node[midway,above]{$#3$};
-\draw[jmlinem](R)--(B)node[midway,right]{$#2$};
-\draw[jmlinem](B)--(L)node[midway,left]{$#1$};
+\draw[jmlinem](L)--(R)node[midway,above]{\(#3\)};
+\draw[jmlinem](R)--(B)node[midway,right]{\(#2\)};
+\draw[jmlinem](B)--(L)node[midway,left]{\(#1\)};
 \else
-\draw[jmlinem](R)--(L)node[midway,above]{$#3$};
-\draw[jmlinem](B)--(R)node[midway,right]{$#2$};
-\draw[jmlinem](L)--(B)node[midway,left]{$#1$};
+\draw[jmlinem](R)--(L)node[midway,above]{\(#3\)};
+\draw[jmlinem](B)--(R)node[midway,right]{\(#2\)};
+\draw[jmlinem](L)--(B)node[midway,left]{\(#1\)};
 \fi
 \end{tikzpicture}}
 %\njdiam{tl}{tr}{bl}{br}{cdiam}: closed diamond, edges tl,tr (upper) and
@@ -649,39 +687,39 @@
 \begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
 \coordinate(T)at(0,0.65);\coordinate(Le)at(-0.62,0);\coordinate(Re)at(0.62,0);\coordinate(Bo)at(0,-0.65);
 \node[dotnode,label={90:\minusmark}]at(T){};\node[dotnode,label={180:\plusmark}]at(Le){};\node[dotnode,label={0:\plusmark}]at(Re){};\node[dotnode,label={-90:\minusmark}]at(Bo){};
-\draw[jmlinem](T)--(Le)node[midway,above left]{$#1$};
-\draw[jmlinem](Re)--(T)node[midway,above right]{$#2$};
-\draw[jmlinem](Bo)--(Le)node[midway,below left]{$#3$};
-\draw[jmlinem](Bo)--(Re)node[midway,below right]{$#4$};
-\def\njdc{#5}\ifx\njdc\empty\else\draw[jmlinem](T)--(Bo)node[midway,right]{$#5$};\fi
+\draw[jmlinem](T)--(Le)node[midway,above left]{\(#1\)};
+\draw[jmlinem](Re)--(T)node[midway,above right]{\(#2\)};
+\draw[jmlinem](Bo)--(Le)node[midway,below left]{\(#3\)};
+\draw[jmlinem](Bo)--(Re)node[midway,below right]{\(#4\)};
+\def\njdc{#5}\ifx\njdc\empty\else\draw[jmlinem](T)--(Bo)node[midway,right]{\(#5\)};\fi
 \end{tikzpicture}}
 %\njvtri{top}{bot} / \njvtrir{top}{bot}: small triangles (apex right / left)
 %used as the outer factors of the reduced products; all nodes +.
 \newcommand{\njvtri}[2]{%
 \begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
   \pgfmathsetmacro{\Sz}{0.5}
-\coordinate(T)at($\Sz*(-0.5,0.861)$);
-\coordinate(B)at($\Sz*(-0.5,-0.861)$);
-\coordinate(Ap)at($\Sz*(1,0)$);
+\coordinate(T)at(\(\Sz*(-0.5,0.861)\));
+\coordinate(B)at(\(\Sz*(-0.5,-0.861)\));
+\coordinate(Ap)at(\(\Sz*(1,0)\));
 \node[dotnode,label={135:\plusmark}]at(T){};
 \node[dotnode,label={-135:\plusmark}]at(B){};
 \node[dotnode,label={0:\plusmark}]at(Ap){};
 \draw[jmlinem](T)--(B);
-\draw[jmlinem](T)--(Ap)node[midway,above right]{$#1$};
-\draw[jmlinem](B)--(Ap)node[midway,below right]{$#2$};
+\draw[jmlinem](T)--(Ap)node[midway,above right]{\(#1\)};
+\draw[jmlinem](B)--(Ap)node[midway,below right]{\(#2\)};
 \end{tikzpicture}}
 \newcommand{\njvtrir}[2]{%
 \begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
   \pgfmathsetmacro{\Sz}{0.5}
-\coordinate(T)at($\Sz*(0.5,0.861)$);
-\coordinate(B)at($\Sz*(0.5,-0.861)$);
-\coordinate(Ap)at($\Sz*(-1,0)$);
+\coordinate(T)at(\(\Sz*(0.5,0.861)\));
+\coordinate(B)at(\(\Sz*(0.5,-0.861)\));
+\coordinate(Ap)at(\(\Sz*(-1,0)\));
 \node[dotnode,label={45:\plusmark}]at(T){};
 \node[dotnode,label={-45:\plusmark}]at(B){};
 \node[dotnode,label={180:\plusmark}]at(Ap){};
 \draw[jmlinem](T)--(B);
-\draw[jmlinem](T)--(Ap)node[midway,above left]{$#1$};
-\draw[jmlinem](B)--(Ap)node[midway,below left]{$#2$};
+\draw[jmlinem](T)--(Ap)node[midway,above left]{\(#1\)};
+\draw[jmlinem](B)--(Ap)node[midway,below left]{\(#2\)};
 \end{tikzpicture}}
 %\njsqx{a}{b}{d}{e}{c}{f}: square with the two crossing diagonals c,f (the middle
 %factor of the {a b c; e 0 e'; f b' d} reduction).
@@ -692,13 +730,13 @@
 \node[dotnode,label={45:\plusmark}]at(tr){};
 \node[dotnode,label={-135:\minusmark}]at(bl){};
 \node[dotnode,label={-45:\plusmark}]at(br){};
-\draw[jmlinem](tl)--(tr)node[pos=0.32,above]{$#1$};
-\draw[jmlinem](bl)--(tl)node[pos=0.32,left]{$#2$};
-\draw[jmlinem](br)--(tr)node[pos=0.32,right]{$#4$};
-\draw[jmlinem](bl)--(br)node[pos=0.32,below]{$#3$};
-\draw[jmlinem](tl)--(br)node[pos=0.32,above right]{$#5$};
-\normedge[jmlinem=0.35]{br}{tl}{0.35}{-0.2}{$#5$};
-\normedge[jmlinem=0.35]{tr}{bl}{0.35}{-0.2}{$#6$};
+\draw[jmlinem](tl)--(tr)node[pos=0.32,above]{\(#1\)};
+\draw[jmlinem](bl)--(tl)node[pos=0.32,left]{\(#2\)};
+\draw[jmlinem](br)--(tr)node[pos=0.32,right]{\(#4\)};
+\draw[jmlinem](bl)--(br)node[pos=0.32,below]{\(#3\)};
+\draw[jmlinem](tl)--(br)node[pos=0.32,above right]{\(#5\)};
+\normedge[jmlinem=0.35]{br}{tl}{0.35}{-0.2}{\(#5\)};
+\normedge[jmlinem=0.35]{tr}{bl}{0.35}{-0.2}{\(#6\)};
 \end{tikzpicture}}
 %\njhexx{a}{b}{c}{f}{e}{d}{bp}{ep}: hexagon with two crossing diagonals
 %(c,f) -- the closed {a b c; e 0 e'; f b' d} diagram (the third, 0-valued
@@ -709,14 +747,14 @@
 \foreach \i in {0,...,5}{\coordinate(h\i)at(60+60*\i:0.78);}
 \foreach \i in {0,2,4}{\node[label={135+60*\i:\plusmark}] at(h\i){};}
 \foreach \i in {1,3,5}{\node[label={135+60*\i:\minusmark}] at(h\i){};}
-\normedge[jmlinem=0.5]{h0}{h1}{0.5}{-0.2}{$#1$}; %a
-\normedge[jmlinem=0.5]{h2}{h1}{0.5}{0.2}{$#2$}; %b
-\normedge[jmlinem=0.5]{h2}{h3}{0.5}{0.2}{$#7$}; %b'
-\normedge[jmlinem=0.5]{h4}{h3}{0.5}{-0.2}{$#6$}; %d
-\normedge[jmlinem=0.5]{h4}{h5}{0.5}{-0.2}{$#8$}; %e'
-\normedge[jmlinem=0.5]{h5}{h0}{0.5}{-0.2}{$#5$}; %e
-\normedge[jmlinem=0.25]{h4}{h1}{0.75}{0.2}{$#3$}; %c
-\normedge[jmlinem=0.25]{h3}{h0}{0.75}{-0.2}{$#4$}; %f
+\normedge[jmlinem=0.5]{h0}{h1}{0.5}{-0.2}{\(#1\)}; %a
+\normedge[jmlinem=0.5]{h2}{h1}{0.5}{0.2}{\(#2\)}; %b
+\normedge[jmlinem=0.5]{h2}{h3}{0.5}{0.2}{\(#7\)}; %b'
+\normedge[jmlinem=0.5]{h4}{h3}{0.5}{-0.2}{\(#6\)}; %d
+\normedge[jmlinem=0.5]{h4}{h5}{0.5}{-0.2}{\(#8\)}; %e'
+\normedge[jmlinem=0.5]{h5}{h0}{0.5}{-0.2}{\(#5\)}; %e
+\normedge[jmlinem=0.25]{h4}{h1}{0.75}{0.2}{\(#3\)}; %c
+\normedge[jmlinem=0.25]{h3}{h0}{0.75}{-0.2}{\(#4\)}; %f
 \end{tikzpicture}}
 
 %---- Table 11.8 helpers (Zero Rotation, R=1 / R^{-1}R=1 cases) ----
@@ -734,11 +772,11 @@
 \else
   \tikzset{vmkln/.style={thick}}
 \fi
-\draw[vmkln,vmkbra] (-0.8,0) node[left]{$#2$} -- (0.8,0) node[right]{$#3$};
+\draw[vmkln,vmkbra] (-0.8,0) node[left]{\(#2\)} -- (0.8,0) node[right]{\(#3\)};
 \node[dotnode,label={90:\vmk@sign{#4}}]at(0,0){};
 \draw[rline] (0,0) -- (0,-0.75);
 %\node[deltanode] at (0,-0.75){};
-\node[below,inner sep=1pt] at (0,-0.86){$R{=}1$};
+\node[below,inner sep=1pt] at (0,-0.86){\(R{=}1\)};
 \end{tikzpicture}}
 %\rredline{type}{left}{right}: the reduced plain bra-line.
 \newcommand{\rredline}[3]{%
@@ -748,7 +786,7 @@
 \else
   \tikzset{vmkln/.style={thick}}
   \fi
-\draw[vmkln,vmkbra] (-0.5,0) node[above]{$#2$} -- (0.5,0) node[above]{$#3$};
+\draw[vmkln,vmkbra] (-0.5,0) node[above]{\(#2\)} -- (0.5,0) node[above]{\(#3\)};
 \end{tikzpicture}}
 %\rarcline{type}{left}{right}{sign}: bra-line with an inverted-V double-dashed
 %"$R^{-1}$/$R$" arc between two nodes (the R^{-1}R=1 case).
@@ -759,15 +797,15 @@
 \else
 \tikzset{vmkln/.style={thick}}
 \fi
-\draw[vmkln,vmkbra] (-1.22,0) node[left]{$#2$} -- (1.2,0) node[right]{$#3$};
+\draw[vmkln,vmkbra] (-1.22,0) node[left]{\(#2\)} -- (1.2,0) node[right]{\(#3\)};
 \node[dotnode,label={90:\vmk@sign{#4}}]at(-0.4,0){};
 \node[dotnode,label={90:\vmk@sign{#4}}]at(0.4,0){};
 \coordinate (D) at (0,-0.6);%\node[deltanode] at (D){};
 \draw[rline] (-0.4,0) -- (D);\draw[rline] (D) -- (0.4,0);
 \draw[rline] (D) -- (0,-1);
-\node[inner sep=1pt] at (-0.52,-0.4){$R^{-1}$};
-\node[inner sep=1pt] at (0.44,-0.4){$R$};
-\node[below,inner sep=1pt] at (0,-1.2){$R^{-1}R{=}1$};
+\node[inner sep=1pt] at (-0.52,-0.4){\(R^{-1}\)};
+\node[inner sep=1pt] at (0.44,-0.4){\(R\)};
+\node[below,inner sep=1pt] at (0,-1.2){\(R^{-1}R{=}1\)};
 \end{tikzpicture}}
 \newcommand{\rarcloop}[5]{%
 \begin{tikzpicture}[baseline=0pt,inner sep=0.13em,font=\scriptsize]
@@ -776,25 +814,28 @@
 \else
 \tikzset{vmkln/.style={thick}}
 \fi
-\draw[vmkln,vmkbra] (-1.22,0) node[left]{$#2$} -- (1.2,0) node[right]{$#3$};
+\draw[vmkln,vmkbra] (-1.22,0) node[left]{\(#2\)} -- (1.2,0) node[right]{\(#3\)};
 \node[dotnode,label={90:\vmk@sign{#4}}]at(-0.4,0){};
 \node[dotnode,label={90:\vmk@sign{#5}}]at(0.4,0){};
 \coordinate (D) at (0,-0.6);%\node[deltanode] at (D){};
 \draw[rline] (-0.4,0) to[bend right=60](0.4,0);
-\node[inner sep=1pt] at (0.44,-0.4){$R$};
+\node[inner sep=1pt] at (0.44,-0.4){\(R\)};
 \end{tikzpicture}}
 %---- Table 11.11 helpers (Metric Tensor) ----
-%\metric{L}{R}{bk}: metric-tensor line -- a central node with a left
+%\metric[lr]{L}{R}{bk}: metric-tensor line -- a central node with a left
 %segment to label L and right segment to label R. lt/rt pick the type:
 %'k' = ket (single arrowhead pointing outward, away from the node),
 %'b' = bra (double arrowhead pointing inward, toward the node).
-\newcommand{\metric}[3]{%
+%'l/r' arrow direction at node.
+\newcommand{\metric}[4][l]{%
 \begin{tikzpicture}[baseline=-0.4ex,inner sep=0.13em,font=\scriptsize]
-\draw[jmlinem] (0.5,0)-- (-0.5,0);
-\if k#3\draw[jmarrow] (-0.5,0) -- (-1.05,0) node[above]{$#1$};
-\draw[jmarrow](0.5,0) -- (1.05,0) node[above]{$#2$};
-\else\draw[bjmarrow] (-0.5,0) -- (-1.05,0) node[above]{$#1$};
-\draw[bjmarrow](0.5,0) -- (1.05,0) node[above]{$#2$};\fi
+\if l#1\draw[jmlinem] (0.5,0)-- (-0.5,0);
+\else\draw[jmlinem] (-0.5,0)-- (0.5,0);
+\fi
+\if k#4\draw[jmarrow] (-0.5,0) -- (-1.05,0) node[above]{\(#2\)};
+\draw[jmarrow](0.5,0) -- (1.05,0) node[above]{\(#3\)};
+\else\draw[bjmarrow] (-1.05,0) -- (-0.5,0) node[at start,above]{\(#2\)};
+\draw[bjmarrow](1.05,0) -- (0.5,0) node[at start,above]{\(#3\)};\fi
 \end{tikzpicture}}
 
 %\rednode{name}: a "reduced" vertex -- a filled dot enclosed by a circle
@@ -806,7 +847,7 @@
 % line from the origin, labelled to its right.
 \tikzset{ketout/.style={-{Stealth[length=2.2mm]},thick},
          brain/.style={-{Stealth[length=2.2mm] Stealth[length=2.2mm]},thick}}
-\newcommand{\Rdown}[1]{\draw[rline](0,0)--(0,-0.85);\node at(0.13,-0.5)[right]{$#1$};}
+\newcommand{\Rdown}[1]{\draw[rline](0,0)--(0,-0.85);\node at(0.13,-0.5)[right]{\(#1\)};}
 
 %\loopbox[style]{operator}{loop label}: an operator box with a momentum
 %line looping over its top -- the reduced matrix element (j||M||j). The
@@ -814,10 +855,10 @@
 %[jmlinemu] for a summed (ultra-thick) reduced line. Draw inside a
 %tikzpicture; creates node (B) = the box.
 \newcommand{\loopbox}[3][jmlinem]{%
-\node[draw,minimum width=0.85cm,minimum height=0.85cm](B){\normalsize$#2$};
+\node[draw,minimum width=0.85cm,minimum height=0.85cm](B){\normalsize\(#2\)};
 %\draw[#1](B.east)to[in=150,out=30,looseness=4] node[midway,above]{$#3$} (B.west);
-\draw[rounded corners=4pt,#1](B.east) -| ($(B.north east)+(0.2,0)$) |- ($(B.north)+(0,0.3)$) -|  ($(B.north west)-(0.2,0)$) |- (B.west);
-\node[above] at ($(B.north)+(0,0.3)$) {$#3$} ;
+\draw[rounded corners=4pt,#1](B.east) -| (\((B.north east)+(0.2,0)\)) |- (\((B.north)+(0,0.3)\)) -|  (\((B.north west)-(0.2,0)\)) |- (B.west);
+\node[above] at (\((B.north)+(0,0.3)\)) {\(#3\)} ;
 }
 
 %\tribox{operator}{l}{m}{r}{lstyle}{mstyle}{rstyle}: triangle-roof box =
@@ -825,11 +866,11 @@
 %lines l/m/r (left roof edge, middle, right roof edge), each drawn in its
 %own style (#5/#6/#7) -- pass jmlinemu for a summed (ultra-thick) leg.
 \newcommand{\tribox}[7]{%
-\node[draw,minimum width=1.0cm,minimum height=0.9cm](B){\normalsize$#1$};
-\coordinate(A)at($(B.north)+(0,0.75)$);
-\draw[#5](B.north west)--(A)node[midway,left]{$#2$};
-\draw[#6]($(B.north)$)--(A)node[pos=0.2,right]{$#3$};
-\draw[#7](B.north east)--(A)node[midway,right]{$#4$};
+\node[draw,minimum width=1.0cm,minimum height=0.9cm](B){\normalsize\(#1\)};
+\coordinate(A)at(\((B.north)+(0,0.75)\));
+\draw[#5](B.north west)--(A)node[midway,left]{\(#2\)};
+\draw[#6](\((B.north)\))--(A)node[pos=0.2,right]{\(#3\)};
+\draw[#7](B.north east)--(A)node[midway,right]{\(#4\)};
 \node[dotnode,label={90:\plusmark}]at(A){};}
 
 %\wtri: a small open (white) downward-pointing triangle recoupling node,
@@ -845,25 +886,25 @@
 %matrix element (they close into loops).
 \newcommand{\ploop}[3]{%
   \draw[thick,decoration={markings,mark=at position 0.6 with {\arrow{Stealth[length=1.6mm]}}},postaction={decorate}](#1)circle(#2);
-  \node at(#1){$#3$};
-  \node[dotnode,label={90:\plusmark}]at($(#1)+(0,#2)$){};}
+  \node at(#1){\(#3\)};
+  \node[dotnode,label={90:\plusmark}]at(\((#1)+(0,#2)\)){};}
 
 %\redlhs{box}{a}{b}{c}{d}: coupled-operator box with four legs a,b (->left
 %white triangle ->J) and c,d (->right white triangle ->J'), plus a straight
 %middle k, all meeting at a + apex. (Two-subsystem reduced-m.e. LHS.)
 \newcommand{\redlhs}[5]{%
 \begin{tikzpicture}[baseline=-6pt,inner sep=2pt,font=\scriptsize]
-  \node[draw,minimum width=2.2cm,minimum height=0.85cm](B){\normalsize$#1$};
+  \node[draw,minimum width=2.2cm,minimum height=0.85cm](B){\normalsize\(#1\)};
   \coordinate(TL)at([xshift=-8mm,yshift=8mm]B.north);
   \coordinate(TR)at([xshift=8mm,yshift=8mm]B.north);
   \node[dotnode,label={90:\plusmark}](ap)at([yshift=18mm]B.north){};
-  \draw[jmlinem]([xshift=-13mm]B.north)--(TL)node[pos=0.4,left]{$#2$};
-  \draw[jmlinem]([xshift=-5mm]B.north)--(TL)node[pos=0.4,right]{$#3$};
-  \draw[jmlinem]([xshift=5mm]B.north)--(TR)node[pos=0.4,left]{$#4$};
-  \draw[jmlinem]([xshift=13mm]B.north)--(TR)node[pos=0.4,right]{$#5$};
-  \draw[jmlinem](TL)--(ap)node[midway,left]{$J$};
-  \draw[jmlinem](B.north)--(ap)node[pos=0.45,right]{$k$};
-  \draw[jmlinem](TR)--(ap)node[midway,right]{$J'$};
+  \draw[jmlinem]([xshift=-13mm]B.north)--(TL)node[pos=0.4,left]{\(#2\)};
+  \draw[jmlinem]([xshift=-5mm]B.north)--(TL)node[pos=0.4,right]{\(#3\)};
+  \draw[jmlinem]([xshift=5mm]B.north)--(TR)node[pos=0.4,left]{\(#4\)};
+  \draw[jmlinem]([xshift=13mm]B.north)--(TR)node[pos=0.4,right]{\(#5\)};
+  \draw[jmlinem](TL)--(ap)node[midway,left]{\(J\)};
+  \draw[jmlinem](B.north)--(ap)node[pos=0.45,right]{\(k\)};
+  \draw[jmlinem](TR)--(ap)node[midway,right]{\(J'\)};
   \wtri at(TL){};\node at([xshift=2mm]TL){\tiny\plusmark};
   \wtri at(TR){};\node at([xshift=2mm]TR){\tiny\plusmark};
 \end{tikzpicture}}
@@ -875,32 +916,32 @@
 %- a spectator j-loop sa(o)sb below the box.
 \newcommand{\redrhs}[7]{%
 \begin{tikzpicture}[baseline=-30pt,inner sep=2pt,font=\scriptsize]
-  \node[draw,minimum width=1.5cm,minimum height=0.8cm](M){\normalsize$#1$};
-  \coordinate(ap)at($(M.north)+(0,0.75)$);
+  \node[draw,minimum width=1.5cm,minimum height=0.8cm](M){\normalsize\(#1\)};
+  \coordinate(ap)at(\((M.north)+(0,0.75)\));
   \node[dotnode,label={0:\plusmark}]at(ap){};
-  \draw[jmlinem](M.north west)--(ap)node[midway,left]{$#2$};
-  \draw[jmlinem](M.north)--(ap)node[pos=0.35,right]{$k$};
-  \draw[jmlinem](M.north east)--(ap)node[midway,right]{$#3$};
-  \coordinate(BA)at($(ap)+(0,0.4)$);
+  \draw[jmlinem](M.north west)--(ap)node[midway,left]{\(#2\)};
+  \draw[jmlinem](M.north)--(ap)node[pos=0.35,right]{\(k\)};
+  \draw[jmlinem](M.north east)--(ap)node[midway,right]{\(#3\)};
+  \coordinate(BA)at(\((ap)+(0,0.4)\));
   \draw[jmlinem](ap)--(BA);
-  \coordinate(TL)at($(BA)+(-0.85,1.2)$);\coordinate(TR)at($(BA)+(0.85,1.2)$);
-  \coordinate(Cc)at($(BA)+(0,0.72)$);
-  \draw[jmlinem](TL)--(TR)node[midway,above]{$k$};
-  \draw[jmlinem](TL)--(BA)node[pos=0.5,left]{$#4$};
-  \draw[jmlinem](TR)--(BA)node[pos=0.5,right]{$#5$};
+  \coordinate(TL)at(\((BA)+(-0.85,1.2)\));\coordinate(TR)at(\((BA)+(0.85,1.2)\));
+  \coordinate(Cc)at(\((BA)+(0,0.72)\));
+  \draw[jmlinem](TL)--(TR)node[midway,above]{\(k\)};
+  \draw[jmlinem](TL)--(BA)node[pos=0.5,left]{\(#4\)};
+  \draw[jmlinem](TR)--(BA)node[pos=0.5,right]{\(#5\)};
   \draw[jmlinem](Cc)--(TL);\draw[jmlinem](Cc)--(TR);
-  \draw[jmlinem](Cc)--(BA)node[pos=0.45,right]{$#6$};
+  \draw[jmlinem](Cc)--(BA)node[pos=0.45,right]{\(#6\)};
   \node[dotnode,label={-90:\minusmark}]at(BA){};
   \node[dotnode,label={90:\minusmark}]at(TL){};\node[dotnode,label={90:\plusmark}]at(TR){};
-  \draw[jmlinem](TL)--($(TL)+(-0.32,0)$);\draw[jmlinem](TR)--($(TR)+(0.32,0)$);
-  \ploop{$(TL)+(-0.55,0)$}{0.22}{J}
-  \ploop{$(TR)+(0.55,0)$}{0.22}{J'}
-  \coordinate(sl)at($(M.south)+(0,-0.55)$);
-  \draw[jmlinem](M.south)--($(sl)+(0,0.26)$);
+  \draw[jmlinem](TL)--(\((TL)+(-0.32,0)\));\draw[jmlinem](TR)--(\((TR)+(0.32,0)\));
+  \ploop{\((TL)+(-0.55,0)\)}{0.22}{J}
+  \ploop{\((TR)+(0.55,0)\)}{0.22}{J'}
+  \coordinate(sl)at(\((M.south)+(0,-0.55)\));
+  \draw[jmlinem](M.south)--(\((sl)+(0,0.26)\));
   \draw[thick,decoration={markings,mark=at position 0.6 with {\arrow{Stealth[length=1.6mm]}}},postaction={decorate}](sl)circle(0.26);
-  \node at($(sl)+(-0.42,0)$){$#6$};\node at($(sl)+(0.42,0)$){$#7$};
-  \node[dotnode,label={90:\plusmark}]at($(sl)+(0,0.26)$){};
-  \node[dotnode,label={-90:\plusmark}]at($(sl)+(0,-0.26)$){};
+  \node at(\((sl)+(-0.42,0)\)){\(#6\)};\node at(\((sl)+(0.42,0)\)){\(#7\)};
+  \node[dotnode,label={90:\plusmark}]at(\((sl)+(0,0.26)\)){};
+  \node[dotnode,label={-90:\plusmark}]at(\((sl)+(0,-0.26)\)){};
 \end{tikzpicture}}
 
 
@@ -915,120 +956,120 @@
 % \dtheta[midstyle]{x}{y}{top}{mid}{bot} -- closed 2-arc theta + middle line, centred at (x,y)
 \newcommand{\dtheta}[6][dl]{%
   \coordinate(tC)at(#2,#3);
-  \coordinate(tL)at($(tC)+(-0.62,0)$);
-  \coordinate(tR)at($(tC)+(0.62,0)$);
-  \draw[dl](tL)to[bend left=60]node[midway,above,inner sep=1pt]{$#4$}(tR);
-  \draw[dl](tL)to[bend right=60]node[midway,above,inner sep=1pt]{$#6$}(tR);
-  \draw[#1](tL)--node[midway,above]{$#5$}(tR);}
+  \coordinate(tL)at(\((tC)+(-0.62,0)\));
+  \coordinate(tR)at(\((tC)+(0.62,0)\));
+  \draw[dl](tL)to[bend left=60]node[midway,above,inner sep=1pt]{\(#4\)}(tR);
+  \draw[dl](tL)to[bend right=60]node[midway,above,inner sep=1pt]{\(#6\)}(tR);
+  \draw[#1](tL)--node[midway,above]{\(#5\)}(tR);}
 % \dlens{Lname}{Rname}{top}{bot} -- two arcs between existing coords
 \newcommand{\dlens}[4]{%
-  \draw[dl](#1)to[bend left=60] node[midway,above,inner sep=1pt]{$#3$}(#2);
-  \draw[dl](#1)to[bend right=60]node[midway,above,inner sep=1pt]{$#4$}(#2);}
+  \draw[dl](#1)to[bend left=60] node[midway,above,inner sep=1pt]{\(#3\)}(#2);
+  \draw[dl](#1)to[bend right=60]node[midway,above,inner sep=1pt]{\(#4\)}(#2);}
 % \dsixjsq[vdstyle]{x}{y}{tl}{tr}{bl}{br}{hd}{vd} -- 6j square/diamond, both diagonals
 \newcommand{\dsixjsq}[9][0]{%
   \coordinate(qc)at(#2,#3);
-  \coordinate(qt)at($(qc)+(90:0.9)$);\coordinate(qb)at($(qc)+(-90:0.9)$);
-  \coordinate(ql)at($(qc)+(180:0.9)$);\coordinate(qr)at($(qc)+(0:0.9)$);
-  \draw[dl](ql)--(qt)node[midway,above left,inner sep=1pt]{$#4$};
-  \draw[dl](qt)--(qr)node[midway,above right,inner sep=1pt]{$#5$};
-  \draw[dl](ql)--(qb)node[midway,below left,inner sep=1pt]{$#6$};
-  \draw[dl](qb)--(qr)node[midway,below right,inner sep=1pt]{$#7$};
+  \coordinate(qt)at(\((qc)+(90:0.9)\));\coordinate(qb)at(\((qc)+(-90:0.9)\));
+  \coordinate(ql)at(\((qc)+(180:0.9)\));\coordinate(qr)at(\((qc)+(0:0.9)\));
+  \draw[dl](ql)--(qt)node[midway,above left,inner sep=1pt]{\(#4\)};
+  \draw[dl](qt)--(qr)node[midway,above right,inner sep=1pt]{\(#5\)};
+  \draw[dl](ql)--(qb)node[midway,below left,inner sep=1pt]{\(#6\)};
+  \draw[dl](qb)--(qr)node[midway,below right,inner sep=1pt]{\(#7\)};
   \ifcase #1
-    \draw[dl](ql)--(qr)node[wb,pos=0.32]{$#8$};
-    \draw[dl](qt)--(qb)node[wb,pos=0.32]{$#9$};
+    \draw[dl](ql)--(qr)node[wb,pos=0.32]{\(#8\)};
+    \draw[dl](qt)--(qb)node[wb,pos=0.32]{\(#9\)};
   \or %1
-    \draw[dl](ql)--(qr)node[wb,pos=0.32]{$#8$};
-    \draw[dlu](qt)--(qb)node[wb,pos=0.32]{$#9$};
+    \draw[dl](ql)--(qr)node[wb,pos=0.32]{\(#8\)};
+    \draw[dlu](qt)--(qb)node[wb,pos=0.32]{\(#9\)};
   \or %2
-    \draw[dlu](ql)--(qr)node[wb,pos=0.32]{$#8$};
-    \draw[dl](qt)--(qb)node[wb,pos=0.32]{$#9$};
+    \draw[dlu](ql)--(qr)node[wb,pos=0.32]{\(#8\)};
+    \draw[dl](qt)--(qb)node[wb,pos=0.32]{\(#9\)};
   \else
-    \draw[dlu](ql)--(qr)node[wb,pos=0.32]{$#8$};
-    \draw[dlu](qt)--(qb)node[wb,pos=0.32]{$#9$};
+    \draw[dlu](ql)--(qr)node[wb,pos=0.32]{\(#8\)};
+    \draw[dlu](qt)--(qb)node[wb,pos=0.32]{\(#9\)};
   \fi
 }
 % \dsixjtri[spkstyle]{x}{y}{eL}{eR}{eB}{sT}{sBL}{sBR} -- 6j triangle-with-centre, apex-up
 \newcommand{\dsixjtri}[9][dl]{%
   \coordinate(ct)at(#2,#3);
-  \coordinate(vT)at($(ct)+(90:1)$);
-  \coordinate(vL)at($(ct)+(210:1)$);
-  \coordinate(vR)at($(ct)+(330:1)$);
-  \draw[dl](vL)--(vT)node[midway,above left,inner sep=1pt]{$#4$};
-  \draw[dl](vT)--(vR)node[midway,above right,inner sep=1pt]{$#5$};
-  \draw[dl](vL)--(vR)node[midway,below,inner sep=1pt]{$#6$};
-  \draw[#1](ct)--(vT)node[pos=0.5,right,inner sep=1pt]{$#7$};
-  \draw[dl](ct)--(vL)node[pos=0.5,above,inner sep=1pt]{$#8$};
-  \draw[dl](ct)--(vR)node[pos=0.5,above,inner sep=1pt]{$#9$};}
+  \coordinate(vT)at(\((ct)+(90:1)\));
+  \coordinate(vL)at(\((ct)+(210:1)\));
+  \coordinate(vR)at(\((ct)+(330:1)\));
+  \draw[dl](vL)--(vT)node[midway,above left,inner sep=1pt]{\(#4\)};
+  \draw[dl](vT)--(vR)node[midway,above right,inner sep=1pt]{\(#5\)};
+  \draw[dl](vL)--(vR)node[midway,below,inner sep=1pt]{\(#6\)};
+  \draw[#1](ct)--(vT)node[pos=0.5,right,inner sep=1pt]{\(#7\)};
+  \draw[dl](ct)--(vL)node[pos=0.5,above,inner sep=1pt]{\(#8\)};
+  \draw[dl](ct)--(vR)node[pos=0.5,above,inner sep=1pt]{\(#9\)};}
 % \dsq{x}{y}{top}{bot}{left}{right} -- axis-aligned square; exposes sqTL/sqTR/sqBL/sqBR
 \newcommand{\dsq}[6]{%
   \coordinate(sqc)at(#1,#2);
-  \coordinate(sqTL)at($(sqc)+(135:0.92)$);\coordinate(sqTR)at($(sqc)+(45:0.92)$);
-  \coordinate(sqBL)at($(sqc)+(225:0.92)$);\coordinate(sqBR)at($(sqc)+(-45:0.92)$);
-  \draw[dl](sqTL)--(sqTR)node[midway,above,inner sep=1pt]{$#3$};
-  \draw[dl](sqBL)--(sqBR)node[midway,below,inner sep=1pt]{$#4$};
-  \draw[dl](sqTL)--(sqBL)node[midway,left,inner sep=1pt]{$#5$};
-  \draw[dl](sqTR)--(sqBR)node[midway,right,inner sep=1pt]{$#6$};}
+  \coordinate(sqTL)at(\((sqc)+(135:0.92)\));\coordinate(sqTR)at(\((sqc)+(45:0.92)\));
+  \coordinate(sqBL)at(\((sqc)+(225:0.92)\));\coordinate(sqBR)at(\((sqc)+(-45:0.92)\));
+  \draw[dl](sqTL)--(sqTR)node[midway,above,inner sep=1pt]{\(#3\)};
+  \draw[dl](sqBL)--(sqBR)node[midway,below,inner sep=1pt]{\(#4\)};
+  \draw[dl](sqTL)--(sqBL)node[midway,left,inner sep=1pt]{\(#5\)};
+  \draw[dl](sqTR)--(sqBR)node[midway,right,inner sep=1pt]{\(#6\)};}
 % \dninehex{x}{y}{eTL}{eL}{eBL}{eBR}{eR}{eTR} -- 9j pointy-top hexagon; exposes
 % hT,hUL,hLL,hB,hLR,hUR so the caller draws the three centre diameters.
 \newcommand{\dninehex}[8]{%
   \coordinate(hc)at(#1,#2);
-  \coordinate(hT)at($(hc)+(90:1)$);\coordinate(hUL)at($(hc)+(150:1)$);
-  \coordinate(hLL)at($(hc)+(210:1)$);\coordinate(hB)at($(hc)+(270:1)$);
-  \coordinate(hLR)at($(hc)+(330:1)$);\coordinate(hUR)at($(hc)+(30:1)$);
-  \draw[dl](hT)--(hUL)node[midway,above left,inner sep=1pt]{$#3$};
-  \draw[dl](hUL)--(hLL)node[midway,left,inner sep=1pt]{$#4$};
-  \draw[dl](hLL)--(hB)node[midway,below left,inner sep=1pt]{$#5$};
-  \draw[dl](hB)--(hLR)node[midway,below right,inner sep=1pt]{$#6$};
-  \draw[dl](hLR)--(hUR)node[midway,right,inner sep=1pt]{$#7$};
-  \draw[dl](hUR)--(hT)node[midway,above right,inner sep=1pt]{$#8$};}
+  \coordinate(hT)at(\((hc)+(90:1)\));\coordinate(hUL)at(\((hc)+(150:1)\));
+  \coordinate(hLL)at(\((hc)+(210:1)\));\coordinate(hB)at(\((hc)+(270:1)\));
+  \coordinate(hLR)at(\((hc)+(330:1)\));\coordinate(hUR)at(\((hc)+(30:1)\));
+  \draw[dl](hT)--(hUL)node[midway,above left,inner sep=1pt]{\(#3\)};
+  \draw[dl](hUL)--(hLL)node[midway,left,inner sep=1pt]{\(#4\)};
+  \draw[dl](hLL)--(hB)node[midway,below left,inner sep=1pt]{\(#5\)};
+  \draw[dl](hB)--(hLR)node[midway,below right,inner sep=1pt]{\(#6\)};
+  \draw[dl](hLR)--(hUR)node[midway,right,inner sep=1pt]{\(#7\)};
+  \draw[dl](hUR)--(hT)node[midway,above right,inner sep=1pt]{\(#8\)};}
 
 % Vertical lens / theta (bubble oriented top-to-bottom), for Chap12 §12.1.6.
 % \dlensv{x}{y}{leftlab}{rightlab} -- two arcs between a top and bottom point.
 \newcommand{\dlensv}[4]{%
-  \coordinate(lvt)at($(#1,#2)+(0,0.62)$);\coordinate(lvb)at($(#1,#2)+(0,-0.62)$);
-  \draw[dl](lvt)to[bend right=60]node[midway,left,inner sep=1pt]{$#3$}(lvb);
-  \draw[dl](lvt)to[bend left=60]node[midway,right,inner sep=1pt]{$#4$}(lvb);}
+  \coordinate(lvt)at(\((#1,#2)+(0,0.62)\));\coordinate(lvb)at(\((#1,#2)+(0,-0.62)\));
+  \draw[dl](lvt)to[bend right=60]node[midway,left,inner sep=1pt]{\(#3\)}(lvb);
+  \draw[dl](lvt)to[bend left=60]node[midway,right,inner sep=1pt]{\(#4\)}(lvb);}
 % \dthetav[midstyle]{x}{y}{leftlab}{midlab}{rightlab} -- vertical theta + middle line.
 \newcommand{\dthetav}[6][dl]{%
-  \coordinate(tvt)at($(#2,#3)+(0,0.62)$);\coordinate(tvb)at($(#2,#3)+(0,-0.62)$);
-  \draw[dl](tvt)to[bend right=60]node[midway,left,inner sep=1pt]{$#4$}(tvb);
-  \draw[dl](tvt)to[bend left=60]node[midway,right,inner sep=1pt]{$#6$}(tvb);
-  \draw[#1](tvt)--node[midway,right,inner sep=1pt]{$#5$}(tvb);}
+  \coordinate(tvt)at(\((#2,#3)+(0,0.62)\));\coordinate(tvb)at(\((#2,#3)+(0,-0.62)\));
+  \draw[dl](tvt)to[bend right=60]node[midway,left,inner sep=1pt]{\(#4\)}(tvb);
+  \draw[dl](tvt)to[bend left=60]node[midway,right,inner sep=1pt]{\(#6\)}(tvb);
+  \draw[#1](tvt)--node[midway,right,inner sep=1pt]{\(#5\)}(tvb);}
 
 % ===== §12.2 (6j/9j sums) building blocks: loops, circle-thetas, delta-rect =====
 % \dloop{x}{y}{lab} -- closed j-line (circle) with a centred label = \Pi_{lab} factor.
-\newcommand{\dloop}[3]{\draw[dl](#1,#2)circle(0.42);\node at(#1,#2){$#3$};}
+\newcommand{\dloop}[3]{\draw[dl](#1,#2)circle(0.42);\node at(#1,#2){\(#3\)};}
 % \cthetav[midstyle]{x}{y}{left}{mid}{right} -- theta as CIRCLE + vertical diameter.
 \newcommand{\cthetav}[6][dl]{%
   \draw[dl](#2,#3)circle(0.5);
-  \draw[#1]($(#2,#3)+(0,0.5)$)--($(#2,#3)+(0,-0.5)$);
-  \node at($(#2,#3)+(-0.3,0)$){$#4$};
-  \node[wb,inner sep=1pt] at(#2,#3){$#5$};
-  \node at($(#2,#3)+(0.3,0)$){$#6$};}
+  \draw[#1](\((#2,#3)+(0,0.5)\))--(\((#2,#3)+(0,-0.5)\));
+  \node at(\((#2,#3)+(-0.3,0)\)){\(#4\)};
+  \node[wb,inner sep=1pt] at(#2,#3){\(#5\)};
+  \node at(\((#2,#3)+(0.3,0)\)){\(#6\)};}
 % \ctheta[midstyle]{x}{y}{top}{mid}{bot} -- theta as CIRCLE + horizontal diameter.
 \newcommand{\ctheta}[6][dl]{%
   \draw[dl](#2,#3)circle(0.5);
-  \draw[#1]($(#2,#3)+(-0.5,0)$)--($(#2,#3)+(0.5,0)$);
-  \node at($(#2,#3)+(0,0.27)$){$#4$};
-  \node[wb,inner sep=1pt] at(#2,#3){$#5$};
-  \node at($(#2,#3)+(0,-0.27)$){$#6$};}
+  \draw[#1](\((#2,#3)+(-0.5,0)\))--(\((#2,#3)+(0.5,0)\));
+  \node at(\((#2,#3)+(0,0.27)\)){\(#4\)};
+  \node[wb,inner sep=1pt] at(#2,#3){\(#5\)};
+  \node at(\((#2,#3)+(0,-0.27)\)){\(#6\)};}
 % \drect{x}{y}{toplab}{botlab} -- small rectangle (a \delta between two j-lines).
 \newcommand{\drect}[4]{%
-  \draw[dl]($(#1,#2)+(-0.3,0.55)$)rectangle($(#1,#2)+(0.3,-0.55)$);
-  \node at($(#1,#2)+(0,0.8)$){$#3$};\node at($(#1,#2)+(0,-0.8)$){$#4$};}
+  \draw[dl](\((#1,#2)+(-0.3,0.55)\))rectangle(\((#1,#2)+(0.3,-0.55)\));
+  \node at(\((#1,#2)+(0,0.8)\)){\(#3\)};\node at(\((#1,#2)+(0,-0.8)\)){\(#4\)};}
 % \drects{x}{y}{top}{bot}{left}{right} -- rectangle \delta with all four side labels.
 \newcommand{\drects}[6]{%
-  \draw[dl]($(#1,#2)+(-0.3,0.55)$)rectangle($(#1,#2)+(0.3,-0.55)$);
-  \node at($(#1,#2)+(0,0.8)$){$#3$};\node at($(#1,#2)+(0,-0.8)$){$#4$};
-  \node[left] at($(#1,#2)+(-0.3,0)$){$#5$};\node[right] at($(#1,#2)+(0.3,0)$){$#6$};}
+  \draw[dl](\((#1,#2)+(-0.3,0.55)\))rectangle(\((#1,#2)+(0.3,-0.55)\));
+  \node at(\((#1,#2)+(0,0.8)\)){\(#3\)};\node at(\((#1,#2)+(0,-0.8)\)){\(#4\)};
+  \node[left] at(\((#1,#2)+(-0.3,0)\)){\(#5\)};\node[right] at(\((#1,#2)+(0.3,0)\)){\(#6\)};}
 % \dhexflat{x}{y}{top}{ur}{lr}{bot}{ll}{ul} -- flat-top 9j-hexagon ring (6 outer
 % edges); exposes vertex coords v0..v5 (v0=right, ccw) so the caller draws the
 % three centre diameters (e.g. \draw[dlu](v1)--(v4)... for the summed one).
 \newcommand{\dhexflat}[8]{%
-  \foreach \i in {0,...,5}{\coordinate(v\i) at ($(#1,#2)+(60*\i:1)$);}
-  \draw[dl](v2)--(v1)node[midway,above,inner sep=1pt]{$#3$};
-  \draw[dl](v1)--(v0)node[midway,above right,inner sep=1pt]{$#4$};
-  \draw[dl](v0)--(v5)node[midway,below right,inner sep=1pt]{$#5$};
-  \draw[dl](v5)--(v4)node[midway,below,inner sep=1pt]{$#6$};
-  \draw[dl](v4)--(v3)node[midway,below left,inner sep=1pt]{$#7$};
-  \draw[dl](v3)--(v2)node[midway,above left,inner sep=1pt]{$#8$};}
+  \foreach \i in {0,...,5}{\coordinate(v\i) at (\((#1,#2)+(60*\i:1)\));}
+  \draw[dl](v2)--(v1)node[midway,above,inner sep=1pt]{\(#3\)};
+  \draw[dl](v1)--(v0)node[midway,above right,inner sep=1pt]{\(#4\)};
+  \draw[dl](v0)--(v5)node[midway,below right,inner sep=1pt]{\(#5\)};
+  \draw[dl](v5)--(v4)node[midway,below,inner sep=1pt]{\(#6\)};
+  \draw[dl](v4)--(v3)node[midway,below left,inner sep=1pt]{\(#7\)};
+  \draw[dl](v3)--(v2)node[midway,above left,inner sep=1pt]{\(#8\)};}
