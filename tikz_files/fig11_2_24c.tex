@@ -1,0 +1,31 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}
+    \begin{scope}
+        \path (0,0) pic (M) {opmleft};
+        \path (2,0) pic (N) {opnright};
+        \coordinate (T) at (1,0.5);
+        \node[label={below:\plusmark}] at (T) {};
+        \node[smalltri,rotate=180] (t) at (T) {};
+        \draw[jmlinem] (M-M) -- (t) node[midway,above left]{$j_1$};
+        \draw[jmlinem] (N-N) -- (t) node[midway,above right]{$j_2$};
+        \draw[jmarrow] (t) -- (1,1.4) node[above]{$JM$};
+    \end{scope}
+    \node at (2.9,0) {$=$};
+    \begin{scope}[xshift=38mm]
+        \path (0,0) pic (M) {opmleft};
+        \path (2,0) pic (N) {opnright};
+        \coordinate (T) at (1,0.5);
+        \node[minusnode] at (T) {};
+        \draw[jmlinem] (T) -- (M-M) node[midway,above left]{$j_1$};
+        \draw[jmlinem] (T) -- (N-N) node[midway,above right]{$j_2$};
+        \draw[jmarrow] (T) -- (1,1.4) node[above]{$JM$};
+        \draw[
+                decoration={markings, mark=at position 0.78 with  {\arrow[rotate=-10]{Stealth[reversed,length=2.2mm]}}},
+                postaction={decorate},thick] (1,2.2) circle (0.3) node {$J$};
+        \node[dotnode] at (1,2.5) {};
+    \end{scope}
+\end{tikzpicture}
+\end{document}

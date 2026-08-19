@@ -2,5 +2,16 @@
 \usepackage{amsmath,amssymb}
 \usepackage{diagrams}
 \begin{document}
-\begin{tikzpicture}[baseline=0pt]\draw[bjmarrow] (0,0) node[left]{$R_1$} to[bend left=40] node[midway,above]{$J$} (2,0); \draw[bjmarrow] (0,0) to[bend right=40] node[midway,below]{$J$} (2,0); \node at (2.3,0){$R_2$};\end{tikzpicture}
+\begin{tikzpicture}[baseline=0pt]
+    \draw[rline] (0,0) -- (1,0) node[midway,above]{$R_1$};
+    \draw[jmlinem, ultra thick]([shift={(2:0.5cm)}]1.5,0) arc (2:178:0.5cm) node[midway,above] {$J$};
+    \draw[jmlinem, ultra thick]([shift={(182:0.5cm)}]1.5,0) arc (182:358:0.5cm) node[midway,below] {$J$};
+    \draw[rline] (2,0) -- (3,0) node[midway,above]{$R_2$};
+    \node at (1.15,0) {\plusmark};
+    \node at (1.75,0) {\minusmark};
+    \node at (3.5,0) {$=$};
+    \draw[rline] (4,0) -- (5,0) node[midway,above]{$R_1$};
+    \draw[ultra thick] (5.25,0) circle (0.25cm);
+    \draw[rline] (5.5,0) -- (6.5,0) node[midway,above]{$R_2$};
+ \end{tikzpicture}
 \end{document}

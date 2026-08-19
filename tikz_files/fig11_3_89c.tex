@@ -1,0 +1,41 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=0.15em,font=\scriptsize]
+    \begin{scope}
+    \node[opbox,minimum size=10mm](M) at (0,0){\normalsize$\mathfrak{M}$};
+    \coordinate (T) at ([yshift=4mm]M.east);
+    \coordinate (B) at ([yshift=-4mm]M.east);
+    \coordinate (R) at ([xshift=7mm]M.east);
+    \draw[jmlinem] (T) -- (R) node[midway,above right] {$j_1$};
+    \draw[jmlinem] (R) -- (B) node[midway,below] {$j_2$};
+    \draw[jmarrow] (R) -- ([xshift=1cm]R) node[midway,above] {$j=0$};
+    \node[dotnode,label={above:\plusmark}] at (R) {};
+    \end{scope}
+    \node at (2.5,0) {$=$};
+    \begin{scope}[xshift=34mm]
+    \node[opbox,minimum size=10mm](M) at (0,0){\normalsize$\mathfrak{M}$};
+    \coordinate (T) at ([yshift=4mm]M.east);
+    \coordinate (B) at ([yshift=-4mm]M.east);
+    \coordinate (R) at ([xshift=7mm]M.east);
+    \draw[jmlinem] (T) -- (R) node[midway,above] {$j_1$};
+    \draw[jmlinem] (R) -- (B) node[midway,below] {$j_2$};
+    \node[dotnode,label={above:\minusmark}] at (R) {};
+    \end{scope}
+    \node at (5.1,0) {$=$};
+    \begin{scope}[xshift=57mm]
+    \node[opbox,minimum size=10mm](M) at (0,0){\normalsize$\mathfrak{M}$};
+    \coordinate (T) at ([yshift=4mm]M.east);
+    \coordinate (B) at ([yshift=-4mm]M.east);
+    \draw[jmlinem] (T) arc(90:-90:4mm); 
+    \coordinate (m) at ([xshift=12mm]M.east);
+    \node[dotnode,label={0:\minusmark}] at ($(m)+(0:0.5)$) (a1) {};
+    \node[dotnode,label={-90:\plusmark}] at ($(m)+(-120:0.5)$) (a2) {};
+    \node[dotnode,label={90:\plusmark}] at ($(m)+(-240:0.5)$) (a3) {};
+    \draw[jmlinem] (a1) -- (a2) node[midway,below]{$j_2$};
+    \draw[jmlinem] (a2) -- (a3) node[midway,left]{$j_1$};
+    \draw[jmlinem] (a3) -- (a1) node[midway,above right]{$j_1$};
+    \end{scope}
+\end{tikzpicture}
+\end{document}

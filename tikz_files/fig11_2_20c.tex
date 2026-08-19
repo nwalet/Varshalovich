@@ -1,0 +1,20 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt]
+    \node at (0,-0.2) {\normalsize\(\displaystyle\sum_{m}\)};
+    \begin{scope}[xshift=10mm,yshift=0mm]
+        \path (0,0) pic (M) {opmleft};
+        \path (2.3,0) pic (N) {opnright};
+        \draw[jmarrow] (M-M) -- (1.1,0) node[above left]{$jm$};
+        \draw[bjmarrow] (1.2,0) -- (N-N) node[at start,above right]{$jm$};
+    \end{scope}
+    \node at (4.2,0) {$=$};
+    \begin{scope}[xshift=53mm,yshift=0mm]
+        \path (0,0) pic (M) {opmleft};
+        \path (1.5,0) pic (N) {opnright};
+        \draw[jmarrow] (M-M) -- (N-N) node[midway,above]{$j$};
+    \end{scope}
+\end{tikzpicture}
+\end{document}

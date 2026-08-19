@@ -1,0 +1,27 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=0.1em,font=\scriptsize]
+    \begin{scope}
+    \node[opbox,minimum height=20mm](M) at (0,0){\normalsize\normalsize$\mathfrak{M}$};
+    \path (3.8,0) pic (N) {opnf};
+    \node[dotnode,label={right:\plusmark}] (mc) at (1.5,0){};
+    \node[dotnode,label={left:\minusmark}] (nc) at (2.3,0){};
+    \draw[jmlinem] ([yshift=4mm]M.east) -- node[midway,above right] {$j_1$} (mc);
+    \draw[jmlinem] (M.east) -- node[pos=0.2,fill=white] {$j_2$} (mc);
+    \draw[jmlinem] ([yshift=-4mm]M.east) -- node[midway,below right] {$j_3$} (mc);
+    \draw[jmlinem] (nc) -- node[midway,below left] {$j_3$} ([yshift=-4mm]N-N.west);
+    \draw[jmlinem] (nc) -- node[pos=0.75,fill=white] {$j_2$} (N-N.west);
+    \draw[jmlinem] (nc) -- node[midway,above left] {$j_1$} ([yshift=4mm]N-N.west);
+    \end{scope}
+    \node at (5,0) {$=$};
+    \begin{scope}[xshift=60mm]
+    \node[opbox,minimum height=20mm](M) at (0,0){\normalsize\normalsize$\mathfrak{M}$};
+    \path (2,0) pic (N) {opnf};
+    \draw[jmlinem] ([yshift=4mm]M.east) -- node[midway,above=0.1] {$j_1$} ([yshift=4mm]N-N.west);
+    \draw[jmlinem] (M.east) -- node[pos=0.2,fill=white] {$j_2$} (N-N.west);
+    \draw[jmlinem] ([yshift=-4mm]M.east) -- node[midway,below=0.1] {$j_3$} ([yshift=-4mm]N-N.west);
+    \end{scope}
+\end{tikzpicture}
+\end{document}

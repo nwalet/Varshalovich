@@ -1,0 +1,23 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=0.3em,font=\scriptsize]
+    \begin{scope}
+    \node[opbox,minimum size=10mm](M) at (0,0){\normalsize$\mathfrak{M}$};
+    \coordinate (T) at ([yshift=4mm]M.east);
+    \coordinate (B) at ([yshift=-4mm]M.east);
+    \coordinate (R) at ([xshift=7mm]M.east);
+    \draw[omlinem] (B) -- ([yshift=-0.5mm]R) node[midway,below] {$\Omega$};
+    \draw[omlinem] ([yshift=0.5mm]R) -- (T) node[midway,above right] {$\Omega'$};
+    \draw[rline] (R) -- ([xshift=1cm]R) node[midway,above] {$R=1$};
+    \end{scope}
+    \node at (2.5,0) {$=$};
+    \begin{scope}[xshift=34mm]
+    \node[opbox,minimum size=10mm](M) at (0,0){\normalsize$\mathfrak{M}$};
+    \coordinate (T) at ([yshift=4mm]M.east);
+    \coordinate (B) at ([yshift=-4mm]M.east);
+    \draw[omlinem] (B) arc(-90:90:4mm) node[midway, right]{$\Omega$};
+    \end{scope}
+\end{tikzpicture}
+\end{document}

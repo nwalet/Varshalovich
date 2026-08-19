@@ -1,0 +1,23 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=0.2em,font=\scriptsize]
+    \begin{scope}
+    \node[opbox](M) at (0,0){\normalsize\normalsize$\mathfrak{M}$};
+    \path (2.6,0) pic (N) {opnt};
+    \draw[jmlinem] ([yshift=3mm]M.east)--([yshift=3mm,xshift=3mm]M.east) arc(90:-90:3mm)  node[midway,right]{$j$}  --([yshift=-3mm]M.east);
+    \draw[jmlinem] ([yshift=-3mm]N-N.west)--([yshift=-3mm,xshift=-3mm]N-N.west) arc(90:-90:-3mm)  node[midway,left]{$j$}  --([yshift=3mm]N-N.west);
+    \end{scope}
+    \node at (4,0) {$=$};
+    \begin{scope}[xshift=5cm]
+        \jloopd{j}{a}
+    \end{scope}
+    \begin{scope}[xshift=60mm]
+        \node[opbox](M) at (0,0){\normalsize\normalsize$\mathfrak{M}$};
+        \path (2.,0) pic (N) {opnt};
+    \draw[jmlinem] ([yshift=3mm]M.east) -- ([yshift=3mm]N-N.west) node[midway,above] {$j$};
+    \draw[jmlinem] ([yshift=-3mm]N-N.west) -- ([yshift=-3mm]M.east) node[midway,above] {$j$};
+    \end{scope}
+\end{tikzpicture}
+\end{document}

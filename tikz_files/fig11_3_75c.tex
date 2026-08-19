@@ -1,0 +1,54 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt, inner sep=0.2em,font=\scriptsize]
+    \begin{scope}
+        \node[opbox](P) at (0,0) {$P$};
+        \node[opbox](Q) at (2,0)  {$Q$};
+        \node[opbox](R) at (4,0) {$R$};
+        \draw[jmlinem] ([yshift=2mm]P.east) -- ([yshift=2mm]Q.west) node[pos=0.65,above] {$B$};
+        \draw[jmlinem] ([yshift=2mm]Q.east) -- ([yshift=2mm]R.west) node[pos=0.65,above] {$C$};
+        \draw[jmlinem] ([yshift=-2mm]P.east) -- ([yshift=-2mm]Q.west) node[pos=0.65,above] {$b$};
+        \draw[jmlinem] ([yshift=-2mm]Q.east) -- ([yshift=-2mm]R.west) node[pos=0.65,above] {$c$};
+        \draw[jmlinem] ([yshift=2mm]R.east) arc(-90:90:2mm) --node [pos=0.55,above] {$A$} ([yshift=6mm]P.west) arc(90:270:2mm);
+        \draw[jmlinem] ([yshift=-2mm]R.east) arc(90:-90:2mm) --node [pos=0.55,below] {$a$} ([yshift=-6mm]P.west) arc(-90:-270:2mm);
+    \end{scope}
+    \node at (5,0) {$=$};
+    \begin{scope}[xshift=70mm]
+        \node[opbox](b) at (0,0) {$P$};
+        \coordinate (l) at ([xshift=-5mm]b.west);
+        \coordinate (r) at ([xshift=5mm]b.east);
+        \draw[jmlinem] (l) --([yshift=2mm]b.west) node[midway,above=0.2] {$A$};
+        \draw[jmlinem] (l) --([yshift=-2mm]b.west) node[midway,below=0.05] {$a$};
+        \draw[jmlinem] ([yshift=2mm]b.east) -- (r) node[midway,above=0.2] {$B$};
+        \draw[jmlinem] ([yshift=-2mm]b.east) -- (r) node[midway,below=0.05] {$b$};
+        \node[dotnode,label={135:\minusmark}] at (l) {};
+        \node[dotnode,label={45:\plusmark}] at (r) {};
+        \draw[jmlinem, ultra thick] (l)--([yshift=-4mm]l) arc(0:90:-2mm) --([xshift=-2mm,yshift=-6mm]r) node[midway, below]{$X$} arc(90:180:-2mm)--(r);
+    \end{scope}    \begin{scope}[xshift=95mm]
+        \node[opbox](b) at (0,0) {$Q$};
+        \coordinate (l) at ([xshift=-5mm]b.west);
+        \coordinate (r) at ([xshift=5mm]b.east);
+        \draw[jmlinem] (l) --([yshift=2mm]b.west) node[midway,above=0.2] {$B$};
+        \draw[jmlinem] (l) --([yshift=-2mm]b.west) node[midway,below=0.05] {$b$};
+        \draw[jmlinem] ([yshift=2mm]b.east) -- (r) node[midway,above=0.2] {$C$};
+        \draw[jmlinem] ([yshift=-2mm]b.east) -- (r) node[midway,below=0.05] {$c$};
+        \node[dotnode,label={135:\minusmark}] at (l) {};
+        \node[dotnode,label={45:\plusmark}] at (r) {};
+        \draw[jmlinem, ultra thick] (l)--([yshift=-4mm]l) arc(0:90:-2mm) --([xshift=-2mm,yshift=-6mm]r) node[midway, below]{$X$} arc(90:180:-2mm)--(r);
+    \end{scope}    
+    \begin{scope}[xshift=120mm]
+        \node[opbox](b) at (0,0) {$T$};
+        \coordinate (l) at ([xshift=-5mm]b.west);
+        \coordinate (r) at ([xshift=5mm]b.east);
+        \draw[jmlinem] (l) --([yshift=2mm]b.west) node[midway,above=0.2] {$C$};
+        \draw[jmlinem] (l) --([yshift=-2mm]b.west) node[midway,below=0.05] {$c$};
+        \draw[jmlinem] ([yshift=2mm]b.east) -- (r) node[midway,above=0.2] {$A$};
+        \draw[jmlinem] ([yshift=-2mm]b.east) -- (r) node[midway,below=0.05] {$a$};
+        \node[dotnode,label={135:\minusmark}] at (l) {};
+        \node[dotnode,label={45:\plusmark}] at (r) {};
+        \draw[jmlinem, ultra thick] (l)--([yshift=-4mm]l) arc(0:90:-2mm) --([xshift=-2mm,yshift=-6mm]r) node[midway, below]{$X$} arc(90:180:-2mm)--(r);
+    \end{scope}
+\end{tikzpicture}
+\end{document}

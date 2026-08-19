@@ -1,0 +1,35 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt, inner sep=0.3em,font=\scriptsize]
+    \begin{scope}
+        \draw[bjmarrow] (-1,0.5) -- (0,0.5) node[at start, above]{$c\gamma$} ;
+        \draw[jmarrow] (0,0.5) -- (1,0.5) node[at end, above]{$c'\gamma'$} ;
+
+        \coordinate (L) at (-0.7,-0.5); \coordinate (R) at (0.7,-0.5);
+    %
+        \node[dotnode,label={180:\plusmark}] at (L) {};
+        \node[dotnode,label={0:\minusmark}] at (R) {};
+    %
+        \draw[jmlinem] (R) to[bend left=60] node[midway,above] {$a$} (L);
+        \draw[jmlinem] (R) to node[midway,above] {$b$} (L);
+        \draw[jmlinem] (R) to[bend right=60] node[midway,above] {$c$} (L);
+    \end{scope}
+    \node at (1.8,0) {$=$};
+    \begin{scope}[xshift=26mm]
+    \jloopd{c}{a}
+    \end{scope}
+    \begin{scope}[xshift=48mm]
+        \coordinate (L) at (-0.7,0); \coordinate (R) at (0.7,0);
+        \draw[bjmarrow] (-1.5,0) -- (L) node[at start, above right]{$c\gamma$} ;
+        \draw[jmarrow] (R) -- (1.5,0) node[at end, above left]{$c'\gamma'$} ;
+%
+        \node[dotnode,label={0:\plusmark}] at (L) {};
+        \node[dotnode,label={180:\minusmark}] at (R) {};
+%
+        \draw[jmlinem] (R) to[bend left=60] node[midway,above] {$a$} (L);
+        \draw[jmlinem] (R) to[bend right=60] node[midway,above] {$b$} (L);
+    \end{scope}
+\end{tikzpicture}
+\end{document}

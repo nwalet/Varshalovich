@@ -1,0 +1,35 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=0.2em,font=\scriptsize]
+    \begin{scope}
+        \coordinate (T) at (0,0.95);
+        \coordinate (L) at (-0.9,-0.55);
+        \coordinate (R) at (0.9,-0.55);
+        \coordinate (M) at (0,0);
+        \node[dotnode,label={above left:\plusmark}] at (M) {};
+        \draw[jmline] (M) -- (T) node[above]{$c\gamma$};
+        \draw[jmline] (M) -- (L) node[below]{$a\alpha$};
+        \draw[jmline] (M) -- (R) node[below]{$b\beta$};
+    \end{scope}
+    \begin{scope}[xshift=22mm]
+        \sixjdgenu{A,B,C,a,b,c,++++,dddddd}
+    \end{scope}
+    \node at (3.7,0) {$=$};
+    \begin{scope}[xshift=55mm]
+        \coordinate (T) at (90:0.8);
+        \coordinate (L) at (210:0.8);
+        \coordinate (R) at (330:0.8);
+        \node[dotnode,label={0:\minusmark}] at (T) {}; 
+        \node[dotnode,label={10:\minusmark}] at (L) {};
+        \node[dotnode,label={150:\minusmark}] at (R) {};
+        \draw[jmlinem] (T) -- (L) node[midway,left]{$B$};
+        \draw[jmlinem] (R) -- (T) node[midway,right]{$A$};
+        \draw[jmlinem] (L) -- (R) node[midway,below]{$C$};
+        \draw[jmline] (T) -- (90:1.6) node[above]{$c\gamma$};
+        \draw[jmline] (L) -- (210:1.6) node[below]{$a\alpha$};
+        \draw[jmline] (R) -- (330:1.6) node[below]{$b\beta$};
+    \end{scope}
+\end{tikzpicture}
+\end{document}

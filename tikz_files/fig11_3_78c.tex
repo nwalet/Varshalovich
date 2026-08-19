@@ -1,0 +1,35 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=0.2em,font=\scriptsize]
+    \begin{scope}
+    \node[opboxw](M) at (0,0){\normalsize\normalsize$\mathfrak{M}$};
+    \coordinate (L) at (-0.6,1);
+    \coordinate (R) at (0.6,1);
+    \coordinate (M1) at ([xshift=-9mm]M.north);
+    \coordinate (M2) at ([xshift=-3mm]M.north);
+    \coordinate (M3) at ([xshift= 3mm]M.north);
+    \coordinate (M4) at ([xshift= 9mm]M.north);
+    \node[dotnode,label={above:\plusmark}] at (R) {};
+    \node[dotnode,label={above:\plusmark}] at (L) {};
+    \normedge{M1}{L}{0.5}{0.2}{$j_1$} 
+    \normedge{M2}{L}{0.5}{-0.2}{$j_2$} 
+    \normedge{R}{M3}{0.5}{-0.2}{$j_1$} 
+    \normedge{R}{M4}{0.5}{0.2}{$j_2$} 
+    \normedge[jmlinem,ultra thick]{R}{L}{0.5}{-0.2}{$j$} 
+    \end{scope}
+    \node at (2,0) {$=$};
+    \begin{scope}[xshift=35mm]
+    \node[opboxw](M) at (0,0){\normalsize\normalsize$\mathfrak{M}$};
+    \coordinate (L) at (-0.6,1);
+    \coordinate (R) at (0.6,1);
+    \coordinate (M1) at ([xshift=-9mm]M.north);
+    \coordinate (M2) at ([xshift=-3mm]M.north);
+    \coordinate (M3) at ([xshift= 3mm]M.north);
+    \coordinate (M4) at ([xshift= 9mm]M.north);
+    \draw[jmlinem] (M1) to[bend left=90,distance=0.7cm] node[midway,above] {$j_1$} (M3); 
+    \draw[jmlinem] (M2) to[bend left=90,distance=0.7cm] node[midway,above] {$j_2$} (M4); 
+    \end{scope}
+\end{tikzpicture}
+\end{document}

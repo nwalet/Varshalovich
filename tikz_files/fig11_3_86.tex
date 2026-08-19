@@ -2,5 +2,12 @@
 \usepackage{amsmath,amssymb}
 \usepackage{diagrams}
 \begin{document}
-\begin{tikzpicture}[baseline=0pt]\draw[omketarrow] (0,0) node[left]{$\Omega$} to[bend left=40] node[midway,above]{$l$} (2,0); \draw[omketarrow] (0,0) to[bend right=40] node[midway,below]{$l$} (2,0); \node at (2.3,0){$\Omega^{\prime}$};\end{tikzpicture}
+\begin{tikzpicture}[baseline=0pt]
+    \draw[ombraarrow] (0,0) -- (1,0) node[midway,above]{$\Omega$} ;
+    \draw[jmlinem,ultra thick] (1,0) -- (2,0) node[midway,above]{$l$} ;
+    \draw[omketarrow] (2,0) -- (3,0) node[midway,above]{$\Omega'$} ;
+    \node at (3.5,0) {$=$};
+    \draw[bomarrown] (4,0) -- (5,0) node[midway,above]{$\Omega$} ;
+    \draw[omarrow] (5,0) -- (6,0) node[midway,above]{$\Omega'$} ;
+\end{tikzpicture}
 \end{document}

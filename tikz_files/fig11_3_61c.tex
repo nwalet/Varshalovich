@@ -1,0 +1,82 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt, inner sep=0.1em,font=\scriptsize]
+    \pgfmathsetmacro{\len}{1}
+    \begin{scope}[xshift=-1cm]
+    \coordinate (Ml) at (0,0);
+    \coordinate (Tl) at (60:\len);
+    \coordinate (Bl) at (-60:\len);
+    \coordinate (Ll) at (180:\len);
+    
+    \node[dotnode,label={45:\plusmark}] at (Tl) {};
+    \node[dotnode,label={315:\plusmark}] at (Bl) {};
+    \node[dotnode,label={180:\plusmark}] at (Ll) {};
+    \node[dotnode,label={0:\plusmark}] at (Ml) {};
+%
+    \normedge{Ll}{Bl}{0.5}{-0.25}{$B$}
+    \normedge{Tl}{Ll}{0.5}{-0.25}{$A$}
+    \normedge{Bl}{Tl}{0.5}{-0.25}{$C$}
+    \normedge{Ml}{Ll}{0.4}{0.15}{$c$}
+    \normedge{Ml}{Tl}{0.4}{-0.15}{$b$}
+    \normedge{Ml}{Bl}{0.4}{0.15}{$a$}
+    \end{scope}
+    \begin{scope}[xshift=1cm]
+    \coordinate (Mr) at (0,0);
+    \coordinate (Tr) at (120:\len);
+    \coordinate (Br) at (-120:\len);
+    \coordinate (Rr) at (0:\len);
+
+    \node[dotnode,label={135:\plusmark}] at (Tr) {};
+    \node[dotnode,label={225:\plusmark}] at (Br) {};
+    \node[dotnode,label={0:\plusmark}] at (Rr) {};
+    \node[dotnode,label={180:\plusmark}] at (Mr) {};
+%
+    \normedge{Br}{Rr}{0.5}{-0.25}{$D$}
+    \normedge{Rr}{Tr}{0.5}{-0.25}{$E$}
+    \normedge{Tr}{Br}{0.5}{-0.25}{$C$}
+    \normedge{Rr}{Mr}{0.6}{0.15}{$c$}
+    \normedge{Tr}{Mr}{0.6}{0.15}{$d$}
+    \normedge{Br}{Mr}{0.6}{0.15}{$e$}
+    \end{scope}
+    \node at (2.5,0) {$=$};
+    \begin{scope}[xshift=50mm]
+        \coordinate (Ml) at (-\len,0);
+    \coordinate (Tl) at ($(60:\len)+(Ml)$);
+    \coordinate (Bl) at ($(-60:\len)+(Ml)$);
+    \coordinate (Ll) at ($(180:\len)+(Ml)$);
+    \coordinate (Mr) at (0.8,0);
+    \coordinate (Tr) at ($(120:\len)+(Mr)$);
+    \coordinate (Br) at ($(-120:\len)+(Mr)$);
+    \coordinate (Rr) at ($(0:\len)+(Mr)$);
+%
+    \node[dotnode,label={90:\plusmark}] at (Tr) {};
+    \node[dotnode,label={270:\plusmark}] at (Br) {};
+    \node[dotnode,label={0:\plusmark}] at (Rr) {};
+    \node[dotnode,label={180:\plusmark}] at (Mr) {};
+    \node[dotnode,label={90:\plusmark}] at (Tl) {};
+    \node[dotnode,label={270:\plusmark}] at (Bl) {};
+    \node[dotnode,label={180:\plusmark}] at (Ll) {};
+    \node[dotnode,label={0:\plusmark}] at (Ml) {};
+%
+    \normedge{Ll}{Bl}{0.5}{-0.25}{$B$}
+    \normedge{Tl}{Ll}{0.5}{-0.25}{$A$}
+    \normedge{Ml}{Ll}{0.4}{0.15}{$c$}
+    \normedge{Ml}{Tl}{0.4}{-0.15}{$b$}
+    \normedge{Ml}{Bl}{0.4}{0.15}{$a$}
+%
+    \normedge{Br}{Rr}{0.5}{-0.25}{$D$}
+    \normedge{Rr}{Tr}{0.5}{-0.25}{$E$}
+    \normedge{Rr}{Mr}{0.6}{0.15}{$c$}
+    \normedge{Tr}{Mr}{0.6}{0.15}{$d$}
+    \normedge{Br}{Mr}{0.6}{0.15}{$e$}
+%
+    \normedge{Bl}{Br}{0.5}{-0.25}{$C'$}
+    \normedge{Tr}{Tl}{0.5}{-0.25}{$C$}
+    \end{scope}
+    \begin{scope}[xshift=78mm]
+    \jloopd{C}{a}
+    \end{scope}
+    \end{tikzpicture}
+\end{document}

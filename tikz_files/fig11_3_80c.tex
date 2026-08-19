@@ -1,0 +1,25 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=0.3em,font=\scriptsize]
+    \begin{scope}
+        \coordinate (ML) at (-0.55,0);
+        \coordinate (MR) at (0.55,0);
+        \node[dotnode,label={180:\plusmark}] at (ML) {};
+        \node[dotnode,label={0:\minusmark}] at (MR) {};
+        \draw[jmlinem] (MR) -- (ML) node[midway]{$c$};
+        \draw[bjmarrow] (-1.35,0.8) node[right]{$a\alpha$} -- (ML);
+        \draw[bjmarrow] (-1.35,-0.8) node[right=0.05]{$b\beta$} -- (ML);
+        \draw[jmarrow] (MR) -- (1.35,0.8) node[left]{$a\alpha'$};
+        \draw[jmarrow] (MR) -- (1.35,-0.8) node[left=0.1]{$b\beta'$};
+    \end{scope}
+    \node at (1.5,0) {$=$};
+    \begin{scope}[xshift=30mm]
+        \draw[bjmarrow] (-1,0.5) node[right,above]{$a\alpha$} --(0,0.5);
+        \draw[jmarrow] (0,0.5) -- (1,0.5) node[left,above]{$a\alpha'$};
+        \draw[bjmarrow] (-1,-0.5) node[right,below=0.05]{$b\beta$} --(0,-0.5);
+        \draw[jmarrow] (0,-0.5) -- (1,-0.5) node[left,below]{$b\beta'$};
+    \end{scope}
+\end{tikzpicture}
+\end{document}
