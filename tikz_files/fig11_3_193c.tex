@@ -1,0 +1,35 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
+  \begin{scope}
+  \draw[bjmarrow](-2.0,0)--(-1.0,0) node[pos=0.2,above=2pt]{$l_1m_1$};
+  \node[deltanode](c1)at(-1.0,0){};
+  \draw[omlinem](c1)--(0,0)node[midway,above=2pt]{$\Omega$};
+  \node[deltanode](c2)at(0,0){};
+  \draw[jmarrow](c2)--(1.0,0)node[pos=0.8,above=2pt]{$l_2m_2$};
+  \end{scope}
+  \node at (1.4,0) {$=$};
+  \begin{scope}[xshift=28mm]
+\draw[bjmarrow](-1.0,0)--(0,0) node[pos=0.2,above=2pt]{$l_1m_1$};
+  \node[deltanode](c1)at(0,0){};
+  \draw[jmarrow](0.05,0)--(1.0,0)node[pos=0.8,above=2pt]{$l_2m_2$};
+  \end{scope}
+  \node at (0,-0.9) {$=$};
+  \begin{scope}[yshift=-9mm,xshift=13mm]
+  \draw[bjmarrow](-1.0,0)--(0,0) node[pos=0.2,above=2pt]{$l_1m_1$};
+  \draw[jmarrow](0.0,0)--(1.0,0)node[pos=0.8,above=2pt]{$l_2m_2$};
+  \end{scope}
+  \begin{scope}[yshift=-15mm,xshift=13mm]
+    \coordinate (m1) at (-0.5,-0.25); \node[dotnode,label={-135:\plusmark}] at (m1) {};
+    \coordinate (m2) at (0.5,-0.25); \node[dotnode,label={-45:\plusmark}] at (m2) {};
+    \coordinate (m3) at (0.5,0.25); \node[dotnode,label={45:\plusmark}] at (m3) {};
+    \coordinate (m4) at (-0.5,0.25); \node[dotnode,label={135:\plusmark}] at (m4) {};
+    \draw[jmlinem] (m1)--(m2); 
+    \draw[jmlinem] (m2)--(m3) node[midway,right] {$l_2$}; 
+    \draw[jmlinem] (m3)--(m4); 
+    \draw[jmlinem] (m4)--(m1) node[midway,left] {$l_1$}; 
+  \end{scope}
+\end{tikzpicture}
+\end{document}

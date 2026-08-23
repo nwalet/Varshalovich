@@ -1,0 +1,33 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
+  \begin{scope}
+  \node[dotnode](O)at(0,0){};
+  \node[deltanode](u)at(90:0.6){};\draw[omline](O)--(u);
+  \draw[jmarrow](u)--(90:1.35)node[above]{$l_3m_3$};
+  \node[deltanode](a)at(210:0.6){};\draw[omline](O)--(a);
+  \draw[jmarrow](a)--(210:1.35)node[below right]{$l_1m_1$};
+  \node[deltanode](b)at(-30:0.6){};\draw[omline](O)--(b);
+  \draw[jmarrow](b)--(-30:1.35)node[below left]{$l_2m_2$};
+  \end{scope}
+  \node at (1.5,0.5) {$=$};
+  \begin{scope}[xshift=30mm]
+    \node[dotnode](L)at(-0.16,0){};\node[dotnode](R)at(0.16,0){};
+  \draw[jmarrow](L)--($(L)+(90:1.35)$)node[above left]{$l_30$};
+  \draw[jmarrow](R)--($(R)+(90:1.35)$)node[above right]{$l_3m_3$};
+  \draw[jmarrow](L)--($(L)+(210:1.35)$)node[above=4pt]{$l_10$};
+  \draw[jmarrow](R)--($(R)+(210:1.35)$)node[below]{$l_1m_1$};
+  \draw[jmarrow](L)--($(L)+(-30:1.35)$)node[below]{$l_20$};
+  \draw[jmarrow](R)--($(R)+(-30:1.35)$)node[above=5pt]{$l_2m_2$};
+  \end{scope}
+  \node at (4.5,0.5) {$=$};
+  \begin{scope}[xshift=60mm]
+  \rednode{X}
+  \draw[jmarrow](X)--(90:1.35)node[above]{$l_3m_3$};
+  \draw[jmarrow](X)--(210:1.35)node[below right]{$l_1m_1$};
+  \draw[jmarrow](X)--(-30:1.35)node[below left]{$l_2m_2$};
+  \end{scope}
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,34 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
+  \begin{scope}
+    \node[opbox,minimum width=0.7cm,minimum height=0.8cm](M) at (0,0){\normalsize$\mathfrak{M}$};
+    \node[opbox,minimum width=0.7cm,minimum height=0.8cm](N) at (2,0)
+    {\normalsize$\mathfrak{N}$};
+    \foreach \i in {-1,0,1} {
+      \draw ([yshift=\i*3mm]N.east) --([yshift=\i*3mm,xshift=1.5mm]N.east);
+    }
+    \coordinate(ma)at ([yshift=3mm]M.east);
+    \coordinate(mb)at ([yshift=-3mm]M.east);
+    \draw[jmlinem](ma)to[out=0,in=0,looseness=2.5] node[midway,right]{$j$}(mb);
+    \coordinate(na)at ([yshift=3mm]N.west);
+    \coordinate(nb)at ([yshift=-3mm]N.west);
+    \draw[jmlinem](nb)to[out=180,in=180,looseness=2.5] node[midway,left]{$j$}(na);
+  \end{scope}
+  \node at (2.8,0) {$=$};
+  \begin{scope}[xshift=45mm]
+    \node[opbox,minimum width=0.7cm,minimum height=0.8cm](M) at (0,0){\normalsize$\mathfrak{M}$};
+    \node[opbox,minimum width=0.7cm,minimum height=0.8cm](N) at (1.6,0){\normalsize$\mathfrak{N}$};
+    \foreach \i in {-1,0,1} {
+      \draw ([yshift=\i*3mm]N.east) --([yshift=\i*3mm,xshift=1.5mm]N.east);
+    }
+    \draw[jmlinem]([yshift=2.5mm]M.east)--([yshift=2.5mm]N.west)node[midway,above]{$j$};
+    \draw[jmlinem]([yshift=-2.5mm]N.west)--([yshift=-2.5mm]M.east)node[midway,below]{$j$};
+  \end{scope}
+  \begin{scope}[xshift=35mm,yshift=0mm]
+    \jloopd{j}{a}
+  \end{scope}
+\end{tikzpicture}
+\end{document}

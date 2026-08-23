@@ -1,0 +1,16 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
+  \node[opbox](M) at (0,0){\normalsize$\mathfrak{M}$};\node[opbox](N) at (1.5,0){\normalsize$\mathfrak{N}$};
+  \draw[jmlinem] (M.east) -- (N.west) node[midway,above]{$j$};
+  \node at (2.6,0) {$=(-1)^{2j}$};
+  \begin{scope}[xshift=38mm]
+    \node[opbox](M) at (0,0){\normalsize$\mathfrak{M}$};\node[opbox](N) at (1.5,0){\normalsize$\mathfrak{N}$};
+    \draw[jmlinem] (N.west) -- (M.east) node[midway,above]{$j$};
+  \end{scope}
+  \end{tikzpicture}
+\end{document}
+& \includegraphics[valign=t]{fig11_3_185}\(=(-1)^{2j}\)%
+\includegraphics[valign=t]{fig11_3_186} \\

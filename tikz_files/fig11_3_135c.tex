@@ -1,0 +1,27 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
+  \begin{scope}
+    \node[opbox,minimum width=0.8cm,minimum height=0.8cm](M) at (0,0){\normalsize$\mathfrak{M}$};
+    \coordinate(ma)at([yshift=3mm]M.east);
+    \coordinate(mb)at([yshift=-3mm]M.east);
+    \coordinate(p)at($(M.east)+(0.6,0)$){};
+    \draw[jmlinem]([yshift=0.5mm]p)--(ma)node[pos=0.4,above]{$j$};
+    \draw[jmlinem](mb)--([yshift=-0.5mm]p)node[pos=0.4,below]{$j'$};
+    \draw[rline](p)--+(0.8,0)node[near end,above=0.05]{$R=1$};
+  \end{scope}
+  \node at (2.2,0) {$=$};
+  \begin{scope}[xshift=32mm]
+    \node[opbox,minimum width=0.8cm,minimum height=0.8cm](M) at (0,0){\normalsize$\mathfrak{M}$};
+    \coordinate(ma)at([yshift=3mm]M.east);
+    \coordinate(mb)at([yshift=-3mm]M.east);
+    \draw[jmlinem](ma)to[out=0,in=0,looseness=2.5] node[midway,right=0.05]{$j$} (mb);
+    \node[dotnode,label={left:\plusmark}](ta)at(1.5,0){};
+    \node[dotnode,label={right:\plusmark}](tb)at(2.3,0){};
+    \draw[jmlinem] (ta)arc(180:0:0.4cm)node[midway,above]{$j$};
+    \draw[jmlinem](tb)arc(180:0:-0.4cm)node[midway,below]{$j'$};
+  \end{scope}
+\end{tikzpicture}
+\end{document}

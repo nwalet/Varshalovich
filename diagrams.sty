@@ -68,6 +68,7 @@
     mark=at position {#1-0.05} with {\pgftransformxshift{1.1mm}\arrow{Stealth[length=2.2mm]},thick},
     mark=at position {#1+0.1} with {\pgftransformxshift{1.1mm}\arrow{Stealth[length=2.2mm]}}}}},
   bjmlinem/.default=0.5,
+  omline/.style={dashed,thick},
   omlinem/.style={postaction={decorate,decoration={markings,mark=at position #1 with {\pgftransformxshift{1.1mm}\arrow{Stealth[length=2.2mm]}}}},dashed,thick},
   omlinem/.default=0.5,
   %other styles: nodes, boxes, etc.
@@ -587,28 +588,30 @@ opnf/.pic={
 %"tee" diagrams of Table 11.7's jm-Symbols rows.
 \newcommand{\jzTnode}[6]{%
 \begin{tikzpicture}[baseline=0pt,inner sep=0.2em,font=\scriptsize]
+  \jztnoded{#1}{#2}{#3}{#4}{#5}{#6}
+\end{tikzpicture}}
+\newcommand{\jzTnoded}[6]{%
 \coordinate (N) at (0,0);
 \node[dotnode,label={90:\vmk@sign{#1}}] at (N) {};
 \if i#3
-  \draw[bjmarrow] (-0.75,0) node[left]{$#2$} -- (N);
+  \draw[bjmarrow] (-0.75,0) node[above right]{$#2$} -- (N);
 \else
-  \draw[jmarrow] (N) -- (-0.75,0) node[left]{$#2$};
+  \draw[jmarrow] (N) -- (-0.75,0) node[above right]{$#2$};
 \fi
 \if i#5
-  \draw[bjmarrow] (0.75,0) node[right]{$#4$} -- (N);
+  \draw[bjmarrow] (0.75,0) node[above left]{$#4$} -- (N);
 \else
-  \draw[jmarrow] (N) -- (0.75,0) node[right]{$#4$};
+  \draw[jmarrow] (N) -- (0.75,0) node[above left]{$#4$};
 \fi
 \if d#6
-  \draw[bjmarrow] (N) -- (0,-0.9) node[below]{$c=0$};
+  \draw[jmarrow] (N) -- (0,-0.9) node[below]{$c=0$};
 \else 
   \if u#6 
-    \draw[jmarrow] (0,-0.9) node[below]{$c=0$} -- (N);
+    \draw[bjmarrow] (0,-0.9) node[below]{$c=0$} -- (N);
   \else
     \draw (0,-0.9) node[below]{$c=0$} -- (N);
   \fi
 \fi
-\end{tikzpicture}%
 }
 %\jzotri{leftlab}{rightlab}{botsign}: a small "downward triangle" open
 %diagram -- two top nodes (both +) joined by an unlabelled top edge, each
@@ -634,26 +637,30 @@ opnf/.pic={
 %extdir 'o' = arrows out to the labels, 'i' = arrows in drawn above
 %a closed \jzotri{leftlab}{rightlab}{botsign} normalization triangle.
 \newcommand{\jzld}[5]{%
+\begin{tikzpicture}[baseline=0pt,inner sep=0.15em,font=\scriptsize]
+  \jzldd{#1}{#2}{#3}{#4}{#5}
+\end{tikzpicture}
+}
+\newcommand{\jzldd}[5]{%
 \pgfmathsetmacro{\Len}{0.8}
 \pgfmathsetmacro{\HEO}{0}
 \pgfmathsetmacro{\HET}{-0.6}
-\pgfmathsetmacro{\Sz}{0.7}
-\begin{tikzpicture}[baseline=0pt,inner sep=0.13em,font=\scriptsize]
+\pgfmathsetmacro{\Sz}{0.6}
 \if n#2 % not a metric tensor
 \if o#1
-  \draw[bjmarrow] (-\Len,\HEO) -- (0,\HEO)  node[above]{$a\alpha$};
-  \draw[jmarrow] (0,\HEO) node[above]{$b\beta$} -- (\Len,\HEO) ;
+  \draw[bjmarrow] (-\Len,\HEO) node[above right=0.05]{$a\alpha$} -- (0,\HEO);
+  \draw[jmarrow] (0,\HEO) -- (\Len,\HEO) node[above left]{$b\beta$}  ;
 \else
-  \draw[jmarrow] (0,\HEO) --(-\Len,\HEO)   node[above]{$a\alpha$};
-  \draw[bjmarrow] (\Len,\HEO) node[above]{$b\beta$}--(0,\HEO) ; 
+  \draw[jmarrow] (0,\HEO) --(-\Len,\HEO)   node[above right]{$a\alpha$};
+  \draw[bjmarrow] (\Len,\HEO) node[above left]{$b\beta$}--(0,\HEO) ; 
 \fi
 \else
 \if o#1
-  \draw[jmarrow] (0,\HEO) -- (-\Len,\HEO) node[above]{$a\alpha$};
-  \draw[jmarrow] (0,\HEO) -- (\Len,\HEO) node[above]{$b\beta$};
+  \draw[jmarrow] (0,\HEO) -- (-\Len,\HEO) node[above right]{$a\alpha$};
+  \draw[jmarrow] (0,\HEO) -- (\Len,\HEO) node[above left]{$b\beta$};
 \else
-  \draw[bjmarrow] (-\Len,\HEO) node[above]{$a\alpha$} -- (0,\HEO);
-  \draw[bjmarrow] (\Len,\HEO) node[above]{$b\beta$} -- (0,\HEO);
+  \draw[bjmarrow] (-\Len,\HEO) node[above right]{$a\alpha$} -- (0,\HEO);
+  \draw[bjmarrow] (\Len,\HEO) node[above left]{$b\beta$} -- (0,\HEO);
 \fi
 \if l#2
   \draw[jmlinem] (\Len,\HEO) -- (-\Len,\HEO);
@@ -671,7 +678,6 @@ opnf/.pic={
 \draw[jmlinem] (L) -- (R);
 \draw[jmlinem] (L) -- (B) node[midway,left]{$#3$};
 \draw[jmlinem] (R) -- (B) node[midway,right]{$#4$};
-\end{tikzpicture}%
 }
 \newcommand{\jloopd}[2]{%
 \if a#2
@@ -680,10 +686,10 @@ opnf/.pic={
         postaction={decorate},thick] (0,0.) circle (0.4);
 \else
   \draw[
-        decoration={markings, mark=at position 0.25 with  {\arrow[rotate=10]{Stealth[length=2.2mm]}}},
+        decoration={markings, mark=at position 0.25 with  {\arrow[rotate=-10]{Stealth[length=2.2mm]}}},
         postaction={decorate},thick] (0,0.) circle (0.4);
 \fi
-\node (0.0.5) {$#1$};
+\node (0,0) {$#1$};
 }
 \newcommand{\jloop}[2]{%
 \begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
@@ -697,27 +703,34 @@ opnf/.pic={
 % The {a b 0}=delta_ab diagram.
 \newcommand{\njloop}[5]{%
 \begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
+\njloopd{#1}{#2}{#3}{#4}{#5}
+\end{tikzpicture}}
+\newcommand{\njloopd}[5]{%
 \coordinate(T)at(0,0.5);\coordinate(B)at(0,-0.5);
 \node[dotnode,label={-90:\vmk@sign{#3}}]at(B){};
 \node[dotnode,label={90:\vmk@sign{#4}}]at(T){};
 \if c#5
-\draw[jmlinem](T)to[bend right=60]node[left]{$#1$}(B);
-\draw[jmlinem](B)to[bend right=60]node[right]{$#2$}(T);
+\draw[jmlinem](B) arc(90:-90:-0.5cm) node[midway,right]{$#1$} (T);
+\draw[jmlinem](T) arc(90:-90:0.5cm) node[midway,left]{$#2$} (B);
 \else
-\draw[jmlinem](T)to[bend left=60]node[right]{$#1$}(B);
-\draw[jmlinem](B)to[bend left=60]node[left]{$#2$}(T);
+\draw[jmlinem](T) arc(90:270:0.5cm) node[midway,right]{$#1$} (B);
+\draw[jmlinem](T) arc(90:-90:0.5cm) node[midway,left]{$#2$} (B);
 \fi
-\end{tikzpicture}}
+}
 %\njloopc{a}{c}{b}: same loop with an added vertical c diameter.
 \newcommand{\njloopc}[5]{%
 \begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
+\njloopcd{#1}{#2}{#3}{#4}{#5}
+\end{tikzpicture}}
+%
+\newcommand{\njloopcd}[5]{%
 \coordinate(T)at(0,0.5);\coordinate(B)at(0,-0.5);
 \node[dotnode,label={-90:\vmk@sign{#4}}]at(B){};
 \node[dotnode,label={90:\vmk@sign{#5}}]at(T){};
-\draw[jmlinem](T)to[bend right=60]node[left]{$#1$}(B);
-\draw[jmlinem](T)to[bend left=60]node[right]{$#3$}(B);
+\draw[jmlinem](T) arc(90:-90:0.5cm) node[midway,left]{$#3$} (B);
+\draw[jmlinem](T) arc(90:270:0.5cm) node[midway,right]{$#1$} (B);
 \draw[jmlinem](T)--(B)node[midway,right]{$#2$};
-\end{tikzpicture}}
+}
 %\njdtri{a}{b}{c}{botsign}{dir}: closed downward triangle, top edge c, left a,
 %right b, top nodes both +, bottom node = botsign. The {0 0 0; a b c} form.
 \newcommand{\njdtri}[5]{%
@@ -753,111 +766,130 @@ opnf/.pic={
 \end{tikzpicture}}
 %\njvtri{top}{bot} / \njvtrir{top}{bot}: small triangles (apex right / left)
 %used as the outer factors of the reduced products; all nodes +.
-\newcommand{\njvtri}[2]{%
-\begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
+\newcommand{\njvtrid}[2]{%
   \pgfmathsetmacro{\Sz}{0.5}
 \coordinate(T)at($\Sz*(-0.5,0.861)$);
 \coordinate(B)at($\Sz*(-0.5,-0.861)$);
 \coordinate(Ap)at($\Sz*(1,0)$);
-\node[dotnode,label={135:\plusmark}]at(T){};
-\node[dotnode,label={-135:\plusmark}]at(B){};
+\node[dotnode,label={90:\plusmark}]at(T){};
+\node[dotnode,label={-90:\plusmark}]at(B){};
 \node[dotnode,label={0:\plusmark}]at(Ap){};
 \draw[jmlinem](T)--(B);
 \draw[jmlinem](T)--(Ap)node[midway,above right]{$#1$};
 \draw[jmlinem](B)--(Ap)node[midway,below right]{$#2$};
-\end{tikzpicture}}
-\newcommand{\njvtrir}[2]{%
+}
+\newcommand{\njvtri}[2]{%
 \begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
+  \njvtrid{#1}{#2}
+\end{tikzpicture}}
+\newcommand{\njvtrird}[2]{%
   \pgfmathsetmacro{\Sz}{0.5}
 \coordinate(T)at($\Sz*(0.5,0.861)$);
 \coordinate(B)at($\Sz*(0.5,-0.861)$);
 \coordinate(Ap)at($\Sz*(-1,0)$);
-\node[dotnode,label={45:\plusmark}]at(T){};
-\node[dotnode,label={-45:\plusmark}]at(B){};
+\node[dotnode,label={90:\plusmark}]at(T){};
+\node[dotnode,label={-90:\plusmark}]at(B){};
 \node[dotnode,label={180:\plusmark}]at(Ap){};
 \draw[jmlinem](T)--(B);
 \draw[jmlinem](T)--(Ap)node[midway,above left]{$#1$};
 \draw[jmlinem](B)--(Ap)node[midway,below left]{$#2$};
+}
+\newcommand{\njvtrir}[2]{%
+\begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
+  \njvtrird{#1}{#2}
 \end{tikzpicture}}
 %\njsqx{a}{b}{d}{e}{c}{f}: square with the two crossing diagonals c,f (the middle
 %factor of the {a b c; e 0 e'; f b' d} reduction).
+\newcommand{\njsqxd}[6]{%
+\coordinate(tl)at(-0.5,0.5);\coordinate(tr)at(0.5,0.5);\coordinate(bl)at(-0.5,-0.5);\coordinate(br)at(0.5,-0.5);
+\node[dotnode,label={90:\minusmark}]at(tl){};
+\node[dotnode,label={90:\plusmark}]at(tr){};
+\node[dotnode,label={-90:\minusmark}]at(bl){};
+\node[dotnode,label={-90:\plusmark}]at(br){};
+\draw[jmlinem](tl)--(tr)node[pos=0.5,above]{$#1$};
+\draw[jmlinem](bl)--(tl)node[pos=0.5,left]{$#2$};
+\draw[jmlinem](br)--(tr)node[pos=0.5,right]{$#4$};
+\draw[jmlinem](bl)--(br)node[pos=0.5,below]{$#3$};
+%\draw[jmlinem](tl)--(br)node[pos=0.32,above right]{$#5$};
+\normedge[jmlinem=0.65]{br}{tl}{0.65}{0.15}{$#5$}
+\normedge[jmlinem=0.35]{tr}{bl}{0.35}{0.15}{$#6$}
+}
 \newcommand{\njsqx}[6]{%
 \begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
-\coordinate(tl)at(-0.5,0.5);\coordinate(tr)at(0.5,0.5);\coordinate(bl)at(-0.5,-0.5);\coordinate(br)at(0.5,-0.5);
-\node[dotnode,label={135:\minusmark}]at(tl){};
-\node[dotnode,label={45:\plusmark}]at(tr){};
-\node[dotnode,label={-135:\minusmark}]at(bl){};
-\node[dotnode,label={-45:\plusmark}]at(br){};
-\draw[jmlinem](tl)--(tr)node[pos=0.32,above]{$#1$};
-\draw[jmlinem](bl)--(tl)node[pos=0.32,left]{$#2$};
-\draw[jmlinem](br)--(tr)node[pos=0.32,right]{$#4$};
-\draw[jmlinem](bl)--(br)node[pos=0.32,below]{$#3$};
-\draw[jmlinem](tl)--(br)node[pos=0.32,above right]{$#5$};
-\normedge[jmlinem=0.35]{br}{tl}{0.35}{-0.2}{$#5$};
-\normedge[jmlinem=0.35]{tr}{bl}{0.35}{-0.2}{$#6$};
+\njsqxd{#1}{#2}{#3}{#4}{#5}{#6}
 \end{tikzpicture}}
 %\njhexx{a}{b}{c}{f}{e}{d}{bp}{ep}: hexagon with two crossing diagonals
 %(c,f) -- the closed {a b c; e 0 e'; f b' d} diagram (the third, 0-valued
 %diameter omitted). Perimeter: T-UR a, UL-T b, UR-LR e, LR-B ep, B-LL d,
 %LL-UL bp; diagonals UL-LR c, LL-UR f.
+\newcommand{\njhexxd}[8]{%
+\foreach \i in {0,...,5}{\coordinate(h\i)at(60+60*\i:0.8);}
+\foreach \i in {0,2,4}{\node[label={[label distance=-1mm]60+60*\i:\plusmark}] at(h\i){};}
+\foreach \i in {1,3,5}{\node[label={[label distance=-1mm]60+60*\i:\minusmark}] at(h\i){};}
+\normedge[jmlinem=0.5]{h0}{h1}{0.5}{-0.2}{$#1$} %a
+\normedge[jmlinem=0.5]{h2}{h1}{0.5}{0.2}{$#2$} %b
+\normedge[jmlinem=0.5]{h2}{h3}{0.5}{-0.2}{$#7$} %b'
+\normedge[jmlinem=0.5]{h4}{h3}{0.5}{0.2}{$#6$} %d
+\normedge[jmlinem=0.5]{h4}{h5}{0.5}{-0.2}{$#8$} %e'
+\normedge[jmlinem=0.5]{h5}{h0}{0.5}{-0.2}{$#5$} %e
+\normedge[jmlinem=0.25]{h4}{h1}{0.75}{0.14}{$#3$} %c
+\normedge[jmlinem=0.75]{h0}{h3}{0.25}{0.11}{$#4$} %f
+}
+
+
 \newcommand{\njhexx}[8]{%
 \begin{tikzpicture}[baseline=0pt,inner sep=0.2em,font=\scriptsize]
-\foreach \i in {0,...,5}{\coordinate(h\i)at(60+60*\i:0.78);}
-\foreach \i in {0,2,4}{\node[label={135+60*\i:\plusmark}] at(h\i){};}
-\foreach \i in {1,3,5}{\node[label={135+60*\i:\minusmark}] at(h\i){};}
-\normedge[jmlinem=0.5]{h0}{h1}{0.5}{-0.2}{$#1$}; %a
-\normedge[jmlinem=0.5]{h2}{h1}{0.5}{0.2}{$#2$}; %b
-\normedge[jmlinem=0.5]{h2}{h3}{0.5}{0.2}{$#7$}; %b'
-\normedge[jmlinem=0.5]{h4}{h3}{0.5}{-0.2}{$#6$}; %d
-\normedge[jmlinem=0.5]{h4}{h5}{0.5}{-0.2}{$#8$}; %e'
-\normedge[jmlinem=0.5]{h5}{h0}{0.5}{-0.2}{$#5$}; %e
-\normedge[jmlinem=0.25]{h4}{h1}{0.75}{0.2}{$#3$}; %c
-\normedge[jmlinem=0.25]{h3}{h0}{0.75}{-0.2}{$#4$}; %f
+\njhexxd{#1}{#2}{#3}{#4}{#5}{#6}{#7}{#8}
 \end{tikzpicture}}
 
 %---- Table 11.8 helpers (Zero Rotation, R=1 / R^{-1}R=1 cases) ----
 %A "bra line": double arrowhead near the start + single at the end.
 \tikzset{vmkbra/.style={postaction={decorate,decoration={markings,
-  mark=at position 0.12 with {\arrow{Stealth[length=1.6mm] Stealth[length=1.6mm]}},
+  mark=at position 0.32 with {\arrow{Stealth[length=1.6mm] Stealth[length=1.6mm]}}}}},
+vmket/.style={postaction={decorate,decoration={markings,
   mark=at position 0.995 with {\arrow{Stealth[length=1.9mm]}}}}}}
 %\rstubline{type}{left}{right}{sign}: bra-line left--node(sign)--right with a
 %vertical double-dashed "$R=1$" stub down to a delta node. type 'o'=dashed
 %Omega-line, else solid j-line.
 \newcommand{\rstubline}[4]{%
-\begin{tikzpicture}[baseline=0pt,inner sep=0.13em,font=\scriptsize]
+\begin{tikzpicture}[baseline=0pt,inner sep=0.2em,font=\scriptsize]
 \if o#1
   \tikzset{vmkln/.style={thick,dashed}}
 \else
   \tikzset{vmkln/.style={thick}}
 \fi
-\draw[vmkln,vmkbra] (-0.8,0) node[left]{$#2$} -- (0.8,0) node[right]{$#3$};
-\node[dotnode,label={90:\vmk@sign{#4}}]at(0,0){};
+\draw[vmkln,vmkbra] (-0.8,0) node[above]{$#2$} -- (-0.05,0);
+\draw[vmkln,vmket] (0.05,0)  -- (0.8,0) node[above left]{$#3$};
+\node[label={90:\vmk@sign{#4}}]at(0,0){};
 \draw[rline] (0,0) -- (0,-0.75);
 %\node[deltanode] at (0,-0.75){};
 \node[below,inner sep=1pt] at (0,-0.86){$R{=}1$};
 \end{tikzpicture}}
 %\rredline{type}{left}{right}: the reduced plain bra-line.
 \newcommand{\rredline}[3]{%
-\begin{tikzpicture}[baseline=0pt,inner sep=0.13em,font=\scriptsize]
+\begin{tikzpicture}[baseline=0pt,inner sep=0.2em,font=\scriptsize]
 \if o#1
   \tikzset{vmkln/.style={thick,dashed}}
 \else
   \tikzset{vmkln/.style={thick}}
   \fi
-\draw[vmkln,vmkbra] (-0.5,0) node[above]{$#2$} -- (0.5,0) node[above]{$#3$};
+\draw[vmkln,vmkbra] (-0.7,0) node[above]{$#2$} -- (0,0);
+\draw[vmkln,vmket] (0,0)  -- (0.7,0) node[above left]{$#3$};
 \end{tikzpicture}}
 %\rarcline{type}{left}{right}{sign}: bra-line with an inverted-V double-dashed
 %"$R^{-1}$/$R$" arc between two nodes (the R^{-1}R=1 case).
-\newcommand{\rarcline}[4]{%
+\newcommand{\rarcline}[5]{%
 \begin{tikzpicture}[baseline=0pt,inner sep=0.13em,font=\scriptsize]
 \if o#1
 \tikzset{vmkln/.style={thick,dashed}}
 \else
 \tikzset{vmkln/.style={thick}}
 \fi
-\draw[vmkln,vmkbra] (-1.22,0) node[left]{$#2$} -- (1.2,0) node[right]{$#3$};
-\node[dotnode,label={90:\vmk@sign{#4}}]at(-0.4,0){};
-\node[dotnode,label={90:\vmk@sign{#4}}]at(0.4,0){};
+\draw[vmkln,vmkbra] (-1.22,0) node[above right]{$#2$} -- (-0.45,0);
+\draw[vmkln] (-0.35,0) -- (0.35,0) node[midway,above]{$#3$};
+\draw[vmkln,vmket] (0.45,0) -- (1.2,0) node[above left]{$#4$};
+\node[label={90:\vmk@sign{#5}}]at(-0.4,0){};
+\node[label={90:\vmk@sign{#5}}]at(0.4,0){};
 \coordinate (D) at (0,-0.6);%\node[deltanode] at (D){};
 \draw[rline] (-0.4,0) -- (D);\draw[rline] (D) -- (0.4,0);
 \draw[rline] (D) -- (0,-1);
@@ -865,19 +897,20 @@ opnf/.pic={
 \node[inner sep=1pt] at (0.44,-0.4){$R$};
 \node[below,inner sep=1pt] at (0,-1.2){$R^{-1}R{=}1$};
 \end{tikzpicture}}
-\newcommand{\rarcloop}[5]{%
+\newcommand{\rarcloop}[6]{%
 \begin{tikzpicture}[baseline=0pt,inner sep=0.13em,font=\scriptsize]
 \if o#1
 \tikzset{vmkln/.style={thick,dashed}}
 \else
 \tikzset{vmkln/.style={thick}}
 \fi
-\draw[vmkln,vmkbra] (-1.22,0) node[left]{$#2$} -- (1.2,0) node[right]{$#3$};
-\node[dotnode,label={90:\vmk@sign{#4}}]at(-0.4,0){};
-\node[dotnode,label={90:\vmk@sign{#5}}]at(0.4,0){};
+\draw[vmkln,vmkbra] (-1.22,0) node[above right]{$#2$} -- (-0.45,0);
+\draw[vmkln] (-0.35,0) -- (0.35,0) node[midway,above]{$#3$};
+\draw[vmkln,vmket] (0.45,0) -- (1.2,0) node[above left]{$#4$};
+\node[label={90:\vmk@sign{#5}}]at(-0.4,0){};
+\node[label={90:\vmk@sign{#6}}]at(0.4,0){};
 \coordinate (D) at (0,-0.6);%\node[deltanode] at (D){};
-\draw[rline] (-0.4,0) to[bend right=60](0.4,0);
-\node[inner sep=1pt] at (0.44,-0.4){$R$};
+\draw[rline] (-0.4,0) arc(180:360:0.4cm) node[midway,below]{$R$};
 \end{tikzpicture}}
 %---- Table 11.11 helpers (Metric Tensor) ----
 %\metric[lr]{L}{R}{bk}: metric-tensor line -- a central node with a left
@@ -885,15 +918,19 @@ opnf/.pic={
 %'k' = ket (single arrowhead pointing outward, away from the node),
 %'b' = bra (double arrowhead pointing inward, toward the node).
 %'l/r' arrow direction at node.
+\newcommand{\metricd}[4][l]{%
+\if l#1\draw[jmlinem] (0.4,0)-- (-0.4,0);
+\else\draw[jmlinem] (-0.4,0)-- (0.4,0);
+\fi
+\if k#4\draw[jmarrow] (-0.2,0) -- (-0.8,0) node[near end,above=1pt]{$#2$};
+\draw[jmarrow](0.4,0) -- (0.8,0) node[near end,above=1pt]{$#3$};
+\else\draw[bjmarrow] (-0.8,0) -- (-0.2,0) node[near start,above=1pt]{$#2$};
+\draw[bjmarrow](0.8,0) -- (0.2,0) node[near start,above=1pt]{$#3$};
+\fi}
+
 \newcommand{\metric}[4][l]{%
 \begin{tikzpicture}[baseline=-0.4ex,inner sep=0.13em,font=\scriptsize]
-\if l#1\draw[jmlinem] (0.5,0)-- (-0.5,0);
-\else\draw[jmlinem] (-0.5,0)-- (0.5,0);
-\fi
-\if k#4\draw[jmarrow] (-0.5,0) -- (-1.05,0) node[above]{$#2$};
-\draw[jmarrow](0.5,0) -- (1.05,0) node[above]{$#3$};
-\else\draw[bjmarrow] (-1.05,0) -- (-0.5,0) node[at start,above]{$#2$};
-\draw[bjmarrow](1.05,0) -- (0.5,0) node[at start,above]{$#3$};\fi
+\metricd[#1]{#2}{#3}{#4}
 \end{tikzpicture}}
 
 %\rednode{name}: a "reduced" vertex -- a filled dot enclosed by a circle

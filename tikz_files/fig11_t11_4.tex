@@ -1,0 +1,18 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
+  \node {$\displaystyle\sum_{m^{\prime}}$};
+  \begin{scope}[xshift=12mm]
+    \metricd{jm}{jm^{\prime}}{k}
+  \end{scope}
+  \begin{scope}[xshift=32mm]
+    \metricd{jm^{\prime}}{jm^{\prime\prime}}{b}
+  \end{scope}
+  \node at (4.3,0) {$=$};
+  \begin{scope}[xshift=55mm]
+  \metricd{jm}{jm^{\prime\prime}}{b}
+  \end{scope}
+\end{tikzpicture}
+\end{document}

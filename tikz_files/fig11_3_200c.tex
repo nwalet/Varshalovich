@@ -1,0 +1,24 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
+  \begin{scope}
+  \node[dotnode](O)at(0,0){};
+  \draw[omarrow](O)--(-1,0)node[midway,above=2pt]{$\Omega$};
+  \node[deltanode](a)at(0.5,0.4){};
+  \draw[omarrow](O)--(a);\draw[jmarrow](a)--(1,0.8)node[above right]{$l_2m_2$};
+  \node[deltanode](b)at(0.5,-0.4){};
+  \draw[omarrow](O)--(b);\draw[jmarrow](b)--(1,-0.8)node[below right]{$l_1m_1$};
+  \end{scope}
+  \node at (1.4,0) {$=$};
+  \begin{scope}[xshift=34mm]
+  \draw[omarrow](-0.9,0)--(-1.7,0)node[midway,above=2pt]{$\Omega$};
+  \node[deltanode](c)at(-0.9,0){};
+  \rednode{X}
+  \draw[jmlinem](X)--(c)node[midway,above=2pt]{$l_3$};
+  \draw[jmarrow](X)--(1, 0.8)node[above right]{$l_2m_2$};
+  \draw[jmarrow](X)--(1,-0.8)node[below right]{$l_1m_1$};
+  \end{scope}
+\end{tikzpicture}
+\end{document}

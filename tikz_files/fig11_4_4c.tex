@@ -1,0 +1,50 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
+  \begin{scope}
+    \node[opbox,minimum width=0.8cm,minimum height=0.8cm](M) at (0,0){\normalsize$\mathfrak{M}$};
+    \coordinate(mra)at([yshift=3mm]M.east);
+    \coordinate(mrb)at([yshift=-3mm]M.east);
+    \coordinate(mla)at([yshift=3mm]M.west);
+    \coordinate(mlb)at([yshift=-3mm]M.west);
+    \draw[jmarrow](mra)--([xshift=6mm]mra)node[at end, above]{$j_3m_3$};
+    \draw[jmarrow](mrb)--([xshift=6mm]mrb)node[at end, below]{$j_4m_4$};
+    \draw[bjmarrow]([xshift=-6mm]mla)--(mla)node[at start, above]{$j_1m_2$};
+    \draw[bjmarrow]([xshift=-6mm]mlb)--(mlb)node[at start, below]{$j_4m_4$};
+  \end{scope}
+  \node at (2.2,0) {$=$};
+  \begin{scope}[xshift=30mm]
+    \coordinate(mla)at(0,0.3);
+    \coordinate(mlb)at(0,-0.3);
+    \coordinate (c1) at (0.5,0);
+    \coordinate (c2) at (1,0);
+    \coordinate (mra) at(1.5,0.3);
+    \coordinate (mrb) at(1.5,-0.3);
+    \draw[bjmarrow] (mla) -- (c1) node[at start, above] {$j_1m_1$};
+    \draw[bjmarrow] (mlb) -- (c1) node[at start, below] {$j_2m_2$};
+    \draw[jmlinem] (c2) --(c1) node[midway,above] {$j$};
+    \draw[jmarrow] (c2) -- (mra) node[at end, above] {$j_3m_3$};
+    \draw[jmarrow] (c2) -- (mrb) node[at end, below] {$j_4m_4$};
+    \node[dotnode,label={90:\plusmark}] at (c1) {};
+    \node[dotnode,label={90:\minusmark}] at (c2) {};
+  \end{scope}
+  \begin{scope}[xshift=65mm]
+    \node[opbox,minimum width=0.8cm,minimum height=0.8cm](M) at (0,0){\normalsize$\mathfrak{M}$};
+    \coordinate(mra)at([yshift=3mm]M.east);
+    \coordinate(mrb)at([yshift=-3mm]M.east);
+    \coordinate(mla)at([yshift=3mm]M.west);
+    \coordinate(mlb)at([yshift=-3mm]M.west);
+    \coordinate (l)at ([xshift=-6mm]M.west);
+    \coordinate (r)at ([xshift=6mm]M.east);
+    \node[dotnode,label={0:\plusmark}] at (r) {};
+    \node[dotnode,label={180:\minusmark}] at (l) {};
+    \draw[jmlinem](l) --(mla) node[midway,above=0.05]{$j_1$};
+    \draw[jmlinem](l) --(mlb) node[midway,below=0.05]{$j_2$};
+    \draw[jmlinem](mra) --(r) node[midway,above=0.05]{$j_3$};
+    \draw[jmlinem](mrb) --(r) node[midway,below=0.05]{$j_4$};
+    \draw[jmlinem,ultra thick] (l)--([yshift=-4mm]l) arc(-180:-90:2mm) -- node[midway,below] {$j$} ([xshift=-2mm,yshift=-6mm]r) arc(-90:0:2mm) -- (r);
+  \end{scope}
+\end{tikzpicture}
+\end{document}

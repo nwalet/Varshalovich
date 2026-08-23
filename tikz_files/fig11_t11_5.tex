@@ -1,0 +1,20 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
+  \node {$\displaystyle\sum_{m^{\prime}}$};
+  \begin{scope}[xshift=8mm]
+  \node[opbox](M) at (0,0){\normalsize$\mathfrak{M}$};
+  \draw[bjmarrow](1.2,0)--(M.east)node[near start, above]{$jm^{\prime}$};
+  \end{scope}
+  \begin{scope}[xshift=33mm]
+    \metricd{jm^{\prime}}{jm}{k}
+  \end{scope}
+  \node at (4.5,0) {$=$};
+  \begin{scope}[xshift=55mm]
+  \node[opbox](M) at (0,0){\normalsize$\mathfrak{M}$};
+  \draw[jmarrow](M.east)--(1.2,0)node[near end,above]{$jm$};
+  \end{scope}
+\end{tikzpicture}
+\end{document}

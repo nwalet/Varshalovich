@@ -1,0 +1,45 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
+  \begin{scope}
+    \node[opbox,minimum width=0.8cm,minimum height=0.8cm](M) at (0,0){\normalsize$\mathfrak{M}$};
+    \coordinate(ma)at([yshift=3mm]M.east);
+    \coordinate(mb)at([yshift=-3mm]M.east);
+    \draw[bjmarrow]([xshift=8mm]ma)--(ma)node[pos=0.2,above]{$j_1m_1$};
+    \draw[jmlinem](mb)--([xshift=8mm]mb)node[pos=0.4,below]{$j_2$};
+  \end{scope}
+  \node at (2.2,0) {$=$};
+  \begin{scope}[xshift=30mm]
+    \node[opbox,minimum width=0.8cm,minimum height=0.8cm](M) at (0,0){\normalsize$\mathfrak{M}$};
+    \coordinate(ma)at([yshift=3mm]M.east);
+    \coordinate(mb)at([yshift=-3mm]M.east);
+    \draw[jmlinem](ma)to[out=0,in=0,looseness=2.5] node[midway,right=0.05]{$j_1$} (mb);
+    \node[circle,draw,thick,inner sep=0.7mm](c)at([xshift=10mm]M.east){};
+    \node[dotnode] at(c.north) (c1) {};
+    \node[dotnode] at(c.south) (c2) {};
+    \draw[bjmarrow] ([xshift=0.7cm,yshift=0.2cm]c.north) to[out=0,in=60] node[at start,right] {$j_1m_1$}(c.north) ;
+    \draw[jmarrow] (c.south) to[out=-60,in=0] node[at end,right] {$j_2m_2$}([xshift=0.7cm,yshift=-0.2cm]c.south) ;
+  \end{scope}
+  \node at (6.0,0) {$=$};
+  \begin{scope}[xshift=70mm]
+    \node[opbox,minimum width=0.8cm,minimum height=0.8cm](M) at (0,0){\normalsize$\mathfrak{M}$};
+    \coordinate(ma)at([yshift=3mm]M.east);
+    \coordinate(mb)at([yshift=-3mm]M.east);
+    \draw[jmlinem](ma)to[out=0,in=0,looseness=2.5] node[midway,right=0.05]{$j_1$} (mb);
+    % rectangke
+    \node[dotnode,label={above:\plusmark}](ta)at(1.35,0.4){};
+    \node[dotnode,label={below:\plusmark}](tb)at(1.35,-0.4){};
+    \node[dotnode,label={right:\plusmark}](tc)at(1.9,0.4){};
+    \node[dotnode,label={right:\plusmark}](td)at(1.9,-0.4){};
+    \draw[jmlinem](ta)--(tb);
+    \draw[jmlinem](tb)--(td)node[midway,below ]{$j_2$};
+    \draw[jmlinem](td)--(tc)node[midway,right ]{$j_2$};
+    \draw[jmlinem](tc)--(ta)node[midway,above ]{$j_1$};
+    %line
+    \draw[bjmarrow] (2.5,0.5) --(2.5,0) node[at start,above] {$j_1m_1$};
+    \draw[jmarrow] (2.5,0) --(2.5,-0.5) node[at end, below] {$j_2m_2$};
+  \end{scope}
+\end{tikzpicture}
+\end{document}

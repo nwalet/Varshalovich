@@ -1,0 +1,20 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
+  \begin{scope}
+  \draw[bomarrown](-2.0,0)--(-1.0,0) node[pos=0.2,above=2pt]{$\Omega_1$};
+  \node[deltanode](c1)at(-1.0,0){};
+  \draw[jmlinem](c1)--(0,0)node[midway,above=2pt]{$l$};
+  \node[deltanode](c2)at(0,0){};
+  \draw[omarrow](c2)--(1.0,0)node[pos=0.8,above=2pt]{$\Omega_2$};
+  \end{scope}
+  \node at (1.4,0) {$=$};
+  \begin{scope}[xshift=28mm]
+\draw[bomarrown](-1.0,0)--(0,0) node[pos=0.2,above=2pt]{$\Omega_1$};
+  \node[deltanode](c1)at(0,0){};
+  \draw[omarrow](0.05,0)--(1.0,0)node[pos=0.8,above=2pt]{$\Omega_2$};
+  \end{scope}
+\end{tikzpicture}
+\end{document}

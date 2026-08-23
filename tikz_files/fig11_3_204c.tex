@@ -1,0 +1,26 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
+  \coordinate(P)at(0,0);
+  \draw[jmarrow](-0.05,0)--(-0.7,0)node[pos=0.8,above=2pt]{$jm$};
+  \draw[bjmarrow](0.7,0)--(0.05,0)node[pos=0.2,above=2pt]{$jm'$};
+  \node at(0,0.24){$+$};\Rdown{R}
+  \node at (1.2,-0.1) {$\displaystyle=\sum_{\mu\mu'}$};
+  \begin{scope}[xshift=26mm]
+    \draw[jmline](0,0)--(-0.7,0)node[pos=0.8,above=2pt]{$jm$};
+  \draw[ketout](0,0)--(0.7,0)node[pos=0.8,above=2pt]{$j\mu$};
+  \end{scope}
+  \begin{scope}[xshift=43mm]
+\coordinate(P)at(0,0);
+  \draw[bjmarrow](-0.7,0)--(-0.05,0)node[pos=0.2,above=2pt]{$j\mu$};
+  \draw[jmarrow](0.05,0)--(0.7,0)node[pos=0.8,above=2pt]{$j\mu'$};
+  \node at(0,0.24){$+$};\Rdown{R}
+  \end{scope}
+  \begin{scope}[xshift=61mm]
+    \draw[bjmarrow](-0.7,0)--(0,0)node[pos=0.2,above=2pt]{$jm'$};
+  \draw[bjmarrow](0.7,0)--(0,0)node[pos=0.2,above=2pt]{$j\mu'$};
+  \end{scope}
+\end{tikzpicture}
+\end{document}

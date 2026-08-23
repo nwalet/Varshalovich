@@ -1,0 +1,40 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
+    \node[opbox](M) at (0,0){\normalsize$\mathfrak{M}$};\node[opbox](N) at (1.6,0){\normalsize$\mathfrak{N}$};
+  \draw[jmlinem](M.east)--(N.west)node[midway,above=1pt]{$j$};
+  \node at (2.5,0) {$\displaystyle=\sum_{m}$};
+  \begin{scope}[xshift=35mm]
+    \node[opbox](M) at (0,0){\normalsize$\mathfrak{M}$};
+    \draw[jmarrow](M.east)--(1.1,0)node[near end,above=1pt]{$jm$};
+    \node[opbox](N) at (2.4,0){\normalsize$\mathfrak{N}$};
+    \draw[bjmarrow](1.3,0)--(N.west)node[near start,above=1pt]{$jm$};
+  \end{scope}
+  \node at (0,-1){$\displaystyle=\sum_{mm^{\prime}}$};
+  \begin{scope}[xshift=10mm,yshift=-10mm]
+    \node[opbox](M) at (0,0){\normalsize$\mathfrak{M}$};
+    \draw[jmarrow](M.east)--(1.1,0)node[near end,above=1pt]{$jm$};
+  \end{scope}
+  \begin{scope}[xshift=31mm,yshift=-10mm]
+    \metricd{jm}{jm^{\prime}}{b}
+  \end{scope}
+  \begin{scope}[xshift=53mm,yshift=-10mm]
+    \node[opbox](N) at (0,0){\normalsize$\mathfrak{N}$};
+    \draw[jmarrow](N.west)--(-1.1,0)node[near end,above=1pt]{$jm'$};
+  \end{scope}
+    \node at (0,-2){$\displaystyle=\sum_{mm^{\prime}}$};
+  \begin{scope}[xshift=10mm,yshift=-20mm]
+    \node[opbox](M) at (0,0){\normalsize$\mathfrak{M}$};
+    \draw[bjmarrow](1.1,0)--(M.east)node[near start,above=1pt]{$jm'$};
+  \end{scope}
+  \begin{scope}[xshift=31mm,yshift=-20mm]
+    \metricd{jm^{\prime}}{jm}{k}
+  \end{scope}
+  \begin{scope}[xshift=53mm,yshift=-20mm]
+    \node[opbox](N) at (0,0){\normalsize$\mathfrak{N}$};
+    \draw[bjmarrow](-1.1,0)--(N.west)node[near start,above=1pt]{$jm$};
+  \end{scope}
+\end{tikzpicture}
+\end{document}

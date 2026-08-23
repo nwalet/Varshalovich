@@ -1,0 +1,29 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
+  \begin{scope}
+  \rednode{X}
+  \node[deltanode](a)at(-0.5,0.4){};\draw[jmlinem](a)--(X)node[midway,above=2pt]{$l_2$};
+  \draw[bomarrown](-1,0.8)--(a)node[at start,above]{$\Omega_2$};
+  \node[deltanode](b)at(-0.5,-0.4){};\draw[jmlinem](b)--(X)node[midway,below=2pt]{$l_3$};
+  \draw[bomarrown](-1,-0.8)--(b)node[at start,below]{$\Omega_3$};
+  \node[deltanode](c)at(0.7,0){};\draw[jmlinem](c)--(X)node[midway,above=2pt]{$l_1$};
+  \draw[bomarrown](1.5,0)--(c)node[near start,above=2pt]{$\Omega_1$};
+  \end{scope}
+  \node at (1.7,0) {$=$};
+  \begin{scope}[xshift=39mm]
+  \draw[bomarrown](-1.9,0.45)--(-1,0.45)node[midway,above=2pt]{$\Omega_2$};
+  \node[deltanode](p1)at(-1,0.45){};
+  \draw[jmlinem](p1)--(-0.1,0.45)node[midway,above=2pt]{$l_2$};
+  \node[deltanode](p2)at(-0.1,0.45){};
+  \draw[omarrow](p2)--(0.8,0.45)node[midway,above=2pt]{$\Omega_1$};
+  \draw[bomarrown](-1.9,-0.55)--(-1,-0.55)node[midway,above=2pt]{$\Omega_3$};
+  \node[deltanode](q1)at(-1,-0.55){};
+  \draw[jmlinem](q1)--(-0.1,-0.55)node[midway,above=2pt]{$l_3$};
+  \node[deltanode](q2)at(-0.1,-0.55){};
+  \draw[omarrow](q2)--(0.8,-0.55)node[midway,above=2pt]{$\Omega_1$};
+  \end{scope}
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,34 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0,inner sep=1.5pt,font=\scriptsize]
+  \begin{scope}
+    \node[opbox,minimum width=0.8cm,minimum height=0.8cm](M) at (0,0){\normalsize$\mathfrak{M}$};
+    \coordinate(ma)at([yshift=1mm]M.east);
+    \coordinate(mb)at([yshift=0mm]M.east);
+    \coordinate(mc)at([yshift=-1mm]M.east);
+    \draw[jmarrow](ma)--([xshift=8mm,yshift=3mm]ma)node[right]{$j_1m_1$};
+    \draw[jmarrow](mb)--([xshift=8mm,yshift=0mm]mb)node[right]{$j_2m_2$};
+    \draw[jmarrow](mc)--([xshift=8mm,yshift=-3mm]mc)node[right]{$j_3m_3$};
+  \end{scope}
+  \node at (2.2,0) {$=$};
+  \begin{scope}[xshift=30mm]
+    \node[opbox,minimum width=0.8cm,minimum height=0.8cm](M) at (0,0){\normalsize$\mathfrak{M}$};
+    \coordinate(ma)at([yshift=3mm]M.east);
+    \coordinate(mb)at([yshift=0mm]M.east);
+    \coordinate(mc)at([yshift=-3mm]M.east);
+    \coordinate (c)at ([xshift=8mm]mb);
+    \draw[jmlinem](ma) --(c) node[midway,above=0.05]{$j_1$};
+    \draw[jmlinem,pos=0.6](mb) --(c) node[pos=0.2,fill=white,inner sep=0.5pt]{$j_2$};
+    \draw[jmlinem](mc) --(c) node[midway,below=0.05]{$j_3$};
+    \node[dotnode,label={right:\plusmark}] at(c) {};
+    \coordinate (c2)at ([xshift=6mm]c);
+    \coordinate (c3)at ([xshift=8mm]c2);
+    \node[dotnode,label={left:\minusmark}] at(c2) {};
+    \draw[jmarrow] (c2)--([yshift=3mm]c3) node[at end,right] {$j_1m_1$} ;
+    \draw[jmarrow] (c2)--([yshift=0mm]c3) node[at end,right] {$j_2m_2$} ;
+    \draw[jmarrow] (c2)--([yshift=-3mm]c3) node[at end,right] {$j_3m_3$} ;
+  \end{scope}
+\end{tikzpicture}
+\end{document}

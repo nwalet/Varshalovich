@@ -1,0 +1,22 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
+  \begin{scope}
+    \node[regular polygon,regular polygon sides=3,shape border rotate=90,draw,thick,
+          inner sep=1.1pt,label={180:\plusmark}](O) at (0,0){};
+    \draw[bjmarrow](110:0.8)--(O) node[at start,above]{$j_1m_1$};
+    \draw[bjmarrow](-110:0.8)--(O)node[ at start, below]{$j_2m_2$};
+    \draw[jmarrow](O)--(0.8,0) node[pos=0.8,above=2pt]{$JM$};
+  \end{scope}
+  \node at (1.1,0) {$=$};
+  \begin{scope}[xshift=2.5cm]
+    \node[regular polygon,regular polygon sides=3,shape border rotate=90,draw,thick,
+          inner sep=1.1pt,label={180:\plusmark}](O) at (0,0){};
+    \draw[jmarrow](O)--(110:0.8) node[at end,above]{$j_1m_1$};
+    \draw[jmarrow](O)--(-110:0.8)node[ at end, below]{$j_2m_2$};
+    \draw[bjmarrow](0.8,0)--(O) node[pos=0.2, above=2pt]{$JM$};
+  \end{scope}
+\end{tikzpicture}
+\end{document}

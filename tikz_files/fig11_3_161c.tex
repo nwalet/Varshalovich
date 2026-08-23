@@ -1,0 +1,27 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=-2pt,inner sep=1.5pt,font=\scriptsize]
+  \begin{scope}
+      \node[dotnode,label={180:\plusmark}](P)at(0,0){};
+  \node[dotnode,label={0:\minusmark}](Q)at(1.2,0){};
+  \draw[jmlinem](Q)--(P)node[midway,above]{$j_3$};
+  \draw[bjmarrow](-0.4,0.6)--(P);\node at(-0.45,0.75){$j_1m_1$};
+  \draw[bjmarrow](-0.4,-0.6)--(P);\node at(-0.45,-0.75){$j_2m_2$};
+  \draw[jmarrow](Q)--(1.6,0.6);\node at(1.65,0.75){$j_1m'_1$};
+  \draw[jmarrow](Q)--(1.6,-0.6);\node at(1.65,-0.75){$j_2m'_2$};
+  \end{scope}
+  \node at (2.1,0) {$=$};
+  \begin{scope}[xshift=3cm]  
+  \draw[postaction={decorate,decoration={markings,mark=at position 0.25 with
+      {\arrow{Stealth[length=2.2mm] Stealth[length=2.2mm]}}}},
+      -{Stealth[length=2.2mm]},thick](0,0.45)--(1.8,0.45);
+  \node at(0.15,0.63){$j_1m_1$};\node at(1.65,0.63){$j_1m'_1$};
+  \draw[postaction={decorate,decoration={markings,mark=at position 0.25 with
+      {\arrow{Stealth[length=2.2mm] Stealth[length=2.2mm]}}}},
+      -{Stealth[length=2.2mm]},thick](0,-0.45)--(1.8,-0.45);
+  \node at(0.15,-0.55){$j_2m_2$};\node at(1.65,-0.55){$j_2m'_2$};
+  \end{scope}
+\end{tikzpicture}
+\end{document}
