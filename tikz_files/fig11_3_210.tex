@@ -3,11 +3,13 @@
 \usepackage{diagrams}
 \begin{document}
 \begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
-  \draw[bjmarrow](-2.1,0)--(-0.75,0);\node at(-1.6,0.28){$jm'$};
-  \node[dotnode,label={90:\minusmark}](A)at(-0.75,0){};
-  \draw[jmlinem](A)--(0.75,0);
-  \node[dotnode,label={90:\plusmark}](B)at(0.75,0){};
-  \draw[jmarrow](B)--(2.1,0);\node at(1.6,0.28){$j\bar m'$};
-  \draw[rline](A)to[bend right=70]node[below]{$R$}(B);
+  \begin{scope}
+  \node[label={90:\minusmark}](A)at(-0.75,0){};
+  \node[label={90:\plusmark}](B)at(0.75,0){};
+  \draw[jmlinem]([xshift=0.5mm]A)--([xshift=-0.5mm]B);
+  \draw[bjmarrow](-2.1,0)--([xshift=-0.5mm]A) node[near start,above=2pt]{$jm'$};
+  \draw[jmarrow]([xshift=0.5mm]B)--(2.1,0)node[near end,above=2pt]{$j\bar m'$};
+  \draw[rline](A) arc[90:270:7.5mm]node[below]{$R$} ;
+  \end{scope}
 \end{tikzpicture}
 \end{document}

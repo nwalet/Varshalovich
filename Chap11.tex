@@ -1304,13 +1304,13 @@ where \(\omega_{12}\) is the angle between \(\Omega_1\) and \(\Omega_2\).
 \small
 \setlength{\tabcolsep}{5pt}
 \renewcommand{\arraystretch}{1.3}
-\begin{tabular}{@{}p{0.46\textwidth}|m{0.54\textwidth}@{}}
+\begin{tabular}{@{}m{0.46\textwidth}m{0.54\textwidth}@{}}
 \hline
-\multicolumn{1}{c|}{Analytical Expression} & Graphical Representation \\
+\multicolumn{1}{c}{Analytical Expression} & Graphical Representation \\
 \hline
 \multicolumn{2}{c}{Adjoint Matrix}\\
 \[\begin{aligned}
-\left(D^{j}_{mm'}(R)\right)^{*}&=\sum_{\mu\mu'}\binom{j}{m\ \mu}D^{j}_{\mu\mu'}(R)\binom{j}{\mu'\ m'}\\
+\left(D^{j}_{mm'}(R)\right)^{*}&=\sum_{\mu\mu'}\binom{j}{m\,\mu}D^{j}_{\mu\mu'}(R)\binom{j}{\mu'\ m'}\\
 &=(-1)^{m-m'}D^{j}_{-m,-m'}(R).
 \end{aligned}\]
 &\centerline{\includegraphics[valign=t]{fig11_3_204c}}\\
@@ -1319,45 +1319,26 @@ where \(\omega_{12}\) is the angle between \(\Omega_1\) and \(\Omega_2\).
 &\centerline{\includegraphics[valign=t]{fig11_3_208c}}\\
 \multicolumn{2}{c}{Unitarity}\\
 \[\displaystyle\sum_{m}\left(D^{j}_{mm'}(R)\right)^{*}D^{j}_{m\bar m'}(R)=\sum_{m}D^{j}_{m'm}(R^{-1})D^{j}_{m\bar m'}(R)=\delta_{m'\bar m'}\]
-&
-\scalebox{0.86}{\includegraphics[valign=t]{fig11_3_210}\(=\)%
-\includegraphics[valign=t]{fig11_3_211}}
-\\
+&\centerline{\includegraphics[valign=t]{fig11_3_210c}}\\
 \[\displaystyle\sum_{m'}D^{j}_{mm'}(R)\left(D^{j}_{\bar m m'}(R)\right)^{*}=\sum_{m'}D^{j}_{mm'}(R)D^{j}_{m'\bar m}(R^{-1})=\delta_{m\bar m}\]
-&
-\scalebox{0.86}{\includegraphics[valign=t]{fig11_3_212}\(=\)%
-\includegraphics[valign=t]{fig11_3_213}}
-\\
+&\centerline{\includegraphics[valign=t]{fig11_3_212c}}\\
 \multicolumn{2}{c}{Orthonormality}\\
 \[\displaystyle\int D^{j_1}_{m_1m'_1}(R)\,D^{j_2\,*}_{m_2m'_2}(R)\,\frac{dR}{16\pi^2}=\frac{\delta_{j_1j_2}\delta_{m_1m_2}\delta_{m'_1m'_2}}{(2j_1+1)}\]
-&
-\includegraphics[valign=t]{fig11_3_214}\(\;=\;\)%
-\includegraphics[valign=t]{fig11_3_215}
-\\
+&\centerline{\includegraphics[valign=t]{fig11_3_214c}}\\
 \multicolumn{2}{c}{Completeness}\\
 \[\displaystyle\sum_{j=0,1/2,1}^{\infty}(2j+1)\sum_{mm'}D^{j}_{mm'}(R_1)\,D^{j\,*}_{mm'}(R_2)=16\pi^2\,\delta(R_1-R_2)\]
-&
-\includegraphics[valign=t]{fig11_3_216}\(\;=\;\)%
-\includegraphics[valign=t]{fig11_3_217}
-\\
+&\centerline{\includegraphics[valign=t]{fig11_3_216c}}\\
 \multicolumn{2}{c}{Rotation Matrix in \(\Omega\)-Representation}\\
 \[\begin{aligned}
 \delta_{ll'}D^{l}_{mm'}(R)&=\frac{2l+1}{4\pi}\iint d\Omega\,d\Omega'\,C^{*}_{lm}(\Omega)\,\delta(\Omega-R^{-1}\Omega')\,C_{l'm'}(\Omega'),\\
 \braOket{ lm}{R}{l'm'}&=\braket{ lm}{\Omega}\braOket{\Omega}{R^{-1}}{\Omega'}
 \braket{\Omega'}{l'm'}.
-\end{aligned}\]
-&
-\includegraphics[valign=t]{fig11_3_218}\(\;=\;\)%
-\includegraphics[valign=t]{fig11_3_219}
-\\
+\end{aligned}\]&\centerline{\includegraphics[valign=t]{fig11_3_218c}}\\
 \[\begin{aligned}
 \delta(\Omega'-R\Omega)&=\sum_{lmm'}\frac{2l+1}{4\pi}\,C_{lm'}(\Omega')\,D^{l}_{m'm}(R^{-1})\,C^{*}_{lm}(\Omega),\\
 \braOket{\Omega'}{R}{\Omega}&=\braket{\Omega'}{l'm'}\braOket{ l'm'}{R^{-1}}{lm}\braket{ lm}{\Omega}.
 \end{aligned}\]
-&
-\includegraphics[valign=t]{fig11_3_220}\(\;=\;\)%
-\includegraphics[valign=t]{fig11_3_221}
-\\
+&\centerline{\includegraphics[valign=t]{fig11_3_220c}}\\
 \hline
 \end{tabular}
 \end{center}
@@ -1366,7 +1347,7 @@ where \(\omega_{12}\) is the angle between \(\Omega_1\) and \(\Omega_2\).
 \begin{table}[tbhp!]
 \begin{center}
 \captionsetup{justification=centering,labelformat=empty}
-\caption*{Table 11.13\\Cnt'ed.}
+\caption*{Table \ref{tab:11.13}\\Cnt'ed.}
 \small
 \setlength{\tabcolsep}{5pt}
 \renewcommand{\arraystretch}{1.3}

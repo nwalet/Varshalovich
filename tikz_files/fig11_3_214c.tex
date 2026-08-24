@@ -1,0 +1,30 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
+  \pgfmathsetmacro{\lx}{1.0}
+  \pgfmathsetmacro{\ly}{0.6}
+  \pgfmathsetmacro{\my}{0.4}
+  \pgfmathsetmacro{\lxh}{0.5}
+  \pgfmathsetmacro{\mx}{0.2}
+  \begin{scope}
+    \node[label={90:\plusmark}](T)at(0,\my){};
+    \node[label={-90:\minusmark}](B)at(0,-\my){};
+    \draw[bjmarrow](-\lx,\ly)--(T)node[at start,left=1pt]{$j_1m_1$};
+    \draw[jmarrow](T)--(\lx,\ly)node[at end,right=1pt]{$j_1m'_1$};
+    \draw[jmarrow](B)--(-\lx,-\ly)node[at end,left=1pt]{$j_2m_2$};
+    \draw[bjmarrow](\lx,-\ly)--(B)node[at start,right=1pt]{$j_2m'_2$};
+    \draw[rline](T)--(B)node[midway,right]{$R$};
+  \end{scope}
+  \node at (2,0) {$=$};
+  \begin{scope}[xshift=35mm]
+    \node[dotnode](T)at(-\mx,0){};
+    \node[dotnode](B)at(\mx,0){};
+    \draw[bjmarrow](-\lxh,\ly)--(T)node[at start,left=1pt]{$j_1m_1$};
+    \draw[jmarrow](B)--(\lxh,\ly)node[at end,right=1pt]{$j_1m'_1$};
+    \draw[jmarrow](T)--(-\lxh,-\ly)node[at end,left=1pt]{$j_2m_2$};
+    \draw[bjmarrow](\lxh,-\ly)--(B)node[at start,right=1pt]{$j_2m'_2$};
+  \end{scope}
+\end{tikzpicture}
+\end{document}

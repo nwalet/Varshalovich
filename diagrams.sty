@@ -942,7 +942,7 @@ vmket/.style={postaction={decorate,decoration={markings,
 % line from the origin, labelled to its right.
 \tikzset{ketout/.style={-{Stealth[length=2.2mm]},thick},
          brain/.style={-{Stealth[length=2.2mm] Stealth[length=2.2mm]},thick}}
-\newcommand{\Rdown}[1]{\draw[rline](0,0)--(0,-0.85);\node at(0.13,-0.5)[right]{$#1$};}
+\newcommand{\Rdown}[2][0.85]{\draw[rline](0,0)--(0,-#1)node[midway,right=2pt]{$#2$};}
 
 %\loopbox[style]{operator}{loop label}: an operator box with a momentum
 %line looping over its top -- the reduced matrix element (j||M||j). The

@@ -1,0 +1,23 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
+
+  \begin{scope}
+     \node[label={90:\plusmark}](P)at(0,0){};
+    \draw[bjmarrow](150:0.8)--([xshift=-0.5mm]P)node[at start,left=1pt]{$lm$};
+    \draw[jmarrow]([xshift=0.5mm]P)--(30:0.8) node[at end,right=1pt]{$l'm'$};
+    \Rdown[0.5]{R}
+  \end{scope}
+  \node at (1.5,0) {$=$};
+  \begin{scope}[xshift=32mm]
+     \node[label={90:\plusmark}](P)at(0,0){};
+    \draw[bjmarrow]([xshift=-0.5mm]150:1.3)--([xshift=-0.5mm]150:0.7)node[at start,left=1pt]{$lm$};
+    \draw[omlinem]([xshift=-0.5mm]150:0.7)--([xshift=-0.5mm]P)node[pos=0.5,above=2pt]{$\Omega$};
+    \draw[jmarrow]([xshift=0.5mm]30:0.67)--([xshift=0.5mm]30:1.3) node[at end,right=1pt]{$l'm'$};
+    \draw[omlinem]([xshift=0.5mm]P)--([xshift=0.5mm]30:0.7) node[pos=0.5,above=2pt]{$\Omega'$};
+    \Rdown[0.5]{R}
+  \end{scope}
+\end{tikzpicture}
+\end{document}

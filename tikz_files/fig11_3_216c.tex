@@ -1,0 +1,22 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
+  \begin{scope}
+  \draw[rline](-1.0,0)--(-0.35,0)node[midway,above=2pt]{$R_1$};
+  \draw[rline](1.0,0)--(0.35,0)node[midway,above=2pt]{$R_2$};
+  \draw[jmlinem] (0.35,0.05) arc(5:175:0.35cm);
+  \draw[jmlinem] (-0.35,-0.05) arc(-175:-5:0.35cm);
+  \node at(-0.35,0)[right]{\plusmark};
+  \node at(0.35,0)[left]{\minusmark};
+  \node at(0.0,0){$j$};
+  \end{scope}
+  \node at (1.5,0) {$=$};
+  \begin{scope}[xshift=28mm]
+  \draw[rline](-0.7,0)--(-0.1,0)node[midway,above=2pt]{$R_1$};
+  \draw[rline](0.7,0)--(0.1,0)node[midway,above=2pt]{$R_2$};
+  \node[deltanode] at(0,0){};
+  \end{scope}
+\end{tikzpicture}
+\end{document}

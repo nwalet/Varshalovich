@@ -1,0 +1,20 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
+  \begin{scope}
+  \node[label={90:\minusmark}](A)at(-0.4,0){};
+  \node[label={90:\plusmark}](B)at(0.4,0){};
+  \draw[jmlinem]([xshift=0.5mm]A)--([xshift=-0.5mm]B);
+  \draw[bjmarrow](-1.2,0)--([xshift=-0.5mm]A) node[near start,above=2pt]{$jm'$};
+  \draw[jmarrow]([xshift=0.5mm]B)--(1.2,0)node[near end,above=2pt]{$j\bar{m}'$};
+  \draw[rline](A) arc(-180:0:0.4cm)node[midway,below=2pt]{$R$} ;
+  \end{scope}
+  \node at (1.8,0) {$=$};
+  \begin{scope}[xshift=30mm]
+  \draw[bjmarrow](-0.7,0)--(0,0) node[near start,above=2pt]{$jm'$};
+  \draw[jmarrow](0,0)--(0.7,0)node[near end,above=2pt]{$j\bar{m}'$};
+  \end{scope}
+\end{tikzpicture}
+\end{document}
