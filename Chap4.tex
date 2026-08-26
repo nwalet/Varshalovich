@@ -202,7 +202,7 @@ where $d_{M M^{\prime}}^{J}(\beta)$ is a real function whose explicit forms are 
 d_{M M^{\prime}}^{J}(\beta)&=(-1)^{J-M^{\prime}}\left[(J+M)!(J-M)!\left(J+M^{\prime}\right)!\left(J-M^{\prime}\right)!\right]^{\frac{1}{2}}  \notag\\
 &\times \sum_{k}(-1)^{k} \frac{\left(\cos \frac{\beta}{2}\right)^{M+M^{\prime}+2 k}\left(\sin \frac{\beta}{2}\right)^{2 J-M-M^{\prime}-2 k}}{k!(J-M-k)!\left(J-M^{\prime}-k\right)!\left(M+M^{\prime}+k\right)!}  \label{eq:4:3:2}
 \end{align}\begin{align}
-d_{M M^{\prime}}^{J}(\beta)&=(-1)^{J+M^{\prime}}\left[(J+M)!(J-M)!\left(J+M^{\prime}\right)!\left(J-M^{\prime}\right)!\right]^{\frac{1}{2}}  \notag\\
+d_{M M^{\prime}}^{J}(\beta)&=(-1)^{J+M}\left[(J+M)!(J-M)!\left(J+M^{\prime}\right)!\left(J-M^{\prime}\right)!\right]^{\frac{1}{2}}  \notag\\
 &\times \sum_{k}(-1)^{k} \frac{\left(\cos \frac{\beta}{2}\right)^{2 k-M-M^{\prime}}\left(\sin \frac{\beta}{2}\right)^{2 J+M+M^{\prime}-2 k}}{k!(J+M-k)!\left(J+M^{\prime}-k\right)!\left(k-M-M^{\prime}\right)!}  \label{eq:4:3:3}
 \end{align}\begin{align}
 d_{M M^{\prime}}^{J}(\beta)&=\left[(J+M)!(J-M)!\left(J+M^{\prime}\right)!\left(J-M^{\prime}\right)!\right]^{\frac{1}{2}}  \notag\\
@@ -233,11 +233,11 @@ where $J_{1}$ and $J_{2}$ are arbitrary integer or half-integer numbers which sa
 \end{align}
 \begin{align}
  d_{M M^{\prime}}^{J}(\beta)&=(-1)^{J-M^{\prime}} \frac{1}{2^{J}}\left[\frac{\left(J+M^{\prime}\right)!}{(J+M)!(J-M)!\left(J-M^{\prime}\right)!}\right]^{\frac{1}{2}}(1-\cos \beta)^{\frac{M-M^{\prime}}{2}}(1+\cos \beta)^{-\frac{M+M^{\prime}}{2}}  \notag\\
-& \times \frac{d^{J-M^{\prime}}}{(d \cos \beta)^{J-M^{\prime}}}\left[(1-\cos \beta)^{J-M^{\prime}}(1+\cos \beta)^{J+M^{\prime}}\right]  \label{eq:4:3:9}
+& \times \frac{d^{J-M^{\prime}}}{(d \cos \beta)^{J-M^{\prime}}}\left[(1-\cos \beta)^{J-M}(1+\cos \beta)^{J+M}\right]  \label{eq:4:3:9}
 \end{align}
 \begin{align}
- d_{M M^{\prime}}^{J}(\beta)&=(-1)^{J+M} \frac{1}{2^{J}}\left[\frac{\left(J-M^{\prime}\right)!}{\left(J+M^{\prime}\right)!(J-M)!\left(J+M^{\prime}\right)!}\right]^{\frac{1}{2}}(1-\cos \beta)^{\frac{M^{\prime}-M}{2}}(1+\cos \beta)^{\frac{M+M^{\prime}}{2}}  \notag\\
-& \times \frac{d^{J+M^{\prime}}}{(d \cos \beta)^{J+M^{\prime}}}\left[(1-\cos \beta)^{J+M^{\prime}}(1+\cos \beta)^{J-M^{\prime}}\right] \label{eq:4:3:10}
+ d_{M M^{\prime}}^{J}(\beta)&=(-1)^{J+M} \frac{1}{2^{J}}\left[\frac{\left(J-M^{\prime}\right)!}{(J+M)!(J-M)!\left(J+M^{\prime}\right)!}\right]^{\frac{1}{2}}(1-\cos \beta)^{\frac{M^{\prime}-M}{2}}(1+\cos \beta)^{\frac{M+M^{\prime}}{2}}  \notag\\
+& \times \frac{d^{J+M^{\prime}}}{(d \cos \beta)^{J+M^{\prime}}}\left[(1-\cos \beta)^{J+M}(1+\cos \beta)^{J-M}\right] \label{eq:4:3:10}
 \end{align}
 In practice it is convenient to use such equation from Eqs.~\eqref{eq:4:3:7}-\eqref{eq:4:3:10} in which the order of derivative is the lowest.
 
@@ -282,8 +282,12 @@ d_{M M^{\prime}}^{J}(\beta)=\frac{(-1)^{s} \xi_{M M^{\prime}}}{\nu!}\left[\frac{
 \begin{equation}
 d_{M M^{\prime}}^{J}(\beta)=\frac{(-1)^{s} \xi_{M M^{\prime}}(2 s+\mu+\nu)!}{[s!(s+\mu+\nu)!(s+\mu)!(s+\nu)!]^{\frac{1}{2}}}\left(\sin \frac{\beta}{2}\right)^{2 s+\mu}\left(\cos \frac{\beta}{2}\right)^{\nu} F\left(-s,-s-\mu ;-2 s-\mu-\nu ; \frac{1}{\sin ^{2} \frac{\beta}{2}}\right), \label{eq:4:3:22}
 \end{equation}
+% VERIFIED: source misprint corrected -- book prints the hypergeometric
+% argument as -1/cos^2(beta/2); the correct sign is +1/cos^2(beta/2)
+% (checked numerically vs d^J_{MM'}, and consistent with the +1/sin^2
+% argument of the mirror Eq. 4.3.22).  See scripts/check_4_3.py.
 \begin{equation}
-d_{M M^{\prime}}^{J}(\beta)=\frac{\xi_{M M^{\prime}}(2 s+\mu+\nu)!}{[s!(s+\mu+\nu)!(s+\mu)!(s+\nu)!]^{\frac{1}{2}}}\left(\sin \frac{\beta}{2}\right)^{\mu}\left(\cos \frac{\beta}{2}\right)^{2 s+\nu} F\left(-s,-s-\nu ;-2 s-\mu-\nu ;-\frac{1}{\cos ^{2} \frac{\beta}{2}}\right). \label{eq:4:3:23}
+d_{M M^{\prime}}^{J}(\beta)=\frac{\xi_{M M^{\prime}}(2 s+\mu+\nu)!}{[s!(s+\mu+\nu)!(s+\mu)!(s+\nu)!]^{\frac{1}{2}}}\left(\sin \frac{\beta}{2}\right)^{\mu}\left(\cos \frac{\beta}{2}\right)^{2 s+\nu} F\left(-s,-s-\nu ;-2 s-\mu-\nu ;\frac{1}{\cos ^{2} \frac{\beta}{2}}\right). \label{eq:4:3:23}
 \end{equation}
 Parameters $\mu, \nu, s$ and a phase factor $\xi_{M M^{\prime}}$ in Eqs.~\eqref{eq:4:3:16}-\eqref{eq:4:3:23} are defined by Eqs.~\eqref{eq:4:3:14} and \eqref{eq:4:3:15}.
 
