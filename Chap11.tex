@@ -18,25 +18,24 @@ The Dirac representation of quantum mechanical quantities seems to be most adequ
 A line with an arrow coming out of a node represents the ``ket'' \(\ket{\Psi}\), i.e., a covariant (standard) state vector, whereas, a line with double arrow coming into the node represents the ``bra'' \(\bra{\Psi}\), i.e. a contravariant (Hermitian conjugate) state vector.
 
 A thin solid line corresponds to a state with some definite angular momentum \(j\) and projection \(m\) : 
-\[
+\begin{equation}
 \begin{aligned}
 & \includegraphics[valign=t]{fig11_1_1}  \qquad \ket{jm}, \\
 & \includegraphics[valign=t]{fig11_1_2}  \qquad \bra{j m}, 
 \end{aligned}
-\]
+\end{equation}
 Such lines are referred to as the \(j\)-lines.\\
 A dashed line corresponds to a state with some definite direction of the position vector (or linear momentum) \(\Omega\{\vartheta, \varphi\}\)
-\[
+\begin{equation}
 \begin{aligned}
 & \includegraphics[valign=t]{fig11_1_3}  \qquad \ket{\Omega}, \\
 & \includegraphics[valign=t]{fig11_1_4}  \qquad \bra{\Omega}, 
 \end{aligned}
-\]
+\end{equation}
 Such lines are referred to as the \(\Omega\)-lines.\\
-A double dashed line corresponds to a set of the Euler angles \(\alpha, \beta, \gamma\) (or the angles \(\omega, \Theta, \Phi\) ) which specify a rotation of the coordinate system, \(R\). Such lines are called the \(R\)-lines
-\[
-\includegraphics[valign=t]{fig11_1_5}
-\]
+A double dashed line corresponds to a set of the Euler angles \(\alpha, \beta, \gamma\) (or the angles \(\omega, \Theta, \Phi\) ) which specify a rotation of the coordinate system, \(R\). Such lines are called the \(R\)-lines\\
+\centerline{\includegraphics[valign=t]{fig11_1_5}}
+
 The symbols \(j m, \Omega\) and \(R\) are usually indicated near the corresponding lines. Therefore, length, curvature, orientation, and position of the line are inessential. For example, 
 \begin{center}
 \includegraphics[valign=t]{fig11_1_6} 
@@ -46,29 +45,29 @@ is equivalent to
 
 However, the arrow direction with respect to the node is of importance.\\
 The normalization of state vectors may be different. In diagrams it is indicated by the type of node. A state vector \(\ket{j m}\) normalized according to
-\[
+\begin{equation}
 \braket{j m}{j^{\prime} m^{\prime}}=\delta_{j j^{\prime}} \delta_{m m^{\prime}}
-\]
+\end{equation}
 is represented by the \(j\)-line with a bar node, whereas, a state vector \(\ket{j m}\), which obeys the normalization condition
-\[
+\begin{equation}
 \rbraket{j m}{j^{\prime} m^{\prime}}=(2 j+1)^{-1} \delta_{j j^{\prime}} \delta_{m m^{\prime}}
-\]
+\end{equation}
 is represented by the \(j\)-line with a dot node. The completeness condition for wave functions \(\ket{j m}\) or \(\ket{j m}\)  reads
-\[
+\begin{equation}
 \sum_{j m}\ket{j m}\bra{j m}=\sum_{j m}\ket{j m}(2 j+1)\rbra{j m}=1
-\]
+\end{equation}
 Similarly, a state vector \(\ket{\Omega}\) normalized by the Dirac \(\delta\)-function
-\[
+\begin{equation}
 \braket{\Omega}{\Omega^{\prime}}=\delta\left(\Omega-\Omega^{\prime}\right)
-\]
+\end{equation}
 corresponds to the \(\Omega\)-line with the bar node, whereas, a state vector \(\ket{\Omega}\) normalized by
-\[
+\begin{equation}
 \rbraket{\Omega}{\Omega^{\prime}}=4 \pi \delta\left(\Omega-\Omega^{\prime}\right)
-\]
+\end{equation}
 corresponds to the \(\Omega\)-line with a dot node. The completeness condition for the functions \(\ket{\Omega}\) or \(\ket{\Omega}\) reads
-\[
+\begin{equation}
 \int\ket{\Omega} d \Omega\bra{\Omega}=1 \quad \text { and } \quad \int \ket{\Omega} \frac{d \Omega}{4 \pi}\rbra{\Omega}=1\,,
-\]
+\end{equation}
 respectively.
 
 \subsection{Diagrams of the Basic Functions of the Theory}\label{sec:11.1.2}
@@ -278,9 +277,9 @@ This section describes the graphical representation of those analytic operations
 
 \subsection{Multiplication}\label{sec:11.2.1}
 The product (direct product) of factors \normalsize\(\mathfrak{M}\) and \normalsize\(\mathfrak{N}\) is represented graphically by unlinked subdiagrams (blocks) which correspond to factors \normalsize\(\mathfrak{M}\) and \normalsize\(\mathfrak{N}\). The mutual disposition and orientation of these subdiagrams are inessential. For example, the product
-\[
+\begin{equation}
 \threej{A}{B}{C}{\alpha}{\beta}{\gamma}\sixj{A}{B}{C}{a}{b}{c}
-\]
+\end{equation}
 may be represented by\\
 \begin{center}
   \includegraphics[valign=t]{fig11_2_1c}
@@ -288,9 +287,9 @@ may be represented by\\
 
 \subsection{Invariant Summation over Projections}\label{sec:11.2.2}
 The scalar product of two irreducible tensors of rank \(j\), \normalsize\(\mathfrak{M}_{j m}\) and \normalsize\(\mathfrak{N}_{j m}\), i.e., the sum of bilinear combinations over all possible values of the projection \(m\)
-\[
+\begin{equation}
 \sum_{m=-j}^{j}\braOket{}{\mathfrak{M}}{j m}\braOket{j m}{\mathfrak{N}}{},
-\]
+\end{equation}
 % PROOFREAD: OCR-garbled -- \mathfrak{W} is likely \mathfrak{M}; empty-bra \langle| covariant form; \Re likely \mathfrak{N}.
 is represented by the conjunction (closure) of \(\ket{j m}\) - and \(\rbra{j m}\)-lines of subdiagrams corresponding to \(\braOket{}{\mathfrak{M}}{j m}\) and \(\braket{j m}{\mathfrak{N}}\)\\
 \begin{center}
@@ -299,9 +298,9 @@ is represented by the conjunction (closure) of \(\ket{j m}\) - and \(\rbra{j m}\
 
 The resultant linking \(j\)-line has the same direction as the original \(\ket{j m}\) - and \(\bra{j m}\)-lines.\\
 For example, the sum of product of two \(3jm\) symbols over two projections, \(\alpha\) and \(\beta\)
-\[
+\begin{equation}
 \sum_{\alpha, \beta}\threej{a}{b}{c}{\alpha}{\beta}{\gamma}\threej{a}{b}{c^{\prime}}{\alpha}{\beta}{\gamma^{\prime}}=\sum_{\alpha, \beta}(-1)^{a-\alpha+b-\beta+c-\gamma}\threej{a}{b}{c}{-\alpha}{-\beta}{-\gamma}\threej{a}{b}{c^{\prime}}{\alpha}{\beta}{\gamma^{\prime}}
-\]
+\end{equation}
 may be displayed as\\
 \centerline{
       \includegraphics[valign=t]{fig11_2_4c}
@@ -311,9 +310,9 @@ may be displayed as\\
 Thus, each internal \(j\)-line of a diagram represents a scalar product (contraction over \(m\) ) of two irreducible tensors of rank \(j\). To construct such a scalar product one of these tensors should be written in a covariant form \(\braOket{}{\mathfrak{M}}{j m} \equiv \mathfrak{M}_{j m}\) while the other should be written in the form \(\braOket{j m}{\mathfrak{N}}{}=(-1)^{j-m} \mathfrak{N}_{j-m}\) (Sec.~\ref{sec:3.1.8}). Graphically, this means that one of the corresponding subdiagrams has the external \(\ket{j m}\)-line (with single outward arrow) and the other has the  \(\bra{j m}\)-line (\emph{with}  double inward arrow).
 
 Two diagrams which differ only by the direction of an internal \(j\)-line, correspond to analytic expressions which differ only by the phase factor \((-1)^{2 j}\), because
-\[
+\begin{equation}
 \sum_{m}(-1)^{j-m} \mathfrak{M}_{j m} \mathfrak{N}_{j-m}=(-1)^{2 j} \sum_{m}(-1)^{j-m} \mathfrak{M}_{j-m} \mathfrak{N}_{j m} .
-\]
+\end{equation}
 One should especially mention the entirely invariant sums of products of two, four, six, or more \(3 j m\) symbols over all projections. Corresponding diagrams are closed with respect to all \(j\)-lines. These sums represent the Wigner \(3 n j\) symbols (Table~11.4).
 
 \begin{table}[tbhp!]
@@ -398,18 +397,18 @@ A Clebsch-Gordan coefficient may be represented as a sum over \(c^{\prime} \gamm
 
     \subsection{Invariant Integration over Directions}\label{sec:11.2.4}
 A double integral of a bilinear form
-\[
+\begin{equation}
 \int\braOket{}{\mathfrak{N}}{\Omega} \frac{d \Omega}{\Omega_{0}}\braket{\Omega}{\mathfrak{N}},
-\]
+\end{equation}
 over the total solid angle \(4 \pi(0 \leq \vartheta \leq \pi, 0 \leq \varphi<2 \pi)\) is represented by a dashed \(\Omega\) line which links \(\ket{\Omega}\) and \(\bra{\Omega}\) lines of subdiagrams corresponding to the integrand factors\footnote{Note this is not denoted in boldface!}\\
 \centerline{\includegraphics[valign=t]{fig11_2_16c}}
 The resultant \(\Omega\)-line has the same direction as the original \(\ket{\Omega}\) - and \(\rbra{\Omega}\)-lines. In this case \(\Omega_{0}\) is the normalization constant; for integration of the standard spherical harmonics we have \(\Omega_{0}=1\),
-\[
+\begin{equation}
 \int Y_{l m}^{*}(\Omega) Y_{l^{\prime} m^{\prime}}(\Omega) d \Omega=\braket{l m}{\Omega}\braket{\Omega}{l^{\prime} m^{\prime}} ,
 %\vcenter{\hbox{
   \qquad\includegraphics[valign=b]{fig11_2_18}
 %  }}
-  \]
+  \end{equation}
 whereas \(\Omega_{0}=4 \pi\) for integration of the functions \(C_{l m}(\Omega)=[4 \pi /(2 l+1)]^{1 / 2} Y_{l m}(\Omega)\).
 
 \subsection{Integration over Rotation Parameters}\label{sec:11.2.5}
@@ -478,22 +477,13 @@ Completeness Condition
 
 
 The integration of a bilinear form with respect to parameters which specify the rotation \(R\) (the Euler angles \(\{\alpha, \beta, \gamma\}\) or the angles \(\{\omega, \theta, \Phi\})\) over the entire domain of their definition \(\left(R_{0} \equiv \int d R\right.\), see Sec.~\ref{sec:4.10})
-\[
+\begin{equation}
 % PROOFREAD: OCR-garbled operator integral -- empty-bra \langle| forms and mismatched \left/\right; reconstruct against orig.
 \int\braOket{}{\mathfrak{M}(R)}{}\braOket{}{\mathfrak{N}\left(R^{-1}\right)}{} \frac{d R}{R_{0}}
-\]
-may be represented by a conjunction of corresponding \(R\) - and \(R^{-1}\)-lines of subdiagrams which display the integrand factors.
-\[ \int
-\vcenter{\hbox{
-    \includegraphics[valign=t]{fig11_2_30}
-    }
-}
-=
-\vcenter{\hbox{
-    \includegraphics[valign=t]{fig11_2_31}
-    }
-}
-\]
+\end{equation}
+may be represented by a conjunction of corresponding \(R\) - and \(R^{-1}\)-lines of subdiagrams which display the integrand factors.\\
+\centerline{}\includegraphics{fig11_2_30}}
+
 Note that integrals of three or more functions of \(R\) may be reduced to standard bilinear forms, using the Clebsch-Gordan expansion.
 
 \section{Rules of the graphical technique}\label{sec:11.3}
@@ -620,38 +610,38 @@ The reversal of signs of all the nodes in a diagram produces an additional phase
 
 \subsection{Change of Direction of External Lines}\label{sec:11.3.3}
 The direction of an external \(j\)-line specifies the form (covariant or contravariant, i.e. \(\ket{j m}\) or \(\bra{ j m})\) of an irreducible tensor of rank \(j\) (Sec.~\ref{sec:11.1.1}). The conversion of covariant components of a tensor into contravariant ones, as well as the inverse transformation, is carried out by contraction (over \(m\) ) of the tensor in question with the tensor \(\binom{j}{m m^{\prime}}=(-1)^{j+m} \delta_{m-m^{\prime}}\), which may be considered as the metric tensor for the \((2 j+1)\) dimensional space of the functions \(\ket{j m}\). Such a transformation reads
-\[
+\begin{equation}
 \begin{gathered}
 \sum_{m^{\prime}}\braOket{}{\mathfrak{M}}{j m^{\prime}}\binom{ j}{m^{\prime} m}=\braOket{j m}{\mathfrak{M}}{}
 \end{gathered}
-\]
+\end{equation}
 \centerline{\includegraphics[valign=t]{fig11_3_52}}
 and the inverse transformation is
-\[
+\begin{equation}
 \begin{gathered}
 \sum_{m^{\prime}}\binom{j}{m m^{\prime}}\braOket{j m^{\prime}}{\mathfrak{M}}{}=\braOket{}{\mathfrak{M}}{j m} 
 \end{gathered}
-\]
+\end{equation}
 \centerline{\includegraphics[valign=t]{fig11_3_53}}
 Thus, a reversal of the direction of any external \(j\)-line ( \(j m\) being fixed) corresponds to the transformation
-\[
+\begin{equation}
 \braOket{}{\mathfrak{M}}{j m} \equiv \mathfrak{M}_{j m} \rightleftarrows\braOket{j m}{\mathfrak{M}}{} \equiv(-1)^{j-m} \mathfrak{M}_{j-m},
-\]
+\end{equation}
 in the associated analytic expression. In other words, the replacement of a single outward arrow by a double inward one corresponds to the introduction of the phase factor \((-1)^{j-m}\), and substitution of \(-m\) for \(m\), and vice versa.
 
 For example,
-\[
+\begin{equation}
 \sum_{\alpha^{\prime}}\binom{a}{\alpha^{\prime} \alpha}\threej{a}{b}{c}{\alpha^{\prime}}{\beta}{\gamma}=(-1)^{a-\alpha}\threej{a}{b}{c}{-\alpha}{\beta}{\gamma},
-\]
+\end{equation}
 and, conversely,
-\[
+\begin{equation}
 \sum_{\alpha^{\prime}}\binom{a}{\alpha \alpha^{\prime}}(-1)^{a-\alpha^{\prime}}\threej{a}{b}{c}{-\alpha^{\prime}}{\beta}{\gamma}=\threej{a}{b}{c}{\alpha}{\beta}{\gamma} .
-\]
+\end{equation}
 \subsection{Change of Direction of Integral Lines}\label{sec:11.3.4}
 The reversal of the direction of any internal \(j\)-line produces the phase factor \((-1)^{2 j}\) in the associated analytic expression, because
-\[
+\begin{equation}
 \sum_{m}(-1)^{j-m} \mathfrak{M}_{j m} \mathfrak{N}_{j-m}=(-1)^{2 j} \sum_{m}(-1)^{j-m} \mathfrak{M}_{j-m} \mathfrak{N}_{j m} .
-\]
+\end{equation}
 For a closed diagram which represents a \(3 n j\) symbol, reversal of the directions of the \(j\)-lines produces the factor \((-1)^{2 J}\) in the associated expression, where \(J\) is the algebraic sum of all the momenta of the \(3 n j\) symbol (Table~11.6).
 
 The reversal of the directions of three internal \(j\)-lines ( \(j_{1} j_{2} j_{3}\) ) coupled together in a node does not produce any additional phase factor, since \((-1)^{2\left(j_{1}+j_{2}+j_{3}\right)}=1\). For example,
@@ -669,21 +659,21 @@ Two subdiagrams representing factors \normalsize\(\mathfrak{M}\) and \normalsize
 \centerline{\includegraphics[valign=t]{fig11_3_56c}}
 
 The necessary condition for such a linking is that at least one of these subdiagrams should have no external line. The graphical rule is equivalent to the relation
-\[
+\begin{equation}
 \left(\sum_{m}\braOket{j m}{\mathfrak{M}}{j m}\right) \times\left(\sum_{m^{\prime}}\braOket{j m^{\prime}}{\mathfrak{M}}{j m^{\prime}}\right)=(2 j+1) \sum_{m m^{\prime}}\braOket{j m}{\mathfrak{M}}{j m^{\prime}}\braOket{j m^{\prime}}{\mathfrak{M}}{j m} .
-\]
+\end{equation}
 \item \label{schemeb}
 Two subdiagrams representing the factors \normalsize\(\mathfrak{N}\) and \normalsize\(\mathfrak{N}\) which have at least one identical (for both subdiagrams) node, i.e., three coupled \(j\)-lines ( \(j_{1} j_{2} j_{3}\) ) may be linked together into the combined diagram which corresponds to the product of these factors:
 
 \centerline{\includegraphics[valign=t]{fig11_3_59c}}
 
 This is equivalent to the relation
-\[
+\begin{equation}
 \begin{gathered}
 {\left[\sum_{m_{1} m_{2} m_{3}}\braOket{00}{\mathfrak{M}}{j_{1} m_{1} j_{2} m_{2} j_{3} m_{3}}\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{m_{2}}{m_{3}}\right] \times\left[\sum_{m_{1}^{\prime} m_{3}^{\prime} m_{3}^{\prime}}\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}^{\prime}}{m_{2}^{\prime}}{m_{3}^{\prime}}\braOket{j_{1} m_{1}^{\prime} j_{2} m_{2}^{\prime} j_{3} m_{3}^{\prime}}{\mathfrak{M}}{}\right]} \\
 =\left\{j_{1} j_{2} j_{3}\right\} \sum_{m_{1} m_{3} m_{3}}\braOket{00}{\mathfrak{M}}{j_{1} m_{1} j_{2} m_{2} j_{3} m_{3}}\braOket{j_{1} m_{1} j_{2} m_{2} j_{3} m_{3}}{\mathfrak{M}}{}
 \end{gathered}
-\]
+\end{equation}
 For example,\\
 \centerline{\includegraphics[valign=t]{fig11_3_61c}}
 \centerline{\includegraphics[valign=t]{fig11_3_64c}}
@@ -696,28 +686,28 @@ Note that Scheme \ref{schemea} is a special case of Scheme \ref{schemeb} when on
 
 \subsection{Cutting Diagram into Subdiagrams}\label{sec:11.3.6}
 The scalar product of two \(n\)-fold irreducible tensors of rank \(j_{1}, j_{2}, \ldots, j_{n}\), i.e., the \(n\)-fold invariant sum over projections
-\[
+\begin{equation}
 \left(\mathfrak{M}_{j_{1} j_{2} \ldots j_{n}} \cdot \mathfrak{N}_{j_{1} j_{2} \ldots j_{n}}\right)=\sum_{m_{1} m_{2} \ldots m_{n}}\braOket{00}{\mathfrak{M}}{j_{1} m_{1} j_{2} m_{2} \ldots j_{n} m_{n}}\braOket{j_{1} m_{1} j_{2} m_{2} \ldots j_{n} m_{n}}{\mathfrak{N}}{}
-\]
+\end{equation}
 may be transformed into a \(k\)-fold complete sum (over momenta \(X_{1}, X_{2}, \ldots, X_{n}\) with \(k=n-3\) and \(n \geq 4\) ) of the product of factors:
-\[
+\begin{equation}
 \left(\mathfrak{M}_{j_{1} j_{2} \ldots j_{n}} \cdot \mathfrak{N}_{j_{1} j_{2} \ldots j_{n}}\right)=\sum_{X_{1} X_{2} \ldots X_{k}}^{k=n-3}\left(2 X_{1}+1\right)\left(2 X_{2}+1\right) \ldots\left(2 X_{k}+1\right) \mathfrak{M}_{j_{1} j_{2} \ldots j_{n}}\left(X_{1} X_{2} \ldots X_{k}\right) \mathfrak{N}_{j_{1} j_{2} \ldots j_{n}}\left(X_{1} X_{2} \ldots X_{k}\right) .
-\]
+\end{equation}
 These factors represent contractions of the original tensors and \(3 j m\) symbols:
-\[
+\begin{equation}
 \begin{gathered}
 \mathfrak{M}_{j_{1} j_{2} \ldots j_{n}}\left(X_{1} X_{2} \ldots X_{k}\right) \\
 \equiv \sum_{m_{i} M_{i}} \mathfrak{M}_{j_{1} m_{1} j_{2} m_{2} \ldots j_{n} m_{n}}\threej{j_{1}}{j_{2}}{X_{1}}{m_{1}}{m_{2}}{-M_{1}}(-1)^{X_{1}-M_{1}}\threej{X_{1}}{j_{3}}{X_{2}}{M_{1}}{m_{3}}{-M_{2}}(-1)^{X_{2}-M_{2}} \ldots\threej{X_{k}}{j_{n-1}}{j_{n}}{M_{k}}{m_{n-1}}{m_{n}} \\
 \left.\equiv \sum_{m_{i} M_{i}} \mathfrak{N}_{j_{1} j_{2} \ldots j_{n}}^{m_{1} m_{2} \ldots m_{n}}\threej{j_{1}}{j_{2}}{X_{1}}{m_{1}}{m_{2}}{-M_{1}}(-1)^{\mathfrak{N}_{j_{1} j_{2} \ldots j_{n}}\left(X_{1} X_{2} \ldots\right.} X_{k}\right) \\
 \threej{X_{1}}{j_{3}}{X_{2}}{M_{1}}{m_{3}}{-M_{2}}(-1)^{X_{2}-M_{2}} \ldots\threej{X_{k}}{j_{n-1}}{j_{n}}{M_{k}}{m_{n-1}}{m_{n}}
 \end{gathered}
-\]
+\end{equation}
 Again, at least one of these contracted quantities must be a true invariant, i.e., should not depend on any additional momentum projection or direction.
 
 For \(n \leq 3\) the sum over \(X_{i}\) may be reduced to the direct product of the contracted tensors. For example,
-\[
+\begin{equation}
 \left(\mathfrak{M}_{j_{1} j_{2} \ldots j_{n}} \cdot \mathfrak{N}_{j_{1} j_{2} \ldots j_{n}}\right)=\mathfrak{M}_{j_{1} j_{2} \ldots j_{n}} \cdot \mathfrak{N}_{j_{1} j_{2} \ldots j_{n}} .
-\]
+\end{equation}
 This means that the original sum becomes factorized. Therefore, the cases \(n \leq 3\) are the most important ones for practical applications.
 
 The analytic transformations under study correspond to cutting the associated diagram into two subdiagrams which represent two factors. The necessary condition is that at least one of these subdiagrams should have no more external lines (apart from those \(j\)-lines which link the subdiagram together)\\
@@ -737,22 +727,22 @@ According to Sec.~\ref{sec:11.2.3}, a complete invariant sum over angular moment
 Rule \(\sum\) : Any thick \(j\)-line which connects identical pairs of thin \(j\)-lines, may be removed provided the ends of the thin lines with equal momenta are linked together. This is displayed below:\\
 \centerline{\includegraphics[valign=t]{fig11_3_78}}
 Such a graphical operation does not change the meaning of a diagram and corresponds to the equation
-\[
+\begin{equation}
 \sum_{j m}(2 j+1)\braOket{j_{1} j_{2} j m}{\mathfrak{M}}{j_{1} j_{2} j m}=\sum_{m_{1} m_{2}}\braOket{j_{1} m_{1} j_{2} m_{2}}{\mathfrak{M}}{j_{1} m_{1} j_{2} m_{2}}
-\]
+\end{equation}
 where
-\[
+\begin{equation}
 \braOket{j_{1} m_{1} j_{2} m_{2}}{\mathfrak{M}}{j_{1}^{\prime} m_{1}^{\prime} j_{2}^{\prime} m_{2}^{\prime}}=\sum_{j m}(2 j+1)\threej{j_{1}}{j_{2}}{j}{m_{1}}{m_{2}}{m}\braOket{j_{1} j_{2} j m}{\mathfrak{M}}{j_{1}^{\prime} j_{2}^{\prime} j m}\threej{j_{1}^{\prime}}{j_{2}^{\prime}}{j}{m_{1}^{\prime}}{m_{2}^{\prime}}{m} .
-\]
+\end{equation}
 For example,
-\[
+\begin{equation}
 \sum_{c \gamma}(2 c+1)(-1)^{a-\alpha+b-\beta+c-\gamma}\threej{a}{b}{c}{-\alpha}{-\beta}{-\gamma}\threej{a}{b}{c}{\alpha^{\prime}}{\beta^{\prime}}{\gamma^{\prime}}=\sum_{c \gamma}(2 c+1)\threej{a}{b}{c}{\alpha}{\beta}{\gamma}\threej{a}{b}{c}{\alpha^{\prime}}{\beta^{\prime}}{\gamma^{\prime}}=\delta_{\alpha \alpha^{\prime}} \delta_{\beta \beta^{\prime}},
-\]
+\end{equation}
 \centerline{\includegraphics[valign=t]{fig11_3_80c}}
 
-\[
+\begin{equation}
 \sum_{X}(2 X+1)\ninej{a}{b}{c}{b^{\prime}}{d}{e}{c}{e}{X}=\{a b c\}\{b d e\} \frac{\delta_{b b^{\prime}}}{(2 b+1)}
-\]
+\end{equation}
 \begin{center}
 \includegraphics[valign=t]{fig11_3_82c}
 \end{center}
@@ -760,39 +750,39 @@ For example,
 When a common thick \(j\)-line is included into two or more unlinked subdiagrams, one should preliminarily link these subdiagrams with the aid of the rules of subdiagram multiplication (Sec.~\ref{sec:11.3.5}) in order to arrive at one thick \(j\)-line. Only after this operation can one perform graphical summation over \(j\) and \(m\) according to Rule \(\sum\). These combined graphical operations are displayed in Table~11.9.
 
 The complete invariant summation over \(j\) and \(m\) may also be performed graphically in the cases when the lines adjacent to the thick \(j\)-line are dashed \(\Omega\)-lines. For instance,
-\[
+\begin{equation}
 \sum_{l m} Y_{l m}(\Omega) Y_{l m}^{*}\left(\Omega^{\prime}\right)=\delta\left(\Omega-\Omega^{\prime}\right)
-\]
+\end{equation}
 \begin{center}
 \includegraphics[valign=t]{fig11_3_86}
 \end{center}
-\[
+\begin{equation}
 \sum_{J M M^{\prime}}(2 J+1) D_{M M^{\prime}}^{J}\left(R_{1}\right) D_{M^{\prime} M}^{J}\left(R_{2}\right)=16 \pi^{2} \delta\left(R_{1}-R_{2}\right),
-\]
+\end{equation}
 \begin{center}
 \includegraphics[valign=t]{fig11_3_87}
 \end{center}
 
 In fact, all the rules for complete invariant summation formulated in this section follow from the completeness of \(\ket{j m}\)-functions.
-\[
+\begin{equation}
 \sum_{j m}\ket{j m}\bra{j m}=\sum_{j m}\ket{j m}(2 j+1)\rbra{j m}=1,
-\]
+\end{equation}
 \subsection{Replacing An Internal \(\Omega\)-Line by a Thick \(j\)-Line}\label{sec:11.3.8}
 Each internal \(\Omega\)-line which represents invariant integration over direction angles \(\Omega\{\vartheta, \varphi\}\) may be replaced by a thick \(j\)-line representing the complete invariant sum over \(j\) and \(m\), according to
-\[
+\begin{equation}
 \int d \Omega\braOket{\Omega}{\mathfrak{M}}{\Omega}=\sum_{j m}\braOket{jm}{\mathfrak{M}}{ j m},
-\]
+\end{equation}
 where
-\[
+\begin{equation}
 \braOket{j m}{\mathfrak{M}}{j^{\prime} m^{\prime}} \equiv \iint d \Omega d \Omega^{\prime}\braket{j m}{\Omega^{\prime}}\braOket{\Omega^{\prime}}{\mathfrak{M}}{\Omega}\braket{\Omega}{j^{\prime} m^{\prime}} .
-\]
+\end{equation}
 Thus, all the \(\Omega\)-lines in the inner part of a diagram may be converted into the \(j\)-lines. Hence, it is sufficient to formulate the rules of graphical operations only for diagrams in which all the internal lines are \(j\)-lines.
 
 \subsection{Elimination of \(j=0\) Line}\label{sec:11.3.9}
 In the particular case of \(j=0\) the corresponding expression is independent of the angular variables \(\Omega\{\vartheta, \varphi\}\). Hence, the corresponding \(j\)-line may be removed from a diagram without changing its meaning. However, there remain the nodes which were initially connected with this \(j=0\) line. These nodes may also be extracted from the diagram in the form of a separated subdiagram corresponding to the factor
-\[
+\begin{equation}
 K=( \pm 1)^{2 j_{1}} \frac{\delta_{j_{1} j_{2}}}{\sqrt{2 j_{1}+1}} .
-\]
+\end{equation}
 The phase of \(K\) depends on the node sign and line direction. \(K\) is positive if the node sign corresponds to the cyclic order of the couplZeroing momenta \(\left(j_{1}, j_{1}, j_{2}\right)\), the \(j_{1}\)-line is directed toward the node and the \(j_{2}\)-line is directed outward from the node. In this case the resultant \(j_{1}=j_{2}\)-line has the same direction as that before the node's removal. In other cases the phase of \(K\) may be determined by means of the reduction of the diagram under study to the above case, using the rules of Sec.~\ref{sec:11.3.2}.
 
 Thus elimination of the \(j=0\) line may be illustrated by\\
@@ -862,17 +852,15 @@ A summary of the rules of graphical operations is presented in Table~11.9.
 (a) For \(R=1\): \[\delta\left(\Omega^{\prime}-\hat{R}\Omega\right)=\delta\left(\Omega^{\prime}-\Omega\right),\] i.e.,
 \[\braOket{\Omega^{\prime}}{R}{\Omega}=\braket{\Omega^{\prime}}{\Omega}.\]
 & \includegraphics[valign=t]{fig11_8_1} \\
-(b) For \(R=1\): \[\delta_{jj^{\prime}}D_{mm^{\prime}}^{j}(000)=\delta_{jj^{\prime}}\delta_{mm^{\prime}},\] i.e.,\newline
+(b) For \(R=1\): \[\delta_{jj^{\prime}}D_{mm^{\prime}}^{j}(000)=\delta_{jj^{\prime}}\delta_{mm^{\prime}},\] i.e.,
 \[\braOket{jm}{D(1)}{j^{\prime}m^{\prime}}=\braket{jm}{j^{\prime}m^{\prime}}.\]
 & \includegraphics[valign=t]{fig11_8_2}  \\
 (c) For \(R^{-1}R=1\): \[\int\delta\!\left(\Omega^{\prime\prime}-R^{-1}\Omega^{\prime}\right)d\Omega^{\prime}\,\delta\!\left(\Omega^{\prime}-R\Omega\right)=\delta\!\left(\Omega^{\prime\prime}-\Omega\right),\]
 i.e., \[\braOket{\Omega^{\prime\prime}}{R^{-1}}{\Omega^{\prime}}\braOket{\Omega^{\prime}}{R}{\Omega}=\braket{\Omega^{\prime\prime}}{\Omega}.\].
-& \includegraphics[valign=t]{fig11_8_3}  \\
-&\(\;=\;\)\rredline{o}{\Omega^{\prime\prime}}{\Omega} \\
+& \includegraphics[valign=t]{fig11_8_3c}  \\
 (d) For \(R^{-1}R=1\): \[\sum_{m^{\prime}}D_{m^{\prime\prime}m^{\prime}}^{j}(R^{-1})D_{m^{\prime}m}^{j}(R)=\delta_{m^{\prime\prime}m},\]
 i.e., \[\braOket{jm^{\prime\prime}}{D(R^{-1})}{j^{\prime}m^{\prime}}\braOket{j^{\prime}m^{\prime}}{D(R)}{jm}=\braket{jm^{\prime\prime}}{jm}.\]
-& \includegraphics[valign=t]{fig11_8_4}  \\
-&\(\;=\;\)\rredline{s}{jm^{\prime\prime}}{jm} \\
+& \includegraphics[valign=t]{fig11_8_4c}  \\
 \hline
 \end{tabular}
 \end{center}
@@ -1546,9 +1534,9 @@ Let us summarize the main properties of diagrams which are consequences of the g
 A transformed diagram corresponds to the same analytic expression provided node signs are reversed for those nodes in which the cyclic order of the coupled momenta becomes opposite to the initial one.
 \item Each \(j\)-line holds a fixed value of angular momentum \(j\) in spite of any deformation of the line. For an external \(j\)-line, the projection \(m\) is fixed as well as the \(j\)-value. Moreover, \(j\) and \(m\) remain unchanged along the line even if any block (subdiagram) is inserted into the line, provided this block has no additional external \(j\)-lines.
 \item The total angular momentum of any diagram or subdiagram, i.e., the vector sum of angular momenta of all external lines, is equal to zero.
-\[
+\begin{equation}
 \sum_{i} \mathrm{j}_{i}=0, \quad \sum_{i} m_{i}=0 .
-\]
+\end{equation}
 Hence, for a diagram with one external \(j\)-line \(j\) has to be zero; for a diagram which has two external \(j\)-lines associated with \(j_{1}\) and \(j_{2}\) one has \(j_{1}=j_{2}\).
 \item Any diagram may be cut into two subdiagrams in many different ways. The total angular momenta of both these subdiagrams are identical. Moreover, the angular momenta will be the same for all the diagram cross-sections with fixed sets of external lines for each subdiagram.
 \end{enumerate}
@@ -1558,40 +1546,39 @@ Standard functions of angular momentum theory may be used as a basis for the exp
 \begin{enumerate}[label=(\alph*)]
 \item A diagram without external lines (i.e. a closed diagram) is invariant with respect to coordinate-system rotations.
 \item A diagram with one external line also is invariant. This is a consequence of the fact that, in principle, one cannot distinguish any preferred direction in isotropic space. Therefore, any dependence on one direction is fictitious, so that such an external \(j\)-line has to correspond to \(j=0\) and may be eliminated in accordance with the rule of Sec.~\ref{sec:11.3.9}.
-\[
+\begin{equation}
 \braOket{00}{\mathfrak{M}}{j m}=\delta_{j 0} \delta_{m 0}\braOket{00}{\mathfrak{N}}{00}
-\]
+\end{equation}
 \centerline{\includegraphics[valign=t]{fig11_4_1c}}
 \item A diagram with two external lines corresponding to \(\bra{j_{1} m_{1}}\) and \(\ket{j_{2} m_{2}}\) is non-zero only if \(j_{1}=j_{2}\) and \(m_{1}=m_{2}\)
-\[
+\begin{equation}
 \braOket{j_{1} m_{1}}{\mathfrak{M}}{j_{2} m_{2}}=\frac{\delta_{j_{1} j_{2}} \delta_{m_{1} m_{2}}}{2 j_{1}+1} \sum_{m}\braOket{j_{1} m}{\mathfrak{M}}{j_{1} m}
-\]
+\end{equation}
 \begin{center}
 \includegraphics[valign=t]{fig11_4_2c}
 \end{center}
 
 This follows from the fact that any dependence on two directions is, actually, the dependence on the angle between these directions, i.e. it may be represented by the scalar product of two functions \(\ket{j m}\) and \(\bra{ j m}\).
 \item A diagram with three external \(j\)-lines which represent \(\ket{j_{1} m_{1}}, \ket{j_{2} m_{2}}\) and \(\ket{j_{3} m_{3}}\) is proportional to the \(3 j m\) symbol \(\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{m_{2}}{m_{3}}\)
-%review the equation below--is this consistent? Should I use \rbraOketred???
-\[
+\begin{equation}
 \braOket{00}{\mathfrak{M}}{j_{1} m_{1} j_{2} m_{2} j_{3} m_{3}}=\braOketred{0}{\mathfrak{M}}{j_{1} j_{2} j_{3}}\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{m_{2}}{m_{3}},
-\]
+\end{equation}
 where \(\braOketred{0}{\mathfrak{M}}{j_{1} j_{2} j_{3}}\) is the reduced matrix element defined by
-\[
+\begin{equation}
 \braOketred{0}{\mathfrak{M}}{j_{1} j_{2} j_{3}}=
 \sum_{m_{1} m_{2} m_{3}}
 \braOket{00}{\mathfrak{M}}{j_1 m_{1} j_{2} m_{2} j_{3} m_{3}}
 \threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{m_{2}}{m_{3}},
-\]
+\end{equation}
 \centerline{\includegraphics[valign=t]{fig11_4_3c}}
 \item A diagram with four external \(j\)-lines corresponding \(j_{1} m_{1}, j_{2} m_{2}, j_{3} m_{3}\) and \(j_{4} m_{4}\) may be presented as a sum (over \(j\) ) of the product of two \(3 j m\) symbols
-\[
+\begin{equation}
 \braOket{j_{1} m_{1} j_{2} m_{2}}{\mathfrak{M}}{ j_{3} m_{3} j_{4} m_{4}}=\sum_{j m}(2 j+1)\threej{j_{1}}{j_{2}}{j}{m_{1}}{m_{2}}{m}\braOket{j_{1} j_{2} j m}{\mathfrak{M}}{j_{3} j_{4} j m}\threej{j_{3}}{j_{4}}{j}{m_{3}}{m_{4}}{m},
-\]
+\end{equation}
 where
-\[
+\begin{equation}
 \braOket{j_{1} j_{2} j m}{\mathfrak{M}}{j_{3} j_{4} j m} \equiv \sum_{m_{1} m_{2} m_{3} m_{4}}\threej{j_{1}}{j_{2}}{j}{m_{1}}{m_{2}}{m}\braOket{j_{1} m_{1} j_{2} m_{2}}{\mathfrak{M}}{j_{3} m_{3} j_{4} m_{4}}\threej{j_{3}}{j_{4}}{j^{\prime}}{m_{3}}{m_{4}}{m^{\prime}}
-\]
+\end{equation}
 \begin{center}
 \includegraphics[valign=t]{fig11_4_4c}
 \end{center}
@@ -1602,7 +1589,6 @@ where
 \captionsetup{justification=centering}
 \caption{Generalized Wigner-Eckart Theorem.}\label{tab:11.15}
 \small
-% in this table all reduced matrix elements are sudddenly \braOketRed---is this consistent?
 \setlength{\tabcolsep}{5pt}
 \renewcommand{\arraystretch}{1.3}
 \begin{tabular}{@{}m{0.42\textwidth}m{0.48\textwidth}@{}}

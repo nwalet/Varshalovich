@@ -1,0 +1,74 @@
+\documentclass[tikz,border=6pt]{standalone}
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+
+\usetikzlibrary{3d,calc,arrows.meta,quotes}
+
+\begin{document}
+\tdplotsetmaincoords{60}{105}
+\begin{tikzpicture}[
+    tdplot_main_coords,
+    >=Latex,
+    line join=round,
+    line cap=round,
+    axis/.style={very thick,->},
+    vector/.style={very thick,->},
+    construction/.style={thick,dashed},
+    every node/.style={font=\small}
+]
+
+% Coordinate system
+\draw[axis] (0,0,0) -- (0,0,5) node[above] {$z$};
+\draw[axis] (0,0,0) -- (5,0,0) node[right] {$x$};
+\draw[axis] (0,0,0) -- (0,5,0) node[below left] {$y$};
+
+% Main vectors
+\coordinate (O)  at (0,0,0);
+\coordinate (r1) at (-0.2,1.7,1.1);
+\coordinate (r2) at (0.8,-2,2.7);
+\coordinate (R)  at ($(r1)+(r2)$);
+\coordinate (r)   at ($(r1)-(r2)$);
+
+\draw[vector] (O) -- (r1) node[pos=0.3] (r1a) {} node[pos=.62,below] {$r_1$};
+\draw[vector] (O) -- (r2) node[pos=0.3] (r2a) {} node[pos=.58,left] {$r_2$};
+\draw[vector] (O) -- (R)  node[pos=0.3] (Ra) {} node[pos=.76,left] {$R$};
+\draw[vector] (O) -- (r)  node[pos=0.3] (ra) {} node[pos=1,right] {$r$};
+
+% Dashed parallelogram representing the plane
+\coordinate (P1) at (r2);
+\coordinate (P2) at (R);
+\coordinate (P3) at (r);
+\coordinate (P4) at ($(r)-(r1)$);
+
+%\fill[gray!8]  (O) -- (P1) -- (P3) -- (P2) -- cycle;
+
+\draw[construction] (P1) -- (P2) -- (P3) -- (P4) -- cycle;
+\coordinate (c1) at ($0.6*(r1)$);
+\coordinate (c2) at ($0.2*(r2)$);
+\draw[very thick,->] (r2a) to[bend left=40] (r1a);
+\draw[very thick,->] (Ra) to[bend left=40] (ra);
+% Angular constructions near the origin
+% \draw[very thick,->]
+%   (0.48,0.05,0.05)
+%   .. controls (0.55,0.35,0.10) and (0.28,0.65,0.35)
+%   .. (0.05,0.55,0.55)
+%   node[pos=.65,left] {$\omega_1$};
+
+% \draw[very thick,->]
+%   (0.18,0.15,0.35)
+%   .. controls (-0.15,0.40,0.55) and (-0.55,0.42,0.95)
+%   .. (-0.72,0.20,1.15)
+%   node[pos=.65,above] {$\omega_{12}$};
+
+% \draw[very thick,->]
+%   (0.25,0.02,0.02)
+%   .. controls (0.65,-0.02,-0.05) and (0.95,0.15,-0.15)
+%   .. (1.15,0.25,-0.25)
+%   node[pos=.75,below] {$\omega$};
+
+% Origin marker
+\fill (O) circle (1.5pt);
+
+\end{tikzpicture}
+
+\end{document}

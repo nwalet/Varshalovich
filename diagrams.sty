@@ -866,20 +866,22 @@ vmket/.style={postaction={decorate,decoration={markings,
 \node[below,inner sep=1pt] at (0,-0.86){$R{=}1$};
 \end{tikzpicture}}
 %\rredline{type}{left}{right}: the reduced plain bra-line.
-\newcommand{\rredline}[3]{%
-\begin{tikzpicture}[baseline=0pt,inner sep=0.2em,font=\scriptsize]
+\newcommand{\rredlined}[3]{%
 \if o#1
   \tikzset{vmkln/.style={thick,dashed}}
 \else
   \tikzset{vmkln/.style={thick}}
   \fi
-\draw[vmkln,vmkbra] (-0.7,0) node[above]{$#2$} -- (0,0);
-\draw[vmkln,vmket] (0,0)  -- (0.7,0) node[above left]{$#3$};
+\draw[vmkln,vmkbra] (-0.7,0) -- (0,0)  node[pos=0.2,above=1pt]{$#2$};
+\draw[vmkln,vmket] (0,0)  -- (0.7,0) node[pos=0.8,above=1pt]{$#3$};
+}
+\newcommand{\rredline}[3]{%
+\begin{tikzpicture}[baseline=0pt,inner sep=0.2em,font=\scriptsize]
+\rredlined{#1}{#2}{#3}
 \end{tikzpicture}}
 %\rarcline{type}{left}{right}{sign}: bra-line with an inverted-V double-dashed
 %"$R^{-1}$/$R$" arc between two nodes (the R^{-1}R=1 case).
-\newcommand{\rarcline}[5]{%
-\begin{tikzpicture}[baseline=0pt,inner sep=0.13em,font=\scriptsize]
+\newcommand{\rarclined}[5]{%
 \if o#1
 \tikzset{vmkln/.style={thick,dashed}}
 \else
@@ -896,9 +898,12 @@ vmket/.style={postaction={decorate,decoration={markings,
 \node[inner sep=1pt] at (-0.52,-0.4){$R^{-1}$};
 \node[inner sep=1pt] at (0.44,-0.4){$R$};
 \node[below,inner sep=1pt] at (0,-1.2){$R^{-1}R{=}1$};
-\end{tikzpicture}}
-\newcommand{\rarcloop}[6]{%
+}
+\newcommand{\rarcline}[5]{%
 \begin{tikzpicture}[baseline=0pt,inner sep=0.13em,font=\scriptsize]
+  \rarclined{#1}{#2}{#3}{#4}{#5}
+\end{tikzpicture}}
+\newcommand{\rarcloopd}[6]{%
 \if o#1
 \tikzset{vmkln/.style={thick,dashed}}
 \else
@@ -911,6 +916,10 @@ vmket/.style={postaction={decorate,decoration={markings,
 \node[label={90:\vmk@sign{#6}}]at(0.4,0){};
 \coordinate (D) at (0,-0.6);%\node[deltanode] at (D){};
 \draw[rline] (-0.4,0) arc(180:360:0.4cm) node[midway,below]{$R$};
+}
+\newcommand{\rarcloop}[6]{%
+\begin{tikzpicture}[baseline=0pt,inner sep=0.13em,font=\scriptsize]
+  \rarcloopd{#1}{#2}{#3}{#4}{#5}{#6}
 \end{tikzpicture}}
 %---- Table 11.11 helpers (Metric Tensor) ----
 %\metric[lr]{L}{R}{bk}: metric-tensor line -- a central node with a left

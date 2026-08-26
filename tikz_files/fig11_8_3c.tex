@@ -1,0 +1,16 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document} 
+\begin{tikzpicture}[baseline=0pt,inner sep=0.13em,font=\scriptsize]
+\rarclined{o}{\Omega^{\prime\prime}}{\Omega'}{\Omega}{-}
+\node at (2,0){$=$};
+\begin{scope}[xshift=3.8cm]
+\rarcloopd{o}{\Omega^{\prime\prime}}{\Omega'}{\Omega}{-}{+}
+\end{scope}
+\node at (2,-1.5){$=$};
+\begin{scope}[xshift=3.8cm,yshift=-1.5cm]
+   \rredlined{o}{\Omega^{\prime\prime}}{\Omega}
+\end{scope}
+\end{tikzpicture}
+\end{document}
