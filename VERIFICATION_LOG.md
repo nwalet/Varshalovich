@@ -30,7 +30,7 @@ identity, and genuine source misprints are flagged.
 |----|-------|-----------|------------------|---------|
 | 0–2 | prelim / rotations / D-functions | ➖ n/a | not amenable to symbolic checking (definitional) | — |
 | 3 | irreducible tensors | ✅ partial | 3.2 tensor-product coefficients | `check_chap3.py` |
-| 4 | Wigner D-functions | 🔄 in progress | **4.3, 4.4 done**; 4.5–4.15 remain | `check_4_3.py`, `check_4_4.py` |
+| 4 | Wigner D-functions | 🔄 in progress | **4.3, 4.4, 4.5 done**; 4.6–4.15 remain | `check_4_3.py`, `check_4_4.py`, `check_4_5.py` |
 | 5 | — | ❌ **gap** | OCR + headings/labels only | — |
 | 6 | — | ❌ **gap** | OCR + headings/labels only | — |
 | 7 | — | ❌ **gap** | OCR + headings/labels only | — |
@@ -53,6 +53,10 @@ Previously: Chapter 13, §13.2.9 (`be21346`, ~2026-08-13). The pass had run
   31-relation D array 4.4.2, periodicity 4.4.4–4.4.5, and special cases
   4.4.6–4.4.8 all verified; the badly OCR-garbled 4.4.2 array was rebuilt
   from the scan (see flags).
+- Sec 4.5 (U-matrix in ω,Θ,Φ) — `check_4_5.py`: the explicit forms 4.5.3/4/6,
+  the property relations 4.5.17–4.5.22, and special cases 4.5.28–4.5.32
+  verified against the validated `u_function` helper; seven errors fixed
+  (5 OCR + 2 book misprints, see flags).
 
 ## Gaps / next up
 
@@ -77,6 +81,13 @@ Previously: Chapter 13, §13.2.9 (`be21346`, ~2026-08-13). The pass had run
   `.tex` array had `M'M'`/`-M'-M'` throughout (should be `M'M`/`-M'-M`), a
   4-argument `D(γ,β,-β,-γ)` garble, a spurious `D^{JJ'}`, and misaligned
   columns. All 31 relations of the corrected array verified numerically.
+- **Sec 4.5 fixes** (2026-08-26): eq 4.5.10 dropped prime `J_z`→`J_z'` [OCR];
+  eq 4.5.19 truncated arg `(ω;Θ`→`(ω;Θ,Φ)` [OCR]; eq 4.5.20 stray trailing
+  `m` [OCR]; eq 4.5.21 `U_{-M'-M'}`→`U_{-M'-M}` [OCR]; eq 4.5.25 garble
+  `sin²Θ₁ ..`→`sin²Θ = 1` [OCR]; **eq 4.5.22 book misprint** RHS `π+Φ`→`π-Φ`;
+  **eq 4.5.28 book misprint** x-axis `D(π/2,ω,−π/2)=(−i)^{M−M'}d`→
+  `D(−π/2,ω,π/2)=(i)^{M−M'}d` (the printed RHS is the inverse rotation).
+  Both misprints annotated in-source.
 - **eq 9.6.3** — annotated as a source misprint (`e73fc49`).
 - **eq 10.8.26** — annotated as a source omission (`9212d0b`).
 - **eq 10.9.8** — flagged, then corrected as a source-author fix and verified
