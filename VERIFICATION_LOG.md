@@ -30,7 +30,7 @@ identity, and genuine source misprints are flagged.
 |----|-------|-----------|------------------|---------|
 | 0–2 | prelim / rotations / D-functions | ➖ n/a | not amenable to symbolic checking (definitional) | — |
 | 3 | irreducible tensors | ✅ partial | 3.2 tensor-product coefficients | `check_chap3.py` |
-| 4 | Wigner D-functions | 🔄 in progress | **4.3, 4.4, 4.5 done**; 4.6–4.15 remain | `check_4_3.py`, `check_4_4.py`, `check_4_5.py` |
+| 4 | Wigner D-functions | 🔄 in progress | **4.3–4.7 done**; 4.8–4.15 remain | `check_4_3.py` … `check_4_7.py` |
 | 5 | — | ❌ **gap** | OCR + headings/labels only | — |
 | 6 | — | ❌ **gap** | OCR + headings/labels only | — |
 | 7 | — | ❌ **gap** | OCR + headings/labels only | — |
@@ -57,6 +57,14 @@ Previously: Chapter 13, §13.2.9 (`be21346`, ~2026-08-13). The pass had run
   the property relations 4.5.17–4.5.22, and special cases 4.5.28–4.5.32
   verified against the validated `u_function` helper; seven errors fixed
   (5 OCR + 2 book misprints, see flags).
+- Sec 4.6 (sums of D) — `check_4_6.py`: CG series 4.6.1, projected sums
+  4.6.3/5/6, k-fold products 4.6.10, Cayley-Klein form 4.6.13 verified; 3 OCR
+  fixes (4.6.5 `M_3`→`M_2`; 4.6.6 spurious `M1M2M` sum + `D_{M_N N}`→`D_{MN}`
+  + missing label; 4.6.9 `D_{ƒ(a)M_k N_k}`→`D_{M_k N_k}`).
+- Sec 4.7 (addition of rotations) — `check_4_7.py`: unitarity 4.7.4, d-additions
+  4.7.7–4.7.10, identical-rotation 4.7.15, and the character sums 4.7.17/4.7.19
+  with their angle formulas 4.7.18/4.7.20 all verified; 2 OCR fixes (4.7.16
+  `ϖ`→`φ`; 4.7.19 `R_2^{-r}`→`R_2^{-1}`).
 
 ## Gaps / next up
 
