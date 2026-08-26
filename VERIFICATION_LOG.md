@@ -30,7 +30,7 @@ identity, and genuine source misprints are flagged.
 |----|-------|-----------|------------------|---------|
 | 0–2 | prelim / rotations / D-functions | ➖ n/a | not amenable to symbolic checking (definitional) | — |
 | 3 | irreducible tensors | ✅ partial | 3.2 tensor-product coefficients | `check_chap3.py` |
-| 4 | Wigner D-functions | 🔄 in progress | **4.3–4.7 done**; 4.8–4.15 remain | `check_4_3.py` … `check_4_7.py` |
+| 4 | Wigner D-functions | 🔄 in progress | **4.3–4.9 done**; 4.10–4.15 remain | `check_4_3.py` … `check_4_9.py` |
 | 5 | — | ❌ **gap** | OCR + headings/labels only | — |
 | 6 | — | ❌ **gap** | OCR + headings/labels only | — |
 | 7 | — | ❌ **gap** | OCR + headings/labels only | — |
@@ -65,6 +65,15 @@ Previously: Chapter 13, §13.2.9 (`be21346`, ~2026-08-13). The pass had run
   4.7.7–4.7.10, identical-rotation 4.7.15, and the character sums 4.7.17/4.7.19
   with their angle formulas 4.7.18/4.7.20 all verified; 2 OCR fixes (4.7.16
   `ϖ`→`φ`; 4.7.19 `R_2^{-r}`→`R_2^{-1}`).
+- Sec 4.8 (D^J recursions) — `check_4_8.py`: all 21 relations 4.8.1–4.8.21
+  (D^{J±1}, D^{J±1/2}, and the same-level M/M'±1 ladders) verified; many OCR
+  fixes — the D^{J±1/2} phases `e^{i(α+α)/2}`→`e^{i(α+γ)/2}` and `α±x`→`α±γ`,
+  missing `M` subscripts and `D^{J(...)}` garbles in 4.8.4/5/7/8, the 4.8.7 last
+  coefficient, and the badly-garbled 4.8.18–4.8.21 (rebuilt from the scan: `B`
+  diagonal denominators, `M'`→`M` in 4.8.20/21, and two `sqrt(x/x)=1` coeffs);
+  added missing labels 4.8.16/18/19/20.
+- Sec 4.9 (differential relations) — `check_4_9.py`: all of 4.9.1–4.9.9 verified;
+  1 LaTeX-bracket fix in 4.9.1 and a missing label on 4.9.2.
 
 ## Gaps / next up
 
