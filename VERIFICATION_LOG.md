@@ -80,11 +80,15 @@ Previously: Chapter 13, §13.2.9 (`be21346`, ~2026-08-13). The pass had run
   Kronecker deltas); OCR fixes to 4.11.4 (`D^{J3}_{M2M3'}`→`M3M3'`, CG bottom
   `-M1'`→`-M3'`) and 4.11.5 (`M5'`→`M3'`). 4.10 is prose/definitional.
 - Sec 4.12 (invariant summation) — 4.12.2/3/4 verified numerically (character
-  integrals → δ and {J1J2J3}); **4.12.5–4.12.8** (multi-R integrals → 6j²,
-  three-6j, 9j) only OCR-cleaned for garbled subscripts + the sum label, NOT
-  numerically verified — flagged in-source for a manual pass against the scan.
-  (The 6j/9j forms ARE legible on the scan, printed p.98 — reconstruction is
-  now feasible; deferred.)
+  integrals → δ and {J1J2J3}). **4.12.5–4.12.9** (multi-R integrals →
+  6j / 6j² / three-6j / 9j / 9j²) now fully reconstructed character-by-character
+  against the scan (printed pp.97–98, 200 dpi) and confirmed by a clean build.
+  Corrections: 4.12.5 spurious `^2` removed (the 6j is NOT squared); 4.12.6 R2
+  first D gained its conjugate `*` and the 6j is `{J1J2J3/J1'J2'J3'}^2`
+  (all-primed bottom, squared); 4.12.7 R1 2nd D subscript `N2 N3'`→`N2 N2'`;
+  4.12.9 R2 2nd D `J6`→`J4` and R4 2nd D `N2 M2`→`N3 M3`. 4.12.8 (the 9j)
+  matched as-is. These quadruple-R identities are impractical to evaluate
+  numerically; verification is against the printed equations.
 - Sec 4.13 (generating functions for d^J) — not machine-verified (would need
   the ξ,μ,ν helpers), but 4 clear OCR garbles fixed against the scan
   (printed p.99): 4.13.6 `-t^{\sin^2}β/2`→`-t\sin^2 β/2` and exponent

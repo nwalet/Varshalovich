@@ -1023,34 +1023,40 @@ Making use of this notation, one gets
 \sum_{M_{1} M_{2} M_{3}} \int d R D_{M_{3} M_{3}}^{J_{3}}(R) D_{M_{2} M_{2}}^{J_{2}}(R) D_{M_{1} M_{1}}^{J_{1}}(R)=8 \pi^{2}\left\{J_{1} J_{2} J_{3}\right\} , \label{eq:4:12:4}
 \end{gather}
 
-% NOTE (2026-08): Eqs 4.12.5-4.12.8 below (multi-R invariant integrals ->
-% 6j^2 / three-6j product / 9j, orig pp.97-98) were only OCR-cleaned for the
-% clearly-garbled D-subscripts and the summation label. The 6j/9j ARGUMENTS
-% and the squared exponents were NOT numerically verified (the quadruple-R
-% identities are impractical to check here) -- give them a careful manual
-% pass against the scan.
+% NOTE (2026-08-26): Eqs 4.12.5-4.12.9 below (multi-R invariant integrals ->
+% 6j / 6j^2 / three-6j product / 9j / 9j^2) were reconstructed and fully
+% cross-checked character-by-character against the scan (printed pp.97-98,
+% 200 dpi). Corrections made in this pass: 4.12.5 spurious ^2 removed (the 6j
+% is NOT squared); 4.12.6 R2 first D gained its conjugate *, and the 6j is
+% {J1 J2 J3 / J1' J2' J3'}^2 (all-primed bottom row, squared); 4.12.7 R1 2nd D
+% subscript N2 N3' -> N2 N2'; 4.12.9 R2 2nd D J6 -> J4 and R4 2nd D N2 M2 ->
+% N3 M3. 4.12.8 (the 9j) matched as-is. The D-subscripts, integration blocks,
+% and 6j/9j arguments now all agree with the printed equations.
+% (Numerically these quadruple-R identities remain impractical to evaluate
+% here; the verification is against the scan, not sympy.)
+% RESPONSE: Due to summations, almost all of these integrals contain a trace of one D function--so can be simplified conside
 \begin{gather}
 \sum_{\text {All } M, N}
 \int d R_{1} D_{M_{1} N_{1}}^{J_{1}}\left(R_{1}\right) D_{M_{2} N_{2}}^{J_{2}}\left(R_{1}\right) D_{M_{3} M_{3}}^{J_{3}}\left(R_{1}\right) 
 \int d R_{2} D_{N_{1} M_{1}}^{J_{1}}\left(R_{2}\right) D_{M_{2} N_{2}}^{J_{2} *}\left(R_{2}\right) D_{M_{3}^{\prime} M_{3}^{\prime}}^{J_{3}^{\prime}}\left(R_{2}\right)  \notag\\
 =(-1)^{2 J_{3}^{\prime}}\left(8 \pi^{2}\right)^{2}
-\sixj{J_1}{J_2}{J_3}{J_1}{J_2}{J_3^{\prime}}^2, \label{eq:4:12:5}
+\sixj{J_1}{J_2}{J_3}{J_1}{J_2}{J_3^{\prime}}, \label{eq:4:12:5}
 \end{gather}
 
 \begin{gather}
  \sum_{\text {All } M, N} 
- \int d R_{1} D_{M_{1}^{\prime} N_{1}^{\prime}}^{J_{1}^{\prime}}\left(R_{1}\right) D_{M_{2}^{\prime} N_{2}^{\prime}}^{J_{2}^{\prime}}\left(R_{1}\right) D_{M_{3} M_{3}}^{J_{3}}\left(R_{1}\right) 
- \int d R_{2} D_{M_{2}^{\prime} N_{2}^{\prime}}^{J_{2}^{\prime}}\left(R_{2}\right) D_{M_{3}^{\prime} N_{3}^{\prime}}^{J_{3}^{\prime}}\left(R_{2}\right) D_{M_{1} M_{1}}^{J_{1}}\left(R_{2}\right)  
+ \int d R_{1} D_{M_{1}^{\prime} N_{1}^{\prime}}^{J_{1}^{\prime}*}\left(R_{1}\right) D_{M_{2}^{\prime} N_{2}^{\prime}}^{J_{2}^{\prime}}\left(R_{1}\right) D_{M_{3} M_{3}}^{J_{3}}\left(R_{1}\right) 
+ \int d R_{2} D_{M_{2}^{\prime} N_{2}^{\prime}}^{J_{2}^{\prime} *}\left(R_{2}\right) D_{M_{3}^{\prime} N_{3}^{\prime}}^{J_{3}^{\prime}}\left(R_{2}\right) D_{M_{1} M_{1}}^{J_{1}}\left(R_{2}\right)
  \notag\\
 \times 
 \int d R_{3} D_{M_{3}^{\prime} N_{3}^{\prime}}^{J_{3}^{\prime *}}\left(R_{3}\right) D_{M_{1}^{\prime} N_{1}^{\prime}}^{J_{1}^{\prime}}\left(R_{3}\right) D_{M_{2} M_{2}}^{J_{2}}\left(R_{3}\right)
 =\left(8 \pi^{2}\right)^{3}
-\sixj{J_1}{J_2}{J_3}{J_1}{J_2}{J_3^{\prime}},  \label{eq:4:12:6}
+\sixj{J_1}{J_2}{J_3}{J_1^{\prime}}{J_2^{\prime}}{J_3^{\prime}}^2,  \label{eq:4:12:6}
 \end{gather}
 
 \begin{gather}
  \sum_{\text {All } M, N} 
- \int d R_{1} D_{M M}^{J}\left(R_{1}\right) D_{N_{2} N_{3}^{\prime}}^{J_{2}}\left(R_{1}\right) D_{N_{3} N_{3}^{\prime}}^{J_{3}}\left(R_{1}\right) 
+ \int d R_{1} D_{M M}^{J}\left(R_{1}\right) D_{N_{2} N_{2}^{\prime}}^{J_{2}}\left(R_{1}\right) D_{N_{3} N_{3}^{\prime}}^{J_{3}}\left(R_{1}\right)
  \int d R_{2} D_{M^{\prime} M^{\prime}}^{J^{\prime}}\left(R_{2}\right) D_{N_{1} M_{1}}^{J_{1}}\left(R_{2}\right) D_{N_{2}^{\prime} M_{2}^{\prime}}^{J_{2}}\left(R_{2}\right)  
  \notag\\
  \times 
@@ -1070,8 +1076,8 @@ Making use of this notation, one gets
 \end{gather}
 
 \begin{gather}
- \sum_{\text {All } M, N} \int d R_{1} D_{M_{1} N_{1}}^{J_{1}}\left(R_{1}\right) D_{M_{2} N_{2}}^{J_{2}}\left(R_{1}\right) D_{M_{12} M_{12}}^{J_{12}}\left(R_{1}\right) \int d R_{2} D_{M_{3} N_{3}}^{J_{3}}\left(R_{2}\right) D_{M_{4} N_{4}}^{J_{6}}\left(R_{2}\right) D_{M_{34} M_{34}}^{J_{34}}\left(R_{2}\right)  \notag\\
- \times \int d R_{3} D_{M_{13} N_{13}}^{J_{13}}\left(R_{3}\right) D_{M_{24} N_{24}}^{J_{24}}\left(R_{3}\right) D_{M M}^{J}\left(R_{3}\right) \int d R_{4} D_{N_{1} M_{1}}^{J_{1}}\left(R_{4}\right) D_{N_{2} M_{2}}^{J_{3}}\left(R_{4}\right) D_{N_{13} M_{13}}^{J_{13}}\left(R_{4}\right)  \notag\\
+ \sum_{\text {All } M, N} \int d R_{1} D_{M_{1} N_{1}}^{J_{1}}\left(R_{1}\right) D_{M_{2} N_{2}}^{J_{2}}\left(R_{1}\right) D_{M_{12} M_{12}}^{J_{12}}\left(R_{1}\right) \int d R_{2} D_{M_{3} N_{3}}^{J_{3}}\left(R_{2}\right) D_{M_{4} N_{4}}^{J_{4}}\left(R_{2}\right) D_{M_{34} M_{34}}^{J_{34}}\left(R_{2}\right)  \notag\\
+ \times \int d R_{3} D_{M_{13} N_{13}}^{J_{13}}\left(R_{3}\right) D_{M_{24} N_{24}}^{J_{24}}\left(R_{3}\right) D_{M M}^{J}\left(R_{3}\right) \int d R_{4} D_{N_{1} M_{1}}^{J_{1}}\left(R_{4}\right) D_{N_{3} M_{3}}^{J_{3}}\left(R_{4}\right) D_{N_{13} M_{13}}^{J_{13}}\left(R_{4}\right)  \notag\\
  \times \int d R_{5} D_{N_{2} M_{2}}^{J_{2}}\left(R_{5}\right) D_{N_{4} M_{4}}^{J_{4}}\left(R_{5}\right) D_{N_{24} M_{24}}^{J_{24}}\left(R_{5}\right)=\left(8 \pi^{2}\right)^{5}
  \ninej{J_{1}}{J_{2}}{J_{12}}{J_{3}}{J_{4}}{J_{34}}{J_{13}}{J_{24}}{J}^2
  . \label{eq:4:12:9}
