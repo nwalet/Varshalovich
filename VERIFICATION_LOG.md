@@ -30,7 +30,7 @@ identity, and genuine source misprints are flagged.
 |----|-------|-----------|------------------|---------|
 | 0–2 | prelim / rotations / D-functions | ➖ n/a | not amenable to symbolic checking (definitional) | — |
 | 3 | irreducible tensors | ✅ partial | 3.2 tensor-product coefficients | `check_chap3.py` |
-| 4 | Wigner D-functions | 🔄 in progress | **4.3–4.9 done**; 4.10–4.15 remain | `check_4_3.py` … `check_4_9.py` |
+| 4 | Wigner D-functions | 🔄 in progress | **4.3–4.12 done** (4.12.5–8 partial); 4.13–4.15 remain | `check_4_3.py` … `check_4_11.py` |
 | 5 | — | ❌ **gap** | OCR + headings/labels only | — |
 | 6 | — | ❌ **gap** | OCR + headings/labels only | — |
 | 7 | — | ❌ **gap** | OCR + headings/labels only | — |
@@ -74,6 +74,14 @@ Previously: Chapter 13, §13.2.9 (`be21346`, ~2026-08-13). The pass had run
   added missing labels 4.8.16/18/19/20.
 - Sec 4.9 (differential relations) — `check_4_9.py`: all of 4.9.1–4.9.9 verified;
   1 LaTeX-bracket fix in 4.9.1 and a missing label on 4.9.2.
+- Secs 4.10–4.11 (orthogonality/integrals) — `check_4_11.py`: the integral
+  identities 4.11.1–4.11.8 verified by β-quadrature (the α,γ integrals are exact
+  Kronecker deltas); OCR fixes to 4.11.4 (`D^{J3}_{M2M3'}`→`M3M3'`, CG bottom
+  `-M1'`→`-M3'`) and 4.11.5 (`M5'`→`M3'`). 4.10 is prose/definitional.
+- Sec 4.12 (invariant summation) — 4.12.2/3/4 verified numerically (character
+  integrals → δ and {J1J2J3}); **4.12.5–4.12.8** (multi-R integrals → 6j²,
+  three-6j, 9j) only OCR-cleaned for garbled subscripts + the sum label, NOT
+  numerically verified — flagged in-source for a manual pass against the scan.
 
 ## Gaps / next up
 

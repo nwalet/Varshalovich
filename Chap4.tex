@@ -985,11 +985,11 @@ for both cases of integer and half-integer $J$. A difference between the expansi
 \quad\left(J_{1}+J_{2} \text { is integer }\right) , \label{eq:4:11:3}
 \end{gather}
 \begin{gather}
-\int_{0}^{2 \pi} d \alpha \int_{0}^{\pi} d \beta \sin \beta \int_{0}^{2 \pi} d \gamma D_{M_{2} M_{3}^{\prime}}^{J_{3}}(\alpha, \beta, \gamma) D_{M_{2} M_{2}^{\prime}}^{J_{2}}(\alpha, \beta, \gamma) D_{M_{1} M_{1}^{\prime}}^{J_{1}}(\alpha, \beta, \gamma)  \notag\\
-=(-1)^{M_{3}-M_{3}^{\prime}} \frac{8 \pi^{2}}{2 J_{3}+1} \clebsch{J_{1}}{M_{1}}{J_{2}}{M_{2}}{J_{3}}{-M_{3}} \clebsch{J_{1}}{M_{1}^{\prime}}{J_{2}}{M_{2}^{\prime}}{J_{3}}{-M_{1}^{\prime}}\left(J_{1}+J_{2}+J_{3} \text { is integer }\right), \label{eq:4:11:4}
+\int_{0}^{2 \pi} d \alpha \int_{0}^{\pi} d \beta \sin \beta \int_{0}^{2 \pi} d \gamma D_{M_{3} M_{3}^{\prime}}^{J_{3}}(\alpha, \beta, \gamma) D_{M_{2} M_{2}^{\prime}}^{J_{2}}(\alpha, \beta, \gamma) D_{M_{1} M_{1}^{\prime}}^{J_{1}}(\alpha, \beta, \gamma)  \notag\\
+=(-1)^{M_{3}-M_{3}^{\prime}} \frac{8 \pi^{2}}{2 J_{3}+1} \clebsch{J_{1}}{M_{1}}{J_{2}}{M_{2}}{J_{3}}{-M_{3}} \clebsch{J_{1}}{M_{1}^{\prime}}{J_{2}}{M_{2}^{\prime}}{J_{3}}{-M_{3}^{\prime}}\left(J_{1}+J_{2}+J_{3} \text { is integer }\right), \label{eq:4:11:4}
 \end{gather}
 \begin{gather}
-\int_{0}^{2 \pi} d \alpha \int_{0}^{\pi} d \beta \sin \beta \int_{0}^{2 \pi} d \gamma D_{M_{3} M_{5}^{\prime}}^{J_{3}^{*}}(\alpha, \beta, \gamma) D_{M_{2} M_{2}^{\prime}}^{J_{2}}(\alpha, \beta, \gamma) D_{M_{1} M_{1}^{\prime}}^{J_{1}}(\alpha, \beta, \gamma)  \notag\\
+\int_{0}^{2 \pi} d \alpha \int_{0}^{\pi} d \beta \sin \beta \int_{0}^{2 \pi} d \gamma D_{M_{3} M_{3}^{\prime}}^{J_{3}^{*}}(\alpha, \beta, \gamma) D_{M_{2} M_{2}^{\prime}}^{J_{2}}(\alpha, \beta, \gamma) D_{M_{1} M_{1}^{\prime}}^{J_{1}}(\alpha, \beta, \gamma)  \notag\\
 =\frac{8 \pi^{2}}{2 J_{3}+1} \clebsch{J_{1}}{M_{1}}{J_{2}}{M_{2}}{J_{3}}{M_{3}} \clebsch{J_{1}}{M_{1}^{\prime}}{J_{2}}{M_{2}^{\prime}}{J_{3}}{M_{3}^{\prime}}, \quad\left(J_{1}+J_{2}+J_{3} \text { is integer }\right) \label{eq:4:11:5}
 \end{gather}
 Equations \eqref{eq:4:11:1}-\eqref{eq:4:11:5} are valid, if the conditions in parentheses are satisfied. These conditions may be omitted, if the integration domain is $V_{1}$ or $V_{2}$ instead of $V$; in the latter case the factor $8 \pi^{2}$ on the right-hand side of Eqs.~\eqref{eq:4:11:1}-\eqref{eq:4:11:5} must be replaced by $16 \pi^{2}$ (see Sec.~\ref{sec:4.10}).
@@ -1023,9 +1023,15 @@ Making use of this notation, one gets
 \sum_{M_{1} M_{2} M_{3}} \int d R D_{M_{3} M_{3}}^{J_{3}}(R) D_{M_{2} M_{2}}^{J_{2}}(R) D_{M_{1} M_{1}}^{J_{1}}(R)=8 \pi^{2}\left\{J_{1} J_{2} J_{3}\right\} , \label{eq:4:12:4}
 \end{gather}
 
+% NOTE (2026-08): Eqs 4.12.5-4.12.8 below (multi-R invariant integrals ->
+% 6j^2 / three-6j product / 9j, orig pp.97-98) were only OCR-cleaned for the
+% clearly-garbled D-subscripts and the summation label. The 6j/9j ARGUMENTS
+% and the squared exponents were NOT numerically verified (the quadruple-R
+% identities are impractical to check here) -- give them a careful manual
+% pass against the scan.
 \begin{gather}
-\sum_{A l M, N} 
-\int d R_{1} D_{M_{1} N_{1}}^{J_{1}}\left(R_{1}\right) D_{M_{3} N_{2}}^{J_{2}}\left(R_{1}\right) D_{M_{3} M_{3}}^{J_{3}}\left(R_{1}\right) 
+\sum_{\text {All } M, N}
+\int d R_{1} D_{M_{1} N_{1}}^{J_{1}}\left(R_{1}\right) D_{M_{2} N_{2}}^{J_{2}}\left(R_{1}\right) D_{M_{3} M_{3}}^{J_{3}}\left(R_{1}\right) 
 \int d R_{2} D_{N_{1} M_{1}}^{J_{1}}\left(R_{2}\right) D_{M_{2} N_{2}}^{J_{2} *}\left(R_{2}\right) D_{M_{3}^{\prime} M_{3}^{\prime}}^{J_{3}^{\prime}}\left(R_{2}\right)  \notag\\
 =(-1)^{2 J_{3}^{\prime}}\left(8 \pi^{2}\right)^{2}
 \sixj{J_1}{J_2}{J_3}{J_1}{J_2}{J_3^{\prime}}^2, \label{eq:4:12:5}
@@ -1037,7 +1043,7 @@ Making use of this notation, one gets
  \int d R_{2} D_{M_{2}^{\prime} N_{2}^{\prime}}^{J_{2}^{\prime}}\left(R_{2}\right) D_{M_{3}^{\prime} N_{3}^{\prime}}^{J_{3}^{\prime}}\left(R_{2}\right) D_{M_{1} M_{1}}^{J_{1}}\left(R_{2}\right)  
  \notag\\
 \times 
-\int d R_{3} D_{M_{3}^{\prime} N_{3}^{\prime}}^{J_{3}^{\prime *}}\left(R_{3}\right) D_{M_{1}^{\prime} N_{1}^{\prime}}^{J_{1}^{\prime}}\left(R_{3}\right) D_{1}^{J_{2}} M_{2} M_{2}\left(R_{3}\right)
+\int d R_{3} D_{M_{3}^{\prime} N_{3}^{\prime}}^{J_{3}^{\prime *}}\left(R_{3}\right) D_{M_{1}^{\prime} N_{1}^{\prime}}^{J_{1}^{\prime}}\left(R_{3}\right) D_{M_{2} M_{2}}^{J_{2}}\left(R_{3}\right)
 =\left(8 \pi^{2}\right)^{3}
 \sixj{J_1}{J_2}{J_3}{J_1}{J_2}{J_3^{\prime}},  \label{eq:4:12:6}
 \end{gather}
