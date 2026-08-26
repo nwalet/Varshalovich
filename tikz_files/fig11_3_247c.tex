@@ -1,0 +1,30 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
+  \begin{scope}
+  \node[draw,minimum width=1.7cm,minimum height=0.7cm](M)at(0,0){\normalsize$\mathfrak{M}_{\gamma\gamma'}$};
+  \draw[bjmarrow]($(M.north)+(-0.55,1.2)$)--($(M.north)+(-0.55,0)$);
+  \node at($(M.north)+(-0.55,1.35)$){$JM$};
+  \draw[jmarrow]($(M.north)+(0,0)$)--($(M.north)+(0,1.2)$);
+  \node at($(M.north)+(0,1.35)$){$kq$};
+  \draw[jmarrow]($(M.north)+(0.55,0)$)--($(M.north)+(0.55,1.2)$);
+  \node at($(M.north)+(0.55,1.35)$){$J'M'$};
+  \end{scope}
+  \node at (1.5,0) {$=$};
+  \begin{scope}[xshift=30mm]
+      \node[draw,minimum width=1.7cm,minimum height=0.7cm](M)at(0,0){\normalsize$\mathfrak{M}_{\gamma\gamma'}$};
+  \coordinate(P)at($(M.north)+(0,0.7)$);
+  \node[dotnode,label={90:\plusmark}]at(P){};
+  \draw[jmlinem](M.north)++(-0.5,0)--(P)node[midway,left]{$J$};
+  \draw[jmlinem]($(M.north)$)--(P)node[pos=0.25,right]{$k$};
+  \draw[jmlinem](M.north)++(0.5,0)--(P)node[midway,right]{$J'$};
+  \coordinate(Q)at($(P)+(0,0.55)$);
+  \node[dotnode,label={-90:\minusmark}]at(Q){};
+  \draw[bjmarrow]($(Q)+(150:1.05)$)--(Q) node[at start,above]{$JM$};
+  \draw[jmarrow](Q)--($(Q)+(90:1.05)$) node[above]{$kq$};
+  \draw[jmarrow](Q)--($(Q)+(30:1.05)$) node[above]{$J'M'$};
+  \end{scope}
+\end{tikzpicture}
+\end{document}

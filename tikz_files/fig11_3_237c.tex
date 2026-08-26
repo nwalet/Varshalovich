@@ -1,0 +1,26 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
+  \coordinate(A)at(-0.4,0);\coordinate(B)at(0.4,0);
+  \draw[bjmarrow]($(A)-(0.9,0)$)--([xshift=-0.5mm]A) node[pos=0.2,above]{$jm$};
+  \draw[jmlinem]([xshift=0.5mm]A)--([xshift=-0.5mm]B);
+  \draw[jmarrow]([xshift=0.5mm]B)--($(B)+(0.9,0)$) node[pos=0.8,above]{$jm''$};
+  \coordinate(F)at(0,-0.7);
+  \draw[rline](A)--(F) node[pos=0.55,left]{$R_2$};
+  \draw[rline](B)--(F) node[pos=0.55,right]{$R_1$};
+  \node[label={90:\plusmark}] at (A) {};
+  \node[label={90:\plusmark}] at (B) {};
+  \draw[rline](F)--($(F)-(0,0.7)$) node[pos=0.9,right]{$R_2R_1$};
+  \node[dotnode] at (F) {};
+  \node at (1.8,0) {$=$};
+  \begin{scope}[xshift=30mm]
+    \coordinate(P)at(0,0);
+  \draw[bjmarrow]($(P)-(0.9,0)$)--(P) node[pos=0.2,above]{$jm$};
+  \draw[jmarrow](P)--($(P)+(0.9,0)$) node[pos=0.8,above]{$jm''$};
+    \node[label={90:\plusmark}] at (P) {};
+  \draw[rline](P)--($(P)-(0,0.9)$) node[pos=0.9,right]{$R_2R_1$};
+  \end{scope}
+\end{tikzpicture}
+\end{document}

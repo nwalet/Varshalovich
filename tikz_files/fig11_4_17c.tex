@@ -1,0 +1,21 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
+  \node[draw,minimum width=0.9cm,minimum height=0.9cm](B){\normalsize\normalsize$\mathfrak{M}$};
+  \draw[bjmarrow]($(B.west)+(-0.7,0)$)--(B.west)node[pos=0.2,above=1pt]{$j_1m_1$};
+  \draw[jmarrow](B.north)--($(B.north)+(0,0.7)$)node[above]{$j_2m_2$};
+  \draw[jmarrow](B.east)--($(B.east)+(0.7,0)$)node[pos=0.8,above=1pt]{$j_3m_3$};
+  \node at (1.7,0) {$=$};
+  \begin{scope}[xshift=27mm]
+  \node[dotnode,label={180:\minusmark}](O)at(0,0){};
+  \draw[jmarrow](O)--(90:0.8)node[above]{$j_2m_2$};
+  \draw[bjmarrow](230:0.8)--(O)node[at start,below]{$j_1m_1$};
+  \draw[jmarrow](O)--(310:0.8)node[below]{$j_3m_3$};
+  \end{scope}
+  \begin{scope}[xshift=45mm]
+  \tribox{\mathfrak{M}}{j_1}{j_2}{j_3}{jmlinem}{jmlinem}{jmlinem}
+  \end{scope}
+\end{tikzpicture}
+\end{document}

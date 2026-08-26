@@ -1,0 +1,59 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=0.2pt,font=\scriptsize]
+  \begin{scope} % left figure
+  \coordinate(T)at(90:0.5);\coordinate(BL)at(210:0.5);\coordinate(BR)at(330:0.5);
+  \draw[jmlinem](T)--(BL) node[midway,above left=1pt]{$J_{31}$};
+  \draw[jmlinem](BR)--(T) node[midway,above right]{$J_{23}$};
+  \draw[jmlinem](BL)--(BR) node[midway,below=2pt]{$J_{12}$};
+  \node[inner sep=5pt,label={-90:\minusmark}]at(T){};
+  \node[label={30:\minusmark},inner sep=3pt]at(BL){};
+  \node[label={150:\minusmark},inner sep=3pt]at(BR){};
+  \coordinate(v3)at($(T)+(90:0.6)$);\coordinate(e3)at($(T)+(90:1.25)$);
+  \draw[jmlinem](T)--([shift={(90:-0.05)}]v3);
+  \draw[jmarrow]([shift={(90:0.05)}]v3)--(e3) node[pos=1,above=1pt]{$j_3m'_3$};
+  \node[label={180:\plusmark}]at(v3){};
+  \draw[rline](v3)--($(v3)+(0:0.8)$) node[right=1pt]{$R_3$};
+  \coordinate(v1)at($(BL)+(210:0.6)$);\coordinate(e1)at($(BL)+(210:1.25)$);
+  \draw[jmlinem](BL)--([shift={(210:-0.05)}]v1);
+  \draw[jmarrow]([shift={(210:0.05)}]v1)--(e1) node[pos=1,below]{$j_1m'_1$};
+  \node[label={-60:\plusmark}]at(v1){};
+  \draw[rline](v1)--($(v1)+(120:0.8)$) node[above=1pt]{$R_1$};
+  \coordinate(v2)at($(BR)+(330:0.6)$);\coordinate(e2)at($(BR)+(330:1.25)$);
+  \draw[jmlinem](BR)--([shift={(330:-0.05)}]v2);
+  \draw[jmarrow]([shift={(330:0.05)}]v2)--(e2) node[pos=1,below]{$j_2m'_2$};
+  \node[label={60:\plusmark}]at(v2){};
+  \draw[rline](v2)--($(v2)+(-120:0.8)$) node[left=1pt]{$R_2$};
+  \end{scope}
+  \node at (2.1,0) {$=$};
+  \begin{scope}[xshift=47mm]
+    \coordinate(T)at(90:1.3);\coordinate(BL)at(210:1.3);\coordinate(BR)at(330:1.3);
+  \draw[draw=none](BL)--(T) coordinate[pos=0.4](b31) coordinate[pos=0.6](a31);
+  \draw[draw=none](BR)--(T) coordinate[pos=0.4](a23) coordinate[pos=0.6](b23);
+  \draw[draw=none](BL)--(BR) coordinate[pos=0.4](a12) coordinate[pos=0.6](b12);
+  \draw[jmlinem] (BL) --([shift={(0:-0.05)}]a12) node[midway,below=2pt] {$J_{12}$};
+  \draw[jmlinem] ([shift={(0:0.05)}]a12) --([shift={(0:-0.05)}]b12);
+  \draw[jmlinem] ([shift={(0:0.05)}]b12) --(BR) node[midway,below=2pt] {$J_{12}$};
+  \draw[jmlinem] (BR) --([shift={(120:-0.05)}]a23) node[midway,right=2pt] {$J_{23}$};
+  \draw[jmlinem] ([shift={(120:0.05)}]a23) --([shift={(120:-0.05)}]b23);
+  \draw[jmlinem] ([shift={(120:0.05)}]b23) --(T) node[midway,right=2pt] {$J_{23}$};
+  \draw[jmlinem] (T) --([shift={(240:-0.05)}]a31) node[midway,left=2pt] {$J_{31}$};
+  \draw[jmlinem] ([shift={(240:0.05)}]a31) --([shift={(240:-0.05)}]b31);
+  \draw[jmlinem] ([shift={(240:0.05)}]b31) --(BL) node[midway,left=2pt] {$J_{31}$};
+  \node[label={[label distance=4pt]-90:\minusmark}]at(T){};
+  \node[label={[label distance=4pt]30:\minusmark}]at(BL){};
+  \node[label={[label distance=4pt]150:\minusmark}]at(BR){};
+  \node[label={[label distance=0pt]270:\plusmark}]at(a12){};\draw[rline](a12)--($(a12)+(90:0.6)$) node[midway,left=2pt]{$R_1$};
+  \node[label={[label distance=0pt]90:\plusmark}]at(b12){};\draw[rline](b12)--($(b12)+(270:0.6)$) node[at end,right=2pt]{$R_2$};
+  \node[label={[label distance=0pt]30:\plusmark}]at(a23){};\draw[rline](a23)--($(a23)+(-150:0.6)$) node[midway,below=4pt]{$R_2$};
+  \node[label={[label distance=0pt]210:\plusmark}]at(b23){};\draw[rline](b23)--($(b23)+(30:0.6)$) node[right=2pt]{$R_3$};
+  \node[label={[label distance=0pt]150:\plusmark}]at(a31){};\draw[rline](a31)--($(a31)+(-30:0.6)$) node[pos=0.7,above=4pt]{$R_3$};
+  \node[label={[label distance=0pt]-30:\plusmark}]at(b31){};\draw[rline](b31)--($(b31)+(150:0.6)$) node[left=2pt]{$R_1$};
+  \draw[jmarrow](T)--($(T)+(90:0.7)$) node[above]{$j_3m'_3$};
+  \draw[jmarrow](BL)--($(BL)+(210:0.7)$) node[below left]{$j_1m'_1$};
+  \draw[jmarrow](BR)--($(BR)+(330:0.7)$) node[below right]{$j_2m'_2$};
+  \end{scope}
+\end{tikzpicture}
+\end{document}

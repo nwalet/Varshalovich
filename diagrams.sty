@@ -30,16 +30,16 @@
   jmarrow/.style={-{Stealth[length=2.2mm]}, thick},
   jmrndarrow/.style={{Circle[length=3pt]}-{Stealth[length=2.2mm]}, thick},
   %bra jm-line: double arrowhead in the middle of the line
-  jmbraarrow/.style={postaction={decorate,decoration={markings,mark=at position 5mm with {\arrow{Stealth[length=2.2mm] Stealth[length=2.2mm]}},mark=at position 1.0 with {\arrow{Bar[]}}}},thick},
-  bjmarrow/.style={postaction={decorate,decoration={markings,mark=at position 5mm with {\arrow{Stealth[length=2.2mm] Stealth[length=2.2mm]}}}},thick},
-  djmbraarrow/.style={postaction={decorate,decoration={markings,mark=at position 5mm with {\arrow{Stealth[length=2.2mm] Stealth[length=2.2mm]}},mark=at position 1.0 with {\arrow{Circle[length=3pt]}}}},thick},
+  jmbraarrow/.style={postaction={decorate,decoration={markings,mark=at position 4mm with {\arrow{Stealth[length=2.2mm,sep=-3pt] Stealth[length=2.2mm]}},mark=at position 1.0 with {\arrow{Bar[]}}}},thick},
+  bjmarrow/.style={postaction={decorate,decoration={markings,mark=at position 4mm with {\arrow{Stealth[length=2.2mm,sep=-3pt] Stealth[length=2.2mm]}}}},thick},
+  djmbraarrow/.style={postaction={decorate,decoration={markings,mark=at position 4mm with {\arrow{Stealth[length=2.2mm,sep=-3pt] Stealth[length=2.2mm]}},mark=at position 1.0 with {\arrow{Circle[length=3pt]}}}},thick},
   %Omega-line: dashed arrow
   omketarrow/.style={Bar[]-{Stealth[length=2.2mm]}, thick, dashed},
   omarrow/.style={-{Stealth[length=2.2mm]}, thick, dashed},
-  ombraarrow/.style={postaction={decorate,decoration={markings,mark=at position 5mm with {\arrow{Stealth[length=2.2mm] Stealth[length=2.2mm]}},mark=at position 1.0 with {\arrow{Bar[]}}}},thick,dashed},
-  bomarrown/.style={postaction={decorate,decoration={markings,mark=at position 5mm with {\arrow{Stealth[length=2.2mm] Stealth[length=2.2mm]}}}},thick,dashed},
+  ombraarrow/.style={postaction={decorate,decoration={markings,mark=at position 4mm with {\arrow{Stealth[length=2.2mm,sep=-3pt] Stealth[length=2.2mm]}},mark=at position 1.0 with {\arrow{Bar[]}}}},thick,dashed},
+  bomarrown/.style={postaction={decorate,decoration={markings,mark=at position 4mm with {\arrow{Stealth[length=2.2mm,sep=-3pt] Stealth[length=2.2mm]}}}},thick,dashed},
   domarrow/.style={{Circle[length=3pt]}-{Stealth[length=2.2mm]}, thick, dashed},
-  dbomarrow/.style={postaction={decorate,decoration={markings,mark=at position 5mm  with {\arrow{Stealth[length=2.2mm] Stealth[length=2.2mm]}},mark=at position 1.0 with {\arrow{Circle[length=3pt]}}}},thick,dashed},%rotations
+  dbomarrow/.style={postaction={decorate,decoration={markings,mark=at position 4mm  with {\arrow{Stealth[length=2.2mm,sep=-3pt] Stealth[length=2.2mm]}},mark=at position 1.0 with {\arrow{Circle[length=3pt]}}}},thick,dashed},%rotations
   rline/.style={double,double distance=1.5pt, thick, densely dashed},
   %lines: connected to nodes
   jmline/.style={-{Stealth[length=2.2mm]}, thick},
@@ -961,11 +961,11 @@ vmket/.style={postaction={decorate,decoration={markings,
 %lines l/m/r (left roof edge, middle, right roof edge), each drawn in its
 %own style (#5/#6/#7) -- pass jmlinemu for a summed (ultra-thick) leg.
 \newcommand{\tribox}[7]{%
-\node[draw,minimum width=1.0cm,minimum height=0.9cm](B){\normalsize$#1$};
+\node[draw,minimum width=1.2cm,minimum height=0.7cm](B){\normalsize$#1$};
 \coordinate(A)at($(B.north)+(0,0.75)$);
-\draw[#5](B.north west)--(A)node[midway,left]{$#2$};
-\draw[#6]($(B.north)$)--(A)node[pos=0.2,right]{$#3$};
-\draw[#7](B.north east)--(A)node[midway,right]{$#4$};
+\draw[#5]([xshift=-4mm]B.north)--(A)node[midway,left]{$#2$};
+\draw[#6](B.north)--(A)node[pos=0.2,right]{$#3$};
+\draw[#7]([xshift=5mm]B.north)--(A)node[midway,right]{$#4$};
 \node[dotnode,label={90:\plusmark}]at(A){};}
 
 %\wtri: a small open (white) downward-pointing triangle recoupling node,
@@ -980,7 +980,7 @@ vmket/.style={postaction={decorate,decoration={markings,
 %the label sits inside. Used for the free external ranks of a reduced
 %matrix element (they close into loops).
 \newcommand{\ploop}[3]{%
-  \draw[thick,decoration={markings,mark=at position 0.6 with {\arrow{Stealth[length=1.6mm]}}},postaction={decorate}](#1)circle(#2);
+  \draw[thick,decoration={markings,mark=at position 0.55 with {\arrow[rotate=-15]{Stealth[length=1.6mm]}}},postaction={decorate}](#1)circle(#2);
   \node at(#1){$#3$};
   \node[dotnode,label={90:\plusmark}]at($(#1)+(0,#2)$){};}
 

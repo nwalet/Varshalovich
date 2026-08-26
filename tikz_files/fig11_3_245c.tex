@@ -1,0 +1,68 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
+  \pgfmathsetmacro{\ltr}{0.5}
+  \pgfmathsetmacro{\la}{1.5}
+  \pgfmathsetmacro{\lR}{0.6}
+  \pgfmathsetmacro{\lf}{0.75}
+  \begin{scope}
+    \coordinate(iT)at(90:\ltr);\coordinate(iBL)at(210:\ltr);\coordinate(iBR)at(330:\ltr);
+    \draw[jmlinem](iT)--(iBL) node[midway,left]{$J_{31}$};
+    \draw[jmlinem](iBR)--(iT) node[midway,right]{$J_{23}$};
+    \draw[jmlinem](iBL)--(iBR) node[midway,below]{$J_{12}$};
+    \node[label={-90:\minusmark},inner sep=5pt]at(iT){};
+    \node[label={30:\minusmark},inner sep=2pt]at(iBL){};
+    \node[label={140:\minusmark},inner sep=2pt]at(iBR){};
+    \coordinate(OT)at(90:\la);\coordinate(OL)at(210:\la);\coordinate(OR)at(330:\la);
+    \coordinate(v3)at($(iT)!0.5!(OT)$);
+    \draw[jmlinem](iT)--(v3);\draw[jmlinem](v3)--(OT);
+    \node[label={0:\plusmark}]at(v3){};
+    \draw[rline](v3)--($(v3)+(180:\lR)$) node[left]{$R_3$};
+    \coordinate(v1)at($(iBL)!0.5!(OL)$);
+    \draw[jmlinem](iBL)--(v1);\draw[jmlinem](v1)--(OL);
+    \node[label={90:\plusmark}]at(v1){};
+    \draw[rline](v1)--($(v1)+(-60:\lR)$) node[below]{$R_1$};
+    \coordinate(v2)at($(iBR)!0.5!(OR)$);
+    \draw[jmlinem](iBR)--(v2);\draw[jmlinem](v2)--(OR);
+    \node[label={-120:\plusmark}]at(v2){};
+    \draw[rline](v2)--($(v2)+(60:\lR)$) node[above]{$R_2$};
+    \node[label={90:\minusmark},inner sep=2pt]at(OT){};
+    \node[label={210:\minusmark},inner sep=2pt]at(OL){};
+    \node[label={330:\minusmark},inner sep=2pt]at(OR){};
+    \draw[bjmarrow]($(OT)+(160:\lf)$)--(OT) node[pos=0,above left]{$J_{31}M_{31}$};
+    \draw[jmarrow](OT)--($(OT)+(20:\lf)$) node[above right]{$J_{23}M'_{23}$};
+    \draw[bjmarrow]($(OL)+(280:\lf)$)--(OL) node[pos=0,left]{$J_{12}M_{12}$};
+    \draw[jmarrow](OL)--($(OL)+(140:\lf)$) node[above]{$J_{31}M'_{31}$};
+    \draw[bjmarrow]($(OR)+(40:\lf)$)--(OR) node[pos=0,above=1pt]{$J_{23}M_{23}$};
+    \draw[jmarrow](OR)--($(OR)+(240:\lf)$) node[below]{$J_{12}M'_{12}$};
+  \end{scope}
+  \node at (2.3,0.5) {$=$};
+  \begin{scope}[xshift=42mm]
+      \pgfmathsetmacro{\lsd}{1.4}
+    \coordinate(T)at(90:\lsd);\coordinate(BL)at(210:\lsd);\coordinate(BR)at(330:\lsd);
+    \coordinate (s12) at ($(BL)!0.1!(BR)$);\coordinate (a12) at ($(BL)!0.4!(BR)$);
+    \coordinate (b12) at ($(BL)!0.6!(BR)$);\coordinate (e12) at ($(BL)!0.9!(BR)$);
+    \coordinate (s23) at ($(BR)!0.1!(T)$);\coordinate (a23) at ($(BR)!0.4!(T)$);
+    \coordinate (b23) at ($(BR)!0.6!(T)$);\coordinate (e23) at ($(BR)!0.9!(T)$);
+    \coordinate (s31) at ($(T)!0.1!(BL)$);\coordinate (a31) at ($(T)!0.4!(BL)$);
+    \coordinate (b31) at ($(T)!0.6!(BL)$);\coordinate (e31) at ($(T)!0.9!(BL)$);
+    \draw[bjmarrow] (s12) --(a12) node[at start,below=2pt] {$J_{12}M_{12}$};
+    \draw[jmlinem] (a12) --(b12);
+    \draw[jmarrow] (b12) --(e12) node[below=1pt] {$J_{12}M'_{12}$};
+    \draw[bjmarrow] (s23) --(a23) node[at start,right] {$J_{23}M_{23}$};
+    \draw[jmlinem] (a23) --(b23);
+    \draw[jmarrow] (b23) --(e23) node[above right] {$J_{23}M_{23}'$};
+    \draw[bjmarrow] (s31) --(a31) node[at start,above left] {$J_{31}M_{31}$};
+    \draw[jmlinem] (a31) --(b31);
+    \draw[jmarrow] (b31) --(e31) node[left] {$J_{31}M'_{31}$};
+    \node[label={[label distance=-2pt]90:\plusmark}]at(a12){};\draw[rline](a12)--($(a12)+(-90:\lR)$) node[near end,right=1pt]{$R_1$};
+    \node[label={[label distance=-2pt]270:\plusmark}]at(b12){};\draw[rline](b12)--($(b12)+(90:\lR)$) node[near end,right=1pt]{$R_2$};
+    \node[label={[label distance=-4pt]210:\plusmark}]at(a23){};\draw[rline](a23)--($(a23)+(30:\lR)$) node[right]{$R_2$};
+    \node[label={[label distance=-4pt]30:\plusmark}]at(b23){};\draw[rline](b23)--($(b23)+(-150:\lR)$) node[at end,above=4pt]{$R_3$};
+    \node[label={[label distance=-4pt]-30:\plusmark}]at(a31){};\draw[rline](a31)--($(a31)+(150:\lR)$) node[left]{$R_3$};
+    \node[label={[label distance=-4pt]150:\plusmark}]at(b31){};\draw[rline](b31)--($(b31)+(-30:\lR)$) node[midway,below=2pt]{$R_1$};
+  \end{scope}
+\end{tikzpicture}
+\end{document}

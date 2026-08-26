@@ -1,0 +1,21 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
+  \begin{scope}
+  \node[draw,minimum width=0.85cm,minimum height=0.85cm](B){\normalsize\normalsize$\mathfrak{M}$};
+  \draw[bjmarrow]($(B.west)+(-0.95,0)$)--(B.west)node[pos=0.2,above]{$jm$};
+  \draw[jmarrow](B.east)--($(B.east)+(0.95,0)$)node[pos=0.8,above]{$j'm'$};
+  \end{scope}
+  \node at (1.8,0) {$=$};
+  \begin{scope}[xshift=30mm]
+    \draw[bjmarrow](-0.95,0)--(-0.05,0)node[pos=0.2,above]{$jm$};
+    \node[deltanode]at(0,0){};
+    \draw[jmarrow](0.05,0)--(0.95,0)node[pos=0.8,above]{$j'm'$};
+  \end{scope}
+  \begin{scope}[xshift=50mm]
+  \loopbox{\mathfrak{M}}{j}
+  \end{scope}
+\end{tikzpicture}
+\end{document}

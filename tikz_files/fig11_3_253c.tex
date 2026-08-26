@@ -1,0 +1,44 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=-14pt,inner sep=1pt,font=\scriptsize]
+  \begin{scope}
+    \node[draw,minimum width=3.2cm,minimum height=0.85cm](B){\normalsize$\{\mathfrak{M}^{(1)}\!\otimes\!\mathfrak{N}^{(2)}\}_{\gamma\gamma'}$};
+    \foreach \i in {1,...,6}{\coordinate (n\i) at ([xshift=(\i-3.5)*5.5mm]B.north);}
+    \coordinate(TL)at([xshift=-11mm,yshift=10mm]B.north);
+    \coordinate(TM)at([xshift=0mm,yshift=10mm]B.north);
+    \coordinate(TR)at([xshift=11mm,yshift=10mm]B.north);
+    \node[dotnode,label={90:\plusmark}](ap)at([yshift=18mm]B.north){};
+    \draw[jmlinem](n1)--(TL)node[pos=0.4,left]{$j_1$};
+    \draw[jmlinem](n2)--(TL)node[pos=0.4,right]{$j_2$};
+    \draw[jmlinem](n3)--(TM)node[pos=0.4,left]{$k_1$};
+    \draw[jmlinem](n4)--(TM)node[pos=0.4,right]{$k_2$};
+    \draw[jmlinem](n5)--(TR)node[pos=0.4,left]{$j'_1$};
+    \draw[jmlinem](n6)--(TR)node[pos=0.4,right]{$j'_2$};
+    \draw[jmlinem](TL)--(ap)node[midway,above left]{$J$};
+    \draw[jmlinem](TM)--(ap)node[pos=0.4,right]{$k$};
+    \draw[jmlinem](TR)--(ap)node[midway,above right]{$J'$};
+    \wtri at(TL){};\node at([xshift=2mm]TL){\tiny\plusmark};
+    \wtri at(TM){};\node at([xshift=2mm]TM){\tiny\plusmark};
+    \wtri at(TR){};\node at([xshift=2mm]TR){\tiny\plusmark};
+  \end{scope}
+  \node at (2,0) {$\displaystyle=\sum_{\gamma^{\prime\prime}}$};
+  \begin{scope}[xshift=30mm]
+  \tribox{\mathfrak{M}_{\gamma\gamma''}}{J_1}{k_1}{j_1'}{jmlinem}{jmlinem}{jmlinem}
+  \end{scope}
+  \begin{scope}[xshift=42mm,yshift=18mm]
+    \node(hex){\ninejdgen{J,k,J',j_1,k_1,j'_1,j_2,k_2,j'_2,+-+-+-,ddddddddd}};
+    \foreach \x/\lab in {-0.49/J,0/k,0.49/J'}{
+      \coordinate(lc)at($(hex.north)+(\x,0.28)$);
+  %    \draw[thick,decoration={markings,mark=at position 0.6 with {\arrow{Stealth[length=1.6mm]}}},postaction={decorate}](lc)circle(0.16);
+      \draw[thick,decoration={markings,mark=at position 0.6 with {\arrow{Stealth[length=1.4mm]}}},postaction={decorate},thick](lc)circle(0.20);
+      \node at(lc){$\lab$};
+      \node[dotnode,label={90:\plusmark}]at($(lc)+(0,0.20)$){};
+    }
+  \end{scope}  
+  \begin{scope}[xshift=56mm]
+  \tribox{\mathfrak{N}_{\gamma''\gamma'}}{J_2}{k_2}{j_2'}{jmlinem}{jmlinem}{jmlinem}
+  \end{scope}
+\end{tikzpicture}
+\end{document}

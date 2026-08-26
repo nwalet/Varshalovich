@@ -1,0 +1,19 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
+  \node[draw,minimum width=0.85cm,minimum height=0.85cm](B){\normalsize\normalsize$\mathfrak{M}$};
+  \draw[bomarrown]($(B.west)+(-0.95,0)$)--(B.west)node[pos=0.2,above=2pt]{$\Omega_1$};
+  \draw[omarrow](B.east)--($(B.east)+(0.95,0)$)node[pos=0.8,above=2pt]{$\Omega_2$};
+  \node at (1.7,0) {$=$};
+  \begin{scope}[xshift=34mm]
+  \draw[bomarrown](-1.3,0)--(-0.4,0)node[pos=0.1,above]{$\Omega_1$};
+  \draw[jmlinem,ultra thick](-0.4,0)--(0.4,0)node[midway,above]{$l$};
+  \draw[omarrow](0.4,0)--(1.3,0)node[pos=0.9,above]{$\Omega_2$};
+  \end{scope}
+  \begin{scope}[xshift=56mm]
+  \loopbox[jmlinemu]{\mathfrak{M}}{l}
+  \end{scope}
+\end{tikzpicture}
+\end{document}

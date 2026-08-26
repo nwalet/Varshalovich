@@ -1,0 +1,48 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=0.2pt,font=\scriptsize]
+  \begin{scope}
+    \coordinate (O) at (0,0);
+    \node[dotnode,label={45:\plusmark}]at (O) {};
+    \coordinate(e3)at(90:1.7);\coordinate(t3)at(90:0.7);
+    \draw[bjmarrow](e3)--([shift={(90:0.05)}]t3) node[pos=0,above]{$j_3m_3$};
+    \draw[jmlinem]([shift={(90:-0.05)}]t3)--(O);
+    \node[label={0:\plusmark}]at(t3){};
+    \draw[rline](t3)--($(t3)+(180:0.8)$) node[left]{$R_3$};
+    \coordinate(e1)at(215:1.7);\coordinate(t1)at(215:0.7);
+    \draw[bjmarrow](e1)--([shift={(215:0.05)}]t1) node[pos=0,below=2pt]{$j_1m_1$};
+    \draw[jmlinem]([shift={(215:-0.05)}]t1)--(O);
+    \node[label={125:\plusmark}]at(t1){};
+    \draw[rline](t1)--($(t1)+(305:0.8)$) node[right=1pt]{$R_1$};
+    \coordinate(e2)at(325:1.7);\coordinate(t2)at(325:0.7);
+    \draw[bjmarrow](e2)--([shift={(325:0.05)}]t2) node[pos=0,below=2pt]{$j_2m_2$};
+    \draw[jmlinem]([shift={(325:-0.05)}]t2)--(O);
+    \node[label={235:\plusmark}]at(t2){};
+    \draw[rline](t2)--($(t2)+(55:0.8)$) node[right=1pt]{$R_2$};
+    \end{scope}
+  \node at (2,0) {$=$};
+  \begin{scope}[xshift=39mm]
+    \coordinate (O) at (0,0);
+    \node[dotnode,label={45:\plusmark}]at (O) {};
+    \coordinate(e3)at(90:1.7);\coordinate(t3)at(90:0.7);
+    \draw[bjmarrow](e3)--(O) node[pos=0,above]{$j_3m_3$};
+    %\draw[rline](t3)--($(t3)+(180:0.8)$) node[left]{$R_3$};
+    \coordinate(e1)at(215:1.7);\coordinate(r1)at(215:1);\coordinate(t1)at(215:0.5);
+    \draw[bjmarrow](e1)--([shift={(215:0.05)}]r1) node[pos=0,below=2pt]{$j_1m_1$};
+    \draw[jmlinem]([shift={(215:-0.05)}]r1)--([shift={(215:0.05)}]t1);\draw[jmlinem]([shift={(215:-0.05)}]t1)--(O);
+    \node[label={125:\plusmark}]at(r1){};
+    \node[label={305:\plusmark}]at(t1){};
+    \draw[rline](r1)--($(r1)+(305:0.6)$) node[right=1pt]{$R_1$};
+    \draw[rline](t1)--($(t1)+(125:0.6)$) node[above=1pt]{$R_3$};
+    \coordinate(e2)at(325:1.7);\coordinate(r2)at(325:1);\coordinate(t2)at(325:0.5);
+    \draw[bjmarrow](e2)--([shift={(325:0.05)}]r2) node[pos=0,below=2pt]{$j_2m_2$};
+    \draw[jmlinem]([shift={(325:-0.05)}]r2)--([shift={(325:0.05)}]t2);\draw[jmlinem]([shift={(325:-0.05)}]t2)--(O);
+    \node[label={235:\plusmark}]at(r2){};
+    \node[label={55:\plusmark}]at(t2){};
+    \draw[rline](r2)--($(r2)+(55:0.6)$) node[right=1pt]{$R_2$};
+    \draw[rline](t2)--($(t2)+(235:0.6)$) node[right=2pt]{$R_3$};
+  \end{scope}
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,55 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
+  \begin{scope}
+  \coordinate(L)at(-0.5,0);\coordinate(R)at(0.5,0);
+  \coordinate(T) at (90:0.5);\coordinate(B) at(-90:0.5);
+  \draw[jmlinem](L) arc(180:95:0.5cm);
+  \draw[jmlinem](85:0.5) arc(85:0:0.5cm) node[midway,above=4pt] {$j_1$};
+  \draw[jmlinem](L) arc(-180:-95:0.5cm);
+  \draw[jmlinem](-85:0.5) arc(-85:0:0.5cm) node[midway,below=2pt]{$j_2$};
+  \node[dotnode, label={135:\minusmark}] at (L){};
+  \node[dotnode, label={45:\plusmark}] at (R){};
+  \node[label={90:\plusmark}] at (T){};
+  \node[label={90:\plusmark}] at (B){};
+  \draw[jmarrow](L)--([xshift=-8mm]L)node[pos=0.8,above=2pt]{$j_3m_3$};
+  \draw[bjmarrow]([xshift=8mm]R)--(R)node[pos=0.2,above=2pt]{$j'_3m'_3$};
+  %\node at(0.7,0.5){$+$};\node at(0.7,0.9){$j_1$};
+  %\node at(0.7,-0.5){$+$};\node at(0.7,-0.9){$j_2$};
+  \coordinate(Rp)at(-0.75,-1);
+  \draw[rline](T)--(Rp);\draw[rline](B)--(Rp) node[below right=2pt] {$R$};
+  \draw[rline] (Rp)--(-1.2,-1.4);
+  \node[dotnode] at (Rp) {};
+  \end{scope}
+  \node at (1.7,0) {$=$};
+  \begin{scope}[xshift=32mm]
+  \draw[jmarrow](-0.05,0)--(-0.85,0)node[pos=0.8,above=2pt]{$j_3m_3$};
+  \draw[bjmarrow](0.85,0)--(0.05,0)node[pos=0.2,above=2pt]{$j'_3m'_3$};
+  \draw[rline](0,0)--(-0.6,-0.6) node[below right=2pt] {$R$};
+  \end{scope}
+  \begin{scope}[xshift=52mm]
+    \coordinate(L)at(-0.5,0);\coordinate(R)at(0.5,0);
+    \draw[jmlinem] (L) arc(180:0:0.5cm) node[midway,above=2pt] {$j_1$};
+    \draw[jmlinem] (L) -- (R) node[midway,above=2pt] {$j_2$};
+    \draw[jmlinem] (L) arc(-180:0:0.5cm) node[midway,above=2pt] {$j_3$};
+    \node[dotnode,label={180:\plusmark}] at (L) {};
+    \node[dotnode,label={0:\minusmark}] at (R) {};
+  \end{scope}
+  \begin{scope}[xshift=52mm,yshift=-12mm]
+    \coordinate(n1)at(45:0.5);
+    \coordinate(n2)at(-45:0.5);
+    \coordinate(n3)at(-135:0.5);
+    \coordinate(n4)at(-225:0.5);
+    \draw[jmlinem] (n1)--(n2) node[midway, right=2pt] {$j_2$};
+    \draw[jmlinem] (n2)--(n3);
+    \draw[jmlinem] (n3)--(n4) node[midway, left=2pt] {$j_4$};
+    \draw[jmlinem] (n4)--(n1);
+    \node[dotnode,label={45:\plusmark}] at (n1) {};
+    \node[dotnode,label={-45:\plusmark}] at (n2) {};
+    \node[dotnode,label={-135:\plusmark}] at (n3) {};
+    \node[dotnode,label={-225:\plusmark}] at (n4) {};
+  \end{scope}
+\end{tikzpicture}
+\end{document}

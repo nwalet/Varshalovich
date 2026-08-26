@@ -1,0 +1,22 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
+  \node[draw,minimum width=0.9cm,minimum height=0.9cm](B){\normalsize\normalsize$\mathfrak{M}$};
+  \draw[bomarrown]($(B.west)+(-0.95,0)$)--(B.west)node[pos=0.3,above]{$\Omega_1$};
+  \draw[jmarrow]([yshift=3mm]B.east)--([xshift=8mm,yshift=3mm]B.east) node[midway,above]{$j_2m_2$};
+  \draw[jmarrow]([yshift=-3mm]B.east)--([xshift=8mm,yshift=-3mm]B.east) node[midway,below]{$j_3m_3$};
+  \node at (1.5,0) {$=$};
+  \begin{scope}[xshift=35mm]
+  \draw[bomarrown](-1.6,0)--(-0.65,0)node[pos=0.3,above]{$\Omega_1$};
+  \node[dotnode,label={-90:\minusmark}](O)at(0,0){};
+  \draw[jmlinemu](-0.65,0)--(O)node[midway,above]{$j_1$};
+  \draw[jmarrow](O)--($(O)+(35:0.95)$)node[above]{$j_2m_2$};
+  \draw[jmarrow](O)--($(O)+(-35:0.95)$)node[below]{$j_3m_3$};
+  \end{scope}
+  \begin{scope}[xshift=53mm]
+  \tribox{\mathfrak{M}}{j_1}{j_2}{j_3}{jmlinem}{jmlinem}{jmlinem}
+  \end{scope}
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,31 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
+  \begin{scope}
+  \node[dotnode](C)at(0,0){};
+  \draw[rline](-0.6,0)--(C)node[midway,above=2pt]{$R$};
+  \node[label={45:\plusmark}](T)at(0.5,0.5){};
+  \node[label={-45:\plusmark}](B)at(0.5,-0.5){};
+  \draw[rline](C)--(T);\draw[rline](C)--(B);
+  \draw[bjmarrow](0.5,1.25)--(T)node[at start,left]{$j_1m_1$};
+  \draw[jmarrow](T)--(1.25,0.5)node[at end,right]{$j_1m'_1$};
+  \draw[bjmarrow](1.25,-0.5)--(B)node[at start,right]{$j_2m_2$};
+  \draw[jmarrow](B)--(0.5,-1.25)node[at end,left]{$j_2m'_2$};
+  \end{scope}
+  \node at(2,0){$=$};
+    \begin{scope}[xshift=31mm]
+      \coordinate (C) at (0,0);
+  \draw[rline](-0.6,0)--(C)node[midway,above=2pt]{$R$};
+  \node[dotnode,label={45:\minusmark}](T)at(0.5,0.5){};
+  \node[dotnode,label={-45:\minusmark}](B)at(0.5,-0.5){};
+  \draw[jmlinem, ultra thick]([shift={(45:0.5mm)}]C)--(T) node[midway,above=2pt] {$j_3$};
+  \draw[jmlinem,ultra thick](B)--([shift={(-45:0.5mm)}]C) node[midway,below=2pt] {$j_3$};
+  \draw[bjmarrow](0.5,1.25)--(T)node[at start,left]{$j_1m_1$};
+  \draw[bjmarrow](1.25,0.5)--(T)node[at start,right]{$j_2m_2$};
+  \draw[jmarrow](B)--(1.25,-0.5)node[at end,right]{$j_1m_1'$};
+  \draw[jmarrow](B)--(0.5,-1.25)node[at end,left]{$j_2m'_2$};
+  \end{scope}
+\end{tikzpicture}
+\end{document}

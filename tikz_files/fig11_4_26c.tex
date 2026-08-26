@@ -1,0 +1,36 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=2pt,font=\scriptsize]
+  \node[draw,minimum width=1.0cm,minimum height=1.15cm](B){\normalsize\normalsize$\mathfrak{M}$};
+  \coordinate(nw)at($(B.west)+(0,0.32)$);\coordinate(sw)at($(B.west)+(0,-0.32)$);
+  \coordinate(ne)at($(B.east)+(0,0.32)$);\coordinate(se)at($(B.east)+(0,-0.32)$);
+  \draw[bjmarrow]($(nw)+(-0.95,0)$)--(nw)node[pos=0.1,above]{$j_1m_1$};
+  \draw[bjmarrow]($(sw)+(-0.95,0)$)--(sw)node[pos=0.1,below]{$j_2m_2$};
+  \draw[jmarrow](ne)--($(ne)+(0.95,0)$)node[pos=0.9,above]{$j_3m_3$};
+  \draw[jmarrow](se)--($(se)+(0.95,0)$)node[pos=0.9,below]{$j_4m_4$};
+  \node at (-1.5,-2.2) {$=$};
+  \begin{scope}[yshift=-22mm,xshift=-5mm]
+  \node[dotnode,label={180:\plusmark}](P)at(0,0){};
+  \node[dotnode,label={0:\minusmark}](Q)at(1.5,0){};
+  \draw[jmlinemu](Q)--(P)node[midway,above]{$J$};
+  \draw[bjmarrow]($(P)+(130:0.95)$)--(P)node[at start,above]{$j_1m_1$};
+  \draw[bjmarrow]($(P)+(230:0.95)$)--(P)node[at start,below]{$j_2m_2$};
+  \draw[jmarrow](Q)--($(Q)+(50:0.95)$)node[above]{$j_3m_3$};
+  \draw[jmarrow](Q)--($(Q)+(-50:0.95)$)node[below]{$j_4m_4$};
+  \end{scope}
+  \begin{scope}[xshift=35mm,yshift=-22mm]
+  \node[draw,minimum width=1.0cm,minimum height=0.9cm](B){\normalsize\normalsize$\mathfrak{M}$};
+  \coordinate(L)at($(B.west)+(-0.6,0)$){};
+  \node[dotnode,label={180:\minusmark}]at (L){};
+  \coordinate(R)at($(B.east)+(0.6,0)$);
+  \node[dotnode,label={0:\plusmark}]at (R){};
+  \draw[jmlinem](L)--(B.north west)node[pos=0.4,above=2pt]{$j_1$};
+  \draw[jmlinem](L)--(B.south west)node[pos=0.4,below=2pt]{$j_2$};
+  \draw[jmlinem](B.north east)--(R)node[pos=0.6,above=2pt]{$j_3$};
+  \draw[jmlinem](B.south east)--(R)node[pos=0.6,below=2pt]{$j_4$};
+  \draw[jmlinemu](L)--([yshift=5mm]L) arc(180:90:2mm)node[midway,above]{$J$} -- ([xshift=-2mm,yshift=7mm]R) arc(90:0:2mm) -- (R);
+  \end{scope}
+\end{tikzpicture}
+\end{document}

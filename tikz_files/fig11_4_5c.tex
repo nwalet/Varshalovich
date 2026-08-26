@@ -1,0 +1,25 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=1pt,font=\scriptsize]
+  \begin{scope}
+  \node[draw,minimum width=0.8cm,minimum height=0.8cm](B){\normalsize\normalsize$\mathfrak{M}$};
+  \coordinate(tip)at($(B.east)+(0.45,0)$);
+  \draw(B.north east)--(tip)--(B.south east);
+  \node[dotnode,label={-60:\minusmark}]at(tip){};
+  \draw[jmarrow](tip)--($(tip)+(0.95,0)$)node[pos=0.7,above=2pt]{$lm$};
+  \end{scope}
+  \node at (2,0) {$=$};
+  \begin{scope}[xshift=27mm]
+  \node[draw,minimum width=0.8cm,minimum height=0.8cm](B){\normalsize\normalsize$\mathfrak{M}$};
+  \coordinate(tip)at($(B.east)+(0.45,0)$);
+  \draw(B.north east)--(tip)--(B.south east);
+  \node[dotnode,label={45:\plusmark}]at(tip){};
+  \end{scope}
+  \begin{scope}[xshift=40mm]
+  \node[dotnode]at(0,0){};
+  \draw[jmarrow](0,0)--(1.0,0)node[pos=0.5,above=2pt]{$l=0$};
+  \end{scope}
+\end{tikzpicture}
+\end{document}

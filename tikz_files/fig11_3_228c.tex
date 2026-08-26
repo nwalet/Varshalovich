@@ -1,0 +1,35 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
+  \begin{scope}
+  \coordinate (C) at (0,0);
+  \coordinate (pA) at (0.6,0.4);
+  \coordinate (pB) at (1.0,0);
+  \coordinate (pC) at (1.2,-0.3);
+  \node[dotnode,label={180:\minusmark}]at(C){};
+  \node[label={135:\plusmark}]at(pA){};
+  \node[label={90:\plusmark}]at(pB){};
+  \node[label={60:\plusmark}]at(pC){};
+  \draw[jmlinem](C)--(pA);\draw[jmlinem](C)--(pB);\draw[jmlinem](C)--(pC);
+  \draw[jmarrow](pA)--($2*(pA)$) node[right]{$j_1m'_1$};
+  \draw[jmarrow](pB)--($2*(pB)$) node[right]{$j_2m'_2$};
+  \draw[jmarrow](pC)--($2*(pC)$) node[right]{$j_3m'_3$};
+  \coordinate(Rp)at(1,-0.7);
+  \draw[rline](pA)--(Rp);\draw[rline](pB)--(Rp);\draw[rline](pC)--(Rp);
+  \node[dotnode] at (Rp) {} ;
+  \end{scope}
+  \node at (3,0) {$=$};
+    \begin{scope}[xshift=35mm]
+  \coordinate (C) at (0,0);
+  \node[dotnode,label={180:\minusmark}]at(C){};
+  \coordinate (pA) at (0.6,0.4);
+  \coordinate (pB) at (1.0,0);
+  \coordinate (pC) at (1.2,-0.3);
+  \draw[jmarrow](C)--($2*(pA)$) node[right]{$j_1m'_1$};
+  \draw[jmarrow](C)--($2*(pB)$) node[right]{$j_2m'_2$};
+  \draw[jmarrow](C)--($2*(pC)$) node[right]{$j_3m'_3$};
+  \end{scope}
+\end{tikzpicture}
+\end{document}

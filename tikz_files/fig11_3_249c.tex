@@ -1,0 +1,45 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=-14pt,inner sep=1pt,font=\scriptsize]
+  \begin{scope}
+  \node[draw,minimum width=1.6cm,minimum height=0.85cm](B){\normalsize$\{\mathfrak{M}\otimes\mathfrak{N}\}_{\gamma\gamma'}$};
+  \foreach \i in {1,...,4} {\coordinate (n\i) at ([xshift=(\i-2.5)*6mm]B.north);}
+  \node[label={-90:\plusmark}](c1)at([yshift=6mm]B.north){};
+  \node[dotnode,label={90:\plusmark}](c2)at([yshift=16mm]B.north){};
+  \draw[jmlinem](n1)--(c2)node[midway,left]{$J$};
+  \draw[jmlinem](n4)--(c2)node[midway,right]{$J'$};
+  \draw[jmlinem](n2)--(c1)node[midway,left]{$k_1$};
+  \draw[jmlinem](n3)--(c1)node[midway,right]{$k_2$};
+  \draw[jmlinem](c1)--(c2)node[pos=0.2,right]{$k$};
+  \wtri at(c1){};
+  \end{scope}
+  \node at (1.7,0) {$\displaystyle=\sum_{\gamma^{\prime\prime}}$};
+  \begin{scope}[xshift=30mm]
+  \tribox{\mathfrak{M}_{\gamma\gamma''}}{J}{k_1}{J''}{jmlinem}{jmlinem}{jmlinemu}
+  \end{scope}
+    \begin{scope}[xshift=44mm,yshift=17mm]
+    \coordinate(T)at(0,0.95);\coordinate(BL)at(-0.85,-0.35);\coordinate(BR)at(0.85,-0.35);
+  \coordinate(C)at(0,0.15);
+  \draw[jmlinem](BL)--(T)node[midway,left]{$J$};
+  \draw[jmlinem](T)--(BR)node[midway,right]{$J'$};
+  \draw[jmlinemu](BR)--(BL)node[midway,below]{$J''$};
+  \draw[jmlinem](C)--(T)node[pos=0.55,right]{$k$};
+  \draw[jmlinem](C)--(BL)node[pos=0.55,above]{$k_1$};
+  \draw[jmlinem](C)--(BR)node[pos=0.55,above]{$k_2$};
+  \node[dotnode,label={-90:\minusmark}]at(C){};
+  \node[label={-115:\minusmark}]at(BL){};
+  \node[label={-65:\minusmark}]at(BR){};
+  \node[label={0:\plusmark}]at(T){};
+  \coordinate(cc)at($(T)+(0,0.4)$);
+  %\draw[jmlinem](T)--($(cc)-(0,0.28)$);
+  \draw[decoration={markings,mark=at position -0.25 with {\arrow[rotate=-10]{Stealth[reversed,length=2.2mm]}}},postaction={decorate},thick](cc)circle(0.22);
+  \node[dotnode,label={90:\plusmark}]at($(cc)+(0,0.22)$){};
+  \node at(cc){$k$};
+  \end{scope}  
+  \begin{scope}[xshift=60mm]
+  \tribox{\mathfrak{N}_{\gamma''\gamma'}}{J''}{k_2}{J'}{jmlinemu}{jmlinem}{jmlinem}
+  \end{scope}
+\end{tikzpicture}
+\end{document}

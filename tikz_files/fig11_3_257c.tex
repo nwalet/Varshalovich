@@ -1,0 +1,43 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=-4pt,inner sep=2pt,font=\scriptsize]
+  \begin{scope}
+  \node[draw,minimum width=2.2cm,minimum height=0.85cm](B){\normalsize$(\mathfrak{M}^{(1)}\!\cdot\mathfrak{N}^{(2)})_{\gamma\gamma'}$};
+  \coordinate(tp)at($(B.north)+(0,0.5)$);
+  \node at([yshift=-3mm]tp){\tiny\plusmark};
+  \draw[jmlinem]($(B.north)+(-0.65,0)$)--(tp)node[midway,left=2pt]{$j'_1$};
+  \draw[jmlinem]($(B.north)+(0.65,0)$)--(tp)node[midway,right=2pt]{$j'_2$};
+  \draw[jmarrow](tp)--($(tp)+(0,0.85)$)node[above]{$J'M'$};
+  \wtri at(tp){};
+  \coordinate(bt)at($(B.south)-(0,0.5)$);
+  \draw[jmlinem]($(B.south)+(-0.65,0)$)--(bt)node[midway,left=1pt]{$j_1$};
+  \draw[jmlinem]($(B.south)+(0.65,0)$)--(bt)node[midway,right=1pt]{$j_2$};
+  \draw[bjmarrow]($(bt)-(0,0.85)$)--(bt)node[at start,right]{$JM$};
+  \utri at(bt){};\node at([yshift=2mm]bt){\tiny\minusmark};
+  \end{scope}
+  \node at (2.2,0) {$\displaystyle=(-1)^{-k}\sum_{\gamma^{\prime\prime}}$};
+  \begin{scope}[xshift=40mm]
+  \tribox{\mathfrak{M}_{\gamma\gamma''}}{J_1}{k}{j_1'}{jmlinem}{jmlinem}{jmlinem}
+  \end{scope}
+  \begin{scope}[xshift=52mm,yshift=13mm]
+  \coordinate(TL)at(-0.85,0.55);\coordinate(TR)at(0.85,0.55);\coordinate(BA)at(0,-0.65);
+  \coordinate(C)at(0,0.05);
+  \draw[jmlinem](TL)--(TR)node[midway,above]{$k$};
+  \draw[jmlinem](TL)--(BA)node[pos=0.5,left]{$j'_1$};
+  \draw[jmlinem](TR)--(BA)node[pos=0.5,right]{$j'_2$};
+  \draw[jmlinem](C)--(TL)node[pos=0.55,above]{$j_1$};
+  \draw[jmlinem](C)--(TR)node[pos=0.55,above]{$j_2$};
+  \draw[jmlinem](C)--(BA)node[pos=0.5,right]{$J$};
+  \node[dotnode,label={180:\minusmark}]at(TL){};
+  \node[dotnode,label={0:\plusmark}]at(TR){};
+  \node[dotnode,label={-90:\plusmark}]at(BA){};
+  \draw[jmarrow]($(BA)-(0,1.5)$)--($(BA)-(0,0.8)$)node[right]{$J'M'$};
+  \draw[bjmarrow]($(BA)-(0,2.2)$)--($(BA)-(0,1.5)$)node[at start,right]{$JM$};
+  \end{scope}  
+  \begin{scope}[xshift=66mm]
+  \tribox{\mathfrak{N}_{\gamma''\gamma'}}{J_2}{k}{j_2'}{jmlinem}{jmlinem}{jmlinem}
+  \end{scope}
+\end{tikzpicture}
+\end{document}

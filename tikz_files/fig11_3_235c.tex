@@ -1,0 +1,44 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\pgfmathsetmacro{\lo}{1}
+\pgfmathsetmacro{\lt}{0.7}
+\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
+  \begin{scope}
+  \coordinate(Cp)at(0,0);
+  \coordinate (TL) at (150:\lo); \coordinate(TR) at (30:\lo); \coordinate (Bo) at (-90:\lo);
+  \node[label={135:\plusmark}]at(TL){};
+  \node[label={45:\plusmark}]at(TR){};
+  \node[label={-90:\plusmark}]at(Bo){};
+  \draw[rline](Cp)--(TL);\draw[rline](Cp)--(TR);\draw[rline](Cp)--(Bo);
+  \coordinate (TLl) at ($(TL)+(210:\lt)$);\coordinate (TLr) at ($(TL)+(90:\lt)$);
+  \coordinate (TRl) at ($(TR)+(90:\lt)$);\coordinate (TRr) at ($(TR)+(-30:\lt)$);
+  \coordinate (Bol) at ($(Bo)+(-150:\lt)$);\coordinate (Bor) at ($(Bo)+(-30:\lt)$);
+  \draw[bjmarrow](TLl)--(TL)node[near start,below=2pt]{$j_1m_1$};
+  \draw[jmarrow](TL)--(TLr)node[at end,left]{$j_1m'_1$};
+  \draw[bjmarrow](TRl)--(TR)node[at start,left]{$j_3m_3$};
+  \draw[jmarrow](TR)--(TRr)node[near end,below=2pt]{$j_3m'_3$};
+  \draw[bjmarrow](Bol)--(Bo)node[at start,left]{$j_2m_2$};
+  \draw[jmarrow](Bo)--(Bor)node[at end,right]{$j_2m'_2$};
+  \node[dotnode] at (Cp) {};
+  \end{scope}
+  \node at (2,0) {$=$};
+   \begin{scope}[xshift=34mm]
+  \coordinate(Cp)at(0,0);
+  \coordinate (TL) at (150:\lt); \coordinate(TR) at (30:\lt); \coordinate (Bo) at (-90:\lt);
+  \draw[bjmarrow](TL)--(Cp)node[at start,above]{$j_1m_1$};
+ \draw[bjmarrow](TR)--(Cp)node[at start,above]{$j_3m_3$};
+  \draw[bjmarrow](Bo)--(Cp)node[at start,below]{$j_2m_2$};
+  \node[dotnode,label={90:\plusmark}] at (Cp) {};
+  \end{scope}
+   \begin{scope}[xshift=55mm]
+  \coordinate(Cp)at(0,0);
+  \coordinate (TL) at (150:\lt); \coordinate(TR) at (30:\lt); \coordinate (Bo) at (-90:\lt);
+  \draw[jmarrow](Cp)--(TL)node[at end,above ]{$j_1m'_1$};
+ \draw[jmarrow](Cp)--(TR)node[at end,above ]{$j_3m'_3$};
+  \draw[jmarrow](Cp)--(Bo)node[at end,below]{$j_2m'_2$};
+  \node[dotnode,label={90:\plusmark}] at (Cp) {};
+  \end{scope}
+\end{tikzpicture}
+\end{document}

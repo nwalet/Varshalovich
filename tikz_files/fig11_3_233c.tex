@@ -1,0 +1,31 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
+  \begin{scope}
+  \node[label={90:\plusmark}](P)at(0,0){};
+  \draw[jmarrow]([xshift=-0.5mm]P)--($(P)-(0.8,0)$) node[left]{$j_3m_3$};
+  \draw[rline](P)--($(P)-(0,0.7)$) node[pos=0.6,right]{$R$};
+  \node[dotnode,label={0:\plusmark}](Q)at(0.8,0){};
+  \draw[jmlinem](Q)--([xshift=0.5mm]P)node[pos=0.5,above]{$j_3m'_3$};
+  \draw[jmarrow](Q)--($(Q)+(60:0.8)$) node[right]{$j_2m'_2$};
+  \draw[jmarrow](Q)--($(Q)+(-60:0.8)$) node[right]{$j_1m'_1$};
+  \end{scope}
+  \node at (2,0) {$=$};
+  \begin{scope}[xshift=40mm]
+  \coordinate(P)at(0,0){};
+  \draw[jmarrow](P)--($(P)-(0.8,0)$) node[left]{$j_3m_3$};
+  \node[dotnode,label={0:\plusmark}]at(P){};
+  \draw[jmlinem](P)--($(P)+(60:0.5)$) ;
+  \draw[jmlinem](P)--($(P)+(-60:0.5)$) ;
+  \draw[jmarrow]($(P)+(60:0.65)$)--($(P)+(60:1.2)$) node[right]{$j_2m'_2$};
+  \draw[jmarrow]($(P)+(-60:0.65)$)--($(P)+(-60:1.2)$) node[right]{$j_1m'_1$};
+  \coordinate (Q) at ($(1.73*0.6,0)$);
+  \draw[rline] ($(P)+(60:0.6)$)--(Q);
+  \draw[rline] ($(P)+(-60:0.6)$)--(Q);
+  \draw[rline] (Q)--([xshift=6mm]Q) node[at end, right=1pt] {$R$};
+  \node[dotnode] at (Q) {} ;
+  \end{scope}
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,46 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,inner sep=1.2pt,font=\scriptsize]
+  \begin{scope}
+    \coordinate(M)at(0,0);
+    \coordinate (LN) at (-0.7,0);\coordinate(RN) at (0.7,0);
+    \node[dotnode,label={180:\plusmark}]at(LN){};
+    \node[dotnode,label={0:\minusmark}]at(RN){};
+    \draw[jmlinemu](LN)--([xshift=-0.5mm]M) node[midway,above=2pt] {$j_3$};
+    \draw[jmlinemu]([xshift=0.5mm]M)--(RN)  node[midway,above=2pt] {$j_3$};
+    \node[above] at (M){\plusmark};
+    \draw[rline](M)--($(M)-(0,0.85)$) node[below=2pt]{$R_3$};
+    \draw[jmarrow](LN)--($(LN)+(110:0.8)$) node[above=2pt]{$j_1\tilde m_1$};
+    \draw[jmarrow](LN)--($(LN)+(250:0.8)$) node[below=2pt]{$j_2\tilde m_2$};
+    \coordinate(u1)at($(RN)+(70:0.75)$);
+    \draw[bjmarrow]($(RN)+(70:1.6)$)--(u1) node[pos=0,right]{$j_1m_1$};
+    \draw[jmlinem](u1)--(RN) node[midway,below right=2pt]{$j_1$};
+    \node[label={-20:\plusmark}]at(u1){};
+    \draw[rline](u1)--($(u1)+(160:0.85)$) node[above=2pt]{$R_1$};
+    \coordinate(u2)at($(RN)+(-70:0.75)$);
+    \draw[bjmarrow]($(RN)+(-70:1.6)$)--(u2) node[pos=0,right]{$j_2m_2$};
+    \draw[jmlinem](u2)--(RN) node[midway,below left=2pt]{$j_2$};
+    \node[label={200:\plusmark}]at(u2){};
+    \draw[rline](u2)--($(u2)+(20:0.85)$) node[above=2pt]{$R_2$};
+  \end{scope}
+  \node at (2.6,0) {$=$};
+  \begin{scope}[xshift=36mm]
+    \coordinate(TL)at(0,0.75);\coordinate(TR)at(0.6,0.75);
+    \coordinate(BL)at(0,-0.75);\coordinate(BR)at(0.6,-0.75);
+    \draw[jmarrow](TL)--($(TL)-(0.65,0)$) node[above=2pt]{$j_1\tilde m_1$};
+    \draw[jmlinem](TL)--(TR);
+    \draw[bjmarrow]($(TR)+(0.65,0)$)--(TR) node[pos=0.2,above=2pt]{$j_1m_1$};
+    \draw[jmarrow](BL)--($(BL)-(0.65,0)$) node[below=2pt]{$j_2\tilde m_2$};
+    \draw[jmlinem](BL)--(BR);
+    \draw[bjmarrow]($(BR)+(0.65,0)$)--(BR) node[pos=0.2,below=2pt]{$j_2m_2$};
+    \draw[rline](TL)--($0.4*(TL)+0.6*(BL)$) node[pos=0.5,left]{$R_3$};
+    \draw[rline]($0.6*(TR)+0.4*(BR)$)--(BR) node[pos=0.5,right]{$R_2$};
+    \draw[rline](TR)--($(TR)+(0,0.5)$) node[above=2pt]{$R_1$};
+    \draw[rline](BL)--($(BL)-(0,0.5)$) node[below=2pt]{$R_3$};
+    \node[label={90:\plusmark}]at(TL){};\node[label={-90:\plusmark}]at(TR){};
+    \node[label={90:\plusmark}]at(BL){};\node[label={-90:\plusmark}]at(BR){};
+  \end{scope}
+\end{tikzpicture}
+\end{document}
