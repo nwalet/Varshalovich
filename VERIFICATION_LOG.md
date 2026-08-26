@@ -30,7 +30,7 @@ identity, and genuine source misprints are flagged.
 |----|-------|-----------|------------------|---------|
 | 0–2 | prelim / rotations / D-functions | ➖ n/a | not amenable to symbolic checking (definitional) | — |
 | 3 | irreducible tensors | ✅ partial | 3.2 tensor-product coefficients | `check_chap3.py` |
-| 4 | Wigner D-functions | 🔄 in progress | **4.3–4.12 done** (4.12.5–8 partial); 4.13–4.15 remain | `check_4_3.py` … `check_4_11.py` |
+| 4 | Wigner D-functions | 🔄 in progress | **4.3–4.14 done** (4.12.5–8 partial); 4.15 remain | `check_4_3.py` … `check_4_14.py` |
 | 5 | — | ❌ **gap** | OCR + headings/labels only | — |
 | 6 | — | ❌ **gap** | OCR + headings/labels only | — |
 | 7 | — | ❌ **gap** | OCR + headings/labels only | — |
@@ -46,7 +46,8 @@ identity, and genuine source misprints are flagged.
 Previously: Chapter 13, §13.2.9 (`be21346`, ~2026-08-13). The pass had run
 3 → 8 → 9 → 10 → 13.
 
-**Now in progress: Chapter 4** (2026-08-26).
+**Now in progress: Chapter 4** (2026-08-26). §4.3–4.14 done; next §4.15
+(generalized characters χ_λ^J).
 - Sec 4.3 (explicit d-forms) — `check_4_3.py`, all 18 forms 4.3.2–4.3.23
   verified; four source errors fixed (see flags).
 - Sec 4.4 (symmetries of d/D) — `check_4_4.py`: d-relations 4.4.1, the full
@@ -82,6 +83,21 @@ Previously: Chapter 13, §13.2.9 (`be21346`, ~2026-08-13). The pass had run
   integrals → δ and {J1J2J3}); **4.12.5–4.12.8** (multi-R integrals → 6j²,
   three-6j, 9j) only OCR-cleaned for garbled subscripts + the sum label, NOT
   numerically verified — flagged in-source for a manual pass against the scan.
+  (The 6j/9j forms ARE legible on the scan, printed p.98 — reconstruction is
+  now feasible; deferred.)
+- Sec 4.13 (generating functions for d^J) — not machine-verified (would need
+  the ξ,μ,ν helpers), but 4 clear OCR garbles fixed against the scan
+  (printed p.99): 4.13.6 `-t^{\sin^2}β/2`→`-t\sin^2 β/2` and exponent
+  `s+(μ±ν)/2`→`s+(μ+ν)/2`; 4.13.7 exponent `(μ+ν)/2`→`s+(μ+ν)/2`; 4.13.8
+  Pochhammer `(μ+ν+1-λ),(λ)_s`→`(μ+ν+1-λ)_s(λ)_s` and exponent
+  `+(μ+ν)/2`→`s+(μ+ν)/2`.
+- Sec 4.14 (characters χ^J(ω)) — `check_4_14.py`: ~45 identities verified
+  (explicit forms 4.14.3–14, properties/periodicity 4.14.16–23, diff. eq
+  4.14.26, diff. relation 4.14.30, algebraic 4.14.31–37, orthogonality/
+  integrals 4.14.38/40–44, finite sums 4.14.45–51, infinite/generating series
+  4.14.52/55–62, particular ω 4.14.63–66, special cases 4.14.67–72) — all
+  PASS. Two source errors fixed: 4.14.22 (OCR) and 4.14.62 (book misprint,
+  see flags). 4.14.9 is valid only on ω∈[0,π] (noted in the checker).
 
 ## Gaps / next up
 
@@ -113,6 +129,13 @@ Previously: Chapter 13, §13.2.9 (`be21346`, ~2026-08-13). The pass had run
   **eq 4.5.28 book misprint** x-axis `D(π/2,ω,−π/2)=(−i)^{M−M'}d`→
   `D(−π/2,ω,π/2)=(i)^{M−M'}d` (the printed RHS is the inverse rotation).
   Both misprints annotated in-source.
+- **eq 4.14.22** — OCR fix (2026-08-26): the transformation J̃=−J−1 was lost;
+  `.tex` read `χ^J(R)=−χ^J(R)` (i.e. χ=0). Restored the tilde:
+  `χ^{J̃}(R)=−χ^J(R)`, matching the scan (printed p.101). Verified: χ^{−J−1}=−χ^J.
+- **eq 4.14.62** — book misprint (2026-08-26; printed p.105). The printed
+  denominator `1+t²−4t cos(ω/2)cos(ω′/2)+2t²(cosω+cosω′)` is numerically wrong;
+  the correct form (matching the series to 1e-14) restores the (1+t²) factors:
+  `(1+t²)²−4t(1+t²)cos(ω/2)cos(ω′/2)+2t²(cosω+cosω′)`. Annotated in-source.
 - **eq 9.6.3** — annotated as a source misprint (`e73fc49`).
 - **eq 10.8.26** — annotated as a source omission (`9212d0b`).
 - **eq 10.9.8** — flagged, then corrected as a source-author fix and verified

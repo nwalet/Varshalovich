@@ -1102,16 +1102,16 @@ R=\sqrt{1-2 t \cos \beta+t^{2}}, \quad|t|<1 .  \label{eq:4:13:4}
 \frac{\xi_{M M^{\prime}}}{R}\left(\frac{2 \sin \frac{\beta}{2}}{1+R-t}\right)^{\mu}\left(\frac{2 \cos \frac{\beta}{2}}{1+R+t}\right)^{\nu}=\sum_{s=0}^{\infty} \sqrt{\frac{(s+\mu)!(s+\nu)!}{s!(s+\mu+\nu)!}} t^{s} d_{M M^{\prime}}^{s+\frac{\mu+\nu}{2}}(\beta) .  \label{eq:4:13:5}
 \end{gather}
 \begin{gather}
-\xi_{M M^{\prime}}\left(\sin \frac{\beta}{2}\right)^{\mu}\left(\cos \frac{\beta}{2}\right)^{\nu} \Fhg{0}{1}\left(; 1+\mu ;-t^{\sin ^{2}} \frac{\beta}{2}\right)\Fhg{0}{1}\left(; 1+\nu ; t \cos ^{2} \frac{\beta}{2}\right)  \notag\\
-=\sum_{s=0}^{\infty} \frac{\mu!\nu!}{\sqrt{s!(s+\mu)!(s+\nu)!(s+\mu+\nu)!}} t^{s} d_{M M^{\prime}}^{s+\frac{\mu \pm \nu}{2}}(\beta),  \label{eq:4:13:6}
+\xi_{M M^{\prime}}\left(\sin \frac{\beta}{2}\right)^{\mu}\left(\cos \frac{\beta}{2}\right)^{\nu} \Fhg{0}{1}\left(; 1+\mu ;-t \sin ^{2} \frac{\beta}{2}\right)\Fhg{0}{1}\left(; 1+\nu ; t \cos ^{2} \frac{\beta}{2}\right)  \notag\\
+=\sum_{s=0}^{\infty} \frac{\mu!\nu!}{\sqrt{s!(s+\mu)!(s+\nu)!(s+\mu+\nu)!}} t^{s} d_{M M^{\prime}}^{s+\frac{\mu+\nu}{2}}(\beta),  \label{eq:4:13:6}
 \end{gather}
 \begin{gather}
 \xi_{M M^{\prime}}(1-t)^{1-\mu-\nu}\left(\sin \frac{\beta}{2}\right)^{\mu}\left(\cos \frac{\beta}{2}\right)^{\nu}{ }\Fhg{2}{1}\left(\frac{\mu+\nu+1}{2}, \frac{\mu+\nu+2}{2} ; 1+\mu ;-\frac{4 t \sin^{2} \frac{\beta}{2}}{(1-t)^{2}}\right)  \notag\\
-=\sum_{s=0}^{\infty} \sqrt{\frac{(s+\nu)!(s+\mu+\nu)!}{s!(s+\mu)!}} \frac{\mu!}{(\mu+\nu)!} t^{s} d_{M M^{\prime}}^{\frac{\mu+\nu}{2}}(\beta),  \label{eq:4:13:7}
+=\sum_{s=0}^{\infty} \sqrt{\frac{(s+\nu)!(s+\mu+\nu)!}{s!(s+\mu)!}} \frac{\mu!}{(\mu+\nu)!} t^{s} d_{M M^{\prime}}^{s+\frac{\mu+\nu}{2}}(\beta),  \label{eq:4:13:7}
 \end{gather}
 \begin{gather}
 \xi_{M M^{\prime}}\left(\sin \frac{\beta}{2}\right)^{\mu}\left(\cos \frac{\beta}{2}\right)^{\nu}{ }\Fhg{2}{1}\left(\lambda, \mu+\nu+1-\lambda ; 1+\mu ; \frac{1-t-R}{2}\right)\Fhg{2}{1}\left(\lambda, \mu+\nu+1-\lambda ; 1+\nu ; \frac{1+t-R}{2}\right)  \notag\\
-=\sum_{s=0}^{\infty} \frac{(\mu+\nu+1-\lambda),(\lambda)_{s} \mu!\nu!}{\sqrt{s!(s+\mu+\nu)!(s+\mu)!(s+\nu)!}} t^{s} d_{M M^{\prime}}^{+\frac{\mu+\nu}{2}}(\beta) . \label{eq:4:13:8}
+=\sum_{s=0}^{\infty} \frac{(\mu+\nu+1-\lambda)_{s}(\lambda)_{s} \mu!\nu!}{\sqrt{s!(s+\mu+\nu)!(s+\mu)!(s+\nu)!}} t^{s} d_{M M^{\prime}}^{s+\frac{\mu+\nu}{2}}(\beta) . \label{eq:4:13:8}
 \end{gather}
 In Eq.~\eqref{eq:4:13:8} $\lambda$ is an arbitrary integer.
 \end{enumerate}
@@ -1191,9 +1191,9 @@ Products of the characters may be expanded in a Clebsch-Gordan series
 \chi^{J_{1}}(R) \chi^{J_{2}}(R)=\sum_{J}\left\{J_{1} J_{2} J\right\} \chi^{J}(R) \label{eq:4:14:21}
 \end{equation}
 where $\left\{J_{1} J_{2} J_{3}\right\}=1$, if the triangle inequality (Sec. \ref{sec:4.6.2}) is satisfied, and $\left\{J_{1} J_{2} J_{3}\right\}=0$ otherwise.\\
-The transformation $J=J=-J-1$ reverses the character sign
+The transformation $J=\tilde{J}=-J-1$ reverses the character sign
 \begin{equation}
-\chi^{J}(R)=-\chi^{J}(R) \label{eq:4:14:22}
+\chi^{\tilde{J}}(R)=-\chi^{J}(R) \label{eq:4:14:22}
 \end{equation}
 The function $\chi^{J}(\omega)$ is even and periodic
 \begin{align}
@@ -1302,7 +1302,11 @@ R^{2} \equiv 1-2 t \cos \frac{\omega}{2}+t^{2}, \quad \text { where }|t|<1:  \la
 \sum_{J=0, \frac{1}{2}, 1, \ldots}^{\infty} \frac{1}{2 J+1} t^{2 J} \chi^{J}(\omega)=\frac{1}{2 i t \sin \frac{\omega}{2}} \ln \left(\frac{1-t e^{-\frac{i \omega}{2}}}{1-t e^{\frac{i \omega}{2}}}\right),  \label{eq:4:14:59}\\
 \sum_{J=0, \frac{1}{2}, 1, \ldots}^{\infty} \sum_{\Gamma(\nu)}^{\Gamma(2 J+\nu)} \frac{t^{2 J} \chi^{J}(\omega)}{(2 J+1)!}=\left(1-t \cos \frac{\omega}{2}\right)^{-\nu}{ }\Fhg{2}{1}\left(\frac{\nu}{2}, \frac{\nu+1}{2} ; \frac{3}{2} ;-\left(\frac{t \sin \frac{\omega}{2}}{1-t \cos \frac{\omega}{2}}\right)^{2}\right),  \label{eq:4:14:60}\\
 \sum_{J=0, \frac{1}{2}, 1, \ldots}^{\infty} \frac{1}{(4 J+2)!}(4 t)^{2 J} \chi^{J}(\omega)=\frac{1}{2} \Fhg{0}{1}\left(; \frac{3}{2} ;-t \sin ^{2} \frac{\omega}{4}\right)\Fhg{0}{1}\left(; \frac{3}{2} ; t \cos { }^{2} \frac{\omega}{4}\right),  \label{eq:4:14:61}\\
-\sum_{J=0, \frac{1}{2}, 1, \ldots}^{\infty} t^{2 J} \chi^{J}(\omega) \chi^{J}\left(\omega^{\prime}\right)=\frac{1-t^{2}}{1+t^{2}-4 t \cos \frac{\omega}{2} \cos \frac{\omega^{\prime}}{2}+2 t^{2}\left(\cos \omega+\cos \omega^{\prime}\right)} . \label{eq:4:14:62}
+% NOTE: source misprint (printed p.105). The book denominator reads
+%   1+t^2-4t cos(w/2)cos(w'/2)+2t^2(cos w+cos w'),
+% which is numerically wrong. The correct denominator (verified vs the series
+% to 1e-14, check_4_14.py) restores the (1+t^2) factors: (1+t^2)^2 and 4t(1+t^2).
+\sum_{J=0, \frac{1}{2}, 1, \ldots}^{\infty} t^{2 J} \chi^{J}(\omega) \chi^{J}\left(\omega^{\prime}\right)=\frac{1-t^{2}}{\left(1+t^{2}\right)^{2}-4 t\left(1+t^{2}\right) \cos \frac{\omega}{2} \cos \frac{\omega^{\prime}}{2}+2 t^{2}\left(\cos \omega+\cos \omega^{\prime}\right)} . \label{eq:4:14:62}
 \end{gather}
 \subsection{$\chi^{J}(\omega)$ for Particular Values of $\omega$}\label{sec:4.14.10}
 \begin{align}
