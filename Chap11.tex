@@ -74,7 +74,7 @@ respectively.
 \subsection{Diagrams of the Basic Functions of the Theory}\label{sec:11.1.2}
 Quantum mechanical quantities, i.e., state vectors and operators, may depend on many spin and angular variables (such as \(j m\) or \(\Omega)\) and also on coordinate system rotation \(R\). Accordingly, these state vectors and matrix elements of the operators may be represented graphically as blocks (i.e., as subdiagrams) with external \(j m\)-, \(\Omega\) - and/or \(R\)-lines associated with the corresponding spin angular variables. A diagram corresponding to a composite expression will be a combination of such blocks connected by some of jm-, \(\Omega\) - and \(R\)-lines.
 
-Diagrams of some spin and angular functions are listed in Tables 11.1-11.3; graphical displays of their properties and relations is given in Tables 11.4-11.14.
+Diagrams of some spin and angular functions are listed in Tables \ref{tab:11.1}-\ref{tab:11.3}; graphical displays of their properties and relations is given in Tables \ref{tab:11.4}-\ref{tab:11.14}.
 
 A spherical harmonic \(Y_{l m}(\vartheta, \varphi) \equiv\braket{\Omega}{l m}\) is represented by a junction of a thin solid and dashed lines which correspond to \(\ket{l m}\) and \(\bra{\Omega}\).
 
@@ -235,7 +235,7 @@ Adjoint Matrix \[\braOket{\gamma \Omega}{\mathfrak{M}_{\lambda \mu}^{\dagger}}{\
 & 
 \includegraphics[valign=t]{fig11_1_45}\\
 Adjoint Matrix
- \[\braOket{\gamma j m}{\mathfrak{M}_{\lambda \mu}^{+}}{\gamma^{\prime} j^{\prime} m^{\prime}}=(-1)^{\lambda-\mu}\braOket{\gamma'j'm'}{\mathfrak{M}_{\lambda-\mu}}{\gamma jm}^*\] & 
+ \[\braOket{\gamma j m}{\mathfrak{M}_{\lambda \mu}^{\dagger}}{\gamma^{\prime} j^{\prime} m^{\prime}}=(-1)^{\lambda-\mu}\braOket{\gamma'j'm'}{\mathfrak{M}_{\lambda-\mu}}{\gamma jm}^*\] & 
 \includegraphics[valign=t]{fig11_1_46}\\ 
 Reduced Matrix Element
 \textcolor{red}{Here there are some subtleties--the book uses both sharp and round bras and kets. The mathematical relation holds for both--it is equivalent to the one from Edmunds. However, the graphical method works most simply with round brackets--the vertical lines for the sharp brackets are hard to see, and the diagram shown is the one for that case. This has been corrected from the book. }
@@ -258,7 +258,7 @@ Reduced Matrix Element
 & \includegraphics[valign=t]{fig11_1_50c}
  \\
 Inverse Rotation Matrix   
-\[ \begin{gathered} \braOket{\gamma j m}{D^{+}(R)}{\gamma^{\prime} j^{\prime} m^{\prime}}=\delta_{\gamma \gamma^{\prime}} \delta_{j j^{\prime}} D_{m^{\prime} m}^{j *}(R) \\ =\braOket{\gamma j m}{D^{-1}(R)}{\gamma^{\prime} j^{\prime} m^{\prime}}=\delta_{\gamma \gamma^{\prime}} \delta_{j j^{\prime}} D_{m m^{\prime}}^{j}\left(R^{-1}\right)\end{gathered} \] & 
+\[ \begin{gathered} \braOket{\gamma j m}{D^{\dagger}(R)}{\gamma^{\prime} j^{\prime} m^{\prime}}=\delta_{\gamma \gamma^{\prime}} \delta_{j j^{\prime}} D_{m^{\prime} m}^{j *}(R) \\ =\braOket{\gamma j m}{D^{-1}(R)}{\gamma^{\prime} j^{\prime} m^{\prime}}=\delta_{\gamma \gamma^{\prime}} \delta_{j j^{\prime}} D_{m m^{\prime}}^{j}\left(R^{-1}\right)\end{gathered} \] & 
 \includegraphics[valign=t]{fig11_1_52c}
  \\
 \hline
@@ -1471,7 +1471,7 @@ D^{J_{31}}_{M_{31}M'_{31}}(R_3R_1^{-1})
 \[
 \braOket{\gamma J M}{\mathfrak{M}_{kq}}{\gamma^{\prime} J^{\prime} M^{\prime}}=(-1)^{J-M}\threej{J}{k}{J^{\prime}}{-M}{q}{M^{\prime}}\rbraOketred{\gamma J}{\mathfrak{M}_{k}}{\gamma^{\prime} J^{\prime}} .
 \]
-where \(\rbraOketred{\gamma J}{\mathfrak{M}_{k}}{\gamma^{\prime} J^{\prime}}\) is the reduced matrix element
+where \(\rbraOketred{\gamma J}{\mathfrak{M}_{k}}{\gamma^{\prime} J^{\prime}}\) is the reduced matrix element with the renormalised states
 &\centerline{\includegraphics[valign=t]{fig11_3_247c}}\\
 \multicolumn{2}{c}{\parbox{0.93\textwidth}{\centering Reduced Matrix elements of irreducible tensor product of irreducible tensor operators.}}\\
 \[
@@ -1523,7 +1523,7 @@ depend on variables of the first and the second subsystems, respectively.}}\\
 \] &\centerline{\includegraphics[valign=t]{fig11_3_258c}}\\
 \[
 \begin{gathered}
-\rbraOketred{\gamma j_{1} j_{2} J}{\mathfrak{N}_{k}(2)}{\gamma^{\prime} j_{1}^{\prime} j_{2}^{\prime} J^tab{\prime}} \\
+\rbraOketred{\gamma j_{1} j_{2} J}{\mathfrak{N}_{k}(2)}{\gamma^{\prime} j_{1}^{\prime} j_{2}^{\prime} J^{\prime}} \\
 =(-1)^{j_{1}^{\prime}+j_{2}^{\prime}+J+k} \delta_{j_{1} j_{1}^{\prime}} \sqrt{(2 J+1)\left(2 J^{\prime}+1\right)} \\
 \times\sixj{J}{k}{J^{\prime}}{j_{2}^{\prime}}{j_{1}}{j_{2}}\rbraOketred{\gamma j_{2}}{\mathfrak{N}_{k}}{\gamma^{\prime} j_{2}^{\prime}} .
 \end{gathered}
@@ -1572,6 +1572,7 @@ Standard functions of angular momentum theory may be used as a basis for the exp
 
 This follows from the fact that any dependence on two directions is, actually, the dependence on the angle between these directions, i.e. it may be represented by the scalar product of two functions \(\ket{j m}\) and \(\bra{ j m}\).
 \item A diagram with three external \(j\)-lines which represent \(\ket{j_{1} m_{1}}, \ket{j_{2} m_{2}}\) and \(\ket{j_{3} m_{3}}\) is proportional to the \(3 j m\) symbol \(\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{m_{2}}{m_{3}}\)
+%review the equation below--is this consistent? Should I use \rbraOketred???
 \[
 \braOket{00}{\mathfrak{M}}{j_{1} m_{1} j_{2} m_{2} j_{3} m_{3}}=\braOketred{0}{\mathfrak{M}}{j_{1} j_{2} j_{3}}\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{m_{2}}{m_{3}},
 \]
@@ -1601,6 +1602,7 @@ where
 \captionsetup{justification=centering}
 \caption{Generalized Wigner-Eckart Theorem.}\label{tab:11.15}
 \small
+% in this table all reduced matrix elements are sudddenly \braOketRed---is this consistent?
 \setlength{\tabcolsep}{5pt}
 \renewcommand{\arraystretch}{1.3}
 \begin{tabular}{@{}m{0.42\textwidth}m{0.48\textwidth}@{}}
