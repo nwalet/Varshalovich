@@ -30,7 +30,7 @@ identity, and genuine source misprints are flagged.
 |----|-------|-----------|------------------|---------|
 | 0–2 | prelim / rotations / D-functions | ➖ n/a | not amenable to symbolic checking (definitional) | — |
 | 3 | irreducible tensors | ✅ partial | 3.2 tensor-product coefficients | `check_chap3.py` |
-| 4 | Wigner D-functions | 🔄 in progress | **4.3 done** (explicit d-forms 4.3.2–23); 4.4–4.15 remain | `check_4_3.py` |
+| 4 | Wigner D-functions | 🔄 in progress | **4.3, 4.4 done**; 4.5–4.15 remain | `check_4_3.py`, `check_4_4.py` |
 | 5 | — | ❌ **gap** | OCR + headings/labels only | — |
 | 6 | — | ❌ **gap** | OCR + headings/labels only | — |
 | 7 | — | ❌ **gap** | OCR + headings/labels only | — |
@@ -46,9 +46,13 @@ identity, and genuine source misprints are flagged.
 Previously: Chapter 13, §13.2.9 (`be21346`, ~2026-08-13). The pass had run
 3 → 8 → 9 → 10 → 13.
 
-**Now in progress: Chapter 4** (2026-08-26). Sec 4.3 (explicit d-forms) done
-via `check_4_3.py` — all 18 forms 4.3.2–4.3.23 verified against the validated
-`wigner_d` helper; four source errors found and fixed (see flags below).
+**Now in progress: Chapter 4** (2026-08-26).
+- Sec 4.3 (explicit d-forms) — `check_4_3.py`, all 18 forms 4.3.2–4.3.23
+  verified; four source errors fixed (see flags).
+- Sec 4.4 (symmetries of d/D) — `check_4_4.py`: d-relations 4.4.1, the full
+  31-relation D array 4.4.2, periodicity 4.4.4–4.4.5, and special cases
+  4.4.6–4.4.8 all verified; the badly OCR-garbled 4.4.2 array was rebuilt
+  from the scan (see flags).
 
 ## Gaps / next up
 
@@ -67,6 +71,12 @@ via `check_4_3.py` — all 18 forms 4.3.2–4.3.23 verified against the validate
   Verified against the scan (printed pp.76–77).
 - **eq 4.3.23** — source misprint corrected (2026-08-26): hypergeometric
   argument `-1/cos^2(β/2)`→`+1/cos^2(β/2)`; annotated in-source.
+- **eq 4.4.1** — OCR fixes (2026-08-26): row-1 `d_{M'M'}`→`d_{M'M}` and
+  `d_{-M'-M'}`→`d_{-M'-M}` (verified vs scan, printed p.79).
+- **eq 4.4.2** (D symmetry array) — rebuilt from the scan (2026-08-26): the
+  `.tex` array had `M'M'`/`-M'-M'` throughout (should be `M'M`/`-M'-M`), a
+  4-argument `D(γ,β,-β,-γ)` garble, a spurious `D^{JJ'}`, and misaligned
+  columns. All 31 relations of the corrected array verified numerically.
 - **eq 9.6.3** — annotated as a source misprint (`e73fc49`).
 - **eq 10.8.26** — annotated as a source omission (`9212d0b`).
 - **eq 10.9.8** — flagged, then corrected as a source-author fix and verified
