@@ -10,10 +10,10 @@ $
     \draw[dlu](sqTR)--(sqBR);
   \end{scope}
   \begin{scope}[shift={(1.6,1.4)}] % diamond {X Y r;j h g}: h(UL) j(UR) X(BL) Y(BR) ; r(h) g(v) ; X,Y bold
-    \dsixjsq{0}{0}{h}{j}{X}{Y}{r}{g}
+    \dsixjsq{0}{0}{h}{j}{X}{Y}{g}{r}
     \draw[dlu](ql)--(qb);\draw[dlu](qb)--(qr);
   \end{scope}
-  \begin{scope}[shift={(3.3,-0.2)}] % triangle-right (apex-right) {c d Y;j g f}: j(UR) d(BR) Y(left,bold); spokes g,f,c
+  \begin{scope}[shift={(3.3,0)}] % triangle-right (apex-right) {c d Y;j g f}: j(UR) d(BR) Y(left,bold); spokes g,f,c
     \coordinate(c)at(0,0);\coordinate(T)at(120:1);\coordinate(B)at(240:1);\coordinate(V)at(0:1);
     \draw[dl](T)--(V)node[midway,above right,inner sep=1pt]{$j$};
     \draw[dl](B)--(V)node[midway,below right,inner sep=1pt]{$d$};
@@ -25,19 +25,19 @@ $
   \begin{scope}[shift={(1.6,-1.6)}] % hexagon {a b X;c d Y;p q r} (pointy): outer X,a,p,q,d,Y ; diam b,c,r
     \dninehex{0}{0}{X}{a}{p}{q}{d}{Y}
     \draw[dlu](hT)--(hUL);\draw[dlu](hUR)--(hT); % X (UL), Y (UR) edges bold
-    \draw[dl](hT)--(hB)node[wb,pos=0.27]{$b$};
+    \draw[dl](hT)--(hB)node[wb,pos=0.27]{$r$};
     \draw[dl](hUR)--(hLL)node[wb,pos=0.30]{$c$};
-    \draw[dl](hUL)--(hLR)node[wb,pos=0.70]{$r$};
+    \draw[dl](hUL)--(hLR)node[wb,pos=0.70]{$b$};
   \end{scope}
 \end{tikzpicture}
 \;=\;
 \begin{tikzpicture}[baseline=0pt,font=\small]
-  \begin{scope}\dsixjsq{0}{0}{g}{e}{c}{p}{a}{f}\end{scope}
+  \begin{scope}\dsixjsq{0}{0}{g}{e}{c}{p}{f}{a}\end{scope}
   \begin{scope}[shift={(2.6,0)}] % 9j-hex {e b h;f d j;p q r}: outer h,j,d,q,p,e ; diam b,f,r
     \dhexflat{0}{0}{h}{j}{d}{q}{p}{e}
     \draw[dl](v2)--(v5)node[wb,pos=0.30]{$b$};
-    \draw[dl](v1)--(v4)node[wb,pos=0.30]{$f$};
-    \draw[dl](v0)--(v3)node[wb,pos=0.70]{$r$};
+    \draw[dl](v1)--(v4)node[wb,pos=0.30]{$r$};
+    \draw[dl](v0)--(v3)node[wb,pos=0.70]{$f$};
   \end{scope}
 \end{tikzpicture}
 $

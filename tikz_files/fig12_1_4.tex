@@ -7,8 +7,8 @@
   \coordinate(T) at (60:0.9);
   \coordinate(B) at (300:0.9);
   \draw[dl](L)--($(L)+(180:0.6)$)node[left]{$a\alpha$};
-  \draw[dl](T)--($(T)+(60:0.6)$)node[at end,right]{$b\beta$};
-  \draw[dl](B)--($(B)+(300:0.6)$)node[at end,right]{$c\gamma$};
+  \draw[dl](T)--($(T)+(60:0.6)$)node[at end,above]{$b\beta$};
+  \draw[dl](B)--($(B)+(300:0.6)$)node[at end,below]{$c\gamma$};
   \draw[dl](L)--(T)node[midway,above left]{$q$};
   \draw[dl](T)--(B)node[midway,right]{$r$};
   \draw[dl](L)--(B)node[midway,below left]{$p$};
@@ -16,9 +16,9 @@
 \node at (1.3,0) {$=$};
 \begin{scope}[xshift=30mm]
   \coordinate(N)at(0,0);
-  \draw[dl](-0.95,0)--(N)node[at start,left]{$a\alpha$};
-  \draw[dl](N)--(0.8,0.75)node[at end,right]{$b\beta$};
-  \draw[dl](N)--(0.8,-0.75)node[at end,right]{$c\gamma$};
+  \draw[dl](180:0.95)--(N)node[at start,left]{$a\alpha$};
+  \draw[dl](N)--(60:0.95)node[at end,above]{$b\beta$};
+  \draw[dl](N)--(-60:0.95)node[at end,below]{$c\gamma$};
 \end{scope}
 \begin{scope}[xshift=48mm]
   \dsixjl{r}{q}{p}{b}{c}{a}

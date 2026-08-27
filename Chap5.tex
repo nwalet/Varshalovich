@@ -1131,11 +1131,11 @@ Under inversion of coordinate system the phases of the bipolar harmonics change 
 The Clebsch-Gordan series for product of the bipolar harmonics may be presented in the form
 \begin{gather}
 \left\{\vect{Y}_{l_{1}^{\prime}}\left(\Omega_{1}\right) \otimes \vect{Y}_{l_{2}^{\prime}}\left(\Omega_{2}\right)\right\}_{L^{\prime} M^{\prime}}\left\{\vect{Y}_{l_{1}^{\prime \prime}}\left(\Omega_{1}\right) \otimes \vect{Y}_{l_{2}^{\prime \prime}}\left(\Omega_{2}\right)\right\}_{L^{\prime \prime} M^{\prime \prime}}  \notag\\
-=\sum_{L M} \clebsch{L^{\prime}}{M^{\prime}}{L^{\prime \prime}}{M^{\prime \prime}}{L}{M} \sum_{l_{1} l_{2}} B_{l_{1}^{\prime} l_{2}^{\prime} L^{\prime} l_{1}^{\prime \prime} L^{\prime \prime}}^{l_{1} l_{2} L}\left\{\vect{Y}_{l_{1}}\left(\Omega_{1}\right) \otimes \vect{Y}_{l_{2}}\left(\Omega_{2}\right)\right\}_{L M}, \label{eq:5:16:7}
+=\sum_{L M} \clebsch{L^{\prime}}{M^{\prime}}{L^{\prime \prime}}{M^{\prime \prime}}{L}{M} \sum_{l_{1} l_{2}} B_{l_{1}^{\prime} l_{2}^{\prime} L^{\prime} l_{1}^{\prime \prime} l_{2}^{\prime \prime} L^{\prime \prime}}^{l_{1} l_{2} L}\left\{\vect{Y}_{l_{1}}\left(\Omega_{1}\right) \otimes \vect{Y}_{l_{2}}\left(\Omega_{2}\right)\right\}_{L M}, \label{eq:5:16:7}
 \end{gather}
 where
 \begin{equation}
-B_{l_{1}^{\prime} l_{2}^{\prime} L_{1}^{\prime \prime} l_{2}^{\prime \prime} L^{\prime \prime}}^{l_{1} l_{2} L}=\sqrt{\frac{\left(2 l_{1}^{\prime}+1\right)\left(2 l_{2}^{\prime}+1\right)\left(2 l_{1}^{\prime \prime}+1\right)\left(2 l_{2}^{\prime \prime}+1\right)\left(2 L^{\prime}+1\right)\left(2 L^{\prime \prime}+1\right)}{(4 \pi)^{2}}} \clebsch{l_{1}^{\prime}}{0}{l_{1}^{\prime \prime}}{0}{l_{1}}{0} \clebsch{l_{2}^{\prime}}{0}{l_{2}^{\prime \prime}}{0}{l_{2}}{0}\left\{\begin{array}{lll}
+B_{l_{1}^{\prime} l_{2}^{\prime} L^{\prime} l_{1}^{\prime \prime} l_{2}^{\prime \prime} L^{\prime \prime}}^{l_{1} l_{2} L}=\sqrt{\frac{\left(2 l_{1}^{\prime}+1\right)\left(2 l_{2}^{\prime}+1\right)\left(2 l_{1}^{\prime \prime}+1\right)\left(2 l_{2}^{\prime \prime}+1\right)\left(2 L^{\prime}+1\right)\left(2 L^{\prime \prime}+1\right)}{(4 \pi)^{2}}} \clebsch{l_{1}^{\prime}}{0}{l_{1}^{\prime \prime}}{0}{l_{1}}{0} \clebsch{l_{2}^{\prime}}{0}{l_{2}^{\prime \prime}}{0}{l_{2}}{0}\left\{\begin{array}{lll}
 l_{1}^{\prime} & l_{1}^{\prime \prime} & l_{1}  \label{eq:5:16:8}\\
 l_{2}^{\prime} & l_{2}^{\prime \prime} & l_{2} \\
 L^{\prime} & L^{\prime \prime} & L
@@ -1154,7 +1154,7 @@ A tripolar spherical harmonic is defined as an irreducible tensor product of thr
 \begin{gather}
 \left\{\vect{Y}_{l_{1}}\left(\vartheta_{1}, \varphi_{1}\right) \otimes\left\{\vect{Y}_{l_{2}}\left(\vartheta_{2}, \varphi_{2}\right) \otimes \vect{Y}_{l_{3}}\left(\vartheta_{3}, \varphi_{3}\right)\right\}_{l_{23}}\right\}_{L M}  \label{eq:5:16:11}\\
 =\sum_{\substack{m_{1} m_{2} m_{3} \\
-m_{23}}} C_{l_{2} m_{2} m_{2} m_{3} m_{3}}^{l_{23}} Y_{l_{1} m_{1}}\left(\vartheta_{1}, \varphi_{1}\right) Y_{l_{2} m_{2}}\left(\vartheta_{2}, \varphi_{2}\right) Y_{l_{3} m_{3}}\left(\vartheta_{3}, \varphi_{3}\right) \notag
+m_{23}}} \clebsch{l_{1}}{m_{1}}{l_{23}}{m_{23}}{L}{M} \clebsch{l_{2}}{m_{2}}{l_{3}}{m_{3}}{l_{23}}{m_{23}} Y_{l_{1} m_{1}}\left(\vartheta_{1}, \varphi_{1}\right) Y_{l_{2} m_{2}}\left(\vartheta_{2}, \varphi_{2}\right) Y_{l_{3} m_{3}}\left(\vartheta_{3}, \varphi_{3}\right) \notag
 \end{gather}
 In contrast to bipolar harmonics, the tripolar harmonics allow different coupling schemes of angular momenta, namely, $l_{1}+\left(l_{2}+l_{3}\right)_{l_{23}}=\vect{L},\left(l_{1}+l_{2}\right)_{l_{12}}+l_{3}=\vect{L}$ or $\left(l_{1}+l_{3}\right)_{l_{13}}+l_{2}=\vect{L}$. The relations between different coupling schemes are considered in Sec.~\ref{sec:3.3}.
 
@@ -1188,11 +1188,11 @@ Under inversion of the coordinate system the tripolar harmonics acquire the phas
 The Clebsch-Gordan series for the tripolar harmonics is given by
 \begin{align}
 & \left\{\vect{Y}_{l_{1}^{\prime}}\left(\Omega_{1}\right) \otimes\left\{\vect{Y}_{l_{2}^{\prime}}\left(\Omega_{2}\right) \otimes \vect{Y}_{l_{3}^{\prime}}\left(\Omega_{3}\right)\right\}_{\lambda^{\prime}}\right\}_{L^{\prime} M^{\prime}}\left\{\vect{Y}_{l_{1}^{\prime \prime}}\left(\Omega_{1}\right) \otimes\left\{\vect{Y}_{l_{2}^{\prime \prime}}\left(\Omega_{2}\right) \otimes \vect{Y}_{l_{3}^{\prime \prime}}\left(\Omega_{3}\right)\right\}_{\lambda^{\prime \prime}}\right\}_{L^{\prime \prime} M^{\prime \prime}}  \notag\\
-& =\sum_{L M} \clebsch{L^{\prime}}{M^{\prime}}{L^{\prime \prime}}{M^{\prime \prime}}{L}{M} \sum_{l_{1} l_{2} l_{3} \lambda} B_{l_{1}^{\prime} l_{2}^{\prime} l_{3}^{\prime} \lambda^{\prime} L^{\prime} l_{1}^{\prime \prime} l_{2}^{\prime \prime} l_{3}^{\prime \prime} L^{\prime \prime}}^{l_{1} l_{3} \lambda L}\left\{\vect{Y}_{l_{1}}\left(\Omega_{1}\right) \otimes\left\{\vect{Y}_{l_{2}}\left(\Omega_{2}\right) \otimes \vect{Y}_{l_{3}}\left(\Omega_{3}\right)\right\}_{\lambda}\right\}_{L M} \label{eq:5:16:17}
+& =\sum_{L M} \clebsch{L^{\prime}}{M^{\prime}}{L^{\prime \prime}}{M^{\prime \prime}}{L}{M} \sum_{l_{1} l_{2} l_{3} \lambda} B_{l_{1}^{\prime} l_{2}^{\prime} l_{3}^{\prime} \lambda^{\prime} L^{\prime} l_{1}^{\prime \prime} l_{2}^{\prime \prime} l_{3}^{\prime \prime} \lambda^{\prime \prime} L^{\prime \prime}}^{l_{1} l_{2} l_{3} \lambda L}\left\{\vect{Y}_{l_{1}}\left(\Omega_{1}\right) \otimes\left\{\vect{Y}_{l_{2}}\left(\Omega_{2}\right) \otimes \vect{Y}_{l_{3}}\left(\Omega_{3}\right)\right\}_{\lambda}\right\}_{L M} \label{eq:5:16:17}
 \end{align}
 where
 \begin{gather}
-B_{l_{1}^{\prime} l_{2}^{\prime} l^{\prime} \lambda^{\prime} L_{1}^{\prime \prime} l_{2}^{\prime \prime} l_{3}^{\prime \prime} \lambda^{\prime \prime} L^{\prime \prime}}^{l_{1} l_{2} l_{3} \lambda L}=\sqrt{\frac{\left(2 l_{1}^{\prime}+1\right)\left(2 l_{1}^{\prime \prime}+1\right)\left(2 l_{2}^{\prime}+1\right)\left(2 l_{2}^{\prime \prime}+1\right)\left(2 l_{3}^{\prime \prime}+1\right)\left(2 l_{3}^{\prime}+1\right)\left(2 L^{\prime}+1\right)\left(2 L^{\prime \prime}+1\right)}{(4 \pi)^{3}}}  \notag\\
+B_{l_{1}^{\prime} l_{2}^{\prime} l_{3}^{\prime} \lambda^{\prime} L^{\prime} l_{1}^{\prime \prime} l_{2}^{\prime \prime} l_{3}^{\prime \prime} \lambda^{\prime \prime} L^{\prime \prime}}^{l_{1} l_{2} l_{3} \lambda L}=\sqrt{\frac{\left(2 l_{1}^{\prime}+1\right)\left(2 l_{1}^{\prime \prime}+1\right)\left(2 l_{2}^{\prime}+1\right)\left(2 l_{2}^{\prime \prime}+1\right)\left(2 l_{3}^{\prime \prime}+1\right)\left(2 l_{3}^{\prime}+1\right)\left(2 L^{\prime}+1\right)\left(2 L^{\prime \prime}+1\right)}{(4 \pi)^{3}}}  \notag\\
 \times \sqrt{\left(2 \lambda^{\prime}+1\right)\left(2 \lambda^{\prime \prime}+1\right)(2 \lambda+1)} \clebsch{l_{1}^{\prime}}{0}{l_{1}^{\prime \prime}}{0}{l_{1}}{0} \clebsch{l_{2}^{\prime}}{0}{l_{2}^{\prime \prime}}{0}{l_{2}}{0} \clebsch{l_{3}^{\prime}}{0}{l_{3}^{\prime \prime}}{0}{l_{3}}{0}\left\{\begin{array}{ccc}
 l_{1}^{\prime} & l_{1}^{\prime \prime} & l_{1} \\
 \lambda^{\prime} & \lambda^{\prime \prime} & \lambda \\

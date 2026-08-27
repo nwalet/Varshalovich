@@ -1172,17 +1172,17 @@ vmket/.style={postaction={decorate,decoration={markings,
 % \cthetav[midstyle]{x}{y}{left}{mid}{right} -- theta as CIRCLE + vertical diameter.
 \newcommand{\cthetav}[6][dl]{%
   \draw[dl](#2,#3)circle(0.5);
-  \draw[#1]($(#2,#3)+(0,0.5)$)--($(#2,#3)+(0,-0.5)$);
-  \node at($(#2,#3)+(-0.3,0)$){$#4$};
+  \draw[#1]($(#2,#3)+(0,0.5)$)--($(#2,#3)+(0,-0.5)$) ;
+  \node[wb,inner sep=1pt] at($(#2,#3)+(-0.5,0)$){$#4$};
   \node[wb,inner sep=1pt] at(#2,#3){$#5$};
-  \node at($(#2,#3)+(0.3,0)$){$#6$};}
+  \node[wb,inner sep=1pt] at($(#2,#3)+(0.5,0)$){$#6$};}
 % \ctheta[midstyle]{x}{y}{top}{mid}{bot} -- theta as CIRCLE + horizontal diameter.
 \newcommand{\ctheta}[6][dl]{%
   \draw[dl](#2,#3)circle(0.5);
   \draw[#1]($(#2,#3)+(-0.5,0)$)--($(#2,#3)+(0.5,0)$);
-  \node at($(#2,#3)+(0,0.27)$){$#4$};
+  \node[wb,inner sep=1pt] at($(#2,#3)+(0,0.5)$){$#4$};
   \node[wb,inner sep=1pt] at(#2,#3){$#5$};
-  \node at($(#2,#3)+(0,-0.27)$){$#6$};}
+  \node[wb,inner sep=1pt] at($(#2,#3)+(0,-0.5)$){$#6$};}
 % \drect{x}{y}{toplab}{botlab} -- small rectangle (a \delta between two j-lines).
 \newcommand{\drect}[4]{%
   \draw[dl]($(#1,#2)+(-0.3,0.55)$)rectangle($(#1,#2)+(0.3,-0.55)$);

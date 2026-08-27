@@ -6,16 +6,16 @@ $
   \begin{scope}[shift={(0,1.5)}] % hex-TL (pointy) outer c',a,j,Z,e,Y ; diam h,l,b ; Z,Y bold
     \dninehex{0}{0}{c'}{j}{e}{Y}{Z}{a}
     \draw[dlu](hLR)--(hUR);\draw[dlu](hB)--(hLR); % Z (eR), Y (eBR) edges bold
-    \draw[dl](hT)--(hB)node[wb,pos=0.27]{$h$};
+    \draw[dl](hT)--(hB)node[wb,pos=0.27]{$b$};
     \draw[dl](hUR)--(hLL)node[wb,pos=0.30]{$l$};
-    \draw[dl](hUL)--(hLR)node[wb,pos=0.70]{$b$};
+    \draw[dl](hUL)--(hLR)node[wb,pos=0.70]{$h$};
   \end{scope}
   \begin{scope}[shift={(0,-1.5)}] % hex-BL (pointy) outer e,f,c,a,X,Y ; diam b,d,g ; X,Y bold
     \dninehex{0}{0}{e}{f}{c}{a}{X}{Y}
     \draw[dlu](hLR)--(hUR);\draw[dlu](hUR)--(hT); % X (eR), Y (eTR) edges bold
     \draw[dl](hT)--(hB)node[wb,pos=0.27]{$b$};
-    \draw[dl](hUR)--(hLL)node[wb,pos=0.30]{$d$};
-    \draw[dl](hUL)--(hLR)node[wb,pos=0.70]{$g$};
+    \draw[dl](hUR)--(hLL)node[wb,pos=0.30]{$g$};
+    \draw[dl](hUL)--(hLR)node[wb,pos=0.70]{$d$};
   \end{scope}
   \begin{scope}[shift={(2.0,0.2)}] % triangle (apex-right): Z(UR) X(BR) Y(left,bold); spokes h,k,g
     \coordinate(c)at(0,0);\coordinate(T)at(120:1);\coordinate(B)at(240:1);\coordinate(V)at(0:1);
@@ -34,8 +34,8 @@ $
 \;=\;
 \begin{tikzpicture}[baseline=0pt,font=\small]
   \cthetav{0}{0}{a}{b}{c}
-  \begin{scope}[shift={(1.9,0)}]\dsixjsq{0}{0}{h}{j}{g}{f}{c}{k}\end{scope}
-  \begin{scope}[shift={(4.2,0)}]\dsixjsq{0}{0}{j}{l}{f}{d}{e}{k}\end{scope}
+  \begin{scope}[shift={(1.9,0)}]\dsixjsq{0}{0}{h}{j}{g}{f}{k}{c}\end{scope}
+  \begin{scope}[shift={(4.2,0)}]\dsixjsq{0}{0}{j}{l}{f}{d}{k}{e}\end{scope}
   \drect{5.8}{0}{c'}{c}
 \end{tikzpicture}
 $

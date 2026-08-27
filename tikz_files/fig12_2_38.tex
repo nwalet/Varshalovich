@@ -32,20 +32,20 @@ $
 \end{tikzpicture}
 \;=\;
 \begin{tikzpicture}[baseline=0pt,font=\small]
-  \begin{scope}[shift={(1.4,2.0)}] % square-top {p r Z;t q s}: top s, left p, right t, bot Z ; diag q,r ; Z bot bold
+  \begin{scope}[shift={(1.4,1.0)}] % square-top {p r Z;t q s}: top s, left p, right t, bot Z ; diag q,r ; Z bot bold
     \dsq{0}{0}{s}{Z}{p}{t}
     \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$q$};
     \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$r$};
     \draw[dlu](sqBL)--(sqBR);
   \end{scope}
-  \begin{scope} % hexagon-left {c g l;a e k;p r Z}: outer p,Z,l,g,e,a ; diam k,r,c
+  \begin{scope}[yshift=-10mm] % hexagon-left {c g l;a e k;p r Z}: outer p,Z,l,g,e,a ; diam k,r,c
     \dhexflat{0}{0}{p}{Z}{l}{g}{e}{a}
     \draw[dlu](v1)--(v0); % Z UR edge bold
-    \draw[dl](v2)--(v5)node[wb,pos=0.30]{$k$};
-    \draw[dl](v0)--(v3)node[wb,pos=0.30]{$r$};
-    \draw[dl](v1)--(v4)node[wb,pos=0.70]{$c$};
+    \draw[dl](v2)--(v5)node[wb,pos=0.30]{$c$};
+    \draw[dl](v0)--(v3)node[wb,pos=0.30]{$k$};
+    \draw[dl](v1)--(v4)node[wb,pos=0.70]{$r$};
   \end{scope}
-  \begin{scope}[shift={(2.8,0)}] % hexagon-right {f b k;h d l;t q Z}: outer t,f,b,d,l,Z ; diam q,k,h
+  \begin{scope}[shift={(2.8,-1.0)}] % hexagon-right {f b k;h d l;t q Z}: outer t,f,b,d,l,Z ; diam q,k,h
     \dhexflat{0}{0}{t}{f}{b}{d}{l}{Z}
     \draw[dlu](v3)--(v2); % Z UL edge bold
     \draw[dl](v2)--(v5)node[wb,pos=0.30]{$q$};

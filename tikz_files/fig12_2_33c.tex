@@ -1,0 +1,30 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[baseline=0pt,font=\small]
+  \begin{scope}\dsixjsq[2]{0}{0}{b}{c}{a}{d}{X}{p}\end{scope}
+  \begin{scope}[xshift=2cm]\dsixjsq[2]{0}{0}{c}{f}{d}{e}{X}{q}\end{scope}
+  \begin{scope}[xshift=4cm]\dsixjsq[2]{0}{0}{f}{g}{e}{h}{X}{r}\end{scope}
+  \begin{scope}[xshift=6cm]\dsixjsq[2]{0}{0}{g}{b}{h}{a}{X}{s}\end{scope}
+  \node at (7.4,0) {$=$};
+  \begin{scope}[xshift=9.4cm]
+    % 12j octagon-LATTICE (twelvejII, second kind): 8 outer edges + central # square
+  \coordinate(Ta)at(-0.6,1.4);\coordinate(Tb)at(0.6,1.4);
+  \coordinate(Ra)at(1.4,0.6);\coordinate(Rb)at(1.4,-0.6);
+  \coordinate(Qa)at(0.6,-1.4);\coordinate(Qb)at(-0.6,-1.4);
+  \coordinate(La)at(-1.4,-0.6);\coordinate(Lb)at(-1.4,0.6);
+  \draw[dl](Ta)--(Tb)node[midway,above,inner sep=1pt]{$b$};
+  \draw[dl](Tb)--(Ra)node[midway,above right,inner sep=1pt]{$g$};
+  \draw[dl](Ra)--(Rb)node[midway,right,inner sep=1pt]{$r$};
+  \draw[dl](Rb)--(Qa)node[midway,below right,inner sep=1pt]{$h$};
+  \draw[dl](Qa)--(Qb)node[midway,below,inner sep=1pt]{$a$};
+  \draw[dl](Qb)--(La)node[midway,below left,inner sep=1pt]{$d$};
+  \draw[dl](La)--(Lb)node[midway,left,inner sep=1pt]{$q$};
+  \draw[dl](Lb)--(Ta)node[midway,above left,inner sep=1pt]{$c$};
+  \draw[dl](Ta)--(Qb) node[midway,wb,inner sep=1.5pt] {$p$} ;
+  \draw[dl](Tb)--(Qa) node[midway,wb,inner sep=1.5pt] {$s$} ;
+  \draw[dl](Lb)--(Ra)  node[midway,wb,inner sep=1.5pt] {$f$} ; 
+  \draw[dl](La)--(Rb)  node[midway,wb,inner sep=1.5pt] {$e$} ;
+  \end{scope}
+\end{tikzpicture}
+\end{document}
