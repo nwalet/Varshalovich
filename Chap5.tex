@@ -179,6 +179,9 @@ In the following equations sums are over all integer values of $s$ so that no fa
 &Y_{l m}(\vartheta, \varphi)=(-1)^{l} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \, \frac{(l-m)!}{(l+m)!}}\left(\sin \frac{\vartheta}{2} \, \cos \frac{\vartheta}{2}\right)^{m} \sum_{s}(-1)^{s} \frac{(l+m+s)!}{(l-m-s)!} \, \frac{\left(\cos \frac{\vartheta}{2}\right)^{2 s}}{s!(s+m)!},  \label{eq:5:2:13}\\
 &Y_{l m}(\vartheta, \varphi)=(-1)^{l-m} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \, \frac{(l-m)!}{(l+m)!}}\left(\tan \frac{\vartheta}{2}\right)^{m} \sum_{s}(-1)^{l-s} \frac{(2 l-s)!}{s!(l-s)!} \, \frac{\left(\cos \frac{\vartheta}{2}\right)^{2(l-s)}}{(l-m-s)!},  \label{eq:5:2:14}
 \end{align}
+% FLAG (5.2.15-5.2.16): NOT verified. The (cos/sin th/2)^{2l} belongs OUTSIDE
+% the radical, and the verified prefactor is sqrt((2l+1)/4pi (l+m)!(l-m)!)*l! --
+% the printed radical sqrt(...l!|m|!) could not be reconciled from the scan.
 \begin{multline}
 Y_{l m}(\vartheta, \varphi)=\xi_{m 0} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi}} \sqrt{(l+m)!(l-m)!l!|m|!\left(\cos \frac{\vartheta}{2}\right)^{2 l}}  \\
 \times \sum_{s} \frac{(-1)^{s}\left(\tan \frac{\vartheta}{2}\right)^{2 s+|m|}}{s!(s+|m|)!(l-s)!(l-|m|-s)!},  \label{eq:5:2:15}
@@ -199,6 +202,10 @@ Y_{l m}(\vartheta, \varphi)=e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi(l+m)!(l-m)!
 \text { if } l-m \text { is odd },
 \end{array}\right.  \label{eq:5:2:17}
 \end{multline}
+% FLAG (5.2.18-5.2.19): NOT verified numerically (double-factorial series
+% disagree with mpmath.spherharm even after de-garbling; needs careful review).
+% 5.2.19 additionally has a mis-scoped radical (the sqrt wraps (sin th)^m and the
+% whole sum) and a stray "L" for "l" in the parity condition -- left as-is.
 \begin{multline}
 Y_{l m}(\vartheta, \varphi)=e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi(l+m)!(l-m)!}}(\sin \vartheta)^{l}  \\
 \times\left\{\begin{array}{c}
@@ -293,6 +300,8 @@ F\left(-\frac{l-|m|}{2}, \frac{l+|m|+1}{2} ;|m|+1 ; \sin ^{2} \vartheta\right) \
 
 \subsection{$Y_{l m}(\vartheta, \varphi)$ and the Hypergeometric Functions with Arguments Expressed in Terms of Exponential Functions}\label{sec:5.2.6}
 \begin{gather}
+% FLAG (5.2.35-5.2.36): scan-matched only. The 2F1 arguments lie on |z|=1
+% (e^{+-2i th}) and are not numerically reproducible here (analytic continuation).
 Y_{l m}(\vartheta, \varphi)=-\frac{i e^{i m \varphi}}{\pi} \sqrt{\frac{2 l+1}{4 \pi}(l+m)!(l-m)!} \frac{2^{l+m+1}(\sin \vartheta)^{m}}{(2 l+1)!!}  \notag\\
 \times\left\{e^{-i(l+m+1) \vartheta} F\left(m+\frac{1}{2}, l+m+1 ; l+\frac{3}{2} ; e^{-2 i \vartheta}\right)-e^{i(l+m+1) \vartheta} F\left(m+\frac{1}{2}, l+m+1 ; l+\frac{3}{2} ; e^{2 i \vartheta}\right)\right\},  \label{eq:5:2:35}
 \end{gather}\begin{gather}
