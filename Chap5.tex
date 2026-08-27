@@ -755,7 +755,7 @@ Here $j_{l}(x)$ is a spherical Bessel function, $\vartheta_{k}$ and $\varphi_{k}
 \begin{gather}
 \sum_{m=-l}^{l}\left|Y_{l m}(\vartheta, \varphi)\right|^{2}=\frac{2 l+1}{4 \pi},  \label{eq:5:10:1}\\
 \sum_{m=-l}^{l} m\left|Y_{l m}(\vartheta, \varphi)\right|^{2}=0,  \label{eq:5:10:2}\\
-\sum_{m=-1}^{l} m^{2}\left|Y_{l m}(\vartheta, \varphi)\right|^{2}=\frac{l(l+1)(2 l+1)}{8 \pi} \sin ^{2} \vartheta,  \label{eq:5:10:3}\\
+\sum_{m=-l}^{l} m^{2}\left|Y_{l m}(\vartheta, \varphi)\right|^{2}=\frac{l(l+1)(2 l+1)}{8 \pi} \sin ^{2} \vartheta,  \label{eq:5:10:3}\\
 \sum_{m=-l}^{l} \sqrt{\frac{\left(l^{2}-m^{2}\right)\left[(l+1)^{2}-m^{2}\right]}{(2 l-1)(2 l+3)}} Y_{l-1 m}(\vartheta, \varphi) Y_{l+1 m}^{*}(\vartheta, \varphi)=\frac{l(l+1)}{8 \pi}\left(3 \cos ^{2} \vartheta-1\right),  \label{eq:5:10:4}\\
 \sum_{m=-l}^{l} \frac{(\mp i)^{m}}{\sqrt{(l-m)!(l+m)!}} Y_{l m}(\vartheta, \varphi)=\sqrt{\frac{2 l+1}{4 \pi}} \, \frac{(\cos \vartheta \pm i \sin \vartheta \cos \varphi)^{l}}{l!} . \label{eq:5:10:5}
 \end{gather}
@@ -770,7 +770,7 @@ In the equations given below [27] we will use the notation $R=\sqrt{1-2 t \cos \
 
 \begin{gather}
 \sum_{l=m}^{\infty} \sqrt{\frac{4 \pi}{(2 l+1)(l-m)!(l+m)!}} \, \frac{1}{l!} t^{l-m} Y_{l m}(\vartheta, \varphi)  \notag\\
-=\frac{\left(-\sin \vartheta e^{i \varphi}\right)^{m}}{2^{m}(m!)^{2}} o_{1}\left(; m+1 ; t \cos ^{2} \frac{\vartheta}{2}\right) 
+=\frac{\left(-\sin \vartheta e^{i \varphi}\right)^{m}}{2^{m}(m!)^{2}} \Fnm[l]{0}{1}{}{m+1}{t \cos ^{2} \frac{\vartheta}{2}}
 \Fnm[l]{0}{1}{}{m+1}{-t \sin ^{2} \frac{\vartheta}{2}},(|t|<1),  \label{eq:5:10:7}
 \end{gather}
 
@@ -790,12 +790,12 @@ In the equations given below [27] we will use the notation $R=\sqrt{1-2 t \cos \
 \end{gather}
 
 \begin{gather}
-\sum_{l=m}^{\infty} i^{l-m} \sqrt{\frac{4 \pi(2 l+1)(l+m)!}{(l-m)!}} j(t) Y_{l m}(\vartheta, \varphi)=\left(-t \sin \vartheta e^{i \varphi}\right)^{m} e^{i t \cos \vartheta},  \label{eq:5:10:11}\\
-\sum_{l=m, m+2, \ldots}^{\infty} i^{l-m} \sqrt{\frac{4 \pi(2 l+1)(l+m)!}{(l-m)!}} j(t) Y_{l m}(\vartheta, \varphi)=\left(-t \sin \vartheta e^{i \varphi}\right)^{m} \cos (t \cos \vartheta),  \label{eq:5:10:12}\\
-\sum_{l=m+1, m+3, \ldots}^{\infty} i^{l-m-1} \sqrt{\frac{4 \pi(2 l+1)(l+m)!}{(l-m)!}} j(t) Y_{l m}(\vartheta, \varphi)=\left(-t \sin \vartheta e^{i \varphi}\right)^{m} \sin (t \cos \vartheta),  \label{eq:5:10:13}\\
-\sum_{l=m}^{\infty} \sqrt{\frac{4 \pi(2 l+1)(l+m)!}{(l-m)!}} j(t) z_{l}(t) Y_{l m}(\vartheta, \varphi)=\left(-t \cos \frac{\vartheta}{2} e^{i \varphi}\right)^{m} z_{m}\left(2 t \sin \frac{\vartheta}{2}\right),  \label{eq:5:10:14}\\
+\sum_{l=m}^{\infty} i^{l-m} \sqrt{\frac{4 \pi(2 l+1)(l+m)!}{(l-m)!}} j_{l}(t) Y_{l m}(\vartheta, \varphi)=\left(-t \sin \vartheta e^{i \varphi}\right)^{m} e^{i t \cos \vartheta},  \label{eq:5:10:11}\\
+\sum_{l=m, m+2, \ldots}^{\infty} i^{l-m} \sqrt{\frac{4 \pi(2 l+1)(l+m)!}{(l-m)!}} j_{l}(t) Y_{l m}(\vartheta, \varphi)=\left(-t \sin \vartheta e^{i \varphi}\right)^{m} \cos (t \cos \vartheta),  \label{eq:5:10:12}\\
+\sum_{l=m+1, m+3, \ldots}^{\infty} i^{l-m-1} \sqrt{\frac{4 \pi(2 l+1)(l+m)!}{(l-m)!}} j_{l}(t) Y_{l m}(\vartheta, \varphi)=\left(-t \sin \vartheta e^{i \varphi}\right)^{m} \sin (t \cos \vartheta),  \label{eq:5:10:13}\\
+\sum_{l=m}^{\infty} \sqrt{\frac{4 \pi(2 l+1)(l+m)!}{(l-m)!}} j_{l}(t) z_{l}(t) Y_{l m}(\vartheta, \varphi)=\left(-t \cos \frac{\vartheta}{2} e^{i \varphi}\right)^{m} z_{m}\left(2 t \sin \frac{\vartheta}{2}\right),  \label{eq:5:10:14}\\
 \sum_{l=m}^{\infty} \sqrt{\frac{4 \pi(2 l+1)(l+m)!}{(l-m)!}} j_{l}(x) z_{l}(y) Y_{l m}(\vartheta, \varphi)=\left(-\frac{x y \sin \vartheta e^{i \varphi}}{\sqrt{x^{2}+y^{2}-2 x y \cos \vartheta}}\right)^{m} z_{m}\left(\sqrt{x^{2}+y^{2}-2 x y \cos \vartheta}\right),  \label{eq:5:10:15}\\
-\sum_{l=m}^{\infty} i^{l-m} j i(t) Y_{l m}\left(\vartheta_{1}, \varphi_{1}\right) Y_{l m}^{*}\left(\vartheta_{2}, \varphi_{2}\right)=\frac{1}{4 \pi} J_{m}\left(t \sin \vartheta_{1} \sin \vartheta_{2}\right) e^{i t \cos \vartheta_{1} \cos \vartheta_{2} e^{i m\left(\varphi_{1}-\varphi_{2}\right)}} \label{eq:5:10:16}
+\sum_{l=m}^{\infty} i^{l-m} j_{l}(t) Y_{l m}\left(\vartheta_{1}, \varphi_{1}\right) Y_{l m}^{*}\left(\vartheta_{2}, \varphi_{2}\right)=\frac{1}{4 \pi} J_{m}\left(t \sin \vartheta_{1} \sin \vartheta_{2}\right) e^{i t \cos \vartheta_{1} \cos \vartheta_{2}} e^{i m\left(\varphi_{1}-\varphi_{2}\right)} \label{eq:5:10:16}
 \end{gather}
 
 \section{Generating functions for $Y_{l m}(\vartheta, \varphi)$}\label{sec:5.11}

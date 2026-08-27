@@ -195,6 +195,18 @@ Rodrigues/differential forms 5.2.2/3/6, hypergeometric 5.2.23, the D-relation
   past-the-pole continuation branch). **Fix: 5.14.6** phase
   `(-1)^{l+(m+1)/2}`→`(-1)^{(l+m+1)/2}` — OCR pulled l out of the fraction
   numerator; scan (PDF p.171) confirms the whole l+m+1 is over 2. Silent OCR fix.
+- **§5.10** (`check_5_10_1.py` + `check_5_10_2.py`, all PASS): sums involving Y.
+  - §5.10.1 (sums over m, eqs 5.10.1–5.10.5) verified to ~1e-30. **Fix 5.10.3**
+    lower limit `\sum_{m=-1}^{l}`→`\sum_{m=-l}^{l}` (OCR; scan p.163 confirms −l).
+  - §5.10.2 (sums over l, eqs 5.10.6–5.10.16) verified by truncating the |t|<1
+    series: Gegenbauer finite sum (6), ₀F₁ product (7), ₂F₁ gen.fn (8), ₂F₁
+    product (9), Laguerre gen.fn (10), Rayleigh plane-wave j_l (11/12/13),
+    Bessel addition theorem (15, z=y_l), bilinear J_m (16). 5.10.14 is the x=y=t
+    boundary case of 5.10.15 (direct sum diverges, terms ~l^{m-1/2}); confirmed
+    via the exact identity RHS_14 = RHS_15|_{x=y=t}. OCR fixes (scan p.163-164):
+    5.10.7 `o_1(;m+1;.)`→`{}_0F_1`; 5.10.11-14 `j(t)`→`j_l(t)` (spherical Bessel);
+    5.10.16 `j i(t)`→`j_l(t)` and split merged exponential
+    `e^{it cosϑ₁cosϑ₂ · e^{im(φ₁-φ₂)}}`→`e^{it cosϑ₁cosϑ₂} e^{im(φ₁-φ₂)}`.
 
 ## Open flags (book misprints / omissions, annotated in-source)
 
