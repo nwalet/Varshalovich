@@ -1,0 +1,41 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{3dfigs}
+\begin{document}
+\begin{tikzpicture}[axo, scale=1.15]
+  % sphere radius R=4, point P at theta=40 deg, phi=50 deg
+  % P=(1.653,1.970,3.064)  Q=(1.653,1.970,0)  E=(2.571,3.064,0)
+  % dashed octant arcs
+  \draw[cdash] plot[variable=\t,domain=0:90,samples=60] ({4*sin(\t)},0,{4*cos(\t)});
+  \draw[cdash] plot[variable=\t,domain=0:90,samples=60] (0,{4*sin(\t)},{4*cos(\t)});
+  \draw[cdash] plot[variable=\t,domain=0:90,samples=60] ({4*cos(\t)},{4*sin(\t)},0);
+  % meridian through P (azimuth 50 deg): pole -> P -> E
+  \draw[rdash] plot[variable=\t,domain=0:90,samples=60]
+       ({2.571*sin(\t)},{3.064*sin(\t)},{4*cos(\t)});
+  % drop line P->Q and radius O->Q in the xy-plane
+  \draw[cdash] (1.653,1.970,3.064)--(1.653,1.970,0);
+  \draw[cdash] (0,0,0)--(1.653,1.970,0);
+  % axes
+  \draw[axis] (0,0,0)--(5,0,0) node[below left]{$x$};
+  \draw[axis] (0,0,0)--(0,5.5,0) node[right]{$y$};
+  \draw[axis] (0,0,0)--(0,0,5) node[above]{$z$};
+  % position vector r
+  \draw[rvec] (0,0,0)--(1.653,1.970,3.064);
+  \node[blue!70!black] at (1.25,1.4,2.4) {$\mathbf{r}$};
+  \fill (1.653,1.970,3.064) circle (1.4pt);
+  % polar angle theta (z-axis to r)
+  \draw[arc] plot[variable=\t,domain=0:40,samples=30]
+       ({1.1*sin(\t)*0.643},{1.1*sin(\t)*0.766},{1.1*cos(\t)});
+  \node at (0.42,0.5,1.45) {$\vartheta$};
+  % azimuth phi (x-axis to OQ, in xy-plane)
+  \draw[arc] plot[variable=\t,domain=0:50,samples=30] ({1.0*cos(\t)},{1.0*sin(\t)},0);
+  \node at (1.3,0.8,0) {$\varphi$};
+  % local spherical basis at P
+  \draw[bvec] (1.653,1.970,3.064)--(2.190,2.610,4.060);
+  \node[red!80!black,above] at (2.19,2.61,4.10) {$\mathbf{e}_r$};
+  \draw[bvec] (1.653,1.970,3.064)--(2.293,2.733,2.228);
+  \node[red!80!black,right] at (2.29,2.73,2.20) {$\mathbf{e}_\vartheta$};
+  \draw[bvec] (1.653,1.970,3.064)--(0.657,2.806,3.064);
+  \node[red!80!black,above] at (0.66,2.81,3.10) {$\mathbf{e}_\varphi$};
+\end{tikzpicture}
+\end{document}

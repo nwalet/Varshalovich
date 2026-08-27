@@ -1,0 +1,32 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{3dfigs}
+\begin{document}
+\begin{tikzpicture}[axo, scale=1.15]  
+    % axes
+  \draw[axis] (0,0,0)--(5,0,0) node[below left]{$x$};
+  \draw[axis] (0,0,0)--(0,5.5,0) node[right]{$y$};
+  \draw[axis] (0,0,0)--(0,0,5) node[above]{$z$};
+    \coordinate (O)  at (0,0,0);
+    \coordinate (r1) at (-0.2,1.7,1.1);
+    \coordinate (r1a) at ($0.3*(r1)$);
+    \coordinate (r2) at (0.8,-2,2.7);
+    \coordinate (r2a) at ($0.3*(r2)$);
+    \coordinate (R)  at ($(r1)+(r2)$);
+    \coordinate (Ra) at ($0.3*(R)$);
+    \coordinate (r)   at ($(r1)-(r2)$);
+    \coordinate (ra) at ($0.3*(r)$);
+    \draw[rvec] (O) -- (r1) node[pos=.8,below=1pt] {$\mathbf{r}_1$};
+    \draw[rvec] (O) -- (r2)  node[pos=.8,left] {$\mathbf{r}_2$};
+    \draw[rvec] (O) -- (R)   node[pos=.8,left] {$\mathbf{R}$};
+    \draw[rvec] (O) -- (r)  node[pos=1,right] {$\mathbf{r}$};
+    % Dashed parallelogram representing the plane
+    \coordinate (P1) at (r2);
+    \coordinate (P2) at (R);
+    \coordinate (P3) at (r);
+    \coordinate (P4) at ($(r)-(r1)$);
+    \draw[cdash] (P1) -- (P2) -- (P3) -- (P4) -- cycle;
+   \draw[arc] (r2a) to[bend left=40] node[pos=0.15,above] {$\omega_{12}$}(r1a) ;
+\draw[arc] (Ra) to[bend left=40]  node[pos=0.4,fill=white] {$\omega$} (ra);
+\end{tikzpicture}
+\end{document}

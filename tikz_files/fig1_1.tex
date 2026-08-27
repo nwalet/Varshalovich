@@ -1,0 +1,31 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{3dfigs}
+\begin{document}
+\begin{tikzpicture}[axo, scale=1.15]
+  % dashed projection box: O=(0,0,0) A=(2,0,0) B=(0,2.8,0) C=(0,0,3.6)
+  % Q=(2,2.8,0) D=(2,0,3.6) E=(0,2.8,3.6) M=(2,2.8,3.6)
+  \draw[cdash] (2,0,0)--(2,2.8,0)--(0,2.8,0);
+  \draw[cdash] (0,0,3.6)--(2,0,3.6)--(2,2.8,3.6)--(0,2.8,3.6)--(0,0,3.6);
+  \draw[cdash] (2,0,0)--(2,0,3.6);
+  \draw[cdash] (2,2.8,0)--(2,2.8,3.6);
+  \draw[cdash] (0,2.8,0)--(0,2.8,3.6);
+  % axes
+  \draw[axis] (0,0,0)--(3.4,0,0) node[below left]{$x$};
+  \draw[axis] (0,0,0)--(0,4.6,0) node[right]{$y$};
+  \draw[axis] (0,0,0)--(0,0,4.3) node[above]{$z$};
+  % position vector r to M
+  \draw[rvec] (0,0,0)--(2,2.8,3.6);
+  \node[blue!70!black] at (0.9,1.5,1.75) {$\mathbf{r}$};
+  \fill (2,2.8,3.6) circle (1.4pt);
+  \node[above left] at (2,2.8,3.6) {$M$};
+  % box edge dimension labels
+  \node[right] at (2,2.8,2) {$z$};
+  \node[above] at (2,2,3.1) {$y$};
+  \node[above right] at (1.0,2.6,3.2) {$x$};
+  % Cartesian basis vectors
+  \draw[bvec] (0,0,0)--(1,0,0);  \node[red!80!black,below] at (1.15,0,0) {$\mathbf{e}_x$};
+  \draw[bvec] (0,0,0)--(0,1,0);  \node[red!80!black,below] at (0.6,0.9,0) {$\mathbf{e}_y$};
+  \draw[bvec] (0,0,0)--(0,0,1);  \node[red!80!black,left]  at (0,0,0.7) {$\mathbf{e}_z$};
+\end{tikzpicture}
+\end{document}

@@ -36,7 +36,7 @@ StyleBox[\"x\",\nFontSlant->\"Italic\"]\)'",20,FontFamily->"Times New Roman"],R 
 StyleBox[\"y\",\nFontSlant->\"Italic\"]\)'"],20,FontFamily->"Times New Roman"],R y3,{-1,0}],Text[Style["(c)",20,FontFamily->"Times New Roman"],{0.5L,-0.8L,L}]},Lighting->"Neutral",ViewPoint->{10,10,6},Boxed->False,PlotRange->L{{-1,1},{-1,1},{-1,1}}]
 
 
-Export["fig13.pdf",GraphicsRow[{pla,plb,plc},0,ImageSize->1024]]
+Export["fig1_3.pdf",GraphicsRow[{pla,plb,plc},0,ImageSize->1024]]
 
 
 {x1,y1,z1}=(r1=RotationTransform[20 degrad,z])/@{x,y,z}
@@ -101,7 +101,7 @@ StyleBox[\"z\",\nFontSlant->\"Italic\"]\)",20,FontFamily->"Times New Roman"],R z
 StyleBox[\"z\",\nFontSlant->\"Italic\"]\)'",20,FontFamily->"Times New Roman",Background->White],R z3,{-2.5,1}],Text[Style["(c)",20,FontFamily->"Times New Roman"],{0.5L,-0.8L,L}]},Lighting->"Neutral",ViewPoint->{10,10,6},Boxed->False,PlotRange->L{{-1,1},{-1,1},{-1,1}}]
 
 
-Export["fig14.pdf",GraphicsRow[{pla,plb,plc},0,ImageSize->1024]]
+Export["fig1_4.pdf",GraphicsRow[{pla,plb,plc},0,ImageSize->1024]]
 
 
 {x1,y1,z1}=(r1=RotationTransform[65 degrad,z])/@{x,y,z};
@@ -126,7 +126,7 @@ StyleBox[\"z\",\nFontSlant->\"Italic\"]\)",20,FontFamily->"Times New Roman"],R z
 StyleBox[\"z\",\nFontSlant->\"Italic\"]\)'",20,FontFamily->"Times New Roman",Background->White],R z3,{-2.5,1}],Text[Style["\[Alpha]",20,FontFamily->"Times New Roman"],(y+y1)/2 0.6,{-3,0}],Text[Style["\[Beta]",20,FontFamily->"Times New Roman"],(z+z3)/2 1.0,{3,0}],Text[Style["\[Gamma]",20,FontFamily->"Times New Roman",Background->White],(y1+y3)/2 0.9,{2,0}]},Lighting->"Neutral",ViewPoint->{10,10,6},Boxed->False,PlotRange->L{{-1,1},{-1,1},{-1,1}}]
 
 
-Export["fig15.pdf",g15,ImageSize->1024]
+Export["fig1_5.pdf",g15,ImageSize->1024]
 
 
 nv=Normalize[{-0.7,0.3,0.7}];\[Theta]=50 degrad;{xp,yp,zp}=(RotationTransform[\[Theta],nv])/@{x,y,z};
@@ -150,7 +150,7 @@ StyleBox[\"z\",\nFontSlant->\"Italic\"]\)'",20,FontFamily->"Times New Roman"],R 
 StyleBox[\"n\",\nFontWeight->\"Plain\",\nFontSlant->\"Italic\"]\)",20,FontFamily->"Times New Roman"],R nv,{0,-1}],Text[Style["\[Omega]",20,FontFamily->"Times New Roman"],R 0.6nv,{-1.5,-0.5}]},Lighting->"Neutral",ViewPoint->{10,2,12},Boxed->False,PlotRange->L{{-1,1},{-1,1},{-1,1}}]
 
 
-Export["fig16.pdf",g16,ImageSize->1024]
+Export["fig1_6.pdf",g16,ImageSize->1024]
 
 
 g17=Graphics3D[{{Red,Arrow[{{0,0,0},R x}],Arrow[{{0,0,0},R y}],Arrow[{{0,0,0},R z}]},{Green,Arrow[{{0,0,-1/2},R x+{0,0,-1/2}}],Arrow[{{0,0,-1/2},R y+{0,0,-1/2}}]},{Blue,Opacity[0.4],Sphere[{0,0,0},1/2]},{Directive[Opacity[0.0],EdgeForm[{Pink}]],ResourceFunction["Disk3D"][{0,0,0},1/2,{0,0,1}]},
@@ -162,4 +162,4 @@ StyleBox[\"x\",\nFontSlant->\"Italic\"]\)",20,FontFamily->"Times New Roman"],R x
 StyleBox[\"z\",\nFontSlant->\"Italic\"]\)",20,FontFamily->"Times New Roman"],R z,{0,-1}],Text[Style["\[Zeta]",20,FontFamily->"Times New Roman"],{1,1,-1/2},{0,1}]},Lighting->"Neutral",ViewPoint->{10,2,5},Boxed->False,PlotRange->L{{-1/2,1},{-1/2,1},{-1,1}}]
 
 
-Export["fig17.pdf",g17,ImageSize->1024]
+Export["fig1_7.pdf",g17,ImageSize->1024]

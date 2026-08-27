@@ -1,0 +1,20 @@
+% styles for the coordinate-system figures (Figs. 1.1, 1.2, 1.8); axes stay
+% black, other elements coloured for clarity. Shared axonometric x/y/z basis.
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{3dfigs}[2026/07/17 Chap11 TikZ graphical-method diagrams]
+\RequirePackage{tikz}
+\usetikzlibrary{arrows.meta,decorations.markings,positioning,calc,decorations.pathreplacing,math,shapes.geometric,bending}
+
+\tikzset{
+  axo/.style={x={(-0.72cm,-0.46cm)}, y={(1cm,0cm)}, z={(0cm,1cm)}},
+  axis/.style={black, thick, -{Latex[length=2.4mm]}},
+  rvec/.style={blue!70!black, ultra thick, -{Latex[length=2.8mm]}},
+  bvec/.style={red!80!black, ultra thick, -{Latex[length=2.4mm]}},
+  cdash/.style={black!45, very thick, dashed},
+  rdash/.style={red!80!black, very thick, dashed},
+  arc/.style={black, thin},
+  side/.style={blue!70!black, line width=1.1pt},          % spherical-triangle sides (Fig 1.8)
+  sph/.style={black!55, thin},                            % sphere octant outline
+  merid/.style={black!45, thin},                          % meridian/radial construction
+  tang/.style={red!80!black, very thick, -{Latex[length=2.2mm]}}, % frame x-axis arrows
+}
