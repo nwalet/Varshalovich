@@ -92,7 +92,9 @@ Equations \eqref{eq:5:1:4} and the relations \eqref{eq:5:1:5}, \eqref{eq:5:1:10}
 \subsection{Zonal, Sectorial and Tesseral Harmonics}\label{sec:5.1.6}
 These functions are linear combinations of the spherical harmonics for $|m| \leq l$
 \begin{align}
-& u_{l m}(\vartheta, \varphi)=\frac{1}{2}\left[Y_{l m}(\vartheta, \varphi)+Y_{l m}^{*}(\vartheta, \varphi)\right]=\sqrt{\frac{2 l+1}{2 \pi} \, \frac{(l-m)!}{(l+m)!}} \cos m \varphi P_{l}^{m}(\cos \vartheta),  \notag\\
+% NOTE: book misprint (printed p.132) -- u_lm RHS printed with sqrt((2l+1)/2pi);
+% since u_lm=1/2(Y+Y*)=Re(Y) the coefficient must be 4pi (as for v_lm). Corrected.
+& u_{l m}(\vartheta, \varphi)=\frac{1}{2}\left[Y_{l m}(\vartheta, \varphi)+Y_{l m}^{*}(\vartheta, \varphi)\right]=\sqrt{\frac{2 l+1}{4 \pi} \, \frac{(l-m)!}{(l+m)!}} \cos m \varphi P_{l}^{m}(\cos \vartheta),  \notag\\
 & v_{l m}(\vartheta, \varphi)=\frac{1}{2 i}\left[Y_{l m}(\vartheta, \varphi)-Y_{l m}^{*}(\vartheta, \varphi)\right]=\sqrt{\frac{2 l+1}{4 \pi} \frac{(l-m)!}{(l+m)!}} \sin m \varphi P_{l}^{m}(\cos \vartheta) .\label{eq:5:1:14}
 \end{align}
 The functions $u_{l m}(\vartheta, \varphi)$ and $v_{l m}(\vartheta, \varphi)$ are real, in contrast to $Y_{l m}(\vartheta, \varphi)$. The functions $u_{l 0}(\vartheta, \varphi)$ are called the zonal harmonics because parallels where $u_{10}(\vartheta, \varphi)=0$ divide a sphere of unit radius into $l+1$ zones. The functions $u_{l l}(\vartheta, \varphi)$ and $v_{l l}(\vartheta, \varphi)$ are called the sectorial harmonics because meridians where $u_{l l}(\vartheta, \varphi)=0$ or $v_{l l}(\vartheta, \varphi)=0$ divide the unit sphere into $2 l$ sectors. The functions $u_{l m}(\vartheta, \varphi)$ and $v_{l m}(\vartheta, \varphi)$ for $m \neq 0$ and $m \neq l$ are called the tesseral harmonics because a set of parallels and meridians where $u_{l m}(\vartheta, \varphi)=0$ or $v_{l m}(\vartheta, \varphi)=0$ divides the whole spherical surface into $2 m(l-m+1)$ cells. The cells, which correspond to positive and negative signs of any function, are arranged in as on a chequer board.
@@ -168,7 +170,7 @@ In the following equations sums are over all integer values of $s$ so that no fa
 \xi_{m 0}= \begin{cases}(-1)^{m} & \text { if } m>0 ,\\ 1 & \text { if } m \leq 0.\end{cases} \label{eq:5:2:8}
 \end{equation}
 \begin{align}
-& Y_{l m}(\vartheta, \varphi)=(-1)^{m} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \, \frac{(l+m)!}{(l-m)!}}\left(\tan \frac{\vartheta}{2}\right)^{m} \sum_{*}(-1)^{s} \frac{(l+s)!}{(l-s)!} \, \frac{\left(\sin \frac{\vartheta}{2}\right)^{2 s}}{s!(s+m)!} , \label{eq:5:2:9}\\
+& Y_{l m}(\vartheta, \varphi)=(-1)^{m} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \, \frac{(l+m)!}{(l-m)!}}\left(\tan \frac{\vartheta}{2}\right)^{m} \sum_{s}(-1)^{s} \frac{(l+s)!}{(l-s)!} \, \frac{\left(\sin \frac{\vartheta}{2}\right)^{2 s}}{s!(s+m)!} , \label{eq:5:2:9}\\
 & Y_{l m}(\vartheta, \varphi)=(-1)^{m} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \, \frac{(l-m)!}{(l+m)!}}\left(\sin \frac{\vartheta}{2} \, \cos \frac{\vartheta}{2}\right)^{m} \sum_{s}(-1)^{s} \frac{(l+m+s)!}{(l-m-s)!} \, \frac{\left(\sin \frac{\vartheta}{2}\right)^{2 s}}{s!(s+m)!} , \label{eq:5:2:10}\\
 & Y_{l m}(\vartheta, \varphi)=e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \, \frac{(l-m)!}{(l+m)!}}\left(\cot \frac{\vartheta}{2}\right)^{m} \sum_{s}(-1)^{l-s} \frac{(2 l-s)!}{s!(l-s)!} \, \frac{\left(\sin \frac{\vartheta}{2}\right)^{2(l-s)}}{(l-m-s)!} ,\label{eq:5:2:11}
 \end{align}
@@ -191,7 +193,7 @@ In the equations of this section an integer index $s$ assumes either only even o
 \begin{multline}
 Y_{l m}(\vartheta, \varphi)=e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi(l+m)!(l-m)!}}  \\
 \times\left\{\begin{array}{c}
-\sum_{s=|m|,|m|+2, \ldots}^{l}(-1)^{\frac{4+m}{2}} \frac{(l+s)!}{(s+m)!!(s-m)!!} \, \frac{(l+m)!!(l-m)!!}{(l+\vartheta)!!(l-s)!!}(\sin \vartheta)^{s} \\
+\sum_{s=|m|,|m|+2, \ldots}^{l}(-1)^{\frac{s+m}{2}} \frac{(l+s)!}{(s+m)!!(s-m)!!} \, \frac{(l+m)!!(l-m)!!}{(l+s)!!(l-s)!!}(\sin \vartheta)^{s} \\
 \text { if } l-m \text { is even } \\
 \cos \vartheta \sum_{s=|m|,|m|+2, \ldots}^{l-1}(-1)^{\frac{l+m}{2}} \frac{(l+s)!}{(s+m)!!(s-m)!!} \, \frac{(l+m-1)!!(l-m-1)!!}{(l+s-1)!!(l-s-1)!!}(\sin \vartheta)^{s} \\
 \text { if } l-m \text { is odd },
@@ -211,7 +213,7 @@ Y_{l m}(\vartheta, \varphi)=e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \, \frac{(
 L+m-s \text { is even } ,
 \end{gather}
 \begin{gather}
-Y_{l m}(\vartheta, \varphi)=e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi}(l+m)!(l-m)!(\cos \vartheta)^{l}} \sum_{\rho=|m|,|m|+2, \ldots}(-1)^{\frac{s+m}{2}} \frac{1}{(s+m)!!(s-m)!!} \, \frac{(\tan \vartheta)^{s}}{(l-s)!} , \label{eq:5:2:20}\\
+Y_{l m}(\vartheta, \varphi)=e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi}(l+m)!(l-m)!}(\cos \vartheta)^{l} \sum_{s=|m|,|m|+2, \ldots}(-1)^{\frac{s+m}{2}} \frac{1}{(s+m)!!(s-m)!!} \, \frac{(\tan \vartheta)^{s}}{(l-s)!} , \label{eq:5:2:20}\\
 Y_{l m}(\vartheta, \varphi)=e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi}(l+m)!(l-m)!(\sin \vartheta)^{l}} \sum_{0}(-1)^{l+\frac{m}{2}-s} \frac{1}{(l+m-s)!!(l-m-s)!!} \, \frac{(\cot \vartheta)^{s}}{s!} , \notag\\
 l+m-s \text { is even } .\label{eq:5:2:21}
 \end{gather}
@@ -232,15 +234,15 @@ Y_{l m}(\vartheta, \varphi)=  (-1)^{l-m} \xi_{m 0} e^{i m \varphi} \sqrt{\frac{2
 \end{gather}
 
 \begin{gather}
-Y_{l m}(\vartheta, \varphi)=(-1)^{l-m} \xi_{m 0} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \, \frac{(l+|m|)!}{(l-|m|)!}} \frac{(\sin \vartheta)^{|m|}}{|m||2| m \mid}  \label{eq:5:2:25}\\
+Y_{l m}(\vartheta, \varphi)=(-1)^{l-m} \xi_{m 0} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \, \frac{(l+|m|)!}{(l-|m|)!}} \frac{(\sin \vartheta)^{|m|}}{|m|! 2^{|m|}}  \label{eq:5:2:25}\\
 \times F\left(-l+|m|, l+|m|+1 ;|m|+1 ; \cos ^{2} \frac{\vartheta}{2}\right)  \notag
 \end{gather}\begin{gather}
-Y_{l m}(\vartheta, \varphi)=\xi_{m 0} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi(l+m)!(l-m)!}} \frac{(2 l)!}{l!}\left(\cos ^{\frac{\vartheta}{2}}\right)^{2 l}\left(\tan \frac{\vartheta}{2}\right)^{|m|}  \label{eq:5:2:26}\\
+Y_{l m}(\vartheta, \varphi)=\xi_{m 0} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi(l+m)!(l-m)!}} \frac{(2 l)!}{l!}\left(\cos \frac{\vartheta}{2}\right)^{2 l}\left(\tan \frac{\vartheta}{2}\right)^{|m|}  \label{eq:5:2:26}\\
 \times F\left(-l,-l+|m| ;-2 l ; \frac{1}{\cos ^{2} \frac{\vartheta}{2}}\right),  \notag
 \end{gather}\begin{gather}
-Y_{l m}(\vartheta, \varphi)=\xi_{m 0} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \, \frac{(l+|m|)!}{(l-|m|)!}}\left(\tan \frac{\vartheta}{2}\right)^{|m|}\left(\cos \frac{\vartheta}{2}\right)^{2 l} F\left(-l+|m|,-l ;|m|+1 ;-\tan ^{2} \frac{\vartheta}{2}\right)  \label{eq:5:2:27}
+Y_{l m}(\vartheta, \varphi)=\xi_{m 0} e^{i m \varphi} \frac{1}{|m|!}\sqrt{\frac{2 l+1}{4 \pi} \, \frac{(l+|m|)!}{(l-|m|)!}}\left(\tan \frac{\vartheta}{2}\right)^{|m|}\left(\cos \frac{\vartheta}{2}\right)^{2 l} F\left(-l+|m|,-l ;|m|+1 ;-\tan ^{2} \frac{\vartheta}{2}\right)  \label{eq:5:2:27}
 \end{gather}\begin{gather}
-Y_{l m}(\vartheta, \varphi)=(-1)^{l-m} \xi_{m 0} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \, \frac{(l+|m|)!}{(l-|m|)!}}\left(\cot ^{\frac{\vartheta}{2}}\right)^{|m|}\left(\sin ^{\frac{\vartheta}{2}}\right)^{2 l}  \label{eq:5:2:28}\\
+Y_{l m}(\vartheta, \varphi)=(-1)^{l-m} \xi_{m 0} e^{i m \varphi} \frac{1}{|m|!}\sqrt{\frac{2 l+1}{4 \pi} \, \frac{(l+|m|)!}{(l-|m|)!}}\left(\cot \frac{\vartheta}{2}\right)^{|m|}\left(\sin \frac{\vartheta}{2}\right)^{2 l}  \label{eq:5:2:28}\\
 \times F\left(-l+|m|,-l ;|m|+1 ;-\cot ^{2} \frac{\vartheta}{2}\right) \notag
 \end{gather}
 \subsection{$Y_{l m}(\vartheta, \varphi)$ and the Hypergeometric Functions with Arguments Expressed in Terms of Trigonometric Functions of $\vartheta$}\label{sec:5.2.5}
@@ -276,7 +278,7 @@ F\left(-\frac{l-|m|}{2}, \frac{l+|m|+1}{2} ;|m|+1 ; \sin ^{2} \vartheta\right) \
 & \times F\left(-\frac{l-m}{2},-\frac{l-m-1}{2} ;-\frac{2 l-1}{2} ; \frac{1}{\cos ^{2} \vartheta}\right),  \label{eq:5:2:32}
 \end{align}
 \begin{align}
-& Y_{l m}(\vartheta, \varphi)=\xi_{m 0} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \frac{(l+|m|)!}{(l-|m|)!}}(\cos \vartheta)^{l} \frac{(\tan \vartheta)^{|m|}}{2^{|m||m|!}}  \notag\\
+& Y_{l m}(\vartheta, \varphi)=\xi_{m 0} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \frac{(l+|m|)!}{(l-|m|)!}}(\cos \vartheta)^{l} \frac{(\tan \vartheta)^{|m|}}{2^{|m|}|m|!}  \notag\\
 & \times F\left(-\frac{l-|m|}{2},-\frac{l-|m|-1}{2} ;|m|+1 ;-\tan ^{2} \vartheta\right),  \label{eq:5:2:33}
 \end{align}
 \begin{align}
@@ -1217,7 +1219,7 @@ F(\vect{R}, \vect{r})=f\left(\vect{r}_{1}, \vect{r}_{2}\right)=\sum_{l_{1} l_{3}
 \end{equation}
 \begin{figure}[tbh]
 \begin{center}
-  \includegraphics[alt={},max width=0.4\textwidth]{402d9a1b-ee97-49cb-ae14-75458391be12-177_736_783_276_688}
+  \includegraphics[alt={}]{fig5_1}
 \caption{Relations between the vectors $\vect{R}, \vect{r}$ and $\vect{r}_{1}, \vect{r}_{2}$.}
 \label{chap5:fig:2}
 \end{center}

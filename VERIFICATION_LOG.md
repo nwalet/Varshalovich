@@ -147,12 +147,22 @@ Rodrigues/differential forms 5.2.2/3/6, hypergeometric 5.2.23, the D-relation
 - **Open flags (need scan)**: **5.2.27** off by exactly `|m|!` for |m|≥2 —
   a missing `1/|m|!` (cf. 5.2.23); **5.1.14** `u_lm` differs by √2 (real-harmonic
   normalization — book writes `½(Y+Y*)` but the RHS carries `√((2l+1)/2π)`).
-- **Not yet checked**: power-series 5.2.9–5.2.22 and hypergeometric 5.2.24–5.2.36
-  — visible OCR damage (garbled sum indices `∑_*`,`∑_ρ`,`∑_0`; `4+m`→`l+m`; √
-  wrapping trig that belongs outside; `2|m|l!`, `\cos^{ϑ/2}` mangles). Next.
-- **Build note**: §5.17 (~line 1220) references a missing figure
-  (`402d9a1b-…`, un-extracted OCR placeholder) — pre-existing, blocks a clean
-  halt-on-error full-chapter build.
+- **§5.2 power-series & hypergeometric cluster** (`check_5_2_series.py`,
+  all PASS): the trig-θ/2 series 5.2.9–5.2.14 and hypergeometric
+  5.2.24/25/26/31/33/34 verified vs mpmath.spherharm; scan-read the rest
+  (printed pp.135–137). Fixes applied: 5.2.9 `∑_*`→`∑_s`; 5.2.17 `(-1)^{(4+m)/2}`
+  →`(-1)^{(s+m)/2}` and `(l+ϑ)!!`→`(l+s)!!`; 5.2.20 `∑_ρ`→`∑_s` + √-unwrap of
+  `(cosϑ)^l`; 5.2.25 denom `|m||2|m|`→`|m|!2^{|m|}`; 5.2.26 `(\cos^{ϑ/2})`→
+  `(\cos ϑ/2)`; 5.2.28 `(\cot^{ϑ/2})`,`(\sin^{ϑ/2})` de-garble; 5.2.33
+  `2^{|m||m|!}`→`2^{|m|}|m|!`.
+- **Book misprints** (restored + annotated in-source): **5.2.27, 5.2.28**
+  omit the `1/|m|!` prefactor (cf. 5.2.23/5.2.25) — added; **5.1.14** `u_lm`
+  coefficient `2π`→`4π` (`½(Y+Y*)=Re(Y)` needs 4π, matching v_lm).
+- **Still to do in §5.2**: 5.2.15/16 (√ wraps trig), 5.2.18/19/21/22, 5.2.29/30/
+  32/35/36, 5.2.38 (√ wraps + `2|m|l!`). §5.3 onward untouched.
+- **Build blocker (user-side)**: §5.16 line ~1222 `\includegraphics{fig5_1}` —
+  file not found (graphicspath `./images/`; tikz_files has `fig5_a.tex`, not
+  `fig5_1`). Figure-name mismatch to resolve before a clean full build.
 
 ## Open flags (book misprints / omissions, annotated in-source)
 
