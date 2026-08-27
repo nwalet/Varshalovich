@@ -31,7 +31,7 @@ identity, and genuine source misprints are flagged.
 | 0–2 | prelim / rotations / D-functions | ➖ n/a | not amenable to symbolic checking (definitional) | — |
 | 3 | irreducible tensors | ✅ partial | 3.2 tensor-product coefficients | `check_chap3.py` |
 | 4 | Wigner D-functions | 🔄 in progress | **4.3–4.17 done**; 4.18–4.19 remain | `check_4_3.py` … `check_4_16_17.py` |
-| 5 | — | ❌ **gap** | OCR + headings/labels only | — |
+| 5 | spherical harmonics | 🔄 in progress | 5.1 + 5.2 explicit forms started | `check_5_1_2.py` |
 | 6 | — | ❌ **gap** | OCR + headings/labels only | — |
 | 7 | — | ❌ **gap** | OCR + headings/labels only | — |
 | 8 | CG / 3jm | ✅ extensive | 8.1–8.2 tables, 8.4 symmetry, 8.5 special values, 8.6 recursions (incl. 8.6.1, 8.6.8 Regge), 8.7 sum rules (8.7.1–8.7.6), 8.8 generating fns, 8.10 zero selection rules; accidental 3j zeros (J≤17) | `symmetries_8_4`, `special_values_8_5`, `recursions_8_6`, `sums_8_7`, `check_8_8`, `check_8_10`, `check_cg_tables`, `check_3j_zeros` |
@@ -129,9 +129,30 @@ Previously: Chapter 13, §13.2.9 (`be21346`, ~2026-08-13). The pass had run
 1. **Chapter 4 continued** — 4.4 (symmetries), 4.6–4.7 (sums / addition
    theorems), 4.8 (recursions), 4.10–4.12 (orthogonality / integrals),
    4.14–4.15 (characters). All machine-checkable via `wigner_d`.
-2. **Chapters 5, 6, 7** — never symbolically verified (OCR + labels only).
+2. **Chapters 6, 7** — never symbolically verified (OCR + labels only).
 3. Chapter 3 is only partially covered (3.2); the rest could be swept.
    (Chapters 0–2 are definitional and not amenable to symbolic checking.)
+
+## Chapter 5 (spherical harmonics) — in progress (2026-08-27)
+
+Reference: `Y_{lm} = mpmath.spherharm(l,m,ϑ,φ)` (VMK = standard Condon–Shortley;
+validated in Ch.4). `check_5_1_2.py` verifies (all PASS): 5.2.1
+(e^{imφ}√·P_l^m), 5.1.10, 5.1.11 (conjugation), 5.1.6 (orthonormality), the
+Rodrigues/differential forms 5.2.2/3/6, hypergeometric 5.2.23, the D-relation
+5.2.37, and Gegenbauer 5.2.39.
+
+- **Chapter-wide OCR fix**: `Y_{\text{Im/lm/im}}` (16 spots, incl. section
+  titles) → `Y_{lm}`; §5.1.7 `\mathfrak{Z}{lm}`→`\mathfrak{Z}_{lm}`,
+  `\vect{3}`→`\mathfrak{Z}`; eq 5.1.9 `\delta_{l}`→`\delta_{ll'}`.
+- **Open flags (need scan)**: **5.2.27** off by exactly `|m|!` for |m|≥2 —
+  a missing `1/|m|!` (cf. 5.2.23); **5.1.14** `u_lm` differs by √2 (real-harmonic
+  normalization — book writes `½(Y+Y*)` but the RHS carries `√((2l+1)/2π)`).
+- **Not yet checked**: power-series 5.2.9–5.2.22 and hypergeometric 5.2.24–5.2.36
+  — visible OCR damage (garbled sum indices `∑_*`,`∑_ρ`,`∑_0`; `4+m`→`l+m`; √
+  wrapping trig that belongs outside; `2|m|l!`, `\cos^{ϑ/2}` mangles). Next.
+- **Build note**: §5.17 (~line 1220) references a missing figure
+  (`402d9a1b-…`, un-extracted OCR placeholder) — pre-existing, blocks a clean
+  halt-on-error full-chapter build.
 
 ## Open flags (book misprints / omissions, annotated in-source)
 
