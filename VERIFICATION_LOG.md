@@ -178,6 +178,16 @@ Rodrigues/differential forms 5.2.2/3/6, hypergeometric 5.2.23, the D-relation
   organization needs a careful re-read before editing), 5.2.18 (partial fix
   only; my series encoding still off), 5.2.19, 5.2.35/36 (|z|=1 exponential 2F1,
   scan-matched, not numerically reproducible). §5.3 onward untouched.
+- **§5.13** (`check_5_13.py` + `check_5_13_1.py`, all PASS): every live form
+  verified vs mpmath.spherharm to machine precision.
+  - §5.13.2 (eqs 5.13.1–5.13.5, |m|=0..4 via Legendre P_l) and §5.13.3
+    (eqs 5.13.6–5.13.11, |m|=l..l−5 via trig) — all correct as printed, no fixes.
+  - §5.13.1 (explicit l≤5 table, currently inside a `\begin{comment}` block):
+    all 35 entries correct in both the sin^k and multiple-angle forms. OCR label
+    garbles fixed: `\sin4\theta`→`\sin4\vartheta` & `e^{-iS\varphi}`→`e^{-i3\varphi}`
+    (Y_{4-3}); `\sin3\theta`→`\sin3\vartheta` (Y_{5+5}); `Y_{5+9}`→`Y_{5+3}`;
+    `Y_{\delta+1}`/`\sin\phi`→`Y_{5+1}`/`\sin\vartheta`. **Restored dropped
+    Y_{5-2}** (OCR omission) as conjugate partner of Y_{5+2}, with in-source NOTE.
 
 ## Open flags (book misprints / omissions, annotated in-source)
 
