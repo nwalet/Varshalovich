@@ -188,6 +188,13 @@ Rodrigues/differential forms 5.2.2/3/6, hypergeometric 5.2.23, the D-relation
     (Y_{4-3}); `\sin3\theta`→`\sin3\vartheta` (Y_{5+5}); `Y_{5+9}`→`Y_{5+3}`;
     `Y_{\delta+1}`/`\sin\phi`→`Y_{5+1}`/`\sin\vartheta`. **Restored dropped
     Y_{5-2}** (OCR omission) as conjugate partner of Y_{5+2}, with in-source NOTE.
+- **§5.14** (`check_5_14.py`, all PASS): Y and ∂_ϑY at ϑ=0,π/2,π,±nπ
+  (eqs 5.14.1–5.14.8) verified vs mpmath.spherharm (Y at the special ϑ directly;
+  ∂_ϑY via high-precision finite differences at the poles / centered at π/2;
+  5.14.8 cross-checked through the verified 5.8.5c recurrence to avoid the
+  past-the-pole continuation branch). **Fix: 5.14.6** phase
+  `(-1)^{l+(m+1)/2}`→`(-1)^{(l+m+1)/2}` — OCR pulled l out of the fraction
+  numerator; scan (PDF p.171) confirms the whole l+m+1 is over 2. Silent OCR fix.
 
 ## Open flags (book misprints / omissions, annotated in-source)
 
