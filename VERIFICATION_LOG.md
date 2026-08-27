@@ -237,6 +237,17 @@ Rodrigues/differential forms 5.2.2/3/6, hypergeometric 5.2.23, the D-relation
   garbled 2nd CG `C_{l₂m₁l₂m a}`→`\clebsch{l₁}{m₁}{l₂}{m₂}{L}{M}`; 5.6.10 `m₃`→
   `m₂`; 5.6.11 `(4x)²`→`(4π)²`; 5.6.14 `\vect{Y}_{l₃}`→`\vect{Y}_{l₂}`; 5.6.15
   stray trailing `,(` removed.
+- **§5.3** (`check_5_3.py`, all PASS): integral representations, verified by
+  mpmath.quad/quadosc. §5.3.1: Mehler–Dirichlet 5.3.2/5.3.3 (m=0 only — m≥1 is a
+  finite-part integral), 5.3.4. §5.3.2: 5.3.5–5.3.10 (both ± signs). §5.3.3:
+  improper 5.3.12/5.3.13, 5.3.14 (cosϑ>0), |Y|² Bessel 5.3.15. OCR fixes:
+  **5.3.9, 5.3.10** `(1+m)!`→`(l+m)!` (l→1; numerically confirmed); `\item(c)`→
+  `\item` (redundant literal label); 5.3.15 `\subsubsection{(c) …}`→`\item …`
+  (broke the enumerate). **Domain note (in-source)**: the reciprocal-power forms
+  5.3.6/5.3.8/5.3.10 are valid only for cosϑ>0 — for cosϑ<0 the
+  ∫dψ/(a+b cosψ) branch flips sign and the RHS returns −Y_lm; the direct forms
+  5.3.5/5.3.7/5.3.9 hold for all ϑ. 5.3.1 (m-fold indefinite) and 5.3.11
+  (change of variables) left as structural, not numerically checked.
 
 ## Open flags (book misprints / omissions, annotated in-source)
 

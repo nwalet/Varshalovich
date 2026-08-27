@@ -345,13 +345,18 @@ This formula represents the analytic continuation of the differential expression
 Y_{l m}(\vartheta, \varphi)=(-1)^{m} \frac{\sqrt{2}}{\pi} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \, \frac{(l-m)!}{(l+m)!}}(2 m-1)!!\left(\frac{\sin \vartheta}{2}\right)^{m} \int_{0}^{\vartheta} \frac{\cos \left[(2 l+1) \frac{\psi}{2}\right] d \psi}{(\cos \psi-\cos \vartheta)^{m+\frac{1}{2}}},(m \geq 0)  \label{eq:5:3:2}\\
 Y_{l m}(\vartheta, \varphi)=\frac{\sqrt{2}}{\pi} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \, \frac{(l-m)!}{(l+m)!}}(2 m-1)!!\left(\frac{\sin \vartheta}{2}\right)^{m} \int_{\vartheta}^{\pi} \frac{\sin \left[(2 l+1) \frac{\psi}{2}\right] d \psi}{(\cos \vartheta-\cos \psi)^{m+\frac{1}{2}}},(m \geq 0). \label{eq:5:3:3}
 \end{gather}
-\item(c)
+\item
 \begin{align}
 Y_{l m}(\vartheta, \varphi)= & (-1)^{m} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \, \frac{(l+m)!}{(l-m)!}} \frac{1}{(m-1)!(\sin \vartheta)^{m}}  \notag\\
 & \times \int_{\cos \vartheta}^{1} P_{l}(\cos \psi)[\cos \psi-\cos \vartheta]^{m-1} d \cos \psi,(m>0) .\label{eq:5:3:4}
 \end{align}
 \end{enumerate}
 \subsection{$Y_{l m}(\vartheta, \varphi)$ in the Form of Definite Integrals}\label{sec:5.3.2}
+% NOTE: the reciprocal-power representations \eqref{eq:5:3:6}, \eqref{eq:5:3:8}
+% and \eqref{eq:5:3:10} are valid for cos(vartheta) > 0, i.e. 0 <= vartheta <
+% pi/2; for cos(vartheta) < 0 the branch of int dpsi/(a+b cos psi) flips sign and
+% the RHS returns -Y_lm.  The direct-power forms \eqref{eq:5:3:5},
+% \eqref{eq:5:3:7}, \eqref{eq:5:3:9} hold for all vartheta.  (scripts/check_5_3.py)
 \begin{enumerate}[label=(\alph*)]
   \item
 \begin{align}
@@ -367,8 +372,8 @@ For $\varphi=0$, complex conjugation does not affect the right-hand side of Eq. 
 Equations \eqref{eq:5:3:7} and \eqref{eq:5:3:8} represent modifications of Eqs. \eqref{eq:5:3:5} and \eqref{eq:5:3:6}.\\
 \item
 \begin{align}
-& Y_{l m}(\vartheta, \varphi)=\frac{(-1)^{m}}{\pi} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \, \frac{(1+m)!}{(l-m)!}} \frac{(\sin \vartheta)^{m}}{(2 m-1)!!} \int_{0}^{\pi}(\cos \vartheta \pm i \sin \vartheta \cos \psi)^{l-m}(\sin \psi)^{2 m} d \psi,(m \geq 0)  \label{eq:5:3:9}\\
-& Y_{l m}(\vartheta, \varphi)=\frac{(-1)^{m}}{\pi} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \, \frac{(1+m)!}{(l-m)!}} \frac{(\sin \vartheta)^{m}}{(2 m-1)!!} \int_{0}^{\pi} \frac{(\sin \chi)^{2 m} d \chi}{(\cos \vartheta \mp i \sin \vartheta \cos \chi)^{l+m+1}},(m \geq 0) \label{eq:5:3:10}
+& Y_{l m}(\vartheta, \varphi)=\frac{(-1)^{m}}{\pi} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \, \frac{(l+m)!}{(l-m)!}} \frac{(\sin \vartheta)^{m}}{(2 m-1)!!} \int_{0}^{\pi}(\cos \vartheta \pm i \sin \vartheta \cos \psi)^{l-m}(\sin \psi)^{2 m} d \psi,(m \geq 0)  \label{eq:5:3:9}\\
+& Y_{l m}(\vartheta, \varphi)=\frac{(-1)^{m}}{\pi} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \, \frac{(l+m)!}{(l-m)!}} \frac{(\sin \vartheta)^{m}}{(2 m-1)!!} \int_{0}^{\pi} \frac{(\sin \chi)^{2 m} d \chi}{(\cos \vartheta \mp i \sin \vartheta \cos \chi)^{l+m+1}},(m \geq 0) \label{eq:5:3:10}
 \end{align}
 Equations \eqref{eq:5:3:9} and \eqref{eq:5:3:10} transform to each other at replacing the integration variables according to
 \begin{equation}
@@ -393,7 +398,7 @@ This replacing is equivalent to the transformation of "mirror" symmetry, i.e., t
 Y_{l m}(\vartheta, \varphi)=(-1)^{m} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi(l+m)!(l-m)!}} \int_{0}^{\infty} e^{-k \cos \vartheta} J_{m}(k \sin \vartheta) k^{l} d k. \label{eq:5:3:14}
 \end{equation}
 where $J_{m}(x)$ is a Bessel function.\\
-\subsubsection{(c) $\left|Y_{ l m}(\vartheta, \varphi)\right|^{2}$ may be represented as}
+\item $\left|Y_{l m}(\vartheta, \varphi)\right|^{2}$ may be represented as
 \begin{equation}
 \left|Y_{l m}(\vartheta, \varphi)\right|^{2}=\frac{2 l+1}{4 \pi} \int_{0}^{\infty}\left[J_{m}\left(\frac{t \sin \vartheta}{2}\right)\right]^{2} J_{2 l+1}(t) d t .\label{eq:5:3:15}
 \end{equation}
