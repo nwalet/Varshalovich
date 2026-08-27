@@ -207,6 +207,14 @@ Rodrigues/differential forms 5.2.2/3/6, hypergeometric 5.2.23, the D-relation
     5.10.7 `o_1(;m+1;.)`→`{}_0F_1`; 5.10.11-14 `j(t)`→`j_l(t)` (spherical Bessel);
     5.10.16 `j i(t)`→`j_l(t)` and split merged exponential
     `e^{it cosϑ₁cosϑ₂ · e^{im(φ₁-φ₂)}}`→`e^{it cosϑ₁cosϑ₂} e^{im(φ₁-φ₂)}`.
+- **§5.11** (`check_5_11.py`, all PASS): generating functions. Term-wise
+  convergent 5.11.1 (1/R^{2m+1}, both |t|≶1), 5.11.2 (1/R, m=0), 5.11.3
+  ([(1+R)²−t²]^{−m}/R) verified by direct summation. 5.11.4/5/7 are
+  distributional (Θ step-fn + LHS singularity at ϑ=ψ, not term-wise convergent);
+  5.11.7 (m=0 Legendre) confirmed via Abel summation (r→1); 5.11.4/5 scan-matched
+  (PDF p.165). OCR fixes: 5.11.1 `t^{+m+1}`→`t^{l+m+1}`; 5.11.2 `1/1^{l+1}`→
+  `1/t^{l+1}`; 5.11.3 LHS bracket `\left.\mid…\right]`→`\left[…\right]` and stray
+  `\|_{1}`→`l!` (factor pinned numerically); 5.11.7 `\theta`→`\Theta` (×2).
 
 ## Open flags (book misprints / omissions, annotated in-source)
 
