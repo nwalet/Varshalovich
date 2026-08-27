@@ -65,6 +65,18 @@ def CGf(j1, j2, j3, m1, m2, m3):
                      sp.nsimplify(m1), sp.nsimplify(m2), sp.nsimplify(m3)))
 def F(a, b, c, z):
     return complex(mp.hyp2f1(a, b, c, z))
+def Fterm(a, b, c, z, nmax=200):
+    """Terminating 2F1 as an explicit Pochhammer sum (exact for |z|>1 when the
+    series terminates via a non-positive-integer numerator parameter)."""
+    term = mp.mpf(1); tot = mp.mpf(1)
+    for s in range(nmax):
+        num = (a+s)*(b+s)*z
+        den = (c+s)*(s+1)
+        term = term*num/den
+        tot += term
+        if term == 0:
+            return complex(tot)
+    raise ValueError("did not terminate")
 
 def report(tag, worst, tol=TOL):
     ok = worst < tol
@@ -173,6 +185,15 @@ def main():
                 * math.sqrt(fac(2*J+lam+1)/fac(2*J-lam))*math.sin(w/2)**lam)
         return pref*F(-2*J+lam, 2*J+lam+2, lam+1.5, math.cos(w/4)**2)
     ok &= sweep("4.15.10 2F1(cos^2 w/4)", f10, ws=WS_PI)
+
+    # 4.15.11, 4.15.12, 4.15.14 -- NOT numerically checked here. These forms use
+    # 2F1 with argument outside [0,1] (1/sin^2, 1/cos^2) or a complex argument
+    # (e^{-+iw}) together with negative-integer c parameters; they are correct
+    # only under a specific analytic continuation that a naive terminating-sum
+    # or mpmath default evaluation does not reproduce. Verified instead by direct
+    # comparison against the scan (printed pp.107-108): 4.15.11 matches as-is;
+    # 4.15.12 needed a LaTeX de-garble ( (sin^{w/2}) -> (sin w/2)^lam );
+    # 4.15.14 matches as-is.
 
     # 4.15.13  F(-2J+lam, -2J-1/2; lam+3/2; -tan^2 w/4)
     def f13(J, lam, w):

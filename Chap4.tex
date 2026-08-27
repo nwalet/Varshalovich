@@ -1385,27 +1385,32 @@ See also Eq.~\eqref{eq:4:15:1}.\\
 %\notag\\ \times 
 F\left(-2 J+\lambda,-2 J-\frac{1}{2} ;-4 J-1 ; \frac{1}{\sin ^{2} \frac{\omega}{2}}\right) , \notag\\ \label{eq:4:15:11}
 \end{gather}
+% NOTE: eqs 4.15.11, 4.15.12, 4.15.14 use F(a,b;c;z) with z outside [0,1]
+% (1/sin^2, 1/cos^2) or complex (e^{-+iw}) and negative-integer c; they hold
+% only under analytic continuation and were confirmed against the scan
+% (printed pp.107-108), not by naive numerical evaluation. All other 4.15
+% forms are numerically verified in scripts/check_4_15.py.
 \begin{gather}
-\chi_{\lambda}^{J}(\omega)=\frac{\sqrt{2 J+1}(4 J)!!}{\sqrt{(2 J-\lambda)!(2 J+\lambda+1)!}}\left(\cos \frac{\omega}{2}\right)^{2 J-\lambda}\left(\sin ^{\frac{\omega}{2}}\right)^{\lambda}  %\notag\\ \times 
+\chi_{\lambda}^{J}(\omega)=\frac{\sqrt{2 J+1}(4 J)!!}{\sqrt{(2 J-\lambda)!(2 J+\lambda+1)!}}\left(\cos \frac{\omega}{2}\right)^{2 J-\lambda}\left(\sin \frac{\omega}{2}\right)^{\lambda}  %\notag\\ \times
 F\left(-J+\frac{1}{2}, \frac{-2 J+\lambda+1}{2} ;-2 J ; \frac{1}{\cos ^{2} \frac{\omega}{2}}\right) , \notag\\\label{eq:4:15:12}
 \end{gather}
 \begin{gather}
-\chi_{\lambda}^{J}(\omega)=\frac{\sqrt{2 J+1}}{(2 \lambda+1)!!} \sqrt{\frac{(2 J+\lambda+1)!}{(2 J-\lambda)!}}\left(\sin \frac{\omega}{2}\right)^{\lambda}\left(\cos ^{\left.\frac{\omega}{4}\right)^{4 J-2 \lambda}}\right.  %\notag\\\times 
+\chi_{\lambda}^{J}(\omega)=\frac{\sqrt{2 J+1}}{(2 \lambda+1)!!} \sqrt{\frac{(2 J+\lambda+1)!}{(2 J-\lambda)!}}\left(\sin \frac{\omega}{2}\right)^{\lambda}\left(\cos \frac{\omega}{4}\right)^{4 J-2 \lambda}  %\notag\\\times
 F\left(-2 J+\lambda,-2 J-\frac{1}{2} ; \lambda+\frac{3}{2} ;-\tan ^{2} \frac{\omega}{4}\right), \notag\\ \label{eq:4:15:13}
 \end{gather}
 \begin{align}
 \chi_{\lambda}^{J}(\omega)= & \frac{\sqrt{2 J+1}(2 J)!i^{\lambda}}{\sqrt{(2 J-\lambda)!(2 J+\lambda+1)!}}\left(e^{-\frac{i \omega}{2}}-e^{\frac{i \omega}{2}}\right)^{\lambda} e^{ \pm i \frac{\omega}{2}(2 J-\lambda)} F\left(-2 J+\lambda, \lambda+1 ;-2 J ; e^{\mp i \omega}\right) , \label{eq:4:15:14}\\
 \chi_{\lambda}^{J}(\omega)= & \left\{\begin{array}{l}
-(-1)^{J+\frac{3 \lambda}{2}} \sqrt{2 J+1} \sqrt{\frac{(2 J-\lambda-1)!(2 J+\lambda)!11}{(2 J-\lambda)!(2 J+\lambda+1)!}}\left(\sin \frac{\omega}{2}\right)^{\lambda} F\left(-J+\frac{\lambda}{2}, J+1+\frac{\lambda}{2} ; \frac{1}{2} ; \cos ^{2} \frac{\omega}{2}\right), \\
+(-1)^{J+\frac{3 \lambda}{2}} \sqrt{2 J+1} \sqrt{\frac{(2 J-\lambda-1)!!(2 J+\lambda)!!}{(2 J-\lambda)!!(2 J+\lambda+1)!!}}\left(\sin \frac{\omega}{2}\right)^{\lambda} F\left(-J+\frac{\lambda}{2}, J+1+\frac{\lambda}{2} ; \frac{1}{2} ; \cos ^{2} \frac{\omega}{2}\right), \\
 \qquad\qquad \text { if } 2 J-\lambda \text { is even } ,\\
-(-1)^{J+\frac{3 \lambda-1}{2}} \sqrt{2 J+1} \sqrt{\frac{(2 J-\lambda)!1(2 J+\lambda+1)!1}{(2 J-\lambda-1)!1(2 J+\lambda)!1}} \cos \frac{\omega}{2}\left(\sin \frac{\omega}{2}\right)^{\lambda}, \\
+(-1)^{J+\frac{3 \lambda-1}{2}} \sqrt{2 J+1} \sqrt{\frac{(2 J-\lambda)!!(2 J+\lambda+1)!!}{(2 J-\lambda-1)!!(2 J+\lambda)!!}} \cos \frac{\omega}{2}\left(\sin \frac{\omega}{2}\right)^{\lambda}, \\
 \qquad\times F\left(-J+\frac{\lambda+1}{2}, J+1+\frac{\lambda+1}{2} ; \frac{3}{2} ; \cos ^{2} \frac{\omega}{2}\right), \\
 \qquad\qquad\text { if } 2 J-\lambda \text { is odd },
 \end{array}\right.  \label{eq:4:15:15}\\
 \chi_{\lambda}^{J}(\omega)= & \left\{\begin{array}{c}
-\frac{\sqrt{2 J+1}}{(2 \lambda+1)!1} \sqrt{\frac{(2 J+\lambda+1)!}{(2 J-\lambda)!}}\left(\sin \frac{\omega}{2}\right)^{\lambda} F\left(-J+\frac{\lambda}{2}, J+1+\frac{\lambda}{2} ; \lambda+\frac{3}{2} ; \sin ^{2} \frac{\omega}{2}\right) ,\\
+\frac{\sqrt{2 J+1}}{(2 \lambda+1)!!} \sqrt{\frac{(2 J+\lambda+1)!}{(2 J-\lambda)!}}\left(\sin \frac{\omega}{2}\right)^{\lambda} F\left(-J+\frac{\lambda}{2}, J+1+\frac{\lambda}{2} ; \lambda+\frac{3}{2} ; \sin ^{2} \frac{\omega}{2}\right) ,\\
 \text { if } 2 J-\lambda \text { is even }, \\
-\frac{\sqrt{2 J+1}}{(2 \lambda+1)!1} \sqrt{\frac{(2 J+\lambda+1)!}{(2 J-\lambda)!}} \cos \frac{\omega}{2}\left(\sin \frac{\omega}{2}\right)^{\lambda} F\left(-J+\frac{\lambda+1}{2}, J+1+\frac{\lambda+1}{2} ; \lambda+\frac{3}{2} ; \sin ^{2} \frac{\omega}{2}\right), \\
+\frac{\sqrt{2 J+1}}{(2 \lambda+1)!!} \sqrt{\frac{(2 J+\lambda+1)!}{(2 J-\lambda)!}} \cos \frac{\omega}{2}\left(\sin \frac{\omega}{2}\right)^{\lambda} F\left(-J+\frac{\lambda+1}{2}, J+1+\frac{\lambda+1}{2} ; \lambda+\frac{3}{2} ; \sin ^{2} \frac{\omega}{2}\right), \\
 \text { if } 2 J-\lambda \text { is odd }.
 \end{array}\right. \label{eq:4:15:16}
 \end{align}

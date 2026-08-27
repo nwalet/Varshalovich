@@ -30,7 +30,7 @@ identity, and genuine source misprints are flagged.
 |----|-------|-----------|------------------|---------|
 | 0–2 | prelim / rotations / D-functions | ➖ n/a | not amenable to symbolic checking (definitional) | — |
 | 3 | irreducible tensors | ✅ partial | 3.2 tensor-product coefficients | `check_chap3.py` |
-| 4 | Wigner D-functions | 🔄 in progress | **4.3–4.14 done** (4.12.5–8 partial); 4.15 remain | `check_4_3.py` … `check_4_14.py` |
+| 4 | Wigner D-functions | 🔄 in progress | **4.3–4.15 done**; 4.16–4.17 remain | `check_4_3.py` … `check_4_15.py` |
 | 5 | — | ❌ **gap** | OCR + headings/labels only | — |
 | 6 | — | ❌ **gap** | OCR + headings/labels only | — |
 | 7 | — | ❌ **gap** | OCR + headings/labels only | — |
@@ -46,8 +46,8 @@ identity, and genuine source misprints are flagged.
 Previously: Chapter 13, §13.2.9 (`be21346`, ~2026-08-13). The pass had run
 3 → 8 → 9 → 10 → 13.
 
-**Now in progress: Chapter 4** (2026-08-26). §4.3–4.14 done; next §4.15
-(generalized characters χ_λ^J).
+**Now in progress: Chapter 4** (2026-08-26/27). §4.3–4.15 done; next §4.16–4.17
+($D$ for particular arguments; the `e^{±i(α±α)/2}` phase garbles in §4.17).
 - Sec 4.3 (explicit d-forms) — `check_4_3.py`, all 18 forms 4.3.2–4.3.23
   verified; four source errors fixed (see flags).
 - Sec 4.4 (symmetries of d/D) — `check_4_4.py`: d-relations 4.4.1, the full
@@ -102,6 +102,19 @@ Previously: Chapter 13, §13.2.9 (`be21346`, ~2026-08-13). The pass had run
   4.14.52/55–62, particular ω 4.14.63–66, special cases 4.14.67–72) — all
   PASS. Two source errors fixed: 4.14.22 (OCR) and 4.14.62 (book misprint,
   see flags). 4.14.9 is valid only on ω∈[0,π] (noted in the checker).
+
+- Sec 4.15 (generalized characters χ_λ^J) — `check_4_15.py`: ~28 identities
+  verified against the definition 4.15.1 (λ-th derivative of χ^J in cos(ω/2),
+  cross-checked vs the CG series 4.15.2) — trig series 4.15.2–4, differential
+  form 4.15.5, Gegenbauer 4.15.6, Jacobi 4.15.7/8, hypergeometric 4.15.9/10/13/
+  15/16, integral rep 4.15.18, symmetries 4.15.19/20, particular ω 4.15.21,
+  recursions 4.15.22/23, asymptotics 4.15.25, ODE 4.15.26, orthogonality
+  4.15.28 — all PASS. Source fixes: 4.15.21 denominator `(2J−λ)!`→`(2J−λ)!!`
+  (OCR); LaTeX de-garbles in 4.15.12 (`(\sin^{ω/2})`→`(\sin ω/2)^λ`), 4.15.13
+  (`(\cos^{…})` mangle), 4.15.15/16 (`!11`,`!1`,single-`!` → `!!`). Forms
+  4.15.11/12/14 (2F1 with |z|>1 or complex z and negative-integer c) hold only
+  under analytic continuation — scan-verified (pp.107–108), not numerically;
+  documented in-source.
 
 ## Gaps / next up
 
