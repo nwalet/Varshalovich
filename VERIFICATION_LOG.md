@@ -229,6 +229,14 @@ Rodrigues/differential forms 5.2.2/3/6, hypergeometric 5.2.23, the D-relation
     (l₁+m₁) — the un-normalized P_l^m form — corrected to
     √((2l+1)(l²−m²)/(2l−1)) required for normalized Y_lm; derived from the
     verified 5.8.6 recurrence, confirmed for general m₁,m₂; annotated in-source.
+- **§5.6** (`check_5_6.py`, all PASS): expansions of products of Y (CG from
+  sympy). Verified 5.6.9 (Clebsch–Gordan series), 5.6.10 (inverse), 5.6.11
+  (three-Y), 5.6.14/5.6.15 (irreducible tensor products), 5.6.17 (iterated
+  {Y₁⊗…⊗Y₁} coupling) vs mpmath.spherharm to ~1e-17. §5.6.1 (completeness /
+  Parseval / Dirac notation) is definitional. OCR fixes (scan p.157): 5.6.9
+  garbled 2nd CG `C_{l₂m₁l₂m a}`→`\clebsch{l₁}{m₁}{l₂}{m₂}{L}{M}`; 5.6.10 `m₃`→
+  `m₂`; 5.6.11 `(4x)²`→`(4π)²`; 5.6.14 `\vect{Y}_{l₃}`→`\vect{Y}_{l₂}`; 5.6.15
+  stray trailing `,(` removed.
 
 ## Open flags (book misprints / omissions, annotated in-source)
 
