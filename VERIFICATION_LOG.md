@@ -257,6 +257,16 @@ Rodrigues/differential forms 5.2.2/3/6, hypergeometric 5.2.23, the D-relation
   it is genuinely O(1/l²), 2–27× better (improvement grows with m). Corrected +
   annotated. **OCR 5.12.6**: phase `(-1)^{(l+m)/2}`→`(-1)^{(l±m)/2}` (scan p.166
   shows the ±; the + form fails for Y_{l,−m} with odd m).
+- **§5.5** (`check_5_5.py`, all PASS): behaviour under coordinate transforms.
+  Angle relations 5.5.2 (inversion), 5.5.6/7/8 (π-rotations x/y/z), 5.5.9 (z by
+  χ), 5.5.11 (equatorial refl.), 5.5.12 (meridian refl.); general rotation 5.5.1
+  via Wigner D (passive R⁻¹); infinitesimal 5.5.10 (d/dω vs ladder bracket);
+  translation 5.5.3. OCR fixes: 5.5.1 `D^{\prime}`→`D^l` and `Y(ϑ,ψ)`→`Y(ϑ,φ)`;
+  5.5.4 `d²`→`a²`; 5.5.9 `e^{-imx}`→`e^{-imχ}`. **BOOK MISPRINT 5.5.3**: the
+  coefficient printed as `[4π(2l+1)(2l'-2l+1)/(2l'+1)]^{1/2}` is wrong for l'≥2
+  (coincides with the correct value only at l'=1); the regular-solid-harmonic
+  addition theorem gives `[4π(2l'+1)!/((2l+1)!(2l'-2l+1)!)]^{1/2}` — factorials
+  dropped and fraction inverted. Corrected + annotated (verified to 1e-15).
 
 ## Open flags (book misprints / omissions, annotated in-source)
 

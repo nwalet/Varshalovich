@@ -452,9 +452,9 @@ Any transformation of coordinate system in 3-dimensional space, which does not a
 \subsection{Rotation}\label{sec:5.5.1}
 The spherical harmonics $Y_{l m}(\vartheta, \varphi)$ are covariant components of some irreducible tensor of rank $l$. Hence, under arbitrary rotation $S\{x, y, z\} \rightarrow S^{\prime}\left\{x^{\prime}, y^{\prime}, z^{\prime}\right\}$ of the coordinate system described by the Euler angles $\alpha, \beta, \gamma$ (Sec.~\ref{sec:1.4}) the spherical harmonics transform in accordance with
 \begin{equation}
-\hat{D}(\alpha, \beta, \gamma) Y_{l m^{\prime}}(\vartheta, \varphi)=Y_{l m^{\prime}}\left(\vartheta^{\prime}, \varphi^{\prime}\right)=\sum_{m} Y_{l m}(\vartheta, \psi) D_{m m^{\prime}}^{l}(\alpha, \beta, \gamma) \label{eq:5:5:1}
+\hat{D}(\alpha, \beta, \gamma) Y_{l m^{\prime}}(\vartheta, \varphi)=Y_{l m^{\prime}}\left(\vartheta^{\prime}, \varphi^{\prime}\right)=\sum_{m} Y_{l m}(\vartheta, \varphi) D_{m m^{\prime}}^{l}(\alpha, \beta, \gamma) \label{eq:5:5:1}
 \end{equation}
-Here $D_{m m^{\prime}}^{\prime}(\alpha, \beta, \gamma)$ is a Wigner $D$-function (Chap.~\ref{chap:4}), $\vartheta, \varphi$ and $\vartheta^{\prime}, \varphi^{\prime}$ are polar angles of the position vector in the original and final coordinate systems, $S$ and $S^{\prime}$, respectively. The angles $\vartheta^{\prime}, \varphi^{\prime}$ may be expressed through $\vartheta, \varphi$ and the Euler angles according to Eqs. 1.4.(2).
+Here $D_{m m^{\prime}}^{l}(\alpha, \beta, \gamma)$ is a Wigner $D$-function (Chap.~\ref{chap:4}), $\vartheta, \varphi$ and $\vartheta^{\prime}, \varphi^{\prime}$ are polar angles of the position vector in the original and final coordinate systems, $S$ and $S^{\prime}$, respectively. The angles $\vartheta^{\prime}, \varphi^{\prime}$ may be expressed through $\vartheta, \varphi$ and the Euler angles according to Eqs. 1.4.(2).
 
 \subsection{Inversion}\label{sec:5.5.2}
 Under inversion $S\{x, y, z\} \rightarrow S^{\prime}\{-x,-y,-z\}$ the spherical harmonics transform as
@@ -464,13 +464,18 @@ Under inversion $S\{x, y, z\} \rightarrow S^{\prime}\{-x,-y,-z\}$ the spherical 
 \subsection{Parallel Translation}\label{sec:5.5.3}
 At parallel displacement $S\{x, y, z\} \rightarrow S^{\prime}\left\{x^{\prime}, y^{\prime}, z^{\prime}\right\}$ by a vector $\vect{a}(a, \theta, \phi)$ one has $\vect{r}^{\prime}=\vect{r}-\vect{a}$. In this case the spherical harmonics transform as
 \begin{align}
-\hat{T}(\vect{a}) Y_{l^{\prime} m^{\prime}}(\vartheta, \varphi)=Y_{l^{\prime} m^{\prime}}\left(\vartheta^{\prime}, \varphi^{\prime}\right)=\sum_{l=0}^{l^{\prime}} & (-1)^{l^{\prime}+l}\left[\frac{4 \pi(2 l+1)\left(2 l^{\prime}-2 l+1\right)}{2 l^{\prime}+1}\right]^{\frac{1}{2}}  \notag\\
+% NOTE: book misprint in the coefficient.  As printed it reads
+% [4 pi (2l+1)(2l'-2l+1)/(2l'+1)]^{1/2}, which is wrong for l'>=2 (it coincides
+% with the correct value only at l'=1).  The regular-solid-harmonic addition
+% theorem gives [4 pi (2l'+1)! / ((2l+1)!(2l'-2l+1)!)]^{1/2}; verified to machine
+% precision for all l' (scripts/check_5_5.py).  Corrected below.
+\hat{T}(\vect{a}) Y_{l^{\prime} m^{\prime}}(\vartheta, \varphi)=Y_{l^{\prime} m^{\prime}}\left(\vartheta^{\prime}, \varphi^{\prime}\right)=\sum_{l=0}^{l^{\prime}} & (-1)^{l^{\prime}+l}\left[\frac{4 \pi\left(2 l^{\prime}+1\right)!}{(2 l+1)!\left(2 l^{\prime}-2 l+1\right)!}\right]^{\frac{1}{2}}  \notag\\
 & \times\left(\frac{a}{r^{\prime}}\right)^{l^{\prime}}\left(\frac{r}{a}\right)^{l}\left\{\vect{Y}_{l}(\vartheta, \varphi) \otimes \vect{Y}_{l^{\prime}-l}(\Theta, \Phi)\right\}_{l^{\prime} m^{\prime}} \label{eq:5:5:3}
 \end{align}
 where $\widehat{T}(a)=e^{-a \, \nabla}$ is the displacement operator, $\left\{\vect{Y}_{l_{1}} \otimes \vect{Y}_{l_{2}}\right\}_{t m}$ is the irreducible tensor product (Sec.~\ref{sec:3.1}). The polar coordinates of the vectors $r(r, \vartheta, \varphi)$ and $r^{\prime}\left(r^{\prime}, \vartheta^{\prime}, \varphi^{\prime}\right)$ are related by
 \begin{gather}
 r^{\prime 2}=r^{2}+a^{2}-2 r a \cos \omega_{12}  \notag\\
-\cos \vartheta^{\prime}=\frac{r \cos \vartheta-a \cos \theta}{\sqrt{r^{2}+d^{2}-2 r a \cos \omega_{12}}}  \label{eq:5:5:4}\\
+\cos \vartheta^{\prime}=\frac{r \cos \vartheta-a \cos \theta}{\sqrt{r^{2}+a^{2}-2 r a \cos \omega_{12}}}  \label{eq:5:5:4}\\
 \tan \varphi^{\prime}=\frac{r \sin \vartheta \sin \varphi-a \sin \theta \sin \Phi}{r \sin \vartheta \cos \varphi-a \sin \theta \cos \Phi} \notag
 \end{gather}
 where
@@ -502,7 +507,7 @@ r^{\prime}=r, \\
 r^{\prime}=r,  \label{eq:5:5:9}\\
 \vartheta^{\prime}=\vartheta, \\
 \varphi^{\prime}=\varphi-\chi,
-\end{array}\right\} Y_{l m}(\vartheta, \varphi-\chi)=e^{-i m x} Y_{l m}(\vartheta, \varphi) .
+\end{array}\right\} Y_{l m}(\vartheta, \varphi-\chi)=e^{-i m \chi} Y_{l m}(\vartheta, \varphi) .
 \end{equation}
 \subsubsection{Rotation about an arbitrary direction $\vect{n}(\boldsymbol{\Theta}, \Phi)$ through a small angle $\omega(\omega \ll \pi / 2)$}
 \begin{gather}
