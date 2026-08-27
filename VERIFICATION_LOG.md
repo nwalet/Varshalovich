@@ -158,11 +158,16 @@ Rodrigues/differential forms 5.2.2/3/6, hypergeometric 5.2.23, the D-relation
 - **Book misprints** (restored + annotated in-source): **5.2.27, 5.2.28**
   omit the `1/|m|!` prefactor (cf. 5.2.23/5.2.25) — added; **5.1.14** `u_lm`
   coefficient `2π`→`4π` (`½(Y+Y*)=Re(Y)` needs 4π, matching v_lm).
-- **Still to do in §5.2**: 5.2.15/16 (√ wraps trig), 5.2.18/19/21/22, 5.2.29/30/
-  32/35/36, 5.2.38 (√ wraps + `2|m|l!`). §5.3 onward untouched.
-- **Build blocker (user-side)**: §5.16 line ~1222 `\includegraphics{fig5_1}` —
-  file not found (graphicspath `./images/`; tikz_files has `fig5_a.tex`, not
-  `fig5_1`). Figure-name mismatch to resolve before a clean full build.
+- **§5.2 remaining cluster** (`check_5_2b.py`): verified 5.2.21, 5.2.22 (|Y|²),
+  5.2.29, 5.2.30, 5.2.32, 5.2.38 vs mpmath.spherharm; fixes applied — 5.2.21
+  √-unwrap + `∑_0`→`∑_s` + exponent `l+m/2-s`→`(l+m-s)/2`; 5.2.36 `ρ/2`,`s/2`
+  →`ϑ/2`; 5.2.38 `2|m|l!`→`2^{|m|}l!` + √-unwrap; 5.2.40 `1/r`→`1/r^l`; 5.2.18
+  `(l+m-1)!`→`(l+m-1)!!`. Chapter now builds clean (fig fixed to `fig5_a`).
+- **Still deferred in §5.2**: 5.2.15/16 (correct prefactor is
+  `√((2l+1)/4π(l+m)!(l-m)!)·l!`, verified — but the book's radical
+  organization needs a careful re-read before editing), 5.2.18 (partial fix
+  only; my series encoding still off), 5.2.19, 5.2.35/36 (|z|=1 exponential 2F1,
+  scan-matched, not numerically reproducible). §5.3 onward untouched.
 
 ## Open flags (book misprints / omissions, annotated in-source)
 

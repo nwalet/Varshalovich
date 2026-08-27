@@ -204,7 +204,7 @@ Y_{l m}(\vartheta, \varphi)=e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi(l+m)!(l-m)!
 \times\left\{\begin{array}{c}
 \sum_{s=0,2, \ldots}^{l-|m|}(-1)^{\frac{l+m-s}{2}} \frac{(l+m)!!(l-m)!!}{(l+m-s)!!(l-m-s)!!} \, \frac{(2 l-s-1)!!}{s!(\sin \vartheta)^s} \\
 \text { if } l-m \text { is even } \\
-\cos \vartheta \sum_{s=1,3, \ldots}^{l-|m|}(-1)^{\frac{l+m-s}{2}} \frac{(l+m-1)!(l-m-1)!!}{(l+m-s)!!(l-m-s)!!} \, \frac{(2 l-s)!!}{(s-1)!!(\sin \vartheta)^s} \\
+\cos \vartheta \sum_{s=1,3, \ldots}^{l-|m|}(-1)^{\frac{l+m-s}{2}} \frac{(l+m-1)!!(l-m-1)!!}{(l+m-s)!!(l-m-s)!!} \, \frac{(2 l-s)!!}{(s-1)!!(\sin \vartheta)^s} \\
 \text { if } l-m \text { is odd },
 \end{array}\right.  \label{eq:5:2:18}
 \end{multline}
@@ -214,7 +214,7 @@ L+m-s \text { is even } ,
 \end{gather}
 \begin{gather}
 Y_{l m}(\vartheta, \varphi)=e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi}(l+m)!(l-m)!}(\cos \vartheta)^{l} \sum_{s=|m|,|m|+2, \ldots}(-1)^{\frac{s+m}{2}} \frac{1}{(s+m)!!(s-m)!!} \, \frac{(\tan \vartheta)^{s}}{(l-s)!} , \label{eq:5:2:20}\\
-Y_{l m}(\vartheta, \varphi)=e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi}(l+m)!(l-m)!(\sin \vartheta)^{l}} \sum_{0}(-1)^{l+\frac{m}{2}-s} \frac{1}{(l+m-s)!!(l-m-s)!!} \, \frac{(\cot \vartheta)^{s}}{s!} , \notag\\
+Y_{l m}(\vartheta, \varphi)=e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi}(l+m)!(l-m)!}(\sin \vartheta)^{l} \sum_{s}(-1)^{\frac{l+m-s}{2}} \frac{1}{(l+m-s)!!(l-m-s)!!} \, \frac{(\cot \vartheta)^{s}}{s!} , \notag\\
 l+m-s \text { is even } .\label{eq:5:2:21}
 \end{gather}
 The quantity $\left|Y_{l m}(\vartheta, \varphi)\right|^{2}$ may be written in the form
@@ -297,8 +297,8 @@ Y_{l m}(\vartheta, \varphi)=-\frac{i e^{i m \varphi}}{\pi} \sqrt{\frac{2 l+1}{4 
 \times\left\{e^{-i(l+m+1) \vartheta} F\left(m+\frac{1}{2}, l+m+1 ; l+\frac{3}{2} ; e^{-2 i \vartheta}\right)-e^{i(l+m+1) \vartheta} F\left(m+\frac{1}{2}, l+m+1 ; l+\frac{3}{2} ; e^{2 i \vartheta}\right)\right\},  \label{eq:5:2:35}
 \end{gather}\begin{gather}
 Y_{l m}(\vartheta, \varphi)=-\frac{i}{\pi} e^{i m \varphi} \sqrt{\frac{2 l+1}{8 \pi}(l+m)!(l-m)!} \frac{2^{l+1}}{(2 l+1)!!\sqrt{\sin \vartheta}}  \notag\\
-\times\left\{e^{-i\left[(2 l+1) \frac{\rho}{2}+(2 m+1) \frac{\pi}{4}\right]} F\left(m+\frac{1}{2}, \frac{1}{2}-m ; l+\frac{3}{2} ;-\frac{e^{-i\left(\vartheta+\frac{\pi}{2}\right)}}{2 \sin \vartheta}\right)\right.  \notag\\
-\left.-e^{i\left[(2 l+1) \frac{s}{2}+(2 m+1) \frac{\pi}{4}\right]} F\left(m+\frac{1}{2}, \frac{1}{2}-m ; l+\frac{3}{2} ;-\frac{e^{i\left(\vartheta+\frac{\pi}{2}\right)}}{2 \sin \vartheta}\right)\right\} . \label{eq:5:2:36}
+\times\left\{e^{-i\left[(2 l+1) \frac{\vartheta}{2}+(2 m+1) \frac{\pi}{4}\right]} F\left(m+\frac{1}{2}, \frac{1}{2}-m ; l+\frac{3}{2} ;-\frac{e^{-i\left(\vartheta+\frac{\pi}{2}\right)}}{2 \sin \vartheta}\right)\right.  \notag\\
+\left.-e^{i\left[(2 l+1) \frac{\vartheta}{2}+(2 m+1) \frac{\pi}{4}\right]} F\left(m+\frac{1}{2}, \frac{1}{2}-m ; l+\frac{3}{2} ;-\frac{e^{i\left(\vartheta+\frac{\pi}{2}\right)}}{2 \sin \vartheta}\right)\right\} . \label{eq:5:2:36}
 \end{gather}
 \subsection{$Y_{l m}(\vartheta, \varphi)$ and Other Special Functions}\label{sec:5.2.7}
 \begin{enumerate}[label=(\alph*)]
@@ -310,7 +310,7 @@ Y_{l m}(\vartheta, \varphi)=\sqrt{\frac{2 l+1}{4 \pi}} D_{0-m}^{l}(\chi, \varthe
 where $\chi$ is an arbitrary angle.\\
 \item $Y_{l m}(\vartheta, \varphi)$ can be related to the Jacobi polynomials $P_{n}^{(\alpha, \beta)}(x)$
 \begin{equation}
-Y_{l m}(\vartheta, \varphi)=\xi_{m 0} \frac{e^{i m \varphi}}{2|m| l!} \sqrt{\frac{2 l+1}{4 \pi}(l+m)!(l-m)!(\sin \vartheta)^{|m|} P_{l-|m|}^{(|m|,|m|)}(\cos \vartheta)} .\label{eq:5:2:38}
+Y_{l m}(\vartheta, \varphi)=\xi_{m 0} \frac{e^{i m \varphi}}{2^{|m|} l!} \sqrt{\frac{2 l+1}{4 \pi}(l+m)!(l-m)!}(\sin \vartheta)^{|m|} P_{l-|m|}^{(|m|,|m|)}(\cos \vartheta) .\label{eq:5:2:38}
 \end{equation}
 \item $Y_{l m}(\vartheta, \varphi)$ can be expressed in terms of Gegenbauer polynomials $C_{\nu}^{\lambda}(x)$
 \begin{equation}
@@ -321,7 +321,7 @@ Y_{l m}(\vartheta, \varphi)=\xi_{m 0} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} 
 \subsection{$Y_{l m}(\vartheta, \varphi)$ as an Irreducible Tensor Product}\label{sec:5.2.8}
 For any position vector $r$ specified by polar coordinates $r, \vartheta, \varphi$ one has
 \begin{equation}
-Y_{l m}(\vartheta, \varphi)=\frac{1}{r} \sqrt{\frac{(2 l+1)!!}{4 \pi l!}}\left\{\ldots\left\{\{r \otimes r\}_{2} \otimes r\right\}_{3} \ldots \otimes r\right\}_{l m} .\label{eq:5:2:40}
+Y_{l m}(\vartheta, \varphi)=\frac{1}{r^{l}} \sqrt{\frac{(2 l+1)!!}{4 \pi l!}}\left\{\ldots\left\{\{r \otimes r\}_{2} \otimes r\right\}_{3} \ldots \otimes r\right\}_{l m} .\label{eq:5:2:40}
 \end{equation}
 \section{Integral representations of the spherical harmonics [4,22,27]}\label{sec:5.3}
 \subsection{$Y_{l m}(\vartheta, \varphi)$ in the Form of Indefinite Integrals}\label{sec:5.3.1}
