@@ -30,7 +30,7 @@ identity, and genuine source misprints are flagged.
 |----|-------|-----------|------------------|---------|
 | 0–2 | prelim / rotations / D-functions | ➖ n/a | not amenable to symbolic checking (definitional) | — |
 | 3 | irreducible tensors | ✅ partial | 3.2 tensor-product coefficients | `check_chap3.py` |
-| 4 | Wigner D-functions | 🔄 in progress | **4.3–4.15 done**; 4.16–4.17 remain | `check_4_3.py` … `check_4_15.py` |
+| 4 | Wigner D-functions | 🔄 in progress | **4.3–4.17 done**; 4.18–4.19 remain | `check_4_3.py` … `check_4_16_17.py` |
 | 5 | — | ❌ **gap** | OCR + headings/labels only | — |
 | 6 | — | ❌ **gap** | OCR + headings/labels only | — |
 | 7 | — | ❌ **gap** | OCR + headings/labels only | — |
@@ -46,8 +46,8 @@ identity, and genuine source misprints are flagged.
 Previously: Chapter 13, §13.2.9 (`be21346`, ~2026-08-13). The pass had run
 3 → 8 → 9 → 10 → 13.
 
-**Now in progress: Chapter 4** (2026-08-26/27). §4.3–4.15 done; next §4.16–4.17
-($D$ for particular arguments; the `e^{±i(α±α)/2}` phase garbles in §4.17).
+**Now in progress: Chapter 4** (2026-08-26/27). §4.3–4.17 done; next §4.18
+(asymptotics) / §4.19 (other authors' conventions).
 - Sec 4.3 (explicit d-forms) — `check_4_3.py`, all 18 forms 4.3.2–4.3.23
   verified; four source errors fixed (see flags).
 - Sec 4.4 (symmetries of d/D) — `check_4_4.py`: d-relations 4.4.1, the full
@@ -116,7 +116,15 @@ Previously: Chapter 13, §13.2.9 (`be21346`, ~2026-08-13). The pass had run
   under analytic continuation — scan-verified (pp.107–108), not numerically;
   documented in-source.
 
-## Gaps / next up
+- Secs 4.16–4.17 (D for particular arguments / particular M,M') —
+  `check_4_16_17.py`: 4.16.1–4.16.5 (D at β=0, ±2nπ, ±(2n+1)π, π/2 binomial
+  sum) and 4.17.1/2/4/7/8 all verified against D=e^{-iMα}d e^{-iM'γ} (wigner_d)
+  and VMK-convention Y (validated via 4.17.1). Phase garbles fixed: **§4.17
+  `e^{±i(α±α)/2}`→`e^{±i(α±γ)/2}`** — 4.17.4's four phases numerically
+  confirmed (α±γ), 4.17.3's two taken from the scan (p.114, `e^{±i(α−γ)/2}`;
+  its general form uses half-integer-degree Y and isn't cleanly evaluable, but
+  its M'=±1/2 special case 4.17.4 is). Also 4.17.4 line-1 bracket fix: the
+  `cos(β/2)/(J+½)` factor had been pulled into the exponent.
 
 1. **Chapter 4 continued** — 4.4 (symmetries), 4.6–4.7 (sums / addition
    theorems), 4.8 (recursions), 4.10–4.12 (orthogonality / integrals),
