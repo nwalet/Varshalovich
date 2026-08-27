@@ -248,6 +248,15 @@ Rodrigues/differential forms 5.2.2/3/6, hypergeometric 5.2.23, the D-relation
   ∫dψ/(a+b cosψ) branch flips sign and the RHS returns −Y_lm; the direct forms
   5.3.5/5.3.7/5.3.9 hold for all ϑ. 5.3.1 (m-fold indefinite) and 5.3.11
   (change of variables) left as structural, not numerically checked.
+- **§5.12** (`check_5_12.py`, all PASS): asymptotics, verified as limits
+  (relative error vanishes at the stated order). 5.12.1 (leading O(1/l)), 5.12.3
+  (bound), 5.12.4/5.12.5 (small-ϑ / near-π, O(δ⁴)), 5.12.6/5.12.7 (near-π/2,
+  O(δ⁴)), 5.12.8 (McDonald Bessel), 5.12.9 (J_m(lϑ), rel err O(1/l)).
+  **BOOK MISPRINT 5.12.2**: printed second-term sign "+" makes the "more exact"
+  formula worse than the leading 5.12.1 for m≥1 (error stays O(1/l)); with "−"
+  it is genuinely O(1/l²), 2–27× better (improvement grows with m). Corrected +
+  annotated. **OCR 5.12.6**: phase `(-1)^{(l+m)/2}`→`(-1)^{(l±m)/2}` (scan p.166
+  shows the ±; the + form fails for Y_{l,−m} with odd m).
 
 ## Open flags (book misprints / omissions, annotated in-source)
 

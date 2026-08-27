@@ -846,10 +846,15 @@ If $l \gg 1$ and $l \gg m \geq 0$, a spherical harmonic $Y_{l m}(\vartheta, \var
 Y_{l m}(\vartheta, \varphi) \approx \frac{e^{i m \varphi}}{\pi} \frac{\cos \left[(2 l+1) \frac{\vartheta}{2}+(2 m-1) \frac{\pi}{4}\right]}{\sqrt{\sin \vartheta}}+O\left(\frac{1}{l}\right) . \label{eq:5:12:1}
 \end{equation}
 A more exact formula [22] is
+% NOTE: book misprint -- the printed second term has a "+" sign, which makes this
+% "more exact" formula WORSE than the leading \eqref{eq:5:12:1} for m>=1 (its
+% error stays O(1/l)).  With a MINUS sign the error is genuinely O(1/l^2) for all
+% m (2-27x smaller than the leading form, improvement growing with m).  Corrected
+% to "-" below; verified numerically (scripts/check_5_12.py).
 \begin{equation}
 \begin{array}{r}
 Y_{l m}(\vartheta, \varphi) \approx \frac{e^{i m \varphi}}{\pi \sqrt{\sin \vartheta}}\left\{\left(1+\frac{4 m^{2}-3}{8 l}\right) \cos \left[(2 l+1) \frac{\vartheta}{2}+(2 m-1) \frac{\pi}{4}\right]\right. \\
-\left.+\frac{4 m^{2}-1}{8 l \sin \vartheta} \cos \left[(2 l+3) \frac{\vartheta}{2}+(2 m-3) \frac{\pi}{4}\right]\right\}+O\left(\frac{1}{l^{2}}\right) \label{eq:5:12:2}
+\left.-\frac{4 m^{2}-1}{8 l \sin \vartheta} \cos \left[(2 l+3) \frac{\vartheta}{2}+(2 m-3) \frac{\pi}{4}\right]\right\}+O\left(\frac{1}{l^{2}}\right) \label{eq:5:12:2}
 \end{array}
 \end{equation}
 The terms $O(1 / l)$ and $O\left(1 / l^{2}\right)$ depend on $m$ and $\vartheta$.\\
@@ -868,7 +873,7 @@ Y_{l \pm m}(\vartheta, \varphi) \approx(-1)^{l}( \pm 1)^{m} \frac{e^{ \pm i m \v
 \end{equation}
 In the case when $\pi / 2-\varepsilon \leq \vartheta \leq \pi / 2+\varepsilon$
 \begin{equation}
-Y_{l \pm m}(\vartheta, \varphi) \approx(-1)^{\frac{l+m}{2}} e^{ \pm i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \, \frac{(l-m-1)!!}{(l-m)!!} \, \frac{(l+m-1)!!}{(l+m)!!}}\left[1-\frac{l(l+1)-m^{2}}{2}\left(\frac{\pi}{2}-\vartheta\right)^{2}\right] \label{eq:5:12:6}
+Y_{l \pm m}(\vartheta, \varphi) \approx(-1)^{\frac{l \pm m}{2}} e^{ \pm i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \, \frac{(l-m-1)!!}{(l-m)!!} \, \frac{(l+m-1)!!}{(l+m)!!}}\left[1-\frac{l(l+1)-m^{2}}{2}\left(\frac{\pi}{2}-\vartheta\right)^{2}\right] \label{eq:5:12:6}
 \end{equation}
 if $l+m$ is even and
 \begin{gather}
