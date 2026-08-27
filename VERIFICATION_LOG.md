@@ -163,6 +163,16 @@ Rodrigues/differential forms 5.2.2/3/6, hypergeometric 5.2.23, the D-relation
   √-unwrap + `∑_0`→`∑_s` + exponent `l+m/2-s`→`(l+m-s)/2`; 5.2.36 `ρ/2`,`s/2`
   →`ϑ/2`; 5.2.38 `2|m|l!`→`2^{|m|}l!` + √-unwrap; 5.2.40 `1/r`→`1/r^l`; 5.2.18
   `(l+m-1)!`→`(l+m-1)!!`. Chapter now builds clean (fig fixed to `fig5_a`).
+- **§5.4 / §5.7 / §5.8** (`check_5_4_7_8.py`, all PASS): symmetry 5.4.1/2/4–6/8;
+  recursions 5.7.1–5.7.9; derivative relations 5.8.4/5/6 — verified vs
+  mpmath.spherharm. Fixes: **5.4.3** LHS `Y_{lm}`→`Y_{l̄ m}` (l̄=−l−1) + heading;
+  **5.7.9** `\sin²\forall`→`\sin²ϑ` and denominator `(2l+1)(2l+3)`→`(2l+1)(2l-3)`
+  (confirmed numerically); **5.8.2** garbled `C_{lm+μ}^{lm+μ}`→CG
+  `\clebsch{l}{m}{1}{μ}{l}{m+μ}`; **5.8.4** `Y(v,φ)=imY(θ,φ)`→`Y(ϑ,φ)=imY(ϑ,φ)`;
+  **5.8.7** `∂/∂ϑ²`→`∂²/∂ϑ²`; **5.8.17** `j_i`→`j_l` (×3) + orphaned `\left.`/`\mid`
+  bracket repair; §5.8.1 lead-in `\vect{Y}_{\text{Im}}`→`Y_{lm}`. 5.4.7/5.4.9
+  (negative-θ) hold under VMK's `(sinϑ)^m` continuation, not reproducible via
+  spherharm's cos-even branch — noted, not flagged.
 - **Still deferred in §5.2**: 5.2.15/16 (correct prefactor is
   `√((2l+1)/4π(l+m)!(l-m)!)·l!`, verified — but the book's radical
   organization needs a careful re-read before editing), 5.2.18 (partial fix

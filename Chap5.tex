@@ -408,9 +408,9 @@ Y_{l m}^{*}(\vartheta, \varphi)=Y_{l m}(\vartheta,-\varphi)=(-1)^{m} Y_{l-m}(\va
 \begin{equation}
 Y_{l-m}(\vartheta, \varphi)=(-1)^{m} Y_{l m}(\vartheta,-\varphi)=(-1)^{m} e^{-i 2 m \varphi} Y_{l m}(\vartheta, \varphi) . \label{eq:5:4:2}
 \end{equation}
-\subsubsection{"Mirror" symmetry (replacement $l$ by $l=-l-1$)}
+\subsubsection{"Mirror" symmetry (replacement $l$ by $\bar{l}=-l-1$)}
 \begin{equation}
-Y_{ l m}(\vartheta, \varphi)=(-1)^{m} Y_{ l m}(\vartheta, \varphi) \label{eq:5:4:3}
+Y_{\bar{l} m}(\vartheta, \varphi)=(-1)^{m} Y_{l m}(\vartheta, \varphi) \label{eq:5:4:3}
 \end{equation}
 \subsubsection{Replacement $\vartheta \rightarrow \pi-\vartheta$ and $\varphi=\pi+\varphi$}
 \begin{gather}
@@ -628,19 +628,19 @@ Recursion relations for the spherical harmonics may be obtained, for example, fr
 + & \frac{(2 l+3)}{\sqrt{(2 l+1)(2 l-3)}} \sqrt{\frac{(l-m)!}{(l-m-4)!}} Y_{l-2 m+2}(\vartheta, \varphi)-2 \sqrt{\frac{(l+m+2)!(l-m)!}{(l-m-2)!(l+m)!}} Y_{l m+2}(\vartheta, \varphi) \label{eq:5:7:8}
 \end{align}
 \begin{align}
-& (2 l-1)(2 l+3) \sin ^{2} \forall e^{-i 2 \varphi} Y_{l m}(\vartheta, \varphi)=\frac{(2 l-1)}{\sqrt{(2 l+1)(2 l+5)}} \sqrt{\frac{(l-m+4)!}{(l-m)!}} Y_{l+2 m-2}(\vartheta, \varphi)  \notag\\
-& +\frac{(2 l+3)}{\sqrt{(2 l+1)(2 l+3)}} \sqrt{\frac{(l+m)!}{(l+m-4)!}} Y_{l-2 m-2}(\vartheta, \varphi)-2 \sqrt{\frac{(l-m+2)!(l+m)!}{(l+m-2)!(l-m)!}} Y_{l m-2}(\vartheta, \varphi) \label{eq:5:7:9}
+& (2 l-1)(2 l+3) \sin ^{2} \vartheta e^{-i 2 \varphi} Y_{l m}(\vartheta, \varphi)=\frac{(2 l-1)}{\sqrt{(2 l+1)(2 l+5)}} \sqrt{\frac{(l-m+4)!}{(l-m)!}} Y_{l+2 m-2}(\vartheta, \varphi)  \notag\\
+& +\frac{(2 l+3)}{\sqrt{(2 l+1)(2 l-3)}} \sqrt{\frac{(l+m)!}{(l+m-4)!}} Y_{l-2 m-2}(\vartheta, \varphi)-2 \sqrt{\frac{(l-m+2)!(l+m)!}{(l+m-2)!(l-m)!}} Y_{l m-2}(\vartheta, \varphi) \label{eq:5:7:9}
 \end{align}
 \section{Differential relations}\label{sec:5.8}
 \subsection{Action of the Operator of Orbital Angular Momentum on $Y_{l m}(\vartheta, \varphi)$}\label{sec:5.8.1}
-Spherical components of the operator $\overline{\vect{L}}$ (Eq. $2.2(18)$ ) act on $\vect{Y}_{\text {Im }}(\mathcal{\vartheta}, \varphi)$ according to
+Spherical components of the operator $\overline{\vect{L}}$ (Eq. $2.2(18)$ ) act on $\vect{Y}_{l m}(\vartheta, \varphi)$ according to
 \begin{align}
 \widehat{L}_{ \pm 1} Y_{l m}(\vartheta, \varphi) & =\mp \sqrt{\frac{l(l+1)-m(m \pm 1)}{2}} Y_{l m \pm 1}(\vartheta, \varphi)  \label{eq:5:8:1}\\
 \widehat{L}_{0} Y_{l m}(\vartheta, \varphi) & =m Y_{l m}(\vartheta, \varphi) \notag
 \end{align}
 or in a more compact form
 \begin{equation}
-\widehat{L}_{\mu} Y_{l m}(\vartheta, \varphi)=\sqrt{l(l+1)} C_{l m+\mu}^{l m+\mu} Y_{l m+\mu}(\vartheta, \varphi) \label{eq:5:8:2}
+\widehat{L}_{\mu} Y_{l m}(\vartheta, \varphi)=\sqrt{l(l+1)} \clebsch{l}{m}{1}{\mu}{l}{m+\mu} Y_{l m+\mu}(\vartheta, \varphi) \label{eq:5:8:2}
 \end{equation}
 The action of the operator $\hat{\vect{L}}^{2}$ on $Y_{l m}(\vartheta, \varphi)$ yields
 \begin{equation}
@@ -648,7 +648,7 @@ The action of the operator $\hat{\vect{L}}^{2}$ on $Y_{l m}(\vartheta, \varphi)$
 \end{equation}
 \subsection{First and Second Order Derivatives of $Y_{l m}(\vartheta, \varphi)$}\label{sec:5.8.2}
 \begin{equation}
-\frac{\partial}{\partial \varphi} Y_{ l m}(v, \varphi)=i m Y_{ l m}(\theta, \varphi) \label{eq:5:8:4}
+\frac{\partial}{\partial \varphi} Y_{l m}(\vartheta, \varphi)=i m Y_{l m}(\vartheta, \varphi) \label{eq:5:8:4}
 \end{equation}
 \begin{align}
 \frac{\partial}{\partial \vartheta} Y_{l m}(\vartheta, \varphi) & =m \cot \vartheta Y_{l m}(\vartheta, \varphi)+\sqrt{l(l+1)-m(m+1)} Y_{l m+1}(\vartheta, \varphi) e^{-i \varphi}  \notag\\
@@ -660,7 +660,7 @@ The action of the operator $\hat{\vect{L}}^{2}$ on $Y_{l m}(\vartheta, \varphi)$
 =l \cos \vartheta Y_{l m}(\vartheta, \varphi)-\sqrt{\frac{2 l+1}{2 l-1}\left(l^{2}-m^{2}\right)} Y_{l-1 m}(\vartheta, \varphi)  \notag\\
 =-(l+1) \cos \vartheta Y_{l m}(\vartheta, \varphi)+\sqrt{\frac{2 l+1}{2 l+3}\left[(l+1)^{2}-m^{2}\right]} Y_{l+1 m}(\vartheta, \varphi)  \notag\\
 =l \sqrt{\frac{(l+1)^{2}-m^{2}}{(2 l+1)(2 l+3)}} Y_{l+1 m}(\vartheta, \varphi)-(l+1) \sqrt{\frac{l^{2}-m^{2}}{(2 l+1)(2 l-1)}} Y_{l-1 m}(\vartheta, \varphi)  \label{eq:5:8:6}\\
-\frac{\partial}{\partial \vartheta^{2}} Y_{l m}(\vartheta, \varphi)=-\left[l(l+1)-\frac{m^{2}}{\sin ^{2} \vartheta}\right] Y_{l m}(\vartheta, \varphi)-\cot \vartheta \frac{\partial}{\partial \vartheta} Y_{l m}(\vartheta, \varphi) .  \label{eq:5:8:7}\\
+\frac{\partial^{2}}{\partial \vartheta^{2}} Y_{l m}(\vartheta, \varphi)=-\left[l(l+1)-\frac{m^{2}}{\sin ^{2} \vartheta}\right] Y_{l m}(\vartheta, \varphi)-\cot \vartheta \frac{\partial}{\partial \vartheta} Y_{l m}(\vartheta, \varphi) .  \label{eq:5:8:7}\\
 \sin ^{2} \vartheta \frac{\partial^{2}}{\partial(\cos \vartheta)^{2}} Y_{l m}(\vartheta, \varphi)=2 \cos \vartheta \frac{\partial}{\partial \cos \vartheta} Y_{l m}(\vartheta, \varphi)-\left[l(l+1)-\frac{m^{2}}{\sin ^{2} \vartheta}\right] Y_{l m}(\vartheta, \varphi) . \label{eq:5:8:8}
 \end{gather}
 \subsection{Vector Differentiation Operations}\label{sec:5.8.3}
@@ -699,7 +699,7 @@ If $f(r)=r^{-l-1}$, Eq. \eqref{eq:5:8:9} is reduced to
 \end{equation}
 In particular, if $f(r)=j_{l}(k r)$, one gets
 \begin{equation}
-\left.\operatorname{curl}\left[j_{i}(k r) \hat{L} Y_{l m}(\vartheta, \varphi)\right]=i \boldsymbol{\nabla} \mid\left(k r j_{l-1}(k r)-l j_{i}(k r)\right) Y_{l m}(\vartheta, \varphi)\right]+i r k^{2} j_{i}(k r) Y_{l m}(\vartheta, \varphi) . \label{eq:5:8:17}
+\operatorname{curl}\left[j_{l}(k r) \hat{L} Y_{l m}(\vartheta, \varphi)\right]=i \boldsymbol{\nabla}\left[\left(k r j_{l-1}(k r)-l j_{l}(k r)\right) Y_{l m}(\vartheta, \varphi)\right]+i r k^{2} j_{l}(k r) Y_{l m}(\vartheta, \varphi) . \label{eq:5:8:17}
 \end{equation}
 If $f(r)=r$,
 \begin{equation}
