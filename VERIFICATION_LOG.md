@@ -215,6 +215,20 @@ Rodrigues/differential forms 5.2.2/3/6, hypergeometric 5.2.23, the D-relation
   (PDF p.165). OCR fixes: 5.11.1 `t^{+m+1}`→`t^{l+m+1}`; 5.11.2 `1/1^{l+1}`→
   `1/t^{l+1}`; 5.11.3 LHS bracket `\left.\mid…\right]`→`\left[…\right]` and stray
   `\|_{1}`→`l!` (factor pinned numerically); 5.11.7 `\theta`→`\Theta` (×2).
+- **§5.9** (`check_5_9.py`, all PASS): integrals involving Y (φ-integral done
+  analytically → 1-D θ-quadratures; CG/3j from sympy).
+  - §5.9.1 solid-angle 5.9.1–5.9.5 (orthonormality + Gaunt/three-Y). OCR fixes:
+    5.9.1 `Y_{1m}`/`\delta_{10}`→`Y_{lm}`/`\delta_{l0}`; 5.9.4 first factor
+    `Y_{l₂m₁}`→`Y_{l₁m₁}` and CG J-index `{l₂}{0}`→`{l₃}{0}`; 5.9.5 first factor
+    `Y_{l₁m₂}`→`Y_{l₁m₁}` and 3j row `m₁m₃m₃`→`m₁m₂m₃` (scan p.161).
+  - §5.9.2 Fourier 5.9.6–5.9.9: distributional/operator (δ(q−k), L̂, ∇×L̂) — not
+    numerically verified; notation fixed `j l`/`j i (qr)`→`j_l(qr)` (×3).
+  - §5.9.3 θ-integrals 5.9.10–5.9.13. OCR: 5.9.10 `\delta l'`→`\delta_{ll'}`;
+    5.9.12 factor `(l+m)!/(l-m)!` moved *inside* the sqrt (scan p.162).
+    **BOOK MISPRINT 5.9.13**: closed-form coefficients printed as bare (l₂+m₂),
+    (l₁+m₁) — the un-normalized P_l^m form — corrected to
+    √((2l+1)(l²−m²)/(2l−1)) required for normalized Y_lm; derived from the
+    verified 5.8.6 recurrence, confirmed for general m₁,m₂; annotated in-source.
 
 ## Open flags (book misprints / omissions, annotated in-source)
 

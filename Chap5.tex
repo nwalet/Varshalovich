@@ -715,25 +715,25 @@ Some additional formulas for the vector differentiation of functions which conta
 \section{Some integrals involving spherical harmonics}\label{sec:5.9}
 \subsection{Integrals over Total Solid Angle}\label{sec:5.9.1}
 \begin{gather}
-\int_{0}^{2 \pi} d \varphi \int_{0}^{\pi} d \vartheta \sin \vartheta Y_{1 m}(\vartheta, \varphi)=\sqrt{4 \pi} \delta_{10} \delta_{m 0}  \label{eq:5:9:1}\\
+\int_{0}^{2 \pi} d \varphi \int_{0}^{\pi} d \vartheta \sin \vartheta Y_{l m}(\vartheta, \varphi)=\sqrt{4 \pi} \delta_{l 0} \delta_{m 0}  \label{eq:5:9:1}\\
 \int_{0}^{2 \pi} d \varphi \int_{0}^{\pi} d \vartheta \sin \vartheta Y_{l_{1} m_{1}}(\vartheta, \varphi) Y_{l_{2} m_{2}}^{*}(\vartheta, \varphi)=\delta_{l_{1} l_{2}} \delta_{m_{1} m_{2}}  \label{eq:5:9:2}\\
 \int_{0}^{2 \pi} d \varphi \int_{0}^{\pi} d \vartheta \sin \vartheta Y_{l_{1} m_{1}}(\vartheta, \varphi) Y_{l_{2} m_{2}}(\vartheta, \varphi)=(-1)^{m_{2}} \delta_{l_{1} l_{2}} \delta_{-m_{1} m_{2}}  \label{eq:5:9:3}\\
-\int_{0}^{2 \pi} d \varphi \int_{0}^{\pi} d \vartheta \sin \vartheta Y_{l_{2} m_{1}}(\vartheta, \varphi) Y_{l_{2} m_{2}}(\vartheta, \varphi) Y_{l_{3} m_{3}}^{*}(\vartheta, \varphi)=\sqrt{\frac{\left(2 l_{1}+1\right)\left(2 l_{2}+1\right)}{4 \pi\left(2 l_{3}+1\right)}} \clebsch{l_{1}}{0}{l_{2}}{0}{l_{2}}{0} \clebsch{l_{1}}{m_{1}}{l_{2}}{m_{2}}{l_{3}}{m_{3}}  \label{eq:5:9:4}\\
-\int_{0}^{2 \pi} d \varphi \int_{0}^{\pi} d \vartheta \sin \vartheta Y_{l_{1} m_{2}}(\vartheta, \varphi) Y_{l_{2} m_{2}}(\vartheta, \varphi) Y_{l_{3} m_{3}}(\vartheta, \varphi)  \notag\\
+\int_{0}^{2 \pi} d \varphi \int_{0}^{\pi} d \vartheta \sin \vartheta Y_{l_{1} m_{1}}(\vartheta, \varphi) Y_{l_{2} m_{2}}(\vartheta, \varphi) Y_{l_{3} m_{3}}^{*}(\vartheta, \varphi)=\sqrt{\frac{\left(2 l_{1}+1\right)\left(2 l_{2}+1\right)}{4 \pi\left(2 l_{3}+1\right)}} \clebsch{l_{1}}{0}{l_{2}}{0}{l_{3}}{0} \clebsch{l_{1}}{m_{1}}{l_{2}}{m_{2}}{l_{3}}{m_{3}}  \label{eq:5:9:4}\\
+\int_{0}^{2 \pi} d \varphi \int_{0}^{\pi} d \vartheta \sin \vartheta Y_{l_{1} m_{1}}(\vartheta, \varphi) Y_{l_{2} m_{2}}(\vartheta, \varphi) Y_{l_{3} m_{3}}(\vartheta, \varphi)  \notag\\
 =\sqrt{\frac{\left(2 l_{1}+1\right)\left(2 l_{2}+1\right)\left(2 l_{3}+1\right)}{4 \pi}}\left(\begin{array}{ccc}
 l_{1} & l_{2} & l_{3} \\
 0 & 0 & 0
 \end{array}\right)\left(\begin{array}{ccc}
 l_{1} & l_{2} & l_{3} \\
-m_{1} & m_{3} & m_{3}
+m_{1} & m_{2} & m_{3}
 \end{array}\right) \label{eq:5:9:5}
 \end{gather}
 Integrals involving products of three and more spherical harmonics can be evaluated by reducing them to integrals which involve products of a smaller number of harmonics. For this purpose it is convenient to use the Clebsch-Gordan expansion (Eq. \eqref{eq:5:6:9}).\\
 \subsection{Fourier Transformations for Some Functions Which Contain $Y_{l m}(\vartheta, \varphi)$}\label{sec:5.9.2}
 \begin{gather}
-\int_{0}^{\infty} d r r^{2} \int_{0}^{2 \pi} d \varphi \int_{0}^{\pi} d \vartheta \sin \vartheta e^{i \vect{k} \vect{r}} j l(q r) Y_{l m}(\vartheta, \varphi)=2 \pi^{2} i^{l} \frac{\delta(q-k)}{q^{2}} Y_{l m}\left(\vartheta_{k}, \varphi_{k}\right)  \label{eq:5:9:6}\\
-\int_{0}^{\infty} d r r^{2} \int_{0}^{2 \pi} d \varphi \int_{0}^{\pi} d \vartheta \sin \vartheta e^{i \vect{k} \vect{r}} \hat{\vect{L}}\left[j i(q r) Y_{l m}(\vartheta, \varphi)\right]=2 \pi^{2} i^{l} \frac{\delta(q-k)}{q^{2}} \hat{\vect{L}}_{\vect{k}} Y_{l m}\left(\vartheta_{k}, \varphi_{k}\right)  \label{eq:5:9:7}\\
-\int_{0}^{\infty} d r r^{2} \int_{0}^{2 \pi} d \varphi \int_{0}^{\pi} d \vartheta \sin \vartheta e^{i \vect{k} \vect{r}}[\boldsymbol{\nabla} \times \hat{\vect{L}}]\left(j l(q r) Y_{l m}(\vartheta, \varphi)\right)=2 \pi^{2} i^{l-1} \frac{\delta(q-k)}{q^{2}}\left[\vect{k} \times \hat{\vect{L}}_{\vect{k}}\right] Y_{l m}\left(\vartheta_{k}, \varphi_{k}\right) \label{eq:5:9:8}
+\int_{0}^{\infty} d r r^{2} \int_{0}^{2 \pi} d \varphi \int_{0}^{\pi} d \vartheta \sin \vartheta e^{i \vect{k} \vect{r}} j_{l}(q r) Y_{l m}(\vartheta, \varphi)=2 \pi^{2} i^{l} \frac{\delta(q-k)}{q^{2}} Y_{l m}\left(\vartheta_{k}, \varphi_{k}\right)  \label{eq:5:9:6}\\
+\int_{0}^{\infty} d r r^{2} \int_{0}^{2 \pi} d \varphi \int_{0}^{\pi} d \vartheta \sin \vartheta e^{i \vect{k} \vect{r}} \hat{\vect{L}}\left [j_{l}(q r) Y_{l m}(\vartheta, \varphi)\right]=2 \pi^{2} i^{l} \frac{\delta(q-k)}{q^{2}} \hat{\vect{L}}_{\vect{k}} Y_{l m}\left(\vartheta_{k}, \varphi_{k}\right)  \label{eq:5:9:7}\\
+\int_{0}^{\infty} d r r^{2} \int_{0}^{2 \pi} d \varphi \int_{0}^{\pi} d \vartheta \sin \vartheta e^{i \vect{k} \vect{r}}[\boldsymbol{\nabla} \times \hat{\vect{L}}]\left(j_{l}(q r) Y_{l m}(\vartheta, \varphi)\right)=2 \pi^{2} i^{l-1} \frac{\delta(q-k)}{q^{2}}\left[\vect{k} \times \hat{\vect{L}}_{\vect{k}}\right] Y_{l m}\left(\vartheta_{k}, \varphi_{k}\right) \label{eq:5:9:8}
 \end{gather}
 Here $j_{l}(x)$ is a spherical Bessel function, $\vartheta_{k}$ and $\varphi_{k}$ are polar angles of the vector $\vect{k} ; \hat{\vect{L}}$ and $\hat{\vect{L}}_{\vect{k}}$ are the operators of orbital angular momentum in the coordinate and momentum representations, respectively,
 \begin{equation}
@@ -741,14 +741,19 @@ Here $j_{l}(x)$ is a spherical Bessel function, $\vartheta_{k}$ and $\varphi_{k}
 \end{equation}
 \subsection{Integrals with Respect to $\vartheta$}\label{sec:5.9.3}
 \begin{gather}
-\int_{0}^{\pi} Y_{l m}^{*}(\vartheta, \varphi) Y_{l^{\prime} m}(\vartheta, \varphi) \sin \vartheta d \vartheta=\frac{\delta l^{\prime}}{2 \pi} .  \label{eq:5:9:10}\\
+\int_{0}^{\pi} Y_{l m}^{*}(\vartheta, \varphi) Y_{l^{\prime} m}(\vartheta, \varphi) \sin \vartheta d \vartheta=\frac{\delta_{l l^{\prime}}}{2 \pi} .  \label{eq:5:9:10}\\
 \int_{0}^{\pi} Y_{l m}^{*}(\vartheta, \varphi) Y_{l m^{\prime}}(\vartheta, \varphi) \frac{d \vartheta}{\sin \vartheta}=\frac{2 l+1}{4 \pi m} \delta_{m m^{\prime}}\left(m, m^{\prime}>0\right) .  \label{eq:5:9:11}\\
 \int_{0}^{\pi / 2}(\sin \vartheta)^{m+1}(\cos \vartheta)^{n} Y_{l m}(\vartheta, \varphi) d \vartheta  \notag\\
-=\sqrt{\frac{2 l+1}{4 \pi}} \, \frac{(l+m)!}{(l-m)!}(-1)^{m} \frac{n!e^{i m \varphi}}{(n+l+m+1)!!(n-l+m)!!},(m, n \geq 0)  \label{eq:5:9:12}\\
+=\sqrt{\frac{2 l+1}{4 \pi} \cdot \frac{(l+m)!}{(l-m)!}}(-1)^{m} \frac{n!e^{i m \varphi}}{(n+l+m+1)!!(n-l+m)!!},(m, n \geq 0)  \label{eq:5:9:12}\\
 \int_{a}^{b}\left[\left(l_{1}-l_{2}\right)\left(l_{1}+l_{2}+1\right)-\frac{m_{1}^{2}-m_{2}^{2}}{\sin ^{2} \vartheta}\right] Y_{l_{1} m_{1}}(\vartheta, \varphi) Y_{l_{2} m_{2}}(\vartheta, \varphi) d(\cos \vartheta)  \notag\\
 =\left.\sin ^{2} \vartheta\left[Y_{l_{1} m_{1}}(\vartheta, \varphi) \frac{d}{d \cos \vartheta} Y_{l_{2} m_{2}}(\vartheta, \varphi)-Y_{l_{2} m_{2}}(\vartheta, \varphi) \frac{d}{d \cos \vartheta} Y_{l_{1} m_{1}}(\vartheta, \varphi)\right]\right|_{a} ^{b}  \notag\\
-=\left[\cos \vartheta\left(l_{1}-l_{2}\right) Y_{l_{1} m_{1}}(\vartheta, \varphi) Y_{l_{2} m_{2}}(\vartheta, \varphi)+\left(l_{2}+m_{2}\right) Y_{l_{1} m_{1}}(\vartheta, \varphi) Y_{l_{2}-1 m_{2}}(\vartheta, \varphi)\right.  \notag\\
-\left.-\left(l_{1}+m_{1}\right) Y_{l_{1}-1 m_{1}}(\vartheta, \varphi) Y_{l_{2} m_{2}}(\vartheta, \varphi)\right]\left.\right|_{a} ^{b} . \label{eq:5:9:13}
+% NOTE: book misprint in the closed form.  As printed the coefficients are the
+% bare (l_2+m_2),(l_1+m_1) -- correct for the *un-normalized* associated Legendre
+% functions P_l^m, but the harmonics here are the normalized Y_lm, for which the
+% Wronskian coefficient is sqrt((2l+1)(l^2-m^2)/(2l-1)).  Corrected below;
+% verified numerically (scripts/check_5_9.py) for general m_1,m_2.
+=\left[\cos \vartheta\left(l_{1}-l_{2}\right) Y_{l_{1} m_{1}}(\vartheta, \varphi) Y_{l_{2} m_{2}}(\vartheta, \varphi)+\sqrt{\frac{\left(2 l_{2}+1\right)\left(l_{2}^{2}-m_{2}^{2}\right)}{2 l_{2}-1}} Y_{l_{1} m_{1}}(\vartheta, \varphi) Y_{l_{2}-1 m_{2}}(\vartheta, \varphi)\right.  \notag\\
+\left.-\sqrt{\frac{\left(2 l_{1}+1\right)\left(l_{1}^{2}-m_{1}^{2}\right)}{2 l_{1}-1}} Y_{l_{1}-1 m_{1}}(\vartheta, \varphi) Y_{l_{2} m_{2}}(\vartheta, \varphi)\right]\left.\right|_{a} ^{b} . \label{eq:5:9:13}
 \end{gather}
 \section{Sums involving spherical harmonics}\label{sec:5.10}
 \subsection{Sums over $m$ (with fixed $l$ )}\label{sec:5.10.1}
