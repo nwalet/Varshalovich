@@ -1062,13 +1062,39 @@ vmket/.style={postaction={decorate,decoration={markings,
   \coordinate(tC)at(#2,#3);
   \coordinate(tL)at($(tC)+(-0.62,0)$);
   \coordinate(tR)at($(tC)+(0.62,0)$);
-  \draw[dl](tL)to[bend left=60]node[midway,above,inner sep=1pt]{$#4$}(tR);
-  \draw[dl](tL)to[bend right=60]node[midway,above,inner sep=1pt]{$#6$}(tR);
+  \draw[dl](tL)to[bend left=90]node[midway,above,inner sep=1pt]{$#4$}(tR);
+  \draw[dl](tL)to[bend right=90]node[midway,above,inner sep=1pt]{$#6$}(tR);
   \draw[#1](tL)--node[midway,above]{$#5$}(tR);}
 % \dlens{Lname}{Rname}{top}{bot} -- two arcs between existing coords
 \newcommand{\dlens}[4]{%
-  \draw[dl](#1)to[bend left=60] node[midway,above,inner sep=1pt]{$#3$}(#2);
-  \draw[dl](#1)to[bend right=60]node[midway,above,inner sep=1pt]{$#4$}(#2);}
+  \draw[dl](#1)to[bend left=90] node[midway,above,inner sep=1pt]{$#3$}(#2);
+  \draw[dl](#1)to[bend right=90]node[midway,above,inner sep=1pt]{$#4$}(#2);}
+% \dsixjr[vdstyle]{l}{t}{b}{mt}{mb}{mr} -- 6j triangle, right. Style for horzontal
+\newcommand{\dsixjr}[7][dl]{%
+    \coordinate(c)at(0,0);
+    \coordinate(TL)at($(c)+(120:0.9)$);
+    \coordinate(BL)at($(c)+(240:0.9)$);
+    \coordinate(VL)at($(c)+(0:0.9)$);
+    \draw[dl](TL)--(BL)node[midway,left,inner sep=1pt]{$#2$};
+    \draw[dl](TL)--(VL)node[midway,above right,inner sep=1pt]{$#3$};
+    \draw[dl](BL)--(VL)node[midway,below right,inner sep=1pt]{$#4$};
+    \draw[dl](c)--(TL)node[pos=0.5,fill=white,inner sep=1pt]{$#5$};
+    \draw[dl](c)--(BL)node[pos=0.5,fill=white,inner sep=1pt]{$#6$};
+    \draw[#1](c)--(VL)node[pos=0.4,fill=white,inner sep=1pt]{$#7$};
+}
+% \dsixjl[vdstyle]{r}{t}{b}{mt}{mb}{ml} -- 6j triangle, left. Style for horzontal
+\newcommand{\dsixjl}[7][dl]{%
+    \coordinate(c2)at(0,0);
+    \coordinate(TR)at($(c2)+(60:0.9)$);
+    \coordinate(BR)at($(c2)+(-60:0.9)$);
+    \coordinate(VR)at($(c2)+(180:0.9)$);
+    \draw[dl](TR)--(BR)node[midway,right,inner sep=1pt]{$#2$};
+    \draw[dl](VR)--(TR)node[midway,above left,inner sep=1pt]{$#3$};
+    \draw[dl](VR)--(BR)node[midway,below left,inner sep=1pt]{$#4$};
+    \draw[dl](c2)--(TR)node[pos=0.5,fill=white,inner sep=1pt]{$#5$};
+    \draw[dl](c2)--(BR)node[pos=0.5,fill=white,inner sep=1pt]{$#6$};
+    \draw[#1](c2)--(VR)node[pos=0.4,fill=white,inner sep=1pt]{$#7$};
+}
 % \dsixjsq[vdstyle]{x}{y}{tl}{tr}{bl}{br}{hd}{vd} -- 6j square/diamond, both diagonals
 \newcommand{\dsixjsq}[9][0]{%
   \coordinate(qc)at(#2,#3);
@@ -1131,13 +1157,13 @@ vmket/.style={postaction={decorate,decoration={markings,
 % \dlensv{x}{y}{leftlab}{rightlab} -- two arcs between a top and bottom point.
 \newcommand{\dlensv}[4]{%
   \coordinate(lvt)at($(#1,#2)+(0,0.62)$);\coordinate(lvb)at($(#1,#2)+(0,-0.62)$);
-  \draw[dl](lvt)to[bend right=60]node[midway,left,inner sep=1pt]{$#3$}(lvb);
-  \draw[dl](lvt)to[bend left=60]node[midway,right,inner sep=1pt]{$#4$}(lvb);}
+  \draw[dl](lvt)to[bend right=90]node[midway,left,inner sep=1pt]{$#3$}(lvb);
+  \draw[dl](lvt)to[bend left=90]node[midway,right,inner sep=1pt]{$#4$}(lvb);}
 % \dthetav[midstyle]{x}{y}{leftlab}{midlab}{rightlab} -- vertical theta + middle line.
 \newcommand{\dthetav}[6][dl]{%
   \coordinate(tvt)at($(#2,#3)+(0,0.62)$);\coordinate(tvb)at($(#2,#3)+(0,-0.62)$);
-  \draw[dl](tvt)to[bend right=60]node[midway,left,inner sep=1pt]{$#4$}(tvb);
-  \draw[dl](tvt)to[bend left=60]node[midway,right,inner sep=1pt]{$#6$}(tvb);
+  \draw[dl](tvt)to[bend right=90]node[midway,left,inner sep=1pt]{$#4$}(tvb);
+  \draw[dl](tvt)to[bend left=90]node[midway,right,inner sep=1pt]{$#6$}(tvb);
   \draw[#1](tvt)--node[midway,right,inner sep=1pt]{$#5$}(tvb);}
 
 % ===== §12.2 (6j/9j sums) building blocks: loops, circle-thetas, delta-rect =====

@@ -1,8 +1,8 @@
 \documentclass[border=2pt]{standalone}
 \usepackage{diagrams}
 \begin{document}
-$
 \begin{tikzpicture}[baseline=0pt,font=\small]
+  \begin{scope}
   \coordinate(L) at (180:0.9);
   \coordinate(T) at (60:0.9);
   \coordinate(B) at (300:0.9);
@@ -12,16 +12,16 @@ $
   \draw[dl](L)--(T)node[midway,above left]{$q$};
   \draw[dl](T)--(B)node[midway,right]{$r$};
   \draw[dl](L)--(B)node[midway,below left]{$p$};
-\end{tikzpicture}
-\;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]
+\end{scope}
+\node at (1.3,0) {$=$};
+\begin{scope}[xshift=30mm]
   \coordinate(N)at(0,0);
   \draw[dl](-0.95,0)--(N)node[at start,left]{$a\alpha$};
   \draw[dl](N)--(0.8,0.75)node[at end,right]{$b\beta$};
   \draw[dl](N)--(0.8,-0.75)node[at end,right]{$c\gamma$};
+\end{scope}
+\begin{scope}[xshift=48mm]
+  \dsixjl{r}{q}{p}{b}{c}{a}
+\end{scope}
 \end{tikzpicture}
-\begin{tikzpicture}[baseline=0pt,font=\small]
-  \dsixjtri{0}{0}{q}{r}{p}{a}{b}{c}
-\end{tikzpicture}
-$
 \end{document}

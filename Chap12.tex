@@ -1,10 +1,12 @@
 \chapter{Sums involving vector addition and recoupling coefficients}
-Many quantum-mechanical problems are concerned with calculations of sums containing products of the Clebsch-Gordan coefficients and 3nj symbols whose summation indices represent quantum numbers of angular momenta and momentum projections. Summation over different indices may be performed independently and successively. It is more convenient to start with the summation of 3jm symbol products over projections. This summation may be carried out with the aid of the equations presented in Sec.~\ref{sec:12.1}. Summation over projections yields invariant 3nj symbols. The next step is to sum the products of 3nj symbols over momenta; this may be done with the aid of the equations of Sec.~\ref{sec:12.2}.
+Many quantum-mechanical problems are concerned with calculations of sums containing products of the Clebsch-Gordan coefficients and \(3nj\) symbols whose summation indices represent quantum numbers of angular momenta and momentum projections. Summation over different indices may be performed independently and successively. It is more convenient to start with the summation of 3jm symbol products over projections. This summation may be carried out with the aid of the equations presented in Sec.~\ref{sec:12.1}. Summation over projections yields invariant \(3nj\) symbols. The next step is to sum the products of \(3nj\) symbols over momenta; this may be done with the aid of the equations of Sec.~\ref{sec:12.2}.
 
 \section{Summation of products of $3 j m$ symbols}\label{sec:12.1}
 This section contains a collection of sums involving the 3jm symbols. Each sum is illustrated by a diagram which shows the coupling scheme of angular momenta involved in the sum. The equations are grouped in accordance with the number of $3 j m$ symbols in the products. Within each group the equations are arranged according to the number of fixed indices, i.e., the number of external lines of the corresponding diagram. The summations are of two kinds:\\
-(a) Summation index $j$ represents an angular momentum and runs over all possible values consistent with the triangle condition. Summations of this kind are shown by thick internal $j$-lines in the diagrams.\\
-(b) Summation index $m_{j}$ is a projection of $j$ and runs over all allowed values, $j, j-1, j-2, \ldots,-j$. Summations of such kind are shown by thin internal $j$-lines in the diagrams.
+\begin{enumerate}[label=(\alph*)]
+\item Summation index $j$ represents an angular momentum and runs over all possible values consistent with the triangle condition. Summations of this kind are shown by thick internal $j$-lines in the diagrams.
+\item Summation index $m_{j}$ is a projection of $j$ and runs over all allowed values, $j, j-1, j-2, \ldots,-j$. Summations of such kind are shown by thin internal $j$-lines in the diagrams.
+\end{enumerate}
 
 The sums are written in such a form that each summation index $m_{j}$ is included in two 3jm symbols, although with the opposite signs. In addition, the sums contain the phase factors $(-1)^{j-m_{j}}$ which ensure that the results of summation are invariant under coordinate rotations (Sec.~\ref{sec:11.2}). Any sum over projections, which is invariant with respect to rotations, may be converted into such a form (Sec.~\ref{sec:8.4}).
 
@@ -16,82 +18,73 @@ Hereafter, we use the notation
 
 \subsection{Sum Involving One $3 j m$ Symbol}\label{sec:12.1.1}
 \begin{equation}
-\sum_{\alpha}(-1)^{a-\alpha}\threej{a}{a}{c}{\alpha}{-\alpha}{\gamma} \label{chap12:eq:2}=\Fact{a} \delta_{c 0} \delta_{\gamma 0},
+\sum_{\alpha}(-1)^{a-\alpha}\threej{a}{a}{c}{\alpha}{-\alpha}{\gamma} \label{chap12:eq:2}=\Fact{a} \delta_{c 0} \delta_{\gamma 0}.
 \end{equation}
 \subsection{Sums Involving Products of Two $3 j m$ Symbols}\label{sec:12.1.2}
 \begin{equation}
-\sum_{\psi \kappa}(-1)^{p-\psi+q-\kappa}\threej{a}{p}{q}{-\alpha}{\psi}{\kappa} \label{chap12:eq:3}\threej{p}{q}{a^{\prime}}{-\psi}{-\kappa}{\alpha^{\prime}}=\frac{(-1)^{a+\alpha}}{\Fact{a}^{2}}\{a p q\} \delta_{a a^{\prime}} \delta_{\alpha \alpha^{\prime}}
+\sum_{\psi \kappa}(-1)^{p-\psi+q-\kappa}\threej{a}{p}{q}{-\alpha}{\psi}{\kappa} \label{chap12:eq:3}\threej{p}{q}{a^{\prime}}{-\psi}{-\kappa}{\alpha^{\prime}}=\frac{(-1)^{a+\alpha}}{\Fact{a}^{2}}\{a p q\} \delta_{a a^{\prime}} \delta_{\alpha \alpha^{\prime}},
 \end{equation}
-\[
-  \includegraphics[alt={}]{fig12_1_1}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_1_1}}
 \begin{equation}
 \sum_{q \kappa}(-1)^{q-\kappa} \Fact{q}^{2}\threej{a}{b}{q}{-\alpha}{-\beta}{\kappa} \label{chap12:eq:4}\threej{q}{a}{b}{-\kappa}{\alpha^{\prime}}{\beta^{\prime}}=(-1)^{a+\alpha+b+\beta} \delta_{\alpha \alpha^{\prime}} \delta_{\beta \beta^{\prime}},
 \end{equation}
-\[
-  \includegraphics[alt={}]{fig12_1_2}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_1_2}}
 \begin{equation}
 \sum_{\kappa}(-1)^{q-\kappa}\threej{a}{b}{q}{\alpha}{\beta}{-\kappa} \label{chap12:eq:5}\threej{q}{d}{c}{\kappa}{\delta}{\gamma}=(-1)^{2 a} \sum_{x \xi}(-1)^{x-\xi} \Fact{x}^{2}\threej{a}{c}{x}{\alpha}{\gamma}{-\xi}\threej{x}{d}{b}{\xi}{\delta}{\beta}\sixj{b}{d}{x}{c}{a}{q},
 \end{equation}
-\[
-  \includegraphics[alt={}]{fig12_1_3}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_1_3}}
 \subsection{Sums Involving Products of Three $3 j m$ Symbols}\label{sec:12.1.3}
 \begin{equation}
 \sum_{\kappa \psi \rho}(-1)^{p-\psi+q-\kappa+r-\rho}\threej{p}{a}{q}{\psi}{\alpha}{-\kappa} \label{chap12:eq:6}\threej{q}{b}{r}{\kappa}{\beta}{-\rho}\threej{r}{c}{p}{\rho}{\gamma}{-\psi}=\threej{a}{b}{c}{-\alpha}{-\beta}{-\gamma}\sixj{a}{b}{c}{r}{p}{q},
 \end{equation}
-\[
-  \includegraphics[alt={}]{fig12_1_4}
-\]
 
-\begin{gather}
-\sum_{\psi \kappa}\threej{a}{b}{p}{\alpha}{\beta}{\psi}\threej{p}{c}{q}{-\psi}{-\gamma}{-\kappa}\threej{q}{d}{e}{\kappa}{\delta}{\varepsilon}  \notag\\
+\centerline{\includegraphics[alt={}]{fig12_1_4}}
+
+\begin{multline}
+\sum_{\psi \kappa}\threej{a}{b}{p}{\alpha}{\beta}{\psi}\threej{p}{c}{q}{-\psi}{-\gamma}{-\kappa}\threej{q}{d}{e}{\kappa}{\delta}{\varepsilon}  \\
 =\sum_{\substack{x y \\
 \varepsilon \eta}} \Fact{x y}^{2}\threej{a}{d}{x}{\alpha}{\delta}{\xi}\threej{x}{c}{y}{-\xi}{-\gamma}{-\eta}\threej{y}{b}{e}{\eta}{\beta}{\varepsilon}\ninej{a}{b}{p}{d}{e}{q}{x}{y}{c}, \label{chap12:eq:7}
-\end{gather}
-\[
-  \includegraphics[alt={}]{fig12_1_5}
-\]
+\end{multline}
+
+\centerline{\includegraphics[alt={}]{fig12_1_5}}
 
 \subsection{Sums Involving Products of Four $3 j m$ Symbols}\label{sec:12.1.4}
 % PROOFREAD: contains OCR-garbled or 12j Wigner array(s) not auto-converted -- verify/reconstruct against orig.
 \begin{gather}
-\sum_{\kappa \psi \rho \sigma \tau}(-1)^{p-\psi+q-\kappa+r-\rho+s-\sigma+t-\tau}\left(\begin{array}{lr}
-p & a \\
-\psi & -\alpha \\
-\kappa
-\end{array}\right)\threej{q}{r}{t}{-\kappa}{\rho}{\tau}\threej{r}{a^{\prime}}{s}{-\rho}{\alpha^{\prime}}{\sigma}\threej{s}{p}{t}{-\sigma}{-\psi}{-\tau}  \notag\\
+\sum_{\kappa \psi \rho \sigma \tau}(-1)^{p-\psi+q-\kappa+r-\rho+s-\sigma+t-\tau}
+\threej{p}{a}{q}{\psi}{-\alpha}{\kappa}
+\threej{q}{r}{t}{-\kappa}{\rho}{\tau}
+\threej{r}{a^{\prime}}{s}{-\rho}{\alpha^{\prime}}{\sigma}
+\threej{s}{p}{t}{-\sigma}{-\psi}{-\tau}  \notag\\
 =\frac{(-1)^{a-\alpha}}{\Fact{a}^{2}}\sixj{q}{p}{a}{s}{r}{t} \delta_{a a^{\prime}} \delta_{\alpha \alpha^{\prime}}, \label{chap12:eq:8}
 \end{gather}
 
-\[
-  \includegraphics[alt={}]{fig12_1_6}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_1_6}}
 
 \begin{gather}
 \sum_{\rho \psi \kappa \sigma}(-1)^{p-\psi+q-\kappa+r-\rho+s-\sigma}\threej{p}{a}{q}{\psi}{\alpha}{-\kappa}\threej{q}{b}{r}{\kappa}{\beta}{-\rho}\threej{r}{s}{p}{\rho}{\sigma}{-\psi}\threej{s}{c}{d}{-\sigma}{\gamma}{\delta}  \notag\\
 =\sixj{a}{b}{s}{r}{p}{q} \sum_{\sigma}(-1)^{s-\sigma}\threej{a}{s}{b}{\alpha}{\sigma}{\beta}\threej{d}{s}{c}{\delta}{-\sigma}{\gamma}, \label{chap12:eq:9}
 \end{gather}
 
-\[
-  \includegraphics[alt={}]{fig12_1_7}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_1_7}}
 
 \begin{align}
 & \sum_{\psi \kappa \rho \sigma}(-1)^{p-\psi+q-\kappa+r-\rho+s-\sigma}\threej{p}{a}{q}{\psi}{\alpha}{-\kappa}\threej{q}{b}{r}{\kappa}{\beta}{-\rho}\threej{r}{c}{s}{\rho}{\gamma}{-\sigma}\threej{s}{d}{p}{\sigma}{\delta}{-\psi}  \notag\\
 & =(-1)^{s-a-d-q} \sum_{x \xi}(-1)^{x-\xi} \Fact{x}^{2}\threej{a}{x}{d}{\alpha}{-\xi}{\delta}\threej{b}{x}{c}{\beta}{\xi}{\gamma}\sixj{a}{x}{d}{s}{p}{q}\sixj{b}{x}{c}{s}{r}{q} \label{chap12:eq:10}
 \end{align}
 
-\[
-  \includegraphics[alt={}]{fig12_1_8}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_1_8}}
 \begin{equation}
 =(-1)^{2 r-s-d-a-q} \sum_{x \xi}(-1)^{x-\xi} \Fact{x}^{2}\threej{a}{x}{c}{\alpha}{-\xi}{\gamma} \label{chap12:eq:11}\threej{b}{x}{d}{\beta}{\xi}{\delta}\ninej{a}{p}{q}{x}{d}{b}{c}{s}{r},
 \end{equation}
-\[
-  \includegraphics[alt={}]{fig12_1_9}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_1_9}}
 
 \subsection{Sums Involving Products of Five 3jm Symbols}\label{sec:12.1.5}
 \begin{align}
@@ -100,9 +93,8 @@ p & a \\
 &=(-1)^{2 u} \frac{1}{\Fact{u}} \delta_{u v} \delta_{a 0} \delta_{\alpha 0}\sixj{q}{p}{u}{s}{r}{t}, \label{chap12:eq:12}
 \end{align}
 
-\[
-  \includegraphics[alt={}]{fig12_1_10}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_1_10}}
 
 \begin{align}
 \sum_{\substack{\psi \kappa p \sigma \\
@@ -110,42 +102,37 @@ p & a \\
 = & \threej{a}{b}{c}{\alpha}{\beta}{\gamma}\sixj{a}{b}{c}{u}{s}{r}\sixj{a}{p}{q}{t}{r}{s}, \label{chap12:eq:13}
 \end{align}
 
-\[
-  \includegraphics[alt={}]{fig12_1_11}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_1_11}}
 
 \begin{gather}
 \sum_{\psi \kappa \rho r}(-1)^{p-\psi+q-\kappa+r-\rho+\rho-\sigma+t-r+u-\nu}\threej{p}{a}{q}{\psi}{\alpha}{\kappa}\threej{q}{t}{r}{-\kappa}{-\tau}{-\rho}\threej{r}{b}{s}{\rho}{\beta}{\sigma}\threej{s}{p}{u}{-\sigma}{-\psi}{-\nu}\threej{u}{c}{t}{\nu}{\gamma}{r}  \notag\\
 =(-1)^{r+b+\theta}\threej{a}{b}{c}{-\alpha}{-\beta}{-\gamma}\ninej{a}{b}{c}{p}{s}{u}{q}{r}{t}, \label{chap12:eq:14}
 \end{gather}
 
-\[
-  \includegraphics[alt={}]{fig12_1_12}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_1_12}}
 
 \begin{align}
 & \sum_{\psi \kappa \rho}(-1)^{p-\psi+q-\kappa+r-\rho+s-\sigma+t-\tau}\threej{p}{a}{q}{\psi}{\alpha}{-\kappa}\threej{q}{b}{r}{\kappa}{\beta}{-\rho}\threej{r}{c}{s}{\rho}{\gamma}{-\sigma}\threej{s}{d}{t}{\sigma}{\delta}{-\tau}\threej{t}{e}{p}{\tau}{\varepsilon}{-\psi}  \notag\\
 &=(-1)^{t-p-b-a-d-c} \sum_{x \xi y \eta}(-1)^{x-\xi+y-\eta} \Fact{x y}^{2}\threej{a}{b}{x}{\alpha}{\beta}{\xi}\threej{x}{e}{y}{-\xi}{\varepsilon}{-\eta}\threej{y}{c}{d}{\eta}{\gamma}{\delta}\sixj{a}{b}{x}{r}{p}{q}\sixj{x}{e}{y}{t}{r}{p}\sixj{y}{c}{d}{s}{t}{r} \label{chap12:eq:15}
 \end{align}
 
-\[
-  \includegraphics[alt={}]{fig12_1_13}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_1_13}}
 \begin{equation}
 =(-1)^{p-t-b-a-d-c} \sum_{x \xi y \eta}(-1)^{x-\xi+y-\eta} \Fact{x y}^{2}\threej{a}{b}{x}{\alpha}{\beta}{\xi} \label{chap12:eq:16}\threej{x}{d}{y}{-\xi}{\delta}{-\eta}\threej{y}{c}{e}{\eta}{\gamma}{\varepsilon}\sixj{a}{b}{x}{r}{p}{q}\ninej{c}{e}{y}{r}{p}{x}{s}{t}{d},
 \end{equation}
-\[
-  \includegraphics[alt={}]{fig12_1_14}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_1_14}}
 
 \begin{gather}
 =(-1)^{r-t+p+a+d} \sum_{x \xi y \eta z}(-1)^{x-\xi+y-\eta+x} \Fact{x y z}^{2}\threej{a}{c}{x}{\alpha}{\gamma}{\xi}\threej{x}{e}{y}{-\xi}{\varepsilon}{-\eta}\threej{y}{b}{d}{\eta}{\beta}{\delta}  \notag\\
 \sixj{c}{q}{z}{b}{s}{r}\sixj{a}{c}{x}{z}{p}{q}\sixj{x}{e}{y}{t}{z}{p}\sixj{y}{b}{d}{s}{t}{z}, \label{chap12:eq:17}
 \end{gather}
 
-\[
-  \includegraphics[alt={}]{fig12_1_15}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_1_15}}
 
 \subsection{Sums Involving Products of Six 3jm Symbols}\label{sec:12.1.6}
 \begin{gather}
@@ -162,9 +149,8 @@ p & a \\
 \sixj{a}{p}{q}{t}{r}{s} {tuv} \delta+_{t't}\delta_{aa'}\delta_{\alpha\alpha'}
 \label{chap12:eq:18}
 \end{gather}
-\[
-  \includegraphics[alt={}]{fig12_1_16}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_1_16}}
 
 \begin{gather}
 \sum_{\substack{\psi \kappa p \sigma \\
@@ -174,9 +160,8 @@ p & a \\
 \times\threej{q}{p}{a}{\kappa}{\psi}{\alpha}\threej{q^{\prime}}{p^{\prime}}{a^{\prime}}{-\rho}{-\sigma}{-\alpha^{\prime}}=\frac{(-1)^{\alpha-a}}{\Fact{a p q}^{2}} \delta_{q q^{\prime}} \delta_{p p^{\prime}} \delta_{a a^{\prime}} \delta_{\alpha \alpha^{\prime}}\{u v q\}\{p t s\}\{a p q\}, \label{chap12:eq:19}
 \end{gather}
 
-\[
-  \includegraphics[alt={}]{fig12_1_17}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_1_17}}
 
 \begin{gather}
 \sum_{\psi \kappa \rho \sigma}(-1)^{p-\psi+q-\kappa+r-\rho+s-\sigma+t-\tau+v-\mu+u-\nu+g-\lambda}\threej{a}{q}{p}{-\alpha}{\kappa}{\psi}\left(\begin{array}{rrr}
@@ -194,9 +179,8 @@ s & t &a^{\prime} \\
 \sigma & -\tau &\alpha^{\prime}
 \end{array}\right)=\frac{(-1)^{s-p-\alpha-g}}{\Fact{a}^{2}}\sixj{q}{g}{s}{u}{r}{v}\sixj{a}{p}{q}{g}{s}{t} \delta_{a a^{\prime}} \delta_{\alpha \alpha^{\prime}} \label{chap12:eq:20}
 \end{gather}
-\[
-  \includegraphics[alt={}]{fig12_1_18}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_1_18}}
 \begin{gather}
 \sum_{\substack{\psi \kappa \rho \sigma \\
 \nu \tau \mu \lambda}}
@@ -210,9 +194,8 @@ s&t & a^{\prime} \\
 \sixj{a}{r}{s}{v}{p}{q} \delta_{a a^{\prime}} \delta_{\alpha \alpha^{\prime}}, .\label{chap12:eq:21}
 \end{gather}
 
-\[
-  \includegraphics[alt={}]{fig12_1_19}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_1_19}}
 \begin{gather}
 \sum_{\substack{\psi \kappa \rho \sigma \\
 \nu \tau \mu \lambda}}
@@ -228,9 +211,8 @@ s&t & a^{\prime} \\
 \ninej{a}{p}{q}{u}{r}{g}{t}{v}{s}
  \delta_{a a^{\prime}} \delta_{\alpha \alpha^{\prime}}, .\label{chap12:eq:21a}
 \end{gather}
-\[
-  \includegraphics[alt={}]{fig12_1_20}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_1_20}}
 \begin{gather}
 \sum_{\substack{\psi \kappa \nu \rho  \\
 \mu \sigma \lambda}}
@@ -252,9 +234,8 @@ s&t & a^{\prime} \\
 .\label{chap12:eq:22a}
 \end{gather}
 
-\[
-  \includegraphics[alt={}]{fig12_1_21}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_1_21}}
 
 \begin{equation}
 =(-1)^{v+u+r+p-g-a-c} \sum_{x y \eta}(-1)^{y-\eta} \Fact{x y}^{2}
@@ -268,9 +249,8 @@ s&t & a^{\prime} \\
 \end{equation}
 
 
-\[
-  \includegraphics[alt={}]{fig12_1_22}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_1_22}}
 % PROOFREAD: contains OCR-garbled or 12j Wigner array(s) not auto-converted -- verify/reconstruct against orig.
 \begin{equation}
 =(-1)^{r+s+d-q-c} \sum_{x y \eta}(-1)^{y-\eta+x} \Fact{x y}^{2}
@@ -281,9 +261,8 @@ s&t & a^{\prime} \\
 \ninej{a}{p}{q}{x}{d}{u}{v}{s}{g},
 \label{chap12:eq:23}
 \end{equation}
-\[
-  \includegraphics[alt={}]{fig12_1_23}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_1_23}}
 % PROOFREAD: contains OCR-garbled or 12j Wigner array(s) not auto-converted -- verify/reconstruct against orig.
 \[
 \begin{aligned}
@@ -304,9 +283,8 @@ r & c & s \\
 \begin{equation}
 =(-1)^{a+b+c+u+s}\sixj{a}{p}{q}{g}{v}{u} \label{chap12:eq:24} \sum_{x \xi}(-1)^{x-\xi} \Fact{x}^{2}\threej{a}{d}{x}{\alpha}{\delta}{\xi}\threej{x}{b}{c}{-\xi}{\beta}{\gamma}\sixj{a}{d}{x}{s}{v}{u}\sixj{x}{b}{c}{r}{s}{v},
 \end{equation}
-\[
-  \includegraphics[alt={}]{fig12_1_24}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_1_24}}
 \[
 \begin{gathered}
 \sum_{\substack{\psi \kappa \rho \sigma \\
@@ -317,15 +295,13 @@ r \nu \mu}}(-1)^{p-\psi+q-\kappa+r-\rho+s-\sigma+t-r+u-\nu+v-\mu}\threej{p}{a}{q
 \begin{equation}
 =(-1)^{q+v+t-o-d+2 u} \sum_{x y \eta}(-1)^{x+y-\eta} \Fact{x y}^{2}\threej{a}{b}{y}{\alpha}{\beta}{-\eta} \label{chap12:eq:25}\threej{y}{c}{d}{\eta}{\gamma}{\delta}\sixj{p}{r}{x}{c}{v}{s}\sixj{p}{r}{x}{u}{a}{q}\sixj{a}{b}{y}{t}{x}{u}\sixj{y}{c}{d}{v}{t}{x}=
 \end{equation}
-\[
-  \includegraphics[alt={}]{fig12_1_25}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_1_25}}
 \begin{equation}
 =(-1)^{q+u-a-s-b-d} \sum_{x \xi}(-1)^{x-\xi} \Fact{x}^{2}\threej{a}{x}{c}{\alpha}{-\xi}{\gamma} \label{chap12:eq:26}\threej{d}{x}{b}{\delta}{\xi}{\beta}\sixj{d}{x}{b}{u}{t}{v}\ninej{a}{x}{c}{p}{v}{s}{q}{u}{r},
 \end{equation}
-\[
-  \includegraphics[alt={}]{fig12_1_26}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_1_26}}
 
 \begin{align}
 & \sum_{\substack{\psi \kappa \rho \\
@@ -334,18 +310,16 @@ r \nu \mu}}(-1)^{p-\psi+q-\kappa+r-\rho+s-\sigma+t-r+u-\nu+v-\mu}\threej{p}{a}{q
 \xi \eta s}}(-1)^{x-\xi+y-\eta+x-s} \Fact{x y z}^{2}\threej{a}{x}{b}{\alpha}{\xi}{\beta}\threej{c}{y}{d}{\gamma}{\eta}{\delta}\threej{e}{z}{f}{\varepsilon}{\zeta}{\varphi}\threej{x}{y}{z}{-\xi}{-\eta}{-s}\sixj{a}{x}{b}{r}{q}{p}\sixj{c}{y}{d}{t}{s}{r} \label{chap12:eq:27}
 \end{align}
 
-\[
-  \includegraphics[alt={}]{fig12_1_27}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_1_27}}
 \[
 =(-1)^{2 p-u-r+a+b+d+e-c} \sum_{\substack{x y z \\ \xi \eta \xi}}(-1)^{x} \Fact{x y z}^{2}(-1)^{x-\xi+y-\eta+x-\xi}
 \]
 \begin{equation}
 \times\threej{a}{b}{x}{\alpha}{\beta}{-\xi} \label{chap12:eq:28}\threej{x}{c}{y}{\xi}{\gamma}{-\eta}\threej{y}{f}{z}{\eta}{\varphi}{-\zeta}\threej{z}{d}{e}{\zeta}{\delta}{e}\sixj{a}{b}{x}{r}{p}{q}\sixj{x}{c}{y}{s}{p}{r}\sixj{y}{f}{z}{u}{s}{p}\sixj{z}{d}{e}{t}{u}{s}=
 \end{equation}
-\[
-  \includegraphics[alt={}]{fig12_1_28}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_1_28}}
 
 \begin{gather}
 =(-1)^{u-d-c-c-r} \sum_{\substack{x y z \\
@@ -353,9 +327,8 @@ r \nu \mu}}(-1)^{p-\psi+q-\kappa+r-\rho+s-\sigma+t-r+u-\nu+v-\mu}\threej{p}{a}{q
 \times\sixj{a}{x}{b}{r}{q}{p}\sixj{e}{y}{d}{s}{t}{u}\ninej{x}{y}{z}{p}{u}{f}{r}{s}{c} \label{chap12:eq:29}
 \end{gather}
 
-\[
-  \includegraphics[alt={}]{fig12_1_29}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_1_29}}
 
 \section{Summation of products of $6 j$ and $9 j$ symbols}\label{sec:12.2}
 This section presents a collection of sums involving $6 j$ and, $9 j$ symbols. All the sums are illustrated by diagrams which display the coupling scheme for angular moments involved in the equation. The sums are grouped in accordance with the number of $3 n j$ symbols in the products. Within each group the sums are arranged according to the number of summation indices. The summation indices are printed by capital letters in equations and marked by thick $j$-lines. In Sec.~\ref{sec:12.2}, just as in Sec.~\ref{sec:12.1}, we use the notation
@@ -369,66 +342,57 @@ Some of the sums presented are taken from Refs. \cite{ref024} and \cite{ref044}.
 \sum_{X} \Fact{X}^{2}\{a b X\}=\Fact{a b}^{2} \label{chap12:eq:30}
 \end{equation}
 
-\[
-  \includegraphics[alt={}]{fig12_2_1}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_2_1}}
 
 \begin{equation}
 \sum_{x}(-1)^{2 a+\dot{x}} \Fact{x}^{2}\{a a X\}=\Fact{a}^{2} \label{chap12:eq:31}
 \end{equation}
 
-\[
-  \includegraphics[alt={}]{fig12_2_2}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_2_2}}
 \begin{equation}
 \sum_{x} \Fact{x}^{2}\sixj{a}{b}{X}{a}{b}{c} \label{chap12:eq:32}=(-1)^{2 c}\{a b c\},
 \end{equation}
-\[
-  \includegraphics[alt={}]{fig12_2_3}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_2_3}}
 \begin{equation}
 \sum_{X}(-1)^{a+b+X} \Fact{X}^{2}\sixj{a}{b}{x}{b}{a}{c} \label{chap12:eq:33}=\Fact{a b} \delta_{c 0}
 \end{equation}
-\[
-  \includegraphics[alt={}]{fig12_2_4}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_2_4}}
 \begin{equation}
 \sum_{X} \Fact{X}^{2}\ninej{a}{b}{e}{c}{d}{f}{e}{f}{X} \label{chap12:eq:34}=\frac{\delta_{b c}}{\Fact{b}^{2}}\{a b e\}\{b d f\}
 \end{equation}
-\[
-  \includegraphics[alt={}]{fig12_2_5}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_2_5}}
 \begin{equation}
 \sum_{X}(-1)^{a+b+c+d-X} \Fact{X}^{2}\ninej{a}{b}{e}{c}{d}{f}{f}{e}{X} \label{chap12:eq:35}=\frac{\delta_{a d}}{\Fact{a}^{2}}\{d b e\}\{a c f\}
 \end{equation}
-\[
-  \includegraphics[alt={}]{fig12_2_6}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_2_6}}
 \subsection{Sums Involving Products of Two $3 n j$ Symbols}\label{sec:12.2.2}
 \subsubsection{(i) Single summation}
 \begin{equation}
 \sum_{X} \Fact{X}^{2}\sixj{a}{b}{X}{c}{d}{p} \sixj{c}{d}{X}{a}{b}{q}=\frac{\delta_{p q}}{\Fact{p}^{2}}\{a d p\}\{b c p\}
 \label{chap12:eq:36}
 \end{equation}
-\[
-  \includegraphics[alt={}]{fig12_2_7}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_2_7}}
 \begin{equation}
 \sum_{X}(-1)^{p+q+X} \Fact{X}^{2}\sixj{a}{b}{X}{c}{d}{p} \sixj{c}{d}{X}{b}{a}{q}=\sixj{c}{a}{q}{d}{b}{p}
 \label{chap12:eq:37}
 \end{equation}
-\[
-  \includegraphics[alt={}]{fig12_2_8}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_2_8}}
 \begin{equation}
 \sum_{X} \Fact{X}^{2}
 \ninej{a}{f}{X}{d}{q}{e}{p}{c}{b}
 \sixj{a}{f}{X}{e}{b}{s}=(-1)^{2 s}\sixj{a}{b}{s}{c}{d}{p}\sixj{c}{d}{s}{e}{f}{q},
  \label{chap12:eq:38}
 \end{equation}
-\[
-  \includegraphics[alt={}]{fig12_2_9}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_2_9}}
 \begin{equation}
 \sum_X (-1)^{R+X}\Fact{X}^2 
 \ninej{a}{f}{X}{d}{q}{e}{p}{c}{b}
@@ -439,34 +403,30 @@ Some of the sums presented are taken from Refs. \cite{ref024} and \cite{ref044}.
 \sixj{p}{q}{s}{f}{b}{c}\,,
 \end{equation}
 where $R=a+b+c+d+e+f+p+q$\\
-\[
-  \includegraphics[alt={}]{fig12_2_10}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_2_10}}
 \begin{equation}
 \sum_X\Fact{X}^2\ninej{a}{b}{p}{c}{d}{q}{r}{s}{X}
 \ninej{e}{f}{p}{g}{h}{q}{r}{s}{X}
 =
 (-1)^{b-c-f+g}\twelvejII{r,a,c,s,b,d,h,g,q,f,e,p}
 \end{equation}
-\[
-  \includegraphics[alt={}]{fig12_2_11}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_2_11}}
 \begin{equation}
 (-1)^{p+q-r-s} \sum_{X} \Fact{X}^{2}
 \ninej{a}{b}{p}{c}{d}{q}{r}{s}{X} 
 \ninej{e}{f}{p}{g}{h}{q}{r}{s}{X}=(-1)^{b+g-c-f} \sum_{Y} \Fact{Y}^{2}\ninej{a}{p}{b}{r}{e}{g}{c}{f}{Y}\ninej{d}{s}{b}{q}{h}{g}{c}{f}{Y},
 \label{chap12:eq:39}
 \end{equation}
-\[
-  \includegraphics[alt={}]{fig12_2_12}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_2_12}}
 \subsubsection{(ii) Double summation}
 \begin{equation}
 \sum_{X Y} \Fact{X Y}^{2}\ninej{a}{b}{X}{c}{d}{Y}{e}{f}{j} \label{chap12:eq:40}\ninej{a}{b}{X}{c}{d}{Y}{g}{h}{j}=\frac{\delta_{e g} \delta_{f h}}{\Fact{e f}^{2}}\{a c e\}\{b d h\}\{g f j\},
 \end{equation}
-\[
-  \includegraphics[alt={}]{fig12_2_13}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_2_13}}
 
 \begin{equation}
  \sum_{XY} (-1)^{Y} \Fact{XY}^2 \ninej{a}{b}{X}{c}{d}{Y}{e}{f}{j}
@@ -479,23 +439,20 @@ where $R=a+b+c+d+e+f+p+q$\\
 \begin{equation}
   \sum_{XYZ} \Fact{XYZ}^2 \sixj{X}{Y}{Z}{a}{b}{c}^2=\Fact{abc}^2
 \end{equation}
-\[
-  \includegraphics[alt={}]{fig12_2_14}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_2_14}}
 \begin{equation}
   \sum_{XYZ} \Fact{XYZ}^2 \ninej{X}{Y}{Z}{a}{b}{c}{d}{e}{f}
   \sixj{X}{Y}{Z}{c}{a}{b}= \{abc\}
 \end{equation}
-\[
-  \includegraphics[alt={}]{fig12_2_15}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_2_15}}
 \begin{equation}
 \sum_{X Y Z} \Fact{X Y Z}^{2}\ninej{X}{Y}{Z}{a}{b}{c}{d}{e}{f}^2=\{a b c\}\{d e f\}
 \label{chap12:eq:41}
 \end{equation}
-\[
-  \includegraphics[alt={}]{fig12_2_16}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_2_16}}
 
 \subsection{Sums Involving Products of Three $3 n j$ Symbols}\label{sec:12.2.3}
 \subsubsection{(i) Single summation}
@@ -509,23 +466,20 @@ where $R=a+b+c+d+e+f+p+q$\\
 ,
 \end{equation}
 where $R=a+b+c+d+e+f+p+q+r$,\\
-\[
-  \includegraphics[alt={}]{fig12_2_17}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_2_17}}
 \begin{equation}
 \sum_{X}(-1)^{2 X} \Fact{X}^{2}\sixj{a}{b}{X}{c}{d}{p} \label{chap12:eq:43}\sixj{c}{d}{X}{e}{f}{q}\sixj{e}{f}{X}{a}{b}{r}=\ninej{a}{f}{r}{d}{q}{e}{p}{c}{b},
 \end{equation}
-\[
-  \includegraphics[alt={}]{fig12_2_18}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_2_18}}
 \begin{equation}
 (-1)^{p+q-e-f} \sum_{X} \Fact{X}^{2}\ninej{a}{b}{p}{c}{d}{q}{e}{f}{X} \sixj{p}{q}{X}{k}{l}{g}\sixj{e}{f}{X}{k}{l}{h}=
 \twelvejI{f,b,p,g,d,a,l,k,q,c,e,h}
 \label{chap12:eq:44}
 \end{equation}
-\[
-  \includegraphics[alt={}]{fig12_2_19}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_2_19}}
 \begin{align}
 &(-1)^{p+q-e-f} \sum_{X} \Fact{X}^{2}\ninej{a}{b}{p}{c}{d}{q}{e}{f}{X}
 \sixj{p}{q}{X}{k}{l}{g}
@@ -536,38 +490,33 @@ where $R=a+b+c+d+e+f+p+q+r$,\\
 .
  \label{chap12:eq:45}
 \end{align}
-\[
-  \includegraphics[alt={}]{fig12_2_20}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_2_20}}
 
 \subsubsection{(ii) Double summation}
 \begin{equation}
 \sum_{X Y} \Fact{X Y}^{2}\sixj{a}{b}{X}{c}{d}{p} \label{chap12:eq:46}\sixj{c}{d}{X}{a}{b}{Y}\sixj{a}{b}{q}{c}{d}{Y}=\sixj{a}{b}{q}{c}{d}{p},
 \end{equation}
-\[
-  \includegraphics[alt={}]{fig12_2_21}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_2_21}}
 \begin{equation}
 \sum_{X Y}(-1)^{X+Y+p} \Fact{X Y}^{2}\sixj{a}{b}{X}{c}{d}{p} \label{chap12:eq:47}\sixj{a}{c}{Y}{d}{b}{X}\sixj{a}{d}{q}{b}{c}{Y}=\frac{\delta_{p q}}{\Fact{p}^{2}}\{a d p\}\{b c p\}
 \end{equation}
-\[
-  \includegraphics[alt={}]{fig12_2_22}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_2_22}}
 \begin{equation}
 \sum_{X Y}(-1)^{X+Y+2 a-s-t} \Fact{X Y}^{2}\ninej{a}{b}{p}{c}{d}{X}{q}{Y}{g} \label{chap12:eq:48}\sixj{c}{d}{X}{p}{g}{s}\sixj{b}{d}{Y}{q}{g}{t}=\ninej{a}{b}{p}{c}{g}{s}{q}{t}{d},
 \end{equation}
-\[
-  \includegraphics[alt={}]{fig12_2_23}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_2_23}}
 \begin{equation}
 \sum_{X Y} \Fact{X Y}^{2}\ninej{a}{b}{p}{c}{d}{X}{q}{Y}{g} \sixj{c}{d}{X}{g}{p}{s}
 \sixj{b}{d}{Y}{g}{q}{t}
 =(-1)^{2 s} \frac{\delta_{s t}}{\Fact{s}^{2}}\{d g s\}\sixj{a}{b}{p}{s}{c}{q},
 \label{chap12:eq:49}
 \end{equation}
-\[
-  \includegraphics[alt={}]{fig12_2_24}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_2_24}}
 \begin{equation}
 \sum_{X Y} \Fact{X Y}^{2}\ninej{a}{b}{X}{c}{d}{Y}{e}{f}{g} 
 \sixj{a}{b}{X}{Y}{g}{h}
@@ -575,9 +524,8 @@ where $R=a+b+c+d+e+f+p+q+r$,\\
 =(-1)^{2 h} \frac{\delta_{fj}}{\Fact{f}^{2}}\{b d f\}\sixj{e}{j}{g}{h}{a}{c},
 \label{chap12:eq:49a}
 \end{equation}
-\[
-  \includegraphics[alt={}]{fig12_2_25}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_2_25}}
 \begin{equation}
 \sum_{X Y} \Fact{X Y}^{2}
 \ninej{a}{f}{X}{d}{q}{e}{p}{c}{b}
@@ -591,9 +539,8 @@ where $R=a+b+c+d+e+f+p+q+r$,\\
 \label{chap12:eq:49b}
 \end{equation}
 
-\[
-  \includegraphics[alt={}]{fig12_2_26}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_2_26}}
 
 \subsubsection{(iii) Triple summation}
 \begin{equation}
@@ -605,9 +552,8 @@ where $R=a+b+c+d+e+f+p+q+r$,\\
 (-1)^{2e}{\Fact{d}^{2}}
 \sixj{a}{b}{p}{e}{c}{q},
 \end{equation}
-\[
-  \includegraphics[alt={}]{fig12_2_27}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_2_27}}
 \begin{equation}
 \sum_{X Y Z}(-1)^{X+Y-e-h} \Fact{X Y Z}^{2}
 \ninej{a}{b}{X}{c}{d}{Z}{e}{f}{g} 
@@ -618,23 +564,20 @@ where $R=a+b+c+d+e+f+p+q+r$,\\
 \{bdf\}
 \sixj{e}{f}{g}{h}{c}{a},
 \end{equation}
-\[
-  \includegraphics[alt={}]{fig12_2_28}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_2_28}}
 \begin{equation}
 \sum_{X Y Z}(-1)^{X+f-a-l} \Fact{X Y Z}^{2}\ninej{a}{b}{p}{c}{d}{X}{q}{Y}{Z} \label{chap12:eq:50}\ninej{b}{d}{Y}{c}{f}{Z}{l}{k}{q}\sixj{p}{X}{Z}{c}{f}{d}=\frac{\delta_{p k}}{\Fact{k}^{2}}\{d f p\}\sixj{a}{b}{p}{l}{q}{c},
 \end{equation}
-\[
-  \includegraphics[alt={}]{fig12_2_29}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_2_29}}
 \begin{equation}
 \sum_{X Y Z} \Fact{X Y Z}^{2}\ninej{a}{b}{p}{c}{d}{X}{q}{Y}{Z} \label{chap12:eq:51}\ninej{c}{d}{X}{e}{f}{Z}{g}{h}{p}\ninej{b}{d}{Y}{e}{f}{Z}{j}{k}{q}=\frac{\delta_{h k}}{\Fact{h}^{2}}\{d f h\}\ninej{a}{b}{p}{c}{e}{g}{q}{j}{h},
 \end{equation}
 % eq 51: three flat 9j-hex (X,Y,Z bold) = theta(d f h) . rect(h,k) . 9j-hex
 % LHS 9j's: hex1 {b d Y;e f Z;j k q}, hex2 {a b p;c d X;q Y Z}, hex3 {c d X;e f Z;g h p}
-\[
-  \includegraphics[alt={}]{fig12_2_30}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_2_30}}
 
 \subsection{Sums Involving Products of Four $3 n j$ Symbols}\label{sec:12.2.4}
 \subsubsection{(i) Single summation}
@@ -645,12 +588,10 @@ where $R=a+b+c+d+e+f+p+q+r$,\\
 \label{chap12:eq:52}
 \end{gather}
 where $R=a+b+c+d+e+f+g+h+p+q+r+s$.\\
-\[
-  \includegraphics[alt={}]{fig12_2_31}
-\]
-\[
-  \includegraphics[alt={}]{fig12_2_32}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_2_31}}
+
+\centerline{\includegraphics[alt={}]{fig12_2_32}}
 
 % PROOFREAD: contains OCR-garbled or 12j Wigner array(s) not auto-converted -- verify/reconstruct against orig.
 \begin{align}
@@ -665,12 +606,10 @@ where $R=a+b+c+d+e+f+g+h+p+q+r+s$.\\
 \twelvejII{a,d,p,f,q,a,g,s,b,r,h,e}, \label{chap12:eq:53}
 \end{align}
 
-\[
-  \includegraphics[alt={}]{fig12_2_33}
-\]
-\[
-  \includegraphics[alt={}]{fig12_2_34}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_2_33}}
+
+\centerline{\includegraphics[alt={}]{fig12_2_34}}
 \subsubsection{(ii) Double summation}
 \begin{equation}
 \sum_{XY}\Fact{XY}^2
@@ -683,9 +622,8 @@ where $R=a+b+c+d+e+f+g+h+p+q+r+s$.\\
 \sixj{a}{e}{f}{d}{p}{q},
 \end{equation}
 
-\[
-  \includegraphics[alt={}]{fig12_2_35}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_2_35}}
 
 \begin{align}
 & \sum_{X Y}(-1)^{X+Y} \Fact{X Y}^{2}\sixj{a}{b}{c}{d}{X}{Y}\sixj{a}{e}{f}{g}{X}{Y}\sixj{c}{f}{p}{g}{d}{X}\sixj{b}{e}{q}{g}{d}{Y}  \notag\\
@@ -693,18 +631,16 @@ where $R=a+b+c+d+e+f+g+h+p+q+r+s$.\\
 \end{align}
 
 \begin{center}
-\[
-  \includegraphics[alt={}]{fig12_2_36}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_2_36}}
 \end{center}
 % PROOFREAD: contains OCR-garbled or 12j Wigner array(s) not auto-converted -- verify/reconstruct against orig.
 \begin{equation}
 \sum_{X Y}(-1)^{Y} \Fact{X Y}^{2}\ninej{a}{b}{X}{c}{d}{Y}{p}{q}{r} \label{chap12:eq:55}\sixj{X}{Y}{r}{j}{h}{g}\sixj{a}{b}{X}{h}{g}{e}
 \sixj{c}{d}{Y}{j}{g}{f}=(-1)^{a-b+d+e-j-p+r}\ninej{e}{b}{h}{f}{d}{j}{p}{q}{r}\sixj{a}{c}{p}{f}{e}{g},
 \end{equation}
-\[
-  \includegraphics[alt={}]{fig12_2_37}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_2_37}}
 
 % PROOFREAD: contains OCR-garbled or 12j Wigner array(s) not auto-converted -- verify/reconstruct against orig.
 \begin{gather}
@@ -713,9 +649,8 @@ where $R=a+b+c+d+e+f+g+h+p+q+r+s$.\\
 \sixj{p}{r}{Z}{t}{q}{s}, \label{chap12:eq:56}
 \end{gather}
 
-\[
-  \includegraphics[alt={}]{fig12_2_38}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_2_38}}
 \subsubsection{(iii) Triple summation}
 
 \begin{gather}
@@ -723,15 +658,13 @@ where $R=a+b+c+d+e+f+g+h+p+q+r+s$.\\
 \times\sixj{a_{2}}{b_{3}}{b_{1}}{c}{X_{1}}{X_{3}}\sixj{a_{3}}{b_{1}}{b_{2}}{c}{X_{2}}{X_{1}}=\Fact{c}^{2}\sixj{a_{1}}{a_{2}}{a_{3}}{b_{1}}{b_{2}}{b_{3}}, \label{chap12:eq:57}
 \end{gather}
 
-\[
-  \includegraphics[alt={}]{fig12_2_39}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_2_39}}
 \begin{equation}
 \sum_{X Y Z} \Fact{X Y Z}^{2}\ninej{X}{Y}{Z}{d}{e}{f}{a}{b}{c} \label{chap12:eq:58}\sixj{X}{Y}{Z}{f}{c}{g}\sixj{X}{a}{d}{b^{\prime}}{g}{c}\sixj{Y}{b}{e}{d^{\prime}}{f}{g}=(-1)^{2(b+d)} \frac{\delta_{b b^{\prime}} \delta_{d d^{\prime}}}{\Fact{b d}^{2}}\{a b c\}\{d e f\}\{b d g\},
 \end{equation}
-\[
-  \includegraphics[alt={}]{fig12_2_40}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_2_40}}
 % PROOFREAD: contains OCR-garbled or 12j Wigner array(s) not auto-converted -- verify/reconstruct against orig.
 \begin{equation}
 \sum_{X Y Z}(-1)^{2 Z} \Fact{X Y Z}^{2}\ninej{a}{b}{X}{c}{d}{Y}{e^{\prime}}{f^{\prime}}{g} \sixj{a}{b}{X}{f}{Z}{d}
@@ -740,9 +673,8 @@ where $R=a+b+c+d+e+f+g+h+p+q+r+s$.\\
 \label{chap12:eq:59}
 \end{equation}
 \begin{center}
-\[
-  \includegraphics[alt={}]{fig12_2_41}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_2_41}}
 \end{center}
 \begin{gather}
 \sum_{X Y Z}(-1)^{Z} \Fact{X Y Z}^{2}\ninej{a}{b}{c^{\prime}}{d}{e}{f}{X}{Y}{g}\ninej{l}{e}{j}{a}{b}{c}{Z}{Y}{h}\sixj{a}{d}{X}{k}{Z}{l}\sixj{X}{Y}{g}{h}{k}{Z}  \notag\\
@@ -750,9 +682,8 @@ where $R=a+b+c+d+e+f+g+h+p+q+r+s$.\\
 \end{gather}
 
 \begin{center}
-\[
-  \includegraphics[alt={}]{fig12_2_42}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_2_42}}
 \end{center}
 
 % PROOFREAD: contains OCR-garbled or 12j Wigner array(s) not auto-converted -- verify/reconstruct against orig.
@@ -761,9 +692,8 @@ where $R=a+b+c+d+e+f+g+h+p+q+r+s$.\\
 \sixj{c}{d}{Y}{k}{l}{j'}
 =(-1)^{-b+c-h+k} \frac{\delta_{j j^{\prime}}}{\Fact{j}^{2}}\sixj{a}{c}{e}{l}{h}{j}\sixj{b}{d}{f}{k}{g}{j}, \label{chap12:eq:61}
 \end{gather}
-\[
-  \includegraphics[alt={}]{fig12_2_43}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_2_43}}
 
 \begin{gather}
 \sum_{X Y Z}(-1)^{Y-a-b-c-f-h-p+q} \Fact{X Y Z}^{2}\ninej{a}{b}{X}{g}{c}{q}{p}{Z}{Y}\ninej{b}{d}{f^{\prime}}{a}{h}{j}{Z}{Y}{p}\sixj{a}{b}{X}{d}{e}{f}\sixj{d}{h}{Y}{q}{X}{e}  \notag\\
@@ -787,8 +717,7 @@ where $R=a+b+c+d+e+f+g+h+p+q+r+s$.\\
 \end{gather}
 
 
-\[
-  \includegraphics[alt={}]{fig12_2_45}
-\]
+
+\centerline{\includegraphics[alt={}]{fig12_2_45}}
 
 

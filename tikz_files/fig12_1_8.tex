@@ -11,36 +11,23 @@ $
 \end{tikzpicture}
 \;=\;
 \begin{tikzpicture}[baseline=0pt,font=\small]
-  % left 6j-triangle apex-right, legs cgamma(up)/bbeta(down), X exits right
-  \coordinate(c)at(0,0);
-  \coordinate(TL)at($(c)+(120:0.9)$);
-  \coordinate(BL)at($(c)+(240:0.9)$);
-  \coordinate(VL)at($(c)+(0:0.9)$);
-  \draw[dl](TL)--(BL)node[midway,left,inner sep=1pt]{$r$};
-  \draw[dl](TL)--(VL)node[midway,above right,inner sep=1pt]{$p$};
-  \draw[dl](BL)--(VL)node[midway,below right,inner sep=1pt]{$q$};
-  \draw[dl](c)--(TL)node[pos=0.5,right,inner sep=1pt]{$c$};
-  \draw[dl](c)--(BL)node[pos=0.5,right,inner sep=1pt]{$b$};
-  \draw[dlu](c)--(VL)node[pos=0.4,above,inner sep=1pt]{$x$};
-  \coordinate(c2)at($(VL)+(2.4,0)$);
-  \coordinate(TR)at($(c2)+(60:0.9)$);
-  \coordinate(BR)at($(c2)+(-60:0.9)$);
-  \coordinate(VR)at($(c2)+(180:0.9)$);
-  \draw[dl](TR)--(BR)node[midway,right,inner sep=1pt]{$s$};
-  \draw[dl](VR)--(TR)node[midway,above left,inner sep=1pt]{$p$};
-  \draw[dl](VR)--(BR)node[midway,below left,inner sep=1pt]{$q$};
-  \draw[dl](c2)--(TR)node[pos=0.5,left,inner sep=1pt]{$d$};
-  \draw[dl](c2)--(BR)node[pos=0.5,left,inner sep=1pt]{$a$};
-  \draw[dlu](c2)--(VR)node[pos=0.4,above,inner sep=1pt]{$x$};
+  \begin{scope}
+    \dsixjr[dlu]{r}{p}{q}{c}{b}{x}
+  \end{scope}
+  \begin{scope}[xshift=3.3cm]
+    \dsixjl[dlu]{s}{p}{q}{d}{a}{x}
+  \end{scope}
+  \begin{scope}[xshift=11mm]
   % external legs attach near the apex, angling away from the centre
-   \coordinate(VRs) at ([xshift=-2mm]VR);
-   \coordinate(VLs) at ([xshift=2mm]VL);
-  \draw[dl](VRs)--($(VRs)+(55:0.95)$)node[at end,above]{$c\gamma$};
+   \coordinate(VRs) at (1.0,0);
+   \coordinate(VLs) at (0,0);
+  \draw[dl](VRs)--($(VRs)+(55:0.95)$)node[at end,above]{$d\delta$};
   \draw[dl](VRs)--($(VRs)+(-55:0.95)$)node[at end,below]{$a\alpha$};
-  \draw[dl](VLs)--($(VLs)+(125:0.95)$)node[at end,above]{$d\delta$};
+  \draw[dl](VLs)--($(VLs)+(125:0.95)$)node[at end,above]{$c\gamma$};
   \draw[dl](VLs)--($(VLs)+(-125:0.95)$)node[at end,below]{$b\beta$};
 % ultra-thick summed X joining the two apexes
   \draw[dlu](VRs)--(VLs)node[midway,above,inner sep=1pt]{$x$};
+  \end{scope}
   \end{tikzpicture}
 $
 \end{document}
