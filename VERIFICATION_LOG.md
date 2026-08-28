@@ -32,7 +32,7 @@ identity, and genuine source misprints are flagged.
 | 3 | irreducible tensors | ✅ partial | 3.2 tensor-product coefficients | `check_chap3.py` |
 | 4 | Wigner D-functions | ✅ complete | **§4.3–4.19 verified** (2026-08-28); no open flags | `check_4_3.py` … `check_4_16_17.py`, `check_4_18.py`, `check_4_19.py` |
 | 5 | spherical harmonics | ✅ complete | **all machine-checkable eqs in §5.1–5.17 verified** (2026-08-27/28); no open flags | `check_5_1_2.py`, `check_5_2_series.py`, `check_5_2b.py`, `check_5_3.py`, `check_5_4_7_8.py`, `check_5_5.py`, `check_5_6.py`, `check_5_9.py`, `check_5_10_1.py`, `check_5_10_2.py`, `check_5_11.py`, `check_5_12.py`, `check_5_13.py`, `check_5_13_1.py`, `check_5_14.py`, `check_5_15.py`, `check_5_16.py`, `check_5_17a.py`, `check_5_17b.py` |
-| 6 | — | ❌ **gap** | OCR + headings/labels only | — |
+| 6 | spin functions / density matrix | ✅ complete | **§6.1–6.3 verified** (2026-08-28); 5 book misprints fixed | `check_6_1.py`, `check_6_2.py`, `check_6_3.py` |
 | 7 | — | ❌ **gap** | OCR + headings/labels only | — |
 | 8 | CG / 3jm | ✅ extensive | 8.1–8.2 tables, 8.4 symmetry, 8.5 special values, 8.6 recursions (incl. 8.6.1, 8.6.8 Regge), 8.7 sum rules (8.7.1–8.7.6), 8.8 generating fns, 8.10 zero selection rules; accidental 3j zeros (J≤17) | `symmetries_8_4`, `special_values_8_5`, `recursions_8_6`, `sums_8_7`, `check_8_8`, `check_8_10`, `check_cg_tables`, `check_3j_zeros` |
 | 9 | 6j / Racah / R-symbol | ✅ complete | 9.1–9.8 | `check_9_1,2,4,5,6,8` |
@@ -151,9 +151,37 @@ Chapter 3.
 1. **Chapter 4 continued** — 4.4 (symmetries), 4.6–4.7 (sums / addition
    theorems), 4.8 (recursions), 4.10–4.12 (orthogonality / integrals),
    4.14–4.15 (characters). All machine-checkable via `wigner_d`.
-2. **Chapters 6, 7** — never symbolically verified (OCR + labels only).
+2. **Chapter 7** — never symbolically verified (OCR + labels only). (Chapter 6
+   completed 2026-08-28.)
 3. Chapter 3 is only partially covered (3.2); the rest could be swept.
    (Chapters 0–2 are definitional and not amenable to symbolic checking.)
+
+## Chapter 6 (spin functions) — complete (2026-08-28)
+
+All three sections verified as finite-dimensional linear algebra; the physics is
+correct, most defects were OCR. Spin-S / T_LM(S) operators built from Sec 2.4/2.6.
+
+- **§6.1 (arbitrary spin)** — `check_6_1.py`: single-particle 6.1.5, 6.1.11–15,
+  6.1.18, 6.1.22, 6.1.27, 6.1.30–35, 6.1.49–51 for S=½,1,3⁄2; two-particle
+  6.1.53–65 + 6.1.34 for (S₁,S₂)=(½,½),(1,½),(1,1). Uses a **Racah-formula 6j**
+  (sympy `wigner_6j` raises spuriously on some valid half-integer 6j, e.g.
+  {1 1 1;1 ½ ½}). **Book misprints:** 6.1.60 & 6.1.65 6j `{S₁ S₂ L; S S S}` is
+  identically 0 for mixed spins (non-integer triad sum) → Q_L eigenvalue would
+  vanish; correct `{S₁ S₂ S; S₂ S₁ L}` (eigenvalue-proven). 6.1.58 phase
+  `(-1)^{2S+L₂}` → `(-1)^{S₁+S₂+S′+L₂}` inside the sum (Edmonds 7.1.7; the
+  particle-1 analog 6.1.57 with `(-1)^{S₁+S₂+S+L₁}` is correct). 6.1.46 book
+  `ρ²±ρ` → `ρ²=ρ`. OCR: pervasive lowercase s→S, merged S_χ subscripts, garbled
+  CG in 6.1.50, e_x′→e_z′, 6.1.58 6j lower-row S′/L₂ swap.
+- **§6.2 (S=½)** — `check_6_2.py`: basis/helicity spinors, product expansions
+  6.2.9/10, rotated bases 6.2.17/18 vs D^{½}/U^{½}, helicity 6.2.22–31,
+  spin-direction 6.2.39–41, polarization 6.2.50–52, contravariant transform
+  6.2.46. ~46 OCR fixes (χ scanned as x/X, ½ as ⅓/¼, S_z as S_x, γ→α in 6.2.17
+  exponents, φ→ψ in 6.2.22/23, dropped conjugate star in 6.2.46 — scan-checked).
+- **§6.3 (S=1)** — `check_6_3.py`: T_{2M} via Eq 2.6.4, Q_{ik} via 2.6.7;
+  product expansions 6.3.20–23 (middle + cartesian), action tables 6.3.24–33
+  (emitted and reconciled), rotated/helicity forms 6.3.36–52, ⟨T_{2M}⟩=…Y_{2M}
+  (6.3.62). ~37 OCR fixes, dominated by χ_x/χ_z and Q_xx/Q_zz/Q_zx diagonal-index
+  garbles and S_x↔S_z operator labels.
 
 ## Chapter 5 (spherical harmonics) — in progress (2026-08-27)
 
