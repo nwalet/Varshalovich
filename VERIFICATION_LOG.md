@@ -31,7 +31,7 @@ identity, and genuine source misprints are flagged.
 | 0–2 | prelim / rotations / D-functions | ➖ n/a | not amenable to symbolic checking (definitional) | — |
 | 3 | irreducible tensors | ✅ partial | 3.2 tensor-product coefficients | `check_chap3.py` |
 | 4 | Wigner D-functions | 🔄 in progress | **4.3–4.17 done**; 4.18–4.19 remain | `check_4_3.py` … `check_4_16_17.py` |
-| 5 | spherical harmonics | 🔄 in progress | 5.1 + 5.2 explicit forms started | `check_5_1_2.py` |
+| 5 | spherical harmonics | ✅ complete | **all machine-checkable eqs in §5.1–5.17 verified** (2026-08-27/28); no open flags | `check_5_1_2.py`, `check_5_2_series.py`, `check_5_2b.py`, `check_5_3.py`, `check_5_4_7_8.py`, `check_5_5.py`, `check_5_6.py`, `check_5_9.py`, `check_5_10_1.py`, `check_5_10_2.py`, `check_5_11.py`, `check_5_12.py`, `check_5_13.py`, `check_5_13_1.py`, `check_5_14.py`, `check_5_15.py`, `check_5_16.py`, `check_5_17a.py`, `check_5_17b.py` |
 | 6 | — | ❌ **gap** | OCR + headings/labels only | — |
 | 7 | — | ❌ **gap** | OCR + headings/labels only | — |
 | 8 | CG / 3jm | ✅ extensive | 8.1–8.2 tables, 8.4 symmetry, 8.5 special values, 8.6 recursions (incl. 8.6.1, 8.6.8 Regge), 8.7 sum rules (8.7.1–8.7.6), 8.8 generating fns, 8.10 zero selection rules; accidental 3j zeros (J≤17) | `symmetries_8_4`, `special_values_8_5`, `recursions_8_6`, `sums_8_7`, `check_8_8`, `check_8_10`, `check_cg_tables`, `check_3j_zeros` |
@@ -351,4 +351,87 @@ Rodrigues/differential forms 5.2.2/3/6, hypergeometric 5.2.23, the D-relation
   11.15). Book itself carries a `j'`/`m'` misprint in the four-line
   generalized-W-E definition (Chap11.tex ~L1592), reproduced as-is.
 
-_Last updated: 2026-08-26._
+## Lessons learned (methodology — from the Chapter 5 pass, 2026-08-27/28)
+
+Distilled from verifying all of §5.1–5.17 and cracking the six §5.2 stragglers.
+These are transferable to the remaining chapters.
+
+**1. Verification-first, always.** Build the numeric checker for a section
+*before* editing the `.tex`. It is the only reliable way to tell an OCR slip
+(fix silently) from a genuine book misprint (fix *and* annotate). Guessing from
+the scan alone repeatedly mislabeled both.
+
+**2. Push past the first non-trivial order.** Several book errors are *exactly
+right at the lowest order* and only diverge higher up — they survive casual
+checks precisely because dipole-level (l=1) sanity tests pass:
+  - 5.5.3 translation coefficient: exact at l'=0,1, wrong for l'≥2.
+  - 5.10.14, 5.11.3: right at low order, structural error above.
+Verify at l up to ~6–8 and m across the full range, not just a token case.
+
+**3. The discrepancy's *shape* names the bug.** This was the single most useful
+diagnostic. Compute ratio (or residual) vs the exact Y over several (l,m,θ):
+  - **Constant ±1, independent of l,m** → global sign / branch / domain issue,
+    NOT a coefficient typo. (5.2.35/36 sign; 5.3.6/8/10 domain; the −Y tell.)
+  - **θ-dependent ratio** → structural error inside the summand/coefficient.
+    (5.2.18 s!→s!! showed up this way.)
+  - **Right at low l, wrong higher** → wrong *functional form* of a coefficient;
+    fit it from a small linear system, then identify. (5.5.3.)
+  - **Selective failure** (only Y_{l,−m}, only odd m, only one L-parity) →
+    a sign-of-m / parity tracking error. (5.12.6 (l±m)/2; 5.15.4 mislabel.)
+  - **A phase that must be real but isn't** (½-integer exponent) → a mis-split
+    fraction. (5.14.6 (l+m+1)/2.)
+
+**4. Know when a formula is *supposed* to break.** Not every failure is an
+error. Recognize and test the *regular* regime instead of chasing the tail:
+  - Generic-N / hypergeometric closed forms have Γ-pole lattice points
+    (5.17.39: (L−N)/2 or (L+N+3)/2 a non-positive integer).
+  - Distributional / Abel-summable series (5.11.4/5/7, 5.10.14) — verify by
+    Abel summation (r→1⁻) or as the limit of a neighbouring convergent case.
+  - Domain restrictions (5.3.6/8/10 need cosθ>0; the reciprocal-power branch
+    flips sign otherwise).
+  - Analytic-continuation subtleties can *look* unresolvable — find the
+    sub-case where they evaporate. (5.2.36's |z|=1/(2sinθ)<1 near π/2 is a plain
+    convergent series and proved the sign error that 5.2.35's |z|=1 obscured.)
+
+**5. Hard cases are usually *stacked* errors.** The stragglers resisted because
+each combined an OCR slip *and* a book misprint (5.2.15/16 = mis-scoped radical
++ spurious |m|!). Fix one at a time and re-measure; a partial fix leaves a
+partial residual that looks like a different bug.
+
+**6. Exploit identities to collapse the check.** Reducing dimensionality makes
+high-precision verification cheap and robust:
+  - Addition theorem (Y_l·Y_l)=(2l+1)/4π P_l(cosω₁₂) turns every two-vector
+    *scalar* expansion (§5.17) into a 1-D Legendre identity.
+  - Doing the φ-integral analytically turns solid-angle integrals (§5.9) into
+    1-D θ-quadratures.
+  - Derive a doubted coefficient from an *already-verified* neighbour (5.9.13's
+    K_l came straight from the verified 5.8.6 recurrence).
+
+**7. Cross-check corrections against theory, not just numerics.** When a fix is
+substantial, confirm it also drops out of a known representation — 5.2.15/16's
+corrected l!√((l+m)!(l-m)!) prefactor matches the Wigner d^l_{m,0} form; 5.5.3's
+corrected [4π(2l'+1)!/((2l+1)!(2l'−2l+1)!)]^{1/2} is the solid-harmonic addition
+theorem. Two independent routes to the same answer ≫ one numeric fit.
+
+**8. Recurring OCR signatures in this corpus** (grep for these first):
+  - `\forall`/`\exists`/`\theta` in math where `\vartheta` is meant (ϑ↔∀).
+  - single `!` for `!!` (double factorial); `s!`↔`s!!`.
+  - `j l`, `j i`, `\dot{l}` → `j_l` (spherical Bessel subscript lost).
+  - `\sqrt{…}` wrapping too much (a trailing trig factor or l! swept under the
+    vinculum) — the most common §5.2 signature.
+  - `(4x)`→`(4π)`; capital `L`→`l`; duplicated case labels (m=±(l−4) twice);
+    garbled CG / recoupling-symbol indices (subscripts dropped or swapped).
+
+**9. Tooling / workflow.**
+  - `mpmath.spherharm(l,m,θ,φ)` = VMK Y (Condon-Shortley); `sympy.physics.wigner`
+    for CG/3j/6j/9j (slow — cache results, it is the bottleneck; drop dps and
+    truncation for infinite sums, r1/r2≈0.3 converges by l≈40).
+  - Scan: PDF page = printed page + 13; `pdftoppm -r 200-300` then crop with PIL.
+  - Build hygiene: delete `ChapN.aux` before a `\includeonly{ChapN}` rebuild;
+    note the `sed`/`perl` includeonly rewrite can silently no-op (whole book
+    builds, 375pp) — 0 errors still validates the chapter.
+  - Run slow checkers in the background (`-u` for progressive output), wait with
+    Monitor; never `git checkout -- VMK.tex` (clobbers uncommitted figure work);
+    stage only the specific files for each section's commit.
+
+_Last updated: 2026-08-28 (Chapter 5 complete)._
