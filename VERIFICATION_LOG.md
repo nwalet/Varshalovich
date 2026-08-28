@@ -277,6 +277,18 @@ Rodrigues/differential forms 5.2.2/3/6, hypergeometric 5.2.23, the D-relation
   `l₁'l₂'L_1''l₂''L''`/missing l₂''→`l₁'l₂'L'l₁''l₂''L''`; **5.16.17/5.16.18**
   B superscript missing l₂ and subscript `l'`/`L_1''` garbles → full index list.
   The B-coefficient *formulas* (9j structure) were correct as printed.
+- **§5.17** (`check_5_17a.py` + `check_5_17b.py`, all PASS): expansions of
+  two-vector functions. Scalar group (17 identities, reduced to 1-D Legendre via
+  the addition theorem (Y_l·Y_l)=(2l+1)/4π P_l(cosω₁₂)): 5.17.9, (r₁·r₂)ⁿ
+  5.17.10–13, exp 5.17.14, power-series 5.17.16/17, Green's fns 5.17.19/21/22,
+  r/1/r³/1/r⁵ 5.17.23–25, and every hypergeometric aₗⁿ coefficient 5.17.26–33 —
+  all correct as printed to ~1e-30. Bipolar group: 5.17.34 (spherical wave, z=n),
+  5.17.35 (rᴸY_LM), 5.17.36 (Y_LM/r^{L+1}), 5.17.37 (r_μ/r³), 5.17.38/39 (rᴺY_LM).
+  **Note (5.17.39)**: the generic-N coefficient degenerates at Γ-pole lattice
+  points — (L-N)/2 ≤0 integer (polynomial cases, → 5.17.35) and (L+N+3)/2 ≤0
+  integer (very-negative N); exact wherever both Γ's are regular (10 (N,L) pairs
+  verified). OCR fixes: 5.17.7 `l₃`→`l₂`; 5.17.14/5.17.19 `j l`/`j(x)`→`j_l(x)`;
+  5.17.34 `\dot{l}_1`→`j_{l₁}`. 5.17.1-8 (setup) / 5.17.18 (δ-fn) definitional.
 
 ## Open flags (book misprints / omissions, annotated in-source)
 

@@ -1246,7 +1246,7 @@ $\omega$ being the angle between $\vect{R}$ and $\vect{r}$ (Fig.~\ref{chap5:fig:
 \end{equation}
 Note that the expressions for the polar coordinates of $\vect{R}$ and $\vect{r}$ are interchanged by the replacement $\vect{r}_{2} \rightarrow-\vect{r}_{2}$, i.e., $\vartheta_{2} \rightarrow \pi-\vartheta_{2}, \varphi_{2} \rightarrow \pi+\varphi_{2}$. Hence, the expansions of functions $F(\vect{R}, \vect{r})$ and $F(\vect{r}, \vect{R})$, which may be reduced to each other by the replacement $\vect{R} \rightleftarrows \vect{r}$ are mutually related. If
 \begin{equation}
-F(\vect{R}, \vect{r})=f\left(\vect{r}_{1}, \vect{r}_{2}\right)=\sum_{l_{1} l_{3} L M} C_{l_{1} l_{2}}^{L M}\left(r_{1}, r_{2}\right)\left\{\vect{Y}_{l_{1}}\left(\Omega_{1}\right) \otimes \vect{Y}_{l_{2}}\left(\Omega_{2}\right)\right\}_{L M} \label{eq:5:17:7}
+F(\vect{R}, \vect{r})=f\left(\vect{r}_{1}, \vect{r}_{2}\right)=\sum_{l_{1} l_{2} L M} C_{l_{1} l_{2}}^{L M}\left(r_{1}, r_{2}\right)\left\{\vect{Y}_{l_{1}}\left(\Omega_{1}\right) \otimes \vect{Y}_{l_{2}}\left(\Omega_{2}\right)\right\}_{L M} \label{eq:5:17:7}
 \end{equation}
 \begin{figure}[tbh]
 \begin{center}
@@ -1283,7 +1283,7 @@ The expansion of the exponential function is given by
 \begin{equation}
 e^{i\left(r_{1} \cdot r_{2}\right)}=4 \pi \sum_{l=0}^{\infty} i^{l} j_{l}\left(r_{1} r_{2}\right)\left(\vect{Y}_{l}\left(\Omega_{1}\right) \cdot \vect{Y}_{l}\left(\Omega_{2}\right)\right) \label{eq:5:17:14}
 \end{equation}
-where $j l(x)$ is a spherical Bessel function.\\
+where $j_l(x)$ is a spherical Bessel function.\\
 An arbitrary function $f\left(\vect{r}_{1} \cdot \vect{r}_{2}\right)$ which can be written as a power series
 \begin{equation}
 f\left(r_{1} \cdot r_{2}\right)=\sum_{n=0}^{\infty} c_{n}\left(r_{1} \cdot r_{2}\right)^{n} \label{eq:5:17:15}
@@ -1306,7 +1306,7 @@ An expansion of the Green's function for the scalar Helmholtz equation may be wr
 \begin{equation}
 \frac{e^{i k r}}{r}=4 \pi i k \sum_{l=0}^{\infty} j_{l}\left(k r_{1}\right) h_{l}^{(1)}\left(k r_{2}\right)\left(\vect{Y}_{l}\left(\Omega_{1}\right) \cdot \vect{Y}_{l}\left(\Omega_{2}\right)\right), \quad\left(r_{1}<r_{2}\right) \label{eq:5:17:19}
 \end{equation}
-where $j(x)$ and $h_{l}^{(1)}(x)$ are the spherical Bessel function and the Hankel function of the first kind; respectively. Equation \eqref{eq:5:17:19} is valid at $r_{1}<r_{2}$; for $r_{1}>r_{2}$ one should make the replacement $r_{1} \rightleftarrows r_{2}$. Equation \eqref{eq:5:17:19} follows from a more general expansion which is given in Ref. [70].
+where $j_l(x)$ and $h_{l}^{(1)}(x)$ are the spherical Bessel function and the Hankel function of the first kind; respectively. Equation \eqref{eq:5:17:19} is valid at $r_{1}<r_{2}$; for $r_{1}>r_{2}$ one should make the replacement $r_{1} \rightleftarrows r_{2}$. Equation \eqref{eq:5:17:19} follows from a more general expansion which is given in Ref. [70].
 \begin{equation}
 z_{0}(k r)=4 \pi \sum_{l=0}^{\infty} j_{l}\left(k r_{1}\right) z_{l}\left(k r_{2}\right)\left(\vect{Y}_{l}\left(\Omega_{1}\right) \cdot \vect{Y}_{l}\left(\Omega_{2}\right)\right), \quad\left(r_{1}<r_{2}\right) \label{eq:5:17:20}
 \end{equation}
@@ -1356,7 +1356,7 @@ Note that all the expansions given in Secs. \ref{sec:5.17.4} and \ref{sec:5.17.5
 The spherical waves have the form $z_{L}(k r) Y_{L M}(\vartheta, \varphi)$, where $\vect{r}(r, \vartheta, \varphi)=\vect{r}_{1}-\vect{r}_{2}, z_{L}(x)=\sqrt{\pi / 2 x} Z_{L+\frac{1}{2}}(x)$ and $Z_{L+\frac{1}{2}}(x)$ is any of the cylinder functions. The spherical waves are expressed in terms of the bipolar spherical harmonics of rank $L$ [70] (Sec.~\ref{sec:5.16.1})
 \begin{align}
 z_{L}(k r) Y_{L M}(\vartheta, \varphi)= & \sqrt{\frac{4 \pi}{2 L+1}} \sum_{l_{1}, l_{2}=0}^{\infty} i^{l_{1}-l_{2}-L} \sqrt{\left(2 l_{1}+1\right)\left(2 l_{2}+1\right)}  \notag\\
-& \times \clebsch{l_{1}}{0}{l_{2}}{0}{L}{0} \dot{l}_{1}\left(k r_{1}\right) z_{l_{2}}\left(k r_{2}\right)\left\{\vect{Y}_{l_{1}}\left(\Omega_{1}\right) \otimes \vect{Y}_{l_{2}}\left(\Omega_{2}\right)\right\}_{L M},\left(r_{1}<r_{2}\right) \label{eq:5:17:34}
+& \times \clebsch{l_{1}}{0}{l_{2}}{0}{L}{0} j_{l_{1}}\left(k r_{1}\right) z_{l_{2}}\left(k r_{2}\right)\left\{\vect{Y}_{l_{1}}\left(\Omega_{1}\right) \otimes \vect{Y}_{l_{2}}\left(\Omega_{2}\right)\right\}_{L M},\left(r_{1}<r_{2}\right) \label{eq:5:17:34}
 \end{align}
 When $r_{1}>r_{2}$, one should interchange $r_{1}$ and $r_{2}$ in Eq. \eqref{eq:5:17:34}. If $z_{L}(k r)=j_{L}(k r), j_{L}(x)$ being a spherical Bessel function, one obtains as $k \rightarrow 0[22,96]$
 \begin{equation}
