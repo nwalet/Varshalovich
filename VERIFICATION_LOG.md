@@ -289,6 +289,14 @@ Rodrigues/differential forms 5.2.2/3/6, hypergeometric 5.2.23, the D-relation
   integer (very-negative N); exact wherever both Γ's are regular (10 (N,L) pairs
   verified). OCR fixes: 5.17.7 `l₃`→`l₂`; 5.17.14/5.17.19 `j l`/`j(x)`→`j_l(x)`;
   5.17.34 `\dot{l}_1`→`j_{l₁}`. 5.17.1-8 (setup) / 5.17.18 (δ-fn) definitional.
+- **§5.15** (`check_5_15.py`, all PASS): zeros of Y_lm and ∂_ϑY_lm. All
+  cos²ϑ_α (5.15.2, m=l..l−5) and cos²ϑ_β (5.15.4, m=l..l−4) formulas confirmed by
+  plugging the predicted cos²ϑ back and checking Y (resp. ∂_ϑY) vanishes there
+  (~1e-30 / 1e-15); interior zero counts (5.15.1) verified = l−|m|. **OCR 5.15.4**:
+  the m=±(l-3) row was mislabeled `m=±(l-4)` (duplicate of the next row) and
+  carried a spurious `; 0` — scan p.173 shows `m=±(l-3) … ; 1(l≥5)`; the checker
+  verified that formula as l−3. Also `\partial\theta`→`\partial\vartheta` in the
+  count text. 5.15.3 (large-l approx θ_α) and Table 5.1 left as reference.
 
 ## Open flags (book misprints / omissions, annotated in-source)
 
