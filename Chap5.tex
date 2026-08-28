@@ -179,15 +179,18 @@ In the following equations sums are over all integer values of $s$ so that no fa
 &Y_{l m}(\vartheta, \varphi)=(-1)^{l} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \, \frac{(l-m)!}{(l+m)!}}\left(\sin \frac{\vartheta}{2} \, \cos \frac{\vartheta}{2}\right)^{m} \sum_{s}(-1)^{s} \frac{(l+m+s)!}{(l-m-s)!} \, \frac{\left(\cos \frac{\vartheta}{2}\right)^{2 s}}{s!(s+m)!},  \label{eq:5:2:13}\\
 &Y_{l m}(\vartheta, \varphi)=(-1)^{l-m} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \, \frac{(l-m)!}{(l+m)!}}\left(\tan \frac{\vartheta}{2}\right)^{m} \sum_{s}(-1)^{l-s} \frac{(2 l-s)!}{s!(l-s)!} \, \frac{\left(\cos \frac{\vartheta}{2}\right)^{2(l-s)}}{(l-m-s)!},  \label{eq:5:2:14}
 \end{align}
-% FLAG (5.2.15-5.2.16): NOT verified. The (cos/sin th/2)^{2l} belongs OUTSIDE
-% the radical, and the verified prefactor is sqrt((2l+1)/4pi (l+m)!(l-m)!)*l! --
-% the printed radical sqrt(...l!|m|!) could not be reconciled from the scan.
+% NOTE: two corrections (verified to 1e-31, scripts/check_5_2b.py).
+%  (i) OCR: the radical must wrap only (l+m)!(l-m)!; the factor l! and
+%      (cos/sin th/2)^{2l} belong OUTSIDE it (scan p.148 confirms this scope).
+%  (ii) BOOK MISPRINT: the printed prefactor carries a spurious |m|! (harmless
+%      for |m|<=1, wrong for |m|>=2).  The correct prefactor is
+%      l! sqrt((l+m)!(l-m)!), matching the Wigner d^l_{m,0}(theta) representation.
 \begin{multline}
-Y_{l m}(\vartheta, \varphi)=\xi_{m 0} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi}} \sqrt{(l+m)!(l-m)!l!|m|!\left(\cos \frac{\vartheta}{2}\right)^{2 l}}  \\
+Y_{l m}(\vartheta, \varphi)=\xi_{m 0} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi}} \, l! \sqrt{(l+m)!(l-m)!}\left(\cos \frac{\vartheta}{2}\right)^{2 l}  \\
 \times \sum_{s} \frac{(-1)^{s}\left(\tan \frac{\vartheta}{2}\right)^{2 s+|m|}}{s!(s+|m|)!(l-s)!(l-|m|-s)!},  \label{eq:5:2:15}
 \end{multline}
 \begin{multline}
-Y_{l m}(\vartheta, \varphi)=\xi_{m 0}(-1)^{l-m} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi}} \sqrt{(l+m)!(l-m)!l!|m|!\left(\sin \frac{\vartheta}{2}\right)^{2 l}} \\
+Y_{l m}(\vartheta, \varphi)=\xi_{m 0}(-1)^{l-m} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi}} \, l! \sqrt{(l+m)!(l-m)!}\left(\sin \frac{\vartheta}{2}\right)^{2 l} \\
 \times \sum_{s} \frac{(-1)^{s}\left(\cot \frac{\vartheta}{2}\right)^{2 s+|m|}}{s!(s+|m|)!(l-s)!(l-|m|-s)!} .\label{eq:5:2:16}
 \end{multline}
 
@@ -202,22 +205,23 @@ Y_{l m}(\vartheta, \varphi)=e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi(l+m)!(l-m)!
 \text { if } l-m \text { is odd },
 \end{array}\right.  \label{eq:5:2:17}
 \end{multline}
-% FLAG (5.2.18-5.2.19): NOT verified numerically (double-factorial series
-% disagree with mpmath.spherharm even after de-garbling; needs careful review).
-% 5.2.19 additionally has a mis-scoped radical (the sqrt wraps (sin th)^m and the
-% whole sum) and a stray "L" for "l" in the parity condition -- left as-is.
+% NOTE: OCR fixes verified to 1e-30 (scripts/check_5_2b.py), matching scan p.148.
+%  5.2.18 even branch: denominator s!(sin th)^s -> s!!(sin th)^s (double factorial).
+%  5.2.19: radical mis-scoped -- it wraps only (2l+1)/4pi (l-m)!/(l+m)!; the
+%    (sin th)^m and the sum are OUTSIDE it.  Also "L+m-s" -> "l+m-s".  As with the
+%    other (l-m)!/(l+m)! forms, 5.2.19 is written for m>=0 (m<0 via conjugation).
 \begin{multline}
 Y_{l m}(\vartheta, \varphi)=e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi(l+m)!(l-m)!}}(\sin \vartheta)^{l}  \\
 \times\left\{\begin{array}{c}
-\sum_{s=0,2, \ldots}^{l-|m|}(-1)^{\frac{l+m-s}{2}} \frac{(l+m)!!(l-m)!!}{(l+m-s)!!(l-m-s)!!} \, \frac{(2 l-s-1)!!}{s!(\sin \vartheta)^s} \\
+\sum_{s=0,2, \ldots}^{l-|m|}(-1)^{\frac{l+m-s}{2}} \frac{(l+m)!!(l-m)!!}{(l+m-s)!!(l-m-s)!!} \, \frac{(2 l-s-1)!!}{s!!(\sin \vartheta)^s} \\
 \text { if } l-m \text { is even } \\
 \cos \vartheta \sum_{s=1,3, \ldots}^{l-|m|}(-1)^{\frac{l+m-s}{2}} \frac{(l+m-1)!!(l-m-1)!!}{(l+m-s)!!(l-m-s)!!} \, \frac{(2 l-s)!!}{(s-1)!!(\sin \vartheta)^s} \\
 \text { if } l-m \text { is odd },
 \end{array}\right.  \label{eq:5:2:18}
 \end{multline}
 \begin{gather}
-Y_{l m}(\vartheta, \varphi)=e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \, \frac{(l-m)!}{(l+m)!}(\sin \vartheta)^{m} \sum_{s}(-1)^{\frac{l+m-s}{2}} \frac{(l+m+s-1)!!}{(l-m-s)!!} \, \frac{(\cos \vartheta)^{s}}{s!}} ,\notag\\
-L+m-s \text { is even } ,
+Y_{l m}(\vartheta, \varphi)=e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \, \frac{(l-m)!}{(l+m)!}}(\sin \vartheta)^{m} \sum_{s}(-1)^{\frac{l+m-s}{2}} \frac{(l+m+s-1)!!}{(l-m-s)!!} \, \frac{(\cos \vartheta)^{s}}{s!} ,\notag\\
+l+m-s \text { is even } ,\label{eq:5:2:19}
 \end{gather}
 \begin{gather}
 Y_{l m}(\vartheta, \varphi)=e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi}(l+m)!(l-m)!}(\cos \vartheta)^{l} \sum_{s=|m|,|m|+2, \ldots}(-1)^{\frac{s+m}{2}} \frac{1}{(s+m)!!(s-m)!!} \, \frac{(\tan \vartheta)^{s}}{(l-s)!} , \label{eq:5:2:20}\\
@@ -300,12 +304,15 @@ F\left(-\frac{l-|m|}{2}, \frac{l+|m|+1}{2} ;|m|+1 ; \sin ^{2} \vartheta\right) \
 
 \subsection{$Y_{l m}(\vartheta, \varphi)$ and the Hypergeometric Functions with Arguments Expressed in Terms of Exponential Functions}\label{sec:5.2.6}
 \begin{gather}
-% FLAG (5.2.35-5.2.36): scan-matched only. The 2F1 arguments lie on |z|=1
-% (e^{+-2i th}) and are not numerically reproducible here (analytic continuation).
-Y_{l m}(\vartheta, \varphi)=-\frac{i e^{i m \varphi}}{\pi} \sqrt{\frac{2 l+1}{4 \pi}(l+m)!(l-m)!} \frac{2^{l+m+1}(\sin \vartheta)^{m}}{(2 l+1)!!}  \notag\\
+% NOTE: BOOK MISPRINT -- leading sign.  As printed both 5.2.35 and 5.2.36 carry
+% -i/pi, which yields exactly -Y_lm; the correct prefactor is +i/pi (verified to
+% 6e-41, scripts/check_5_2b.py).  5.2.36 clinches it: for pi/2-ish theta its 2F1
+% argument has |z|=1/(2 sin th)<1 (a convergent series, no branch ambiguity) yet
+% still gives -Y with the printed -i.  Corrected to +i/pi below.
+Y_{l m}(\vartheta, \varphi)=\frac{i e^{i m \varphi}}{\pi} \sqrt{\frac{2 l+1}{4 \pi}(l+m)!(l-m)!} \frac{2^{l+m+1}(\sin \vartheta)^{m}}{(2 l+1)!!}  \notag\\
 \times\left\{e^{-i(l+m+1) \vartheta} F\left(m+\frac{1}{2}, l+m+1 ; l+\frac{3}{2} ; e^{-2 i \vartheta}\right)-e^{i(l+m+1) \vartheta} F\left(m+\frac{1}{2}, l+m+1 ; l+\frac{3}{2} ; e^{2 i \vartheta}\right)\right\},  \label{eq:5:2:35}
 \end{gather}\begin{gather}
-Y_{l m}(\vartheta, \varphi)=-\frac{i}{\pi} e^{i m \varphi} \sqrt{\frac{2 l+1}{8 \pi}(l+m)!(l-m)!} \frac{2^{l+1}}{(2 l+1)!!\sqrt{\sin \vartheta}}  \notag\\
+Y_{l m}(\vartheta, \varphi)=\frac{i}{\pi} e^{i m \varphi} \sqrt{\frac{2 l+1}{8 \pi}(l+m)!(l-m)!} \frac{2^{l+1}}{(2 l+1)!!\sqrt{\sin \vartheta}}  \notag\\
 \times\left\{e^{-i\left[(2 l+1) \frac{\vartheta}{2}+(2 m+1) \frac{\pi}{4}\right]} F\left(m+\frac{1}{2}, \frac{1}{2}-m ; l+\frac{3}{2} ;-\frac{e^{-i\left(\vartheta+\frac{\pi}{2}\right)}}{2 \sin \vartheta}\right)\right.  \notag\\
 \left.-e^{i\left[(2 l+1) \frac{\vartheta}{2}+(2 m+1) \frac{\pi}{4}\right]} F\left(m+\frac{1}{2}, \frac{1}{2}-m ; l+\frac{3}{2} ;-\frac{e^{i\left(\vartheta+\frac{\pi}{2}\right)}}{2 \sin \vartheta}\right)\right\} . \label{eq:5:2:36}
 \end{gather}

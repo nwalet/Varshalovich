@@ -48,7 +48,7 @@ def f15(l, m, th, ph):
         if fac(l-am-s) == math.inf or fac(l-s) == math.inf: continue
         tot += (-1)**s*math.tan(th/2)**(2*s+am)/(fac(s)*fac(s+am)*fac(l-s)*fac(l-am-s))
     return (xi(m)*e(1j*m*ph)*math.sqrt((2*l+1)/(4*math.pi))
-            * math.sqrt(fac(l+m)*fac(l-m)*fac(l)*fac(am))*c2**(2*l)*tot)
+            * fac(l)*math.sqrt(fac(l+m)*fac(l-m))*c2**(2*l)*tot)   # corrected: l! sqrt(...), no |m|!
 ok &= sweep("5.2.15 tan^{2s+|m|} multline", f15)
 
 # 5.2.16  xi (-1)^{l-m} e sqrt((2l+1)/4pi) sqrt((l+m)!(l-m)!l!|m|!) (sin th/2)^{2l}
@@ -60,7 +60,7 @@ def f16(l, m, th, ph):
         if fac(l-am-s) == math.inf or fac(l-s) == math.inf: continue
         tot += (-1)**s*(1/math.tan(th/2))**(2*s+am)/(fac(s)*fac(s+am)*fac(l-s)*fac(l-am-s))
     return (xi(m)*(-1)**(l-m)*e(1j*m*ph)*math.sqrt((2*l+1)/(4*math.pi))
-            * math.sqrt(fac(l+m)*fac(l-m)*fac(l)*fac(am))*s2**(2*l)*tot)
+            * fac(l)*math.sqrt(fac(l+m)*fac(l-m))*s2**(2*l)*tot)   # corrected: l! sqrt(...), no |m|!
 ok &= sweep("5.2.16 cot^{2s+|m|} multline", f16)
 
 # 5.2.18  e sqrt((2l+1)/4pi/((l+m)!(l-m)!)) (sin th)^l {even/odd}
@@ -71,7 +71,7 @@ def f18(l, m, th, ph):
         tot = 0.0
         for k in range(0, l-am+1, 2):
             tot += ((-1)**((l+m-k)//2)*dfac(l+m)*dfac(l-m)/(dfac(l+m-k)*dfac(l-m-k))
-                    * dfac(2*l-k-1)/(fac(k)*s**k))
+                    * dfac(2*l-k-1)/(dfac(k)*s**k))   # corrected: s!! not s!
         return pre*tot
     else:
         tot = 0.0
@@ -135,14 +135,38 @@ def f32(l, m, th, ph):
             * F(-(l-m)/2, -(l-m-1)/2, -(2*l-1)/2, 1/math.cos(th)**2))
 ok &= sweep("5.2.32 2F1(1/cos^2 th) m>=0", f32, mpos=True, ths=[0.4,0.9,1.3])
 
-# 5.2.35  -i e/pi sqrt((2l+1)/4pi (l+m)!(l-m)!) 2^{l+m+1}(sin th)^m/(2l+1)!! {exp F - exp F}
+# 5.2.19  e sqrt((2l+1)/4pi (l-m)!/(l+m)!) (sin th)^m sum_s (-1)^{(l+m-s)/2}
+#          (l+m+s-1)!!/(l-m-s)!! (cos th)^s/s!   (l+m-s even); m>=0
+def f19(l, m, th, ph):
+    c = math.cos(th)
+    tot = 0.0
+    for s in range(0, l+2):
+        if (l+m-s) % 2 != 0: continue
+        if dfac(l-m-s) == math.inf: continue
+        tot += (-1)**((l+m-s)//2)*dfac(l+m+s-1)/dfac(l-m-s)*c**s/fac(s)
+    return e(1j*m*ph)*math.sqrt((2*l+1)/(4*math.pi)*fac(l-m)/fac(l+m))*math.sin(th)**m*tot
+ok &= sweep("5.2.19 (cos th)^s series", f19, mpos=True)
+
+# 5.2.35  +i e/pi sqrt((2l+1)/4pi (l+m)!(l-m)!) 2^{l+m+1}(sin th)^m/(2l+1)!! {exp F - exp F}
+# (leading sign +i corrected from book's -i; m>=0)
 def f35(l, m, th, ph):
-    pre = (-1j*e(1j*m*ph)/math.pi*math.sqrt((2*l+1)/(4*math.pi)*fac(l+m)*fac(l-m))
+    pre = (1j*e(1j*m*ph)/math.pi*math.sqrt((2*l+1)/(4*math.pi)*fac(l+m)*fac(l-m))
            * 2**(l+m+1)*math.sin(th)**m/dfac(2*l+1))
     A = e(-1j*(l+m+1)*th)*F(m+0.5, l+m+1, l+1.5, e(-2j*th))
     B = e(1j*(l+m+1)*th)*F(m+0.5, l+m+1, l+1.5, e(2j*th))
     return pre*(A - B)
-ok &= sweep("5.2.35 exp 2F1(e^{-+2i th})", f35, ls=range(0,5), tol=1e-6)
+ok &= sweep("5.2.35 exp 2F1(e^{-+2i th}) [+i]", f35, ls=range(0,5), mpos=True)
+
+# 5.2.36  +i e/pi sqrt((2l+1)/8pi (l+m)!(l-m)!) 2^{l+1}/((2l+1)!! sqrt(sin th)) {exp F - exp F}
+def f36(l, m, th, ph):
+    pre = (1j*e(1j*m*ph)/math.pi*math.sqrt((2*l+1)/(8*math.pi)*fac(l+m)*fac(l-m))
+           * 2**(l+1)/(dfac(2*l+1)*math.sqrt(math.sin(th))))
+    a, b, c = m+0.5, 0.5-m, l+1.5
+    E = e(-1j*((2*l+1)*th/2+(2*m+1)*math.pi/4))
+    A = E*F(a, b, c, -e(-1j*(th+math.pi/2))/(2*math.sin(th)))
+    B = (1/E)*F(a, b, c, -e(1j*(th+math.pi/2))/(2*math.sin(th)))
+    return pre*(A - B)
+ok &= sweep("5.2.36 exp 2F1(-e/2sin th) [+i]", f36, ls=range(0,5), mpos=True, ths=[0.8,1.3,1.9])
 
 # 5.2.38  xi e/(2^|m| l!) sqrt((2l+1)/4pi (l+m)!(l-m)!) (sin th)^|m| P^{(|m|,|m|)}_{l-|m|}(cos th)
 def f38(l, m, th, ph):

@@ -298,6 +298,19 @@ Rodrigues/differential forms 5.2.2/3/6, hypergeometric 5.2.23, the D-relation
   verified that formula as l−3. Also `\partial\theta`→`\partial\vartheta` in the
   count text. 5.15.3 (large-l approx θ_α) and Table 5.1 left as reference.
 
+- **§5.2 stragglers resolved** (`check_5_2b.py`, all PASS; scan pp.148,150-151):
+  the 6 previously-flagged forms are now verified to ~1e-15/1e-40.
+  - **5.2.15/16**: OCR mis-scoped the radical (only (l+m)!(l-m)! under it; l! and
+    (cos/sin th/2)^{2l} outside) AND the book carries a **spurious |m|!** — correct
+    prefactor l! sqrt((l+m)!(l-m)!) (matches Wigner d^l_{m,0}). Both corrected.
+  - **5.2.18**: even-branch denominator `s!(sin th)^s`→`s!!(sin th)^s` (OCR; scan
+    confirms double factorial). **5.2.19**: radical mis-scoped (wraps only the
+    (l-m)!/(l+m)! ratio; (sin th)^m and sum outside) + `L+m-s`→`l+m-s`; m≥0 form.
+  - **5.2.35/36**: **BOOK MISPRINT** in leading sign — printed −i/π yields exactly
+    −Y_lm; correct is +i/π. 5.2.36 clinches it (its 2F1 arg has |z|=1/(2 sin th)<1
+    near π/2 — convergent series, no branch ambiguity — yet still −Y with −i).
+    Corrected to +i/π (verified 6e-41).
+
 ## Open flags (book misprints / omissions, annotated in-source)
 
 - **eqs 4.3.3, 4.3.9, 4.3.10** — OCR errors fixed (2026-08-26): 4.3.3 phase
