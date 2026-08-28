@@ -37,23 +37,23 @@ According to definition, the basis spin functions describe the states with defin
 \begin{equation}
 \widehat{\vect{S}}^{2} \chi_{S m}=S(S+1) \chi_{S m}, \widehat{S}_{z} \chi_{S m}=m \chi_{S m} . \label{eq:6:1:5}
 \end{equation}
-As follows from the definition, the dependence of the basis spin functions $\chi_{s_{m}}(\sigma)$ on the spin variable $\sigma$ is given by
+As follows from the definition, the dependence of the basis spin functions $\chi_{S m}(\sigma)$ on the spin variable $\sigma$ is given by
 \begin{equation}
-\chi s_{m}(\sigma)=\delta_{m \sigma} . \label{eq:6:1:6}
+\chi_{S m}(\sigma)=\delta_{m \sigma} . \label{eq:6:1:6}
 \end{equation}
-In other words, contravariant components of the basis spin functions $\chi_{S_{m}}$ have the form
+In other words, contravariant components of the basis spin functions $\chi_{S m}$ have the form
 \begin{equation}
-\left[x_{s_{m}}\right]^{\sigma}=\delta_{m \sigma}. \label{eq:6:1:7}
+\left[\chi_{S m}\right]^{\sigma}=\delta_{m \sigma}. \label{eq:6:1:7}
 \end{equation}
 If the basis spin functions are written as column matrices, then
 \begin{equation}
-\chi s s=\left(\begin{array}{c}
+\chi_{S S}=\left(\begin{array}{c}
 1 \\
 0 \\
 \vdots \\
 0 \\
 0
-\end{array}\right), \quad \chi s s-1=\left(\begin{array}{c}
+\end{array}\right), \quad \chi_{S\, S-1}=\left(\begin{array}{c}
 0 \\
 1 \\
 \vdots \\
@@ -69,11 +69,11 @@ If the basis spin functions are written as column matrices, then
 \end{equation}
 The collection of $2 S+1$ basis functions $\chi_{S m}(m=S, S-1, \ldots,-S)$ constitutes a complete orthonormal set of functions. The orthonormality condition for the basis functions is
 \begin{equation}
-\chi_{S m}^{\dagger} \chi_{S_{m^{\prime}}}=\delta_{m m^{\prime}} . \label{eq:6:1:9}
+\chi_{S m}^{\dagger} \chi_{S m^{\prime}}=\delta_{m m^{\prime}} . \label{eq:6:1:9}
 \end{equation}
 The completeness condition for the basis spin functions may be written in matrix form
 \begin{equation}
-\sum_{m=-s}^{s} \chi_{s m} \chi_{S m}^{\dagger}=\widehat{I} . \label{eq:6:1:10}
+\sum_{m=-S}^{S} \chi_{S m} \chi_{S m}^{\dagger}=\widehat{I} . \label{eq:6:1:10}
 \end{equation}
 where $\widehat{I}$ is the unit $(2 S+1) \times(2 S+1)$ matrix.\\
 Matrix products $\chi_{S m} \chi_{S m^{\prime}}^{\dagger}$ of the basis spin functions are the square $(2 S+1) \times(2 S+1)$ matrices. They may be expanded in terms of the polarization operators $\widehat{T}_{L M}(S)$ (see 2.4),
@@ -87,7 +87,7 @@ Matrix elements of spherical components of the spin operator $\widehat{S}_{\mu}(
 The only nonvanishing matrix elements are the following:
 \begin{gather}
 \chi_{S m+1}^{\dagger} \widehat{S}_{+1} \chi_{S m}=-\frac{1}{\sqrt{2}} \sqrt{(S-m)(S+m+1)} , \notag\\
-\chi_{S m}^{\dagger} S_{0} \chi_{S_{m}}=m , \label{eq:6:1:13}\\
+\chi_{S m}^{\dagger} \widehat{S}_{0} \chi_{S m}=m , \label{eq:6:1:13}\\
 \chi_{S m-1}^{\dagger} \widehat{S}_{-1} \chi_{S m}=\frac{1}{\sqrt{2}} \sqrt{(S+m)(S-m+1)}. \notag
 \end{gather}
 For cartesian components of the spin operator $\widehat{S}_{i}(i=x, y, z)$ the nonvanishing matrix elements are
@@ -98,16 +98,16 @@ For cartesian components of the spin operator $\widehat{S}_{i}(i=x, y, z)$ the n
 \end{align}
 The matrix elements of the polarization operators $\hat{T}_{L M}(S)$ between the basis spin functions may be written as
 \begin{equation}
-\chi_{S m^{\prime}}^{\dagger} \hat{T}_{L M}(S)_{\chi S_{m}}=\sqrt{\frac{2 L+1}{2 S+1}} \clebsch{S}{m}{L}{M}{S}{m^{\prime}}. \label{eq:6:1:15}
+\chi_{S m^{\prime}}^{\dagger} \hat{T}_{L M}(S) \chi_{S m}=\sqrt{\frac{2 L+1}{2 S+1}} \clebsch{S}{m}{L}{M}{S}{m^{\prime}}. \label{eq:6:1:15}
 \end{equation}
 Under rotations of the coordinate system the basis spin functions are transformed either by the rotation operator $\hat{D}^{S}(\alpha, \beta, \gamma)$ (Eq. 2.4(17)), if rotations are defined by the Euler angles $\alpha, \beta, \gamma$, or by the rotation operator $\hat{U}^{S}(\omega ; \theta, \Phi)$ (Eq. $2.4(18)$ ) if rotations are described by the rotation axis $\vect{n}(\theta, \Phi)$ and the rotation angle $\omega$
 \begin{align}
-& \chi_{S m^{\prime}}^{\prime} \equiv \hat{D}^{S}(\alpha, \beta, \gamma) \chi_{S_{m^{\prime}}}=\sum_{m} D_{m m^{\prime}}^{S}(\alpha, \beta, \gamma) \chi_{S m} , \notag\\
-& \chi_{S m^{\prime}}^{\prime} \equiv \hat{U}^{S}(\omega ; \Theta, \Phi) \chi_{m_{m^{\prime}}}=\sum_{m} U_{m m^{\prime}}^{S}(\omega ; \Theta, \Phi) \chi_{S m}, \label{eq:6:1:16}
+& \chi_{S m^{\prime}}^{\prime} \equiv \hat{D}^{S}(\alpha, \beta, \gamma) \chi_{S m^{\prime}}=\sum_{m} D_{m m^{\prime}}^{S}(\alpha, \beta, \gamma) \chi_{S m} , \notag\\
+& \chi_{S m^{\prime}}^{\prime} \equiv \hat{U}^{S}(\omega ; \Theta, \Phi) \chi_{S m^{\prime}}=\sum_{m} U_{m m^{\prime}}^{S}(\omega ; \Theta, \Phi) \chi_{S m}, \label{eq:6:1:16}
 \end{align}
-where $D_{m m^{\prime}}^{S}$ are the Wigner $D$-functions (Chap.~\ref{chap:4}), and $U_{m m^{\prime}}^{S}$ are the functions defined in Sec.~\ref{sec:4.5}. The functions $\chi_{S m^{\prime}}^{\prime}$ describe quantum states with definite spin $S$ and spin projection $m^{\prime}$ on the new $z^{\prime}$-axis. They are eigenfunctions of the operators $\widehat{\vect{S}}^{\prime 2}$ and $\widehat{S}_{x}^{\prime}$,
+where $D_{m m^{\prime}}^{S}$ are the Wigner $D$-functions (Chap.~\ref{chap:4}), and $U_{m m^{\prime}}^{S}$ are the functions defined in Sec.~\ref{sec:4.5}. The functions $\chi_{S m^{\prime}}^{\prime}$ describe quantum states with definite spin $S$ and spin projection $m^{\prime}$ on the new $z^{\prime}$-axis. They are eigenfunctions of the operators $\widehat{\vect{S}}^{\prime 2}$ and $\widehat{S}_{z}^{\prime}$,
 \begin{gather}
-\hat{\vect{s}}^{\prime 2} \chi_{S m^{\prime}}^{\prime}=S(S+1) \chi_{S m^{\prime}}^{\prime} , \label{eq:6:1:17}\\
+\hat{\vect{S}}^{\prime 2} \chi_{S m^{\prime}}^{\prime}=S(S+1) \chi_{S m^{\prime}}^{\prime} , \label{eq:6:1:17}\\
 \hat{S}_{z}^{\prime} \chi_{S m^{\prime}}^{\prime}=m^{\prime} \chi_{S m^{\prime}}^{\prime} . \notag
 \end{gather}
 Here $\widehat{\vect{S}}^{\prime}$ is the spin operator in the rotated coordinate system
@@ -120,13 +120,13 @@ The spin projection on the linear momentum direction of a particle is called the
 The helicity basis functions $\chi_{S \lambda}(\vartheta, \varphi)$, by definition, are the eigenfunctions of the operators $\widehat{\vect{S}}^{2}$ and $\widehat{\vect{S}} \cdot \vect{n}$ where $\widehat{\vect{S}}$ is the spin operator, $\vect{n}=\vect{p} / \vect{p}$ is the momentum direction of the particles, $\vartheta$ and $\varphi$ are the polar angles of the vector $n$,
 \begin{gather}
 \widehat{\vect{S}}^{2} \chi_{S \lambda}(\vartheta, \varphi)=S(S+1) \chi_{S \lambda}(\vartheta, \varphi), \label{eq:6:1:19}\\
-\widehat{\vect{S}} \cdot \vect{n}_{\chi_{s \lambda}}(\vartheta, \varphi)=\lambda \chi_{s_{\lambda}}(\vartheta, \varphi). \notag
+\widehat{\vect{S}} \cdot \vect{n} \chi_{S \lambda}(\vartheta, \varphi)=\lambda \chi_{S \lambda}(\vartheta, \varphi). \notag
 \end{gather}
-The function $\chi_{s \lambda}(\vartheta, \varphi)$ describes a quantum state with definite spin $S$ and helicity $\lambda$.\\
-The helicity basis functions $\chi_{S \lambda}(\vartheta, \varphi)$ may be expressed in terms of the basis functions $\chi_{S m}$ by means of the rotation which turns the $z$-axis parallel to $\vect{n}(\vartheta, \varphi)$. Such a rotation is determined by the Euler angles $\alpha=\varphi$, $\beta=\vartheta$. The third Euler angle $\gamma$ (the angle of rotation about the new $z^{\prime}$-axis) is arbitrary. For simplicity, let us adopt $\gamma=0$. In this case the rotated cartesian basis vectors $\mathrm{e}_{x}^{\prime}, \mathrm{e}_{y}^{\prime}, \mathrm{e}_{x}^{\prime}$ will coincide with the polar basis vectors $\vect{e}_{\theta}, \vect{e}_{\varphi}, \vect{e}_{\rho}$, respectively (Sec.~\ref{sec:1.1.2}). Making use of the transformation properties of the basis spin functions $\chi S_{m}$ under the rotation \eqref{eq:6:1:16} we obtain
+The function $\chi_{S \lambda}(\vartheta, \varphi)$ describes a quantum state with definite spin $S$ and helicity $\lambda$.\\
+The helicity basis functions $\chi_{S \lambda}(\vartheta, \varphi)$ may be expressed in terms of the basis functions $\chi_{S m}$ by means of the rotation which turns the $z$-axis parallel to $\vect{n}(\vartheta, \varphi)$. Such a rotation is determined by the Euler angles $\alpha=\varphi$, $\beta=\vartheta$. The third Euler angle $\gamma$ (the angle of rotation about the new $z^{\prime}$-axis) is arbitrary. For simplicity, let us adopt $\gamma=0$. In this case the rotated cartesian basis vectors $\mathrm{e}_{x}^{\prime}, \mathrm{e}_{y}^{\prime}, \mathrm{e}_{z}^{\prime}$ will coincide with the polar basis vectors $\vect{e}_{\theta}, \vect{e}_{\varphi}, \vect{e}_{\rho}$, respectively (Sec.~\ref{sec:1.1.2}). Making use of the transformation properties of the basis spin functions $\chi_{S m}$ under the rotation \eqref{eq:6:1:16} we obtain
 \begin{gather}
-\chi s_{\lambda}(\vartheta, \varphi)=\sum_{m} D_{m \lambda}^{S}(\varphi, \vartheta, 0) \chi_{s m}, \label{eq:6:1:20}\\
-\chi_{s m}=\sum_{\lambda} D_{-\lambda-m}^{s}(0, \vartheta, \varphi) \chi_{s \lambda}(\vartheta, \varphi). \notag
+\chi_{S \lambda}(\vartheta, \varphi)=\sum_{m} D_{m \lambda}^{S}(\varphi, \vartheta, 0) \chi_{S m}, \label{eq:6:1:20}\\
+\chi_{S m}=\sum_{\lambda} D_{-\lambda-m}^{S}(0, \vartheta, \varphi) \chi_{S \lambda}(\vartheta, \varphi). \notag
 \end{gather}
 For Hermitian adjoint functions we have
 \begin{align}
@@ -135,16 +135,16 @@ For Hermitian adjoint functions we have
 \end{align}
 It follows from \eqref{eq:6:1:7}, \eqref{eq:6:1:20}, \eqref{eq:6:1:21} that the contravariant components of the helicity basis functions have the form
 \begin{gather}
-{\left[\chi_{s \lambda}(\vartheta, \varphi)\right]^{\sigma}=D_{\sigma \lambda}^{S}(\varphi, \vartheta, 0)}, \notag\\
+{\left[\chi_{S \lambda}(\vartheta, \varphi)\right]^{\sigma}=D_{\sigma \lambda}^{S}(\varphi, \vartheta, 0)}, \notag\\
 {\left[\chi_{S \lambda}^{\dagger}(\vartheta, \varphi)\right]^{\sigma}=(-1)^{\lambda-\sigma} D_{-\sigma-\lambda}^{S}(\varphi, \vartheta, 0) . \quad(\sigma, \lambda=-S,-S+1, \ldots S-1, S)}. \label{eq:6:1:22}
 \end{gather}
-The collection of $2 S+1$ helicity basis functions $\chi_{s \lambda}(\vartheta, \varphi)(\lambda=S, S-1, \ldots,-S)$ as well as the set of the functions $\chi_{S m}$ form complete orthonormal sets. The orthonormality condition for the helicity basis functions is
+The collection of $2 S+1$ helicity basis functions $\chi_{S \lambda}(\vartheta, \varphi)(\lambda=S, S-1, \ldots,-S)$ as well as the set of the functions $\chi_{S m}$ form complete orthonormal sets. The orthonormality condition for the helicity basis functions is
 \begin{equation}
 \chi_{S \lambda}^{\dagger}(\vartheta, \varphi) \chi_{S \lambda^{\prime}}(\vartheta, \varphi)=\delta_{\lambda \lambda^{\prime}}. \label{eq:6:1:23}
 \end{equation}
 The completeness condition for these functions has the following matrix form
 \begin{equation}
-\sum_{\lambda} \chi_{s \lambda}(\vartheta, \varphi) \chi_{S \lambda}^{\dagger}(\vartheta, \varphi)=\hat{I} . \label{eq:6:1:24}
+\sum_{\lambda} \chi_{S \lambda}(\vartheta, \varphi) \chi_{S \lambda}^{\dagger}(\vartheta, \varphi)=\hat{I} . \label{eq:6:1:24}
 \end{equation}
 Matrix products $\chi_{S \lambda}(\vartheta, \varphi) \chi_{S \lambda^{\prime}}^{\dagger}(\vartheta, \varphi)$ of the helicity basis functions are the square $(2 S+1) \times(2 S+1)$ matrices. They may be expanded in terms of the polarization operators $\widehat{T}_{L M}(S)$ (see Sec.~\ref{sec:2.4}) as
 \begin{equation}
@@ -161,11 +161,11 @@ In particular, the diagonal matrix elements are
 \subsection{General Spin Functions}\label{sec:6.1.4}
 Any spin function \eqref{eq:6:1:1} of particles of spin $S$ can be expanded in sum of the basis spin functions $\chi_{S m}$,
 \begin{equation}
-\chi=\sum_{m=-S}^{S} a^{m} \chi_{s_{m}}, \label{eq:6:1:28}
+\chi=\sum_{m=-S}^{S} a^{m} \chi_{S m}, \label{eq:6:1:28}
 \end{equation}
 where $a^{m} \equiv \chi(m)$ is a contravariant component of some irreducible tensor of rank $S$. Similarly, the expansion of the Hermitian adjoint function $\chi^{\dagger}$ has the form
 \begin{equation}
-\chi^{\dagger}=\sum_{m=-s^{\prime}}^{s}\left(a^{m}\right)^{*} \chi_{S m}^{\dagger}, \label{eq:6:1:29}
+\chi^{\dagger}=\sum_{m=-S}^{S}\left(a^{m}\right)^{*} \chi_{S m}^{\dagger}, \label{eq:6:1:29}
 \end{equation}
 In general, $\left(a^{m}\right)^{*} \neq a_{m}$, i.e., the corresponding irreducible tensor is not real. The normalization condition \eqref{eq:6:1:4} imposes a restriction on $a^{m}$:
 \[
@@ -182,7 +182,7 @@ P_{L M}=\sqrt{\frac{2 L+1}{2 S+1}} \sum_{m, n=-S}^{S} \clebsch{S}{m}{L}{M}{S}{n}
 In particular, $P_{00}=1 / \sqrt{2 S+1}$.\\
 The quantities $P_{L M}(M=-L,-L+1, \ldots, L)$ are covariant components of some irreducible tensor of rank $L$. They represent the mean values of the polarization operators $\widehat{T}_{L M}(S)$ in the states described by the spin functions $\chi$ :
 \begin{equation}
-\chi^{\dagger} \hat{T}_{L M}(S)_{\chi}=P_{L M} . \label{eq:6:1:32}
+\chi^{\dagger} \hat{T}_{L M}(S) \chi=P_{L M} . \label{eq:6:1:32}
 \end{equation}
 Under complex conjugation $P_{L M}$ transforms as
 \begin{equation}
@@ -204,7 +204,7 @@ The spin function $\chi^{\prime}$ in the rotated coordinate system may be expand
 \begin{equation}
 \chi^{\prime}=\sum_{m=-S}^{S} a^{\prime m} \chi_{S m}=\sum_{m=-S}^{S} a^{m} \chi_{S m}^{\prime}, \label{eq:6:1:37}
 \end{equation}
-where $a^{m}$ and $a^{\prime m}$ are components of the spin function in the original and rotated systems, respectively. The relations between the basis functions $\chi_{S_{m}}$ and $\chi_{S_{m}}^{\prime}$ are given by Eq. \eqref{eq:6:1:16}. The transformation properties of $a^{m}$ under rotations are
+where $a^{m}$ and $a^{\prime m}$ are components of the spin function in the original and rotated systems, respectively. The relations between the basis functions $\chi_{S m}$ and $\chi_{S m}^{\prime}$ are given by Eq. \eqref{eq:6:1:16}. The transformation properties of $a^{m}$ under rotations are
 \begin{align}
 a^{\prime m} & =\sum_{n=-S}^{S} D_{m n}^{S}(\alpha, \beta, \gamma) a^{n}, \label{eq:6:1:38}\\
 a^{n} & =\sum_{m=-S}^{S} D_{m n}^{S *}(\alpha, \beta, \gamma) a^{\prime m}, \notag
@@ -221,7 +221,7 @@ The polarization density matrix $\hat{\rho}$ of the particles of spin $S$ is the
 \end{equation}
 or in a matrix form by
 \begin{equation}
-\hat{\rho}=\left\langle x x^{\dagger}\right\rangle_{\xi}, \label{eq:6:1:40}
+\hat{\rho}=\left\langle \chi \chi^{\dagger}\right\rangle_{\xi}, \label{eq:6:1:40}
 \end{equation}
 where ()$_{\epsilon}$ denotes the statistical average. In particular, for pure states one gets
 \begin{equation}
@@ -247,7 +247,9 @@ Note also the following property of the density matrix
 \end{equation}
 where the equality holds only for pure states. The density matrix of pure states satisfies the relation
 \begin{equation}
-\hat{p}^{2} \pm \hat{p} . \label{eq:6:1:46}
+% NOTE (6.1.46): the book prints "rho^2 \pm rho" (scan p.176); the pure-state
+% density matrix is idempotent, rho^2 = rho.  (Also OCR: rho was scanned as p.)
+\hat{\rho}^{2}=\hat{\rho} . \label{eq:6:1:46}
 \end{equation}
 The density matrix $\hat{\rho}$ may be expanded into a sum of the polarisation operators $\hat{T}_{L M}(S)$,
 \begin{equation}
@@ -259,8 +261,8 @@ t_{L M}=\left\langle\widehat{T}_{L M}(S)\right\rangle=\operatorname{Tr}\left\{\h
 \end{equation}
 The statistical tensors are related to the density matrix elements by
 \begin{gather}
-t_{L M}=\sqrt{\frac{2 L+1}{2 S+1}} \sum_{\sigma, \sigma^{\prime}=-s}^{s} \clebsch{S}{\sigma}{L}{M}{S}{\sigma^{\prime}} \rho_{\sigma \sigma^{\prime}} , \label{eq:6:1:49}\\
-\rho_{\sigma \sigma^{\prime}}=\sum_{L, M} \sqrt{\frac{2 L+1}{2 S+1}} C_{S \sigma_{L M}^{\prime}}^{S \sigma_{L M}^{\prime}}. \label{eq:6:1:50}
+t_{L M}=\sqrt{\frac{2 L+1}{2 S+1}} \sum_{\sigma, \sigma^{\prime}=-S}^{S} \clebsch{S}{\sigma}{L}{M}{S}{\sigma^{\prime}} \rho_{\sigma \sigma^{\prime}} , \label{eq:6:1:49}\\
+\rho_{\sigma \sigma^{\prime}}=\sum_{L, M} \sqrt{\frac{2 L+1}{2 S+1}} \clebsch{S}{\sigma}{L}{M}{S}{\sigma^{\prime}} t_{L M}. \label{eq:6:1:50}
 \end{gather}
 In particular,
 \begin{equation}
@@ -278,13 +280,13 @@ where $\widehat{I}$ is the unit matrix.\\
 The quantities $t_{L M}$ are covariant components of some irreducible tensor of rank $L$. Under rotations they transform in accordance with Eq. 4.1(2).
 
 \subsection{Two Particles with Arbitrary Spins}\label{sec:6.1.6}
-Let us consider a system of two particles, 1 and 2 , with spins $S_{1}$ and $S_{2}$. Total spin $S$ of the system takes the values $\left|S_{1}-S_{2}\right|,\left|S_{1}-S_{2}\right|+1, \ldots, S_{1}+S_{2}$. The spin function $\chi_{S_{m}}(1,2)$ which describes the system with total spin $S$ and spin projection $m$ may be written as
+Let us consider a system of two particles, 1 and 2 , with spins $S_{1}$ and $S_{2}$. Total spin $S$ of the system takes the values $\left|S_{1}-S_{2}\right|,\left|S_{1}-S_{2}\right|+1, \ldots, S_{1}+S_{2}$. The spin function $\chi_{S m}(1,2)$ which describes the system with total spin $S$ and spin projection $m$ may be written as
 \begin{equation}
-\chi S_{S_{m}}(1,2)=\sum_{m_{1} m_{2}} \clebsch{S_{1}}{m_{1}}{s_{2}}{m_{2}}{S}{m} \chi S_{S_{1} m_{1}}(1) \chi S_{S_{2} m_{2}}(2) . \label{eq:6:1:53}
+\chi_{S m}(1,2)=\sum_{m_{1} m_{2}} \clebsch{S_{1}}{m_{1}}{S_{2}}{m_{2}}{S}{m} \chi_{S_{1} m_{1}}(1) \chi_{S_{2} m_{2}}(2) . \label{eq:6:1:53}
 \end{equation}
 The inverse relation is
 \begin{equation}
-\chi_{S_{1} m_{1}}(1) \chi_{S_{2} m_{3}}(2)=\sum_{S} \clebsch{S_{1}}{m_{1}}{S_{2}}{m_{2}}{S}{m} \chi_{S m}(1,2) . \label{eq:6:1:54}
+\chi_{S_{1} m_{1}}(1) \chi_{S_{2} m_{2}}(2)=\sum_{S} \clebsch{S_{1}}{m_{1}}{S_{2}}{m_{2}}{S}{m} \chi_{S m}(1,2) . \label{eq:6:1:54}
 \end{equation}
 Spin functions \eqref{eq:6:1:53} are orthonormalized
 \begin{equation}
@@ -296,10 +298,19 @@ and satisfy the completeness condition
 \end{equation}
 Let the polarization operator $\widehat{T}_{L M}(i)(i=1,2)$ act on spin variables of a particle $i$ only. Then we have
 \begin{gather}
-\widehat{T}_{L_{1} M_{1}}(1) \times{ }_{S m}(1,2)=(-1)^{S_{1}+S_{2}+S+L_{1}} \sqrt{\left(2 L_{1}+1\right)(2 S+1)} \notag\\
-\times \sum_{S^{\prime}}\sixj{S_{1}}{S_{2}}{S}{S^{\prime}}{L_{1}}{S_{1}} \clebsch{S}{m}{L_{1}}{M_{1}}{S^{\prime}}{m^{\prime}} \times S_{S^{\prime} m^{\prime}}(1,2) , \label{eq:6:1:57}\\
-\hat{T}_{L_{2} M_{2}}(2) \chi_{S m}(1,2)=(-1)^{2 S+L_{2}} \sqrt{\left(2 L_{2}+1\right)(2 S+1)}  \notag\\
-\times \sum_{S^{\prime}}\sixj{S_{1}}{S_{2}}{S}{S^{\prime}}{L_{2}}{S_{2}} \clebsch{S}{m}{L_{2}}{M_{2}}{S^{\prime}}{m^{\prime}} \chi_{S^{\prime} m^{\prime}}(1,2) . \label{eq:6:1:58}
+\widehat{T}_{L_{1} M_{1}}(1) \chi_{S m}(1,2)=(-1)^{S_{1}+S_{2}+S+L_{1}} \sqrt{\left(2 L_{1}+1\right)(2 S+1)} \notag\\
+\times \sum_{S^{\prime}}\sixj{S_{1}}{S_{2}}{S}{S^{\prime}}{L_{1}}{S_{1}} \clebsch{S}{m}{L_{1}}{M_{1}}{S^{\prime}}{m^{\prime}} \chi_{S^{\prime} m^{\prime}}(1,2) , \label{eq:6:1:57}\\
+% NOTE (6.1.58): two corrections.  (i) OCR: the 6j lower row read {S' L2 S2};
+% the book (scan p.177) prints {L2 S' S2}.  (ii) BOOK MISPRINT: the prefactor
+% phase (-1)^{2S+L2} is wrong -- the correct phase is (-1)^{S1+S2+S'+L2}, which
+% depends on the summation index S' and so sits inside the sum.  This is the
+% standard reduced-matrix-element phase for a tensor operator acting on
+% subsystem 2 (Edmonds 7.1.7); cf. the S-dependent phase of 6.1.57 for
+% subsystem 1.  Verified: T_{L2 M2}(2) chi_{Sm} reproduced exactly for
+% (S1,S2)=(1/2,1/2),(1,1/2),(1,1); the printed phase fails for mixed spins.
+% See scripts/check_6_1.py.
+\hat{T}_{L_{2} M_{2}}(2) \chi_{S m}(1,2)=\sqrt{\left(2 L_{2}+1\right)(2 S+1)}  \notag\\
+\times \sum_{S^{\prime}}(-1)^{S_{1}+S_{2}+S^{\prime}+L_{2}}\sixj{S_{1}}{S_{2}}{S}{L_{2}}{S^{\prime}}{S_{2}} \clebsch{S}{m}{L_{2}}{M_{2}}{S^{\prime}}{m^{\prime}} \chi_{S^{\prime} m^{\prime}}(1,2) . \label{eq:6:1:58}
 \end{gather}
 One may also consider a set of scalar operators $\widehat{Q}_{L}(1,2)$ with $0 \leq L \leq \min \left\{2 S_{1}, 2 S_{2}\right\}$
 \begin{equation}
@@ -307,7 +318,14 @@ One may also consider a set of scalar operators $\widehat{Q}_{L}(1,2)$ with $0 \
 \end{equation}
 These operators leave the spin of a system and spin projection unchanged:
 \begin{equation}
-\hat{Q}_{L}(1,2) \chi_{S m}(1,2)=(-1)^{S_{1}+S_{2}+S}(2 L+1)\sixj{S_{1}}{S_{2}}{L}{S}{S}{S} \chi_{S m}(1,2). \label{eq:6:1:60}
+% NOTE (6.1.60): BOOK MISPRINT in the 6j symbol.  As printed, {S1 S2 L; S1 S2 S}
+% (scan p.177) has the triad (S1,S2,L) whose sum is non-integer whenever S1+S2 is
+% half-integer, so the 6j -- and hence the eigenvalue -- vanishes identically for
+% mixed-spin systems (e.g. S1=1, S2=1/2), which is impossible (Q_0 is proportional
+% to the identity).  The correct 6j is {S1 S2 S; S2 S1 L}: it reproduces the true
+% Q_L eigenvalues for (S1,S2)=(1/2,1/2),(1,1/2),(1,1) and coincides with the
+% printed form only for equal spins.  See scripts/check_6_1.py.
+\hat{Q}_{L}(1,2) \chi_{S m}(1,2)=(-1)^{S_{1}+S_{2}+S}(2 L+1)\sixj{S_{1}}{S_{2}}{S}{S_{2}}{S_{1}}{L} \chi_{S m}(1,2). \label{eq:6:1:60}
 \end{equation}
 Among scalar operators the so-called projection operators $\widehat{P}_{S}(1,2)\left(\left|S_{1}-S_{2}\right| \leq S \leq S_{1}+S_{2}\right)$ are of special interest. When applied to arbitrary spin function $\chi(1,2)$, the operator $\widehat{P}_{S}(1,2)$ gives the component of this function with definite total spin $S$. Thus, the projection operator $\widehat{P}_{S}(1,2)$ may be defined by the equations
 \begin{equation}
@@ -320,11 +338,15 @@ From Eqs. \eqref{eq:6:1:61} one may obtain the following properties of the proje
 \end{gather}
 The form of $\widehat{P}_{S}(1,2)$ may be written explicitly as
 \begin{equation}
-\widehat{P}_{S}(1,2)=\sum_{m} \chi_{S_{m}}(1,2) \chi_{S_{m}}^{\dagger}(1,2), \label{eq:6:1:64}
+\widehat{P}_{S}(1,2)=\sum_{m} \chi_{S m}(1,2) \chi_{S m}^{\dagger}(1,2), \label{eq:6:1:64}
 \end{equation}
 or, in terms of scalar operators $\widehat{Q}_{L}(1,2)$,
 \begin{equation}
-\hat{P}_{S}(1,2)=(-1)^{S_{1}+S_{2}+S}(2 S+1) \sum_{L}\sixj{S_{1}}{S_{2}}{L}{S}{S}{S} \hat{Q}_{L}(1,2). \label{eq:6:1:65}
+% NOTE (6.1.65): BOOK MISPRINT in the 6j symbol, as in 6.1.60.  The correct 6j is
+% {S1 S2 S; S2 S1 L}; with it the projector identity P_S = sum_L (...) Q_L holds
+% for mixed spins (verified for (1,1/2) in scripts/check_6_1.py).  The printed
+% forms ({S1 S2 L; S S S} here, {S1 S1 L; S1 S2 S} in the scan) both fail there.
+\hat{P}_{S}(1,2)=(-1)^{S_{1}+S_{2}+S}(2 S+1) \sum_{L}\sixj{S_{1}}{S_{2}}{S}{S_{2}}{S_{1}}{L} \hat{Q}_{L}(1,2). \label{eq:6:1:65}
 \end{equation}
 \section{Spin functions for $S=1 / 2$}\label{sec:6.2}
 \subsection{Basis Spin Functions}\label{sec:6.2.1}
