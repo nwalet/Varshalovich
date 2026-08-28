@@ -267,6 +267,16 @@ Rodrigues/differential forms 5.2.2/3/6, hypergeometric 5.2.23, the D-relation
   (coincides with the correct value only at l'=1); the regular-solid-harmonic
   addition theorem gives `[4π(2l'+1)!/((2l+1)!(2l'-2l+1)!)]^{1/2}` — factorials
   dropped and fraction inverted. Corrected + annotated (verified to 1e-15).
+- **§5.16** (`check_5_16.py`, all PASS): bipolar & tripolar harmonics (CG/3j/9j
+  from sympy). Bipolar: 5.16.4 (Σ|Bip|²), 5.16.6 (inversion phase), 5.16.7/5.16.8
+  (product CG series — one 9j), 5.16.9/5.16.10 (L=0 scalar product). Tripolar:
+  5.16.14 (Σ|Trip|²), 5.16.17/5.16.18 (product CG series — TWO 9j, verified to
+  3e-19), 5.16.19 (L=0 tripolar scalar, 3j). Definitional: 5.16.1/2/3/5/11-13/15/16.
+  OCR fixes (scan p.174-175): **5.16.11** garbled CG `C_{l₂m₂m₂m₃m₃}^{l₂₃}`→
+  `C^{LM}_{l₁m₁ l₂₃m₂₃} C^{l₂₃m₂₃}_{l₂m₂ l₃m₃}`; **5.16.7/5.16.8** B-subscript
+  `l₁'l₂'L_1''l₂''L''`/missing l₂''→`l₁'l₂'L'l₁''l₂''L''`; **5.16.17/5.16.18**
+  B superscript missing l₂ and subscript `l'`/`L_1''` garbles → full index list.
+  The B-coefficient *formulas* (9j structure) were correct as printed.
 
 ## Open flags (book misprints / omissions, annotated in-source)
 
