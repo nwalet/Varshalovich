@@ -1666,21 +1666,37 @@ D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma) \approx & e^{-i M \alpha-i M^{\prime
 \end{align}
 where $s, \mu, \nu$ are related to $J, M, M^{\prime}$ through Eqs.~\eqref{eq:4:3:14}, and $\xi_{M M^{\prime}}$ is defined by Eq.~\eqref{eq:4:3:15}.\\
 If $J \rightarrow \infty$ and $\beta \rightarrow 0$, while $J \beta<\infty$, then
+% NOTE: book (4.18.2) prints the Bessel order as J_{M-M'}(J beta); the correct
+% order is M'-M.  In this book's convention d^J_{MM'}(x/J) -> J_{M'-M}(x) as
+% J->infty (verified numerically to 1e-4 at J up to 6400; the two differ by the
+% factor (-1)^{M-M'}, so they coincide only for even M-M').  See
+% scripts/check_4_18.py.
 \begin{equation}
-D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma) \approx e^{-i M \alpha-i M^{\prime} \gamma} J_{M-M^{\prime}}(J \beta) . \label{eq:4:18:2}
+D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma) \approx e^{-i M \alpha-i M^{\prime} \gamma} J_{M^{\prime}-M}(J \beta) . \label{eq:4:18:2}
 \end{equation}
 Here $J_{n}(x)$ is the Bessel function.
 
 \subsection{Small Variation of Rotation Axis}\label{sec:4.18.2}
 If $\beta \rightarrow 0$, we have
 \begin{align}
+% NOTE: book (4.18.3) prints the leading factor as (beta/2)^mu; the correct
+% threshold factor is (sin(beta/2))^mu.  The exact d^J_{MM'} carries a
+% (sin beta/2)^mu factor, and only with it does the printed O(beta^2) bracket
+% make the expansion accurate to O(beta^4); with the bare (beta/2)^mu the
+% residual is O(beta^2) (the dropped -mu/6 (beta/2)^2 term).  Verified:
+% scripts/check_4_18.py (residual rate 16 with sin, ~4 without).
 & D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma) \approx e^{-i M \alpha-i M^{\prime} \gamma} \frac{\xi_{M M^{\prime}}}{\mu!} \sqrt{\frac{(s+\mu+\nu)!(s+\mu)!}{s!(s+\nu)!}}  \label{eq:4:18:3}\\
-& \times\left(\frac{\beta}{2}\right)^{\mu}\left\{1-\frac{2 s(s+\mu+\nu+1)+\nu(\mu+1)}{2(\mu+1)}\left(\frac{\beta}{2}\right)^{2}+\ldots\right\} \notag
+& \times\left(\sin\frac{\beta}{2}\right)^{\mu}\left\{1-\frac{2 s(s+\mu+\nu+1)+\nu(\mu+1)}{2(\mu+1)}\left(\frac{\beta}{2}\right)^{2}+\ldots\right\} \notag
 \end{align}
 If $\pi-\beta \rightarrow 0$, we have
 \begin{align}
+% NOTE: book (4.18.4) prints the leading factor as ((pi-beta)/2)^nu; the correct
+% threshold factor is (sin((pi-beta)/2))^nu (= (cos(beta/2))^nu).  As in 4.18.3,
+% only with the sine is the printed O((pi-beta)^2) bracket accurate to
+% O((pi-beta)^4); the bare power drops a -nu/6 ((pi-beta)/2)^2 term.  Verified:
+% scripts/check_4_18.py.
 & D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma) \approx e^{-i M \alpha-i M^{\prime} \gamma} \frac{\xi_{M M^{\prime}}}{\nu!}(-1)^{s} \sqrt{\frac{(s+\mu+\nu)!(s+\nu)!}{s!(s+\mu)!}}  \label{eq:4:18:4}\\
-& \times\left(\frac{\pi-\beta}{2}\right)^{\nu}\left\{1-\frac{2 s(s+\mu+\nu+1)+\mu(\nu+1)}{2(\nu+1)}\left(\frac{\pi-\beta}{2}\right)^{2}+\ldots\right\} \notag
+& \times\left(\sin\frac{\pi-\beta}{2}\right)^{\nu}\left\{1-\frac{2 s(s+\mu+\nu+1)+\mu(\nu+1)}{2(\nu+1)}\left(\frac{\pi-\beta}{2}\right)^{2}+\ldots\right\} \notag
 \end{align}
 \subsection{Infinitesimal Rotations}\label{sec:4.18.3}
 \subsubsection{ Rotation $\varepsilon$ about the $x$-Axis}
@@ -1762,7 +1778,7 @@ In Mathematica (Wolfram Language):
 Reference & Rotation Operator & Transformation Form & Relation between Referred Function (left)\\
 & & & and Function of this Book (right) \\
 \hline
-Edmonds $\left[{16}\right]$ & $e^{-i \alpha \hat{J}_z} e^{-i \beta \hat{J}_y} e^{-i \dagger \hat{J}_{z}}$ & $\Psi_{J M^{\prime}}\left(\vartheta^{\prime}, \varphi^{\prime}\right)=\sum_{M} \Psi_{J M}(\vartheta, \varphi) D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)$ & $D_{M M^{\prime}}^{(J)}(\alpha, \beta, \gamma)=D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)$ \\
+Edmonds $\left[{16}\right]$ & $e^{-i \alpha \hat{J}_z} e^{-i \beta \hat{J}_y} e^{-i \gamma \hat{J}_{z}}$ & $\Psi_{J M^{\prime}}\left(\vartheta^{\prime}, \varphi^{\prime}\right)=\sum_{M} \Psi_{J M}(\vartheta, \varphi) D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)$ & $D_{M M^{\prime}}^{(J)}(\alpha, \beta, \gamma)=D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)$ \\
 Rose \cite{ref031} & The same & The same & The same \\
 Brink and Satcher \cite{ref009} & » » & » » & » » \\
 Messiah \cite{ref025} & » » & » » & » » \\
@@ -1770,15 +1786,15 @@ Tinkham \cite{ref039} & » » & » » & » » \\
 Newton \cite{ref028} & » » & » » & » » \\
 Baldin et al \cite{ref003} & » » & » » & » » \\
 De-Shalit and Talmi \cite{ref032} & » » & » » & » » \\
-Dolginov \cite{ref014} & $e^{i \alpha \hat{J}_z} e^{i \beta \hat{J}_y} e^{i \dagger \hat{J}_{z}}$ & $\Psi_{J M}(\vartheta, \varphi)=\sum_{M^{\prime}} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma) \Psi_{J M^{\prime}}\left(\vartheta^{\prime}, \varphi^{\prime}\right)$ & $D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)=D_{M M^{\prime}}^{J}(-\alpha,-\beta,-\gamma)$ \\
+Dolginov \cite{ref014} & $e^{i \alpha \hat{J}_z} e^{i \beta \hat{J}_y} e^{i \gamma \hat{J}_{z}}$ & $\Psi_{J M}(\vartheta, \varphi)=\sum_{M^{\prime}} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma) \Psi_{J M^{\prime}}\left(\vartheta^{\prime}, \varphi^{\prime}\right)$ & $D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)=D_{M M^{\prime}}^{J}(-\alpha,-\beta,-\gamma)$ \\
 Davydov \cite{ref012} & The same & The same & The same \\
 Bohr and Mottelson \cite{ref008} & » » & $\Psi_{J M}\left(\vartheta^{\prime}, \varphi^{\prime}\right)=\sum_{M} \Psi_{J M}(\vartheta, \varphi) D_{M M^{\prime}}^{J^{*}}(\alpha, \beta, \gamma)$ & $D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)=D_{M M^{\prime}}^{J *}(\alpha, \beta, \gamma)$ \\
 Wigner \cite{ref043} & » » &  & $D^{J}((\alpha, \beta, \gamma))_{M M^{\prime}}=D_{M M^{\prime}}^{J}(-\alpha,-\beta,-\gamma)$ \\
-Rose \cite{ref030} &  $e^{i \alpha \hat{J}_z} e^{i \beta \hat{J}_y} e^{i \dagger \hat{J}_{z}}$ & $\Psi_{J M^{\prime}}\left(\vartheta^{\prime}, \varphi^{\prime}\right)=\sum_{M} \Psi_{J M}(\vartheta, \varphi) D_{M M^{\prime}}^{(J)}(\alpha, \beta, \gamma)$ & $D_{M M^{\prime}}^{(J)}(\alpha, \beta, \gamma)=D_{M M^{\prime}}^{J}(-\alpha,-\beta,-\gamma)$ \\
+Rose \cite{ref030} &  $e^{i \alpha \hat{J}_z} e^{i \beta \hat{J}_y} e^{i \gamma \hat{J}_{z}}$ & $\Psi_{J M^{\prime}}\left(\vartheta^{\prime}, \varphi^{\prime}\right)=\sum_{M} \Psi_{J M}(\vartheta, \varphi) D_{M M^{\prime}}^{(J)}(\alpha, \beta, \gamma)$ & $D_{M M^{\prime}}^{(J)}(\alpha, \beta, \gamma)=D_{M M^{\prime}}^{J}(-\alpha,-\beta,-\gamma)$ \\
 Edmonds \cite{ref064} & The same & The same & The same \\
 Fano and Racah \cite{ref018} & » » & » » & » » \\
 Berestetskii et al. \cite{ref006} & » » & $\Psi_{J M}(\vartheta, \varphi)=\sum_{M^{\prime}} \Psi_{J M^{\prime}}\left(\vartheta^{\prime}, \varphi^{\prime}\right) D_{M^{\prime} M}^{(J)}(\alpha, \beta, \gamma)$ & $D_{M M^{\prime}}^{(J)}(\alpha, \beta, \gamma)=D_{M M^{\prime}}^{J}(-\gamma,-\beta,-\alpha)$ \\
-Gel'fand et al. \cite{ref020}] &  $e^{-i \alpha \hat{J}_z} e^{-i \beta \hat{J}_x} e^{-i \dagger \hat{J}_{z}}$&  & $T_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)=(-i)^{M-M^{\prime}} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)$ \\
+Gel'fand et al. \cite{ref020}] &  $e^{-i \alpha \hat{J}_z} e^{-i \beta \hat{J}_x} e^{-i \gamma \hat{J}_{z}}$&  & $T_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)=(-i)^{M-M^{\prime}} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)$ \\
 Lubarskii $\left[{26}\right]$ & The same &  & $D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)=(-i)^{M-M^{\prime}} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)$ \\
 Vilenkin \cite{ref041} & » » &  & $t_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)=(-i)^{M-M^{\prime}} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)$ \\
 Yutsis and Bandzaitis \cite{ref045} & » » & $\Psi_{J M^{\prime}}\left(\vartheta^{\prime}, \varphi^{\prime}\right)=\sum_{M} D_{M^{\prime} M}^{(J)}(\alpha, \beta, \gamma) \Psi_{J M}(\vartheta, \varphi)$ & $D_{M M^{\prime}}^{(J)}(\alpha, \beta, \gamma)=i^{M-M^{\prime}} D_{M M^{\prime}}^{J^{*}}(\alpha, \beta, \gamma)$ \\

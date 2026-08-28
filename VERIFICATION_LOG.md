@@ -30,7 +30,7 @@ identity, and genuine source misprints are flagged.
 |----|-------|-----------|------------------|---------|
 | 0–2 | prelim / rotations / D-functions | ➖ n/a | not amenable to symbolic checking (definitional) | — |
 | 3 | irreducible tensors | ✅ partial | 3.2 tensor-product coefficients | `check_chap3.py` |
-| 4 | Wigner D-functions | 🔄 in progress | **4.3–4.17 done**; 4.18–4.19 remain | `check_4_3.py` … `check_4_16_17.py` |
+| 4 | Wigner D-functions | ✅ complete | **§4.3–4.19 verified** (2026-08-28); no open flags | `check_4_3.py` … `check_4_16_17.py`, `check_4_18.py`, `check_4_19.py` |
 | 5 | spherical harmonics | ✅ complete | **all machine-checkable eqs in §5.1–5.17 verified** (2026-08-27/28); no open flags | `check_5_1_2.py`, `check_5_2_series.py`, `check_5_2b.py`, `check_5_3.py`, `check_5_4_7_8.py`, `check_5_5.py`, `check_5_6.py`, `check_5_9.py`, `check_5_10_1.py`, `check_5_10_2.py`, `check_5_11.py`, `check_5_12.py`, `check_5_13.py`, `check_5_13_1.py`, `check_5_14.py`, `check_5_15.py`, `check_5_16.py`, `check_5_17a.py`, `check_5_17b.py` |
 | 6 | — | ❌ **gap** | OCR + headings/labels only | — |
 | 7 | — | ❌ **gap** | OCR + headings/labels only | — |
@@ -46,8 +46,9 @@ identity, and genuine source misprints are flagged.
 Previously: Chapter 13, §13.2.9 (`be21346`, ~2026-08-13). The pass had run
 3 → 8 → 9 → 10 → 13.
 
-**Now in progress: Chapter 4** (2026-08-26/27). §4.3–4.17 done; next §4.18
-(asymptotics) / §4.19 (other authors' conventions).
+**Chapter 4 complete** (2026-08-26/28). §4.3–4.19 all verified; no open flags.
+Next candidates: Chapters 6, 7 (never symbolically verified) or the rest of
+Chapter 3.
 - Sec 4.3 (explicit d-forms) — `check_4_3.py`, all 18 forms 4.3.2–4.3.23
   verified; four source errors fixed (see flags).
 - Sec 4.4 (symmetries of d/D) — `check_4_4.py`: d-relations 4.4.1, the full
@@ -125,6 +126,27 @@ Previously: Chapter 13, §13.2.9 (`be21346`, ~2026-08-13). The pass had run
   its general form uses half-integer-degree Y and isn't cleanly evaluable, but
   its M'=±1/2 special case 4.17.4 is). Also 4.17.4 line-1 bracket fix: the
   `cos(β/2)/(J+½)` factor had been pulled into the exponent.
+- Sec 4.18 (asymptotics / infinitesimal rotations) — `check_4_18.py`: a fast
+  mpmath `dJ` (self-tested vs `wigner_d` to 1e-16, dps=200 for large-J
+  cancellation) verifies 4.18.1 (large-J cos asymptotic, confirmed O(J^-3/2)
+  by error-ratio 8.5 ≈ 4^1.5 over a J×4 step), 4.18.2 (Bessel limit),
+  4.18.3/4 (β→0 and
+  π−β→0 expansions, confirmed O(β^4) residual), and 4.18.5–8 (infinitesimal
+  rotations = −i⟨JM|J·n|JM'⟩, exact). **Three book misprints fixed** (all
+  scan-confirmed, printed p.116, annotated in-source):
+  - 4.18.2: Bessel order `J_{M-M'}(Jβ)` → `J_{M'-M}(Jβ)` (differ by (−1)^{M−M'}).
+  - 4.18.3: leading `(β/2)^μ` → `(sin β/2)^μ` (the exact threshold factor; only
+    then is the printed O(β²) bracket accurate to O(β⁴)).
+  - 4.18.4: leading `((π−β)/2)^ν` → `(sin((π−β)/2))^ν` (same, near β=π).
+- Sec 4.19 / Table 4.2 (other authors' conventions) — `check_4_19.py`:
+  reference data, mostly convention-dependent. Verified the definitional row
+  (authors with e^{+i} rotation operators ⇒ D = D_book(−α,−β,−γ)) and D_book
+  unitarity. OCR fix: **`e^{∓iγ Ĵ_z}` had been OCR'd as `e^{∓i† Ĵ_z}`
+  (`\dagger`)** in 4 rotation-operator cells (Edmonds/Dolginov/Rose[30]/
+  Gel'fand). Phase/transpose rows (Gel'fand −i vs +i, Yutsis, Berestetskii)
+  depend on each author's own handedness/rotation-sense and are left as
+  published (documented in the script). (Aside: cited name "Brink and
+  Satcher" should read "Satchler" — not touched, outside equation scope.)
 
 1. **Chapter 4 continued** — 4.4 (symmetries), 4.6–4.7 (sums / addition
    theorems), 4.8 (recursions), 4.10–4.12 (orthogonality / integrals),
