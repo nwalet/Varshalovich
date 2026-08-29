@@ -29,7 +29,7 @@ identity, and genuine source misprints are flagged.
 | Ch | Topic | Verified? | Sections covered | Scripts |
 |----|-------|-----------|------------------|---------|
 | 0–2 | prelim / rotations / D-functions | ➖ n/a | not amenable to symbolic checking (definitional) | — |
-| 3 | irreducible tensors | ✅ partial | 3.2 tensor-product coefficients | `check_chap3.py` |
+| 3 | irreducible tensors | ✅ complete | **§3.2 vector-tensor identities + §3.3 recoupling** (2026-08-29); 1 misprint | `check_chap3.py`, `check_3_2.py`, `check_3_3.py` |
 | 4 | Wigner D-functions | ✅ complete | **§4.3–4.19 verified** (2026-08-28); no open flags | `check_4_3.py` … `check_4_16_17.py`, `check_4_18.py`, `check_4_19.py` |
 | 5 | spherical harmonics | ✅ complete | **all machine-checkable eqs in §5.1–5.17 verified** (2026-08-27/28); no open flags | `check_5_1_2.py`, `check_5_2_series.py`, `check_5_2b.py`, `check_5_3.py`, `check_5_4_7_8.py`, `check_5_5.py`, `check_5_6.py`, `check_5_9.py`, `check_5_10_1.py`, `check_5_10_2.py`, `check_5_11.py`, `check_5_12.py`, `check_5_13.py`, `check_5_13_1.py`, `check_5_14.py`, `check_5_15.py`, `check_5_16.py`, `check_5_17a.py`, `check_5_17b.py` |
 | 6 | spin functions / density matrix | ✅ complete | **§6.1–6.3 verified** (2026-08-28); 5 book misprints fixed | `check_6_1.py`, `check_6_2.py`, `check_6_3.py` |
@@ -151,8 +151,24 @@ Chapter 3.
 1. **Chapter 4 continued** — 4.4 (symmetries), 4.6–4.7 (sums / addition
    theorems), 4.8 (recursions), 4.10–4.12 (orthogonality / integrals),
    4.14–4.15 (characters). All machine-checkable via `wigner_d`.
-2. Chapter 3 is only partially covered (3.2); the rest could be swept.
-   (Chapters 0–2 are definitional and not amenable to symbolic checking.)
+2. (Chapters 0–2 are definitional and not amenable to symbolic checking.)
+
+**All of Chapters 3–13 are now verified** (2026-08-29); only Chapters 0–2
+remain (definitional).
+
+## Chapter 3 (irreducible tensors) — complete (2026-08-29)
+
+- **§3.2 (vector ↔ tensor)** — `check_3_2.py`: rank-0/1/2 products 3.2.2/4/6/7,
+  triple products 3.2.8–11, quadruple products 3.2.12–20, and the |A|^n Y_nm
+  chain 3.2.23, all against random complex vectors. (3.2.5/6/30/31 already in
+  `check_chap3.py`.)
+- **§3.3 (recoupling)** — `check_3_3.py`: 3.3.1/2/7/8/9/11/12/13/14 with random
+  rank-a..e tensors (commuting) and 3.3.16 with matrix reps (non-commuting);
+  scalar-product sanity 3.1.34. Uses a Racah 6j and a 6j-sum 9j.
+  **Book misprint 3.3.12**: dimension factor Π_{cfgh}² → Π_{cfgh} (scan p.70
+  prints the square; Π¹ holds to 1e-15, Π² fails by O(10) — cf. 3.3.11's 9j
+  form which correctly carries Π¹).
+- §3.1 and §3.2.2/3.2.3 are definitional or follow by construction from the above.
 
 ## Chapter 7 (tensor spherical harmonics) — complete (2026-08-29)
 
