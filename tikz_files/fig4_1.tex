@@ -1,0 +1,39 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{diagrams}
+\begin{document}
+\begin{tikzpicture}[>=Latex,line width=0.6pt]
+  \coordinate (O) at (0,0);
+  \coordinate (A) at (3.6,2.1);   % top vertex
+  \coordinate (C) at (3.6,-2.1);  % bottom vertex
+  \coordinate (B) at (5.4,0);     % right vertex (on axis)
+
+  % rays / axes from the sphere centre O, each extended to an arrowhead
+  \draw[->] (O) -- (-1.4,0);                 % rotation axis, to the left
+  \draw[->] (O) -- (6.8,0);                  % horizontal ray through B
+  \draw[->] (O) -- ($(O)!1.34!(A)$);         % ray through top vertex A
+  \draw[->] (O) -- ($(O)!1.34!(C)$);         % ray through bottom vertex C
+
+  % the three great-circle arcs of the spherical triangle
+  \draw (A) to[out=-100,in=100] (C);         % beta_3  (left-bulging side)
+  \draw (A) to[out=-33,in=118] (B);          % beta_2  (upper-right side)
+  \draw (B) to[out=-118,in=33] (C);          % beta_1  (lower-right side)
+
+  % small double marks for the vertex angles
+  \draw (A)++(-100:0.5) arc (-100:-33:0.5);
+  \draw (A)++(-100:0.62) arc (-100:-33:0.62);
+  \draw (B)++(-118:0.5) arc (242:118:0.5);
+  \draw (B)++(-118:0.62) arc (242:118:0.62);
+  \draw (C)++(100:0.5) arc (100:33:0.5);
+  \draw (C)++(100:0.62) arc (100:33:0.62);
+
+  % side labels (on the arcs, outer side)
+  \node at (3.0,0.95) {$\beta_3$};
+  \node at (5.45,1.5) {$\beta_2$};
+  \node at (5.45,-1.5) {$\beta_1$};
+
+  % vertex-angle labels (small, kept clear of the side labels)
+  \node[font=\small,anchor=east] at (4.6,1.25) {$\pi-\delta_1$};
+  \node[font=\small,anchor=east] at (4.85,0.34) {$\pi-\delta_3$};
+  \node[font=\small,anchor=east] at (4.6,-1.25) {$\pi-\delta_2$};
+  \end{tikzpicture}
+\end{document}
