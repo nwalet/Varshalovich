@@ -107,6 +107,15 @@
   (\p1) -- (\p2) node[pos=#4,shift={(\n1+90:#5)}] {#6};
 }
 
+%\wrapdiag[tikz-options]{content}: the standard "wrap a diagram draw-body in a
+%standalone tikzpicture" scaffold shared by all the single-figure macros below.
+%The optional first argument is the tikzpicture option list (default matches the
+%most common Chap-11 setting); content is the fully-applied draw-body call. Every
+%\foo below is just \wrapdiag[<its opts>]{\food{args}} -- same output as the old
+%explicit \begin{tikzpicture}...\end{tikzpicture} wrappers it replaces.
+\newcommand{\wrapdiag}[2][baseline=0pt,inner sep=0.12em,font=\scriptsize]{%
+  \begin{tikzpicture}[#1]#2\end{tikzpicture}}
+
 %\threejs[dirs]{a}{b}{c}{top sign}{bottom sign}: the closed "circle with a
 %vertical diameter" 3jm-invariant diagram {abc}: left arc a, diameter b,
 %right arc c, joining a top node and a bottom node whose signs are the
@@ -116,11 +125,7 @@
 %of Tables 11.2/11.6), "u" draws it upwards instead. Table 11.6's
 %line-direction-reversal identities use e.g. \threejs[uuu]{...} (all
 %lines reversed) and \threejs[udd]{...} (only a reversed).
-\newcommand{\threejs}[6][ddd]{
-\begin{tikzpicture}[baseline=0pt, inner sep=0.2em,font=\scriptsize]
-  \threejsd{#1}{#2}{#3}{#4}{#5}{#6}
-\end{tikzpicture}
-}
+\newcommand{\threejs}[6][ddd]{\wrapdiag[baseline=0pt, inner sep=0.2em,font=\scriptsize]{\threejsd{#1}{#2}{#3}{#4}{#5}{#6}}}
 \newcommand{\threejsd}[6][ddd]{%
   \coordinate (T) at (0,0.5);
   \coordinate (B) at (0,-0.5);
@@ -158,13 +163,7 @@
  \foreach \i in {0,...,2}{\draw[jmarrow] (M) -- (n\i) node[label={30+120*\i:$\argx{2*\i+1}$$\argx{2*\i+2}$}]{};}
     \end{scope}
   }
-\newcommand{\threejdiag}[1] {
-  {
-  \begin{tikzpicture}[baseline=-2pt,inner sep=0.1em,font=\scriptsize]
-    \threejdiagdraw{#1}
-  \end{tikzpicture}
-  }
-}
+\newcommand{\threejdiag}[1]{{\wrapdiag[baseline=-2pt,inner sep=0.1em,font=\scriptsize]{\threejdiagdraw{#1}}}}
 %opmleft: box containing M with one stub at left
 \tikzset{
 opmleft/.pic={
@@ -198,11 +197,7 @@ opnf/.pic={
 \draw[jmline] (M) -- (N) node[midway,above]{$#3$};
 \end{scope}%
 }
-\newcommand{\opline}[3]{%
-\begin{tikzpicture}[baseline=0pt]
-\opelinedraw{#1}{#2}{#3}
-\end{tikzpicture}%
-}
+\newcommand{\opline}[3]{\wrapdiag[baseline=0pt]{\oplinedraw{#1}{#2}{#3}}}
 
 
 %\sixjdiagramd{a,b,c,A,B,C,sc}: the full closed-loop
@@ -230,9 +225,7 @@ opnf/.pic={
 \end{scope}
 }
 \newcommand{\sixjdiagramd}[1]{%
-{\begin{tikzpicture}[baseline=0pt, inner sep=0.1em,font=\scriptsize]
-\sixjdiagramddraw{#1}
-\end{tikzpicture}}
+{\wrapdiag[baseline=0pt, inner sep=0.1em,font=\scriptsize]{\sixjdiagramddraw{#1}}}
 }
 %\sixjdiagramu{A,B,C,a,b,c,centersign}: outer triangle (vertices all
 %"+") with edges A,B,C, and an inner node (sign centersign) connected to
@@ -280,9 +273,7 @@ opnf/.pic={
 }
 }
 \newcommand{\sixjdsq}[1]{%
-{\begin{tikzpicture}[baseline=0pt, inner sep=0.2em,font=\scriptsize]
-\sixjdsqdraw{#1}
-\end{tikzpicture}}
+{\wrapdiag[baseline=0pt, inner sep=0.2em,font=\scriptsize]{\sixjdsqdraw{#1}}}
 }
 %\ninejd{1,2,3,4,5,6,7,8,9}: the 9j-symbol hexagon diagram (fixed
 %alternating +/- node signs, no sign argument). Comma-separated calling
@@ -315,8 +306,6 @@ opnf/.pic={
 %and stores the characters in one macro each. Comparisons against these
 %use \if (character-code comparison), not \ifx, so the catcode-12
 %characters produced by \edef compare equal to normal input characters.
-\def\vmk@splitfour#1#2#3#4\relax{\def\vmk@sA{#1}\def\vmk@sB{#2}\def\vmk@sC{#3}\def\vmk@sD{#4}}
-\def\vmk@splitsix#1#2#3#4#5#6\relax{\def\vmk@dA{#1}\def\vmk@dB{#2}\def\vmk@dC{#3}\def\vmk@dD{#4}\def\vmk@dE{#5}\def\vmk@dF{#6}}
 \def\vmk@splitninesigns#1#2#3#4#5#6\relax{\def\vmk@nsA{#1}\def\vmk@nsB{#2}\def\vmk@nsC{#3}\def\vmk@nsD{#4}\def\vmk@nsE{#5}\def\vmk@nsF{#6}}
 \def\vmk@splitnine#1#2#3#4#5#6#7#8#9\relax{\def\vmk@nA{#1}\def\vmk@nB{#2}\def\vmk@nC{#3}\def\vmk@nD{#4}\def\vmk@nE{#5}\def\vmk@nF{#6}\def\vmk@nG{#7}\def\vmk@nH{#8}\def\vmk@nI{#9}}
 %\vmk@sign{<char macro>}: renders + as \plusmark, anything else as \minusmark
@@ -372,32 +361,6 @@ opnf/.pic={
 \ifdir5{\normedge{n3}{n0}{0.3}{0.13}{$\argx{6}$}}{\normedge{n0}{n3}{0.7}{-0.13}{$\argx{6}$}}
 }
 }
-\newlistcommand{\sixjdgend}{%
-{
-   \foreach \i in {0,...,2}{\coordinate (n\i) at (90+120*\i:0.8);}%
-\coordinate (n3) at (0,0);
-  % split the sign string (arg 10) and direction string (arg 11)
-  \esplit{\signlst}{\argx{7}}%
-  \esplit{\direcs}{\argx{8}}%
-    \foreach \s [count=\i from 0] in \signlst {%
-    \if3\i
-    \node[dotnode,label={270:\vmksign{\s}}] at (n\i) {};
-    \else
-    \node[dotnode,label={90+120*\i:\vmksign{\s}}] at (n\i) {};
-    \fi
-  }%
-   % stash each direction character in \dir0..\dir8 for per-slot testing.
-  % \global because \foreach runs its body in a group.
-  \foreach \d [count=\k from 0] in \direcs {%
-    \global\expandafter\let\csname dir\k\endcsname\d}%
-\ifdir0{\normedge{n1}{n0}{0.5}{0.22}{$\argx{1}$}}{\normedge{n0}{n1}{0.5}{-0.22}{$\argx{1}$}}
-\ifdir1{\normedge{n0}{n2}{0.5}{0.22}{$\argx{2}$}}{\normedge{n2}{n0}{0.5}{-0.22}{$\argx{2}$}}
-\ifdir2{\normedge{n1}{n2}{0.5}{-0.22}{$\argx{3}$}}{\normedge{n2}{n1}{0.5}{0.22}{$\argx{3}$}}
-\ifdir3{\normedge{n1}{n3}{0.6}{0.14}{$\argx{4}$}}{\normedge{n3}{n1}{0.4}{-0.14}{$\argx{4}$}}
-\ifdir4{\normedge{n3}{n2}{0.3}{0.14}{$\argx{5}$}}{\normedge{n2}{n3}{0.7}{-0.14}{$\argx{5}$}}
-\ifdir5{\normedge{n3}{n0}{0.3}{0.13}{$\argx{6}$}}{\normedge{n0}{n3}{0.7}{-0.13}{$\argx{6}$}}
-}
-}
 %\ninejdgen{s1,...,s9,SIGNS,DIRS}: fully general form of the 
 %9j hexagon. Items 1-9 are the labels by structural slot (named after
 %where the standard basis diagram of {a1 a2 a3; c1 c2 c3; b1 b2 b3} puts
@@ -419,10 +382,7 @@ opnf/.pic={
 %(\ninejd, kept unchanged, draws the differently-labelled Table 11.2
 % hexagon of {a1 b1 c1; a2 b2 c2; a3 b3 c3}.) Needs reconciling
 \newcommand{\ninejdgen}[1]
-{\begin{tikzpicture}[baseline=0pt, inner sep=0.1em,font=\scriptsize]
-  \ninejdgend{#1}
-\end{tikzpicture}
-}
+{\wrapdiag[baseline=0pt, inner sep=0.1em,font=\scriptsize]{\ninejdgend{#1}}}
 
 \newlistcommand{\ninejdgend}{%
 {
@@ -472,11 +432,7 @@ opnf/.pic={
   \normedge{tid3}{tid4}{0.5}{-0.2}{$\argx{11}$} %c3
   \normedge{tid2}{tid3}{0.5}{-0.2}{$\argx{12}$} %c4
 }
-\newcommand{\twIdiaga}[1]{
-{\begin{tikzpicture}[baseline=0pt, inner sep=0.15em,font=\scriptsize]
-  \twIdiagadraw{#1}
-\end{tikzpicture}}
-}
+\newcommand{\twIdiaga}[1]{{\wrapdiag[baseline=0pt, inner sep=0.15em,font=\scriptsize]{\twIdiagadraw{#1}}}}
 
 \newlistcommand{\twIdiagbdraw}{%
   \pgfmathsetmacro{\len}{0.9}
@@ -505,9 +461,7 @@ opnf/.pic={
 }
 
 \newcommand{\twIdiagb}[1]{%
-{\begin{tikzpicture}[baseline=0pt, inner sep=0.15em,font=\scriptsize]
-  \twIdiagbdraw{#1}
-\end{tikzpicture}}
+{\wrapdiag[baseline=0pt, inner sep=0.15em,font=\scriptsize]{\twIdiagbdraw{#1}}}
 }
 
 \newlistcommand{\twIIdiagadraw}{%
@@ -574,11 +528,7 @@ opnf/.pic={
   \normedge[jmlinem=0.5]{tid0}{tid3}{0.5}{-0.2}{$\argx{11}$} %c3
   \normedge[jmlinem=0.5]{tid7}{tid4}{0.5}{-0.2}{$\argx{12}$} %c4
 }}
-\newcommand{\twIIdiagb}[1]{
-  \begin{tikzpicture}[baseline=0pt, inner sep=0.1em,font=\scriptsize]
-    \twIIdiagbdraw{#1}
-  \end{tikzpicture}
-}
+\newcommand{\twIIdiagb}[1]{\wrapdiag[baseline=0pt, inner sep=0.1em,font=\scriptsize]{\twIIdiagbdraw{#1}}}
 
 %======== Helpers for Table 11.7 (Zero Angular Momentum, j=0 cases) ========
 %\jzTnode{sign}{leftlab}{ldir}{rightlab}{rdir}{cdir}: a horizontal jm-line
@@ -586,10 +536,7 @@ opnf/.pic={
 %ldir/rdir: 'i' = arrow points into the node, 'o' = out of the node.
 %cdir: 'd' = stub points down, 'u' = up. Used for the 3jm-with-a-zero
 %"tee" diagrams of Table 11.7's jm-Symbols rows.
-\newcommand{\jzTnode}[6]{%
-\begin{tikzpicture}[baseline=0pt,inner sep=0.2em,font=\scriptsize]
-  \jztnoded{#1}{#2}{#3}{#4}{#5}{#6}
-\end{tikzpicture}}
+\newcommand{\jzTnode}[6]{\wrapdiag[baseline=0pt,inner sep=0.2em,font=\scriptsize]{\jztnoded{#1}{#2}{#3}{#4}{#5}{#6}}}
 \newcommand{\jzTnoded}[6]{%
 \coordinate (N) at (0,0);
 \node[dotnode,label={90:\vmk@sign{#1}}] at (N) {};
@@ -636,11 +583,7 @@ opnf/.pic={
 %line (
 %extdir 'o' = arrows out to the labels, 'i' = arrows in drawn above
 %a closed \jzotri{leftlab}{rightlab}{botsign} normalization triangle.
-\newcommand{\jzld}[5]{%
-\begin{tikzpicture}[baseline=0pt,inner sep=0.15em,font=\scriptsize]
-  \jzldd{#1}{#2}{#3}{#4}{#5}
-\end{tikzpicture}
-}
+\newcommand{\jzld}[5]{\wrapdiag[baseline=0pt,inner sep=0.15em,font=\scriptsize]{\jzldd{#1}{#2}{#3}{#4}{#5}}}
 \newcommand{\jzldd}[5]{%
 \pgfmathsetmacro{\Len}{0.8}
 \pgfmathsetmacro{\HEO}{0}
@@ -691,20 +634,13 @@ opnf/.pic={
 \fi
 \node (0,0) {$#1$};
 }
-\newcommand{\jloop}[2]{%
-\begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
-\jloopd{#1}{#2}
-\end{tikzpicture}
-}
+\newcommand{\jloop}[2]{\wrapdiag[baseline=0pt,inner sep=0.12em,font=\scriptsize]{\jloopd{#1}{#2}}}
 
 %---- Table 11.7 nj-Symbols helpers (closed j=0 nj-diagrams + reduced products) ----
 %\njloop{a}{b}{botsign}{topsign}{dir}: two-arc closed loop (left arc a, right arc b),
 %top node plain, bottom node = botsign. dir (c/a) clock or anticlockwise
 % The {a b 0}=delta_ab diagram.
-\newcommand{\njloop}[5]{%
-\begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
-\njloopd{#1}{#2}{#3}{#4}{#5}
-\end{tikzpicture}}
+\newcommand{\njloop}[5]{\wrapdiag[baseline=0pt,inner sep=0.12em,font=\scriptsize]{\njloopd{#1}{#2}{#3}{#4}{#5}}}
 \newcommand{\njloopd}[5]{%
 \coordinate(T)at(0,0.5);\coordinate(B)at(0,-0.5);
 \node[dotnode,label={-90:\vmk@sign{#3}}]at(B){};
@@ -718,10 +654,7 @@ opnf/.pic={
 \fi
 }
 %\njloopc{a}{c}{b}: same loop with an added vertical c diameter.
-\newcommand{\njloopc}[5]{%
-\begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
-\njloopcd{#1}{#2}{#3}{#4}{#5}
-\end{tikzpicture}}
+\newcommand{\njloopc}[5]{\wrapdiag[baseline=0pt,inner sep=0.12em,font=\scriptsize]{\njloopcd{#1}{#2}{#3}{#4}{#5}}}
 %
 \newcommand{\njloopcd}[5]{%
 \coordinate(T)at(0,0.5);\coordinate(B)at(0,-0.5);
@@ -778,10 +711,7 @@ opnf/.pic={
 \draw[jmlinem](T)--(Ap)node[midway,above right]{$#1$};
 \draw[jmlinem](B)--(Ap)node[midway,below right]{$#2$};
 }
-\newcommand{\njvtri}[2]{%
-\begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
-  \njvtrid{#1}{#2}
-\end{tikzpicture}}
+\newcommand{\njvtri}[2]{\wrapdiag[baseline=0pt,inner sep=0.12em,font=\scriptsize]{\njvtrid{#1}{#2}}}
 \newcommand{\njvtrird}[2]{%
   \pgfmathsetmacro{\Sz}{0.5}
 \coordinate(T)at($\Sz*(0.5,0.861)$);
@@ -794,10 +724,7 @@ opnf/.pic={
 \draw[jmlinem](T)--(Ap)node[midway,above left]{$#1$};
 \draw[jmlinem](B)--(Ap)node[midway,below left]{$#2$};
 }
-\newcommand{\njvtrir}[2]{%
-\begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
-  \njvtrird{#1}{#2}
-\end{tikzpicture}}
+\newcommand{\njvtrir}[2]{\wrapdiag[baseline=0pt,inner sep=0.12em,font=\scriptsize]{\njvtrird{#1}{#2}}}
 %\njsqx{a}{b}{d}{e}{c}{f}: square with the two crossing diagonals c,f (the middle
 %factor of the {a b c; e 0 e'; f b' d} reduction).
 \newcommand{\njsqxd}[6]{%
@@ -814,10 +741,7 @@ opnf/.pic={
 \normedge[jmlinem=0.65]{br}{tl}{0.65}{0.15}{$#5$}
 \normedge[jmlinem=0.35]{tr}{bl}{0.35}{0.15}{$#6$}
 }
-\newcommand{\njsqx}[6]{%
-\begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
-\njsqxd{#1}{#2}{#3}{#4}{#5}{#6}
-\end{tikzpicture}}
+\newcommand{\njsqx}[6]{\wrapdiag[baseline=0pt,inner sep=0.12em,font=\scriptsize]{\njsqxd{#1}{#2}{#3}{#4}{#5}{#6}}}
 %\njhexx{a}{b}{c}{f}{e}{d}{bp}{ep}: hexagon with two crossing diagonals
 %(c,f) -- the closed {a b c; e 0 e'; f b' d} diagram (the third, 0-valued
 %diameter omitted). Perimeter: T-UR a, UL-T b, UR-LR e, LR-B ep, B-LL d,
@@ -837,10 +761,7 @@ opnf/.pic={
 }
 
 
-\newcommand{\njhexx}[8]{%
-\begin{tikzpicture}[baseline=0pt,inner sep=0.2em,font=\scriptsize]
-\njhexxd{#1}{#2}{#3}{#4}{#5}{#6}{#7}{#8}
-\end{tikzpicture}}
+\newcommand{\njhexx}[8]{\wrapdiag[baseline=0pt,inner sep=0.2em,font=\scriptsize]{\njhexxd{#1}{#2}{#3}{#4}{#5}{#6}{#7}{#8}}}
 
 %---- Table 11.8 helpers (Zero Rotation, R=1 / R^{-1}R=1 cases) ----
 %A "bra line": double arrowhead near the start + single at the end.
@@ -875,10 +796,7 @@ vmket/.style={postaction={decorate,decoration={markings,
 \draw[vmkln,vmkbra] (-0.7,0) -- (0,0)  node[pos=0.2,above=1pt]{$#2$};
 \draw[vmkln,vmket] (0,0)  -- (0.7,0) node[pos=0.8,above=1pt]{$#3$};
 }
-\newcommand{\rredline}[3]{%
-\begin{tikzpicture}[baseline=0pt,inner sep=0.2em,font=\scriptsize]
-\rredlined{#1}{#2}{#3}
-\end{tikzpicture}}
+\newcommand{\rredline}[3]{\wrapdiag[baseline=0pt,inner sep=0.2em,font=\scriptsize]{\rredlined{#1}{#2}{#3}}}
 %\rarcline{type}{left}{right}{sign}: bra-line with an inverted-V double-dashed
 %"$R^{-1}$/$R$" arc between two nodes (the R^{-1}R=1 case).
 \newcommand{\rarclined}[5]{%
@@ -899,10 +817,7 @@ vmket/.style={postaction={decorate,decoration={markings,
 \node[inner sep=1pt] at (0.44,-0.4){$R$};
 \node[below,inner sep=1pt] at (0,-1.2){$R^{-1}R{=}1$};
 }
-\newcommand{\rarcline}[5]{%
-\begin{tikzpicture}[baseline=0pt,inner sep=0.13em,font=\scriptsize]
-  \rarclined{#1}{#2}{#3}{#4}{#5}
-\end{tikzpicture}}
+\newcommand{\rarcline}[5]{\wrapdiag[baseline=0pt,inner sep=0.13em,font=\scriptsize]{\rarclined{#1}{#2}{#3}{#4}{#5}}}
 \newcommand{\rarcloopd}[6]{%
 \if o#1
 \tikzset{vmkln/.style={thick,dashed}}
@@ -917,10 +832,7 @@ vmket/.style={postaction={decorate,decoration={markings,
 \coordinate (D) at (0,-0.6);%\node[deltanode] at (D){};
 \draw[rline] (-0.4,0) arc(180:360:0.4cm) node[midway,below]{$R$};
 }
-\newcommand{\rarcloop}[6]{%
-\begin{tikzpicture}[baseline=0pt,inner sep=0.13em,font=\scriptsize]
-  \rarcloopd{#1}{#2}{#3}{#4}{#5}{#6}
-\end{tikzpicture}}
+\newcommand{\rarcloop}[6]{\wrapdiag[baseline=0pt,inner sep=0.13em,font=\scriptsize]{\rarcloopd{#1}{#2}{#3}{#4}{#5}{#6}}}
 %---- Table 11.11 helpers (Metric Tensor) ----
 %\metric[lr]{L}{R}{bk}: metric-tensor line -- a central node with a left
 %segment to label L and right segment to label R. lt/rt pick the type:
@@ -937,10 +849,7 @@ vmket/.style={postaction={decorate,decoration={markings,
 \draw[bjmarrow](0.8,0) -- (0.2,0) node[near start,above=1pt]{$#3$};
 \fi}
 
-\newcommand{\metric}[4][l]{%
-\begin{tikzpicture}[baseline=-0.4ex,inner sep=0.13em,font=\scriptsize]
-\metricd[#1]{#2}{#3}{#4}
-\end{tikzpicture}}
+\newcommand{\metric}[4][l]{\wrapdiag[baseline=-0.4ex,inner sep=0.13em,font=\scriptsize]{\metricd[#1]{#2}{#3}{#4}}}
 
 %\rednode{name}: a "reduced" vertex -- a filled dot enclosed by a circle
 %(used for reduced 3jm/harmonic nodes). Draw at the current origin (0,0).
