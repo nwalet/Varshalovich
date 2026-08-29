@@ -497,7 +497,7 @@ They are eigenfunctions of the operators $\widehat{\vect{J}}^{2}, \widehat{J}_{z
 \hat{\vect{J}}^{2} \vect{Y}_{J M}^{L}(\vartheta, \varphi) & =J(J+1) \vect{Y}_{J M}^{L}(\vartheta, \varphi), \notag\\
 \widehat{J}_{z} \vect{Y}_{J M}^{L}(\vartheta, \varphi) & =M \vect{Y}_{J M}^{L}(\vartheta, \varphi), \notag\\
 \hat{\vect{L}}^{2} \vect{Y}_{J M}^{L}(\vartheta, \varphi) & =L(L+1) \vect{Y}_{J M}^{L}(\vartheta, \varphi), \label{eq:7:3:2}\\
-\vect{S}^{2} \vect{Y}_{J M}^{L}(\vartheta, \varphi) & =2 \vect{Y}_{J M}^{L}(\vartheta, \varphi) . \notag
+\widehat{\vect{S}}^{2} \vect{Y}_{J M}^{L}(\vartheta, \varphi) & =2 \vect{Y}_{J M}^{L}(\vartheta, \varphi) . \notag
 \end{align}
 
 \begin{table}[tbh]
@@ -507,7 +507,7 @@ They are eigenfunctions of the operators $\widehat{\vect{J}}^{2}, \widehat{J}_{z
 \label{chap7:tab:1}
 \begin{tabular}{l|l|c}
 \hline
-$J$ & M & $W_{J M}(\vartheta)=Q_{J M}^{L^{+}}(\vartheta, \varphi) Q_{J M}^{L}(\vartheta, \varphi)$ \\
+$J$ & M & $W_{J M}(\vartheta)=\Omega_{J M}^{L+}(\vartheta, \varphi) \Omega_{J M}^{L}(\vartheta, \varphi)$ \\
 \hline
 $\frac{1}{2}$ & $\frac{1}{2}$ & $\frac{1}{4 \pi}$ \\
 $\frac{3}{2}$ & $\frac{1}{2}$ & $\frac{1}{8 \pi}\left\{3 \cos ^{2} \vartheta+1\right\}$ \\
@@ -526,7 +526,7 @@ $\frac{9}{2}$ & $\frac{7}{2}$ & $\frac{35}{512 \pi} \sin ^{6} \vartheta\left\{63
 $\frac{9}{2}$ & $\frac{9}{2}$ & $\frac{315}{512 \pi} \sin ^{8} \vartheta$ \\
 $\frac{11}{2}$ & $\frac{1}{2}$ & $\frac{3}{512 \pi}\left\{4851 \cos ^{10} \vartheta-9555 \cos ^{8} \vartheta+6510 \cos ^{6} \vartheta-1750 \cos ^{4} \vartheta+175 \cos ^{2} \vartheta+25\right\}$ \\
 $\frac{11}{2}$ & $\frac{3}{2}$ & $\frac{105}{512 \pi} \sin ^{2} \vartheta\left\{297 \cos ^{8} \vartheta-348 \cos ^{6} \vartheta+126 \cos ^{4} \vartheta-12 \cos ^{2} \vartheta+1\right\}$ \\
-$\frac{11}{2}$ & $\frac{5}{2}$ & $\frac{105}{1024 \pi} \sin ^{4} \vartheta\left\{495 \cos ^{6} \vartheta-285 \cos ^{4} \vartheta+45 \cos ^{2} 9+1\right\}$ \\
+$\frac{11}{2}$ & $\frac{5}{2}$ & $\frac{105}{1024 \pi} \sin ^{4} \vartheta\left\{495 \cos ^{6} \vartheta-285 \cos ^{4} \vartheta+45 \cos ^{2} \vartheta+1\right\}$ \\
 $\frac{11}{2}$ & $\frac{7}{2}$ & $\frac{315}{1024 \pi} \sin ^{6} \vartheta\left\{77 \cos ^{4} \vartheta-14 \cos ^{2} \vartheta+1\right\}$ \\
 $\frac{11}{2}$ & $\frac{9}{2}$ & $\frac{63}{1024 \pi} \sin ^{8} \vartheta\left(99 \cos ^{2} \vartheta+1\right)$ \\
 $\frac{11}{2}$ & $\frac{11}{2}$ & $\frac{693}{1024 \pi} \sin ^{10} \vartheta$ 
@@ -585,7 +585,7 @@ The vector spherical harmonics $\vect{Y}_{J M}^{L}(\vartheta, \varphi)$, as well
 where $\left[\vect{Y}_{J M}^{L}(\vartheta, \varphi)\right]^{\mu}$ and $\left[\vect{Y}_{J M}^{L}(\vartheta, \varphi)\right]_{\mu}$ are contravariant and covariant components, respectively.\\
 The contravariant spherical components of $\vect{Y}_{J M}^{L}(\vartheta, \varphi)$ are given, according to \eqref{eq:7:1:5}, by
 \begin{equation}
-\left|\vect{Y}_{J M}^{L}(\vartheta, \varphi)\right|^{\mu}=\clebsch{L}{M-\mu}{1}{\mu}{J}{M} Y_{L M-\mu}(\vartheta, \varphi). \label{eq:7:3:12}
+\left[\vect{Y}_{J M}^{L}(\vartheta, \varphi)\right]^{\mu}=\clebsch{L}{M-\mu}{1}{\mu}{J}{M} Y_{L M-\mu}(\vartheta, \varphi). \label{eq:7:3:12}
 \end{equation}
 The covariant spherical components of $\vect{Y}_{J M}^{L}(\vartheta, \varphi)$ are related to the contravariant ones by
 \begin{equation}
@@ -923,7 +923,7 @@ In more detailed form \eqref{eq:7:3:78} reads
 \begin{align}
 & \sum_{M=-J}^{J} Y_{J M}^{*}(\vartheta, \varphi) \vect{Y}_{J M}^{J+1}(\vartheta, \varphi)=-\frac{\sqrt{(J+1)(2 J+1)}}{4 \pi} \vect{n}, \notag\\
 & \sum_{M=-J}^{J} Y_{J M}^{*}(\vartheta, \varphi) \vect{Y}_{J M}^{J}(\vartheta, \varphi)=0, \label{eq:7:3:79}\\
-& \sum_{\mu=-J}^{J} Y_{J M}^{*}(\vartheta, \varphi) \vect{Y}_{J M}^{J-1}(\vartheta, \varphi)=\frac{\sqrt{J(2 J+1)}}{4 \pi} \vect{n}. \notag
+& \sum_{M=-J}^{J} Y_{J M}^{*}(\vartheta, \varphi) \vect{Y}_{J M}^{J-1}(\vartheta, \varphi)=\frac{\sqrt{J(2 J+1)}}{4 \pi} \vect{n}. \notag
 \end{align}
 Analogous relations for $\vect{Y}_{J M}^{(\lambda)}(\vartheta, \varphi)$ have the form
 \begin{gather}
@@ -971,7 +971,7 @@ Analogous relations for $\vect{Y}_{J M}^{(\lambda)}(\vartheta, \varphi)$ have th
 J_{1} & L_{1} & 1 \\
 J_{2} & L_{2} & 1 \\
 J & L & 1
-\end{array}\right\} \clebsch{L_{1}}{0}{L_{2}}{0}{L}{0} \clebsch{J_{1}}{M_{1}}{J_{3}}{M_{3}}{J}{M} \vect{Y}_{J M}^{L}(\vartheta, \varphi) . \label{eq:7:3:101}
+\end{array}\right\} \clebsch{L_{1}}{0}{L_{2}}{0}{L}{0} \clebsch{J_{1}}{M_{1}}{J_{2}}{M_{2}}{J}{M} \vect{Y}_{J M}^{L}(\vartheta, \varphi) . \label{eq:7:3:101}
 \end{align}
 \subsection{Addition Theorems for Vector Spherical Harmonics}\label{sec:7.3.11}
 Let $\vect{n}_{1}$ and $\vect{n}_{2}$ be the unit vectors determined by the polar angles $\vartheta_{1}, \varphi_{1}$ and $\vartheta_{2}, \varphi_{2}$, respectively; $\cos \omega_{12} \equiv \vect{n}_{1} \cdot \vect{n}_{2}=\cos \vartheta_{1} \cos \vartheta_{2}+\sin \vartheta_{1} \sin \vartheta_{2} \cos \left(\varphi_{1}-\varphi_{2}\right)$. Then we have the following addition theorems for the vector spherical harmonics $\vect{Y}_{J M}^{L}$.\\
@@ -1039,7 +1039,7 @@ In these equations $P_{L}(x)$ is a Legendre polynomial, and $P_{L}^{\prime}(x) \
 \begin{gather}
 4 \pi \sum_{M=-J}^{J}\left(\vect{a}_{1} \cdot \vect{Y}_{J M}^{J+1}\left(\vartheta_{1}, \varphi_{1}\right)\right)^{*}\left(\vect{a}_{2} \cdot \vect{Y}_{J M}^{J+1}\left(\vartheta_{2}, \varphi_{2}\right)\right)=\frac{1}{J+1}\left\{\left(\vect{a}_{1}^{*} \cdot \vect{n}_{2}\right)\left(\vect{a}_{2} \cdot \vect{n}_{1}\right) P_{J}^{\prime \prime}+\left(\vect{a}_{1}^{*} \cdot \vect{a}_{2}\right) P_{J}^{\prime}\right\}, \notag\\
 4 \pi \sum_{M=-J}^{J}\left(\vect{a}_{1} \cdot \vect{Y}_{J M}^{J+1}\left(\vartheta_{1}, \varphi_{1}\right)\right)^{*}\left(\vect{a}_{2} \cdot \vect{Y}_{J M}^{J}\left(\vartheta_{2}, \varphi_{2}\right)\right), \label{eq:7:3:109}\\
-\left.=\frac{i}{J+1} \sqrt{\frac{2 J+1}{J}}\left\{\left[\vect{a}_{1}^{*} \times \vect{a}_{2}\right] \cdot \vect{n}_{1} P_{J}^{\prime \prime}+\left[\vect{a}_{1}^{*} \times \vect{a}_{2}\right] \cdot \vect{n}_{2} \mid(J+1) P_{J}^{\prime}-P_{J+1}^{\prime \prime}\right]\right\}, \notag\\
+=\frac{i}{J+1} \sqrt{\frac{2 J+1}{J}}\left\{\left[\vect{a}_{1}^{*} \times \vect{a}_{2}\right] \cdot \vect{n}_{1} P_{J}^{\prime \prime}+\left[\vect{a}_{1}^{*} \times \vect{a}_{2}\right] \cdot \vect{n}_{2}\left[(J+1) P_{J}^{\prime}-P_{J+1}^{\prime \prime}\right]\right\}, \notag\\
 4 \pi \sum_{M=-J}^{J}\left(\vect{a}_{1} \cdot \vect{Y}_{J M}^{J+1}\left(\vartheta_{1}, \varphi_{1}\right)\right)^{*}\left(\vect{a}_{2} \cdot \vect{Y}_{J M}^{J-1}\left(\vartheta_{2}, \varphi_{2}\right)\right)=\frac{1}{\sqrt{J(J+1)}}\left\{\left(\vect{a}_{1}^{*} \cdot \vect{n}_{2}\right)\left(\vect{a}_{2} \cdot \vect{n}_{1}\right) P_{J}^{\prime \prime}+\left(\vect{a}_{1}^{*} \cdot \vect{a}_{2}\right) P_{J}^{\prime}\right\}, \notag\\
 4 \pi \sum_{M=-J}^{J}\left(\vect{a}_{1} \cdot \vect{Y}_{J M}^{J}\left(\vartheta_{1}, \varphi_{1}\right)\right)^{*}\left(\vect{a}_{2} \cdot \vect{Y}_{J M}^{J+1}\left(\vartheta_{2}, \varphi_{2}\right)\right)  \notag\\
 =\frac{i}{J+1} \sqrt{\frac{2 J+1}{J}}\left\{\left[\vect{a}_{1}^{*} \times \vect{a}_{2}\right] \cdot \vect{n}_{1}\left[(J+1) P_{J}^{\prime}-P_{J+1}^{\prime \prime}\right]+\left[\vect{a}_{1}^{*} \times \vect{a}_{2}\right] \cdot \vect{n}_{2} P_{J}^{\prime \prime}\right\}, \notag\\
@@ -1080,7 +1080,7 @@ where
 \begin{gather}
 \vect{k}=\left(k, \vartheta_{k}, \varphi_{k}\right), \vect{r}=(r, \vartheta, \varphi), j_{L}(x)=\sqrt{\frac{\pi}{2 x}} J_{L+\frac{1}{2}}(x)  \notag\\
 \int e^{i k r} \vect{Y}_{J M}^{(1)}(\vartheta, \varphi) d \Omega=4 \pi i^{J+1}\left\{\sqrt{\frac{J}{2 J+1}} j_{J+1}(k r) \vect{Y}_{J M}^{J+1}\left(\vartheta_{k}, \varphi_{k}\right)-\sqrt{\frac{J+1}{2 J+1}} j_{J-1}(k r) \vect{Y}_{J M}^{J-1}\left(\vartheta_{k}, \varphi_{k}\right)\right\}  \notag\\
-=\frac{4 \pi i^{J+1}}{2 J+1}\left\{\left[J \cdot j_{J+1}(k r)-(J+1) j_{J-1}(k r) \mid \vect{Y}_{J M}^{(1)}\left(\vartheta_{k}, \varphi_{k}\right)-\sqrt{J(J+1)}\left[j_{J+1}(k r)+j_{J-1}(k r) \mid \vect{Y}_{J M}^{(-1)}\left(\vartheta_{k}, \varphi_{k}\right)\right\},\right.\right. \label{eq:7:3:115}\\
+=\frac{4 \pi i^{J+1}}{2 J+1}\left\{\left[J \cdot j_{J+1}(k r)-(J+1) j_{J-1}(k r)\right] \vect{Y}_{J M}^{(1)}\left(\vartheta_{k}, \varphi_{k}\right)-\sqrt{J(J+1)}\left[j_{J+1}(k r)+j_{J-1}(k r)\right] \vect{Y}_{J M}^{(-1)}\left(\vartheta_{k}, \varphi_{k}\right)\right\}, \label{eq:7:3:115}\\
 \int e^{i k r} \vect{Y}_{J M}^{(0)}(\vartheta, \varphi) d \Omega=4 \pi i^{J} j_{J}(k r) \vect{Y}_{J M}^{J}\left(\vartheta_{k}, \varphi_{k}\right)=4 \pi i^{J} j_{J}(k r) \vect{Y}_{J M}^{(0)}\left(\vartheta_{k}, \varphi_{k}\right), \label{eq:7:3:116}
 \end{gather}
 \begin{gather}
@@ -1103,7 +1103,7 @@ The completeness condition for spherical components of $\vect{Y}_{J M}^{L}(\vart
 \end{equation}
 Similarly, the set of $\vect{Y}_{J M}^{(\lambda)}(\vartheta, \varphi)$ constitutes a complete orthonormal set. The orthonormality property for $\vect{Y}_{J M}^{(\lambda)}(\vartheta, \varphi)$ is the following
 \begin{equation}
-\int_{0}^{\pi} \int_{0}^{2 \pi} \vect{Y}_{J^{\prime} M^{\prime}}^{\left(\lambda^{\prime}\right) *}(\vartheta, \varphi) \vect{Y}_{J M}^{(\lambda)}(\vartheta, \varphi) \sin \vartheta d \vartheta d \varphi=\delta_{J^{\prime} J^{\prime}} \delta_{\lambda^{\prime} \lambda} \delta_{M^{\prime} M} \label{eq:7:3:123}
+\int_{0}^{\pi} \int_{0}^{2 \pi} \vect{Y}_{J^{\prime} M^{\prime}}^{\left(\lambda^{\prime}\right) *}(\vartheta, \varphi) \vect{Y}_{J M}^{(\lambda)}(\vartheta, \varphi) \sin \vartheta d \vartheta d \varphi=\delta_{J^{\prime} J} \delta_{\lambda^{\prime} \lambda} \delta_{M^{\prime} M} \label{eq:7:3:123}
 \end{equation}
 and the completeness relation for spherical components of $\vect{Y}_{J M}^{(\lambda)}(\vartheta, \varphi)$ reads
 \begin{equation}
@@ -1260,7 +1260,7 @@ For $\vartheta=0$ and $\vartheta=\pi$ we have
 \end{align}
 The explicit forms of $W_{J M}^{\perp \|}(\vartheta)$ for $J=0,1,2,3,4,5(0 \leq M \leq J)$ are given in Table~\ref{chap7:tab:2}. For negative $M$ one may use the relation $W_{J-M}=W_{J M}$. Note also the explicit form of $W_{J M}^{\perp, \|}(\vartheta)$ for special values of $M$ :
 \begin{gather}
-\left.\left.W_{J 0}^{\perp}(\vartheta)=\frac{2 J+1}{4 \pi(J+1) J} \sin ^{2} \vartheta \right\rvert\, P_{J}^{\prime}(\cos \vartheta)\right]^{2}  \label{eq:7:3:168}\\
+W_{J 0}^{\perp}(\vartheta)=\frac{2 J+1}{4 \pi(J+1) J} \sin ^{2} \vartheta\left[P_{J}^{\prime}(\cos \vartheta)\right]^{2}  \label{eq:7:3:168}\\
 W_{J 0}^{\|}(\vartheta)=\frac{2 J+1}{4 \pi}\left[P_{J}(\cos \vartheta)\right]^{2}  \notag\\
 W_{J J}^{\perp}(\vartheta)=W_{J-J}^{\perp}(\vartheta)=\frac{1}{4 \pi} \frac{(2 J+1)!(\sin \vartheta)^{2 J-2}}{2^{2 J}(J+1)!(J-1)!}\left(1+\cos ^{2} \vartheta\right)  \notag\\
 W_{J J}^{\|}(\vartheta)=W_{J-J}^{\|}(\vartheta)=\frac{1}{4 \pi} \frac{(2 J+1)!}{2^{2 J}(J!)^{2}}(\sin \vartheta)^{2 J}. \label{eq:7:3:169}
@@ -1272,18 +1272,18 @@ W_{J J}^{\|}(\vartheta)=W_{J-J}^{\|}(\vartheta)=\frac{1}{4 \pi} \frac{(2 J+1)!}{
 \renewcommand{\arraystretch}{1.8}
 \begin{tabular}{l|l|c|c}
 \hline
-J & M & $W_{J M}^{\perp}(\vartheta)$ & $w_{J M}{\|}(\vartheta)$ \\
+J & M & $W_{J M}^{\perp}(\vartheta)$ & $W_{J M}^{\|}(\vartheta)$ \\
 \hline
-0 & 0 & $1 / 4 \pi$ & 1/4 $\pi$ \\
+0 & 0 & $1 / 4 \pi$ & $1 / 4 \pi$ \\
 1 & 0 & $\frac{3}{8 \pi} \sin ^{2} \vartheta$ & $\frac{3}{4 \pi} \cos ^{2} \vartheta$ \\
 1 & 1 & $\frac{3}{16 \pi}\left(1+\cos ^{2} \vartheta\right)$ & $\frac{3}{8 \pi} \sin^2\vartheta$ \\
-2 & 0 & $\frac{15}{8 \pi} \sin ^{2} \vartheta \cos ^{2} \vartheta$ & $\frac{5}{167}\left(1-3 \cos ^{2} \vartheta\right)^{2}$ \\
+2 & 0 & $\frac{15}{8 \pi} \sin ^{2} \vartheta \cos ^{2} \vartheta$ & $\frac{5}{16 \pi}\left(1-3 \cos ^{2} \vartheta\right)^{2}$ \\
 2 & 1 & $\frac{5}{16 \pi}\left(1-3 \cos ^{2} \vartheta+4 \cos ^{4} \vartheta\right)$ & $\frac{15}{8 \pi} \sin ^{2} \vartheta \cos ^{2} \vartheta$ \\
 2 & 2 & $\frac{5}{16 \pi}\left(1-\cos ^{4} \vartheta\right)$ & $\frac{15}{32 \pi} \sin ^{4} \vartheta$ \\
 3 & 0 & $\frac{21}{64 \pi} \sin ^{2} \vartheta\left(1-5 \cos ^{2} \vartheta\right)^{2}$ & $\frac{7}{16 \pi} \cos ^{2} \vartheta\left(3-5 \cos ^{2} \vartheta\right)^{2}$ \\
 3 & 1 & $\frac{7}{256 \pi}\left(1+111 \cos ^{2} \vartheta-305 \cos ^{4} \vartheta+225 \cos ^{6} \vartheta\right)$ & $\frac{21}{64 \pi} \sin ^{2} \vartheta\left(1-5 \cos ^{2} \vartheta\right)^{2}$ \\
-3 & 2 & $\frac{35}{128 \pi} \sin ^{2} \vartheta\left(1-2 \cos ^{2} \vartheta+9 \cos ^{4} \delta\right)$ & $\frac{105}{32 \pi} \sin ^{4} 9 \cos ^{2} \vartheta$ \\
-3 & 3 & $\frac{105}{256 \pi} \sin ^{4} 8\left(1+\cos ^{2} \vartheta\right)$ & $\frac{35}{64 \pi} \sin 6\vartheta$ \\
+3 & 2 & $\frac{35}{128 \pi} \sin ^{2} \vartheta\left(1-2 \cos ^{2} \vartheta+9 \cos ^{4} \vartheta\right)$ & $\frac{105}{32 \pi} \sin ^{4} \vartheta \cos ^{2} \vartheta$ \\
+3 & 3 & $\frac{105}{256 \pi} \sin ^{4} \vartheta\left(1+\cos ^{2} \vartheta\right)$ & $\frac{35}{64 \pi} \sin ^{6}\vartheta$ \\
 4 & 0 & $\frac{45}{64 \pi} \sin ^{2} \vartheta \cos ^{2} \vartheta\left(3-7 \cos ^{2} \vartheta\right)^{2}$ & $\frac{9}{256 \pi}\left(3-30 \cos ^{2} \vartheta+35 \cos ^{4} \vartheta\right)^{2}$ \\
 4 & 1 & $\frac{9}{256 \pi}\left(9-153 \cos ^{2} \vartheta+855 \cos ^{4} \vartheta-1463 \cos ^{6} \vartheta+784 \cos ^{8} \vartheta\right)$ & $\frac{45}{64 \pi} \sin ^{2} \vartheta \cos ^{2} \vartheta\left(3-7 \cos ^{2} \vartheta\right)^{2}$ \\
 4 & 2 & $\frac{9}{128 \pi} \sin ^{2} \vartheta\left(1+50 \cos ^{2} \vartheta-175 \cos ^{4} \vartheta+196 \cos ^{6} \vartheta\right)$ & $\frac{45}{128 \pi} \sin ^{4} \vartheta\left(1-7 \cos ^{2} \vartheta\right)^{2}$ \\
@@ -1291,8 +1291,8 @@ J & M & $W_{J M}^{\perp}(\vartheta)$ & $w_{J M}{\|}(\vartheta)$ \\
 4 & 4 & $\frac{63}{128 \pi} \sin ^{6} \vartheta\left(1+\cos ^{2} \vartheta\right)$ & $\frac{315}{512 \pi} \sin ^{8} \vartheta$ \\
 5 & 0 & $\frac{165}{512 \pi} \sin ^{2} \vartheta\left(1-14 \cos ^{2} \vartheta+21 \cos ^{4} \vartheta\right)^{2}$ & $\frac{11}{256 \pi} \cos ^{2} \vartheta\left(15-70 \cos ^{2} \vartheta+63 \cos ^{4} \vartheta\right)^{2}$ \\
 5 & 1 & \( \begin{gathered} \frac{11}{1024 \pi}\left(1+813 \cos ^{2} \vartheta-7070 \cos ^{4} \vartheta+21378 \cos ^{6} \vartheta-\right. \\ \left.-26019 \cos ^{8} \vartheta+11025 \cos ^{10} \vartheta\right) \end{gathered} \) & $\frac{165}{512 \pi} \sin ^{2} \vartheta\left(1-14 \cos ^{2} \vartheta+21 \cos ^{4} \vartheta\right)^{2}$ \\
-5 & 2 & $\frac{77}{256 \pi} \sin ^{2} y\left(1-20 \cos ^{2} \vartheta+150 \cos ^{4} \vartheta-324 \cos ^{6} \vartheta+225 \cos ^{8} \vartheta\right)$ & $\frac{1155}{128 \pi} \sin ^{4} \vartheta \cos ^{2} \vartheta\left(1-3 \cos ^{2} \vartheta\right)^{2}$ \\
-5 & 3 & $\frac{231}{2048 \pi} \sin ^{4} 8\left(1+31 \cos ^{2} \vartheta-129 \cos ^{4} \vartheta+225 \cos ^{8} \vartheta\right)$ & $\frac{365}{1024 \pi} \sin ^{6} \vartheta\left(1-9 \cos ^{2} \vartheta\right)^{2}$ \\
+5 & 2 & $\frac{77}{256 \pi} \sin ^{2} \vartheta\left(1-20 \cos ^{2} \vartheta+150 \cos ^{4} \vartheta-324 \cos ^{6} \vartheta+225 \cos ^{8} \vartheta\right)$ & $\frac{1155}{128 \pi} \sin ^{4} \vartheta \cos ^{2} \vartheta\left(1-3 \cos ^{2} \vartheta\right)^{2}$ \\
+5 & 3 & $\frac{231}{2048 \pi} \sin ^{4} \vartheta\left(1+31 \cos ^{2} \vartheta-129 \cos ^{4} \vartheta+225 \cos ^{6} \vartheta\right)$ & $\frac{385}{1024 \pi} \sin ^{6} \vartheta\left(1-9 \cos ^{2} \vartheta\right)^{2}$ \\
 5 & 4 & $\frac{231}{1024 \pi} \sin ^{6} \vartheta\left(1+6 \cos ^{2} \vartheta+25 \cos ^{4} \vartheta\right)$ & $\frac{3465}{512 \pi} \sin ^{8} \vartheta \cos ^{2} \vartheta$ \\
 5 & 5 & $\frac{1155}{2048 \pi} \sin ^{8} \vartheta\left(1+\cos ^{2} \vartheta\right)$ & $\frac{693}{1024 \pi} \sin ^{10} \vartheta$ \\
 \end{tabular}
