@@ -227,29 +227,6 @@ opnf/.pic={
 \newcommand{\sixjdiagramd}[1]{%
 {\wrapdiag[baseline=0pt, inner sep=0.1em,font=\scriptsize]{\sixjdiagramddraw{#1}}}
 }
-%\sixjdiagramu{A,B,C,a,b,c,centersign}: outer triangle (vertices all
-%"+") with edges A,B,C, and an inner node (sign centersign) connected to
-%each vertex by a,b,c -- the recurring 9j-symbol "triangle with inner
-%node" diagram. Comma-separated calling convention, like \twIdiaga.
-\newlistcommand{\sixjdiagramu}{%
-{\begin{tikzpicture}[baseline=0pt, inner sep=0.2em,font=\scriptsize]
-\coordinate (T) at ($0.8*(0,1)$);
-\coordinate (L) at ($0.8*(-0.866,-0.5)$);
-\coordinate (R) at ($0.8*(0.866,-0.5)$);
-\coordinate (M) at (0,0);
-\node[dotnode,label={above:\plusmark}] at (T) {};
-\node[dotnode,label={below:\plusmark}] at (L) {};
-\node[dotnode,label={below:\plusmark}] at (R) {};
-\node[dotnode,label={right:$\argx{7}$}] at (M) {};
-\normedge{T}{L}{0.5}{-0.15}{$\argx{1}$} % A
-\normedge{R}{T}{0.5}{-0.15}{$\argx{2}$} % B
-\normedge{L}{R}{0.5}{-0.15}{$\argx{3}$} %C
-\normedge{M}{T}{0.5}{-0.15}{$\argx{6}$} % c
-\normedge{M}{L}{0.5}{0.15}{$\argx{4}$} % a
-\normedge{R}{M}{0.5}{0.15}{$\argx{5}$} % b
-\end{tikzpicture}}
-}
-
 %\sixjdsq{A,B,C,a,b,c,centersign}: square representation of the 6j-symbol
 %diagram with a center node (sign centersign) connected to each corner by
 %a,b,c, and the outer edges labelled A,B,C. Comma-separated calling
@@ -326,15 +303,15 @@ opnf/.pic={
 %labels by slot: 1 = left side (T-L), 2 = right side (T-R), 3 = bottom
 %(L-R), 4 = lower-left spoke (L-M), 5 = lower-right spoke (M-R), 6 =
 %vertical spoke (M-T); the basis diagram of {a b c; A B C} is
-%\sixjdgen{B,A,C,a,b,c,++++,dddddd}, i.e. the same comma order as
-%\sixjdiagramu. Item 7 = four sign characters for the T,L,R,M nodes.
+%\sixjdgen{B,A,C,a,b,c,++++,dddddd}, i.e. the outer edges (slots 1-3)
+%first, then the centre spokes (slots 4-6). Item 7 = four sign characters
+%for the T,L,R,M nodes.
 %Item 8 = six direction characters (slot order as items 1-6): "d" is the
 %book's standard direction (left: L->T, right: T->R, bottom: L->R,
 %lower-left: L->M, lower-right: M->R, vertical: M->T), "r" reverses that
 %edge (arrowhead flipped in place; the label stays on the same side).
-%Unlike \sixjdiagramu (kept unchanged for its validated pre-Table-11.5
-%call sites), this macro matches the direction conventions of the
-%Table 11.6 originals (orig pp. 438).
+%This macro matches the direction conventions of the Table 11.6
+%originals (orig pp. 438).
 \newlistcommand{\sixjdgenu}{%
 {
    \foreach \i in {0,...,2}{\coordinate (n\i) at (90+120*\i:0.8);}%
@@ -699,31 +676,26 @@ opnf/.pic={
 \end{tikzpicture}}
 %\njvtri{top}{bot} / \njvtrir{top}{bot}: small triangles (apex right / left)
 %used as the outer factors of the reduced products; all nodes +.
-\newcommand{\njvtrid}[2]{%
+% \njvtri@body{r|l}{top}{bot}: small vertex-triangle, apex right (r) or left (l);
+% shared body of \njvtrid/\njvtrird (all nodes +).
+\newcommand{\njvtri@body}[3]{%
   \pgfmathsetmacro{\Sz}{0.5}
-\coordinate(T)at($\Sz*(-0.5,0.861)$);
-\coordinate(B)at($\Sz*(-0.5,-0.861)$);
-\coordinate(Ap)at($\Sz*(1,0)$);
-\node[dotnode,label={90:\plusmark}]at(T){};
-\node[dotnode,label={-90:\plusmark}]at(B){};
-\node[dotnode,label={0:\plusmark}]at(Ap){};
-\draw[jmlinem](T)--(B);
-\draw[jmlinem](T)--(Ap)node[midway,above right]{$#1$};
-\draw[jmlinem](B)--(Ap)node[midway,below right]{$#2$};
-}
+  \if r#1
+    \coordinate(T)at($\Sz*(-0.5,0.861)$);\coordinate(B)at($\Sz*(-0.5,-0.861)$);\coordinate(Ap)at($\Sz*(1,0)$);
+    \node[dotnode,label={0:\plusmark}]at(Ap){};\def\njv@a{above right}\def\njv@b{below right}
+  \else
+    \coordinate(T)at($\Sz*(0.5,0.861)$);\coordinate(B)at($\Sz*(0.5,-0.861)$);\coordinate(Ap)at($\Sz*(-1,0)$);
+    \node[dotnode,label={180:\plusmark}]at(Ap){};\def\njv@a{above left}\def\njv@b{below left}
+  \fi
+  \node[dotnode,label={90:\plusmark}]at(T){};
+  \node[dotnode,label={-90:\plusmark}]at(B){};
+  \draw[jmlinem](T)--(B);
+  \draw[jmlinem](T)--(Ap)node[midway,\njv@a]{$#2$};
+  \draw[jmlinem](B)--(Ap)node[midway,\njv@b]{$#3$};}
+\newcommand{\njvtrid}[2]{\njvtri@body{r}{#1}{#2}}
+\newcommand{\njvtrird}[2]{\njvtri@body{l}{#1}{#2}}
 \newcommand{\njvtri}[2]{\wrapdiag[baseline=0pt,inner sep=0.12em,font=\scriptsize]{\njvtrid{#1}{#2}}}
-\newcommand{\njvtrird}[2]{%
-  \pgfmathsetmacro{\Sz}{0.5}
-\coordinate(T)at($\Sz*(0.5,0.861)$);
-\coordinate(B)at($\Sz*(0.5,-0.861)$);
-\coordinate(Ap)at($\Sz*(-1,0)$);
-\node[dotnode,label={90:\plusmark}]at(T){};
-\node[dotnode,label={-90:\plusmark}]at(B){};
-\node[dotnode,label={180:\plusmark}]at(Ap){};
-\draw[jmlinem](T)--(B);
-\draw[jmlinem](T)--(Ap)node[midway,above left]{$#1$};
-\draw[jmlinem](B)--(Ap)node[midway,below left]{$#2$};
-}
+
 \newcommand{\njvtrir}[2]{\wrapdiag[baseline=0pt,inner sep=0.12em,font=\scriptsize]{\njvtrird{#1}{#2}}}
 %\njsqx{a}{b}{d}{e}{c}{f}: square with the two crossing diagonals c,f (the middle
 %factor of the {a b c; e 0 e'; f b' d} reduction).
@@ -979,31 +951,29 @@ vmket/.style={postaction={decorate,decoration={markings,
   \draw[dl](#1)to[bend left=90] node[midway,above,inner sep=1pt]{$#3$}(#2);
   \draw[dl](#1)to[bend right=90]node[midway,above,inner sep=1pt]{$#4$}(#2);}
 % \dsixjr[vdstyle]{l}{t}{b}{mt}{mb}{mr} -- 6j triangle, right. Style for horzontal
-\newcommand{\dsixjr}[7][dl]{%
-    \coordinate(c)at(0,0);
-    \coordinate(TL)at($(c)+(120:0.9)$);
-    \coordinate(BL)at($(c)+(240:0.9)$);
-    \coordinate(VL)at($(c)+(0:0.9)$);
-    \draw[dl](TL)--(BL)node[midway,left,inner sep=1pt]{$#2$};
-    \draw[dl](TL)--(VL)node[midway,above right,inner sep=1pt]{$#3$};
-    \draw[dl](BL)--(VL)node[midway,below right,inner sep=1pt]{$#4$};
-    \draw[dl](c)--(TL)node[pos=0.5,fill=white,inner sep=1pt]{$#5$};
-    \draw[dl](c)--(BL)node[pos=0.5,fill=white,inner sep=1pt]{$#6$};
-    \draw[#1](c)--(VL)node[pos=0.4,fill=white,inner sep=1pt]{$#7$};
-}
+% \dsixj@body{r|l}{style}{eTB}{eTV}{eBV}{sT}{sB}{sV} -- 6j triangle-with-centre,
+% apex to the right (r) or left (l); shared body of \dsixjr/\dsixjl.  Lines are
+% undirected (dl=thick), so drawing sense is irrelevant; the two are exact mirrors.
+\newcommand{\dsixj@body}[8]{%
+  \coordinate(c)at(0,0);
+  \if r#1
+    \coordinate(P)at($(c)+(120:0.9)$);\coordinate(Q)at($(c)+(240:0.9)$);\coordinate(A)at($(c)+(0:0.9)$);
+    \draw[dl](P)--(Q)node[midway,left,inner sep=1pt]{$#3$};
+    \draw[dl](P)--(A)node[midway,above right,inner sep=1pt]{$#4$};
+    \draw[dl](Q)--(A)node[midway,below right,inner sep=1pt]{$#5$};
+  \else
+    \coordinate(P)at($(c)+(60:0.9)$);\coordinate(Q)at($(c)+(-60:0.9)$);\coordinate(A)at($(c)+(180:0.9)$);
+    \draw[dl](P)--(Q)node[midway,right,inner sep=1pt]{$#3$};
+    \draw[dl](A)--(P)node[midway,above left,inner sep=1pt]{$#4$};
+    \draw[dl](A)--(Q)node[midway,below left,inner sep=1pt]{$#5$};
+  \fi
+  \draw[dl](c)--(P)node[pos=0.5,fill=white,inner sep=1pt]{$#6$};
+  \draw[dl](c)--(Q)node[pos=0.5,fill=white,inner sep=1pt]{$#7$};
+  \draw[#2](c)--(A)node[pos=0.4,fill=white,inner sep=1pt]{$#8$};}
+\newcommand{\dsixjr}[7][dl]{\dsixj@body{r}{#1}{#2}{#3}{#4}{#5}{#6}{#7}}
+\newcommand{\dsixjl}[7][dl]{\dsixj@body{l}{#1}{#2}{#3}{#4}{#5}{#6}{#7}}
 % \dsixjl[vdstyle]{r}{t}{b}{mt}{mb}{ml} -- 6j triangle, left. Style for horzontal
-\newcommand{\dsixjl}[7][dl]{%
-    \coordinate(c2)at(0,0);
-    \coordinate(TR)at($(c2)+(60:0.9)$);
-    \coordinate(BR)at($(c2)+(-60:0.9)$);
-    \coordinate(VR)at($(c2)+(180:0.9)$);
-    \draw[dl](TR)--(BR)node[midway,right,inner sep=1pt]{$#2$};
-    \draw[dl](VR)--(TR)node[midway,above left,inner sep=1pt]{$#3$};
-    \draw[dl](VR)--(BR)node[midway,below left,inner sep=1pt]{$#4$};
-    \draw[dl](c2)--(TR)node[pos=0.5,fill=white,inner sep=1pt]{$#5$};
-    \draw[dl](c2)--(BR)node[pos=0.5,fill=white,inner sep=1pt]{$#6$};
-    \draw[#1](c2)--(VR)node[pos=0.4,fill=white,inner sep=1pt]{$#7$};
-}
+
 % \dsixjsq[vdstyle]{x}{y}{tl}{tr}{bl}{br}{hd}{vd} -- 6j square/diamond, both diagonals
 \newcommand{\dsixjsq}[9][0]{%
   \coordinate(qc)at(#2,#3);
