@@ -33,7 +33,7 @@ identity, and genuine source misprints are flagged.
 | 4 | Wigner D-functions | ✅ complete | **§4.3–4.19 verified** (2026-08-28); no open flags | `check_4_3.py` … `check_4_16_17.py`, `check_4_18.py`, `check_4_19.py` |
 | 5 | spherical harmonics | ✅ complete | **all machine-checkable eqs in §5.1–5.17 verified** (2026-08-27/28); no open flags | `check_5_1_2.py`, `check_5_2_series.py`, `check_5_2b.py`, `check_5_3.py`, `check_5_4_7_8.py`, `check_5_5.py`, `check_5_6.py`, `check_5_9.py`, `check_5_10_1.py`, `check_5_10_2.py`, `check_5_11.py`, `check_5_12.py`, `check_5_13.py`, `check_5_13_1.py`, `check_5_14.py`, `check_5_15.py`, `check_5_16.py`, `check_5_17a.py`, `check_5_17b.py` |
 | 6 | spin functions / density matrix | ✅ complete | **§6.1–6.3 verified** (2026-08-28); 5 book misprints fixed | `check_6_1.py`, `check_6_2.py`, `check_6_3.py` |
-| 7 | — | ❌ **gap** | OCR + headings/labels only | — |
+| 7 | tensor spherical harmonics | ✅ complete | **§7.1–7.3 verified** (2026-08-29); 3 misprints fixed | `check_7_1.py`, `check_7_2.py`, `check_7_3.py`, `check_7_3b.py` |
 | 8 | CG / 3jm | ✅ extensive | 8.1–8.2 tables, 8.4 symmetry, 8.5 special values, 8.6 recursions (incl. 8.6.1, 8.6.8 Regge), 8.7 sum rules (8.7.1–8.7.6), 8.8 generating fns, 8.10 zero selection rules; accidental 3j zeros (J≤17) | `symmetries_8_4`, `special_values_8_5`, `recursions_8_6`, `sums_8_7`, `check_8_8`, `check_8_10`, `check_cg_tables`, `check_3j_zeros` |
 | 9 | 6j / Racah / R-symbol | ✅ complete | 9.1–9.8 | `check_9_1,2,4,5,6,8` |
 | 10 | 9j / 12j | ✅ extensive | 10.1–10.2, 10.4–10.9, 10.12–10.13 (incl. 12j(I) & 12j(II)) | `check_10_1,2,4,5,8,9,13` |
@@ -151,10 +151,32 @@ Chapter 3.
 1. **Chapter 4 continued** — 4.4 (symmetries), 4.6–4.7 (sums / addition
    theorems), 4.8 (recursions), 4.10–4.12 (orthogonality / integrals),
    4.14–4.15 (characters). All machine-checkable via `wigner_d`.
-2. **Chapter 7** — never symbolically verified (OCR + labels only). (Chapter 6
-   completed 2026-08-28.)
-3. Chapter 3 is only partially covered (3.2); the rest could be swept.
+2. Chapter 3 is only partially covered (3.2); the rest could be swept.
    (Chapters 0–2 are definitional and not amenable to symbolic checking.)
+
+## Chapter 7 (tensor spherical harmonics) — complete (2026-08-29)
+
+Tensor harmonics Y^{LS}_{JM} = CG-coupling of Y_L with spin-S functions; all
+built from the definition and checked against explicit forms / operator actions.
+
+- **§7.1 (general)** — `check_7_1.py`: (S.n) action 7.1.33, S.L/S.J/L.J
+  eigenvalues 7.1.36-38, sum 7.1.39 at S=1/2,1. OCR: J_x->J_z, L_x->L_z, S_x->S_z,
+  "X S"->chi, Y_{LM}->Y_{Lm}, Phi(theta)->Phi(r), Y_{S_mu}->Y_{S mu}, dropped dot.
+- **§7.2 (spinor, S=1/2)** — `check_7_2.py`: Omega^L_{JM} explicit forms 7.2.6-13,
+  helicity 7.2.14, conjugation/time-reversal 7.2.16-20, (S.n) 7.2.23-25, L.S
+  7.2.30, cos-recursion 7.2.31, CG series 7.2.40, addition theorem 7.2.42,
+  quadratic forms 7.2.46-56. **Confirmed anomaly 7.2.40**: phase 1/3->1/2
+  (1/2 gives 1e-18, 1/3 fails at 4e-2). OCR: J_x->J_z; 7.2.16 "M_i"->
+  (-1)^{..} i sigma_y; 7.2.18 dropped L superscript.
+- **§7.3 (vector, S=1)** — `check_7_3.py`, `check_7_3b.py`: Y^L_{JM} and
+  Y^{(lambda)}_{JM}; Table 7.3.1 (22 entries), components 7.3.12-19, decompositions
+  7.3.9/10, transverse/longitudinal 7.3.5-7, conjugation 7.3.39, (S.n) 7.3.61-63,
+  (S.L) 7.3.67/68, sums 7.3.78-84, CG dot-series 7.3.100, addition theorem 7.3.102,
+  J=0,1 forms, quadratic forms + Table 7.3.2 (21 entries). **Table 7.3.2 misprints
+  fixed**: (5,3) W^par 365->385, (5,3) W^perp 225cos^8->225cos^6. Many OCR fixes
+  (Q->Omega, |..|^mu->[..]^mu, sum_mu->sum_M, C^{J3M3}->{J2M2}, stray \mid,
+  delta_{J'J'}->{J'J}, "5/167"->5/16pi, and digit/greek-for-theta garbles).
+- **§7.4** (other authors' notations) left as reference data (convention-dependent).
 
 ## Chapter 6 (spin functions) — complete (2026-08-28)
 
