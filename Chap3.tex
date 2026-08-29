@@ -357,7 +357,12 @@ To change the coupling scheme for irreducible products of three and four commuti
 \begin{gather}
 \left\{\left\{\vect{P}_{a} \otimes \vect{Q}_{b}\right\}_{c} \otimes\left\{\vect{R}_{d} \otimes \vect{S}_{e}\right\}_{f}\right\}_{k}=\sum_{g h} \Fact{c f g h}
 \ninej{a }{ b }{ c }{d }{ e }{ f }{g }{ h }{ k}\left\{\left\{\vect{P}_{a} \otimes \vect{R}_{d}\right\}_{g} \otimes\left\{\vect{Q}_{b} \otimes \vect{S}_{e}\right\}_{h}\right\}_{k} . \label{eq:3:3:11}\\
-\left\{\left\{\vect{P}_{a} \otimes \vect{Q}_{b}\right\}_{c} \otimes\left\{\vect{R}_{d} \otimes \vect{S}_{e}\right\}_{f}\right\}_{k}=\sum_{g h}(-1)^{h+b-k-e} \Fact{c f g h}^{2}\sixj{a }{ b }{ c }{g }{ d }{ h}\sixj{d }{ e }{ f }{k }{ c }{ g}\left\{\left\{\left\{\vect{P}_{a} \otimes \vect{R}_{d}\right\}_{h} \otimes \vect{Q}_{b}\right\}_{g} \otimes \vect{S}_{e}\right\}_{k} . \label{eq:3:3:12}\\
+% NOTE (3.3.12): BOOK MISPRINT -- the dimension factor is printed as
+% Pi_{cfgh}^2 (scan p.70), but the correct power is 1: Pi_{cfgh}.  Verified
+% numerically (random rank-a..e tensors, integer ranks) -- with Pi^1 the
+% recoupling identity holds to 1e-15, with Pi^2 it fails by O(10).  Cf. the
+% 9j form 3.3.11 which correctly carries Pi_{cfgh}^1.  See scripts/check_3_3.py.
+\left\{\left\{\vect{P}_{a} \otimes \vect{Q}_{b}\right\}_{c} \otimes\left\{\vect{R}_{d} \otimes \vect{S}_{e}\right\}_{f}\right\}_{k}=\sum_{g h}(-1)^{h+b-k-e} \Fact{c f g h}\sixj{a }{ b }{ c }{g }{ d }{ h}\sixj{d }{ e }{ f }{k }{ c }{ g}\left\{\left\{\left\{\vect{P}_{a} \otimes \vect{R}_{d}\right\}_{h} \otimes \vect{Q}_{b}\right\}_{g} \otimes \vect{S}_{e}\right\}_{k} . \label{eq:3:3:12}\\
 \left(\left\{\vect{P}_{a} \otimes \vect{Q}_{b}\right\}_{c} \cdot\left\{\vect{R}_{d} \otimes \vect{S}_{e}\right\}_{c}\right)=(-1)^{2 a+b-d} \sum_{g} \Fact{c}^{2}\sixj{a }{ b }{ c }{e }{ d }{ g}\left(\left\{\vect{P}_{a} \otimes \vect{R}_{d}\right\}_{g} \cdot\left\{\vect{Q}_{b} \otimes \vect{S}_{e}\right\}_{g}\right) . \label{eq:3:3:13}\\
 \left(\left\{\vect{P}_{a} \otimes \vect{Q}_{b}\right\}_{c} \cdot\left\{\vect{R}_{d} \otimes \vect{S}_{e}\right\}_{c}\right)=\sum_{h}(-1)^{e+b+d+h} \frac{\Fact{c c h}}{\Fact{e}}\sixj{a }{ b }{ c }{e }{ d }{ h}\left(\left\{\left\{\vect{P}_{a} \otimes \vect{R}_{d}\right\}_{h} \otimes \vect{Q}_{b}\right\}_{e} \cdot \vect{S}_{e}\right). \label{eq:3:3:14}
 \end{gather}
