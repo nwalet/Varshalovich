@@ -4,7 +4,7 @@
 $
 \begin{tikzpicture}[baseline=0pt,font=\small]
   \begin{scope}[shift={(1.6,2.0)}] % diamond {X Y Z;f c g}: c(UL) f(UR) X(BL) Y(BR); g(h) Z(v,bold)
-    \dsixjsq[1]{0}{0}{c}{f}{X}{Y}{g}{Z}
+    \dsixjsq[1]{c}{f}{X}{Y}{g}{Z}
     \draw[dlu](ql)--(qb);\draw[dlu](qb)--(qr); % X BL, Y BR edges bold
   \end{scope}
   \begin{scope}[shift={(0,0)}] % triangle-left (apex-left) {X a d;b' g c}: c(UL) a(BL) X(right,bold); spokes b',g,d
@@ -26,7 +26,7 @@ $
     \draw[dl](c)--(B)node[wb,pos=0.5]{$b$};
   \end{scope}
   \begin{scope}[shift={(1.6,-2.0)}] % hexagon {X Y Z;d e f;a b c} (pointy): outer X,a,c,f,e,Y ; diam Z,b,d
-    \dninehex{0}{0}{X}{a}{c}{f}{e}{Y}
+    \dninehex{X}{a}{c}{f}{e}{Y}
     \draw[dlu](hT)--(hUL);\draw[dlu](hUR)--(hT); % X (UL), Y (UR) edges bold
     \draw[dlu](hT)--(hB)node[wb,pos=0.27]{$Z$};
     \draw[dl](hUR)--(hLL)node[wb,pos=0.30]{$b$};
@@ -35,11 +35,11 @@ $
 \end{tikzpicture}
 \;=\;
 \begin{tikzpicture}[baseline=0pt,font=\small]
-  \cthetav{0}{0}{a}{c}{b}
-  \drect{1.4}{0}{b}{b'}
-  \cthetav{2.8}{0}{b}{g}{d}
-  \drect{4.2}{0}{d}{d'}
-  \cthetav{5.6}{0}{d}{e}{f}
+  \cthetav{a}{c}{b}
+  \begin{scope}[shift={(1.4,0)}]\drect{b}{b'}\end{scope}
+  \begin{scope}[shift={(2.8,0)}]\cthetav{b}{g}{d}\end{scope}
+  \begin{scope}[shift={(4.2,0)}]\drect{d}{d'}\end{scope}
+  \begin{scope}[shift={(5.6,0)}]\cthetav{d}{e}{f}\end{scope}
 \end{tikzpicture}
 $
 \end{document}

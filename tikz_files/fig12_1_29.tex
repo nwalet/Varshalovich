@@ -4,7 +4,7 @@
 $
 \begin{tikzpicture}[baseline=0pt,font=\small]
   % hexagon loop (pointy-top): edges r,q,p,u,t,s ; legs c,b,a,f,e,d
-  \dninehex{0}{0}{r}{q}{p}{u}{t}{s}
+  \dninehex{r}{q}{p}{u}{t}{s}
   \draw[dl](hT)--($(hT)+(90:0.8)$)node[at end,above]{$c\gamma$};
   \draw[dl](hUL)--($(hUL)+(150:0.8)$)node[at end,left]{$b\beta$};
   \draw[dl](hLL)--($(hLL)+(210:0.8)$)node[at end,left]{$a\alpha$};
@@ -37,8 +37,8 @@ $
     \draw[dl](c)--(R)node[wb,pos=0.5]{$p$};
   \end{scope}
   % --- flat 9j-hexagon (pointy-top): edges x,r,c,f,s,y ; diameters z(vert,bold),p,q
-  \begin{scope}[shift={(6.3,-0.5)}]
-    \dninehex{0}{0}{x}{r}{c}{f}{s}{y}
+  \begin{scope}[shift={(6.4,-0.5)}]
+    \dninehex{x}{r}{c}{f}{s}{y}
     \draw[dlu](hT) --(hUR);
     \draw[dlu](hT) --(hUL);
     \draw[dlu](hT)--(hB)node[wb,pos=0.3]{$z$};
@@ -46,7 +46,7 @@ $
     \draw[dl](hUR)--(hLL)node[wb,pos=0.3]{$q$};
   \end{scope}
   % --- right 6j-triangle (apex-up) {e y d / s t u}: edges y(UL) e(UR) u(bot); spokes d,s,t
-  \begin{scope}[shift={(9.1,0.5)}]
+  \begin{scope}[shift={(8.3,0.5)}]
     \coordinate(c)at(0,0);\coordinate(T)at(90:1);\coordinate(L)at(210:1);\coordinate(R)at(330:1);
     \draw[dlu](T)--(L)node[midway,above left,inner sep=1pt]{$y$};
     \draw[dl](T)--(R)node[midway,above right,inner sep=1pt]{$e$};

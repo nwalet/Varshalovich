@@ -4,18 +4,18 @@
 $
 \begin{tikzpicture}[baseline=0pt,font=\small]
   \begin{scope}
-    \dhexflat{0}{0}{a}{X}{Y}{c}{a}{c}
+    \dhexflat{a}{X}{Y}{c}{a}{c}
     \draw[dlu](v1)--(v0);\draw[dlu](v0)--(v5); % X (UR), Y (LR) edges bold
     \draw[dl](v2)--(v5)node[wb,pos=0.30]{$b$};
     \draw[dl](v1)--(v4)node[wb,pos=0.30]{$b$};
     \draw[dlu](v0)--(v3)node[wb,pos=0.70]{$Z$};
   \end{scope}
   \begin{scope}[xshift=3cm]
-    \dsixjsq[2]{0}{0}{X}{a}{Y}{c}{Z}{b}
+    \dsixjsq[2]{X}{a}{Y}{c}{Z}{b}
     \draw[dlu](ql)--(qt);\draw[dlu](ql)--(qb); % X (UL), Y (LL) edges bold
   \end{scope}
 \end{tikzpicture}
 \;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]\cthetav{0}{0}{a}{b}{c}\end{tikzpicture}
+\begin{tikzpicture}[baseline=0pt,font=\small]\cthetav{a}{b}{c}\end{tikzpicture}
 $
 \end{document}

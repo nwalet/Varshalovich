@@ -57,12 +57,12 @@ def eq_triads(t):
             out.append((tag,fn(*[jlabel(x) for x in re.findall(r'\{([^{}]*)\}',m.group(1))])))
     return out
 def macro_edges(name,a):
-    if name=='dsixjsq': tl,tr,bl,br,hd,vd=a[2:8]; return [('ql','qt',tl),('qt','qr',tr),('ql','qb',bl),('qb','qr',br),('ql','qr',hd),('qt','qb',vd)]
-    if name=='dsixjtri': eL,eR,eB,sT,sBL,sBR=a[2:8]; return [('vL','vT',eL),('vT','vR',eR),('vL','vR',eB),('ct','vT',sT),('ct','vL',sBL),('ct','vR',sBR)]
+    if name=='dsixjsq': tl,tr,bl,br,hd,vd=a[0:6]; return [('ql','qt',tl),('qt','qr',tr),('ql','qb',bl),('qb','qr',br),('ql','qr',hd),('qt','qb',vd)]
+    if name=='dsixjtri': eL,eR,eB,sT,sBL,sBR=a[0:6]; return [('vL','vT',eL),('vT','vR',eR),('vL','vR',eB),('ct','vT',sT),('ct','vL',sBL),('ct','vR',sBR)]
     if name in ('dsixjr','dsixjl'): l,t,b,mt,mb,mr=a[0:6]; return [('P','Q',l),('P','V',t),('Q','V',b),('c','P',mt),('c','Q',mb),('c','V',mr)]
-    if name=='dninehex': e=a[2:8]; V=['hT','hUL','hLL','hB','hLR','hUR']; return [(V[i],V[(i+1)%6],e[i]) for i in range(6)]
-    if name=='dhexflat': e=a[2:8]; return [('v2','v1',e[0]),('v1','v0',e[1]),('v0','v5',e[2]),('v5','v4',e[3]),('v4','v3',e[4]),('v3','v2',e[5])]
-    if name=='dsq': top,bot,left,right=a[2:6]; return [('sqTL','sqTR',top),('sqBL','sqBR',bot),('sqTL','sqBL',left),('sqTR','sqBR',right)]
+    if name=='dninehex': e=a[0:6]; V=['hT','hUL','hLL','hB','hLR','hUR']; return [(V[i],V[(i+1)%6],e[i]) for i in range(6)]
+    if name=='dhexflat': e=a[0:6]; return [('v2','v1',e[0]),('v1','v0',e[1]),('v0','v5',e[2]),('v5','v4',e[3]),('v4','v3',e[4]),('v3','v2',e[5])]
+    if name=='dsq': top,bot,left,right=a[0:4]; return [('sqTL','sqTR',top),('sqBL','sqBR',bot),('sqTL','sqBL',left),('sqTR','sqBR',right)]
     return None
 def fig_edges(t):
     edges=[]
@@ -70,9 +70,9 @@ def fig_edges(t):
         e=macro_edges(m.group(1),re.findall(r'\{([^{}]*)\}',m.group(2)))
         if e: edges+=[(x,y,jlabel(l)) for x,y,l in e]
     for i,m in enumerate(re.finditer(r'\\(cthetav|ctheta|dthetav|dtheta)(?:\[[^\]]*\])?((?:\{[^{}]*\})+)',t)):
-        a=re.findall(r'\{([^{}]*)\}',m.group(2))
-        if len(a)>=5:
-            for l in a[2:5]: edges.append((f'th{i}a',f'th{i}b',jlabel(l)))
+        a=re.findall(r'\{([^{}]*)\}',m.group(2))   # all four now take just {left/top}{mid}{right/bot}
+        if len(a)>=3:
+            for l in a[0:3]: edges.append((f'th{i}a',f'th{i}b',jlabel(l)))
     for m in re.finditer(r'\\draw\[[^\]]*\]\s*\(([^)]*)\)--\(([^)]*)\)[^;]*?node[^;]*?\{\$?([^${}]*)\$?\}',t):
         A=m.group(1).split('+')[0].strip(); B=m.group(2).split('+')[0].strip()
         edges.append((A,B,jlabel(m.group(3))))

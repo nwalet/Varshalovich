@@ -2,13 +2,13 @@
 \usepackage{diagrams}
 \begin{document}
 $
-\begin{tikzpicture}[baseline=0pt,font=\small]\dsixjsq[2]{0}{0}{b}{c}{a}{d}{X}{p}\end{tikzpicture}~~
-\begin{tikzpicture}[baseline=0pt,font=\small]\dsixjsq[2]{0}{0}{c}{b}{d}{a}{X}{q}}\end{tikzpicture}
+\begin{tikzpicture}[baseline=0pt,font=\small]\dsixjsq[2]{b}{c}{a}{d}{X}{p}\end{tikzpicture}~~
+\begin{tikzpicture}[baseline=0pt,font=\small]\dsixjsq[2]{c}{b}{d}{a}{X}{q}\end{tikzpicture}
 \;=\;
 \begin{tikzpicture}[baseline=0pt,font=\small]
-  \cthetav{0}{0}{a}{d}{p}
-  \drect{1.6}{0}{p}{q}
-  \cthetav{3.1}{0}{p}{c}{b}
+  \cthetav{a}{d}{p}
+  \begin{scope}[shift={(1.6,0)}]\drect{p}{q}\end{scope}
+  \begin{scope}[shift={(3.1,0)}]\cthetav{p}{c}{b}\end{scope}
 \end{tikzpicture}
 $
 \end{document}

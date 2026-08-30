@@ -938,14 +938,15 @@ vmket/.style={postaction={decorate,decoration={markings,
   ddot/.style={inner sep=0pt},    % invisible named point
   wb/.style={fill=white,inner sep=1.5pt}
 }
-% \dtheta[midstyle]{x}{y}{top}{mid}{bot} -- closed 2-arc theta + middle line, centred at (x,y)
-\newcommand{\dtheta}[6][dl]{%
-  \coordinate(tC)at(#2,#3);
+% \dtheta[midstyle]{top}{mid}{bot} -- closed 2-arc theta + middle line at the origin
+% (position it with an enclosing \begin{scope}[shift=..])
+\newcommand{\dtheta}[4][dl]{%
+  \coordinate(tC)at(0,0);
   \coordinate(tL)at($(tC)+(-0.62,0)$);
   \coordinate(tR)at($(tC)+(0.62,0)$);
-  \draw[dl](tL)to[bend left=90]node[midway,above,inner sep=1pt]{$#4$}(tR);
-  \draw[dl](tL)to[bend right=90]node[midway,above,inner sep=1pt]{$#6$}(tR);
-  \draw[#1](tL)--node[midway,above]{$#5$}(tR);}
+  \draw[dl](tL)to[bend left=90]node[midway,above,inner sep=1pt]{$#2$}(tR);
+  \draw[dl](tL)to[bend right=90]node[midway,above,inner sep=1pt]{$#4$}(tR);
+  \draw[#1](tL)--node[midway,above]{$#3$}(tR);}
 % \dlens{Lname}{Rname}{top}{bot} -- two arcs between existing coords
 \newcommand{\dlens}[4]{%
   \draw[dl](#1)to[bend left=90] node[midway,above,inner sep=1pt]{$#3$}(#2);
@@ -974,111 +975,122 @@ vmket/.style={postaction={decorate,decoration={markings,
 \newcommand{\dsixjl}[7][dl]{\dsixj@body{l}{#1}{#2}{#3}{#4}{#5}{#6}{#7}}
 % \dsixjl[vdstyle]{r}{t}{b}{mt}{mb}{ml} -- 6j triangle, left. Style for horzontal
 
-% \dsixjsq[vdstyle]{x}{y}{tl}{tr}{bl}{br}{hd}{vd} -- 6j square/diamond, both diagonals
-\newcommand{\dsixjsq}[9][0]{%
-  \coordinate(qc)at(#2,#3);
+% \dsixjsq[vdstyle]{tl}{tr}{bl}{br}{hd}{vd} -- 6j square/diamond at the origin, both
+% diagonals (position it with an enclosing \begin{scope}[shift=..])
+\newcommand{\dsixjsq}[7][0]{%
+  \coordinate(qc)at(0,0);
   \coordinate(qt)at($(qc)+(90:0.9)$);\coordinate(qb)at($(qc)+(-90:0.9)$);
   \coordinate(ql)at($(qc)+(180:0.9)$);\coordinate(qr)at($(qc)+(0:0.9)$);
-  \draw[dl](ql)--(qt)node[midway,above left,inner sep=1pt]{$#4$};
-  \draw[dl](qt)--(qr)node[midway,above right,inner sep=1pt]{$#5$};
-  \draw[dl](ql)--(qb)node[midway,below left,inner sep=1pt]{$#6$};
-  \draw[dl](qb)--(qr)node[midway,below right,inner sep=1pt]{$#7$};
+  \draw[dl](ql)--(qt)node[midway,above left,inner sep=1pt]{$#2$};
+  \draw[dl](qt)--(qr)node[midway,above right,inner sep=1pt]{$#3$};
+  \draw[dl](ql)--(qb)node[midway,below left,inner sep=1pt]{$#4$};
+  \draw[dl](qb)--(qr)node[midway,below right,inner sep=1pt]{$#5$};
   \ifcase #1
-    \draw[dl](ql)--(qr)node[wb,pos=0.32]{$#8$};
-    \draw[dl](qt)--(qb)node[wb,pos=0.32]{$#9$};
+    \draw[dl](ql)--(qr)node[wb,pos=0.32]{$#6$};
+    \draw[dl](qt)--(qb)node[wb,pos=0.32]{$#7$};
   \or %1
-    \draw[dl](ql)--(qr)node[wb,pos=0.32]{$#8$};
-    \draw[dlu](qt)--(qb)node[wb,pos=0.32]{$#9$};
+    \draw[dl](ql)--(qr)node[wb,pos=0.32]{$#6$};
+    \draw[dlu](qt)--(qb)node[wb,pos=0.32]{$#7$};
   \or %2
-    \draw[dlu](ql)--(qr)node[wb,pos=0.32]{$#8$};
-    \draw[dl](qt)--(qb)node[wb,pos=0.32]{$#9$};
+    \draw[dlu](ql)--(qr)node[wb,pos=0.32]{$#6$};
+    \draw[dl](qt)--(qb)node[wb,pos=0.32]{$#7$};
   \else
-    \draw[dlu](ql)--(qr)node[wb,pos=0.32]{$#8$};
-    \draw[dlu](qt)--(qb)node[wb,pos=0.32]{$#9$};
+    \draw[dlu](ql)--(qr)node[wb,pos=0.32]{$#6$};
+    \draw[dlu](qt)--(qb)node[wb,pos=0.32]{$#7$};
   \fi
 }
-% \dsixjtri[spkstyle]{x}{y}{eL}{eR}{eB}{sT}{sBL}{sBR} -- 6j triangle-with-centre, apex-up
-\newcommand{\dsixjtri}[9][dl]{%
-  \coordinate(ct)at(#2,#3);
+% \dsixjtri[spkstyle]{eL}{eR}{eB}{sT}{sBL}{sBR} -- 6j triangle-with-centre, apex-up,
+% at the origin (position it with an enclosing \begin{scope}[shift=..])
+\newcommand{\dsixjtri}[7][dl]{%
+  \coordinate(ct)at(0,0);
   \coordinate(vT)at($(ct)+(90:1)$);
   \coordinate(vL)at($(ct)+(210:1)$);
   \coordinate(vR)at($(ct)+(330:1)$);
-  \draw[dl](vL)--(vT)node[midway,above left,inner sep=1pt]{$#4$};
-  \draw[dl](vT)--(vR)node[midway,above right,inner sep=1pt]{$#5$};
-  \draw[dl](vL)--(vR)node[midway,below,inner sep=1pt]{$#6$};
-  \draw[#1](ct)--(vT)node[pos=0.5,right,inner sep=1pt]{$#7$};
-  \draw[dl](ct)--(vL)node[pos=0.5,above,inner sep=1pt]{$#8$};
-  \draw[dl](ct)--(vR)node[pos=0.5,above,inner sep=1pt]{$#9$};}
-% \dsq{x}{y}{top}{bot}{left}{right} -- axis-aligned square; exposes sqTL/sqTR/sqBL/sqBR
-\newcommand{\dsq}[6]{%
-  \coordinate(sqc)at(#1,#2);
+  \draw[dl](vL)--(vT)node[midway,above left,inner sep=1pt]{$#2$};
+  \draw[dl](vT)--(vR)node[midway,above right,inner sep=1pt]{$#3$};
+  \draw[dl](vL)--(vR)node[midway,below,inner sep=1pt]{$#4$};
+  \draw[#1](ct)--(vT)node[pos=0.5,right,inner sep=1pt]{$#5$};
+  \draw[dl](ct)--(vL)node[pos=0.5,above,inner sep=1pt]{$#6$};
+  \draw[dl](ct)--(vR)node[pos=0.5,above,inner sep=1pt]{$#7$};}
+% \dsq{top}{bot}{left}{right} -- axis-aligned square at the origin; exposes
+% sqTL/sqTR/sqBL/sqBR (position it with an enclosing \begin{scope}[shift=..]).
+\newcommand{\dsq}[4]{%
+  \coordinate(sqc)at(0,0);
   \coordinate(sqTL)at($(sqc)+(135:0.92)$);\coordinate(sqTR)at($(sqc)+(45:0.92)$);
   \coordinate(sqBL)at($(sqc)+(225:0.92)$);\coordinate(sqBR)at($(sqc)+(-45:0.92)$);
-  \draw[dl](sqTL)--(sqTR)node[midway,above,inner sep=1pt]{$#3$};
-  \draw[dl](sqBL)--(sqBR)node[midway,below,inner sep=1pt]{$#4$};
-  \draw[dl](sqTL)--(sqBL)node[midway,left,inner sep=1pt]{$#5$};
-  \draw[dl](sqTR)--(sqBR)node[midway,right,inner sep=1pt]{$#6$};}
-% \dninehex{x}{y}{eTL}{eL}{eBL}{eBR}{eR}{eTR} -- 9j pointy-top hexagon; exposes
-% hT,hUL,hLL,hB,hLR,hUR so the caller draws the three centre diameters.
-\newcommand{\dninehex}[8]{%
-  \coordinate(hc)at(#1,#2);
+  \draw[dl](sqTL)--(sqTR)node[midway,above,inner sep=1pt]{$#1$};
+  \draw[dl](sqBL)--(sqBR)node[midway,below,inner sep=1pt]{$#2$};
+  \draw[dl](sqTL)--(sqBL)node[midway,left,inner sep=1pt]{$#3$};
+  \draw[dl](sqTR)--(sqBR)node[midway,right,inner sep=1pt]{$#4$};}
+% \dninehex{eTL}{eL}{eBL}{eBR}{eR}{eTR} -- 9j pointy-top hexagon at the origin;
+% exposes hT,hUL,hLL,hB,hLR,hUR so the caller draws the three centre diameters
+% (position it with an enclosing \begin{scope}[shift=..]).
+\newcommand{\dninehex}[6]{%
+  \coordinate(hc)at(0,0);
   \coordinate(hT)at($(hc)+(90:1)$);\coordinate(hUL)at($(hc)+(150:1)$);
   \coordinate(hLL)at($(hc)+(210:1)$);\coordinate(hB)at($(hc)+(270:1)$);
   \coordinate(hLR)at($(hc)+(330:1)$);\coordinate(hUR)at($(hc)+(30:1)$);
-  \draw[dl](hT)--(hUL)node[midway,above left,inner sep=1pt]{$#3$};
-  \draw[dl](hUL)--(hLL)node[midway,left,inner sep=1pt]{$#4$};
-  \draw[dl](hLL)--(hB)node[midway,below left,inner sep=1pt]{$#5$};
-  \draw[dl](hB)--(hLR)node[midway,below right,inner sep=1pt]{$#6$};
-  \draw[dl](hLR)--(hUR)node[midway,right,inner sep=1pt]{$#7$};
-  \draw[dl](hUR)--(hT)node[midway,above right,inner sep=1pt]{$#8$};}
+  \draw[dl](hT)--(hUL)node[midway,above left,inner sep=1pt]{$#1$};
+  \draw[dl](hUL)--(hLL)node[midway,left,inner sep=1pt]{$#2$};
+  \draw[dl](hLL)--(hB)node[midway,below left,inner sep=1pt]{$#3$};
+  \draw[dl](hB)--(hLR)node[midway,below right,inner sep=1pt]{$#4$};
+  \draw[dl](hLR)--(hUR)node[midway,right,inner sep=1pt]{$#5$};
+  \draw[dl](hUR)--(hT)node[midway,above right,inner sep=1pt]{$#6$};}
 
 % Vertical lens / theta (bubble oriented top-to-bottom), for Chap12 §12.1.6.
-% \dlensv{x}{y}{leftlab}{rightlab} -- two arcs between a top and bottom point.
-\newcommand{\dlensv}[4]{%
-  \coordinate(lvt)at($(#1,#2)+(0,0.62)$);\coordinate(lvb)at($(#1,#2)+(0,-0.62)$);
-  \draw[dl](lvt)to[bend right=90]node[midway,left,inner sep=1pt]{$#3$}(lvb);
-  \draw[dl](lvt)to[bend left=90]node[midway,right,inner sep=1pt]{$#4$}(lvb);}
-% \dthetav[midstyle]{x}{y}{leftlab}{midlab}{rightlab} -- vertical theta + middle line.
-\newcommand{\dthetav}[6][dl]{%
-  \coordinate(tvt)at($(#2,#3)+(0,0.62)$);\coordinate(tvb)at($(#2,#3)+(0,-0.62)$);
-  \draw[dl](tvt)to[bend right=90]node[midway,left,inner sep=1pt]{$#4$}(tvb);
-  \draw[dl](tvt)to[bend left=90]node[midway,right,inner sep=1pt]{$#6$}(tvb);
-  \draw[#1](tvt)--node[midway,right,inner sep=1pt]{$#5$}(tvb);}
+% \dlensv{leftlab}{rightlab} -- two arcs between a top and bottom point at the
+% origin (position it with an enclosing \begin{scope}[shift=..]).
+\newcommand{\dlensv}[2]{%
+  \coordinate(lvt)at($(0,0)+(0,0.62)$);\coordinate(lvb)at($(0,0)+(0,-0.62)$);
+  \draw[dl](lvt)to[bend right=90]node[midway,left,inner sep=1pt]{$#1$}(lvb);
+  \draw[dl](lvt)to[bend left=90]node[midway,right,inner sep=1pt]{$#2$}(lvb);}
+% \dthetav[midstyle]{leftlab}{midlab}{rightlab} -- vertical theta at the origin +
+% middle line (position it with an enclosing \begin{scope}[shift=..]).
+\newcommand{\dthetav}[4][dl]{%
+  \coordinate(tvt)at($(0,0)+(0,0.62)$);\coordinate(tvb)at($(0,0)+(0,-0.62)$);
+  \draw[dl](tvt)to[bend right=90]node[midway,left,inner sep=1pt]{$#2$}(tvb);
+  \draw[dl](tvt)to[bend left=90]node[midway,right,inner sep=1pt]{$#4$}(tvb);
+  \draw[#1](tvt)--node[midway,right,inner sep=1pt]{$#3$}(tvb);}
 
 % ===== §12.2 (6j/9j sums) building blocks: loops, circle-thetas, delta-rect =====
-% \dloop{x}{y}{lab} -- closed j-line (circle) with a centred label = \Pi_{lab} factor.
-\newcommand{\dloop}[3]{\draw[dl](#1,#2)circle(0.42);\node at(#1,#2){$#3$};}
-% \cthetav[midstyle]{x}{y}{left}{mid}{right} -- theta as CIRCLE + vertical diameter.
-\newcommand{\cthetav}[6][dl]{%
-  \draw[dl](#2,#3)circle(0.5);
-  \draw[#1]($(#2,#3)+(0,0.5)$)--($(#2,#3)+(0,-0.5)$) ;
-  \node[wb,inner sep=1pt] at($(#2,#3)+(-0.5,0)$){$#4$};
-  \node[wb,inner sep=1pt] at(#2,#3){$#5$};
-  \node[wb,inner sep=1pt] at($(#2,#3)+(0.5,0)$){$#6$};}
-% \ctheta[midstyle]{x}{y}{top}{mid}{bot} -- theta as CIRCLE + horizontal diameter.
-\newcommand{\ctheta}[6][dl]{%
-  \draw[dl](#2,#3)circle(0.5);
-  \draw[#1]($(#2,#3)+(-0.5,0)$)--($(#2,#3)+(0.5,0)$);
-  \node[wb,inner sep=1pt] at($(#2,#3)+(0,0.5)$){$#4$};
-  \node[wb,inner sep=1pt] at(#2,#3){$#5$};
-  \node[wb,inner sep=1pt] at($(#2,#3)+(0,-0.5)$){$#6$};}
-% \drect{x}{y}{toplab}{botlab} -- small rectangle (a \delta between two j-lines).
-\newcommand{\drect}[4]{%
-  \draw[dl]($(#1,#2)+(-0.3,0.55)$)rectangle($(#1,#2)+(0.3,-0.55)$);
-  \node at($(#1,#2)+(0,0.8)$){$#3$};\node at($(#1,#2)+(0,-0.8)$){$#4$};}
-% \drects{x}{y}{top}{bot}{left}{right} -- rectangle \delta with all four side labels.
-\newcommand{\drects}[6]{%
-  \draw[dl]($(#1,#2)+(-0.3,0.55)$)rectangle($(#1,#2)+(0.3,-0.55)$);
-  \node at($(#1,#2)+(0,0.8)$){$#3$};\node at($(#1,#2)+(0,-0.8)$){$#4$};
-  \node[left] at($(#1,#2)+(-0.3,0)$){$#5$};\node[right] at($(#1,#2)+(0.3,0)$){$#6$};}
-% \dhexflat{x}{y}{top}{ur}{lr}{bot}{ll}{ul} -- flat-top 9j-hexagon ring (6 outer
+% \dloop{lab} -- closed j-line (circle) at origin with a centred label = \Pi_{lab}
+% factor (position it with an enclosing \begin{scope}[shift=..]).
+\newcommand{\dloop}[1]{\draw[dl](0,0)circle(0.42);\node at(0,0){$#1$};}
+% \cthetav[midstyle]{left}{mid}{right} -- theta as CIRCLE + vertical diameter at
+% origin (position it with an enclosing \begin{scope}[shift=..]).
+\newcommand{\cthetav}[4][dl]{%
+  \draw[dl](0,0)circle(0.5);
+  \draw[#1]($(0,0)+(0,0.5)$)--($(0,0)+(0,-0.5)$) ;
+  \node[wb,inner sep=1pt] at($(0,0)+(-0.5,0)$){$#2$};
+  \node[wb,inner sep=1pt] at(0,0){$#3$};
+  \node[wb,inner sep=1pt] at($(0,0)+(0.5,0)$){$#4$};}
+% \ctheta[midstyle]{top}{mid}{bot} -- theta as CIRCLE + horizontal diameter at origin
+% (position it with an enclosing \begin{scope}[shift=..]).
+\newcommand{\ctheta}[4][dl]{%
+  \draw[dl](0,0)circle(0.5);
+  \draw[#1]($(0,0)+(-0.5,0)$)--($(0,0)+(0.5,0)$);
+  \node[wb,inner sep=1pt] at($(0,0)+(0,0.5)$){$#2$};
+  \node[wb,inner sep=1pt] at(0,0){$#3$};
+  \node[wb,inner sep=1pt] at($(0,0)+(0,-0.5)$){$#4$};}
+% \drect{toplab}{botlab} -- small rectangle (a \delta between two j-lines) at origin
+% (position it with an enclosing \begin{scope}[shift=..]).
+\newcommand{\drect}[2]{%
+  \draw[dl]($(0,0)+(-0.3,0.55)$)rectangle($(0,0)+(0.3,-0.55)$);
+  \node at($(0,0)+(0,0.8)$){$#1$};\node at($(0,0)+(0,-0.8)$){$#2$};}
+% \drects{top}{bot}{left}{right} -- rectangle \delta with all four side labels at
+% origin (position it with an enclosing \begin{scope}[shift=..]).
+\newcommand{\drects}[4]{%
+  \draw[dl]($(0,0)+(-0.3,0.55)$)rectangle($(0,0)+(0.3,-0.55)$);
+  \node at($(0,0)+(0,0.8)$){$#1$};\node at($(0,0)+(0,-0.8)$){$#2$};
+  \node[left] at($(0,0)+(-0.3,0)$){$#3$};\node[right] at($(0,0)+(0.3,0)$){$#4$};}
+% \dhexflat{top}{ur}{lr}{bot}{ll}{ul} -- flat-top 9j-hexagon ring at origin (6 outer
 % edges); exposes vertex coords v0..v5 (v0=right, ccw) so the caller draws the
 % three centre diameters (e.g. \draw[dlu](v1)--(v4)... for the summed one).
-\newcommand{\dhexflat}[8]{%
-  \foreach \i in {0,...,5}{\coordinate(v\i) at ($(#1,#2)+(60*\i:1)$);}
-  \draw[dl](v2)--(v1)node[midway,above,inner sep=1pt]{$#3$};
-  \draw[dl](v1)--(v0)node[midway,above right,inner sep=1pt]{$#4$};
-  \draw[dl](v0)--(v5)node[midway,below right,inner sep=1pt]{$#5$};
-  \draw[dl](v5)--(v4)node[midway,below,inner sep=1pt]{$#6$};
-  \draw[dl](v4)--(v3)node[midway,below left,inner sep=1pt]{$#7$};
-  \draw[dl](v3)--(v2)node[midway,above left,inner sep=1pt]{$#8$};}
+\newcommand{\dhexflat}[6]{%
+  \foreach \i in {0,...,5}{\coordinate(v\i) at ($(0,0)+(60*\i:1)$);}
+  \draw[dl](v2)--(v1)node[midway,above,inner sep=1pt]{$#1$};
+  \draw[dl](v1)--(v0)node[midway,above right,inner sep=1pt]{$#2$};
+  \draw[dl](v0)--(v5)node[midway,below right,inner sep=1pt]{$#3$};
+  \draw[dl](v5)--(v4)node[midway,below,inner sep=1pt]{$#4$};
+  \draw[dl](v4)--(v3)node[midway,below left,inner sep=1pt]{$#5$};
+  \draw[dl](v3)--(v2)node[midway,above left,inner sep=1pt]{$#6$};}

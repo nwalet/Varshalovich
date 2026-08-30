@@ -4,17 +4,17 @@
 $
 \begin{tikzpicture}[baseline=0pt,font=\small]
   \begin{scope}
-    \dsixjsq[2]{0}{0}{b}{X}{a}{Y}{Z}{c}
+    \dsixjsq[2]{b}{X}{a}{Y}{Z}{c}
     \draw[dlu](qt)--(qr);\draw[dlu](qr)--(qb); % X (UR), Y (LR) edges bold
   \end{scope}
   \begin{scope}[xshift=2.6cm]
-    \dsixjsq[2]{0}{0}{X}{b}{Y}{a}{Z}{c}
+    \dsixjsq[2]{X}{b}{Y}{a}{Z}{c}
     \draw[dlu](ql)--(qt);\draw[dlu](ql)--(qb); % X (UL), Y (LL) edges bold
   \end{scope}
 \end{tikzpicture}
 \;=\;
 \begin{tikzpicture}[baseline=0pt,font=\small]
-  \dloop{0}{0}{a}\dloop{1.3}{0}{b}\dloop{2.6}{0}{c}
+  \dloop{a}\begin{scope}[shift={(1.3,0)}]\dloop{b}\end{scope}\begin{scope}[shift={(2.6,0)}]\dloop{c}\end{scope}
 \end{tikzpicture}
 $
 \end{document}

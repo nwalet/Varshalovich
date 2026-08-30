@@ -3,16 +3,16 @@
 \begin{document}
 $
 \begin{tikzpicture}[baseline=0pt,font=\small]
-  \dninehex{0}{0}{e}{a}{f}{e}{d}{f}
+  \dninehex{e}{a}{f}{e}{d}{f}
   \draw[dlu](hT)--(hB)node[wb,pos=0.25]{$X$};
   \draw[dl](hUL)--(hLR)node[wb,pos=0.25]{$b$};
   \draw[dl](hUR)--(hLL)node[wb,pos=0.75]{$c$};
 \end{tikzpicture}
 \;=\;
 \begin{tikzpicture}[baseline=0pt,font=\small]
-  \cthetav{0}{0}{a}{c}{f}
-  \drect{1.6}{0}{a}{d}
-  \cthetav{3.1}{0}{e}{b}{d}
+  \cthetav{a}{c}{f}
+  \begin{scope}[shift={(1.6,0)}]\drect{a}{d}\end{scope}
+  \begin{scope}[shift={(3.1,0)}]\cthetav{e}{b}{d}\end{scope}
 \end{tikzpicture}
 $
 \end{document}

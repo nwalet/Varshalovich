@@ -4,14 +4,14 @@
 $
 \begin{tikzpicture}[baseline=0pt,font=\small]
   \begin{scope}[shift={(0,1.5)}] % hex-TL (pointy) outer c',a,j,Z,e,Y ; diam h,l,b ; Z,Y bold
-    \dninehex{0}{0}{c'}{j}{e}{Y}{Z}{a}
+    \dninehex{c'}{j}{e}{Y}{Z}{a}
     \draw[dlu](hLR)--(hUR);\draw[dlu](hB)--(hLR); % Z (eR), Y (eBR) edges bold
     \draw[dl](hT)--(hB)node[wb,pos=0.27]{$b$};
     \draw[dl](hUR)--(hLL)node[wb,pos=0.30]{$l$};
     \draw[dl](hUL)--(hLR)node[wb,pos=0.70]{$h$};
   \end{scope}
   \begin{scope}[shift={(0,-1.5)}] % hex-BL (pointy) outer e,f,c,a,X,Y ; diam b,d,g ; X,Y bold
-    \dninehex{0}{0}{e}{f}{c}{a}{X}{Y}
+    \dninehex{e}{f}{c}{a}{X}{Y}
     \draw[dlu](hLR)--(hUR);\draw[dlu](hUR)--(hT); % X (eR), Y (eTR) edges bold
     \draw[dl](hT)--(hB)node[wb,pos=0.27]{$b$};
     \draw[dl](hUR)--(hLL)node[wb,pos=0.30]{$g$};
@@ -27,16 +27,16 @@ $
     \draw[dl](c)--(B)node[wb,pos=0.5]{$g$};
   \end{scope}
   \begin{scope}[shift={(4.0,0.2)}] % diamond: Z(UL) l(UR) X(BL) d(BR); k(h) a(v) ; Z,X bold
-    \dsixjsq{0}{0}{Z}{l}{X}{d}{k}{a}
+    \dsixjsq{Z}{l}{X}{d}{k}{a}
     \draw[dlu](ql)--(qt);\draw[dlu](ql)--(qb); % Z UL, X BL edges bold
   \end{scope}
 \end{tikzpicture}
 \;=\;
 \begin{tikzpicture}[baseline=0pt,font=\small]
-  \cthetav{0}{0}{a}{b}{c}
-  \begin{scope}[shift={(1.9,0)}]\dsixjsq{0}{0}{h}{j}{g}{f}{k}{c}\end{scope}
-  \begin{scope}[shift={(4.2,0)}]\dsixjsq{0}{0}{j}{l}{f}{d}{k}{e}\end{scope}
-  \drect{5.8}{0}{c'}{c}
+  \cthetav{a}{b}{c}
+  \begin{scope}[shift={(1.9,0)}]\dsixjsq{h}{j}{g}{f}{k}{c}\end{scope}
+  \begin{scope}[shift={(4.2,0)}]\dsixjsq{j}{l}{f}{d}{k}{e}\end{scope}
+  \begin{scope}[shift={(5.8,0)}]\drect{c'}{c}\end{scope}
 \end{tikzpicture}
 $
 \end{document}

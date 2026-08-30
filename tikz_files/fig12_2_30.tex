@@ -4,14 +4,14 @@
 $
 \begin{tikzpicture}[baseline=0pt,font=\small]
   \begin{scope}[shift={(0,0.3)}] % hex1 {b d Y;e f Z;j k q}: outer f,d,Y,q,j,e ; diam b,Z,k
-    \dhexflat{0}{0}{f}{d}{}{q}{j}{e}
+    \dhexflat{f}{d}{}{q}{j}{e}
     \draw[dlu](v0)--(v5); % Y edge bold
     \draw[dl](v0)--(v3)node[wb,pos=0.30]{$b$};
     \draw[dlu](v2)--(v5)node[wb,pos=0.30]{$Z$};
     \draw[dl](v1)--(v4)node[wb,pos=0.70]{$k$};
   \end{scope}
   \begin{scope}[shift={(2,-0.6)}] % hex2 {a b p;c d X;q Y Z}: outer d,Z,p,a,q,b ; diam c,X,Y
-    \dhexflat{0}{0}{d}{X}{p}{a}{q}{Y}
+    \dhexflat{d}{X}{p}{a}{q}{Y}
     \draw[dlu](v1)--(v0); % X edge bold
     \draw[dlu](v2)--(v3); % Y edge bold
     \draw[dlu](v0)--(v3)node[wb,pos=0.30]{$Z$};
@@ -19,7 +19,7 @@ $
     \draw[dl](v1)--(v4)node[wb,pos=0.70]{$c$};
   \end{scope}
   \begin{scope}[shift={(4,0.3)}] % hex3 {c d X;e f Z;g h p}: outer f,e,g,p,X,d ; diam c,Z,h
-    \dhexflat{0}{0}{f}{e}{g}{p}{}{d}
+    \dhexflat{f}{e}{g}{p}{}{d}
     \draw[dlu](v4)--(v3); % X edge bold
     \draw[dl](v0)--(v3)node[wb,pos=0.30]{$c$};
     \draw[dl](v2)--(v5)node[wb,pos=0.30]{$h$};
@@ -28,10 +28,10 @@ $
 \end{tikzpicture}
 \;=\;
 \begin{tikzpicture}[baseline=0pt,font=\small]
-  \cthetav{0}{0}{d}{f}{h}
-  \drect{1.5}{0}{h}{k}
+  \cthetav{d}{f}{h}
+  \begin{scope}[shift={(1.5,0)}]\drect{h}{k}\end{scope}
   \begin{scope}[shift={(3.4,0)}] % 9j-hex {a b p;c e g;q j h}: outer g,c,a,b,j,k ; diam p,q,e
-    \dninehex{0}{0}{g}{h}{j}{b}{a}{c}
+    \dninehex{g}{h}{j}{b}{a}{c}
     \draw[dl](hT)--(hB)node[wb,pos=0.27]{$e$};
     \draw[dl](hUR)--(hLL)node[wb,pos=0.30]{$q$};
     \draw[dl](hUL)--(hLR)node[wb,pos=0.70]{$p$};

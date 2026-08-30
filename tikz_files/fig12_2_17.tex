@@ -5,21 +5,21 @@ $
 \begin{tikzpicture}[baseline=0pt,font=\small]
   % sq-BL {a b X; r e f}: top f, bot a, left r, right X(bold); diag b,e
   \begin{scope}
-    \dsq{0}{0}{f}{a}{r}{X}
+    \dsq{f}{a}{r}{X}
     \draw[dl](sqTL)--(sqBR)node[wb,pos=0.3]{$b$};
     \draw[dl](sqTR)--(sqBL)node[wb,pos=0.3]{$e$};
     \draw[dlu](sqTR)--(sqBR);
   \end{scope}
   % sq-top {c d X; q e f}: top q, bot X(bold), left f, right d; diag c,e
   \begin{scope}[shift={(1.4,1.9)}]
-    \dsq{0}{0}{q}{X}{f}{d}
+    \dsq{q}{X}{f}{d}
     \draw[dl](sqTL)--(sqBR)node[wb,pos=0.3]{$c$};
     \draw[dl](sqTR)--(sqBL)node[wb,pos=0.3]{$e$};
     \draw[dlu](sqBL)--(sqBR);
   \end{scope}
   % sq-BR {c d X; p a b}: top d, bot b, left X(bold), right p; diag c,a
   \begin{scope}[shift={(2.8,0)}]
-    \dsq{0}{0}{d}{b}{X}{p}
+    \dsq{d}{b}{X}{p}
     \draw[dl](sqTL)--(sqBR)node[wb,pos=0.3]{$c$};
     \draw[dl](sqTR)--(sqBL)node[wb,pos=0.3]{$a$};
     \draw[dlu](sqTL)--(sqBL);
@@ -27,8 +27,8 @@ $
 \end{tikzpicture}
 \;=\;
 \begin{tikzpicture}[baseline=0pt,font=\small]
-  \begin{scope}\dsixjsq{0}{0}{a}{p}{e}{q}{r}{d}\end{scope}
-  \begin{scope}[xshift=2.4cm]\dsixjsq{0}{0}{p}{b}{q}{f}{r}{c}\end{scope}
+  \begin{scope}\dsixjsq{a}{p}{e}{q}{r}{d}\end{scope}
+  \begin{scope}[xshift=2.4cm]\dsixjsq{p}{b}{q}{f}{r}{c}\end{scope}
 \end{tikzpicture}
 $
 \end{document}

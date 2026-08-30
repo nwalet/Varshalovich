@@ -2,24 +2,24 @@
 \usepackage{diagrams}
 \begin{document}
 \begin{tikzpicture}[baseline=0pt,font=\small]
-  \begin{scope}\dsixjsq[2]{0}{0}{b}{c}{a}{d}{X}{p}\end{scope}
-  \begin{scope}[xshift=2cm]\dsixjsq[2]{0}{0}{c}{f}{d}{e}{X}{q}\end{scope}
-  \begin{scope}[xshift=4cm]\dsixjsq[2]{0}{0}{f}{g}{e}{h}{X}{r}\end{scope}
-  \begin{scope}[xshift=6cm]\dsixjsq[2]{0}{0}{g}{a}{h}{b}{X}{s}\end{scope}
+  \begin{scope}\dsixjsq[2]{b}{c}{a}{d}{X}{p}\end{scope}
+  \begin{scope}[xshift=2cm]\dsixjsq[2]{c}{f}{d}{e}{X}{q}\end{scope}
+  \begin{scope}[xshift=4cm]\dsixjsq[2]{f}{g}{e}{h}{X}{r}\end{scope}
+  \begin{scope}[xshift=6cm]\dsixjsq[2]{g}{a}{h}{b}{X}{s}\end{scope}
   \node at (7.3,0) {$=$};
   \begin{scope}[xshift=8.8cm]  % 6j-diamond {b f Y; q p c}: edges b,f,q,p ; diag c(h), Y(v, bold)
-    \dsixjsq[2]{0}{0}{p}{b}{f}{q}{Y}{c}
+    \dsixjsq[2]{p}{b}{f}{q}{Y}{c}
   \end{scope}
     % 9j-hex {s h b; g r f; a e Y}: outer s,g,r,e,Y,b ; diam h,f,a (Y bold)
   \begin{scope}[xshift=11cm]
-    \dhexflat{0}{0}{s}{a}{e}{r}{f}{b}
+    \dhexflat{s}{a}{e}{r}{f}{b}
     \draw[dlu](v0)--(v3)node[wb,pos=0.30]{$Y$};
     \draw[dl](v2)--(v5)node[wb,pos=0.30]{$h$};
     \draw[dl](v1)--(v4)node[wb,pos=0.70]{$g$};
   \end{scope}
   % 6j-diamond {b f Y; q p c}: edges b,f,q,p ; diag c(h), Y(v, bold)
   \begin{scope}[xshift=13cm]
-    \dsixjsq[2]{0}{0}{s}{p}{e}{q}{Y}{d}
+    \dsixjsq[2]{s}{p}{e}{q}{Y}{d}
   \end{scope}
   % 12j octagon-WHEEL (twelvejI): 8 outer edges + 4 diameters through centre
   \node at (14.3,0) {$=$};

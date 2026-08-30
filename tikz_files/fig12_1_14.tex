@@ -28,8 +28,10 @@ $
   \draw[dl](-1.5,1)--($(-1.5,1)+(220:0.9)$)node[at end,left]{$b\beta$}; 
   \draw[dl](1.5,1)--($(1.5,1)+(-50:0.8)$)node[at end,right]{$c\gamma$};
   % 6j-diamond (left) with x bold; hexagon (right) with x,y bold
-  \dsixjsq{-1.5}{-0.2}{b}{x}{q}{p}{r}{a}
-  \draw[dlu]($(-1.5,-0.2)+(90:0.9)$)--($(-1.5,-0.2)+(0:0.9)$);% x edge bold (approx)
+  \begin{scope}[shift={(-1.5,-0.2)}]
+    \dsixjsq{b}{x}{q}{p}{r}{a}
+    \draw[dlu]($(0,0)+(90:0.9)$)--($(0,0)+(0:0.9)$);% x edge bold (approx)
+  \end{scope}
   % flat-top hexagon (right)
   \begin{scope}[shift={(1,-0.2)}]
     \foreach \a in {0,60,120,180,240,300}{\coordinate(v\a)at(\a:0.95);}

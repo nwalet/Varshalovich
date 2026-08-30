@@ -4,20 +4,20 @@
 $
 \begin{tikzpicture}[baseline=0pt,font=\small]
   \begin{scope} % hex1 (pointy) 9j{a b X; c d Z; e f g}-> outer a,b,j,g,Z,c ; diam c,d,X
-    \dninehex{0}{0}{a}{b}{j}{g}{Z}{c}
+    \dninehex{a}{b}{j}{g}{Z}{c}
     \draw[dlu](hLR)--(hUR); % Z edge bold
     \draw[dl](hT)--(hB)node[wb,pos=0.27]{$e$};
     \draw[dl](hUR)--(hLL)node[wb,pos=0.30]{$d$};
     \draw[dlu](hUL)--(hLR)node[wb,pos=0.70]{$X$};
   \end{scope}
   \begin{scope}[shift={(2,-1.6)}] % 6j-square {a b X; g Z Y}: top Z, left g, right a, bot b ; diag X,Y
-    \dsq{0}{0}{Z}{b}{g}{a}
+    \dsq{Z}{b}{g}{a}
     \draw[dlu](sqTL)--(sqBR)node[wb,pos=0.32]{$X$};
     \draw[dlu](sqTR)--(sqBL)node[wb,pos=0.68]{$Y$};
     \draw[dlu](sqTL)--(sqTR); % Z top edge bold
   \end{scope}
   \begin{scope}[shift={(4,0)}] % hex2 (pointy) 9j{g b Y; c d Z; h j a}-> outer c,Z,a,j,b,g ; diam h,Y,d
-    \dninehex{0}{0}{c}{Z}{a}{j}{b}{g}
+    \dninehex{c}{Z}{a}{j}{b}{g}
     \draw[dlu](hUL)--(hLL); % Z edge bold
     \draw[dl](hT)--(hB)node[wb,pos=0.27]{$h$};
     \draw[dlu](hUR)--(hLL)node[wb,pos=0.30]{$Y$};
@@ -27,12 +27,12 @@ $
 \;=\;
 \begin{tikzpicture}[baseline=0pt,font=\small]
   \begin{scope}[shift={(0,1.5)}] % 6j-square {e f g; h c a}: top c, left a, right g, bot f ; diag e,h
-    \dsq{0}{0}{c}{f}{a}{g}
+    \dsq{c}{f}{a}{g}
     \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$e$};
     \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$h$};
   \end{scope}
-  \drects{0}{-0.2}{}{}{f}{j}
-  \begin{scope}[shift={(0,-1.5)}]\ctheta{0}{0}{f}{d}{b}\end{scope}
+  \begin{scope}[shift={(0,-0.2)}]\drects{}{}{f}{j}\end{scope}
+  \begin{scope}[shift={(0,-1.5)}]\ctheta{f}{d}{b}\end{scope}
 \end{tikzpicture}
 $
 \end{document}

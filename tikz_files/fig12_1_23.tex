@@ -19,7 +19,7 @@ $
 \;=\;
 \begin{tikzpicture}[baseline=0pt,font=\small]
   % 9j hexagon (pointy-top): outer q,p,s,v,x,u ; central diameters g,d,a
-  \dninehex{0}{0}{q}{p}{s}{v}{x}{u}
+  \dninehex{q}{p}{s}{v}{x}{u}
   \coordinate(hc)at(0,0);
   \draw[dl](hB)--(hT)node[wb,pos=0.3]{$g$};
   \draw[dl](hUR)--(hLL)node[wb,pos=0.3]{$d$};
@@ -27,13 +27,13 @@ $
   \draw[dlu] (hUR)--(hLR);
   % top diamond {u b / x y}, hd=d, vd=r
   \begin{scope}[shift={(2.1,1.1)}]
-    \dsixjsq{0}{0}{u}{b}{x}{y}{d}{r}
+    \dsixjsq{u}{b}{x}{y}{d}{r}
     \draw[dlu](ql)--(qb);
     \draw[dlu](qb)--(qr);
   \end{scope}
   % bottom diamond {x y / v c}, hd=a, vd=r
   \begin{scope}[shift={(2.1,-1.1)}]
-    \dsixjsq{0}{0}{x}{y}{v}{c}{a}{r}
+    \dsixjsq{x}{y}{v}{c}{a}{r}
     \draw[dlu](ql)--(qt);
     \draw[dlu](qt)--(qr);
   \end{scope}

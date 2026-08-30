@@ -14,11 +14,11 @@ $
     \draw[dl](c)--(B)node[wb,pos=0.5]{$g$};
   \end{scope}
   \begin{scope}[shift={(1.7,1.1)}] % diamond-top {c b X Y ; a,d}: X BL, Y BR edges bold
-    \dsixjsq{0}{0}{c}{b}{X}{Y}{d}{a}
+    \dsixjsq{c}{b}{X}{Y}{d}{a}
     \draw[dlu](ql)--(qb);\draw[dlu](qb)--(qr);
   \end{scope}
   \begin{scope}[shift={(1.7,-1.1)}] % diamond-bottom {X Y f e ; a,g}: X UL, Y UR edges bold
-    \dsixjsq{0}{0}{X}{Y}{f}{e}{g}{a}
+    \dsixjsq{X}{Y}{f}{e}{g}{a}
     \draw[dlu](ql)--(qt);\draw[dlu](qt)--(qr);
   \end{scope}
   % triangle-right (apex-right) {d q g / b e Y}: edges b(UR) e(BR) Y(left,bold) ; spokes d,q,g
@@ -34,9 +34,9 @@ $
 \end{tikzpicture}
 \;=\;
 \begin{tikzpicture}[baseline=0pt,font=\small]
-  \begin{scope}\dsixjsq{0}{0}{c}{b}{f}{e}{p}{a}\end{scope}
-  \begin{scope}[shift={(2.2,0)}]\ctheta{0}{0}{d}{p}{g}\end{scope}
-  \drect{3.8}{0}{p}{q}
+  \begin{scope}\dsixjsq{c}{b}{f}{e}{p}{a}\end{scope}
+  \begin{scope}[shift={(2.2,0)}]\ctheta{d}{p}{g}\end{scope}
+  \begin{scope}[shift={(3.8,0)}]\drect{p}{q}\end{scope}
 \end{tikzpicture}
 $
 \end{document}

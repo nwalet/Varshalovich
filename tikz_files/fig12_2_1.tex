@@ -2,8 +2,8 @@
 \usepackage{diagrams}
 \begin{document}
 $
-\begin{tikzpicture}[baseline=0pt,font=\small]\cthetav[dlu]{0}{0}{a}{X}{b}\end{tikzpicture}
+\begin{tikzpicture}[baseline=0pt,font=\small]\cthetav[dlu]{a}{X}{b}\end{tikzpicture}
 \;=\;
-\begin{tikzpicture}[baseline=0pt,font=\small]\dloop{0}{0}{a}\dloop{1.4}{0}{b}\end{tikzpicture}
+\begin{tikzpicture}[baseline=0pt,font=\small]\dloop{a}\begin{scope}[shift={(1.4,0)}]\dloop{b}\end{scope}\end{tikzpicture}
 $
 \end{document}

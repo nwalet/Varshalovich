@@ -4,28 +4,28 @@
 $
 \begin{tikzpicture}[baseline=0pt,font=\small]
   \begin{scope}[shift={(0,0.9)}] % square-left {a b X;d e f}: top e, left f, right X, bot b ; diag a,d ; X right bold
-    \dsq{0}{0}{e}{b}{f}{X}
+    \dsq{e}{b}{f}{X}
     \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$a$};
     \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$d$};
     \draw[dlu](sqTR)--(sqBR);
   \end{scope}
   \begin{scope}[shift={(2.5,0.9)}] % square-right {d h Y;q X e}: top e, left X, right h, bot Y ; diag d,q ; X left + Y bot bold
-    \dsq{0}{0}{e}{Y}{X}{h}
+    \dsq{e}{Y}{X}{h}
     \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$d$};
     \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$q$};
     \draw[dlu](sqTL)--(sqBL);\draw[dlu](sqBL)--(sqBR);
   \end{scope}
   \begin{scope}[shift={(1.2,-0.9)}] % hex-left {a b X;g c q;p Z Y}: outer X,b,c,g,p,Y ; diam a,Z,q ; X,Y,Z bold
-    \dhexflat{0}{0}{X}{Y}{p}{g}{c}{b}
-%    \dninehex{0}{0}{X}{b}{c}{g}{p}{Y}
+    \dhexflat{X}{Y}{p}{g}{c}{b}
+%    \dninehex{X}{b}{c}{g}{p}{Y}
     \draw[dlu](v2)--(v1);\draw[dlu](v1)--(v0); % X (eTL), Y (eTR) edges bold
     \draw[dl](v2)--(v5)node[wb,pos=0.27]{$a$};
     \draw[dl](v1)--(v4)node[wb,pos=0.30]{$q$};
     \draw[dlu](v0)--(v3)node[wb,pos=0.70]{$Z$};
   \end{scope}
   \begin{scope}[shift={(3.8,-0.9)}] % hex-right {b d f';a h j;Z Y p}: outer Y,p,f',b,c,h ; diam d,Z,j ; Y,Z bold
-    %\dninehex{0}{0}{Y}{p}{f'}{b}{c}{h}
-    \dhexflat{0}{0}{h}{c}{b}{f}{p}{Y}
+    %\dninehex{Y}{p}{f'}{b}{c}{h}
+    \dhexflat{h}{c}{b}{f}{p}{Y}
     \draw[dlu](v3)--(v2); % Y (eTL) edge bold
     \draw[dl](v2)--(v5)node[wb,pos=0.27]{$d$};
     \draw[dl](v1)--(v4)node[wb,pos=0.30]{$j$};
@@ -33,10 +33,10 @@ $
   \end{scope}
 \node at (5,0) {$=$};
 \begin{scope}[xshift=60mm]
-  \cthetav{0}{0}{b}{d}{f}
-  \drect{1.5}{0}{f}{f'}
-  \begin{scope}[shift={(3.1,0)}]\dsixjsq{0}{0}{f}{e}{p}{g}{j}{a}\end{scope}
-  \begin{scope}[shift={(5.4,0)}]\dsixjsq{0}{0}{e}{h}{g}{c}{j}{q}\end{scope}
+  \cthetav{b}{d}{f}
+  \begin{scope}[shift={(1.5,0)}]\drect{f}{f'}\end{scope}
+  \begin{scope}[shift={(3.1,0)}]\dsixjsq{f}{e}{p}{g}{j}{a}\end{scope}
+  \begin{scope}[shift={(5.4,0)}]\dsixjsq{e}{h}{g}{c}{j}{q}\end{scope}
 \end{scope}
 \end{tikzpicture}
 $

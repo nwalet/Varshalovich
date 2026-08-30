@@ -4,26 +4,26 @@
 $
 \begin{tikzpicture}[baseline=0pt,font=\small]
   \begin{scope}[shift={(0,0.3)}] % hex-left {a b X;c d Y;t s r}: outer c,d,s,r,X,a ; diam t,b,Y ; X,Y bold
-    \dninehex{0}{0}{c}{d}{s}{r}{X}{a}
+    \dninehex{c}{d}{s}{r}{X}{a}
     \draw[dlu](hLR)--(hUR); % X (eR) edge bold
     \draw[dl](hT)--(hB)node[wb,pos=0.27]{$t$};
     \draw[dl](hUR)--(hLL)node[wb,pos=0.70]{$b$};
     \draw[dlu](hUL)--(hLR)node[wb,pos=0.30]{$Y$};
   \end{scope}
   \begin{scope}[shift={(2.0,1.8)}] % hex-top {a b X;h j q;s f Z}: outer h,a,X,Z,f,j ; diam q,b,s ; X,Z bold
-    \dninehex{0}{0}{h}{a}{X}{Z}{f}{j}
+    \dninehex{h}{a}{X}{Z}{f}{j}
     \draw[dlu](hLL)--(hB);\draw[dlu](hB)--(hLR); % X (eBL), Z (eBR) edges bold
     \draw[dl](hT)--(hB)node[wb,pos=0.27]{$q$};
     \draw[dl](hUR)--(hLL)node[wb,pos=0.30]{$b$};
     \draw[dl](hUL)--(hLR)node[wb,pos=0.70]{$e$};
   \end{scope}
   \begin{scope}[shift={(2.0,-0.5)}] % diamond {p q r;X Y Z}: q(UL) Z(UR) r(BL) p(BR); X(h) Y(v) ; X,Y,Z bold
-    \dsixjsq[2]{0}{0}{X}{Z}{r}{p}{Y}{q}
+    \dsixjsq[2]{X}{Z}{r}{p}{Y}{q}
     \draw[dlu](qt)--(qr); % Z (UR) edge bold
     \draw[dlu](qt)--(ql); % X (UR) edge bold
   \end{scope}
   \begin{scope}[shift={(4.0,0.3)}] % hex-right {k l p;c d Y;e f Z}: outer f,Z,p,k,c,d ; diam e,l,Y ; Y,Z bold
-    \dninehex{0}{0}{f}{Z}{p}{k}{c}{d}
+    \dninehex{f}{Z}{p}{k}{c}{d}
     \draw[dlu](hUL)--(hLL); % Z (eL) edge bold
     \draw[dl](hT)--(hB)node[wb,pos=0.27]{$l$};
     \draw[dlu](hUR)--(hLL)node[wb,pos=0.70]{$Y$};
@@ -33,17 +33,17 @@ $
 \;=\;
 \begin{tikzpicture}[baseline=0pt,font=\small]
   \begin{scope}[shift={(0,1.2)}] % square {k h t;a c e}: top e, left c, right h, bot t ; diag k,a
-    \dsq{0}{0}{e}{t}{c}{h}
+    \dsq{e}{t}{c}{h}
     \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$k$};
     \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$a$};
   \end{scope}
   \begin{scope}[shift={(3.6,1.2)}] % square {l j s;b d f}: top b, left j, right d, bot l ; diag f,s
-    \dsq{0}{0}{b}{l}{j}{d}
+    \dsq{b}{l}{j}{d}
     \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$f$};
     \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$s$};
   \end{scope}
   \begin{scope}[shift={(1.8,-0.3)}] % hex {k l p;h j q;t s r}: outer h,t,r,p,l,j ; diam k,s,q
-    \dninehex{0}{0}{h}{t}{r}{p}{l}{j}
+    \dninehex{h}{t}{r}{p}{l}{j}
     \draw[dl](hT)--(hB)node[wb,pos=0.27]{$q$};
     \draw[dl](hUR)--(hLL)node[wb,pos=0.30]{$s$};
     \draw[dl](hUL)--(hLR)node[wb,pos=0.70]{$k$};

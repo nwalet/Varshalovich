@@ -4,15 +4,15 @@
 $
 \begin{tikzpicture}[baseline=0pt,font=\small]
   \begin{scope}[shift={(0,1.9)}] % diamond1 {c e ; X Z ; d,p}: X BL, Z BR edges bold
-    \dsixjsq{0}{0}{c}{e}{X}{Z}{d}{p}
+    \dsixjsq{c}{e}{X}{Z}{d}{p}
     \draw[dlu](ql)--(qb);\draw[dlu](qb)--(qr);
   \end{scope}
   \begin{scope}[shift={(2.4,1.9)}] % diamond2 {e b ; Z Y ; d,q}: Z BL, Y BR edges bold
-    \dsixjsq{0}{0}{e}{b}{Z}{Y}{d}{q}
+    \dsixjsq{e}{b}{Z}{Y}{d}{q}
     \draw[dlu](ql)--(qb);\draw[dlu](qb)--(qr);
   \end{scope}
   \begin{scope}[shift={(1.2,0)}] % hexagon: Z Y b a c X ; diam p,q,d ; Z top, Y UR, X UL bold
-    \dhexflat{0}{0}{Z}{Y}{b}{a}{c}{X}
+    \dhexflat{Z}{Y}{b}{a}{c}{X}
     \draw[dlu](v2)--(v1);\draw[dlu](v1)--(v0);\draw[dlu](v3)--(v2);
     \draw[dl](v2)--(v5)node[wb,pos=0.30]{$p$};
     \draw[dl](v1)--(v4)node[wb,pos=0.30]{$q$};
@@ -21,9 +21,9 @@ $
 \end{tikzpicture}
 \;=\;
 \begin{tikzpicture}[baseline=0pt,font=\small]
-  \dloop{0}{0}{d}
+  \dloop{d}
   \begin{scope}[shift={(2,0)}] % 6j-square {a e c b ; q,p}: top c, left a, right e, bot b ; diag q,p
-    \dsq{0}{0}{c}{b}{a}{e}
+    \dsq{c}{b}{a}{e}
     \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$q$};
     \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$p$};
   \end{scope}

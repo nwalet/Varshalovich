@@ -30,11 +30,15 @@ $
   \draw[dl](NR)--($(NR)+(90:0.8)$)node[at end,above]{$c\gamma$};
   \draw[dl](NR)--($(NR)+(320:0.8)$)node[at end,right]{$d\delta$};
   % upper-left 6j-triangle (apex-up): q left, r right, p base; inner b,a,x
-  \dsixjtri{-1.8}{-0.7}{q}{r}{p}{b}{a}{x}
-  \draw[dlu](-1.8,-0.7)--($(-1.8,-0.7)+(330:1)$); % x spoke (sBR) bold
+  \begin{scope}[shift={(-1.8,-0.7)}]
+    \dsixjtri{q}{r}{p}{b}{a}{x}
+    \draw[dlu](0,0)--($(0,0)+(330:1)$); % x spoke (sBR) bold
+  \end{scope}
   % upper-right 6j-triangle
-  \dsixjtri{1.8}{-0.7}{r}{s}{t}{c}{y}{d}
-  \draw[dlu](1.8,-0.7)--($(1.8,-0.7)+(210:1)$); % y spoke (sBL) bold
+  \begin{scope}[shift={(1.8,-0.7)}]
+    \dsixjtri{r}{s}{t}{c}{y}{d}
+    \draw[dlu](0,0)--($(0,0)+(210:1)$); % y spoke (sBL) bold
+  \end{scope}
   % lower (apex-down) 6j-triangle: p left, t right; inner x,y,e ; leg ee down
   \coordinate(bc)at(0,-1.75);
   \coordinate(bT)at($(bc)+(270:0.85)$);\coordinate(bL)at($(bc)+(150:0.85)$);\coordinate(bR)at($(bc)+(30:0.85)$);

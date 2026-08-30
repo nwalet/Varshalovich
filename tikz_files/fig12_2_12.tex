@@ -4,14 +4,14 @@
 % (defined locally in Chap12.tex, not in diagrams.sty)
 \newcommand{\pElevenLHS}{%
   \begin{scope}
-    \dninehex{0}{0}{a}{b}{d}{q}{X}{r}
+    \dninehex{a}{b}{d}{q}{X}{r}
     \draw[dlu](hLR)--(hUR); % X edge bold
     \draw[dl](hT)--(hB)node[wb,pos=0.27]{$c$};
     \draw[dl](hUR)--(hLL)node[wb,pos=0.30]{$s$};
     \draw[dl](hUL)--(hLR)node[wb,pos=0.70]{$p$};
   \end{scope}
   \begin{scope}[xshift=3cm]
-    \dninehex{0}{0}{r}{X}{q}{h}{f}{e}
+    \dninehex{r}{X}{q}{h}{f}{e}
     \draw[dlu](hUL)--(hLL); % X edge bold
     \draw[dl](hT)--(hB)node[wb,pos=0.27]{$g$};
     \draw[dl](hUR)--(hLL)node[wb,pos=0.30]{$p$};
@@ -24,7 +24,7 @@ $
 \begin{tikzpicture}[baseline=0pt,font=\small]
   % RHS-top {a p b; r e g; c f Y}
   \begin{scope}[yshift=1.5cm]
-    \dhexflat{0}{0}{r}{e}{f}{Y}{b}{a}
+    \dhexflat{r}{e}{f}{Y}{b}{a}
     \draw[dlu](v5)--(v4); % Y edge bold
     \draw[dl](v1)--(v4)node[wb,pos=0.30]{$g$};
     \draw[dl](v2)--(v5)node[wb,pos=0.30]{$c$};
@@ -32,7 +32,7 @@ $
   \end{scope}
   % RHS-bottom {d s b; q h g; c f Y}
   \begin{scope}[yshift=-1.5cm]
-    \dhexflat{0}{0}{Y}{f}{h}{q}{d}{b}
+    \dhexflat{Y}{f}{h}{q}{d}{b}
     \draw[dlu](v2)--(v1); % Y edge bold (top)
     \draw[dl](v1)--(v4)node[wb,pos=0.30]{$c$};
     \draw[dl](v2)--(v5)node[wb,pos=0.70]{$g$};
