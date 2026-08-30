@@ -10,20 +10,20 @@ $
   \end{scope}
   \begin{scope}[shift={(2.4,1.9)}] % sq2: d g b q ; diag Y(bold) t
     \dsq{0}{0}{d}{q}{g}{b}
-    \draw[dlu](sqTL)--(sqBR)node[wb,pos=0.32]{$Y$};
-    \draw[dl](sqTR)--(sqBL)node[wb,pos=0.68]{$t$};
+    \draw[dl](sqTL)--(sqBR)node[wb,pos=0.32]{$t$};
+    \draw[dlu](sqTR)--(sqBL)node[wb,pos=0.68]{$Y$};
   \end{scope}
   \begin{scope}[shift={(1.2,0)}] % hexagon (bottom): g q c d b p ; diam Y,a,X
     \dhexflat{0}{0}{g}{q}{c}{d}{b}{p}
-    \draw[dlu](v2)--(v5)node[wb,pos=0.30]{$Y$};
+    \draw[dlu](v2)--(v5)node[wb,pos=0.30]{$X$};
     \draw[dl](v0)--(v3)node[wb,pos=0.70]{$a$};
-    \draw[dlu](v1)--(v4)node[wb,pos=0.70]{$X$};
+    \draw[dlu](v1)--(v4)node[wb,pos=0.70]{$Y$};
   \end{scope}
 \end{tikzpicture}
 \;=\;
 \begin{tikzpicture}[baseline=0pt,font=\small]
   \ctheta{0}{2.0}{d}{g}{s}
-  \drects{0}{0.55}{s}{s}{}{t}
+  \drects{0}{0.55}{}{}{s}{t}
   % 6j-square (bottom) {a b p; s c q}: top s, bot a, left b, right c ; diag q,p
   \begin{scope}[shift={(0,-1.5)}]
     \dsq{0}{0}{s}{a}{b}{c}

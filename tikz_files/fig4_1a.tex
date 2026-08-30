@@ -1,6 +1,17 @@
 \documentclass[border=2pt]{standalone}
 \usepackage{amsmath,amssymb}
 \usepackage{3dfigs}
+% Convert from spherical to cartesian coordinates
+\newcommand{\ToXYZ}[2]{
+    {sin(#1)*cos(#2)}, % X coordinate
+    {cos(#1)*cos(#2)}, % Y coordinate
+    {sin(#2)}          % Z (vertical) coordinate
+}
+\newcommand{\dS}[4] {
+     {acos(cos(#1)*cos(#3)+sin(#1)*sin(#3)*cos(#2-#4))}
+}
+
+\newcoma
 \begin{document}
 
 \begin{tikzpicture}[scale=1.15]
@@ -9,20 +20,26 @@
   % sphere radius R=4, point P3 at theta=40 deg, phi=0 deg
   % ray from center
   \coordinate (O) (0,0,0) ;
-  \coordinate (P1) ({4*cos(10)*sin(20)},{4*sin(10)*sin(20)},{4*cos(20)});
-  \coordinate (P2) ({4*cos(-20)*sin(15)},{4*sin(-20)*sin(15)},{4*cos(15)});
-  \coordinate (P3) ({4*cos(0)*sin(40)},{4*sin(0)*sin(40)},{4*cos(40)});
+  \tikzmath{
+     \phia=10;\thetaa=20;
+     \phib=-20;\thetab=15;
+     \phic=0;\thetac=40;
+  };
+  \coordinate (P1) (\ToXYZ{\phia}{\thetaa});
+  \coordinate (P2) (\ToXYZ{\phib}{\thetab});
+  \coordinate (P3) (\ToXYZ{\phib}{\thetac});
   \draw[bvec] (O) --($1.2*(P1)$);
   \draw[bvec] (O) --($1.2*(P2)$);
   \draw[bvec] (O) --($1.2*(P3)$);
+
   \tikzmath{
-    \ds1 = acos(cos(-20)*cos(0)+sin(-20)*sin(0)*cos(40-15));
-    \ds2 = acos(cos(10)*cos(0)+sin(10)*sin(0)*cos(40-20));
-    \ds3 = acos(cos(10)*cos(-20)+sin(10)*sin(-20)*cos(20-15));
-    \ssc1 = 1/sin(\ds1);
-    \ssc2 = 1/sin(\ds2);
-    \ssc3 = 1/sin(\ds3);
- }
+    \dsa = \dS(\phib,\thetab,\phic,\thetac);
+    \dsb = \dS(\phic,\thetac,\phia,\thetaa);
+    \dsc = \dS(\phia,\thetaa,\phib,\thetab);
+    \ssca = 1/sin(\dsa);
+    \sscb = 1/sin(\dsb);
+    \sscc = 1/sin(\dsc);
+   };
   % beta2= p3-p1
   \draw[green] plot[variable=\t,domain=0:1,samples=60] ({4*cos(-10*\t)*sin(40-20*\t)},{4*sin(-10*\t)*sin(40-20*\t)},{4*cos(40-20*\t)});
   % beta3= p1-p2
