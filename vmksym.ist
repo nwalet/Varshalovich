@@ -1,0 +1,10 @@
+% makeindex style for the VMK index of mathematical symbols (symbols.idx).
+%
+% Sort keys carry a one-letter group prefix (A = Latin, B = Greek, C = other),
+% see \isym / \isymg / \isymo in VMK.tex. headings_flag 1 makes makeindex emit
+% one heading per distinct initial letter, so each group gets exactly one
+% heading; \symgroup in VMK.tex maps that bare letter to a readable title.
+headings_flag 1
+heading_prefix "\n  \\symgroup{"
+heading_suffix "}\\nopagebreak\n"
+group_skip "\n\n  \\indexspace\n"

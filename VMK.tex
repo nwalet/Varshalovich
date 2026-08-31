@@ -16,6 +16,12 @@
 \renewcommand{\kbrdelim}{)}
 \usepackage[a4paper,margin=2cm]{geometry}
 \usepackage{ucharclasses}
+%Two indexes: the main subject index and a separate index of mathematical
+%symbols. The `index' package replaces `makeidx', which can only ever write a
+%single \jobname.idx. It MUST be loaded before hyperref: hyperref installs the
+%two-argument \@wrindex that appends |hyperpage (giving clickable index page
+%numbers) only if it sees multind, index or amsmidx already loaded.
+\usepackage{index}
 \usepackage{hyperref}
 \hypersetup{colorlinks=true, linkcolor=blue, filecolor=magenta, urlcolor=cyan,}
 \urlstyle{same}
@@ -32,8 +38,45 @@
 \usepackage{fontspec}
 \usepackage[backend=bibtex,style=numeric,sorting=none,defernumbers=true]{biblatex}
 \addbibresource{references.bib}
-\usepackage{makeidx}
-\makeindex
+%Main subject index -> VMK.idx/VMK.ind; symbol index -> VMK.sdx/VMK.snd.
+%Build recipe (the -s flag is required, without it the symbol index still
+%typesets but loses its Latin/Greek/other group headings):
+%    xelatex VMK
+%    makeindex VMK.idx
+%    makeindex -s vmksym.ist -o VMK.snd VMK.sdx
+%    xelatex VMK
+%\makeindex is not used for the main index: index.sty defines it with an
+%\edef that freezes \indexname at package-load time, so renewing \indexname
+%afterwards has no effect. Calling \newindex directly takes the title
+%literally and keeps the two declarations symmetric.
+\newindex{default}{idx}{ind}{Subject Index}
+\newindex{sym}{sdx}{snd}{Index of Symbols}
+
+%amsmath's \widehat expands to \setbox\z@\hbox{...} when \index writes its
+%argument to file. The literal "@" inside \z@ is makeindex's "actual" character,
+%so every \widehat entry was silently rejected ("Extra `@'"). Making the math
+%accents robust stops them expanding at write time.
+\usepackage{etoolbox}
+\robustify{\widehat}
+\robustify{\widetilde}
+
+%Symbol entries are tagged with these instead of \index{...}. Each injects a
+%sort-key prefix whose FIRST CHARACTER (A/B/C) is all makeindex actually uses:
+%vmksym.ist turns each distinct initial into a group heading, which \symgroup
+%below maps back to a readable title. The trailing "latin"/"greek"/"other"
+%words are inert padding that keep a raw VMK.sdx legible when debugging.
+%Usage mirrors \index, i.e. \isym{sortkey@$displayed$, description}.
+\newcommand{\isym} [1]{\index[sym]{Alatin #1}}%Latin letters
+\newcommand{\isymg}[1]{\index[sym]{Bgreek #1}}%Greek letters
+\newcommand{\isymo}[1]{\index[sym]{Cother #1}}%operators, brackets, symbols
+
+%Called from VMK.snd via vmksym.ist's heading_prefix/heading_suffix.
+\newcommand{\symgroupname}[1]{%
+  \ifx A#1Latin letters%
+  \else\ifx B#1Greek letters%
+  \else\ifx C#1Special symbols and operators%
+  \else #1\fi\fi\fi}
+\newcommand{\symgroup}[1]{{\normalfont\bfseries\hfil\symgroupname{#1}\hfil}}
 \usepackage{newunicodechar}
 %\usepackage{diagrams}
 %\usetikzlibrary{patterns,angles,quotes,arrows.meta,math,calc}
@@ -162,13 +205,13 @@
 \fi
 }
 
-\newunicodechar{∇}{\ifmmode\nabla\else{$\nabla$}\fi}
-\newunicodechar{→}{\ifmmode\rightarrow\else{$\rightarrow$}\fi}
-\newunicodechar{𝜆}{\ifmmode\lambda\else{$\lambda$}\fi}
-\newunicodechar{⋅}{\ifmmode\cdot\else{$\cdot$}\fi}
-\newunicodechar{←}{\ifmmode\leftarrow\else{$\leftarrow$}\fi}
-\newunicodechar{⟶}{\ifmmode\longrightarrow\else{$\longrightarrow$}\fi}
-\newunicodechar{Ω}{\ifmmode\Omega\else{$\Omega$}\fi}
+% \newunicodechar{∇}{\ifmmode\nabla\else{$\nabla$}\fi}
+% \newunicodechar{→}{\ifmmode\rightarrow\else{$\rightarrow$}\fi}
+% \newunicodechar{𝜆}{\ifmmode\lambda\else{$\lambda$}\fi}
+% \newunicodechar{⋅}{\ifmmode\cdot\else{$\cdot$}\fi}
+% \newunicodechar{←}{\ifmmode\leftarrow\else{$\leftarrow$}\fi}
+% \newunicodechar{⟶}{\ifmmode\longrightarrow\else{$\longrightarrow$}\fi}
+% \newunicodechar{Ω}{\ifmmode\Omega\else{$\Omega$}\fi}
 
 \title{Quantum Theory Angular Momentum }
 
@@ -176,7 +219,7 @@
 A. N. Moskalev\\
 V. K. Khersonskii}
 \date{}
-\includeonly{Chap13,references,glossary}
+\includeonly{Chap1,references,glossary}
 \begin{document}
 \captionsetup{singlelinecheck=false}\maketitle
 \include{preamble}
@@ -196,5 +239,9 @@ V. K. Khersonskii}
 \include{Chap13}
 \include{references}
 \include{glossary}
+%Neither index is numbered, so the ToC entries have to be added by hand.
+\cleardoublepage\addcontentsline{toc}{chapter}{Subject Index}
 \printindex
+\cleardoublepage\addcontentsline{toc}{chapter}{Index of Symbols}
+\printindex[sym]
 \end{document}
