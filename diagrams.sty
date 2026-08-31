@@ -14,7 +14,7 @@
 %"$+$"/"$-$" wherever they appear as node-sign labels below.
 \newcommand{\plusmark}[1][2pt]{\tikz[baseline=-0.5ex]{\draw[line width=0.3pt] (-#1,0) -- (#1,0) (0,-#1) -- (0,#1);}}
 \newcommand{\minusmark}[1][2pt]{\tikz[baseline=-0.5ex]{\draw[line width=0.3pt] (-#1,0) -- (#1,0);}}
-
+%%%%% CHAPTER 11 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Reusable styles for Chap11's graphical-method diagrams (hand-redrawn in
 %TikZ from the original figure images; see CONVERSION_RULES.md). A single
 %solid arrow is a covariant "ket" line |jm>; the same line with a double
@@ -125,7 +125,7 @@
 %of Tables 11.2/11.6), "u" draws it upwards instead. Table 11.6's
 %line-direction-reversal identities use e.g. \threejs[uuu]{...} (all
 %lines reversed) and \threejs[udd]{...} (only a reversed).
-\newcommand{\threejs}[6][ddd]{\wrapdiag[baseline=0pt, inner sep=0.2em,font=\scriptsize]{\threejsd{#1}{#2}{#3}{#4}{#5}{#6}}}
+%\newcommand{\threejs}[6][ddd]{\wrapdiag[baseline=0pt, inner sep=0.2em,font=\scriptsize]{\threejsd{#1}{#2}{#3}{#4}{#5}{#6}}}
 \newcommand{\threejsd}[6][ddd]{%
   \coordinate (T) at (0,0.5);
   \coordinate (B) at (0,-0.5);
@@ -141,17 +141,7 @@
 }
 \def\threejs@split#1#2#3\relax{\def\threejs@da{#1}\def\threejs@db{#2}\def\threejs@dc{#3}}
 
-%\threenode{a}{b}{c}{sign}: a single node with three jm-lines radiating
-%out (top-left a, top-right c, bottom b), labelled with the node sign
-% \newcommand{\threenode}[4]{%
-% \begin{tikzpicture}[baseline=-2pt,inner sep=0.1em,font=\scriptsize]
-%   \foreach \i in {0,...,2}{\coordinate (n\i) at (60+120*\i:0.8);}%
-% \coordinate (M) at (0,0);
-% \node[dotnode,label={above:\vmk@sign{#4}}] at (M) {};
-%  \foreach \i in {0,...,2}{\draw[jmarrow] (M) -- (n\i) node[60+120*\i]{$#\i$};}
-% \end{tikzpicture}%
-% }
-%\threenode{a,ma,b,mb,c,mc,sign}: a single node with three jm-lines radiating
+%\threejdiagramdraw{a,ma,b,mb,c,mc,sign}: a single node with three jm-lines radiating
 %out (top-left a, top-right c, bottom b), labelled with the node sign
 \newlistcommand{\threejdiagdraw}
   {
@@ -252,30 +242,7 @@ opnf/.pic={
 \newcommand{\sixjdsq}[1]{%
 {\wrapdiag[baseline=0pt, inner sep=0.2em,font=\scriptsize]{\sixjdsqdraw{#1}}}
 }
-%\ninejd{1,2,3,4,5,6,7,8,9}: the 9j-symbol hexagon diagram (fixed
-%alternating +/- node signs, no sign argument). Comma-separated calling
-%convention, like \twIdiaga.
-% \newlistcommand{\ninejd}{%
-% {\begin{tikzpicture}[baseline=0pt, inner sep=0.1em,font=\scriptsize]
-%   \foreach \i in {0,...,5} {
-%     \coordinate (tid\i) at (90+60*\i:0.8);
-%     \ifodd\i
-%       \node[dotnode,label={90+60*\i:\plusmark}] at (tid\i) {};
-%     \else
-%       \node[dotnode,label={90+60*\i:\minusmark}] at (tid\i) {};
-%     \fi
-%   }
-% \normedge{tid0}{tid1}{0.5}{-0.2}{$\argx{1}$} %a1
-% \normedge[jmlinem=0.25]{tid4}{tid1}{0.25}{0.2}{$\argx{2}$} %a2
-% \normedge{tid2}{tid1}{0.5}{0.28}{$\argx{3}$} %a3
-% \normedge[jmlinem=0.25]{tid0}{tid3}{0.25}{-0.15}{$\argx{4}$} %b1
-% \normedge{tid4}{tid3}{0.5}{0.2}{$\argx{5}$} %b2
-% \normedge{tid2}{tid3}{0.5}{-0.2}{$\argx{6}$} %b3
-% \normedge{tid0}{tid5}{0.5}{0.2}{$\argx{7}$} %c1
-% \normedge{tid4}{tid5}{0.5}{-0.28}{$\argx{8}$} %c2
-% \normedge[jmlinem=0.25]{tid2}{tid5}{0.25}{0.2}{$\argx{9}$} %c3
-% \end{tikzpicture}}
-% }
+
 
 %Character-splitting helpers for the sign/direction string arguments of
 %\sixjdgen and \ninejdgen below: each takes a fixed-length string of
@@ -474,10 +441,7 @@ opnf/.pic={
 }
 
 \newcommand{\twIIdiaga}[1]%
-{\begin{tikzpicture}[baseline=0pt, inner sep=0.1em,font=\scriptsize]
-  \twIIdiagadraw{#1}
-\end{tikzpicture}
-}
+{\wrapdiag[baseline=0pt, inner sep=0.1em,font=\scriptsize]{\twIIdiagadraw{#1}}}
 
 \newlistcommand{\twIIdiagbdraw}{%
 {
@@ -518,14 +482,14 @@ opnf/.pic={
 \coordinate (N) at (0,0);
 \node[dotnode,label={90:\vmk@sign{#1}}] at (N) {};
 \if i#3
-  \draw[bjmarrow] (-0.75,0) node[above right]{$#2$} -- (N);
+  \draw[bjmarrow] (-0.75,0) node[above right]{$\strut#2$} -- (N);
 \else
-  \draw[jmarrow] (N) -- (-0.75,0) node[above right]{$#2$};
+  \draw[jmarrow] (N) -- (-0.75,0) node[above right]{$\strut#2$};
 \fi
 \if i#5
-  \draw[bjmarrow] (0.75,0) node[above left]{$#4$} -- (N);
+  \draw[bjmarrow] (0.75,0) node[above left]{$\strut#4$} -- (N);
 \else
-  \draw[jmarrow] (N) -- (0.75,0) node[above left]{$#4$};
+  \draw[jmarrow] (N) -- (0.75,0) node[above left]{$\strut#4$};
 \fi
 \if d#6
   \draw[jmarrow] (N) -- (0,-0.9) node[below]{$c=0$};
@@ -542,19 +506,19 @@ opnf/.pic={
 %running down to a bottom apex node (sign botsign) via edges leftlab
 %(left) and rightlab (right). The recurring reduced form paired with a
 %detached a-alpha--b-beta line in Table 11.7's jm rows.
-\newcommand{\jzotri}[3]{%
-\begin{tikzpicture}[baseline=0pt,inner sep=0.2em,font=\scriptsize]
-\coordinate (L) at (-0.7,0.5);
-\coordinate (R) at (0.7,0.5);
-\coordinate (B) at (0,-0.6);
-\node[dotnode,label={180:\plusmark}] at (L) {};
-\node[dotnode,label={0:\plusmark}] at (R) {};
-\node[dotnode,label={-90:\vmk@sign{#3}}] at (B) {};
-\draw[jmlinem] (L) -- (R);
-\draw[jmlinem] (L) -- (B) node[midway,left]{$#1$};
-\draw[jmlinem] (R) -- (B) node[midway,right]{$#2$};
-\end{tikzpicture}%
-}
+% \newcommand{\jzotri}[3]{%
+% \begin{tikzpicture}[baseline=0pt,inner sep=0.2em,font=\scriptsize]
+% \coordinate (L) at (-0.7,0.5);
+% \coordinate (R) at (0.7,0.5);
+% \coordinate (B) at (0,-0.6);
+% \node[dotnode,label={180:\plusmark}] at (L) {};
+% \node[dotnode,label={0:\plusmark}] at (R) {};
+% \node[dotnode,label={-90:\vmk@sign{#3}}] at (B) {};
+% \draw[jmlinem] (L) -- (R);
+% \draw[jmlinem] (L) -- (B) node[midway,left]{$#1$};
+% \draw[jmlinem] (R) -- (B) node[midway,right]{$#2$};
+% \end{tikzpicture}%
+% }
 %\jzld{extdir}{intdir}{leftlab}{rightlab}{botsign}: the reduced form used on the
 %right of Table 11.7's jm rows -- a detached horizontal a-alpha--b-beta
 %line (
@@ -568,11 +532,11 @@ opnf/.pic={
 \pgfmathsetmacro{\Sz}{0.6}
 \if n#2 % not a metric tensor
 \if o#1
-  \draw[bjmarrow] (-\Len,\HEO) node[above right=0.05]{$a\alpha$} -- (0,\HEO);
-  \draw[jmarrow] (0,\HEO) -- (\Len,\HEO) node[above left]{$b\beta$}  ;
+  \draw[bjmarrow] (-\Len,\HEO) node[above right=0.05]{$\strut a\alpha$} -- (0,\HEO);
+  \draw[jmarrow] (0,\HEO) -- (\Len,\HEO) node[above left]{$\strut b\beta$}  ;
 \else
-  \draw[jmarrow] (0,\HEO) --(-\Len,\HEO)   node[above right]{$a\alpha$};
-  \draw[bjmarrow] (\Len,\HEO) node[above left]{$b\beta$}--(0,\HEO) ; 
+  \draw[jmarrow] (0,\HEO) --(-\Len,\HEO)   node[above right]{$\strut a\alpha$};
+  \draw[bjmarrow] (\Len,\HEO) node[above left]{$\strut b\beta$}--(0,\HEO) ; 
 \fi
 \else
 \if o#1
@@ -643,37 +607,38 @@ opnf/.pic={
 }
 %\njdtri{a}{b}{c}{botsign}{dir}: closed downward triangle, top edge c, left a,
 %right b, top nodes both +, bottom node = botsign. The {0 0 0; a b c} form.
-\newcommand{\njdtri}[5]{%
-\begin{tikzpicture}[baseline=0pt,inner sep=0.2em,font=\scriptsize]
-\coordinate(L)at(-0.6,0.45);
-\coordinate(R)at(0.6,0.45);
-\coordinate(B)at(0,-0.55);
+%dir=a: anticlockwise, ohterwise clockwise
+\newcommand{\njdtri}[5]{% only used in fig11_3_108/109:
+\coordinate(L)at(150:0.6);
+\coordinate(R)at(30:0.6);
+\coordinate(B)at(-90:0.6);
 \node[dotnode,label={135:\plusmark}]at(L){};
 \node[dotnode,label={45:\plusmark}]at(R){};
 \node[dotnode,label={-90:\vmk@sign{#4}}]at(B){};
 \if a#5
-\draw[jmlinem](L)--(R)node[midway,above]{$#3$};
-\draw[jmlinem](R)--(B)node[midway,right]{$#2$};
-\draw[jmlinem](B)--(L)node[midway,left]{$#1$};
+\draw[jmlinem](L)--(R)node[midway,above,inner sep=0.4em]{$#3$};
+\draw[jmlinem](R)--(B)node[midway,right,inner sep=0.4em]{$#2$};
+\draw[jmlinem](B)--(L)node[midway,left,inner sep=0.4em]{$#1$};
 \else
-\draw[jmlinem](R)--(L)node[midway,above]{$#3$};
-\draw[jmlinem](B)--(R)node[midway,right]{$#2$};
-\draw[jmlinem](L)--(B)node[midway,left]{$#1$};
+\draw[jmlinem](R)--(L)node[midway,above,inner sep=0.4em]{$#3$};
+\draw[jmlinem](B)--(R)node[midway,right,inner sep=0.4em]{$#2$};
+\draw[jmlinem](L)--(B)node[midway,left,inner sep=0.4em]{$#1$};
 \fi
-\end{tikzpicture}}
+}
 %\njdiam{tl}{tr}{bl}{br}{cdiam}: closed diamond, edges tl,tr (upper) and
 %bl,br (lower); nodes T-,L+,R+,B-. If cdiam is nonempty a vertical
 %diameter labelled cdiam is added (the {a a' 0; b b' c} case).
-\newcommand{\njdiam}[5]{%
-\begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
-\coordinate(T)at(0,0.65);\coordinate(Le)at(-0.62,0);\coordinate(Re)at(0.62,0);\coordinate(Bo)at(0,-0.65);
+\newcommand{\njdiam}[6]{% nly used in fig11_3_110/114: 
+%\begin{tikzpicture}[baseline=0pt,inner sep=0.12em,font=\scriptsize]
+\coordinate(T)at(90:0.65);\coordinate(Le)at(180:0.65);\coordinate(Re)at(0:0.65);\coordinate(Bo)at(-90:0.65);
 \node[dotnode,label={90:\minusmark}]at(T){};\node[dotnode,label={180:\plusmark}]at(Le){};\node[dotnode,label={0:\plusmark}]at(Re){};\node[dotnode,label={-90:\minusmark}]at(Bo){};
 \draw[jmlinem](T)--(Le)node[midway,above left]{$#1$};
 \draw[jmlinem](Re)--(T)node[midway,above right]{$#2$};
 \draw[jmlinem](Bo)--(Le)node[midway,below left]{$#3$};
 \draw[jmlinem](Bo)--(Re)node[midway,below right]{$#4$};
 \def\njdc{#5}\ifx\njdc\empty\else\draw[jmlinem](T)--(Bo)node[midway,right]{$#5$};\fi
-\end{tikzpicture}}
+\def\njdd{#6}\ifx\njdd\empty\else\draw[jmlinem](Le)--(Re)node[midway,right]{$#6$};\fi
+}%\end{tikzpicture}}
 %\njvtri{top}{bot} / \njvtrir{top}{bot}: small triangles (apex right / left)
 %used as the outer factors of the reduced products; all nodes +.
 % \njvtri@body{r|l}{top}{bot}: small vertex-triangle, apex right (r) or left (l);
@@ -744,7 +709,7 @@ vmket/.style={postaction={decorate,decoration={markings,
 %\rstubline{type}{left}{right}{sign}: bra-line left--node(sign)--right with a
 %vertical double-dashed "$R=1$" stub down to a delta node. type 'o'=dashed
 %Omega-line, else solid j-line.
-\newcommand{\rstubline}[4]{%
+\newcommand{\rstubline}[4]{% only used in fig_11_8_1/2 REVIEW FOR SIMPLIFICATION
 \begin{tikzpicture}[baseline=0pt,inner sep=0.2em,font=\scriptsize]
 \if o#1
   \tikzset{vmkln/.style={thick,dashed}}
@@ -877,57 +842,59 @@ vmket/.style={postaction={decorate,decoration={markings,
 %\redlhs{box}{a}{b}{c}{d}: coupled-operator box with four legs a,b (->left
 %white triangle ->J) and c,d (->right white triangle ->J'), plus a straight
 %middle k, all meeting at a + apex. (Two-subsystem reduced-m.e. LHS.)
-\newcommand{\redlhs}[5]{%
-\begin{tikzpicture}[baseline=-6pt,inner sep=2pt,font=\scriptsize]
-  \node[draw,minimum width=2.2cm,minimum height=0.85cm](B){\normalsize$#1$};
-  \coordinate(TL)at([xshift=-8mm,yshift=8mm]B.north);
-  \coordinate(TR)at([xshift=8mm,yshift=8mm]B.north);
-  \node[dotnode,label={90:\plusmark}](ap)at([yshift=18mm]B.north){};
-  \draw[jmlinem]([xshift=-13mm]B.north)--(TL)node[pos=0.4,left]{$#2$};
-  \draw[jmlinem]([xshift=-5mm]B.north)--(TL)node[pos=0.4,right]{$#3$};
-  \draw[jmlinem]([xshift=5mm]B.north)--(TR)node[pos=0.4,left]{$#4$};
-  \draw[jmlinem]([xshift=13mm]B.north)--(TR)node[pos=0.4,right]{$#5$};
-  \draw[jmlinem](TL)--(ap)node[midway,left]{$J$};
-  \draw[jmlinem](B.north)--(ap)node[pos=0.45,right]{$k$};
-  \draw[jmlinem](TR)--(ap)node[midway,right]{$J'$};
-  \wtri at(TL){};\node at([xshift=2mm]TL){\plusmark};
-  \wtri at(TR){};\node at([xshift=2mm]TR){\plusmark};
-\end{tikzpicture}}
+% \newcommand{\redlhs}[5]{% not used anywhere
+% \begin{tikzpicture}[baseline=-6pt,inner sep=2pt,font=\scriptsize]
+%   \node[draw,minimum width=2.2cm,minimum height=0.85cm](B){\normalsize$#1$};
+%   \coordinate(TL)at([xshift=-8mm,yshift=8mm]B.north);
+%   \coordinate(TR)at([xshift=8mm,yshift=8mm]B.north);
+%   \node[dotnode,label={90:\plusmark}](ap)at([yshift=18mm]B.north){};
+%   \draw[jmlinem]([xshift=-13mm]B.north)--(TL)node[pos=0.4,left]{$#2$};
+%   \draw[jmlinem]([xshift=-5mm]B.north)--(TL)node[pos=0.4,right]{$#3$};
+%   \draw[jmlinem]([xshift=5mm]B.north)--(TR)node[pos=0.4,left]{$#4$};
+%   \draw[jmlinem]([xshift=13mm]B.north)--(TR)node[pos=0.4,right]{$#5$};
+%   \draw[jmlinem](TL)--(ap)node[midway,left]{$J$};
+%   \draw[jmlinem](B.north)--(ap)node[pos=0.45,right]{$k$};
+%   \draw[jmlinem](TR)--(ap)node[midway,right]{$J'$};
+%   \wtri at(TL){};\node at([xshift=2mm]TL){\plusmark};
+%   \wtri at(TR){};\node at([xshift=2mm]TR){\plusmark};
+% \end{tikzpicture}}
 
 %\redrhs{box}{ra}{rb}{ia}{ib}{sa}{sb}: RHS vertical stack of a reduced m.e.
 %- inverted 6j triangle (top edge k; inner spokes ia,ib; vertical sb) with
 %  the free ranks J,J' closed into flanking \ploop circles;
 %- a triangle-roof box (reduced m.e.) with roof ra,k,rb;
 %- a spectator j-loop sa(o)sb below the box.
-\newcommand{\redrhs}[7]{%
-\begin{tikzpicture}[baseline=-30pt,inner sep=2pt,font=\scriptsize]
-  \node[draw,minimum width=1.5cm,minimum height=0.8cm](M){\normalsize$#1$};
-  \coordinate(ap)at($(M.north)+(0,0.75)$);
-  \node[dotnode,label={0:\plusmark}]at(ap){};
-  \draw[jmlinem](M.north west)--(ap)node[midway,left]{$#2$};
-  \draw[jmlinem](M.north)--(ap)node[pos=0.35,right]{$k$};
-  \draw[jmlinem](M.north east)--(ap)node[midway,right]{$#3$};
-  \coordinate(BA)at($(ap)+(0,0.4)$);
-  \draw[jmlinem](ap)--(BA);
-  \coordinate(TL)at($(BA)+(-0.85,1.2)$);\coordinate(TR)at($(BA)+(0.85,1.2)$);
-  \coordinate(Cc)at($(BA)+(0,0.72)$);
-  \draw[jmlinem](TL)--(TR)node[midway,above]{$k$};
-  \draw[jmlinem](TL)--(BA)node[pos=0.5,left]{$#4$};
-  \draw[jmlinem](TR)--(BA)node[pos=0.5,right]{$#5$};
-  \draw[jmlinem](Cc)--(TL);\draw[jmlinem](Cc)--(TR);
-  \draw[jmlinem](Cc)--(BA)node[pos=0.45,right]{$#6$};
-  \node[dotnode,label={-90:\minusmark}]at(BA){};
-  \node[dotnode,label={90:\minusmark}]at(TL){};\node[dotnode,label={90:\plusmark}]at(TR){};
-  \draw[jmlinem](TL)--($(TL)+(-0.32,0)$);\draw[jmlinem](TR)--($(TR)+(0.32,0)$);
-  \ploop{$(TL)+(-0.55,0)$}{0.22}{J}
-  \ploop{$(TR)+(0.55,0)$}{0.22}{J'}
-  \coordinate(sl)at($(M.south)+(0,-0.55)$);
-  \draw[jmlinem](M.south)--($(sl)+(0,0.26)$);
-  \draw[thick,decoration={markings,mark=at position 0.6 with {\arrow{Stealth[length=1.6mm]}}},postaction={decorate}](sl)circle(0.26);
-  \node at($(sl)+(-0.42,0)$){$#6$};\node at($(sl)+(0.42,0)$){$#7$};
-  \node[dotnode,label={90:\plusmark}]at($(sl)+(0,0.26)$){};
-  \node[dotnode,label={-90:\plusmark}]at($(sl)+(0,-0.26)$){};
-\end{tikzpicture}}
+% \newcommand{\redrhs}[7]{%
+% \begin{tikzpicture}[baseline=-30pt,inner sep=2pt,font=\scriptsize]
+%   \node[draw,minimum width=1.5cm,minimum height=0.8cm](M){\normalsize$#1$};
+%   \coordinate(ap)at($(M.north)+(0,0.75)$);
+%   \node[dotnode,label={0:\plusmark}]at(ap){};
+%   \draw[jmlinem](M.north west)--(ap)node[midway,left]{$#2$};
+%   \draw[jmlinem](M.north)--(ap)node[pos=0.35,right]{$k$};
+%   \draw[jmlinem](M.north east)--(ap)node[midway,right]{$#3$};
+%   \coordinate(BA)at($(ap)+(0,0.4)$);
+%   \draw[jmlinem](ap)--(BA);
+%   \coordinate(TL)at($(BA)+(-0.85,1.2)$);\coordinate(TR)at($(BA)+(0.85,1.2)$);
+%   \coordinate(Cc)at($(BA)+(0,0.72)$);
+%   \draw[jmlinem](TL)--(TR)node[midway,above]{$k$};
+%   \draw[jmlinem](TL)--(BA)node[pos=0.5,left]{$#4$};
+%   \draw[jmlinem](TR)--(BA)node[pos=0.5,right]{$#5$};
+%   \draw[jmlinem](Cc)--(TL);\draw[jmlinem](Cc)--(TR);
+%   \draw[jmlinem](Cc)--(BA)node[pos=0.45,right]{$#6$};
+%   \node[dotnode,label={-90:\minusmark}]at(BA){};
+%   \node[dotnode,label={90:\minusmark}]at(TL){};\node[dotnode,label={90:\plusmark}]at(TR){};
+%   \draw[jmlinem](TL)--($(TL)+(-0.32,0)$);\draw[jmlinem](TR)--($(TR)+(0.32,0)$);
+%   \ploop{$(TL)+(-0.55,0)$}{0.22}{J}
+%   \ploop{$(TR)+(0.55,0)$}{0.22}{J'}
+%   \coordinate(sl)at($(M.south)+(0,-0.55)$);
+%   \draw[jmlinem](M.south)--($(sl)+(0,0.26)$);
+%   \draw[thick,decoration={markings,mark=at position 0.6 with {\arrow{Stealth[length=1.6mm]}}},postaction={decorate}](sl)circle(0.26);
+%   \node at($(sl)+(-0.42,0)$){$#6$};\node at($(sl)+(0.42,0)$){$#7$};
+%   \node[dotnode,label={90:\plusmark}]at($(sl)+(0,0.26)$){};
+%   \node[dotnode,label={-90:\plusmark}]at($(sl)+(0,-0.26)$){};
+% \end{tikzpicture}}
+
+%%%%% CHAPTER 12 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 % ===== Chapter 12 recoupling-sum diagrams (lines only: thick / ultra-thick,
