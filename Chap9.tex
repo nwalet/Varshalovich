@@ -1,9 +1,9 @@
-\chapter{6j Symbols and the Racah Coefficients}
+\chapter{6j Symbols and the Racah Coefficients}\label{chap:9}\index{6j symbol@$6j$ symbol}\index{Racah coefficient}
 % styles for the Sec.~\ref{sec:9.9} tetrahedron figures (Figs. 9.1-9.3)
 
-\section{Definition}\label{sec:9.1}
-\subsection{6j Symbols}\label{sec:9.1.1}
-The Wigner $6 j$ symbols [110] are related to the coefficients of transformations between different coupling schemes of three angular momenta. The angular momenta $\mathrm{j}_{1}, \mathrm{j}_{2}, \mathrm{j}_{3}$ may be coupled to give a resultant angular momentum $j$ and its projection $m$ in three different ways:
+\section{Definition}\label{sec:9.1}\index{6j symbol@$6j$ symbol!definition}
+\subsection{6j Symbols}\label{sec:9.1.1}\index{recoupling!of three angular momenta}\index{coupling schemes}
+The Wigner $6 j$ symbols [110] are related to the coefficients of transformations between different coupling schemes of three angular momenta.\isymo{6j@$\bigl\{\begin{smallmatrix} a & b & c\\ d & e & f\end{smallmatrix}\bigr\}$, Wigner $6j$ symbol}\index{addition of angular momenta} The angular momenta $\mathrm{j}_{1}, \mathrm{j}_{2}, \mathrm{j}_{3}$ may be coupled to give a resultant angular momentum $j$ and its projection $m$ in three different ways:
 \begin{equation}
 \begin{array}{rlrl}
 \text { I) } \vect{j}_{1}+\vect{j}_{2}  =\vect{j}_{12}, & \vect{j}_{12}+\vect{j}_{3}=\vect{j}, \\
@@ -37,7 +37,7 @@ From Eq. \eqref{eq:9:1:5} one may obtain [92,64]
 \braket{j_{1}, j_{2} j_{3}\left(j_{23}\right) j m}{j_{1} j_{3}\left(j_{13}\right) j_{2} j^{\prime} m^{\prime}}=&\delta_{j j^{\prime}} \delta_{m m^{\prime}}(-1)^{j_{2}+j_{3}-j_{23}} U\left(j_{1} j_{3} j j_{2} ; j_{13} j_{23}\right)  \notag\\
 =&\delta_{j j^{\prime}} \delta_{m m^{\prime}}(-1)^{j_{1}+j+j_{23}} \sqrt{\left(2 j_{13}+1\right)\left(2 j_{23}+1\right)}\sixj{j_{1}}{j_{3}}{j_{13}}{j_{2}}{j}{j_{23}} . \label{eq:9:1:7}
 \end{align}
-According to the definition (5) the $6 j$ symbols may be given in terms of the Clebsch-Gordan coefficients
+According to the definition (5) the $6 j$ symbols may be given in terms of the Clebsch-Gordan coefficients\index{Clebsch-Gordan coefficient}\isym{C-clebsch@$\clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}$, Clebsch-Gordan coefficient}
 \begin{multline}
 \sum \clebsch{j_{12}}{m_{12}}{j_{3}}{m_{3}}{j}{m} \clebsch{j_{1}}{m_{1}}{j_{2}}{m_{2}}{j_{12}}{m_{12}} \clebsch{j_{1}}{m_{1}}{j_{23}}{m_{23}}{j^{\prime}}{m^{\prime}} \clebsch{j_{2}}{m_{2}}{j_{3}}{m_{3}}{j_{23}}{m_{23}}  \\
 =\delta_{j j^{\prime}} \delta_{m m^{\prime}}(-1)^{j_{1}+j_{2}+j_{3}+j} \sqrt{\left(2 j_{12}+1\right)\left(2 j_{23}+1\right)}\sixj{j_{1}}{j_{2}}{j_{12}}{j_{3}}{j}{j_{23}} . \label{eq:9:1:8}
@@ -47,24 +47,24 @@ Here the sum is over $m_{1}, m_{2}, m_{3}, m_{12}, m_{23}$ while $m$ and $m^{\pr
 The quantum-mechanical rules of vector addition impose some restrictions on possible values of momenta which are arguments of the $6 j$ symbol $\sixj{j_{1}}{j_{2}}{j_{12}}{j_{3}}{j}{j_{23}}$.
 \begin{enumerate}[label=(\alph*)]
 \item All momenta are integer or half-integer nonnegative numbers (with one exception considered in Sec.~\ref{sec:9.4}).
-\item Each triad $\left(j_{1} j_{2} j_{12}\right),\left(j_{12} j_{3} j\right),\left(j_{2} j_{3} j_{23}\right)$ and $\left(j_{23} j_{1} j\right)$ should satisfy the triangular condition (Eq. 8.1(1)). 
+\item Each triad $\left(j_{1} j_{2} j_{12}\right),\left(j_{12} j_{3} j\right),\left(j_{2} j_{3} j_{23}\right)$ and $\left(j_{23} j_{1} j\right)$ should satisfy the triangular condition (Eq. \eqref{eq:8:1:1}).\index{triangle condition}\index{triad} 
 \end{enumerate}
-The unitarity of the recoupling transformations implies the orthogonality and normalization conditions of the $6 j$ symbols,
+The unitarity of the recoupling transformations implies the orthogonality and normalization conditions of the $6 j$ symbols,\index{orthogonality!of the $6j$ symbols}\index{normalization!of the $6j$ symbols}\index{unitarity!of the recoupling transformations}
 \begin{align}
 & \sum_{j_{12}}\left(2 j_{12}+1\right)\left(2 j_{23}+1\right)\sixj{j_{1}}{j_{2}}{j_{12}}{j_{3}}{j}{j_{23}}\sixj{j_{1}}{j_{2}}{j_{12}}{j_{3}}{j}{j_{23}^{\prime}}=\delta_{j_{23} j_{23}^{\prime}} , \label{eq:9:1:9}\\
 & \sum_{j_{23}}\left(2 j_{12}+1\right)\left(2 j_{23}+1\right)\sixj{j_{1}}{j_{2}}{j_{12}}{j_{3}}{j}{j_{23}}\sixj{j_{1}}{j_{2}}{j_{12}^{\prime}}{j_{3}}{j}{j_{23}}=\delta_{j_{12} j_{12}^{\prime}} . \label{eq:9:1:10}
 \end{align}
 Below we shall use Latin letters $a, b, c$, etc., to denote arguments of the $6 j$ symbols.
 
-\subsection{Racah Coefficients}\label{sec:9.1.2}
-Instead of the Wigner $6 j$ symbols the Racah coefficients [91] are often used, especially in spectroscopy theory. These coefficients differ from the $6 j$ symbols only by a phase factor:
+\subsection{Racah Coefficients}\label{sec:9.1.2}\index{Racah coefficient!definition}
+Instead of the Wigner $6 j$ symbols the Racah coefficients [91] are often used, especially in spectroscopy theory.\isym{W-racah@$W(a b e d ; c f)$, Racah coefficient} These coefficients differ from the $6 j$ symbols only by a phase factor:
 \begin{equation}
 \sixj{a}{b}{c}{d}{e}{f}  \label{eq:9:1:11} \equiv(-1)^{a+b+d+e} W(a b e d ; c f) .
 \end{equation}
 The Racah coefficients were introduced independently of the $6 j$ symbols. The phase of the Racah coefficients coincides with the phase of the coefficients which describe the transformation between I and II coupling schemes (Eq. (5)).
 
-\subsection{$R$ Symbols}\label{sec:9.1.3}
-The $6 j$ symbols and the Racah coefficients may be written in the form of a $3 \times 4$ array $\left\|R_{i \alpha}\right\|(i=1,2,3 ; \alpha= 1,2,3,4)$ which is called the $R$-symbol (Shelepin [105])
+\subsection{$R$ Symbols}\label{sec:9.1.3}\index{R-symbol@$R$-symbol!of the $6j$ symbol}\index{Shelepin R-symbol@Shelepin $R$-symbol}
+The $6 j$ symbols and the Racah coefficients may be written in the form of a $3 \times 4$ array\isym{R-ialpha@$R_{i \alpha}$, $R$-symbol of the $6j$ symbol} $\left\|R_{i \alpha}\right\|(i=1,2,3 ; \alpha= 1,2,3,4)$ which is called the $R$-symbol (Shelepin [105])
 \begin{equation}
 \left\|\begin{array}{llll}
 R_{11} & R_{12} & R_{13} & R_{14}  \label{eq:9:1:12}\\
@@ -126,11 +126,11 @@ The inverse relations are
 \end{align}
 The $R$ symbols provide the simplest formulation of the symmetry properties of the $6 j$ symbols and Racah coefficients.
 
-\section{General Expressions for the $6 j$ Symbols. Relations Between the $6 j$ Symbols and Other Functions}\label{sec:9.2}
-The $6 j$ symbols $\sixj{a}{b}{c}{d}{e}{f}$ vanish if at least one of the triads $(a b c),(c d e),(a e f)$ and $(b d f)$ does not obey the triangular conditions 8.1 (1). The expressions for the $6 j$ symbols given below are valid if all these conditions are satisfied. Corresponding expressions for the Racah coefficients may be obtained by the use of the relations between these coefficients and the $6 j$ symbols \eqref{eq:9:1:11}.
+\section{General Expressions for the $6 j$ Symbols. Relations Between the $6 j$ Symbols and Other Functions}\label{sec:9.2}\index{6j symbol@$6j$ symbol!general expressions}\index{6j symbol@$6j$ symbol!relations to other functions}
+The $6 j$ symbols $\sixj{a}{b}{c}{d}{e}{f}$ vanish if at least one of the triads $(a b c),(c d e),(a e f)$ and $(b d f)$ does not obey the triangular conditions \eqref{eq:8:1:1}. The expressions for the $6 j$ symbols given below are valid if all these conditions are satisfied. Corresponding expressions for the Racah coefficients may be obtained by the use of the relations between these coefficients and the $6 j$ symbols \eqref{eq:9:1:11}.
 
-\subsection{Expressions for the 6j Symbols in Terms of Finite Sums}\label{sec:9.2.1}
-In the expressions presented below the sums are over all integer nonnegative values of $n$ so that no factorial in denominators has a negative argument. The quantities $\Delta(a b c)$ are defined in Eq. $8.2(1)$. %Numerical values of $\Delta(a b c)$ are given in Table 8.12.
+\subsection{Expressions for the 6j Symbols in Terms of Finite Sums}\label{sec:9.2.1}\index{6j symbol@$6j$ symbol!as finite sums}
+In the expressions presented below the sums are over all integer nonnegative values of $n$ so that no factorial in denominators has a negative argument. The quantities $\Delta(a b c)$ are defined in Eq. $\eqref{eq:8:2:1}$.\index{triangle coefficient}\index{Delta-symbol@$\Delta$-symbol}\isymg{Delta-abc@$\Delta(a b c)$, triangle coefficient} %Numerical values of $\Delta(a b c)$ are given in Table 8.12.
 \begin{gather}
 \sixj{a}{b}{c}{d}{e}{f}=\Delta(a b c) \Delta(c d e) \Delta(a e f) \Delta(b d f)  \notag\\
 \times \sum_{n} \frac{(-1)^{n}(n+1)!}{(n-a-b-c)!(n-c-d-e)!(n-a-e-f)!(n-b-d-f)!(a+b+d+e-n)!}  \notag\\
@@ -155,7 +155,7 @@ Some other expressions for the $6 j$ symbols which cannot be easily reduced to \
 & \sixj{a}{b}{c}{d}{e}{f}=(-1)^{b+c+e+f} \frac{\Delta(a b c) \Delta(c d e) \Delta(a e f) \Delta(b d f)(a+b+c+1)!(b+d+f+1)!}{(a+b-c)!(c-d+e)!(c+d-e)!(a-e+f)!(-a+e+f)!(b+d-f)!}  \notag\\
 & \times \sum_{n}(-1)^{n} \frac{(2 b-n)!(b+c-e+f-n)!(b+c+e+f+1-n)!}{n!(-a+b+c-n)!(b-d+f-n)!(a+b+c+1-n)!(b+d+f+1-n)!} . \label{eq:9:2:6}
 \end{align}
-\subsection{Bargmann Formula [58]}\label{sec:9.2.2}
+\subsection{Bargmann Formula [58]}\label{sec:9.2.2}\index{Bargmann formula}\index{6j symbol@$6j$ symbol!Bargmann formula}
 \begin{equation}
 \sixj{a}{b}{c}{d}{e}{f}  \label{eq:9:2:7} \equiv\left\|\begin{array}{llll}
 R_{11} & R_{12} & R_{13} & R_{14} \\
@@ -165,8 +165,8 @@ R_{31} & R_{32} & R_{33} & R_{34}
 \end{equation}
 Here $R_{i \alpha}$ are elements of the $R$ symbol (Sec.~\ref{sec:9.1.3}), $B_{\alpha}$ are given by Eq. \eqref{eq:9:1:18}, $x_{i}, y_{\alpha}$ are summation indices, $n \equiv \sum_{i=1}^{3} x_{i}+\sum_{\alpha=1}^{4} y_{\alpha}$. The sums are over all integer nonnegative values of $x_{i}, y_{\alpha}$ which satisfy the conditions $x_{i}+y_{\alpha}=R_{i \alpha}$. These conditions show that only one of the summation indices is independent. The sum in \eqref{eq:9:2:7} contains $r+1$ terms where $r=\min \left\{R_{i \alpha}\right\}$. If we take the quantity $n$ (integer nonnegative) as an independent summation index, then $x_{i}=A_{i}-n, y_{\alpha}=n-B_{\alpha}, A_{i}$ and $B_{\alpha}$ being given by Eq. \eqref{eq:9:1:18}. In this case the Bargmann formula \eqref{eq:9:2:7} reduces to the Racah formula \eqref{eq:9:2:1}.
 
-\subsection{Relations Between the $6 j$ Symbols and the Generalized Hypergeometric Functions}\label{sec:9.2.3}
-The $6 j$ symbols may be written in terms of the hypergeometric functions ${ }\Fhg{4}{3}$ with unit argument:
+\subsection{Relations Between the $6 j$ Symbols and the Generalized Hypergeometric Functions}\label{sec:9.2.3}\index{6j symbol@$6j$ symbol!and hypergeometric functions}\index{hypergeometric function!generalized}
+The $6 j$ symbols may be written in terms of the hypergeometric functions ${ }\Fhg{4}{3}$ with unit argument:\isym{F43@$\Fhg{4}{3}$, generalized hypergeometric function}
 \begin{align}
 \sixj{a}{b}{c}{d}{e}{f}&=(-1)^{a+b+d+e} \frac{\Delta(a b c) \Delta(c d e) \Delta(a e f) \Delta(b d f)(a+b+d+e+1)!}{(a+b-c)!(-c+d+e)!(a+e-f)!(b+d-f)!(-a+c-d+f)!(-b+c-e+f)!}  \notag\\
 & \times\Fhg{4}{3}\left[\left.\begin{array}{c}
@@ -198,14 +198,14 @@ a-b-c,-b+d-f,-a-b-c-1,-b-d-f-1 \\
 \end{align}
 Equations \eqref{eq:9:2:8}-\eqref{eq:9:2:12} present Eqs. \eqref{eq:9:2:2}-\eqref{eq:9:2:6} in terms of the hypergeometric functions.
 
-\subsection{Relations Between the $6 j$ Symbols and the $3jm$ Symbols}\label{sec:9.2.4}
+\subsection{Relations Between the $6 j$ Symbols and the $3jm$ Symbols}\label{sec:9.2.4}\index{6j symbol@$6j$ symbol!and the $3jm$ symbols}\index{3jm symbol@$3jm$ symbol}
 The $6 j$ symbols may be written as sums of products of the Clebsch-Gordan coefficients (Eq. \eqref{eq:9:1:8}) or $3jm$ symbols. The relations between the $6 j$ symbols and the $3 j m$ symbols are
 \begin{equation}
 \sixj{a}{b}{c}{d}{e}{f}  \label{eq:9:2:13}=\sum(-1)^{d+e+f+\delta+\varepsilon+\varphi}\threej{a }{ b }{ c }{\alpha }{ \beta }{ \gamma}\threej{a }{ e }{ f }{\alpha }{ \varepsilon }{ -\varphi}\threej{d }{ b }{ f }{-\delta }{ \beta }{ \varphi}\threej{d }{ e }{ c }{\delta }{ -\varepsilon }{ \gamma} .
 \end{equation}
 In Eq. \eqref{eq:9:2:13} the sum is over all possible values of $\alpha, \beta, \gamma, \delta, \varepsilon, \varphi$ with only three summation indices being independent. Some other sums of the $3 j m$ symbols which yield the $6 j$ symbols will be considered in Chap.~\ref{chap:12} .
 
-\subsection{Quasi-Binomial Representation of the 6j Symbols}\label{sec:9.2.5}
+\subsection{Quasi-Binomial Representation of the 6j Symbols}\label{sec:9.2.5}\index{6j symbol@$6j$ symbol!quasi-binomial representation}\index{quasi-binomial}
 The $6 j$ symbols may be written in terms of quasi-binomials [45, 99] which are defined in Sec.~\ref{sec:8.2.2}. These representations are widely used in tabulating the formulas for the $6 j$ symbols.
 
 Let us introduce the following definitions:
@@ -266,8 +266,8 @@ Equation \eqref{eq:9:2:15} for the $6 j$ symbols is valid, if all the exponents 
 \begin{equation}
 p^{(\sigma)} \rightarrow \frac{1}{p^{(-1)(|\sigma|)}}, \quad p^{(-1)(\sigma)} \rightarrow \frac{1}{p^{(|\sigma|)}} \quad \text { for } \sigma<0 \label{eq:9:2:24}
 \end{equation}
-\section{Integral Representations of the $6 j$ Symbols}\label{sec:9.3}
-Squares of the $6 j$ symbols may be expressed by integrals involving the characters of the representations of the rotation group [110]
+\section{Integral Representations of the $6 j$ Symbols}\label{sec:9.3}\index{6j symbol@$6j$ symbol!integral representations}\index{integral representations!of the $6j$ symbols}
+Squares of the $6 j$ symbols may be expressed by integrals involving the characters of the representations of the rotation group [110]\index{character!of an irreducible representation}\index{rotation group}\isymg{chi-J@$\chi^{J}(\omega)$, character of an irreducible representation}\isym{dR@$d R$, invariant volume element of the rotation group}
 \begin{equation}
 \sixj{a}{b}{c}{d}{e}{f}^{2}  \label{eq:9:3:1}=\frac{1}{\left(8 \pi^{2}\right)^{3}} \int d R_{1} d R_{2} d R_{3} \chi^{a}\left(R_{1}\right) \chi^{b}\left(R_{2}\right) \chi^{c}\left(R_{3}\right) \chi^{d}\left(R_{2} R_{3}^{-1}\right) \chi^{e}\left(R_{3} R_{1}^{-1}\right) \chi^{f}\left(R_{1} R_{2}^{-1}\right)
 \end{equation}
@@ -289,8 +289,8 @@ Note also the following integral representations for some special $6 j$ symbols
 \notag\\&\qquad\qquad \qquad\times
 \chi^{a}\left(R_{5}^{-1} R_{3} R_{2}\right) \chi^{b}\left(R_{5} R_{4} R_{2} R_{1}\right) \chi^{c}\left(R_{4}^{-1} R_{5} R_{1} R_{3}\right). \label{eq:9:3:4}
 \end{align}
-\section{Symmetries of the $6 j$ Symbols and the Racah Coefficients}\label{sec:9.4}
-\subsection{R-Symbols}\label{sec:9.4.1}
+\section{Symmetries of the $6 j$ Symbols and the Racah Coefficients}\label{sec:9.4}\index{6j symbol@$6j$ symbol!symmetry properties}\index{Racah coefficient!symmetry properties}\index{symmetry!of the $6j$ symbols}
+\subsection{R-Symbols}\label{sec:9.4.1}\index{R-symbol@$R$-symbol!symmetry properties}
 The symmetry properties of the $6 j$ symbols and the $W$-coefficients may be formulated in a fairly simple way if these coefficients are written in terms of the $R$ symbols (see Sec.~\ref{sec:9.1.3}).
 
 The value of the $R$ symbol is invariant under any permutation of its rows or columns [105]
@@ -311,7 +311,7 @@ R_{3 \alpha} & R_{3 \beta} & R_{3 \gamma} & R_{3 \delta}
 \end{equation}
 In other words, any permutation of parameters $A_{i}$ or $B_{\alpha}$ (see Sec.~\ref{sec:9.1.3}) leaves the value of the $R$ symbol unchanged. These symmetry relations involve $3!\times 4!=144$ generally different Racah coefficients.
 
-\subsection{6j Symbols}\label{sec:9.4.2}
+\subsection{6j Symbols}\label{sec:9.4.2}\index{6j symbol@$6j$ symbol!permutation symmetries}
 The above-mentioned symmetries of the $R$ symbol are equivalent to the following symmetries of the $6 j$ symbols.\\[0pt]
 \subsubsection{Classical Symmetries [110]}
 The $6 j$ symbol is invariant under any permutation of its columns or under interchange of the upper and lower arguments in each of any two columns:
@@ -342,7 +342,7 @@ s_{1}=\frac{1}{2}(b+c+e+f), \quad s_{2}=\frac{1}{2}(a+c+d+f), \quad s_{3}=\frac{
 \end{equation}
 These relations are especially useful when $s_{i}$ equals one of the $6 j$ symbol arguments. Combining the Regge symmetries and the classical symmetries, one gets all 144 symmetry relations.
 
-\subsection{Racah Coefficients}\label{sec:9.4.3}
+\subsection{Racah Coefficients}\label{sec:9.4.3}\index{Racah coefficient!permutation symmetries}
 For the Racah coefficients the symmetry relations are the following.\\[0pt]
 \subsubsection{Classical Symmetries [91]}
 \begin{alignat}{4}
@@ -365,7 +365,7 @@ W(a b e d ; c f)&=W\left(s_{3}-a, s_{3}-b, s_{3}-e, s_{3}-d ; c f\right)=\vareps
 \end{align}
 Here $s_{1}, s_{2}, s_{3}$ are given by Eq. \eqref{eq:9:4:4} and $\varepsilon_{1}, \varepsilon_{2}$ by Eq. \eqref{eq:9:4:6}.
 
-\subsection{"Mirror" Symmetry}\label{sec:9.4.4}
+\subsection{"Mirror" Symmetry}\label{sec:9.4.4}\index{mirror symmetry}\index{symmetry!mirror}\index{negative momenta}
 The formulas for the $6 j$ symbols may be extended to include negative integer or half-integer values of arguments. In this case one has the following symmetry properties [45] corresponding to the replacement $j \rightarrow-j-1$,
 \begin{align}
 & \sixj{a}{b}{c}{d}{e}{f}
@@ -414,8 +414,8 @@ Here
 \begin{equation}
 \psi_{1}=-b+c-e+f, \quad \psi_{2}=-c+d+e+2 f, \quad \psi_{3}=a+b-c, \quad \psi_{4}=2(d+f) \label{eq:9:4:11}
 \end{equation}
-\section{Explicit Forms of the $6 j$ Symbols for Certain Arguments}\label{sec:9.5}
-\subsection{One of Arguments is Equal to Zero}\label{sec:9.5.1}
+\section{Explicit Forms of the $6 j$ Symbols for Certain Arguments}\label{sec:9.5}\index{6j symbol@$6j$ symbol!explicit forms}
+\subsection{One of Arguments is Equal to Zero}\label{sec:9.5.1}\index{6j symbol@$6j$ symbol!with a zero argument}
 For the $6 j$ symbols one obtains
 \begin{alignat}{2}
 \sixj{0}{b}{c}{d}{e}{f}&=(-1)^{b+e+d} \frac{\delta_{b c} \delta_{e f}}{\sqrt{(2 b+1)(2 e+1)}}, \quad& \sixj{a}{b}{c}{0}{e}{f}&=(-1)^{a+b+e} \frac{\delta_{b f} \delta_{c e}}{\sqrt{(2 b+1)(2 c+1)}},\notag\\
@@ -431,7 +431,7 @@ W(a b e d ; 0 f)&=(-1)^{a+e-f} \frac{\delta_{a b} \delta_{d e}}{\sqrt{(2 a+1)(2 
 
 In this case all other arguments are supposed to satisfy the triangular condition.
 
-\subsection{One of Arguments is Equal to the Sum of Two Others}\label{sec:9.5.2}
+\subsection{One of Arguments is Equal to the Sum of Two Others}\label{sec:9.5.2}\index{6j symbol@$6j$ symbol!with an argument equal to a sum of two others}
 If one of the $6 j$ symbol arguments is equal to sum of two others from the same triad (abc), (cde), (aef), (bdf), one may use the classical symmetries of the $6 j$ symbol (Eqs. \eqref{eq:9:4:2}) to express it in the form
 \begin{gather}
 \sixj{a}{b}{a+b}{d}{e}{f}=(-1)^{a+b+d+e} W(a b e d ; a+b f)=(-1)^{a+b+d+e}  \notag\\
@@ -455,7 +455,7 @@ In particular,
 &\sixj{a}{b}{a+b}{a+b+e}{e}{a+e}=(-1)^{2(a+b+e)} \frac{1}{[(2 a+2 b+1)(2 a+2 e+1)]^{\frac{1}{2}}}
 \end{align}
 
-\subsection{One of Arguments is Smaller by Unity than the Sum of Two Others}\label{sec:9.5.3}
+\subsection{One of Arguments is Smaller by Unity than the Sum of Two Others}\label{sec:9.5.3}\index{6j symbol@$6j$ symbol!with an argument one less than a sum of two others}
 If the $6 j$ symbol has one argument which is one less than the sum of two others from the same triad $(a b c),(c d e),(a e f),(b d f)$, one may use the classical symmetries of the $6 j$ symbol (Eqs. \eqref{eq:9:4:2}) to bring it into the form
 \begin{gather}
 \sixj{a}{b}{a+b-1}{d}{e}{f}=(-1)^{a+b+d+e} W(a b e d ; a+b-1 f)  \notag\\
@@ -474,7 +474,7 @@ In particular
 \end{align}
 Some other cases are given by Eqs. \eqref{eq:9:5:7}, \eqref{eq:9:5:9}, (11).
 
-\subsection{Arguments $a, b, d, e$ are Equal in Pairs}\label{sec:9.5.4}
+\subsection{Arguments $a, b, d, e$ are Equal in Pairs}\label{sec:9.5.4}\index{6j symbol@$6j$ symbol!with arguments equal in pairs}
 If $a=b$ and $d=e$ or $a=e$ and $b=d$, the Wigner $6 j$ symbol may be rewritten as [56]
 \begin{align}
 \sixj{a}{a}{c}{b}{b}{f} & =\sixj{a}{b}{f}{b}{a}{c}=(-1)^{2 a+2 b} W(a a b b ; c f)=(-1)^{2 a+2 b} W(a b a b ; f c)  \notag\\
@@ -525,8 +525,8 @@ For special values of $f$ one has
 \end{align}
 See also Eqs. (9) and \eqref{eq:9:5:19}.
 
-\section{Recursion Relations}\label{sec:9.6}
-\subsection{Relations in Which Arguments are Changed by $1 / 2$}\label{sec:9.6.1}
+\section{Recursion Relations}\label{sec:9.6}\index{6j symbol@$6j$ symbol!recursion relations}\index{recursion relations!for the $6j$ symbols}
+\subsection{Relations in Which Arguments are Changed by $1 / 2$}\label{sec:9.6.1}\index{recursion relations!in half-integer steps}
 \begin{gather}
 {[(a+b+c+1)(-a+b+c)(c+d+e+1)(c+d-e)]^{\frac{1}{2}}\sixj{a}{b}{c}{d}{e}{f}}  \notag\\
 =-2 c[(b+d+f+1)(b+d-f)]^{\frac{1}{2}}\sixj{a}{b-\frac{1}{2}}{c-\frac{1}{2}}{d-\frac{1}{2}}{e}{f}  \notag\\
@@ -547,7 +547,7 @@ See also Eqs. (9) and \eqref{eq:9:5:19}.
 & +[(-a+e+f+1)(a+e-f)(b+d+f+2)(-b+d+f+1)(-c+d+e+1)(c-d+e)]^{\frac{1}{2}}  \notag\\
 & \times\sixj{a-\frac{1}{2}}{b}{c-\frac{1}{2}}{d+\frac{1}{2}}{e}{f+\frac{1}{2}} . \label{eq:9:6:4}
 \end{align}
-\subsection{Relations in Which Arguments are Changed by 1}\label{sec:9.6.2}
+\subsection{Relations in Which Arguments are Changed by 1}\label{sec:9.6.2}\index{recursion relations!in unit steps}
 \begin{gather}
 (2 c+1)\{2[a(a+1) d(d+1)+b(b+1) e(e+1)-c(c+1) f(f+1)]  \notag\\
 -[a(a+1)+b(b+1)-c(c+1)][d(d+1)+e(e+1)-c(c+1)]\}\sixj{a}{b}{c}{d}{e}{f}  \notag\\
@@ -567,7 +567,7 @@ In particular
 =c(a+b+c+2)(-a+b+c+1)(a-b+c+1)(a+b-c)\sixj{a}{b}{c+1}{a}{b}{f}  \notag\\
 +(c+1)(a+b+c+1)(-a+b+c)(a-b+c)(a+b-c+1)\sixj{a}{b}{c-1}{a}{b}{f} \label{eq:9:6:7}
 \end{gather}
-\section{Generating Function}\label{sec:9.7}
+\section{Generating Function}\label{sec:9.7}\index{6j symbol@$6j$ symbol!generating function}\index{generating functions!for the $6j$ symbols}
 The $6 j$ symbols turn out to be the coefficients of a power series expansion of the generating function $f\left(\tau_{i \alpha}\right)$ [53], which depends on 12 variables $\tau_{i \alpha}(i=1,2,3 ; \alpha=1,2,3,4)$,
 \begin{equation}
 f\left(r_{i \alpha}\right) \equiv\left[1+\sum_{i=1}^{3} \prod_{\alpha=1}^{4} r_{i \alpha}+\sum_{\alpha=1}^{4} \prod_{i=1}^{3} r_{i \alpha}\right]^{-2}=\sum_{R_{i \alpha}} N\left(R_{i \alpha}\right)\sixj{a}{b}{c}{d}{e}{f}  \label{eq:9:7:1} \prod_{i=1}^{3} \prod_{\alpha=1}^{4}\left(r_{i \alpha}\right)^{R_{i \alpha}}
@@ -578,8 +578,8 @@ N\left(R_{i \alpha}\right)=\left[\frac{\prod_{\alpha=1}^{4}\left(B_{\alpha}+1\ri
 \end{equation}
 where $B_{\alpha}$ are given by Eqs. \eqref{eq:9:1:18}.
 
-\section{Sums Involving the $6 j$ Symbols}\label{sec:9.8}
-In this section only the most important sums involving products of the $6 j$ symbols are presented. We shall use the notation $\{a b c\}$ for the symbol which is equal to 1 if $a, b, c$ satisfy the triangular conditions $8.1(1)$ and is zero otherwise. In the equations below the sum is over all possible values (integer or half-integer) of $X$ which obey all triangular conditions.
+\section{Sums Involving the $6 j$ Symbols}\label{sec:9.8}\index{6j symbol@$6j$ symbol!sums involving}\index{sums!of the $6j$ symbols}\index{9j symbol@$9j$ symbol}\index{12j symbol@$12j$ symbol}
+In this section only the most important sums involving products of the $6 j$ symbols are presented. We shall use the notation $\{a b c\}$ for the symbol which is equal to 1 if $a, b, c$ satisfy the triangular conditions $\eqref{eq:8:1:1}$ and is zero otherwise.\index{triangle symbol}\isymo{braces-jjj@$\{j_{1} j_{2} j_{3}\}$, triangle symbol} In the equations below the sum is over all possible values (integer or half-integer) of $X$ which obey all triangular conditions.
 \begin{align}
 & \sum_{X}(2 X+1)\sixj{a}{b}{X}{a}{b}{c}=(-1)^{2 c}\{a b c\},  \label{eq:9:8:1}\\
 & \sum_{X}(-1)^{a+b+X}(2 X+1)\sixj{a}{b}{X}{b}{a}{c}=\delta_{c 0} \sqrt{(2 a+1)(2 b+1)},  \label{eq:9:8:2}\\
@@ -594,8 +594,8 @@ In this section only the most important sums involving products of the $6 j$ sym
 \end{align}
 Many other sums, involving the $6 j$ symbols as well as the $3 j m$ symbols and the $9 j$ symbols, will be given in Chap.~\ref{chap:12}.
 
-\section{Asymptotics of the $6 j$ Symbols for Large Angular Momenta}\label{sec:9.9}
-\subsection{Asymptotic Relations Between the 6j Symbols and the Clebsch-Gordan Coefficients}\label{sec:9.9.1}
+\section{Asymptotics of the $6 j$ Symbols for Large Angular Momenta}\label{sec:9.9}\index{6j symbol@$6j$ symbol!asymptotics of}\index{asymptotics!of the $6j$ symbols}
+\subsection{Asymptotic Relations Between the 6j Symbols and the Clebsch-Gordan Coefficients}\label{sec:9.9.1}\index{asymptotics!relation to the Clebsch-Gordan coefficients}
 If $R \gg 1$ and $a, b, c$ etc. are arbitrary, one gets the following asymptotic relation
 \begin{equation}
 \sixj{a}{b}{c}{d+R}{e+R}{f+R}  \label{eq:9:9:1} \approx \frac{(-1)^{a+b+d+e}}{\sqrt{2 R(2 c+1)}} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}
@@ -622,8 +622,8 @@ In particular, when $d=e=f=0$ one obtains [60]
 \begin{equation}
 \sixj{a}{b}{c}{R}{R}{R}  \label{eq:9:9:4} \approx \frac{(-1)^{c}}{\sqrt{2 R(2 c+1)}} \clebsch{a}{0}{b}{0}{c}{0}
 \end{equation}
-\subsection{Asymptotic Expressions for the $6 j$ Symbols}\label{sec:9.9.2}
-The asymptotic behaviour of the $6 j$ symbols $\sixj{a}{b}{c}{d}{e}{f}$ for large angular momenta is closely associated with geometric properties of the tetrahedron whose edges are $a+\frac{1}{2}, b+\frac{1}{2}$, etc. (Fig.~\ref{chap9:fig:1}).
+\subsection{Asymptotic Expressions for the $6 j$ Symbols}\label{sec:9.9.2}\index{asymptotics!for large angular momenta}
+The asymptotic behaviour of the $6 j$ symbols $\sixj{a}{b}{c}{d}{e}{f}$ for large angular momenta is closely associated with geometric properties of the tetrahedron whose edges are\index{tetrahedron}\index{6j symbol@$6j$ symbol!and the tetrahedron} $a+\frac{1}{2}, b+\frac{1}{2}$, etc. (Fig.~\ref{chap9:fig:1}).
 
 \begin{figure}[tbh!]
 \begin{center}
@@ -633,7 +633,7 @@ The asymptotic behaviour of the $6 j$ symbols $\sixj{a}{b}{c}{d}{e}{f}$ for larg
 \end{center}
 \end{figure}
 
-\subsubsection{The Ponzano-Regge Formula [89] (semiclassical approximation to the $6 j$ symbols)}
+\subsubsection{The Ponzano-Regge Formula [89] (semiclassical approximation to the $6 j$ symbols)}\index{Ponzano-Regge formula}\index{semiclassical formulas}\isym{V-tetra@$V$, volume of the tetrahedron}
 If $a, b, c, d, e, f \gg 1$, then
 \begin{equation}
 \sixj{a}{b}{c}{d}{e}{f}  \label{eq:9:9:5} \approx \frac{1}{\sqrt{12 \pi V}} \cos \left(\sum_{i, k=1}^{4} j_{i k} \Theta_{i k}+\frac{\pi}{4}\right), \quad\left(V^{2}>0\right)
@@ -699,7 +699,7 @@ where $d_{m n}^{f}(\Theta)$ is the rotation matrix (Chap.~\ref{chap:4}), $\Theta
 \begin{figure}[tbh!]
 \begin{center}
 \includegraphics{fig9_2}
-\caption{The angle $\Theta$ which enters Eq. 9.9(14).}
+\caption{The angle $\Theta$ which enters Eq. \eqref{eq:9:9:14}.}
 \label{chap9:fig:2}
 \end{center}
 \end{figure}
@@ -737,7 +737,7 @@ where combinations $i, k, l$ are obtained by cyclic permutations of $1,2,3$.
 \begin{figure}[tbh!]
 \begin{center}
 \includegraphics{fig9_3}
-\caption{Geometrical interpretation of the angles in Eqs. 9.9(20)-9.9(23).}
+\caption{Geometrical interpretation of the angles in Eqs. \eqref{eq:9:9:20}-\eqref{eq:9:9:23}.}
 \label{chap9:fig:3}
 \end{center}
 \end{figure}
@@ -764,7 +764,7 @@ In this case
 \operatorname{sign} x= \begin{cases}1, & \text { if } x \geq 0 \\
 -1, & \text { if } x<0\end{cases} \label{eq:9:9:26}
 \end{gather}
-\section{Relations Between the Wigner $6 j$ Symbols and Analogous Functions of Other Authors}\label{sec:9.10}
+\section{Relations Between the Wigner $6 j$ Symbols and Analogous Functions of Other Authors}\label{sec:9.10}\index{6j symbol@$6j$ symbol!notations of other authors}\index{notation!of other authors}\isym{U-jahn@$U(a b e d ; c f)$, normalized Racah coefficient}
 Racah [91]:
 \[
 W(a b e d ; c f)=(-1)^{a+b+d+e}\sixj{a}{b}{c}{d}{e}{f}
@@ -777,7 +777,7 @@ Biedenharn, Blatt and Rose [56]:
 \[
 Z(a b e d ; c f)=i^{-a+e+f} \left[(2 a+1)(2 b+1)(2 d+1)(2 e+1)\right]^{\frac{1}{2}} \clebsch{a}{0}{e}{0}{f}{0} W(a b e d ; c f)
 \]
-\section{Tables of Algebraic Expressions for the $6 j$ Symbols}\label{sec:9.11}
+\section{Tables of Algebraic Expressions for the $6 j$ Symbols}\label{sec:9.11}\index{6j symbol@$6j$ symbol!algebraic tables}\index{Racah coefficient!algebraic tables}\index{tables!of the $6j$ symbols}
 Algebraic expressions for the $6 j$ symbols $\sixj{a}{b}{c}{d}{e}{f}$ with $d=\frac{1}{2}, 1, \frac{3}{2}, 2, \frac{5}{2}, 3, \frac{7}{2}, 4$ are presented in Tables 9.1-9.8. We use the following notations
 \[
 \begin{gathered}
@@ -788,7 +788,7 @@ X=-a(a+1)+b(b+1)+c(c+1)
 The tables of algebraic formulas for the $6 j$ symbols and Racah coefficients are also given in Refs. [3,45, 56].
 \begin{comment}
 \section{Numerical Values of the $6 j$ Symbols}
-Numerical values of the $6 j$ symbols $\sixj{a}{b}{c}{d}{e}{f}$ with $a, b, c, d, e, f \leq 3$ are presented in Tables 9.9-9.11. These values are given exactly (i.e., as square roots of rational fractions) and in decimals. All arguments $a, b, c, d, e, f$ are supposed to differ from zero. Otherwise one should use Eqs. 9.5(1). Arguments of the $6 j$ symbols given in Tables 9.9-9.11 satisfy the following conditions:\\
+Numerical values of the $6 j$ symbols $\sixj{a}{b}{c}{d}{e}{f}$ with $a, b, c, d, e, f \leq 3$ are presented in Tables 9.9-9.11. These values are given exactly (i.e., as square roots of rational fractions) and in decimals. All arguments $a, b, c, d, e, f$ are supposed to differ from zero. Otherwise one should use Eqs. \eqref{eq:9:5:1}. Arguments of the $6 j$ symbols given in Tables 9.9-9.11 satisfy the following conditions:\\
 Table 9.9. 1. $a, b, d, e$ are half-integers; $c, f$ are integers.\\
 2. $a \geq b, d, e$ and $c \geq f$.\\
 3. If $a=b$, then $d \geq e$; if $c=f$, then $b \geq e$.
