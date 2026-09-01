@@ -25,7 +25,7 @@ The absolute value of a Clebsch-Gordan coefficient is given by
 \begin{equation}
 \left[\clebsch{j_{1}}{m_{1}}{j_{2}}{m_{2}}{j}{m}\right]^{2}=\frac{2 j+1}{8 \pi} \int_{0}^{2 \pi} d \alpha \int_{0}^{\pi} d \beta \sin \beta \int_{0}^{2 \pi} d \gamma D_{m_{1} m_{1}}^{j_{1}}(\alpha, \beta, \gamma) D_{m_{2} m_{2}}^{j_{2}}(\alpha, \beta, \gamma) D_{m m}^{j *}(\alpha, \beta, \gamma). \label{eq:8:1:4}
 \end{equation}
-The phase of the Clebsch-Gordan coefficients may be chosen in different ways. The phase convention proposed by Condon and Shortley [10] is universally accepted.\index{Condon-Shortley phase convention}\index{phase!of the Clebsch-Gordan coefficients} In accordance with this convention the Clebsch-Gordan
+The phase of the Clebsch-Gordan coefficients may be chosen in different ways. The phase convention proposed by Condon and Shortley \cite{ref010} is universally accepted.\index{Condon-Shortley phase convention}\index{phase!of the Clebsch-Gordan coefficients} In accordance with this convention the Clebsch-Gordan
 
 
 coefficients are real and their phases are fixed by the additional relation
@@ -59,7 +59,7 @@ The inverse relation is
 \left\{\mathfrak{M}_{j_{1}} \otimes \mathfrak{N}_{j_{2}}\right\}_{j m}=\sum_{m_{1} m_{2}} \clebsch{j_{1}}{m_{1}}{j_{2}}{m_{2}}{j}{m_{1}} \mathfrak{M}_{j_{1} m_{1}} \mathfrak{R}_{j_{2} m_{2}} . \label{eq:8:1:10}
 \end{equation}
 \subsection{The Wigner 3jm Symbols}\label{sec:8.1.2}\index{3jm symbol@$3jm$ symbol!definition}
-Not infrequently the Wigner $3 j \mathrm{~m}$ symbols [110] are used instead of the Clebsch-Gordan coefficients.\isymo{3jm@$\bigl(\begin{smallmatrix} a & b & c\\ \alpha & \beta & \gamma\end{smallmatrix}\bigr)$, Wigner $3jm$ symbol} These symbols possess simpler symmetry properties. The $3 j \mathrm{~m}$ symbols are related to the Clebsch-Gordan coefficients by
+Not infrequently the Wigner $3 j \mathrm{~m}$ symbols \cite{ref110} are used instead of the Clebsch-Gordan coefficients.\isymo{3jm@$\bigl(\begin{smallmatrix} a & b & c\\ \alpha & \beta & \gamma\end{smallmatrix}\bigr)$, Wigner $3jm$ symbol} These symbols possess simpler symmetry properties. The $3 j \mathrm{~m}$ symbols are related to the Clebsch-Gordan coefficients by
 \begin{equation}
 \threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{m_{2}}{m_{3}}\label{eq:8:1:11}=(-1)^{j_{3}+m_{3}+2 j_{1}} \frac{1}{\sqrt{2 j_{3}+1}} \clebsch{j_{1}}{-m_{1}}{j_{2}}{-m_{3}}{j_{3}}{m_{3}} .
 \end{equation}
@@ -74,7 +74,7 @@ The $3 j \mathrm{~m}$ symbol represents the probability amplitude that three ang
 The phase factor $\eta=(-1)^{j_{1}-j_{2}+j_{3}}$ is chosen in such a way that any cyclic permutation of columns leaves the $3 j m$ symbol unchanged. Below we shall use, along with the letters $j, m$ other Latin letters ( $a, b, c$, etc.) to denote angular momenta, and Greek letters ( $\alpha, \beta, \gamma$, etc.) to denote momentum projections in the arguments of the $3 j m$ symbols and Clebsch-Gordan coefficients.
 
 \subsection{Regge R-Symbols}\label{sec:8.1.3}\index{Regge R-symbol@Regge $R$-symbol}\index{R-symbol@$R$-symbol|see{Regge $R$-symbol}}
-The Wigner $3 j m$ symbol may be represented by a square $3 \times 3$ array\isym{Rik@$R_{i k}$, Regge $R$-symbol}\isym{J-abc@$J=a+b+c$, sum of three momenta} $\left\|R_{i k}\right\|(i, k=1,2,3)$ which is called the Regge $R$-symbol [94]
+The Wigner $3 j m$ symbol may be represented by a square $3 \times 3$ array\isym{Rik@$R_{i k}$, Regge $R$-symbol}\isym{J-abc@$J=a+b+c$, sum of three momenta} $\left\|R_{i k}\right\|(i, k=1,2,3)$ which is called the Regge $R$-symbol \cite{ref094}
 \begin{equation}
 \threej{a}{b}{c}{\alpha}{\beta}{\gamma}\label{eq:8:1:14}=\left\|\begin{array}{lll}
 R_{11} & R_{12} & R_{13} \\
@@ -120,36 +120,36 @@ The $\Delta$-symbol is invariant under permutations of $a, b, c$. Numerical valu
 \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}= & \delta_{\gamma, \alpha+\beta} \Delta(a b c)[(a+\alpha)!(a-\alpha)!(b+\beta)!(b-\beta)!(c+\gamma)!(c-\gamma)!(2 c+1)]^{\frac{1}{2}}, \notag \\
 & \times \sum_{z} \frac{(-1)^{z}}{z!(a+b-c-z)!(a-\alpha-z)!(b+\beta-z)!(c-b+\alpha+z)!(c-a-\beta+z)!} 
 \end{align}
-(Van der Waerden [40], Racah [91]) 
+(Van der Waerden \cite{ref040}, Racah \cite{ref091}) 
 \begin{align}
 \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}= & \delta_{\gamma, \alpha+\beta} \frac{\Delta(a b c)}{(c+a-b)!(c-a+b)!}\left[\frac{(a-\alpha)!(b-\beta)!(c+\gamma)!(c-\gamma)!(2 c+1)}{(a+\alpha)!(b+\beta)!}\right]^{\frac{1}{2}} \notag \\
 & \times \sum_{z} \frac{(-1)^{a-\alpha+z}(a+\alpha+z)!(c+b-\alpha-z)!}{z!(a-\alpha-z)!(c-\gamma-z)!(b-c+\alpha+z)!} 
 \end{align}
-(Racah [91], Fock [68])
+(Racah \cite{ref091}, Fock \cite{ref068})
 \begin{align}
 \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}=&\delta_{\gamma, \alpha+\beta} \Delta(a b c)\left[\frac{(c+\gamma)!(c-\gamma)!(2 c+1)}{(a+\alpha)!(a-\alpha)!(b+\beta)!(b-\beta)!}\right]^{\frac{1}{2}}\notag \\ &
  \sum_{z} \frac{(-1)^{b+\beta+z}(c+b+\alpha-z)!(a-\alpha+z)!}{(c-a+b-z)!(c+\gamma-z)!(a-b-\gamma+z)!}
 \end{align}
-(Wigner [43])
+(Wigner \cite{ref043})
 \begin{align}
 \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}= & \delta_{\gamma, \alpha+\beta} \frac{\Delta(a b c)}{(a-b+c)!(a+b-c)!}\left[\frac{(a+\alpha)!(a-\alpha)!(b-\beta)!(c+\gamma)!(2 c+1)}{(b+\beta)!(c-\gamma)!}\right]^{\frac{1}{2}}  \notag\\
 & \times \sum_{z} \frac{(-1)^{b+\beta+x}(2 c-z)!(a+b-c+z)!}{z!(c-a+b-z)!(c+\gamma-z)!(a-c-\beta+z)!}. \label{eq:8:2:6}
 \end{align}
-(Majumdar [82])
+(Majumdar \cite{ref082})
 \begin{align}
 \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}= & \delta_{\gamma, \alpha+\beta} \frac{\Delta(a b c)(a+b+c+1)!}{(a-b+c)!}\left[\frac{(a-\alpha)!(c+\gamma)!(2 c+1)}{(a+\alpha)!(b+\beta)!(b-\beta)!(c-\gamma)!}\right]^{\frac{1}{2}}. \notag\\
 & \times \sum_{z} \frac{(-1)^{b+\beta+z}(2 c-z)!(c+b+\alpha-z)!}{z!(c-a+b-z)!(c+\gamma-z)!(a+b+c+1-z)!}. \label{eq:8:2:7}
 \end{align}
-(Bandzaitis and Yutsis [51])
+(Bandzaitis and Yutsis \cite{ref051})
 \begin{align}
 \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}= & \frac{\delta_{\gamma, \alpha+\beta}}{\Delta(a b c)}\left[\frac{(a+\alpha)!(a-\alpha)!(c+\gamma)!(c-\gamma)!(2 c+1)}{(b+\beta)!(b-\beta)!}\right]^{\frac{1}{2}}  \notag\\
 & \times \sum_{z} \frac{(-1)^{a-\alpha+z}(a+b-\gamma-z)!(b+c-\alpha-z)!}{z!(a-\alpha-z)!(c-\gamma-z)!(a+b+c+1-z)!}. \label{eq:8:2:8}
 \end{align}
-(Bandzaitis and Yutsis [51]).\\
+(Bandzaitis and Yutsis \cite{ref051}).\\
 In Eqs.~(3)-(8) the summation index $z$ assumes integer values for which all the factorial arguments are nonnegative.
 
 \subsection{Quasi-Binomial Representation of the Clebsch-Gordan Coefficients}\label{sec:8.2.2}\index{Clebsch-Gordan coefficient!quasi-binomial representation}\index{quasi-binomial}
-The Clebsch-Gordan coefficients can be presented in the form of quasi-binomials $(u \pm v)^{(k)}[48]^{2}$
+The Clebsch-Gordan coefficients can be presented in the form of quasi-binomials $(u \pm v)^{(k)}\cite{ref048}^{2}$
 \begin{equation}
 \left.\left.\clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}=\delta_{\gamma, \alpha+\beta} \frac{\Delta(a b c)}{(a+b-c)!}\left[\frac{(c-\gamma)!(c+\gamma)!(2 c+1)}{(a-\alpha)!(a+\alpha)!(b-\beta)!(b+\beta)!}\right]^{\frac{1}{2}} \right\rvert\,(a+\alpha)(b-\beta)-(a-\alpha)(b+\beta)\right]^{(a+b-c)} . \label{eq:8:2:9}
 \end{equation}
@@ -168,7 +168,7 @@ u^{(z)} & =u(u-1) \ldots(u-z+1), \notag\\
 u^{(-1)(z)} & =(u+1)(u+2) \ldots(u+z). \label{eq:8:2:12}
 \end{align}
 \subsection{Clebsch-Gordan Coefficients and Finite Differences}\label{sec:8.2.3}\index{Clebsch-Gordan coefficient!and finite differences}\index{finite differences}
-The Clebsch-Gordan coefficient are related to finite differences [41]
+The Clebsch-Gordan coefficient are related to finite differences \cite{ref041}
 \begin{gather}
 \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}=\delta_{\gamma, \alpha+\beta}(-1)^{a-c+\beta}\left[\frac{(c+\gamma)!(a+b-c)!(2 c+1)}{(c-\gamma)!(c+a-b)!(c-a+b)!(a+b+c+1)!}\right]^{\frac{1}{2}}  \notag\\
 \times\left[\frac{(a-\alpha)^{(a-b-\gamma)}}{(a+\alpha)^{(a-b+\gamma)}}\right]^{\frac{1}{2}} \Delta_{\alpha}^{c-\gamma}\left[\frac{(a+\alpha)^{(c+a-b)}}{(a-\alpha)^{(a-b-c)}}\right]. \label{eq:8:2:13}
@@ -201,9 +201,9 @@ we see that \eqref{eq:8:2:17} reduces to the following relation for the Wigner $
 & d_{\nu \mu}^{j}(\theta)=\left[\frac{(j+\mu)!(j-\mu)!(j+\nu)!(j-\nu)!}{(2 P)^{2 j}(P-Q)^{j+\mu}(P-Q)^{j+\nu}(P+Q)^{-\mu-\nu}}\right]^{\frac{1}{2}}  \notag\\
 & \times \sum_{x}(-1)^{x} \frac{(P-Q)^{j+\mu+x}(P+Q)^{j-\mu-x}}{z!(j-\mu-z)!(j+\nu-z)!(\mu-\nu+z)!}. \label{eq:8:2:19}
 \end{align}
-\eqref{eq:8:2:19} is similar to Eq.~\eqref{eq:4:3:4}. The analogy between \eqref{eq:8:2:17} and \eqref{eq:8:2:19} permits us to connect the recursion relations, symmetry properties, etc. of the Wigner D-functions and the Clebsch-Gordan coefficients [58]. Since for $u \gg z, u \gg 1$ quasi-powers became asymptotically equal to ordinary powers, a Clebsch-Gordan coefficient turns into a $D$-function in the large-momentum limit (\eqref{eq:8:9:1}).
+\eqref{eq:8:2:19} is similar to Eq.~\eqref{eq:4:3:4}. The analogy between \eqref{eq:8:2:17} and \eqref{eq:8:2:19} permits us to connect the recursion relations, symmetry properties, etc. of the Wigner D-functions and the Clebsch-Gordan coefficients \cite{ref058}. Since for $u \gg z, u \gg 1$ quasi-powers became asymptotically equal to ordinary powers, a Clebsch-Gordan coefficient turns into a $D$-function in the large-momentum limit (\eqref{eq:8:9:1}).
 
-\subsection{Expressions for the Clebsch-Gordan Coefficients in Terms of the Binomial Coefficients [126]}\label{sec:8.2.4}\index{Clebsch-Gordan coefficient!in terms of binomial coefficients}\index{binomial coefficients}
+\subsection{Expressions for the Clebsch-Gordan Coefficients in Terms of the Binomial Coefficients \cite{ref126}}\label{sec:8.2.4}\index{Clebsch-Gordan coefficient!in terms of binomial coefficients}\index{binomial coefficients}
 \begin{equation}
 \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}=\delta_{\gamma, \alpha+\beta}\left[\frac{\binom{2 a}{J-2 c}\binom{2 b}{J-2 c}}{\binom{J+1}{J-2 c}\binom{2 a}{a-\alpha}\binom{2 b}{b-\beta}\binom{2 c}{c-\gamma}}\right]^{\frac{1}{2}} \sum_{x}(-1)^{x}\binom{J-2 c}{z}\binom{J-2 b}{a-\alpha-z}\binom{J-2 a}{b+\beta-z}, \label{eq:8:2:20}
 \end{equation}
@@ -253,14 +253,14 @@ a-b-c,-a-b-c-1,-c-\gamma \mid 1], \\
 \end{array}\right] . \label{eq:8:2:26}
 \end{align}
 Equations (21)-(26) may be associated with Eqs.~(3)-(8), respectively.\\[0pt]
-According to Ref. [36], all $\Fhg{3}{2}$-functions of unit argument, which are given by finite sums, may be expressed in terms of the Clebsch-Gordan coefficients. Any Clebsch-Gordan coefficient may also be represented in the form of derivatives of the hypergeometric functions [46]:
+According to Ref. \cite{ref036}, all $\Fhg{3}{2}$-functions of unit argument, which are given by finite sums, may be expressed in terms of the Clebsch-Gordan coefficients. Any Clebsch-Gordan coefficient may also be represented in the form of derivatives of the hypergeometric functions \cite{ref046}:
 \begin{gather}
 \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}=\delta_{\gamma, \alpha+\beta}(-1)^{a+b-c} \frac{\Delta(a b c)}{(a+b-c)!(-a+b+c)!(a-b+\gamma)!}\left[\frac{(a+\alpha)!(a-\alpha)!(b+\beta)!(c+\gamma)!(2 c+1)}{(b-\beta)!(c-\gamma)!}\right]^{\frac{1}{2}}  \notag\\
 \times\left\{\frac{d^{b-\beta}}{(d t)^{b-\beta}}\left[(1-t)^{a+b-c} F(a-b-c,-c+\gamma ; a-b+\gamma+1 ; t)\right]\right\}_{t=0}. \label{eq:8:2:27}
 \end{gather}
 \subsection{Representations of the $3 j \mathrm{~m}$ Symbols in the Form of Algebraic Sums}\label{sec:8.2.6}\index{3jm symbol@$3jm$ symbol!as algebraic sums}
 The explicit form of the Wigner $3 j m$ symbols may be obtained from Eqs.~(3)-(8) for the Clebsch-Gordan coefficients. Rewriting these equations in terms of the $R$-symbol elements, we get the following relations for\\
-the $3 j m$ symbols [45]
+the $3 j m$ symbols \cite{ref045}
 \begin{align}
  \threej{a}{b}{c}{\alpha}{\beta}{\gamma}&=(-1)^{R_{21}+R_{32}}\left[\frac{\prod_{i, j=1}^{3}\left(R_{i j}\right)!}{(J+1)!}\right]^{\frac{1}{2}} \notag \\
 & \times \sum_{x}(-1)^{x} \frac{1}{z!\left(R_{13}-z\right)!\left(R_{22}-z\right)!\left(R_{31}-z\right)!\left(R_{33}-R_{22}+z\right)!\left(R_{11}-R_{22}+z\right)!}, \label{eq:8:2:28}\\
@@ -277,7 +277,7 @@ where $J=a+b+c$.
 \begin{equation}
 \threej{a}{b}{c}{\alpha}{\beta}{\gamma}\label{eq:8:2:34}=(-1)^{R_{21}+R_{32}}\left[\frac{R_{21}^{(-1)\left(R_{31}-R_{13}\right)} R_{31}^{(-1)\left(R_{32}-R_{13}\right)} R_{32}^{(-1)\left(R_{22}-R_{13}\right)} R_{22}^{(-1)\left(R_{21}-R_{13}\right)}}{(J+1)!R_{13}!}\right]^{\frac{1}{4}}(u-v)^{\left(R_{13}\right)} .
 \end{equation}
-The quasi-binomial may be evaluated according to Eqs.~\eqref{eq:8:2:10} and \eqref{eq:8:2:11}. Variables $u$ and $v$ may be chosen in different ways [45]:
+The quasi-binomial may be evaluated according to Eqs.~\eqref{eq:8:2:10} and \eqref{eq:8:2:11}. Variables $u$ and $v$ may be chosen in different ways \cite{ref045}:
 \begin{align}
 (a)& \qquad u=R_{21}^{(1)} R_{32}^{(1)}, && v=R_{22}^{(1)} R_{31}^{(1)},\notag\\
 (b)& \qquad u=R_{21}^{(1)} R_{11}^{(-1)}, && v=R_{22}^{(1)} R_{12}^{(-1)},\notag\\
@@ -286,7 +286,7 @@ The quasi-binomial may be evaluated according to Eqs.~\eqref{eq:8:2:10} and \eqr
 
 \section{INTEGRAL REPRESENTATIONS}\label{sec:8.3}\index{Clebsch-Gordan coefficient!integral representations}\index{integral representations!of the Clebsch-Gordan coefficients}
 \subsection{Integrals Involving Algebraic Functions}\label{sec:8.3.1}\index{integral representations!with algebraic functions}
-The Clebsch-Gordan coefficients may be represented by the following integrals [41] ( $J=a+b+c$ )
+The Clebsch-Gordan coefficients may be represented by the following integrals \cite{ref041} ( $J=a+b+c$ )
 \begin{gather}
 \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}=\frac{(-1)^{a-c+\beta}}{2^{J+1}}\left[\frac{(c+\gamma)!(J-2 c)!(J+1)!(2 c+1)}{(a-\alpha)!(a+\alpha)!(b-\beta)!(b+\beta)!(c-\gamma)!(J-2 a)!(J-2 b)!}\right]^{\frac{1}{2}}  \notag\\
 \times \int_{-1}^{1}(1-x)^{a-\alpha}(1+x)^{b-\beta} \frac{d^{c-\gamma}}{(d x)^{c-\gamma}}\left[(1-x)^{J-2 a}(1+x)^{J-2 b}\right] d x, \label{eq:8:3:1}\\
@@ -307,7 +307,7 @@ where $R$ means the set of the Euler angles (see Sec.~\ref{sec:4.12})
 \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}= & \frac{(-1)^{a+c-\alpha-\gamma}}{2^{a+b+1}}\left[\frac{(J-2 c)!(J+1)!(2 c+1)}{(a+\alpha)!(a-\alpha)!(b+\beta)!(b-\beta)!}\right]^{\frac{1}{2}} \\
 & \times \int_{-1}^{1}(\sin \theta)^{a+b}\left(\frac{1-\cos \theta}{1+\cos \theta}\right)^{\frac{\alpha-\beta}{2}} d_{b-a \gamma}^{c}(\theta) d(\cos \theta)\\
 &\qquad 
-\text{(Akim and Levin, [46])}
+\text{(Akim and Levin, \cite{ref046})}
 \end{aligned}
 \end{equation}
 
@@ -325,10 +325,10 @@ In particular,
 \left[\clebsch{a}{0}{b}{0}{c}{0}\right]^{2}=\frac{2 c+1}{2} \int_{0}^{\pi} d \theta \sin \vartheta P_{a}(\cos \vartheta) P_{b}(\cos \vartheta) P_{c}(\cos \vartheta). \label{eq:8:3:8}
 \end{equation}
 \section{SYMMETRY PROPERTIES}\label{sec:8.4}\index{vector-addition coefficients!symmetry properties}\index{symmetry!of the vector-addition coefficients}
-The simplest way to formulate the symmetry properties of the Clebsch-Gordan coefficients and 3jm symbols is to use the representations of these coefficients in the form of the Regge $R$-symbols [94] (see Sec.~\ref{sec:8.1.3}).
+The simplest way to formulate the symmetry properties of the Clebsch-Gordan coefficients and 3jm symbols is to use the representations of these coefficients in the form of the Regge $R$-symbols \cite{ref094} (see Sec.~\ref{sec:8.1.3}).
 
 \subsection{Symmetry Properties of the $R$-Symbols}\label{sec:8.4.1}\index{Regge R-symbol@Regge $R$-symbol!symmetry properties}
-The $R$-symbol possesses the following symmetry properties [94].\\
+The $R$-symbol possesses the following symmetry properties \cite{ref094}.\\
 \subsubsection{Permutations of columns}
 \begin{equation}
 \left\|\begin{array}{lll}
@@ -378,7 +378,7 @@ These symmetry transformations relate $6 \times 6 \times 2=72$ generally differe
 \subsection{Symmetry Properties of the $3 j m$ Symbols}\label{sec:8.4.2}\index{3jm symbol@$3jm$ symbol!symmetry properties}
 The above relations are equivalent to the following symmetry properties of the $3 j m$ symbol.
 
-\subsubsection{Classical symmetries [110]}
+\subsubsection{Classical symmetries \cite{ref110}}
 \begin{enumerate}[label=(\roman*)]
 \item Permutations of columns (corresponding to permutations of columns of the $R$-symbol):
 \begin{align}
@@ -389,7 +389,7 @@ The above relations are equivalent to the following symmetry properties of the $
 \begin{equation}
 \threej{a}{b}{c}{\alpha}{\beta}{\gamma}\label{eq:8:4:6}=(-1)^{a+b+c}\threej{a}{b}{c}{-\alpha}{-\beta}{-\gamma}
 \end{equation}
-\subsubsection{Regge symmetries [94]}
+\subsubsection{Regge symmetries \cite{ref094}}
 \item Replacement of arguments:
 \begin{equation}
 \threej{a}{b}{c}{\alpha}{\beta}{\gamma}\label{eq:8:4:7}=(-1)^{a+b+c}\threej{\frac{b+c+\alpha}{2}}{\frac{a+c+\beta}{2}}{\frac{a+b+\gamma}{2}}{a-\frac{b+c-\alpha}{2}}{b-\frac{a+c-\beta}{2}}{c-\frac{a+b-\gamma}{2}}
@@ -451,7 +451,7 @@ where
 \end{align}
 \end{enumerate}
 \subsection{"Mirror" Symmetry}\label{sec:8.4.4}\index{mirror symmetry}\index{symmetry!mirror}\index{negative momenta}
-The original relations which define the $3 j m$ symbols and the Clebsch-Gordan coefficients may be extended to the domain of negative integer or half-integer arguments $a, b, c$. In this case the following symmetry relations are valid [45] (here we denote $\bar{c} \equiv-c-1, \gamma \equiv-\gamma$, etc.).\\
+The original relations which define the $3 j m$ symbols and the Clebsch-Gordan coefficients may be extended to the domain of negative integer or half-integer arguments $a, b, c$. In this case the following symmetry relations are valid \cite{ref045} (here we denote $\bar{c} \equiv-c-1, \gamma \equiv-\gamma$, etc.).\\
 \subsubsection{$3jm$ symbols}
 The relations for the $3 j m$ symbols are
 \begin{equation}
@@ -612,7 +612,7 @@ where
 \begin{equation}
 F=\frac{(-1)^{\frac{c-1}{2}-a}\left(a+\frac{c+1}{2}\right)!}{\left(a-\frac{c-1}{2}\right)!}\left[\frac{(2 c+1)(2 a-c+1)!}{c(c+1)(2 a+c+2)!}\right]^{\frac{1}{2}}. \label{eq:8:5:31}
 \end{equation}
-Equations (24)-(31) were obtained by Stone [107].
+Equations (24)-(31) were obtained by Stone \cite{ref107}.
 
 \subsection{Special Values of Momentum Projections}\label{sec:8.5.2}\index{Clebsch-Gordan coefficient!for special projections}
 \subsubsection{$\alpha=\beta=\gamma=0$}
@@ -659,9 +659,9 @@ In particular,
 & \times \sum_{c^{\prime}=c-k}^{c+k}(-1)^{c^{\prime}+k-c} \clebsch{a}{\alpha}{b-k}{\beta-k}{c^{\prime}}{\gamma-k} \frac{\left(c^{\prime}-k+c\right)!(2 k)!}{\left(c+k-c^{\prime}\right)!\left(c+c^{\prime}+k+1\right)!\left(c^{\prime}+k-c\right)!}  \notag\\
 & \times\left[\frac{\left(c^{\prime}+k-\gamma\right)!\left(a-b+c^{\prime}+k\right)!\left(2 c^{\prime}+1\right)}{\left(c^{\prime}-k+\gamma\right)!\left(-a+b+c^{\prime}-k\right)!\left(a+b-c^{\prime}-k\right)!\left(a+b+c^{\prime}-k+1\right)!}\right]^{\frac{1}{2}}. \label{eq:8:6:1}
 \end{align}
-(Yutsis and Bandzaitis [45]) where $k$ is integer or half-integer, $0 \leq k \leq(b+\beta) / 2$. In accordance with the choice of $k$ \eqref{eq:8:6:1} yields different recursion relations.
+(Yutsis and Bandzaitis \cite{ref045}) where $k$ is integer or half-integer, $0 \leq k \leq(b+\beta) / 2$. In accordance with the choice of $k$ \eqref{eq:8:6:1} yields different recursion relations.
 
-Note also the relation obtained by Stone [107]
+Note also the relation obtained by Stone \cite{ref107}
 \begin{align}
 \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}= & {\left[\frac{(a+b+c+1)!(a-b+c)!(a+b-c)!(b+\beta)!(b-\beta)!(a-b+\alpha-\beta)!(a-b-\alpha+\beta)!}{(-a+b+c)!(a+\alpha)!(a-\alpha)!}\right]^{\frac{1}{2}} }  \notag\\
 & \times \sum_{b^{\prime}}(-1)^{b-b^{\prime} / 2} 
@@ -669,7 +669,7 @@ Note also the relation obtained by Stone [107]
 & \times\left[\frac{\left(-a+b+c+b^{\prime}\right)!\left(b^{\prime}+2 \beta\right)!\left(b^{\prime}-2 \beta\right)!}{\left(a-b+c+b^{\prime}+1\right)!\left(a-b+c-b^{\prime}\right)!\left(a-b-c+b^{\prime}\right)!}\right]^{\frac{1}{2}}. \label{eq:8:6:2}
 \end{align}
 Here $a-b \geq|\alpha-\beta| \geq 0, b^{\prime}$ is integer, $b^{\prime}+2 b$ is even, and $a-b+c \geq b^{\prime} \geq|-a+b+c|, 2 b \geq b^{\prime} \geq|2 \beta|$.\\[0pt]
-Equation (1) may be rewritten by the use of quasi-powers in the form [45]
+Equation (1) may be rewritten by the use of quasi-powers in the form \cite{ref045}
 \begin{align}
 \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}= & { \left.\left[\frac{2 c+1}{(b+\beta)^{(2 k)}}\right]^{\frac{1}{2}} \sum_{k^{\prime}=-k}^{k}(-1)^{k+k^{\prime}} \clebsch{a}{\alpha}{b-k}{\beta-k}{c+k^{\prime}}{\gamma-k} \right\rvert\,(c+\gamma)^{\left(k-k^{\prime}\right)}\left(c-\gamma+k+k^{\prime}\right)^{\left(k+k^{\prime}\right)}(a+b-c)^{\left(k+k^{\prime}\right)} }  \notag\\
 & \left.\times(-a+b+c)^{\left(k-k^{\prime}\right)}(a+b+c+1)^{\left(k-k^{\prime}\right)}\left(a-b+c+k+k^{\prime}\right)^{\left(k+k^{\prime}\right)}\left(2 c+2 k^{\prime}+1\right)\right]^{\frac{1}{2}}  \notag\\
@@ -995,7 +995,7 @@ where $\kappa_{1}=(-1)^{b+c+d+f}, \kappa_{2}=(-1)^{a+b+e+f}$.\\
 Sums of larger numbers of the Clebsch-Gordan coefficients may be obtained from the above equations using the orthogonality relation (\eqref{eq:8:1:8}).
 
 \subsection{Some Additional Sums of Products of Two Clebsch-Gordan Coefficients}\label{sec:8.7.7}\index{sums!more, with two Clebsch-Gordan coefficients}
-We note also some other sums of products of the Clebsch-Gordan coefficients. The first two sums, obtained by Morgan [136], are written as
+We note also some other sums of products of the Clebsch-Gordan coefficients. The first two sums, obtained by Morgan \cite{ref136}, are written as
 \begin{equation}
 \sum_{l^{\prime}=0}^{l} \frac{1}{\left(2 l^{\prime}-1\right)\left(2 l-2 l^{\prime}+2 J+1\right)}\left(\clebsch{l}{0}{l^{\prime}+J}{0}{l-l^{\prime}+J}{0}\right)^{2}=-\frac{\delta_{l0}}{2 J+1}, \label{eq:8:7:44}
 \end{equation}
@@ -1007,7 +1007,7 @@ and
 \right)^{2}=0 . \label{eq:8:7:45}
 \end{equation}
 In these equations $l, l^{\prime}, J$ are integers.\\[0pt]
-Din proved the following identity [134]
+Din proved the following identity \cite{ref134}
 \begin{equation}
 \sum_{i=|c-b|}^{c+b} \frac{2 i+1}{i(i+1)-a(a+1)}\left(\clebsch{i}{0}{b}{0}{c}{0}\right)^{2}=0, \label{eq:8:7:46}
 \end{equation}
@@ -1015,7 +1015,7 @@ where $a, b, c$ are non-negative integers, with $a+b+c$ odd, which satisfy the t
 \[
 |c-b| \leq a \leq c+b .
 \]
-The sum runs only over values of $i$ for which the Clebsch-Gordan coefficient does not vanish. Dunlop and Judd [135] give the following relation
+The sum runs only over values of $i$ for which the Clebsch-Gordan coefficient does not vanish. Dunlop and Judd \cite{ref135} give the following relation
 \begin{equation}
 \sum_{m} \clebsch{a}{m}{k}{0}{a}{m} \clebsch{c}{M-m}{k}{0}{c}{M-m}=(-1)^{k} \frac{\Fact{a c}}{2 k+1} \sqrt{\frac{(2 a-k)!(2 c+k+1)!}{(2 c-k)!(2 a+k+1)!}}, \label{eq:8:7:47}
 \end{equation}
@@ -1036,7 +1036,7 @@ R_{21} & R_{22} & R_{23} \\
 R_{31} & R_{32} & R_{33}
 \end{array}\right\| \frac{u_{1}^{R_{11}} u_{2}^{R_{12}} u_{3}^{R_{13}} v_{1}^{R_{21}} v_{2}^{R_{22}} v_{3}^{R_{23}} w_{1}^{R_{31}} w_{2}^{R_{32}} w_{3}^{R_{33}}}{\left[R_{11}!R_{12}!R_{13}!R_{21}!R_{22}!R_{23}!R_{31}!R_{32}!R_{33}!\right]^{\frac{1}{2}}} . \label{eq:8:8:1}
 \end{equation}
-(Regge [94], Shelepin [106]). Here $R_{i k}$ are the elements of the $R$-symbol (see Sec.~\ref{sec:8.1.3}). The $R$-symbols and the Clebsch-Gordan coefficients are related by Eqs.~\eqref{eq:8:1:14} and \eqref{eq:8:1:11}.
+(Regge \cite{ref094}, Shelepin \cite{ref106}). Here $R_{i k}$ are the elements of the $R$-symbol (see Sec.~\ref{sec:8.1.3}). The $R$-symbols and the Clebsch-Gordan coefficients are related by Eqs.~\eqref{eq:8:1:14} and \eqref{eq:8:1:11}.
 
 \subsection{Products of Binomials}\label{sec:8.8.2}\index{generating functions!products of binomials}
 \begin{align}
@@ -1064,7 +1064,7 @@ where $\Delta(a b c)$ is given by \eqref{eq:8:2:1}.
 =\sum_{\substack{\alpha, \beta \\
 \alpha+\beta=\gamma}} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} \frac{t^{b-\beta}}{[(a+\alpha)!(a-\alpha)!(b+\beta)!(b-\beta)!]^{\frac{1}{2}}}. \label{eq:8:8:5}
 \end{gather}
-(Akim and Levin [46])
+(Akim and Levin \cite{ref046})
 
 \subsection{Wigner D-Function}\label{sec:8.8.5}\index{generating functions!Wigner $D$-function}\isym{dJMM@$d_{M M^{\prime}}^{J}(\beta)$, Wigner (small) $d$-function}
 \begin{equation}
@@ -1076,7 +1076,7 @@ where $a-b=\gamma^{\prime},|a-b| \leq c \leq a+b$.
 \begin{equation}
 \frac{1}{1+u^{2}+v^{2}+w^{2}}=\sum_{a b c}(-1)^{a-b}\left[\frac{(J+1)!}{2 c+1}\right]^{\frac{1}{2}} \clebsch{a}{0}{b}{0}{c}{0} \frac{u^{J-2 a} v^{J-2 b} w^{J-2 c}}{[(J-2 a)!(J-2 b)!(J-2 c)!]^{\frac{1}{2}}} . \label{eq:8:8:7}
 \end{equation}
-(Schwinger [101])
+(Schwinger \cite{ref101})
 
 \section{CLASSICAL LIMIT AND ASYMPTOTIC EXPRESSIONS FOR THE CLEBSCH-GORDAN COEFFICIENTS}\label{sec:8.9}\index{Clebsch-Gordan coefficient!classical limit}\index{Clebsch-Gordan coefficient!asymptotic expressions}\index{asymptotics!of the Clebsch-Gordan coefficients}\index{classical limit}
 Asymptotic expressions permit us to simplify calculations of the Clebsch-Gordan coefficients. Note that these expressions appear to be accurate even if the arguments are not very large.\\
@@ -1089,7 +1089,7 @@ where $\delta=c-a$, and $\vartheta$ is the angle between the momentum $c$ and th
 \begin{equation}
 \cos \frac{\vartheta}{2}=\sqrt{\frac{c+\gamma+\frac{1}{2}}{2 c+1}}=\clebsch{c}{\gamma}{\frac{1}{2}}{\frac{1}{2}}{c+\frac{1}{2}}{\gamma+\frac{1}{2}}, \quad \sin \frac{\vartheta}{2}=\sqrt{\frac{c-\gamma+\frac{1}{2}}{2 c+1}}=\clebsch{c}{\gamma}{\frac{1}{2}}{-\frac{1}{2}}{c+\frac{1}{2}}{\gamma-\frac{1}{2}}, \quad \cos \vartheta=\frac{\gamma}{c+\frac{1}{2}} . \label{eq:8:9:2}
 \end{equation}
-This formula was obtained by Edmonds [64], Brussaard and Tolhoek [60]. In particular,
+This formula was obtained by Edmonds \cite{ref064}, Brussaard and Tolhoek \cite{ref060}. In particular,
 \begin{align}
 \clebsch{a}{\alpha}{b}{b}{c}{\gamma} &\approx \delta_{b, \gamma-\alpha}(-1)^{b-\delta}\left[\frac{(2 b)!}{(b+\delta) !(b-\delta)!}\right]^{\frac{1}{2}}\left(\cos \frac{\vartheta}{2}\right)^{b+\delta}\left(\sin \frac{\vartheta}{2}\right)^{b-\delta}, \label{eq:8:9:3}\\
 \clebsch{a}{\alpha}{b}{\beta}{c}{c} &\approx \delta_{\beta, c-\alpha} D_{\beta c-a}^{b}(0,0,0)=\delta_{\beta, c-\alpha} \delta_{\beta, c-a}, \label{eq:8:9:4}\\
@@ -1109,13 +1109,13 @@ If $a, c \gg b \gg 1$ one can use in \eqref{eq:8:9:1} the asymptotic expressions
 \begin{equation}
 \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} \approx(-1)^{a+b-c} \frac{(c+\gamma+1)^{b-\beta}}{(a-b-\alpha)!}\left[\frac{(2 c+1)(a-b+c)!(a-\alpha)!(b+\beta)!(c-\gamma)!(c+\gamma)!}{(a+b-c)!(-a+b+c)!(a+b+c+1)!(a+\alpha)!(b-\beta)!}\right]^{\frac{1}{2}}. \label{eq:8:9:11}
 \end{equation}
-(Akim and Levin [46]).
+(Akim and Levin \cite{ref046}).
 
 \subsection{Semiclassical Formulas for $a, b, c \gg 1$}\label{sec:8.9.3}\index{semiclassical formulas}
 \begin{equation}
 \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} \approx(-1)^{2 b+c+\gamma+1} \sqrt{\frac{2 c+1}{2 \pi S}} \cos \left[j_{1} \theta_{1}+j_{2} \theta_{2}+j_{3} \theta_{3}-m_{2} \varphi_{1}+m_{1} \varphi_{2}+\frac{\pi}{4}\right], \label{eq:8:9:12}
 \end{equation}
-(Ponzano and Regge [89]), where
+(Ponzano and Regge \cite{ref089}), where
 \begin{gather}
 j_{1} \equiv a+\frac{1}{2}, j_{2} \equiv b+\frac{1}{2}, j_{3} \equiv c+\frac{1}{2}, m_{1} \equiv \alpha, \quad m_{2} \equiv \beta, \quad m_{3} \equiv-\gamma, \label{eq:8:9:13}\\
 S^{2}=\frac{1}{16}\left\{-j_{1}^{4}-j_{2}^{4}-j_{3}^{4}+2\left(j_{1}^{2} j_{2}^{2}+j_{1}^{2} j_{3}^{2}+j_{2}^{2} j_{3}^{2}\right)+4\left(j_{1}^{2} m_{2} m_{3}+j_{2}^{2} m_{1} m_{3}+j_{3}^{2} m_{1} m_{2}\right)\right\}  \notag\\
@@ -1152,7 +1152,7 @@ Equations (12)-(17) are valid, if $S^{2}>0$.
 \end{center}
 \end{figure}
 
-More accurate expressions valid not only for $S^{2}>0$ but also if $S^{2}<0$ or $S^{2} \approx 0$ were obtained by Schulten and Gordon [140]. In the case of $S^{2} \geq 0$ they derived
+More accurate expressions valid not only for $S^{2}>0$ but also if $S^{2}<0$ or $S^{2} \approx 0$ were obtained by Schulten and Gordon \cite{ref140}. In the case of $S^{2} \geq 0$ they derived
 \begin{subequations}
 \begin{gather}
 \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}=(-1)^{2 b+c+\gamma+1} \sqrt{\frac{2 c+1}{2 S}} Z^{\frac{1}{4}} \notag\\
@@ -1184,7 +1184,7 @@ $\theta_{i}^{(0)}$ and $\varphi_{i}^{(0)}$ being determined by the relations
 \end{aligned}
 \]
 \subsection{Squares of the Clebsch-Gordan Coefficients in the Classical Limit}\label{sec:8.9.4}\index{Clebsch-Gordan coefficient!squares in the classical limit}\index{probability amplitude}
-According to Sec.~\ref{sec:8.1.1} the square of a Clebsch-Gordan coefficient represents the probability of the coupling of two angular momenta $\mathrm{j}_{1}$ and $\mathrm{j}_{2}$ with projections $m_{1}$ and $m_{2}$ into the resultant angular momentum j with , projection $m$. On the other hand, the same square is equal to the probability that the momenta $\vect{j}_{1}$ and $\vect{j}_{2}$ coupled into the momentum $j$ with the projection $m$ have the projections $m_{1}$ and $m_{2}$, respectively. Let us consider the square of the Clebsch-Gordan coefficients in the classical limit [60].
+According to Sec.~\ref{sec:8.1.1} the square of a Clebsch-Gordan coefficient represents the probability of the coupling of two angular momenta $\mathrm{j}_{1}$ and $\mathrm{j}_{2}$ with projections $m_{1}$ and $m_{2}$ into the resultant angular momentum j with , projection $m$. On the other hand, the same square is equal to the probability that the momenta $\vect{j}_{1}$ and $\vect{j}_{2}$ coupled into the momentum $j$ with the projection $m$ have the projections $m_{1}$ and $m_{2}$, respectively. Let us consider the square of the Clebsch-Gordan coefficients in the classical limit \cite{ref060}.
 
 If the vector $j$ as well as the magnitudes of $j_{1}$ and $j_{2}$ are given, the possible positions of the end of the vector $\mathrm{j}_{1}$ form a circle (Fig.~\ref{chap8:fig:2}). The probability in question is proportional to the length of the circle arc confined between the planes $z=m_{1}$ and $z=m_{2}$. In the classical limit (for $\left.j_{1}, j_{2}, j \gg 1\right)$ this probability may be expressed by
 \begin{equation}
@@ -1225,20 +1225,20 @@ Below we list particular 3jm symbols with $J=a+b+c \leq 17$ which vanish in nont
 \]
 \section{CONNECTION OF THE CLEBSCH-GORDAN COEFFICIENTS AND THE 3 jm SYMBOLS WITH ANALOGOUS FUNCTIONS OF OTHER AUTHORS}\label{sec:8.11}\index{Clebsch-Gordan coefficient!notations of other authors}\index{notation!of other authors}
 \[
-\clebsch{j_{1}}{m_{1}}{j_{2}}{m_{2}}{j}{m}= \begin{cases}S_{j m_{1} m_{2}}^{j j_{2}} & \text { - Wigner [43], } \\
-A_{m m_{1} m_{2}}^{j j_{1} j_{2}} & \text { - Eckart [15], } \\
-C_{m_{1} m_{2}}^{j} & \text { - Vander Waerden [40], } \\
-\left(j_{1} j_{2} m_{1} m_{2} \mid j_{1} j_{2} j m\right) & \text { - Condon and Shortley [10], } \\
-C_{j m}^{j_{1} j_{2}}\left(m_{1} m_{2}\right) & \text { - Fock [68], } \\
-X\left(j, m_{1}, j_{1}, j_{2}, m_{1}\right) & \text { - Boys [59], } \\
-C\left(j m_{1} m_{1} m_{2}\right) & \text { - Blatt and Weisskopf [7], } \\
-C_{m_{1} m_{2} m}^{j_{1} j_{2} j} & \text { - Biedenharn [115], } \\
-C\left(j_{1} j_{2} j, m_{1} m_{2}\right) & \text { - Rose [30], } \\
+\clebsch{j_{1}}{m_{1}}{j_{2}}{m_{2}}{j}{m}= \begin{cases}S_{j m_{1} m_{2}}^{j j_{2}} & \text { - Wigner \cite{ref043}, } \\
+A_{m m_{1} m_{2}}^{j j_{1} j_{2}} & \text { - Eckart \cite{ref015}, } \\
+C_{m_{1} m_{2}}^{j} & \text { - Vander Waerden \cite{ref040}, } \\
+\left(j_{1} j_{2} m_{1} m_{2} \mid j_{1} j_{2} j m\right) & \text { - Condon and Shortley \cite{ref010}, } \\
+C_{j m}^{j_{1} j_{2}}\left(m_{1} m_{2}\right) & \text { - Fock \cite{ref068}, } \\
+X\left(j, m_{1}, j_{1}, j_{2}, m_{1}\right) & \text { - Boys \cite{ref059}, } \\
+C\left(j m_{1} m_{1} m_{2}\right) & \text { - Blatt and Weisskopf \cite{ref007}, } \\
+C_{m_{1} m_{2} m}^{j_{1} j_{2} j} & \text { - Biedenharn \cite{ref115}, } \\
+C\left(j_{1} j_{2} j, m_{1} m_{2}\right) & \text { - Rose \cite{ref030}, } \\
 {\left[\begin{array}{lll}
 j_{1} & j_{2} & j \\
 m_{1} & m_{2} & m
-\end{array}\right]} & \text { - Yutsis and Bandzaitis [45], } \\
-\braket{j_{1} m_{1} j_{2} m_{2}}{\left(j_{1} j_{2}\right) j m} & \text { - Fano [66]. }\end{cases}
+\end{array}\right]} & \text { - Yutsis and Bandzaitis \cite{ref045}, } \\
+\braket{j_{1} m_{1} j_{2} m_{2}}{\left(j_{1} j_{2}\right) j m} & \text { - Fano \cite{ref066}. }\end{cases}
 \]
 \begin{table}[tbhp!]
   \caption{Accidental zeroes of the $3j$ coefficients for $J=j_1+j_2+j_3\leq 17$}
@@ -1271,30 +1271,30 @@ J=17 &\threej{1}{8}{8}{0}{0}{0},\threej{2}{7}{8}{0}{0}{0},\threej{3}{6}{8}{0}{0}
 $
 \end{table}
 \[
-\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{m_{2}}{m_{3}}= \begin{cases}(-1)^{-j_{1}+j_{2}+j_{3}} V\left(j_{1} j_{2} j_{3}, m_{1} m_{2} m_{3}\right) & - \text { Racah }[91] \\
-(-1)^{-j_{1}+j_{2}+j_{3}} \bar{V}\left(j_{1} j_{2} j_{3}, m_{1} m_{2} m_{3}\right) & - \text { Fano and Racah [18] } \\
-(-1)^{j_{1}-j_{2}+j_{3}} S_{j_{1} m_{1} j_{2} m_{2} j_{3} m_{3}} & - \text { Landau and Lifshitz [25] } \\
-(-1)^{j_{1}-j_{2}+j_{3}}\left(j_{1} m_{1}, j_{2} m_{2}, j_{3} m_{3}|0\rangle\right. & - \text { Fano [66] } \\
-X\left(j_{1} j_{2} j_{3}, m_{1} m_{2} m_{3}\right) & - \text { Schwinger [101] } \\
-(-1)^{j_{1}-j_{2}+j_{3}} U\left(j_{1} j_{2} m_{1} m_{2} \mid j_{3}-m_{3}\right) & - \text { Lubarskii [26] } \\
-\left(j_{1} j_{2} j_{3}\right)_{m_{1} m_{2} m_{3}} & - \text { Sharp [102] }\end{cases}
+\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{m_{2}}{m_{3}}= \begin{cases}(-1)^{-j_{1}+j_{2}+j_{3}} V\left(j_{1} j_{2} j_{3}, m_{1} m_{2} m_{3}\right) & - \text { Racah }\cite{ref091} \\
+(-1)^{-j_{1}+j_{2}+j_{3}} \bar{V}\left(j_{1} j_{2} j_{3}, m_{1} m_{2} m_{3}\right) & - \text { Fano and Racah \cite{ref018} } \\
+(-1)^{j_{1}-j_{2}+j_{3}} S_{j_{1} m_{1} j_{2} m_{2} j_{3} m_{3}} & - \text { Landau and Lifshitz \cite{ref025} } \\
+(-1)^{j_{1}-j_{2}+j_{3}}\left(j_{1} m_{1}, j_{2} m_{2}, j_{3} m_{3}|0\rangle\right. & - \text { Fano \cite{ref066} } \\
+X\left(j_{1} j_{2} j_{3}, m_{1} m_{2} m_{3}\right) & - \text { Schwinger \cite{ref101} } \\
+(-1)^{j_{1}-j_{2}+j_{3}} U\left(j_{1} j_{2} m_{1} m_{2} \mid j_{3}-m_{3}\right) & - \text { Lubarskii \cite{ref026} } \\
+\left(j_{1} j_{2} j_{3}\right)_{m_{1} m_{2} m_{3}} & - \text { Sharp \cite{ref102} }\end{cases}
 \]
 \section{ALGEBRAIC TABLES OF THE CLEBSCH-GORDAN COEFFICIENTS}\label{sec:8.12}\index{Clebsch-Gordan coefficient!algebraic tables}\index{tables!of the Clebsch-Gordan coefficients}
 Below we present tables of algebraic formulas for the Clebsch-Gordan coefficients $\clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}$ with $b=1 / 2,1,3 / 2,2$, $5 / 2,3,7 / 2,4,9 / 2,5$. If $b=3,7 / 2,4,9 / 2,5$, we give $\clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}$ with $\beta \geq 0$, while $\clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}$ with $\beta<0$ may be obtained from the symmetry property
 \[
 \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}=(-1)^{a+b-c} \clebsch{a}{-\alpha}{b}{-\beta}{c}{-\gamma} .
 \]
-The algebraic tables of the Clebsch-Gordan coefficients are also available in Ref. [10] for $b=1 / 2,1,3 / 2,2$; in Ref. $[121,125]$ for $b=5 / 2$; in Refs. $[117,130]$ with $b=3$; and in Ref. $[126]$ with $b=7 / 2,4,9 / 2,5$.
+The algebraic tables of the Clebsch-Gordan coefficients are also available in Ref. \cite{ref010} for $b=1 / 2,1,3 / 2,2$; in Ref. $[121,125]$ for $b=5 / 2$; in Refs. $[117,130]$ with $b=3$; and in Ref. $\cite{ref126}$ with $b=7 / 2,4,9 / 2,5$.
 
 \section{NUMERICAL TABLES OF THE CLEBSCH-GORDAN COEFFICIENTS}\label{sec:8.13}\index{Clebsch-Gordan coefficient!numerical tables}\index{tables!numerical}
 In Table 8.11 we present numerical values of the Clebsch-Gordan coefficients for $a, b, c \leq 3$. These values are given in the form of square roots of rational fractions and in decimals. The Clebsch-Gordan coefficients are separated into groups with respect to the values of $c$. The arguments $a, \alpha, b, \beta$ for the Clebsch-Gordan coefficients given in Table 8.11 satisfy the inequalities (a) $a \geq b, \alpha \geq 0$; (b) $\alpha \geq \beta$ for $a=b$. Other ClebschGordan coefficients with $a, b, c \leq 3$ may be reduced to those in Table 8.11 by the use of the symmetry properties
 \[
 \clebsch{a}{\alpha}{b}{\beta}{c}{\alpha+\beta}=(-1)^{a+b-c} \clebsch{b}{\beta}{a}{\alpha}{c}{\alpha+\beta}=(-1)^{a+b-c} \clebsch{a}{-\alpha}{b}{-\beta}{c}{-\alpha-\beta}=\clebsch{b}{-\beta}{a}{-\alpha}{c}{-\alpha-\beta}
 \]
-Numerical values of the Clebsch-Gordan coefficients are also given in Refs. [126, 127]. Reference [127] presents the Clebsch-Gordan coefficients for $\frac{1}{2} \leq a \leq 4, \frac{1}{2} \leq b, c \leq 9 / 2$ in decimals. Reference [126] gives the Clebsch-Gordan coefficients for $\frac{1}{2} \leq b \leq 6, a=5,11 / 2,6$ in the form of rational fractions. Numerical values of the $3 j m$ symbols are also available in Ref. [113].
+Numerical values of the Clebsch-Gordan coefficients are also given in Refs. [126, 127]. Reference \cite{ref127} presents the Clebsch-Gordan coefficients for $\frac{1}{2} \leq a \leq 4, \frac{1}{2} \leq b, c \leq 9 / 2$ in decimals. Reference \cite{ref126} gives the Clebsch-Gordan coefficients for $\frac{1}{2} \leq b \leq 6, a=5,11 / 2,6$ in the form of rational fractions. Numerical values of the $3 j m$ symbols are also available in Ref. \cite{ref113}.
 
-Tables~\ref{chap8:tab:1}--\ref{chap8:tab:10}. Algebraic Formulas for the Clebsch-Gordan Coefficients.
-
+Tables~\ref{chap8:tab:1}--\ref{chap8:tab:2}. Algebraic Formulas for the Clebsch-Gordan Coefficients.
+Tables not reproduced here can be found in the original book.
 \begin{table}[tbh!]
 \begin{center}
 \caption{$\clebsch{a}{\alpha}{\frac{1}{2}}{\beta}{c}{\gamma}$}
