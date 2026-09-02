@@ -15,6 +15,9 @@ import time
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
+# lambdify compiles a deeply nested tree; the largest cells overflow the default
+sys.setrecursionlimit(20000)
+
 from sympy import Rational, sqrt, lambdify
 from sympy.physics.wigner import wigner_9j
 

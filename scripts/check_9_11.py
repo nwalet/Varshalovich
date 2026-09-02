@@ -7,13 +7,16 @@
 so a bug in the phase / sign-absorption bookkeeping cannot slip through.
 Both levels call the shipped functions directly -- nothing is reimplemented.
 
-    python3 scripts/check_9_11.py [2*dmax]      # default 8, i.e. d <= 4
+    python3 scripts/check_9_11.py [2*dmax [2*dmin]]   # default 8 1, i.e. d <= 4
 """
 import os
 import sys
 import time
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
+# lambdify compiles a deeply nested tree; the largest cells overflow the default
+sys.setrecursionlimit(20000)
 
 from sympy import Rational, sqrt, lambdify
 from sympy.physics.wigner import wigner_6j
@@ -35,9 +38,9 @@ def _samples(d, m, n, lo=None):
                 yield uu, vv, ww, av, bv, cv, ev, fv
 
 
-def main(dmax2=8):
+def main(dmax2=8, dmin2=1):
     t0, bad, checked, cells = time.time(), 0, 0, 0
-    for d2 in range(1, dmax2 + 1):
+    for d2 in range(dmin2, dmax2 + 1):
         d = Rational(d2, 2)
         vals = [d - i for i in range(d2 + 1)]              # d, d-1, ..., -d
         for m in vals:
@@ -78,4 +81,5 @@ def main(dmax2=8):
 
 
 if __name__ == "__main__":
-    sys.exit(main(int(sys.argv[1]) if len(sys.argv) > 1 else 8))
+    sys.exit(main(int(sys.argv[1]) if len(sys.argv) > 1 else 8,
+                  int(sys.argv[2]) if len(sys.argv) > 2 else 1))
