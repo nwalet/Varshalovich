@@ -217,11 +217,11 @@ For describing partially polarized states which are incoherent statistical mixtu
 
 The polarization density matrix $\hat{\rho}$ of the particles of spin $S$ is the square\isymg{rho-hat@$\widehat{\rho}$, polarization density matrix} $(2 S+1) \times(2 S+1)$ matrix defined by
 \begin{equation}
-\rho_{\sigma \sigma^{\prime}}=\left\langle\chi(\sigma) \chi^{*}\left(\sigma^{\prime}\right)\right\rangle_{\xi} , \label{eq:6:1:39}
+\rho_{\sigma \sigma^{\prime}}=\expect{\chi(\sigma) \chi^{*}\left(\sigma^{\prime}\right)}_{\xi} , \label{eq:6:1:39}
 \end{equation}
 or in a matrix form by
 \begin{equation}
-\hat{\rho}=\left\langle \chi \chi^{\dagger}\right\rangle_{\xi}, \label{eq:6:1:40}
+\hat{\rho}=\expect{\chi \chi^{\dagger}}_{\xi}, \label{eq:6:1:40}
 \end{equation}
 where ()$_{\epsilon}$ denotes the statistical average. In particular, for pure states one gets
 \begin{equation}
@@ -239,7 +239,7 @@ The conditions \eqref{eq:6:1:42}, \eqref{eq:6:1:43} reveal that the density matr
 
 An expectation value of any polarization operator $\widehat{T}$ in a state described by the density matrix $\widehat{\rho}$ may be evaluated by
 \begin{equation}
-\langle\widehat{T}\rangle=\operatorname{Tr}\{\widehat{T} \widehat{\rho}\}=\operatorname{Tr}\{\widehat{\rho} \widehat{T}\}. \label{eq:6:1:44}
+\expect{\widehat{T}}=\operatorname{Tr}\{\widehat{T} \widehat{\rho}\}=\operatorname{Tr}\{\widehat{\rho} \widehat{T}\}. \label{eq:6:1:44}
 \end{equation}
 Note also the following property of the density matrix
 \begin{equation}
@@ -257,7 +257,7 @@ The density matrix $\hat{\rho}$ may be expanded into a sum of the polarisation o
 \end{equation}
 The expansion coefficients $t_{L M}$ are called the statistical tensors.\index{statistical tensors}\isym{tLM@$t_{L M}$, statistical tensor} They represent expectation values of the polarization operators $\hat{T}_{L M}(S)$ in a state described by the density matrix $\hat{\rho}$,
 \begin{equation}
-t_{L M}=\left\langle\widehat{T}_{L M}(S)\right\rangle=\operatorname{Tr}\left\{\hat{\rho} \widehat{T}_{L M}(S)\right\} . \label{eq:6:1:48}
+t_{L M}=\expect{\widehat{T}_{L M}(S)}=\operatorname{Tr}\left\{\hat{\rho} \widehat{T}_{L M}(S)\right\} . \label{eq:6:1:48}
 \end{equation}
 The statistical tensors are related to the density matrix elements by
 \begin{gather}
@@ -620,7 +620,7 @@ The polarisation density matrix for particles of spin $\frac{1}{2}$ may be writt
 \end{equation}
 where the real vector $\vect{P}$ is called the polarisation vector.\index{polarization vector}\isym{P-vec@$\vect{P}$, polarization vector} This vector gives the expectation value of the spin operator multiplied by 2 ,
 \begin{equation}
-\vect{P}=2\langle\vect{S}\rangle=2 \operatorname{Tr}\{\hat{\rho} \widehat{\vect{S}}\} . \label{eq:6:2:48}
+\vect{P}=2\expect{\vect{S}}=2 \operatorname{Tr}\{\hat{\rho} \widehat{\vect{S}}\} . \label{eq:6:2:48}
 \end{equation}
 The absolute value of the vector $\vect{P}$ is called the polarization degree;\index{polarization degree} it ranges from 0 (for unpolarised states) to 1 (for pure, i.e., totally polarized states):
 \begin{equation}
@@ -1187,9 +1187,9 @@ P_{i k}=P_{k i}, \sum_{i} P_{i i}=0 . \notag
 \end{gather}
 The vector $\vect{P}$ and tensor $\vect{P}_{2}$ give the following expectation values of the spin operator and the quadrupole momentum operator, respectively:\index{polarization tensor!quadrupole}\isym{P2-tensor@$\vect{P}_{2}$, quadrupole polarization tensor}
 \begin{gather}
-\langle\widehat{\vect{S}}\rangle \equiv \chi_{1}^{\dagger} \widehat{\vect{S}} \chi_{1}=\vect{P}, \notag\\
-\left\langle\widehat{T}_{2 M}\right\rangle \equiv \chi_{1}^{\dagger} \hat{T}_{2 M} \chi_{1}=P_{2 M}, \label{eq:6:3:76}\\
-\left\langle\hat{Q}_{i k}\right\rangle \equiv \chi_{1}^{\dagger} \hat{Q}_{i k} \chi_{1}=P_{i k} . \notag
+\expect{{\vect{S}}} \equiv \chi_{1}^{\dagger} \widehat{\vect{S}} \chi_{1}=\vect{P}, \notag\\
+\expect{{\widehat{T}_{2 M}}} \equiv \chi_{1}^{\dagger} \hat{T}_{2 M} \chi_{1}=P_{2 M}, \label{eq:6:3:76}\\
+\expect{{\hat{Q}_{i k}}} \equiv \chi_{1}^{\dagger} \hat{Q}_{i k} \chi_{1}=P_{i k} . \notag
 \end{gather}
 The transformation of the spin function $\chi_{1}$ under rotations of coordinate systems is performed by the rotation operators $\hat{D}^{1}(\alpha, \beta, \gamma)$ (Eqs.~\eqref{eq:2:6:76}-\eqref{eq:2:6:77} ) or $\hat{U}^{1}(\omega ; \Theta, \Phi)$ (Eqs.~\eqref{eq:2:6:80}-\eqref{eq:2:6:81} ) depending on the choice of the parameters to describe rotations
 \begin{equation}
