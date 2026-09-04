@@ -101,7 +101,7 @@ Under rotations of the coordinate system specified by the Euler angles $\alpha, 
 \begin{equation}
 Y_{J M^{\prime}}^{L S}\left(\vartheta^{\prime}, \varphi^{\prime}\right) \equiv \hat{D}(\alpha, \beta, \gamma) Y_{J M^{\prime}}^{L S}(\vartheta, \varphi)=\sum_{M=-J}^{J} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma) Y_{J M}^{L S}(\vartheta, \varphi), \label{eq:7:1:18}
 \end{equation}
-where $M$ is the projection of total angular momentum on the initial $z$-axis, $M^{\prime}$ is its projection on the final $z^{\prime}$ axis; $\vartheta, \varphi$ and $\vartheta^{\prime}, \varphi^{\prime}$ are polar angles of the unit vector $\vect{n}$ in the initial and final coordinate systems, respectively. The relations between $\vartheta^{\prime}, \varphi^{\prime}$ and $\vartheta, \varphi$ are given by Eqs. 1.4(2), 1.4(3). The coefficients $D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)$ are matrix elements of the rotation operator, i.e., the Wigner $D$-functions (Chap.~\ref{chap:4}). Note that the transformation properties of tensor spherical harmonics are determined by the total angular momentum $\vect{J}$, but not by the spin S. Thus, it is $J$ that determines true rank of a tensor spherical harmonic.
+where $M$ is the projection of total angular momentum on the initial $z$-axis, $M^{\prime}$ is its projection on the final $z^{\prime}$ axis; $\vartheta, \varphi$ and $\vartheta^{\prime}, \varphi^{\prime}$ are polar angles of the unit vector $\vect{n}$ in the initial and final coordinate systems, respectively. The relations between $\vartheta^{\prime}, \varphi^{\prime}$ and $\vartheta, \varphi$ are given by Eqs. \eqref{eq:1:4:2}, \eqref{eq:1:4:3}. The coefficients $D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)$ are matrix elements of the rotation operator, i.e., the Wigner $D$-functions (Chap.~\ref{chap:4}). Note that the transformation properties of tensor spherical harmonics are determined by the total angular momentum $\vect{J}$, but not by the spin S. Thus, it is $J$ that determines true rank of a tensor spherical harmonic.
 
 \subsection{Differential Equations}\label{sec:7.1.5}\index{tensor spherical harmonics!differential equations}\index{differential equations!for the tensor spherical harmonics}
 \begin{enumerate}[label=(\alph*)]
@@ -147,9 +147,9 @@ A_{L^{\prime}}(L)= \begin{cases}L \sqrt{L+1}, & \text { if } L^{\prime}=L+1 \\
 (L+1) \sqrt{L}, & \text { if } L^{\prime}=L-1 \\
 0 & \text { if } L^{\prime} \neq L \pm 1\end{cases}.\]
 \begin{gather}
-n_{\mu}\left\{\Phi(r) Y_{J M}^{L S}(\vartheta, \varphi)\right\}=(-1)^{J+S+1} \Phi(r) \sqrt{(2 J+1)(2 L+1)} \sum_{J^{\prime} L^{\prime}}(-1)^{L^{\prime}}\sixj{J}{J^{\prime}}{1}{L^{\prime}}{L}{S} \clebsch{L}{0}{1}{0}{L^{\prime}}{0} \clebsch{J}{M}{1}{\mu}{J^{\prime}}{M^{\prime}} Y_{J^{\prime} M^{\prime}}^{L^{\prime} S}(\vartheta, \varphi) . \label{eq:7:1:26}\\
+n_{\mu}\left\{\Phi(r) Y_{J M}^{L S}(\vartheta, \varphi)\right\}=(-1)^{J+S+1} \Phi(r) \sqrt{(2 J+1)(2 L+1)} \sum_{J^{\prime} L^{\prime}}(-1)^{L^{\prime}}\sixj{J}{J^{\prime}}{1}{L^{\prime}}{L}{S} \clebsch{L}{0}{1}{0}{L^{\prime}}{0} \clebsch{J}{M}{1}{\mu}{J^{\prime}}{M^{\prime}} Y_{J^{\prime} M^{\prime}}^{L^{\prime} S}(\vartheta, \varphi) , \label{eq:7:1:26}\\
 \widehat{L}_{\mu}\left\{\Phi(r) Y_{J M}^{L S}(\vartheta, \varphi)\right\}=\Phi(r) \widehat{L}_{\mu}\left\{Y_{J M}^{L S}(\vartheta, \varphi)\right\}  \notag\\
-=(-1)^{J+L+S+1} \Phi(r) \sqrt{(2 J+1) L(L+1)(2 L+1)} \sum_{J^{\prime}}\sixj{J}{J^{\prime}}{1}{L}{L}{S} \clebsch{J}{M}{1}{\mu}{J^{\prime}}{M+\mu} Y_{J^{\prime} M+\mu}^{L S}(\vartheta, \varphi) \\
+=(-1)^{J+L+S+1} \Phi(r) \sqrt{(2 J+1) L(L+1)(2 L+1)} \sum_{J^{\prime}}\sixj{J}{J^{\prime}}{1}{L}{L}{S} \clebsch{J}{M}{1}{\mu}{J^{\prime}}{M+\mu} Y_{J^{\prime} M+\mu}^{L S}(\vartheta, \varphi) ,\label{eq:7:1:27}\\
 \widehat{S}_{\mu}\left\{\Phi(r) Y_{J M}^{L S}(\vartheta, \varphi)\right\}=\Phi(r) \widehat{S}_{\mu}\left\{Y_{J M}^{L S}(\vartheta, \varphi)\right\}  \notag\\
 =(-1)^{L+1} \Phi(r) \sqrt{(2 J+1) S(S+1)(2 S+1)} \sum_{J^{\prime}}(-1)^{J^{\prime}+S}
 \sixj{J}{J'}{1}{S}{S}{L} \clebsch{J}{M}{1}{\mu}{J^{\prime}}{M+\mu} Y_{J^{\prime} M+\mu}^{L S}(\vartheta, \varphi)  \label{eq:7:1:28}\\
@@ -326,7 +326,7 @@ Under rotations specified by the Euler angles $\alpha, \beta, \gamma$ the spinor
 \begin{equation}
 \Omega_{J M^{\prime}}^{L}\left(\vartheta^{\prime}, \varphi^{\prime}\right)=\hat{D}(\alpha, \beta, \gamma) \Omega_{J M^{\prime}}^{L}(\vartheta, \varphi)=\sum_{M=-J}^{J} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma) \Omega_{J M}^{L}(\vartheta, \varphi), \label{eq:7:2:22}
 \end{equation}
-where $D_{M M}^{J}$, are the Wigner $D$-functions (Chap.~\ref{chap:4}), $M^{\prime}$ is the projection of total angular momentum on the rotated $z^{\prime}$-axis; $\vartheta, \varphi$ and $\vartheta^{\prime}, \varphi^{\prime}$ are polar angles of the position vector $\vect{r}$ in the initial and final coordinate systems. The relations between $\vartheta^{\prime}, \varphi^{\prime}$ and $\vartheta, \varphi$ are given by Eqs. 1.4(2)-1.4(3).
+where $D_{M M}^{J}$, are the Wigner $D$-functions (Chap.~\ref{chap:4}), $M^{\prime}$ is the projection of total angular momentum on the rotated $z^{\prime}$-axis; $\vartheta, \varphi$ and $\vartheta^{\prime}, \varphi^{\prime}$ are polar angles of the position vector $\vect{r}$ in the initial and final coordinate systems. The relations between $\vartheta^{\prime}, \varphi^{\prime}$ and $\vartheta, \varphi$ are given by Eqs. \eqref{eq:1:4:2}-\eqref{eq:1:4:3}.
 
 \subsection{Action of $\vect{\nabla}$ and Angular Momentum Operators}\label{sec:7.2.5}\index{spinor spherical harmonics!action of operators on}
 The spinor spherical harmonics satisfy Eqs. \eqref{eq:7:1:24}-\eqref{eq:7:1:38} for $S=\frac{1}{2}$. Note also the following relations in which $\widehat{\vect{S}}$ is the spin operator (Sec.~\ref{sec:2.5}), $\widehat{\vect{L}}$ is the operator of orbital angular momentum (Sec.~\ref{sec:2.2}), $\widehat{\vect{J}}=\widehat{\vect{L}}+\widehat{\vect{S}}$ is the operator of total angular momentum, and $\vect{n}(\vartheta, \varphi)=\vect{r} / r$.
@@ -558,7 +558,7 @@ The longitudinal vector $\vect{Y}_{J M}^{(-1)}(\vartheta, \varphi)$ is given by
 \begin{equation}
 \vect{Y}_{J M}^{(-1)}(\vartheta, \varphi)=\mathrm{n} Y_{J M}(\vartheta, \varphi). \label{eq:7:3:7}
 \end{equation}
-In \eqref{eq:7:3:6} $\nabla_{\Omega}$ denotes the angular part of the $\nabla$ operator (see Eqs. 1.3(9)-1.3(10)), and $\widehat{\vect{L}}$ is the orbital angular momentum operator.\index{operator!angular part of $\nabla$}\isymo{nabla-Omega@$\nabla_{\Omega}$, angular part of the $\nabla$ operator} Three vectors $\vect{Y}_{J M}^{(\lambda)}(\vartheta, \varphi)$ with different $\lambda$ are mutually orthogonal:
+In \eqref{eq:7:3:6} $\nabla_{\Omega}$ denotes the angular part of the $\nabla$ operator (see Eqs. \eqref{eq:1:3:9}-\eqref{eq:1:3:10}), and $\widehat{\vect{L}}$ is the orbital angular momentum operator.\index{operator!angular part of $\nabla$}\isymo{nabla-Omega@$\nabla_{\Omega}$, angular part of the $\nabla$ operator} Three vectors $\vect{Y}_{J M}^{(\lambda)}(\vartheta, \varphi)$ with different $\lambda$ are mutually orthogonal:
 \begin{equation}
 \vect{Y}_{J M}^{\left(\lambda^{\prime}\right)}(\vartheta, \varphi) \cdot \vect{Y}_{J M}^{(\lambda)}(\vartheta, \varphi)=0, \quad \text { if } \lambda^{\prime} \neq \lambda. \label{eq:7:3:8}
 \end{equation}
@@ -742,7 +742,7 @@ Under rotations specified by the Euler angles $\alpha, \beta, \gamma$ (Sec.~\ref
 & \vect{Y}_{J M^{\prime}}^{L}\left(\vartheta^{\prime}, \varphi^{\prime}\right)=\hat{D}(\alpha, \beta, \gamma) \vect{Y}_{J M^{\prime}}^{L}(\vartheta, \varphi)=\sum_{M} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma) \vect{Y}_{J M}^{L}(\vartheta, \varphi)  \notag\\
 & \vect{Y}_{J M^{\prime}}^{(\lambda)}\left(\vartheta^{\prime}, \varphi^{\prime}\right)=\hat{D}(\alpha, \beta, \gamma) \vect{Y}_{J M^{\prime}}^{(\lambda)}(\vartheta, \varphi)=\sum_{M}^{J} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma) \vect{Y}_{J M}^{(\lambda)}(\vartheta, \varphi). \label{eq:7:3:45}
 \end{align}
-where $D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)$ are the Wigner $D$-functions (Chap.~\ref{chap:4}), $M^{\prime}$ is the projection of total angular momentum on the new $z^{\prime}$-axis; $\vartheta, \varphi$ and $\vartheta^{\prime}, \varphi^{\prime}$ are polar angles of $r$ in the initial and final coordinate systems, respectively. The relations between $\vartheta^{\prime}, \varphi^{\prime}$ and $\vartheta, \varphi$ are given by eqs. 1.4(2), 1.4(3).
+where $D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)$ are the Wigner $D$-functions (Chap.~\ref{chap:4}), $M^{\prime}$ is the projection of total angular momentum on the new $z^{\prime}$-axis; $\vartheta, \varphi$ and $\vartheta^{\prime}, \varphi^{\prime}$ are polar angles of $r$ in the initial and final coordinate systems, respectively. The relations between $\vartheta^{\prime}, \varphi^{\prime}$ and $\vartheta, \varphi$ are given by eqs. \eqref{eq:1:4:2}, \eqref{eq:1:4:3}.
 
 \subsection{Differential Equations}\label{sec:7.3.5}\index{vector spherical harmonics!differential equations}
 \begin{enumerate}[label=(\alph*)]
@@ -754,7 +754,7 @@ This equation may be rewritten in a compact form as
 \begin{equation}
 \left\{\Delta_{\Omega}+L(L+1)\right\} \vect{Y}_{J M}^{L}(\vartheta, \varphi)=0 \label{eq:7:3:47}
 \end{equation}
-where $\Delta_{\Omega} \equiv \nabla_{\Omega}^{2}$ is the angular part of the Laplace operator (see Eq. 1.3(15)).
+where $\Delta_{\Omega} \equiv \nabla_{\Omega}^{2}$ is the angular part of the Laplace operator (see Eq. \eqref{eq:1:3:15}).
 \item The vector functions $r^{L} \vect{Y}_{J M}^{L}(\vartheta, \varphi)$ are solutions of the Laplace equation
 \begin{equation}
 \Delta\left\{r^{L} \vect{Y}_{J M}^{J}(\vartheta, \varphi)\right\}=0. \label{eq:7:3:48}
@@ -825,7 +825,7 @@ where $z_{L}(k r) \equiv \sqrt{\pi /(2 k r)} Z_{L+\frac{1}{2}}(k r)$, and $Z_{L+
 \end{enumerate}
 
 \subsection{Action of Angular Momentum Operators}\label{sec:7.3.7}\index{vector spherical harmonics!action of angular momentum operators}
-The action of the angular momentum operators on vector spherical harmonics is given by Eqs. 7.1(27)7.1(29) for $S=1$. In addition, we note the following relations in which $\widehat{\vect{S}}, \widehat{\vect{L}}$ and $\widehat{\vect{J}}=\widehat{\vect{L}}+\widehat{\vect{S}}$ are the spin, orbital and total angular momentum operators, respectively; $n$ is the unit vector defined by the polar angles $\vartheta, \varphi$.\\
+The action of the angular momentum operators on vector spherical harmonics is given by Eqs. \eqref{eq:7:1:27} and \eqref{eq:7:1:29} for $S=1$. In addition, we note the following relations in which $\widehat{\vect{S}}, \widehat{\vect{L}}$ and $\widehat{\vect{J}}=\widehat{\vect{L}}+\widehat{\vect{S}}$ are the spin, orbital and total angular momentum operators, respectively; $n$ is the unit vector defined by the polar angles $\vartheta, \varphi$.\\
 \begin{enumerate}[label=(\alph*)]
 \item
 \begin{gather}

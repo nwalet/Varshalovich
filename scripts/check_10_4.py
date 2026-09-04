@@ -12,6 +12,19 @@ mismatch flags an OCR error in the printed table.
 
 Usage:  python3 check_10_4.py
 """
+
+import os
+
+
+def _chapter_path(name):
+    """Locate a chapter beside the repo root, relative to THIS file.
+
+    Using a path relative to the current directory made the script work
+    only when run from inside scripts/.
+    """
+    return os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                        os.pardir, name)
+
 import re
 from sympy import Rational, S
 from sympy.physics.wigner import wigner_9j
@@ -36,7 +49,7 @@ def w9(v):
 def extract_table():
     """Pull the eq 10.4.6 block out of Chap10.tex and return list of
     (eps_flag, [9 letters]) for every \\ninej in it."""
-    text = open('../Chap10.tex').read()
+    text = open(_chapter_path('Chap10.tex')).read()
     # region: from the paragraph introducing 729/72 symbols up to the r-symbol subsection
     start = text.index('are arranged horizontally')
     end = text.index('Symmetries of the $r$ Symbol')

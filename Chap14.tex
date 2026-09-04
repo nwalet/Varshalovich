@@ -1,0 +1,205 @@
+\chapter{Computer generation of numerical and algebraic expressions}\label{chap:14}\index{computer algebra}\index{computer generation of tables}
+
+The algebraic tables of Secs.~\ref{sec:8.12}, \ref{sec:9.11} and \ref{sec:10.11},
+and the numerical tables of Secs.~\ref{sec:8.13} and \ref{sec:10.12}, together
+with Tables 9.9--9.11, may be reproduced entry by entry by computer algebra. This
+chapter records the method used, so that any individual entry can be
+regenerated and checked rather than taken on trust. The programs are listed in
+Sec.~\ref{sec:14.5}.
+
+\section{Scope}\label{sec:14.1}\index{computer algebra!scope}
+Each algebraic table fixes one small angular momentum and leaves the remaining
+arguments symbolic: $b$ in the Clebsch-Gordan tables, $d$ in the $6j$ tables,
+and the triad $(\alpha \beta \gamma)$ in the $9j$ tables. The corresponding sum
+is then finite with a number of terms bounded by that fixed argument, and is
+therefore a finite symbolic computation. Nothing in the method is restricted to
+the ranges printed here; the same programs generate entries beyond them, at
+greater cost.
+
+\section{Algebraic generation}\label{sec:14.2}\index{computer algebra!algebraic tables}
+
+\subsection{The Clebsch-Gordan coefficients}\label{sec:14.2.1}\index{Clebsch-Gordan coefficient!computer generation}
+For fixed $b$ and $\beta$, and with $c=a+k$, the summation index of the Van der
+Waerden-Racah sum of Sec.~\ref{sec:8.2.1} runs over at most $2b+1$ values, so
+the coefficient is a short symbolic sum. The difficulty is that its terms
+contain factorials of $a\pm\alpha$, which are not polynomial in $a$. It is
+removed by the change of variable
+\begin{equation}
+p=a+\alpha, \qquad q=a-\alpha ,\label{eq:14:2:1}
+\end{equation}
+both of which are non-negative \emph{integers} even when $a$ and $\alpha$ are
+half-integral. Every factorial argument is then an explicit integer offset from
+$p$, $q$ or $p+q=2a$, and each such factorial may be replaced by a rational
+function through
+\begin{equation}
+\frac{(x+m)!}{x!}=
+\begin{cases}
+(x+1)(x+2)\cdots(x+m), & m \geq 0,\\[2pt]
+\bigl[x(x-1)\cdots(x+m+1)\bigr]^{-1}, & m<0 .
+\end{cases}\label{eq:14:2:2}
+\end{equation}
+The factor $p!\,q!$ produced by the sum cancels exactly against the one under
+the square root, and the coefficient takes the form
+\begin{equation}
+\clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}=T(p,q)\,\bigl[W(p,q)\bigr]^{1/2},
+\label{eq:14:2:3}
+\end{equation}
+with $T$ and $W$ explicit rational functions. No general-purpose simplification
+of factorials or gamma functions is required at any stage.
+
+Eq.~\eqref{eq:14:2:3} does not fix the presentation, since any factor may be
+moved under the radical as its square. The tables of Sec.~\ref{sec:8.12} absorb
+every factor that is of one sign throughout the physical domain
+$|\gamma| \leq c$, such as $(c+\gamma)$ or $(c-\gamma+1)$, and leave outside
+only those that change sign, such as $\gamma$ itself. Applying that rule
+reproduces the printed entries.
+
+\subsection{The $6j$ symbols}\label{sec:14.2.2}\index{6j symbol@$6j$ symbol!computer generation}
+The analogous integer variables for the $6j$ symbols are the triangle deficits
+\begin{equation}
+u=s-2a, \qquad v=s-2b, \qquad w=s-2c, \qquad s=a+b+c=u+v+w .\label{eq:14:2:4}
+\end{equation}
+Writing the summation index of Eq.~\eqref{eq:9:2:1} as $N=s+t$, and taking
+$e=c+n$ and $f=b+m$ as in the tables, the seven factorial arguments of that
+equation become
+\begin{equation}
+\begin{gathered}
+N-a-b-c=t, \qquad N-a-e-f=t-n-m, \\
+N-b-d-f=v+t-d-m, \qquad N-c-d-e=w+t-d-n, \\
+a+b+d+e-N=d+n-t, \qquad a+c+d+f-N=d+m-t, \\
+b+c+e+f-N=u+n+m-t ,
+\end{gathered}\label{eq:14:2:5}
+\end{equation}
+each an explicit integer offset from $t$, $u$, $v$ or $w$. The index $t$ runs
+over the explicit finite range
+\begin{equation}
+\max(0,\,n+m) \leq t \leq \min(d+n,\,d+m),\label{eq:14:2:6}
+\end{equation}
+so the sum has at most $2d+1$ terms. Here the cancellation is complete:
+$\Delta(abc)$ contributes $[u!\,v!\,w!/(s+1)!]^{1/2}$, the sum contributes
+$(s+1)!/(u!\,v!\,w!)$, and $\Delta(aef)$ contributes the inverse, leaving
+\begin{equation}
+\sixj{a}{b}{c}{d}{e}{f}=(-1)^{s}\,T(u,v,w)\,\bigl[W(u,v,w)\bigr]^{1/2}
+\label{eq:14:2:7}
+\end{equation}
+with no symbolic factorial remaining. The phase arises because
+$(-1)^{N}=(-1)^{s}(-1)^{t}$, which is why every entry of Sec.~\ref{sec:9.11}
+carries $(-1)^{s}$ or $(-1)^{s+1}$.
+
+The factors of $T$ and $W$ are linear in $a$, $b$, $c$ and are printed in the
+notation of the tables by reading off their coefficients: $(1,1,1)$ gives
+$s+k$, $(-1,1,1)$ gives $s-2a+k$, $(0,2,0)$ gives $2b+k$, and so on. The factor
+left outside the radical is expressed as a polynomial in $X$ by division, $X$
+being quadratic in $a$.
+
+\subsection{The $9j$ symbols}\label{sec:14.2.3}\index{9j symbol@$9j$ symbol!computer generation}
+The $9j$ symbols of Sec.~\ref{sec:10.11} are not given by a single sum of the
+above type. They are obtained from the sum over three $6j$ symbols,
+Eq.~\eqref{eq:10:2:20}. For the tabulated symbols the triad $(\beta a x)$
+restricts the intermediate momentum to
+\begin{equation}
+x=a+\xi, \qquad -\beta \leq \xi \leq \beta ,\label{eq:14:2:8}
+\end{equation}
+an explicit sum of at most $2\beta+1$ terms. Each of the three $6j$ symbols is
+carried by a permutation of its columns together with an interchange of the
+upper and lower arguments in two of them into the form
+$\bigl\{{A\ B\ C \atop d\ C{+}n\ B{+}m}\bigr\}$ treated in
+Sec.~\ref{sec:14.2.2}, so the same machinery evaluates all three; only the
+deficits \eqref{eq:14:2:4} need re-expressing in terms of those of $(abc)$.
+
+The phases collapse. Summing the three factors $(-1)^{A+B+C}$ with the
+$(-1)^{2x}$ of Eq.~\eqref{eq:10:2:20} gives the exponent
+$4a+4\xi+2(a+b+c)+\beta+\mu$, and since $2a$, $2\xi$ and $a+b+c$ are integers
+every term is even except the last two:
+\begin{equation}
+\ninej{a+\lambda}{b+\mu}{c+\nu}{a}{b}{c}{\alpha}{\beta}{\gamma}
+=(-1)^{\beta+\mu}\sum_{\xi}(2a+2\xi+1)\,T_1T_2T_3\,[W_1W_2W_3]^{1/2},
+\label{eq:14:2:9}
+\end{equation}
+independent of $\xi$ and of $a$, $b$, $c$. The radicands of the individual
+terms differ by perfect squares of rational functions, so a common radical may
+be extracted and the whole reduces to a rational multiple of a single square
+root. That the ratios are perfect squares is tested, not assumed.
+
+\section{Numerical evaluation}\label{sec:14.3}\index{computer algebra!numerical tables}
+Numerical values are obtained in exact rational arithmetic. Since every
+coefficient of Secs.~\ref{sec:8.13} and \ref{sec:10.12}, and of
+Tables 9.9--9.11, is a signed square root of a rational number, the value $V$ is squared, $V^{2}$ is
+confirmed to be rational, and the entry is presented as
+\begin{equation}
+V=\pm\left(\frac{P}{Q}\right)^{1/2},\label{eq:14:3:1}
+\end{equation}
+the decimal being derived from the fraction rather than the reverse. The
+$12j$ symbols are evaluated from their defining single sums over four $6j$
+symbols, Eqs.~\eqref{eq:10:13:6} and \eqref{eq:10:13:26}.
+
+\section{Verification}\label{sec:14.4}\index{computer algebra!verification}
+Each generator is checked against an independent implementation of the same
+coefficient at a large number of numerical points, at two levels: the sum
+itself, and the regrouping into the printed form, so that an error in a phase
+or in the choice of factors placed under the radical cannot pass unnoticed.
+Points are chosen asymmetrically as well as symmetrically, since a factor such
+as $X$ or $Z$ changes sign only when one momentum dominates the other two, and
+a symmetric sample would not detect a factor wrongly treated as of one sign.
+All entries of the tables cited in Sec.~\ref{sec:14.1} agree. The relations of
+Sec.~\ref{sec:10.13} are checked against each other in the same way.
+
+\section{The programs}\label{sec:14.5}\index{computer algebra!programs}
+The generators and their checks are written in Python using
+\textsf{SymPy}. Each generator produces a single entry, given the fixed
+argument and the row and column indices of the table:
+\begin{lstlisting}[language=bash]
+gen_8_12_cg_tables.py  --b 1 --beta=0 --k=0
+gen_9_11_6j_tables.py  --d 1 --m=0 --n=0
+gen_10_11_9j_tables.py --alpha 3/2 --beta 3/2 --gamma 0 --lam=1/2 --mu=1/2 --nu=0
+\end{lstlisting}
+Omitting the row and column indices produces a whole table. The companion
+programs \texttt{check\_8\_12.py}, \texttt{check\_9\_11.py},
+\texttt{check\_10\_11.py} and \texttt{check\_10\_13.py} perform the
+verification of Sec.~\ref{sec:14.4}. The same functions are available
+interactively in the two notebooks described in Sec.~\ref{sec:14.6}.
+
+\section{Use of the notebooks}\label{sec:14.6}\index{computer algebra!notebooks}
+Two Jupyter notebooks make the generators available without recourse to the
+command line. Both require only \textsf{SymPy}; if \textsf{ipywidgets} is
+also present the arguments are set from menus, and if it is not, each quantity
+is instead obtained by editing the arguments at the head of a cell and running
+it. Every result is displayed both as a typeset formula and as the
+corresponding \textsf{SymPy} expression, the latter being the form to copy if
+the entry is to be used in further computation.
+
+\subsection{Algebraic expressions}\label{sec:14.6.1}
+The notebook \texttt{vmk\_algebraic\_tables.ipynb} has one part for each of
+the three families of Sec.~\ref{sec:14.2}. In each, one selects the fixed
+argument and the row and column of the table:
+\begin{lstlisting}[language=Python]
+clebsch(b=1, beta=0, k=0)             # <a alpha, b beta | c gamma>, c = a+k
+sixj(d=1, m=0, n=0)                   # {a b c; d e f}, e = c+n, f = b+m
+ninej(1, 1, 0, lam=1, mu=0, nu=0)     # alpha, beta, gamma, then lambda, mu, nu
+\end{lstlisting}
+A further cell in each part prints an entire table at once. Setting
+\texttt{show\_source=True} adds the \LaTeX{} source of the entry. The
+Clebsch-Gordan entries are recomputed as soon as an argument is changed; the
+$6j$ and $9j$ entries are not, since a single entry of the larger tables takes
+appreciably longer to construct, and are instead computed on request. A closing
+part runs the verification programs of Sec.~\ref{sec:14.4} over a reduced
+range of arguments.
+
+\subsection{Numerical values}\label{sec:14.6.2}
+The notebook \texttt{vmk\_numeric\_tables.ipynb} evaluates the
+Clebsch-Gordan coefficients and the $6j$, $9j$ and $12j$ symbols at given
+numerical arguments, in the form \eqref{eq:14:3:1}:
+\begin{lstlisting}[language=Python]
+clebsch(1, 0, 1, 0, 2)                # gamma = alpha + beta is supplied
+sixj(1, 1, 1, 1, 1, 1)
+ninej(0.5, 0.5, 1, 0.5, 0.5, 1, 1, 1, 2)
+twelvej1(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)    # eq (10.13.6)
+twelvej2(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)    # eq (10.13.26)
+\end{lstlisting}
+A coefficient that vanishes is reported together with the condition that fails,
+whether a triangular condition on a particular triad or a projection outside
+its permitted range, so that a zero is never returned without explanation.
+Further cells reproduce the numerical tables themselves under the conditions
+stated there, and a final part evaluates the algebraic expressions of
+Sec.~\ref{sec:14.2} at numerical arguments and compares them with the values
+obtained directly, the two being independent routes to the same quantity.

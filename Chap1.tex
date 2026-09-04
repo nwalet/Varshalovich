@@ -476,80 +476,7 @@ r & -\frac{\sin \vartheta}{\sqrt{2}} e^{i \varphi} & \cos \vartheta & \frac{\sin
 \end{tabular}
 \end{center}
 \end{table}
-\begin{comment}
-\begin{pmatrix}
-x & y & z \\
--\frac{1}{\sqrt{2}} & \frac{i}{\sqrt{2}} & 0 \\
-0 & 0 & 1 \\
-\frac{1}{\sqrt{2}} &   \frac{i}{\sqrt{2}} & 0
-\end{pmatrix} \\
-& \left.\begin{array}{c}
-r \\
-x \\
-y \\
-z \\
-y \\
-\sin \vartheta \cos \varphi \\
-\sin \vartheta \sin \varphi \\
-\cos \vartheta
-\end{array} 
 
-& M(+1,0,-1 \longleftarrow x, y, z) \\
-
-
-\quad \cos \vartheta \cos \varphi \quad-\sin \varphi \quad \begin{array}{c}
-\cos \varphi \\
--\sin \vartheta
-\end{array} \quad 0 \quad\right) . \\
-&\\
-& \left.\begin{array}{l}
-x \\
-y \\
-z \\
--\frac{1}{\sqrt{2}} \\
--\frac{i}{\sqrt{2}}
-\end{array} 0 \begin{array}{c}
-0 \\
-0
-\end{array} 1 \frac{1}{\sqrt{2}}{ }_{0}^{\sqrt{2}}{ }_{0}\right) \\
-& \begin{array}{c}
-+1 \\
-0 \\
--1
-\end{array}\begin{pmatrix}
--\frac{1}{\sqrt{2}} & \frac{i}{\sqrt{2}} & 0 \\
-0 & 0 & 1 \\
-\frac{1}{\sqrt{2}} & \, \frac{i}{\sqrt{2}} & 0
-\end{pmatrix} \\
-& \left.\left.\begin{array}{c}
-M(r, \vartheta, \varphi \longleftarrow x, y, z) \\
-\dot{r} \\
-\vartheta \\
-\varphi \\
-\dot{\varphi} \\
-\dot{\sin \vartheta \cos \varphi} \\
-\cos \vartheta \cos \varphi \\
--\sin \varphi
-\end{array} \quad \sin \vartheta \sin \varphi \quad \cos \vartheta \sin \varphi \quad-\sin \vartheta\right) ~ \cos \varphi \quad 0 ~\right) ~ c \\
-& M(+1,0,-1 \longleftarrow r, \vartheta, \varphi) \\
-& M(r, \vartheta, \varphi \leftarrow+1,0,-1) \\
-& r \vartheta \varphi \\
-& +1\begin{pmatrix}
--\frac{\sin \vartheta}{\sqrt{2}} e^{-i \varphi} & -\frac{\cos \vartheta}{\sqrt{2}} e^{-i \varphi} & \frac{i}{\sqrt{2}} e^{-i \varphi} \\
-\cos \vartheta & -\sin \vartheta & 0 \\
-\frac{\sin \vartheta}{\sqrt{2}} e^{i \varphi} & \frac{\cos \vartheta}{\sqrt{2}} e^{i \varphi} & \frac{i}{\sqrt{2}} e^{i \varphi}
-\end{pmatrix} \\
-& \begin{array}{l}
-r \\
-\varphi
-\end{array}\begin{pmatrix}
--\frac{\sin \vartheta}{\sqrt{2}} e^{i \varphi} & \cos \vartheta & \frac{\sin \vartheta}{\sqrt{2}} e^{-i \varphi} \\
--\frac{\cos \vartheta}{\sqrt{2}} e^{i \varphi} & -\sin \vartheta & \frac{\cos \vartheta}{\sqrt{2}} e^{-i \varphi} \\
--\frac{i}{\sqrt{2}} e^{i \varphi} & 0 & -\frac{i}{\sqrt{2}} e^{-i \varphi}
-\end{pmatrix}
-\end{aligned}
-\]
-\end{comment}
 
 \subsection{Scalar Product of Vectors}\label{sec:1.2.2}\index{scalar product}\index{product!scalar}
 The scalar product of vectors \(\vect{A}\) and \(\vect{B}\) in an arbitrary orthonormal basis is defined by
@@ -637,9 +564,9 @@ Equations \eqref{eq:1:2:26}-\eqref{eq:1:2:27} may be written in a more compact f
 & {[\vect{A} \times \vect{B}]_{\mu}=-i \sqrt{2} \sum_{\nu \lambda} \clebsch{1}{\nu}{1}{\lambda}{1}{\mu} A_{\nu} B_{\lambda}} ,\\
 & {[\vect{A} \times \vect{B}]^{\mu}=i \sqrt{2} \sum_{\nu \lambda} \clebsch{1}{\nu}{1}{\lambda}{1}{\mu} A^{\nu} B^{\lambda}},
 \end{aligned}
- \quad(\mu, \nu, \lambda= \pm 1,0) .
+ \quad(\mu, \nu, \lambda= \pm 1,0) .\label{eq:1:2:28}
 \end{equation}
-Helicity components of the vector product are given by equations analogous to (25)-(28).
+Helicity components of the vector product are given by equations analogous to \eqref{eq:1:2:25}-\eqref{eq:1:2:28}.
 
 \subsection{Products Involving Three or More Vectors}\label{sec:1.2.4}\index{triple product}\index{product!triple (scalar and vector)}
 \begin{gather}
@@ -681,17 +608,17 @@ The components \(\varepsilon_{i k l}\) are invariant with respect to rotations a
 The tensor \(\varepsilon_{i k l}\) has the following properties: The product of two tensors \(\varepsilon_{i k l}\) and \(\varepsilon_{r g t}\) may be written in the form of a determinant
 \begin{equation}
 \varepsilon_{i k l} \varepsilon_{r s t}=\left|\begin{array}{ccc}
-\delta_{i r} & \delta_{i s} & \delta_{i t}  \label{eq:1:2:36}\\
+\delta_{i r} & \delta_{i s} & \delta_{i t}  \\
 \delta_{k r} & \delta_{k s} & \delta_{k t} \\
 \delta_{l r} & \delta_{l s} & \delta_{l t}
-\end{array}\right|=\delta_{i r} \delta_{k s} \delta_{l t}+\delta_{i s} \delta_{k t} \delta_{l r}+\delta_{i t} \delta_{k r} \delta_{l s}-\delta_{i r} \delta_{k t} \delta_{l s}-\delta_{i s} \delta_{k r} \delta_{l t}-\delta_{i t} \delta_{k s} \delta_{l r}.
+\end{array}\right|=\delta_{i r} \delta_{k s} \delta_{l t}+\delta_{i s} \delta_{k t} \delta_{l r}+\delta_{i t} \delta_{k r} \delta_{l s}-\delta_{i r} \delta_{k t} \delta_{l s}-\delta_{i s} \delta_{k r} \delta_{l t}-\delta_{i t} \delta_{k s} \delta_{l r}. \label{eq:1:2:36}
 \end{equation}
 By summing over a pair of indices, one obtains
 \begin{equation}
 \sum_{i} \varepsilon_{i k l} \varepsilon_{i s t}=\left|\begin{array}{ll}
-\delta_{k s} & \delta_{k t}  \label{eq:1:2:37}\\
+\delta_{k s} & \delta_{k t}  \\
 \delta_{l s} & \delta_{l t}
-\end{array}\right|=\delta_{k s} \delta_{l t}-\delta_{k t} \delta_{l s}.
+\end{array}\right|=\delta_{k s} \delta_{l t}-\delta_{k t} \delta_{l s}. \label{eq:1:2:37}
 \end{equation}
 Summation over two pairs of indices yields
 \begin{equation}
@@ -1478,7 +1405,7 @@ U(a, b)=U\left(a_{2}, b_{2}\right) U\left(a_{1}, b_{1}\right). \label{eq:1:4:78}
 In this case all the matrices are supposed to be given in an initial coordinate system.
 
 \subsubsection{(d) Addition Theorem for Rotation Matrices a}\index{addition theorem!for rotation matrices}\index{rotation matrix!addition theorem}
-Let us carry out two successive rotations \(S\{x, y, z\} \rightarrow S^{\prime}\left\{x^{\prime}, y^{\prime}, z^{\prime}\right\}\) and \(S^{\prime}\left\{x^{\prime}, y^{\prime}, z^{\prime}\right\} \rightarrow S^{\prime \prime}\left\{x^{\prime \prime}, y^{\prime \prime}, z^{\prime \prime}\right\}\). The matrix which transforms cartesian components of vectors and tensors under the resultant rotation \(S\{x, y, z\} \rightarrow S^{\prime \prime}\left\{x^{\prime \prime}, y^{\prime \prime}, z^{\prime \prime}\right\}\) represents a product of the matrices \(a(1)\) and \(a(2)\) corresponding to the first and second rotations. The order of these matrices in the product depends on the convention used for the rotation angles. If all angles which describe rotations are referred to the initial coordinate system, i.e., the operator of the resultant rotation is given by Eq. (64), then
+Let us carry out two successive rotations \(S\{x, y, z\} \rightarrow S^{\prime}\left\{x^{\prime}, y^{\prime}, z^{\prime}\right\}\) and \(S^{\prime}\left\{x^{\prime}, y^{\prime}, z^{\prime}\right\} \rightarrow S^{\prime \prime}\left\{x^{\prime \prime}, y^{\prime \prime}, z^{\prime \prime}\right\}\). The matrix which transforms cartesian components of vectors and tensors under the resultant rotation \(S\{x, y, z\} \rightarrow S^{\prime \prime}\left\{x^{\prime \prime}, y^{\prime \prime}, z^{\prime \prime}\right\}\) represents a product of the matrices \(a(1)\) and \(a(2)\) corresponding to the first and second rotations. The order of these matrices in the product depends on the convention used for the rotation angles. If all angles which describe rotations are referred to the initial coordinate system, i.e., the operator of the resultant rotation is given by Eq. \eqref{eq:1:4:64}, then
 \begin{equation}
 a=a(2) a(1), \label{eq:1:4:79}
 \end{equation}

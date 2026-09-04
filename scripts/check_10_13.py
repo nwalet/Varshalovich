@@ -11,17 +11,30 @@ the definition of 12j(I) and cross-check the other representations against it:
   eq 10.13.7  12j(I) = sum of 9j x 6j x 6j
   eq 10.13.9  16 symmetry permutations all equal
 
-(eq 10.13.3, the eight-3jm sum, and 10.13.4/5 orthogonality are not covered
-here.)
+(eq 10.13.3, the eight-3jm sum, and 10.13.5 orthogonality are not covered
+here; 10.13.4 is.)
 
 Argument order (as in the \twelvejI macro):
   (a1 a2 a3 a4 | b12 b23 b34 b41 | c1 c2 c3 c4)
 
 Usage:  python3 check_10_13.py
 """
+
+import os
+
+
+def _chapter_path(name):
+    """Locate a chapter beside the repo root, relative to THIS file.
+
+    Using a path relative to the current directory made the script work
+    only when run from inside scripts/.
+    """
+    return os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                        os.pardir, name)
+
 import math
 from sympy import Rational, S, sqrt, factorial as fac
-from sympy.physics.wigner import wigner_6j, wigner_9j
+from sympy.physics.wigner import wigner_3j, wigner_6j, wigner_9j
 
 
 def D(a, b, c):
@@ -52,6 +65,14 @@ def w9(a, b, c, d, e, f, g, h, j):
                 tri(a, d, g), tri(b, e, h), tri(c, f, j)]):
         return S.Zero
     return wigner_9j(a, b, c, d, e, f, g, h, j)
+
+
+def w3(a, b, c, al, be, ga):
+    if not tri(a, b, c) or al + be + ga != 0:
+        return S.Zero
+    if abs(al) > a or abs(be) > b or abs(ga) > c:
+        return S.Zero
+    return wigner_3j(a, b, c, al, be, ga)
 
 
 def valid12(a1, a2, a3, a4, b12, b23, b34, b41, c1, c2, c3, c4):
@@ -179,7 +200,7 @@ def extract_sym_II():
     """Pull the eq 10.13.27 symmetry block and return all \\twelvejII arg-lists
     (as lists of subscripted-letter tokens)."""
     import re
-    text = open('../Chap10.tex').read()
+    text = open(_chapter_path('Chap10.tex')).read()
     start = text.index('relate 48 formally different')
     end = text.index('Recursion relations', start)
     region = text[start:end]
@@ -306,6 +327,87 @@ def run():
     okk = good > 0 and bad == 0
     ok &= okk
     print(f"  [{'OK  ' if okk else 'FAIL'}] {'eq 10.13.33 one arg 0 -> two 6j':36s} ({good - bad}/{good})")
+
+
+    # eq 10.13.17 : 12j(I) with b41 = 0 -> a 9j symbol
+    good = bad = 0
+    for a1, a2, a3, b12, b23, b34, c2, c3 in itertools.product([H, 1, Rational(3, 2)], repeat=8):
+        # b41 = 0 forces a4 = c1 and c4 = a1 through the triads
+        for a4 in [H, 1, Rational(3, 2)]:
+            v = (a1, a2, a3, a4, b12, b23, b34, 0, a4, c2, c3, a1)
+            if not valid12(*v):
+                continue
+            lhs = TW(*v)
+            rhs = (1 / sqrt((2 * a1 + 1) * (2 * a4 + 1))
+                   * w9(a1, b12, a2, c3, c2, b23, b34, a4, a3))
+            good += 1
+            if not close(lhs, rhs):
+                bad += 1
+        if good >= 400:
+            break
+    okk = good > 0 and bad == 0
+    ok &= okk
+    print(f"  [{'OK  ' if okk else 'FAIL'}] {'eq 10.13.17 b41=0 -> 9j':36s} ({good - bad}/{good})")
+
+    # eq 10.13.18 : 12j(I) with c4 = 0 -> two 6j
+    good = bad = 0
+    for a1, a2, a3, a4, b12, b23, c1, c2 in itertools.product([H, 1, Rational(3, 2)], repeat=8):
+        # c4 = 0 forces b34 = c3 and b41 = a1
+        for c3 in [H, 1, Rational(3, 2)]:
+            v = (a1, a2, a3, a4, b12, b23, c3, a1, c1, c2, c3, 0)
+            if not valid12(*v):
+                continue
+            lhs = TW(*v)
+            rhs = ((-1) ** (b12 + b23 + c3 + a1 - a2 - c2)
+                   / sqrt((2 * a1 + 1) * (2 * c3 + 1))
+                   * w6(a1, a2, b12, c2, c1, a4) * w6(a2, a3, b23, c3, c2, a4))
+            good += 1
+            if not close(lhs, rhs):
+                bad += 1
+        if good >= 400:
+            break
+    okk = good > 0 and bad == 0
+    ok &= okk
+    print(f"  [{'OK  ' if okk else 'FAIL'}] {'eq 10.13.18 c4=0 -> two 6j':36s} ({good - bad}/{good})")
+
+    # eq 10.13.37 / 10.13.38 : 12j(II) at a2 = b1 = 1/2 and c4 = d3 +/- 1.
+    # Both hold only when a4+b4+d3 and c1+c2+d3 are ODD (eq 10.13.36 is the
+    # even counterpart); the all-zero 3jm in the denominators would vanish
+    # otherwise, so the parity filter is part of the identity, not a shortcut.
+    for tag, shift in (("eq 10.13.37 c4=d3+1 (odd)", +1), ("eq 10.13.38 c4=d3-1 (odd)", -1)):
+        good = bad = 0
+        for a3, a4, b3, b4, c1, c2, d1, d2, d3 in itertools.product(
+                [H, 1, Rational(3, 2), 2], repeat=9):
+            c4 = d3 + shift
+            v = (H, a3, a4, H, b3, b4, c1, c2, c4, d1, d2, d3)
+            if not valid12II(*v):
+                continue
+            if (a4 + b4 + d3) % 2 == 0 or (c1 + c2 + d3) % 2 == 0:
+                continue
+            den = w3(a4, b4, c4, 0, 0, 0) * w3(c1, c2, c4, 0, 0, 0)
+            if den == 0:
+                continue
+            num = ((a4 - a3) * (2 * a3 + 1) + (b4 - b3) * (2 * b3 + 1)
+                   + (d3 + 1 if shift > 0 else -d3))
+            num2 = ((c2 - d2) * (2 * d2 + 1) + (c1 - d1) * (2 * d1 + 1)
+                    + (d3 + 1 if shift > 0 else -d3))
+            if shift > 0:
+                denom1 = (2 * d3 + 1) * (2 * d3 + 2) * (2 * d3 + 3)
+            else:
+                denom1 = (2 * d3 - 1) * (2 * d3) * (2 * d3 + 1)
+            if denom1 == 0:
+                continue
+            rhs = (num / denom1 * num2
+                   / sqrt((2 * a4 + 1) * (2 * b4 + 1) * (2 * c1 + 1) * (2 * c2 + 1))
+                   * (w3(a3, b3, d3, H, -H, 0) * w3(d2, d1, d3, H, -H, 0)) / den)
+            good += 1
+            if not close(TW2(*v), rhs):
+                bad += 1
+            if good >= 300:
+                break
+        okk = good > 0 and bad == 0
+        ok &= okk
+        print(f"  [{'OK  ' if okk else 'FAIL'}] {tag:36s} ({good - bad}/{good})")
 
     # eq 10.13.30 : a2 = b1 + c4 + d3 (tetrad sum) -> closed D-form
     good = bad = 0
