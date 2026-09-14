@@ -762,7 +762,7 @@ where $\Delta_{\Omega} \equiv \nabla_{\Omega}^{2}$ is the angular part of the La
 It follows from \eqref{eq:7:3:48} that the components of $r^{L} \vect{Y}_{J M}^{L}(\vartheta, \varphi)$ are harmonic polynomials of degree $L$.\\
 \item The vectors $z_{L}(k r) \vect{Y}_{J M}^{L}(\vartheta, \varphi)$ satisfy the Helmholtz equation
 \begin{equation}
-\left(\Delta+k^{2}\right)\left\{z_{L}(k r) \vect{Y}_{J M}^{L}(\vartheta, \varphi)\right\}=0 \label{eq:7:3:49}
+\left(\Delta+k^{2}\right)\left\{z_{L}(k r) \vect{Y}_{L M}^{L}(\vartheta, \varphi)\right\}=0 \label{eq:7:3:49}
 \end{equation}
 where
 \begin{equation}
@@ -1095,7 +1095,7 @@ where
 \subsection{Orthogonality, Normalization and Completeness}\label{sec:7.3.13}\index{orthogonality!of the vector spherical harmonics}\index{normalization!of the vector spherical harmonics}\index{completeness!of the vector spherical harmonics}
 The collection of vector spherical harmonics $\vect{Y}_{J M}^{L}(\vartheta, \varphi)$ with integer nonnegative $J(0 \leq J<\infty), L= J, J \pm 1$ and integer $M(|M| \leq J)$ constitutes a complete orthonormal set of vector functions in the domain of arguments $0 \leq \vartheta \leq \pi, 0 \leq \varphi<2 \pi$. The orthonormality condition for $\vect{Y}_{J M}^{L}(\vartheta, \varphi)$ has the form
 \begin{equation}
-\int_{0}^{\pi} \int_{0}^{2 \pi} \vect{Y}_{J^{\prime} M^{\prime}}^{L^{\prime}}(\vartheta, \varphi) \vect{Y}_{J M}^{L}(\vartheta, \varphi) \sin \vartheta d \vartheta d \varphi=\delta_{J^{\prime} J} \delta_{L^{\prime} L} \delta_{M^{\prime} M}. \label{eq:7:3:121}
+\int_{0}^{\pi} \int_{0}^{2 \pi} \vect{Y}_{J^{\prime} M^{\prime}}^{L^{\prime}}(\vartheta, \varphi) \cdot \vect{Y}_{J M}^{L}(\vartheta, \varphi) \sin \vartheta d \vartheta d \varphi=\delta_{J^{\prime} J} \delta_{L^{\prime} L} \delta_{M^{\prime} M}. \label{eq:7:3:121}
 \end{equation}
 The completeness condition for spherical components of $\vect{Y}_{J M}^{L}(\vartheta, \varphi)$ may be written as
 \begin{equation}
@@ -1103,7 +1103,7 @@ The completeness condition for spherical components of $\vect{Y}_{J M}^{L}(\vart
 \end{equation}
 Similarly, the set of $\vect{Y}_{J M}^{(\lambda)}(\vartheta, \varphi)$ constitutes a complete orthonormal set. The orthonormality property for $\vect{Y}_{J M}^{(\lambda)}(\vartheta, \varphi)$ is the following
 \begin{equation}
-\int_{0}^{\pi} \int_{0}^{2 \pi} \vect{Y}_{J^{\prime} M^{\prime}}^{\left(\lambda^{\prime}\right) *}(\vartheta, \varphi) \vect{Y}_{J M}^{(\lambda)}(\vartheta, \varphi) \sin \vartheta d \vartheta d \varphi=\delta_{J^{\prime} J} \delta_{\lambda^{\prime} \lambda} \delta_{M^{\prime} M} \label{eq:7:3:123}
+\int_{0}^{\pi} \int_{0}^{2 \pi} \vect{Y}_{J^{\prime} M^{\prime}}^{\left(\lambda^{\prime}\right) *}(\vartheta, \varphi) \cdot\vect{Y}_{J M}^{(\lambda)}(\vartheta, \varphi) \sin \vartheta d \vartheta d \varphi=\delta_{J^{\prime} J} \delta_{\lambda^{\prime} \lambda} \delta_{M^{\prime} M} \label{eq:7:3:123}
 \end{equation}
 and the completeness relation for spherical components of $\vect{Y}_{J M}^{(\lambda)}(\vartheta, \varphi)$ reads
 \begin{equation}
@@ -1148,13 +1148,13 @@ where the expansion coefficients are given by
 \begin{align}
 A_{J M}^{(1)}=4 \pi i^{J+1} & \left\{\sqrt{\frac{J}{2 J+1}} j_{J+1}(k r) \varepsilon(\vect{k}) \cdot \vect{Y}_{J M}^{J+1 *}\left(\vartheta_{k}, \varphi_{k}\right)-\sqrt{\frac{J+1}{2 J+1}} j_{J-1}(k r) \varepsilon(\vect{k}) \cdot \vect{Y}_{J M}^{J-1 *}\left(\vartheta_{k}, \varphi_{k}\right)\right\}  \notag\\
 = & \frac{4 \pi i^{J+1}}{2 J+1}\left\{\left[J \cdot j_{J+1}(k r)-(J+1) j_{J-1}(k r)\right] \varepsilon(\vect{k}) \cdot \vect{Y}_{J M}^{(1) *}\left(\vartheta_{k}, \varphi_{k}\right)\right. \label{eq:7:3:133}\\
-& \left.-\sqrt{J(J+1)}\left[j_{J+1}(k r)+j_{J-1}(k r)\right] \varepsilon(\vect{k}) \cdot Y_{J M}^{(-1) *}\left(\vartheta_{k}, \varphi_{k}\right)\right\}. \notag
+& \left.-\sqrt{J(J+1)}\left[j_{J+1}(k r)+j_{J-1}(k r)\right] \varepsilon(\vect{k}) \cdot \vect{Y}_{J M}^{(-1) *}\left(\vartheta_{k}, \varphi_{k}\right)\right\}. \notag
 \end{align}
 \begin{gather}
 A_{J M}^{(0)}=4 \pi i^{J} j_{J}(k r) \vect{\epsilon}(\vect{k}) \cdot \vect{Y}_{J M}^{J *}\left(\vartheta_{k}, \varphi_{k}\right)=4 \pi i^{J} j_{J}(k r) \cdot \vect{\epsilon}(\vect{k}) \cdot \vect{Y}_{J M}^{(0) *}\left(\vartheta_{k}, \varphi_{k}\right)  \label{eq:7:3:134}\\
 A_{J M}^{(-1)}=4 \pi i^{J-1}\left\{\sqrt{\frac{J+1}{2 J+1}} j_{J+1}(k r) \vect{\varepsilon}(\vect{k}) \cdot \vect{Y}_{J M}^{J+1 *}\left(\vartheta_{k}, \varphi_{k}\right)+\sqrt{\frac{J}{2 J+1}} j_{J-1}(k r) \vect{\varepsilon}(\vect{k}) \cdot \vect{Y}_{J M}^{J-1 *}\left(\vartheta_{k}, \varphi_{k}\right)\right\}  \notag\\
 =\frac{4 \pi i^{J-1}}{2 J+1}\left\{\sqrt{J(J+1)}\left[j_{J+1}(k r)+j_{J-1}(k r)\right] \vect{\varepsilon}(\vect{k}) \cdot \vect{Y}_{J M}^{(1) *}\left(\vartheta_{k}, \varphi_{k}\right)\right. \notag\\
-\left.-\left[(J+1) j_{J+1}(k r)-J \cdot j_{J-1}(k r)\right] \vect{\varepsilon}(\vect{k}) \cdot Y_{J M}^{(-1) *}\left(\vartheta_{k}, \varphi_{k}\right)\right\}. \label{eq:7:3:135}
+\left.-\left[(J+1) j_{J+1}(k r)-J \cdot j_{J-1}(k r)\right] \vect{\varepsilon}(\vect{k}) \cdot \vect{Y}_{J M}^{(-1) *}\left(\vartheta_{k}, \varphi_{k}\right)\right\}. \label{eq:7:3:135}
 \end{gather}
 If the plane wave is transverse, i.e., $\vect{k} \cdot \vect{\varepsilon}(\vect{k})=0$, then $\vect{\varepsilon}(\vect{k}) \cdot \vect{Y}_{J M}^{(-1) *}\left(\vartheta_{k}, \varphi_{k}\right)=0$.
 \subsubsection{Green's function for Laplace equation}
