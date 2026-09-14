@@ -5,12 +5,12 @@ In quantum mechanics the total angular momentum operator $\widehat{\vect{J}}$ is
 
 A transformation of an arbitrary wave function $\Psi$ under rotation of the coordinate system through an infinitesimal angle $\delta \omega$ about an axis $n$ may be written as
 \begin{equation}
-\Psi \rightarrow \Psi^{\prime}=(1-i \delta \omega n \cdot \hat{J}) \Psi . \label{eq:2:1:1}
+\Psi \rightarrow \Psi^{\prime}=(1-i \delta \omega \vect n \cdot \hat{J}) \Psi . \label{eq:2:1:1}
 \end{equation}
 where $\widehat{\vect{J}}$ is the total angular momentum operator.\isym{J-hat@$\widehat{\vect{J}}$, total angular momentum operator}\\
 A transformation of an arbitrary quantum operator $\widehat{O}$ under an infinitesimal rotation has the form
 \begin{equation}
-\widehat{O} \rightarrow \widehat{O}^{\prime}=\widehat{O}-i \delta \omega n \cdot[\widehat{\vect{J}}, \widehat{O}] . \label{eq:2:1:2}
+\widehat{O} \rightarrow \widehat{O}^{\prime}=\widehat{O}-i \delta \omega \vect n \cdot[\widehat{\vect{J}}, \widehat{O}] . \label{eq:2:1:2}
 \end{equation}
 The finite rotation operator can also be written in terms of the total angular momentum operator (see Eqs. \ref{eq:1:4:29}, \ref{eq:1:4:30}, \ref{eq:1:4:32}). The total angular momentum operator is Hermitian,\index{Hermitian operator}
 \begin{equation}
@@ -27,7 +27,7 @@ Using the definition of the total angular momentum operator \eqref{eq:2:1:1} and
 \begin{equation}
 [(\vect{a} \cdot \widehat{\vect{J}}),(\vect{b} \cdot \widehat{\vect{J}})]=i \cdot[\vect{a} \times \vect{b}] \cdot \widehat{\vect{J}}, \label{eq:2:1:5}
 \end{equation}
-$a$ and $b$ being arbitrary constant vectors. The commutation relations for the total angular momentum operator may also be written symbolically as
+$\vect a$ and $\vect b$ being arbitrary constant vectors. The commutation relations for the total angular momentum operator may also be written symbolically as
 \begin{equation}
 [\widehat{\vect{J}} \times \widehat{\vect{J}}]=i \widehat{\vect{J}} .\label{eq:2:1:6}
 \end{equation}
@@ -306,10 +306,9 @@ and the matrix elements of the spin matrices are
 The elements are arranged in the matrices as follows
 \begin{equation}
 A=\begin{pmatrix}
-A_{S S} \ldots \ldots A_{S-S}  \\
-\ldots \ldots \ldots \ldots \ldots \\
-\ldots \ldots \ldots \ldots \ldots \\
-A_{-S S} \ldots A_{-S-S}
+A_{S S} &\ldots & A_{S-S}  \\
+\vdots  &\ddots & \vdots \\
+A_{-S S} &\ldots & A_{-S-S}
 \end{pmatrix}.\label{eq:2:3:10}
 \end{equation}
 Explicit forms of the spin matrices for spin values $\frac{1}{2}$ and 1 are given below in Secs. \ref{sec:2.5} and \ref{sec:2.6}.
