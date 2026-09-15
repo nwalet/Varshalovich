@@ -182,7 +182,7 @@ In particular,
 \Delta_{a} f(a)=f(a+1)-f(a), \notag\\
 \Delta_{a} a^{(n)}=n a^{(n-1)} . \label{eq:8:2:15}
 \end{gather}
-Finite differences are analogous to differentials, while quasi-powers are analogous to ordinary powers. From this it can be concluded that the Clebsch-Gordan coefficients are analogous to the Wigner $D$-functions [20, 58].\index{Wigner D-function@Wigner $D$-function}\isym{DJMM@$D_{M M^{\prime}}^{J}$, Wigner $D$-function} To illustrate this similarity let us introduce the notations
+Finite differences are analogous to differentials, while quasi-powers are analogous to ordinary powers. From this it can be concluded that the Clebsch-Gordan coefficients are analogous to the Wigner $D$-functions \cite{ref020, ref058}.\index{Wigner D-function@Wigner $D$-function}\isym{DJMM@$D_{M M^{\prime}}^{J}$, Wigner $D$-function} To illustrate this similarity let us introduce the notations
 \begin{equation}
 j=b, \quad \mu=c-a, \quad \nu=\beta, \quad P=\frac{1}{2}(a+b+c), \quad Q=a+\alpha-\frac{1}{2}(a+b+c) . \label{eq:8:2:16}
 \end{equation}
@@ -201,16 +201,17 @@ we see that \eqref{eq:8:2:17} reduces to the following relation for the Wigner $
 & d_{\nu \mu}^{j}(\theta)=\left[\frac{(j+\mu)!(j-\mu)!(j+\nu)!(j-\nu)!}{(2 P)^{2 j}(P-Q)^{j+\mu}(P-Q)^{j+\nu}(P+Q)^{-\mu-\nu}}\right]^{\frac{1}{2}}  \notag\\
 & \times \sum_{x}(-1)^{x} \frac{(P-Q)^{j+\mu+x}(P+Q)^{j-\mu-x}}{z!(j-\mu-z)!(j+\nu-z)!(\mu-\nu+z)!}. \label{eq:8:2:19}
 \end{align}
-\eqref{eq:8:2:19} is similar to Eq.~\eqref{eq:4:3:4}. The analogy between \eqref{eq:8:2:17} and \eqref{eq:8:2:19} permits us to connect the recursion relations, symmetry properties, etc. of the Wigner D-functions and the Clebsch-Gordan coefficients \cite{ref058}. Since for $u \gg z, u \gg 1$ quasi-powers became asymptotically equal to ordinary powers, a Clebsch-Gordan coefficient turns into a $D$-function in the large-momentum limit (\eqref{eq:8:9:1}).
+\eqref{eq:8:2:19} is similar to Eq.~\eqref{eq:4:3:4}. The analogy between \eqref{eq:8:2:17} and \eqref{eq:8:2:19} permits us to connect the recursion relations, symmetry properties, etc. of the Wigner D-functions and the Clebsch-Gordan coefficients \cite{ref058}. Since for $u \gg z, u \gg 1$ quasi-powers become asymptotically equal to ordinary powers, a Clebsch-Gordan coefficient turns into a $D$-function in the large-momentum limit, see Eq.~\eqref{eq:8:9:1}.
 
-\subsection{Expressions for the Clebsch-Gordan Coefficients in Terms of the Binomial Coefficients \cite{ref126}}\label{sec:8.2.4}\index{Clebsch-Gordan coefficient!in terms of binomial coefficients}\index{binomial coefficients}
+\subsection{Expressions for the Clebsch-Gordan Coefficients in Terms of  Binomial Coefficients \cite{ref126}}\label{sec:8.2.4}\index{Clebsch-Gordan coefficient!in terms of binomial coefficients}\index{binomial coefficients}
+Ww can express the Clebsch-Gordan coeffixients in terms of a sum over binomials as
 \begin{equation}
 \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}=\delta_{\gamma, \alpha+\beta}\left[\frac{\binom{2 a}{J-2 c}\binom{2 b}{J-2 c}}{\binom{J+1}{J-2 c}\binom{2 a}{a-\alpha}\binom{2 b}{b-\beta}\binom{2 c}{c-\gamma}}\right]^{\frac{1}{2}} \sum_{x}(-1)^{x}\binom{J-2 c}{z}\binom{J-2 b}{a-\alpha-z}\binom{J-2 a}{b+\beta-z}, \label{eq:8:2:20}
 \end{equation}
 where $J=a+b+c$.
 
-\subsection{Representations of the Clebsch-Gordan Coefficients in Terms of of the Hypergeometric Functions}\label{sec:8.2.5}\index{Clebsch-Gordan coefficient!and hypergeometric functions}\index{hypergeometric function!generalized}
-The Clebsch-Gordan coefficients may be expressed via the generalized hypergeometric functions $\Fhg{3}{2}$ of unit argument,\isym{F32@$\Fhg{3}{2}$, generalized hypergeometric function}
+\subsection{Representations of the Clebsch-Gordan Coefficients in Terms of the Hypergeometric Functions}\label{sec:8.2.5}\index{Clebsch-Gordan coefficient!and hypergeometric functions}\index{hypergeometric function!generalized}
+The Clebsch-Gordan coefficients may be expressed as generalized hypergeometric functions $\Fhg{3}{2}$ of unit argument,\isym{F32@$\Fhg{3}{2}$, generalized hypergeometric function}
 \begin{gather}
 \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}=\delta_{\gamma, \alpha+\beta} \frac{\Delta(a b c)}{(a+b-c)!(-b+c+\alpha)!(-a+c-\beta)!}\left[\frac{(a+\alpha)!(b-\beta)!(c+\gamma)!(c-\gamma)!(2 c+1)}{(a-\alpha)!(b+\beta)!}\right]^{\frac{1}{2}}  \notag\\
 \times\Fhg{3}{2}\left[\left.\begin{array}{c}
@@ -221,36 +222,28 @@ The Clebsch-Gordan coefficients may be expressed via the generalized hypergeomet
 \begin{align}
 & \begin{aligned}
 \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}= & \delta_{\gamma, \alpha+\beta}(-1)^{a-\alpha} \frac{\Delta(a b c)(b+c-\alpha)!}{(a-b+c)!(-a+b+c)!(b-c+\alpha)!}\left[\frac{(a+\alpha)!(b-\beta)!(c+\gamma)!(2 c+1)}{(a-\alpha)!(b+\beta)!(c-\gamma)!}\right]^{\frac{1}{2}} \\
-& \times\Fhg{3}{2}\left[\left.\begin{array}{c}
-a+\alpha+1,-a+\alpha,-c+\gamma \\
--b-c+\alpha, b-c+\alpha+1
-\end{array} \right\rvert\, 1\right],
+& \times\Fnm[r]{3}{2}{a+\alpha+1,-a+\alpha,-c+\gamma}{-b-c+\alpha, b-c+\alpha+1}{1},
 \end{aligned}, \\
 & \begin{aligned}
 \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}= & \delta_{\gamma, \alpha+\beta}(-1)^{b+\beta} \frac{\Delta(a b c)(b+c+\alpha)!}{(-a+b+c)!(a-b-\gamma)!}\left[\frac{(a-\alpha)!(c-\gamma)!(2 c+1)}{(a+\alpha)!(b+\beta)!(b-\beta)!(c+\gamma)!}\right]^{\frac{1}{2}} \\
-& \quad \times\Fhg{3}{2}\left[\left.\begin{array}{c}
-a-b-c, a-\alpha+1,-c-\gamma \\
-a-b-\gamma+1,-b-c-\alpha \\
-\end{array} \right\rvert\, 1\right]\\
-&\qquad 
-(\text { Rose \cite{ref030}})
-\end{aligned}, \label{eq:8:2:23}\\
+& \quad \times\Fnm[r]{3}{2}{a-b-c, a-\alpha+1,-c-\gamma}{
+a-b-\gamma+1,-b-c-\alpha}{1}
+\end{aligned}, \label{eq:8:2:23}
+\end{align}
+Rose \cite{ref030}
+\begin{align}
 & \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}=\delta_{\gamma, \alpha+\beta}(-1)^{b+\beta} \frac{\Delta(a b c)(2 c)!}{(a-b+c)!(-a+b+c)!(a-c-\beta)!}\left[\frac{(a+\alpha)!(a-\alpha)!(b-\beta)!(2 c+1)}{(b+\beta)!(c+\gamma)!(c-\gamma)!}\right]^{\frac{1}{2}}  \notag\\
 &  \label{eq:8:2:24}\\
-& \quad \times\Fhg{3}{2}\left[\begin{array}{c}
-a-b-c, a+b-c+1,-c-\gamma \mid 1], \\
--2 c, a-c-\beta+1
-\end{array}\right. \notag\\
+& \quad \times\Fnm[r]{3}{2}{
+a-b-c, a+b-c+1,-c-\gamma }{-2 c, a-c-\beta+1}{1} \notag\\
 & \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}=\delta_{\gamma, \alpha+\beta}(-1)^{b+\beta} \frac{\Delta(a b c)(2 c)!(b+c+\alpha)!}{(a-b+c)!(-a+b+c)!}\left[\frac{(a+\alpha)!(b+\beta)!(b-\beta)!(c+\gamma)!(c-\gamma)!}{(a-\alpha)}\right]^{\frac{1}{2}}  \notag\\
-& \quad \times\Fhg{3}{2}\left[\begin{array}{c}
-a-b-c,-a-b-c-1,-c-\gamma \mid 1], \\
--2 c,-b-c-\alpha
-\end{array}\right. \label{eq:8:2:25}\\
+& \quad \times\Fnm[r]{3}{2}{
+a-b-c,-a-b-c-1,-c-\gamma}{
+-2 c,-b-c-\alpha}{1}
+\label{eq:8:2:25}\\
 & \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}=\delta_{\gamma, \alpha+\beta}(-1)^{a-\alpha} \frac{(a+b-\gamma)!(b+c-\alpha)!}{\Delta(a b c)(a+b+c+1)!}\left[\frac{(a+\alpha)!(c+\gamma)!(2 c+1)}{(a-\alpha)!(b+\beta)!(b-\beta)!(c-\gamma)!}\right]^{\frac{1}{2}}  \notag\\
-& \quad \times\Fhg{3}{2}\left[\begin{array}{c}
--a-b-c-1,-a+\alpha,-c+\gamma \mid 1 \\
--a-b+\gamma,-b-c+\alpha
-\end{array}\right] . \label{eq:8:2:26}
+& \quad \times\Fnm[r]{3}{2}{-a-b-c-1,-a+\alpha,-c+\gamma}{-a-b+\gamma,-b-c+\alpha}{1}
+. \label{eq:8:2:26}
 \end{align}
 Equations \eqref{eq:8:2:21}-\eqref{eq:8:2:26} may be associated with Eqs.~\eqref{eq:8:2:3}-\eqref{eq:8:2:8}, respectively.\\[0pt]
 According to Ref.~\cite{ref036}, all $\Fhg{3}{2}$-functions of unit argument, which are given by finite sums, may be expressed in terms of the Clebsch-Gordan coefficients. Any Clebsch-Gordan coefficient may also be represented in the form of derivatives of the hypergeometric functions \cite{ref046}:
@@ -277,7 +270,7 @@ where $J=a+b+c$.
 \begin{equation}
 \threej{a}{b}{c}{\alpha}{\beta}{\gamma}\label{eq:8:2:34}=(-1)^{R_{21}+R_{32}}\left[\frac{R_{21}^{(-1)\left(R_{31}-R_{13}\right)} R_{31}^{(-1)\left(R_{32}-R_{13}\right)} R_{32}^{(-1)\left(R_{22}-R_{13}\right)} R_{22}^{(-1)\left(R_{21}-R_{13}\right)}}{(J+1)!R_{13}!}\right]^{\frac{1}{4}}(u-v)^{\left(R_{13}\right)} .
 \end{equation}
-The quasi-binomial may be evaluated according to Eqs.~\eqref{eq:8:2:10} and \eqref{eq:8:2:11}. Variables $u$ and $v$ may be chosen in different ways \cite{ref045}:
+The quasi-binomial should be evaluated according to Eqs.~\eqref{eq:8:2:10} and \eqref{eq:8:2:11}. The variables $u$ and $v$ may be chosen in different ways \cite{ref045}:
 \begin{align}
 (a)& \qquad u=R_{21}^{(1)} R_{32}^{(1)}, && v=R_{22}^{(1)} R_{31}^{(1)},\notag\\
 (b)& \qquad u=R_{21}^{(1)} R_{11}^{(-1)}, && v=R_{22}^{(1)} R_{12}^{(-1)},\notag\\
