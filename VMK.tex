@@ -3,7 +3,7 @@
 %=====================================================================
 % Encoding, fonts and language
 %=====================================================================
-\usepackage[utf8]{inputenc}
+%\usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{polyglossia}
 \setdefaultlanguage{english}
@@ -14,7 +14,7 @@
 %=====================================================================
 % Page layout
 %=====================================================================
-\usepackage{etex}
+%\usepackage{etex}
 \usepackage[a4paper,margin=2cm]{geometry}
 %\usepackage{ucharclasses}
 
@@ -98,7 +98,8 @@
 %=====================================================================
 % Hyperlinks (must come after index, per note above)
 %=====================================================================
-\usepackage{hyperref}
+\usepackage[pdfencoding=auto, psdextra]{hyperref}
+\pdfstringdefDisableCommands{\def\varepsilon{\textepsilon}\def\varphi{\textphi}\def\vartheta{\texttheta}}
 \hypersetup{colorlinks=true, linkcolor=blue, filecolor=magenta, urlcolor=cyan,}
 \urlstyle{same}
 
