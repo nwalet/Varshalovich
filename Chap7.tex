@@ -21,13 +21,13 @@ Y_{J M}^{L S}(\vartheta, \varphi)=\left\{\mathrm{Y}_{\mathrm{L}} \otimes \chi_{S
 The indices $J$ and $S$ are integer or half-integer nonnegative numbers, and $L$ is always an integer nonnegative number. For given $J$ and $S$, the momentum $L$ takes the values $L=|J-S|,|J-S|+1, \ldots, J+S$. The possible values of $M$ are $M=-J,-J+1, \ldots, J-1, J$.
 
 The tensor spherical harmonics with fixed indices are functions of three variables: two polar angles $\vartheta, \varphi(0 \leq \vartheta \leq \pi, 0 \leq \varphi<2 \pi)$ and spin variable $\xi(\xi=-S,-S+1, \ldots, S-1, S)$ which is the argument of spin function\\
-$\chi_{S \sigma}$. The spin variable $\xi$ is usually not mentioned as an argument of tensor spherical harmonics. Instead, the tensor spherical harmonics are written in matrix form by analogy with spin functions. More precisely, $Y_{J M}^{L S}(\vartheta, \varphi)$ is represented by a column matrix with $2 S+1$ elements, and $Y_{J M}^{L S+}(\vartheta, \varphi)$ is represented by a row matrix. Summation over spin variable is replaced by matrix multiplication.
+$\chi_{S \sigma}$. The spin variable $\xi$ is usually not mentioned as an argument of tensor spherical harmonics. Instead, the tensor spherical harmonics are written in matrix form by analogy with spin functions. More precisely, $Y_{J M}^{L S}(\vartheta, \varphi)$ is represented by a column matrix with $2 S+1$ elements, and $Y_{J M}^{L S\dagger}(\vartheta, \varphi)$ is represented by a row matrix. Summation over spin variable is replaced by matrix multiplication.
 
 The tensor spherical harmonics $Y_{J M}^{L S}(\vartheta, \varphi)$ constitute a complete orthonormal set for series expansion of $\operatorname{rank} S$ tensor functions within the domain of arguments $0 \leq \vartheta \leq \pi, 0 \leq \varphi<2 \pi$ (see Sec.~\ref{sec:7.1.8}).
 
 Note also the following orthogonality relations for $Y_{J M}^{L S}(\vartheta, \varphi)$ which have the same $J, M$ and $S$ but different $L$ :
 \begin{equation}
-\sum_{M} Y_{J M}^{L^{\prime} S+}(\vartheta, \varphi) \cdot Y_{J M}^{L S}(\vartheta, \varphi)=0, \quad \text { if } L^{\prime} \neq L. \label{eq:7:1:4}
+\sum_{M} Y_{J M}^{L^{\prime} S\dagger}(\vartheta, \varphi) \cdot Y_{J M}^{L S}(\vartheta, \varphi)=0, \quad \text { if } L^{\prime} \neq L. \label{eq:7:1:4}
 \end{equation}
 \subsection{Components of Tensor Spherical Harmonics}\label{sec:7.1.2}\index{tensor spherical harmonics!components of}\index{components!covariant}\index{components!contravariant}
 \begin{enumerate}[label=(\alph*)]
@@ -128,79 +128,82 @@ z_{L}(k r)=\sqrt{\frac{\pi}{2 k r}} Z_{L+\frac{1}{2}}(k r). \label{eq:7:1:23}
 $Z_{L+\frac{1}{2}}$ is any of the cylinder functions of half-integer order.\index{cylinder functions}\isym{zl@$z_{l}(k r)$, spherical cylinder function}\isym{ZL@$Z_{L+1/2}(x)$, cylinder function}
 \end{enumerate}
 
-\subsection{Action of Operators $\nabla, \mathrm{n}$ and Angular Momentum Operators}\label{sec:7.1.6}\index{tensor spherical harmonics!action of operators on}\index{differential operations!on the tensor spherical harmonics}\index{6j symbol@$6j$ symbol}
-In the equations given below $\vect{r}=\{r, \vartheta, \varphi\}, \vect{n}=\vect{r} / r, \Phi(r)$ is an arbitrary function of $r=|\vect{r}|$, $\widehat{\vect{L}}$ is the operator of orbital angular momentum, $\widehat{\vect{S}}$ is the spin operator, $\widehat{\vect{J}}=\widehat{\vect{L}}+\widehat{\vect{S}}$ is the operator of total angular momentum, and $n_{\mu}, \nabla_{\mu}, \widehat{L}_{\mu}$, etc. are spherical components of the corresponding operators ( $\mu= \pm 1,0$ ).
+\subsection{Action of the operators $\nabla$, $\mathrm{n}$ combined with Angular Momentum Operators}\label{sec:7.1.6}\index{tensor spherical harmonics!action of operators on}\index{differential operations!on the tensor spherical harmonics}\index{6j symbol@$6j$ symbol}
+
+In the equations given below $\vect{r}=(r, \vartheta, \varphi)$, $\vect{n}=\vect{r} / r$, $\Phi(r)$ is an arbitrary function of $r=|\vect{r}|$, $\widehat{\vect{L}}$ is the operator of orbital angular momentum, $\widehat{\vect{S}}$ is the spin operator, $\widehat{\vect{J}}=\widehat{\vect{L}}+\widehat{\vect{S}}$ is the operator of total angular momentum, and $n_{\mu}$, $\nabla_{\mu}$, $\widehat{L}_{\mu}$, etc. are spherical components of the corresponding operators ($\mu= \pm 1,0$).
 \begin{enumerate}[label=(\alph*)]
 \item
-\begin{gather}
-\nabla_{\mu}\left\{\Phi(r) Y_{J M}^{L S}(\vartheta, \varphi)\right\}=(-1)^{J+L+S} \sqrt{(2 J+1)(L+1)}\left\{\frac{d \Phi(r)}{d r}-\frac{L}{r} \Phi(r)\right\}, \notag\\
-\times \sum_{J^{\prime}}\sixj{J}{J^{\prime}}{1}{L+1}{L}{S} \clebsch{J}{M}{1}{\mu}{J^{\prime}}{M+\mu} Y_{J^{\prime} M+\mu}^{L+1 S}(\vartheta, \varphi)+(-1)^{J+L+S+1} \sqrt{(2 J+1) L}\left\{\frac{d \Phi(r)}{d r}+\frac{L+1}{r} \Phi(r)\right\}, \notag\\
+\begin{multline}
+\nabla_{\mu}\left\{\Phi(r) Y_{J M}^{L S}(\vartheta, \varphi)\right\}=(-1)^{J+L+S} \sqrt{(2 J+1)(L+1)}\left\{\frac{d \Phi(r)}{d r}-\frac{L}{r} \Phi(r)\right\}\\
+\times \sum_{J^{\prime}}\sixj{J}{J^{\prime}}{1}{L+1}{L}{S} \clebsch{J}{M}{1}{\mu}{J^{\prime}}{M+\mu} Y_{J^{\prime} M+\mu}^{L+1 S}(\vartheta, \varphi)+(-1)^{J+L+S+1} \sqrt{(2 J+1) L}\left\{\frac{d \Phi(r)}{d r}+\frac{L+1}{r} \Phi(r)\right\} \\
 \times \sum_{J^{\prime}}\sixj{J}{J^{\prime}}{1}{L-1}{L}{S} \clebsch{J}{M}{1}{\mu}{J^{\prime}}{M+\mu} Y_{J^{\prime} M+\mu}^{L-1 S}(\vartheta, \varphi). \label{eq:7:1:24}
-\end{gather}
+\end{multline}
 In particular,
 \begin{equation}
 r \nabla_{\mu} Y_{J M}^{L S}(\vartheta, \varphi)=(-1)^{J+L+S+1} \sqrt{2 J+1} \sum_{J^{\prime} L^{\prime}} A_{L^{\prime}}(L)\sixj{J}{J^{\prime}}{1}{L^{\prime}}{L}{S}\label{eq:7:1:25} \clebsch{J}{M}{1}{\mu}{J^{\prime}}{M+\mu} Y_{J^{\prime} M+\mu}^{L^{\prime} S}(\vartheta, \varphi) ,
 \end{equation}
 where
 \[
-A_{L^{\prime}}(L)= \begin{cases}L \sqrt{L+1}, & \text { if } L^{\prime}=L+1 \\
-(L+1) \sqrt{L}, & \text { if } L^{\prime}=L-1 \\
-0 & \text { if } L^{\prime} \neq L \pm 1\end{cases}.\]
-\begin{gather}
-n_{\mu}\left\{\Phi(r) Y_{J M}^{L S}(\vartheta, \varphi)\right\}=(-1)^{J+S+1} \Phi(r) \sqrt{(2 J+1)(2 L+1)} \sum_{J^{\prime} L^{\prime}}(-1)^{L^{\prime}}\sixj{J}{J^{\prime}}{1}{L^{\prime}}{L}{S} \clebsch{L}{0}{1}{0}{L^{\prime}}{0} \clebsch{J}{M}{1}{\mu}{J^{\prime}}{M^{\prime}} Y_{J^{\prime} M^{\prime}}^{L^{\prime} S}(\vartheta, \varphi) , \label{eq:7:1:26}\\
-\widehat{L}_{\mu}\left\{\Phi(r) Y_{J M}^{L S}(\vartheta, \varphi)\right\}=\Phi(r) \widehat{L}_{\mu}\left\{Y_{J M}^{L S}(\vartheta, \varphi)\right\}  \notag\\
-=(-1)^{J+L+S+1} \Phi(r) \sqrt{(2 J+1) L(L+1)(2 L+1)} \sum_{J^{\prime}}\sixj{J}{J^{\prime}}{1}{L}{L}{S} \clebsch{J}{M}{1}{\mu}{J^{\prime}}{M+\mu} Y_{J^{\prime} M+\mu}^{L S}(\vartheta, \varphi) ,\label{eq:7:1:27}\\
-\widehat{S}_{\mu}\left\{\Phi(r) Y_{J M}^{L S}(\vartheta, \varphi)\right\}=\Phi(r) \widehat{S}_{\mu}\left\{Y_{J M}^{L S}(\vartheta, \varphi)\right\}  \notag\\
+A_{L^{\prime}}(L)= \begin{cases}L \sqrt{L+1}, & \text { if } L^{\prime}=L+1, \\
+(L+1) \sqrt{L}, & \text { if } L^{\prime}=L-1, \\
+0, & \text { if } L^{\prime} \neq L \pm 1 .\end{cases}\]
+\begin{equation}
+n_{\mu}\left\{\Phi(r) Y_{J M}^{L S}(\vartheta, \varphi)\right\}=(-1)^{J+S+1} \Phi(r) \sqrt{(2 J+1)(2 L+1)} \sum_{J^{\prime} L^{\prime}}(-1)^{L^{\prime}}\sixj{J}{J^{\prime}}{1}{L^{\prime}}{L}{S} \clebsch{L}{0}{1}{0}{L^{\prime}}{0} \clebsch{J}{M}{1}{\mu}{J^{\prime}}{M^{\prime}} Y_{J^{\prime} M^{\prime}}^{L^{\prime} S}(\vartheta, \varphi) , \label{eq:7:1:26}
+\end{equation}
+\begin{multline}
+\widehat{L}_{\mu}\left\{\Phi(r) Y_{J M}^{L S}(\vartheta, \varphi)\right\}=\Phi(r) \widehat{L}_{\mu}\left\{Y_{J M}^{L S}(\vartheta, \varphi)\right\} \\
+=(-1)^{J+L+S+1} \Phi(r) \sqrt{(2 J+1) L(L+1)(2 L+1)} \sum_{J^{\prime}}\sixj{J}{J^{\prime}}{1}{L}{L}{S} \clebsch{J}{M}{1}{\mu}{J^{\prime}}{M+\mu} Y_{J^{\prime} M+\mu}^{L S}(\vartheta, \varphi) ,\label{eq:7:1:27}
+\end{multline}
+\begin{multline}
+\widehat{S}_{\mu}\left\{\Phi(r) Y_{J M}^{L S}(\vartheta, \varphi)\right\}=\Phi(r) \widehat{S}_{\mu}\left\{Y_{J M}^{L S}(\vartheta, \varphi)\right\} \\
 =(-1)^{L+1} \Phi(r) \sqrt{(2 J+1) S(S+1)(2 S+1)} \sum_{J^{\prime}}(-1)^{J^{\prime}+S}
-\sixj{J}{J'}{1}{S}{S}{L} \clebsch{J}{M}{1}{\mu}{J^{\prime}}{M+\mu} Y_{J^{\prime} M+\mu}^{L S}(\vartheta, \varphi)  \label{eq:7:1:28}\\
+\sixj{J}{J'}{1}{S}{S}{L} \clebsch{J}{M}{1}{\mu}{J^{\prime}}{M+\mu} Y_{J^{\prime} M+\mu}^{L S}(\vartheta, \varphi)  \label{eq:7:1:28}
+\end{multline}
+\begin{equation}
 \widehat{J}_{\mu}\left\{\Phi(r) Y_{J M}^{L S}(\vartheta, \varphi)\right\}=\Phi(r) \widehat{J}_{\mu}\left\{Y_{J M}^{L S}(\vartheta, \varphi)\right\}=\Phi(r) \sqrt{J(J+1)} \clebsch{J}{M}{1}{\mu}{J}{M+\mu} Y_{J M+\mu}^{L S}(\vartheta, \varphi). \label{eq:7:1:29}
-\end{gather}
+\end{equation}
 \item
 \begin{gather}
-(\vect{r} \cdot \nabla)\left\{\Phi(r) Y_{J M}^{L S}(\vartheta, \varphi)\right\}=r \frac{d \Phi(r)}{d r} Y_{J M}^{L S}(\vartheta, \varphi), \label{eq:7:1:30}\\
+(\vect{r}\cdot \boldsymbol{\nabla})\left\{\Phi(r) Y_{J M}^{L S}(\vartheta, \varphi)\right\}=r \frac{d \Phi(r)}{d r} Y_{J M}^{L S}(\vartheta, \varphi), \label{eq:7:1:30}\\
 (\vect{r} \cdot \hat{\vect{L}})\left\{\Phi(r) Y_{J M}^{L S}(\vartheta, \varphi)\right\}=0, \label{eq:7:1:31}\\
 (\vect{r} \cdot \widehat{\vect{S}})\left\{\Phi(r) Y_{J M}^{L S}(\vartheta, \varphi)\right\}=r \Phi(r)(-1)^{J+L+S} \sqrt{S(S+1)(2 S+1)(2 L+1)} \sum_{L^{\prime}}
 \sixj{L}{L'}{1}{S}{S}{L} \clebsch{L}{0}{1}{0}{L^{\prime}}{0} Y_{J M}^{L^{\prime} S}(\vartheta, \varphi). \label{eq:7:1:32}
 \end{gather}
 An expanded form of \eqref{eq:7:1:32} is
-\begin{gather}
-(\widehat{\vect{S}} \cdot \vect{n}) Y_{J M}^{L S}(\vartheta, \varphi)=-\frac{1}{2}\left\{\sqrt{\frac{(J+L+S+2)(J+L-S+1)(J-L+S)(-J+L+S+1)}{(2 L+1)(2 L+3)}} Y_{J M}^{L+1 S}(\vartheta, \varphi)\right. \notag\\
-\left.+\sqrt{\frac{(J+L+S+1)(J+L-S)(J-L+S+1)(-J+L+S)}{(2 L-1)(2 L+1)}} Y_{J M}^{L-1 S}(\vartheta, \varphi)\right\}, \label{eq:7:1:33}\\
+\begin{multline}
+(\widehat{\vect{S}} \cdot \vect{n}) Y_{J M}^{L S}(\vartheta, \varphi)=-\frac{1}{2}\left\{\sqrt{\frac{(J+L+S+2)(J+L-S+1)(J-L+S)(-J+L+S+1)}{(2 L+1)(2 L+3)}} Y_{J M}^{L+1 S}(\vartheta, \varphi)\right. \\
+\left.+\sqrt{\frac{(J+L+S+1)(J+L-S)(J-L+S+1)(-J+L+S)}{(2 L-1)(2 L+1)}} Y_{J M}^{L-1 S}(\vartheta, \varphi)\right\}, \label{eq:7:1:33}
+\end{multline}
+\begin{equation}
 (\vect{r} \cdot \widehat{\vect{J}})\left\{\Phi(r) Y_{J M}^{L S}(\vartheta, \varphi)\right\}=(\vect{r} \cdot \widehat{\vect{S}})\left\{\Phi(r) Y_{J M}^{L S}(\vartheta, \varphi)\right\}. \label{eq:7:1:34}
-\end{gather}
+\end{equation}
 \item
-\begin{gather}
-(\widehat{\vect{S}} \cdot \nabla)\left\{\Phi(r) Y_{J M}^{L S}(\vartheta, \varphi)\right\}=  \notag\\
-=-\frac{1}{2}\left\{\frac{d \Phi(r)}{d r}-\frac{L}{r} \Phi(r)\right\} \sqrt{\frac{(J+L+S+2)(J+L-S+1)(J-L+S)(-J+L+S+1)}{(2 L+1)(2 L+3)}} Y_{J M}^{L+1 S}(\vartheta, \varphi)  \notag\\
+\begin{multline}
+(\widehat{\vect{S}}\cdot \boldsymbol{\nabla})\left\{\Phi(r) Y_{J M}^{L S}(\vartheta, \varphi)\right\} \\
+=-\frac{1}{2}\left\{\frac{d \Phi(r)}{d r}-\frac{L}{r} \Phi(r)\right\} \sqrt{\frac{(J+L+S+2)(J+L-S+1)(J-L+S)(-J+L+S+1)}{(2 L+1)(2 L+3)}} Y_{J M}^{L+1 S}(\vartheta, \varphi)  \\
 -\frac{1}{2}\left\{\frac{d \Phi(r)}{d r}+\frac{L+1}{r} \Phi(r)\right\} \sqrt{\frac{(J+L+S+1)(J+L-S)(J-L+S+1)(-J+L+S)}{(2 L-1)(2 L+1)}} Y_{J M}^{L-1 S}(\vartheta, \varphi). \label{eq:7:1:35}
-\end{gather}
-\begin{equation}
-(\widehat{\vect{S}} \cdot \widehat{\vect{L}})\left\{\Phi(r) Y_{J M}^{L S}(\vartheta, \varphi)\right\}=\frac{1}{2}\{J(J+1)-L(L+1)-S(S+1)\} \Phi(r) Y_{J M}^{L S}(\vartheta, \varphi). \label{eq:7:1:36}
-\end{equation}
-\begin{equation}
-(\widehat{\vect{S}} \cdot \widehat{\vect{J}})\left\{\Phi(r) Y_{J M}^{L S}(\vartheta, \varphi)\right\}=\frac{1}{2}\{J(J+1)-L(L+1)+S(S+1)\} \Phi(r) Y_{J M}^{L S}(\vartheta, \varphi). \label{eq:7:1:37}
-\end{equation}
-\begin{equation}
-(\widehat{\vect{L}} \cdot \widehat{\vect{J}})\left\{\Phi(r) Y_{J M}^{L S}(\vartheta, \varphi)\right\}=\frac{1}{2}\{J(J+1)+L(L+1)-S(S+1)\} \Phi(r) Y_{J M}^{L S}(\vartheta, \varphi). \label{eq:7:1:38}
-\end{equation}
+\end{multline}
+\begin{align}
+(\widehat{\vect{S}} \cdot \widehat{\vect{L}})\left\{\Phi(r) Y_{J M}^{L S}(\vartheta, \varphi)\right\}&=\frac{1}{2}\{J(J+1)-L(L+1)-S(S+1)\} \Phi(r) Y_{J M}^{L S}(\vartheta, \varphi). \label{eq:7:1:36}\\
+(\widehat{\vect{S}} \cdot \widehat{\vect{J}})\left\{\Phi(r) Y_{J M}^{L S}(\vartheta, \varphi)\right\}&=\frac{1}{2}\{J(J+1)-L(L+1)+S(S+1)\} \Phi(r) Y_{J M}^{L S}(\vartheta, \varphi). \label{eq:7:1:37}\\
+(\widehat{\vect{L}} \cdot \widehat{\vect{J}})\left\{\Phi(r) Y_{J M}^{L S}(\vartheta, \varphi)\right\}&=\frac{1}{2}\{J(J+1)+L(L+1)-S(S+1)\} \Phi(r) Y_{J M}^{L S}(\vartheta, \varphi). \label{eq:7:1:38}
+\end{align}
 \end{enumerate}
 
 \subsection{Sums of Tensor Spherical Harmonics}\label{sec:7.1.7}\index{tensor spherical harmonics!sums of}\index{sums!of the tensor spherical harmonics}
-In what follows (\eqref{eq:7:1:39}-\eqref{eq:7:1:42}) $S$ is integer, and covariant components of tensor spherical harmonics are defined in accordance with \eqref{eq:7:1:8}, \eqref{eq:7:1:9}:
-\begin{equation}
-\sum_{\mu=-S}^{S} Y_{S \mu}(\vartheta, \varphi)\left[Y_{J M}^{L S}(\vartheta, \varphi)\right]^{\mu}=\sqrt{\frac{(2 S+1)(2 L+1)}{4 \pi(2 J+1)}} \clebsch{L}{0}{S}{0}{J}{0} Y_{J M}(\vartheta, \varphi). \label{eq:7:1:39}
-\end{equation}
+In Eqs.~\eqref{eq:7:1:39}--\eqref{eq:7:1:42}) $S$ is integer, and covariant components of tensor spherical harmonics are defined in accordance with \eqref{eq:7:1:8}, \eqref{eq:7:1:9}:
 \begin{align}
-& \sum_{\mu=-S}^{S} Y_{S \mu}^{*}(\vartheta, \varphi)\left[Y_{J M}^{L S}(\vartheta, \varphi)\right]_{\mu}=\sqrt{\frac{(2 S+1)(2 L+1)}{4 \pi(2 J+1)}} \clebsch{L}{0}{S}{0}{J}{0} Y_{J M}^{*}(\vartheta, \varphi), \label{eq:7:1:40}\\
-& \sum_{M=-J}^{J} Y_{J M}^{*}(\vartheta, \varphi)\left[Y_{J M}^{L S}(\vartheta, \varphi)\right]^{\mu}=(-1)^{\mu} \sqrt{\frac{(2 J+1)(2 L+1)}{4 \pi(2 S+1)}} \clebsch{S}{0}{L}{0}{J}{0} Y_{S-\mu}(\vartheta, \varphi), \label{eq:7:1:41}\\
-& \sum_{M=-J}^{J} Y_{J M}(\vartheta, \varphi)\left[Y_{J M}^{L S}(\vartheta, \varphi)\right]_{\mu}=\sqrt{\frac{(2 J+1)(2 L+1)}{4 \pi(2 S+1)}} \clebsch{S}{0}{L}{0}{J}{0} Y_{S \mu}(\vartheta, \varphi). \label{eq:7:1:42}
+\sum_{\mu=-S}^{S} Y_{S \mu}(\vartheta, \varphi)\left[Y_{J M}^{L S}(\vartheta, \varphi)\right]^{\mu}&=\sqrt{\frac{(2 S+1)(2 L+1)}{4 \pi(2 J+1)}} \clebsch{L}{0}{S}{0}{J}{0} Y_{J M}(\vartheta, \varphi). \label{eq:7:1:39}\\
+ \sum_{\mu=-S}^{S} Y_{S \mu}^{*}(\vartheta, \varphi)\left[Y_{J M}^{L S}(\vartheta, \varphi)\right]_{\mu}&=\sqrt{\frac{(2 S+1)(2 L+1)}{4 \pi(2 J+1)}} \clebsch{L}{0}{S}{0}{J}{0} Y_{J M}^{*}(\vartheta, \varphi), \label{eq:7:1:40}\\
+ \sum_{M=-J}^{J} Y_{J M}^{*}(\vartheta, \varphi)\left[Y_{J M}^{L S}(\vartheta, \varphi)\right]^{\mu}&=(-1)^{\mu} \sqrt{\frac{(2 J+1)(2 L+1)}{4 \pi(2 S+1)}} \clebsch{S}{0}{L}{0}{J}{0} Y_{S-\mu}(\vartheta, \varphi), \label{eq:7:1:41}\\
+ \sum_{M=-J}^{J} Y_{J M}(\vartheta, \varphi)\left[Y_{J M}^{L S}(\vartheta, \varphi)\right]_{\mu}&=\sqrt{\frac{(2 J+1)(2 L+1)}{4 \pi(2 S+1)}} \clebsch{S}{0}{L}{0}{J}{0} Y_{S \mu}(\vartheta, \varphi). \label{eq:7:1:42}
 \end{align}
 \subsection{Orthogonality, Normalization and Completeness}\label{sec:7.1.8}\index{orthogonality!of the tensor spherical harmonics}\index{normalization!of the tensor spherical harmonics}\index{completeness!of the tensor spherical harmonics}
 A collection of tensor spherical harmonics with the same $S$ and all possible $J, L, M$ forms a complete orthonormal set of tensor functions in the domain of the arguments $0 \leq \vartheta \leq \pi, 0 \leq \varphi<2 \pi$.
 
 The orthonormality condition for tensor spherical harmonics has the form
 \begin{equation}
-\int_{0}^{\pi} \int_{0}^{2 \pi} Y_{J^{\prime} M^{\prime}}^{L^{\prime}} S+(\vartheta, \varphi) Y_{J M}^{L S}(\vartheta, \varphi) \sin \vartheta d \vartheta d \varphi=\delta_{J J^{\prime}} \delta_{M M^{\prime}} \delta_{L L^{\prime}}. \label{eq:7:1:43}
+\int_{0}^{\pi} \int_{0}^{2 \pi} Y_{J^{\prime} M^{\prime}}^{L^{\prime}} S+(\vartheta, \varphi) Y_{J M}^{L S}(\vartheta, \varphi) \sin \vartheta \dd \vartheta \dd \varphi=\delta_{J J^{\prime}} \delta_{M M^{\prime}} \delta_{L L^{\prime}}. \label{eq:7:1:43}
 \end{equation}
 The completeness of these functions is given by
 \begin{gather}
@@ -210,7 +213,7 @@ The completeness of these functions is given by
 \subsection{Expansion in a Series of Tensor Spherical Harmonics}\label{sec:7.1.9}\index{tensor spherical harmonics!expansion in series of}\index{expansion!in the tensor spherical harmonics}
 Any tensor $F_{S}(\vartheta, \varphi)$ of rank $S$ which depends on polar angles $\vartheta, \varphi$ and possesses components which satisfy the conditions
 \begin{equation}
-\int\left|F_{S \mu}(\vartheta, \varphi)\right|^{2} d \Omega<\infty, \quad(\mu=-S, \ldots, S-1, S), \label{eq:7:1:45}
+\int\left|F_{S \mu}(\vartheta, \varphi)\right|^{2} \dd \Omega<\infty, \quad(\mu=-S, \ldots, S-1, S), \label{eq:7:1:45}
 \end{equation}
 may be expanded in a series of tensor spherical harmonics $Y_{J M}^{L S}(\vartheta, \varphi)$, i.e., written in the form\isym{AJLM@$A_{J L M}$, expansion coefficient}
 \begin{equation}
@@ -218,11 +221,11 @@ F_{S}(\vartheta, \varphi)=\sum_{J L M} A_{J L M} Y_{J M}^{L S}(\vartheta, \varph
 \end{equation}
 The expansion coefficients are given by
 \begin{equation}
-A_{J L M}=\int d \Omega\, Y_{J M}^{L S}+(\vartheta, \varphi) F_{S}(\vartheta, \varphi). \label{eq:7:1:47}
+A_{J L M}=\int \dd \Omega\, Y_{J M}^{L S}+(\vartheta, \varphi) F_{S}(\vartheta, \varphi). \label{eq:7:1:47}
 \end{equation}
 These coefficients satisfy the relation
 \begin{equation}
-\sum_{J L M}\left|A_{J L M}\right|^{2}=\int d \Omega\,\left|F_{S}(\vartheta, \varphi)\right|^{2}. \label{eq:7:1:48}
+\sum_{J L M}\left|A_{J L M}\right|^{2}=\int \dd \Omega\,\left|F_{S}(\vartheta, \varphi)\right|^{2}. \label{eq:7:1:48}
 \end{equation}
 \section{Spinor spherical harmonics}\label{sec:7.2}\index{spinor spherical harmonics}
 \subsection{Definition}\label{sec:7.2.1}\index{spinor spherical harmonics!definition}
@@ -328,7 +331,7 @@ Under rotations specified by the Euler angles $\alpha, \beta, \gamma$ the spinor
 \end{equation}
 where $D_{M M}^{J}$, are the Wigner $D$-functions (Chap.~\ref{chap:4}), $M^{\prime}$ is the projection of total angular momentum on the rotated $z^{\prime}$-axis; $\vartheta, \varphi$ and $\vartheta^{\prime}, \varphi^{\prime}$ are polar angles of the position vector $\vect{r}$ in the initial and final coordinate systems. The relations between $\vartheta^{\prime}, \varphi^{\prime}$ and $\vartheta, \varphi$ are given by Eqs. \eqref{eq:1:4:2}-\eqref{eq:1:4:3}.
 
-\subsection{Action of $\vect{\nabla}$ and Angular Momentum Operators}\label{sec:7.2.5}\index{spinor spherical harmonics!action of operators on}
+\subsection{Action of $\boldsymbol{\nabla}$ combined with Angular Momentum Operators}\label{sec:7.2.5}\index{spinor spherical harmonics!action of operators on}
 The spinor spherical harmonics satisfy Eqs. \eqref{eq:7:1:24}-\eqref{eq:7:1:38} for $S=\frac{1}{2}$. Note also the following relations in which $\widehat{\vect{S}}$ is the spin operator (Sec.~\ref{sec:2.5}), $\widehat{\vect{L}}$ is the operator of orbital angular momentum (Sec.~\ref{sec:2.2}), $\widehat{\vect{J}}=\widehat{\vect{L}}+\widehat{\vect{S}}$ is the operator of total angular momentum, and $\vect{n}(\vartheta, \varphi)=\vect{r} / r$.
 \begin{enumerate}[label=(\alph*)]
 \item
@@ -346,7 +349,7 @@ An expanded form of \eqref{eq:7:2:23} is
 \end{align}
 \item
 \begin{equation}
-r(\widehat{\vect{S}} \cdot \nabla) \Omega_{J M}^{L}(\vartheta, \varphi)=-\frac{1+\kappa}{2} \Omega_{J M}^{L^{\prime}}(\vartheta, \varphi), \label{eq:7:2:26}
+r(\widehat{\vect{S}}\cdot \boldsymbol{\nabla}) \Omega_{J M}^{L}(\vartheta, \varphi)=-\frac{1+\kappa}{2} \Omega_{J M}^{L^{\prime}}(\vartheta, \varphi), \label{eq:7:2:26}
 \end{equation}
 where $L^{\prime}=2 J-L$,
 \begin{equation}
@@ -354,8 +357,8 @@ where $L^{\prime}=2 J-L$,
 \end{equation}
 In a more detailed form \eqref{eq:7:2:26} gives
 \begin{align}
-& r(\widehat{\vect{S}} \cdot \nabla) \Omega_{J M}^{J+\frac{1}{2}}(\vartheta, \varphi)=-\frac{2 J+3}{4} \Omega_{J M}^{J-\frac{1}{2}}(\vartheta, \varphi), \notag\\
-& r(\widehat{\vect{S}} \cdot \nabla) \Omega_{J M}^{J-\frac{1}{2}}(\vartheta, \varphi)=\frac{2 J-1}{4} \Omega_{J M}^{J+\frac{1}{2}}(\vartheta, \varphi) . \label{eq:7:2:28}
+& r(\widehat{\vect{S}}\cdot \boldsymbol{\nabla}) \Omega_{J M}^{J+\frac{1}{2}}(\vartheta, \varphi)=-\frac{2 J+3}{4} \Omega_{J M}^{J-\frac{1}{2}}(\vartheta, \varphi), \notag\\
+& r(\widehat{\vect{S}}\cdot \boldsymbol{\nabla}) \Omega_{J M}^{J-\frac{1}{2}}(\vartheta, \varphi)=\frac{2 J-1}{4} \Omega_{J M}^{J+\frac{1}{2}}(\vartheta, \varphi) . \label{eq:7:2:28}
 \end{align}
 \item
 \begin{equation}
@@ -381,23 +384,23 @@ where $L^{\prime}$ is defined by \eqref{eq:7:2:24}. Note that Eqs. \eqref{eq:7:2
 \begin{equation}
 n_{\mu} \Omega_{J M}^{L}(\vartheta, \varphi)=(-1)^{J+L+\frac{1}{2}} \sqrt{(2 J+1)(2 L+1)} \sum_{J^{\prime} L^{\prime}}\sixj{J^{\prime}}{J}{1}{L}{L^{\prime}}{\frac{1}{2}}\label{eq:7:2:34} \clebsch{L}{0}{1}{0}{L^{\prime}}{0} \clebsch{J}{M}{1}{\mu}{J^{\prime}}{M+\mu} \Omega_{J^{\prime} M+\mu}^{L^{\prime}}(\vartheta, \varphi)
 \end{equation}
-where $n_{\mu}(\mu= \pm 1,0)$ are spherical components of the unit vector $n(\vartheta, \varphi)$.
+where $n_{\mu}(\mu= \pm 1,0)$ are spherical components of the unit vector $\vect n(\vartheta, \varphi)$.
 
 \subsection{Orthonormality and Completeness. Expansion in a Series of Spinor Spherical Harmonics}\label{sec:7.2.7}\index{orthogonality!of the spinor spherical harmonics}\index{completeness!of the spinor spherical harmonics}\index{expansion!in the spinor spherical harmonics}
 The collection of spinor spherical harmonics $\Omega_{J M}^{L}(\vartheta, \varphi)$ with half-integer nonnegative $J\left(\frac{1}{2} \leq J<\infty\right), L= J \pm \frac{1}{2}$ and $M=-J,-J+1, \ldots, J$ forms complete set of spinors for $0 \leq \vartheta \leq \pi, 0 \leq \varphi<2 \pi$.
 
 The orthonormality condition has the form
 \begin{equation}
-\int_{0}^{\pi} d \vartheta \sin \vartheta \int_{0}^{2 \pi} d \varphi \Omega_{J^{\prime} M^{\prime}}^{L^{\prime}}(\vartheta, \varphi) \Omega_{J M}^{L}(\vartheta, \varphi)=\delta_{J^{\prime} J} \delta_{L^{\prime} L} \delta_{M^{\prime} M}. \label{eq:7:2:35}
+\int_{0}^{\pi} \dd \vartheta \sin \vartheta \int_{0}^{2 \pi} \dd \varphi \Omega_{J^{\prime} M^{\prime}}^{L^{\prime}}(\vartheta, \varphi) \Omega_{J M}^{L}(\vartheta, \varphi)=\delta_{J^{\prime} J} \delta_{L^{\prime} L} \delta_{M^{\prime} M}. \label{eq:7:2:35}
 \end{equation}
 The completeness condition may be written as
 \begin{equation}
-\sum_{J=\frac{1}{2}}^{\infty} \sum_{L=J-\frac{1}{2}}^{J+\frac{1}{2}} \sum_{M=-J}^{J} \Omega_{J M}^{L}(\vartheta, \varphi) \Omega_{J M}^{L+}\left(\vartheta^{\prime}, \varphi^{\prime}\right)=\widehat{I} \delta\left(\cos \vartheta-\cos \vartheta^{\prime}\right) \delta\left(\varphi-\varphi^{\prime}\right), \label{eq:7:2:36}
+\sum_{J=\frac{1}{2}}^{\infty} \sum_{L=J-\frac{1}{2}}^{J+\frac{1}{2}} \sum_{M=-J}^{J} \Omega_{J M}^{L}(\vartheta, \varphi) \Omega_{J M}^{L*}\left(\vartheta^{\prime}, \varphi^{\prime}\right)=\widehat{I} \delta\left(\cos \vartheta-\cos \vartheta^{\prime}\right) \delta\left(\varphi-\varphi^{\prime}\right), \label{eq:7:2:36}
 \end{equation}
 where $\widehat{I}$ is the unit $2 \times 2$ matrix.\\
 Any spinor $\chi(\vartheta, \varphi)$ which satisfies
 \begin{equation}
-\int \chi^{+}(\vartheta, \varphi) \chi(\vartheta, \varphi) d \Omega<\infty, \label{eq:7:2:37}
+\int \chi^{\dagger}(\vartheta, \varphi) \chi(\vartheta, \varphi) \dd \Omega<\infty, \label{eq:7:2:37}
 \end{equation}
 may be expanded in a series of spinor spherical harmonics
 \begin{equation}
@@ -405,46 +408,49 @@ may be expanded in a series of spinor spherical harmonics
 \end{equation}
 where the expansion coefficients $A_{J M}^{L}$ are given by
 \begin{equation}
-A_{J M}^{L}=\int_{0}^{\pi} d \vartheta \sin \vartheta \int_{0}^{2 \pi} d \varphi \Omega_{J M}^{L+}(\vartheta, \varphi) \chi(\vartheta, \varphi). \label{eq:7:2:39}
+A_{J M}^{L}=\int_{0}^{\pi} \dd \vartheta \sin \vartheta \int_{0}^{2 \pi} \dd \varphi \Omega_{J M}^{L*}(\vartheta, \varphi) \chi(\vartheta, \varphi). \label{eq:7:2:39}
 \end{equation}
 The expansion \eqref{eq:7:2:38} is valid for the range $0 \leq \vartheta \leq \pi, 0 \leq \varphi<2 \pi$.
 
 \subsection{Clebsch-Gordan Series}\label{sec:7.2.8}\index{Clebsch-Gordan series}\index{spinor spherical harmonics!Clebsch-Gordan series}\index{9j symbol@$9j$ symbol}
-\begin{gather}
+\begin{align}
 % NOTE (7.2.40): OCR fixes -- the source had a stray comma "J_{2}," in the 6j
 % (removed), and the phase exponent frac{1}{3} is a mis-OCR of frac{1}{2}.
 % Verified: with +1/2 the identity holds to 1e-18; with +1/3 it fails at 4e-2
 % (scripts/check_7_2.py).
-\Omega_{J_{1} M_{1}}^{L_{1}+}(\vartheta, \varphi) \Omega_{J_{2} M_{2}}^{L_{2}}(\vartheta, \varphi)=\sum_{L}(-1)^{J_{1}+M_{1}+J_{2}+L+\frac{1}{2}}\sixj{L_{1}}{L_{2}}{L}{J_{2}}{J_{1}}{\frac{1}{2}}  \notag\\
-\times \sqrt{\frac{\left(2 J_{1}+1\right)\left(2 J_{2}+1\right)\left(2 L_{1}+1\right)\left(2 L_{2}+1\right)}{4 \pi(2 L+1)}} \clebsch{L_{1}}{0}{L_{2}}{0}{L}{0} \clebsch{J_{1}}{-M_{1}}{J_{2}}{M_{2}}{L}{M} Y_{L M}(\vartheta, \varphi),  \label{eq:7:2:40}\\
-\Omega_{J_{1} M_{1}}^{L_{1}+}(\vartheta, \varphi) \hat{\vect{S}} \Omega_{J_{2} M_{2}}^{L_{2}}(\vartheta, \varphi)=(-1)^{J_{2}+L_{1}+M_{1}} \sqrt{\frac{3\left(2 J_{1}+1\right)\left(2 J_{2}+1\right)\left(2 L_{1}+1\right)\left(2 L_{2}+1\right)}{8 \pi}}  \notag\\
-\times \sum_{J L}(-1)^{J} \clebsch{L_{1}}{0}{L_{2}}{0}{L}{0}
+\Omega_{J_{1} M_{1}}^{L_{1}*}(\vartheta, \varphi) \Omega_{J_{2} M_{2}}^{L_{2}}(\vartheta, \varphi)=&\sum_{L}(-1)^{J_{1}+M_{1}+J_{2}+L+\frac{1}{2}}\sixj{L_{1}}{L_{2}}{L}{J_{2}}{J_{1}}{\frac{1}{2}}  \notag\\
+&\times \sqrt{\frac{\left(2 J_{1}+1\right)\left(2 J_{2}+1\right)\left(2 L_{1}+1\right)\left(2 L_{2}+1\right)}{4 \pi(2 L+1)}} \clebsch{L_{1}}{0}{L_{2}}{0}{L}{0} \clebsch{J_{1}}{-M_{1}}{J_{2}}{M_{2}}{L}{M} Y_{L M}(\vartheta, \varphi),  \label{eq:7:2:40}\\
+\Omega_{J_{1} M_{1}}^{L_{1}*}(\vartheta, \varphi) \hat{\vect{S}} \Omega_{J_{2} M_{2}}^{L_{2}}(\vartheta, \varphi)=&(-1)^{J_{2}+L_{1}+M_{1}} \sqrt{\frac{3\left(2 J_{1}+1\right)\left(2 J_{2}+1\right)\left(2 L_{1}+1\right)\left(2 L_{2}+1\right)}{8 \pi}}  \notag\\
+&\times \sum_{J L}(-1)^{J} \clebsch{L_{1}}{0}{L_{2}}{0}{L}{0}
 \ninej{L_{1}}{J_{1}}{\frac{1}{2}}%
 {L_{2}}{J_{2}}{\frac{1}{2}}%
 {L}{J}{1} \clebsch{J_{1}}{-M_{1}}{J_{2}}{M_{2}}{J}{M} \vect{Y}_{J M}^{L}(\vartheta, \varphi), \label{eq:7:2:41}
-\end{gather}
-where $\widehat{\mathrm{S}}$ is the spin operator, $\vect{Y}_{J M}^{L}$ is a vector spherical harmonic (see Sec.~\ref{sec:7.3}).
+\end{align}
+where $\widehat{\vect{S}}$ is the spin operator and $\vect{Y}_{J M}^{L}$ is a vector spherical harmonic (see Sec.~\ref{sec:7.3}).
 
 \subsection{Addition Theorems}\label{sec:7.2.9}\index{addition theorem!for the spinor spherical harmonics}\index{spinor spherical harmonics!addition theorems}
-Let $\vect{n}_{1}$ and $\vect{n}_{2}$ be unit vectors with polar angles $\vartheta_{1}, \varphi_{1}$ and $\vartheta_{2}, \varphi_{2}, \cos \omega_{12} \equiv \vect{n}_{1} \cdot \vect{n}_{2}=\cos \vartheta_{1} \cos \vartheta_{2}+ \sin \vartheta_{1} \sin \vartheta_{2} \cos \left(\varphi_{1}-\varphi_{2}\right)$. The addition theorem for the spinor spherical harmonics may be written in the form
-\begin{gather}
-4 \pi \sum_{M=-J}^{J} \Omega_{J M}^{L+}\left(\vartheta_{1}, \varphi_{1}\right) \Omega_{J M}^{L^{\prime}}\left(\vartheta_{2}, \varphi_{2}\right)=\delta_{L L^{\prime}}(2 J+1) P_{L}\left(\cos \omega_{12}\right), \label{eq:7:2:42}\\
-4 \pi \sum_{M=-J}^{J} \Omega_{J M}^{L+}\left(\vartheta_{1}, \varphi_{1}\right) \hat{\mathrm{S}} \Omega_{J M}^{L^{\prime}}\left(\vartheta_{2}, \varphi_{2}\right)= \begin{cases}i\left|\vect{n}_{1} \times \vect{n}_{2}\right| P_{L}^{\prime}\left(\cos \omega_{12}\right) & \text { if } L^{\prime}=L \\
-\left(L^{\prime}-L\right)\left\{\vect{n}_{1} P_{L^{\prime}}^{\prime}\left(\cos \omega_{12}\right)-\vect{n}_{2} P_{L^{\prime}}^{\prime}\left(\cos \omega_{12}\right)\right\}, & \text { if } L^{\prime}=2 J-L\end{cases}, \label{eq:7:2:43}
-\end{gather}
-where $P_{L}(x)$ is a Legendre polynomial, $P_{L}^{\prime}(x)=d P_{L}(x) / d x, \widehat{\vect{S}}$ is the spin operator (Sec.~\ref{sec:2.5}).\index{Legendre polynomials}\isym{Pl@$P_{l}(x)$, Legendre polynomial} Another form of the addition theorem may be obtained for matrix products of the type
-\begin{gather}
-4 \pi \sum_{M=-J}^{J} \Omega_{J M}^{L}\left(\vartheta_{1}, \varphi_{1}\right) \Omega_{J M}^{L+}\left(\vartheta_{2}, \varphi_{2}\right)  \notag\\
-=\left(J+\frac{1}{2}\right) \hat{I} P_{L}\left(\cos \omega_{12}\right)-i 4(J-L) \hat{\vect{S}} \cdot\left[\vect{n}_{1} \times \vect{n}_{2}\right] P_{L}^{\prime}\left(\cos \omega_{12}\right),  \label{eq:7:2:44}\\
-4 \pi \sum_{M=-J}^{J} \Omega_{J M}^{L}\left(\vartheta_{1}, \varphi_{1}\right) \Omega_{J M}^{L^{\prime}+}\left(\vartheta_{2}, \varphi_{2}\right)  \notag\\
+Let $\vect{n}_{1}$ and $\vect{n}_{2}$ be unit vectors with polar angles $\vartheta_{1}, \varphi_{1}$ and \[\vartheta_{2}, \varphi_{2}, \cos \omega_{12} \equiv \vect{n}_{1} \cdot \vect{n}_{2}=\cos \vartheta_{1} \cos \vartheta_{2}+ \sin \vartheta_{1} \sin \vartheta_{2} \cos \left(\varphi_{1}-\varphi_{2}\right).\] The addition theorem for the spinor spherical harmonics may be written in the form
+\begin{align}
+4 \pi \sum_{M=-J}^{J} \Omega_{J M}^{L*}\left(\vartheta_{1}, \varphi_{1}\right) \Omega_{J M}^{L^{\prime}}\left(\vartheta_{2}, \varphi_{2}\right)&=\delta_{L L^{\prime}}(2 J+1) P_{L}\left(\cos \omega_{12}\right), \label{eq:7:2:42}\\
+4 \pi \sum_{M=-J}^{J} \Omega_{J M}^{L*}\left(\vartheta_{1}, \varphi_{1}\right) \hat{\vect{S}} \Omega_{J M}^{L^{\prime}}\left(\vartheta_{2}, \varphi_{2}\right)&= 
+\begin{cases}i\left|\vect{n}_{1} \times \vect{n}_{2}\right| P_{L}^{\prime}\left(\cos \omega_{12}\right), & \text { if } L^{\prime}=L, \\
+\left(L^{\prime}-L\right)\left\{\vect{n}_{1} P_{L^{\prime}}^{\prime}\left(\cos \omega_{12}\right)-\vect{n}_{2} P_{L^{\prime}}^{\prime}\left(\cos \omega_{12}\right)\right\}, & \text { if } L^{\prime}=2 J-L.\end{cases} \label{eq:7:2:43}
+\end{align}
+where $P_{L}(x)$ is a Legendre polynomial, $P_{L}^{\prime}(x)=\dd P_{L}(x) / \dd x$, $\widehat{\vect{S}}$ is the spin operator (Sec.~\ref{sec:2.5}).\index{Legendre polynomials}\isym{Pl@$P_{l}(x)$, Legendre polynomial} Another form of the addition theorem may be obtained for matrix products of the type
+\begin{multline}
+4 \pi \sum_{M=-J}^{J} \Omega_{J M}^{L}\left(\vartheta_{1}, \varphi_{1}\right) \Omega_{J M}^{L*}\left(\vartheta_{2}, \varphi_{2}\right) %\\
+=\left(J+\frac{1}{2}\right) \hat{I} P_{L}\left(\cos \omega_{12}\right)-i 4(J-L) \hat{\vect{S}} \cdot\left[\vect{n}_{1} \times \vect{n}_{2}\right] P_{L}^{\prime}\left(\cos \omega_{12}\right),  \label{eq:7:2:44}
+\end{multline}
+\begin{multline}
+4 \pi \sum_{M=-J}^{J} \Omega_{J M}^{L}\left(\vartheta_{1}, \varphi_{1}\right) \Omega_{J M}^{L^{\prime}*}\left(\vartheta_{2}, \varphi_{2}\right) \\
 =2\left(L^{\prime}-L\right)\left\{\left(\hat{\vect{S}} \cdot \vect{n}_{1}\right) P_{L}^{\prime}\left(\cos \omega_{12}\right)-\left(\hat{\vect{S}} \cdot \vect{n}_{2}\right) P_{L^{\prime}}^{\prime}\left(\cos \omega_{12}\right)\right\}, \quad\left(L^{\prime}=2 J-L\right). \label{eq:7:2:45}
-\end{gather}
+\end{multline}
 \subsection{Quadratic Forms of Spinor Spherical Harmonics}\label{sec:7.2.10}\index{spinor spherical harmonics!quadratic forms of}\index{quadratic forms!of the spinor spherical harmonics}\index{angular distribution}
-The quadratic forms $\Omega_{J M}^{L+}(\vartheta, \varphi) \Omega_{J M}^{L}(\vartheta, \varphi)$ describe angular distributions of spin-\isym{WJM@$W_{J M}(\vartheta)$, quadratic form of the spinor spherical harmonics} $\frac{1}{2}$ particles in states with definite total angular momentum $J$, angular momentum projection $M$ and orbital angular momentum $L$. Note that in fact these forms are independent of $L$ and angle $\varphi$.
+The quadratic forms $\Omega_{J M}^{L*}(\vartheta, \varphi) \Omega_{J M}^{L}(\vartheta, \varphi)$ describe angular distributions of spin-\isym{WJM@$W_{J M}(\vartheta)$, quadratic form of the spinor spherical harmonics} $\frac{1}{2}$ particles in states with definite total angular momentum $J$, angular momentum projection $M$ and orbital angular momentum $L$. Note that in fact these forms are independent of $L$ and angle $\varphi$.
 
 Let us denote
 \begin{equation}
-W_{J M}(\vartheta) \equiv \Omega_{J M}^{L+}(\vartheta, \varphi) \Omega_{J M}^{L}(\vartheta, \varphi). \label{eq:7:2:46}
+W_{J M}(\vartheta) \equiv \Omega_{J M}^{L*}(\vartheta, \varphi) \Omega_{J M}^{L}(\vartheta, \varphi). \label{eq:7:2:46}
 \end{equation}
 Then one obtains
 \begin{align}
@@ -467,7 +473,7 @@ In particular,
 \end{align}
 The functions $W_{J M}(\vartheta)$ are normalized according to
 \begin{gather}
-\int W_{J M}(\vartheta) d \Omega=1, \label{eq:7:2:51}\\
+\int W_{J M}(\vartheta) \dd \Omega=1, \label{eq:7:2:51}\\
 \sum_{M=-J}^{J} W_{J M}(\vartheta)=\frac{2 J+1}{4 \pi}. \notag
 \end{gather}
 The symmetries of $W_{J M}(\vartheta)$ are
@@ -507,7 +513,7 @@ They are eigenfunctions of the operators $\widehat{\vect{J}}^{2}, \widehat{J}_{z
 \label{chap7:tab:1}
 \begin{tabular}{l|l|c}
 \hline
-$J$ & M & $W_{J M}(\vartheta)=\Omega_{J M}^{L+}(\vartheta, \varphi) \Omega_{J M}^{L}(\vartheta, \varphi)$ \\
+$J$ & M & $W_{J M}(\vartheta)=\Omega_{J M}^{L*}(\vartheta, \varphi) \Omega_{J M}^{L}(\vartheta, \varphi)$ \\
 \hline
 $\frac{1}{2}$ & $\frac{1}{2}$ & $\frac{1}{4 \pi}$ \\
 $\frac{3}{2}$ & $\frac{1}{2}$ & $\frac{1}{8 \pi}\left\{3 \cos ^{2} \vartheta+1\right\}$ \\
@@ -691,7 +697,7 @@ Explicitly we may write Eqs. \eqref{eq:7:3:29}-\eqref{eq:7:3:31} as follows:
 \begin{align}
 \left[\vect{Y}_{J M}^{J+1}(\vartheta, \varphi)\right]^{\prime+1}&=-\left[\vect{Y}_{J M}^{J+1}(\vartheta, \varphi)\right]_{-1}^{\prime}=\sqrt{\frac{J}{8 \pi}} D_{-1-M}^{J}(0, \vartheta, \varphi), \notag\\
 \left[\vect{Y}_{J M}^{J+1}(\vartheta, \varphi)\right]^{\prime 0}&=\left[\vect{Y}_{J M}^{J+1}(\vartheta, \varphi)\right]_{0}^{\prime}=-\sqrt{\frac{J+1}{4 \pi}} D_{0-M}^{J}(0, \vartheta, \varphi), \label{eq:7:3:32}\\
-\left[\vect{Y}_{J M}^{J+1}(\vartheta, \varphi)\right]^{\prime-1}*=-\left[\vect{Y}_{J M}^{J+1}(\vartheta, \varphi)\right]_{+1}^{\prime}=\sqrt{\frac{J}{8 \pi}} D_{1-M}^{J}(0, \vartheta, \varphi), \notag
+\left[\vect{Y}_{J M}^{J+1}(\vartheta, \varphi)\right]^{\prime-1}&=-\left[\vect{Y}_{J M}^{J+1}(\vartheta, \varphi)\right]_{+1}^{\prime}=\sqrt{\frac{J}{8 \pi}} D_{1-M}^{J}(0, \vartheta, \varphi), \notag
 \end{align}
 \begin{align}
 \left[\vect{Y}_{J M}^{J}(\vartheta, \varphi)\right]^{\prime+1}&=-\left[\vect{Y}_{J M}^{J}(\vartheta, \varphi)\right]_{-1}^{\prime}=-\sqrt{\frac{2 J+1}{8 \pi}} D_{-1-M}^{J}(0, \vartheta, \varphi), \notag\\
@@ -787,35 +793,35 @@ Below we present the results of the action of the $\nabla$ operator on scalar an
 \begin{enumerate}[label=(\alph*)]
 \item 
 \begin{align}
-& \vect{\nabla}\left\{f(r) Y_{J M}(\vartheta, \varphi)\right\} \equiv \operatorname{grad}\left\{f(r) Y_{J M}(\vartheta, \varphi)\right\}  \notag\\
+& \boldsymbol{\nabla}\left\{f(r) Y_{J M}(\vartheta, \varphi)\right\} \equiv \operatorname{grad}\left\{f(r) Y_{J M}(\vartheta, \varphi)\right\}  \notag\\
 & =\sqrt{\frac{J}{2 J+1}}\left\{\frac{d}{d r}+\frac{J+1}{r}\right\} f(r) \vect{Y}_{J M}^{J-1}(\vartheta, \varphi)-\sqrt{\frac{J+1}{2 J+1}}\left\{\frac{d}{d r}-\frac{J}{r}\right\} f(r) \vect{Y}_{J M}^{J+1}(\vartheta, \varphi), \label{eq:7:3:51}\\
 & \nabla\left\{f(r) Y_{J M}(\vartheta, \varphi)\right\} \equiv \operatorname{grad}\left\{f(r) Y_{J M}(\vartheta, \varphi)\right\}=\frac{d f(r)}{d r} \vect{Y}_{J M}^{(-1)}(\vartheta, \varphi)+\sqrt{J(J+1)} \frac{1}{r} f(r) \vect{Y}_{J M}^{(1)}(\vartheta, \varphi), \notag\\
-& (\vect{r} \cdot \nabla)\left\{f(r) \vect{Y}_{J M}^{L}(\vartheta, \varphi)\right\}=r \frac{d}{d r} f(r) \vect{Y}_{J M}^{L}(\vartheta, \varphi), \label{eq:7:3:52}\\
-& (\vect{r} \cdot \nabla)\left\{f(r) \vect{Y}_{J M}^{(\lambda)}(\vartheta, \varphi)\right\}=r \frac{d}{d r} f(r) \vect{Y}_{J M}^{(\lambda)}(\vartheta, \varphi). \notag
+& (\vect{r}\cdot \boldsymbol{\nabla})\left\{f(r) \vect{Y}_{J M}^{L}(\vartheta, \varphi)\right\}=r \frac{d}{d r} f(r) \vect{Y}_{J M}^{L}(\vartheta, \varphi), \label{eq:7:3:52}\\
+& (\vect{r}\cdot \boldsymbol{\nabla})\left\{f(r) \vect{Y}_{J M}^{(\lambda)}(\vartheta, \varphi)\right\}=r \frac{d}{d r} f(r) \vect{Y}_{J M}^{(\lambda)}(\vartheta, \varphi). \notag
 \end{align}
 \item 
 \begin{align}
-\vect{\nabla} \cdot\left[f(r) \vect{Y}_{J M}^{J+1}(\vartheta, \varphi)\right] \equiv \operatorname{div}\left[f(r) \vect{Y}_{J M}^{J+1}(\vartheta, \varphi)\right]=-\sqrt{\frac{J+1}{2 J+1}}\left(\frac{d}{d r}+\frac{J+2}{r}\right) f(r) Y_{J M}(\vartheta, \varphi), \notag\\
-\vect{\nabla} \cdot\left[f(r) \vect{Y}_{J M}^{J}(\vartheta, \varphi)\right] \equiv \operatorname{div}\left[f(r) \vect{Y}_{J M}^{J}(\vartheta, \varphi)\right]=0, \label{eq:7:3:53}\\
-\vect{\nabla} \cdot\left[f(r) \vect{Y}_{J M}^{J-1}(\vartheta, \varphi)\right] \equiv \operatorname{div}\left[f(r) \vect{Y}_{J M}^{J-1}(\vartheta, \varphi)\right]=\sqrt{\frac{J}{2 J+1}}\left(\frac{d}{d r}-\frac{J-1}{r}\right) f(r) Y_{J M}(\vartheta, \varphi), \notag
+\boldsymbol{\nabla} \cdot\left[f(r) \vect{Y}_{J M}^{J+1}(\vartheta, \varphi)\right] &\equiv \operatorname{div}\left[f(r) \vect{Y}_{J M}^{J+1}(\vartheta, \varphi)\right]=-\sqrt{\frac{J+1}{2 J+1}}\left(\frac{d}{d r}+\frac{J+2}{r}\right) f(r) Y_{J M}(\vartheta, \varphi), \notag\\
+\boldsymbol{\nabla} \cdot\left[f(r) \vect{Y}_{J M}^{J}(\vartheta, \varphi)\right] &\equiv \operatorname{div}\left[f(r) \vect{Y}_{J M}^{J}(\vartheta, \varphi)\right]=0, \label{eq:7:3:53}\\
+\boldsymbol{\nabla} \cdot\left[f(r) \vect{Y}_{J M}^{J-1}(\vartheta, \varphi)\right] &\equiv \operatorname{div}\left[f(r) \vect{Y}_{J M}^{J-1}(\vartheta, \varphi)\right]=\sqrt{\frac{J}{2 J+1}}\left(\frac{d}{d r}-\frac{J-1}{r}\right) f(r) Y_{J M}(\vartheta, \varphi), \notag
 \end{align}
 \begin{align}
-\vect{\nabla} \cdot\left[f(r) \vect{Y}_{J M}^{(1)}(\vartheta, \varphi)\right] \equiv \operatorname{div}\left[f(r) \vect{Y}_{J M}^{(1)}(\vartheta, \varphi)\right]=-\sqrt{J(J+1)} \frac{1}{r} f(r) Y_{J M}(\vartheta, \varphi), \notag\\
-\vect{\nabla} \cdot\left[f(r) \vect{Y}_{J M}^{(0)}(\vartheta, \varphi)\right] \equiv \operatorname{div}\left[f(r) \vect{Y}_{J M}^{(0)}(\vartheta, \varphi)\right]=0, \label{eq:7:3:54}\\
-\vect{\nabla} \cdot\left[f(r) \vect{Y}_{J M}^{(-1)}(\vartheta, \varphi)\right] \equiv \operatorname{div}\left[f(r) \vect{Y}_{J M}^{(-1)}(\vartheta, \varphi)\right]=\left(\frac{d}{d r}+\frac{2}{r}\right) f(r) Y_{J M}(\vartheta, \varphi). \notag
+\boldsymbol{\nabla} \cdot\left[f(r) \vect{Y}_{J M}^{(1)}(\vartheta, \varphi)\right] &\equiv \operatorname{div}\left[f(r) \vect{Y}_{J M}^{(1)}(\vartheta, \varphi)\right]=-\sqrt{J(J+1)} \frac{1}{r} f(r) Y_{J M}(\vartheta, \varphi), \notag\\
+\boldsymbol{\nabla} \cdot\left[f(r) \vect{Y}_{J M}^{(0)}(\vartheta, \varphi)\right] &\equiv \operatorname{div}\left[f(r) \vect{Y}_{J M}^{(0)}(\vartheta, \varphi)\right]=0, \label{eq:7:3:54}\\
+\boldsymbol{\nabla} \cdot\left[f(r) \vect{Y}_{J M}^{(-1)}(\vartheta, \varphi)\right] &\equiv \operatorname{div}\left[f(r) \vect{Y}_{J M}^{(-1)}(\vartheta, \varphi)\right]=\left(\frac{d}{d r}+\frac{2}{r}\right) f(r) Y_{J M}(\vartheta, \varphi). \notag
 \end{align}
 \item 
 \begin{align}
-& \vect{\nabla} \times\left[f(r) \vect{Y}_{J M}^{J+1}(\vartheta, \varphi)\right] \equiv \operatorname{curl}\left[f(r) \vect{Y}_{J M}^{J+1}(\vartheta, \varphi)\right]=i \sqrt{\frac{J}{2 J+1}}\left(\frac{d}{d r}+\frac{J+2}{r}\right) f(r) \vect{Y}_{J M}^{J}(\vartheta, \varphi), \notag\\
-& \vect{\nabla} \times\left[f(r) \vect{Y}_{J M}^{J}(\vartheta, \varphi)\right] \equiv \operatorname{curl}\left[f(r) \vect{Y}_{J M}^{J}(\vartheta, \varphi)\right], \notag\\
+& \boldsymbol{\nabla} \times\left[f(r) \vect{Y}_{J M}^{J+1}(\vartheta, \varphi)\right] \equiv \operatorname{curl}\left[f(r) \vect{Y}_{J M}^{J+1}(\vartheta, \varphi)\right]=i \sqrt{\frac{J}{2 J+1}}\left(\frac{d}{d r}+\frac{J+2}{r}\right) f(r) \vect{Y}_{J M}^{J}(\vartheta, \varphi), \notag\\
+& \boldsymbol{\nabla} \times\left[f(r) \vect{Y}_{J M}^{J}(\vartheta, \varphi)\right] \equiv \operatorname{curl}\left[f(r) \vect{Y}_{J M}^{J}(\vartheta, \varphi)\right] \notag\\
 & \quad=i \sqrt{\frac{J}{2 J+1}}\left(\frac{d}{d r}-\frac{J}{r}\right) f(r) \vect{Y}_{J M}^{J+1}(\vartheta, \varphi)+i \sqrt{\frac{J+1}{2 J+1}}\left(\frac{d}{d r}+\frac{J+1}{r}\right) f(r) \vect{Y}_{J M}^{J-1}(\vartheta, \varphi), \label{eq:7:3:55}\\
-& \vect{\nabla} \times\left[f(r) \vect{Y}_{J M}^{J-1}(\vartheta, \varphi)\right] \equiv \operatorname{curl}\left[f(r) \vect{Y}_{J M}^{J-1}(\vartheta, \varphi)\right]=i \sqrt{\frac{J+1}{2 J+1}}\left(\frac{d}{d r}-\frac{J-1}{r}\right) f(r) \vect{Y}_{J M}^{J}(\vartheta, \varphi), \notag
+& \boldsymbol{\nabla} \times\left[f(r) \vect{Y}_{J M}^{J-1}(\vartheta, \varphi)\right] \equiv \operatorname{curl}\left[f(r) \vect{Y}_{J M}^{J-1}(\vartheta, \varphi)\right]=i \sqrt{\frac{J+1}{2 J+1}}\left(\frac{d}{d r}-\frac{J-1}{r}\right) f(r) \vect{Y}_{J M}^{J}(\vartheta, \varphi), \notag
 \end{align}
 \begin{align}
-& \vect{\nabla} \times\left[f(r) \vect{Y}_{J M}^{(1)}(\vartheta, \varphi)\right] \equiv \operatorname{curl}\left[f(r) \vect{Y}_{J M}^{(1)}(\vartheta, \varphi)\right]=i\left(\frac{d}{d r}+\frac{1}{r}\right) f(r) \vect{Y}_{J M}^{(0)}(\vartheta, \varphi), \notag\\
-& \vect{\nabla} \times\left[f(r) \vect{Y}_{J M}^{(0)}(\vartheta, \varphi)\right] \equiv \operatorname{curl}\left[f(r) \vect{Y}_{J M}^{(0)}(\vartheta, \varphi)\right], \notag\\
-& \quad=i\left(\frac{d}{d r}+\frac{1}{r}\right) f(r) \vect{Y}_{J M}^{(1)}(\vartheta, \varphi)+i \sqrt{J(J+1)} \frac{1}{r} f(r) \vect{Y}_{J M}^{(-1)}(\vartheta, \varphi), \label{eq:7:3:56}\\
-& \vect{\nabla} \times\left[f(r) \vect{Y}_{J M}^{(-1)}(\vartheta, \varphi)\right] \equiv \operatorname{curl}\left[f(r) \vect{Y}_{J M}^{(-1)}(\vartheta, \varphi)\right]=-i \sqrt{J(J+1)} \frac{1}{r} f(r) \vect{Y}_{J M}^{(0)}(\vartheta, \varphi). \notag
+ \boldsymbol{\nabla} \times\left[f(r) \vect{Y}_{J M}^{(1)}(\vartheta, \varphi)\right]&\equiv \operatorname{curl}\left[f(r) \vect{Y}_{J M}^{(1)}(\vartheta, \varphi)\right]=i\left(\frac{d}{d r}+\frac{1}{r}\right) f(r) \vect{Y}_{J M}^{(0)}(\vartheta, \varphi), \notag\\
+ \boldsymbol{\nabla} \times\left[f(r) \vect{Y}_{J M}^{(0)}(\vartheta, \varphi)\right] &\equiv \operatorname{curl}\left[f(r) \vect{Y}_{J M}^{(0)}(\vartheta, \varphi)\right] \notag\\
+& =i\left(\frac{d}{d r}+\frac{1}{r}\right) f(r) \vect{Y}_{J M}^{(1)}(\vartheta, \varphi)+i \sqrt{J(J+1)} \frac{1}{r} f(r) \vect{Y}_{J M}^{(-1)}(\vartheta, \varphi), \label{eq:7:3:56}\\
+ \boldsymbol{\nabla} \times\left[f(r) \vect{Y}_{J M}^{(-1)}(\vartheta, \varphi)\right] &\equiv \operatorname{curl}\left[f(r) \vect{Y}_{J M}^{(-1)}(\vartheta, \varphi)\right]=-i \sqrt{J(J+1)} \frac{1}{r} f(r) \vect{Y}_{J M}^{(0)}(\vartheta, \varphi). \notag
 \end{align}
 \item Some applications of spherical harmonics to physical problems involve the functions
 \begin{align}
@@ -823,10 +829,10 @@ F_{J M}(\mathrm{r}) & \equiv z_{J}(k r) Y_{J M}(\vartheta, \varphi), \notag\\
 \vect{F}_{J M}^{L}(\mathrm{r}) & \equiv z_{L}(k r) \vect{Y}_{J M}^{L}(\vartheta, \varphi). \label{eq:7:3:57}
 \end{align}
 where $z_{L}(k r) \equiv \sqrt{\pi /(2 k r)} Z_{L+\frac{1}{2}}(k r)$, and $Z_{L+\frac{1}{2}}$ is any cylinder functions; $k$ is an arbitrary parameter. For these special functions Eqs. \eqref{eq:7:3:51}-\eqref{eq:7:3:56} are reduced to the following
-\begin{align}
-& \frac{1}{k} \operatorname{grad}\left\{F_{J M}(\vect{r})\right\}=\sqrt{\frac{J}{2 J+1}} z_{J-1}(k r) \vect{Y}_{J M}^{J-1}(\vartheta, \varphi)+\sqrt{\frac{J+1}{2 J+1}} z_{J+1}(k r) \vect{Y}_{J M}^{J+1}(\vartheta, \varphi)  \notag\\
-&=\sqrt{\frac{J}{2 J+1}} \vect{F}_{J M}^{J-1}(\vect{r})+\sqrt{\frac{J+1}{2 J+1}} \vect{F}_{J M}^{J+1}(\vect{r}), \label{eq:7:3:58}
-\end{align}
+\begin{multline}
+ \frac{1}{k} \operatorname{grad}\left\{F_{J M}(\vect{r})\right\}=\sqrt{\frac{J}{2 J+1}} z_{J-1}(k r) \vect{Y}_{J M}^{J-1}(\vartheta, \varphi)+\sqrt{\frac{J+1}{2 J+1}} z_{J+1}(k r) \vect{Y}_{J M}^{J+1}(\vartheta, \varphi) \\
+=\sqrt{\frac{J}{2 J+1}} \vect{F}_{J M}^{J-1}(\vect{r})+\sqrt{\frac{J+1}{2 J+1}} \vect{F}_{J M}^{J+1}(\vect{r}), \label{eq:7:3:58}
+\end{multline}
 \begin{equation}
 \begin{aligned}
 & \frac{1}{k} \operatorname{div}\left\{\vect{F}_{J M}^{J+1}(\vect{r})\right\}=-\sqrt{\frac{J+1}{2 J+1}} z_{J}(k r) Y_{J M}(\vartheta, \varphi)=-\sqrt{\frac{J+1}{2 J+1}} F_{J M}(\vect{r}), \\
@@ -849,10 +855,10 @@ where $z_{L}(k r) \equiv \sqrt{\pi /(2 k r)} Z_{L+\frac{1}{2}}(k r)$, and $Z_{L+
 The action of the angular momentum operators on vector spherical harmonics is given by Eqs. \eqref{eq:7:1:27} and \eqref{eq:7:1:29} for $S=1$. In addition, we note the following relations in which $\widehat{\vect{S}}, \widehat{\vect{L}}$ and $\widehat{\vect{J}}=\widehat{\vect{L}}+\widehat{\vect{S}}$ are the spin, orbital and total angular momentum operators, respectively; $n$ is the unit vector defined by the polar angles $\vartheta, \varphi$.\\
 \begin{enumerate}[label=(\alph*)]
 \item
-\begin{gather}
-(\widehat{\vect{S}} \cdot \vect{n}) \vect{Y}_{J M}^{L}(\vartheta, \varphi)=-\frac{1}{2} \sqrt{\frac{(J+L+3)(J+L)(-J+L+2)(J-L+1)}{(2 L+1)(2 L+3)}} \vect{Y}_{J M}^{L+1}(\vartheta, \varphi), \notag\\
--\frac{1}{2} \sqrt{\frac{(J+L+2)(J+L-1)(-J+L+1)(J-L+2)}{(2 L-1)(2 L+1)}} \vect{Y}_{J M}^{L-1}(\vartheta, \varphi). \label{eq:7:3:61}
-\end{gather}
+\begin{align}
+(\widehat{\vect{S}} \cdot \vect{n}) \vect{Y}_{J M}^{L}(\vartheta, \varphi)=&-\frac{1}{2} \sqrt{\frac{(J+L+3)(J+L)(-J+L+2)(J-L+1)}{(2 L+1)(2 L+3)}} \vect{Y}_{J M}^{L+1}(\vartheta, \varphi)\notag\\
+&-\frac{1}{2} \sqrt{\frac{(J+L+2)(J+L-1)(-J+L+1)(J-L+2)}{(2 L-1)(2 L+1)}} \vect{Y}_{J M}^{L-1}(\vartheta, \varphi). \label{eq:7:3:61}
+\end{align}
 In particular,
 \begin{align}
 &(\widehat{\vect{S}} \cdot \vect{n}) \vect{Y}_{J M}^{J+1}(\vartheta, \varphi)=-\sqrt{\frac{J}{2 J+1}} \vect{Y}_{J M}^{J}(\vartheta, \varphi), \notag\\
@@ -866,19 +872,19 @@ In particular,
 \end{align}
 \item
 \begin{align}
-& r(\widehat{\vect{S}} \cdot \nabla) \vect{Y}_{J M}^{L}(\vartheta, \varphi)=\frac{L}{2} \sqrt{\frac{(J+L+3)(J+L)(-J+L+2)(J-L+1)}{(2 L+1)(2 L+3)}} \vect{Y}_{J M}^{L+1}(\vartheta, \varphi), \notag\\
-& \quad-\frac{L+1}{2} \sqrt{\frac{(J+L+2)(J+L-1)(-J+L+1)(J-L+2)}{(2 L-1)(2 L+1)}} \vect{Y}_{J M}^{L-1}(\vartheta, \varphi). \label{eq:7:3:64}
+ r(\widehat{\vect{S}}\cdot \boldsymbol{\nabla}) \vect{Y}_{J M}^{L}(\vartheta, \varphi)=&\frac{L}{2} \sqrt{\frac{(J+L+3)(J+L)(-J+L+2)(J-L+1)}{(2 L+1)(2 L+3)}} \vect{Y}_{J M}^{L+1}(\vartheta, \varphi), \notag\\
+&-\frac{L+1}{2} \sqrt{\frac{(J+L+2)(J+L-1)(-J+L+1)(J-L+2)}{(2 L-1)(2 L+1)}} \vect{Y}_{J M}^{L-1}(\vartheta, \varphi). \label{eq:7:3:64}
 \end{align}
 In particular,
 \begin{align}
-r(\widehat{\vect{S}} \cdot \nabla) \vect{Y}_{J M}^{J+1}(\vartheta, \varphi) & =-(J+2) \sqrt{\frac{J}{2 J+1}} \vect{Y}_{J M}^{J}(\vartheta, \varphi), \notag\\
-r(\widehat{\vect{S}} \cdot \nabla) \vect{Y}_{J M}^{J}(\vartheta, \varphi) & =J \sqrt{\frac{J}{2 J+1}} \vect{Y}_{J M}^{J+1}(\vartheta, \varphi)-(J+1) \sqrt{\frac{J+1}{2 J+1}} \vect{Y}_{J M}^{J-1}(\vartheta, \varphi), \label{eq:7:3:65}\\
-r(\widehat{\vect{S}} \cdot \nabla) \vect{Y}_{J M}^{J-1}(\vartheta, \varphi) & =(J-1) \sqrt{\frac{J+1}{2 J+1}} \vect{Y}_{J M}^{J}(\vartheta, \varphi), \notag
+r(\widehat{\vect{S}}\cdot \boldsymbol{\nabla}) \vect{Y}_{J M}^{J+1}(\vartheta, \varphi) & =-(J+2) \sqrt{\frac{J}{2 J+1}} \vect{Y}_{J M}^{J}(\vartheta, \varphi), \notag\\
+r(\widehat{\vect{S}}\cdot \boldsymbol{\nabla}) \vect{Y}_{J M}^{J}(\vartheta, \varphi) & =J \sqrt{\frac{J}{2 J+1}} \vect{Y}_{J M}^{J+1}(\vartheta, \varphi)-(J+1) \sqrt{\frac{J+1}{2 J+1}} \vect{Y}_{J M}^{J-1}(\vartheta, \varphi), \label{eq:7:3:65}\\
+r(\widehat{\vect{S}}\cdot \boldsymbol{\nabla}) \vect{Y}_{J M}^{J-1}(\vartheta, \varphi) & =(J-1) \sqrt{\frac{J+1}{2 J+1}} \vect{Y}_{J M}^{J}(\vartheta, \varphi), \notag
 \end{align}
 \begin{align}
-r(\widehat{\vect{S}} \cdot \nabla) \vect{Y}_{J M}^{(1)}(\vartheta, \varphi) & =-\vect{Y}_{J M}^{(0)}(\vartheta, \varphi), \notag\\
-r(\widehat{\vect{S}} \cdot \nabla) \vect{Y}_{J M}^{(0)}(\vartheta, \varphi) & =-\vect{Y}_{J M}^{(1)}(\vartheta, \varphi)-\sqrt{J(J+1)} \vect{Y}_{J M}^{(-1)}(\vartheta, \varphi), \label{eq:7:3:66}\\
-r(\widehat{\vect{S}} \cdot \nabla) \vect{Y}_{J M}^{(-1)}(\vartheta, \varphi) & =\sqrt{J(J+1)} \vect{Y}_{J M}^{(0)}(\vartheta, \varphi). \notag
+r(\widehat{\vect{S}}\cdot \boldsymbol{\nabla}) \vect{Y}_{J M}^{(1)}(\vartheta, \varphi) & =-\vect{Y}_{J M}^{(0)}(\vartheta, \varphi), \notag\\
+r(\widehat{\vect{S}}\cdot \boldsymbol{\nabla}) \vect{Y}_{J M}^{(0)}(\vartheta, \varphi) & =-\vect{Y}_{J M}^{(1)}(\vartheta, \varphi)-\sqrt{J(J+1)} \vect{Y}_{J M}^{(-1)}(\vartheta, \varphi), \label{eq:7:3:66}\\
+r(\widehat{\vect{S}}\cdot \boldsymbol{\nabla}) \vect{Y}_{J M}^{(-1)}(\vartheta, \varphi) & =\sqrt{J(J+1)} \vect{Y}_{J M}^{(0)}(\vartheta, \varphi). \notag
 \end{align}
 \item
 \begin{equation}
@@ -899,13 +905,14 @@ In particular,
 
 \subsection{Algebraic Relations}\label{sec:7.3.8}\index{vector spherical harmonics!algebraic relations}
 In the equations given below $\vect{n}$ is the unit vector specified by the polar angles $\vartheta, \varphi$.\\
+\begin{fleqn}[3cm]
 \begin{enumerate}[label=(\alph*)]
 \item
 \begin{align}
 & \vect{n} Y_{J M}(\vartheta, \varphi)=\sqrt{\frac{J}{2 J+1}} \vect{Y}_{J M}^{J-1}(\vartheta, \varphi)-\sqrt{\frac{J+1}{2 J+1}} \vect{Y}_{J M}^{J+1}(\vartheta, \varphi), \notag\\
 & \vect{n} Y_{J M}(\vartheta, \varphi)=\vect{Y}_{J M}^{(-1)}(\vartheta, \varphi). \label{eq:7:3:70}
 \end{align}
-\item
+
 \begin{align}
 \vect{n} \cdot \vect{Y}_{J M}^{J+1}(\vartheta, \varphi) & =-\sqrt{\frac{J+1}{2 J+1}} Y_{J M}(\vartheta, \varphi), \notag\\
 \vect{n} \cdot \vect{Y}_{J M}^{J}(\vartheta, \varphi) & =0, \label{eq:7:3:71}\\
@@ -917,15 +924,18 @@ In the equations given below $\vect{n}$ is the unit vector specified by the pola
 \vect{n} \cdot \vect{Y}_{J M}^{(-1)}(\vartheta, \varphi) & =Y_{J M}(\vartheta, \varphi). \notag
 \end{align}
 \item
+
 \begin{align}
 \vect{n} \times \vect{Y}_{J M}^{J+1}(\vartheta, \varphi)= & i \sqrt{\frac{J}{2 J+1}} \vect{Y}_{J M}^{J}(\vartheta, \varphi), \notag\\
 \vect{n} \times \vect{Y}_{J M}^{J}(\vartheta, \varphi)= & i \sqrt{\frac{J+1}{2 J+1}} \vect{Y}_{J M}^{J-1}(\vartheta, \varphi)+i \sqrt{\frac{J}{2 J+1}} \vect{Y}_{J M}^{J+1}(\vartheta, \varphi), \label{eq:7:3:73}\\
 \vect{n} \times \vect{Y}_{J M}^{J-1}(\vartheta, \varphi)= & i \sqrt{\frac{J+1}{2 J+1}} \vect{Y}_{J M}^{J}(\vartheta, \varphi), \notag\\
-& \vect{n} \times \vect{Y}_{J M}^{(1)}(\vartheta, \varphi)=i \vect{Y}_{J M}^{(0)}(\vartheta, \varphi), \notag\\
-& \vect{n} \times \vect{Y}_{J M}^{(0)}(\vartheta, \varphi)=i \vect{Y}_{J M}^{(1)}(\vartheta, \varphi), \label{eq:7:3:74}\\
-& \vect{n} \times \vect{Y}_{J M}^{(-1)}(\vartheta, \varphi)=0. \notag
+ \vect{n} \times \vect{Y}_{J M}^{(1)}(\vartheta, \varphi)=&i \vect{Y}_{J M}^{(0)}(\vartheta, \varphi), \notag\\
+ \vect{n} \times \vect{Y}_{J M}^{(0)}(\vartheta, \varphi)=&i \vect{Y}_{J M}^{(1)}(\vartheta, \varphi), \label{eq:7:3:74}\\
+ \vect{n} \times \vect{Y}_{J M}^{(-1)}(\vartheta, \varphi)=&0. \notag
 \end{align}
 \end{enumerate}
+\end{fleqn}
+
 \subsection{Sums of Vector Spherical Harmonics}\label{sec:7.3.9}\index{vector spherical harmonics!sums of}\index{sums!of the vector spherical harmonics}
 \begin{enumerate}[label=(\alph*)]
 \item
@@ -991,10 +1001,11 @@ Analogous relations for $\vect{Y}_{J M}^{(\lambda)}(\vartheta, \varphi)$ have th
 \end{enumerate}
 \subsection{Clebsch-Gordan Series}\label{sec:7.3.10}\index{Clebsch-Gordan series}\index{vector spherical harmonics!Clebsch-Gordan series}
 \begin{align}
-& \vect{Y}_{J_{1} M_{1}}^{L_{1}}(\vartheta, \varphi) \cdot \vect{Y}_{J_{2} M_{2}}^{L_{2}}(\vartheta, \varphi)  \notag\\
-& =\sum_{L}(-1)^{J_{2}+L_{1}+L} \sqrt{\frac{\left(2 J_{1}+1\right)\left(2 J_{2}+1\right)\left(2 L_{1}+1\right)\left(2 L_{2}+1\right)}{4 \pi(2 L+1)}}\sixj{L_{1}}{L_{2}}{L}{J_{2}}{J_{1}}{1} \clebsch{L_{1}}{0}{L_{2}}{0}{L}{0} \clebsch{J_{1}}{M_{1}}{J_{2}}{M_{2}}{L}{M} Y_{L M}(\vartheta, \varphi), \label{eq:7:3:100}\\
-& \vect{Y}_{J_{1} M_{1}}^{L_{1}}(\vartheta, \varphi) \times \vect{Y}_{J_{2} M_{2}}^{L_{2}}(\vartheta, \varphi)=i \sqrt{\frac{3}{2 \pi}\left(2 J_{1}+1\right)\left(2 J_{2}+1\right)\left(2 L_{1}+1\right)\left(2 L_{2}+1\right)}  \notag\\
-& \times \sum_{J L}
+\vect{Y}_{J_{1} M_{1}}^{L_{1}}(\vartheta, \varphi) \cdot \vect{Y}_{J_{2} M_{2}}^{L_{2}}(\vartheta, \varphi)  =&\sum_{L}(-1)^{J_{2}+L_{1}+L} \sqrt{\frac{\left(2 J_{1}+1\right)\left(2 J_{2}+1\right)\left(2 L_{1}+1\right)\left(2 L_{2}+1\right)}{4 \pi(2 L+1)}}
+\notag\\&\qquad \times
+\sixj{L_{1}}{L_{2}}{L}{J_{2}}{J_{1}}{1} \clebsch{L_{1}}{0}{L_{2}}{0}{L}{0} \clebsch{J_{1}}{M_{1}}{J_{2}}{M_{2}}{L}{M} Y_{L M}(\vartheta, \varphi), \label{eq:7:3:100}\\
+ \vect{Y}_{J_{1} M_{1}}^{L_{1}}(\vartheta, \varphi) \times \vect{Y}_{J_{2} M_{2}}^{L_{2}}(\vartheta, \varphi)=&i \sqrt{\frac{3}{2 \pi}\left(2 J_{1}+1\right)\left(2 J_{2}+1\right)\left(2 L_{1}+1\right)\left(2 L_{2}+1\right)}  \notag\\
+& \qquad\times \sum_{J L}
 \ninej{J_{1}} {L_{1}} {1}{J_{2}} {L_{2}}{ 1 }{J}{ L}{1}
 \clebsch{L_{1}}{0}{L_{2}}{0}{L}{0} \clebsch{J_{1}}{M_{1}}{J_{2}}{M_{2}}{J}{M} \vect{Y}_{J M}^{L}(\vartheta, \varphi) . \label{eq:7:3:101}
 \end{align}
@@ -1021,42 +1032,42 @@ Let $\vect{n}_{1}$ and $\vect{n}_{2}$ be the unit vectors determined by the pola
 & 4 \pi \sum_{M=-J}^{J} \vect{Y}_{J M}^{J-1 *}\left(\vartheta_{1}, \varphi_{1}\right) \times \vect{Y}_{J M}^{J}\left(\vartheta_{2}, \varphi_{2}\right)=i \frac{\sqrt{(J+1)(2 J+1)}}{J}\left\{\vect{n}_{1} P_{J-1}^{\prime}\left(\cos \omega_{12}\right)-\vect{n}_{2} P_{J}^{\prime}\left(\cos \omega_{12}\right)\right\}, \label{eq:7:3:105}\\
 & 4 \pi \sum_{M=-J}^{J} \vect{Y}_{J M}^{J-1 *}\left(\vartheta_{1}, \varphi_{1}\right) \times \vect{Y}_{J M}^{J-1}\left(\vartheta_{2}, \varphi_{2}\right)=-\frac{2 J+1}{J}\left[\vect{n}_{1} \times \vect{n}_{2}\right] P_{J-1}^{\prime}\left(\cos \omega_{12}\right) . \notag
 \end{align}
-In these equations $P_{L}(x)$ is a Legendre polynomial, and $P_{L}^{\prime}(x) \equiv d P_{L}(x) / d x$. Analogous equations for $\vect{Y}_{J M}^{(\lambda)}$ may be obtained from Eqs. \eqref{eq:7:3:9}-\eqref{eq:7:3:10}.
-\item The most general form of the addition theorems for $\vect{Y}_{J M}^{L}$ may be written by introducing arbitrary complex vectors $\vect{a}_{1}$ and $\vect{a}_{2}$. For brevity, we shall omit the arguments ( $\cos \omega_{12}$ ) of derivatives of the Legendre polynomials, writing $P_{L}^{\prime}$ instead of $P_{L}^{\prime}\left(\cos \omega_{12}\right)$, etc.
+In these equations $P_{L}(x)$ is a Legendre polynomial, and $P_{L}^{\prime}(x) \equiv \dd P_{L}(x) / \dd x$. Analogous equations for $\vect{Y}_{J M}^{(\lambda)}$ may be obtained from Eqs. \eqref{eq:7:3:9}-\eqref{eq:7:3:10}.
+\item The most general form of the addition theorems for $\vect{Y}_{J M}^{L}$ may be written by introducing arbitrary complex vectors $\vect{a}_{1}$ and $\vect{a}_{2}$. For brevity, we shall omit the arguments ($\cos \omega_{12}$) of derivatives of the Legendre polynomials, writing $P_{L}^{\prime}$ instead of $P_{L}^{\prime}\left(\cos \omega_{12}\right)$, etc.
 \begin{subequations}
     \begin{align}
- 4 \pi &\sum_{M=-J}^{J}\left(\vect{a}_{1} \cdot \vect{Y}_{J M}^{J+1}\left(\vartheta_{1}, \varphi_{1}\right)\right)^{*}\left(\vect{a}_{2} \cdot \vect{Y}_{J M}^{J+1}\left(\vartheta_{2}, \varphi_{2}\right)\right)=\frac{1}{J+1}\left\{\left(\vect{a}_{1}^{*} \cdot \vect{n}_{1}\right)\left(\vect{a}_{2} \cdot \vect{n}_{2}\right)\left[P_{J}^{\prime \prime}+(2 J+1) P_{J+1}^{\prime}\right]\right. \notag \\
-& +\left.\left(\vect{a}_{1}^{*} \cdot \vect{n}_{2}\right)\left(\vect{a}_{2} \cdot \vect{n}_{1}\right) P_{J}^{\prime \prime}-\left[\left(\vect{a}_{1}^{*} \cdot \vect{n}_{1}\right)\left(\vect{a}_{2} \cdot \vect{n}_{1}\right)+\left(\vect{a}_{1}^{*} \cdot \vect{n}_{2}\right)\left(\vect{a}_{2} \cdot \vect{n}_{2}\right)\right] P_{J+1}^{\prime \prime}+\left(\vect{a}_{1}^{*} \cdot \vect{a}_{2}\right) P_{J}^{\prime}\right\},\\
+ 4 \pi &\sum_{M=-J}^{J}\left(\vect{a}_{1} \cdot \vect{Y}_{J M}^{J+1}\left(\vartheta_{1}, \varphi_{1}\right)\right)^{*}\left(\vect{a}_{2} \cdot \vect{Y}_{J M}^{J+1}\left(\vartheta_{2}, \varphi_{2}\right)\right)=\frac{1}{J+1}\biggl\{\left(\vect{a}_{1}^{*} \cdot \vect{n}_{1}\right)\left(\vect{a}_{2} \cdot \vect{n}_{2}\right)\left[P_{J}^{\prime \prime}+(2 J+1) P_{J+1}^{\prime}\right] \notag \\
+& +\left(\vect{a}_{1}^{*} \cdot \vect{n}_{2}\right)\left(\vect{a}_{2} \cdot \vect{n}_{1}\right) P_{J}^{\prime \prime}-\left[\left(\vect{a}_{1}^{*} \cdot \vect{n}_{1}\right)\left(\vect{a}_{2} \cdot \vect{n}_{1}\right)+\left(\vect{a}_{1}^{*} \cdot \vect{n}_{2}\right)\left(\vect{a}_{2} \cdot \vect{n}_{2}\right)\right] P_{J+1}^{\prime \prime}+\left(\vect{a}_{1}^{*} \cdot \vect{a}_{2}\right) P_{J}^{\prime}\biggr\},\\
  4 \pi &\sum_{M=-J}^{J}\left(\vect{a}_{1} \cdot \vect{Y}_{J M}^{J+1}\left(\vartheta_{1}, \varphi_{1}\right)\right)^{*}\left(\vect{a}_{2} \cdot \vect{Y}_{J M}^{J}\left(\vartheta_{2}, \varphi_{2}\right)\right)=\frac{i}{2(J+1)} \sqrt{\frac{2 J+1}{J}}, \notag\\
-&  \times\left\{-\left[\vect{a}_{1}^{*} \times \vect{a}_{2}\right] \cdot \vect{n}_{1} J P_{J+1}^{\prime}+\left[\vect{a}_{1}^{*} \times \vect{a}_{2}\right] \cdot \vect{n}_{2} J P_{J}^{\prime}-\left[\left(\vect{a}_{1}^{*} \cdot \vect{n}_{1}\right)\left(\vect{a}_{2} \cdot\left[\vect{n}_{1} \times \vect{n}_{2}\right]\right)+\left(\vect{a}_{1}^{*} \cdot\left[\vect{n}_{1} \times \vect{n}_{2}\right]\right)\left(\vect{a}_{2} \cdot \vect{n}_{1}\right)\right] P_{J+1}^{\prime \prime}\right. \notag\\
-& \left.+\left[\left(\vect{a}_{1}^{*} \cdot \vect{n}_{2}\right)\left(\vect{a}_{2} \cdot\left[\vect{n}_{1} \times \vect{n}_{2}\right]\right)+\left(\vect{a}_{1}^{*} \cdot\left[\vect{n}_{1} \times \vect{n}_{2}\right]\right)\left(\vect{a}_{2} \cdot \vect{n}_{2}\right)\right] P_{J}^{\prime \prime}\right\}, \\
+&  \times\biggl\{-\left[\vect{a}_{1}^{*} \times \vect{a}_{2}\right] \cdot \vect{n}_{1} J P_{J+1}^{\prime}+\left[\vect{a}_{1}^{*} \times \vect{a}_{2}\right] \cdot \vect{n}_{2} J P_{J}^{\prime}-\left[\left(\vect{a}_{1}^{*} \cdot \vect{n}_{1}\right)\left(\vect{a}_{2} \cdot\left[\vect{n}_{1} \times \vect{n}_{2}\right]\right)+\left(\vect{a}_{1}^{*} \cdot\left[\vect{n}_{1} \times \vect{n}_{2}\right]\right)\left(\vect{a}_{2} \cdot \vect{n}_{1}\right)\right] P_{J+1}^{\prime \prime} \notag\\
+& \qquad+\left[\left(\vect{a}_{1}^{*} \cdot \vect{n}_{2}\right)\left(\vect{a}_{2} \cdot\left[\vect{n}_{1} \times \vect{n}_{2}\right]\right)+\left(\vect{a}_{1}^{*} \cdot\left[\vect{n}_{1} \times \vect{n}_{2}\right]\right)\left(\vect{a}_{2} \cdot \vect{n}_{2}\right)\right] P_{J}^{\prime \prime}\biggr\}, \\
  4 \pi& \sum_{M=-J}^{J}\left(\vect{a}_{1} \cdot \vect{Y}_{J M}^{J+1}\left(\vartheta_{1}, \varphi_{1}\right)\right)^{*}\left(\vect{a}_{2} \cdot \vect{Y}_{J M}^{J-1}\left(\vartheta_{2}, \varphi_{2}\right)\right)=\frac{1}{\sqrt{J(J+1)}}, \notag\\
-& \quad \times\left\{\left[\left(\vect{a}_{1}^{*} \cdot \vect{n}_{1}\right)\left(\vect{a}_{2} \cdot \vect{n}_{2}\right)+\left(\vect{a}_{1}^{*} \cdot \vect{n}_{2}\right)\left(\vect{a}_{2} \cdot \vect{n}_{1}\right)\right] P_{j}^{\prime \prime}-\left(\vect{a}_{1}^{*} \cdot \vect{n}_{1}\right)\left(\vect{a}_{2} \cdot \vect{n}_{1}\right) P_{J+1}^{\prime \prime}\right. \notag\\
-& \left.-\left(\vect{a}_{1}^{*} \cdot \vect{n}_{2}\right)\left(\vect{a}_{2} \cdot \vect{n}_{2}\right) P_{J-1}^{\prime \prime}+\left(\vect{a}_{1}^{*} \cdot \vect{a}_{2}\right) P_{J}^{\prime}\right\}. 
+& \quad \times\biggl\{\left[\left(\vect{a}_{1}^{*} \cdot \vect{n}_{1}\right)\left(\vect{a}_{2} \cdot \vect{n}_{2}\right)+\left(\vect{a}_{1}^{*} \cdot \vect{n}_{2}\right)\left(\vect{a}_{2} \cdot \vect{n}_{1}\right)\right] P_{j}^{\prime \prime}-\left(\vect{a}_{1}^{*} \cdot \vect{n}_{1}\right)\left(\vect{a}_{2} \cdot \vect{n}_{1}\right) P_{J+1}^{\prime \prime} \notag\\
+& \qquad-\left(\vect{a}_{1}^{*} \cdot \vect{n}_{2}\right)\left(\vect{a}_{2} \cdot \vect{n}_{2}\right) P_{J-1}^{\prime \prime}+\left(\vect{a}_{1}^{*} \cdot \vect{a}_{2}\right) P_{J}^{\prime}\biggr\}. 
 \end{align}\label{eq:7:3:106}
 \end{subequations}
 \begin{subequations}
 \begin{align}
  4 \pi &\sum_{M=-J}^{J}\left(\vect{a}_{1} \cdot \vect{Y}_{J M}^{J}\left(\vartheta_{1}, \varphi_{1}\right)\right)^{*}\left(\vect{a}_{2} \cdot \vect{Y}_{J M}^{J+1}\left(\vartheta_{2}, \varphi_{2}\right)\right)=\frac{i}{2(J+1)} \sqrt{\frac{2 J+1}{J}} \notag\\
-& \times\left\{\left[\vect{a}_{1}^{*} \times \vect{a}_{2}\right] \cdot \vect{n}_{1} J P_{J}^{\prime}-\left[\vect{a}_{1}^{*} \times \vect{a}_{2}\right] \cdot \vect{n}_{2} J P_{J+1}^{\prime}+\left[\left(\vect{a}_{1}^{*} \cdot \vect{n}_{1}\right)\left(\vect{a}_{2} \cdot\left[\vect{n}_{1} \times \vect{n}_{2}\right]\right)+\left(\vect{a}_{1}^{*} \cdot\left[\vect{n}_{1} \times \vect{n}_{2}\right]\right)\left(\vect{a}_{2} \cdot \vect{n}_{1}\right)\right] P_{J}^{\prime \prime}\right. \notag\\
-& \left.-\left[\left(\vect{a}_{1}^{*} \cdot \vect{n}_{2}\right)\left(\vect{a}_{2} \cdot\left[\vect{n}_{1} \times \vect{n}_{2}\right]\right)+\left(\vect{a}_{1}^{*} \cdot\left[\vect{n}_{1} \times \vect{n}_{2}\right]\right)\left(\vect{a}_{2} \cdot \vect{n}_{2}\right)\right] P_{J+1}^{\prime \prime}\right\}\\
-    4 \pi& \sum_{M=-J}^{J}\left(\vect{a}_{1} \cdot \vect{Y}_{J M}^{J}\left(\vartheta_{1}, \varphi_{1}\right)\right)^{*}\left(\vect{a}_{2} \cdot \vect{Y}_{J M}^{J}\left(\vartheta_{2}, \varphi_{2}\right)\right)=\frac{2 J+1}{J(J+1)}\left\{-\left(\vect{a}_{1}^{*} \cdot \vect{n}_{1}\right)\left(\vect{a}_{2} \cdot \vect{n}_{2}\right)\left[P_{J-1}^{\prime \prime}+(J-1) P_{J}^{\prime}\right]\right. \notag\\
-& \left.-\left(\vect{a}_{1}^{*} \cdot \vect{n}_{2}\right)\left(\vect{a}_{2} \cdot \vect{n}_{1}\right)\left[P_{J-1}^{\prime \prime}+J P_{J}^{\prime}\right]+\left[\left(\vect{a}_{1}^{*} \cdot \vect{n}_{1}\right)\left(\vect{a}_{2} \cdot \vect{n}_{1}\right)+\left(\vect{a}_{1}^{*} \cdot \vect{n}_{2}\right)\left(\vect{a}_{2} \cdot \vect{n}_{2}\right)\right] P_{J}^{\prime \prime}+\left(\vect{a}_{1}^{*} \cdot \vect{a}_{2}\right)\left[J^{2} P_{J}-P_{J-1}^{\prime}\right]\right\}. \\
- 4 \pi &\sum_{M=-J}^{J}\left(\vect{a}_{1} \cdot \vect{Y}_{J M}^{J}\left(\vartheta_{1}, \varphi_{1}\right)\right)^{*}\left(\vect{a}_{2} \cdot \vect{Y}_{J M}^{J-1}\left(\vartheta_{2}, \varphi_{2}\right)\right)=\frac{i}{2 J} \sqrt{\frac{2 J+1}{J+1}}\left\{-\left[\vect{a}_{1}^{*} \times \vect{a}_{2}\right] \cdot \vect{n}_{1}(J+1) P_{J}^{\prime}\right. \notag\\
-& +\left[\vect{a}_{1}^{*} \times \vect{a}_{2}\right] \cdot \vect{n}_{2}(J+1) P_{J-1}^{\prime}+\left[\left(\vect{a}_{1}^{*} \cdot \vect{n}_{1}\right)\left(\vect{a}_{2} \cdot\left[\vect{n}_{1} \times \vect{n}_{2}\right]\right)+\left(\vect{a}_{1}^{*} \cdot\left[\vect{n}_{1} \times \vect{n}_{2}\right]\right)\left(\vect{a}_{2} \cdot \vect{n}_{1}\right)\right] P_{J}^{\prime \prime} \notag\\
-& \left.-\left[\left(\vect{a}_{1}^{*} \cdot \vect{n}_{2}\right)\left(\vect{a}_{2} \cdot\left[\vect{n}_{1} \times \vect{n}_{2}\right]\right)+\left(\vect{a}_{1}^{*} \cdot\left[\vect{n}_{1} \times \vect{n}_{2}\right]\right)\left(\vect{a}_{2} \cdot \vect{n}_{2}\right)\right] P_{J-1}^{\prime \prime}\right\}.
+& \times\biggl\{\left[\vect{a}_{1}^{*} \times \vect{a}_{2}\right] \cdot \vect{n}_{1} J P_{J}^{\prime}-\left[\vect{a}_{1}^{*} \times \vect{a}_{2}\right] \cdot \vect{n}_{2} J P_{J+1}^{\prime}+\left[\left(\vect{a}_{1}^{*} \cdot \vect{n}_{1}\right)\left(\vect{a}_{2} \cdot\left[\vect{n}_{1} \times \vect{n}_{2}\right]\right)+\left(\vect{a}_{1}^{*} \cdot\left[\vect{n}_{1} \times \vect{n}_{2}\right]\right)\left(\vect{a}_{2} \cdot \vect{n}_{1}\right)\right] P_{J}^{\prime \prime}\notag\\
+& \qquad-\left[\left(\vect{a}_{1}^{*} \cdot \vect{n}_{2}\right)\left(\vect{a}_{2} \cdot\left[\vect{n}_{1} \times \vect{n}_{2}\right]\right)+\left(\vect{a}_{1}^{*} \cdot\left[\vect{n}_{1} \times \vect{n}_{2}\right]\right)\left(\vect{a}_{2} \cdot \vect{n}_{2}\right)\right] P_{J+1}^{\prime \prime}\biggr\}\\
+    4 \pi& \sum_{M=-J}^{J}\left(\vect{a}_{1} \cdot \vect{Y}_{J M}^{J}\left(\vartheta_{1}, \varphi_{1}\right)\right)^{*}\left(\vect{a}_{2} \cdot \vect{Y}_{J M}^{J}\left(\vartheta_{2}, \varphi_{2}\right)\right)=\frac{2 J+1}{J(J+1)}\biggl\{-\left(\vect{a}_{1}^{*} \cdot \vect{n}_{1}\right)\left(\vect{a}_{2} \cdot \vect{n}_{2}\right)\left[P_{J-1}^{\prime \prime}+(J-1) P_{J}^{\prime}\right] \notag\\
+& \qquad-\left(\vect{a}_{1}^{*} \cdot \vect{n}_{2}\right)\left(\vect{a}_{2} \cdot \vect{n}_{1}\right)\left[P_{J-1}^{\prime \prime}+J P_{J}^{\prime}\right]+\left[\left(\vect{a}_{1}^{*} \cdot \vect{n}_{1}\right)\left(\vect{a}_{2} \cdot \vect{n}_{1}\right)+\left(\vect{a}_{1}^{*} \cdot \vect{n}_{2}\right)\left(\vect{a}_{2} \cdot \vect{n}_{2}\right)\right] P_{J}^{\prime \prime}+\left(\vect{a}_{1}^{*} \cdot \vect{a}_{2}\right)\left[J^{2} P_{J}-P_{J-1}^{\prime}\right]\biggr\}. \\
+ 4 \pi &\sum_{M=-J}^{J}\left(\vect{a}_{1} \cdot \vect{Y}_{J M}^{J}\left(\vartheta_{1}, \varphi_{1}\right)\right)^{*}\left(\vect{a}_{2} \cdot \vect{Y}_{J M}^{J-1}\left(\vartheta_{2}, \varphi_{2}\right)\right)=\frac{i}{2 J} \sqrt{\frac{2 J+1}{J+1}}\biggl\{-\left[\vect{a}_{1}^{*} \times \vect{a}_{2}\right] \cdot \vect{n}_{1}(J+1) P_{J}^{\prime} \notag\\
+& \qquad +\left[\vect{a}_{1}^{*} \times \vect{a}_{2}\right] \cdot \vect{n}_{2}(J+1) P_{J-1}^{\prime}+\left[\left(\vect{a}_{1}^{*} \cdot \vect{n}_{1}\right)\left(\vect{a}_{2} \cdot\left[\vect{n}_{1} \times \vect{n}_{2}\right]\right)+\left(\vect{a}_{1}^{*} \cdot\left[\vect{n}_{1} \times \vect{n}_{2}\right]\right)\left(\vect{a}_{2} \cdot \vect{n}_{1}\right)\right] P_{J}^{\prime \prime} \notag\\
+& \qquad-\left[\left(\vect{a}_{1}^{*} \cdot \vect{n}_{2}\right)\left(\vect{a}_{2} \cdot\left[\vect{n}_{1} \times \vect{n}_{2}\right]\right)+\left(\vect{a}_{1}^{*} \cdot\left[\vect{n}_{1} \times \vect{n}_{2}\right]\right)\left(\vect{a}_{2} \cdot \vect{n}_{2}\right)\right] P_{J-1}^{\prime \prime}\biggr\}.
 \end{align}\label{eq:7:3:107}
 \end{subequations}
 \begin{subequations}
 \begin{align}
- 4 \pi &\sum_{M=-J}^{J}\left(\vect{a}_{1} \cdot \vect{Y}_{J M}^{J-1}\left(\vartheta_{1}, \varphi_{1}\right)\right)^{*}\left(\vect{a}_{2} \cdot \vect{Y}_{J M}^{J+1}\left(\vartheta_{2}, \varphi_{2}\right)\right)=\frac{1}{\sqrt{J(J+1)}}\left\{\left[\left(\vect{a}_{1}^{*} \cdot \vect{n}_{1}\right)\left(\vect{a}_{2} \cdot \vect{n}_{2}\right)+\left(\vect{a}_{1}^{*} \cdot \vect{n}_{2}\right)\left(\vect{a}_{2} \cdot \vect{n}_{1}\right)\right] P_{J}^{\prime \prime}\right. \notag\\
-& \left.-\left(\vect{a}_{1}^{*} \cdot \vect{n}_{1}\right)\left(\vect{a}_{2} \cdot \vect{n}_{1}\right) P_{J-1}^{\prime \prime}-\left(\vect{a}_{1}^{*} \cdot \vect{n}_{2}\right)\left(\vect{a}_{2} \cdot \vect{n}_{2}\right) P_{J+1}^{\prime \prime}+\left(\vect{a}_{1}^{*} \cdot \vect{a}_{2}\right) P_{J}^{\prime}\right\},
+ 4 \pi &\sum_{M=-J}^{J}\left(\vect{a}_{1} \cdot \vect{Y}_{J M}^{J-1}\left(\vartheta_{1}, \varphi_{1}\right)\right)^{*}\left(\vect{a}_{2} \cdot \vect{Y}_{J M}^{J+1}\left(\vartheta_{2}, \varphi_{2}\right)\right)=\frac{1}{\sqrt{J(J+1)}}\biggl\{\left[\left(\vect{a}_{1}^{*} \cdot \vect{n}_{1}\right)\left(\vect{a}_{2} \cdot \vect{n}_{2}\right)+\left(\vect{a}_{1}^{*} \cdot \vect{n}_{2}\right)\left(\vect{a}_{2} \cdot \vect{n}_{1}\right)\right] P_{J}^{\prime \prime}\notag\\
+& \qquad-\left(\vect{a}_{1}^{*} \cdot \vect{n}_{1}\right)\left(\vect{a}_{2} \cdot \vect{n}_{1}\right) P_{J-1}^{\prime \prime}-\left(\vect{a}_{1}^{*} \cdot \vect{n}_{2}\right)\left(\vect{a}_{2} \cdot \vect{n}_{2}\right) P_{J+1}^{\prime \prime}+\left(\vect{a}_{1}^{*} \cdot \vect{a}_{2}\right) P_{J}^{\prime}\biggr\},
 \\
- 4 \pi &\sum_{M=-J}^{J}\left(\vect{a}_{1} \cdot \vect{Y}_{J M}^{J-1}\left(\vartheta_{1}, \varphi_{1}\right)\right)^{*}\left(\vect{a}_{2} \cdot \vect{Y}_{J M}^{J}\left(\vartheta_{2}, \varphi_{2}\right)\right)=\frac{i}{2 J} \sqrt{\frac{2 J+1}{J+1}}\left\{\left[\vect{a}_{1}^{*} \times \vect{a}_{2}\right] \cdot \vect{n}_{1}(J+1) P_{J-1}^{\prime}\right. \notag\\
-& -\left[\vect{a}_{1}^{*} \times \vect{a}_{2}\right] \cdot \vect{n}_{2}(J+1) P_{J}^{\prime}-\left[\left(\vect{a}_{1}^{*} \cdot \vect{n}_{1}\right)\left(\vect{a}_{2} \cdot\left[\vect{n}_{1} \times \vect{n}_{2}\right]\right)+\left(\vect{a}_{1}^{*} \cdot\left[\vect{n}_{1} \times \vect{n}_{2}\right]\right)\left(\vect{a}_{2} \cdot \vect{n}_{1}\right)\right] P_{J-1}^{\prime \prime}, \notag\\
-& \left.\quad+\left[\left(\vect{a}_{1}^{*} \cdot \vect{n}_{2}\right)\left(\vect{a}_{2} \cdot\left[\vect{n}_{1} \times \vect{n}_{2}\right]\right)+\left(\vect{a}_{1}^{*} \cdot\left[\vect{n}_{1} \times \vect{n}_{2}\right]\right)\left(\vect{a}_{2} \cdot \vect{n}_{2}\right)\right] P_{J}^{\prime \prime}\right\}, \\
- 4 \pi &\sum_{M=-J}^{J}\left(\vect{a}_{1} \cdot \vect{Y}_{J M}^{J-1}\left(\vartheta_{1}, \varphi_{1}\right)\right)^{*}\left(\vect{a}_{2} \cdot \vect{Y}_{J M}^{J-1}\left(\vartheta_{2}, \varphi_{2}\right)\right)=\frac{1}{J}\left\{\left(\vect{a}_{1}^{*} \cdot \vect{n}_{1}\right)\left(\vect{a}_{2} \cdot \vect{n}_{2}\right)\left[P_{J}^{\prime \prime}-(2 J-1) P_{J-1}^{\prime}\right]\right. \notag\\
-& \left.+\left(\vect{a}_{1}^{*} \cdot \vect{n}_{2}\right)\left(\vect{a}_{2} \cdot \vect{n}_{1}\right) P_{J}^{\prime \prime}-\left[\left(\vect{a}_{1}^{*} \cdot \vect{n}_{1}\right)\left(\vect{a}_{2} \cdot \vect{n}_{1}\right)+\left(\vect{a}_{1}^{*} \cdot \vect{n}_{2}\right)\left(\vect{a}_{2} \cdot \vect{n}_{2}\right)\right] P_{J-1}^{\prime \prime}+\left(\vect{a}_{1}^{*} \cdot \vect{a}_{2}\right) P_{J}^{\prime}\right\}. \label{eq:7:3:108}
+ 4 \pi &\sum_{M=-J}^{J}\left(\vect{a}_{1} \cdot \vect{Y}_{J M}^{J-1}\left(\vartheta_{1}, \varphi_{1}\right)\right)^{*}\left(\vect{a}_{2} \cdot \vect{Y}_{J M}^{J}\left(\vartheta_{2}, \varphi_{2}\right)\right)=\frac{i}{2 J} \sqrt{\frac{2 J+1}{J+1}}\biggl\{\left[\vect{a}_{1}^{*} \times \vect{a}_{2}\right] \cdot \vect{n}_{1}(J+1) P_{J-1}^{\prime} \notag\\
+& \qquad-\left[\vect{a}_{1}^{*} \times \vect{a}_{2}\right] \cdot \vect{n}_{2}(J+1) P_{J}^{\prime}-\left[\left(\vect{a}_{1}^{*} \cdot \vect{n}_{1}\right)\left(\vect{a}_{2} \cdot\left[\vect{n}_{1} \times \vect{n}_{2}\right]\right)+\left(\vect{a}_{1}^{*} \cdot\left[\vect{n}_{1} \times \vect{n}_{2}\right]\right)\left(\vect{a}_{2} \cdot \vect{n}_{1}\right)\right] P_{J-1}^{\prime \prime}, \notag\\
+& \qquad\+\left[\left(\vect{a}_{1}^{*} \cdot \vect{n}_{2}\right)\left(\vect{a}_{2} \cdot\left[\vect{n}_{1} \times \vect{n}_{2}\right]\right)+\left(\vect{a}_{1}^{*} \cdot\left[\vect{n}_{1} \times \vect{n}_{2}\right]\right)\left(\vect{a}_{2} \cdot \vect{n}_{2}\right)\right] P_{J}^{\prime \prime}\biggr\}, \\
+ 4 \pi &\sum_{M=-J}^{J}\left(\vect{a}_{1} \cdot \vect{Y}_{J M}^{J-1}\left(\vartheta_{1}, \varphi_{1}\right)\right)^{*}\left(\vect{a}_{2} \cdot \vect{Y}_{J M}^{J-1}\left(\vartheta_{2}, \varphi_{2}\right)\right)=\frac{1}{J}\biggl\{\left(\vect{a}_{1}^{*} \cdot \vect{n}_{1}\right)\left(\vect{a}_{2} \cdot \vect{n}_{2}\right)\left[P_{J}^{\prime \prime}-(2 J-1) P_{J-1}^{\prime}\right]\notag\\
+& \qquad+\left(\vect{a}_{1}^{*} \cdot \vect{n}_{2}\right)\left(\vect{a}_{2} \cdot \vect{n}_{1}\right) P_{J}^{\prime \prime}-\left[\left(\vect{a}_{1}^{*} \cdot \vect{n}_{1}\right)\left(\vect{a}_{2} \cdot \vect{n}_{1}\right)+\left(\vect{a}_{1}^{*} \cdot \vect{n}_{2}\right)\left(\vect{a}_{2} \cdot \vect{n}_{2}\right)\right] P_{J-1}^{\prime \prime}+\left(\vect{a}_{1}^{*} \cdot \vect{a}_{2}\right) P_{J}^{\prime}\biggr\}. \label{eq:7:3:108}
 \end{align}
 \end{subequations}
 \item The case when the vectors $\vect{a}_{1}$ and $\vect{a}_{2}$ are transverse (i.e., $\vect{a}_{1} \cdot \vect{n}_{1}=\vect{a}_{2} \cdot \vect{n}_{2}=0$ ) is of special interest (e.g., to describe the multipole electromagnetic fields). In this case Eqs. \eqref{eq:7:3:106}-\eqref{eq:7:3:108} are considerably simplified to
@@ -1098,31 +1109,31 @@ The sums involving the longitudinal vectors $\vect{Y}_{J M}^{(-1)}$ are equal to
 \]
 \end{enumerate}
 \subsection{Integrals Involving Vector Spherical Harmonics}\label{sec:7.3.12}\index{vector spherical harmonics!integrals involving}\index{integrals!of the vector spherical harmonics}
-Let us use the notation $\int f(\vartheta, \varphi) \,d \Omega \equiv \int_{0}^{\pi} d \vartheta \sin \vartheta \int_{0}^{2 \pi} \,d \varphi f(\vartheta, \varphi)$.
+Let us use the notation $\int f(\vartheta, \varphi) \,d \Omega \equiv \int_{0}^{\pi} \dd \vartheta \sin \vartheta \int_{0}^{2 \pi} \,d \varphi f(\vartheta, \varphi)$.
 \begin{equation}
-\int e^{i k r} \vect{Y}_{J M}^{L}(\vartheta, \varphi) d \Omega=i^{L} 4 \pi j_{L}(k r) \vect{Y}_{J M}^{L}\left(\vartheta_{k}, \varphi_{k}\right), \label{eq:7:3:114}
+\int e^{i k r} \vect{Y}_{J M}^{L}(\vartheta, \varphi) \dd \Omega=i^{L} 4 \pi j_{L}(k r) \vect{Y}_{J M}^{L}\left(\vartheta_{k}, \varphi_{k}\right), \label{eq:7:3:114}
 \end{equation}
 where
 \begin{equation*}
 \vect{k}=\left(k, \vartheta_{k}, \varphi_{k}\right), \vect{r}=(r, \vartheta, \varphi), j_{L}(x)=\sqrt{\frac{\pi}{2 x}} J_{L+\frac{1}{2}}(x).  \end{equation*}
 \begin{gather}
-\int e^{i k r} \vect{Y}_{J M}^{(1)}(\vartheta, \varphi) d \Omega=4 \pi i^{J+1}\left\{\sqrt{\frac{J}{2 J+1}} j_{J+1}(k r) \vect{Y}_{J M}^{J+1}\left(\vartheta_{k}, \varphi_{k}\right)-\sqrt{\frac{J+1}{2 J+1}} j_{J-1}(k r) \vect{Y}_{J M}^{J-1}\left(\vartheta_{k}, \varphi_{k}\right)\right\}  \notag\\
+\int e^{i k r} \vect{Y}_{J M}^{(1)}(\vartheta, \varphi) \dd \Omega=4 \pi i^{J+1}\left\{\sqrt{\frac{J}{2 J+1}} j_{J+1}(k r) \vect{Y}_{J M}^{J+1}\left(\vartheta_{k}, \varphi_{k}\right)-\sqrt{\frac{J+1}{2 J+1}} j_{J-1}(k r) \vect{Y}_{J M}^{J-1}\left(\vartheta_{k}, \varphi_{k}\right)\right\}  \notag\\
 =\frac{4 \pi i^{J+1}}{2 J+1}\left\{\left[J \cdot j_{J+1}(k r)-(J+1) j_{J-1}(k r)\right] \vect{Y}_{J M}^{(1)}\left(\vartheta_{k}, \varphi_{k}\right)-\sqrt{J(J+1)}\left[j_{J+1}(k r)+j_{J-1}(k r)\right] \vect{Y}_{J M}^{(-1)}\left(\vartheta_{k}, \varphi_{k}\right)\right\}, \label{eq:7:3:115}\\
-\int e^{i k r} \vect{Y}_{J M}^{(0)}(\vartheta, \varphi) d \Omega=4 \pi i^{J} j_{J}(k r) \vect{Y}_{J M}^{J}\left(\vartheta_{k}, \varphi_{k}\right)=4 \pi i^{J} j_{J}(k r) \vect{Y}_{J M}^{(0)}\left(\vartheta_{k}, \varphi_{k}\right), \label{eq:7:3:116}
+\int e^{i k r} \vect{Y}_{J M}^{(0)}(\vartheta, \varphi) \dd \Omega=4 \pi i^{J} j_{J}(k r) \vect{Y}_{J M}^{J}\left(\vartheta_{k}, \varphi_{k}\right)=4 \pi i^{J} j_{J}(k r) \vect{Y}_{J M}^{(0)}\left(\vartheta_{k}, \varphi_{k}\right), \label{eq:7:3:116}
 \end{gather}
 \begin{gather}
-\int e^{i k r} \vect{Y}_{J M}^{(-1)}(\vartheta, \varphi) d \Omega=4 \pi i^{J-1}\left\{\sqrt{\frac{J+1}{2 J+1}} j_{J+1}(k r) \vect{Y}_{J M}^{J+1}\left(\vartheta_{k}, \varphi_{k}\right)+\sqrt{\frac{J}{2 J+1}} j_{J-1}(k r) \vect{Y}_{J M}^{J-1}\left(\vartheta_{k}, \varphi_{k}\right)\right\}  \notag\\
+\int e^{i k r} \vect{Y}_{J M}^{(-1)}(\vartheta, \varphi) \dd \Omega=4 \pi i^{J-1}\left\{\sqrt{\frac{J+1}{2 J+1}} j_{J+1}(k r) \vect{Y}_{J M}^{J+1}\left(\vartheta_{k}, \varphi_{k}\right)+\sqrt{\frac{J}{2 J+1}} j_{J-1}(k r) \vect{Y}_{J M}^{J-1}\left(\vartheta_{k}, \varphi_{k}\right)\right\}  \notag\\
 =\frac{4 \pi i^{J-1}}{2 J+1}\left\{\sqrt{J(J+1)}\left[j_{J+1}(k r)+j_{J-1}(k r)\right] \vect{Y}_{J M}^{(1)}\left(\vartheta_{k}, \varphi_{k}\right)-\left[(J+1) j_{J+1}(k r)-J j_{J-1}(k r)\right] \vect{Y}_{J M}^{(-1)}\left(\vartheta_{k}, \varphi_{k}\right)\right\},  \label{eq:7:3:117}\\
-\int \vect{Y}_{J M}^{L}(\vartheta, \varphi) d \Omega=\sqrt{4 \pi} \delta_{J 1} \delta_{L 0} \vect{e}_{M},  \notag\\
-\int \vect{Y}_{J M}^{(\lambda)}(\vartheta, \varphi) d \Omega=\sqrt{\frac{4 \pi}{3}} \delta_{J 1}\left(\sqrt{2} \delta_{\lambda 1}+\delta_{\lambda-1}\right) \vect{e}_{M} ;  \label{eq:7:3:118}\\
-\int \vect{Y}_{J^{\prime} M^{\prime}}^{L^{\prime} *}(\vartheta, \varphi) \cdot \vect{Y}_{J M}^{L}(\vartheta, \varphi) d \Omega=\delta_{J^{\prime} J} \delta_{L^{\prime} L} \delta_{M^{\prime} M} , \label{eq:7:3:119}\\
-\int \vect{Y}_{J^{\prime} M^{\prime}}^{\left(\lambda^{\prime}\right) *}(\vartheta, \varphi) \cdot \vect{Y}_{J M}^{(\lambda)}(\vartheta, \varphi) d \Omega=\delta_{J^{\prime} J} \delta_{\lambda^{\prime} \lambda} \delta_{M^{\prime} M} ;  \notag\\
-\int \vect{Y}_{J^{\prime} M^{\prime}}^{L^{\prime} *}(\vartheta, \varphi) \times \vect{Y}_{J M}^{L}(\vartheta, \varphi) d \Omega=i(-1)^{J+L} \delta_{L L^{\prime}} \sqrt{6\left(2 J^{\prime}+1\right)}\sixj{1}{1}{1}{J^{\prime}}{J}{L} \clebsch{J^{\prime}}{M^{\prime}}{1}{m}{J}{M} \vect{e}_{m} . \label{eq:7:3:120}
+\int \vect{Y}_{J M}^{L}(\vartheta, \varphi) \dd \Omega=\sqrt{4 \pi} \delta_{J 1} \delta_{L 0} \vect{e}_{M},  \notag\\
+\int \vect{Y}_{J M}^{(\lambda)}(\vartheta, \varphi) \dd \Omega=\sqrt{\frac{4 \pi}{3}} \delta_{J 1}\left(\sqrt{2} \delta_{\lambda 1}+\delta_{\lambda-1}\right) \vect{e}_{M} ;  \label{eq:7:3:118}\\
+\int \vect{Y}_{J^{\prime} M^{\prime}}^{L^{\prime} *}(\vartheta, \varphi) \cdot \vect{Y}_{J M}^{L}(\vartheta, \varphi) \dd \Omega=\delta_{J^{\prime} J} \delta_{L^{\prime} L} \delta_{M^{\prime} M} , \label{eq:7:3:119}\\
+\int \vect{Y}_{J^{\prime} M^{\prime}}^{\left(\lambda^{\prime}\right) *}(\vartheta, \varphi) \cdot \vect{Y}_{J M}^{(\lambda)}(\vartheta, \varphi) \dd \Omega=\delta_{J^{\prime} J} \delta_{\lambda^{\prime} \lambda} \delta_{M^{\prime} M} ;  \notag\\
+\int \vect{Y}_{J^{\prime} M^{\prime}}^{L^{\prime} *}(\vartheta, \varphi) \times \vect{Y}_{J M}^{L}(\vartheta, \varphi) \dd \Omega=i(-1)^{J+L} \delta_{L L^{\prime}} \sqrt{6\left(2 J^{\prime}+1\right)}\sixj{1}{1}{1}{J^{\prime}}{J}{L} \clebsch{J^{\prime}}{M^{\prime}}{1}{m}{J}{M} \vect{e}_{m} . \label{eq:7:3:120}
 \end{gather}
 \subsection{Orthogonality, Normalization and Completeness}\label{sec:7.3.13}\index{orthogonality!of the vector spherical harmonics}\index{normalization!of the vector spherical harmonics}\index{completeness!of the vector spherical harmonics}
 The collection of vector spherical harmonics $\vect{Y}_{J M}^{L}(\vartheta, \varphi)$ with integer nonnegative $J(0 \leq J<\infty), L= J, J \pm 1$ and integer $M(|M| \leq J)$ constitutes a complete orthonormal set of vector functions in the domain of arguments $0 \leq \vartheta \leq \pi, 0 \leq \varphi<2 \pi$. The orthonormality condition for $\vect{Y}_{J M}^{L}(\vartheta, \varphi)$ has the form
 \begin{equation}
-\int_{0}^{\pi} \int_{0}^{2 \pi} \vect{Y}_{J^{\prime} M^{\prime}}^{L^{\prime}}(\vartheta, \varphi) \cdot \vect{Y}_{J M}^{L}(\vartheta, \varphi) \sin \vartheta d \vartheta d \varphi=\delta_{J^{\prime} J} \delta_{L^{\prime} L} \delta_{M^{\prime} M}. \label{eq:7:3:121}
+\int_{0}^{\pi} \int_{0}^{2 \pi} \vect{Y}_{J^{\prime} M^{\prime}}^{L^{\prime}}(\vartheta, \varphi) \cdot \vect{Y}_{J M}^{L}(\vartheta, \varphi) \sin \vartheta \dd \vartheta \dd \varphi=\delta_{J^{\prime} J} \delta_{L^{\prime} L} \delta_{M^{\prime} M}. \label{eq:7:3:121}
 \end{equation}
 The completeness condition for spherical components of $\vect{Y}_{J M}^{L}(\vartheta, \varphi)$ may be written as
 \begin{equation}
@@ -1130,7 +1141,7 @@ The completeness condition for spherical components of $\vect{Y}_{J M}^{L}(\vart
 \end{equation}
 Similarly, the set of $\vect{Y}_{J M}^{(\lambda)}(\vartheta, \varphi)$ constitutes a complete orthonormal set. The orthonormality property for $\vect{Y}_{J M}^{(\lambda)}(\vartheta, \varphi)$ is the following
 \begin{equation}
-\int_{0}^{\pi} \int_{0}^{2 \pi} \vect{Y}_{J^{\prime} M^{\prime}}^{\left(\lambda^{\prime}\right) *}(\vartheta, \varphi) \cdot\vect{Y}_{J M}^{(\lambda)}(\vartheta, \varphi) \sin \vartheta d \vartheta d \varphi=\delta_{J^{\prime} J} \delta_{\lambda^{\prime} \lambda} \delta_{M^{\prime} M}, \label{eq:7:3:123}
+\int_{0}^{\pi} \int_{0}^{2 \pi} \vect{Y}_{J^{\prime} M^{\prime}}^{\left(\lambda^{\prime}\right) *}(\vartheta, \varphi) \cdot\vect{Y}_{J M}^{(\lambda)}(\vartheta, \varphi) \sin \vartheta \dd \vartheta \dd \varphi=\delta_{J^{\prime} J} \delta_{\lambda^{\prime} \lambda} \delta_{M^{\prime} M}, \label{eq:7:3:123}
 \end{equation}
 and the completeness relation for spherical components of $\vect{Y}_{J M}^{(\lambda)}(\vartheta, \varphi)$ reads
 \begin{equation}
@@ -1139,9 +1150,9 @@ and the completeness relation for spherical components of $\vect{Y}_{J M}^{(\lam
 \subsection{Expansion in Series of Vector Spherical Harmonics}\label{sec:7.3.14}\index{vector spherical harmonics!expansion in series of}\index{expansion!in the vector spherical harmonics}
 Any vector $\vect{F}(\vartheta, \varphi)$ which depends on polar angles $\vartheta, \varphi$ and satisfies the condition
 \begin{equation}
-\int|\vect{F}(\vartheta, \varphi)|^{2} d \Omega<\infty, \label{eq:7:3:125}
+\int|\vect{F}(\vartheta, \varphi)|^{2} \dd \Omega<\infty, \label{eq:7:3:125}
 \end{equation}
-with $\int d \Omega \equiv \int_{0}^{\pi} d \vartheta \sin \vartheta \int_{0}^{2 \pi} d \varphi$, may be expanded in series of vector spherical harmonics $\vect{Y}_{J M}^{L}(\vartheta, \varphi)$ or $\vect{Y}_{J M}^{(\lambda)}(\vartheta, \varphi)$. In order words, for $0 \leq \vartheta \leq \pi, 0 \leq \varphi<2 \pi \vect{F}(\vartheta, \varphi)$ may be written as
+with $\int \dd \Omega \equiv \int_{0}^{\pi} \dd \vartheta \sin \vartheta \int_{0}^{2 \pi} \dd \varphi$, may be expanded in series of vector spherical harmonics $\vect{Y}_{J M}^{L}(\vartheta, \varphi)$ or $\vect{Y}_{J M}^{(\lambda)}(\vartheta, \varphi)$. In order words, for $0 \leq \vartheta \leq \pi, 0 \leq \varphi<2 \pi \vect{F}(\vartheta, \varphi)$ may be written as
 \begin{equation}
 \vect{F}(\vartheta, \varphi)=\sum_{J L M} A_{J M}^{L} \vect{Y}_{J M}^{L}(\vartheta, \varphi), \label{eq:7:3:126}
 \end{equation}
@@ -1151,8 +1162,8 @@ or
 \end{equation}
 The expansion coefficients are given by
 \begin{align}
-& A_{J M}^{L}=\int d \Omega \vect{F}(\vartheta, \varphi) \cdot \vect{Y}_{J M}^{L *}(\vartheta, \varphi), \notag\\
-& A_{J M}^{(\lambda)}=\int d \Omega \vect{F}(\vartheta, \varphi) \cdot \vect{Y}_{J M}^{(\lambda) *}(\vartheta, \varphi) . \label{eq:7:3:128}
+& A_{J M}^{L}=\int \dd \Omega \vect{F}(\vartheta, \varphi) \cdot \vect{Y}_{J M}^{L *}(\vartheta, \varphi), \notag\\
+& A_{J M}^{(\lambda)}=\int \dd \Omega \vect{F}(\vartheta, \varphi) \cdot \vect{Y}_{J M}^{(\lambda) *}(\vartheta, \varphi) . \label{eq:7:3:128}
 \end{align}
 Note also the following useful rule. If a scalar function $\Phi\left(\vect{r}_{1}, \vect{r}_{2}\right)$ of vector arguments $\vect{r}_{1}\left(r_{1}, \vartheta_{1}, \varphi_{1}\right)$ and $r_{2}\left(r_{2}, \vartheta_{2}, \varphi_{2}\right)$ may be expanded in a series of scalar spherical harmonics as
 \begin{equation}
@@ -1268,7 +1279,7 @@ In particular,
 \end{align}
 The functions $W_{J M}^{\perp \|}(\vartheta)$ satisfy the normalization conditions
 \begin{gather}
-\int W_{J M}^{\perp}(\vartheta) d \Omega=\int W_{J M}^{\|}(\vartheta) d \Omega=1  \notag\\
+\int W_{J M}^{\perp}(\vartheta) \dd \Omega=\int W_{J M}^{\|}(\vartheta) \dd \Omega=1  \notag\\
 \sum_{M=-J}^{J} W_{J M}^{\perp}(\vartheta)=\sum_{M=-J}^{J} W_{J M}^{\|}(\vartheta)=\frac{2 J+1}{4 \pi}. \label{eq:7:3:164}
 \end{gather}
 Note the following symmetry properties of $W_{J M}^{\perp \|}(\vartheta)$
