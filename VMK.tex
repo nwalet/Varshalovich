@@ -195,7 +195,6 @@
 \newcommand{\delop}{\widehat{\del}}
 \newcommand{\dd}{\mathrm{d}}
 %Clebsch-Gordan coefficient C^{#5 #6}_{#1 #2 #3 #4}
-\newcommand{\clebsch}[6]{C_{#1\,#2\,#3\,#4}^{#5\,#6}}
 
 %Bracket notation, see CONVERSION_RULES.md for the source patterns each replaces
 \newcommand{\ket}[1]{\bigl| #1 \bigr\rangle}
@@ -213,9 +212,11 @@
 %Vectors (upright bold) and matrices (italic bold); see CONVERSION_RULES.md rule 10
 \newcommand{\vect}[1]{\mathbf{#1}}
 \newcommand{\mat}[1]{\boldsymbol{#1}}
+%Clebsch Gordan coefficient C^{#5 #6}_{#1 #2 #3 #4}
+\newcommand{\clebsch}[6]{C_{#1\,#2\,#3\,#4}^{#5\,#6}}
 %Wigner 3j symbol, reading order: top row then bottom row
-\newcommand{\threej}[6]{%
-\renewcommand{\arraystretch}{1}\arraycolsep=0.2em\left(\hspace*{-0.2em}\begin{array}{rrr} #1 & #2 & #3 \\ #4 & #5 & #6 \end{array}\hspace*{-0.2em}\right)}
+\newcommand{\threej}[7][r]{%
+\ifx #1r \renewcommand{\arraystretch{1}}\arraycolsep=0.2em\else\renewcommand{\arraystretch{1.4}}\arraycolsep=0.4em\fi \left(\hspace*{-0.2em}\begin{array}{#1#1#1} #2 & #3 & #4 \\ #5 & #6 & #7 \end{array}\hspace*{-0.2em}\right)}
 %Wigner 6j symbol, reading order: top row then bottom row
 \newcommand{\sixj}[6]{%
 {\renewcommand{\arraystretch}{1}\arraycolsep=0.2em\left\{\hspace*{-0.2em}%
