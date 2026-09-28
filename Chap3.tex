@@ -4,19 +4,19 @@
 Irreducible tensors occupy a central position in angular momentum theory. Under rotations of coordinate systems these tensors transform in the same manner as eigenfunctions of the angular momentum operator. The use of this property permits us to develop very effective methods for calculating matrix elements of different quantum-mechanical operators.
 
 An irreducible tensor $\mathfrak{M}_{J}$ of rank $J$ (with $J$ integer or half-integer) is defined as a set of $2 J+1$ functions (components) $\mathfrak{M}_{J M}$ (where $M=-J,-J+1, \ldots, J-1, J$) which satisfy the following commutation rules with spherical components of the angular momentum operator\isym{Mfrak@$\mathfrak{M}_{J}$, irreducible tensor}\isym{MfrakJM@$\mathfrak{M}_{J M}$, components of irreducible tensor}\index{rank!of an irreducible tensor}\index{commutation relations!with angular momentum operator}
-\begin{gather}
-{\left[\hat{J}_{ \pm 1}, \mathfrak{M}_{J M}\right]=\mp \frac{1}{\sqrt{2}} e^{ \pm i \delta} \sqrt{J(J+1)-M(M \pm 1)} \mathfrak{M}_{J M \pm 1}}  ,\label{eq:3:1:1}\\
+\begin{align}
+{\left[\hat{J}_{ \pm 1}, \mathfrak{M}_{J M}\right]&=\mp \frac{1}{\sqrt{2}} e^{ \pm i \delta} \sqrt{J(J+1)-M(M \pm 1)} \mathfrak{M}_{J M \pm 1}}  ,\label{eq:3:1:1}\\
 {\left[\hat{J}_{0}, \mathfrak{M}_{J M}\right]=M \mathfrak{M}_{J M}}. \notag
-\end{gather}
+\end{align}
 In compact form
 \begin{equation}
-\left[\widehat{J}_{\mu}, \mathfrak{M}_{J M}\right]=e^{i \mu \delta} \sqrt{J(J+1)} \clebsch{J}{M}{1}{\mu}{J}{M+\mu} \mathfrak{M}_{J M+\mu} .\label{eq:3:1:2}
+\left[\widehat{J}_{\mu}, \mathfrak{M}_{J M}\right]=e^{i \mu \delta} \sqrt{J(J+1)} \,\clebsch{J}{M}{1}{\mu}{J}{M+\mu} \,\mathfrak{M}_{J M+\mu} .\label{eq:3:1:2}
 \end{equation}
 From these relations it follows that
 \begin{equation}
 \left[\hat{\vect{J}}^{2}, \mathfrak{M}_{J M}\right]=J(J+1) \mathfrak{M}_{J M}. \label{eq:3:1:3}
 \end{equation}
-The quantity $\delta$ in Eq. \eqref{eq:3:1:1} which determines relative phases of different $\mathfrak{M}_{J M}$ components is arbitrary.\index{phase!of irreducible tensor}\isymg{delta@$\delta$, phase of irreducible tensor} Let us adopt $\delta=0$, i.e., $e^{ \pm i \delta}=1$, and choose the positive sign of the square root. The linear equations \eqref{eq:3:1:1} define the components of the irreducible tensor $\mathfrak{M}_{J M}$ within an arbitrary scalar factor, which is the same for all the components. This factor can be a real or complex number, function or operator. In the case of integer rank $J$ the overall phase of the $\mathfrak{M}_{J M}$ components is usually defined in such manner that
+The quantity $\delta$ in Eq.~\eqref{eq:3:1:1} which determines relative phases of different $\mathfrak{M}_{J M}$ components is arbitrary.\index{phase!of irreducible tensor}\isymg{delta@$\delta$, phase of irreducible tensor} Let us adopt $\delta=0$, i.e., $e^{ \pm i \delta}=1$, and choose the positive sign of the square root. The linear equations \eqref{eq:3:1:1} define the components of the irreducible tensor $\mathfrak{M}_{J M}$ within an arbitrary scalar factor, which is the same for all the components. This factor can be a real or complex number, function or operator. In the case of integer rank $J$ the overall phase of the $\mathfrak{M}_{J M}$ components is usually defined in such manner that
 \begin{equation}
 \left(\mathfrak{M}_{J M}\right)^{*}=(-1)^{-M} \mathfrak{M}_{J-M} . \label{eq:3:1:4}
 \end{equation}
@@ -33,11 +33,12 @@ The choice of the phase \eqref{eq:3:1:6} can be used for tensors of integer as w
 \braOket{b}{\tilde{\mathfrak{M}}_{J M}}{a}=\left(\braOket{a}{\left(\tilde{\mathfrak{M}}_{J M}\right)^{*}}{b}\right)^{*} . \label{eq:3:1:7}
 \end{equation}
 \subsection{Covariant and Contravariant Components}\label{sec:3.1.2}\index{covariant component}\index{contravariant component}
+\textcolor{red}{Notation here is a bit confused--the $e$'s are not necessarily vectors; the dot-product stands for an appropriate integration or summation. We need to find a more consistent notation.}
 Any irreducible tensor $\mathfrak{M}_{J}$ of rank $J$ can be expanded in a series based on a complete set of the unit orthonormalized irreducible tensors $\vect{e}_{J M}$ of rank $J$\index{unit irreducible tensor}\isym{e-vec@$\vect{e}_{J M}$, unit irreducible tensor}
 \begin{equation}
 \vect{e}_{J}^{M} \cdot \vect{e}_{J^{\prime} M^{\prime}}=\delta_{J J^{\prime}} \delta_{M M^{\prime}}. \label{eq:3:1:8}
 \end{equation}
-The tensors $\vect{e}_{J M}$ can be composed, for example, of the basis spin functions. The expansion of $\mathfrak{M}_{J}$ is written as
+The tensors $\mathrm{e}_{J M}$ can be composed, for example, of the basis spin functions. The expansion of $\mathfrak{M}_{J}$ is written as
 \begin{equation}
 \mathfrak{M}_{J}=\sum_{M} \mathrm{e}_{J}^{M} \cdot \mathfrak{M}_{J M}=\sum_{M} \mathrm{e}_{J M} \cdot \mathfrak{M}_{J}^{M} . \label{eq:3:1:9}
 \end{equation}
@@ -200,7 +201,7 @@ The components of a tensor product of rank two are also related to products of s
 \begin{equation}
 \left\{\vect{A}_{1} \otimes \vect{B}_{1}\right\}_{2 M}=\sum_{\mu, \nu} \clebsch{1}{\mu}{1}{\nu}{2}{M} A_{\mu} B_{\nu}=\sqrt{\frac{3|M|-2}{14|M|-12}} \sum_{\substack{\mu+\nu=M \\ \mu \geq \nu}}\left(A_{\mu} B_{\nu}+A_{\nu} B_{\mu}\right) .\label{eq:3:2:6}
 \end{equation}
-In a more detailed form Eq. \eqref{eq:3:2:6} may be written as
+In a more detailed form Eq.~\eqref{eq:3:2:6} may be written as
 \begin{align}
 \left\{\vect{A}_{1} \otimes \vect{B}_{1}\right\}_{2+2}&=A_{+1} B_{+1},  \notag\\
 \left\{\vect{A}_{1} \otimes \vect{B}_{1}\right\}_{2+1}&=\frac{1}{\sqrt{2}}\left(A_{+1} B_{0}+A_{0} B_{+1}\right),  \notag\\
@@ -215,7 +216,7 @@ Given three commuting vectors $\vect{A}_{1}, \vect{B}_{1}, \vect{C}_{1}$ we can 
 \left\{\left\{\vect{A}_{1} \otimes \vect{B}_{1}\right\}_{1} \otimes \vect{C}_{1}\right\}_{1}&=-\frac{1}{2}\left[[ \vect{A} \times \vect{B}] \times \vect{C}\right]=\frac{1}{2} \vect{A}(\vect{B} \cdot \vect{C})-\frac{1}{2} \vect{B}(\vect{A} \cdot \vect{C}),  \label{eq:3:2:10}\\
 \left\{\left\{\vect{A}_{1} \otimes \vect{B}_{1}\right\}_{2} \otimes \vect{C}_{1}\right\}_{1}&=\sqrt{\frac{3}{5}}\left\{\frac{1}{3} \vect{C}(\vect{A} \cdot \vect{B})-\frac{1}{2} \vect{B}(\vect{A} \cdot \vect{C})-\frac{1}{2} \vect{A}(\vect{B} \cdot \vect{C})\right\} . \label{eq:3:2:11}
 \end{align}
-In addition to the foregoing formulas, there exist products which differ from Eqs. \eqref{eq:3:2:8}-\eqref{eq:3:2:11} by vector coupling schemes. The problems concerned with recoupling in tensor products are considered below (Sec.~\ref{sec:3.3}).
+In addition to the foregoing formulas, there exist products which differ from Eqs.~\eqref{eq:3:2:8}-\eqref{eq:3:2:11} by vector coupling schemes. The problems concerned with recoupling in tensor products are considered below (Sec.~\ref{sec:3.3}).
 
 Given four commuting vectors $\vect{A}_{1}, \vect{B}_{1}, \vect{C}_{1}$ and $\vect{D}_{1}$ we can compose the following irreducible tensor products of ranks 0 and 1 :
 \begin{align}
@@ -315,12 +316,12 @@ Here $\vect{u}=\delta \vect{r} /|\delta \vect{r}|$ and $(\vect{u} \cdot \vect{\n
 \begin{equation}
 (u \cdot \nabla)^{n}=(-1)^{n} \sum_{l_{2}, l_{3}, \ldots l_{n}}(-1)^{l_{n}}\left(\left\{\ldots\left\{\left\{u_{1} \otimes u_{1}\right\}_{l_{2}} \otimes u_{1}\right\}_{l_{3}} \ldots \otimes u_{1}\right\}_{l_{n}} \cdot\left\{\ldots\left\{\left\{\nabla_{1} \otimes \nabla_{1}\right\}_{l_{2}} \otimes \nabla_{1}\right\}_{l_{3}} \ldots \otimes \nabla_{1}\right\}_{l_{n}}\right) .\label{eq:3:2:44}
 \end{equation}
-Using Eqs. \eqref{eq:3:2:22} and \eqref{eq:3:2:23} one can express multiple tensor products of the unit vector $u$ which enters Eq. \eqref{eq:3:2:44} in terms of spherical harmonics.
+Using Eqs.~\eqref{eq:3:2:22} and \eqref{eq:3:2:23} one can express multiple tensor products of the unit vector $u$ which enters Eq.~\eqref{eq:3:2:44} in terms of spherical harmonics.
 
 \section{Recoupling in irreducible tensor products}\label{sec:3.3}\index{recoupling!in irreducible tensor products}\index{irreducible tensor product!recoupling}
 The irreducible tensor product of two irreducible tensors is defined in Sec.~\ref{sec:3.1.7}. By making use of the same relations one can form irreducible tensor products of three and more irreducible tensors. However, in these cases different orders and different coupling schemes of tensors in products are possible.
 
-The recoupling tensors without change of their order may be carried out by some real (for a given definition of the vector addition coefficients) and orthogonal matrix which performs the direct and inverse transformation. When the tensor order has to be changed one should take account of the commutation rules (Eqs. \eqref{eq:3:1:24}-\eqref{eq:3:1:28}). We will use the notation\isymg{Pi-dim@$\Pi_{a b c \ldots}$, dimension factor $[(2a+1)(2b+1)\cdots]^{1/2}$}\index{dimension factor}
+The recoupling tensors without change of their order may be carried out by some real (for a given definition of the vector addition coefficients) and orthogonal matrix which performs the direct and inverse transformation. When the tensor order has to be changed one should take account of the commutation rules (Eqs.~\eqref{eq:3:1:24}-\eqref{eq:3:1:28}). We will use the notation\isymg{Pi-dim@$\Pi_{a b c \ldots}$, dimension factor $[(2a+1)(2b+1)\cdots]^{1/2}$}\index{dimension factor}
 \[
 \Fact{a b c \ldots d}=[(2 a+1)(2 b+1)(2 c+1) \ldots(2 d+1)]^{\frac{1}{2}}
 \]
@@ -366,7 +367,7 @@ To change the coupling scheme for irreducible products of three and four commuti
 \left(\left\{\vect{P}_{a} \otimes \vect{Q}_{b}\right\}_{c} \cdot\left\{\vect{R}_{d} \otimes \vect{S}_{e}\right\}_{c}\right)=(-1)^{2 a+b-d} \sum_{g} \Fact{c}^{2}\sixj{a }{ b }{ c }{e }{ d }{ g}\left(\left\{\vect{P}_{a} \otimes \vect{R}_{d}\right\}_{g} \cdot\left\{\vect{Q}_{b} \otimes \vect{S}_{e}\right\}_{g}\right) . \label{eq:3:3:13}\\
 \left(\left\{\vect{P}_{a} \otimes \vect{Q}_{b}\right\}_{c} \cdot\left\{\vect{R}_{d} \otimes \vect{S}_{e}\right\}_{c}\right)=\sum_{h}(-1)^{e+b+d+h} \frac{\Fact{c c h}}{\Fact{e}}\sixj{a }{ b }{ c }{e }{ d }{ h}\left(\left\{\left\{\vect{P}_{a} \otimes \vect{R}_{d}\right\}_{h} \otimes \vect{Q}_{b}\right\}_{e} \cdot \vect{S}_{e}\right). \label{eq:3:3:14}
 \end{gather}
-Equation \eqref{eq:3:1:27} and Eqs. \eqref{eq:3:3:11}-\eqref{eq:3:3:14} permit us to obtain all other permutations. The product $\left\{\vect{P}_{a} \otimes \vect{Q}_{b}\right\}_{b}$ is orthogonal to tensor $\vect{Q}_{b}$, if $a=2 b-1,2 b-2, \ldots$
+Equation \eqref{eq:3:1:27} and Eqs.~\eqref{eq:3:3:11}-\eqref{eq:3:3:14} permit us to obtain all other permutations. The product $\left\{\vect{P}_{a} \otimes \vect{Q}_{b}\right\}_{b}$ is orthogonal to tensor $\vect{Q}_{b}$, if $a=2 b-1,2 b-2, \ldots$
 \begin{equation}
 \left(\left\{\vect{P}_{a} \otimes \vect{Q}_{b}\right\}_{b} \cdot \vect{Q}_{b}\right)=0 .\label{eq:3:3:15}
 \end{equation}
@@ -387,4 +388,4 @@ A change of the coupling scheme for irreducible tensor products of three and fou
  \left(\left\{\vect{P}_{a} \otimes \vect{Q}_{b}\right\}_{c} \cdot\left\{\vect{R}_{d} \otimes \vect{S}_{e}\right\}_{c}\right)&=\sum_{g}(-1)^{a+d+g+b} \frac{\Fact{c c g}}{\Fact{a}}\sixj{b }{ e }{ g }{d }{ a }{ c}\left(\vect{P}_{a} \cdot\left\{\vect{R}_{d} \otimes\left\{\vect{Q}_{b} \otimes \vect{S}_{e}\right\}_{g}\right\}_{a}\right)  \notag\\
 & +\sum_{q}(-1)^{d+e+c-b} \frac{\Fact{c c q}}{\Fact{a}}\sixj{a }{ b }{ c }{d }{ e }{ q}\left(\vect{P}_{a} \cdot\left\{\mathfrak{R}_{q}^{b d} \otimes \vect{S}_{e}\right\}_{a}\right) . \label{eq:3:3:23}
 \end{align}
-The definition of the commutator $\mathfrak{R}_{q}^{b d}$ is given in Eq. \eqref{eq:3:1:26}. By making use of the foregoing formulas, one can obtain all other relations for irreducible products of non-commuting tensors.
+The definition of the commutator $\mathfrak{R}_{q}^{b d}$ is given in Eq.~\eqref{eq:3:1:26}. By making use of the foregoing formulas, one can obtain all other relations for irreducible products of non-commuting tensors.
