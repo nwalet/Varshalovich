@@ -1232,7 +1232,7 @@ f_{l}\left(r_{1} r_{2}\right)=4 \pi \sum_{n=l, l+2}^{\infty} c_{n} \frac{n!\left
 \subsection{Expansions of Some Functions Which Depend on $r=\left|\vect{r}_{1}-\vect{r}_{2}\right|$}\label{sec:5.17.4}\index{expansion!of functions of the distance between two points}
 An expansion of the delta function $\delta\left(\vect{r}_{1}-\vect{r}_{2}\right)$ is\index{delta function}
 \begin{equation}
-\delta\left(\vect{r}_{1}-\vect{r}_{2}\right)=\frac{\delta\left(r_{1}-r_{2}\right)}{r_{1}^{2}} \sum_{l=0}^{\infty}\left(\vect{Y}_{l}\left(\Omega_{1}\right) \cdot \vect{Y}_{l}\left(\Omega_{2}\right)\right) \label{eq:5:17:18}
+\delta\left(\vect{r}_{1}-\vect{r}_{2}\right)=\frac{\delta\left(r_{1}-r_{2}\right)}{r_{1}^{2}} \sum_{l=0}^{\infty}\left(\vect{Y}_{l}\left(\Omega_{1}\right) \cdot \vect{Y}_{l}\left(\Omega_{2}\right)\right). \label{eq:5:17:18}
 \end{equation}
 This equation results from the completeness relation for the spherical harmonics (Eqs.~\eqref{eq:5:6:1}).\\
 An expansion of the Green's function for the scalar Helmholtz equation may be written in the form\index{Green's function}\index{Helmholtz equation}
@@ -1252,7 +1252,7 @@ This result as well as Eq.~\eqref{eq:5:17:19} are valid when $r_{1}<r_{2}$, wher
 \begin{equation}
 \frac{1}{r}=\frac{4 \pi}{\sqrt{r_{1}^{2}+r_{2}^{2}}} \sum_{l=0}^{\infty}\left\{\sum_{n=l, l+2}^{\infty} \frac{(2 n-1)!!}{(n-l)!!(l+n+1)!!}\left(\frac{r_{1} r_{2}}{r_{1}^{2}+r_{2}^{2}}\right)^{n}\right\}\left(\vect{Y}_{l}\left(\Omega_{1}\right) \cdot \vect{Y}_{l}\left(\Omega_{2}\right)\right) \label{eq:5:17:22}
 \end{equation}
-Below we give some examples of expansions of $r^{n}(n=1,-3,-5)$
+Below we give some examples of expansions of $r^{n}$ ($n=1,-3,-5$)
 \begin{align}
 r & =4 \pi \sum_{l=0}^{\infty} \frac{1}{(2 l+1)}\left(\frac{r_{1}^{l}}{r_{2}^{l+1}}\right)\left(\frac{r_{1}^{2}}{2 l+3}-\frac{r_{2}^{2}}{2 l-1}\right)\left(\vect{Y}_{l}\left(\Omega_{1}\right) \cdot \vect{Y}_{l}\left(\Omega_{2}\right)\right),  \label{eq:5:17:23}\\
 \frac{1}{r^{3}} & =\frac{4 \pi}{r_{2}^{2}-r_{1}^{2}} \sum_{l=0}^{\infty}\left(\frac{r_{1}^{l}}{r_{2}^{l+1}}\right)\left(\vect{Y}_{l}\left(\Omega_{1}\right) \cdot \vect{Y}_{l}\left(\Omega_{2}\right)\right),  \label{eq:5:17:24}\\
@@ -1267,21 +1267,23 @@ r^{n}=4 \pi \sum_{l=0}^{\infty} \frac{1}{2 l+1} a_{l}^{n}\left(r_{1}, r_{2}\righ
 \end{equation}
 where the expansion coefficients $a_{1}^{n}\left(r_{1}, r_{2}\right)$ are determined by (see Ref.~\cite{ref097})
 \begin{align}
-a_{l}^{n}\left(r_{1}, r_{2}\right)= & \frac{\left(-\frac{n}{2}\right)_{l}}{\left(\frac{1}{2}\right)_{l}} r_{2}^{n}\left(\frac{r_{1}}{r_{2}}\right)^{l} F\left(l-\frac{n}{2},-\frac{1}{2}-\frac{n}{2} ; l+\frac{3}{2} ; \frac{r_{1}^{2}}{r_{2}^{2}}\right),\left(r_{1}<r_{2}\right),  \label{eq:5:17:27}\\
-a_{l}^{n}\left(r_{1}, r_{2}\right)= & \frac{\left(-\frac{n}{2}\right)_{l}}{\left(\frac{1}{2}\right)_{l}} \frac{r_{1}^{l}\left(r_{2}^{2}-r_{1}^{2}\right)^{n+2}}{r_{2}^{l+n+4}} F\left(l+2+\frac{n}{2}, \frac{3}{2}+\frac{n}{2} ; l+\frac{3}{2} ; \frac{r_{1}^{2}}{r_{2}^{2}}\right),\left(r_{1}<r_{2}\right),  \label{eq:5:17:28}\\
+a_{l}^{n}\left(r_{1}, r_{2}\right)= & \frac{\left(-\frac{n}{2}\right)_{l}}{\left(\frac{1}{2}\right)_{l}} r_{2}^{n}\left(\frac{r_{1}}{r_{2}}\right)^{l} F\left(l-\frac{n}{2},-\frac{1}{2}-\frac{n}{2} ; l+\frac{3}{2} ; \frac{r_{1}^{2}}{r_{2}^{2}}\right),\quad \left(r_{1}<r_{2}\right),  \label{eq:5:17:27}\\
+a_{l}^{n}\left(r_{1}, r_{2}\right)= & \frac{\left(-\frac{n}{2}\right)_{l}}{\left(\frac{1}{2}\right)_{l}} \frac{r_{1}^{l}\left(r_{2}^{2}-r_{1}^{2}\right)^{n+2}}{r_{2}^{l+n+4}} F\left(l+2+\frac{n}{2}, \frac{3}{2}+\frac{n}{2} ; l+\frac{3}{2} ; \frac{r_{1}^{2}}{r_{2}^{2}}\right),\quad\left(r_{1}<r_{2}\right),  \label{eq:5:17:28}\\
 a_{l}^{n}\left(r_{1}, r_{2}\right)= & \frac{2^{n+1}\left(l+\frac{1}{2}\right)\left(-\frac{n}{2}\right)_{l}}{\left(1+\frac{n}{2}\right)_{l+1}^{l} r_{2}^{n-l} F\left(l-\frac{n}{2},-\frac{1}{2}-\frac{n}{2} ;-1-n ; \frac{r_{2}^{2}-r_{1}^{2}}{r_{2}^{2}}\right)}  \notag\\
-& -\frac{2 l+1}{2^{n+3}(n+2)} \cdot \frac{r_{1}^{l}\left(r_{2}^{2}-r_{1}^{2}\right)^{n+2}}{r_{2}^{l+n+4}} F\left(l+\frac{n}{2}+2, \frac{3}{2}+\frac{n}{2} ; n+3 ; \frac{r_{2}^{2}-r_{1}^{2}}{r_{2}^{2}}\right),  \\
-a_{l}^{n}\left(r_{1}, r_{2}\right)= & \frac{\left(-\frac{n}{2}\right)_{l}(-1)^{\frac{n}{2}} \cos \frac{n \pi}{2} r_{1}^{n-l} r_{2}^{l} F\left(l-\frac{n}{2},-\frac{1}{2}-\frac{n}{2} ; l+\frac{3}{2} ; \frac{r_{2}^{2}}{r_{1}^{2}}\right)}{\left(\frac{1}{2}\right)_{l}}  \notag\\
-& +\frac{\Gamma\left(l+\frac{3}{2}\right) \sqrt{\pi}(-1)^{\frac{n+1}{2}}}{\Gamma\left(-\frac{n}{2}\right) \Gamma\left(2+l+\frac{n}{2}\right)} \frac{r_{1}^{n+l+1}}{r_{2}^{l+1}} F\left(-1-l-\frac{n}{2},-\frac{1}{2}-\frac{n}{2} ; \frac{1}{2}-l ; \frac{r_{2}^{2}}{r_{1}^{2}}\right), \label{eq:5:17:30}
+& -\frac{2 l+1}{2^{n+3}(n+2)} \, \frac{r_{1}^{l}\left(r_{2}^{2}-r_{1}^{2}\right)^{n+2}}{r_{2}^{l+n+4}} F\left(l+\frac{n}{2}+2, \frac{3}{2}+\frac{n}{2} ; n+3 ; \frac{r_{2}^{2}-r_{1}^{2}}{r_{2}^{2}}\right),\quad (r_{1}<r_{2}) , \label{eq:5:17:29}\\
+a_{l}^{n}\left(r_{1}, r_{2}\right)= & \frac{\left(-\frac{n}{2}\right)_{l}}{\left(\frac{1}{2}\right)_{l}}
+(-1)^{\frac{n}{2}} \cos \frac{n \pi}{2} r_{1}^{n-l} r_{2}^{l} F\left(l-\frac{n}{2},-\frac{1}{2}-\frac{n}{2} ; l+\frac{3}{2} ; \frac{r_{2}^{2}}{r_{1}^{2}}\right)  \notag\\
+& +\frac{\Gamma\left(l+\frac{3}{2}\right) \sqrt{\pi}(-1)^{\frac{n+1}{2}}}{\Gamma\left(-\frac{n}{2}\right) \Gamma\left(2+l+\frac{n}{2}\right)} \frac{r_{1}^{n+l+1}}{r_{2}^{l+1}} F\left(-1-l-\frac{n}{2},-\frac{1}{2}-\frac{n}{2} ; \frac{1}{2}-l ; \frac{r_{2}^{2}}{r_{1}^{2}}\right),\quad (r_{1}<r_{2}) .
+\label{eq:5:17:30}
 \end{align}
 If $r_{1}>r_{2}$, one should interchange $r_{1}$ and $r_{2}$ in Eqs.~\eqref{eq:5:17:27}-\eqref{eq:5:17:30}. Let us present also symmetric expressions for $a_{l}^{n}\left(r_{1}, r_{2}\right)$ which are valid when $r_{1}<r_{2}$ and $r_{1}>r_{2}$ :
 \begin{align}
-& a_{l}^{n}\left(r_{1}, r_{2}\right)=\frac{\left(-\frac{n}{2}\right)_{l}}{\left(\frac{1}{2}\right)_{l}} \cdot \frac{\left(r_{1} r_{2}\right)^{l}}{\left(r_{1}^{2}+r_{2}^{2}\right)^{l-\frac{n}{2}}} F\left(\frac{l}{2}-\frac{n}{4}, \frac{l}{2}-\frac{n}{4}+\frac{1}{2} ; l+\frac{3}{2} ;\left(\frac{2 r_{1} r_{2}}{r_{1}^{2}+r_{2}^{2}}\right)^{2}\right)  \label{eq:5:17:31}\\
-& a_{l}^{n}\left(r_{1}, r_{2}\right)=\frac{\left(-\frac{n}{2}\right)_{l}}{\left(\frac{1}{2}\right)_{l}} \cdot \frac{\left(r_{1} r_{2}\right)^{l}}{\left(r_{1}+r_{2}\right)^{2 l-n}} F\left(l-\frac{n}{2}, 1+l ; 2 l+2 ; \frac{4 r_{1} r_{2}}{\left(r_{1}+r_{2}\right)^{2}}\right) \label{eq:5:17:32}
+& a_{l}^{n}\left(r_{1}, r_{2}\right)=\frac{\left(-\frac{n}{2}\right)_{l}}{\left(\frac{1}{2}\right)_{l}} \, \frac{\left(r_{1} r_{2}\right)^{l}}{\left(r_{1}^{2}+r_{2}^{2}\right)^{l-\frac{n}{2}}} F\left(\frac{l}{2}-\frac{n}{4}, \frac{l}{2}-\frac{n}{4}+\frac{1}{2} ; l+\frac{3}{2} ;\left(\frac{2 r_{1} r_{2}}{r_{1}^{2}+r_{2}^{2}}\right)^{2}\right),  \label{eq:5:17:31}\\
+& a_{l}^{n}\left(r_{1}, r_{2}\right)=\frac{\left(-\frac{n}{2}\right)_{l}}{\left(\frac{1}{2}\right)_{l}} \, \frac{\left(r_{1} r_{2}\right)^{l}}{\left(r_{1}+r_{2}\right)^{2 l-n}} F\left(l-\frac{n}{2}, 1+l ; 2 l+2 ; \frac{4 r_{1} r_{2}}{\left(r_{1}+r_{2}\right)^{2}}\right). \label{eq:5:17:32}
 \end{align}
 A comparison of Eqs.~\eqref{eq:5:17:27} and \eqref{eq:5:17:28} shows that the expansion coefficient for $r^{n}$ and $r^{-n-4}$ are related by
 \begin{equation}
-a_{l}^{n}\left(r_{1}, r_{2}\right)=\frac{\left(-\frac{n}{2}\right)_{l}}{\left(\frac{n}{2}+2\right)_{l}}\left(r_{2}^{2}-r_{1}^{2}\right)^{n+2} a_{l}^{-n-4}\left(r_{1}, r_{2}\right) \label{eq:5:17:33}
+a_{l}^{n}\left(r_{1}, r_{2}\right)=\frac{\left(-\frac{n}{2}\right)_{l}}{\left(\frac{n}{2}+2\right)_{l}}\left(r_{2}^{2}-r_{1}^{2}\right)^{n+2} a_{l}^{-n-4}\left(r_{1}, r_{2}\right). \label{eq:5:17:33}
 \end{equation}
 Note that all the expansions given in Secs.~\ref{sec:5.17.4} and \ref{sec:5.17.5} remain valid after substituting $R=\left|\vect{r}_{1}+\vect{r}_{2}\right|$ for $r=\left|r_{1}-r_{2}\right|$ and multiplying the expansion coefficients by $(-1)^{l}$.
 
@@ -1289,33 +1291,34 @@ Note that all the expansions given in Secs.~\ref{sec:5.17.4} and \ref{sec:5.17.5
 The spherical waves have the form $z_{L}(k r) Y_{L M}(\vartheta, \varphi)$, where $\vect{r}(r, \vartheta, \varphi)=\vect{r}_{1}-\vect{r}_{2}, z_{L}(x)=\sqrt{\pi / 2 x} Z_{L+\frac{1}{2}}(x)$ and $Z_{L+\frac{1}{2}}(x)$ is any of the cylinder functions.\index{cylinder functions}\isym{ZL@$Z_{L+1/2}(x)$, cylinder function} The spherical waves are expressed in terms of the bipolar spherical harmonics of rank $L$ \cite{ref070} (Sec.~\ref{sec:5.16.1})
 \begin{align}
 z_{L}(k r) Y_{L M}(\vartheta, \varphi)= & \sqrt{\frac{4 \pi}{2 L+1}} \sum_{l_{1}, l_{2}=0}^{\infty} i^{l_{1}-l_{2}-L} \sqrt{\left(2 l_{1}+1\right)\left(2 l_{2}+1\right)}  \notag\\
-& \times \clebsch{l_{1}}{0}{l_{2}}{0}{L}{0} j_{l_{1}}\left(k r_{1}\right) z_{l_{2}}\left(k r_{2}\right)\left\{\vect{Y}_{l_{1}}\left(\Omega_{1}\right) \otimes \vect{Y}_{l_{2}}\left(\Omega_{2}\right)\right\}_{L M},\left(r_{1}<r_{2}\right) \label{eq:5:17:34}
+& \times \clebsch{l_{1}}{0}{l_{2}}{0}{L}{0} j_{l_{1}}\left(k r_{1}\right) z_{l_{2}}\left(k r_{2}\right)\left\{\vect{Y}_{l_{1}}\left(\Omega_{1}\right) \otimes \vect{Y}_{l_{2}}\left(\Omega_{2}\right)\right\}_{L M},\left(r_{1}<r_{2}\right). \label{eq:5:17:34}
 \end{align}
 When $r_{1}>r_{2}$, one should interchange $r_{1}$ and $r_{2}$ in Eq.~\eqref{eq:5:17:34}. If $z_{L}(k r)=j_{L}(k r), j_{L}(x)$ being a spherical Bessel function, one obtains as $k \rightarrow 0$ \cite{ref022,ref096}
 \begin{equation}
-r^{L} Y_{L M}(\vartheta, \varphi)=\sqrt{4 \pi(2 L+1)!} \sum_{\substack{l_{1}, l_{2}=0 \\ l_{1}+l_{2}=L}}^{L}(-1)^{l_{2}} \frac{r_{1}^{l_{1}} r_{2}^{l_{2}}}{\sqrt{\left(2 l_{1}+1\right)!\left(2 l_{2}+1\right)!}}\left\{\vect{Y}_{l_{1}}\left(\Omega_{1}\right) \otimes \vect{Y}_{l_{2}}\left(\Omega_{2}\right)\right\}_{L M} \label{eq:5:17:35}
+r^{L} Y_{L M}(\vartheta, \varphi)=\sqrt{4 \pi(2 L+1)!} \sum_{\substack{l_{1}, l_{2}=0 \\ l_{1}+l_{2}=L}}^{L}(-1)^{l_{2}} \frac{r_{1}^{l_{1}} r_{2}^{l_{2}}}{\sqrt{\left(2 l_{1}+1\right)!\left(2 l_{2}+1\right)!}}\left\{\vect{Y}_{l_{1}}\left(\Omega_{1}\right) \otimes \vect{Y}_{l_{2}}\left(\Omega_{2}\right)\right\}_{L M}/ \label{eq:5:17:35}
 \end{equation}
 Similarly, if $z_{L}(k r)=n_{L}(k r), n_{L}(k r)$ being a spherical Neumann function, one obtains as $k \rightarrow 0$ \cite{ref022,ref096}\index{spherical Neumann function}
 \begin{equation}
-\frac{1}{r^{L+1}} Y_{L M}(\vartheta, \varphi)=\sqrt{\frac{4 \pi}{(2 L)!}} \sum_{\substack{l_{1}, l_{2}=0 \\ l_{2}-l_{1}=L}}^{\infty}(-1)^{l_{2}} \sqrt{\frac{\left(2 l_{2}\right)!}{\left(2 l_{1}+1\right)!}} \cdot \frac{r_{1}^{l_{1}}}{r_{2}^{l_{2}+1}}\left\{\vect{Y}_{l_{1}}\left(\Omega_{1}\right) \otimes \vect{Y}_{l_{2}}\left(\Omega_{2}\right)\right\}_{L M},\left(r_{1}<r_{2}\right) \label{eq:5:17:36}
+\frac{1}{r^{L+1}} Y_{L M}(\vartheta, \varphi)=\sqrt{\frac{4 \pi}{(2 L)!}} \sum_{\substack{l_{1}, l_{2}=0 \\ l_{2}-l_{1}=L}}^{\infty}(-1)^{l_{2}} \sqrt{\frac{\left(2 l_{2}\right)!}{\left(2 l_{1}+1\right)!}} \cdot \frac{r_{1}^{l_{1}}}{r_{2}^{l_{2}+1}}\left\{\vect{Y}_{l_{1}}\left(\Omega_{1}\right) \otimes \vect{Y}_{l_{2}}\left(\Omega_{2}\right)\right\}_{L M},\left(r_{1}<r_{2}\right). \label{eq:5:17:36}
 \end{equation}
 For example, spherical components of $r / r^{3}$ read
 \begin{equation}
-\frac{r_{\mu}}{r^{3}}=4 \pi \sum_{l=1}^{\infty}(-1)^{l} \sqrt{\frac{l}{3}} \cdot \frac{r_{1}^{l-1}}{r_{2}^{l+1}}\left\{\vect{Y}_{l-1}\left(\Omega_{1}\right) \otimes \vect{Y}_{l}\left(\Omega_{2}\right)\right\}_{1 \mu}, \quad\left(r_{1}<r_{2}\right) \label{eq:5:17:37}
+\frac{r_{\mu}}{r^{3}}=4 \pi \sum_{l=1}^{\infty}(-1)^{l} \sqrt{\frac{l}{3}} \cdot \frac{r_{1}^{l-1}}{r_{2}^{l+1}}\left\{\vect{Y}_{l-1}\left(\Omega_{1}\right) \otimes \vect{Y}_{l}\left(\Omega_{2}\right)\right\}_{1 \mu}, \quad\left(r_{1}<r_{2}\right). \label{eq:5:17:37}
 \end{equation}
 \subsection{Expansions of $r^{N} Y_{L M}(\vartheta, \varphi)$}\label{sec:5.17.7}\index{expansion!of $r^{N} Y_{L M}$}
 The expansion of this function in terms of bipolar harmonics of rank $L$ may be written as
 \begin{equation}
-r^{N} Y_{L M}(\vartheta, \varphi)=4 \pi \sum_{l_{1}, l_{2}=0}^{\infty} a_{l_{1} l_{2}}^{N L}\left(r_{1}, r_{2}\right) \sqrt{\frac{\left(2 l_{1}+1\right)\left(2 l_{2}+1\right)}{4 \pi(2 L+1)}} \clebsch{l_{1}}{0}{l_{2}}{0}{L}{0}\left\{\vect{Y}_{l_{1}}\left(\Omega_{1}\right) \otimes \vect{Y}_{l_{2}}\left(\Omega_{2}\right)\right\}_{L M} \label{eq:5:17:38}
+r^{N} Y_{L M}(\vartheta, \varphi)=4 \pi \sum_{l_{1}, l_{2}=0}^{\infty} a_{l_{1} l_{2}}^{N L}\left(r_{1}, r_{2}\right) \sqrt{\frac{\left(2 l_{1}+1\right)\left(2 l_{2}+1\right)}{4 \pi(2 L+1)}} \clebsch{l_{1}}{0}{l_{2}}{0}{L}{0}\left\{\vect{Y}_{l_{1}}\left(\Omega_{1}\right) \otimes \vect{Y}_{l_{2}}\left(\Omega_{2}\right)\right\}_{L M}. \label{eq:5:17:38}
 \end{equation}
 The sum is over all positive integer $l_{1}$ and $l_{2}$ allowed by the momentum addition rules and the parity selection rule ( $l_{1}+l_{2}-L$ is even). The expansion coefficients $a_{l_{1} l_{2}}^{N L}\left(r_{1}, r_{2}\right)$ are given by (see Ref.~\cite{ref098})
 \begin{align}
 a_{l_{1} l_{2}}^{N L}\left(r_{1}, r_{2}\right)= & (-1)^{\frac{l_{1}-l_{2}-L}{2}} \frac{2^{l_{1}}}{\left(2 l_{1}+1\right)!!} \frac{\Gamma\left(\frac{l_{1}+l_{2}-N}{2}\right) \Gamma\left(\frac{L+N+3}{2}\right)}{\Gamma\left(\frac{L-N}{2}\right) \Gamma\left(\frac{-l_{1}+l_{2}+N+3}{2}\right)}  \notag\\
 & \times r_{2}^{N}\left(\frac{r_{1}}{r_{2}}\right)^{l_{1}} F\left(\frac{l_{1}+l_{2}-N}{2}, \frac{l_{1}-l_{2}-N-1}{2} ; l_{1}+\frac{3}{2} ; \frac{r_{1}^{2}}{r_{2}^{2}}\right),\left(r_{1}<r_{2}\right) . \label{eq:5:17:39}
 \end{align}
-If $r_{1}>r_{2}$, the expression for the expansion coefficients may be obtained from Eq.~\eqref{eq:5:17:39} by interchanging $r_{1}$ and $r_{2}, l_{1}$ and $l_{2}$ and introducing the additional factor $(-1)^{L}$. The expression \eqref{eq:5:17:39} was studied in detail in Ref.~\cite{ref078}. For different values of $N$ and $L$ the expansion coefficients are determined by the following relations. For $N=L, L+2, L+4, \ldots$ we have
+If $r_{1}>r_{2}$, the expression for the expansion coefficients may be obtained from Eq.~\eqref{eq:5:17:39} by interchanging $r_{1}$ and $r_{2}$, $l_{1}$ and $l_{2}$ and introducing the additional factor $(-1)^{L}$. The expression \eqref{eq:5:17:39} was studied in detail in Ref.~\cite{ref078}. For different values of $N$ and $L$ the expansion coefficients are determined by the following relations. For $N=L, L+2, L+4, \ldots$ we have
 \begin{equation}
-a_{l_{1} l_{2}}^{N L}\left(r_{1}, r_{2}\right)= \begin{cases}(-1)^{l_{2}}(N+L+1)!!(N-L)!! & \sum_{e_{1}, e_{2}=0}^{\infty} \frac{r_{1}^{l_{1}+2 e_{1} r_{2}+2 e_{2}}}{\left(2 e_{1}\right) 11\left(2 e_{1}+2 l_{1}+1\right) 11\left(2 e_{2}\right) 11\left(2 e_{2}+2 l_{2}+1\right) 11}  \label{eq:5:17:40}\\ & \left(e_{1}+e_{2}=\frac{N-l_{1}-l_{2}}{5}\right) \\ & \text { if } l_{1}+l_{2} \leq N, \\ 0 & \text { if } l_{1}+l_{2}>N .\end{cases}
+a_{l_{1} l_{2}}^{N L}\left(r_{1}, r_{2}\right)= \begin{cases}\displaystyle  (-1)^{l_{2}}(N+L+1)!!(N-L)!! & {\displaystyle\sum_{\substack{s_{1}, s_{2}=0\\s_{1}+s_{2}=\frac{N-l_{1}-l_{2}}{2}}}^{\infty} \frac{r_{1}^{l_{1}+2 s_{1}} r_{2}^{l_{2}+2 s_{2}}}{\left(2 s_{1}\right) !!\left(2 s_{1}+2 l_{1}+1\right) !!\left(2 s_{2}\right) !!\left(2 s_{2}+2 l_{2}+1\right) !!} } \\ 
+ & \text { if } l_{1}+l_{2} \leq N, \\ 0 & \text { if } l_{1}+l_{2}>N .\end{cases}\label{eq:5:17:40}
 \end{equation}
 For $N=L-2, L-4, L-6, \ldots$ one gets
 \begin{gather}
@@ -1324,18 +1327,21 @@ a_{l_{1} l_{2}}^{N L}\left(r_{1}, r_{2}\right)=(-1)^{l_{2}+\frac{N-2}{j}} \frac{
 \end{gather}
 If $N$ is integer, $N-L$ is odd, and $r_{1}<r_{2}$, the expansion coefficient is given by
 \begin{equation}
-a_{l_{1} l_{2}}^{N L}\left(r_{1}, r_{2}\right)= \begin{cases}(-1)^{N+l_{2}+1}+l_{1} & \frac{(N+L+1) \|}{(L-N-2) \|} r_{1}^{l_{1}} r_{2}^{N-l_{1}} \sum_{:=0}^{\frac{N-l_{1}+l_{2}+1}{2}} \frac{\left(\frac{r_{1}}{r_{2}}\right)^{2 \cdot}}{(2 \cdot)\left\|\left(N-l_{1}-l_{3}-2 \cdot\right)\right\|\left(N-l_{1}+l_{2}+1-2 \cdot\right)\left\|\left(2 l_{1}+2 \cdot+1\right)\right\|}  \label{eq:5:17:42}\\ 0 & \text { if } N-l_{1}+l_{2}+1 \geq 0, \\ & \text { if } N-l_{1}+l_{2}+1<0 .\end{cases}
+a_{l_{1} l_{2}}^{N L}\left(r_{1}, r_{2}\right)= 
+\begin{cases}(-1)^{\frac{N+l_{2}+1}{2}+l_{1}} \frac{(N+L+1)!!}{(L-N-2) !!} r_{1}^{l_{1}} r_{2}^{N-l_{1}} &
+  \displaystyle{\sum_{s=0}^{\frac{N-l_{1}+l_{2}+1}{2}}} \frac{\left(\frac{r_{1}}{r_{2}}\right)^{2 s}}{(2 s)!!\left(N-l_{1}-l_{2}-2 s\right)!!\left(N-l_{1}+l_{2}+1-2 s\right)!!
+  \left(2 l_{1}+2 s+1\right)!!} \\  & \text { if } N-l_{1}+l_{2}+1 \geq 0, \\ 0& \text { if } N-l_{1}+l_{2}+1<0 .\end{cases}\label{eq:5:17:42}
 \end{equation}
 The expansion coefficient for $r_{1}>r_{2}$ may be obtained from \eqref{eq:5:17:42} by interchanging $r_{1}$ and $r_{2}, l_{1}$ and $l_{2}$ and introducing the additional factor $(-1)^{L}$. It should be emphasised that if $N \leq-3$ the expansion coefficients contain additional terms involving the delta function $\delta\left(r_{1}-r_{2}\right)$ and its derivatives \cite{ref078}
 \begin{align}
-a_{l_{1} l_{2}}^{N L}\left(r_{1}, r_{2}\right)_{\delta}= & (-1)^{N+l_{1}-1} \frac{(N+L+1)!!}{(L-N-2)!!} \sum_{e_{1}=0}^{l_{1}} \sum_{\substack{e_{2}=0 \\
-e_{1}+e_{2}+N \leq-3}}^{l_{2}}(-1)^{e_{2}} \frac{\left(l_{1}+s_{1}\right)!\left(l_{2}+s_{2}\right)!}{\left(l_{1}-s_{1}\right)!\left(l_{2}-s_{2}\right)!}  \notag\\
-& \times \frac{1}{\left(2 s_{1}\right)!!\left(2 s_{2}\right)!!} \cdot \frac{1}{r_{2}^{\beta_{2}+1}}\left(\frac{\partial}{\partial r_{2}}\right)^{-N-s_{1}-e_{2}-3}\left[\frac{\delta\left(r_{1}-r_{2}\right)}{r_{1}^{2} r_{2}^{\beta_{1}-1}}\right] . \label{eq:5:17:43}
+a_{l_{1} l_{2}}^{N L}\left(r_{1}, r_{2}\right)_{\delta}= & (-1)^{N+l_{1}-1} \frac{(N+L+1)!!}{(L-N-2)!!} \sum_{s_{1}=0}^{l_{1}} \sum_{\substack{s_{2}=0 \\
+s_{1}+s_{2}+N \leq-3}}^{l_{2}}(-1)^{s_{2}} \frac{\left(l_{1}+s_{1}\right)!\left(l_{2}+s_{2}\right)!}{\left(l_{1}-s_{1}\right)!\left(l_{2}-s_{2}\right)!}  \notag\\
+& \times \frac{1}{\left(2 s_{1}\right)!!\left(2 s_{2}\right)!!} \, \frac{1}{r_{2}^{\beta_{2}+1}}\left(\frac{\partial}{\partial r_{2}}\right)^{-N-s_{1}-s_{2}-3}\left[\frac{\delta\left(r_{1}-r_{2}\right)}{r_{1}^{2} r_{2}^{s_{1}-1}}\right] . \label{eq:5:17:43}
 \end{align}
 These additional terms give finite contributions into the integrals involving the expansion \eqref{eq:5:17:38}.\\
 Finally, if $N$ is not integer, the expansion coefficient is given by
-\begin{gather}
-a_{l_{1} l_{2}}^{N L}\left(r_{1}, r_{2}\right)=(-1)^{l_{1}+L+1} \frac{2^{L-1} \Gamma\left(\frac{N+L+3}{2}\right) \Gamma(N-L+2)}{\Gamma\left(\frac{N-L+3}{2}\right) \Gamma\left(N+l_{1}+l_{2}+3\right)} r_{1}^{l_{1}} r_{2}^{l_{2}}  \notag\\
-\times\left(\frac{1}{r_{1}} \frac{\partial}{\partial r_{1}}\right)^{l_{1}}\left(\frac{1}{r_{2}} \frac{\partial}{\partial r_{2}}\right)^{l_{2}} \frac{1}{r_{1} r_{2}}\left\{\left|r_{1}+r_{2}\right|^{N+l_{1}+l_{2}+2}-\left|r_{1}-r_{2}\right|^{N+l_{1}+l_{2}+2}\right\} \label{eq:5:17:44}
-\end{gather}
+\begin{multline}
+a_{l_{1} l_{2}}^{N L}\left(r_{1}, r_{2}\right)=(-1)^{l_{1}+L+1} \frac{2^{L-1} \Gamma\left(\frac{N+L+3}{2}\right) \Gamma(N-L+2)}{\Gamma\left(\frac{N-L+3}{2}\right) \Gamma\left(N+l_{1}+l_{2}+3\right)} r_{1}^{l_{1}} r_{2}^{l_{2}}  \\
+\times\left(\frac{1}{r_{1}} \frac{\partial}{\partial r_{1}}\right)^{l_{1}}\left(\frac{1}{r_{2}} \frac{\partial}{\partial r_{2}}\right)^{l_{2}} \frac{1}{r_{1} r_{2}}\left\{\left|r_{1}+r_{2}\right|^{N+l_{1}+l_{2}+2}-\left|r_{1}-r_{2}\right|^{N+l_{1}+l_{2}+2}\right\}. \label{eq:5:17:44}
+\end{multline}
 Note that all the expansions given in Secs.~\ref{sec:5.17.6} and \ref{sec:5.17.7} remain valid after substituting $\vect{R}(R, \Theta, \Phi)=\vect{r}_{1}+\vect{r}_{2}$ for $\vect{r}(r, \vartheta, \varphi)=\vect{r}_{1}-\vect{r}_{2}$ and introducing the additional factor $(-1)^{l_{2}}$ into the expansion coefficients.
