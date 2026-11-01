@@ -11,10 +11,10 @@ The spherical harmonics $Y_{l m}(\vartheta, \varphi)$ are components of some irr
 \end{equation}
 where $\widehat{L}_{\mu}(\vartheta, \varphi)$ is a spherical component of the operator $\widehat{\vect{L}}$ (see Eq.~\eqref{eq:2:2:18}).\\
 The three commutation relations \eqref{eq:5:1:1} (for $\mu=1,0,-1$ ) generate the following three equations
-\begin{gather}
-\hat{L}_{ \pm 1} Y_{l m}(\vartheta, \varphi)=\mp \sqrt{\frac{l(l+1)-m(m \pm 1)}{2}} Y_{l m \pm 1}(\vartheta, \varphi) , \label{eq:5:1:2}\\
-\hat{L}_{0} Y_{l m}(\vartheta, \varphi)=m Y_{l m}(\vartheta, \varphi). \notag
-\end{gather}
+\begin{align}
+\hat{L}_{ \pm 1} Y_{l m}(\vartheta, \varphi)=&\mp \sqrt{\frac{l(l+1)-m(m \pm 1)}{2}} Y_{l m \pm 1}(\vartheta, \varphi) , \label{eq:5:1:2}\\
+\hat{L}_{0} Y_{l m}(\vartheta, \varphi)=&m Y_{l m}(\vartheta, \varphi). \notag
+\end{align}
 \subsection{Differential Equations}\label{sec:5.1.2}\index{spherical harmonics!differential equations}\index{differential equations!for the spherical harmonics}
 According to the commutation relations \eqref{eq:5:1:1}, $Y_{l m}(\vartheta, \varphi)$ is the eigenfunction of the operators $\widehat{\vect{L}}^{2}$ and $\widehat{L}_{z}$
 \begin{equation}
@@ -24,10 +24,10 @@ According to the commutation relations \eqref{eq:5:1:1}, $Y_{l m}(\vartheta, \va
 \end{array}\right.\label{eq:5:1:3}
 \end{equation}
 or in an expanded form
-\begin{gather}
-{\left[\frac{1}{\sin \vartheta} \frac{\partial}{\partial \vartheta}\left(\sin \vartheta \frac{\partial}{\partial \vartheta}\right)+\frac{1}{\sin ^{2} \vartheta} \frac{\partial^{2}}{\partial \varphi^{2}}+l(l+1)\right] Y_{l m}(\vartheta, \varphi)=0}, \label{eq:5:1:4}\\
-{\left[i \frac{\partial}{\partial \varphi}+m\right] Y_{l m}(\vartheta, \varphi)=0} .\notag
-\end{gather}
+\begin{align}
+\left[\frac{1}{\sin \vartheta} \frac{\partial}{\partial \vartheta}\left(\sin \vartheta \frac{\partial}{\partial \vartheta}\right)+\frac{1}{\sin ^{2} \vartheta} \frac{\partial^{2}}{\partial \varphi^{2}}+l(l+1)\right] Y_{l m}(\vartheta, \varphi)&=0, \label{eq:5:1:4}\\
+\left[i \frac{\partial}{\partial \varphi}+m\right] Y_{l m}(\vartheta, \varphi)&=0 .\notag
+\end{align}
 Equations \eqref{eq:5:1:4} are invariant under the following transformations
 \begin{enumerate}[label=(\alph*)]
   \item  $l \rightarrow \bar{l}=-l-1$;
@@ -155,12 +155,12 @@ For the spherical harmonics with $|m| \leq l$ one gets the following expressions
 \end{align}
 The spherical harmonics may be expressed in terms of $m$ th order derivatives of the Legendre polynomials\index{Legendre polynomials}\isym{Pl@$P_{l}(x)$, Legendre polynomial}
 \begin{gather}
-Y_{l m}(\vartheta, \varphi)=(-1)^{m} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \frac{(l-m)!}{(l+m)!}}(\sin \vartheta)^{m} \frac{d^{m}}{(d \cos \vartheta)^{m}} P_{l}(\cos \vartheta)  \label{eq:5:2:6}.\\
-(m \geq 0) \notag
+Y_{l m}(\vartheta, \varphi)=(-1)^{m} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \frac{(l-m)!}{(l+m)!}}(\sin \vartheta)^{m} \frac{d^{m}}{(d \cos \vartheta)^{m}} P_{l}(\cos \vartheta)  \label{eq:5:2:6}
+\quad (m \geq 0). 
 \end{gather}
-Assuming that
+Using the definition of the anti-derivative as
 \begin{equation}
-\left(\frac{d}{d \mu}\right)^{-|m|} f(\mu) \equiv \int_{1}^{\mu} \int_{1}^{\mu} \cdots \int_{1}^{\mu} f(\mu) \underbrace{d \mu \ldots \dd \mu}_{|m|} \label{eq:5:2:7}
+\left(\frac{d}{d \mu}\right)^{-|m|} f(\mu) \equiv \int_{1}^{\mu} \int_{1}^{\mu} \cdots \int_{1}^{\mu} f(\mu) \underbrace{d \mu \ldots \dd \mu}_{|m|} ,\label{eq:5:2:7}
 \end{equation}
 one can use Eq.~\eqref{eq:5:2:6} not only at $m \geq 0$ but also at $m<0$.
 
@@ -196,14 +196,16 @@ Y_{l m}(\vartheta, \varphi)=\xi_{m 0}(-1)^{l-m} e^{i m \varphi} \sqrt{\frac{2 l+
 
 \subsection{Representations of $Y_{l m}(\vartheta, \varphi)$ as a Power Series of Trigonometric Functions of $\vartheta$}\label{sec:5.2.3}\index{spherical harmonics!power series in $\vartheta$}
 In the equations of this section an integer index $s$ assumes either only even or only odd values as indicated under the summation symbols. Sums are over such $s$ for which the factorial arguments are non-negative.
+\begin{fleqn}
 \begin{multline}
 Y_{l m}(\vartheta, \varphi)=e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi(l+m)!(l-m)!}}  \\
-\times\left\{\begin{array}{c}
-\sum_{s=|m|,|m|+2, \ldots}^{l}(-1)^{\frac{s+m}{2}} \frac{(l+s)!}{(s+m)!!(s-m)!!} \, \frac{(l+m)!!(l-m)!!}{(l+s)!!(l-s)!!}(\sin \vartheta)^{s} \\
+\times\begin{cases}
+\sum_{s=|m|,|m|+2, \ldots}^{l}(-1)^{\frac{s+m}{2}} \frac{(l+s)!}{(s+m)!!(s-m)!!} \, \frac{(l+m)!!(l-m)!!}{(l+s)!!(l-s)!!}(\sin \vartheta)^{s} &
 \text { if } l-m \text { is even } \\
-\cos \vartheta \sum_{s=|m|,|m|+2, \ldots}^{l-1}(-1)^{\frac{l+m}{2}} \frac{(l+s)!}{(s+m)!!(s-m)!!} \, \frac{(l+m-1)!!(l-m-1)!!}{(l+s-1)!!(l-s-1)!!}(\sin \vartheta)^{s} \\
+\cos \vartheta \sum_{s=|m|,|m|+2, \ldots}^{l-1}(-1)^{\frac{l+m}{2}} \frac{(l+s)!}{(s+m)!!(s-m)!!} \, \frac{(l+m-1)!!(l-m-1)!!}{(l+s-1)!!(l-s-1)!!}(\sin \vartheta)^{s} &
 \text { if } l-m \text { is odd },
-\end{array}\right.  \label{eq:5:2:17}
+\end{cases}
+  \label{eq:5:2:17}
 \end{multline}
 % NOTE: OCR fixes verified to 1e-30 (scripts/check_5_2b.py), matching scan p.148.
 %  5.2.18 even branch: denominator s!(sin th)^s -> s!!(sin th)^s (double factorial).
@@ -212,117 +214,129 @@ Y_{l m}(\vartheta, \varphi)=e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi(l+m)!(l-m)!
 %    other (l-m)!/(l+m)! forms, 5.2.19 is written for m>=0 (m<0 via conjugation).
 \begin{multline}
 Y_{l m}(\vartheta, \varphi)=e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi(l+m)!(l-m)!}}(\sin \vartheta)^{l}  \\
-\times\left\{\begin{array}{c}
-\sum_{s=0,2, \ldots}^{l-|m|}(-1)^{\frac{l+m-s}{2}} \frac{(l+m)!!(l-m)!!}{(l+m-s)!!(l-m-s)!!} \, \frac{(2 l-s-1)!!}{s!!(\sin \vartheta)^s} \\
+\times\begin{cases}
+\sum_{s=0,2, \ldots}^{l-|m|}(-1)^{\frac{l+m-s}{2}} \frac{(l+m)!!(l-m)!!}{(l+m-s)!!(l-m-s)!!} \, \frac{(2 l-s-1)!!}{s!!(\sin \vartheta)^s} &
 \text { if } l-m \text { is even } \\
-\cos \vartheta \sum_{s=1,3, \ldots}^{l-|m|}(-1)^{\frac{l+m-s}{2}} \frac{(l+m-1)!!(l-m-1)!!}{(l+m-s)!!(l-m-s)!!} \, \frac{(2 l-s)!!}{(s-1)!!(\sin \vartheta)^s} \\
+\cos \vartheta \sum_{s=1,3, \ldots}^{l-|m|}(-1)^{\frac{l+m-s}{2}} \frac{(l+m-1)!!(l-m-1)!!}{(l+m-s)!!(l-m-s)!!} \, \frac{(2 l-s)!!}{(s-1)!!(\sin \vartheta)^s} &
 \text { if } l-m \text { is odd },
-\end{array}\right.  \label{eq:5:2:18}
+\end{cases}  \label{eq:5:2:18}
 \end{multline}
-\begin{gather}
+\begin{flalign}
 Y_{l m}(\vartheta, \varphi)=e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \, \frac{(l-m)!}{(l+m)!}}(\sin \vartheta)^{m} \sum_{s}(-1)^{\frac{l+m-s}{2}} \frac{(l+m+s-1)!!}{(l-m-s)!!} \, \frac{(\cos \vartheta)^{s}}{s!} ,\notag\\
-l+m-s \text { is even } ,\label{eq:5:2:19}
-\end{gather}
+\text{if $l+m-s$ is even } ,\label{eq:5:2:19}
+\end{flalign}
 \begin{gather}
-Y_{l m}(\vartheta, \varphi)=e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi}(l+m)!(l-m)!}(\cos \vartheta)^{l} \sum_{s=|m|,|m|+2, \ldots}(-1)^{\frac{s+m}{2}} \frac{1}{(s+m)!!(s-m)!!} \, \frac{(\tan \vartheta)^{s}}{(l-s)!} , \label{eq:5:2:20}\\
-Y_{l m}(\vartheta, \varphi)=e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi}(l+m)!(l-m)!}(\sin \vartheta)^{l} \sum_{s}(-1)^{\frac{l+m-s}{2}} \frac{1}{(l+m-s)!!(l-m-s)!!} \, \frac{(\cot \vartheta)^{s}}{s!} , \notag\\
-l+m-s \text { is even } .\label{eq:5:2:21}
+Y_{l m}(\vartheta, \varphi)=e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi}(l+m)!(l-m)!}(\cos \vartheta)^{l} \sum_{s=|m|,|m|+2, \ldots}(-1)^{\frac{s+m}{2}} \frac{1}{(s+m)!!(s-m)!!} \, \frac{(\tan \vartheta)^{s}}{(l-s)!} , \label{eq:5:2:20}
 \end{gather}
+\begin{multline}
+Y_{l m}(\vartheta, \varphi)=e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi}(l+m)!(l-m)!}(\sin \vartheta)^{l} \sum_{s}(-1)^{\frac{l+m-s}{2}} \frac{1}{(l+m-s)!!(l-m-s)!!} \, \frac{(\cot \vartheta)^{s}}{s!} , \\
+\text{if $l+m-s$ is even } .\label{eq:5:2:21}
+\end{multline}
+\end{fleqn}
 The quantity $\left|Y_{l m}(\vartheta, \varphi)\right|^{2}$ may be written in the form
 \begin{equation}
 \left|Y_{l m}(\vartheta, \varphi)\right|^{2}=\frac{2 l+1}{4 \pi} \sum_{s=|m|,|m|+1, \ldots}^{l}(-1)^{s+m} \frac{(l+s)!}{(l-s)!} \, \frac{(2 s-1)!!}{(2 s)!!} \, \frac{(\sin \vartheta)^{2s}}{(s-m)!(s+m)!} . \label{eq:5:2:22}
 \end{equation}
 \subsection{$Y_{l m}(\vartheta, \varphi)$ and the Hypergeometric Functions with Arguments Expressed in Terms of Trigonometric Functions of $\vartheta / 2$}\label{sec:5.2.4}\index{spherical harmonics!and hypergeometric functions of $\vartheta/2$}\index{hypergeometric function}\isym{F-hg@$F(a, b ; c ; z)$, hypergeometric function}
+\begin{fleqn}
 \begin{gather}
 Y_{l m}(\vartheta, \varphi)=\xi_{m 0} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \, \frac{(l+|m|)!}{(l-|m|)!}} \, \frac{(\sin \vartheta)^{|m|}}{|m|!2^{|m|}} F\left(-l+|m|, l+|m|+1 ;|m|+1 ; \sin ^{2} \frac{\vartheta}{2}\right) , \label{eq:5:2:23}
 \end{gather}
-
-\begin{gather}
+\begin{multline}
 Y_{l m}(\vartheta, \varphi)=  (-1)^{l-m} \xi_{m 0} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi(l+m)!(l-m)!}}\frac{(2 l)!}{l!}  
 \left(\sin \frac{\vartheta}{2}\right)^{2 l}
-\left(\cot \frac{\vartheta}{2}\right)^{|m|} \notag \\
- \times F\left(-l,-l+|m| ;-2 l ; \frac{1}{\sin ^{2} \frac{\vartheta}{2}}\right),
-\end{gather}
-
-\begin{gather}
-Y_{l m}(\vartheta, \varphi)=(-1)^{l-m} \xi_{m 0} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \, \frac{(l+|m|)!}{(l-|m|)!}} \frac{(\sin \vartheta)^{|m|}}{|m|! 2^{|m|}}  \label{eq:5:2:25}\\
-\times F\left(-l+|m|, l+|m|+1 ;|m|+1 ; \cos ^{2} \frac{\vartheta}{2}\right)  \notag
-\end{gather}\begin{gather}
+\left(\cot \frac{\vartheta}{2}\right)^{|m|}\\
+ \times F\left(-l,-l+|m| ;-2 l ; \frac{1}{\sin ^{2} \frac{\vartheta}{2}}\right), \label{eq:5:2:24}
+\end{multline}
+\begin{multline}
+Y_{l m}(\vartheta, \varphi)=(-1)^{l-m} \xi_{m 0} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \, \frac{(l+|m|)!}{(l-|m|)!}} \frac{(\sin \vartheta)^{|m|}}{|m|! 2^{|m|}}  \\
+\times F\left(-l+|m|, l+|m|+1 ;|m|+1 ; \cos ^{2} \frac{\vartheta}{2}\right),  \label{eq:5:2:25}
+\end{multline}
+\begin{multline}
 Y_{l m}(\vartheta, \varphi)=\xi_{m 0} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi(l+m)!(l-m)!}} \frac{(2 l)!}{l!}\left(\cos \frac{\vartheta}{2}\right)^{2 l}\left(\tan \frac{\vartheta}{2}\right)^{|m|}  \label{eq:5:2:26}\\
-\times F\left(-l,-l+|m| ;-2 l ; \frac{1}{\cos ^{2} \frac{\vartheta}{2}}\right),  \notag
-\end{gather}\begin{gather}
+\times F\left(-l,-l+|m| ;-2 l ; \frac{1}{\cos ^{2} \frac{\vartheta}{2}}\right),  
+\end{multline}
+\begin{equation}
 Y_{l m}(\vartheta, \varphi)=\xi_{m 0} e^{i m \varphi} \frac{1}{|m|!}\sqrt{\frac{2 l+1}{4 \pi} \, \frac{(l+|m|)!}{(l-|m|)!}}\left(\tan \frac{\vartheta}{2}\right)^{|m|}\left(\cos \frac{\vartheta}{2}\right)^{2 l} F\left(-l+|m|,-l ;|m|+1 ;-\tan ^{2} \frac{\vartheta}{2}\right)  \label{eq:5:2:27}
-\end{gather}\begin{gather}
+\end{equation}
+\begin{multline}
 Y_{l m}(\vartheta, \varphi)=(-1)^{l-m} \xi_{m 0} e^{i m \varphi} \frac{1}{|m|!}\sqrt{\frac{2 l+1}{4 \pi} \, \frac{(l+|m|)!}{(l-|m|)!}}\left(\cot \frac{\vartheta}{2}\right)^{|m|}\left(\sin \frac{\vartheta}{2}\right)^{2 l}  \label{eq:5:2:28}\\
-\times F\left(-l+|m|,-l ;|m|+1 ;-\cot ^{2} \frac{\vartheta}{2}\right) \notag
-\end{gather}
+\times F\left(-l+|m|,-l ;|m|+1 ;-\cot ^{2} \frac{\vartheta}{2}\right).
+\end{multline}
+\end{fleqn}
 \subsection{$Y_{l m}(\vartheta, \varphi)$ and the Hypergeometric Functions with Arguments Expressed in Terms of Trigonometric Functions of $\vartheta$}\label{sec:5.2.5}\index{spherical harmonics!and hypergeometric functions of $\vartheta$}
+\begin{fleqn}
 \begin{align}
-& Y_{l m}(\vartheta, \varphi)=\xi_{m 0} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \, \frac{(l+|m|)!}{(l-|m|)!}} \frac{(\sin \vartheta)^{|m|}}{2^{|m|}|m|!}  \notag\\
-& \times\left\{\begin{array}{r}
-F\left(-\frac{l-|m|}{2}, \frac{l+|m|+1}{2} ;|m|+1 ; \sin ^{2} \vartheta\right) \\
+Y_{l m}(\vartheta, \varphi)=&\xi_{m 0} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \, \frac{(l+|m|)!}{(l-|m|)!}} \frac{(\sin \vartheta)^{|m|}}{2^{|m|}|m|!}  \notag\\
+& \times\begin{cases}
+F\left(-\frac{l-|m|}{2}, \frac{l+|m|+1}{2} ;|m|+1 ; \sin ^{2} \vartheta\right) &
 \text { if } l+m \text { is even , } \\
-\cos \vartheta F\left(-\frac{l-|m|-1}{2}, \frac{l+|m|+2}{2} ;|m|+1 ; \sin ^{2} \vartheta\right) \\
+\cos \vartheta F\left(-\frac{l-|m|-1}{2}, \frac{l+|m|+2}{2} ;|m|+1 ; \sin ^{2} \vartheta\right) &
 \text { if } l+m \text { is odd , }
-\end{array}\right.  \label{eq:5:2:29}
+\end{cases}  \label{eq:5:2:29}
 \end{align}
 \begin{align}
-& Y_{l m}(\vartheta, \varphi)=e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi(l+m)!(l-m)!}}(2 l-1)!!(\sin \vartheta)^{l}  \notag\\
-& \times\left\{\begin{array}{c}
-(-1)^{\frac{l+m}{2}} F\left(-\frac{l+m}{2},-\frac{l-m}{2} ;-\frac{2 l-1}{2} ; \frac{1}{\sin ^{2} \theta}\right) \\
+ Y_{l m}(\vartheta, \varphi)=&e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi(l+m)!(l-m)!}}(2 l-1)!!(\sin \vartheta)^{l}  \notag\\
+& \times\begin{cases}
+(-1)^{\frac{l+m}{2}} F\left(-\frac{l+m}{2},-\frac{l-m}{2} ;-\frac{2 l-1}{2} ; \frac{1}{\sin ^{2} \theta}\right) &
 \text { if } l+m \text { is even } \\
-(-1)^{\frac{l+m-1}{2}} \cot \vartheta F\left(-\frac{l+m-1}{2},-\frac{l-m-1}{2} ;-\frac{2 l-1}{2} ; \frac{1}{\sin ^{2} \vartheta}\right) \\
+(-1)^{\frac{l+m-1}{2}} \cot \vartheta F\left(-\frac{l+m-1}{2},-\frac{l-m-1}{2} ;-\frac{2 l-1}{2} ; \frac{1}{\sin ^{2} \vartheta}\right) &
 \text { if } l+m \text { is odd },
-\end{array}\right.  \label{eq:5:2:30}
+\end{cases}  \label{eq:5:2:30}
 \end{align}
 \begin{align}
-& Y_{l m}(\vartheta, \varphi)=e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi(l+m)!(l-m)!}}(\sin \vartheta)^{m}  \notag\\
-& \times\left\{\begin{array}{c}
-(-1)^{\frac{l+m}{2}}(l+m-1)!!(l-m-1)!!F\left(-\frac{l-m}{2}, \frac{l+m+1}{2} ; \frac{1}{2} ; \cos ^{2} \vartheta\right) \\
+ Y_{l m}(\vartheta, \varphi)=&e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi(l+m)!(l-m)!}}(\sin \vartheta)^{m}  \notag\\
+& \times\begin{cases}
+(-1)^{\frac{l+m}{2}}(l+m-1)!!(l-m-1)!!F\left(-\frac{l-m}{2}, \frac{l+m+1}{2} ; \frac{1}{2} ; \cos ^{2} \vartheta\right) &
 \text { if } l+m \text { is even } \\
-(-1)^{\frac{l+m-1}{2}}(l+m)!!(l-m)!!\cos \vartheta F\left(-\frac{l-m-1}{2}, \frac{l+m+2}{2} ; \frac{3}{2} ; \cos ^{2} \vartheta\right) \\
+(-1)^{\frac{l+m-1}{2}}(l+m)!!(l-m)!!\cos \vartheta F\left(-\frac{l-m-1}{2}, \frac{l+m+2}{2} ; \frac{3}{2} ; \cos ^{2} \vartheta\right) &
 \text { if } l+m \text { is odd },
-\end{array}\right.  \label{eq:5:2:31}
+\end{cases}  \label{eq:5:2:31}
 \end{align}
 \begin{align}
-& Y_{l m}(\vartheta, \varphi)=(-1)^{m} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi(l+m)!(l-m)!}}(2 l-1)!!(\cos \vartheta)^{l}(\tan \vartheta)^{m}  \notag\\
-& \times F\left(-\frac{l-m}{2},-\frac{l-m-1}{2} ;-\frac{2 l-1}{2} ; \frac{1}{\cos ^{2} \vartheta}\right),  \label{eq:5:2:32}
+Y_{l m}(\vartheta, \varphi)=&(-1)^{m} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi(l+m)!(l-m)!}}(2 l-1)!!(\cos \vartheta)^{l}(\tan \vartheta)^{m} 
+%\notag\\& \times 
+F\left(-\frac{l-m}{2},-\frac{l-m-1}{2} ;-\frac{2 l-1}{2} ; \frac{1}{\cos ^{2} \vartheta}\right),  \label{eq:5:2:32}
 \end{align}
 \begin{align}
-& Y_{l m}(\vartheta, \varphi)=\xi_{m 0} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \frac{(l+|m|)!}{(l-|m|)!}}(\cos \vartheta)^{l} \frac{(\tan \vartheta)^{|m|}}{2^{|m|}|m|!}  \notag\\
-& \times F\left(-\frac{l-|m|}{2},-\frac{l-|m|-1}{2} ;|m|+1 ;-\tan ^{2} \vartheta\right),  \label{eq:5:2:33}
+Y_{l m}(\vartheta, \varphi)&=\xi_{m 0} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \frac{(l+|m|)!}{(l-|m|)!}}(\cos \vartheta)^{l} \frac{(\tan \vartheta)^{|m|}}{2^{|m|}|m|!}  
+%\notag\\& \times 
+F\left(-\frac{l-|m|}{2},-\frac{l-|m|-1}{2} ;|m|+1 ;-\tan ^{2} \vartheta\right),  \label{eq:5:2:33}
 \end{align}
 \begin{align}
-& Y_{l m}(\vartheta, \varphi)=e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi(l+m)!(l-m)!}}(\sin \vartheta)^{l}  \notag\\
-& \times\left\{\begin{array}{c}
-(-1)^{\frac{l+m}{2}}(l+m-1)!!(l-m-1)!!F\left(-\frac{l-m}{2},-\frac{l+m}{2} ; \frac{1}{2} ;-\cot ^{2} \vartheta\right) \\
+ Y_{l m}(\vartheta, \varphi)=&e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi(l+m)!(l-m)!}}(\sin \vartheta)^{l}  \notag\\
+& \times\begin{cases}
+(-1)^{\frac{l+m}{2}}(l+m-1)!!(l-m-1)!!F\left(-\frac{l-m}{2},-\frac{l+m}{2} ; \frac{1}{2} ;-\cot ^{2} \vartheta\right) &
 \text { if } l+m \text { is even } \\
-(-1)^{\frac{l+m-1}{2}}(l+m)!!(l-m)!!\cot \vartheta F\left(-\frac{l-m-1}{2},-\frac{l+m-1}{2} ; \frac{3}{2} ;-\cot ^{2} \vartheta\right) \\
-\text { if } l+m \text { is odd },
-\end{array}\right. \label{eq:5:2:34}
+(-1)^{\frac{l+m-1}{2}}(l+m)!!(l-m)!!\cot \vartheta F\left(-\frac{l-m-1}{2},-\frac{l+m-1}{2} ; \frac{3}{2} ;-\cot ^{2} \vartheta\right) &
+\text { if } l+m \text { is odd }.
+\end{cases} \label{eq:5:2:34}
 \end{align}
-
+\end{fleqn}
 \subsection{$Y_{l m}(\vartheta, \varphi)$ and the Hypergeometric Functions with Arguments Expressed in Terms of Exponential Functions}\label{sec:5.2.6}\index{spherical harmonics!and hypergeometric functions of exponentials}
-\begin{gather}
+\begin{multline}
 % NOTE: BOOK MISPRINT -- leading sign.  As printed both 5.2.35 and 5.2.36 carry
 % -i/pi, which yields exactly -Y_lm; the correct prefactor is +i/pi (verified to
 % 6e-41, scripts/check_5_2b.py).  5.2.36 clinches it: for pi/2-ish theta its 2F1
 % argument has |z|=1/(2 sin th)<1 (a convergent series, no branch ambiguity) yet
 % still gives -Y with the printed -i.  Corrected to +i/pi below.
-Y_{l m}(\vartheta, \varphi)=\frac{i e^{i m \varphi}}{\pi} \sqrt{\frac{2 l+1}{4 \pi}(l+m)!(l-m)!} \frac{2^{l+m+1}(\sin \vartheta)^{m}}{(2 l+1)!!}  \notag\\
+Y_{l m}(\vartheta, \varphi)=\frac{i e^{i m \varphi}}{\pi} \sqrt{\frac{2 l+1}{4 \pi}(l+m)!(l-m)!} \frac{2^{l+m+1}(\sin \vartheta)^{m}}{(2 l+1)!!}  \\
 \times\left\{e^{-i(l+m+1) \vartheta} F\left(m+\frac{1}{2}, l+m+1 ; l+\frac{3}{2} ; e^{-2 i \vartheta}\right)-e^{i(l+m+1) \vartheta} F\left(m+\frac{1}{2}, l+m+1 ; l+\frac{3}{2} ; e^{2 i \vartheta}\right)\right\},  \label{eq:5:2:35}
-\end{gather}\begin{gather}
-Y_{l m}(\vartheta, \varphi)=\frac{i}{\pi} e^{i m \varphi} \sqrt{\frac{2 l+1}{8 \pi}(l+m)!(l-m)!} \frac{2^{l+1}}{(2 l+1)!!\sqrt{\sin \vartheta}}  \notag\\
-\times\left\{e^{-i\left[(2 l+1) \frac{\vartheta}{2}+(2 m+1) \frac{\pi}{4}\right]} F\left(m+\frac{1}{2}, \frac{1}{2}-m ; l+\frac{3}{2} ;-\frac{e^{-i\left(\vartheta+\frac{\pi}{2}\right)}}{2 \sin \vartheta}\right)\right.  \notag\\
+\end{multline}
+\begin{multline}
+Y_{l m}(\vartheta, \varphi)=\frac{i}{\pi} e^{i m \varphi} \sqrt{\frac{2 l+1}{8 \pi}(l+m)!(l-m)!} \frac{2^{l+1}}{(2 l+1)!!\sqrt{\sin \vartheta}}  %\notag
+\\
+\times\left\{e^{-i\left[(2 l+1) \frac{\vartheta}{2}+(2 m+1) \frac{\pi}{4}\right]} F\left(m+\frac{1}{2}, \frac{1}{2}-m ; l+\frac{3}{2} ;-\frac{e^{-i\left(\vartheta+\frac{\pi}{2}\right)}}{2 \sin \vartheta}\right)\right.  %\notag
+\\
 \left.-e^{i\left[(2 l+1) \frac{\vartheta}{2}+(2 m+1) \frac{\pi}{4}\right]} F\left(m+\frac{1}{2}, \frac{1}{2}-m ; l+\frac{3}{2} ;-\frac{e^{i\left(\vartheta+\frac{\pi}{2}\right)}}{2 \sin \vartheta}\right)\right\} . \label{eq:5:2:36}
-\end{gather}
+\end{multline}
 \subsection{$Y_{l m}(\vartheta, \varphi)$ and Other Special Functions}\label{sec:5.2.7}\index{spherical harmonics!and other special functions}
 \begin{enumerate}[label=(\alph*)]
 \item The relation between $Y_{l m}(\vartheta, \varphi)$ and the Wigner D-function (Chap.~\ref{chap:4})\index{Wigner D-function@Wigner $D$-function}\isym{DJMM@$D_{M M^{\prime}}^{J}$, Wigner $D$-function}
-\begin{gather}
-Y_{l m}(\vartheta, \varphi)=\sqrt{\frac{2 l+1}{4 \pi}} D_{0-m}^{l}(\chi, \vartheta, \varphi)=(-1)^{m} \sqrt{\frac{2 l+1}{4 \pi}} D_{0 m}^{l *}(\chi, \vartheta, \varphi)  \notag\\
-=(-1)^{m} \sqrt{\frac{2 l+1}{4 \pi}} D_{-m 0}^{l}(\varphi, \vartheta, \chi)=\sqrt{\frac{2 l+1}{4 \pi}} D_{m 0}^{l *}(\varphi, \vartheta, \chi) ,\label{eq:5:2:37}
-\end{gather}
+\begin{align}
+Y_{l m}(\vartheta, \varphi)=&\sqrt{\frac{2 l+1}{4 \pi}} D_{0-m}^{l}(\chi, \vartheta, \varphi)=(-1)^{m} \sqrt{\frac{2 l+1}{4 \pi}} D_{0 m}^{l *}(\chi, \vartheta, \varphi)  \notag\\
+=&(-1)^{m} \sqrt{\frac{2 l+1}{4 \pi}} D_{-m 0}^{l}(\varphi, \vartheta, \chi)=\sqrt{\frac{2 l+1}{4 \pi}} D_{m 0}^{l *}(\varphi, \vartheta, \chi) ,\label{eq:5:2:37}
+\end{align}
 where $\chi$ is an arbitrary angle.\\
 \item $Y_{l m}(\vartheta, \varphi)$ can be related to the Jacobi polynomials $P_{n}^{(\alpha, \beta)}(x)$\index{Jacobi polynomials}\isym{PsMuNu@$P_{s}^{(\mu, \nu)}(x)$, Jacobi polynomial}
 \begin{equation}
@@ -353,10 +367,11 @@ Y_{l m}(\vartheta, \varphi)=(-1)^{m} \frac{\sqrt{2}}{\pi} e^{i m \varphi} \sqrt{
 Y_{l m}(\vartheta, \varphi)=\frac{\sqrt{2}}{\pi} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \, \frac{(l-m)!}{(l+m)!}}(2 m-1)!!\left(\frac{\sin \vartheta}{2}\right)^{m} \int_{\vartheta}^{\pi} \frac{\sin \left[(2 l+1) \frac{\psi}{2}\right] \dd \psi}{(\cos \vartheta-\cos \psi)^{m+\frac{1}{2}}},(m \geq 0). \label{eq:5:3:3}
 \end{gather}
 \item
-\begin{align}
-Y_{l m}(\vartheta, \varphi)= & (-1)^{m} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \, \frac{(l+m)!}{(l-m)!}} \frac{1}{(m-1)!(\sin \vartheta)^{m}}  \notag\\
-& \times \int_{\cos \vartheta}^{1} P_{l}(\cos \psi)[\cos \psi-\cos \vartheta]^{m-1} \dd \cos \psi,(m>0) .\label{eq:5:3:4}
-\end{align}
+\begin{multline}
+Y_{l m}(\vartheta, \varphi)=  (-1)^{m} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \, \frac{(l+m)!}{(l-m)!}} \frac{1}{(m-1)!(\sin \vartheta)^{m}}  %\notag
+\\
+ \times \int_{\cos \vartheta}^{1} P_{l}(\cos \psi)[\cos \psi-\cos \vartheta]^{m-1} \dd \cos \psi,(m>0) .\label{eq:5:3:4}
+\end{multline}
 \end{enumerate}
 \subsection{$Y_{l m}(\vartheta, \varphi)$ in the Form of Definite Integrals}\label{sec:5.3.2}\index{integral representations!as definite integrals}
 % NOTE: the reciprocal-power representations \eqref{eq:5:3:6}, \eqref{eq:5:3:8}
@@ -367,20 +382,20 @@ Y_{l m}(\vartheta, \varphi)= & (-1)^{m} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi
 \begin{enumerate}[label=(\alph*)]
   \item
 \begin{align}
-& Y_{l m}(\vartheta, \varphi)=\frac{( \pm i)^{m}}{\pi} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi}(l+m)!(l-m)!} \frac{1}{l!} \int_{0}^{\pi}[\cos \vartheta \pm i \sin \vartheta \cos \psi]^{l} \cos (m \psi) \dd \psi  \label{eq:5:3:5}\\
-& Y_{l m}(\vartheta, \varphi)=\frac{( \pm i)^{m}}{\pi} e^{i m \varphi} \sqrt{\frac{(2 l+1)}{4 \pi(l+m)!(l-m)!}} l!\int_{0}^{\pi} \frac{\cos (m \psi) \dd \psi}{(\cos \vartheta \mp i \sin \vartheta \cos \psi)^{l+1}} \label{eq:5:3:6}
+& Y_{l m}(\vartheta, \varphi)=\frac{( \pm i)^{m}}{\pi} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi}(l+m)!(l-m)!} \frac{1}{l!} \int_{0}^{\pi}[\cos \vartheta \pm i \sin \vartheta \cos \psi]^{l} \cos (m \psi) \dd \psi , \label{eq:5:3:5}\\
+& Y_{l m}(\vartheta, \varphi)=\frac{( \pm i)^{m}}{\pi} e^{i m \varphi} \sqrt{\frac{(2 l+1)}{4 \pi(l+m)!(l-m)!}} l!\int_{0}^{\pi} \frac{\cos (m \psi) \dd \psi}{(\cos \vartheta \mp i \sin \vartheta \cos \psi)^{l+1}} .\label{eq:5:3:6}
 \end{align}
 For $\varphi=0$, complex conjugation does not affect the right-hand side of Eq.~\eqref{eq:5:3:6}, because $Y_{l m}(\vartheta, 0)$ is real.\\
 \item
 \begin{align}
-& Y_{l m}(\vartheta, \varphi)=\frac{( \pm i)^{m}}{2 \pi} \sqrt{\frac{(2 l+1)}{4 \pi}(l+m)!(l-m)!} \frac{1}{l!} \int_{0}^{2 \pi}[\cos \vartheta \pm i \sin \vartheta \cos (\psi-\varphi)]^{l} e^{i m \psi} \dd \psi  \label{eq:5:3:7}\\
-& Y_{l m}(\vartheta, \varphi)=\frac{( \pm i)^{m}}{2 \pi} \sqrt{\frac{2 l+1}{4 \pi(l+m)!(l-m)!}} l!\int_{0}^{2 \pi}[\cos \vartheta \mp i \sin \vartheta \cos (\psi-\varphi)]^{-l-1} e^{i m \psi} \dd \psi \label{eq:5:3:8}
+& Y_{l m}(\vartheta, \varphi)=\frac{( \pm i)^{m}}{2 \pi} \sqrt{\frac{(2 l+1)}{4 \pi}(l+m)!(l-m)!} \frac{1}{l!} \int_{0}^{2 \pi}[\cos \vartheta \pm i \sin \vartheta \cos (\psi-\varphi)]^{l} e^{i m \psi} \dd \psi , \label{eq:5:3:7}\\
+& Y_{l m}(\vartheta, \varphi)=\frac{( \pm i)^{m}}{2 \pi} \sqrt{\frac{2 l+1}{4 \pi(l+m)!(l-m)!}} l!\int_{0}^{2 \pi}[\cos \vartheta \mp i \sin \vartheta \cos (\psi-\varphi)]^{-l-1} e^{i m \psi} \dd \psi. \label{eq:5:3:8}
 \end{align}
 Equations \eqref{eq:5:3:7} and \eqref{eq:5:3:8} represent modifications of Eqs.~\eqref{eq:5:3:5} and \eqref{eq:5:3:6}.\\
 \item
 \begin{align}
-& Y_{l m}(\vartheta, \varphi)=\frac{(-1)^{m}}{\pi} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \, \frac{(l+m)!}{(l-m)!}} \frac{(\sin \vartheta)^{m}}{(2 m-1)!!} \int_{0}^{\pi}(\cos \vartheta \pm i \sin \vartheta \cos \psi)^{l-m}(\sin \psi)^{2 m} \dd \psi,(m \geq 0)  \label{eq:5:3:9}\\
-& Y_{l m}(\vartheta, \varphi)=\frac{(-1)^{m}}{\pi} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \, \frac{(l+m)!}{(l-m)!}} \frac{(\sin \vartheta)^{m}}{(2 m-1)!!} \int_{0}^{\pi} \frac{(\sin \chi)^{2 m} \dd \chi}{(\cos \vartheta \mp i \sin \vartheta \cos \chi)^{l+m+1}},(m \geq 0) \label{eq:5:3:10}
+& Y_{l m}(\vartheta, \varphi)=\frac{(-1)^{m}}{\pi} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \, \frac{(l+m)!}{(l-m)!}} \frac{(\sin \vartheta)^{m}}{(2 m-1)!!} \int_{0}^{\pi}(\cos \vartheta \pm i \sin \vartheta \cos \psi)^{l-m}(\sin \psi)^{2 m} \dd \psi,\,(m \geq 0),  \label{eq:5:3:9}\\
+& Y_{l m}(\vartheta, \varphi)=\frac{(-1)^{m}}{\pi} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \, \frac{(l+m)!}{(l-m)!}} \frac{(\sin \vartheta)^{m}}{(2 m-1)!!} \int_{0}^{\pi} \frac{(\sin \chi)^{2 m} \dd \chi}{(\cos \vartheta \mp i \sin \vartheta \cos \chi)^{l+m+1}},\,(m \geq 0). \label{eq:5:3:10}
 \end{align}
 Equations \eqref{eq:5:3:9} and \eqref{eq:5:3:10} transform to each other at replacing the integration variables according to
 \begin{equation}
@@ -393,11 +408,11 @@ This replacing is equivalent to the transformation of "mirror" symmetry, i.e., t
 \begin{enumerate}[label=(\alph*)]
 \item
 \begin{align}
-& Y_{l m}(\vartheta, \varphi)=\frac{i^{m+1}}{\pi} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi(l+m)!(l-m)!}} l!  \notag\\
+ Y_{l m}(\vartheta, \varphi)=&\frac{i^{m+1}}{\pi} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi(l+m)!(l-m)!}} l!  \notag\\
 & \quad \times\left\{(-1)^{m} \int_{0}^{\infty} \frac{\cosh (m t) \dd t}{(\cos \vartheta+i \sin \vartheta \cosh t)^{l+1}}-\int_{0}^{\infty} \frac{\cosh (m t) \dd t}{(\cos \vartheta-i \sin \vartheta \cosh t)^{l+1}}\right\}  ,\label{eq:5:3:12}
 \end{align}
 \begin{align}
-& \quad Y_{l m}(\vartheta, \varphi)=\frac{i}{\pi} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \, \frac{(l+m)!}{(l-m)!}} \frac{(\sin \vartheta)^{m}}{(2 m-1)!!}  \notag\\
+ \quad Y_{l m}(\vartheta, \varphi)&=\frac{i}{\pi} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi} \, \frac{(l+m)!}{(l-m)!}} \frac{(\sin \vartheta)^{m}}{(2 m-1)!!}  \notag\\
 & \times\left\{\int_{0}^{\infty} \frac{(\sinh t)^{2 m} \dd t}{(\cos \vartheta+i \sin \vartheta \cosh t)^{l+m+1}}-\int_{0}^{\infty} \frac{(\sinh t)^{2 m} \dd t}{(\cos \vartheta-i \sin \vartheta \cosh t)^{l+m+1}}\right\},(m \geq 0) .\label{eq:5:3:13}
 \end{align}
 \item
@@ -444,14 +459,13 @@ Y_{l m}(\vartheta, \varphi), & \text { if } n \text { is even }\end{cases}  \lab
 Y_{l m}(\vartheta, \varphi) & \text { if } n \text { is even }\end{cases} \label{eq:5:4:11}
 \end{align}
 Making use of the above symmetry properties, one gets
-\begin{equation}
-\begin{array}{rlll} 
-& Y_{l m}(\vartheta, \varphi) & =(-1)^{m} e^{2 i m \varphi} Y_{l-m}(\vartheta, \varphi) & =e^{2 i m \varphi} Y_{l m}^{*}(\vartheta, \varphi) \\
-=(-1)^{m} Y_{l m}(-\vartheta, \varphi) & =e^{2 i m \varphi} Y_{l-m}(-\vartheta, \varphi) & =(-1)^{m} Y_{l-m}^{*}(\vartheta, \varphi)  \label{eq:5:4:12}\\
-=(-1)^{m} Y_{l-m}(\vartheta,-\varphi) & =e^{2 i m \varphi} Y_{l m}(\vartheta,-\varphi) & =(-1)^{m} e^{2 i m \varphi} Y_{l m}^{*}(-\vartheta, \varphi) & =Y_{l-m}^{*}(-\vartheta, \varphi) \\
-=Y_{l-m}(-\vartheta,-\varphi) & =(-1)^{m} e^{2 i m \varphi} Y_{l m}(-\vartheta,-\varphi) & =e^{2 i m \varphi} Y_{l-m}^{*}(-\vartheta,-\varphi) & =(-1)^{m} Y_{l m}^{*}(-\vartheta,-\varphi) .
-\end{array}
-\end{equation}
+\begin{align}
+& Y_{l m}(\vartheta, \varphi) & =(-1)^{m} e^{2 i m \varphi} Y_{l-m}(\vartheta, \varphi) & =e^{2 i m \varphi} Y_{l m}^{*}(\vartheta, \varphi) &-(-1)^n Y_{l-m}^*(\vartheta, \varphi)\notag\\
+=&(-1)^{m} Y_{l m}(-\vartheta, \varphi) & =e^{2 i m \varphi} Y_{l-m}(-\vartheta, \varphi) & =(-1)^{m} Y_{l-m}^{*}(\vartheta, \varphi)  \notag\\
+=&(-1)^{m} Y_{l-m}(\vartheta,-\varphi) & =e^{2 i m \varphi} Y_{l m}(\vartheta,-\varphi) & =(-1)^{m} e^{2 i m \varphi} Y_{l m}^{*}(-\vartheta, \varphi) & =Y_{l-m}^{*}(-\vartheta, \varphi) \notag\\
+=&Y_{l-m}(-\vartheta,-\varphi) & =(-1)^{m} e^{2 i m \varphi} Y_{l m}(-\vartheta,-\varphi) & =e^{2 i m \varphi} Y_{l-m}^{*}(-\vartheta,-\varphi) & =(-1)^{m} Y_{l m}^{*}(-\vartheta,-\varphi) .
+\label{eq:5:4:12}
+\end{align}
 \section{Behaviour of $Y_{l m}(\vartheta, \varphi)$ under transformations of coordinate systems}\label{sec:5.5}\index{spherical harmonics!under coordinate transformations}\index{coordinate system!transformations of}
 Any transformation of coordinate system in 3-dimensional space, which does not affect the orthogonality of coordinate axes, may be represented as a result of three operations:
  (1) rotation, (2) inversion and (3) parallel translation.
@@ -1324,8 +1338,8 @@ e_{1}+e_{2}+N \leq-3}}^{l_{2}}(-1)^{e_{2}} \frac{\left(l_{1}+s_{1}\right)!\left(
 \end{align}
 These additional terms give finite contributions into the integrals involving the expansion \eqref{eq:5:17:38}.\\
 Finally, if $N$ is not integer, the expansion coefficient is given by
-\begin{gather}
-a_{l_{1} l_{2}}^{N L}\left(r_{1}, r_{2}\right)=(-1)^{l_{1}+L+1} \frac{2^{L-1} \Gamma\left(\frac{N+L+3}{2}\right) \Gamma(N-L+2)}{\Gamma\left(\frac{N-L+3}{2}\right) \Gamma\left(N+l_{1}+l_{2}+3\right)} r_{1}^{l_{1}} r_{2}^{l_{2}}  \notag\\
-\times\left(\frac{1}{r_{1}} \frac{\partial}{\partial r_{1}}\right)^{l_{1}}\left(\frac{1}{r_{2}} \frac{\partial}{\partial r_{2}}\right)^{l_{2}} \frac{1}{r_{1} r_{2}}\left\{\left|r_{1}+r_{2}\right|^{N+l_{1}+l_{2}+2}-\left|r_{1}-r_{2}\right|^{N+l_{1}+l_{2}+2}\right\} \label{eq:5:17:44}
-\end{gather}
+\begin{align}
+a_{l_{1} l_{2}}^{N L}\left(r_{1}, r_{2}\right)=&(-1)^{l_{1}+L+1} \frac{2^{L-1} \Gamma\left(\frac{N+L+3}{2}\right) \Gamma(N-L+2)}{\Gamma\left(\frac{N-L+3}{2}\right) \Gamma\left(N+l_{1}+l_{2}+3\right)} r_{1}^{l_{1}} r_{2}^{l_{2}}  \notag\\
+&\times\left(\frac{1}{r_{1}} \frac{\partial}{\partial r_{1}}\right)^{l_{1}}\left(\frac{1}{r_{2}} \frac{\partial}{\partial r_{2}}\right)^{l_{2}} \frac{1}{r_{1} r_{2}}\left\{\left|r_{1}+r_{2}\right|^{N+l_{1}+l_{2}+2}-\left|r_{1}-r_{2}\right|^{N+l_{1}+l_{2}+2}\right\} \label{eq:5:17:44}
+\end{align}
 Note that all the expansions given in Secs.~\ref{sec:5.17.6} and \ref{sec:5.17.7} remain valid after substituting $\vect{R}(R, \Theta, \Phi)=\vect{r}_{1}+\vect{r}_{2}$ for $\vect{r}(r, \vartheta, \varphi)=\vect{r}_{1}-\vect{r}_{2}$ and introducing the additional factor $(-1)^{l_{2}}$ into the expansion coefficients.
