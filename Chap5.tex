@@ -91,12 +91,14 @@ Equations \eqref{eq:5:1:4} and the relations \eqref{eq:5:1:5}, \eqref{eq:5:1:10}
 
 \subsection{Zonal, Sectorial and Tesseral Harmonics}\label{sec:5.1.6}\index{spherical harmonics!zonal, sectorial and tesseral}\index{zonal harmonics}\index{sectorial harmonics}\index{tesseral harmonics}
 These functions are linear combinations of the spherical harmonics for $|m| \leq l$
+\begin{corrected}
 \begin{align}
 % NOTE: book misprint (printed p.132) -- u_lm RHS printed with sqrt((2l+1)/2pi);
 % since u_lm=1/2(Y+Y*)=Re(Y) the coefficient must be 4pi (as for v_lm). Corrected.
 & u_{l m}(\vartheta, \varphi)=\frac{1}{2}\left[Y_{l m}(\vartheta, \varphi)+Y_{l m}^{*}(\vartheta, \varphi)\right]=\sqrt{\frac{2 l+1}{4 \pi} \, \frac{(l-m)!}{(l+m)!}} \cos m \varphi P_{l}^{m}(\cos \vartheta),  \notag\\
 & v_{l m}(\vartheta, \varphi)=\frac{1}{2 i}\left[Y_{l m}(\vartheta, \varphi)-Y_{l m}^{*}(\vartheta, \varphi)\right]=\sqrt{\frac{2 l+1}{4 \pi} \frac{(l-m)!}{(l+m)!}} \sin m \varphi P_{l}^{m}(\cos \vartheta) .\label{eq:5:1:14}
 \end{align}
+\end{corrected}
 The functions $u_{l m}(\vartheta, \varphi)$ and $v_{l m}(\vartheta, \varphi)$ are real, in contrast to $Y_{l m}(\vartheta, \varphi)$.\isym{ulm-vlm@$u_{l m}, v_{l m}$, real spherical harmonics} The functions $u_{l 0}(\vartheta, \varphi)$ are called the zonal harmonics because parallels where $u_{10}(\vartheta, \varphi)=0$ divide a sphere of unit radius into $l+1$ zones. The functions $u_{l l}(\vartheta, \varphi)$ and $v_{l l}(\vartheta, \varphi)$ are called the sectorial harmonics because meridians where $u_{l l}(\vartheta, \varphi)=0$ or $v_{l l}(\vartheta, \varphi)=0$ divide the unit sphere into $2 l$ sectors. The functions $u_{l m}(\vartheta, \varphi)$ and $v_{l m}(\vartheta, \varphi)$ for $m \neq 0$ and $m \neq l$ are called the tesseral harmonics because a set of parallels and meridians where $u_{l m}(\vartheta, \varphi)=0$ or $v_{l m}(\vartheta, \varphi)=0$ divides the whole spherical surface into $2 m(l-m+1)$ cells. The cells, which correspond to positive and negative signs of any function, are arranged in as on a chequer board.
 
 \subsection{Solutions of Some Differential Equations in Terms of $Y_{l m}(\vartheta, \varphi)$}\label{sec:5.1.7}\index{spherical harmonics!as solutions of differential equations}
@@ -185,10 +187,11 @@ In the following equations sums are over all integer values of $s$ so that no fa
 %  (ii) BOOK MISPRINT: the printed prefactor carries a spurious |m|! (harmless
 %      for |m|<=1, wrong for |m|>=2).  The correct prefactor is
 %      l! sqrt((l+m)!(l-m)!), matching the Wigner d^l_{m,0}(theta) representation.
-\begin{multline}
+\begin{corrected}\begin{multline}
 Y_{l m}(\vartheta, \varphi)=\xi_{m 0} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi}} \, l! \sqrt{(l+m)!(l-m)!}\left(\cos \frac{\vartheta}{2}\right)^{2 l}  \\
 \times \sum_{s} \frac{(-1)^{s}\left(\tan \frac{\vartheta}{2}\right)^{2 s+|m|}}{s!(s+|m|)!(l-s)!(l-|m|-s)!},  \label{eq:5:2:15}
 \end{multline}
+\end{corrected}
 \begin{multline}
 Y_{l m}(\vartheta, \varphi)=\xi_{m 0}(-1)^{l-m} e^{i m \varphi} \sqrt{\frac{2 l+1}{4 \pi}} \, l! \sqrt{(l+m)!(l-m)!}\left(\sin \frac{\vartheta}{2}\right)^{2 l} \\
 \times \sum_{s} \frac{(-1)^{s}\left(\cot \frac{\vartheta}{2}\right)^{2 s+|m|}}{s!(s+|m|)!(l-s)!(l-|m|-s)!} .\label{eq:5:2:16}
@@ -314,6 +317,7 @@ F\left(-\frac{l-|m|}{2},-\frac{l-|m|-1}{2} ;|m|+1 ;-\tan ^{2} \vartheta\right), 
 \end{align}
 \end{fleqn}
 \subsection{$Y_{l m}(\vartheta, \varphi)$ and the Hypergeometric Functions with Arguments Expressed in Terms of Exponential Functions}\label{sec:5.2.6}\index{spherical harmonics!and hypergeometric functions of exponentials}
+\begin{corrected}
 \begin{multline}
 % NOTE: BOOK MISPRINT -- leading sign.  As printed both 5.2.35 and 5.2.36 carry
 % -i/pi, which yields exactly -Y_lm; the correct prefactor is +i/pi (verified to
@@ -323,6 +327,7 @@ F\left(-\frac{l-|m|}{2},-\frac{l-|m|-1}{2} ;|m|+1 ;-\tan ^{2} \vartheta\right), 
 Y_{l m}(\vartheta, \varphi)=\frac{i e^{i m \varphi}}{\pi} \sqrt{\frac{2 l+1}{4 \pi}(l+m)!(l-m)!} \frac{2^{l+m+1}(\sin \vartheta)^{m}}{(2 l+1)!!}  \\
 \times\left\{e^{-i(l+m+1) \vartheta} F\left(m+\frac{1}{2}, l+m+1 ; l+\frac{3}{2} ; e^{-2 i \vartheta}\right)-e^{i(l+m+1) \vartheta} F\left(m+\frac{1}{2}, l+m+1 ; l+\frac{3}{2} ; e^{2 i \vartheta}\right)\right\},  \label{eq:5:2:35}
 \end{multline}
+\end{corrected}
 \begin{multline}
 Y_{l m}(\vartheta, \varphi)=\frac{i}{\pi} e^{i m \varphi} \sqrt{\frac{2 l+1}{8 \pi}(l+m)!(l-m)!} \frac{2^{l+1}}{(2 l+1)!!\sqrt{\sin \vartheta}}  %\notag
 \\
@@ -484,6 +489,7 @@ Under inversion $S\{x, y, z\} \rightarrow S^{\prime}\{-x,-y,-z\}$ the spherical 
 \end{equation}
 \subsection{Parallel Translation}\label{sec:5.5.3}\index{parallel translation}\index{translation!parallel}
 At parallel displacement $S\{x, y, z\} \rightarrow S^{\prime}\left\{x^{\prime}, y^{\prime}, z^{\prime}\right\}$ by a vector $\vect{a}(a, \Theta, \Phi)$ one has $\vect{r}^{\prime}=\vect{r}-\vect{a}$. In this case the spherical harmonics transform as
+\begin{corrected}
 \begin{align}
 % NOTE: book misprint in the coefficient.  As printed it reads
 % [4 pi (2l+1)(2l'-2l+1)/(2l'+1)]^{1/2}, which is wrong for l'>=2 (it coincides
@@ -493,6 +499,7 @@ At parallel displacement $S\{x, y, z\} \rightarrow S^{\prime}\left\{x^{\prime}, 
 \hat{T}(\vect{a}) Y_{l^{\prime} m^{\prime}}(\vartheta, \varphi)=Y_{l^{\prime} m^{\prime}}\left(\vartheta^{\prime}, \varphi^{\prime}\right)=\sum_{l=0}^{l^{\prime}} & (-1)^{l^{\prime}+l}\left[\frac{4 \pi\left(2 l^{\prime}+1\right)!}{(2 l+1)!\left(2 l^{\prime}-2 l+1\right)!}\right]^{\frac{1}{2}}  \notag\\
 & \times\left(\frac{a}{r^{\prime}}\right)^{l^{\prime}}\left(\frac{r}{a}\right)^{l}\left\{\vect{Y}_{l}(\vartheta, \varphi) \otimes \vect{Y}_{l^{\prime}-l}(\Theta, \Phi)\right\}_{l^{\prime} m^{\prime}}. \label{eq:5:5:3}
 \end{align}
+\end{corrected}
 Here $\widehat{T}(\vect a)=e^{-\vect a \cdot \boldsymbol \nabla}$ is the displacement operator\index{displacement operator}\isym{T-hat-a@$\widehat{T}(\vect{a})$, displacement operator}, $\left\{\vect{Y}_{l_{1}} \otimes \vect{Y}_{l_{2}}\right\}_{t m}$ is the irreducible tensor product (Sec.~\ref{sec:3.1}). The polar coordinates of the vectors $\vect{r}(r, \vartheta, \varphi)$ and $\vect{r}^{\prime}\left(r^{\prime}, \vartheta^{\prime}, \varphi^{\prime}\right)$ are related by
 \begin{gather}
 r^{\prime 2}=r^{2}+a^{2}-2 r a \cos \omega_{12} , \notag\\
@@ -532,7 +539,7 @@ r^{\prime}=r,  \label{eq:5:5:9}\\
 \end{equation}
 \subsubsection{Rotation about an arbitrary direction $\vect{n}(\boldsymbol{\Theta}, \Phi)$ through a small angle $\omega(\omega \ll \pi / 2)$}
 \begin{multline}
-\hat{D} Y_{l m}(\vartheta, \varphi) \approx Y_{l m}(\vartheta, \varphi)-i \omega\biggl\{m \cos \Theta Y_{l m}(\vartheta, \varphi) \
+\hat{D} Y_{l m}(\vartheta, \varphi) \approx Y_{l m}(\vartheta, \varphi)-i \omega\biggl\{m \cos \Theta Y_{l m}(\vartheta, \varphi) \\
 +\frac{\sin \Theta}{2}\left[e^{-i \Phi} \sqrt{l(l+1)-m(m+1)} Y_{l m+1}(\vartheta, \varphi)+e^{i \Phi} \sqrt{l(l+1)-m(m-1)} Y_{l m-1}(\vartheta, \varphi)\right]\biggr\} . \label{eq:5:5:10}
 \end{multline}
 \subsubsection{Reflection of the coordinate system with respect to the equatorial plane, $\vartheta=\pi / 2$}
@@ -604,64 +611,76 @@ The inverse relation may be written as
 \sqrt{\frac{4 \pi(2 L+1)}{\left(2 l_{1}+1\right)\left(2 l_{2}+1\right)}} \sum_{m_{1} m_{2}} \clebsch{l_{1}}{m_{1}}{l_{2}}{m_{2}}{L}{M} Y_{l_{1} m_{1}}(\vartheta, \varphi) Y_{l_{2} m_{2}}(\vartheta, \varphi)=\clebsch{l_{1}}{0}{l_{2}}{0}{L}{0} Y_{L M}(\vartheta, \varphi) . \label{eq:5:6:10}
 \end{equation}
 Products of three and more spherical harmonics are decomposed according to
-\begin{gather}
-Y_{l_{1} m_{1}}(\vartheta, \varphi) Y_{l_{2} m_{2}}(\vartheta, \varphi) Y_{l_{3} m_{3}}(\vartheta, \varphi)=\sum_{L M L^{\prime} M^{\prime}} \sqrt{\frac{\left(2 l_{1}+1\right)\left(2 l_{2}+1\right)\left(2 l_{3}+1\right)}{(4 \pi)^{2}(2 L+1)}}  \notag\\
-\times \clebsch{l_{1}}{0}{l_{2}}{0}{L^{\prime}}{0} \clebsch{L^{\prime}}{0}{l_{3}}{0}{L}{0} \clebsch{l_{1}}{m_{1}}{l_{2}}{m_{2}}{L^{\prime}}{M^{\prime}} \clebsch{L^{\prime}}{M^{\prime}}{l_{3}}{m_{3}}{L}{M} Y_{L M}(\vartheta, \varphi)  \label{eq:5:6:11}\\
-Y_{l_{1} m_{1}}(\vartheta, \varphi) Y_{l_{2} m_{2}}(\vartheta, \varphi) \times \ldots \times Y_{l_{n} m_{n}}(\vartheta, \varphi)=\sum_{L_{n}} B_{L_{n}} Y_{L_{n} M_{n}}(\vartheta, \varphi) \label{eq:5:6:12}
-\end{gather}
+\begin{align}
+Y_{l_{1} m_{1}}(\vartheta, \varphi) Y_{l_{2} m_{2}}(\vartheta, \varphi) Y_{l_{3} m_{3}}(\vartheta, \varphi)=&\sum_{L M L^{\prime} M^{\prime}} \sqrt{\frac{\left(2 l_{1}+1\right)\left(2 l_{2}+1\right)\left(2 l_{3}+1\right)}{(4 \pi)^{2}(2 L+1)}}  \notag\\
+&\times \clebsch{l_{1}}{0}{l_{2}}{0}{L^{\prime}}{0} \clebsch{L^{\prime}}{0}{l_{3}}{0}{L}{0} \clebsch{l_{1}}{m_{1}}{l_{2}}{m_{2}}{L^{\prime}}{M^{\prime}} \clebsch{L^{\prime}}{M^{\prime}}{l_{3}}{m_{3}}{L}{M} Y_{L M}(\vartheta, \varphi)  \label{eq:5:6:11}\\
+Y_{l_{1} m_{1}}(\vartheta, \varphi) Y_{l_{2} m_{2}}(\vartheta, \varphi) \times \ldots \times Y_{l_{n} m_{n}}(\vartheta, \varphi)=&\sum_{L_{n}} B_{L_{n}} Y_{L_{n} M_{n}}(\vartheta, \varphi) \label{eq:5:6:12}
+\end{align}
 where
 \begin{equation}
 B_{L_{n}}=\sqrt{\frac{4 \pi}{2 L_{n}+1}} \sum_{\substack{L_{1} L_{2} \ldots L_{n-1} \\ M_{1} M_{2}, \ldots M_{n-1}}} \prod_{i=1}^{n}\left(\sqrt{\frac{2 l_{i}+1}{4 \pi}} \clebsch{L_{i-1}}{0}{l_{i}}{0}{L_{i}}{0} \clebsch{L_{i-1}}{M_{i-1}}{l_{i}}{m_{i}}{L_{i}}{M_{i}}\right) \label{eq:5:6:13}
 \end{equation}
 with $L_{0} \equiv M_{0} \equiv 0$.\\
 \item Irreducible tensor products (defined in Sec.~\ref{sec:3.1}) of the spherical harmonics may be expanded as\isym{Ybold@$\vect{Y}_{l}(\vartheta, \varphi)$, spherical harmonic as an irreducible tensor}
-\begin{gather}
-\left\{\vect{Y}_{l_{1}}(\vartheta, \varphi) \otimes \vect{Y}_{l_{2}}(\vartheta, \varphi)\right\}_{L M}=\sqrt{\frac{\left(2 l_{1}+1\right)\left(2 l_{2}+1\right)}{4 \pi(2 L+1)}} \clebsch{l_{1}}{0}{l_{2}}{0}{L}{0} Y_{L M}(\vartheta, \varphi)  \label{eq:5:6:14}\\
-\left\{\left\{\vect{Y}_{l_{1}}(\vartheta, \varphi) \otimes \vect{Y}_{l_{2}}(\vartheta, \varphi)\right\}_{L^{\prime}} \otimes \vect{Y}_{l_{3}}(\vartheta, \varphi)\right\}_{L M}=\sqrt{\frac{\left(2 l_{1}+1\right)\left(2 l_{2}+1\right)\left(2 l_{3}+1\right)}{(4 \pi)^{2}(2 L+1)}} \clebsch{l_{1}}{0}{l_{2}}{0}{L^{\prime}}{0} \clebsch{L^{\prime}}{0}{l_{3}}{0}{L}{0} Y_{L M}(\vartheta, \varphi)  \label{eq:5:6:15}\\
-\left\{\ldots\left\{\left\{\vect{Y}_{l_{1}}(\vartheta, \varphi) \otimes \vect{Y}_{l_{2}}(\vartheta, \varphi)\right\}_{L_{2}} \otimes \vect{Y}_{l_{3}}(\vartheta, \varphi)\right\}_{L_{2}} \ldots \otimes \vect{Y}_{l_{n}}(\vartheta, \varphi)\right\}_{L_{n} M_{n}}  \notag\\
-=\sqrt{\frac{4 \pi}{2 L_{n}+1}} \prod_{i=1}^{n}\left(\sqrt{\frac{2 l_{i}+1}{4 \pi}} \clebsch{L_{i-1}}{0}{l_{i}}{0}{L_{i}}{0}\right) Y_{L_{n} M_{n}}(\vartheta, \varphi) \label{eq:5:6:16}
-\end{gather}
+\begin{align}
+\left\{\vect{Y}_{l_{1}}(\vartheta, \varphi) \otimes \vect{Y}_{l_{2}}(\vartheta, \varphi)\right\}_{L M}=&\sqrt{\frac{\left(2 l_{1}+1\right)\left(2 l_{2}+1\right)}{4 \pi(2 L+1)}} \clebsch{l_{1}}{0}{l_{2}}{0}{L}{0} Y_{L M}(\vartheta, \varphi),  \label{eq:5:6:14}\\
+\left\{\left\{\vect{Y}_{l_{1}}(\vartheta, \varphi) \otimes \vect{Y}_{l_{2}}(\vartheta, \varphi)\right\}_{L^{\prime}} \otimes \vect{Y}_{l_{3}}(\vartheta, \varphi)\right\}_{L M}=&\sqrt{\frac{\left(2 l_{1}+1\right)\left(2 l_{2}+1\right)\left(2 l_{3}+1\right)}{(4 \pi)^{2}(2 L+1)}} \clebsch{l_{1}}{0}{l_{2}}{0}{L^{\prime}}{0} \clebsch{L^{\prime}}{0}{l_{3}}{0}{L}{0} Y_{L M}(\vartheta, \varphi),  \label{eq:5:6:15}\\
+\MoveEqLeft{\left\{\ldots\left\{\left\{\vect{Y}_{l_{1}}(\vartheta, \varphi) \otimes \vect{Y}_{l_{2}}(\vartheta, \varphi)\right\}_{L_{2}} \otimes \vect{Y}_{l_{3}}(\vartheta, \varphi)\right\}_{L_{2}} \ldots \otimes \vect{Y}_{l_{n}}(\vartheta, \varphi)\right\}_{L_{n} M_{n}}}  \notag\\
+=&\sqrt{\frac{4 \pi}{2 L_{n}+1}} \prod_{i=1}^{n}\left(\sqrt{\frac{2 l_{i}+1}{4 \pi}} \clebsch{L_{i-1}}{0}{l_{i}}{0}{L_{i}}{0}\right) Y_{L_{n} M_{n}}(\vartheta, \varphi) .\label{eq:5:6:16}
+\end{align}
 In particular, when $l_{1}=l_{2}=\ldots=l_{n}=1$ and $L_{k}=k(k=1,2,3, \ldots, n)$ one has
 \begin{equation}
-\left\{\ldots\left\{\left\{\vect{Y}_{1}(\vartheta, \varphi) \otimes \vect{Y}_{1}(\vartheta, \varphi)\right\}_{2} \otimes \vect{Y}_{1}(\vartheta, \varphi)\right\}_{3} \ldots \otimes \vect{Y}_{1}(\vartheta, \varphi)\right\}_{n m}=\sqrt{\frac{3^{n}}{(4 \pi)^{n-1}} \frac{n!}{(2 n+1)!!}} Y_{n m}(\vartheta, \varphi) \label{eq:5:6:17}
+\left\{\ldots\left\{\left\{\vect{Y}_{1}(\vartheta, \varphi) \otimes \vect{Y}_{1}(\vartheta, \varphi)\right\}_{2} \otimes \vect{Y}_{1}(\vartheta, \varphi)\right\}_{3} \ldots \otimes \vect{Y}_{1}(\vartheta, \varphi)\right\}_{n m}=\sqrt{\frac{3^{n}}{(4 \pi)^{n-1}} \frac{n!}{(2 n+1)!!}} Y_{n m}(\vartheta, \varphi). \label{eq:5:6:17}
 \end{equation}
 Note that when expanding the products of the spherical harmonics, the functions $C_{l m}(\vartheta, \varphi)$ which contain an additional factor $\sqrt{4 \pi /(2 l+1)}$ (Sec.~\ref{sec:5.1.4}), are more convenient.
 \end{enumerate}
 
 \section{Recursion relations}\label{sec:5.7}\index{spherical harmonics!recursion relations}\index{recursion relations!for the spherical harmonics}
-Recursion relations for the spherical harmonics may be obtained, for example, from the Clebsch-Gordan series (see Eq.~\eqref{eq:5:6:9}).
+Recursion relations for the spherical harmonics may be obtained, for example, from the Clebsch-Gordan series (see Eq.~\eqref{eq:5:6:9}):
+\begin{fleqn}
 \begin{align}
--2 m \cot \vartheta Y_{l m}(\vartheta, \varphi) & =\sqrt{l(l+1)-m(m+1)} e^{-i \varphi} Y_{l m+1}(\vartheta, \varphi)+\sqrt{l(l+1)-m(m-1)} e^{i \varphi} Y_{l m-1}(\vartheta, \varphi)  \label{eq:5:7:1}\\
-\cos \vartheta Y_{l m}(\vartheta, \varphi) & =\sqrt{\frac{(l-m+1)(l+m+1)}{(2 l+1)(2 l+3)}} Y_{l+1 m}(\vartheta, \varphi)+\sqrt{\frac{(l-m)(l+m)}{(2 l-1)(2 l+1)}} Y_{l-1 m}(\vartheta, \varphi)  \label{eq:5:7:2}\\
-\sin \vartheta Y_{l m}(\vartheta, \varphi) e^{-i \varphi} & =\sqrt{\frac{(l-m+1)(l-m+2)}{(2 l+1)(2 l+3)}} Y_{l+1 m-1}(\vartheta, \varphi)-\sqrt{\frac{(l+m-1)(l+m)}{(2 l-1)(2 l+1)}} Y_{l-1 m-1}(\vartheta, \varphi)  \notag\\
+-2 m \cot \vartheta\,Y_{l m}(\vartheta, \varphi) & =\sqrt{l(l+1)-m(m+1)} e^{-i \varphi} Y_{l m+1}(\vartheta, \varphi)+\sqrt{l(l+1)-m(m-1)} e^{i \varphi} Y_{l m-1}(\vartheta, \varphi),  \label{eq:5:7:1}\\
+\cos \vartheta\, Y_{l m}(\vartheta, \varphi) & =\sqrt{\frac{(l-m+1)(l+m+1)}{(2 l+1)(2 l+3)}} Y_{l+1 m}(\vartheta, \varphi)+\sqrt{\frac{(l-m)(l+m)}{(2 l-1)(2 l+1)}} Y_{l-1 m}(\vartheta, \varphi),  \label{eq:5:7:2}\\
+\sin \vartheta\, Y_{l m}(\vartheta, \varphi) e^{-i \varphi} & =\sqrt{\frac{(l-m+1)(l-m+2)}{(2 l+1)(2 l+3)}} Y_{l+1 m-1}(\vartheta, \varphi)-\sqrt{\frac{(l+m-1)(l+m)}{(2 l-1)(2 l+1)}} Y_{l-1 m-1}(\vartheta, \varphi)  \notag\\
 & =\cos \vartheta \sqrt{\frac{l-m+1}{l+m}} Y_{l m-1}(\vartheta, \varphi)-\sqrt{\frac{2 l+1}{2 l-1} \, \frac{l+m-1}{l+m}} Y_{l-1 m-1}(\vartheta, \varphi)  \notag\\
-& =-\cos \vartheta \sqrt{\frac{l+m}{l-m+1}} Y_{l m-1}(\vartheta, \varphi)+\sqrt{\frac{2 l+1}{2 l+3} \, \frac{l-m+2}{l-m+1}} Y_{l+1 m-1}(\vartheta, \varphi) \label{eq:5:7:3}
+& =-\cos \vartheta \sqrt{\frac{l+m}{l-m+1}} Y_{l m-1}(\vartheta, \varphi)+\sqrt{\frac{2 l+1}{2 l+3} \, \frac{l-m+2}{l-m+1}} Y_{l+1 m-1}(\vartheta, \varphi), \label{eq:5:7:3}
 \end{align}
 \begin{align}
-\sin \vartheta Y_{l m}(\vartheta, \varphi) e^{i \varphi} & =-\sqrt{\frac{(l+m+1)(l+m+2)}{(2 l+1)(2 l+3)}} Y_{l+1 m+1}(\vartheta, \varphi)+\sqrt{\frac{(l-m-1)(l-m)}{(2 l-1)(2 l+1)}} Y_{l-1 m+1}(\vartheta, \varphi)  \notag\\
+\sin \vartheta\, Y_{l m}(\vartheta, \varphi) e^{i \varphi} & =-\sqrt{\frac{(l+m+1)(l+m+2)}{(2 l+1)(2 l+3)}} Y_{l+1 m+1}(\vartheta, \varphi)+\sqrt{\frac{(l-m-1)(l-m)}{(2 l-1)(2 l+1)}} Y_{l-1 m+1}(\vartheta, \varphi)  \notag\\
 & =-\cos \vartheta \sqrt{\frac{l+m+1}{l-m}} Y_{l m+1}(\vartheta, \varphi)+\sqrt{\frac{2 l+1}{2 l-1} \, \frac{l-m-1}{l-m}} Y_{l-1 m+1}(\vartheta, \varphi)  \notag\\
-& =\cos \vartheta \sqrt{\frac{l-m}{l+m+1}} Y_{l m+1}(\vartheta, \varphi)-\sqrt{\frac{2 l+1}{2 l+3} \, \frac{l+m+2}{l+m+1}} Y_{l+1 m+1}(\vartheta, \varphi) \label{eq:5:7:4}
+& =\cos \vartheta \sqrt{\frac{l-m}{l+m+1}} Y_{l m+1}(\vartheta, \varphi)-\sqrt{\frac{2 l+1}{2 l+3} \, \frac{l+m+2}{l+m+1}} Y_{l+1 m+1}(\vartheta, \varphi), \label{eq:5:7:4}
 \end{align}
 \begin{align}
-& (2 l-1)(2 l+3) \cos ^{2} \vartheta Y_{l m}(\vartheta, \varphi)=(2 l-1) \sqrt{\frac{(l+1)^{2}-m^{2}}{2 l+1} \, \frac{(l+2)^{2}-m^{2}}{2 l+5}} Y_{l+2 m}(\vartheta, \varphi)  \notag\\
-& \quad+\left[2 l(l+1)-2 m^{2}-1\right] Y_{l m}(\vartheta, \varphi)+(2 l+3) \sqrt{\frac{l^{2}-m^{2}}{2 l+1} \, \frac{(l-1)^{2}-m^{2}}{2 l-3}} Y_{l-2 m}(\vartheta, \varphi) \label{eq:5:7:5}
+ (2 l-1)(2 l+3) \cos ^{2} \vartheta\, Y_{l m}(\vartheta, \varphi)=&(2 l-1) \sqrt{\frac{(l+1)^{2}-m^{2}}{2 l+1} \, \frac{(l+2)^{2}-m^{2}}{2 l+5}} Y_{l+2 m}(\vartheta, \varphi)  \notag \\
+&+\left[2 l(l+1)-2 m^{2}-1\right] Y_{l m}(\vartheta, \varphi)
+\notag\\
+&
++(2 l+3) \sqrt{\frac{l^{2}-m^{2}}{2 l+1} \, \frac{(l-1)^{2}-m^{2}}{2 l-3}} Y_{l-2 m}(\vartheta, \varphi), \label{eq:5:7:5}
 \end{align}
 \begin{align}
-& (2 l-1)(2 l+3) \sin \vartheta \cos \vartheta e^{i \varphi} Y_{l m}(\vartheta, \varphi)=-(2 l-1) \sqrt{\frac{(l+1)^{2}-m^{2}}{2 l+1} \, \frac{(l+m+2)(l+m+3)}{2 l+5}} Y_{l+2 m+1}(\vartheta, \varphi)  \notag\\
-& -(2 m+1) \sqrt{l(l+1)-m(m+1)} Y_{l m+1}(\vartheta, \varphi)+(2 l+3) \sqrt{\frac{l^{2}-m^{2}}{2 l+1} \, \frac{(l-m-1)(l-m-2)}{2 l-3}} Y_{l-2 m+1}(\vartheta, \varphi) \label{eq:5:7:6}
+ (2 l-1)(2 l+3) \sin \vartheta \cos \vartheta e^{i \varphi} Y_{l m}(\vartheta, \varphi)=&-(2 l-1) \sqrt{\frac{(l+1)^{2}-m^{2}}{2 l+1} \, \frac{(l+m+2)(l+m+3)}{2 l+5}} Y_{l+2 m+1}(\vartheta, \varphi)  \notag\\
+& -(2 m+1) \sqrt{l(l+1)-m(m+1)} Y_{l m+1}(\vartheta, \varphi)+(2 l+3)\notag\\&
+ \sqrt{\frac{l^{2}-m^{2}}{2 l+1} \, \frac{(l-m-1)(l-m-2)}{2 l-3}} Y_{l-2 m+1}(\vartheta, \varphi), \label{eq:5:7:6}
 \end{align}
 \begin{align}
-& (2 l-1)(2 l+3) \sin \vartheta \cos \vartheta e^{-i \varphi} Y_{l m}(\vartheta, \varphi)=(2 l-1) \sqrt{\frac{(l+1)^{2}-m^{2}}{2 l+1} \, \frac{(l-m+2)(l-m+3)}{2 l+5}} Y_{l+2 m-1}(\vartheta, \varphi)  \notag\\
-& -(2 m-1) \sqrt{l(l+1)-m(m-1)} Y_{l m-1}(\vartheta, \varphi)-(2 l+3) \sqrt{\frac{l^{2}-m^{2}}{2 l+1} \, \frac{(l+m-1)(l+m-2)}{(2 l-3)}} Y_{l-2 m-1}(\vartheta, \varphi) \label{eq:5:7:7}
+ (2 l-1)(2 l+3) \sin \vartheta \cos \vartheta e^{-i \varphi} Y_{l m}(\vartheta, \varphi)=&(2 l-1) \sqrt{\frac{(l+1)^{2}-m^{2}}{2 l+1} \, \frac{(l-m+2)(l-m+3)}{2 l+5}} Y_{l+2 m-1}(\vartheta, \varphi)  \notag\\
+& -(2 m-1) \sqrt{l(l+1)-m(m-1)} Y_{l m-1}(\vartheta, \varphi)
+\notag\\&-(2 l+3) \sqrt{\frac{l^{2}-m^{2}}{2 l+1} \, \frac{(l+m-1)(l+m-2)}{(2 l-3)}} Y_{l-2 m-1}(\vartheta, \varphi), \label{eq:5:7:7}
 \end{align}
 \begin{align}
-& (2 l-1)(2 l+3) \sin ^{2} \vartheta e^{i 2 \varphi} Y_{l m}(\vartheta, \varphi)=\frac{(2 l-1)}{\sqrt{(2 l+1)(2 l+5)}} \sqrt{\frac{(l+m+4)!}{(l+m)!}} Y_{l+2 m+2}(\vartheta, \varphi)  \notag\\
-+ & \frac{(2 l+3)}{\sqrt{(2 l+1)(2 l-3)}} \sqrt{\frac{(l-m)!}{(l-m-4)!}} Y_{l-2 m+2}(\vartheta, \varphi)-2 \sqrt{\frac{(l+m+2)!(l-m)!}{(l-m-2)!(l+m)!}} Y_{l m+2}(\vartheta, \varphi) \label{eq:5:7:8}
+(2 l-1)(2 l+3) \sin ^{2} \vartheta e^{i 2 \varphi} Y_{l m}(\vartheta, \varphi)=&\frac{(2 l-1)}{\sqrt{(2 l+1)(2 l+5)}} \sqrt{\frac{(l+m+4)!}{(l+m)!}} Y_{l+2 m+2}(\vartheta, \varphi)  \notag\\
+&+  \frac{(2 l+3)}{\sqrt{(2 l+1)(2 l-3)}} \sqrt{\frac{(l-m)!}{(l-m-4)!}} Y_{l-2 m+2}(\vartheta, \varphi)
+\notag\\&
+-2 \sqrt{\frac{(l+m+2)!(l-m)!}{(l-m-2)!(l+m)!}} Y_{l m+2}(\vartheta, \varphi), \label{eq:5:7:8}
 \end{align}
 \begin{align}
-& (2 l-1)(2 l+3) \sin ^{2} \vartheta e^{-i 2 \varphi} Y_{l m}(\vartheta, \varphi)=\frac{(2 l-1)}{\sqrt{(2 l+1)(2 l+5)}} \sqrt{\frac{(l-m+4)!}{(l-m)!}} Y_{l+2 m-2}(\vartheta, \varphi)  \notag\\
-& +\frac{(2 l+3)}{\sqrt{(2 l+1)(2 l-3)}} \sqrt{\frac{(l+m)!}{(l+m-4)!}} Y_{l-2 m-2}(\vartheta, \varphi)-2 \sqrt{\frac{(l-m+2)!(l+m)!}{(l+m-2)!(l-m)!}} Y_{l m-2}(\vartheta, \varphi) \label{eq:5:7:9}
+(2 l-1)(2 l+3) \sin ^{2} \vartheta e^{-i 2 \varphi} Y_{l m}(\vartheta, \varphi)=&\frac{(2 l-1)}{\sqrt{(2 l+1)(2 l+5)}} \sqrt{\frac{(l-m+4)!}{(l-m)!}} Y_{l+2 m-2}(\vartheta, \varphi)  \notag\\
+& +\frac{(2 l+3)}{\sqrt{(2 l+1)(2 l-3)}} \sqrt{\frac{(l+m)!}{(l+m-4)!}} Y_{l-2 m-2}(\vartheta, \varphi)
+\notag\\&
+-2 \sqrt{\frac{(l-m+2)!(l+m)!}{(l+m-2)!(l-m)!}} Y_{l m-2}(\vartheta, \varphi). \label{eq:5:7:9}
 \end{align}
+\end{fleqn}
+
 \section{Differential relations}\label{sec:5.8}\index{spherical harmonics!differential relations}\index{differential relations!for the spherical harmonics}
 \subsection{Action of the Orbital Angular Momentum  Operator on $Y_{l m}(\vartheta, \varphi)$}\label{sec:5.8.1}\index{orbital angular momentum operator}\index{angular momentum operator!orbital}
 Spherical components of the operator $\hat{\vect{L}}$ (Eq.~$\eqref{eq:2:2:18}$ ) act on $\vect{Y}_{l m}(\vartheta, \varphi)$ according to
@@ -681,16 +700,16 @@ The action of the operator $\hat{\vect{L}}^{2}$ on $Y_{l m}(\vartheta, \varphi)$
 The partial derivatives are
 \begin{align}
 \frac{\partial}{\partial \varphi} Y_{l m}(\vartheta, \varphi)=&i m Y_{l m}(\vartheta, \varphi), \label{eq:5:8:4}\\
-\frac{\partial}{\partial \vartheta} Y_{l m}(\vartheta, \varphi) & =m \cot \vartheta Y_{l m}(\vartheta, \varphi)+\sqrt{l(l+1)-m(m+1)} Y_{l m+1}(\vartheta, \varphi) e^{-i \varphi},  \notag\\
-& =-m \cot \vartheta Y_{l m}(\vartheta, \varphi)-\sqrt{l(l+1)-m(m-1)} Y_{l m-1}(\vartheta, \varphi) e^{i \varphi}  \notag\\
-& =\frac{1}{2} \sqrt{l(l+1)-m(m+1)} Y_{l m+1}(\vartheta, \varphi) e^{-i \varphi}-\frac{1}{2} \sqrt{l(l+1)-m(m-1)} Y_{l m-1}(\vartheta, \varphi) e^{i \varphi}. \label{eq:5:8:5}
+\frac{\partial}{\partial \vartheta} Y_{l m}(\vartheta, \varphi) =&m \cot \vartheta Y_{l m}(\vartheta, \varphi)+\sqrt{l(l+1)-m(m+1)} Y_{l m+1}(\vartheta, \varphi) e^{-i \varphi},  \notag\\
+ =&-m \cot \vartheta Y_{l m}(\vartheta, \varphi)-\sqrt{l(l+1)-m(m-1)} Y_{l m-1}(\vartheta, \varphi) e^{i \varphi}  \notag\\
+ =&\frac{1}{2} \sqrt{l(l+1)-m(m+1)} Y_{l m+1}(\vartheta, \varphi) e^{-i \varphi}-\frac{1}{2} \sqrt{l(l+1)-m(m-1)} Y_{l m-1}(\vartheta, \varphi) e^{i \varphi}. \label{eq:5:8:5}
 \end{align}
 Alternative expression
 \begin{align}
-\sin \vartheta \frac{\partial}{\partial \vartheta} Y_{l m}(\vartheta, \varphi)=&-\sin ^{2} \vartheta \frac{\partial}{\partial \cos \vartheta} Y_{l m}(\vartheta, \varphi)  \notag\\
-=&l \cos \vartheta Y_{l m}(\vartheta, \varphi)-\sqrt{\frac{2 l+1}{2 l-1}\left(l^{2}-m^{2}\right)} Y_{l-1 m}(\vartheta, \varphi)  \notag\\
-=&-(l+1) \cos \vartheta Y_{l m}(\vartheta, \varphi)+\sqrt{\frac{2 l+1}{2 l+3}\left[(l+1)^{2}-m^{2}\right]} Y_{l+1 m}(\vartheta, \varphi)  \notag\\
-=&l \sqrt{\frac{(l+1)^{2}-m^{2}}{(2 l+1)(2 l+3)}} Y_{l+1 m}(\vartheta, \varphi)-(l+1) \sqrt{\frac{l^{2}-m^{2}}{(2 l+1)(2 l-1)}} Y_{l-1 m}(\vartheta, \varphi).  \label{eq:5:8:6}
+\sin \vartheta \frac{\partial}{\partial \vartheta} Y_{l m}(\vartheta, \varphi)&=-\sin ^{2} \vartheta \frac{\partial}{\partial \cos \vartheta} Y_{l m}(\vartheta, \varphi)  \notag\\
+&=l \cos \vartheta Y_{l m}(\vartheta, \varphi)-\sqrt{\frac{2 l+1}{2 l-1}\left(l^{2}-m^{2}\right)} Y_{l-1 m}(\vartheta, \varphi)  \notag\\
+&=-(l+1) \cos \vartheta Y_{l m}(\vartheta, \varphi)+\sqrt{\frac{2 l+1}{2 l+3}\left[(l+1)^{2}-m^{2}\right]} Y_{l+1 m}(\vartheta, \varphi)  \notag\\
+&=l \sqrt{\frac{(l+1)^{2}-m^{2}}{(2 l+1)(2 l+3)}} Y_{l+1 m}(\vartheta, \varphi)-(l+1) \sqrt{\frac{l^{2}-m^{2}}{(2 l+1)(2 l-1)}} Y_{l-1 m}(\vartheta, \varphi).  \label{eq:5:8:6}
 \end{align}
 The second derivative van be expressed as
 \begin{align}
@@ -701,27 +720,27 @@ The second derivative van be expressed as
 %\begin{enumerate}[label=(\alph*)]
 \subsubsection{Gradient} The gradient of a function $f(r) Y_{l m}(\vartheta, \varphi)$, where $f(r)$ is an arbitrary function of $r \equiv|\vect{r}|$ can be expanded in terms of vector spherical harmonics (Sec.~\ref{sec:7.3}) as follows:\index{vector spherical harmonics}
 \begin{equation}
-\boldsymbol{\nabla}\left[f(r) Y_{l m}(\vartheta, \varphi)\right]=-\sqrt{\frac{l+1}{2 l+1}}\left(\frac{\dd  f}{\dd  r}-\frac{l}{r} f\right) \vect{Y}_{l m}^{l+1}(\vartheta, \varphi)+\sqrt{\frac{l}{2 l+1}}\left(\frac{\dd  f}{\dd  r}+\frac{l+1}{r} f\right) \vect{Y}_{l m}^{l-1}(\vartheta, \varphi) \label{eq:5:8:9}
+\boldsymbol{\nabla}\left[f(r) Y_{l m}(\vartheta, \varphi)\right]=-\sqrt{\frac{l+1}{2 l+1}}\left(\frac{\dd  f}{\dd  r}-\frac{l}{r} f\right) \vect{Y}_{l m}^{l+1}(\vartheta, \varphi)+\sqrt{\frac{l}{2 l+1}}\left(\frac{\dd  f}{\dd  r}+\frac{l+1}{r} f\right) \vect{Y}_{l m}^{l-1}(\vartheta, \varphi). \label{eq:5:8:9}
 \end{equation}
 or in component form
 \begin{align}
 \nabla_{0}\left[f(r) Y_{l m}(\vartheta, \varphi)\right]= & \sqrt{\frac{(l+1)^{2}-m^{2}}{(2 l+1)(2 l+3)}}\left(\frac{\dd  f}{\dd  r}-\frac{l}{r} f\right) Y_{l+1 m}(\vartheta, \varphi)  \notag\\
-& +\sqrt{\frac{l^{2}-m^{2}}{(2 l-1)(2 l+1)}}\left(\frac{\dd  f}{\dd  r}+\frac{l+1}{r} f\right) Y_{l-1 m}(\vartheta, \varphi)  \label{eq:5:8:10}\\
+& +\sqrt{\frac{l^{2}-m^{2}}{(2 l-1)(2 l+1)}}\left(\frac{\dd  f}{\dd  r}+\frac{l+1}{r} f\right) Y_{l-1 m}(\vartheta, \varphi),  \label{eq:5:8:10}\\
 \nabla_{ \pm 1}\left[f(r) Y_{l m}(\vartheta, \varphi)\right]= & \sqrt{\frac{(l \pm m+1)(l \pm m+2)}{2(2 l+1)(2 l+3)}}\left(\frac{\dd  f}{\dd  r}-\frac{l}{r} f\right) Y_{l+1 m \pm 1}(\vartheta, \varphi)  \notag\\
-& -\sqrt{\frac{(l \mp m-1)(l \mp m)}{2(2 l-1)(2 l+1)}}\left(\frac{\dd  f}{\dd  r}+\frac{l+1}{r} f\right) Y_{l-1 m \pm 1}(\vartheta, \varphi) \label{eq:5:8:11}
+& -\sqrt{\frac{(l \mp m-1)(l \mp m)}{2(2 l-1)(2 l+1)}}\left(\frac{\dd  f}{\dd  r}+\frac{l+1}{r} f\right) Y_{l-1 m \pm 1}(\vartheta, \varphi). \label{eq:5:8:11}
 \end{align}
 Here $\nabla_{0, \pm 1}$ are spherical components of the operator $\boldsymbol{\nabla}$ (Sec.~\ref{sec:1.3}).\\
 Let us consider some special cases of Eq.~\eqref{eq:5:8:9}. If $f(r)=j(k r)$ is a spherical Bessel function, one has,
 \begin{equation}
-\frac{1}{k} \boldsymbol{\nabla}\left[j_{l}(k r) Y_{l m}(\vartheta, \varphi)\right]=\sqrt{\frac{l+1}{2 l+1}} j_{l+1}(k r) \vect{Y}_{l m}^{l+1}(\vartheta, \varphi)+\sqrt{\frac{l}{2 l+1}} j_{l-1}(k r) \vect{Y}_{l m}^{l-1}(\vartheta, \varphi) \label{eq:5:8:12}
+\frac{1}{k} \boldsymbol{\nabla}\left[j_{l}(k r) Y_{l m}(\vartheta, \varphi)\right]=\sqrt{\frac{l+1}{2 l+1}} j_{l+1}(k r) \vect{Y}_{l m}^{l+1}(\vartheta, \varphi)+\sqrt{\frac{l}{2 l+1}} j_{l-1}(k r) \vect{Y}_{l m}^{l-1}(\vartheta, \varphi). \label{eq:5:8:12}
 \end{equation}
 Putting $f(r)=r^{l}$, one gets
 \begin{equation}
-\boldsymbol{\nabla}\left[r^{l} Y_{l m}(\vartheta, \varphi)\right]=\sqrt{l(2 l+1)} r^{l-1} \vect{Y}_{l m}^{l-1}(\vartheta, \varphi) \label{eq:5:8:13}
+\boldsymbol{\nabla}\left[r^{l} Y_{l m}(\vartheta, \varphi)\right]=\sqrt{l(2 l+1)} r^{l-1} \vect{Y}_{l m}^{l-1}(\vartheta, \varphi). \label{eq:5:8:13}
 \end{equation}
 If $f(r)=r^{-l-1}$, Eq.~\eqref{eq:5:8:9} is reduced to
 \begin{equation}
-\boldsymbol{\nabla}\left[r^{-l-1} Y_{l m}(\vartheta, \varphi)\right]=\sqrt{(l+1)(2 l+1)} r^{-l-2} \vect{Y}_{l m}^{l+1}(\vartheta, \varphi) \label{eq:5:8:14}
+\boldsymbol{\nabla}\left[r^{-l-1} Y_{l m}(\vartheta, \varphi)\right]=\sqrt{(l+1)(2 l+1)} r^{-l-2} \vect{Y}_{l m}^{l+1}(\vartheta, \varphi). \label{eq:5:8:14}
 \end{equation}
 \subsubsection{divergence}
  The divergence of a vector function $f(r) \hat{\vect{L}} Y_{l m}(\vartheta, \varphi)$ vanishes for any function $f(r)$
@@ -750,32 +769,30 @@ Some additional formulas for the vector differentiation of functions which conta
 
 \section{Some integrals involving spherical harmonics}\label{sec:5.9}\index{spherical harmonics!integrals involving}\index{integrals!of the spherical harmonics}
 \subsection{Integrals over Total Solid Angle}\label{sec:5.9.1}\index{integrals!over the total solid angle}\isymg{Omega-solid@$\Omega$, solid angle}
-\begin{gather}
-\int_{0}^{2 \pi} \dd \varphi \int_{0}^{\pi} \dd \vartheta \sin \vartheta Y_{l m}(\vartheta, \varphi)=\sqrt{4 \pi} \delta_{l 0} \delta_{m 0}  \label{eq:5:9:1}\\
-\int_{0}^{2 \pi} \dd \varphi \int_{0}^{\pi} \dd \vartheta \sin \vartheta Y_{l_{1} m_{1}}(\vartheta, \varphi) Y_{l_{2} m_{2}}^{*}(\vartheta, \varphi)=\delta_{l_{1} l_{2}} \delta_{m_{1} m_{2}}  \label{eq:5:9:2}\\
-\int_{0}^{2 \pi} \dd \varphi \int_{0}^{\pi} \dd \vartheta \sin \vartheta Y_{l_{1} m_{1}}(\vartheta, \varphi) Y_{l_{2} m_{2}}(\vartheta, \varphi)=(-1)^{m_{2}} \delta_{l_{1} l_{2}} \delta_{-m_{1} m_{2}}  \label{eq:5:9:3}\\
-\int_{0}^{2 \pi} \dd \varphi \int_{0}^{\pi} \dd \vartheta \sin \vartheta Y_{l_{1} m_{1}}(\vartheta, \varphi) Y_{l_{2} m_{2}}(\vartheta, \varphi) Y_{l_{3} m_{3}}^{*}(\vartheta, \varphi)=\sqrt{\frac{\left(2 l_{1}+1\right)\left(2 l_{2}+1\right)}{4 \pi\left(2 l_{3}+1\right)}} \clebsch{l_{1}}{0}{l_{2}}{0}{l_{3}}{0} \clebsch{l_{1}}{m_{1}}{l_{2}}{m_{2}}{l_{3}}{m_{3}}  \label{eq:5:9:4}\\
-\int_{0}^{2 \pi} \dd \varphi \int_{0}^{\pi} \dd \vartheta \sin \vartheta Y_{l_{1} m_{1}}(\vartheta, \varphi) Y_{l_{2} m_{2}}(\vartheta, \varphi) Y_{l_{3} m_{3}}(\vartheta, \varphi)  \notag\\
-=\sqrt{\frac{\left(2 l_{1}+1\right)\left(2 l_{2}+1\right)\left(2 l_{3}+1\right)}{4 \pi}}\left(\begin{array}{ccc}
-l_{1} & l_{2} & l_{3} \\
-0 & 0 & 0
-\end{array}\right)\left(\begin{array}{ccc}
-l_{1} & l_{2} & l_{3} \\
-m_{1} & m_{2} & m_{3}
-\end{array}\right) \label{eq:5:9:5}
-\end{gather}
+\begin{align}
+\int_{0}^{2 \pi} \dd \varphi \int_{0}^{\pi} \dd \vartheta \sin \vartheta Y_{l m}(\vartheta, \varphi)&=\sqrt{4 \pi} \delta_{l 0} \delta_{m 0},  \label{eq:5:9:1}\\
+\int_{0}^{2 \pi} \dd \varphi \int_{0}^{\pi} \dd \vartheta \sin \vartheta Y_{l_{1} m_{1}}(\vartheta, \varphi) Y_{l_{2} m_{2}}^{*}(\vartheta, \varphi)&=\delta_{l_{1} l_{2}} \delta_{m_{1} m_{2}},  \label{eq:5:9:2}\\
+\int_{0}^{2 \pi} \dd \varphi \int_{0}^{\pi} \dd \vartheta \sin \vartheta Y_{l_{1} m_{1}}(\vartheta, \varphi) Y_{l_{2} m_{2}}(\vartheta, \varphi)&=(-1)^{m_{2}} \delta_{l_{1} l_{2}} \delta_{-m_{1} m_{2}},  \label{eq:5:9:3}\\
+\int_{0}^{2 \pi} \dd \varphi \int_{0}^{\pi} \dd \vartheta \sin \vartheta Y_{l_{1} m_{1}}(\vartheta, \varphi) Y_{l_{2} m_{2}}(\vartheta, \varphi) Y_{l_{3} m_{3}}^{*}(\vartheta, \varphi)&=\sqrt{\frac{\left(2 l_{1}+1\right)\left(2 l_{2}+1\right)}{4 \pi\left(2 l_{3}+1\right)}} \clebsch{l_{1}}{0}{l_{2}}{0}{l_{3}}{0} \clebsch{l_{1}}{m_{1}}{l_{2}}{m_{2}}{l_{3}}{m_{3}},  \label{eq:5:9:4}\\
+\int_{0}^{2 \pi} \dd \varphi \int_{0}^{\pi} \dd \vartheta \sin \vartheta Y_{l_{1} m_{1}}(\vartheta, \varphi) Y_{l_{2} m_{2}}(\vartheta, \varphi) Y_{l_{3} m_{3}}(\vartheta, \varphi),  \notag\\
+&=\sqrt{\frac{\left(2 l_{1}+1\right)\left(2 l_{2}+1\right)\left(2 l_{3}+1\right)}{4 \pi}}
+\threej{l_{1}}{l_{2}}{l_{3}}{0}{0}{0} 
+\threej{l_{1}}{l_{2}}{l_{3}}{m_{1}}{m_{2}}{m_{3}}.
+ \label{eq:5:9:5}
+\end{align}
 Integrals involving products of three and more spherical harmonics can be evaluated by reducing them to integrals which involve products of a smaller number of harmonics. For this purpose it is convenient to use the Clebsch-Gordan expansion (Eq.~\eqref{eq:5:6:9}).\\
 \subsection{Fourier Transformations for Some Functions Which Contain $Y_{l m}(\vartheta, \varphi)$}\label{sec:5.9.2}\index{Fourier transformation}
-\begin{gather}
-\int_{0}^{\infty} \dd r r^{2} \int_{0}^{2 \pi} \dd \varphi \int_{0}^{\pi} \dd \vartheta \sin \vartheta e^{i \vect{k} \vect{r}} j_{l}(q r) Y_{l m}(\vartheta, \varphi)=2 \pi^{2} i^{l} \frac{\delta(q-k)}{q^{2}} Y_{l m}\left(\vartheta_{k}, \varphi_{k}\right)  \label{eq:5:9:6}\\
-\int_{0}^{\infty} \dd r r^{2} \int_{0}^{2 \pi} \dd \varphi \int_{0}^{\pi} \dd \vartheta \sin \vartheta e^{i \vect{k} \vect{r}} \hat{\vect{L}}\left [j_{l}(q r) Y_{l m}(\vartheta, \varphi)\right]=2 \pi^{2} i^{l} \frac{\delta(q-k)}{q^{2}} \hat{\vect{L}}_{\vect{k}} Y_{l m}\left(\vartheta_{k}, \varphi_{k}\right)  \label{eq:5:9:7}\\
-\int_{0}^{\infty} \dd r r^{2} \int_{0}^{2 \pi} \dd \varphi \int_{0}^{\pi} \dd \vartheta \sin \vartheta e^{i \vect{k} \vect{r}}[\boldsymbol{\nabla} \times \hat{\vect{L}}]\left(j_{l}(q r) Y_{l m}(\vartheta, \varphi)\right)=2 \pi^{2} i^{l-1} \frac{\delta(q-k)}{q^{2}}\left[\vect{k} \times \hat{\vect{L}}_{\vect{k}}\right] Y_{l m}\left(\vartheta_{k}, \varphi_{k}\right) \label{eq:5:9:8}
-\end{gather}
+\begin{align}
+\int_{0}^{\infty} \dd r r^{2} \int_{0}^{2 \pi} \dd \varphi \int_{0}^{\pi} \dd \vartheta \sin \vartheta e^{i \vect{k} \vect{r}} j_{l}(q r) Y_{l m}(\vartheta, \varphi)&=2 \pi^{2} i^{l} \frac{\delta(q-k)}{q^{2}} Y_{l m}\left(\vartheta_{k}, \varphi_{k}\right)  \label{eq:5:9:6}\\
+\int_{0}^{\infty} \dd r r^{2} \int_{0}^{2 \pi} \dd \varphi \int_{0}^{\pi} \dd \vartheta \sin \vartheta e^{i \vect{k} \vect{r}} \hat{\vect{L}}\left [j_{l}(q r) Y_{l m}(\vartheta, \varphi)\right]&=2 \pi^{2} i^{l} \frac{\delta(q-k)}{q^{2}} \hat{\vect{L}}_{\vect{k}} Y_{l m}\left(\vartheta_{k}, \varphi_{k}\right)  \label{eq:5:9:7}\\
+\int_{0}^{\infty} \dd r r^{2} \int_{0}^{2 \pi} \dd \varphi \int_{0}^{\pi} \dd \vartheta \sin \vartheta e^{i \vect{k} \vect{r}}[\boldsymbol{\nabla} \times \hat{\vect{L}}]\left(j_{l}(q r) Y_{l m}(\vartheta, \varphi)\right)&=2 \pi^{2} i^{l-1} \frac{\delta(q-k)}{q^{2}}\left[\vect{k} \times \hat{\vect{L}}_{\vect{k}}\right] Y_{l m}\left(\vartheta_{k}, \varphi_{k}\right) \label{eq:5:9:8}
+\end{align}
 Here $j_{l}(x)$ is a spherical Bessel function, $\vartheta_{k}$ and $\varphi_{k}$ are polar angles of the vector $\vect{k} ; \hat{\vect{L}}$ and $\hat{\vect{L}}_{\vect{k}}$ are the operators of orbital angular momentum in the coordinate and momentum representations, respectively,
 \begin{equation}
 \hat{\vect{L}}=-i[\vect{r} \times \boldsymbol{\nabla}], \hat{\vect{L}}_{\vect{k}}=-i\left[\vect{k} \times \boldsymbol{\nabla}_{\vect{k}}\right] . \label{eq:5:9:9}
 \end{equation}
 \subsection{Integrals with Respect to $\vartheta$}\label{sec:5.9.3}\index{integrals!with respect to $\vartheta$}
+\begin{fleqn}
 \begin{gather}
 \int_{0}^{\pi} Y_{l m}^{*}(\vartheta, \varphi) Y_{l^{\prime} m}(\vartheta, \varphi) \sin \vartheta \dd \vartheta=\frac{\delta_{l l^{\prime}}}{2 \pi} ,  \label{eq:5:9:10}\\
 \int_{0}^{\pi} Y_{l m}^{*}(\vartheta, \varphi) Y_{l m^{\prime}}(\vartheta, \varphi) \frac{\dd  \vartheta}{\sin \vartheta}=\frac{2 l+1}{4 \pi m} \delta_{m m^{\prime}}\left(m, m^{\prime}>0\right) ,  \label{eq:5:9:11}
@@ -784,6 +801,7 @@ Here $j_{l}(x)$ is a spherical Bessel function, $\vartheta_{k}$ and $\varphi_{k}
 \int_{0}^{\pi / 2}(\sin \vartheta)^{m+1}(\cos \vartheta)^{n} Y_{l m}(\vartheta, \varphi) \dd \vartheta  \\
 =\sqrt{\frac{2 l+1}{4 \pi} \cdot \frac{(l+m)!}{(l-m)!}}(-1)^{m} \frac{n!e^{i m \varphi}}{(n+l+m+1)!!(n-l+m)!!},(m, n \geq 0),  \label{eq:5:9:12}
 \end{multline}
+\begin{corrected}
 \begin{multline}
 \int_{a}^{b}\left[\left(l_{1}-l_{2}\right)\left(l_{1}+l_{2}+1\right)-\frac{m_{1}^{2}-m_{2}^{2}}{\sin ^{2} \vartheta}\right] Y_{l_{1} m_{1}}(\vartheta, \varphi) Y_{l_{2} m_{2}}(\vartheta, \varphi) d(\cos \vartheta) \\
 =\left.\sin ^{2} \vartheta\left[Y_{l_{1} m_{1}}(\vartheta, \varphi) \frac{\dd }{\dd  \cos \vartheta} Y_{l_{2} m_{2}}(\vartheta, \varphi)-Y_{l_{2} m_{2}}(\vartheta, \varphi) \frac{\dd }{\dd  \cos \vartheta} Y_{l_{1} m_{1}}(\vartheta, \varphi)\right]\right|_{a} ^{b}  \\
@@ -795,7 +813,8 @@ Here $j_{l}(x)$ is a spherical Bessel function, $\vartheta_{k}$ and $\varphi_{k}
 =\left[\cos \vartheta\left(l_{1}-l_{2}\right) Y_{l_{1} m_{1}}(\vartheta, \varphi) Y_{l_{2} m_{2}}(\vartheta, \varphi)+\sqrt{\frac{\left(2 l_{2}+1\right)\left(l_{2}^{2}-m_{2}^{2}\right)}{2 l_{2}-1}} Y_{l_{1} m_{1}}(\vartheta, \varphi) Y_{l_{2}-1 m_{2}}(\vartheta, \varphi)\right. \\
 \left.\left.-\sqrt{\frac{\left(2 l_{1}+1\right)\left(l_{1}^{2}-m_{1}^{2}\right)}{2 l_{1}-1}} Y_{l_{1}-1 m_{1}}(\vartheta, \varphi) Y_{l_{2} m_{2}}(\vartheta, \varphi)\right]\right|_{a} ^{b} . \label{eq:5:9:13}
 \end{multline}
-
+\end{corrected}
+\end{fleqn}
 \section{Sums involving spherical harmonics}\label{sec:5.10}\index{spherical harmonics!sums involving}\index{sums!of the spherical harmonics}
 \subsection{Sums over $m$ (with fixed $l$ )}\label{sec:5.10.1}\index{sums!over $m$}
 \begin{align}
@@ -887,12 +906,14 @@ A more accurate formula \cite{ref022} is
 % error stays O(1/l)).  With a MINUS sign the error is genuinely O(1/l^2) for all
 % m (2-27x smaller than the leading form, improvement growing with m).  Corrected
 % to "-" below; verified numerically (scripts/check_5_12.py).
+\begin{corrected}
 \begin{equation}
 \begin{aligned}
 Y_{l m}(\vartheta, \varphi) \approx \frac{e^{i m \varphi}}{\pi \sqrt{\sin \vartheta}}\left\{\left(1+\frac{4 m^{2}-3}{8 l}\right) \cos \left[(2 l+1) \frac{\vartheta}{2}+(2 m-1) \frac{\pi}{4}\right]\right. \\
 \left.-\frac{4 m^{2}-1}{8 l \sin \vartheta} \cos \left[(2 l+3) \frac{\vartheta}{2}+(2 m-3) \frac{\pi}{4}\right]\right\}+O\left(l^{-2}\right).
 \end{aligned} \label{eq:5:12:2}
 \end{equation}
+\end{corrected}
 The terms proportional to $1 / l$ and $1 / l^{2}$ depend on both $m$ and $\vartheta$.\\
 If $l \gg 1$ and $l \gg m \geq 0$, one also obtains
 \begin{equation}
@@ -1100,9 +1121,9 @@ In accordance with Eq.~\eqref{eq:3:1:30} this scalar product is given by
 \subsection{Tripolar Spherical Harmonics}\label{sec:5.16.2}\index{tripolar spherical harmonics!definition}
 A tripolar spherical harmonic is defined as an irreducible tensor product of three spherical harmonics with different arguments,
 \begin{multline}
-\left\{\vect{Y}_{l_{1}}\left(\vartheta_{1}, \varphi_{1}\right) \otimes\left\{\vect{Y}_{l_{2}}\left(\vartheta_{2}, \varphi_{2}\right) \otimes \vect{Y}_{l_{3}}\left(\vartheta_{3}, \varphi_{3}\right)\right\}_{l_{23}}\right\}_{L M}  \label{eq:5:16:11}\\
+\left\{\vect{Y}_{l_{1}}\left(\vartheta_{1}, \varphi_{1}\right) \otimes\left\{\vect{Y}_{l_{2}}\left(\vartheta_{2}, \varphi_{2}\right) \otimes \vect{Y}_{l_{3}}\left(\vartheta_{3}, \varphi_{3}\right)\right\}_{l_{23}}\right\}_{L M}  \\
 =\sum_{\substack{m_{1} m_{2} m_{3} \\
-m_{23}}} \clebsch{l_{1}}{m_{1}}{l_{23}}{m_{23}}{L}{M} \clebsch{l_{2}}{m_{2}}{l_{3}}{m_{3}}{l_{23}}{m_{23}} Y_{l_{1} m_{1}}\left(\vartheta_{1}, \varphi_{1}\right) Y_{l_{2} m_{2}}\left(\vartheta_{2}, \varphi_{2}\right) Y_{l_{3} m_{3}}\left(\vartheta_{3}, \varphi_{3}\right). \notag
+m_{23}}} \clebsch{l_{1}}{m_{1}}{l_{23}}{m_{23}}{L}{M} \clebsch{l_{2}}{m_{2}}{l_{3}}{m_{3}}{l_{23}}{m_{23}} Y_{l_{1} m_{1}}\left(\vartheta_{1}, \varphi_{1}\right) Y_{l_{2} m_{2}}\left(\vartheta_{2}, \varphi_{2}\right) Y_{l_{3} m_{3}}\left(\vartheta_{3}, \varphi_{3}\right). \label{eq:5:16:11}
 \end{multline}
 In contrast to bipolar harmonics, the tripolar harmonics allow different coupling schemes of angular momenta, namely, $l_{1}+\left(l_{2}+l_{3}\right)_{l_{23}}=\vect{L},\left(l_{1}+l_{2}\right)_{l_{12}}+l_{3}=\vect{L}$ or $\left(l_{1}+l_{3}\right)_{l_{13}}+l_{2}=\vect{L}$. The relations between different coupling schemes are considered in Sec.~\ref{sec:3.3}.
 
@@ -1153,7 +1174,7 @@ B_{l_{1}^{\prime} l_{2}^{\prime} l_{3}^{\prime} \lambda^{\prime} L^{\prime} l_{1
 \end{gather}
 Putting $L=0$ in Eq.~\eqref{eq:5:16:11}, we get an important special case for the tripolar scalar harmonic:
 \begin{multline}
-\left\{\mathrm{Y}_{l_{1}}\left(\Omega_{1}\right) \otimes\left\{\mathrm{Y}_{l_{2}}\left(\Omega_{2}\right) \otimes \mathrm{Y}_{l_{3}}\left(\Omega_{3}\right)\right\}_{\lambda}\right\}_{00}  \notag\\
+\left\{\mathrm{Y}_{l_{1}}\left(\Omega_{1}\right) \otimes\left\{\mathrm{Y}_{l_{2}}\left(\Omega_{2}\right) \otimes \mathrm{Y}_{l_{3}}\left(\Omega_{3}\right)\right\}_{\lambda}\right\}_{00}  \\
 =(-1)^{l_{1}+l_{2}+l_{3}} \delta_{\lambda l_{1}} \sum_{m_{1} m_{2} m_{3}}
 \threej{l_{1}}{l_{2}}{l_{3}}{m_{1}}{m_{2}} {m_{3}}
  Y_{l_{1} m_{1}}\left(\Omega_{1}\right) Y_{l_{2} m_{2}}\left(\Omega_{2}\right) Y_{l_{3} m_{3}}\left(\Omega_{3}\right). \label{eq:5:16:19}
@@ -1202,7 +1223,6 @@ F(\vect{R}, \vect{r})=f\left(\vect{r}_{1}, \vect{r}_{2}\right)=\sum_{l_{1} l_{2}
 \label{chap5:fig:2}
 \end{center}
 \end{figure}
-
 then
 \begin{equation}
 F(\vect{r}, \vect{R})=f\left(\vect{r}_{1},-\vect{r}_{2}\right)=\sum_{l_{1} l_{2} L M}(-1)^{l_{2}} C_{l_{1} l_{2}}^{L M}\left(r_{1}, r_{2}\right)\left\{\vect{Y}_{l_{1}}\left(\Omega_{1}\right) \otimes \vect{Y}_{l_{2}}\left(\Omega_{2}\right)\right\}_{L M} \label{eq:5:17:8}
@@ -1335,10 +1355,10 @@ a_{l_{1} l_{2}}^{N L}\left(r_{1}, r_{2}\right)= \begin{cases}\displaystyle  (-1)
  & \text { if } l_{1}+l_{2} \leq N, \\ 0 & \text { if } l_{1}+l_{2}>N .\end{cases}\label{eq:5:17:40}
 \end{equation}
 For $N=L-2, L-4, L-6, \ldots$ one gets
-\begin{gather}
-a_{l_{1} l_{2}}^{N L}\left(r_{1}, r_{2}\right)=(-1)^{l_{2}+\frac{N-2}{j}} \frac{(N+L+1)!!}{2(L-N-2)!!\left(N+l_{1}+l_{2}+2\right)!} r_{1}^{l_{1}} r_{2}^{l_{2}}  \notag\\
+\begin{multline}
+a_{l_{1} l_{2}}^{N L}\left(r_{1}, r_{2}\right)=(-1)^{l_{2}+\frac{N-2}{j}} \frac{(N+L+1)!!}{2(L-N-2)!!\left(N+l_{1}+l_{2}+2\right)!} r_{1}^{l_{1}} r_{2}^{l_{2}}  \\
 \times\left(\frac{1}{r_{1}} \cdot \frac{\partial}{\partial r_{1}}\right)^{l_{1}}\left(\frac{1}{r_{2}} \cdot \frac{\partial}{\partial r_{2}}\right)^{l_{2}} \frac{1}{r_{1} r_{2}}\left[\left(r_{1}-r_{2}\right)^{N+l_{1}+l_{2}+2} \ln \left|r_{1}-r_{2}\right|-\left(r_{1}+r_{2}\right)^{N+l_{1}+l_{2}+2} \ln \left(r_{1}+r_{2}\right)\right] . \label{eq:5:17:41}
-\end{gather}
+\end{multline}
 If $N$ is integer, $N-L$ is odd, and $r_{1}<r_{2}$, the expansion coefficient is given by
 \begin{equation}
 a_{l_{1} l_{2}}^{N L}\left(r_{1}, r_{2}\right)= 
@@ -1354,8 +1374,8 @@ s_{1}+s_{2}+N \leq-3}}^{l_{2}}(-1)^{s_{2}} \frac{\left(l_{1}+s_{1}\right)!\left(
 \end{align}
 These additional terms give finite contributions into the integrals involving the expansion \eqref{eq:5:17:38}.\\
 Finally, if $N$ is not integer, the expansion coefficient is given by
-\begin{gather}
-a_{l_{1} l_{2}}^{N L}\left(r_{1}, r_{2}\right)=(-1)^{l_{1}+L+1} \frac{2^{L-1} \Gamma\left(\frac{N+L+3}{2}\right) \Gamma(N-L+2)}{\Gamma\left(\frac{N-L+3}{2}\right) \Gamma\left(N+l_{1}+l_{2}+3\right)} r_{1}^{l_{1}} r_{2}^{l_{2}}  \notag\\
+\begin{multline}
+a_{l_{1} l_{2}}^{N L}\left(r_{1}, r_{2}\right)=(-1)^{l_{1}+L+1} \frac{2^{L-1} \Gamma\left(\frac{N+L+3}{2}\right) \Gamma(N-L+2)}{\Gamma\left(\frac{N-L+3}{2}\right) \Gamma\left(N+l_{1}+l_{2}+3\right)} r_{1}^{l_{1}} r_{2}^{l_{2}}  \\
 \times\left(\frac{1}{r_{1}} \frac{\partial}{\partial r_{1}}\right)^{l_{1}}\left(\frac{1}{r_{2}} \frac{\partial}{\partial r_{2}}\right)^{l_{2}} \frac{1}{r_{1} r_{2}}\left\{\left|r_{1}+r_{2}\right|^{N+l_{1}+l_{2}+2}-\left|r_{1}-r_{2}\right|^{N+l_{1}+l_{2}+2}\right\} \label{eq:5:17:44}
-\end{gather}
+\end{multline}
 Note that all the expansions given in Secs.~\ref{sec:5.17.6} and \ref{sec:5.17.7} remain valid after substituting $\vect{R}(R, \Theta, \Phi)=\vect{r}_{1}+\vect{r}_{2}$ for $\vect{r}(r, \vartheta, \varphi)=\vect{r}_{1}-\vect{r}_{2}$ and introducing the additional factor $(-1)^{l_{2}}$ into the expansion coefficients.
