@@ -41,6 +41,14 @@ usually sits at a vertex where two sub-diagrams are glued along that shared line
 per-scope graph (e.g. the two hexagons of a 12j: fig12_2_11/12/33c/45).  A
 missing triad with only NON-summed labels stays the strong real candidate.
 """
+
+import os
+
+
+def _repo(name):
+    """Resolve a repo file relative to THIS script, not the current directory."""
+    return os.path.join(os.path.dirname(os.path.abspath(__file__)), os.pardir, name)
+
 import re, os, sys
 GREEK=r'\\(?:alpha|beta|gamma|delta|epsilon|varepsilon|eta|xi|kappa|sigma|psi|rho|theta|tau|lambda|mu|nu|zeta|omega|phi|chi|varphi)'
 def jlabel(lab):
@@ -105,13 +113,13 @@ def fig_triads(figtext):
             triads+=node_triads(fig_edges(u))
     return triads
 
-def pairs_from_chapter(chap='Chap12.tex'):
+def pairs_from_chapter(chap=None):
     # Chapter 12 lays out "<equation(s)> then <figure>" repeatedly.  A figure's
     # symbols are exactly those in the text since the PREVIOUS figure, so bound
     # the equation-region that way -- this keeps each figure from being charged
     # with a neighbour's 3nj symbol, and naturally gathers all symbols (LHS+RHS)
     # that the figure's sub-diagrams are meant to illustrate.
-    src=open(chap).read(); out=[]; prev=0
+    src=open(chap or _repo('Chap12.tex')).read(); out=[]; prev=0
     for m in re.finditer(r'\\centerline\{\\includegraphics(?:\[[^\]]*\])?\{(fig12[^}]*)\}\}',src):
         out.append((m.group(1), src[prev:m.start()])); prev=m.end()
     return out
@@ -121,7 +129,7 @@ if __name__=='__main__':
     npass=0; rows=[]
     for fig,eqtext in pairs_from_chapter():
         if only and only not in fig: continue
-        fp=f'tikz_files/{fig}.tex'
+        fp=_repo(f'tikz_files/{fig}.tex')
         if not os.path.exists(fp): continue
         ets=eq_triads(eqtext)
         if not ets: continue

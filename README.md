@@ -125,7 +125,7 @@ cd tikz_files && make -j8 && cd ..
 
 # 2. build the book
 xelatex VMK
-bibtex  VMK                                   # biblatex, bibtex backend
+biber   VMK                                   # biblatex, biber backend
 makeindex VMK.idx                             # subject index
 makeindex -s vmksym.ist -o VMK.snd VMK.sdx    # symbol index (-s is required)
 xelatex VMK

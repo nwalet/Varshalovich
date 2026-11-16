@@ -149,7 +149,7 @@ def main():
     # 5.2.28 (-1)^{l-m} xi e sqrt((2l+1)/4pi (l+|m|)!/(l-|m|)!) (cot th/2)^|m| (sin th/2)^{2l} F(-l+|m|,-l;|m|+1;-cot^2 th/2)
     def f28(l, m, th, ph):
         am = abs(m)
-        return ((-1)**(l-m)*xi(m)*e(1j*m*ph)
+        return ((-1)**(l-m)*xi(m)*e(1j*m*ph) / fac(am)
                 * math.sqrt((2*l+1)/(4*math.pi)*fac(l+am)/fac(l-am))
                 * (1/math.tan(th/2))**am*math.sin(th/2)**(2*l)
                 * F(-l+am, -l, am+1, -1/math.tan(th/2)**2))

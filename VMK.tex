@@ -1,7 +1,7 @@
 \documentclass[10pt]{book}
-\usepackage[utf8]{inputenc}
+%\usepackage[utf8]{inputenc}  % XeLaTeX is already UTF-8; inputenc warns that it is ignored
 \usepackage[T1]{fontenc}
-\usepackage{etex}
+%\usepackage{etex}            % obsolete: XeTeX has e-TeX extensions built in
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
@@ -36,7 +36,7 @@
 \usepackage{polyglossia}
 \setdefaultlanguage{english}
 \usepackage{fontspec}
-\usepackage[backend=bibtex,style=numeric,sorting=none,defernumbers=true]{biblatex}
+\usepackage[backend=biber,style=numeric,sorting=none,defernumbers=true]{biblatex}
 \addbibresource{references.bib}
 %Main subject index -> VMK.idx/VMK.ind; symbol index -> VMK.sdx/VMK.snd.
 %Build recipe (the -s flag is required, without it the symbol index still
