@@ -1,43 +1,118 @@
 \documentclass[10pt]{book}
 %\usepackage[utf8]{inputenc}  % XeLaTeX is already UTF-8; inputenc warns that it is ignored
+
+%=====================================================================
+% Encoding, fonts and language
+%=====================================================================
+%\usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-%\usepackage{etex}            % obsolete: XeTeX has e-TeX extensions built in
+\usepackage{polyglossia}
+\setdefaultlanguage{english}
+\usepackage{fontspec}
+\usepackage{newunicodechar}
+%\DeclareUnicodeCharacter{2207}{\ifmmode\nabla\else{$\nabla$}\fi}
+
+%=====================================================================
+% Page layout
+%=====================================================================
+%\usepackage{etex}
+\usepackage[a4paper,margin=2cm]{geometry}
+%\usepackage{ucharclasses}
+
+%=====================================================================
+% Maths
+%=====================================================================
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
-\usepackage[version=4]{mhchem}
-\usepackage{stmaryrd}
-\usepackage{graphicx}
-\usepackage[export]{adjustbox}
-\graphicspath{ {./images/} }
-\usepackage{caption}
-\usepackage{comment}
+\usepackage{mathrsfs}
+\usepackage{mathtools}
+\usepackage[fleqn]{nccmath}
+\usepackage{bbold}
+\usepackage{relsize}
 \usepackage{kbordermatrix} \renewcommand{\kbldelim}{(}
 \renewcommand{\kbrdelim}{)}
-\usepackage[a4paper,margin=2cm]{geometry}
-\usepackage{ucharclasses}
+%\usepackage[version=4]{mhchem}
+%\usepackage{stmaryrd}
+
+%=====================================================================
+% Graphics, figures and tables
+%=====================================================================
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+\usepackage[export]{adjustbox}
+\usepackage{caption}
+\usepackage{multirow}
+\usepackage{diagbox}
+%\usepackage{diagrams}
+%\usetikzlibrary{patterns,angles,quotes,arrows.meta,math,calc}
+
+%=====================================================================
+% Colour and code listings
+%=====================================================================
+\usepackage{xcolor}
+\usepackage{listings}
+\lstdefinestyle{vmkcode}{%
+  basicstyle=\ttfamily\footnotesize,
+  keywordstyle=\color{blue!55!black},
+  commentstyle=\color{green!40!black}\itshape,
+  stringstyle=\color{purple!65!black},
+  showstringspaces=false,
+  columns=fullflexible,
+  breaklines=true,
+  frame=single,
+  rulecolor=\color{black!25},
+  xleftmargin=1em,
+  aboveskip=0.7em,belowskip=0.4em,
+}
+\lstset{style=vmkcode}
+
+%=====================================================================
+% Lists and sectioning
+%=====================================================================
+\usepackage{enumitem}
+\RequirePackage{newlist}
+\usepackage{comment}
+
+\setcounter{secnumdepth}{3}
+\usepackage{titlesec}
+\renewcommand{\thesubsubsection}{\alph{subsubsection}}
+\titleformat{\subsubsection}
+{\normalfont\itshape}
+{(\thesubsubsection)}{0.5em}{}
+
+%=====================================================================
+% Bibliography
+%=====================================================================
+\usepackage[backend=bibtex,style=numeric,sorting=none,defernumbers=true]{biblatex}
+\addbibresource{references.bib}
+
+%=====================================================================
+% Indexes
+%=====================================================================
 %Two indexes: the main subject index and a separate index of mathematical
 %symbols. The `index' package replaces `makeidx', which can only ever write a
 %single \jobname.idx. It MUST be loaded before hyperref: hyperref installs the
 %two-argument \@wrindex that appends |hyperpage (giving clickable index page
 %numbers) only if it sees multind, index or amsmidx already loaded.
 \usepackage{index}
-\usepackage{hyperref}
+
+%=====================================================================
+% Hyperlinks (must come after index, per note above)
+%=====================================================================
+\usepackage[pdfencoding=auto, psdextra]{hyperref}
+\pdfstringdefDisableCommands{\def\varepsilon{\textepsilon}\def\varphi{\textphi}\def\vartheta{\texttheta}}
 \hypersetup{colorlinks=true, linkcolor=blue, filecolor=magenta, urlcolor=cyan,}
 \urlstyle{same}
-\usepackage{graphicx}
-\usepackage[export]{adjustbox}
-\graphicspath{ {./images/} }
-\usepackage{mathrsfs}
-\usepackage{multirow}
-\usepackage{diagbox}
-\usepackage{bbold}
-\usepackage{mathtools}
-\usepackage{polyglossia}
-\setdefaultlanguage{english}
-\usepackage{fontspec}
-\usepackage[backend=biber,style=numeric,sorting=none,defernumbers=true]{biblatex}
-\addbibresource{references.bib}
+
+%=====================================================================
+% Utilities
+%=====================================================================
+\usepackage{etoolbox}
+
+%=====================================================================
+% Index setup
+%=====================================================================
 %Main subject index -> VMK.idx/VMK.ind; symbol index -> VMK.sdx/VMK.snd.
 %Build recipe (the -s flag is required, without it the symbol index still
 %typesets but loses its Latin/Greek/other group headings):
@@ -56,7 +131,6 @@
 %argument to file. The literal "@" inside \z@ is makeindex's "actual" character,
 %so every \widehat entry was silently rejected ("Extra `@'"). Making the math
 %accents robust stops them expanding at write time.
-\usepackage{etoolbox}
 \robustify{\widehat}
 \robustify{\widetilde}
 
@@ -77,25 +151,10 @@
   \else\ifx C#1Special symbols and operators%
   \else #1\fi\fi\fi}
 \newcommand{\symgroup}[1]{{\normalfont\bfseries\hfil\symgroupname{#1}\hfil}}
-\usepackage{newunicodechar}
-%\usepackage{diagrams}
-%\usetikzlibrary{patterns,angles,quotes,arrows.meta,math,calc}
-\usepackage{xcolor}
-\usepackage{listings}
-\lstdefinestyle{vmkcode}{%
-  basicstyle=\ttfamily\footnotesize,
-  keywordstyle=\color{blue!55!black},
-  commentstyle=\color{green!40!black}\itshape,
-  stringstyle=\color{purple!65!black},
-  showstringspaces=false,
-  columns=fullflexible,
-  breaklines=true,
-  frame=single,
-  rulecolor=\color{black!25},
-  xleftmargin=1em,
-  aboveskip=0.7em,belowskip=0.4em,
-}
-\lstset{style=vmkcode}
+
+%=====================================================================
+% Footnotes
+%=====================================================================
 %New command to display footnote whose markers will always be hidden
 \let\svthefootnote\thefootnote
 \newcommand\blfootnotetext[1]{%
@@ -114,8 +173,10 @@
     \else\svfootnotetext[#1]{#2}\fi%
   \fi
 }
-%\DeclareUnicodeCharacter{2207}{\ifmmode\nabla\else{$\nabla$}\fi}
 
+%=====================================================================
+% Equation, figure and table numbering
+%=====================================================================
 %Reset equation numbering at each chapter; see CONVERSION_RULES.md rule 7
 \numberwithin{equation}{section}
 
@@ -126,12 +187,15 @@
 \numberwithin{table}{chapter}
 \renewcommand{\figurename}{Fig.}
 \captionsetup{labelsep=period}
-
+\newenvironment{corrected}{\color{red}}{}
+%=====================================================================
+% Physics notation macros
+%=====================================================================
 %the vector nabla->del
 \newcommand{\del}{\boldsymbol{\nabla}}
 \newcommand{\delop}{\widehat{\del}}
+\newcommand{\dd}{\mathrm{d}}
 %Clebsch-Gordan coefficient C^{#5 #6}_{#1 #2 #3 #4}
-\newcommand{\clebsch}[6]{C_{#1\,#2\,#3\,#4}^{#5\,#6}}
 
 %Bracket notation, see CONVERSION_RULES.md for the source patterns each replaces
 \newcommand{\ket}[1]{\bigl| #1 \bigr\rangle}
@@ -149,9 +213,11 @@
 %Vectors (upright bold) and matrices (italic bold); see CONVERSION_RULES.md rule 10
 \newcommand{\vect}[1]{\mathbf{#1}}
 \newcommand{\mat}[1]{\boldsymbol{#1}}
+%Clebsch Gordan coefficient C^{#5 #6}_{#1 #2 #3 #4}
+\newcommand{\clebsch}[6]{C_{#1\,#2\,#3\,#4}^{#5\,#6}}
 %Wigner 3j symbol, reading order: top row then bottom row
-\newcommand{\threej}[6]{%
-\renewcommand{\arraystretch}{1}\arraycolsep=0.2em\left(\hspace*{-0.2em}\begin{array}{rrr} #1 & #2 & #3 \\ #4 & #5 & #6 \end{array}\hspace*{-0.2em}\right)}
+\newcommand{\threej}[7][r]{%
+\ifx #1r \renewcommand{\arraystretch{1}}\arraycolsep=0.2em\else\renewcommand{\arraystretch{1.4}}\arraycolsep=0.4em\fi \left(\hspace*{-0.2em}\begin{array}{#1#1#1} #2 & #3 & #4 \\ #5 & #6 & #7 \end{array}\hspace*{-0.2em}\right)}
 %Wigner 6j symbol, reading order: top row then bottom row
 \newcommand{\sixj}[6]{%
 {\renewcommand{\arraystretch}{1}\arraycolsep=0.2em\left\{\hspace*{-0.2em}%
@@ -171,40 +237,32 @@
 
 %Same idea as \twelvej but for the 3-row (12-entry, no diagonal) layout
 %\newcommand{\twelvejalt}[3]{\left\{\begin{array}{cccc} #1 \\ #2 \\ #3 \end{array}\right\}}
-\RequirePackage{newlist}
 \newlistcommand{\twelvejI}{%
-{\renewcommand{\arraystretch}{1}\left\{\begin{array}{llll} 
+{\renewcommand{\arraystretch}{1}\left\{\begin{array}{llll}
  \argx{1}     &\argx{2}     &\argx{3}     &\argx{4} \\
 \quad \argx{5}     &\quad \argx{6}     &\quad \argx{7}     &\quad \argx{8} \\
  \argx{9}     &\argx{10}     &\argx{11}     &\argx{12}  \end{array}\right\}}
 }
 
 \newlistcommand{\twelvejII}{%
-{\renewcommand{\arraystretch}{1}\left\{\begin{array}{cccc} 
+{\renewcommand{\arraystretch}{1}\left\{\begin{array}{cccc}
  -  &\argx{1}     &\argx{2}     &\argx{3} \\
  \argx{4} & - & \argx{5}     &\argx{6} \\
  \argx{7} & \argx{8}     & - & \argx{9} \\
  \argx{10} & \argx{11}     & \argx{12}     & - \end{array}\right\}}
 }
 
-\usepackage{enumitem}
-
-\setcounter{secnumdepth}{3}
-\usepackage{titlesec}
-\renewcommand{\thesubsubsection}{\alph{subsubsection}}
-\titleformat{\subsubsection}
-{\normalfont\itshape}
-{(\thesubsubsection)}{0.5em}{}
-
-\usepackage{relsize}
 \newcommand{\Fact}[1]{{\mathlarger{\Pi}_{#1}}}
-\newcommand{\Fhg}[2]{\prescript{}{#1}{F}_{#2}^{}}
-\newcommand{\Fnm}[6][l]{\prescript{}{#2}{F}_{#3}^{}%
+\newcommand{\Fhg}[2]{\prescript{}{#1}{F}_{#2}^{}}  %should no longer be used
+\newcommand{\Fnm}[6][l]{\prescript{}{#2}{F}_{#3}^{}% defines the  hypergeometric function in two forms, one with square brackets and one with parentheses. The first argument is optional and can be either `l` or `s` to select the form. The other arguments are the parameters of the hypergeometric function.
 \if#1l \left(#4 ; #5 ; #6\right)
 \else\left[\begin{array}{c} #4\\#5\end{array}\middle|#6\right]
 \fi
 }
 
+%=====================================================================
+% Document metadata
+%=====================================================================
 \title{Quantum Theory Angular Momentum\\Electronic version 2026}
 
 \author{originally by:\\
