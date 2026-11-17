@@ -1,5 +1,5 @@
 \chapter{Clebsch-Gordan coefficients and $3 j m$ symbols}\label{chap:8}\index{Clebsch-Gordan coefficient}\index{3jm symbol@$3jm$ symbol}
-\section{Definition of vector addition coeffieicnts}\label{sec:8.1}\index{vector-addition coefficients!definition}
+\section{Definition of vector addition coefficients}\label{sec:8.1}\index{vector-addition coefficients!definition}
 The Clebsch-Gordan coefficients are vector addition coefficients.\index{vector-addition coefficients}\index{rotation group!irreducible representations of}\index{3nj symbols@$3nj$ symbols} They play an important role in the decomposition of reducible representations of rotation group into irreducible representations. All recoupling coefficients or $3 n j$ symbols can be determined as the sums of products of the Clebsch-Gordan coefficients. The aforesaid explains the extensive application of these coefficients in the quantum theory of angular momentum.
 
 \subsection{The Clebsch-Gordan Coefficients}\label{sec:8.1.1}\index{Clebsch-Gordan coefficient!definition}
@@ -26,8 +26,6 @@ The absolute value of a Clebsch-Gordan coefficient is given by
 \left[\clebsch{j_{1}}{m_{1}}{j_{2}}{m_{2}}{j}{m}\right]^{2}=\frac{2 j+1}{8 \pi} \int_{0}^{2 \pi}\dd \alpha \int_{0}^{\pi}\dd \beta \sin \beta \int_{0}^{2 \pi}\dd \gamma D_{m_{1} m_{1}}^{j_{1}}(\alpha, \beta, \gamma) D_{m_{2} m_{2}}^{j_{2}}(\alpha, \beta, \gamma) D_{m m}^{j *}(\alpha, \beta, \gamma). \label{eq:8:1:4}
 \end{equation}
 The phase of the Clebsch-Gordan coefficients may be chosen in different ways. The phase convention proposed by Condon and Shortley \cite{ref010} is universally accepted.\index{Condon-Shortley phase convention}\index{phase!of the Clebsch-Gordan coefficients} In accordance with this convention the Clebsch-Gordan
-
-
 coefficients are real and their phases are fixed by the additional relation
 \begin{equation}
 \clebsch{j_{1}}{m_{1}}{j_{2}}{m_{2}}{j}{m} \clebsch{j_{1}}{j_{1}}{j_{2}}{-j_{2}}{j}{j_{1}-j_{2}}=\frac{2 j+1}{8 \pi} \int_{0}^{2 \pi}\dd \alpha \int_{0}^{\pi}\dd \beta \sin \beta \int_{0}^{2 \pi}\dd \gamma D_{m_{1} j_{1}}^{j_{1}}(\alpha, \beta, \gamma) D_{m_{2}-j_{2}}^{j_{2}}(\alpha, \beta, \gamma) D_{m j_{1}-j_{2}}^{j *}(\alpha, \beta, \gamma), \label{eq:8:1:5}
@@ -41,7 +39,7 @@ Under such a phase definition the Clebsch-Gordan coefficients satisfy the relati
 \clebsch{j}{m}{0}{0}{j}{m}=1, \quad \clebsch{j_{1}}{j_{1}}{j_{2}}{j_{2}}{j_{1}+j_{2}}{j_{1}+j_{2}}=1, \quad \clebsch{j_{1}}{m_{1}}{j_{2}}{m_{2}}{j_{1}+j_{2}}{m_{1}+m_{2}}>0, \quad \clebsch{j_{1}}{m_{1}}{j_{2}}{-j_{2}}{j}{m}>0, \quad(-1)^{j_{1}+j_{2}-j} \clebsch{j_{1}}{m_{1}}{j_{2}}{j_{2}}{j}{m}>0, \notag\\
 (-1)^{j_{1}-m_{1}} \clebsch{j_{1}}{m_{1}}{j_{2}}{m_{2}}{j}{j}>0, \quad(-1)^{j_{2}+m_{2}} \clebsch{j_{1}}{m_{1}}{j_{2}}{m_{2}}{j_{1}-j_{2}}{m}>0 . \label{eq:8:1:6}
 \end{gather}
-The Clebsch-Gordan coefficients are elements of the unitary matrix which performs direct and inverse transformations between state vectors\index{Clebsch-Gordan coefficient!unitarity}\index{unitarity!of the Clebsch-Gordan coefficients} $\left|j_{1} m_{1} j_{2} m_{2}\right\rangle$ and $\left|j_{1} j_{2} j m\right\rangle$
+The Clebsch-Gordan coefficients are elements of the unitary matrix which performs direct and inverse transformations between state vectors\index{Clebsch-Gordan coefficient!unitarity}\index{unitarity!of the Clebsch-Gordan coefficients} $\ket{j_{1} m_{1} j_{2} m_{2}}$ and $\ket{j_{1} j_{2} j m}$
 \begin{equation}
 \clebsch{j_{1}}{m_{1}}{j_{2}}{m_{2}}{j}{m}=\braket{j_{1} m_{1} j_{2} m_{2}}{j_{1} j_{2} j m}=\braket{j_{1} j_{2} j m}{j_{1} m_{1} j_{2} m_{2}} . \label{eq:8:1:7}
 \end{equation}
@@ -59,7 +57,7 @@ The inverse relation is
 \left\{\mathfrak{M}_{j_{1}} \otimes \mathfrak{N}_{j_{2}}\right\}_{j m}=\sum_{m_{1} m_{2}} \clebsch{j_{1}}{m_{1}}{j_{2}}{m_{2}}{j}{m_{1}} \mathfrak{M}_{j_{1} m_{1}} \mathfrak{R}_{j_{2} m_{2}} . \label{eq:8:1:10}
 \end{equation}
 \subsection{The Wigner 3jm Symbols}\label{sec:8.1.2}\index{3jm symbol@$3jm$ symbol!definition}
-Not infrequently the Wigner $3 j \mathrm{~m}$ symbols \cite{ref110} are used instead of the Clebsch-Gordan coefficients.\isymo{3jm@$\bigl(\begin{smallmatrix} a & b & c\\ \alpha & \beta & \gamma\end{smallmatrix}\bigr)$, Wigner $3jm$ symbol} These symbols possess simpler symmetry properties. The $3 j \mathrm{~m}$ symbols are related to the Clebsch-Gordan coefficients by
+Not infrequently the Wigner $3 j m$ symbols \cite{ref110} are used instead of the Clebsch-Gordan coefficients.\isymo{3jm@$\bigl(\begin{smallmatrix} a & b & c\\ \alpha & \beta & \gamma\end{smallmatrix}\bigr)$, Wigner $3jm$ symbol} These symbols possess simpler symmetry properties. The $3 j m$ symbols are related to the Clebsch-Gordan coefficients by
 \begin{equation}
 \threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{m_{2}}{m_{3}}\label{eq:8:1:11}=(-1)^{j_{3}+m_{3}+2 j_{1}} \frac{1}{\sqrt{2 j_{3}+1}} \clebsch{j_{1}}{-m_{1}}{j_{2}}{-m_{3}}{j_{3}}{m_{3}} .
 \end{equation}
@@ -67,20 +65,20 @@ The inverse relation is
 \begin{equation}
 \clebsch{j_{1}}{m_{1}}{j_{2}}{m_{2}}{j_{3}}{m_{3}}=(-1)^{j_{1}-j_{2}+m_{3}} \sqrt{2 j_{3}+1}\threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{m_{2}}{-m_{3}}\label{eq:8:1:12} .
 \end{equation}
-The $3 j \mathrm{~m}$ symbol represents the probability amplitude that three angular momenta $\mathrm{j}_{1}, \mathrm{j}_{2}$ and $\mathrm{j}_{3}$ with projections $m_{1}, m_{2}$ and $m_{3}$ are coupled to yield zero angular momentum:
+The $3 j m$ symbol represents the probability amplitude that three angular momenta $\mathrm{j}_{1}, \mathrm{j}_{2}$ and $\mathrm{j}_{3}$ with projections $m_{1}, m_{2}$ and $m_{3}$ are coupled to yield zero angular momentum:
 \begin{equation}
 \threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{m_{2}}{m_{3}}\label{eq:8:1:13}=\eta \sum_{j^{\prime} m^{\prime}} \clebsch{j_{1}}{m_{1}}{j_{2}}{m_{3}}{j^{\prime}}{m^{\prime}} \clebsch{j^{\prime}}{m^{\prime}}{j_{3}}{m_{3}}{0}{0}
 \end{equation}
-The phase factor $\eta=(-1)^{j_{1}-j_{2}+j_{3}}$ is chosen in such a way that any cyclic permutation of columns leaves the $3 j m$ symbol unchanged. Below we shall use, along with the letters $j, m$ other Latin letters ( $a, b, c$, etc.) to denote angular momenta, and Greek letters ( $\alpha, \beta, \gamma$, etc.) to denote momentum projections in the arguments of the $3 j m$ symbols and Clebsch-Gordan coefficients.
+The phase factor $\eta=(-1)^{j_{1}-j_{2}+j_{3}}$ is chosen in such a way that any cyclic permutation of columns leaves the $3 j m$ symbol unchanged. Below we shall use, along with the letters $j, m$ other Latin letters ($a, b, c$, etc.) to denote angular momenta, and Greek letters ($\alpha, \beta, \gamma$, etc.) to denote momentum projections in the arguments of the $3 j m$ symbols and Clebsch-Gordan coefficients.
 
 \subsection{Regge R-Symbols}\label{sec:8.1.3}\index{Regge R-symbol@Regge $R$-symbol}\index{R-symbol@$R$-symbol|see{Regge $R$-symbol}}
 The Wigner $3 j m$ symbol may be represented by a square $3 \times 3$ array\isym{Rik@$R_{i k}$, Regge $R$-symbol}\isym{J-abc@$J=a+b+c$, sum of three momenta} $\left\|R_{i k}\right\|(i, k=1,2,3)$ which is called the Regge $R$-symbol \cite{ref094}
 \begin{equation}
-\threej{a}{b}{c}{\alpha}{\beta}{\gamma}\label{eq:8:1:14}=\left\|\begin{array}{lll}
+\threej{a}{b}{c}{\alpha}{\beta}{\gamma}\label{eq:8:1:14}=\begin{Vmatrix}
 R_{11} & R_{12} & R_{13} \\
 R_{21} & R_{22} & R_{23} \\
 R_{31} & R_{32} & R_{33}
-\end{array}\right\|
+\end{Vmatrix}
 \end{equation}
 where
 \begin{equation}
@@ -252,7 +250,7 @@ According to Ref.~\cite{ref036}, all $\Fhg{3}{2}$-functions of unit argument, wh
 \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}=\delta_{\gamma, \alpha+\beta}(-1)^{a+b-c} \frac{\Delta(a b c)}{(a+b-c)!(-a+b+c)!(a-b+\gamma)!}\left[\frac{(a+\alpha)!(a-\alpha)!(b+\beta)!(c+\gamma)!(2 c+1)}{(b-\beta)!(c-\gamma)!}\right]^{\frac{1}{2}}  \notag\\
 \times\left\{\frac{d^{b-\beta}}{(d t)^{b-\beta}}\left[(1-t)^{a+b-c} F(a-b-c,-c+\gamma ; a-b+\gamma+1 ; t)\right]\right\}_{t=0}. \label{eq:8:2:27}
 \end{gather}
-\subsection{Representations of the $3 j \mathrm{~m}$ Symbols in the Form of Algebraic Sums}\label{sec:8.2.6}\index{3jm symbol@$3jm$ symbol!as algebraic sums}
+\subsection{Representations of the $3 j m$ Symbols in the Form of Algebraic Sums}\label{sec:8.2.6}\index{3jm symbol@$3jm$ symbol!as algebraic sums}
 The explicit form of the Wigner $3 j m$ symbols may be obtained from Eqs.~\eqref{eq:8:2:3}-\eqref{eq:8:2:8} for the Clebsch-Gordan coefficients. Rewriting these equations in terms of the $R$-symbol elements, we get the following relations for\\
 the $3 j m$ symbols \cite{ref045}
 \begin{align}
@@ -325,15 +323,15 @@ The simplest way to formulate the symmetry properties of the Clebsch-Gordan coef
 The $R$-symbol possesses the following symmetry properties \cite{ref094}.\\
 \subsubsection{Permutations of columns}
 \begin{equation}
-\left\|\begin{array}{lll}
+\begin{Vmatrix}
 R_{11} & R_{12} & R_{13}\\
 R_{21} & R_{22} & R_{23} \\
 R_{31} & R_{32} & R_{33}
-\end{array}\right\|=\varepsilon\left\|\begin{array}{lll}
+\end{Vmatrix}=\varepsilon\begin{Vmatrix}
 R_{1 i} & R_{1 k} & R_{1 i} \\
 R_{2 i} & R_{2 k} & R_{2 l} \\
 R_{3 i} & R_{3 k} & R_{3 l}
-\end{array}\right\|,   \label{eq:8:4:1}
+\end{Vmatrix},   \label{eq:8:4:1}
 \end{equation}
 where
 \begin{equation}
@@ -345,27 +343,27 @@ J \equiv \sum_{k} R_{i k}=\sum_{i} R_{i k} ;
 \]
 \subsubsection{Permutations of rows}
 \begin{equation}
-\left\|\begin{array}{lll}
+\begin{Vmatrix}
 R_{11} & R_{12} & R_{13} \\
 R_{21} & R_{22} & R_{23} \\
 R_{31} & R_{32} & R_{33}
-\end{array}\right\|=\left\|\begin{array}{lll}
+\end{Vmatrix}=\varepsilon_{ikl}\begin{Vmatrix}
 R_{i 1} & R_{i 2} & R_{i 3} \\
 R_{k 1} & R_{k 2} & R_{k 3} \\
-R_{i 1} & R_{i 2} & R_{i 3}
-\end{array}\right\|, 
+R_{l 1} & R_{l 2} & R_{l 3}
+\end{Vmatrix},   \label{eq:8:4:3}
 \end{equation}
 \subsubsection{Transposition}
 \begin{equation}
-\left\|\begin{array}{lll}
+\begin{Vmatrix}
 R_{11} & R_{12} & R_{13} \\
 R_{21} & R_{22} & R_{23} \\
 R_{31} & R_{32} & R_{33}
-\end{array}\right\|=\left\|\begin{array}{lll}
+\end{Vmatrix}=\begin{Vmatrix}
 R_{11} & R_{21} & R_{31} \\
 R_{12} & R_{22} & R_{32} \\
 R_{13} & R_{23} & R_{33}
-\end{array}\right\|.  \label{eq:8:4:4}
+\end{Vmatrix}.  \label{eq:8:4:4}
 \end{equation}
 These symmetry transformations relate $6 \times 6 \times 2=72$ generally different coefficients.
 
@@ -382,17 +380,17 @@ The above relations are equivalent to the following symmetry properties of the $
 \end{align}
 \item Change of signs of momentum projections (corresponding to the permutation of the second and third rows of the $R$-symbol)
 \begin{equation}
-\threej{a}{b}{c}{\alpha}{\beta}{\gamma}\label{eq:8:4:6}=(-1)^{a+b+c}\threej{a}{b}{c}{-\alpha}{-\beta}{-\gamma}
+\threej{a}{b}{c}{\alpha}{\beta}{\gamma}=(-1)^{a+b+c}\threej{a}{b}{c}{-\alpha}{-\beta}{-\gamma}. \label{eq:8:4:6}
 \end{equation}
 \subsubsection{Regge symmetries \cite{ref094}}
 \item Replacement of arguments:
 \begin{equation}
-\threej[c]{a}{b}{c}{\alpha}{\beta}{\gamma}\label{eq:8:4:7}=(-1)^{a+b+c}\threej[c]{\frac{b+c+\alpha}{2}}{\frac{a+c+\beta}{2}}{\frac{a+b+\gamma}{2}}{a-\frac{b+c-\alpha}{2}}{b-\frac{a+c-\beta}{2}}{c-\frac{a+b-\gamma}{2}}
+\threej[c]{a}{b}{c}{\alpha}{\beta}{\gamma}=(-1)^{a+b+c}\threej[c]{\frac{b+c+\alpha}{2}}{\frac{a+c+\beta}{2}}{\frac{a+b+\gamma}{2}}{a-\frac{b+c-\alpha}{2}}{b-\frac{a+c-\beta}{2}}{c-\frac{a+b-\gamma}{2}}. \label{eq:8:4:7}
 \end{equation}
 (corresponding to the permutation of the first and third rows of the $R$-symbol) and\\
 \item
 \begin{equation}
-\threej{a}{b}{c}{\alpha}{\beta}{\gamma}\label{eq:8:4:8}=\threej[c]{a}{\frac{b+c-\alpha}{2}}{\frac{b+c+\alpha}{2}}{-b+c}{\frac{b-c-\alpha}{2}-\gamma}{\frac{b-c+\alpha}{2}+\gamma}
+\threej{a}{b}{c}{\alpha}{\beta}{\gamma}=\threej[c]{a}{\frac{b+c-\alpha}{2}}{\frac{b+c+\alpha}{2}}{-b+c}{\frac{b-c-\alpha}{2}-\gamma}{\frac{b-c+\alpha}{2}+\gamma}. \label{eq:8:4:8}
 \end{equation}
 This corresponds to the transposition of the $R$-symbol. According to the above symmetry properties, 72 formally different $3 j m$ symbols have the same absolute values. One can decompose these symbols into six groups ( 12 coefficients in each group). The $3 j m$ symbols which belong to different groups correspond to triangles of different forms but the same perimeter $J=a+b+c$. On the other hand, all $3 j m$ symbols which belong to one group are related by the classical symmetry properties \eqref{eq:8:4:5} and \eqref{eq:8:4:6}. In \eqref{eq:8:4:9} we list one $3 j m$ symbol from each group.
 \begin{align}
@@ -445,14 +443,14 @@ where
 2 \gamma^{\prime} & =(a-\alpha)+(b-\beta)-2(c-\gamma), & 2 \gamma & =\left(a^{\prime}-\alpha^{\prime}\right)+\left(b^{\prime}-\beta^{\prime}\right)-2\left(c^{\prime}-\gamma^{\prime}\right) . \notag
 \end{align}
 \end{enumerate}
-\subsection{"Mirror" Symmetry}\label{sec:8.4.4}\index{mirror symmetry}\index{symmetry!mirror}\index{negative momenta}
+\subsection{``Mirror" Symmetry}\label{sec:8.4.4}\index{mirror symmetry}\index{symmetry!mirror}\index{negative momenta}
 The original relations which define the $3 j m$ symbols and the Clebsch-Gordan coefficients may be extended to the domain of negative integer or half-integer arguments $a, b, c$. In this case the following symmetry relations are valid \cite{ref045} (here we denote $\bar{c} \equiv-c-1, \gamma \equiv-\gamma$, etc.).\\
 \subsubsection{$3jm$ symbols}
 The relations for the $3 j m$ symbols are
 \begin{equation}
 \threej{a}{b}{c}{\alpha}{\beta}{\gamma}\label{eq:8:4:16}=(-1)^{b-c-\alpha}\threej{a}{b}{c}{\alpha}{\beta}{\gamma}=i(-1)^{a+\alpha-\beta}\threej{a}{b}{c}{\alpha}{\beta}{\gamma}=i(-1)^{a+b+c}\threej{\bar{a}}{b}{\bar{c}}{\alpha}{\beta}{\gamma} .
 \end{equation}
-The $3 j \mathrm{~m}$ symbols with negative momenta obey the symmetry relations \eqref{eq:8:4:5} and \eqref{eq:8:4:6} provided $\bar{a}, \bar{b}, \bar{c}$ are replaced by $-a,-b,-c$, respectively, in the phase factors of these relations.\\
+The $3 j m$ symbols with negative momenta obey the symmetry relations \eqref{eq:8:4:5} and \eqref{eq:8:4:6} provided $\bar{a}, \bar{b}, \bar{c}$ are replaced by $-a,-b,-c$, respectively, in the phase factors of these relations.\\
 \subsubsection{Clebsch-Gordan symbols}
 The relations for the Clebsch-Gordan coefficients are
 \begin{align}
@@ -465,28 +463,28 @@ From \eqref{eq:8:4:17} one gets
 & \clebsch{\bar{a}}{\bar{a}}{b}{\beta}{c}{\gamma}=\clebsch{a}{\alpha}{\bar{b}}{\bar{\beta}}{\bar{c}}{\bar{\gamma}}, \label{eq:8:4:19}\\
 & \clebsch{a}{\alpha}{\bar{b}}{\bar{\beta}}{c}{\gamma}=\clebsch{\bar{a}}{\bar{a}}{b}{\beta}{\bar{c}}{\bar{\gamma}}. \label{eq:8:4:20}
 \end{align}
-When tabulating formulas for the Clebsch-Gordan coefficients, it is convenient to use the "mirror" symmetry properties in the form
+When tabulating formulas for the Clebsch-Gordan coefficients, it is convenient to use the ``mirror" symmetry properties in the form
 \begin{equation}
 \clebsch{a}{\alpha}{b}{\beta}{a+k}{\gamma}=(-1)^{b+\beta} \clebsch{a}{\alpha}{b}{\beta}{a-k}{\gamma}. \label{eq:8:4:21}
 \end{equation}
 \subsection{Properties of the Vector-Addition Coefficients under Transformations of the Coordinate System and Time Reversal}\label{sec:8.4.5}\index{vector-addition coefficients!under coordinate transformations}\index{time reversal}\index{coordinate inversion}\isym{Pr-hat@$\widehat{P}_{r}$, coordinate-inversion operator}\isym{Pt-hat@$\widehat{P}_{t}$, time-reversal operator}
 The vector-addition coefficients are not invariant under transformations in question, although formally they are independent of coordinates and time.
 
-\subsubsection{Rotation of the coordinate system.}
+\subsubsection{Rotation of the coordinate system}
 
 The projections of angular momenta vary under rotations of the coordinate system. The $3 j m$ symbols and the Clebsch-Gordan coefficients in a new coordinate system may be expressed as superpositions of the corresponding quantities in the initial coordinate system. Thus
 \begin{align}
 \hat{R}\threej{a}{b}{c}{\alpha}{\beta}{\gamma} & \equiv\threej{a}{b}{c}{\alpha^{\prime}}{\beta^{\prime}}{\gamma^{\prime}}=\sum_{\alpha \beta \gamma}\threej{a}{b}{c}{\alpha}{\beta}{\gamma} D_{\alpha \alpha^{\prime}}^{a}(R) D_{\beta \beta^{\prime}}^{b}(R) D_{\gamma \gamma^{\prime}}^{c}(R), \label{eq:8:4:22}\\
 \widehat{R} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} & \equiv \clebsch{a}{\alpha^{\prime}}{b}{\beta^{\prime}}{c}{\gamma^{\prime}}=\sum_{\alpha \beta \gamma} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} D_{\alpha \alpha^{\prime}}^{a}(R) D_{\beta \beta^{\prime}}^{b}(R) D_{\gamma \gamma^{\prime}}^{c *}(R). \notag
 \end{align}
-\subsubsection{Inversion of the coordinate system.}
+\subsubsection{Inversion of the coordinate system}
 
 The $3 j m$ symbols and the Clebsch-Gordan coefficients are invariant under inversion of the coordinate system, because angular momentum is a pseudovector.
 \begin{align}
 \widehat{P}_{r}\threej{a}{b}{c}{\alpha}{\beta}{\gamma} & =\threej{a}{b}{c}{\alpha}{\beta}{\gamma}, \label{eq:8:4:23}\\
 \widehat{P}_{r} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} & =\clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}. \notag
 \end{align}
-\subsubsection{(Time reversal.}
+\subsubsection{Time reversal}
 The time reversal changes signs of projections of all angular momenta (reversal of the rotation direction). Hence
 \begin{align}
 \hat{P}_{t}\threej{a}{b}{c}{\alpha}{\beta}{\gamma} & =\threej{a}{b}{c}{-\alpha}{-\beta}{-\gamma}=(-1)^{a+b+c}\threej{a}{b}{c}{\alpha}{\beta}{\gamma}, \label{eq:8:4:24}\\
@@ -503,7 +501,7 @@ The time reversal changes signs of projections of all angular momenta (reversal 
 \begin{equation}
 \clebsch{a}{a}{b}{\beta}{a+b}{\alpha+\beta}=\left[\frac{(2 a)!(2 b)!(a+b+\alpha+\beta)!(a+b-\alpha-\beta)!}{(2 a+2 b)!(a+\alpha)!(a-\alpha)!(b+\beta)!(b-\beta)!}\right]^{\frac{1}{2}}. \label{eq:8:5:3}
 \end{equation}
-The following two formulas are equivalent to \eqref{eq:8:5:3} (i and $n$ are integer)
+The following two formulas are equivalent to \eqref{eq:8:5:3} ($i$ and $n$ are integer)
 \begin{gather}
 \clebsch{a}{a-n+i}{b}{b-i+1}{a+b}{a+b-n+1}=\left[\frac{\binom{2 a}{n-i}\binom{2 b}{i-1}}{\binom{2 a+2 b}{n-1}}\right]^{\frac{1}{2}}, \label{eq:8:5:4}\\
 \clebsch{a}{a+n-i}{b}{-b+i-1}{a+b}{a-b+n-1}=\left[\frac{\binom{2 a}{i-n}\binom{2 b}{i-1}}{\binom{2 a+2 b}{2 a+n-1}}\right]^{\frac{1}{2}}. \label{eq:8:5:5}
@@ -519,10 +517,10 @@ In particular,
 \end{equation}
 In particular,
 \begin{gather}
-\clebsch{a}{\alpha}{b}{\beta}{a+b-1}{\alpha+\beta}=0, \quad \text { if } \quad \frac{\alpha}{\beta}=\frac{a}{b}. \label{eq:8:5:9}\\
-\clebsch{a}{a-1}{b}{b}{a+b-1}{a+b-1}=-\sqrt{\frac{b}{a+b}}. \label{eq:8:5:10}\\
-\clebsch{a}{a}{b}{b-1}{a+b-1}{a+b-1}=\sqrt{\frac{a}{a+b}}. \label{eq:8:5:11}\\
-\clebsch{a}{a}{b}{-b}{a+b-1}{a-b}=\left[\frac{(2 a)!(2 b)!(2 a+2 b-1)}{(2 a+2 b)!}\right]^{\frac{1}{2}}, \label{eq:8:5:12}
+\clebsch{a}{\alpha}{b}{\beta}{a+b-1}{\alpha+\beta}=0, \quad \text { if } \quad \frac{\alpha}{\beta}=\frac{a}{b}, \label{eq:8:5:9}\\
+\clebsch{a}{a-1}{b}{b}{a+b-1}{a+b-1}=-\sqrt{\frac{b}{a+b}}, \label{eq:8:5:10}\\
+\clebsch{a}{a}{b}{b-1}{a+b-1}{a+b-1}=\sqrt{\frac{a}{a+b}}, \label{eq:8:5:11}\\
+\clebsch{a}{a}{b}{-b}{a+b-1}{a-b}=\left[\frac{(2 a)!(2 b)!(2 a+2 b-1)}{(2 a+2 b)!}\right]^{\frac{1}{2}}. \label{eq:8:5:12}
 \end{gather}
 \subsubsection{$c=a-b(a \geq b)$}
 \begin{equation}
@@ -547,7 +545,7 @@ In particular,
 \end{equation}
 \subsubsection{$c=a+b-2$}
 \begin{align}
-\clebsch{a}{\alpha}{b}{\beta}{a+b-2}{\alpha+\beta} & =\left[\frac{2 a(2 a-1) 2 b(2 b-1)}{2(2 a+2 b-2)(2 a+2 b-1)}\right]^{\frac{1}{2}}\left[\binom{2 a}{a-\alpha}\binom{2 b}{b-\beta}\binom{2 a+2 b-4}{a+b-\alpha-\beta-2}\right]^{-\frac{1}{2}}  \notag\\
+\clebsch{a}{\alpha}{b}{\beta}{a+b-2}{\alpha+\beta} =&\left[\frac{2 a(2 a-1) 2 b(2 b-1)}{2(2 a+2 b-2)(2 a+2 b-1)}\right]^{\frac{1}{2}}\left[\binom{2 a}{a-\alpha}\binom{2 b}{b-\beta}\binom{2 a+2 b-4}{a+b-\alpha-\beta-2}\right]^{-\frac{1}{2}}  \notag\\
 & \times\left\{\binom{2 a-2}{a-\alpha}\binom{2 b-2}{b+\beta}-2\binom{2 a-2}{a-\alpha-1}\binom{2 b-2}{b+\beta-1}+\binom{2 a-2}{a-\alpha-2}\binom{2 b-2}{b+\beta-2}\right\} . \label{eq:8:5:19}
 \end{align}
 In particular,
@@ -555,11 +553,11 @@ In particular,
 \clebsch{a}{a}{b}{-b}{a+b-2}{a-b}=\left[\frac{(2 a)!(2 b)!(2 a+2 b-3)}{2(2 a+2 b-1)!}\right]^{\frac{1}{2}}. \label{eq:8:5:20}
 \end{equation}
 \subsubsection{$c=a-b+2(a+2 \geq b)$}
-\begin{gather}
-\clebsch{a}{\alpha}{b}{\beta}{a-b+2}{\alpha+\beta}=\left[\frac{(2 b-1) 2 b(2 a-2 b+5)(2 a-2 b+4)(2 a-2 b+3)}{2(2 a+1)(2 a+2)(2 a+3)}\right]^{\frac{1}{2}}  \notag\\
-\times\left[\binom{2 a}{a-\alpha}\binom{2 b}{b-\beta}\binom{2 a-2 b+4}{a-b-\alpha-\beta+2}\right]^{-\frac{1}{2}}(-1)^{b+\beta}\left\{\binom{2 b-2}{b+\beta}\binom{2 a-2 b+2}{a-b-\alpha-\beta}\right. \notag\\
-\left.-2\binom{2 b-2}{b+\beta-1}\binom{2 a-2 b+2}{a-b-\alpha-\beta+1}+\binom{2 b-2}{b+\beta-2}\binom{2 a-2 b+2}{a-b-\alpha-\beta+2}\right\} . \label{eq:8:5:21}
-\end{gather}
+\begin{align}
+\clebsch{a}{\alpha}{b}{\beta}{a-b+2}{\alpha+\beta}=&\left[\frac{(2 b-1) 2 b(2 a-2 b+5)(2 a-2 b+4)(2 a-2 b+3)}{2(2 a+1)(2 a+2)(2 a+3)}\right]^{\frac{1}{2}}  \notag\\
+&\times\left[\binom{2 a}{a-\alpha}\binom{2 b}{b-\beta}\binom{2 a-2 b+4}{a-b-\alpha-\beta+2}\right]^{-\frac{1}{2}}(-1)^{b+\beta}\left\{\binom{2 b-2}{b+\beta}\binom{2 a-2 b+2}{a-b-\alpha-\beta}\right. \notag\\
+&\qquad\left.-2\binom{2 b-2}{b+\beta-1}\binom{2 a-2 b+2}{a-b-\alpha-\beta+1}+\binom{2 b-2}{b+\beta-2}\binom{2 a-2 b+2}{a-b-\alpha-\beta+2}\right\} . \label{eq:8:5:21}
+\end{align}
 In particular,
 \begin{equation}
 \clebsch{a}{a}{b}{-b}{a-b+2}{a-b}=\left[\frac{(2 a-2 b+5) 2 b(2 b-1)}{(2 a+1)(2 a+2)(2 a+3)}\right]^{\frac{1}{2}}. \label{eq:8:5:22}
@@ -568,7 +566,7 @@ In particular,
 \begin{equation}
 \clebsch{a}{\alpha}{a}{\alpha}{c}{\gamma}= \begin{cases}0, & \text { if } 2 a+c=2 g+1, \label{eq:8:5:23}\\ \delta_{\gamma, 2 \alpha} \frac{(-1)^{g-c} \sqrt{2 c+1} g!}{\left(\frac{c+\gamma}{2}\right)!\left(\frac{\varepsilon-\gamma}{2}\right)!(g-c)!}\left[\frac{(c+\gamma)!(c-\gamma)!(2 g-2 c)!}{(2 g+1)!}\right]^{\frac{1}{2}}, & \text { if } 2 a+c=2 g,\end{cases}
 \end{equation}
-$g$ is integer and positive.\\
+where $g$ is integer and positive.\\
 \subsubsection{$b=a+\frac{1}{2}$, $\beta=\alpha \pm \frac{1}{2}$, $2 a+c=2 g$}
 \begin{align}
 & \clebsch{a}{\alpha}{a+\frac{1}{2}}{\alpha+\frac{1}{2}}{c+\frac{1}{2}}{2 \alpha+\frac{1}{2}}=\left[\frac{c+2 \alpha+1}{a+\alpha+1}\right]^{\frac{1}{2}} C, \label{eq:8:5:24}\\
@@ -625,15 +623,15 @@ $g$ is integer and positive. In particular,
 \clebsch{a}{a}{b}{\beta}{c}{\gamma}=\delta_{\gamma-\beta, \alpha}\left[\frac{(2 c+1)(2 a)!(-a+b+c)!(b-\beta)!(c+\gamma)!}{(a+b+c+1)!(a-b+c)!(a+b-c)!(b+\beta)!(c-\gamma)!}\right]^{\frac{1}{2}}. \label{eq:8:5:36}
 \end{gather}
 In particular,
-\begin{gather}
-\clebsch{a}{a}{b}{b}{c}{c}=\delta_{a+b, c}, \label{eq:8:5:37}\\
-\clebsch{a}{a}{b}{-b}{c}{c}=\delta_{a-b, c}\left[\frac{2 c+1}{2 a+1}\right]^{\frac{1}{2}}, \label{eq:8:5:38}\\
-\clebsch{a}{a}{b}{c-a}{c}{c}=\left[\frac{(2 a)!(2 c+1)!}{(a+b+c+1)!(a-b+c)!}\right]^{\frac{1}{2}}, \label{eq:8:5:39}\\
-\clebsch{a}{a-1}{b}{c-a+1}{c}{c}=-\left[\frac{(2 a-1)!(2 c+1)!(a+b-c)(-a+b+c+1)}{(a+b+c+1)!(a-b+c)!}\right]^{\frac{1}{2}}, \label{eq:8:5:40}\\
-\clebsch{a}{a}{b}{c-a-1}{c}{c-1}=\left[\frac{(2 a)!(2 c+1)!(a+b-c+1)(-a+b+c)}{(a+b+c+1)!(a-b+c)!2 c}\right]^{\frac{1}{2}}, \label{eq:8:5:41}\\
-\clebsch{c}{c}{b}{0}{c}{c}=(2 c)!\left[\frac{2 c+1}{(2 c-b)!(2 c+b+1)!}\right]^{\frac{1}{2}}, \label{eq:8:5:42}\\
-\clebsch{c}{c-b}{b}{b}{c}{c}=(-1)^{b}\left[\frac{(2 c+1)!(2 b)!}{(2 c+b+1)!b!}\right]^{\frac{1}{2}}, \label{eq:8:5:43}
-\end{gather}
+\begin{align}
+\clebsch{a}{a}{b}{b}{c}{c}=&\delta_{a+b, c}, \label{eq:8:5:37}\\
+\clebsch{a}{a}{b}{-b}{c}{c}=&\delta_{a-b, c}\left[\frac{2 c+1}{2 a+1}\right]^{\frac{1}{2}}, \label{eq:8:5:38}\\
+\clebsch{a}{a}{b}{c-a}{c}{c}=&\left[\frac{(2 a)!(2 c+1)!}{(a+b+c+1)!(a-b+c)!}\right]^{\frac{1}{2}}, \label{eq:8:5:39}\\
+\clebsch{a}{a-1}{b}{c-a+1}{c}{c}=&-\left[\frac{(2 a-1)!(2 c+1)!(a+b-c)(-a+b+c+1)}{(a+b+c+1)!(a-b+c)!}\right]^{\frac{1}{2}}, \label{eq:8:5:40}\\
+\clebsch{a}{a}{b}{c-a-1}{c}{c-1}=&\left[\frac{(2 a)!(2 c+1)!(a+b-c+1)(-a+b+c)}{(a+b+c+1)!(a-b+c)!2 c}\right]^{\frac{1}{2}}, \label{eq:8:5:41}\\
+\clebsch{c}{c}{b}{0}{c}{c}=&(2 c)!\left[\frac{2 c+1}{(2 c-b)!(2 c+b+1)!}\right]^{\frac{1}{2}}, \label{eq:8:5:42}\\
+\clebsch{c}{c-b}{b}{b}{c}{c}=&(-1)^{b}\left[\frac{(2 c+1)!(2 b)!}{(2 c+b+1)!b!}\right]^{\frac{1}{2}}, \label{eq:8:5:43}
+\end{align}
 \subsubsection{ $\gamma=c-1$ or $\alpha=a-1$ :}
 \begin{align}
 \clebsch{a}{\alpha}{b}{\beta}{c}{c-1}= & \delta_{\alpha+\beta, c-1}(-1)^{a-\alpha}\{(b-\beta)(b+\beta+1)-(a-\alpha)(a+\alpha+1)\}  \notag\\
@@ -688,19 +686,19 @@ when $|\alpha|=|\beta|=\frac{1}{2}$
 \clebsch{a}{\frac{1}{2}}{b}{\frac{1}{2}}{c}{1}=\clebsch{a}{\frac{1}{2}}{b}{-\frac{1}{2}}{c}{0} \frac{(2 b+1)+(-1)^{a+b-c}(2 a+1)}{2[c(c+1)]^{\frac{1}{2}}}, \label{eq:8:6:6}
 \end{equation}
 and for $|\alpha|=|\beta|=1, a+b+c$ even, one gets
-\begin{gather}
-\clebsch{a}{1}{b}{-1}{c}{0}=\clebsch{a}{0}{b}{0}{c}{0} \frac{c(c+1)-a(a+1)-b(b+1)}{2[a(a+1) b(b+1)]^{\frac{1}{2}}}, \label{eq:8:6:7}\\
-\clebsch{a}{1}{b}{1}{c}{2}=\clebsch{a}{0}{b}{0}{c}{0} \frac{a(a+1)[c(c+1)-a(a+1)+b(b+1)]+b(b+1)[c(c+1)+a(a+1)-b(b+1)]}{2[a(a+1) b(b+1)(c-1) c(c+1)(c+2)]^{\frac{1}{2}}}. \label{eq:8:6:8}
-\end{gather}
+\begin{align}
+\clebsch{a}{1}{b}{-1}{c}{0}=&\clebsch{a}{0}{b}{0}{c}{0} \frac{c(c+1)-a(a+1)-b(b+1)}{2[a(a+1) b(b+1)]^{\frac{1}{2}}}, \label{eq:8:6:7}\\
+\clebsch{a}{1}{b}{1}{c}{2}=&\clebsch{a}{0}{b}{0}{c}{0} \frac{a(a+1)[c(c+1)-a(a+1)+b(b+1)]+b(b+1)[c(c+1)+a(a+1)-b(b+1)]}{2[a(a+1) b(b+1)(c-1) c(c+1)(c+2)]^{\frac{1}{2}}}. \label{eq:8:6:8}
+\end{align}
 \subsection{Arguments Change by $1/2$}\label{sec:8.6.3}\index{recursion relations!in half-integer steps}
-\begin{gather}
-(2 a+1)[b \pm \beta]^{\frac{1}{2}} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}=\mp[(a \mp \alpha)(a+b-c)(a+b+c+1)]^{\frac{1}{2}} \clebsch{a-\frac{1}{2}}{\alpha \pm \frac{1}{2}}{b-\frac{1}{2}}{\beta \mp \frac{1}{2}}{c}{\gamma}  \notag\\
-+[(a \pm \alpha+1)(-a+b+c)(a-b+c+1)]^{\frac{1}{2}} \clebsch{a+\frac{1}{2}}{\alpha \pm \frac{1}{2}}{b-\frac{1}{2}}{\beta \mp \frac{1}{2}}{c}{\gamma}  \label{eq:8:6:9}
-\end{gather}
-\begin{gather}
-(2 a+1)[b \mp \beta+1]^{\frac{1}{2}} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}=[(a \mp \alpha)(a-b+c)(-a+b+c+1)]^{\frac{1}{2}} \clebsch{a-\frac{1}{2}}{\alpha \pm \frac{1}{2}}{b+\frac{1}{2}}{\beta \mp \frac{1}{2}}{c}{\gamma}  \notag\\
-\pm[(a \pm \alpha+1)(a+b-c+1)(a+b+c+2)]^{\frac{1}{2}} \clebsch{a+\frac{1}{2}}{\alpha \pm \frac{1}{2}}{b+\frac{1}{2}}{\beta \mp \frac{1}{2}}{c}{\gamma}  \label{eq:8:6:10}
-\end{gather}
+\begin{align}
+(2 a+1)[b \pm \beta]^{\frac{1}{2}} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}=\&mp[(a \mp \alpha)(a+b-c)(a+b+c+1)]^{\frac{1}{2}} \clebsch{a-\frac{1}{2}}{\alpha \pm \frac{1}{2}}{b-\frac{1}{2}}{\beta \mp \frac{1}{2}}{c}{\gamma}  \notag\\
+&+[(a \pm \alpha+1)(-a+b+c)(a-b+c+1)]^{\frac{1}{2}} \clebsch{a+\frac{1}{2}}{\alpha \pm \frac{1}{2}}{b-\frac{1}{2}}{\beta \mp \frac{1}{2}}{c}{\gamma}  \label{eq:8:6:9}
+\end{align}
+\begin{align}
+(2 a+1)[b \mp \beta+1]^{\frac{1}{2}} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}=&[(a \mp \alpha)(a-b+c)(-a+b+c+1)]^{\frac{1}{2}} \clebsch{a-\frac{1}{2}}{\alpha \pm \frac{1}{2}}{b+\frac{1}{2}}{\beta \mp \frac{1}{2}}{c}{\gamma}  \notag\\
+&\pm[(a \pm \alpha+1)(a+b-c+1)(a+b+c+2)]^{\frac{1}{2}} \clebsch{a+\frac{1}{2}}{\alpha \pm \frac{1}{2}}{b+\frac{1}{2}}{\beta \mp \frac{1}{2}}{c}{\gamma}  \label{eq:8:6:10}
+\end{align}
 \begin{multline}
 {[(-a+b+c)(a-b+c+1)]^{\frac{1}{2}} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}=[(a-\alpha+1)(b-\beta)]^{\frac{1}{2}} \clebsch{a+\frac{1}{2}}{\alpha-\frac{1}{2}}{b-\frac{1}{2}}{\beta+\frac{1}{2}}{c}{\gamma}}  \\
 +[(a+\alpha+1)(b+\beta)]^{\frac{1}{2}} \clebsch{a+\frac{1}{2}}{\alpha+\frac{1}{2}}{b-\frac{1}{2}}{\beta-\frac{1}{2}}{c}{\gamma}  \label{eq:8:6:11}
@@ -758,153 +756,157 @@ Let $p$ be integer and $2 g=a+b+c$. Then
 \clebsch{a+p}{0}{b-p}{0}{c}{0}=\clebsch{a}{0}{b}{0}{c}{0} \frac{(g-a)!(g-b)!}{(g-a-p)!(g-b+p)!}\left[\frac{(2 g-2 a-2 p)!(2 g-2 b+2 p)!}{(2 g-2 a)!(2 g-2 b)!}\right]^{\frac{1}{2}}. \label{eq:8:6:20}
 \end{equation}
 In particular, \eqref{eq:8:6:20} yields
-\begin{gather}
-\clebsch{a+1}{0}{b-1}{0}{c}{0}=\clebsch{a}{0}{b}{0}{c}{0}\left[\frac{(-a+b+c)(a-b+c+1)}{(-a+b+c-1)(a-b+c+2)}\right]^{\frac{1}{2}}, \label{eq:8:6:21}\\
-\clebsch{a}{0}{b+2p}{0}{c}{0}=\clebsch{a}{0}{b}{0}{c}{0}(-1)^{p} \frac{(g+p)!(g-a)!(g-b)!(g-c)!}{g!(g-a+p)!(g-b-p)!(g-c+p)!}, \notag\\
-\times\left[\frac{(a+b-c+2 p)!(a-b+c-2 p)!(-a+b+c+2 p)!(a+b+c+1)!}{(a+b-c)!(a-b+c)!(-a+b+c)!(a+b+c+2 p+1)!}\right]^{\frac{1}{2}}. \label{eq:8:6:22}
-\end{gather}
+\begin{align}
+\clebsch{a+1}{0}{b-1}{0}{c}{0}=&\clebsch{a}{0}{b}{0}{c}{0}\left[\frac{(-a+b+c)(a-b+c+1)}{(-a+b+c-1)(a-b+c+2)}\right]^{\frac{1}{2}}, \label{eq:8:6:21}\\
+\clebsch{a}{0}{b+2p}{0}{c}{0}=&\clebsch{a}{0}{b}{0}{c}{0}(-1)^{p} \frac{(g+p)!(g-a)!(g-b)!(g-c)!}{g!(g-a+p)!(g-b-p)!(g-c+p)!}, \notag\\
+&\times\left[\frac{(a+b-c+2 p)!(a-b+c-2 p)!(-a+b+c+2 p)!(a+b+c+1)!}{(a+b-c)!(a-b+c)!(-a+b+c)!(a+b+c+2 p+1)!}\right]^{\frac{1}{2}}. \label{eq:8:6:22}
+\end{align}
 Moreover, from \eqref{eq:8:6:22} one gets
 \begin{equation}
 \clebsch{a}{0}{b+2}{0}{c}{0}=-\clebsch{a}{0}{b}{0}{c}{0}\left[\frac{(a+b+c+2)(a+b-c+1)(a-b+c)(-a+b+c+1)}{(a+b+c+3)(a+b-c+2)(a-b+c-1)(-a+b+c+2)}\right]^{\frac{1}{2}}. \label{eq:8:6:23}
 \end{equation}
-\subsection{Arguments $a, b, c$ Change by 1}\label{sec:8.6.5}\index{recursion relations!in the momenta}
-\begin{align}
-& 2\left[b^{2}-\beta^{2}\right]^{\frac{1}{2}} \clebsch{a}{\alpha}{b-1}{\beta}{c}{\gamma}=\frac{1}{a(2 a+1)}\left[\left(a^{2}-\alpha^{2}\right)(-a+b+c)(-a+b+c+1)(a-b+c)(a-b+c+1)\right]^{\frac{1}{2}} \notag\\
-& \quad \times \clebsch{a-1}{\alpha}{b}{\beta}{c}{\gamma}+\frac{\alpha}{a(a+1)}[(-a+b+c)(a-b+c+1)(a+b-c)(a+b+c+1)]^{\frac{1}{2}} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}  \notag\\
-& -\frac{1}{(a+1)(2 a+1)}\left\{\left[(a+1)^{2}-\alpha^{2}\right](a+b-c)(a+b-c+1)(a+b+c+1)(a+b+c+2)\right\}^{\frac{1}{2}} \clebsch{a+1}{\alpha}{b}{\beta}{c}{\gamma}, \label{eq:8:6:24}\\
-& 2 \beta \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}=-\frac{1}{a(2 a+1)}\left[\left(a^{2}-\alpha^{2}\right)(-a+b+c+1)(a-b+c)(a+b-c)(a+b+c+1)\right]^{\frac{1}{2}} \clebsch{a-1}{\alpha}{b}{\beta}{c}{\gamma}  \notag\\
-& \quad-\frac{\alpha}{a(a+1)}\{a(a+1)+b(b+1)-c(c+1)\} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}  \notag\\
-& -\frac{1}{(a+1)(2 a+1)}\left\{\left[(a+1)^{2}-\alpha^{2}\right](-a+b+c)(a-b+c+1)(a+b-c+1)(a+b+c+2)\right\}^{\frac{1}{2}} \clebsch{a+1}{\alpha}{b}{\beta}{c}{\gamma}, \label{eq:8:6:25}
-\end{align}
-\begin{gather}
-2\left[(b+1)^{2}-\beta^{2}\right]^{\frac{1}{2}} \clebsch{a}{\alpha}{b+1}{\beta}{c}{\gamma}=-\frac{1}{a(2 a+1)}\left[\left(a^{2}-\alpha^{2}\right)(a+b-c)(a+b-c+1)(a+b+c+1)(a+b+c+2)\right]^{\frac{1}{2}} \notag\\
-\times \clebsch{a-1}{\alpha}{b}{\beta}{c}{\gamma}+\frac{\alpha}{a(a+1)}[(-a+b+c+1)(a-b+c)(a+b-c+1)(a+b+c+2)]^{\frac{1}{2}} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}  \notag\\
-+\frac{1}{(a+1)(2 a+1)}\left\{\left[(a+1)^{2}-\alpha^{2}\right](-a+b+c)(-a+b+c+1)(a-b+c)(a-b+c+1)\right\}^{\frac{1}{2}} \clebsch{a+1}{\alpha}{b}{\beta}{c}{\gamma}, \label{eq:8:6:26}\\
-\clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}=\left[\frac{4 c^{2}(2 c+1)(2 c-1)}{(c+\gamma)(c-\gamma)(-a+b+c)(a-b+c)(a+b-c+1)(a+b+c+1)}\right]^{\frac{1}{2}}  \notag\\
-\times\left\{\frac{(\alpha-\beta) c(c-1)-\gamma a(a+1)+\gamma b(b+1)}{2 c(c-1)} \clebsch{a}{\alpha}{b}{\beta}{c-1}{\gamma}\right. \notag\\
+\subsection{Arguments $a, b, c$ change by 1}\label{sec:8.6.5}\index{recursion relations!in the momenta}
+\begin{multline}
+ 2\left[b^{2}-\beta^{2}\right]^{\frac{1}{2}} \clebsch{a}{\alpha}{b-1}{\beta}{c}{\gamma}=\frac{1}{a(2 a+1)}\left[\left(a^{2}-\alpha^{2}\right)(-a+b+c)(-a+b+c+1)(a-b+c)(a-b+c+1)\right]^{\frac{1}{2}} \\
+\times \clebsch{a-1}{\alpha}{b}{\beta}{c}{\gamma}+\frac{\alpha}{a(a+1)}[(-a+b+c)(a-b+c+1)(a+b-c)(a+b+c+1)]^{\frac{1}{2}} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}  \\
+ -\frac{1}{(a+1)(2 a+1)}\left\{\left[(a+1)^{2}-\alpha^{2}\right](a+b-c)(a+b-c+1)(a+b+c+1)(a+b+c+2)\right\}^{\frac{1}{2}} \clebsch{a+1}{\alpha}{b}{\beta}{c}{\gamma}, \label{eq:8:6:24}
+\end{multline}
+\begin{multline}
+ 2 \beta \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}=-\frac{1}{a(2 a+1)}\left[\left(a^{2}-\alpha^{2}\right)(-a+b+c+1)(a-b+c)(a+b-c)(a+b+c+1)\right]^{\frac{1}{2}} \clebsch{a-1}{\alpha}{b}{\beta}{c}{\gamma} \\
+ \quad-\frac{\alpha}{a(a+1)}\{a(a+1)+b(b+1)-c(c+1)\} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}  \\
+ -\frac{1}{(a+1)(2 a+1)}\left\{\left[(a+1)^{2}-\alpha^{2}\right](-a+b+c)(a-b+c+1)(a+b-c+1)(a+b+c+2)\right\}^{\frac{1}{2}} \clebsch{a+1}{\alpha}{b}{\beta}{c}{\gamma}, \label{eq:8:6:25}
+\end{multline}
+\begin{multline}
+2\left[(b+1)^{2}-\beta^{2}\right]^{\frac{1}{2}} \clebsch{a}{\alpha}{b+1}{\beta}{c}{\gamma}=-\frac{1}{a(2 a+1)}\left[\left(a^{2}-\alpha^{2}\right)(a+b-c)(a+b-c+1)(a+b+c+1)(a+b+c+2)\right]^{\frac{1}{2}} \\
+\times \clebsch{a-1}{\alpha}{b}{\beta}{c}{\gamma}+\frac{\alpha}{a(a+1)}[(-a+b+c+1)(a-b+c)(a+b-c+1)(a+b+c+2)]^{\frac{1}{2}} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}  \\
++\frac{1}{(a+1)(2 a+1)}\left\{\left[(a+1)^{2}-\alpha^{2}\right](-a+b+c)(-a+b+c+1)(a-b+c)(a-b+c+1)\right\}^{\frac{1}{2}} \clebsch{a+1}{\alpha}{b}{\beta}{c}{\gamma}, \label{eq:8:6:26}\end{multline}
+\begin{multline}
+\clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}=\left[\frac{4 c^{2}(2 c+1)(2 c-1)}{(c+\gamma)(c-\gamma)(-a+b+c)(a-b+c)(a+b-c+1)(a+b+c+1)}\right]^{\frac{1}{2}} \\
+\times\left\{\frac{(\alpha-\beta) c(c-1)-\gamma a(a+1)+\gamma b(b+1)}{2 c(c-1)} \clebsch{a}{\alpha}{b}{\beta}{c-1}{\gamma}\right. \\
 \left.-\left[\frac{(c-\gamma-1)(c+\gamma-1)(-a+b+c-1)(a-b+c-1)(a+b-c+2)(a+b+c)}{4(c-1)^{2}(2 c-3)(2 c-1)}\right]^{\frac{1}{2}} \clebsch{a}{\alpha}{b}{\beta}{c-2}{\gamma}\right\} . \label{eq:8:6:27}
-\end{gather}
+\end{multline}
 \subsection{Arguments $a, b, \alpha, \beta$ Change by 1}\label{sec:8.6.6}\index{recursion relations!in $a, b, \alpha, \beta$}
-\begin{gather}
-{[(b \pm \beta)(b \pm \beta+1)]^{\frac{1}{2}} \clebsch{a}{\alpha}{b-1}{\beta}{c}{\gamma}}  \notag\\
-=\frac{1}{2 a(2 a+1)}[(a \pm \alpha)(a \pm \alpha-1)(-a+b+c)(-a+b+c+1)(a-b+c)(a-b+c+1)]^{\frac{1}{2}} \clebsch{a-1}{\alpha \mp 1}{b}{\beta \pm 1}{c}{\gamma}  \notag\\
-\mp \frac{1}{2 a(a+1)}[(a \pm \alpha)(a \mp \alpha+1)(-a+b+c)(a-b+c+1)(a+b-c)(a+b+c+1)]^{\frac{1}{2}} \clebsch{a}{\alpha \mp 1}{b}{\beta \pm 1}{c}{\gamma}  \notag\\
-+\frac{1}{2(a+1)(2 a+1)}[(a \mp \alpha+1)(a \mp \alpha+2)(a+b-c)(a+b-c+1)(a+b+c+1)(a+b+c+2)]^{\frac{1}{2}}  \notag\\
-\times \clebsch{a+1}{\alpha \mp 1}{b}{\beta \pm 1}{c}{\gamma} . \label{eq:8:6:28}\end{gather}
-\begin{gather}
-[(b\mp\beta)(b\pm\beta+1)]^{\frac{1}{2}}\clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}\notag\\
-= \pm \frac{1}{2 a(2 a+1)}[(a \pm \alpha)(a \pm \alpha-1)(-a+b+c+1)(a-b+c)(a+b-c)(a+b+c+1)]^{\frac{1}{2}} \clebsch{a-1}{\alpha \mp 1}{b}{\beta \pm 1}{c}{\gamma}  \notag\\
-\quad-\frac{1}{2 a(a+1)}\{a(a+1)+b(b+1)-c(c+1)\}\left[(a \pm \alpha)(a \mp \alpha+1)\right]^{\frac{1}{2}} \clebsch{a}{\alpha \mp 1}{b}{\beta \pm 1}{c}{\gamma}  \notag\\
-\mp \frac{1}{2(a+1)(2 a+1)}[(a \mp \alpha+1)(a \mp \alpha+2)(-a+b+c)(a-b+c+1)(a+b-c+1)(a+b+c+2)]^{\frac{1}{2}}  \notag\\
+\begin{multline}
+{[(b \pm \beta)(b \pm \beta+1)]^{\frac{1}{2}} \clebsch{a}{\alpha}{b-1}{\beta}{c}{\gamma}}  \\
+=\frac{1}{2 a(2 a+1)}[(a \pm \alpha)(a \pm \alpha-1)(-a+b+c)(-a+b+c+1)(a-b+c)(a-b+c+1)]^{\frac{1}{2}} \clebsch{a-1}{\alpha \mp 1}{b}{\beta \pm 1}{c}{\gamma}  \\
+\mp \frac{1}{2 a(a+1)}[(a \pm \alpha)(a \mp \alpha+1)(-a+b+c)(a-b+c+1)(a+b-c)(a+b+c+1)]^{\frac{1}{2}} \clebsch{a}{\alpha \mp 1}{b}{\beta \pm 1}{c}{\gamma}  \\
++\frac{1}{2(a+1)(2 a+1)}[(a \mp \alpha+1)(a \mp \alpha+2)(a+b-c)(a+b-c+1)(a+b+c+1)(a+b+c+2)]^{\frac{1}{2}}  \\
+\times \clebsch{a+1}{\alpha \mp 1}{b}{\beta \pm 1}{c}{\gamma} . \label{eq:8:6:28}
+\end{multline}
+\begin{multline}
+[(b\mp\beta)(b\pm\beta+1)]^{\frac{1}{2}}\clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}\\
+= \pm \frac{1}{2 a(2 a+1)}[(a \pm \alpha)(a \pm \alpha-1)(-a+b+c+1)(a-b+c)(a+b-c)(a+b+c+1)]^{\frac{1}{2}} \clebsch{a-1}{\alpha \mp 1}{b}{\beta \pm 1}{c}{\gamma}  \\
+\quad-\frac{1}{2 a(a+1)}\{a(a+1)+b(b+1)-c(c+1)\}\left[(a \pm \alpha)(a \mp \alpha+1)\right]^{\frac{1}{2}} \clebsch{a}{\alpha \mp 1}{b}{\beta \pm 1}{c}{\gamma}  \\
+\mp \frac{1}{2(a+1)(2 a+1)}[(a \mp \alpha+1)(a \mp \alpha+2)(-a+b+c)(a-b+c+1)(a+b-c+1)(a+b+c+2)]^{\frac{1}{2}}  \\
 \quad \times \clebsch{a+1}{\alpha \mp 1}{b}{\beta \pm 1}{c}{\gamma} . \label{eq:8:6:29}
-\end{gather}
-\begin{gather}
-{[(b \mp \beta)(b \mp \beta+1)]^{\frac{1}{2}} \clebsch{a}{\alpha}{b+1}{\beta}{c}{\gamma}}  \notag\\
-=\frac{1}{2 a(2 a+1)}[(a \pm \alpha)(a \pm \alpha-1)(a+b-c)(a+b-c+1)(a+b+c+1)(a+b+c+2)]^{\frac{1}{2}} \clebsch{a-1}{\alpha \mp 1}{b}{\beta \pm 1}{c}{\gamma}  \notag\\
-\pm \frac{1}{2 a(a+1)}[(a \pm \alpha)(a \mp \alpha+1)(-a+b+c+1)(a-b+c)(a+b-c+1)(a+b+c+2)]^{\frac{1}{2}} \clebsch{a}{\alpha \mp 1}{b}{\beta \pm 1}{c}{\gamma}  \notag\\
-+\frac{1}{2(a+1)(2 a+1)}[(a \mp \alpha+1)(a \mp \alpha+2)(-a+b+c)(-a+b+c+1)(a-b+c)(a-b+c+1)]^{\frac{1}{2}}  \notag\\
+\end{multline}
+\begin{multline}
+{[(b \mp \beta)(b \mp \beta+1)]^{\frac{1}{2}} \clebsch{a}{\alpha}{b+1}{\beta}{c}{\gamma}}  \\
+=\frac{1}{2 a(2 a+1)}[(a \pm \alpha)(a \pm \alpha-1)(a+b-c)(a+b-c+1)(a+b+c+1)(a+b+c+2)]^{\frac{1}{2}} \clebsch{a-1}{\alpha \mp 1}{b}{\beta \pm 1}{c}{\gamma}  \\
+\pm \frac{1}{2 a(a+1)}[(a \pm \alpha)(a \mp \alpha+1)(-a+b+c+1)(a-b+c)(a+b-c+1)(a+b+c+2)]^{\frac{1}{2}} \clebsch{a}{\alpha \mp 1}{b}{\beta \pm 1}{c}{\gamma}  \\
++\frac{1}{2(a+1)(2 a+1)}[(a \mp \alpha+1)(a \mp \alpha+2)(-a+b+c)(-a+b+c+1)(a-b+c)(a-b+c+1)]^{\frac{1}{2}}  \\
 \times \clebsch{a+1}{\alpha \mp 1}{b}{\beta \pm 1}{c}{\gamma} \label{eq:8:6:30}
-\end{gather}
+\end{multline}
 \subsection{Arguments $c, b, \gamma, \beta$ Change by 1}\label{sec:8.6.7}\index{recursion relations!in $c, b, \gamma, \beta$}
-\begin{gather}
-{\left[\frac{(-a+b+c)(a-b+c)(a+b-c+1)(a+b+c+1)(2 c-1)}{(2 c+1)}\right]^{\frac{1}{2}} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}}  \notag\\
-=[(b+\beta)(b-\beta+1)(c+\gamma)(c+\gamma-1)]^{\frac{1}{2}} \clebsch{a}{\alpha}{b}{\beta-1}{c-1}{\gamma-1}-2 \beta\left[c^{2}-\gamma^{2}\right]^{\frac{1}{2}} \clebsch{a}{\alpha}{b}{\beta}{c-1}{\gamma}  \notag\\
+\begin{multline}
+{\left[\frac{(-a+b+c)(a-b+c)(a+b-c+1)(a+b+c+1)(2 c-1)}{(2 c+1)}\right]^{\frac{1}{2}} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}}  \\
+=[(b+\beta)(b-\beta+1)(c+\gamma)(c+\gamma-1)]^{\frac{1}{2}} \clebsch{a}{\alpha}{b}{\beta-1}{c-1}{\gamma-1}-2 \beta\left[c^{2}-\gamma^{2}\right]^{\frac{1}{2}} \clebsch{a}{\alpha}{b}{\beta}{c-1}{\gamma}  \\
 -[(b-\beta)(b+\beta+1)(c-\gamma)(c-\gamma-1)]^{\frac{1}{2}} \clebsch{a}{\alpha}{b}{\beta+1}{c-1}{\gamma+1} . \label{eq:8:6:31}
-\end{gather}
-\begin{gather}
-{[(b \mp \beta)(b \mp \beta+1)]^{\frac{1}{2}} \clebsch{a}{\alpha}{b-1}{\beta}{c}{\gamma}}  \notag\\
-=\frac{1}{2 c}\left[\frac{(c \pm \gamma)(c \pm \gamma-1)(a-b+c)(a-b+c+1)(a+b-c)(a+b-c+1)}{(2 c-1)(2 c+1)}\right]^{\frac{1}{2}} \clebsch{a}{\alpha}{b}{\beta \mp 1}{c-1}{\gamma \mp 1}  \notag\\
-\pm \frac{1}{2 c(c+1)}[(c \pm \gamma)(c \mp \gamma+1)(-a+b+c)(a-b+c+1)(a+b-c)(a+b+c+1)]^{\frac{1}{2}} \clebsch{a}{\alpha}{b}{\beta \mp 1}{c}{\gamma \mp 1}  \notag\\
+\end{multline}
+\begin{multline}
+{[(b \mp \beta)(b \mp \beta+1)]^{\frac{1}{2}} \clebsch{a}{\alpha}{b-1}{\beta}{c}{\gamma}}  \\
+=\frac{1}{2 c}\left[\frac{(c \pm \gamma)(c \pm \gamma-1)(a-b+c)(a-b+c+1)(a+b-c)(a+b-c+1)}{(2 c-1)(2 c+1)}\right]^{\frac{1}{2}} \clebsch{a}{\alpha}{b}{\beta \mp 1}{c-1}{\gamma \mp 1}  \\
+\pm \frac{1}{2 c(c+1)}[(c \pm \gamma)(c \mp \gamma+1)(-a+b+c)(a-b+c+1)(a+b-c)(a+b+c+1)]^{\frac{1}{2}} \clebsch{a}{\alpha}{b}{\beta \mp 1}{c}{\gamma \mp 1}  \\
 +\frac{1}{2(c+1)}\left[\frac{(c \mp \gamma+1)(c \mp \gamma+2)(-a+b+c)(-a+b+c+1)(a+b+c+1)(a+b+c+2)}{(2 c+1)(2 c+3)}\right]^{\frac{1}{2}} \clebsch{a}{\alpha}{b}{\beta \mp 1}{c+1}{\gamma \mp 1}  \label{eq:8:6:32}
-\end{gather}
-\begin{gather}
-  [(b\pm\beta)(b\mp\beta+1)]^{\frac{1}{2}}\clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}\notag\\
-= \pm \frac{1}{2 c}\left[\frac{(c \pm \gamma)(c \pm \gamma-1)(-a+b+c)(a-b+c)(a+b-c+1)(a+b+c+1)}{(2 c-1)(2 c+1)}\right]^{\frac{1}{2}} \clebsch{a}{\alpha}{b}{\beta \mp 1}{c-1}{\gamma \mp 1}  \notag\\
-+\frac{1}{2 c(c+1)}\{-a(a+1)+b(b+1)+c(c+1)\}[(c \pm \gamma)(c \mp \gamma+1)]^{\frac{1}{2}} \clebsch{a}{\alpha}{b}{\beta \mp 1}{c}{\gamma \mp 1}  \notag\\
+\end{multline}
+\begin{multline}
+  [(b\pm\beta)(b\mp\beta+1)]^{\frac{1}{2}}\clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}\\
+= \pm \frac{1}{2 c}\left[\frac{(c \pm \gamma)(c \pm \gamma-1)(-a+b+c)(a-b+c)(a+b-c+1)(a+b+c+1)}{(2 c-1)(2 c+1)}\right]^{\frac{1}{2}} \clebsch{a}{\alpha}{b}{\beta \mp 1}{c-1}{\gamma \mp 1}  \\
++\frac{1}{2 c(c+1)}\{-a(a+1)+b(b+1)+c(c+1)\}[(c \pm \gamma)(c \mp \gamma+1)]^{\frac{1}{2}} \clebsch{a}{\alpha}{b}{\beta \mp 1}{c}{\gamma \mp 1}  \\
 \mp \frac{1}{2(c+1)}\left[\frac{(c \mp \gamma+1)(c \mp \gamma+2)(-a+b+c+1)(a-b+c+1)(a+b-c)(a+b+c+2)}{(2 c+1)(2 c+3)}\right]^{\frac{1}{2}} \clebsch{a}{\alpha}{b}{\beta \mp 1}{c+1}{\gamma \mp 1} \label{eq:8:6:33}
-\end{gather}
-\begin{gather}
-  [(b\pm\beta)(b\pm\beta+1)]^{\frac{1}{2}}\clebsch{a}{\alpha}{b+1}{\beta}{c}{\gamma}\notag\\
-=\frac{1}{2 c}\left[\frac{(c \pm \gamma)(c \pm \gamma-1)(-a+b+c)(-a+b+c+1)(a+b+c+1)(a+b+c+2)}{(2 c-1)(2 c+1)}\right]^{\frac{1}{2}} \clebsch{a}{\alpha}{b}{\beta \mp 1}{c-1}{\gamma \mp 1} \notag\\
-\mp \frac{1}{2 c(c+1)}[(c \pm \gamma)(c \mp \gamma+1)(-a+b+c+1)(a-b+c)(a+b-c+1)(a+b+c+2)]^{\frac{1}{2}} \clebsch{a}{\alpha}{b}{\beta \mp 1}{c}{\gamma \mp 1}  \notag\\
+\end{multline}
+\begin{multline}
+  [(b\pm\beta)(b\pm\beta+1)]^{\frac{1}{2}}\clebsch{a}{\alpha}{b+1}{\beta}{c}{\gamma}\\
+=\frac{1}{2 c}\left[\frac{(c \pm \gamma)(c \pm \gamma-1)(-a+b+c)(-a+b+c+1)(a+b+c+1)(a+b+c+2)}{(2 c-1)(2 c+1)}\right]^{\frac{1}{2}} \clebsch{a}{\alpha}{b}{\beta \mp 1}{c-1}{\gamma \mp 1} \\
+\mp \frac{1}{2 c(c+1)}[(c \pm \gamma)(c \mp \gamma+1)(-a+b+c+1)(a-b+c)(a+b-c+1)(a+b+c+2)]^{\frac{1}{2}} \clebsch{a}{\alpha}{b}{\beta \mp 1}{c}{\gamma \mp 1}  \\
 +\frac{1}{2(c+1)}\left[\frac{(c \mp \gamma+1)(c \mp \gamma+2)(a-b+c)(a-b+c+1)(a+b-c)(a+b-c+1)}{(2 c+1)(2 c+3)}\right]^{\frac{1}{2}} \clebsch{a}{\alpha}{b}{\beta \mp 1}{c+1}{\gamma \mp 1} .  \label{eq:8:6:34}
-\end{gather}
+\end{multline}
 \subsection{Recursion Relations for the Regge Symbols}\label{sec:8.6.8}\index{Regge R-symbol@Regge $R$-symbol!recursion relations}
 Recursion relations for the Regge $R$-symbols are very convenient because each relation is equivalent to a variety of formally different expressions for the Clebsch-Gordan coefficients. The formulas given below represent some recursion relations \cite{ref086,ref103}. In these formulas we use the notation $J=\sum_{k=1}^{3} R_{i k}=\sum_{i=1}^{3} R_{i k}=a+b+c$.
 \begin{align}
-& {\left[R_{11}(J+1)\right]^{\frac{1}{2}}\left\|\begin{array}{lll}
+&{\left[R_{11}(J+1)\right]^{\frac{1}{2}}\begin{Vmatrix}
 R_{11} & R_{12} & R_{13} \\
 R_{21} & R_{22} & R_{23} \\
 R_{31} & R_{32} & R_{33}
-\end{array}\right\|-\left[R_{22} R_{33}\right]^{\frac{1}{2}}\left\|\begin{array}{lll}
+\end{Vmatrix}&-\left[R_{22} R_{33}\right]^{\frac{1}{2}}\begin{Vmatrix}
 R_{11}-1 & R_{12} & R_{13} \\
 R_{21} & R_{22}-1 & R_{23} \\
 R_{31} & R_{32} & R_{33}-1
-\end{array}\right\|}  \notag\\
-& +\left[R_{23} R_{32}\right]^{\frac{1}{2}}\left\|\begin{array}{lll}
+\end{Vmatrix}}  \notag\\
+& +\left[R_{23} R_{32}\right]^{\frac{1}{2}}\begin{Vmatrix}
 R_{11}-1 & R_{12} & R_{13} \\
 R_{21} & R_{22} & R_{23}-1 \\
 R_{31} & R_{32}-1 & R_{33}
-\end{array}\right\|=0 . \label{eq:8:6:35}\\
-& {\left[\left(R_{11}+1\right) R_{21}\right]^{\frac{1}{2}}\left\|\begin{array}{lll}
+\end{Vmatrix}=0 . \label{eq:8:6:35}\\
+ {\left[\left(R_{11}+1\right) R_{21}\right]^{\frac{1}{2}}\begin{Vmatrix}
 R_{11}+1 & R_{12} & R_{13} \\
 R_{21}-1 & R_{22} & R_{23} \\
 R_{31} & R_{32} & R_{33}
-\end{array}\right\|+\left[\left(R_{12}+1\right) R_{22}\right]^{\frac{1}{2}}\left\|\begin{array}{lll}
+\end{Vmatrix}&+\left[\left(R_{12}+1\right) R_{22}\right]^{\frac{1}{2}}\begin{Vmatrix}
 R_{11} & R_{12}+1 & R_{13} \\
 R_{21} & R_{22}-1 & R_{23} \\
 R_{31} & R_{32} & R_{33}
-\end{array}\right\|}  \notag\\
-& +\left[\left(R_{13}+1\right) R_{23}\right]^{\frac{1}{2}}\left\|\begin{array}{lll}
+\end{Vmatrix}}  \notag\\
+& +\left[\left(R_{13}+1\right) R_{23}\right]^{\frac{1}{2}}\begin{Vmatrix}
 R_{11} & R_{12} & R_{13}+1 \\
 R_{21} & R_{22} & R_{23}-1 \\
 R_{31} & R_{32} & R_{33}
-\end{array}\right\|=0 .
+\end{Vmatrix}=0 .
 \footnote{Column recursion — it shifts $R_{1k}+1$ and $R_{2k}-1$, so each array has equal column sums but row sums J+1, J−1, J. A Regge symbol requires all six line-sums equal, so every term vanishes as a standard 3jm and the relation is only vacuously satisfied.  It's not an OCR issue; the transcription matches the scan.}
 \label{eq:8:6:36}\\
-& {\left[R_{11} R_{22}(J+1)\right]^{\frac{1}{2}}\left\|\begin{array}{lll}
+ {\left[R_{11} R_{22}(J+1)\right]^{\frac{1}{2}}\begin{Vmatrix}
 R_{11} & R_{12} & R_{13} \\
 R_{21} & R_{22} & R_{23} \\
 R_{31} & R_{32} & R_{33}
-\end{array}\right\|-\left(R_{22}+R_{23}\right)\left[R_{33}\right]^{\frac{1}{2}}\left\|\begin{array}{lll}
+\end{Vmatrix}&-\left(R_{22}+R_{23}\right)\left[R_{33}\right]^{\frac{1}{2}}\begin{Vmatrix}
 R_{11}-1 & R_{12} & R_{13} \\
 R_{21} & R_{22}-1 & R_{23} \\
 R_{31} & R_{32} & R_{33}-1
-\end{array}\right\|}  \notag\\
-& -\left[R_{23} R_{31}\left(R_{21}+1\right)\right]^{\frac{1}{2}}\left\|\begin{array}{lll}
+\end{Vmatrix}}  \notag\\
+& -\left[R_{23} R_{31}\left(R_{21}+1\right)\right]^{\frac{1}{2}}\begin{Vmatrix}
 R_{11}-1 & R_{12} & R_{13} \\
 R_{21}+1 & R_{22}-1 & R_{23}-1 \\
 R_{31}-1 & R_{32} & R_{33}
-\end{array}\right\|=0 . \label{eq:8:6:37}\\
-& \left(R_{11}+R_{12}+1\right)\left[R_{22}\right]^{\frac{1}{2}}\left\|\begin{array}{lll}
+\end{Vmatrix}=0 . \label{eq:8:6:37}\\
+ \left(R_{11}+R_{12}+1\right)\left[R_{22}\right]^{\frac{1}{2}}\begin{Vmatrix}
 R_{11} & R_{12} & R_{13} \\
 R_{21} & R_{22} & R_{23} \\
 R_{31} & R_{32} & R_{33}
-\end{array}\right\|+\left[R_{13}\left(R_{23}+1\right)\left(R_{12}+1\right)\right]^{\frac{1}{2}}\left\|\begin{array}{lll}
+\end{Vmatrix}&+\left[R_{13}\left(R_{23}+1\right)\left(R_{12}+1\right)\right]^{\frac{1}{2}}\begin{Vmatrix}
 R_{11} & R_{12}+1 & R_{13}-1 \\
 R_{21} & R_{22}-1 & R_{23}+1 \\
 R_{31} & R_{32} & R_{33}
-\end{array}\right\|  \notag\\
-& -\left[R_{11} R_{33}(J+1)\right]^{\frac{1}{2}}\left\|\begin{array}{lll}
+\end{Vmatrix}  \notag\\
+& -\left[R_{11} R_{33}(J+1)\right]^{\frac{1}{2}}\begin{Vmatrix}
 R_{11}-1 & R_{12} & R_{13} \\
 R_{21} & R_{22}-1 & R_{23} \\
 R_{31} & R_{32} & R_{33}-1
-\end{array}\right\|=0 . \label{eq:8:6:38}\\
-& \left(R_{22}-R_{33}\right)\left[R_{11} R_{23} R_{32}\right]^{\frac{1}{2}}\left\|\begin{array}{lll}
+\end{Vmatrix}=0 . \label{eq:8:6:38}\\
+ \left(R_{22}-R_{33}\right)\left[R_{11} R_{23} R_{32}\right]^{\frac{1}{2}}&\begin{Vmatrix}
 R_{11}-1 & R_{12} & R_{13} \\
 R_{21} & R_{22} & R_{23}-1 \\
 R_{31} & R_{32}-1 & R_{33}
-\end{array}\right\|  \notag\\
-& +\left(R_{33}-R_{11}\right)\left[R_{13} R_{22} R_{31}\right]^{\frac{1}{2}}\left\|\begin{array}{lll}
+\end{Vmatrix}  \notag\\
+& +\left(R_{33}-R_{11}\right)\left[R_{13} R_{22} R_{31}\right]^{\frac{1}{2}}\begin{Vmatrix}
 R_{11} & R_{12} & R_{13}-1 \\
 R_{21} & R_{22}-1 & R_{23} \\
 R_{31}-1 & R_{32} & R_{33}
-\end{array}\right\|  \notag\\
-& +\left(R_{11}-R_{22}\right)\left[R_{12} R_{21} R_{33}\right]^{\frac{1}{2}}\left\|\begin{array}{lll}
+\end{Vmatrix}  \notag\\
+& +\left(R_{11}-R_{22}\right)\left[R_{12} R_{21} R_{33}\right]^{\frac{1}{2}}\begin{Vmatrix}
 R_{11} & R_{12}-1 & R_{13} \\
 R_{21}-1 & R_{22} & R_{23} \\
 R_{31} & R_{32} & R_{33}-1
-\end{array}\right\|=0 . \label{eq:8:6:39}
+\end{Vmatrix}=0 . \label{eq:8:6:39}
 \end{align}
 \section{Sums of products of Clebsch-Gordan coefficients}\label{sec:8.7}\index{Clebsch-Gordan coefficient!sums of products of}\index{sums!of the Clebsch-Gordan coefficients}
 Sums of products of the vector-addition coefficients are more conveniently represented in terms of the $3 j m$ symbols than in terms of the Clebsch-Gordan coefficients, because the $3 j m$ symbols have simpler symmetry relations. The sums expressed in terms of the $3 j m$ symbols will be given in Sec.~\ref{sec:12.2}. Nevertheless the ClebschGordan coefficients are also widely used. That is why we present the formulas which seem to be most useful for sums of products containing the Clebsch-Gordan coefficients. For practical convenience we consider various versions of the formulas which differ by permutations of upper and lower arguments. In these formulas we use the notation\index{dimension factor}\isymg{Pi-dim@$\Pi_{a b c \ldots}$, dimension factor $[(2a+1)(2b+1)\cdots]^{1/2}$}
@@ -1026,11 +1028,11 @@ The Clebsch-Gordan coefficients may be generated by expansions of some functions
 u_{1} & u_{2} & u_{3}  \\
 v_{1} & v_{2} & v_{3} \\
 w_{1} & w_{2} & w_{3}
-\end{array}\right|^{J}=J!\sqrt{(J+1)!} \sum_{R_{i k}}\left\|\begin{array}{lll}
+\end{array}\right|^{J}=J!\sqrt{(J+1)!} \sum_{R_{i k}}\begin{Vmatrix}
 R_{11} & R_{12} & R_{13} \\
 R_{21} & R_{22} & R_{23} \\
 R_{31} & R_{32} & R_{33}
-\end{array}\right\| \frac{u_{1}^{R_{11}} u_{2}^{R_{12}} u_{3}^{R_{13}} v_{1}^{R_{21}} v_{2}^{R_{22}} v_{3}^{R_{23}} w_{1}^{R_{31}} w_{2}^{R_{32}} w_{3}^{R_{33}}}{\left[R_{11}!R_{12}!R_{13}!R_{21}!R_{22}!R_{23}!R_{31}!R_{32}!R_{33}!\right]^{\frac{1}{2}}} . \label{eq:8:8:1}
+\end{Vmatrix} \frac{u_{1}^{R_{11}} u_{2}^{R_{12}} u_{3}^{R_{13}} v_{1}^{R_{21}} v_{2}^{R_{22}} v_{3}^{R_{23}} w_{1}^{R_{31}} w_{2}^{R_{32}} w_{3}^{R_{33}}}{\left[R_{11}!R_{12}!R_{13}!R_{21}!R_{22}!R_{23}!R_{31}!R_{32}!R_{33}!\right]^{\frac{1}{2}}} . \label{eq:8:8:1}
 \end{equation}
 (Regge \cite{ref094}, Shelepin \cite{ref106}). Here $R_{i k}$ are the elements of the $R$-symbol (see Sec.~\ref{sec:8.1.3}). The $R$-symbols and the Clebsch-Gordan coefficients are related by Eqs.~\eqref{eq:8:1:14} and \eqref{eq:8:1:11}.
 
@@ -1215,7 +1217,7 @@ A Clebsch-Gordan coefficient $\clebsch{a}{\alpha}{b}{\beta}{c}{\gamma}$ and asso
 \clebsch{a}{\alpha}{b}{b-1}{a}{-\alpha}=0 .
 \]
 \end{enumerate}
-Below we list particular 3jm symbols with $J=a+b+c \leq 17$ which vanish in nontrivial cases. They are arranged in the order of increasing $J$ and $a \leq b \leq c$. Roots of other 3jm symbols may be obtained by the use of the simplest symmetry properties of the $3 j \mathrm{~m}$ symbols, concerned with the permutations of momenta $a, b, c$ and sign changes of the projections $\alpha, \beta, \gamma$ (see Eqs.~\eqref{eq:8:4:5} and \eqref{eq:8:4:6}), Hence, any $3 j m$ symbols from the table given below generally represents 12 formally different versions of the $3 j m$ symbols or the Clebsch-Gordan coefficients which are equal to zero. One should bear in mind that the $3 j \mathrm{~m}$ symbols and the Clebsch-Gordan coefficients are related by (see Sec.~\ref{sec:8.1.2})
+Below we list particular 3jm symbols with $J=a+b+c \leq 17$ which vanish in nontrivial cases. They are arranged in the order of increasing $J$ and $a \leq b \leq c$. Roots of other 3jm symbols may be obtained by the use of the simplest symmetry properties of the $3 j m$ symbols, concerned with the permutations of momenta $a, b, c$ and sign changes of the projections $\alpha, \beta, \gamma$ (see Eqs.~\eqref{eq:8:4:5} and \eqref{eq:8:4:6}), Hence, any $3 j m$ symbols from the table given below generally represents 12 formally different versions of the $3 j m$ symbols or the Clebsch-Gordan coefficients which are equal to zero. One should bear in mind that the $3 j m$ symbols and the Clebsch-Gordan coefficients are related by (see Sec.~\ref{sec:8.1.2})
 \[
 \threej{a}{b}{c}{\alpha}{\beta}{-\gamma}=(-1)^{a+b+\gamma} \frac{1}{\sqrt{2 c+1}} \clebsch{a}{\alpha}{b}{\beta}{c}{\gamma} .
 \]
@@ -1270,7 +1272,7 @@ $
 \threej{j_{1}}{j_{2}}{j_{3}}{m_{1}}{m_{2}}{m_{3}}= \begin{cases}(-1)^{-j_{1}+j_{2}+j_{3}} V\left(j_{1} j_{2} j_{3}, m_{1} m_{2} m_{3}\right) & - \text { Racah \cite{ref091}} \\
 (-1)^{-j_{1}+j_{2}+j_{3}} \bar{V}\left(j_{1} j_{2} j_{3}, m_{1} m_{2} m_{3}\right) & - \text { Fano and Racah \cite{ref018} } \\
 (-1)^{j_{1}-j_{2}+j_{3}} S_{j_{1} m_{1} j_{2} m_{2} j_{3} m_{3}} & - \text { Landau and Lifshitz \cite{ref025} } \\
-(-1)^{j_{1}-j_{2}+j_{3}}\left(j_{1} m_{1}, j_{2} m_{2}, j_{3} m_{3}|0\rangle\right. & - \text { Fano \cite{ref066} } \\
+(-1)^{j_{1}-j_{2}+j_{3}}\left(j_{1} m_{1}, j_{2} m_{2}, j_{3} m_{3}\middle|0\right\rangle & - \text { Fano \cite{ref066} } \\
 X\left(j_{1} j_{2} j_{3}, m_{1} m_{2} m_{3}\right) & - \text { Schwinger \cite{ref101} } \\
 (-1)^{j_{1}-j_{2}+j_{3}} U\left(j_{1} j_{2} m_{1} m_{2} \mid j_{3}-m_{3}\right) & - \text { Lubarskii \cite{ref026} } \\
 \left(j_{1} j_{2} j_{3}\right)_{m_{1} m_{2} m_{3}} & - \text { Sharp \cite{ref102} }\end{cases}

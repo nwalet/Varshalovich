@@ -47,25 +47,25 @@ In other words, contravariant components of the basis spin functions $\chi_{S m}
 \end{equation}
 If the basis spin functions are written as column matrices, then
 \begin{equation}
-\chi_{S S}=\left(\begin{array}{c}
+\chi_{S S}=\begin{pmatrix}
 1 \\
 0 \\
 \vdots \\
 0 \\
 0
-\end{array}\right), \quad \chi_{S\, S-1}=\left(\begin{array}{c}
+\end{pmatrix}, \quad \chi_{S\, S-1}=\begin{pmatrix}
 0 \\
 1 \\
 \vdots \\
 0 \\
 0
-\end{array}\right), \ldots, \quad \chi_{s-s}=\left(\begin{array}{c}
+\end{pmatrix}, \ldots, \quad \chi_{s-s}=\begin{pmatrix}
 0 \\
 0 \\
 \vdots \\
 0 \\
 1
-\end{array}\right) . \label{eq:6:1:8}
+\end{pmatrix} . \label{eq:6:1:8}
 \end{equation}
 The collection of $2 S+1$ basis functions $\chi_{S m}(m=S, S-1, \ldots,-S)$ constitutes a complete orthonormal set of functions. The orthonormality condition for the basis functions is
 \begin{equation}
@@ -239,7 +239,7 @@ The conditions \eqref{eq:6:1:42}, \eqref{eq:6:1:43} reveal that the density matr
 
 An expectation value of any polarization operator $\widehat{T}$ in a state described by the density matrix $\widehat{\rho}$ may be evaluated by
 \begin{equation}
-\expect{\widehat{T}}=\operatorname{Tr}\{\widehat{T} \widehat{\rho}\}=\operatorname{Tr}\{\widehat{\rho} \widehat{T}\}. \label{eq:6:1:44}
+\expect{\widehat{T}}=\operatorname{Tr}\{\widehat{T}\, \widehat{\rho}\}=\operatorname{Tr}\{\widehat{\rho}\, \widehat{T}\}. \label{eq:6:1:44}
 \end{equation}
 Note also the following property of the density matrix
 \begin{equation}
@@ -257,7 +257,7 @@ The density matrix $\hat{\rho}$ may be expanded into a sum of the polarisation o
 \end{equation}
 The expansion coefficients $t_{L M}$ are called the statistical tensors.\index{statistical tensors}\isym{tLM@$t_{L M}$, statistical tensor} They represent expectation values of the polarization operators $\hat{T}_{L M}(S)$ in a state described by the density matrix $\hat{\rho}$,
 \begin{equation}
-t_{L M}=\expect{\widehat{T}_{L M}(S)}=\operatorname{Tr}\left\{\hat{\rho} \widehat{T}_{L M}(S)\right\} . \label{eq:6:1:48}
+t_{L M}=\expect{\widehat{T}_{L M}(S)}=\operatorname{Tr}\left\{\hat{\rho} `,'\widehat{T}_{L M}(S)\right\} . \label{eq:6:1:48}
 \end{equation}
 The statistical tensors are related to the density matrix elements by
 \begin{gather}
@@ -332,10 +332,10 @@ Among scalar operators the so-called projection operators\index{projection opera
 \widehat{P}_{S}(1,2) \chi_{S^{\prime} m^{\prime}}(1,2)=\delta_{S S^{\prime}} \chi_{S^{\prime} m^{\prime}}(1,2). \label{eq:6:1:61}
 \end{equation}
 From Eqs.~\eqref{eq:6:1:61} one may obtain the following properties of the projection operators
-\begin{gather}
-\hat{P}_{S}(1,2) \hat{P}_{S^{\prime}}(1,2)=\delta_{S S^{\prime}} \hat{P}_{S}(1,2), \label{eq:6:1:62}\\
-\sum_{S} \hat{P}_{S}(1,2)=\hat{I}. \label{eq:6:1:63}
-\end{gather}
+\begin{align}
+\hat{P}_{S}(1,2) \hat{P}_{S^{\prime}}(1,2)=&\delta_{S S^{\prime}} \hat{P}_{S}(1,2), \label{eq:6:1:62}\\
+\sum_{S} \hat{P}_{S}(1,2)=&\hat{I}. \label{eq:6:1:63}
+\end{align}
 The form of $\widehat{P}_{S}(1,2)$ may be written explicitly as
 \begin{equation}
 \widehat{P}_{S}(1,2)=\sum_{m} \chi_{S m}(1,2) \chi_{S m}^{\dagger}(1,2), \label{eq:6:1:64}
@@ -362,7 +362,7 @@ The dependence of the basis functions $\chi_{\frac{1}{2} m}(\sigma)$ on the spin
 \end{equation}
 According to Eq.~\eqref{eq:6:1:1}, the basis functions $\chi_{\frac{1}{2} m}$ may be written as
 \begin{equation}
-\chi_{\frac{1}{2} \frac{1}{2}}=\binom{1}{0}, \chi_{\frac{1}{2}-\frac{1}{2}}=\binom{0}{1} . \label{eq:6:2:3}
+\chi_{\frac{1}{2} \frac{1}{2}}=\binom{1}{0},\quad \chi_{\frac{1}{2}-\frac{1}{2}}=\binom{0}{1} . \label{eq:6:2:3}
 \end{equation}
 The Hermitian conjugate functions $\chi_{\frac{1}{2} m}^{\dagger}$ have the form
 \begin{equation}
@@ -401,11 +401,11 @@ where $S_{\mu}(\mu= \pm 1,0)$ are spherical components of the spin operator (Sec
 \subsection{Action of Spin Operators on Basis Functions}\label{sec:6.2.3}\index{spin operator!action on basis functions}\index{spin matrices}
 Cartesian components of a spin operator $\widehat{S}_{i}$ (see Sec.~\ref{sec:2.5}) applied to the basis functions yield
 \begin{equation}
-\begin{array}{ll}
+\begin{aligned}
 \widehat{S}_{x} \chi_{\frac{1}{2} \frac{1}{2}}=\frac{1}{2} \chi_{\frac{1}{2}-\frac{1}{2}}, & \widehat{S}_{x} \chi_{\frac{1}{2}-\frac{1}{2}}=\frac{1}{2} \chi_{\frac{1}{2} \frac{1}{2}}, \\
 \widehat{S}_{y} \chi_{\frac{1}{2} \frac{1}{2}}=\frac{i}{2} \chi_{\frac{1}{2}-\frac{1}{2}}, & \widehat{S}_{y} \chi_{\frac{1}{2}-\frac{1}{2}}=-\frac{i}{2} \chi_{\frac{1}{2} \frac{1}{2}},\\
 \widehat{S}_{z} \chi_{\frac{1}{2} \frac{1}{2}}=\frac{1}{2} \chi_{\frac{1}{2} \frac{1}{2}}, & \widehat{S}_{z} \chi_{\frac{1}{2}-\frac{1}{2}}=-\frac{1}{2} \chi_{\frac{1}{2}-\frac{1}{2}}.
-\end{array}.  \label{eq:6:2:11}
+\end{aligned}  \label{eq:6:2:11}
 \end{equation}
 Spherical components of the spin operator $\widehat{S}_{\mu}$ (see Sec.~\ref{sec:2.5}) act on the basis functions as follows:
 \begin{equation}
@@ -443,7 +443,7 @@ The explicit form of the basis spin functions in the rotated coordinate system i
 \end{equation}
 if the rotation is specified by the Euler angles $\alpha, \beta, \gamma$ and
 \begin{equation}
-\chi_{\frac{1}{2} \frac{1}{2}}^{\prime}=\binom{\cos \frac{\omega}{2}-i \sin \frac{\omega}{2} \cos \theta}{-i \sin \frac{\omega}{2} \sin \theta e^{i \phi}}, \chi_{\frac{1}{2}-\frac{1}{2}}^{\prime}=\binom{-i \sin \frac{\omega}{2} \sin \theta e^{-i \phi}}{\cos \frac{\omega}{2}+i \sin \frac{\omega}{2} \cos \theta}. \label{eq:6:2:18}
+\chi_{\frac{1}{2} \frac{1}{2}}^{\prime}=\binom{\cos \frac{\omega}{2}-i \sin \frac{\omega}{2} \cos \theta}{-i \sin \frac{\omega}{2} \sin \theta e^{i \phi}}, \chi_{\frac{1}{2}-\frac{1}{2}}^{\prime}=\binom{-i \sin \frac{\omega}{2} \sin \theta e^{-i \phi}}{\cos \frac{\omega}{2}+i \sin \frac{\omega}{2} \cos \theta}, \label{eq:6:2:18}
 \end{equation}
 in terms of the angles $\omega, \theta, \Phi$.\\
 The functions $\chi_{\frac{1}{2} m}^{\prime}$, satisfy the orthonormality and completeness conditions \eqref{eq:6:2:6}, \eqref{eq:6:2:7} as well as the relations \eqref{eq:6:2:9}-\eqref{eq:6:2:13} in which the spin operator $\widehat{\vect{S}}$ should be replaced by $\widehat{\vect{S}}^{\prime}$.
@@ -483,22 +483,22 @@ The expansion of products of the helicity functions has the form
 \end{equation}
 Explicitly, this gives
 \begin{align}
-\chi_{\frac{1}{2} \frac{1}{2}}(\vartheta, \varphi) \chi_{\frac{1}{2} \frac{1}{2}}^{\dagger}(\vartheta, \varphi) & =\frac{1}{2}\left(\begin{array}{cc}
+\chi_{\frac{1}{2} \frac{1}{2}}(\vartheta, \varphi) \chi_{\frac{1}{2} \frac{1}{2}}^{\dagger}(\vartheta, \varphi) & =\frac{1}{2}\begin{pmatrix}
 1+\cos \vartheta & \sin \vartheta e^{-i \varphi} \\
 \sin \vartheta e^{i \varphi} & 1-\cos \vartheta
-\end{array}\right)=\frac{1}{2} \widehat{I}+\mathrm{n} \cdot \widehat{\mathrm{~S}}, \notag\\
-\chi_{\frac{1}{2} \frac{1}{2}}(\vartheta, \varphi) \chi_{\frac{1}{2}-\frac{1}{2}}^{\dagger}(\vartheta, \varphi) & =\frac{1}{2}\left(\begin{array}{cc}
+\end{pmatrix}=\frac{1}{2} \widehat{I}+\vect{n} \cdot \widehat{\vect{S}}, \notag\\
+\chi_{\frac{1}{2} \frac{1}{2}}(\vartheta, \varphi) \chi_{\frac{1}{2}-\frac{1}{2}}^{\dagger}(\vartheta, \varphi) & =\frac{1}{2}\begin{pmatrix}
 -\sin \vartheta & (\cos \vartheta+1) e^{-i \varphi} \\
 (\cos \vartheta-1) e^{i \varphi} & \sin \vartheta
-\end{array}\right)=-\sqrt{2} \sum_{\nu} D_{\nu 1}^{1}(\varphi, \vartheta, 0) \widehat{S}_{\nu}, \notag\\
-\chi_{\frac{1}{2}-\frac{1}{2}}(\vartheta, \varphi) \chi_{\frac{1}{2} \frac{1}{2}}^{\dagger}(\vartheta, \varphi) & =\frac{1}{2}\left(\begin{array}{cc}
+\end{pmatrix}=-\sqrt{2} \sum_{\nu} D_{\nu 1}^{1}(\varphi, \vartheta, 0) \widehat{S}_{\nu}, \notag\\
+\chi_{\frac{1}{2}-\frac{1}{2}}(\vartheta, \varphi) \chi_{\frac{1}{2} \frac{1}{2}}^{\dagger}(\vartheta, \varphi) & =\frac{1}{2}\begin{pmatrix}
 -\sin \vartheta & (\cos \vartheta-1) e^{-i \varphi} \\
 (\cos \vartheta+1) e^{i \varphi} & \sin \vartheta
-\end{array}\right)=\sqrt{2} \sum_{\nu} D_{\nu-1}^{1}(\varphi, \vartheta, 0) \widehat{S}_{\nu}, \label{eq:6:2:27}\\
-\chi_{\frac{1}{2}-\frac{1}{2}}(\vartheta, \varphi) \chi_{\frac{1}{2}-\frac{1}{2}}^{\dagger}(\vartheta, \varphi) & =\frac{1}{2}\left(\begin{array}{cc}
+\end{pmatrix}=\sqrt{2} \sum_{\nu} D_{\nu-1}^{1}(\varphi, \vartheta, 0) \widehat{S}_{\nu}, \label{eq:6:2:27}\\
+\chi_{\frac{1}{2}-\frac{1}{2}}(\vartheta, \varphi) \chi_{\frac{1}{2}-\frac{1}{2}}^{\dagger}(\vartheta, \varphi) & =\frac{1}{2}\begin{pmatrix}
 1-\cos \vartheta & -\sin \vartheta e^{-i \varphi} \\
 -\sin \vartheta e^{i \varphi} & 1+\cos \vartheta
-\end{array}\right)=\frac{1}{2} \widehat{I}-\mathrm{n} \cdot \widehat{\mathrm{~S}} . \notag
+\end{pmatrix}=\frac{1}{2} \widehat{I}-\vect{n} \cdot \widehat{\vect{S}} . \notag
 \end{align}
 Matrix elements of the spherical components of the spin operator $\widehat{S}_{\mu}(\mu= \pm 1,0)$ between the helicity states are given by
 \begin{equation}
@@ -516,7 +516,7 @@ or, in a detailed form
 Here we use the abbreviations
 \[
 \begin{aligned}
-& \braOket{+}{\widehat{S}_{\mu}}{+} \equiv \chi_{\frac{1}{2} \frac{1}{2}}^{\dagger}(\vartheta, \varphi) \widehat{S}_{\mu} \chi_{\frac{1}{2} \frac{1}{2}}(\vartheta, \varphi) \\
+& \braOket{+}{\widehat{S}_{\mu}}{+} \equiv \chi_{\frac{1}{2} \frac{1}{2}}^{\dagger}(\vartheta, \varphi) \widehat{S}_{\mu} \chi_{\frac{1}{2} \frac{1}{2}}(\vartheta, \varphi), \\
 & \braOket{+}{\widehat{S}_{\mu}}{-} \equiv \chi_{\frac{1}{2} \frac{1}{2}}^{\dagger}(\vartheta, \varphi) \widehat{S}_{\mu} \chi_{\frac{1}{2}-\frac{1}{2}}(\vartheta, \varphi), \text { etc. }
 \end{aligned}
 \]
@@ -571,9 +571,9 @@ a^{\frac{1}{2}}=\cos \frac{\vartheta}{2} e^{-i \frac{\varphi}{2}}, a^{-\frac{1}{
 \begin{equation}
 a^{\frac{1}{2}}=-\sin \frac{\vartheta}{2} e^{-i \frac{\varphi}{2}}, a^{-\frac{1}{2}}=\cos \frac{\vartheta}{2} e^{i \frac{\varphi}{2}}, \chi_{\frac{1}{2}}=\chi_{\frac{1}{2}-\frac{1}{2}}(\vartheta, \varphi)=\binom{-\sin \frac{\vartheta}{2} e^{-i \frac{\varphi}{2}}}{\cos \frac{\vartheta}{2} e^{i \frac{\varphi}{2}}} . \label{eq:6:2:38}
 \end{equation}
-In general, the spin function \eqref{eq:6:2:32} describes a spin- $\frac{1}{2}$ particle whose spin is directed along some unit vector n with cartesian components
+In general, the spin function \eqref{eq:6:2:32} describes a spin- $\frac{1}{2}$ particle whose spin is directed along some unit vector $\vect{n}$ with cartesian components
 \begin{equation}
-n_{x}=2 \operatorname{Re}\left(a^{\frac{1}{2} *} a^{-\frac{1}{2}}\right), n_{y}=2 \operatorname{Im}\left(a^{\frac{1}{2} *} a^{-\frac{1}{2}}\right), n_{z}=\left|a^{\frac{1}{2}}\right|^{2}-\left|a^{-\frac{1}{2}}\right|^{2} . \label{eq:6:2:39}
+n_{x}=2 \operatorname{Re}\left(a^{\frac{1}{2} *} a^{-\frac{1}{2}}\right),\quad n_{y}=2 \operatorname{Im}\left(a^{\frac{1}{2} *} a^{-\frac{1}{2}}\right),\quad n_{z}=\left|a^{\frac{1}{2}}\right|^{2}-\left|a^{-\frac{1}{2}}\right|^{2} . \label{eq:6:2:39}
 \end{equation}
 The spherical components of this unit vector $n$ are given by
 \begin{equation}
@@ -585,16 +585,16 @@ n_{+1}=-\sqrt{2} a^{\frac{1}{2} *} a^{-\frac{1}{2}}, n_{0}=\left|a^{\frac{1}{2}}
 \end{equation}
 The product of the spin functions $\chi_{\frac{1}{2}} \chi_{\frac{1}{2}}^{\dagger}$ may be expressed in terms of the spin matrices
 \begin{equation}
-\chi_{\frac{1}{2}} \chi_{\frac{1}{2}}^{\dagger}=\left(\begin{array}{cc}
+\chi_{\frac{1}{2}} \chi_{\frac{1}{2}}^{\dagger}=\begin{pmatrix}
 \left|a^{\frac{1}{2}}\right|^{2} & a^{-\frac{1}{2} *} a^{\frac{1}{2}} \label{eq:6:2:42}\\
 a^{\frac{1}{2} *} a^{-\frac{1}{2}} & \left|a^{-\frac{1}{2}}\right|^{2}
-\end{array}\right)=\frac{1}{2} \widehat{I}+\mathrm{n} \cdot \widehat{\mathrm{~S}},
+\end{pmatrix}=\frac{1}{2} \widehat{I}+\vect{n} \cdot \widehat{\vect{S}},
 \end{equation}
 where $n$ specifies the spin direction \eqref{eq:6:2:39}-\eqref{eq:6:2:41}.
 
 Matrix elements of the spin operator $\widehat{\vect{S}}$ may be written in terms of the vector $\vect{n}$ as
 \begin{equation}
-\chi_{\frac{1}{2}}^{\dagger} \widehat{\vect{S}} \chi_{\frac{1}{2}}=\frac{1}{2} \mathrm{n} . \label{eq:6:2:43}
+\chi_{\frac{1}{2}}^{\dagger} \widehat{\vect{S}} \chi_{\frac{1}{2}}=\frac{1}{2} \vect{n} . \label{eq:6:2:43}
 \end{equation}
 The transformation of spin functions under rotations of coordinate system is effected by the rotation operators $\widehat{D}^{\frac{1}{2}}(\alpha, \beta, \gamma)$ (Eq.~\eqref{eq:2:5:32}) or $\widehat{U}^{\frac{1}{2}}(\omega ; \theta, \Phi)$ (Eq.~\eqref{eq:2:5:36}), depending on the choice of the parameters to describe rotations:
 \begin{equation}
@@ -609,18 +609,18 @@ In this case $a^{m}$ and $a^{m}$ are spinor components in the original and rotat
 \begin{aligned}
 a^{\prime m} & =\sum_{n} D_{m n}^{\frac{1}{2}}(\alpha, \beta, \gamma) a^{n}, \\
 a^{n} & =\sum_{m} D_{m n}^{\frac{1}{2} *}(\alpha, \beta, \gamma) a^{\prime m} . 
-\end{aligned}\quad\left(\dot{m}, n= \pm \frac{1}{2}\right) .
+\end{aligned}\quad\left(m, n= \pm \frac{1}{2}\right) .
 \end{equation}
 Thus, $a^{m}$ are contravariant spinor components (see Eq.~\eqref{eq:4:1:2}).\index{spinor!contravariant components}
 
 \subsection{Polarization Density Matrix}\label{sec:6.2.7}\index{polarization density matrix!for $S=1/2$}
 The polarisation density matrix for particles of spin $\frac{1}{2}$ may be written in the form
 \begin{equation}
-\hat{\rho}=\frac{1}{2}\{\hat{I}+2 \vect{P} \hat{\vect{S}}\}, \label{eq:6:2:47}
+\hat{\rho}=\frac{1}{2}\{\hat{I}+2 \vect{P}\cdot \hat{\vect{S}}\}, \label{eq:6:2:47}
 \end{equation}
 where the real vector $\vect{P}$ is called the polarisation vector.\index{polarization vector}\isym{P-vec@$\vect{P}$, polarization vector} This vector gives the expectation value of the spin operator multiplied by 2 ,
 \begin{equation}
-\vect{P}=2\expect{\vect{S}}=2 \operatorname{Tr}\{\hat{\rho} \widehat{\vect{S}}\} . \label{eq:6:2:48}
+\vect{P}=2\expect{\vect{S}}=2 \operatorname{Tr}\{\hat{\rho}\, \widehat{\vect{S}}\} . \label{eq:6:2:48}
 \end{equation}
 The absolute value of the vector $\vect{P}$ is called the polarization degree;\index{polarization degree} it ranges from 0 (for unpolarised states) to 1 (for pure, i.e., totally polarized states):
 \begin{equation}
@@ -679,19 +679,19 @@ In the spherical basis representation the dependence of the functions $\chi_{1 m
 \end{equation}
 According to Eq.~\eqref{eq:6:1:1}, the basis spin functions $\chi_{1 m}$ may be written as
 \begin{equation}
-\chi_{11}=\left(\begin{array}{l}
+\chi_{11}=\begin{pmatrix}
 1 \\
 0 \\
 0
-\end{array}\right), \quad \chi_{10}=\left(\begin{array}{l}
+\end{pmatrix}, \quad \chi_{10}=\begin{pmatrix}
 0 \\
 1 \\
 0
-\end{array}\right), \quad \chi_{1-1}=\left(\begin{array}{l}
+\end{pmatrix}, \quad \chi_{1-1}=\begin{pmatrix}
 0 \\
 0 \\
 1
-\end{array}\right), \label{eq:6:3:6}
+\end{pmatrix}, \label{eq:6:3:6}
 \end{equation}
 and the Hermitian conjugate functions $\chi_{1 m}^{\dagger}$ read
 \begin{equation}
@@ -699,19 +699,19 @@ and the Hermitian conjugate functions $\chi_{1 m}^{\dagger}$ read
 \end{equation}
 In the spherical basis representation the functions $\chi_{i}(i=x, y, z)$ have the form
 \begin{gather}
-\chi_{x}=\frac{1}{\sqrt{2}}\left(\begin{array}{r}
+\chi_{x}=\frac{1}{\sqrt{2}}\begin{pmatrix}
 -1 \\
 0 \\
 1
-\end{array}\right), \quad \chi_{y}=\frac{i}{\sqrt{2}}\left(\begin{array}{l}
+\end{pmatrix}, \quad \chi_{y}=\frac{i}{\sqrt{2}}\begin{pmatrix}
 1 \\
 0 \\
 1
-\end{array}\right), \quad \chi_{z}=\left(\begin{array}{l}
+\end{pmatrix}, \quad \chi_{z}=\begin{pmatrix}
 0 \\
 1 \\
 0
-\end{array}\right), \label{eq:6:3:8}\\
+\end{pmatrix}, \label{eq:6:3:8}\\
 \chi_{x}^{\dagger}=\frac{1}{\sqrt{2}}(-1,0,1), \quad \chi_{y}^{\dagger}=-\frac{i}{\sqrt{2}}(1,0,1), \quad \chi_{z}^{\dagger}=(0,1,0) . \label{eq:6:3:9}
 \end{gather}
 It follows from \eqref{eq:6:3:6}, \eqref{eq:6:3:8} that in the spherical basis representation the functions $\chi_{1 m}$ are real,
@@ -731,41 +731,38 @@ In the cartesian basis representation the spin variable $\sigma$ assumes three p
 \end{equation}
 Thus, the basis spin functions $\chi_{i}(i=x, y, z)$ in the cartesian basis representation may be written in the following form (see also Eq.~\eqref{eq:1:4:37})
 \begin{equation}
-\begin{array}{ccc}
-\chi_{x}=\left(\begin{array}{l}
+\chi_{x}=\begin{pmatrix}
 1 \\
 0 \\
 0
-\end{array}\right), & \chi_{y}=\left(\begin{array}{l}
+\end{pmatrix}, \quad \chi_{y}=\begin{pmatrix}
 0 \\
 1 \\
 0
-\end{array}\right), & \chi_{z}=\left(\begin{array}{l}
+\end{pmatrix}, \quad \chi_{z}=\begin{pmatrix}
 0 \\
 0 \\
 1
-\end{array}\right) \end{array}\label{eq:6:3:13}
+\end{pmatrix} \label{eq:6:3:13}
 \end{equation}
 \begin{equation}
-    \begin{array}{ccc}
-\chi_{x}^{\dagger}=(1,0,0), & \chi_{y}^{\dagger}=(0,1,0), & \chi_{z}^{\dagger}=(0,0,1) . \label{eq:6:3:14}
-\end{array}
+\chi_{x}^{\dagger}=(1,0,0), \quad \chi_{y}^{\dagger}=(0,1,0), \quad \chi_{z}^{\dagger}=(0,0,1) . \label{eq:6:3:14}
 \end{equation}
 The basis functions $\chi_{1 m}(m= \pm 1,0)$ read
 \begin{align}
-& \chi_{11}=-\frac{1}{\sqrt{2}}\left(\begin{array}{l}
+& \chi_{11}=-\frac{1}{\sqrt{2}}\begin{pmatrix}
 1 \\
 i \\
 0
-\end{array}\right), \quad \chi_{10}=\left(\begin{array}{l}
+\end{pmatrix}, \quad \chi_{10}=\begin{pmatrix}
 0 \\
 0 \\
 1
-\end{array}\right), \quad \chi_{1-1}=\frac{1}{\sqrt{2}}\left(\begin{array}{r}
+\end{pmatrix}, \quad \chi_{1-1}=\frac{1}{\sqrt{2}}\begin{pmatrix}
 1 \\
 -i \\
 0
-\end{array}\right), \label{eq:6:3:15}\\
+\end{pmatrix}, \label{eq:6:3:15}\\
 & \chi_{11}^{\dagger}=-\frac{1}{\sqrt{2}}(1,-i, 0), \quad \chi_{10}^{\dagger}=(0,0,1), \quad \chi_{1-1}^{\dagger}=\frac{1}{\sqrt{2}}(1, i, 0) . \label{eq:6:3:16}
 \end{align}
 It follows from Eqs.~\eqref{eq:6:3:13}, \eqref{eq:6:3:15} that in the cartesian basis representation the functions $\chi_{i}$ are real,
@@ -822,25 +819,31 @@ Spherical components of the spin operator $\widehat{S} \mu(\mu= \pm 1,0)$ and it
 \end{align}
 In a more detailed form
 \begin{gather}
-\widehat{S}_{+1} \chi_{11}=0 \quad \widehat{S}_{+1} \chi_{10}=-\chi_{11}, \quad \widehat{S}_{+1} \chi_{1-1}=-\chi_{10}, \notag\\
+\widehat{S}_{+1} \chi_{11}=0, \quad \widehat{S}_{+1} \chi_{10}=-\chi_{11}, \quad \widehat{S}_{+1} \chi_{1-1}=-\chi_{10}, \notag\\
 \widehat{S}_{0} \chi_{11}=\chi_{11}, \quad \widehat{S}_{0} \chi_{10}=0, \quad \widehat{S}_{0} \chi_{1-1}=-\chi_{1-1}, \label{eq:6:3:25}\\
-\widehat{S}_{-1} \chi_{11}=\chi_{10} \quad \widehat{S}_{-1} \chi_{10}=\chi_{1-1}, \quad \widehat{S}_{-1} \chi_{1-1}=0 . \notag\\
+\widehat{S}_{-1} \chi_{11}=\chi_{10}, \quad \widehat{S}_{-1} \chi_{10}=\chi_{1-1}, \quad \widehat{S}_{-1} \chi_{1-1}=0 . \notag
+\end{gather}
+\begin{gather}
 \widehat{S}_{+1} \chi_{x}=-\frac{1}{\sqrt{2}} \chi_{z}, \quad \widehat{S}_{+1} \chi_{y}=-\frac{i}{\sqrt{2}} \chi_{z}, \quad \widehat{S}_{+1} \chi_{z}=\frac{1}{\sqrt{2}}\left(\chi_{x}+i \chi_{y}\right), \notag\\
 \widehat{S}_{0} \chi_{x}=i \chi_{y}, \quad \widehat{S}_{0} \chi_{y}=-i \chi_{x}, \quad \widehat{S}_{0} \chi_{z}=0, \label{eq:6:3:26}\\
-\widehat{S}_{-1} \chi_{x}=-\frac{1}{\sqrt{2}} \chi_{z}, \quad \widehat{S}_{-1} \chi_{y}=\frac{i}{\sqrt{2}} \chi_{z}, \quad \widehat{S}_{-1} \chi_{z}=\frac{1}{\sqrt{2}}\left(\chi_{x}-i \chi_{y}\right) . \notag\\
+\widehat{S}_{-1} \chi_{x}=-\frac{1}{\sqrt{2}} \chi_{z}, \quad \widehat{S}_{-1} \chi_{y}=\frac{i}{\sqrt{2}} \chi_{z}, \quad \widehat{S}_{-1} \chi_{z}=\frac{1}{\sqrt{2}}\left(\chi_{x}-i \chi_{y}\right) . \notag
+\end{gather}
+\begin{gather}
 \widehat{S}_{x} \chi_{11}=\frac{1}{\sqrt{2}} \chi_{10}, \quad \widehat{S}_{x} \chi_{10}=\frac{1}{\sqrt{2}}\left(\chi_{1-1}+\chi_{11}\right), \quad \widehat{S}_{x} \chi_{1-1}=\frac{1}{\sqrt{2}} \chi_{10}, \notag\\
 \widehat{S}_{y} \chi_{11}=\frac{i}{\sqrt{2}} \chi_{10}, \quad \widehat{S}_{y} \chi_{10}=\frac{i}{\sqrt{2}}\left(\chi_{1-1}-\chi_{11}\right), \quad \widehat{S}_{y} \chi_{1-1}=-\frac{i}{\sqrt{2}} \chi_{10}, \label{eq:6:3:27}\\
-\widehat{S}_{z} \chi_{11}=\chi_{11}, \quad \widehat{S}_{z} \chi_{10}=0, \quad \widehat{S}_{z} \chi_{1-1}=-\chi_{1-1} . \notag\\
-\widehat{S}_{x} \chi_{x}=0, \quad \widehat{S}_{x} \chi_{y}=i \chi_{z}, \quad \widehat{S}_{x} \chi_{z}=-i \chi_{y}, \notag\\
+\widehat{S}_{z} \chi_{11}=\chi_{11}, \quad \widehat{S}_{z} \chi_{10}=0, \quad \widehat{S}_{z} \chi_{1-1}=-\chi_{1-1} . \notag
+\end{gather}
+\begin{gather}
+    \widehat{S}_{x} \chi_{x}=0, \quad \widehat{S}_{x} \chi_{y}=i \chi_{z}, \quad \widehat{S}_{x} \chi_{z}=-i \chi_{y}, \notag\\
 \widehat{S}_{y} \chi_{x}=-i \chi_{z}, \quad \widehat{S}_{y} \chi_{y}=0, \quad \widehat{S}_{y} \chi_{z}=i \chi_{x}, \label{eq:6:3:28}\\
 \widehat{S}_{z} \chi_{x}=i \chi_{y}, \quad \widehat{S}_{z} \chi_{y}=-i \chi_{x}, \quad \widehat{S}_{z} \chi_{z}=0 . \notag
 \end{gather}
 \subsection{Action of Quadrupole Operators on Basis Functions}\label{sec:6.3.4}\index{quadrupole operator}\index{polarization operator!quadrupole}
 The operators $\widehat{T}_{2 M}(M= \pm 2, \pm 1,0)$ and $\widehat{Q}_{i k}(i, k=x, y, z)$ act on basis functions in accordance with
-\begin{gather}
-\hat{T}_{2 M} \chi_{1 m}=\sqrt{\frac{5}{3}} \clebsch{1}{m}{2}{M}{1}{m^{\prime}} \chi_{1 m^{\prime}}, \label{eq:6:3:29}\\
-\hat{Q}_{i k} \chi_{l}=\frac{1}{2}\left(\frac{2}{3} \delta_{i k} \chi_{l}-\delta_{i l} \chi_{k}-\delta_{k l} \chi_{i}\right) . \notag
-\end{gather}
+\begin{align}
+\hat{T}_{2 M} \chi_{1 m}=&\sqrt{\frac{5}{3}} \clebsch{1}{m}{2}{M}{1}{m^{\prime}} \chi_{1 m^{\prime}}, \label{eq:6:3:29}\\
+\hat{Q}_{i k} \chi_{l}=&\frac{1}{2}\left(\frac{2}{3} \delta_{i k} \chi_{l}-\delta_{i l} \chi_{k}-\delta_{k l} \chi_{i}\right) . \notag
+\end{align}
 In detailed form we have
 \begin{equation}
 \begin{array}{lll}
@@ -882,10 +885,10 @@ In detailed form we have
 \end{equation}
 \subsection{Transformation of Basis Functions Under Rotations of the Coordinate Systems}\label{sec:6.3.5}\index{rotation!of the basis spin functions}
 The spin functions $\chi_{1 m}(m= \pm 1,0)$ and $\chi_{i}(i=x, y, z)$ constitute the covariant spherical basis and cartesian basis, respectively. Under rotations they transform through the rotation operator $\widehat{D}^{1}(\alpha, \beta, \gamma)$ (Eqs.~\eqref{eq:2:6:75}, \eqref{eq:2:6:78}) if rotations are specified by the Euler angles $\alpha, \beta, \gamma$ or through the rotation operator $\widehat{U}^{1}(\omega ; \Theta, \Phi)$ (Eqs.~\eqref{eq:2:6:79}-\eqref{eq:2:6:83}) if rotations are described by the rotation angle $\omega$ and the rotation axis $n(\Theta, \Phi)$.
-\begin{gather}
-\chi_{1 m^{\prime}}^{\prime}=\hat{D}^{1}(\alpha, \beta, \gamma) \chi_{1 m^{\prime}}=\sum_{m= \pm 1,0} D_{m m^{\prime}}^{1}(\alpha, \beta, \gamma) \chi_{1 m}, \notag\\
-\chi_{i}^{\prime}=\hat{D}^{1}(\alpha, \beta, \gamma) \chi_{i}=\sum_{k=x, y, z} a_{k i} \chi_{k} . \label{eq:6:3:34}
-\end{gather}
+\begin{align}
+\chi_{1 m^{\prime}}^{\prime}=&\hat{D}^{1}(\alpha, \beta, \gamma) \chi_{1 m^{\prime}}=\sum_{m= \pm 1,0} D_{m m^{\prime}}^{1}(\alpha, \beta, \gamma) \chi_{1 m}, \notag\\
+\chi_{i}^{\prime}=&\hat{D}^{1}(\alpha, \beta, \gamma) \chi_{i}=\sum_{k=x, y, z} a_{k i} \chi_{k} . \label{eq:6:3:34}
+\end{align}
 Here $D_{m m^{\prime}}^{1}(\alpha, \beta, \gamma)$ are the Wigner $D$-functions (Chap.~\ref{chap:4}) and $a_{i k}$ are elements of the rotation matrix (Sec.~\ref{sec:1.4.6}).
 
 The functions $\chi_{1 m^{\prime}}^{\prime}$ describe quantum states in which a particle of spin 1 has the spin projection $m^{\prime}$ on the new $z^{\prime}$-axis. These functions are eigenfunctions of the operators $\widehat{\vect{S}}^{\prime 2}$ and $\widehat{S}_{z}^{\prime}$ where $\widehat{\vect{S}}^{\prime}$ is the spin operator in the rotated coordinate system (Eqs.~\eqref{eq:2:6:85} and \eqref{eq:2:6:87})
@@ -895,64 +898,64 @@ The functions $\chi_{1 m^{\prime}}^{\prime}$ describe quantum states in which a 
 \end{align}
 In the spherical basis representation the functions $\chi_{1 m^{\prime}}^{\prime}$ have the form
 \begin{equation}
-\chi_{11}^{\prime}=\left(\begin{array}{c}
+\chi_{11}^{\prime}=\begin{pmatrix}
 \frac{1+\cos \beta}{2} e^{-i(\alpha+\gamma)} \\
 \frac{\sin \beta}{\sqrt{2}} e^{-i \gamma} \\
 \frac{1-\cos \beta}{2} e^{i(\alpha-\gamma)}
-\end{array}\right), \quad \chi_{10}^{\prime}=\left(\begin{array}{c}
+\end{pmatrix}, \quad \chi_{10}^{\prime}=\begin{pmatrix}
 -\frac{\sin \beta}{\sqrt{2}} e^{-i \alpha} \\
 \cos \beta \\
 \frac{\sin \beta}{\sqrt{2}} e^{i \alpha}
-\end{array}\right), \quad \chi_{1-1}^{\prime}=\left(\begin{array}{c}
+\end{pmatrix}, \quad \chi_{1-1}^{\prime}=\begin{pmatrix}
 \frac{1-\cos \beta}{2} e^{-i(\alpha-\gamma)} \\
 -\frac{\sin \beta}{\sqrt{2}} e^{i \gamma} \\
 \frac{1+\cos \beta}{2} e^{i(\alpha+\gamma)}
-\end{array}\right), \label{eq:6:3:36}
+\end{pmatrix}, \label{eq:6:3:36}
 \end{equation}
 and the functions $\chi_{i}^{\prime}$ are given by
 \begin{equation}
-\chi_{x}^{\prime}=\left(\begin{array}{c}
+\chi_{x}^{\prime}=\begin{pmatrix}
 -\frac{\cos \beta \cos \gamma-i \sin \gamma}{\sqrt{2}} e^{-i \alpha} \\
 -\sin \beta \cos \gamma \\
 \frac{\cos \beta \cos \gamma+i \sin \gamma}{\sqrt{2}} e^{i \alpha}
-\end{array}\right), \quad \chi_{y}^{\prime}=\left(\begin{array}{c}
+\end{pmatrix}, \quad \chi_{y}^{\prime}=\begin{pmatrix}
 \frac{\cos \beta \sin \gamma+i \cos \gamma}{\sqrt{2}} e^{-i \alpha} \\
 \sin \beta \sin \gamma \\
 -\frac{\cos \beta \sin \gamma-i \cos \gamma}{\sqrt{2}} e^{i \alpha}
-\end{array}\right), \quad \chi_{z}^{\prime}=\left(\begin{array}{c}
+\end{pmatrix}, \quad \chi_{z}^{\prime}=\begin{pmatrix}
 -\frac{\sin \beta}{\sqrt{2}} e^{-i \alpha} \\
 \cos \beta \\
 \frac{\sin \beta}{\sqrt{2}} e^{i \alpha}
-\end{array}\right) . \label{eq:6:3:37}
+\end{pmatrix} . \label{eq:6:3:37}
 \end{equation}
 In the cartesian basis representation these functions read
 \begin{gather}
-\chi_{11}^{\prime}=\left(\begin{array}{c}
+\chi_{11}^{\prime}=\begin{pmatrix}
 -\frac{\cos \beta \cos \alpha-i \sin \alpha}{\sqrt{2}} e^{-i \gamma} \\
 -\frac{\cos \beta \sin \alpha+i \cos \alpha}{\sqrt{2}} e^{-i \gamma} \\
 \frac{\sin \beta}{\sqrt{2}} e^{-i \gamma}
-\end{array}\right), \quad \chi_{10}^{\prime}=\left(\begin{array}{c}
+\end{pmatrix}, \quad \chi_{10}^{\prime}=\begin{pmatrix}
 \sin \beta \cos \alpha \\
 \sin \beta \sin \alpha \\
 \cos \beta
-\end{array}\right), \quad \chi_{1-1}^{\prime}=\left(\begin{array}{c}
+\end{pmatrix}, \quad \chi_{1-1}^{\prime}=\begin{pmatrix}
 \frac{\cos \beta \cos \alpha+i \sin \alpha}{\sqrt{2}} e^{i \gamma} \\
 \frac{\cos \beta \sin \alpha-i \cos \alpha}{\sqrt{2}} e^{i \gamma} \\
 -\frac{\sin \beta}{\sqrt{2}} e^{i \gamma}
-\end{array}\right), \label{eq:6:3:38}\\
-\chi_{x}^{\prime}=\left(\begin{array}{c}
+\end{pmatrix}, \label{eq:6:3:38}\\
+\chi_{x}^{\prime}=\begin{pmatrix}
 \cos \beta \cos \alpha \cos \gamma-\sin \alpha \sin \gamma \\
 \cos \beta \sin \alpha \cos \gamma+\cos \alpha \sin \gamma \\
 -\sin \beta \cos \gamma
-\end{array}\right), \quad \chi_{y}^{\prime}=\left(\begin{array}{c}
+\end{pmatrix}, \quad \chi_{y}^{\prime}=\begin{pmatrix}
 -\cos \beta \cos \alpha \sin \gamma-\sin \alpha \cos \gamma \\
 -\cos \beta \sin \alpha \sin \gamma+\cos \alpha \cos \gamma \\
 \sin \beta \sin \gamma
-\end{array}\right), \quad \chi_{z}^{\prime}=\left(\begin{array}{c}
+\end{pmatrix}, \quad \chi_{z}^{\prime}=\begin{pmatrix}
 \sin \beta \cos \alpha \\
 \sin \beta \sin \alpha \\
 \cos \beta
-\end{array}\right) . \label{eq:6:3:39}
+\end{pmatrix} . \label{eq:6:3:39}
 \end{gather}
 The expansions for the basis functions in the rotated coordinate system in terms of the angles $\omega, \Theta, \Phi$ may be obtained by the use of the rotation operator $\hat{U}^{1}(\omega ; \Theta, \Phi)$ (Eqs.~\eqref{eq:2:6:80}-\eqref{eq:2:6:81}).
 
@@ -1006,62 +1009,62 @@ The completeness conditions are
 Explicit form of the helicity functions $\chi_{1 \lambda}(\vartheta, \varphi)$ and the functions $\chi_{i}(\vartheta, \varphi)$\\
 \subsubsection{Spherical basis representation}
 \begin{gather}
-\chi_{11}(\vartheta, \varphi)=\left(\begin{array}{c}
+\chi_{11}(\vartheta, \varphi)=\begin{pmatrix}
 \frac{1+\cos \theta}{2} e^{-i \varphi} \\
 \frac{\sin \theta}{\sqrt{2}} \\
 \frac{1-\cos \vartheta}{2} e^{i \varphi}
-\end{array}\right), \quad \chi_{10}(\vartheta, \varphi)=\left(\begin{array}{c}
+\end{pmatrix}, \quad \chi_{10}(\vartheta, \varphi)=\begin{pmatrix}
 -\frac{\sin \vartheta}{\sqrt{2}} e^{-i \varphi} \\
 \cos \vartheta \\
 \frac{\sin \vartheta}{\sqrt{2}} e^{i \varphi}
-\end{array}\right), \quad \chi_{1-1}(\vartheta, \varphi)=\left(\begin{array}{c}
+\end{pmatrix}, \quad \chi_{1-1}(\vartheta, \varphi)=\begin{pmatrix}
 \frac{1-\cos \theta}{2} e^{-i \varphi} \\
 -\frac{\sin \vartheta}{\sqrt{2}} \\
 \frac{1+\cos \vartheta}{2} e^{i \varphi}
-\end{array}\right), \label{eq:6:3:49}\\
-\chi_{x}(\vartheta, \varphi)=\left(\begin{array}{c}
+\end{pmatrix}, \label{eq:6:3:49}\\
+\chi_{x}(\vartheta, \varphi)=\begin{pmatrix}
 -\frac{\cos \theta}{\sqrt{2}} e^{-i \varphi} \\
 -\sin \vartheta \\
 \frac{\cos \vartheta}{\sqrt{2}} e^{i \varphi}
-\end{array}\right), \quad \chi_{y}(\vartheta, \varphi)=\left(\begin{array}{c}
+\end{pmatrix}, \quad \chi_{y}(\vartheta, \varphi)=\begin{pmatrix}
 \frac{i}{\sqrt{2}} e^{-i \varphi} \\
 0 \\
 \frac{i}{\sqrt{2}} e^{i \varphi}
-\end{array}\right), \quad \chi_{z}(\vartheta, \varphi)=\left(\begin{array}{c}
+\end{pmatrix}, \quad \chi_{z}(\vartheta, \varphi)=\begin{pmatrix}
 -\frac{\sin \vartheta}{\sqrt{2}} e^{-i \varphi} \\
 \cos \vartheta \\
 \frac{\sin \vartheta}{\sqrt{2}} e^{i \varphi}
-\end{array}\right) . \label{eq:6:3:50}
+\end{pmatrix} . \label{eq:6:3:50}
 \end{gather}
 \subsubsection{Cartesian basis representation}
 \begin{gather}
-\chi_{11}(\vartheta, \varphi)=-\frac{1}{\sqrt{2}}\left(\begin{array}{c}
+\chi_{11}(\vartheta, \varphi)=-\frac{1}{\sqrt{2}}\begin{pmatrix}
 \cos \vartheta \cos \varphi-i \sin \varphi \\
 \cos \vartheta \sin \varphi+i \cos \varphi \\
 -\sin \vartheta
-\end{array}\right), \quad \chi_{10}(\vartheta, \varphi)=\left(\begin{array}{c}
+\end{pmatrix}, \quad \chi_{10}(\vartheta, \varphi)=\begin{pmatrix}
 \sin \vartheta \cos \varphi \\
 \sin \vartheta \sin \varphi \\
 \cos \vartheta
-\end{array}\right), \notag\\
-\chi_{1-1}(\vartheta, \varphi)=\frac{1}{\sqrt{2}}\left(\begin{array}{c}
+\end{pmatrix}, \notag\\
+\chi_{1-1}(\vartheta, \varphi)=\frac{1}{\sqrt{2}}\begin{pmatrix}
 \cos \vartheta \cos \varphi+i \sin \varphi \\
 \cos \vartheta \sin \varphi-i \cos \varphi \\
 -\sin \vartheta
-\end{array}\right), \label{eq:6:3:51}\\
-\chi_{x}(\vartheta, \varphi)=\left(\begin{array}{c}
+\end{pmatrix}, \label{eq:6:3:51}\\
+\chi_{x}(\vartheta, \varphi)=\begin{pmatrix}
 \cos \vartheta \cos \varphi \\
 \cos \vartheta \sin \varphi \\
 -\sin \vartheta
-\end{array}\right), \quad \chi_{y}(\vartheta, \varphi)=\left(\begin{array}{c}
+\end{pmatrix}, \quad \chi_{y}(\vartheta, \varphi)=\begin{pmatrix}
 -\sin \varphi \\
 \cos \varphi \\
 0
-\end{array}\right), \quad \chi_{z}(\vartheta, \varphi)=\left(\begin{array}{c}
+\end{pmatrix}, \quad \chi_{z}(\vartheta, \varphi)=\begin{pmatrix}
 \sin \vartheta \cos \varphi \\
 \sin \vartheta \sin \varphi \\
 \cos \vartheta
-\end{array}\right) . \label{eq:6:3:52}
+\end{pmatrix} . \label{eq:6:3:52}
 \end{gather}
 In the cartesian basis representation these functions satisfy the relations
 \begin{gather}
@@ -1079,10 +1082,10 @@ Analogous expansions for $\chi_{i}(\vartheta, \varphi)$ can be written as
 \end{equation}
 where $a_{m l}(\alpha, \beta, \gamma)$ are elements of the rotation matrix (Eq.~\eqref{eq:1:4:54}).\\
 Matrix elements of the spin operator between the helicity states $\chi_{1 \lambda}(\vartheta, \varphi)$ or between the states $\chi_{i}(\vartheta, \varphi)$ are
-\begin{gather}
-\chi_{1 \lambda}^{\dagger}(\vartheta, \varphi) \hat{S}_{\mu} \chi_{1 \lambda^{\prime}}(\vartheta, \varphi)=(-1)^{\mu+\nu} \sqrt{2} \clebsch{1}{\lambda^{\prime}}{1}{\nu}{1}{\lambda} D_{-\mu-\nu}^{1}(\varphi, \vartheta, 0), \label{eq:6:3:56}\\
-\chi_{i}^{\dagger}(\vartheta, \varphi) \hat{S}_{l} \chi_{k}(\vartheta, \varphi)=-i \sum_{m} \varepsilon_{i k m} a_{l m}(\varphi, \vartheta, 0) . \label{eq:6:3:57}
-\end{gather}
+\begin{align}
+\chi_{1 \lambda}^{\dagger}(\vartheta, \varphi) \hat{S}_{\mu} \chi_{1 \lambda^{\prime}}(\vartheta, \varphi)&=(-1)^{\mu+\nu} \sqrt{2} \clebsch{1}{\lambda^{\prime}}{1}{\nu}{1}{\lambda} D_{-\mu-\nu}^{1}(\varphi, \vartheta, 0), \label{eq:6:3:56}\\
+\chi_{i}^{\dagger}(\vartheta, \varphi) \hat{S}_{l} \chi_{k}(\vartheta, \varphi)&=-i \sum_{m} \varepsilon_{i k m} a_{l m}(\varphi, \vartheta, 0) . \label{eq:6:3:57}
+\end{align}
 In particular, the expectation value of the spin operator $\widehat{\vect{S}}$ in a state with the helicity $\lambda$ is given by
 \begin{equation}
 \chi_{1 \lambda}^{\dagger}(\vartheta, \varphi) \widehat{\vect{S}} \chi_{1 \lambda}(\vartheta, \varphi)=\lambda \vect{n}(\vartheta, \varphi), \quad(\lambda= \pm 1,0), \label{eq:6:3:58}
@@ -1092,10 +1095,10 @@ The expectation value of the operator $\widehat{\vect{S}}$ in the states $\chi_{
 \chi_{i}^{\dagger}(\vartheta, \varphi) \widehat{\vect{S}} \chi_{i}(\vartheta, \varphi)=0, \quad(i=x, y, z) . \label{eq:6:3:59}
 \end{equation}
 The evaluation of matrix elements of the quadrupole operators $\hat{T}_{2 M}(M= \pm 2, \pm 1,0)$ and $\hat{Q}_{i k}(i, k=x, y, z)$ gives\isym{Q-hat@$\widehat{Q}_{i k}$, quadrupole tensor}
-\begin{gather}
-\chi_{1 \lambda}^{\dagger}(\vartheta, \varphi) \hat{T}_{2 M} \chi_{1 \lambda^{\prime}}(\vartheta, \varphi)=(-1)^{M+N} \sqrt{\frac{5}{3}} \clebsch{1}{\lambda^{\prime}}{2}{N}{1}{\lambda} D_{-M-N}^{2}(\varphi, \vartheta, 0), \label{eq:6:3:60}\\
-\chi_{i}^{\dagger}(\vartheta, \varphi) \hat{Q}_{l m} \chi_{k}(\vartheta, \varphi)=-\frac{1}{2}\left\{a_{l i}(\varphi, \vartheta, 0) a_{m k}(\varphi, \vartheta, 0)+a_{l k}(\varphi, \vartheta, 0) a_{m i}(\varphi, \vartheta, 0)-\frac{2}{3} \delta_{i k} \delta_{l m}\right\} . \label{eq:6:3:61}
-\end{gather}
+\begin{align}
+\chi_{1 \lambda}^{\dagger}(\vartheta, \varphi) \hat{T}_{2 M} \chi_{1 \lambda^{\prime}}(\vartheta, \varphi)&=(-1)^{M+N} \sqrt{\frac{5}{3}} \clebsch{1}{\lambda^{\prime}}{2}{N}{1}{\lambda} D_{-M-N}^{2}(\varphi, \vartheta, 0), \label{eq:6:3:60}\\
+\chi_{i}^{\dagger}(\vartheta, \varphi) \hat{Q}_{l m} \chi_{k}(\vartheta, \varphi)&=-\frac{1}{2}\left\{a_{l i}(\varphi, \vartheta, 0) a_{m k}(\varphi, \vartheta, 0)+a_{l k}(\varphi, \vartheta, 0) a_{m i}(\varphi, \vartheta, 0)-\frac{2}{3} \delta_{i k} \delta_{l m}\right\} . \label{eq:6:3:61}
+\end{align}
 In particular, the expectation values of the quadrupole operators $\hat{T}_{2 M}$ in states with helicity $\lambda$ are equal to
 \begin{gather}
 \chi_{1 \lambda}^{\dagger}(\vartheta, \varphi) \hat{T}_{2 M} \chi_{1 \lambda}(\vartheta, \varphi)=\frac{(-1)^{1+\lambda}}{1+|\lambda|} \sqrt{\frac{8 \pi}{15}} Y_{2 M}(\vartheta, \varphi), \label{eq:6:3:62}\\
@@ -1112,35 +1115,35 @@ The expansion of the Hermitian conjugate function $\chi_{1}^{\dagger}$ is given 
 \end{equation}
 In a spherical basis the function $\chi_{1}$ has the form
 \begin{equation}
-\chi_{1}=\left(\begin{array}{c}
+\chi_{1}=\begin{pmatrix}
 a^{+1} \\
 a^{0} \\
 a^{-1}
-\end{array}\right)=\left(\begin{array}{c}
+\end{pmatrix}=\begin{pmatrix}
 -a_{-1} \\
 a_{0} \\
 -a_{+1}
-\end{array}\right)=\left(\begin{array}{c}
+\end{pmatrix}=\begin{pmatrix}
 -\frac{1}{\sqrt{2}}\left(a_{x}-i a_{y}\right) \\
 a_{z} \\
 \frac{1}{\sqrt{2}}\left(a_{x}+i a_{y}\right)
-\end{array}\right), \label{eq:6:3:65}
+\end{pmatrix}, \label{eq:6:3:65}
 \end{equation}
 and in a cartesian basis this function reads
 \begin{equation}
-\chi_{1}=\left(\begin{array}{c}
+\chi_{1}=\begin{pmatrix}
 \frac{1}{\sqrt{2}}\left(a^{-1}-a^{+1}\right) \\
 -\frac{i}{\sqrt{2}}\left(a^{-1}+a^{+1}\right) \\
 a^{0}
-\end{array}\right)=\left(\begin{array}{c}
+\end{pmatrix}=\begin{pmatrix}
 \frac{1}{\sqrt{2}}\left(a_{-1}-a_{+1}\right) \\
 \frac{i}{\sqrt{2}}\left(a_{-1}+a_{+1}\right) \\
 a_{0}
-\end{array}\right)=\left(\begin{array}{c}
+\end{pmatrix}=\begin{pmatrix}
 a_{x} \\
 a_{y} \\
 a_{z}
-\end{array}\right) . \label{eq:6:3:66}
+\end{pmatrix} . \label{eq:6:3:66}
 \end{equation}
 The expansion coefficients $a^{m}$ are contravariant spherical components of some generally complex vector $\vect{a}, a_{m}$ are covariant spherical components of $\vect{a}$ and $a_{i}$ are cartesian components. Sometimes a is called the polarization vector of particles of spin 1.\index{polarization vector!for spin 1}
 
