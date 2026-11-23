@@ -385,7 +385,7 @@ provides. Replace with two new commands (`VMK.tex`):
   amsmath doesn't define (`curl`, `div`, `grad` have no amsmath equivalent)
   or names where amsmath's version renders differently (`\Re`/`\Im` are
   Fraktur symbols ℜ/ℑ, not the upright-text "Re"/"Im" that
-  `\operatorname{Re}`/`\operatorname{Im}` produce — swapping would be a
+  `\\Re `/`\\Im  ` produce — swapping would be a
   visual regression, not a preserving rewrite).
 
 ```latex
@@ -635,7 +635,7 @@ as genuine 3jm symbols — same "don't wrap unverified content" rule as above.
     heading title (dropped all three bold wrappers, rendering plain
     `$1/2$`); and `\boldsymbol{c}` bolding a table column header letter in
     four different tables (dropped, same as Chap7.tex's bold table-header
-    `J` precedent). `\operatorname{Re}` (used correctly, Fraktur exception
+    `J` precedent). `\\Re ` (used correctly, Fraktur exception
     from rule 10 doesn't apply since this is the upright-text Re) was left
     untouched.
   - One stray pair of running header/page-number lines
@@ -752,7 +752,7 @@ as genuine 3jm symbols — same "don't wrap unverified content" rule as above.
   rule 7's "genuine gaps" case, rather than guessing whether the intended
   target was `7.1(28)` (an OCR digit swap) or something else.
 - Rule 10: `\boldsymbol{\nabla}` (appears ~14 times, mostly in
-  `\operatorname{grad}/\operatorname{div}/\operatorname{curl}` identities of
+  `\\grad /\\diver /\\curl ` identities of
   Sec. 7.3.6) all became `\vect{\nabla}` per the rule's own worked example.
   `\boldsymbol{\epsilon}`/`\boldsymbol{\varepsilon}` (a photon polarization
   vector in Sec. 7.3.14) became `\vect{\epsilon}`/`\vect{\varepsilon}` since
@@ -764,7 +764,7 @@ as genuine 3jm symbols — same "don't wrap unverified content" rule as above.
   quantum number $J$ in a table's column header) was dropped to plain `J`,
   same as Chap2.tex's bold-numeral-exponent precedent — it fits neither
   `\vect` (not rank 1) nor `\mat` (not a matrix).
-- `\operatorname{grad}`, `\operatorname{div}`, `\operatorname{curl}` (Sec.
+- `\\grad `, `\\diver `, `\\curl ` (Sec.
   7.3.6) and `\operatorname{rank}` (Sec. 7.1.1) were all left as
   `\operatorname{...}` per rule 10 — amsmath has no built-in equivalent for
   any of them, matching the rule's existing `curl`/`div`/`grad` exception.
@@ -983,8 +983,8 @@ as genuine 3jm symbols — same "don't wrap unverified content" rule as above.
     artifact, `\mathbf{1} / \mathbf{2}` in a heading title ("Relations in
     Which Arguments are Changed by 1/2") — bold dropped entirely, same
     precedent as Chap2.tex's and Chap8.tex's bolded-numeral cases. No
-    `\boldsymbol` occurrences at all. `\operatorname{Re}`, `\operatorname{Im}`
-    (upright-text, not the Fraktur `\Re`/`\Im`) and `\operatorname{sign}`
+    `\boldsymbol` occurrences at all. `\\Re `, `\\Im  `
+    (upright-text, not the Fraktur `\Re`/`\Im`) and `\\sign  `
     (not an amsmath builtin) were all left untouched, consistent with
     established policy.
 - **Chap10.tex ("9j and 12j Symbols") had a `\begin{comment}...\end{comment}`

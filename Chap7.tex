@@ -23,7 +23,7 @@ The indices $J$ and $S$ are integer or half-integer nonnegative numbers, and $L$
 The tensor spherical harmonics with fixed indices are functions of three variables: two polar angles $\vartheta, \varphi(0 \leq \vartheta \leq \pi, 0 \leq \varphi<2 \pi)$ and spin variable $\xi(\xi=-S,-S+1, \ldots, S-1, S)$ which is the argument of spin function\\
 $\chi_{S \sigma}$. The spin variable $\xi$ is usually not mentioned as an argument of tensor spherical harmonics. Instead, the tensor spherical harmonics are written in matrix form by analogy with spin functions. More precisely, $Y_{J M}^{L S}(\vartheta, \varphi)$ is represented by a column matrix with $2 S+1$ elements, and $Y_{J M}^{L S\dagger}(\vartheta, \varphi)$ is represented by a row matrix. Summation over spin variable is replaced by matrix multiplication.
 
-The tensor spherical harmonics $Y_{J M}^{L S}(\vartheta, \varphi)$ constitute a complete orthonormal set for series expansion of $\operatorname{rank} S$ tensor functions within the domain of arguments $0 \leq \vartheta \leq \pi, 0 \leq \varphi<2 \pi$ (see Sec.~\ref{sec:7.1.8}).
+The tensor spherical harmonics $Y_{J M}^{L S}(\vartheta, \varphi)$ constitute a complete orthonormal set for series expansion of rank $S$ tensor functions within the domain of arguments $0 \leq \vartheta \leq \pi, 0 \leq \varphi<2 \pi$ (see Sec.~\ref{sec:7.1.8}).
 
 Note also the following orthogonality relations for $Y_{J M}^{L S}(\vartheta, \varphi)$ which have the same $J, M$ and $S$ but different $L$ :
 \begin{equation}
@@ -804,35 +804,35 @@ Below we present the results of the action of the $\nabla$ operator on scalar an
 \begin{enumerate}[label=(\alph*)]
 \item 
 \begin{align}
-& \boldsymbol{\nabla}\left\{f(r) Y_{J M}(\vartheta, \varphi)\right\} \equiv \operatorname{grad}\left\{f(r) Y_{J M}(\vartheta, \varphi)\right\}  \notag\\
+& \boldsymbol{\nabla}\left\{f(r) Y_{J M}(\vartheta, \varphi)\right\} \equiv \\grad \left\{f(r) Y_{J M}(\vartheta, \varphi)\right\}  \notag\\
 & =\sqrt{\frac{J}{2 J+1}}\left\{\frac{d}{d r}+\frac{J+1}{r}\right\} f(r) \vect{Y}_{J M}^{J-1}(\vartheta, \varphi)-\sqrt{\frac{J+1}{2 J+1}}\left\{\frac{d}{d r}-\frac{J}{r}\right\} f(r) \vect{Y}_{J M}^{J+1}(\vartheta, \varphi), \label{eq:7:3:51}\\
-& \nabla\left\{f(r) Y_{J M}(\vartheta, \varphi)\right\} \equiv \operatorname{grad}\left\{f(r) Y_{J M}(\vartheta, \varphi)\right\}=\frac{d f(r)}{d r} \vect{Y}_{J M}^{(-1)}(\vartheta, \varphi)+\sqrt{J(J+1)} \frac{1}{r} f(r) \vect{Y}_{J M}^{(1)}(\vartheta, \varphi), \notag\\
+& \nabla\left\{f(r) Y_{J M}(\vartheta, \varphi)\right\} \equiv \\grad \left\{f(r) Y_{J M}(\vartheta, \varphi)\right\}=\frac{d f(r)}{d r} \vect{Y}_{J M}^{(-1)}(\vartheta, \varphi)+\sqrt{J(J+1)} \frac{1}{r} f(r) \vect{Y}_{J M}^{(1)}(\vartheta, \varphi), \notag\\
 & (\vect{r}\cdot \boldsymbol{\nabla})\left\{f(r) \vect{Y}_{J M}^{L}(\vartheta, \varphi)\right\}=r \frac{d}{d r} f(r) \vect{Y}_{J M}^{L}(\vartheta, \varphi), \label{eq:7:3:52}\\
 & (\vect{r}\cdot \boldsymbol{\nabla})\left\{f(r) \vect{Y}_{J M}^{(\lambda)}(\vartheta, \varphi)\right\}=r \frac{d}{d r} f(r) \vect{Y}_{J M}^{(\lambda)}(\vartheta, \varphi). \notag
 \end{align}
 \item 
 \begin{align}
-\boldsymbol{\nabla} \cdot\left[f(r) \vect{Y}_{J M}^{J+1}(\vartheta, \varphi)\right] &\equiv \operatorname{div}\left[f(r) \vect{Y}_{J M}^{J+1}(\vartheta, \varphi)\right]=-\sqrt{\frac{J+1}{2 J+1}}\left(\frac{d}{d r}+\frac{J+2}{r}\right) f(r) Y_{J M}(\vartheta, \varphi), \notag\\
-\boldsymbol{\nabla} \cdot\left[f(r) \vect{Y}_{J M}^{J}(\vartheta, \varphi)\right] &\equiv \operatorname{div}\left[f(r) \vect{Y}_{J M}^{J}(\vartheta, \varphi)\right]=0, \label{eq:7:3:53}\\
-\boldsymbol{\nabla} \cdot\left[f(r) \vect{Y}_{J M}^{J-1}(\vartheta, \varphi)\right] &\equiv \operatorname{div}\left[f(r) \vect{Y}_{J M}^{J-1}(\vartheta, \varphi)\right]=\sqrt{\frac{J}{2 J+1}}\left(\frac{d}{d r}-\frac{J-1}{r}\right) f(r) Y_{J M}(\vartheta, \varphi), \notag
+\boldsymbol{\nabla} \cdot\left[f(r) \vect{Y}_{J M}^{J+1}(\vartheta, \varphi)\right] &\equiv \\diver \left[f(r) \vect{Y}_{J M}^{J+1}(\vartheta, \varphi)\right]=-\sqrt{\frac{J+1}{2 J+1}}\left(\frac{d}{d r}+\frac{J+2}{r}\right) f(r) Y_{J M}(\vartheta, \varphi), \notag\\
+\boldsymbol{\nabla} \cdot\left[f(r) \vect{Y}_{J M}^{J}(\vartheta, \varphi)\right] &\equiv \\diver \left[f(r) \vect{Y}_{J M}^{J}(\vartheta, \varphi)\right]=0, \label{eq:7:3:53}\\
+\boldsymbol{\nabla} \cdot\left[f(r) \vect{Y}_{J M}^{J-1}(\vartheta, \varphi)\right] &\equiv \\diver \left[f(r) \vect{Y}_{J M}^{J-1}(\vartheta, \varphi)\right]=\sqrt{\frac{J}{2 J+1}}\left(\frac{d}{d r}-\frac{J-1}{r}\right) f(r) Y_{J M}(\vartheta, \varphi), \notag
 \end{align}
 \begin{align}
-\boldsymbol{\nabla} \cdot\left[f(r) \vect{Y}_{J M}^{(1)}(\vartheta, \varphi)\right] &\equiv \operatorname{div}\left[f(r) \vect{Y}_{J M}^{(1)}(\vartheta, \varphi)\right]=-\sqrt{J(J+1)} \frac{1}{r} f(r) Y_{J M}(\vartheta, \varphi), \notag\\
-\boldsymbol{\nabla} \cdot\left[f(r) \vect{Y}_{J M}^{(0)}(\vartheta, \varphi)\right] &\equiv \operatorname{div}\left[f(r) \vect{Y}_{J M}^{(0)}(\vartheta, \varphi)\right]=0, \label{eq:7:3:54}\\
-\boldsymbol{\nabla} \cdot\left[f(r) \vect{Y}_{J M}^{(-1)}(\vartheta, \varphi)\right] &\equiv \operatorname{div}\left[f(r) \vect{Y}_{J M}^{(-1)}(\vartheta, \varphi)\right]=\left(\frac{d}{d r}+\frac{2}{r}\right) f(r) Y_{J M}(\vartheta, \varphi). \notag
+\boldsymbol{\nabla} \cdot\left[f(r) \vect{Y}_{J M}^{(1)}(\vartheta, \varphi)\right] &\equiv \\diver \left[f(r) \vect{Y}_{J M}^{(1)}(\vartheta, \varphi)\right]=-\sqrt{J(J+1)} \frac{1}{r} f(r) Y_{J M}(\vartheta, \varphi), \notag\\
+\boldsymbol{\nabla} \cdot\left[f(r) \vect{Y}_{J M}^{(0)}(\vartheta, \varphi)\right] &\equiv \\diver \left[f(r) \vect{Y}_{J M}^{(0)}(\vartheta, \varphi)\right]=0, \label{eq:7:3:54}\\
+\boldsymbol{\nabla} \cdot\left[f(r) \vect{Y}_{J M}^{(-1)}(\vartheta, \varphi)\right] &\equiv \\diver \left[f(r) \vect{Y}_{J M}^{(-1)}(\vartheta, \varphi)\right]=\left(\frac{d}{d r}+\frac{2}{r}\right) f(r) Y_{J M}(\vartheta, \varphi). \notag
 \end{align}
 \item 
 \begin{align}
-& \boldsymbol{\nabla} \times\left[f(r) \vect{Y}_{J M}^{J+1}(\vartheta, \varphi)\right] \equiv \operatorname{curl}\left[f(r) \vect{Y}_{J M}^{J+1}(\vartheta, \varphi)\right]=i \sqrt{\frac{J}{2 J+1}}\left(\frac{d}{d r}+\frac{J+2}{r}\right) f(r) \vect{Y}_{J M}^{J}(\vartheta, \varphi), \notag\\
-& \boldsymbol{\nabla} \times\left[f(r) \vect{Y}_{J M}^{J}(\vartheta, \varphi)\right] \equiv \operatorname{curl}\left[f(r) \vect{Y}_{J M}^{J}(\vartheta, \varphi)\right] \notag\\
+& \boldsymbol{\nabla} \times\left[f(r) \vect{Y}_{J M}^{J+1}(\vartheta, \varphi)\right] \equiv \\curl \left[f(r) \vect{Y}_{J M}^{J+1}(\vartheta, \varphi)\right]=i \sqrt{\frac{J}{2 J+1}}\left(\frac{d}{d r}+\frac{J+2}{r}\right) f(r) \vect{Y}_{J M}^{J}(\vartheta, \varphi), \notag\\
+& \boldsymbol{\nabla} \times\left[f(r) \vect{Y}_{J M}^{J}(\vartheta, \varphi)\right] \equiv \\curl \left[f(r) \vect{Y}_{J M}^{J}(\vartheta, \varphi)\right] \notag\\
 & \quad=i \sqrt{\frac{J}{2 J+1}}\left(\frac{d}{d r}-\frac{J}{r}\right) f(r) \vect{Y}_{J M}^{J+1}(\vartheta, \varphi)+i \sqrt{\frac{J+1}{2 J+1}}\left(\frac{d}{d r}+\frac{J+1}{r}\right) f(r) \vect{Y}_{J M}^{J-1}(\vartheta, \varphi), \label{eq:7:3:55}\\
-& \boldsymbol{\nabla} \times\left[f(r) \vect{Y}_{J M}^{J-1}(\vartheta, \varphi)\right] \equiv \operatorname{curl}\left[f(r) \vect{Y}_{J M}^{J-1}(\vartheta, \varphi)\right]=i \sqrt{\frac{J+1}{2 J+1}}\left(\frac{d}{d r}-\frac{J-1}{r}\right) f(r) \vect{Y}_{J M}^{J}(\vartheta, \varphi), \notag
+& \boldsymbol{\nabla} \times\left[f(r) \vect{Y}_{J M}^{J-1}(\vartheta, \varphi)\right] \equiv \\curl \left[f(r) \vect{Y}_{J M}^{J-1}(\vartheta, \varphi)\right]=i \sqrt{\frac{J+1}{2 J+1}}\left(\frac{d}{d r}-\frac{J-1}{r}\right) f(r) \vect{Y}_{J M}^{J}(\vartheta, \varphi), \notag
 \end{align}
 \begin{align}
- \boldsymbol{\nabla} \times\left[f(r) \vect{Y}_{J M}^{(1)}(\vartheta, \varphi)\right]&\equiv \operatorname{curl}\left[f(r) \vect{Y}_{J M}^{(1)}(\vartheta, \varphi)\right]=i\left(\frac{d}{d r}+\frac{1}{r}\right) f(r) \vect{Y}_{J M}^{(0)}(\vartheta, \varphi), \notag\\
- \boldsymbol{\nabla} \times\left[f(r) \vect{Y}_{J M}^{(0)}(\vartheta, \varphi)\right] &\equiv \operatorname{curl}\left[f(r) \vect{Y}_{J M}^{(0)}(\vartheta, \varphi)\right] \notag\\
+ \boldsymbol{\nabla} \times\left[f(r) \vect{Y}_{J M}^{(1)}(\vartheta, \varphi)\right]&\equiv \\curl \left[f(r) \vect{Y}_{J M}^{(1)}(\vartheta, \varphi)\right]=i\left(\frac{d}{d r}+\frac{1}{r}\right) f(r) \vect{Y}_{J M}^{(0)}(\vartheta, \varphi), \notag\\
+ \boldsymbol{\nabla} \times\left[f(r) \vect{Y}_{J M}^{(0)}(\vartheta, \varphi)\right] &\equiv \\curl \left[f(r) \vect{Y}_{J M}^{(0)}(\vartheta, \varphi)\right] \notag\\
 & =i\left(\frac{d}{d r}+\frac{1}{r}\right) f(r) \vect{Y}_{J M}^{(1)}(\vartheta, \varphi)+i \sqrt{J(J+1)} \frac{1}{r} f(r) \vect{Y}_{J M}^{(-1)}(\vartheta, \varphi), \label{eq:7:3:56}\\
- \boldsymbol{\nabla} \times\left[f(r) \vect{Y}_{J M}^{(-1)}(\vartheta, \varphi)\right] &\equiv \operatorname{curl}\left[f(r) \vect{Y}_{J M}^{(-1)}(\vartheta, \varphi)\right]=-i \sqrt{J(J+1)} \frac{1}{r} f(r) \vect{Y}_{J M}^{(0)}(\vartheta, \varphi). \notag
+ \boldsymbol{\nabla} \times\left[f(r) \vect{Y}_{J M}^{(-1)}(\vartheta, \varphi)\right] &\equiv \\curl \left[f(r) \vect{Y}_{J M}^{(-1)}(\vartheta, \varphi)\right]=-i \sqrt{J(J+1)} \frac{1}{r} f(r) \vect{Y}_{J M}^{(0)}(\vartheta, \varphi). \notag
 \end{align}
 \item Some applications of spherical harmonics to physical problems involve the functions
 \begin{align}
@@ -841,23 +841,23 @@ F_{J M}(\mathrm{r}) & \equiv z_{J}(k r) Y_{J M}(\vartheta, \varphi), \notag\\
 \end{align}
 where $z_{L}(k r) \equiv \sqrt{\pi /(2 k r)} Z_{L+\frac{1}{2}}(k r)$, and $Z_{L+\frac{1}{2}}$ is any cylinder functions; $k$ is an arbitrary parameter. For these special functions Eqs.~\eqref{eq:7:3:51}-\eqref{eq:7:3:56} are reduced to the following
 \begin{multline}
- \frac{1}{k} \operatorname{grad}\left\{F_{J M}(\vect{r})\right\}=\sqrt{\frac{J}{2 J+1}} z_{J-1}(k r) \vect{Y}_{J M}^{J-1}(\vartheta, \varphi)+\sqrt{\frac{J+1}{2 J+1}} z_{J+1}(k r) \vect{Y}_{J M}^{J+1}(\vartheta, \varphi) \\
+ \frac{1}{k} \\grad \left\{F_{J M}(\vect{r})\right\}=\sqrt{\frac{J}{2 J+1}} z_{J-1}(k r) \vect{Y}_{J M}^{J-1}(\vartheta, \varphi)+\sqrt{\frac{J+1}{2 J+1}} z_{J+1}(k r) \vect{Y}_{J M}^{J+1}(\vartheta, \varphi) \\
 =\sqrt{\frac{J}{2 J+1}} \vect{F}_{J M}^{J-1}(\vect{r})+\sqrt{\frac{J+1}{2 J+1}} \vect{F}_{J M}^{J+1}(\vect{r}), \label{eq:7:3:58}
 \end{multline}
 \begin{equation}
 \begin{aligned}
-& \frac{1}{k} \operatorname{div}\left\{\vect{F}_{J M}^{J+1}(\vect{r})\right\}=-\sqrt{\frac{J+1}{2 J+1}} z_{J}(k r) Y_{J M}(\vartheta, \varphi)=-\sqrt{\frac{J+1}{2 J+1}} F_{J M}(\vect{r}), \\
-& \frac{1}{k} \operatorname{div}\left\{\vect{F}_{J M}^{J}(\vect{r})\right\}=0, \\
-& \frac{1}{k} \operatorname{div}\left\{\vect{F}_{J M}^{J-1}(\vect{r})\right\}=-\sqrt{\frac{J}{2 J+1}} z_{J}(k r) Y_{J M}(\vartheta, \varphi)=-\sqrt{\frac{J}{2 J+1}} F_{J M}(\vect{r}), 
+& \frac{1}{k} \\diver \left\{\vect{F}_{J M}^{J+1}(\vect{r})\right\}=-\sqrt{\frac{J+1}{2 J+1}} z_{J}(k r) Y_{J M}(\vartheta, \varphi)=-\sqrt{\frac{J+1}{2 J+1}} F_{J M}(\vect{r}), \\
+& \frac{1}{k} \\diver \left\{\vect{F}_{J M}^{J}(\vect{r})\right\}=0, \\
+& \frac{1}{k} \\diver \left\{\vect{F}_{J M}^{J-1}(\vect{r})\right\}=-\sqrt{\frac{J}{2 J+1}} z_{J}(k r) Y_{J M}(\vartheta, \varphi)=-\sqrt{\frac{J}{2 J+1}} F_{J M}(\vect{r}), 
 \end{aligned}\label{eq:7:3:59}
 \end{equation}
 
 \begin{equation}
 \begin{aligned}
-\frac{1}{k} \operatorname{curl}\left\{\vect{F}_{J M}^{J+1}(\vect{r})\right\} & =i \sqrt{\frac{J}{2 J+1}} z_{J}(k r) \vect{Y}_{J M}^{J}(\vartheta, \varphi)=i \sqrt{\frac{J}{2 J+1}} \vect{F}_{J M}^{J}(\vect{r}), \\
-\frac{1}{k} \operatorname{curl}\left\{\vect{F}_{J M}^{J}(\vect{r})\right\} & =-i \sqrt{\frac{J}{2 J+1}} z_{J+1}(k r) \vect{Y}_{J M}^{J+1}(\vartheta, \varphi)+i \sqrt{\frac{J+1}{2 J+1}} z_{J-1}(k r) \vect{Y}_{J M}^{J-1}(\vartheta, \varphi) \\
+\frac{1}{k} \\curl \left\{\vect{F}_{J M}^{J+1}(\vect{r})\right\} & =i \sqrt{\frac{J}{2 J+1}} z_{J}(k r) \vect{Y}_{J M}^{J}(\vartheta, \varphi)=i \sqrt{\frac{J}{2 J+1}} \vect{F}_{J M}^{J}(\vect{r}), \\
+\frac{1}{k} \\curl \left\{\vect{F}_{J M}^{J}(\vect{r})\right\} & =-i \sqrt{\frac{J}{2 J+1}} z_{J+1}(k r) \vect{Y}_{J M}^{J+1}(\vartheta, \varphi)+i \sqrt{\frac{J+1}{2 J+1}} z_{J-1}(k r) \vect{Y}_{J M}^{J-1}(\vartheta, \varphi) \\
 & =-i \sqrt{\frac{J}{2 J+1}} \vect{F}_{J M}^{J+1}(r)+i \sqrt{\frac{J+1}{2 J+1}} \vect{F}_{J M}^{J-1}(\vect{r}) ,\\
-\frac{1}{k} \operatorname{curl}\left\{\vect{F}_{J M}^{J-1}(\vect{r})\right\} & =-i \sqrt{\frac{J+1}{2 J+1}} z_{J}(k r) \vect{Y}_{J M}^{J}(\vartheta, \varphi)=-i \sqrt{\frac{J+1}{2 J+1}} \vect{F}_{J M}^{J}(\vect{r}).
+\frac{1}{k} \\curl \left\{\vect{F}_{J M}^{J-1}(\vect{r})\right\} & =-i \sqrt{\frac{J+1}{2 J+1}} z_{J}(k r) \vect{Y}_{J M}^{J}(\vartheta, \varphi)=-i \sqrt{\frac{J+1}{2 J+1}} \vect{F}_{J M}^{J}(\vect{r}).
 \end{aligned} \label{eq:7:3:60}
 \end{equation}
 \end{enumerate}
