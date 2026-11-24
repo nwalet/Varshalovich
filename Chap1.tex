@@ -854,6 +854,7 @@ An arbitrary rotation of a coordinate system about the origin is completely spec
 
 \subsection{Description of Rotations in Terms of the Euler Angles}\label{sec:1.4.1}\index{Euler angles}\index{rotation!in terms of Euler angles}
 Any rotation of the coordinate system \(S\{x, y, z\} \rightarrow S^{\prime}\left\{x^{\prime}, y^{\prime}, z^{\prime}\right\}\) may be performed by three successive rotations about the coordinate axes (Fig.~\ref{chap1:fig:3})\\
+\label{schemeA}
 \(\vect{A}\left\{\begin{array}{l}
   \text {(a) rotation about the \(z\)-axis through an angle \(\alpha(0 \leq \alpha<2 \pi\)),}\\ 
   \text {(b) rotation about the new \(y_{1}\)-axis through an angle \(\beta(0 \leq \beta \leq \pi)\),} \\ 
@@ -877,7 +878,7 @@ The same rotation \(S\{x, y, z\} \rightarrow S^{\prime}\left\{x^{\prime}, y^{\pr
 \label{chap1:fig:4}
 \end{center}
 \end{figure}
-
+\label{schemeB}
 \(\vect{B}\left\{\begin{array}{l}
   \text {(a) rotation about the } z \text {-axis through an angle } \gamma(0 \leq \gamma<2 \pi), \\ 
   \text {(b) rotation about the initial } y \text {-axis through an angle } \beta(0 \leq \beta \leq \pi), \\ 
@@ -1048,7 +1049,7 @@ The Jacobian of the transformation is equal to
 \end{equation}
 A volume element of the three-dimensional rotation group is given by
 \begin{equation}
-\sd R \equiv \sin \beta \dd \alpha \dd \beta \dd \gamma=4 \sin ^{2} \frac{\omega}{2} \dd \omega \sin \Theta \dd \Theta \dd \Phi \label{eq:1:4:21}
+\dd R \equiv \sin \beta \dd \alpha \dd \beta \dd \gamma=4 \sin ^{2} \frac{\omega}{2} \dd \omega \sin \Theta \dd \Theta \dd \Phi \label{eq:1:4:21}
 \end{equation}
 The total volume of the three-dimensional rotation group is equal to
 \begin{equation}
@@ -1127,7 +1128,7 @@ Matrix elements of \(\widehat{D}\) between states corresponding to the cartesian
 \end{equation}
 Effects of the rotation operator on various wave functions and quantum-mechanical operators are considered in Chaps. 3, 5-7.
 
-\subsection{Transformation of Cartesian Vectors and Tensors Under Rotations of Coordinate Systems. Rotation Matrix $\vect{A}$}\label{sec:1.4.6}\index{rotation matrix}\index{matrix!rotation}\index{transformation!of Cartesian vectors and tensors}
+\subsection{Transformation of Cartesian Vectors and Tensors Under Rotations of Coordinate Systems. Rotation Matrix $a$}\label{sec:1.4.6}\index{rotation matrix}\index{matrix!rotation}\index{transformation!of Cartesian vectors and tensors}
 An arbitrary vector \(\vect{A}\) may be written as a column
 \begin{equation}
 \vect{A}=\begin{pmatrix}
@@ -1212,13 +1213,13 @@ A_{k_{1} k_{2} \ldots k_{n}}=\sum_{i_{1} i_{2} \ldots i_{n}} a_{k_{1} i_{1}} a_{
 \end{gather}
 The elements of the rotation matrix \(a_{i k}\) may be evaluated from
 \begin{equation}
-a_{i k}=\vect{e}_{i} \vect{e}_{k}^{\prime}, \quad(i, k=x, y, z), \label{eq:1:4:52}
+a_{i k}=\vect{e}_{i} \cdot \vect{e}_{k}^{\prime}, \quad(i, k=x, y, z), \label{eq:1:4:52}
 \end{equation}
 Thus, the elements \(a_{i k}\) are cosines of angles between the basis vectors in the initial ( \(S\) ) and rotated ( \(S^{\prime}\) ) coordinate systems. An equivalent definition of \(a_{i k}\) in terms of coordinates in \(S\) and \(S^{\prime}\) has the form
 \begin{equation}
 a_{i k}=\frac{\partial x_{i}^{\prime}}{\partial x_{k}}=\frac{\partial x_{k}}{\partial x_{i}^{\prime}}, \quad\left(x_{i}^{\prime}, x_{k}=x, y, z\right) \label{eq:1:4:53}
 \end{equation}
-The rotation matrix \(a\) is given in terms of the Euler angles by
+The rotation matrix \(a\) can be expressed in terms of the Euler angles as
 \begin{equation}
 a=\begin{pmatrix}
 \cos \alpha \cos \beta \cos \gamma-\sin \alpha \sin \gamma & -\cos \alpha \cos \beta \sin \gamma-\sin \alpha \cos \gamma & \cos \alpha \sin \beta  \label{eq:1:4:54}\\
@@ -1261,7 +1262,7 @@ where \(n_{x}, n_{y}, n_{z}\) are components of the unit vector \(n\) which dete
 \begin{equation}
 a_{i k}=\cos \omega \delta_{i k}+(1-\cos \omega) n_{i} n_{k}-\sin \omega \varepsilon_{i k l} n_{l}, \quad(i, k, l=x, y, z) .\label{eq:1:4:57}
 \end{equation}
-The inverse matrix \(a^{-1}\) may be obtained from \eqref{eq:1:4:55} and \eqref{eq:1:4:56} by transposing or, equivalently, by replacing \(\omega, \Theta, \Phi \rightarrow-\omega, \Theta, \Phi\) or \(\omega, \Theta, \Phi \rightarrow \omega, \pi-\Theta, \pi+\Phi\).
+The inverse matrix \(a^{-1}\) may be obtained from \eqref{eq:1:4:55} and \eqref{eq:1:4:56} by transposing or, equivalently, by replacing \((\omega, \Theta, \Phi) \rightarrow(-\omega, \Theta, \Phi)\) or \((\omega, \Theta, \Phi) \rightarrow (\omega, \pi-\Theta, \pi+\Phi)\).
 
 The expressions for \(\omega, \Theta, \Phi\) in terms of the matrix elements \(a_{i k}\) read
 \begin{align}
@@ -1281,7 +1282,7 @@ a=\begin{pmatrix}
 \end{equation}
 One can see that the parameters \(a, b\) and \(-a,-b\) correspond to the same rotation matrix.
 
-\subsection{Particular Forms of Rotation Matrix\label{sec:1.4.7}}\index{rotation matrix!particular forms}
+\subsubsection{Particular Forms of Rotation Matrix}\index{rotation matrix!particular forms}
 \begin{enumerate}[label=(\alph*)]
   \item 
  Rotation through an angle \(\Psi\) about the \(x\)-axis:
@@ -1308,15 +1309,15 @@ a_{z}(\Psi)=\begin{pmatrix}
 0 & 0 & 1
 \end{pmatrix}.
 \end{equation}
+\end{enumerate}
+
 For an arbitrary rotation determined by the Euler angles \(\alpha, \beta, \gamma\) the rotation matrix, in accordance with Eq.~\eqref{eq:1:4:31}, may be written in the form
 \begin{equation}
 a=a_{n}(\omega)=a_{z}(\alpha) a_{y}(\beta) a_{z}(\gamma). \label{eq:1:4:63}
 \end{equation}
 Equation \eqref{eq:1:4:63} represents a particular case of addition of coordinate rotations (see Sec. \ref{sec:1.4.7}).
-\end{enumerate}
-\subsection{Addition of Rotations}\label{sec:1.4.8}\index{rotation!addition of}\index{addition of rotations}
-Let us consider two successive rotations of the coordinate system. Let the first rotation transform the coordinate system \(S\{x, y, z\}\) into \(S^{\prime}\left\{x^{\prime}, y^{\prime}, z^{\prime}\right\}\) and the second one transform \(S^{\prime}\left\{x^{\prime}, y^{\prime}, z^{\prime}\right\}\) into \(S^{\prime \prime}\left\{x^{\prime \prime}, y^{\prime \prime}, z^{\prime \prime}\right\}\).
-
+\subsection{Addition of Rotations}\label{sec:1.4.7}\index{rotation!addition of}\index{addition of rotations}
+Let us consider two successive rotations of the coordinate system. Let the first rotation transform the coordinate system \(S\{x, y, z\}\to S^{\prime}\left\{x^{\prime}, y^{\prime}, z^{\prime}\right\}\) and the second one transform \(S^{\prime}\left\{x^{\prime}, y^{\prime}, z^{\prime}\right\}\to S^{\prime \prime}\left\{x^{\prime \prime}, y^{\prime \prime}, z^{\prime \prime}\right\}\).
 Below the parameters describing the resultant rotation \(S\{x, y, z\} \rightarrow S^{\prime \prime}\left\{x^{\prime \prime}, y^{\prime \prime}, z^{\prime \prime}\right\}\) will be given in terms of the parameters specifying the rotations \(S\{x, y, z\} \rightarrow S^{\prime}\left\{x^{\prime}, y^{\prime}, z^{\prime}\right\}\) and \(S^{\prime}\left\{x^{\prime}, y^{\prime}, z^{\prime}\right\} \rightarrow S^{\prime \prime}\left\{x^{\prime \prime}, y^{\prime \prime}, z^{\prime \prime}\right\}\).
 
 \subsubsection{Description of rotations in terms of Euler angles}
@@ -1359,7 +1360,7 @@ The following relations are useful for evaluation of \(\alpha, \beta, \gamma\).
 
 Equations \eqref{eq:1:4:67}-\eqref{eq:1:4:70} may be easily interpreted in terms of the geometry on a sphere. Each rotation may be completely determined by a point of intersection of the \(z^{\prime}\)-axis with the spherical surface and by a unit vector in the direction of the \(x^{\prime}\)-axis which lies on a plane tangent to the surface at this point. In this case the determination of \(\alpha, \beta, \gamma\) is reduced to constructing the corresponding spherical triangle, (Fig.~\ref{chap1:fig:8}). Equations \eqref{eq:1:4:67}-\eqref{eq:1:4:70} represent the formulas of sines, cosines and tangents for the spherical triangle.
 
-Another expression for the angles of the resultant rotation will be obtained if successive rotations are performed according to the scheme \(\vect{B}\) (p. 22) but the Euler angles \(\alpha_{2}, \beta_{2}, \gamma_{2}\) specifying the second rotation \(S^{\prime}\left\{x^{\prime}, y^{\prime}, z^{\prime}\right\} \rightarrow S^{\prime \prime}\left\{x^{\prime \prime}, y^{\prime \prime}, z^{\prime \prime}\right\}\) are defined with respect to the intermediate coordinate system \(S^{\prime}\left\{x^{\prime}, y^{\prime}, z^{\prime}\right\}\) rather than the initial system \(S\{x, y, z\}\). In this case the operator of the resultant rotation has the form
+Another expression for the angles of the resultant rotation will be obtained if successive rotations are performed according to the scheme \(\vect{B}\) (p.~\pageref{schemeB}) but the Euler angles \(\alpha_{2}, \beta_{2}, \gamma_{2}\) specifying the second rotation \(S^{\prime}\left\{x^{\prime}, y^{\prime}, z^{\prime}\right\} \rightarrow S^{\prime \prime}\left\{x^{\prime \prime}, y^{\prime \prime}, z^{\prime \prime}\right\}\) are defined with respect to the intermediate coordinate system \(S^{\prime}\left\{x^{\prime}, y^{\prime}, z^{\prime}\right\}\) rather than the initial system \(S\{x, y, z\}\). In this case the operator of the resultant rotation has the form
 \begin{equation}
 \widehat{D}(\alpha, \beta, \gamma)=\widehat{D}^{\prime}\left(\alpha_{2}, \beta_{2}, \gamma_{2}\right) \widehat{D}\left(\alpha_{1}, \beta_{1}, \gamma_{1}\right), \label{eq:1:4:71}
 \end{equation}
@@ -1373,32 +1374,32 @@ Substitution of this expression into Eq.~\eqref{eq:1:4:71} yields
 \end{equation}
 i.e., the operator of the resultant rotation differs from \eqref{eq:1:4:64} in the order of operators of the first and second rotations. Thus, for such a description of the successive rotations the Euler angles \(\alpha, \beta, \gamma\) may be obtained from \eqref{eq:1:4:66}-\eqref{eq:1:4:70} by interchange of indices \(1 \rightleftharpoons 2\).
 
-Finally, if successive rotations are performed according to the scheme \(\vect{A}\) (p. 21), i.e., if each rotation is made about the corresponding new axis, the operator of resultant rotation is given by Eq.~\eqref{eq:1:4:73}. In this case the Euler angles \(\alpha, \beta, \gamma\) of the resultant rotation may also be derived from \eqref{eq:1:4:66}-\eqref{eq:1:4:70} by the interchange of indices \(1 \rightleftharpoons 2\).
+Finally, if successive rotations are performed according to the scheme \(\vect{A}\) (p.~\pageref{schemeA}), i.e., if each rotation is made about the corresponding new axis, the operator of resultant rotation is given by Eq.~\eqref{eq:1:4:73}. In this case the Euler angles \(\alpha, \beta, \gamma\) of the resultant rotation may also be derived from \eqref{eq:1:4:66}-\eqref{eq:1:4:70} by the interchange of indices \(1 \rightleftharpoons 2\).
 
 \subsubsection{Description of Rotations in Terms of Rotation Axis \(\vect{n}(\Theta, \Phi)\) and Rotation Angle \(\omega\)}
 Let the first rotation, \(S\{x, y, z\} \rightarrow S^{\prime}\left\{x^{\prime}, y^{\prime}, z^{\prime}\right\}\), be performed about an axis \(\vect{n}_{1}\) through an angle \(\omega_{1}\), and the second one, \(S^{\prime}\left\{x^{\prime}, y^{\prime}, z^{\prime}\right\} \rightarrow S^{\prime \prime}\left\{x^{\prime \prime}, y^{\prime \prime}, z^{\prime \prime}\right\}\), be about an axis \(\vect{n}_{2}\) through an angle \(\omega_{2}\). The resultant rotation \(S\{x, y, z\} \rightarrow S^{\prime \prime}\left\{x^{\prime \prime}, y^{\prime \prime}, z^{\prime \prime}\right\}\) may be treated as a rotation about an axis \(n\) through an angle \(\omega\).
 
 The operator of the resultant rotation has the form
 \begin{equation}
-e^{-i \omega n \cdot \hat{J}}=e^{-i \omega_{2} n_{2} \cdot \hat{\vect{J}}} e^{-i \omega_{1} n_{1} \cdot \hat{\vect{J}}} . \label{eq:1:4:74}
+e^{-i \omega \vect n \cdot \hat{\vect J}}=e^{-i \omega_{2} \vect n_{2} \cdot \hat{\vect{J}}} e^{-i \omega_{1} \vect n_{1} \cdot \hat{\vect{J}}} . \label{eq:1:4:74}
 \end{equation}
-The angle of the resultant rotation \(\omega\) and the axis of this rotation \(n\) are determined by
+The angle of the resultant rotation \(\omega\) and the axis of this rotation \(\vect n\) are determined by
 \begin{gather}
-\cos \frac{\omega}{2}=\cos \frac{\omega_{1}}{2} \cos \frac{\omega_{2}}{2}-\left(n_{1} \cdot n_{2}\right) \sin \frac{\omega_{1}}{2} \sin \frac{\omega_{2}}{2},  \label{eq:1:4:75}\\
-n \sin \frac{\omega}{2}=n_{1} \sin \frac{\omega_{1}}{2} \cos \frac{\omega_{2}}{2}+n_{2} \sin \frac{\omega_{2}}{2} \cos \frac{\omega_{1}}{2}-\left[n_{1} \times n_{2}\right] \sin \frac{\omega_{1}}{2} \sin \frac{\omega_{2}}{2} .\notag
+\cos \frac{\omega}{2}=\cos \frac{\omega_{1}}{2} \cos \frac{\omega_{2}}{2}-\left(\vect n_{1} \cdot \vect n_{2}\right) \sin \frac{\omega_{1}}{2} \sin \frac{\omega_{2}}{2},  \label{eq:1:4:75}\\
+\vect n \sin \frac{\omega}{2}=\vect n_{1} \sin \frac{\omega_{1}}{2} \cos \frac{\omega_{2}}{2}+\vect n_{2} \sin \frac{\omega_{2}}{2} \cos \frac{\omega_{1}}{2}-\left[\vect n_{1} \times \vect n_{2}\right] \sin \frac{\omega_{1}}{2} \sin \frac{\omega_{2}}{2} .\notag
 \end{gather}
-It follows from Eq.~\eqref{eq:1:4:75} that the resultant rotation is independent of the order of successive rotations (i.e., the rotation operators commute) if and only if \(n_{1} \times n_{2}=0\), i.e., the axes of both rotations are parallel or antiparallel. In this case
+It follows from Eq.~\eqref{eq:1:4:75} that the resultant rotation is independent of the order of successive rotations (i.e., the rotation operators commute) if and only if \(\vect n_{1} \times \vect n_{2}=0\), i.e., the axes of both rotations are parallel or antiparallel. In this case
 \[
 \omega=\omega_{1} \pm \omega_{2}
 \]
-If directions of the rotation axes \(\vect{n}_{1}, \vect{n}_{2}, \vect{n}\) are specified by the polar angles \(\Theta_{1}, \Phi_{1} ; \Theta_{2}, \Phi_{2}\) and \(\Theta, \Phi\), respectively, and the polar angles are defined with respect to the initial coordinate system \(S\{x, y, z\}\), then
+If directions of the rotation axes \(\vect{n}_{1}\), \(\vect{n}_{2}\), \(\vect{n}\) are specified by the polar angles \(\Theta_{1}, \Phi_{1} ; \Theta_{2}, \Phi_{2}\) and \(\Theta, \Phi\), respectively, and the polar angles are defined with respect to the initial coordinate system \(S\{x, y, z\}\), then
 \begin{gather}
 \cos \frac{\omega}{2}=\cos \frac{\omega_{1}}{2} \cos \frac{\omega_{2}}{2}-\sin \frac{\omega_{1}}{2} \sin \frac{\omega_{2}}{2}\left[\cos \Theta_{1} \cos \Theta_{2}+\sin \Theta_{1} \sin \Theta_{2} \cos \left(\Phi_{1}-\Phi_{2}\right)\right]  \notag\\
 \sin \frac{\omega}{2} \cos \Theta=\sin \frac{\omega_{1}}{2} \cos \frac{\omega_{2}}{2} \cos \Theta_{1}+\sin \frac{\omega_{2}}{2} \cos \frac{\omega_{1}}{2} \cos \Theta_{2}  \notag\\
 +\sin \frac{\omega_{1}}{2} \sin \frac{\omega_{2}}{2} \sin \Theta_{1} \sin \Theta_{2} \sin \left(\Phi_{1}-\Phi_{2}\right)  \label{eq:1:4:76}\\
 \cot \Phi=\frac{\sin \Theta_{1}\left(\cot \frac{\omega_{2}}{2} \cos \Phi_{1}-\cos \Theta_{2} \sin \Phi_{1}\right)+\sin \Theta_{2}\left(\cot \frac{\omega_{1}}{2} \cos \Phi_{2}+\cos \Theta_{1} \sin \Phi_{2}\right)}{\sin \Theta_{1}\left(\cot \frac{\omega_{2}}{2} \sin \Phi_{1}+\cos \Theta_{2} \cos \Phi_{1}\right)+\sin \Theta_{2}\left(\cot \frac{\omega_{1}}{2} \sin \Phi_{2}-\cos \Theta_{1} \cos \Phi_{2}\right)} . \notag
 \end{gather}
-If directions of the rotation axes \(n_{1}, n\) are defined by the polar angles \(\Theta_{1}, \Phi_{1}\) and \(\Theta, \Phi\) with respect to the initial coordinate system \(S\{x, y, z\}\) and the direction of the axis of the second rotation \(\vect{n}_{2}\) is defined by the polar angles \(\Theta_{2}, \Phi_{2}\) with respect to the intermediate coordinate system \(S^{\prime}\left\{x^{\prime}, y^{\prime}, z^{\prime}\right\}\) then the angles \(\omega, \Theta, \Phi\) of the resultant rotation will be given by Eqs.~\eqref{eq:1:4:76} with interchanged indices \(1 \rightleftharpoons 2\). This situation is similar to the case when rotations are described by Euler angles.
+If directions of the rotation axes \(\vect n_{1}\), \(\vect n\) are defined by the polar angles \(\Theta_{1}, \Phi_{1}\) and \(\Theta, \Phi\) with respect to the initial coordinate system \(S\{x, y, z\}\) and the direction of the axis of the second rotation \(\vect{n}_{2}\) is defined by the polar angles \(\Theta_{2}, \Phi_{2}\) with respect to the intermediate coordinate system \(S^{\prime}\left\{x^{\prime}, y^{\prime}, z^{\prime}\right\}\) then the angles \(\omega, \Theta, \Phi\) of the resultant rotation will be given by Eqs.~\eqref{eq:1:4:76} with interchanged indices \(1 \rightleftharpoons 2\). This situation is similar to the case when rotations are described by Euler angles.
 
 \subsubsection{Description of Rotation in Terms of Cayley-Klein Parameters}
 Let the first rotation, \(S\{x, y, z\} \rightarrow S^{\prime}\left\{x^{\prime}, y^{\prime}, z^{\prime}\right\}\) be determined by the Cayley-Klein parameters \(a_{1}, b_{1}\) (1.4.3) and the second one, \(S^{\prime}\left\{x^{\prime}, y^{\prime}, z^{\prime}\right\} \rightarrow S^{\prime \prime}\left\{x^{\prime \prime}, y^{\prime \prime}, z^{\prime \prime}\right\}\), by the parameters \(a_{2}, b_{2}\). Then the resultant rotation \(S\{x, y, z\} \rightarrow S^{\prime \prime}\left\{x^{\prime \prime}, y^{\prime \prime}, z^{\prime \prime}\right\}\) will be determined by the parameters \(a, b\) such as

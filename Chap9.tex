@@ -657,11 +657,11 @@ j_{13}^{2} & j_{14}^{2} & 0 & 1 \\
 \end{equation}
 The asymptotic expressions \eqref{eq:9:9:5} are valid only if $V^{2}>0$ (classically allowed domain). If $V^{2}<0$ (classically forbidden domain, when an associated tetrahedron does not exist), the asymptotic expression becomes
 \begin{equation}
-\sixj{a}{b}{c}{d}{e}{f}  \label{eq:9:9:10} \approx \frac{1}{2 \sqrt{12 \pi|V|}} \cos \Phi \exp \left\{-\left|\sum_{i, k=1}^{4} j_{i k} \\Im   \Theta_{i k}\right|\right\}, \quad\left(V^{2}<0\right)
+\sixj{a}{b}{c}{d}{e}{f}  \label{eq:9:9:10} \approx \frac{1}{2 \sqrt{12 \pi|V|}} \cos \Phi \exp \left\{-\left|\sum_{i, k=1}^{4} j_{i k} \Im   \Theta_{i k}\right|\right\}, \quad\left(V^{2}<0\right)
 \end{equation}
 where
 \begin{equation}
-\Phi=\sum_{i, k=1}^{4}\left(j_{i k}-\frac{1}{2}\right) \\Re  \Theta_{i k} \label{eq:9:9:11}
+\Phi=\sum_{i, k=1}^{4}\left(j_{i k}-\frac{1}{2}\right) \Re   \Theta_{i k} \label{eq:9:9:11}
 \end{equation}
 In this case the $6 j$ symbols are exponentially small even if the triangular condition is satisfied.\\
 Near the classical domain boundary, where $V^{2} \approx 0$, Eqs.~\eqref{eq:9:9:5}, \eqref{eq:9:9:10} are of little use, although one may use the improved expressions \cite{ref089}
@@ -741,13 +741,14 @@ This formula is valid only on the average because the $6 j$ symbols oscillate ra
 \subsubsection{$R \rightarrow \infty$}
 If $a, b, c$, etc. are fixed and $R \rightarrow \infty$, one has \cite{ref089}
 \begin{align}
-\sixj{a}{b+R}{c+R}{d}{e+R}{f+R} \approx & (-1)^{\varphi}\left[\frac{(a-b+c)!(a-e+f)!(c+d-e)!(-b+d+f)!}{(a+b-c)!(a+e-f)!(-c+d+e)!(b+d-f)!}\right]^{\frac{1}{2} \\sign  (c+f-b-e)}  \notag\\
+\sixj{a}{b+R}{c+R}{d}{e+R}{f+R} \approx 
+& (-1)^{\varphi}\left[\frac{(a-b+c)!(a-e+f)!(c+d-e)!(-b+d+f)!}{(a+b-c)!(a+e-f)!(-c+d+e)!(b+d-f)!}\right]^{\frac{1}{2} \sign  (c+f-b-e)}  \notag\\
 & \times \frac{(2 R)^{-1-|b+e-c-f|}}{|b+e-c-f|!}\left[1+O\left(\frac{1}{R^{2}}\right)\right] . \label{eq:9:9:25}
 \end{align}
 In this case
 \begin{gather}
 \varphi=a+d+\min \{b+e, c+f\},  \notag\\
-\\sign   x= \begin{cases}1, & \text { if } x \geq 0 \\
+\sign   x= \begin{cases}1, & \text { if } x \geq 0 \\
 -1, & \text { if } x<0\end{cases} \label{eq:9:9:26}
 \end{gather}
 \section{Relations Between the Wigner $6 j$ Symbols and Analogous Functions of Other Authors}\label{sec:9.10}\index{6j symbol@$6j$ symbol!notations of other authors}\index{notation!of other authors}\isym{U-jahn@$U(a b e d ; c f)$, normalized Racah coefficient}
