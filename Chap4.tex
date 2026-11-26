@@ -84,7 +84,7 @@ Moreover, a rotation of the coordinate system (or physical body) described by th
 \item by rotating about the initial axes (case B in Sec.~\ref{sec:1.4.1}), or
 \item by rotating about the new (turned) axes (case A in Sec.~\ref{sec:1.4.1}).
 \end{enumerate}
-Thus, any transformation of wave functions described by Eq.~\eqref{eq:4:1:2} can be treated in four different ways (Table 4.1).
+Thus, any transformation of wave functions described by Eq.~\eqref{eq:4:1:2} can be treated in four different ways (Table \label{chap4:tab:1}).
 
 The Wigner $D$-functions are complex. They depend on three real arguments $\alpha, \beta, \gamma$ and are defined in the domain
 \begin{equation}
@@ -430,7 +430,7 @@ $U_{M M^{\prime}}^{J}(\omega ; \Theta, \Phi)$ are eigenfunctions of three operat
 \begin{align}
 & \hat{J}_{z}=-i\left[\cos \Theta \frac{\partial}{\partial \omega}-\frac{1}{2} \cot \frac{\omega}{2} \sin \Theta \frac{\partial}{\partial \Theta}+\frac{1}{2} \, \frac{\partial}{\partial \Phi}\right] , \label{eq:4:5:9}\\
 & \hat{J}_{z}^{\prime}=-i\left[\cos \Theta \frac{\partial}{\partial \omega}-\frac{1}{2} \cot \frac{\omega}{2} \sin \Theta \frac{\partial}{\partial \Theta}-\frac{1}{2} \, \frac{\partial}{\partial \Phi}\right] , \label{eq:4:5:10}\\
-& \hat{J}^{2}=-\left[\frac{\partial^{2}}{\partial \omega^{2}}+\cot \frac{\omega}{2} \frac{\partial}{\partial \omega}+\frac{1}{4 \sin ^{2} \frac{\omega}{2}}\left(\frac{\partial^{2}}{\partial \Theta^{2}}+\cot \Theta \frac{\partial}{\partial \Theta}+\frac{1}{\sin ^{2} \Theta} \frac{\partial^{2}}{\partial \Phi^{2}}\right)\right] .\label{eq:4:5:11}
+& \hat{\vect J}^{2}=-\left[\frac{\partial^{2}}{\partial \omega^{2}}+\cot \frac{\omega}{2} \frac{\partial}{\partial \omega}+\frac{1}{4 \sin ^{2} \frac{\omega}{2}}\left(\frac{\partial^{2}}{\partial \Theta^{2}}+\cot \Theta \frac{\partial}{\partial \Theta}+\frac{1}{\sin ^{2} \Theta} \frac{\partial^{2}}{\partial \Phi^{2}}\right)\right] .\label{eq:4:5:11}
 \end{align}
 Thus, $U_{M M^{\prime}}^{J}(\omega ; \Theta, \Phi)$ is a solution of the differential equations
 \begin{align}
@@ -550,7 +550,8 @@ U_{M M^{\prime}}^{J}(\omega ; \Theta, \Phi)=\delta_{M M^{\prime}}(1-i \omega M \
 U_{J J}^{J}(\omega ; \theta, \Phi)&=\left(\cos \frac{\omega}{2}-i \sin \frac{\omega}{2} \cos \Theta\right)^{2 J}, \quad&U_{-J-J}^{J}(\omega ; \theta, \Phi)&=\left(\cos \frac{\omega}{2}+i \sin \frac{\omega}{2} \cos \Theta\right)^{2 J}  ,\notag\\
 U_{J-J}^{J}(\omega ; \Theta, \Phi)&=\left(-i \sin \frac{\omega}{2} \sin \Theta e^{-i \Phi}\right)^{2 J}, &U_{-J J}^{J}(\omega ; \Theta, \Phi)&=\left(-i \sin \frac{\omega}{2} \sin \Theta e^{i \Phi}\right)^{2 J}. \label{eq:4:5:32}
 \end{alignat}
-\subsubsection{ Explicit forms of $U_{M M^{\prime}}^{J}(\omega ; \theta, \Phi)$ for $J=\frac{1}{2}, 1, \frac{3}{2}, 2$ are given below in Tables 4.23-4.26.}
+\subsubsection{ Explicit forms of $U_{M M^{\prime}}^{J}(\omega ; \theta, \Phi)$}
+Values for $J=\frac{1}{2}, 1, \frac{3}{2}, 2$ are given in Tables 4.23-4.26 of the original book--a code is in the repository.
 
 \section{Sums involving $D$-functions}\label{sec:4.6}\index{Wigner D-function@Wigner $D$-function!sums involving}\index{sums!of the $D$-functions}
 \subsection{The Clebsch-Gordan Series}\label{sec:4.6.1}\index{Clebsch-Gordan series}
@@ -728,20 +729,20 @@ where
 \end{align}
 \item
 \begin{equation}
-\sum_{M M^{\prime}} D_{M M^{\prime}}^{J}\left(\alpha_{1}, \beta_{1}, \gamma_{1}\right) D_{M M^{\prime}}^{J *}\left(\alpha_{2}, \beta_{2}, \gamma_{2}\right) \equiv \chi^{J}\left(R_{1} R_{2}^{-1}\right)=\chi^{J}\left(R_{1}^{-1} R_{2}\right)=\frac{\sin \left[(2 J+1) \frac{\omega^{\prime}}{2}\right]}{\sin \frac{\omega^{\prime}}{2}} \label{eq:4:7:19}
+\sum_{M M^{\prime}} D_{M M^{\prime}}^{J}\left(\alpha_{1}, \beta_{1}, \gamma_{1}\right) D_{M M^{\prime}}^{J *}\left(\alpha_{2}, \beta_{2}, \gamma_{2}\right) \equiv \chi^{J}\left(R_{1} R_{2}^{-1}\right)=\chi^{J}\left(R_{1}^{-1} R_{2}\right)=\frac{\sin \left[(2 J+1) \sfrac{\omega^{\prime}}{2}\right]}{\sin \sfrac{\omega^{\prime}}{2}} \label{eq:4:7:19}
 \end{equation}
 where
 \begin{align}
 \cos \frac{\omega^{\prime}}{2} & =\cos \frac{\beta_{1}}{2} \cos \frac{\beta_{2}}{2} \cos \frac{\alpha_{1}+\gamma_{1}-\alpha_{2}-\gamma_{2}}{2}+\sin \frac{\beta_{1}}{2} \sin \frac{\beta_{2}}{2} \cos \frac{\alpha_{1}-\gamma_{1}-\alpha_{2}+\gamma_{2}}{2}  ,\notag\\
 & =\cos \frac{\beta_{1}-\beta_{2}}{2} \cos \frac{\alpha_{1}-\alpha_{2}}{2} \cos \frac{\gamma_{1}-\gamma_{2}}{2}-\cos \frac{\beta_{1}+\beta_{2}}{2} \sin \frac{\alpha_{1}-\alpha_{2}}{2} \sin \frac{\gamma_{1}-\gamma_{2}}{2} .\label{eq:4:7:20}
 \end{align}
-Equation \eqref{eq:4:7:20} may be obtained from Eq.~\eqref{eq:4:7:18} by replacing $\left(\alpha_{2}, \beta_{2}, \gamma_{2}\right) \rightarrow\left(-\gamma_{2},-\beta_{2},-\alpha_{2}\right)$.
+Equation \eqref{eq:4:7:20} can be obtained from Eq.~\eqref{eq:4:7:18} by replacing $\left(\alpha_{2}, \beta_{2}, \gamma_{2}\right) \rightarrow\left(-\gamma_{2},-\beta_{2},-\alpha_{2}\right)$.
 \end{enumerate}
 
-Similarly, one can arrive at invariant sums which may be reduced to the characters involving three and more rotations, i.e., $\chi^{J}\left(R_{1} R_{2} R_{3}\right)$ etc.
+Similarly, one can arrive at invariant sums which may be reduced to the characters involving three and more rotations, i.e., $\chi^{J}\left(R_{1} R_{2} R_{3}\right)$, etc.
 
 \subsection{The Ponzano-Regge sum}\label{sec:4.7.6}\index{Ponzano-Regge sum}\index{sums!Ponzano-Regge}
-Note the following sum involving products of three $d_{M M^{\prime}}^{J}(\beta)$ functions with the same $J$ but different arguments (Ref. \cite{ref089})
+Note the following sum involving products of three $d_{M M^{\prime}}^{J}(\beta)$ functions with the same $J$ but different arguments (Ref.~\cite{ref089})
 \begin{equation}
 \sum_{J=J_{\mathrm{min}}}^{\infty}(2 J+1) d_{M_{1} M_{2}}^{J}\left(\beta_{3}\right) d_{M_{2} M_{3}}^{J}\left(\beta_{1}\right) d_{M_{3} M_{1}}^{J}\left(\beta_{2}\right)=\frac{2 \Theta(B)}{\pi \sqrt{B}} \cos \left(\sum_{i=1}^{3} M_{i} \delta_{i}\right) .\label{eq:4:7:21}
 \end{equation}
@@ -752,10 +753,10 @@ B=\left|\begin{array}{ccc}
 \cos \beta_{3} & 1 & \cos \beta_{1} \\
 \cos \beta_{2} & \cos \beta_{1} & 1
 \end{array}\right|,  \label{eq:4:7:22}\\
-\Theta(x)=\left\{\begin{array}{cc}
-1 & x>0 \\
-0 & x<0
-\end{array}\right. \label{eq:4:7:23}
+\Theta(x)\begin{cases}
+1 & x>0, \\
+0 & x<0.
+\end{cases} \label{eq:4:7:23}
 \end{gather}
 \begin{figure}[htbp!]
 \begin{center}
@@ -764,7 +765,6 @@ B=\left|\begin{array}{ccc}
 \label{chap4:fig:1}
 \end{center}
 \end{figure}
-
 The relations between the angles $\delta_{1}, \delta_{2}, \delta_{3}$ and $\beta_{1}, \beta_{2}, \beta_{3}$ are
 \begin{gather}
 \cos \delta_{i}=\frac{\cos \beta_{j} \cos \beta_{k}-\cos \beta_{i}}{\sin \beta_{j} \sin \beta_{k}}, \quad(i \neq j \neq k),  \label{eq:4:7:24}\\
@@ -775,7 +775,7 @@ These relations may be easily obtained by using spherical trigonometry (see Fig.
 \section{Recursion relations for $D_{M M^{\prime}}^{J}$}\label{sec:4.8}\index{recursion relations!for the $D$-functions}\index{Wigner D-function@Wigner $D$-function!recursion relations for}
 \subsection{Relations between $D^{J}$ and $D^{J \pm 1}$}\label{sec:4.8.1}\index{recursion relations!in $J$}
 \begin{align}
-\cos \beta D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)= & \frac{\sqrt{\left(J^{2}-M^{2}\right)\left(J^{2}-M^{\prime 2}\right)}}{J(2 J+1)} D_{M M^{\prime}}^{J-1}(\alpha, \beta, \gamma)+\frac{M M^{\prime}}{J(J+1)} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)  \notag\\
+\cos \beta\, D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)= & \frac{\sqrt{\left(J^{2}-M^{2}\right)\left(J^{2}-M^{\prime 2}\right)}}{J(2 J+1)} D_{M M^{\prime}}^{J-1}(\alpha, \beta, \gamma)+\frac{M M^{\prime}}{J(J+1)} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)  \notag\\
 & +\frac{\sqrt{\left((J+1)^{2}-M^{2}\right]\left[(J+1)^{2}-M^{\prime 2}\right]}}{(J+1)(2 J+1)} D_{M M^{\prime}}^{J+1}(\alpha, \beta, \gamma)  \label{eq:4:8:1}
 \end{align}\begin{align}
 \sin \beta e^{i \alpha} D_{M+1 M^{\prime}}^{J}(\alpha, \beta, \gamma)= & -\frac{\sqrt{(J+M)(J+M+1)\left(J^{2}-M^{\prime 2}\right)}}{J(2 J+1)} D_{M M^{\prime}}^{J-1}(\alpha, \beta, \gamma)  \notag\\
@@ -904,7 +904,7 @@ V_{2}: & \quad  0 \leq \alpha<2 \pi ,
 The total volume of the double domain $V_{1}$ or $V_{2}$ is equal to $16 \pi^{2}$.\\
 The orthogonality and normalization condition is
 \begin{multline}
-\int_{0}^{4 \pi} \dd \alpha \int_{0}^{\pi} \dd \beta \sin \beta \int_{0}^{2 \pi} \dd \gamma D_{M_{2} M_{2}^{\prime}}^{J_{2} *}(\alpha, \beta, \gamma) D_{M_{1} M_{1}^{\prime}}^{J_{1}}(\alpha, \beta, \gamma) , \notag\\
+\int_{0}^{4 \pi} \dd \alpha \int_{0}^{\pi} \dd \beta \sin \beta \int_{0}^{2 \pi} \dd \gamma D_{M_{2} M_{2}^{\prime}}^{J_{2} *}(\alpha, \beta, \gamma) D_{M_{1} M_{1}^{\prime}}^{J_{1}}(\alpha, \beta, \gamma) , \\
 =\int_{0}^{2 \pi} \dd \alpha \int_{0}^{\pi} \dd \beta \sin \beta \int_{0}^{4 \pi} \dd \gamma D_{M_{2} M_{2}^{\prime}}^{J_{2} *}(\alpha, \beta, \gamma) D_{M_{1} M_{1}^{\prime}}^{J_{1}}(\alpha, \beta, \gamma)=\frac{16 \pi^{2}}{2 J_{1}+1} \delta_{J_{1} J_{2}} \delta_{M_{1} M_{2}} \delta_{M_{1}^{\prime} M_{2}^{\prime}} \label{eq:4:10:3}.
 \end{multline}
 If $J_{1}$ and $J_{2}$ are both either integer or half-integer, orthogonality of the $D$-functions takes place at integration over the single volume of rotation group which corresponds to the domain
@@ -1017,53 +1017,53 @@ Making use of this notation, one gets
 % (Numerically these quadruple-R identities remain impractical to evaluate
 % here; the verification is against the scan, not sympy.)
 % RESPONSE: Due to summations, almost all of these integrals contain a trace of one \dd function--so can be simplified considerably
-\begin{gather}
+\begin{multline}
 \sum_{\text {All } M, N}
 \int \dd R_{1} D_{M_{1} N_{1}}^{J_{1}}\left(R_{1}\right) D_{M_{2} N_{2}}^{J_{2}}\left(R_{1}\right) D_{M_{3} M_{3}}^{J_{3}}\left(R_{1}\right) 
-\int \dd R_{2} D_{N_{1} M_{1}}^{J_{1}}\left(R_{2}\right) D_{M_{2} N_{2}}^{J_{2} *}\left(R_{2}\right) D_{M_{3}^{\prime} M_{3}^{\prime}}^{J_{3}^{\prime}}\left(R_{2}\right)  \notag\\
+\int \dd R_{2} D_{N_{1} M_{1}}^{J_{1}}\left(R_{2}\right) D_{M_{2} N_{2}}^{J_{2} *}\left(R_{2}\right) D_{M_{3}^{\prime} M_{3}^{\prime}}^{J_{3}^{\prime}}\left(R_{2}\right)  \\
 =(-1)^{2 J_{3}^{\prime}}\left(8 \pi^{2}\right)^{2}
 \sixj{J_1}{J_2}{J_3}{J_1}{J_2}{J_3^{\prime}}, \label{eq:4:12:5}
-\end{gather}
+\end{multline}
 
-\begin{gather}
+\begin{multline}
  \sum_{\text {All } M, N} 
  \int \dd R_{1} D_{M_{1}^{\prime} N_{1}^{\prime}}^{J_{1}^{\prime}*}\left(R_{1}\right) D_{M_{2}^{\prime} N_{2}^{\prime}}^{J_{2}^{\prime}}\left(R_{1}\right) D_{M_{3} M_{3}}^{J_{3}}\left(R_{1}\right) 
  \int \dd R_{2} D_{M_{2}^{\prime} N_{2}^{\prime}}^{J_{2}^{\prime} *}\left(R_{2}\right) D_{M_{3}^{\prime} N_{3}^{\prime}}^{J_{3}^{\prime}}\left(R_{2}\right) D_{M_{1} M_{1}}^{J_{1}}\left(R_{2}\right)
- \notag\\
+ \\
 \times 
 \int \dd R_{3} D_{M_{3}^{\prime} N_{3}^{\prime}}^{J_{3}^{\prime *}}\left(R_{3}\right) D_{M_{1}^{\prime} N_{1}^{\prime}}^{J_{1}^{\prime}}\left(R_{3}\right) D_{M_{2} M_{2}}^{J_{2}}\left(R_{3}\right)
 =\left(8 \pi^{2}\right)^{3}
 \sixj{J_1}{J_2}{J_3}{J_1^{\prime}}{J_2^{\prime}}{J_3^{\prime}}^2,  \label{eq:4:12:6}
-\end{gather}
+\end{multline}
 
-\begin{gather}
+\begin{multline}
  \sum_{\text {All } M, N} 
  \int \dd R_{1} D_{M M}^{J}\left(R_{1}\right) D_{N_{2} N_{2}^{\prime}}^{J_{2}}\left(R_{1}\right) D_{N_{3} N_{3}^{\prime}}^{J_{3}}\left(R_{1}\right)
  \int \dd R_{2} D_{M^{\prime} M^{\prime}}^{J^{\prime}}\left(R_{2}\right) D_{N_{1} M_{1}}^{J_{1}}\left(R_{2}\right) D_{N_{2}^{\prime} M_{2}^{\prime}}^{J_{2}}\left(R_{2}\right)  
- \notag\\
+ \\
  \times 
  \int \dd R_{3} D_{M^{\prime \prime} M^{\prime \prime}}^{J^{\prime \prime}}\left(R_{3}\right) D_{M_{2}^{\prime} M_{2}^{\prime \prime}}^{J_{2}}\left(R_{3}\right) D_{N_{2}^{\prime} M_{3}}^{J_{3}}\left(R_{3}\right) 
- \int \dd R_{4} D_{M_{1} N_{1}}^{J_{1}}\left(R_{4}\right) D_{M_{2} N_{2}}^{J_{2}}\left(R_{4}\right) D_{M_{2}^{\prime \prime} M_{2}}^{J_{2}}\left(R_{4}\right) D_{M_{3} N_{3}}^{J_{3}}\left(R_{4}\right)  \notag\\
+ \int \dd R_{4} D_{M_{1} N_{1}}^{J_{1}}\left(R_{4}\right) D_{M_{2} N_{2}}^{J_{2}}\left(R_{4}\right) D_{M_{2}^{\prime \prime} M_{2}}^{J_{2}}\left(R_{4}\right) D_{M_{3} N_{3}}^{J_{3}}\left(R_{4}\right) \\
  =(-1)^{2 J_{1}}\left(8 \pi^{2}\right)^{4}
 \sixj{J_1}{J_2}{J'}{J_3}{J_2}{J}
 \sixj{J_{1}}{J_{2}}{J^{\prime \prime}}{J_{3}}{J_{2}}{J^{\prime}}
 \sixj{J_{1}}{J_{2}}{J}{J_{3}}{J_{2}}{J^{\prime \prime}},  \label{eq:4:12:7}
-\end{gather}
+\end{multline}
 
-\begin{gather}
- \sum_{\text {All } M, N} \int \dd R_{1} D_{M M}^{J}\left(R_{1}\right) D_{M^{\prime} N^{\prime}}^{J}\left(R_{1}\right) D_{M_{1} N_{1}}^{J_{1} *}\left(R_{1}\right) \int \dd R_{2} D_{N^{\prime} M^{\prime}}^{J}\left(R_{2}\right) D_{N N}^{J}\left(R_{2}\right) D_{M_{2} N_{2}}^{J_{2} *}\left(R_{2}\right)  \notag\\
+\begin{multline}
+ \sum_{\text {All } M, N} \int \dd R_{1} D_{M M}^{J}\left(R_{1}\right) D_{M^{\prime} N^{\prime}}^{J}\left(R_{1}\right) D_{M_{1} N_{1}}^{J_{1} *}\left(R_{1}\right) \int \dd R_{2} D_{N^{\prime} M^{\prime}}^{J}\left(R_{2}\right) D_{N N}^{J}\left(R_{2}\right) D_{M_{2} N_{2}}^{J_{2} *}\left(R_{2}\right)  \\
  \times \int \dd R_{3} D_{M_{1} N_{1}}^{J_{1}}\left(R_{3}\right) D_{M_{2} N_{2}}^{J_{2}}\left(R_{3}\right) D_{M_{3} M_{3}}^{J_{3} *}\left(R_{3}\right)=\left(8 \pi^{2}\right)^{3}
  \ninej{J}{J}{J_{1}}{J}{J}{J_{2}}{J_{1}}{J_{2}}{J_{3}}
 ,  \label{eq:4:12:8}
-\end{gather}
+\end{multline}
 
-\begin{gather}
+\begin{multline}
  \sum_{\text {All } M, N} \int \dd R_{1} D_{M_{1} N_{1}}^{J_{1}}\left(R_{1}\right) D_{M_{2} N_{2}}^{J_{2}}\left(R_{1}\right) D_{M_{12} M_{12}}^{J_{12}}\left(R_{1}\right) \int \dd R_{2} D_{M_{3} N_{3}}^{J_{3}}\left(R_{2}\right) D_{M_{4} N_{4}}^{J_{4}}\left(R_{2}\right) D_{M_{34} M_{34}}^{J_{34}}\left(R_{2}\right)  \notag\\
- \times \int \dd R_{3} D_{M_{13} N_{13}}^{J_{13}}\left(R_{3}\right) D_{M_{24} N_{24}}^{J_{24}}\left(R_{3}\right) D_{M M}^{J}\left(R_{3}\right) \int \dd R_{4} D_{N_{1} M_{1}}^{J_{1}}\left(R_{4}\right) D_{N_{3} M_{3}}^{J_{3}}\left(R_{4}\right) D_{N_{13} M_{13}}^{J_{13}}\left(R_{4}\right)  \notag\\
+ \times \int \dd R_{3} D_{M_{13} N_{13}}^{J_{13}}\left(R_{3}\right) D_{M_{24} N_{24}}^{J_{24}}\left(R_{3}\right) D_{M M}^{J}\left(R_{3}\right) \int \dd R_{4} D_{N_{1} M_{1}}^{J_{1}}\left(R_{4}\right) D_{N_{3} M_{3}}^{J_{3}}\left(R_{4}\right) D_{N_{13} M_{13}}^{J_{13}}\left(R_{4}\right)  \\
  \times \int \dd R_{5} D_{N_{2} M_{2}}^{J_{2}}\left(R_{5}\right) D_{N_{4} M_{4}}^{J_{4}}\left(R_{5}\right) D_{N_{24} M_{24}}^{J_{24}}\left(R_{5}\right)=\left(8 \pi^{2}\right)^{5}
  \ninej{J_{1}}{J_{2}}{J_{12}}{J_{3}}{J_{4}}{J_{34}}{J_{13}}{J_{24}}{J}^2
  . \label{eq:4:12:9}
-\end{gather}
+\end{multline}
 The left-hand sides of Eqs.~\eqref{eq:4:12:5}-\eqref{eq:4:12:9} include integrations as well as summations. If the integrations are carried out before the summations (with the aid of Eqs.~\eqref{eq:4:11:4}-\eqref{eq:4:11:5}), then Eqs.~\eqref{eq:4:12:5}-\eqref{eq:4:12:9} are reduced to sums of the Clebsch-Gordan coefficients (Sec.~\ref{sec:8.7}). On the other hand, if the summations are preformed before the integrations, one obtains the integral representations of $6 j$ - and $9 j$-symbols (see Secs.~\ref{sec:9.3} and \ref{sec:10.3}).
 
 \section{Generating functions for $d_{M M}^{J}(\beta)$}\label{sec:4.13}\index{generating functions!for the $d$-functions}\index{Wigner d-function@Wigner (small) $d$-function!generating functions for}
@@ -1108,15 +1108,15 @@ R=\sqrt{1-2 t \cos \beta+t^{2}}, \quad|t|<1 .  \label{eq:4:13:4}
 In Eq.~\eqref{eq:4:13:8} $\lambda$ is an arbitrary integer.
 %\end{enumerate}
 
-\section{Characters $\chi^{j}(R)$ of irreducible representations of rotation group}\label{sec:4.14}\index{character!of an irreducible representation}\index{irreducible representation!character of}\index{rotation group!irreducible representations of}
+\section{Characters of irreducible representations of the rotation group}\label{sec:4.14}\index{character!of an irreducible representation}\index{irreducible representation!character of}\index{rotation group!irreducible representations of}
 \subsection{Definition}\label{sec:4.14.1}\index{character!definition}
-The trace of the finite rotation matrix in the JM-representation
+The trace of the finite rotation matrix in the $JM$-representation
 \begin{equation}
 \chi^{J}(R)=\sum_{M=-J}^{J} D_{M M}^{J}(R), \label{eq:4:14:1}
 \end{equation}
 is called the characteristic function, or simply, the character of the irreducible representation of rank $J$.\isymg{chi-J@$\chi^{J}(\omega)$, character of an irreducible representation}\index{characteristic function|see{character}}
 
-In contrast to $D_{M M^{\prime}}^{J}(R)$, the function $\chi^{J}(R)$ is invariant under rotations of the coordinate systems. Explicit forms of $\chi^{J}(R)$ are simpler when $R$ is specified by $\omega, \Theta, \Phi$ rather than by $\alpha, \beta, \gamma$ (Sec.~\ref{sec:1.4.2}). With variables $\omega, \Theta, \Phi$ in use, $\chi^{\mathrm{J}}(R)$ is entirely determined by the rotation angles $\omega$ and is independent of the rotation axis $\vect{n}(\boldsymbol{\theta}, \boldsymbol{\Phi}):$
+In contrast to $D_{M M^{\prime}}^{J}(R)$, the function $\chi^{J}(R)$ is invariant under rotations of the coordinate systems. Explicit forms of $\chi^{J}(R)$ are simpler when $R$ is specified by $\omega, \Theta, \Phi$ rather than by $\alpha, \beta, \gamma$ (Sec.~\ref{sec:1.4.2}). With variables $\omega, \Theta, \Phi$ in use, $\chi^{\mathrm{J}}(R)$ is entirely determined by the rotation angles $\omega$ and is independent of the rotation axis $\vect{n}(\Theta, \Phi):$
 \begin{equation}
 \chi^{J}(R)=\chi^{J}(\omega). \label{eq:4:14:2}
 \end{equation}
@@ -1180,12 +1180,12 @@ In particular,
 in spite of the non-commutativity of $R_{1}$ and $R_{2}$.\\
 Products of the characters may be expanded in a Clebsch-Gordan series
 \begin{equation}
-\chi^{J_{1}}(R) \chi^{J_{2}}(R)=\sum_{J}\left\{J_{1} J_{2} J\right\} \chi^{J}(R) \label{eq:4:14:21}
+\chi^{J_{1}}(R) \chi^{J_{2}}(R)=\sum_{J}\left\{J_{1} J_{2} J\right\} \chi^{J}(R). \label{eq:4:14:21}
 \end{equation}
 where $\left\{J_{1} J_{2} J_{3}\right\}=1$, if the triangle inequality (Sec.~\ref{sec:4.6.2}) is satisfied, and $\left\{J_{1} J_{2} J_{3}\right\}=0$ otherwise.\\
 The transformation $J=\tilde{J}=-J-1$ reverses the character sign
 \begin{equation}
-\chi^{\tilde{J}}(R)=-\chi^{J}(R) \label{eq:4:14:22}
+\chi^{\tilde{J}}(R)=-\chi^{J}(R). \label{eq:4:14:22}
 \end{equation}
 The function $\chi^{J}(\omega)$ is even and periodic
 \begin{align}
@@ -1237,7 +1237,7 @@ where $J$ is integer and positive.
 \end{equation}
 In particular,
 \begin{gather}
-2 \sin ^{2} \frac{\omega}{2}\left[\chi^{J}(\omega)\right]^{2}=1-\cos [(2 J+1) \omega]  \label{eq:4:14:36}\\
+2 \sin ^{2} \frac{\omega}{2}\left[\chi^{J}(\omega)\right]^{2}=1-\cos [(2 J+1) \omega], \label{eq:4:14:36}\\
 \chi^{J}(\omega)=2^{2 J} \prod_{k=1}^{2 J} \sin \left(\frac{\omega}{2}+\frac{k \pi}{2 J+1}\right). \label{eq:4:14:37}
 \end{gather}
 \subsection{Orthogonality and Completeness}\label{sec:4.14.7}\index{orthogonality!of the characters}\index{completeness!of the characters}
@@ -1300,7 +1300,7 @@ R^{2} \equiv 1-2 t \cos \frac{\omega}{2}+t^{2}, \quad \text { where }|t|<1:  \la
 %   1+t^2-4t cos(w/2)cos(w'/2)+2t^2(cos w+cos w'),
 % which is numerically wrong. The correct denominator (verified vs the series
 % to 1e-14, check_4_14.py) restores the (1+t^2) factors: (1+t^2)^2 and 4t(1+t^2).
-\sum_{J=0, \frac{1}{2}, 1, \ldots}^{\infty} t^{2 J} \chi^{J}(\omega) \chi^{J}\left(\omega^{\prime}\right)=\frac{1-t^{2}}{\left(1+t^{2}\right)^{2}-4 t\left(1+t^{2}\right) \cos \frac{\omega}{2} \cos \frac{\omega^{\prime}}{2}+2 t^{2}\left(\cos \omega+\cos \omega^{\prime}\right)} . \label{eq:4:14:62}
+\sum_{J=0, \frac{1}{2}, 1, \ldots}^{\infty} t^{2 J} \chi^{J}(\omega) \chi^{J}\left(\omega^{\prime}\right)=\corrected{\frac{1-t^{2}}{\left(1+t^{2}\right)^{2}-4 t\left(1+t^{2}\right) \cos \frac{\omega}{2} \cos \frac{\omega^{\prime}}{2}+2 t^{2}\left(\cos \omega+\cos \omega^{\prime}\right)}} . \label{eq:4:14:62}
 \end{gather}
 \subsection{$\chi^{J}(\omega)$ for Particular Values of $\omega$}\label{sec:4.14.10}\index{character!particular values of $\omega$}
 \begin{align}
@@ -1391,7 +1391,7 @@ F\left(-2 J+\lambda,-2 J-\frac{1}{2} ; \lambda+\frac{3}{2} ;-\tan ^{2} \frac{\om
 \chi_{\lambda}^{J}(\omega)= & \left\{\begin{array}{l}
 (-1)^{J+\frac{3 \lambda}{2}} \sqrt{2 J+1} \sqrt{\frac{(2 J-\lambda-1)!!(2 J+\lambda)!!}{(2 J-\lambda)!!(2 J+\lambda+1)!!}}\left(\sin \frac{\omega}{2}\right)^{\lambda} F\left(-J+\frac{\lambda}{2}, J+1+\frac{\lambda}{2} ; \frac{1}{2} ; \cos ^{2} \frac{\omega}{2}\right), \\
 \qquad\qquad \text { if } 2 J-\lambda \text { is even } ,\\
-(-1)^{J+\frac{3 \lambda-1}{2}} \sqrt{2 J+1} \sqrt{\frac{(2 J-\lambda)!!(2 J+\lambda+1)!!}{(2 J-\lambda-1)!!(2 J+\lambda)!!}} \cos \frac{\omega}{2}\left(\sin \frac{\omega}{2}\right)^{\lambda}, \\
+(-1)^{J+\frac{3 \lambda-1}{2}} \sqrt{2 J+1} \sqrt{\frac{(2 J-\lambda)!!(2 J+\lambda+1)!!}{(2 J-\lambda-1)!!(2 J+\lambda)!!}} \cos \frac{\omega}{2}\left(\sin \frac{\omega}{2}\right)^{\lambda} \\
 \qquad\times F\left(-J+\frac{\lambda+1}{2}, J+1+\frac{\lambda+1}{2} ; \frac{3}{2} ; \cos ^{2} \frac{\omega}{2}\right), \\
 \qquad\qquad\text { if } 2 J-\lambda \text { is odd },
 \end{array}\right.  \label{eq:4:15:15}\\
@@ -1723,18 +1723,18 @@ Different authors use somewhat different definitions of the rotation matrix. The
 \item in choosing various transformation rules for irreducible tensors;
 \item in accepting different phases of non-diagonal elements in Eqs.~\eqref{eq:4:2:4} and \eqref{eq:4:2:5}.
 \end{enumerate}
-The Wigner $D$-functions used in this book coincide with those defined by Edmonds (Ref. \cite{ref064}), Rose (Ref. \cite{ref030}), Newton (Ref. \cite{ref028}) and some other authors. The relations between these $D$-functions and corresponding functions of other authors are listed in Table 4.2.
+The Wigner $D$-functions used in this book coincide with those defined by Edmonds (Ref.~\cite{ref064}), Rose (Ref.~\cite{ref030}), Newton (Ref.~\cite{ref028}) and some other authors. The relations between these $D$-functions and corresponding functions of other authors are listed in Table \ref{chap4:tab:2}.
 
 \section{Special cases of $d_{M M^{\prime}}^{J}(\beta)$ for particular $J, M$ and $M^{\prime}$}\label{sec:4.20}\index{Wigner d-function@Wigner (small) $d$-function!special cases}
-General expressions for the $D$-functions, Eqs.~\eqref{eq:4:3:2}-\eqref{eq:4:3:5}, may be reduced to simple closed forms for particular values of $J$. Explicit forms of $d_{M M^{\prime}}^{J}(\beta)$ for $J \leq 1$ are presented in Tables 4.3-4.4. $d_{M M^{\prime}}^{J}(\beta)$ are given in terms of either $\cos \beta$ and $\sin \beta$ (if $J$ is integer), or $\cos (\beta / 2)$ and $\sin (\beta / 2)$ (if $J$ is half-integer). Expressions for $d_{M M^{\prime}}^{J}(\beta)$ for $J \geq 5 / 2$ are presented for $M \geq 0$ and $\left|M^{\prime}\right| \leq M$ only. For $M<0$ and $\left|M^{\prime}\right|>M$ one can obtain $d_{M M^{\prime}}^{J}(\beta)$ using the symmetry properties (Sec.~\ref{sec:4.4}).
+General expressions for the $D$-functions, Eqs.~\eqref{eq:4:3:2}-\eqref{eq:4:3:5}, may be reduced to simple closed forms for particular values of $J$. Explicit forms of $d_{M M^{\prime}}^{J}(\beta)$ for $J \leq 1$ are presented in Tables \ref{chap4:tab:3}--\ref{chap4:tab:4}. $d_{M M^{\prime}}^{J}(\beta)$ are given in terms of either $\cos \beta$ and $\sin \beta$ (if $J$ is integer), or $\cos (\beta / 2)$ and $\sin (\beta / 2)$ (if $J$ is half-integer). Expressions for $d_{M M^{\prime}}^{J}(\beta)$ for $J \geq 5 / 2$ are presented for $M \geq 0$ and $\left|M^{\prime}\right| \leq M$ only. For $M<0$ and $\left|M^{\prime}\right|>M$ one can obtain $d_{M M^{\prime}}^{J}(\beta)$ using the symmetry properties (Sec.~\ref{sec:4.4}).
 
 
 
-Explicit forms of $d_{M M^{\prime}}^{J}(\beta)$ with $J \leq 6$ are also given by Buckmaster (Ref. \cite{ref116}), and Wolters (Ref. \cite{ref129}).\\
-Extensive numerical tables of $d_{M M^{\prime}}^{J}(\beta)$ for $J \leq 13$ (integer and half-integer) may be found in Behkami (Ref. \cite{ref114}).
+Explicit forms of $d_{M M^{\prime}}^{J}(\beta)$ with $J \leq 6$ are also given by Buckmaster (Ref.~\cite{ref116}), and Wolters (Ref.~\cite{ref129}).\\
+Extensive numerical tables of $d_{M M^{\prime}}^{J}(\beta)$ for $J \leq 13$ (integer and half-integer) may be found in Behkami (Ref.~\cite{ref114}).
 
 \section{Tables of $d_{M M^{\prime}}^{J}(\beta)$ for $\beta=\pi / 2$}\label{sec:4.21}\index{Wigner d-function@Wigner (small) $d$-function!tables of}\index{tables!of the $d$-functions}
-Values of the $d_{M M^{\prime}}^{J}(\beta)$-functions for $\beta=\pi / 2$ and $J=1 / 2,1,3 / 2,2,5 / 2,3,7 / 2,4,9 / 2,5$ are given in Tables 4.13-4.22.
+Values of the $d_{M M^{\prime}}^{J}(\beta)$-functions for $\beta=\pi / 2$ and $J=1 / 2,1,3 / 2,2,5 / 2,3,7 / 2,4,9 / 2,5$ are given in Tables 4.13-4.22 of the original book.
 
 The $d_{M M^{\prime}}^{J}(\beta)$-functions can also be generated in closed algebraic form with a computer-algebra system.\index{computer algebra!SymPy}\index{computer algebra!Mathematica} The routines below --- provided as \texttt{scripts/wigner\_d.py} and \texttt{scripts/wigner\_d.wl} --- return $d_{M M^{\prime}}^{J}(\beta)$ for given $J,M,M^{\prime}$ in the convention of this book, each with a self-test against the explicit Wigner formula.
 
@@ -1745,28 +1745,28 @@ In Mathematica (Wolfram Language) the built-in \lstinline!WignerD! is the \emph{
 \lstinputlisting[language=Mathematica]{scripts/wigner_d.wl}
 
 \section{Special cases of $U_{M M^{\prime}}^{J}(\omega ; \Theta, \Phi)$}\label{sec:4.22}\index{rotation matrix!$U_{M M^{\prime}}^{J}$, tables of}\index{tables!of the $U$-functions}
-Explicit forms of $U_{M M^{\prime}}^{J}(\omega ; \Theta, \Phi)$ for $J=1 / 2,1,3 / 2,2$ are given in Tables 4.23-4.26.
+Explicit forms of $U_{M M^{\prime}}^{J}(\omega ; \Theta, \Phi)$ for $J=1 / 2,1,3 / 2,2$ are given in Tables 4.23-4.26 of the original book.
 
 The $U_{M M^{\prime}}^{J}(\omega ; \Theta, \Phi)$-functions can likewise be generated in closed algebraic form, from $U_{M M^{\prime}}^{J}(\omega ; \Theta, \Phi)=\braOket{J M}{e^{-i \omega \, \vect{n}(\Theta, \Phi) \cdot \hat{\vect{J}}}}{J M^{\prime}}$. The routines below --- provided as \texttt{scripts/Ufunction.py} and \texttt{scripts/Ufunction.wl} --- return $U_{M M^{\prime}}^{J}(\omega ; \Theta, \Phi)$ for given $J,M,M^{\prime}$ in the convention of this book; they reduce to $d_{M M^{\prime}}^{J}(\omega)$ for $\Theta=\Phi=\pi / 2$, and each carries a self-test against the matrix exponential $e^{-i \omega \, \vect{n} \cdot \hat{\vect{J}}}$.
 
-In SymPy (Python):
-\lstinputlisting[language=Python]{scripts/Ufunction.py}
+In SymPy (Python): scripts/Ufunction.py
+%\lstinputlisting[language=Python]{scripts/Ufunction.py}
 
-In Mathematica (Wolfram Language):
-\lstinputlisting[language=Mathematica]{scripts/Ufunction.wl}
+In Mathematica (Wolfram Language): scripts/Ufunction.wl
+%\lstinputlisting[language=Mathematica]{scripts/Ufunction.wl}
 
 \begin{table}[tbhp]
 \begin{center}
 \caption{Definitions of the Rotation Matrix by Other Authors.}
 \label{chap4:tab:2}
 \renewcommand{\arraystretch}{1.5}
-  \small
+\footnotesize
 \begin{tabular}{p{1.8cm}|l|l|l}
 \hline
-Reference & Rotation Operator & Transformation Form & Relation between Referred Function (left)\\
-& & & and Function of this Book (right) \\
+Reference & Rotation Operator & Transformation Form & reference function\\
+& & & expressed in the form of this book\\
 \hline
-Edmonds $\left[{16}\right]$ & $e^{-i \alpha \hat{J}_z} e^{-i \beta \hat{J}_y} e^{-i \gamma \hat{J}_{z}}$ & $\Psi_{J M^{\prime}}\left(\vartheta^{\prime}, \varphi^{\prime}\right)=\sum_{M} \Psi_{J M}(\vartheta, \varphi) D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)$ & $D_{M M^{\prime}}^{(J)}(\alpha, \beta, \gamma)=D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)$ \\
+Edmonds \cite{ref016} & $e^{-i \alpha \hat{J}_z} e^{-i \beta \hat{J}_y} e^{-i \gamma \hat{J}_{z}}$ & $\Psi_{J M^{\prime}}\left(\vartheta^{\prime}, \varphi^{\prime}\right)=\sum_{M} \Psi_{J M}(\vartheta, \varphi) D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)$ & $D_{M M^{\prime}}^{(J)}(\alpha, \beta, \gamma)=D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)$ \\
 Rose \cite{ref031} & The same & The same & The same \\
 Brink and Satcher \cite{ref009} & » » & » » & » » \\
 Messiah \cite{ref025} & » » & » » & » » \\
@@ -1783,7 +1783,7 @@ Edmonds \cite{ref064} & The same & The same & The same \\
 Fano and Racah \cite{ref018} & » » & » » & » » \\
 Berestetskii et al. \cite{ref006} & » » & $\Psi_{J M}(\vartheta, \varphi)=\sum_{M^{\prime}} \Psi_{J M^{\prime}}\left(\vartheta^{\prime}, \varphi^{\prime}\right) D_{M^{\prime} M}^{(J)}(\alpha, \beta, \gamma)$ & $D_{M M^{\prime}}^{(J)}(\alpha, \beta, \gamma)=D_{M M^{\prime}}^{J}(-\gamma,-\beta,-\alpha)$ \\
 Gel'fand et al. \cite{ref020}] &  $e^{-i \alpha \hat{J}_z} e^{-i \beta \hat{J}_x} e^{-i \gamma \hat{J}_{z}}$&  & $T_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)=(-i)^{M-M^{\prime}} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)$ \\
-Lubarskii $\left[{26}\right]$ & The same &  & $D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)=(-i)^{M-M^{\prime}} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)$ \\
+Lubarskii \cite{ref026} & The same &  & $D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)=(-i)^{M-M^{\prime}} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)$ \\
 Vilenkin \cite{ref041} & » » &  & $t_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)=(-i)^{M-M^{\prime}} D_{M M^{\prime}}^{J}(\alpha, \beta, \gamma)$ \\
 Yutsis and Bandzaitis \cite{ref045} & » » & $\Psi_{J M^{\prime}}\left(\vartheta^{\prime}, \varphi^{\prime}\right)=\sum_{M} D_{M^{\prime} M}^{(J)}(\alpha, \beta, \gamma) \Psi_{J M}(\vartheta, \varphi)$ & $D_{M M^{\prime}}^{(J)}(\alpha, \beta, \gamma)=i^{M-M^{\prime}} D_{M M^{\prime}}^{J^{*}}(\alpha, \beta, \gamma)$ \\
 \hline
